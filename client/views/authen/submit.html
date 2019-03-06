@@ -9,7 +9,7 @@
         </div>
         <p class="desc">{{lang.text('tigerWitID.myAccount.tip19')}}</p>
         <div class="btn-wrapper text-left pd-tp-50" ng-if="toState.name.indexOf('space.update') == -1">
-            <a ui-sref="space.center.index" class="btn btn-primary-gradient">
+            <a ui-sref="space.center.index" class="btn btn-primary-gradient" ng-click="toTrackEvent('Open live account', 'submitted')">
                 {{lang.text('tigerWitID.confirm')}}
             </a>
         </div>

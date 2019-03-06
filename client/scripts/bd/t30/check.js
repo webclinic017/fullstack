@@ -130,18 +130,10 @@ $(document).ready(function () {
                         var h = $('#' + info.targetId).html();
                         $('#' + info.targetId).html('<i class="loading fa fa-spinner"></i>正在跳转');
 
-                        // umeng
-                        _czc.push(["_trackEvent", "活动页", "免费注册"]);
-
                         // 360            
                         // if (window._mvq) {
                         //     _mvq.push(['$setGeneral', 'registered', '', rName, rPhone]);
                         // }
-
-                        // 神策数据统计
-                        sa.track('btn_register', {
-                            page: window.location.href
-                        });
 
                         var tmpForm = $("<form></form>");
                         // tmpForm.append("<input type='hidden' value='" + rName + "' name='username'/>");

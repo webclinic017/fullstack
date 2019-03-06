@@ -77,10 +77,10 @@
         <!-- 未登录时 -->
         <ul class="nav navbar-login navbar-right" ng-cloak ng-if="!personalCookiesInfo.userCode">
             <li class="mg-rg-10">
-                <a class="signup2" ng-click="toTrackLoginSensorsdata()" href="/space/#/account/login"><%= lang.text("login")%></a>
+                <a class="signup2" ng-click="toTrackEvent('navigation', 'global_navigation_login')" href="/space/#/account/login"><%= lang.text("login")%></a>
             </li> 
             <li>
-                <a class="signup" href="/space/#/account/register"><%= lang.text("register")%></a>
+                <a class="signup" ng-click="toTrackEvent('navigation', 'global_navigation_open_account')" href="/space/#/account/register"><%= lang.text("register")%></a>
             </li>
         </ul>
 
@@ -117,13 +117,13 @@
             </li>
             <li class="dropdown" tw-dropdown>
                 <h2>
-                    <a data-navbar-trigger data-navbar-level="2" href="/ranklist/#/ranklist/masters">
+                    <a data-navbar-trigger data-navbar-level="2" href="/ranklist/#/ranklist/masters" ng-click="toTrackEvent('navigation', 'global_navigation_copytrading')">
                         <%= lang.text("navbar2")%>
                     </a>
                 </h2>
                 <ul class="dropdown-menu">
                     <li>
-                        <h2><a data-navbar-trigger href="/ranklist/#/ranklist/masters"><%= lang.text("navbar3")%></a></h2>
+                        <h2><a data-navbar-trigger href="/ranklist/#/ranklist/masters" ng-click="toTrackEvent('navigation', 'global_navigation_copytrading')"><%= lang.text("navbar3")%></a></h2>
                     </li>
                     <!-- <li>
                         <h2><a data-navbar-trigger href="/regular"><%= lang.text("navbar4")%></a></h2>
@@ -132,32 +132,32 @@
             </li>
             <li class="dropdown" tw-dropdown>
                 <h2>
-                    <a data-navbar-trigger data-navbar-level="2" href="/web/product/forex"><%= lang.text("navbar5")%></a>
+                    <a data-navbar-trigger data-navbar-level="2" href="/web/product/forex" ng-click="toTrackEvent('navigation', 'global_navigation_products')"><%= lang.text("navbar5")%></a>
                 </h2>
 
                 <ul class="dropdown-menu">
                     <li>
-                        <h2><a data-navbar-trigger href="/web/product/forex"><%= lang.text("navbar6")%></a></h2>
+                        <h2><a data-navbar-trigger href="/web/product/forex" ng-click="toTrackEvent('navigation', 'global_navigation_fx')"><%= lang.text("navbar6")%></a></h2>
                     </li>
                     <li>
-                        <h2><a data-navbar-trigger href="/web/product/oil"><%= lang.text("navbar7")%></a></h2>
+                        <h2><a data-navbar-trigger href="/web/product/oil" ng-click="toTrackEvent('navigation', 'global_navigation_oil')"><%= lang.text("navbar7")%></a></h2>
                     </li>
                     <li>
-                        <h2><a data-navbar-trigger href="/web/product/metal"><%= lang.text("navbar8")%></a></h2>
+                        <h2><a data-navbar-trigger href="/web/product/metal" ng-click="toTrackEvent('navigation', 'global_navigation_metals')"><%= lang.text("navbar8")%></a></h2>
                     </li>
                     <li>
-                      <h2><a data-navbar-trigger href="/web/product/cfd"><%= lang.text("navbar9")%></a></h2>
+                      <h2><a data-navbar-trigger href="/web/product/cfd" ng-click="toTrackEvent('navigation', 'global_navigation_cfd')"><%= lang.text("navbar9")%></a></h2>
                     </li>
                 </ul>
             </li>
             <li class="dropdown" tw-dropdown>
                 <h2>
-                    <a data-navbar-trigger data-navbar-level="2" href="/web/copy/rules"><%= lang.text("downloadApp.guides")%></a>
+                    <a data-navbar-trigger data-navbar-level="2" href="/web/copy/rules" ng-click="toTrackEvent('navigation', 'global_navigation_guides')"><%= lang.text("downloadApp.guides")%></a>
                 </h2>
 
                 <ul class="dropdown-menu">
                     <li>
-                        <h2><a data-navbar-trigger href="/web/copy/rules"><%= lang.text("downloadApp.copyRegulations")%></a></h2>
+                        <h2><a data-navbar-trigger href="/web/copy/rules" ng-click="toTrackEvent('navigation', 'global_navigation_guides')"><%= lang.text("downloadApp.copyRegulations")%></a></h2>
                     </li>
                     <% if(!lang.isEnglishArea()) { %> 
                     <li>
@@ -175,59 +175,59 @@
             <!-- 内容无翻译，英文暂时隐藏 -->
             <li class="dropdown" tw-dropdown>
                 <h2>
-                    <a data-navbar-trigger data-navbar-level="2" data-default="/web/faq,/web/help,/web/course" href="/web/faq/real"><%= lang.text("header.education")%></a>
+                    <a data-navbar-trigger data-navbar-level="2" data-default="/web/faq,/web/help,/web/course" href="/web/faq/real" ng-click="toTrackEvent('navigation', 'global_navigation_education')"><%= lang.text("header.education")%></a>
                 </h2>
 
                 <ul class="dropdown-menu">
                     <li>
-                        <h2><a data-navbar-trigger data-navbar-level="2" href="/web/faq/real"><%= lang.text("faq")%></a></h2>
+                        <h2><a data-navbar-trigger data-navbar-level="2" href="/web/faq/real" ng-click="toTrackEvent('navigation', 'global_navigation_education')"><%= lang.text("faq")%></a></h2>
                     </li>
                     <li ng-show="!(lang.isEnglishArea())">
                         <h2><a data-navbar-trigger data-navbar-level="2" href="/web/help/introduce"><%= lang.text("foot14")%></a></h2>
-                    <!-- </li>
-                    <li>
+                    </li>
+                    <!-- <li>
                         <h2><a data-navbar-trigger href="/help/oil"><%= lang.text("navbar7")%></a></h2>
                     </li>
                     <li>
                         <h2><a data-navbar-trigger href="/help/metal"><%= lang.text("navbar8")%></a></h2>
                     </li>
                     <li>
-                        <h2><a data-navbar-trigger href="/help/cfd"><%= lang.text("navbar9")%></a></h2> -->
+                        <h2><a data-navbar-trigger href="/help/cfd"><%= lang.text("navbar9")%></a></h2>
                     </li>
-                    <li ng-show="false">
+                    <li>
                         <h2><a data-navbar-trigger data-navbar-level="2" href="/web/course/forex_basics"><%= lang.text("header.course")%></a></h2>
-                    </li>
+                    </li> -->
                 </ul>
             </li>
             <li class="dropdown" tw-dropdown>
                 <h2>
-                    <a data-navbar-trigger data-navbar-level="2" href=<%= lang.isEnglishArea() ? "/web/agent/partner" : "/web/agent/proxy" %>><%= lang.text("downloadApp.partners")%></a>
+                    <a data-navbar-trigger data-navbar-level="2" ng-click="toTrackEvent('navigation', 'global_navigation_partners')" href=<%= lang.isEnglishArea() ? "/web/agent/partner" : "/web/agent/proxy" %>><%= lang.text("downloadApp.partners")%></a>
                 </h2>
 
                 <ul class="dropdown-menu">
                     <li>
-                        <h2><a data-navbar-trigger href=<%= lang.isEnglishArea() ? "/web/agent/partner" : "/web/agent/proxy" %>><%= lang.text("downloadApp.agencies")%></a></h2>
+                        <h2><a data-navbar-trigger ng-click="toTrackEvent('navigation', 'global_navigation_partners')" href=<%= lang.isEnglishArea() ? "/web/agent/partner" : "/web/agent/proxy" %>><%= lang.text("downloadApp.agencies")%></a></h2>
                     </li>
                     <li>
-                        <h2><a data-navbar-trigger href="/web/agent/become"><%= lang.text("downloadApp.becomeMaster")%></a></h2>
+                        <h2><a data-navbar-trigger ng-click="toTrackEvent('navigation', 'global_navigation_become_master')" href="/web/agent/become"><%= lang.text("downloadApp.becomeMaster")%></a></h2>
                     </li>
                 </ul>
             </li>
             <% if(lang.isEnglishArea()) { %> 
             <li class="dropdown" tw-dropdown>
                 <h2>
-                    <a data-navbar-trigger data-navbar-level="2" href="/web/aboutus/abouttigerwit"><%= lang.text("navbar10")%></a>
+                    <a data-navbar-trigger data-navbar-level="2" href="/web/aboutus/abouttigerwit" ng-click="toTrackEvent('navigation', 'global_navigation_about')"><%= lang.text("navbar10")%></a>
                 </h2>
 
                 <ul class="dropdown-menu">
                     <li>
-                        <h2><a data-navbar-trigger href="/web/aboutus/abouttigerwit"><%= lang.text("navbar11")%></a></h2>
+                        <h2><a data-navbar-trigger href="/web/aboutus/abouttigerwit" ng-click="toTrackEvent('navigation', 'global_navigation_about')"><%= lang.text("navbar11")%></a></h2>
                     </li>
                     <li>
-                        <h2><a data-navbar-trigger href="/web/aboutus/liverpool"><%= lang.text("liverpool.nav")%></a></h2>
+                        <h2><a data-navbar-trigger href="/web/aboutus/liverpool" ng-click="toTrackEvent('navigation', 'global_navigation_livepoll')"><%= lang.text("liverpool.nav")%></a></h2>
                     </li>
                     <li>
-                        <h2><a data-navbar-trigger href="/web/aboutus/medianewsandcontact"><%= lang.text("medianewsandcontact.nav")%></a></h2>
+                        <h2><a data-navbar-trigger href="/web/aboutus/medianewsandcontact" ng-click="toTrackEvent('navigation', 'global_navigation_media')"><%= lang.text("medianewsandcontact.nav")%></a></h2>
                     </li>
                     
                 </ul>
@@ -235,7 +235,7 @@
             <% } else { %> 
             <li>
                 <h2>
-                    <a data-navbar-trigger href="/web/aboutus/abouttigerwit">
+                    <a data-navbar-trigger href="/web/aboutus/abouttigerwit" ng-click="toTrackEvent('navigation', 'global_navigation_about')">
                         <%= lang.text("navbar10")%>
                     </a>
                 </h2>
@@ -255,7 +255,7 @@
             <% } %>
             <li>
                 <h2>
-                    <a data-navbar-trigger href="/download">
+                    <a data-navbar-trigger href="/download" ng-click="toTrackEvent('navigation', 'global_navigation_app')">
                         <%= lang.text("navbar16")%>
                     </a>
                 </h2>

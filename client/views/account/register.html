@@ -32,7 +32,7 @@
                         <form name="registerForm6" class="account_login__form" novalidate>
                             <div class="account-form-control-wrapper-new">
                                 <input class="account-form-control-new" autocomplete="off" name="emailText" type="text" placeholder="{{lang.text('tigerWitID.login.enterEmail')}}"
-                                    on-enter="getCaptcha('registerForm6', 'emailText')" required ng-click="toTrackEmailSensorsdata()"
+                                    on-enter="getCaptcha('registerForm6', 'emailText')" required ng-click="toTrackEvent('Login and register', 'inp_account')"
                                     ng-model="account.emailText">
                                 <span class="account-form-control-tip-new" ng-show="account.emailText">{{ lang.text("tigerWitID.login.email") }}</span>
                                 <span class="account_login__close" ng-show="account.emailText" ng-click="clearPhone('emailText')">
@@ -41,9 +41,9 @@
                             </div>
                             <div class="account-form-control-wrapper-new">
                                 <input class="account-form-control-new" autocomplete="off" name="emailCode" type="text" placeholder="{{ lang.text('actLogin4') }}"
-                                    on-enter="register('registerForm6')" required ng-click="toTrackEmailCodeSensorsdata()" ng-model="account.emailCode">
+                                    on-enter="register('registerForm6')" required ng-click="toTrackEvent('Login and register', 'inp_code')" ng-model="account.emailCode">
                                 <span class="account-form-control-tip-new" ng-if="account.emailCode">{{ lang.text('tigerWitID.login.verificationCodej') }}</span>
-                                <span class="account_login__code_btn" ng-show="!codeBtnStatus.emailText.count" ng-click="getCaptcha('registerForm6', 'emailText')">
+                                <span class="account_login__code_btn" ng-show="!codeBtnStatus.emailText.count" ng-click="[getCaptcha('registerForm6', 'emailText'), toTrackEvent('Login and register', 'get_code')]">
                                     {{lang.text('tigerWitID.login.sendCode')}}
                                 </span>
                                 <span class="account_login__code_btn notAllowed" ng-show="codeBtnStatus.emailText.count">
@@ -57,7 +57,7 @@
                             </div>
                         </form>
                         <div class="account_login__btn_wrapper pd-tp-15">
-                            <button class="tw-btn-md tw-btn-capsule-gradient" ng-click="register('registerForm6')">{{lang.text("tigerWitID.login.register")}}</button>
+                            <button class="tw-btn-md tw-btn-capsule-gradient" ng-click="[register('registerForm6'), toTrackEvent('Login and register', 'click_register')]">{{lang.text("tigerWitID.login.register")}}</button>
                         </div>
                     </div>
                     <!-- 手机号注册   -->
@@ -76,7 +76,7 @@
                                     </ul>
                                 </div>
                                 <input class="account-form-control-new select-right" autocomplete="off" name="step1Phone" type="text" placeholder="{{lang.text('tigerWitID.login.enterPhoneNumber')}}"
-                                    on-enter="getCaptcha('registerForm1', 'step1Phone')" required ng-click="toTrackPhoneSensorsdata()"
+                                    on-enter="getCaptcha('registerForm1', 'step1Phone')" required ng-click="toTrackEvent('Login and register', 'inp_account')"
                                     ng-model="account.step1Phone">
                                 <span class="account-form-control-tip-new" ng-show="account.step1Phone">{{ lang.text("actLogin17") }}</span>
                                 <span class="account_login__close" ng-show="account.step1Phone" ng-click="clearPhone('step1Phone')">
@@ -85,9 +85,9 @@
                             </div>
                             <div class="account-form-control-wrapper-new">
                                 <input class="account-form-control-new" autocomplete="off" name="step1Code" type="text" placeholder="{{ lang.text('actLogin4') }}"
-                                    on-enter="register('registerForm1')" required ng-click="toTrackCodeSensorsdata()" ng-model="account.step1Code">
+                                    on-enter="register('registerForm1')" required ng-click="toTrackEvent('Login and register', 'inp_code')" ng-model="account.step1Code">
                                 <span class="account-form-control-tip-new" ng-if="account.step1Code">{{ lang.text('tigerWitID.login.verificationCodej') }}</span>
-                                <span class="account_login__code_btn" ng-show="!codeBtnStatus.step1Phone.count" ng-click="getCaptcha('registerForm1', 'step1Phone')">
+                                <span class="account_login__code_btn" ng-show="!codeBtnStatus.step1Phone.count" ng-click="[getCaptcha('registerForm1', 'step1Phone'), toTrackEvent('Login and register', 'get_code')]">
                                     {{lang.text('tigerWitID.login.sendSMS')}}
                                 </span>
                                 <span class="account_login__code_btn notAllowed" ng-show="codeBtnStatus.step1Phone.count">
@@ -102,7 +102,7 @@
                             </div>
                         </form>
                         <div class="account_login__btn_wrapper pd-tp-15">
-                            <button class="tw-btn-md tw-btn-capsule-gradient" ng-click="register('registerForm1')">{{lang.text("tigerWitID.login.register")}}</button>
+                            <button class="tw-btn-md tw-btn-capsule-gradient" ng-click="[register('registerForm1'), toTrackEvent('Login and register', 'click_register')]">{{lang.text("tigerWitID.login.register")}}</button>
                         </div>
                     </div>
                 </div>
@@ -113,7 +113,7 @@
                     <form name="registerForm2" class="account_login__form" novalidate ng-style="{'margin-bottom': lang.isEnglishArea() ? '5px' : '25px'}">
                         <div class="account-form-control-wrapper-new">
                             <input class="account-form-control-new" autocomplete="off" name="step1Password" type="password" placeholder="{{ lang.text('tigerWitID.login.enterPassword') }}"
-                                on-enter="setPassword('registerForm2')" required ng-model="account.step1Password">
+                                on-enter="setPassword('registerForm2')" required ng-click="toTrackEvent('Login and register', 'inp_password')" ng-model="account.step1Password">
                             <span class="account-form-control-tip-new" ng-show="account.step1Password">{{ lang.text('actLogin22') }}</span>
                             <!-- <span class="account_login__close" ng-click="changePasswordStatus('step1PasswordStatus')">
                                 <i class="fa fa-eye" aria-hidden="true"></i>
@@ -129,7 +129,7 @@
                         </div> -->
                         <div class="account-form-control-wrapper-new">
                             <input class="account-form-control-new" autocomplete="off" name="step2Password" type="password" placeholder="{{ lang.text('tigerWitID.login.confirmPassword') }}"
-                                on-enter="setPassword('registerForm2')" required ng-model="account.step2Password">
+                                on-enter="setPassword('registerForm2')" required ng-click="toTrackEvent('Login and register', 'confirm_password')" ng-model="account.step2Password">
                             <span class="account-form-control-tip-new" ng-show="account.step2Password">{{ lang.text('tigerWitID.login.confirmPasswordj') }}</span>
                             <!-- <span class="account_login__close" ng-click="changePasswordStatus('step1PasswordStatus')">
                                 <i class="fa fa-eye" aria-hidden="true"></i>

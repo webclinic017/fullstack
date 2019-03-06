@@ -11,14 +11,14 @@
                     <ul>
                         <li class="mg-bt-15">
                             <h3>
-                                <a href="/web/mt4">
+                                <a href="/web/mt4" ng-click="toTrackEvent('bottom navigation', 'global_bottom_navigation_mt4download')">
                                     &nbsp;<%= lang.text("foot2")%>
                                 </a>
                             </h3>
                         </li>
                         <li>
                             <h3>
-                                <a href="/web/product/trade">
+                                <a href="/web/product/trade" ng-click="toTrackEvent('bottom navigation', 'global_bottom_navigation_mt4web')">
                                     &nbsp;<%= lang.text("foot3")%>
                                 </a>
                             </h3>
@@ -34,7 +34,7 @@
                     <ul>
                         <li class="mg-bt-15">
                             <h3>
-                                <a href="/web/faq/real">
+                                <a href="/web/faq/real" ng-click="toTrackEvent('bottom navigation', 'global_bottom_navigation_faq')">
                                     &nbsp;<%= lang.text("faq")%>
                                 </a>
                             </h3>
@@ -59,14 +59,14 @@
                     <ul>
                         <li class="mg-bt-15">
                             <h3>
-                                <a href="/web/blog/agreement">
+                                <a href="/web/blog/agreement" ng-click="toTrackEvent('bottom navigation', 'global_bottom_navigation_information')">
                                     &nbsp;<%= lang.text("foot7")%>
                                 </a>
                             </h3>
                         </li>
                         <li>
                             <h3>
-                                <a href="/web/blog/trade_fee">
+                                <a href="/web/blog/trade_fee" ng-click="toTrackEvent('bottom navigation', 'global_navigation_trade_fees')">
                                     &nbsp;<%= lang.text("foot15")%>
                                 </a>
                             </h3>
@@ -83,7 +83,7 @@
                     <ul>
                         <li class="mg-bt-15">
                             <h3>
-                                <a class="font-dark" ng-href='mailto:{{sysMessage.email_list[0].email}}'>
+                                <a class="font-dark" ng-href='mailto:{{sysMessage.email_list[0].email}}' ng-click="toTrackEvent('bottom navigation', 'global_navigation_email')">
                                     &nbsp;{{sysMessage.email_list[0].email}}
                                 </a>
                             </h3>
@@ -99,7 +99,7 @@
                     <div class="contact-us pd-tp-5">
                         <div class="">
                             <p>
-                                <a class="font-dark" ng-href='mailto:{{sysMessage.email_list[0].email}}'>
+                                <a class="font-dark" ng-href='mailto:{{sysMessage.email_list[0].email}}' ng-click="toTrackEvent('bottom navigation', 'global_navigation_email')">
                                     {{sysMessage.email_list[0].email}}
                                 </a>
                             </p>

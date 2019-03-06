@@ -70,7 +70,7 @@
                         </p>
                     </div>
 
-                    <button class="btn btn-sm btn-primary-gradient text-left" ng-if="clickable" ng-click="submitForm()">
+                    <button class="btn btn-sm btn-primary-gradient text-left" ng-if="clickable" ng-click="[submitForm(), toTrackEvent('Open live account', 'questionnaire')]">
                         {{lang.text('actLogin29')}}
                     </button>
 

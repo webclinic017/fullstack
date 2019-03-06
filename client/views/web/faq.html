@@ -20,22 +20,22 @@
                 <div class="mg-200__bg">
                     <h3 class="mg-200__circle-title"><%= lang.text("faq")%></h3>
                     <ul class="faq-public__url_list" tw-navbar>
-                        <li><h2><a data-navbar-trigger href="/web/faq/real"><%= lang.text("openAccount")%></a></h2></li>
-                        <li><h2><a data-navbar-trigger href="/web/faq/wad"><%= lang.text("depAndWith")%></a></h2></li>
-                        <li><h2><a data-navbar-trigger href="/web/faq/deal"><%= lang.text("trading")%></a></h2></li>
+                        <li><h2><a data-navbar-trigger href="/web/faq/real" ng-click="toTrackEvent('faq page', 'global_faq_open_account')"><%= lang.text("openAccount")%></a></h2></li>
+                        <li><h2><a data-navbar-trigger href="/web/faq/wad" ng-click="toTrackEvent('faq page', 'global_faq_depositandwithdrawal')"><%= lang.text("depAndWith")%></a></h2></li>
+                        <li><h2><a data-navbar-trigger href="/web/faq/deal" ng-click="toTrackEvent('faq page', 'global_faq_trading')"><%= lang.text("trading")%></a></h2></li>
                         <li>
-                            <h2><a data-navbar-trigger href="/web/faq/interest"><%= lang.text("swapRate")%></a></h2>
+                            <h2><a data-navbar-trigger href="/web/faq/interest" ng-click="toTrackEvent('faq page', 'global_faq_swaps')"><%= lang.text("swapRate")%></a></h2>
                         </li>
                         <% if(lang.isEnglishArea()) { %> 
                             <li>
-                                <h2><a data-navbar-trigger href="/web/faq/platform"><%= lang.text("navbar2")%></a></h2>
+                                <h2><a data-navbar-trigger href="/web/faq/platform" ng-click="toTrackEvent('faq page', 'global_faq_copytrading')"><%= lang.text("navbar2")%></a></h2>
                             </li>
                             <li>
-                                <h2><a data-navbar-trigger href="/web/faq/protect">TigerWit MT4</a></h2>
+                                <h2><a data-navbar-trigger href="/web/faq/protect" ng-click="toTrackEvent('faq page', 'global_faq_mt4')">TigerWit MT4</a></h2>
                             </li>
                         <% } else { %> 
                              <li>
-                                <h2><a data-navbar-trigger href="/web/faq/platform"><%= lang.text("platform")%></a></h2>
+                                <h2><a data-navbar-trigger href="/web/faq/platform" ng-click="toTrackEvent('faq page', 'global_faq_copytrading')"><%= lang.text("platform")%></a></h2>
                             </li>
                         <% } %>
                     </ul>
