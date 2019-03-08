@@ -52,9 +52,9 @@ module.exports = function () {
              * 分享软件 Skype等
              * 非英语地区 cn, zh-Hant
              *  */
-            var isZhArea = true;
-            if (this.language !== 'zh' && this.language !== 'zh-Hant') {
-                isZhArea = false;
+            var isZhArea = false;
+            if (this.language === 'zh' || this.language === 'zh-Hant') {
+                isZhArea = true;
             }
             return isZhArea;
         },
