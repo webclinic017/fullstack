@@ -78,10 +78,11 @@
                 key: '+' + target.phone_code,
                 value: target.phone_code
             }
+            localStorage['phone_code'] = target.phone_code;
         }
-        // 根据域名判断是否为cn 无用
-        if(lang.hostIsCn()){
-            selectArea({phone_code: 86})
+        // 使用缓存的phone_code
+        if(localStorage['phone_code']){
+            selectArea({phone_code: localStorage['phone_code']})
         }
         var token;
         // console.log(lang.text("actLogin1"));
