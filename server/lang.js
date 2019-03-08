@@ -45,6 +45,22 @@ module.exports = function () {
             }
             return isEngArea;
         },
+        isZhTDK: function () {  //是否读取中文TDK
+            /**
+             * date: 2019.03.08
+             * 链接分享到社交软件后会自动读取TDK，但可能不会读到cookie，添加此方法只是为了优先读取英文TDK
+             * 分享软件 Skype等
+             * 非英语地区 cn, zh-Hant
+             *  */
+            var isZhArea = false;
+            if (this.language === 'zh' || this.language === 'zh-Hant') {
+                isZhArea = true;
+            }
+            return {
+                isZhArea: isZhArea,
+                lang: this.language
+            };
+        },
         currentLanguage: function () {  //此方法只用来调整单个语言的特殊性，一般情况优先使用 isEnglishArea 方法
             return this.language;
         },
