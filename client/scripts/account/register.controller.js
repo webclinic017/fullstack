@@ -26,7 +26,7 @@
                 timer: undefined
             }
         };
-        $scope.area_id = ''; // 1为国内，2为国际区
+        // $scope.area_id = ''; // 1为国内，2为国际区
         // test
         // openWebAgmentModal(100402, function(resolve, e){
         //     // this 当前点击按钮
@@ -61,6 +61,7 @@
                 key: '+' + target.phone_code,
                 value: target.phone_code
             }
+            localStorage['phone_code'] = target.phone_code;
         }
         // 选择国家
         $scope.selectWorld = function (target) {
@@ -69,8 +70,8 @@
             }
             selectPhoneArea(target);
         }
-        // 根据域名判断是否为cn 无用
-        if(lang.hostIsCn()){
+        // 缓存区号
+        if(localStorage['phone_code'] == '86'){
             $scope.account.country.key = lang.text("china");
             $scope.account.country.value = 'CN';
             $scope.selectWorld({phone_code: 86, code: 'CN'})
@@ -217,7 +218,7 @@
                     $scope.writeCookie({nameKey: 'username_en', nameValue: data.data.username_en});
                     // 新用户
                     $scope.registerStep1 = 2;
-                    $scope.area_id = data.data.area_id;
+                    // $scope.area_id = data.data.area_id;
                     $scope.$emit('relogin_info', 'is_register');
                     // 神策统计 - 注册
                     $timeout(function () {
