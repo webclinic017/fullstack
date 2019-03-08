@@ -56,7 +56,10 @@ module.exports = function () {
             if (this.language === 'zh' || this.language === 'zh-Hant') {
                 isZhArea = true;
             }
-            return isZhArea;
+            return {
+                isZhArea: isZhArea,
+                lang: this.language
+            };
         },
         currentLanguage: function () {  //此方法只用来调整单个语言的特殊性，一般情况优先使用 isEnglishArea 方法
             return this.language;
