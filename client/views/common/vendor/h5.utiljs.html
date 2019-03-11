@@ -132,7 +132,10 @@
         var bIsAndroid = navigator.userAgent.toLowerCase().match(/android/i) == "android";
         return bIsAndroid;
     }
-
+    function isWindows(){
+        var np = navigator.platform;
+        return ((np == "Win32") || (np == "Windows"))
+    }
     function getVersionName() {
         var userAgent = window.navigator.userAgent;
         var targetStr = 'tiger_version=';
