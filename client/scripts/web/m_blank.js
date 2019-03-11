@@ -1,7 +1,7 @@
 ;$(document).ready(function () {
 
     var isCn = getQueryString('system') === 'cn' ? true : false;
-    if (isAndriod()) {
+    if (isAndriod() || isWindows()) {
         var userAgent = navigator.userAgent;
         if(/MicroMessenger/gi.test(userAgent)) {
             // 微信浏览器中
