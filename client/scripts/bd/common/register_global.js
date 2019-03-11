@@ -6,6 +6,7 @@ $(document).ready(function () {
     count: 60,
     unable: false
   };
+  $.cookie('lang', 'en', {expires: 1, path: '/', domain: getDomain()});
 
   /*获取查询字段*/
   function getSearch() {
@@ -145,6 +146,10 @@ $(document).ready(function () {
           setTimeout(function () {
               window.location.href = '/space/#/center?type=new';
           }, 100);
+        } else {
+          setTimeout(function () {
+            window.location.href = '/download';
+        }, 100);
         }
       } else {
           if ((data.code == 100402) || (data.code == 100403)) {

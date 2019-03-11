@@ -733,6 +733,7 @@ module.exports = function (app) {
     app.route('/bonus').get(function (req, res) {
         // checkGlobalOrCN(req, res, 'cn');
         setEnvCf(req, res);
+        req.url = req.url + '?lang=en';
         if (isMobile(req)) {
             res.render('bd/g35/h5.html', extendPublic({}, req))
         } else {
