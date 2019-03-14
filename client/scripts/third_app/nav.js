@@ -1,4 +1,4 @@
-var pageIndex;  //当前页面 1 deposit, 2 withdraw, 3 evidence
+var pageIndex = getUrlParam("pageIndex") ? getUrlParam("pageIndex").toString() : '1';  //当前页面 1 deposit, 2 withdraw, 3 evidence
 var elePage = { //page ID
   deposit: '#page_deposit',
   withdraw: '#page_withdraw',
@@ -90,7 +90,7 @@ function getTradeAccount () {
     if (data.is_succ) {
       tradeAccountLst = data.data;
       var deposit = true;
-      // var withdraw = true;
+      var withdraw = true;
       if(depositAccount || withdrawAccount) {
         $.each(tradeAccountLst, function(index, value) {
           if(value.mt4_id == depositAccount) {
@@ -107,12 +107,14 @@ function getTradeAccount () {
       if(deposit) {
         selectAccount('deposit', tradeAccountLst[0].mt4_id, tradeAccountLst[0].account_name, tradeAccountType[tradeAccountLst[0].account_type] || '', tradeAccountLst[0].balance);
       };
-
+      if(withdraw) {
+        selectAccount('withdraw', tradeAccountLst[0].mt4_id, tradeAccountLst[0].account_name, tradeAccountType[tradeAccountLst[0].account_type] || '', tradeAccountLst[0].balance);
+      }
     }
   });
 }
 function changePageIndex (page) {
-  pageIndex = page || "1";
+  pageIndex = page || pageIndex;
   $(ele.nav).find('span').removeClass('active');
   $.each($(ele.nav).find('span'), function (index, value) {
     if ($(value).attr("data-page") == pageIndex) {
@@ -130,9 +132,6 @@ function changePageIndex (page) {
     case "2": 
       $(elePage.withdraw).addClass('active');
       getWithdrawPlatform();
-      if(!withdrawAccount) {
-        selectAccount('withdraw', tradeAccountLst[0].mt4_id, tradeAccountLst[0].account_name, tradeAccountType[tradeAccountLst[0].account_type] || '', tradeAccountLst[0].balance);
-      }
       break;
     case "3": 
       $(elePage.evidence).addClass('active');
