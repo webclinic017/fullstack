@@ -94,10 +94,10 @@
                 },
                 android: {
                     app_info: {
-                        version_name : "V3.3.0",
-                        description: "This update: \n1.TC trading strategy adds pending order function;\n2.Optimized the UI of transaction page;\n3.Upgrade the security strength of the account\n4.Forex,  Metals increased by 400 times leverage;\n5.Fixed bugs,Optimized user experience.",
+                        version_name : "V3.3.1",
+                        description: "This update: \nFixed bugs,Optimized user experience.",
                         updated_description: "70% users are using new version",
-                        url: "https://static.tigerwitfx.com/downloads/apk/tigerwit_v3.3.0.apk",
+                        url: "https://static.tigerwitfx.com/downloads/apk/tigerwit_v3.3.1.apk",
                         force_update : false
                     }
                 }
@@ -113,10 +113,10 @@
                 },
                 android: {
                     app_info: {
-                        version_name : "V3.3.0",
-                        description: "本次更新：\n1.TC的交易策略增加一键挂单功能；\n2.交易界面UI优化；\n3.升级账户的安全强度；\n4.外汇、贵金属增加400倍杠杆；\n5.修复已知BUG，优化用户体验。",
+                        version_name : "V3.3.1",
+                        description: "本次更新：\n修复已知BUG，优化用户体验",
                         updated_description: "70%的用户正在使用新版本",
-                        url: "https://static.tigerwitfx.com/downloads/apk/tigerwit_v3.3.0.apk",
+                        url: "https://static.tigerwitfx.com/downloads/apk/tigerwit_v3.3.1.apk",
                         force_update : false
                     }
                 }
