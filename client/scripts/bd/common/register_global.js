@@ -6,7 +6,6 @@ $(document).ready(function () {
     count: 60,
     unable: false
   };
-  $.cookie('lang', 'en', {expires: 1, path: '/', domain: getDomain()});
 
   /*获取查询字段*/
   function getSearch() {

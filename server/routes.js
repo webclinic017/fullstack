@@ -733,15 +733,6 @@ module.exports = function (app) {
     app.route('/bonus').get(function (req, res) {
         // checkGlobalOrCN(req, res, 'cn');
         setEnvCf(req, res);
-        if (req.headers.cookie) {
-            if (/lang=\w+;/.test(req.headers.cookie)) {
-                req.headers.cookie = req.headers.cookie.replace(/lang=\w+;/, 'lang=en;');
-            } else {
-                req.headers.cookie = 'lang=en; '+req.headers.cookie;
-            }
-        } else {
-            req.headers.cookie = 'lang=en';
-        }
         
         if (isMobile(req)) {
             res.render('bd/g35/h5.html', extendPublic({}, req))
