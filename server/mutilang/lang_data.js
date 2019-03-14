@@ -453,7 +453,7 @@ module.exports = {
         "vi": " ",
         "zh-Hant": "，TigerWit有限公司（英國）由英國金融市場行為監管局(FCA)授權和監管。",
         "id": " ",
-        "es": ""
+        "es": " "
     },
     "foot_42": {
         "zh": "你要在线咨询",
@@ -14101,210 +14101,210 @@ module.exports = {
         "confirmNow":{
             "zh": "Confirm Now!",
             "en": "Confirm Now!",
-            "vi": "Confirm Now!",
+            "vi": "Xác Nhận Ngay!",
             "zh-Hant": "Confirm Now!",
-            "id": "Confirm Now!",
-            "es": "Confirm Now!"
+            "id": "Konfirmasi Sekarang!",
+            "es": "¡Confirmar Ahora!"
         },
         "gainRebateUs":{
             "zh": "You can gain rebate US ",
             "en": "You can gain rebate US ",
-            "vi": "You can gain rebate US ",
+            "vi": "Bạn có thể nhận được chiết khấu bằng USD",
             "zh-Hant": "You can gain rebate US ",
-            "id": "You can gain rebate US ",
-            "es": "You can gain rebate US "
+            "id": "Anda dapat mendapatkan rebate USD",
+            "es": "Puede obtener rebates con NOSOTROS"
         },
         "onceRegistered":{
             "zh": " once registered",
             "en": " once registered",
-            "vi": " once registered",
+            "vi": "khi đã đăng kí",
             "zh-Hant": " once registered",
-            "id": " once registered",
-            "es": " once registered"
+            "id": "Sudah terdaftar",
+            "es": " una vez registrado"
         },
         "us":{
             "zh": "US",
             "en": "US",
             "vi": "US",
             "zh-Hant": "US",
-            "id": "US",
-            "es": "US"
+            "id": "Amerika Serikat",
+            "es": "NOSOTROS"
         },
         "lot":{
             "zh": "lot",
             "en": "lot",
             "vi": "lot",
             "zh-Hant": "lot",
-            "id": "lot",
-            "es": "lot"
+            "id": "Lot",
+            "es": "lote"
         },
         "within":{
             "zh": "within ",
             "en": "within ",
-            "vi": "within ",
+            "vi": "trong vòng",
             "zh-Hant": "within ",
-            "id": "within ",
-            "es": "within "
+            "id": "Dalam",
+            "es": "dentro de "
         },
         "days":{
             "zh": " days",
             "en": " days",
-            "vi": " days",
+            "vi": "ngày",
             "zh-Hant": " days",
-            "id": " days",
-            "es": " days"
+            "id": "Hari",
+            "es": " días"
         },
         "whyChoose1":{
             "zh": "Authority Supervision Regulation by FCA,  license number 679941",
             "en": "Authority Supervision Regulation by FCA,  license number 679941",
-            "vi": "Authority Supervision Regulation by FCA,  license number 679941",
+            "vi": "Cơ Quan Quản Lý Giám Sát FCA, số giấy phép 679941",
             "zh-Hant": "Authority Supervision Regulation by FCA,  license number 679941",
-            "id": "Authority Supervision Regulation by FCA,  license number 679941",
-            "es": "Authority Supervision Regulation by FCA,  license number 679941"
+            "id": "Peraturan Pengawasan Otoritas oleh FCA, nomor lisensi 67994",
+            "es": "FCA Autoridad Supervisión Regulación, número licencia 679941"
         },
-        "whyChoose2":{
+        "whyChoose2": {
             "zh": "Copy trading with TigerWit Trading easier & faster",
             "en": "Copy trading with TigerWit Trading easier & faster",
-            "vi": "Copy trading with TigerWit Trading easier & faster",
+            "vi": "Sao chép giao dịch với TigerWit dễ dàng & nhanh chóng hơn",
             "zh-Hant": "Copy trading with TigerWit Trading easier & faster",
-            "id": "Copy trading with TigerWit Trading easier & faster",
-            "es": "Copy trading with TigerWit Trading easier & faster"
+            "id": "Copy Trading di TigerWit dengan mudah dan cepat",
+            "es": "Copy trading con TigerWit Trading más fácil & rápido"
         },
-        "whyChoose3":{
+        "whyChoose3": {
             "zh": "Min. deposit $50 Min. deposit trading $5 Max. Leverage 1:200",
             "en": "Min. deposit $50 Min. deposit trading $5 Max. Leverage 1:200",
-            "vi": "Min. deposit $50 Min. deposit trading $5 Max. Leverage 1:200",
+            "vi": "Min. Kí quỹ $50 Min. Kí quỹ giao dịch $5 Đòn bẩy Max. 1:200",
             "zh-Hant": "Min. deposit $50 Min. deposit trading $5 Max. Leverage 1:200",
-            "id": "Min. deposit $50 Min. deposit trading $5 Max. Leverage 1:200",
-            "es": "Min. deposit $50 Min. deposit trading $5 Max. Leverage 1:200"
+            "id": "Minimal deposit $ 50 dan maksimal leverage 1:200",
+            "es": "Mín. depósito $50 Mín. depósito trading $5 Max. Apalancamiento 1:200"
         },
-        "whyChoose4":{
+        "whyChoose4": {
             "zh": "Buy & Sell are available  at 24 hours per day",
             "en": "Buy & Sell are available  at 24 hours per day",
-            "vi": "Buy & Sell are available  at 24 hours per day",
+            "vi": "Mua & Bán suốt 24 giờ mỗi ngày",
             "zh-Hant": "Buy & Sell are available  at 24 hours per day",
-            "id": "Buy & Sell are available  at 24 hours per day",
-            "es": "Buy & Sell are available  at 24 hours per day"
+            "id": "Pasar dapat ditransaksikan 24 jam setiap hari",
+            "es": "Comprar y Vender están disponible las 24 horas por día"
         },
         "eventDetails1":{
             "zh": "You can gain the rebate once registered.",
             "en": "You can gain the rebate once registered.",
-            "vi": "You can gain the rebate once registered.",
+            "vi": "Bạn có thể nhận chiết khấu một khi bạn đăng kí.",
             "zh-Hant": "You can gain the rebate once registered.",
-            "id": "You can gain the rebate once registered.",
-            "es": "You can gain the rebate once registered."
+            "id": "Anda bisa mendapatkan Rebate saat pendaftaran",
+            "es": "Puede obtener rebates una vez registrado"
         },
-        "eventDetails2":{
+        "eventDetails2": {
             "zh": "You must meet the requirements before the specified date to claim the rebate.",
             "en": "You must meet the requirements before the specified date to claim the rebate.",
-            "vi": "You must meet the requirements before the specified date to claim the rebate.",
+            "vi": "Bạn phải đạt các yêu cầu trước khi ngày được chỉ định để nhận chiết khấu.",
             "zh-Hant": "You must meet the requirements before the specified date to claim the rebate.",
-            "id": "You must meet the requirements before the specified date to claim the rebate.",
-            "es": "You must meet the requirements before the specified date to claim the rebate."
+            "id": "Anda harus memenuhi kriteria untuk mendapatkan rebate",
+            "es": "Debe cumplir los requisitos antes de la fecha específica para solicitar los rebates."
         },
-        "eventDetails3":{
+        "eventDetails3": {
             "zh": "The rebate promotion will be applied only once, which will be deposited into the user’s account after redemption.",
             "en": "The rebate promotion will be applied only once, which will be deposited into the user’s account after redemption.",
-            "vi": "The rebate promotion will be applied only once, which will be deposited into the user’s account after redemption.",
+            "vi": "Ưu đãi chiết khấu sẽ được áp dụng chỉ một lần, và sẽ được nộp vào tài khoản người dùng sau khi được hoàn trả.",
             "zh-Hant": "The rebate promotion will be applied only once, which will be deposited into the user’s account after redemption.",
-            "id": "The rebate promotion will be applied only once, which will be deposited into the user’s account after redemption.",
-            "es": "The rebate promotion will be applied only once, which will be deposited into the user’s account after redemption."
+            "id": "Promosi rebate ini hanya berlaku satu kali saja. Rebate akan dimasukkan ke akun pengguna setelah di klaim",
+            "es": "La promoción de rebates sólo puede solicitarse una vez y serán depositados en la cuenta del usuario después del cumplimiento."
         },
-        "eventDetails4":{
+        "eventDetails4": {
             "zh": "The number of lots required hereunder only applies to forex, precious metals, and energies. USD/CNY and CFD products are not eligible for this campaign.",
             "en": "The number of lots required hereunder only applies to forex, precious metals, and energies. USD/CNY and CFD products are not eligible for this campaign.",
-            "vi": "The number of lots required hereunder only applies to forex, precious metals, and energies. USD/CNY and CFD products are not eligible for this campaign.",
+            "vi": "Số lượng lot được yêu cầu dưới đây chỉ được áp dụng với forex, kim loại quý, và các loại năng lượng. Các sản phẩm với USD/CNY và CFD không được áp dụng với chiến dịch này.",
             "zh-Hant": "The number of lots required hereunder only applies to forex, precious metals, and energies. USD/CNY and CFD products are not eligible for this campaign.",
-            "id": "The number of lots required hereunder only applies to forex, precious metals, and energies. USD/CNY and CFD products are not eligible for this campaign.",
-            "es": "The number of lots required hereunder only applies to forex, precious metals, and energies. USD/CNY and CFD products are not eligible for this campaign."
+            "id": "Untuk mendapatkan rebate, pengguna harus memenuhi persyaratan lot dan hanya berlaku untuk mata uang, logam mulia dan energi. Produk USD/CNY dan CFD tidak dihitung",
+            "es": "El número de lotes requeridos sólo aplica a forex, metales preciosos y energía. El USD/CNY y otros productos CFDs no son elegibles para esta campaña."
         },
-        "eventDetails5":{
+        "eventDetails5": {
             "zh": "While EA trading is allowed, the use of EAs for scalping is prohibited. Failure to comply with this rule will result in disqualification.",
             "en": "While EA trading is allowed, the use of EAs for scalping is prohibited. Failure to comply with this rule will result in disqualification.",
-            "vi": "While EA trading is allowed, the use of EAs for scalping is prohibited. Failure to comply with this rule will result in disqualification.",
+            "vi": "Mặc dù, bạn được phép dùng EA, việc sử dụng EA với giao dịch scalping bị cấm. Nếu bạn không tuân thủ quy định này, bạn sẽ tước quyền tham gia.",
             "zh-Hant": "While EA trading is allowed, the use of EAs for scalping is prohibited. Failure to comply with this rule will result in disqualification.",
-            "id": "While EA trading is allowed, the use of EAs for scalping is prohibited. Failure to comply with this rule will result in disqualification.",
-            "es": "While EA trading is allowed, the use of EAs for scalping is prohibited. Failure to comply with this rule will result in disqualification."
+            "id": "EA diperbolehkan, namun untuk EA scalping dilarang. Peserta akan didiskualifikasi apabila melanggar",
+            "es": "El trading con EAs está permitido; sin embargo el uso de EAs para scalping está prohibido. El no cumplimiento de esta regla conllevará descalificación."
         },
-        "eventDetails6":{
+        "eventDetails6": {
             "zh": "TigerWit reserves the right of final decision and interpretation in the case of any dispute. For questions, please contact us: customerservice@tigerwit.com.",
             "en": "TigerWit reserves the right of final decision and interpretation in the case of any dispute. For questions, please contact us: customerservice@tigerwit.com.",
-            "vi": "TigerWit reserves the right of final decision and interpretation in the case of any dispute. For questions, please contact us: customerservice@tigerwit.com.",
+            "vi": "TigerWit bảo lưu quyền đưa ra quyết định và phán xét cuối cùng trong trường hợp có tranh chấp. Nếu bạn có thắc mắc nào, vui lòng liên hệ với chúng tôi theo địa chỉ: customerservice@tigerwit.com.",
             "zh-Hant": "TigerWit reserves the right of final decision and interpretation in the case of any dispute. For questions, please contact us: customerservice@tigerwit.com.",
-            "id": "TigerWit reserves the right of final decision and interpretation in the case of any dispute. For questions, please contact us: customerservice@tigerwit.com.",
-            "es": "TigerWit reserves the right of final decision and interpretation in the case of any dispute. For questions, please contact us: customerservice@tigerwit.com."
+            "id": "TigerWit memiliki hak dalam memutuskan keputusan akhir dan interpretasi dalam hal perselisihan. Untuk pertanyaan, silahkan hubungi customerservice@tigerwit.com",
+            "es": "TigerWit se reserva el derecho a la decisión e interpretación final en caso de disputa. Para cualquier cuestión, por favor, contáctenos: customerservice@tigerwit.com."
         },
-        "eventDetails7":{
+        "eventDetails7": {
             "zh": "High Risk Warning: ",
             "en": "High Risk Warning: ",
-            "vi": "High Risk Warning: ",
+            "vi": "Cảnh báo Rủi Ro Cao:",
             "zh-Hant": "High Risk Warning: ",
-            "id": "High Risk Warning: ",
-            "es": "High Risk Warning: "
+            "id": "Peringatan Resiko Tinggi :",
+            "es": "Aviso Alto Riesgo: "
         },
-        "eventDetails8":{
+        "eventDetails8": {
             "zh": "Margin transactions in financial markets have a high level of risk and are not suitable for every investor. Investors should take into consideration their investment goals, ability to withstand losing part or all their investment and their investment experience and knowledge. Past results cannot be taken as a guarantee of future results. ",
             "en": "Margin transactions in financial markets have a high level of risk and are not suitable for every investor. Investors should take into consideration their investment goals, ability to withstand losing part or all their investment and their investment experience and knowledge. Past results cannot be taken as a guarantee of future results. ",
-            "vi": "Margin transactions in financial markets have a high level of risk and are not suitable for every investor. Investors should take into consideration their investment goals, ability to withstand losing part or all their investment and their investment experience and knowledge. Past results cannot be taken as a guarantee of future results. ",
+            "vi": "Các giao dịch có kí quỹ trong thị trường tài chính có mức độ rủi ro cao và không thích hợp với mọi nhà đầu tư. Các nhà đầu tư nên xem xét mục đích đầu tư, khả năng chịu đựng thua lỗ toàn bộ hoặc một phần khoản đầu tư và kinh nghiệm và kiến thức đầu tư của họ. Các kết quả trong quá khứ không thể được xem như là sự đảm bảo cho các kết quả trong tương lai.",
             "zh-Hant": "Margin transactions in financial markets have a high level of risk and are not suitable for every investor. Investors should take into consideration their investment goals, ability to withstand losing part or all their investment and their investment experience and knowledge. Past results cannot be taken as a guarantee of future results. ",
-            "id": "Margin transactions in financial markets have a high level of risk and are not suitable for every investor. Investors should take into consideration their investment goals, ability to withstand losing part or all their investment and their investment experience and knowledge. Past results cannot be taken as a guarantee of future results. ",
-            "es": "Margin transactions in financial markets have a high level of risk and are not suitable for every investor. Investors should take into consideration their investment goals, ability to withstand losing part or all their investment and their investment experience and knowledge. Past results cannot be taken as a guarantee of future results. "
+            "id": "Transaksi margin di pasar keuangan memiliki tingkat risiko yang tinggi dan tidak cocok untuk setiap investor. Investor harus mempertimbangkan tujuan investasi mereka, kemampuan dalam menahan kehilangan sebagian atau seluruh investasi serta pengalaman dan pengetahuan investasi. Hasil masa lalu tidak dapat dijadikan sebagai jaminan untuk hasil di masa mendatang.",
+            "es": "Las transacciones con margen en los mercados financieros tienen un alto nivel de riesgo y no son recomendables para todos los inversores. Los inversores deben tener en consideración sus objetivos de inversión y su habilidad para soportar una pérdida total o parcial de su inversión, junto con su experiencia con las inversiones y su conocimiento de las mismas. Resultados pasados no garantizan futuros retornos. "
         },
         "copyright":{
             "zh": "Copyright  2017 TigerWit. All rights reserved.",
             "en": "Copyright  2017 TigerWit. All rights reserved.",
-            "vi": "Copyright  2017 TigerWit. All rights reserved.",
+            "vi": "Bản quyền của TigerWit năm 2017. All rights reserved.",
             "zh-Hant": "Copyright  2017 TigerWit. All rights reserved.",
-            "id": "Copyright  2017 TigerWit. All rights reserved.",
-            "es": "Copyright  2017 TigerWit. All rights reserved."
+            "id": "Hak Cipta TigerWit 2017. Hak cipta dilindungi undang-undang",
+            "es": "Copyright  2017 TigerWit. Todos los derechos reservados."
         },
         "getRebateNow":{
             "zh": "Get Rebate Now",
             "en": "Get Rebate Now",
-            "vi": "Get Rebate Now",
+            "vi": "Nhận Chiết khấu Ngay Bây Giờ",
             "zh-Hant": "Get Rebate Now",
-            "id": "Get Rebate Now",
-            "es": "Get Rebate Now"
+            "id": "Dapatkan Rebat sekarang juga",
+            "es": "Obtener Rebates Ahora"
         },
         "resend":{
             "zh": "Resend",
             "en": "Resend",
-            "vi": "Resend",
+            "vi": "Gửi lại",
             "zh-Hant": "Resend",
-            "id": "Resend",
-            "es": "Resend"
+            "id": "Kirim ulang",
+            "es": "Reenviar"
         },
         "resendTip1":{
             "zh": "You have registered successfully, ",
             "en": "You have registered successfully, ",
-            "vi": "You have registered successfully, ",
+            "vi": "Bạn đã đăng kí thành công,",
             "zh-Hant": "You have registered successfully, ",
-            "id": "You have registered successfully, ",
-            "es": "You have registered successfully, "
+            "id": "Anda telah berhasil mendaftar",
+            "es": "Se ha registrado con éxito, "
         },
-        "resendTip2":{
+        "resendTip2": {
             "zh": "please click the verify account button in your email to verify.",
             "en": "please click the verify account button in your email to verify.",
-            "vi": "please click the verify account button in your email to verify.",
+            "vi": "vui lòng nhấp vào nút xác minh tài khoản trong email của bạn để xác minh.",
             "zh-Hant": "please click the verify account button in your email to verify.",
-            "id": "please click the verify account button in your email to verify.",
-            "es": "please click the verify account button in your email to verify."
+            "id": "Mohon klik tombol verifikasi akun pada email anda untuk verifikasi",
+            "es": "por favor, haga click en el botón de verificación de cuenta en su email para verificar."
         },
         "modifyAddress":{
             "zh": "Modify Your Email Address",
             "en": "Modify Your Email Address",
-            "vi": "Modify Your Email Address",
+            "vi": "Chỉnh Sửa Địa Chỉ Email Của Bạn",
             "zh-Hant": "Modify Your Email Address",
-            "id": "Modify Your Email Address",
-            "es": "Modify Your Email Address"
+            "id": "Ubah alamat email anda",
+            "es": "Modifique Su Dirección Email"
         },
         "downloadMobileApp":{
             "zh": "Download TigerWit Mobile App",
             "en": "Download TigerWit Mobile App",
-            "vi": "Download TigerWit Mobile App",
+            "vi": "Tải về App TigerWit dành cho Điện thoại",
             "zh-Hant": "Download TigerWit Mobile App",
-            "id": "Download TigerWit Mobile App",
-            "es": "Download TigerWit Mobile App"
+            "id": "Unduh Aplikasi Mobile TigerWit",
+            "es": "Descargar App Móvil TigerWit "
         },
         "login":{
             "zh": "登录",
