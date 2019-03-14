@@ -107,7 +107,7 @@ function getTradeAccount () {
       if(deposit) {
         selectAccount('deposit', tradeAccountLst[0].mt4_id, tradeAccountLst[0].account_name, tradeAccountType[tradeAccountLst[0].account_type] || '', tradeAccountLst[0].balance);
       };
-      if(withdraw) {
+      if(withdraw && pageIndex == '2') {
         selectAccount('withdraw', tradeAccountLst[0].mt4_id, tradeAccountLst[0].account_name, tradeAccountType[tradeAccountLst[0].account_type] || '', tradeAccountLst[0].balance);
       }
     }
@@ -132,6 +132,9 @@ function changePageIndex (page) {
     case "2": 
       $(elePage.withdraw).addClass('active');
       getWithdrawPlatform();
+      if (page) {
+        selectAccount('withdraw', tradeAccountLst[0].mt4_id, tradeAccountLst[0].account_name, tradeAccountType[tradeAccountLst[0].account_type] || '', tradeAccountLst[0].balance);
+      }
       break;
     case "3": 
       $(elePage.evidence).addClass('active');
