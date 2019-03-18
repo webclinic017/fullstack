@@ -147,8 +147,8 @@ $(document).ready(function () {
           }, 100);
         } else {
           setTimeout(function () {
-            window.location.href = '/download';
-        }, 100);
+            window.location.href = '/m/h5_register/succ';
+          }, 100);
         }
       } else {
           if ((data.code == 100402) || (data.code == 100403)) {
