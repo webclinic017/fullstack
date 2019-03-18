@@ -145,7 +145,15 @@
     </pre>
     <div class="common_confirm_btn_wrapper">
       <$if (data.type === 'deposit') {$>
+        <$if (data.depositType === 'payment_1') {$>
+        <p class="mg-bt-10 text-center">
+            <%=lang.text('thirdH5.clientAccountM')%><$= data.userCode $>
+        </p>
+        <button class="btn btn-primary-gradient" id="deposit_submit_btn"><%=lang.text('thirdH5.copyAccountPay')%></button>
+        <$}$>
+        <$if (data.depositType !== 'payment_1') {$>
         <button class="btn btn-primary-gradient" id="deposit_submit_btn"><%=lang.text('thirdH5.confirm')%></button>
+        <$}$>
       <$}$>
       <$if (data.type === 'withdraw') {$>
         <button class="btn btn-primary-gradient" id="withdraw_submit_btn"><%=lang.text('thirdH5.confirm')%></button>

@@ -187,7 +187,7 @@
 
                     <div class="form-control-wrapper">
 
-                            <div class="select">
+                        <div class="select">
                         <input class="select__input" readonly name="country" type="text"
                             placeholder="{{lang.text('tigerWitID.login.countryRegion')}}" required ng-model="completeInfo.country.key">
 
@@ -199,7 +199,7 @@
                                     ng-model="placeholderCountry"><i class="fa fa-search"></i></li>
                             <li ng-repeat="world in worldList | filter : placeholderCountry" ng-class="{'selected': world.code == completeInfo.country.value}">
                                 <span data-value="{{world.code}}" data-disabled='{"disabled": {{world.disabled}}, "msg": "{{lang.text("tigerWitID.myAccount.unableCountry")}}"}'
-                                    ng-click="[world.disabled || selectWorld(world), selectRegion('country', world.code)]" ng-class="{'font-light': world.disabled}">{{world.name}}</span>
+                                    ng-click="[world.disabled || selectRegion('country', world.code)]" ng-class="{'font-light': world.disabled}">{{world.name}}</span>
                             </li>
                         </ul>
                         </div>
@@ -229,8 +229,7 @@
                             <ul class="select__dropdown" twform-select data-bind-model="completeInfo.province">
 
                                 <li ng-repeat="province in address.provinces" ng-class="{'selected': province.code === completeInfo.province.value}">
-                                    <span data-value="{{province.code}}" ng-click="selectRegion('province', province.code)">{{
-                                        province.name }}</span>
+                                    <span data-value="{{province.code}}" ng-click="selectRegion('province', province.code)">{{ province.name }}</span>
                                 </li>
                             </ul>
                         </div>
