@@ -104,6 +104,9 @@ $(document).on("tap", eleDeposit.payDepositSubmitBtn, function () {
     $("#third_app_middle_template").html(html);
     openMiddleMdl();
   }else{
+    if(depositType === 'payment_1'){
+      copyText(personalInfo.user_code)
+    }
     openLoadingMdl();
     submitDeposit();
   }
@@ -173,7 +176,9 @@ function computeAmount () {
       amountDollar: amount,
       amountCur: amountCur,
       amountFee: amountFee,
-      amountTotal: selectKeyFromType('poundage_status') ? Number(amountCur)+Number(amountFee) : amountCur
+      amountTotal: selectKeyFromType('poundage_status') ? Number(amountCur)+Number(amountFee) : amountCur,
+      depositType: depositType,
+      userCode: personalInfo.user_code
     }
   }
   var html=bt('template_asset_confirm',depositTemplate);

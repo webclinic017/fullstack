@@ -5159,6 +5159,22 @@
                     }
                 },
                 "depositWithdrawal": {
+                    "clientAccountM": {
+                        "zh": "客户平台账号为：",
+                        "en": "Account: ",
+                        "vi": "tài khoản giao dịch của khách hàng là: ",
+                        "zh-Hant": "客戶平臺賬號為：",
+                        "id": "Platform Akun pelanggan adalah: ",
+                        "es": "Cuenta plataforma cliente es: "
+                    },
+                    "copyAccountPay": {
+                        "zh": "复制此账号并支付",
+                        "en": "Copy this account and pay",
+                        "vi": "sao chép tài khoản và thanh toán",
+                        "zh-Hant": "復制此賬號並支付",
+                        "id": "Ikuti akun ini dan Bayar",
+                        "es": "Copie esta cuenta y pague"
+                    },
                     "isHasAvodaAccount": {
                         "zh": "是否拥有AVODA Pay账号",
                         "en": "Do you have an AVODA Pay account",
@@ -5252,7 +5268,7 @@
                         "en": "Deposit Amount: ",
                         "vi": "Số tiền gửi: ",
                         "zh-Hant": "充值金額：",
-                        "id": "Jumlah dana yang diisi",
+                        "id": "Jumlah dana yang diisi: ",
                         "es": "Importe Depósito: "
                     },
                     "rechargeMethod": {
@@ -5348,7 +5364,7 @@
                         "en": "Extractable amount: ",
                         "vi": "Số lượng có thể trích: ",
                         "zh-Hant": "可提取金額：",
-                        "id": "Jumlah dana yang dapat digunakan：",
+                        "id": "Jumlah dana yang dapat digunakan: ",
                         "es": "Cantidad extraíble: "
                     },
                     "tip1": {
@@ -6081,19 +6097,19 @@
                     },
                     "equivalent": {
                         "zh": "折合",
-                        "en": "Equivalent",
-                        "vi": "Tương đương",
+                        "en": "Equivalent ",
+                        "vi": "Tương đương ",
                         "zh-Hant": "折合",
-                        "id": "Setara",
-                        "es": "Equivalente"
+                        "id": "Setara ",
+                        "es": "Equivalente "
                     },
                     "about": {
                         "zh": "约",
-                        "en": "about",
-                        "vi": "khoảng",
+                        "en": " about",
+                        "vi": " khoảng",
                         "zh-Hant": "約",
-                        "id": "Tentang",
-                        "es": "sobre"
+                        "id": " Tentang",
+                        "es": " sobre"
                     },
                     "uploadVoucher": {
                         "zh": "上传凭证",
@@ -6705,19 +6721,19 @@
                     },
                     "tip59_1": {
                         "zh": "折合",
-                        "en": "Equivalent",
-                        "vi": "Tương đương",
+                        "en": "Equivalent ",
+                        "vi": "Tương đương ",
                         "zh-Hant": "折合",
-                        "id": "Setara",
-                        "es": "Equivalente"
+                        "id": "Setara ",
+                        "es": "Equivalente "
                     },
                     "tip59_2": {
-                        "zh": "约",
-                        "en": "about",
-                        "vi": "khoảng",
-                        "zh-Hant": "約",
-                        "id": "Tentang",
-                        "es": "sobre"
+                        "zh": "约：",
+                        "en": " about: ",
+                        "vi": " khoảng: ",
+                        "zh-Hant": "約：",
+                        "id": " Tentang: ",
+                        "es": " sobre: "
                     },
                     "tip60": {
                         "zh": "充值成功后请及时上传凭证，若超过两周未上传，将无法进行交易操作。",

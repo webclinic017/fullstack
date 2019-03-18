@@ -13746,19 +13746,19 @@ module.exports = {
         },
         "equivalent": {
             "zh": "折合",
-            "en": "Equivalent",
-            "vi": "Tương đương",
+            "en": "Equivalent ",
+            "vi": "Tương đương ",
             "zh-Hant": "折合",
-            "id": "Setara",
-            "es": "Equivalente"
+            "id": "Setara ",
+            "es": "Equivalente "
         },
         "about": {
             "zh": "约",
-            "en": "about",
-            "vi": "khoảng",
+            "en": " about",
+            "vi": " khoảng",
             "zh-Hant": "約",
-            "id": "Tentang",
-            "es": "acerca de"
+            "id": " Tentang",
+            "es": " acerca de"
         },
         "chooseOtherPayment": {
             "zh": "选择其他支付方式",
@@ -13783,6 +13783,22 @@ module.exports = {
             "zh-Hant": "是否有CSE帳號？",
             "id": "Apakah ini adalah nomor rekening CSE?",
             "es": "¿Es el número de cuenta CSE?"
+        },
+        "clientAccountM": {
+            "zh": "客户平台账号为：",
+            "en": "Account: ",
+            "vi": "tài khoản giao dịch của khách hàng là: ",
+            "zh-Hant": "客戶平臺賬號為：",
+            "id": "Platform Akun pelanggan adalah: ",
+            "es": "Cuenta plataforma cliente es: "
+        },
+        "copyAccountPay": {
+            "zh": "复制此账号并支付",
+            "en": "Copy this account and pay",
+            "vi": "sao chép tài khoản và thanh toán",
+            "zh-Hant": "復制此賬號並支付",
+            "id": "Ikuti akun ini dan Bayar",
+            "es": "Copie esta cuenta y pague"
         },
         "yes": {
             "zh": "是",

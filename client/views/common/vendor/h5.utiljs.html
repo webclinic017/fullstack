@@ -49,6 +49,28 @@
         }
 
     }
+
+    // 复制text到剪切板
+    function copyText(text) {
+        var textArea = document.createElement("textarea");
+        textArea.value = text;
+        textArea.style.position = 'fixed'
+        textArea.style.background = 'transparent';
+        textArea.style.boxShadow = 'none';
+        textArea.style.border = 'none';
+        textArea.style.outline = 'none';
+        document.body.appendChild(textArea);
+        textArea.select();
+        try {
+            var successful = document.execCommand('copy');
+            var msg = successful ? '成功复制到剪贴板' : '该浏览器不支持点击复制到剪贴板';
+            console.log(msg);
+        } catch (err) {
+            console.log('该浏览器不支持点击复制到剪贴板,请手动复制');
+        }
+        document.body.removeChild(textArea);
+    }
+    
     //获取search参数
     function getQueryString(name) {
         var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
@@ -94,7 +116,7 @@
         }
     }
 
-    function layerMsg(message){
+    function layerMsg(message) {
         layer.open({
             skin: 'msg',
             content: message,
@@ -132,7 +154,7 @@
         var bIsAndroid = navigator.userAgent.toLowerCase().match(/android/i) == "android";
         return bIsAndroid;
     }
-    function isWindows(){
+    function isWindows() {
         var np = navigator.platform;
         return ((np == "Win32") || (np == "Windows"))
     }
@@ -515,7 +537,7 @@
                 "id": "Tidak - Masuk ke platform AVODA PAY untuk daftar dan deposit",
                 "es": "No - Jump to AVODA Pay platform to register and deposit"
             },
-            "recreate_order":{
+            "recreate_order": {
                 "zh": "请重新创建订单",
                 "en": "Please recreate the order",
                 "vi": "Vui lòng tạo lại lệnh",
@@ -523,7 +545,7 @@
                 "id": "Silahkan Masukkan kembali",
                 "es": "Por favor, recree la orden"
             },
-            "fill_name":{
+            "fill_name": {
                 "zh": "请填写姓名",
                 "en": "Please fill in your name.",
                 "vi": "Vui lòng điền họ và tên",
@@ -531,7 +553,7 @@
                 "id": "Silahkan Masukkan Nama",
                 "es": "Por favor, rellene su nombre"
             },
-            "fill_id_num":{
+            "fill_id_num": {
                 "zh": "请填写身份证号",
                 "en": "Please fill in your ID number.",
                 "vi": "Vui lòng nhập số ID",
@@ -539,7 +561,7 @@
                 "id": "Silahkan Masukkan nomor ID",
                 "es": "Por favor, rellene su número ID"
             },
-            "fill_phone":{
+            "fill_phone": {
                 "zh": "请填写手机号",
                 "en": "Please fill in your phone number",
                 "vi": "Vui lòng nhập số điện thoại",
@@ -547,7 +569,7 @@
                 "id": "Silahkan Masukkan Nomor telepon",
                 "es": "Por favor, rellene su número de teléfono"
             },
-            "fill_correct_phone":{
+            "fill_correct_phone": {
                 "zh": "请填写正确的手机号",
                 "en": "Please fill in correct phone number",
                 "vi": "Vui lòng nhập đúng số điện thoại",
@@ -563,7 +585,7 @@
                 "id": "Telah dikirim",
                 "es": "Enviar"
             },
-            "fill_ver_code":{
+            "fill_ver_code": {
                 "zh": "请填写验证码",
                 "en": "Please fill in verification code.",
                 "vi": "Vui lòng nhập mã xác nhận",

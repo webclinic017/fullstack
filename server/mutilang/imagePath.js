@@ -205,7 +205,7 @@
         en: indexBasePath + "/bd/bonus/freesign-web-en.png",
         id: indexBasePath + "/bd/bonus/freesign-web-id.png",
         zh: indexBasePath + "/bd/bonus/freesign-web-en.png",
-        vi: indexBasePath + "/bd/bonus/freesign-web-en.png",
+        vi: indexBasePath + "/bd/bonus/freesign-web-vi.png",
         "zh-Hant": indexBasePath + "/bd/bonus/freesign-web-en.png",
         es: indexBasePath + "/bd/bonus/freesign-web-es.png"
     }, //
@@ -213,7 +213,7 @@
         en: indexBasePath + "/bd/bonus/rebateplan-en.png",
         id: indexBasePath + "/bd/bonus/rebateplan-id.png",
         zh: indexBasePath + "/bd/bonus/rebateplan-en.png",
-        vi: indexBasePath + "/bd/bonus/rebateplan-en.png",
+        vi: indexBasePath + "/bd/bonus/rebateplan-vi.png",
         "zh-Hant": indexBasePath + "/bd/bonus/rebateplan-en.png",
         es: indexBasePath + "/bd/bonus/rebateplan-es.png"
     }, //
@@ -221,7 +221,7 @@
         en: indexBasePath + "/bd/bonus/why-choose-en.png",
         id: indexBasePath + "/bd/bonus/why-choose-id.png",
         zh: indexBasePath + "/bd/bonus/why-choose-en.png",
-        vi: indexBasePath + "/bd/bonus/why-choose-en.png",
+        vi: indexBasePath + "/bd/bonus/why-choose-vi.png",
         "zh-Hant": indexBasePath + "/bd/bonus/why-choose-en.png",
         es: indexBasePath + "/bd/bonus/why-choose-es.png"
     }, //
@@ -229,7 +229,7 @@
         en: indexBasePath + "/bd/bonus/event-details-en.png",
         id: indexBasePath + "/bd/bonus/event-details-id.png",
         zh: indexBasePath + "/bd/bonus/event-details-en.png",
-        vi: indexBasePath + "/bd/bonus/event-details-en.png",
+        vi: indexBasePath + "/bd/bonus/event-details-vi.png",
         "zh-Hant": indexBasePath + "/bd/bonus/event-details-en.png",
         es: indexBasePath + "/bd/bonus/event-details-es.png"
     }, //
@@ -237,7 +237,7 @@
         en: indexBasePath + "/bd/bonus/freesign-h5-en.png",
         id: indexBasePath + "/bd/bonus/freesign-h5-id.png",
         zh: indexBasePath + "/bd/bonus/freesign-h5-en.png",
-        vi: indexBasePath + "/bd/bonus/freesign-h5-en.png",
+        vi: indexBasePath + "/bd/bonus/freesign-h5-vi.png",
         "zh-Hant": indexBasePath + "/bd/bonus/freesign-h5-en.png",
         es: indexBasePath + "/bd/bonus/freesign-h5-es.png"
     }, //
