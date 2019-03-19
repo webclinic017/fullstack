@@ -502,7 +502,7 @@
                     passedScope: function () {
                         return {
                             depositType: $scope.deposit.type,
-                            userCode: $scope.personal.user_code,
+                            userCode: $scope.lang.isThird() ? $scope.main.user_code : $scope.personal.user_code,
                         };
                     }
                 },
