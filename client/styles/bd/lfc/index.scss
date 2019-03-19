@@ -1,0 +1,210 @@
+.bd_lfc {
+  .bd_lfc_page_wrapper {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+  img {
+    vertical-align: top;
+  }
+  img[data-name=diff] {
+    display: none;
+  }
+  .bd_lfc_footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+    padding: 15px 0px;
+    z-index: 100;
+    p {
+      display: none;
+      font-size: 14px;
+      &.global {
+        font-size: 18px;
+      }
+    }
+  }
+  // max-width: 1300px;
+  margin: 0 auto;
+  position: relative;
+  .bd_lfc_navbar {
+    width: 100%;
+    padding: 0px 30px;
+    position: absolute;
+    color: #fff;
+    z-index: 100;
+    .pic img {
+      display: none;
+      height: 130px;
+    }
+    .nav {
+      height: 40px;
+      line-height: 40px;
+      margin: 45px 0px;
+      li {
+        float: left;
+        border-left: 1px solid #ccc;
+        padding: 0px 20px;
+        font-size: 20px;
+        cursor: pointer;
+        &:first-child {
+          border-left: none;
+        }
+        &.active {
+          span {
+            padding-bottom: 6px;
+            border-bottom: 2px solid #fff;
+          }
+        }
+      }
+    }
+    &.white {
+      .pic img.w {
+        display: block;
+      }
+    }
+    &.black {
+      color: #333;
+      .pic img.b {
+        display: block;
+      }
+      .nav li.active span {
+        border-bottom: 2px solid #333;
+      }
+    }
+  }
+  .bd_lfc_focus, .bd_lfc_home_footer, .bd_lfc_app_footer {
+    img {
+      width: 100%;
+    }
+  }
+  .bd_lfc_focus, .bd_lfc_app_footer {
+    position: relative;
+    z-index: 10;
+    .bd_lfc_focus_download, .bd_lfc_app_footer_download {
+      width: 100%;
+      position: absolute;
+      left: 0;
+      li {
+        float: left;
+        margin-right: 5px;
+        width: 12%;
+      }
+    }
+    .bd_lfc_focus_download {
+      bottom: 7%;
+      li:first-child {
+        margin-left: 20%;
+      }
+    }
+    .bd_lfc_app_footer_download {
+      bottom: 11%;
+      li:first-child {
+        margin-left: 65%;
+      }
+    }
+  }
+  .bd_lfc_home_cont {
+    padding-bottom: 100px;
+    position: relative;
+    .background {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 200px;
+      left: 0;
+      background-image: url('/white_label/bd_lfc/lfc-bg-1.png');
+      background-position: center bottom;
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+      opacity: 0.1;
+    }
+    .content {
+      position: relative;
+      z-index: 10;
+    }
+    .pic {
+      width: 30%;
+      text-align: center;
+      img {
+        width: 90%;
+      }
+    }
+    .details {
+      width: 70%;
+      padding: 30px 180px 0px 30px;
+      h4 {
+        color: #ffd521;
+        font-size: 34px;
+      }
+      p {
+        font-size: 18px;
+      }
+      .down-tip {
+        text-align: center;
+        margin: 80px 0px 10px;
+      }
+      ul {
+        display: flex;
+        justify-content: center;
+        li {
+          margin-right: 10px;
+          img {
+            width: 160px;
+          }
+        }
+      }
+    }
+  }
+  .bd_lfc_home_video {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    text-align: center;
+    video {
+      width: 70%;
+    }
+  }
+  .bd_lfc_app_cont {
+    position: relative;
+    z-index: 10;
+    .details {
+      display: flex;
+      align-items: center;
+      .pic {
+        width: 30%;
+        img {
+          width: 100%;
+        }
+      }
+      .content {
+        width: 70%;
+        margin-right: 100px;
+        h4 {
+          color: #ffd521;
+          font-size: 28px;
+          margin: 0px 0px 20px;
+        }
+        p {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  .bd_lfc_app_background {
+    position: absolute;
+    width: 100%;
+    height: 46%;
+    top: 0;
+    left: 0;
+    background-image: url('/white_label/bd_lfc/lfc-bg-2.png');
+    background-position: center bottom;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    opacity: 0.1;
+  }
+}
