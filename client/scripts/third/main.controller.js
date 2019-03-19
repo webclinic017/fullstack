@@ -27,6 +27,15 @@
             return domain;
         }
 
+        /**
+         * 友盟统计
+         * 2019.02.18
+         */
+        $scope.toTrackEvent = function (category, action) {
+            console.log(category, action);
+            _czc.push(["_trackEvent", category, action]);
+        };
+        
         $scope.writeCookie = writeCookie;
         function writeCookie (params) {
             params.expires = params.expires || 30;
