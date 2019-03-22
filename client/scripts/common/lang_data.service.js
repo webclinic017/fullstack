@@ -8695,6 +8695,62 @@
                         "id": "Alamat rumah",
                         "es": "Dirección residencial"
                     },
+                    stateRegion: {
+                        "zh": "省/市",
+                        "en": "State/Region",
+                        "vi": "Bang/Vùng",
+                        "zh-Hant": "省/市",
+                        "id": "Daerah/Provinsi",
+                        "es": "Estado/Región"
+                    },
+                    regionCities: {
+                        "zh": "市/区",
+                        "en": "City",
+                        "vi": "Thành phố",
+                        "zh-Hant": "市/區",
+                        "id": "Kota",
+                        "es": "Ciudad"
+                    },
+                    detailedAddress: {
+                        "zh": "请输入详细地址（与身份证保持一致）",
+                        "en": "Detailed address (same as ID card)",
+                        "vi": "Địa chỉ cụ thể (Địa chỉ trên chứng minh thư)",
+                        "zh-Hant": "請輸入詳細地址（與身份證保持一致）",
+                        "id": "Alamat lengkap (Sesuai ID)",
+                        "es": "Dirección detallada(igual tarjeta ID)"
+                    },
+                    zIPCode: {
+                        "zh": "邮编",
+                        "en": "ZIP Code",
+                        "vi": "ZIP code",
+                        "zh-Hant": "郵編",
+                        "id": "Kode Pos",
+                        "es": "Código ZIP"
+                    },
+                    enterStateRegion: {
+                        "zh": "请输入省/市",
+                        "en": "Enter State/Region",
+                        "vi": "Đi vào Bang/Vùng",
+                        "zh-Hant": "請輸入省/市",
+                        "id": "Memasukkan Daerah/Provinsi",
+                        "es": "Entrar Estado/Región"
+                    },
+                    enterRegionCities: {
+                        "zh": "请输入市/区",
+                        "en": "Enter City",
+                        "vi": "Đi vào Thành phố",
+                        "zh-Hant": "請輸入市/區",
+                        "id": "Memasukkan Kota",
+                        "es": "Entrar Ciudad"
+                    },
+                    enterZIPCode: {
+                        "zh": "请输入邮编",
+                        "en": "Enter ZIP Code",
+                        "vi": "Đi vào ZIP Code",
+                        "zh-Hant": "請輸入 郵編",
+                        "id": "Memasukkan Kode Pos",
+                        "es": "Entrar Código ZIP"
+                    },
                     "selectProvincesCities": {
                         "zh": "请选择省/市",
                         "en": "Please select provinces/cities",
