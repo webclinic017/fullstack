@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<!--引入公用头部-->
+<% include /common/meta/h5.html %>
+<!-- 引入H5 CSS -->
+<!-- build:css(.tmp) /styles/h5_common.css -->
+<link rel="stylesheet" href="/styles/h5_common.css">
+<!-- endbuild -->
+<% include /common/vendor/h5.utiljs.html %>
+<% include /common/statistic/main.html %>
+
+<body>
+
+<div class="m_deposit_lcpag">
+    <p class="title">You will use LCPAG to deposit please complete the information:</p>
+    <ul class="lst">
+      <li>
+        <span>amount</span>
+        <strong>$ 6616.95</strong>
+      </li>
+      <li>
+        <span> Business </span>
+        <strong>Tigerwit limit</strong>
+      </li>
+      <li>
+        <span>LCpag Account</span>
+        <input type="text" class="">
+      </li>
+      <li>
+        <span>Code tow factors</span>
+        <input type="text" class="">
+      </li>
+    </ul>
+    <div class="btn-wrapper">
+      <button class="btn btn-primary-gradient">
+        Confirm
+      </button>
+    </div>
+</div>
+
+</body>
+<% include /common/vendor/h5.js.html %>
+<!-- build:js(client) /scripts/m_deposit_lcpag.js -->
+<script src="/scripts/asset/m_deposit_lcpag.js"></script>
+<!-- endbuild -->
+
+<%- include('/common/statistic/all.html') %>
+</html>

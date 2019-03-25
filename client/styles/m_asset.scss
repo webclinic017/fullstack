@@ -674,6 +674,41 @@
     }
 
 }
+// lcpag 支付
+@include b(m_deposit_lcpag) {
+    font-family:PingFangSC-Regular;
+    padding: 65px 16px 0px;
+    .title {
+        color:rgba(74,74,74,1);
+        padding-bottom: 30px;
+        font-size: 16px;
+    }
+    .lst {
+        li {
+            padding: 5px 0px;
+            span {
+                display: inline-block;
+                min-width: 70px;
+                padding-right: 10px;
+            }
+            input {
+                border-bottom: 1px solid #ccc;
+                min-width: 200px;
+                padding: 0px 8px 2px;
+                font-weight: bold;
+            }
+        }
+    }
+    .btn-wrapper {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        .btn {
+            border-radius: 20px;
+        }
+    }
+}
 
 /* H5 支付成功*/
 @include b(m_deposit_succ) {

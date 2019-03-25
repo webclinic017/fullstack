@@ -411,6 +411,10 @@ module.exports = function (app) {
             platform: platform,
         }, req));
     });
+    app.route('/m/deposit/lcpag').get(function (req, res) {
+        setEnvCf(req, res);
+        res.render('m_vue/m_deposit_lcpag', extendPublic({}, req));
+    });
     app.route('/m/deposit/pay_select').get(function (req, res) {
         setEnvCf(req, res);
         var banklistStatus = 'select';
