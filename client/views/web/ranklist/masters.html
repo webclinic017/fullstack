@@ -22,7 +22,7 @@
     </div>
 </div> -->
 <div class="new_body pd-bt-50">
-    <div class="ranklist_banner relative">
+    <div class="ranklist_banner" ng-class="{'relative': masterTrialList.list && masterTrialList.list.length > 0}">
         <div class="ranklist_banner__sup" ng-if="masterTrialList.list && masterTrialList.list.length > 0">
             <div class="ranklist_banner__sup-tit">
                 <h5>{{masterTrialList.pop_title}}</h5>
