@@ -13,6 +13,7 @@
         $scope.rankOrder = 'thirty_profit_rate';
         $scope.search = {};
         $scope.ranklist = [];
+        $scope.masterTrialList = {};
         $scope.pagebar = {
             config: {
                 // total: , // 总页数
@@ -23,7 +24,6 @@
             // selectPage: , bind to pagination.selectPage
             getList: getMastersList           
         };
-
         $scope.showSearchList = showSearchList;
         $scope.getMastersList = getMastersList;
         $scope.changeRankOrder = changeRankOrder;
@@ -84,6 +84,15 @@
             $scope.search[type] = true;
         }
 
+        // 获取体验高手列表
+        getMastersTrialList()
+        function getMastersTrialList(){
+            ranklist.getMastersTrialList(2).then(function(data){
+                if(data.is_succ){
+                    $scope.masterTrialList = data.data;
+                }
+            })
+        }
         // $document.on('click', function () {
         //     $scope.$apply(function () {
         //         $scope.search = {};
