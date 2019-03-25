@@ -33,6 +33,8 @@
         getAvodaPay: origin + '/avoda/pay', // post
         getAvodaCodeApp: origin_app + '/avoda/code', // post
         getAvodaPayApp: origin_app + '/avoda/pay', // post
+        
+        setUserSource: origin + '/user/source', //post
 
         //交易品种
         getSymbols: origin_app + '/symbol/list', //get

@@ -1,6 +1,7 @@
 $(document).ready(function () {
   var oReg = {
-    email: /^\w+([-.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/
+    email: /^\w+([-.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/,
+    source: /^DW_|D_|R_/i
   };
   var sendInfo = {
     count: 60,
@@ -42,7 +43,17 @@ $(document).ready(function () {
    }
 
   oReg.search_arr = getSearch();
-
+  oReg.search_source = {};
+  $.each(oReg.search_arr, function (index, value) {
+    if (oReg.source.test(index)) {
+    oReg.search_source[index] = value;
+    }
+  });
+  //  console.log(JSON.stringify(oReg.search_source));
+  /* 客户推广参数写入 */
+  publicRequest('setUserSource', 'POST', {
+    source: JSON.stringify(oReg.search_source)
+  });
   /*获取lp*/
   if (!oReg.search_arr.lp) {
       oReg.search_arr.lp = window.location.pathname.replace(/[\/:]/g, "").toLowerCase();
@@ -131,6 +142,7 @@ $(document).ready(function () {
       lp: oReg.search_arr.lp || null,
       key: oReg.search_arr.key || null,
       is_agree: is_agree == 'is_agree' ? 1 : 0,
+      register_rule: JSON.stringify(oReg.search_source),
       lang: 'en'
     }).then(function (data) {
       if (!data) return;
