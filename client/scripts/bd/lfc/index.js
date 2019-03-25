@@ -9,6 +9,7 @@
   $(".bd_lfc a[data-link=ios]").attr("href", links[pageInfo][0]);
   $(".bd_lfc a[data-link=android]").attr("href", links[pageInfo][1]);
   $(".bd_lfc_footer p."+pageInfo).css("display", "block");
+  $(".bd_lfc *[data-page="+pageInfo+"]").css("display", "block");
 
   $(".bd_lfc_navbar li").on("click", function () {
     $(".bd_lfc_navbar li").removeClass("active");

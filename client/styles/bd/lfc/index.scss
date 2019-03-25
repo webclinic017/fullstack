@@ -165,6 +165,7 @@
     margin-top: 80px;
     margin-bottom: 80px;
     text-align: center;
+    display: none;
     video {
       width: 70%;
     }
@@ -192,6 +193,13 @@
         p {
           font-size: 20px;
         }
+        h4[data-page=uk],
+        h4[data-page=global],
+        p[data-page=uk],
+        p[data-page=global] {
+          display: none;
+        }
+
       }
     }
   }
