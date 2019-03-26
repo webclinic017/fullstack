@@ -11421,6 +11421,22 @@ module.exports = {
         "id": "Unduh Aplikasi",
         "es": "Descargar App"
     },
+    "mRegister11": {
+        "zh": "全球地区下载",
+        "en": "Global area download",
+        "vi": "Tải về khu vực toàn cầu",
+        "zh-Hant": "全球地區下載",
+        "id": "Unduh area Global",
+        "es": "Área global de descarga"
+    },
+    "mRegister12": {
+        "zh": "其他地区下载",
+        "en": "Other area download",
+        "vi": "Tải về khu vực khác",
+        "zh-Hant": "其他地區下載",
+        "id": "Unduh area Lain",
+        "es": "Descargar otras regiones"
+    },
     "_comment_third": {
         "en": "this is comments, No translation required",
         "zh": "",
