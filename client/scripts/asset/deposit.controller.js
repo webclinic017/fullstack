@@ -38,20 +38,20 @@
         $scope.src = [
             "/white_label/passport/04.png"
         ];
-        $scope.$watch('selectWay.type', function(n){
-            if(!n) return;
-            if(n === 'wallet'){
+        $scope.$watch('selectWay.type', function (n) {
+            if (!n) return;
+            if (n === 'wallet') {
                 $scope.accountIsWallet = true;
-                if($scope.deposit.type === 'wallet'){
-                    angular.forEach($scope.depositTypeLst,function(value, index){
+                if ($scope.deposit.type === 'wallet') {
+                    angular.forEach($scope.depositTypeLst, function (value, index) {
                         // console.log(value, index,'1')
-                        if(value.default) {
+                        if (value.default) {
                             changeDepositType(index)
                             return
                         }
                     })
                     // 如果还等于钱包
-                    if($scope.deposit.type === 'wallet') {
+                    if ($scope.deposit.type === 'wallet') {
                         changeDepositType(Object.keys($scope.depositTypeLst)[0])
                     }
                 }
@@ -101,7 +101,7 @@
                     $scope.depositTypeLst[value.key] = value;
                     // console.log($scope.depositTypeLst)
                 });
-                
+
                 // 设置初始币种
                 if ($scope.deposit.type) {
                     $scope.deposit.currency = $scope.depositTypeLst[$scope.deposit.type].currency.length ? $scope.depositTypeLst[$scope.deposit.type].currency[0] : null;
@@ -156,7 +156,7 @@
         });
 
         // 网银入金限制
-        function checkInvestLimit () {
+        function checkInvestLimit() {
             if ($scope.deposit.isAbleDeposit === 1) {
                 openDepositMdl('depositLimit', openChangeDepTypeMdl, {
                     msgTip: $scope.lang.text("tigerWitID.depositWithdrawal.tip56"),
@@ -170,7 +170,7 @@
         }
 
         // 判断网银绑定银行卡
-        function checkInvestBank () {
+        function checkInvestBank() {
             if (!$scope.deposit.isNeedBank) return;
             if ($scope.deposit.isAbleDeposit !== 0) return;
             asset.checkInvestBank().then(function (data) {
@@ -193,7 +193,7 @@
             tip: ''
         };
         // 选择倍数金额
-        $scope.selectMoney = function(money){
+        $scope.selectMoney = function (money) {
             console.log(money)
             $scope.deposit.amount = Number(money);
             checkInputAmount();
@@ -209,22 +209,22 @@
             }
             var type = $scope.depositTypeLst[$scope.deposit.type]; // 当前支付方式内容
             // console.log(typeof $scope.deposit.amount)
-            if($scope.deposit.amount < Number(type.min)){
+            if ($scope.deposit.amount < Number(type.min)) {
                 $scope.amountVerify.show = true;
                 $scope.amountVerify.tip = $scope.lang.text('tigerWitID.depositWithdrawal.tip57') + type.min;
                 return
             }
-            if(type.max != "0.00"){
-                if($scope.deposit.amount > Number(type.max)){
+            if (type.max != "0.00") {
+                if ($scope.deposit.amount > Number(type.max)) {
                     $scope.amountVerify.show = true;
                     $scope.amountVerify.tip = $scope.lang.text('tigerWitID.depositWithdrawal.tip58') + type.max;
                     return
                 }
             }
             // 需要判断金额倍数时
-            if(type.key === 'omipay'){
+            if (type.key === 'omipay') {
                 var re = (/^[0-9]*[0-9]$/i);
-                if(!(re.test($scope.deposit.amount) && $scope.deposit.amount%100 === 0)){
+                if (!(re.test($scope.deposit.amount) && $scope.deposit.amount % 100 === 0)) {
                     $scope.amountVerify.show = true;
                     $scope.amountVerify.tip = type.describe;
                     return
@@ -278,7 +278,7 @@
         }
 
         // 切换充值方式弹窗
-        function openChangeDepTypeMdl () {
+        function openChangeDepTypeMdl() {
             $modal.open({
                 templateUrl: '/views/asset/deposit_dep_type_modal.html',
                 size: $scope.lang.isEnglishArea() ? 'md' : 'sm',
@@ -301,9 +301,9 @@
                         depositTypeLst: passedScope.depositTypeLst
                     };
                     $scope.lang = lang;
-                    $scope.isWallet = function(key){
-                        if(passedScope.isWallet){
-                            return key === 'wallet'? "false" : "true"
+                    $scope.isWallet = function (key) {
+                        if (passedScope.isWallet) {
+                            return key === 'wallet' ? "false" : "true"
                         } else {
                             return true
                         }
@@ -336,12 +336,12 @@
                 $scope.currencyStatus = false;
             });
         });
-        function openCurrency (e) {
+        function openCurrency(e) {
             e.preventDefault();
             e.stopPropagation();
             $scope.currencyStatus = !$scope.currencyStatus;
         }
-        function selcetCurrency (item) {
+        function selcetCurrency(item) {
             $scope.currencyStatus = false;
             $scope.deposit.currency = item;
         }
@@ -361,7 +361,7 @@
 
                     function confirmDeposit() {
                         var mt4_id;
-                        if($scope.selectWay.type !== 'wallet'){
+                        if ($scope.selectWay.type !== 'wallet') {
                             mt4_id = $scope.accountItem.mt4_id;
                         }
                         $scope.isLoading = true;
@@ -387,10 +387,10 @@
                                 }
                             }
 
-                            function computeAmount () {
-                                var poundage = $scope.depositTypeLst[$scope.deposit.type].poundage.substring(0, $scope.depositTypeLst[$scope.deposit.type].poundage.length-1)*0.01;
-                                var amountRMB = Number(amount*$scope.deposit.currency.rate_in).toFixed(2);
-                                var amountFee = Number(amountRMB*poundage).toFixed(2);
+                            function computeAmount() {
+                                var poundage = $scope.depositTypeLst[$scope.deposit.type].poundage.substring(0, $scope.depositTypeLst[$scope.deposit.type].poundage.length - 1) * 0.01;
+                                var amountRMB = Number(amount * $scope.deposit.currency.rate_in).toFixed(2);
+                                var amountFee = Number(amountRMB * poundage).toFixed(2);
                                 openDepositMdl('confirmDeposit', isAccount, {
                                     amountDollar: amount,
                                     amountRMB: amountRMB,
@@ -403,9 +403,9 @@
                                 });
                             }
 
-                            function isAccount(){
+                            function isAccount() {
                                 // avoda
-                                if($scope.deposit.type === 'invest'){
+                                if ($scope.deposit.type === 'invest') {
                                     openDepositRuleMdl({
                                         type: 'HotMessage',
                                         tit: $scope.lang.text("tigerWitID.depositWithdrawal.isHasAvodaAccount"),
@@ -415,7 +415,7 @@
                                         url: $scope.depositTypeLst[$scope.deposit.type].url,
                                         callback: submitDeposit
                                     });
-                                }else {
+                                } else {
                                     submitDeposit()
                                 }
                             }
@@ -425,19 +425,19 @@
                                 var token = $cookies["token"] || '';
                                 var lang = $cookies["lang"] || '';
                                 var m = mt4_id ? mt4_id : '';
-                                if($scope.deposit.type !== 'wallet'){
+                                if ($scope.deposit.type !== 'wallet') {
                                     var w = $window.open('/waiting');
                                 }
                                 if ($scope.depositTypeLst[$scope.deposit.type].channel_type === 2) {
                                     openDepositMdl('depositFinish');
                                     var params = [
-                                        'amount='+amount,
-                                        'platform='+p,
-                                        'mt4_id='+m,
-                                        'bank_card_id='+$scope.deposit.card.id,
-                                        'currency='+c,
-                                        'lang='+lang,
-                                        'token='+token
+                                        'amount=' + amount,
+                                        'platform=' + p,
+                                        'mt4_id=' + m,
+                                        'bank_card_id=' + $scope.deposit.card.id,
+                                        'currency=' + c,
+                                        'lang=' + lang,
+                                        'token=' + token
                                     ];
                                     w.location = fun.setUrlParam($scope.depositTypeLst[$scope.deposit.type].url) + params.join('&');
                                     return;
@@ -446,7 +446,7 @@
                                     $scope.isLoading = false;
                                     if (!data) return;
                                     if (data.is_succ) {
-                                        if($scope.deposit.type === 'wallet'){
+                                        if ($scope.deposit.type === 'wallet') {
                                             $scope.$emit('asset.transfer')
                                             $scope.walletDepositSucc = true;
                                         } else {
@@ -459,7 +459,7 @@
                                         }
                                     } else {
                                         layer.msg(data.message);
-                                        if($scope.deposit.type !== 'wallet'){
+                                        if ($scope.deposit.type !== 'wallet') {
                                             w.close();
                                         }
                                     }
@@ -498,7 +498,16 @@
                 templateUrl: '/views/asset/deposit_modal.html',
                 size: 'sm',
                 backdrop: 'static',
-                controller: function ($rootScope, $scope, $modalInstance, $state, lang) {
+                resolve: {
+                    passedScope: function () {
+                        return {
+                            depositType: $scope.deposit.type,
+                            userCode: $scope.lang.isThird() ? $scope.main.user_code : $scope.personal.user_code,
+                        };
+                    }
+                },
+                controller: function ($rootScope, $scope, passedScope, $modalInstance, $state, lang, fun) {
+                    $scope.basicInfo = passedScope;
                     $scope.msgInfo = msgInfo || {};
                     $scope.type = type;
                     $scope.lang = lang;
@@ -509,6 +518,7 @@
                     $scope.goOnDeposit = goOnDeposit;
                     $scope.gotoEvidence = gotoEvidence;
                     $scope.bindBankCard = bindBankCard;
+                    $scope.copyUserCode = copyUserCode;
                     $scope.depositCard = {
                         backErr: false,
                         backMsg: '',
@@ -537,8 +547,11 @@
                         callback && callback();
                         closeModal();
                     }
+                    function copyUserCode() {
+                        fun.copyText(passedScope.userCode);
+                    }
                     // 绑定入金银行卡
-                    function bindBankCard () {
+                    function bindBankCard() {
                         if ($scope.depositCard.backErr) return;
                         if (!$scope.depositCard.num) {
                             $scope.depositCard.backErr = true;
@@ -559,7 +572,7 @@
                         });
                     }
                     // 兼容第三方
-                    function gotoEvidence () {
+                    function gotoEvidence() {
                         console.log($scope.main)
                         $rootScope.main.switchPage('evidence');
                         closeModal();
@@ -605,7 +618,7 @@
         }
 
         //填写完成银行卡号后回调
-        function fillBankCard (card) {
+        function fillBankCard(card) {
             $scope.deposit.depositCard = card;
             checkInputAmount();
         }
