@@ -94,10 +94,10 @@
                 },
                 android: {
                     app_info: {
-                        version_name : "V3.3.1",
-                        description: "This update: \nFixed bugs,Optimized user experience.",
+                        version_name : "V3.4.0",
+                        description: "This update: \n1. Add Spanish\n2.Optimize the application process\n3.Optimized details",
                         updated_description: "70% users are using new version",
-                        url: "https://static.tigerwitfx.com/downloads/apk/tigerwit_v3.3.1.apk",
+                        url: "https://static.tigerwitfx.com/downloads/apk/tigerwit_v3.4.0.apk",
                         force_update : false
                     }
                 }
@@ -113,10 +113,10 @@
                 },
                 android: {
                     app_info: {
-                        version_name : "V3.3.1",
-                        description: "本次更新：\n修复已知BUG，优化用户体验",
+                        version_name : "V3.4.0",
+                        description: "本次更新：\n1.增加西班牙语\n2.优化开户流程\n3.细节优化",
                         updated_description: "70%的用户正在使用新版本",
-                        url: "https://static.tigerwitfx.com/downloads/apk/tigerwit_v3.3.1.apk",
+                        url: "https://static.tigerwitfx.com/downloads/apk/tigerwit_v3.4.0.apk",
                         force_update : false
                     }
                 }
