@@ -834,6 +834,14 @@ module.exports = function (app) {
             pageInfo: subpage
         }, req));
     });
+    // 为LFC做的两个网站 2019.03.18
+    app.route('/:subpage(global|uk)/LFC_TigerWit_Partnership').get(function (req, res) {
+        var subpage = req.params.subpage || 'global';
+        setEnvCf(req, res);
+        res.render('bd/lfc/index.html', extendPublic({
+            pageInfo: subpage
+        }, req));
+    });
 
     // nodeAPI
     app.route('/napi').get(function (req, res) {
