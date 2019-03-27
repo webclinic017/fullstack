@@ -584,12 +584,12 @@ module.exports = {
         "es": "3 tipos de apalancamiento ofrecidos."
     },
     "forex7": {
-        "en": "We provide three different kinds of leverage, 50 times, 100 times, 200 times, allowing more flexibility for risk control and cash management requirements.",
-        "zh": "我们同时提供 50 倍，100 倍，200 倍三种不同的杠杆，更灵活的满足您对于风险把控，资金管理的需求。",
-        "vi": "Chúng tôi cung cấp ba loại đòn bẩy khác nhau, 50 lần, 100 lần, 200 lần, cho phép tính linh hoạt hơn khi có các yêu cầu quản lý rủi ro và quản lý tiền mặt.",
-        "zh-Hant": "我們同時提供 50 倍，100 倍，200 倍三種不同的杠桿，更靈活的滿足您對於風險把控，資金管理的需求。",
-        "id": "Kami memiliki 3 jenis daya ungkit, yaitu 50, 100 dan 200. Yang membantu anda dalam menjaga resiko dan keuangan anda.",
-        "es": "Proporcionamos tres tipos diferentes de apalancamiento, 50 veces, 100 veces, 200 veces, permitiendo más flexibilidad para el control de riesgo y sus requisitos de gestión monetaria."
+        "en": "We provide three different kinds of leverage, 100 times, 200 times, 400 times, allowing more flexibility for risk control and cash management requirements.",
+        "zh": "我们同时提供100倍，200倍，400倍三种不同的杠杆，更灵活的满足您对于风险把控，资金管理的需求。",
+        "vi": "Chúng tôi hỗ trợ 3 mức đòn bẩy như sau: 100 lần, 200 lần và 400 lần, cho phép tính linh hoạt hơn khi có các yêu cầu quản lý rủi ro và quản lý tiền mặt.",
+        "zh-Hant": "我們同時提供100倍，200倍，400倍三種不同的槓桿，更靈活的滿足您對於風險把控，資金管理的需求。",
+        "id": "Kami menyediakan 3 jenis daya ungkit yaitu, 1:100, 1:200, dan 1:400. Yang membantu anda dalam menjaga resiko dan keuangan anda.",
+        "es": "Proporcionamos tres tipos de apalancamientos, 100 veces, 200 veces y 400 veces, permitiendo más flexibilidad para el control de riesgo y sus requisitos de gestión monetaria."
     },
     "forex9": {
         "en": "Follow masters' move",
@@ -2229,7 +2229,7 @@ module.exports = {
         "vi": ".",
         "zh-Hant": "進行咨詢。",
         "id": ".",
-        "es": ""
+        "es": "."
     },
     "mt4-1": {
         "en": "MT4 Software Download",
@@ -2245,7 +2245,7 @@ module.exports = {
         "vi": " ",
         "zh-Hant": "操作方便，高效易用",
         "id": " ",
-        "es": ""
+        "es": " "
     },
     "mt4-3": {
         "en": "MT4 trading platform can instantly view of gold, silver, foreign exchange, stock and futures market, and can be simulated trading. Powerful MT4 trading platform, the page is simple, easy to operate, the most important feature is easy to use opening positions, investors can only make a stop set for risk control. MT4 trading platform in addition to providing real-time quotes and trading functions, including 18 kinds of line drawing tool, 9 trading session chart options, 30 kinds of international popular technical indicators and sound warning prompt. Users can be the next single, open, limit orders, stop, only to win, view real-time news, announcements, warning, view the report, as well as data analysis and processing operations.",
@@ -6341,7 +6341,7 @@ module.exports = {
         "vi": " ",
         "zh-Hant": "冬令時間：北京時間周壹早上 6 點 15 分開盤，至周六早上 5 點收盤。",
         "id": " ",
-        "es": ""
+        "es": " "
     },
     "amtConditions32": {
         "zh": "夏令时间：北京时间周一早上 5 点 15 分开盘，至周六早上 4 点收盘。",
@@ -6349,7 +6349,7 @@ module.exports = {
         "vi": " ",
         "zh-Hant": "夏令時間：北京時間周壹早上 5 點 15 分開盤，至周六早上 4 點收盤。",
         "id": " ",
-        "es": ""
+        "es": " "
     },
     "amtConditions33": {
         "zh": "交易平台的报价来自银行及金融机构，所以开盘或收盘时间可能因银行及金融机构延长或提前结束报价而有所变动。开盘时的报价会依市场 价 格 而 有 所 调 整 或 报 价 可 能 受 到 干 扰 ，TigerWit 将在市场价格稳定后开盘。",
