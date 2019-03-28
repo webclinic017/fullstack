@@ -465,14 +465,5 @@
             });
             
         }
-
-        $('#regist_btn3').on('touchend',function(e){
-            if (oReg.search_arr.panda_download_url && oReg.search_arr.panda_download_url === 'oppo') {
-                // pandafx download url of oppo
-                window.location.href = "http://adsfs.oppomobile.com/mp/app/B/detail.html?im=$im1$&pkg=com.pandaforex.forex";
-            } else {
-                window.location.href = $(e.target).attr('data-url');
-            }
-        })
     });
 }());
