@@ -12,28 +12,29 @@
 <body>
 
 <div class="m_deposit_lcpag">
-    <p class="title">You will use LCPAG to deposit please complete the information:</p>
+    <div class="mg-bt-20 pic"><img src="/white_label/lcpag-logo.png" alt=""></div>
+    <p class="title"><%= lang.text("lcpagTip1")%></p>
     <ul class="lst">
       <li>
-        <span>amount</span>
-        <strong>$ 6616.95</strong>
+        <span><%= lang.text("lcpagTip2")%></span>
+        <strong>$ <span id="amount">0.00</span></strong>
       </li>
       <li>
-        <span> Business </span>
-        <strong>Tigerwit limit</strong>
+        <span> <%= lang.text("lcpagTip3")%> </span>
+        <strong><span id="rec">**</span></strong>
       </li>
       <li>
-        <span>LCpag Account</span>
-        <input type="text" class="">
+        <span><%= lang.text("lcpagTip4")%></span>
+        <input type="text" class="" id="sender">
       </li>
       <li>
-        <span>Code tow factors</span>
-        <input type="text" class="">
+        <span><%= lang.text("lcpagTip5")%></span>
+        <input type="text" class="" id="auth">
       </li>
     </ul>
     <div class="btn-wrapper">
-      <button class="btn btn-primary-gradient">
-        Confirm
+      <button class="btn btn-primary-gradient" id="confirmBtn">
+        <%= lang.text("thirdH5.confirm2")%>
       </button>
     </div>
 </div>

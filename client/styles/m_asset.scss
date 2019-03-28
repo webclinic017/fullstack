@@ -678,6 +678,14 @@
 @include b(m_deposit_lcpag) {
     font-family:PingFangSC-Regular;
     padding: 65px 16px 0px;
+    max-width: 750px;
+    margin: 0 auto;
+    .pic {
+        img {
+            width: 100%;
+            max-width: 500px;
+        }
+    }
     .title {
         color:rgba(74,74,74,1);
         padding-bottom: 30px;
@@ -706,6 +714,7 @@
         width: 100%;
         .btn {
             border-radius: 20px;
+            max-width: 750px;
         }
     }
 }
