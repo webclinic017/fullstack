@@ -87,7 +87,7 @@
                 "vi": "Nhận Mã xác nhận",
                 "zh-Hant": "獲取驗證碼",
                 "id": "Dapatkan Kode verifikasi",
-                "es": "Obtener código verificación"
+                "es": "Obtain verification code"
             },
             "register8": {
                 "en": "Please enter phone number",
@@ -303,7 +303,7 @@
                 "vi": "Cách đây",
                 "zh-Hant": "前",
                 "id": "Sebelumnya",
-                "es": ""
+                "es": " "
             },
             "actLogin1": {
                 "zh": "快捷登录",
@@ -977,7 +977,7 @@
                         "vi": " ",
                         "zh-Hant": "郵箱",
                         "id": " ",
-                        "es": ""
+                        "es": " "
                     },
                     "tip6_21": {
                         "zh": "手机号：",
@@ -1533,7 +1533,7 @@
                         "vi": " ",
                         "zh-Hant": "審核時間：",
                         "id": "Jam pemeriksaan",
-                        "es": ""
+                        "es": " "
                     },
                     "tip16": {
                         "zh": "工作日10:00-18:00：将在30分钟左右完成审核",
@@ -1981,7 +1981,7 @@
                         "vi": " ",
                         "zh-Hant": "操作",
                         "id": " ",
-                        "es": ""
+                        "es": " "
                     },
                     "agentManagement": {
                         "zh": "代理商管理后台",
@@ -2273,7 +2273,7 @@
                         "vi": "Trở Thành Bậc Thầy",
                         "zh-Hant": "申請高手",
                         "id": "Menjadi Master",
-                        "es": "Conviértase en un Master"
+                        "es": "Solicitud Máster"
                     },
                     "netAssetValue": {
                         "zh": "资产净值",
@@ -2304,8 +2304,8 @@
                         "en": "Deposit to activate",
                         "vi": "Sao Chép",
                         "zh-Hant": "充值激活帳護",
-                        "id": "Isi dana untuk mengaktifkan akun",
-                        "es": "Depositar para Activar "
+                        "id": "aktivasi refill",
+                        "es": "Depositar y activar"
                     },
                     "openTrades": {
                         "zh": "当前交易",
@@ -6805,7 +6805,7 @@
                         "vi": " ",
                         "zh-Hant": " 美金",
                         "id": " ",
-                        "es": ""
+                        "es": " "
                     },
                     "tip65_1": {
                         "zh": "出金金额最少为 ",
@@ -6821,7 +6821,7 @@
                         "vi": " ",
                         "zh-Hant": " 美金",
                         "id": " ",
-                        "es": ""
+                        "es": " "
                     },
                     "depositStipulation": {
                         "zh": "入金规定",
@@ -8213,7 +8213,7 @@
                         "vi": "Nhận Mã xác nhận",
                         "zh-Hant": "獲取驗證碼",
                         "id": "Dapatkan Kode Verifikasi",
-                        "es": "Obtener código de verificación"
+                        "es": "Código verificación otro email"
                     },
                     "mailboxSettings": {
                         "zh": "电子邮箱设置",
@@ -8752,20 +8752,20 @@
                         "es": "Entrar Código ZIP"
                     },
                     "selectProvincesCities": {
-                        "zh": "请选择省/市",
-                        "en": "Please select provinces/cities",
-                        "vi": "Vui lòng chọn tỉnh/ thành phố",
-                        "zh-Hant": "請選擇省/市",
-                        "id": "Silahkan pilih provinsi/kota",
-                        "es": "Seleccione provincias/ciudades"
+                        "zh": "请选择您的省/市",
+                        "en": "Please select state/region",
+                        "vi": "Vui lòng chọn bang/vùng",
+                        "zh-Hant": "請選擇您的省/市",
+                        "id": "Silahkan pilih daerah/provinsi",
+                        "es": "Por favor elija estado/región"
                     },
                     "selectCityDistrict": {
-                        "zh": "请选择市/区",
-                        "en": "Please select city/district",
-                        "vi": "Vui lòng chọn thành phố/ quận",
-                        "zh-Hant": "請選擇市/區",
-                        "id": " Silahkan pilih provinsi/daerah ",
-                        "es": "Por favor seleccione la ciudad/distrito"
+                        "zh": "请选择您的市/区",
+                        "en": "Please select city",
+                        "vi": "Vui lòng chọn thành phố",
+                        "zh-Hant": "請選擇您的市/區",
+                        "id": "Silahkan pilih kota",
+                        "es": "Por favor elija ciudad"
                     },
                     "enterAddress": {
                         "zh": "请输入完整居住地址",
