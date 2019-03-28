@@ -1619,7 +1619,7 @@ module.exports = {
         "zh": "TigerWit是一家全球性的外汇交易服务科技创新平台，面向全球个人交易者、机构交易者提供科技智能化的在线交易解决方案。致力于「以科技升级为核心驱动力，不断革新外汇交易服务，打造公平透明、低成本、高效的优质交易环境，不断降低用户参与全球外汇市场的门槛，提升交易服务效率和用户参与体验。」",
         "en": "",
         "vi": "^^-^^",
-        "zh-Hant": "TigerWit是壹家全球性的外匯交易服務科技創新平臺，面向全球個人交易者、機構交易者提供科技智能化的在線交易解抉方案。致力於「以科技升級為核心驅動力，不斷革新外匯交易服務，打造公平透明、低成本、高效的優質交易環境，不斷降低用護慘與全球外匯市場的門檻，提升交易服務效率和用護慘與體驗。」",
+        "zh-Hant": "TigerWit是壹家全球性的外匯交易服務科技創新平臺，面向全球個人交易者、機構交易者提供科技智能化的在線交易解抉方案。致力於「以科技升級為核心驅動力，不斷革新外匯交易服務，打造公平透明、低成本、高效的優質交易環境，不斷降低用戶慘與全球外匯市場的門檻，提升交易服務效率和用戶慘與體驗。」",
         "id": "__id__",
         "es": ""
     },
@@ -11041,7 +11041,7 @@ module.exports = {
         "zh": "开通TigerWit真实账户并完成实名认证；",
         "en": "Complete ID verification and open a Live account;",
         "vi": "Hoàn thành xác minh ID và mở tài khoản Live;",
-        "zh-Hant": "開通TigerWit真實帳護並完成實名認證；",
+        "zh-Hant": "開通TigerWit真實賬戶並完成實名認證；",
         "id": "Selesaikan proses verifikasi ID dan buka Akun Live.",
         "es": "Complete verificación ID y abra una cuenta Real;"
     },
@@ -13092,7 +13092,7 @@ module.exports = {
             "zh": "收款人开户行（Bank）：",
             "en": "Beneficiary’s Bank Name: ",
             "vi": "Tên Ngân Hàng Của Người Thụ Hưởng: ",
-            "zh-Hant": "收款人開護行（Bank）：",
+            "zh-Hant": "收款人開戶行（Bank）：",
             "id": " Negara bank penerima: ",
             "es": "Nombre Banco Beneficiario: "
         },
@@ -13220,7 +13220,7 @@ module.exports = {
             "zh": "不同银行在购汇和汇款中会收取不同的手续费（一般为手续费、电报费和中转行费用），对于购汇和汇款中产生的费用由客户自行承担，TigerWit不收取电汇入金手续费，入金金额将以实际到账为准。",
             "en": "Different banks in the purchase of foreign exchange and remittances will charge different fees (usually fee, telegraph fee and transit costs), the costs incurred in the purchase of foreign exchange and remittance shall be borne by the customer, TigerWit does not charge wire transfer fees, deposit amount will be the actual account.",
             "vi": "Các ngân hàng khác nhau trong việc mua ngoại tệ và kiều hối sẽ tính các khoản phí khác nhau (thường là phí, phí điện báo và chi phí quá cảnh), chi phí phát sinh khi mua ngoại tệ và chuyển tiền sẽ do khách hàng chịu, TigerWit không tính phí chuyển khoản ngân hàng , số tiền gửi sẽ là tài khoản thực.",
-            "zh-Hant": "不同銀行在購匯和匯款中會收取不同的手續費（壹般為手續費、電報費和中轉行費用），對於購匯和匯款中產生的費用由客護自行承擔，TigerWit不收取電匯入金手續費，入金金額將以實際到帳為準。",
+            "zh-Hant": "不同銀行在購匯和匯款中會收取不同的手續費（壹般為手續費、電報費和中轉行費用），對於購匯和匯款中產生的費用由客戶自行承擔，TigerWit不收取電匯入金手續費，入金金額將以實際到帳為準。",
             "id": "TigerWit tidak membebankan biaya transfer apapun, namun pembelian valuta asing dan pengiriman dana melalui bank akan dikenakan biaya yang berbeda-beda tergantung kebijakan bank, biaya tersebut akan ditanggung oleh pelanggan. Dana yang akan diterima oleh TigerWit adalah dana yang telah dipotong biaya-biaya bank.",
             "es": "Distintos bancos cargarán distintas tarifas por la compra de foreign exchange (normalmente un fee, una tarifa telégrafo y costes de tránsito); los costes incurridos en la compra de foreign exchange y por envíos serán asumidos por el cliente; TigerWit no carga fees por transferencias bancarias y el importe del depósito será el actual reflejado en cuenta."
         },
@@ -13236,7 +13236,7 @@ module.exports = {
             "zh": "TigerWit将根据各国适用法律尽最大努力以实际行动配合反洗钱及反恐怖方面的所有法律法规，具体包括报告及冻结可疑资产等。TigerWit将不定期地查看账户记录以获取有洗钱嫌疑的交易证据，包括对如下几项的监控：",
             "en": "TigerWit will do its best to cooperate with all laws and regulations on anti-money laundering and anti-terrorism, including reporting and freezing of suspicious assets, in accordance with the applicable laws of each country. TigerWit will view the account records from time to time to obtain evidence of transaction evidence of money laundering, including the following: ",
             "vi": "TigerWit sẽ cố hết sức hợp tác với tất cả các luật và quy định về chống rửa tiền và chống khủng bố, bao gồm báo cáo và đóng băng các tài sản đáng ngờ, phù hợp với luật áp dụng của mỗi quốc gia. TigerWit sẽ xem hồ sơ tài khoản theo thời gian để có được bằng chứng về bằng chứng giao dịch về rửa tiền, bao gồm những điều sau đây: ",
-            "zh-Hant": "TigerWit將根據各國這用法律盡最大努力以實際行動配合反洗錢及反恐怖方面的所有法律法規，具體包括報告及凍結可疑資產等。TigerWit將不定期地查看帳護記錄以獲取有洗錢嫌疑的交易證據，包括對如下幾項的監控：",
+            "zh-Hant": "TigerWit將根據各國這用法律盡最大努力以實際行動配合反洗錢及反恐怖方面的所有法律法規，具體包括報告及凍結可疑資產等。TigerWit將不定期地查看賬戶記錄以獲取有洗錢嫌疑的交易證據，包括對如下幾項的監控：",
             "id": "TigerWit selalu berkomitmen untuk mentaati seluruh peraturan dan hukum terutama mengenai anti pencucian uang dan anti teroris, dengan melaporkan dan membekukan aset yang mencurigakan. Sesuai dengan hukum di masing-masing negara, TigerWit akan memantau seluruh transaksi keuangan yang terjadi, dan untuk mencegah terjadi tindak pencucian uang dengan peraturan sebagai berikut:",
             "es": "TigerWit coopera con todas las leyes y regulaciones sobre blanqueo de capitales y anti terrorismo, incluyendo reporting y la congelación de activos bajo sospecha, de acuerdo con las leyes aplicables en cada país. TigerWit revisará las cuentas en distintos momentos para obtener evidencias blanqueo de capitales, incluyendo lo siguiente: "
         },
@@ -13244,7 +13244,7 @@ module.exports = {
             "zh": "账户资金出入情况。电汇入金的用户，提现时若金额低于电汇入金时金额，TigerWit只支持将提现金额提现至入金银行卡。",
             "en": "Account funds access situation. If the deposit was made by wire transfer, funds may be withdrawn only by wire transfer to the same bank and to the same account from which it originated.",
             "vi": "Tình trạng truy cập quỹ tài khoản. Nếu khoản tiền gửi được thực hiện bằng chuyển khoản ngân hàng, tiền có thể được rút chỉ bằng chuyển khoản ngân hàng đến cùng một ngân hàng và cho cùng một tài khoản mà từ đó nó được bắt nguồn.",
-            "zh-Hant": "帳護資金出入情況。電匯入金的用護，提現時若金額低於電匯入金時金額，TigerWit只支持將提現金額提現至入金銀行卡。",
+            "zh-Hant": "賬戶資金出入情況。電匯入金的用戶，提現時若金額低於電匯入金時金額，TigerWit只支持將提現金額提現至入金銀行卡。",
             "id": "Dana masuk dan dana keluar. Apabila pengisian dana dilakukan melalui transfer antar bank, maka dana hanya boleh ditarik ke rekening yang sama dengan rekening pengirim di awal . ",
             "es": "Situación acceso fondos cuenta. Si el depósito ha sido hecho por transferencia bancaria, los fondos podrán ser reembolsados sólo vía transferencia al mismo banco y a la misma cuenta desde donde salieron."
         },
@@ -13388,7 +13388,7 @@ module.exports = {
             "zh": "请选择开户省",
             "en": "Select opening account province",
             "vi": "Chọn mở tài khoản tỉnh",
-            "zh-Hant": "請選擇開護省",
+            "zh-Hant": "請選擇開戶省",
             "id": "Pilih provinsi",
             "es": "Seleccione la provincia apertura cuenta "
         },
@@ -13396,7 +13396,7 @@ module.exports = {
             "zh": "请选择开户市",
             "en": "Select opening account city",
             "vi": "Chọn mở tài khoản thành phố",
-            "zh-Hant": "請選擇開護市",
+            "zh-Hant": "請選擇開戶市",
             "id": "Pilih kota",
             "es": "Seleccione la ciudad apertura cuenta "
         },
@@ -13484,7 +13484,7 @@ module.exports = {
             "zh": "应监管要求，客户的网银入金会随机抽查入金凭证，如客户的某笔入金被抽查需要客户按照提示和要求上传凭证。",
             "en": "According to the regulatory requirements, the customer's e-deposit will be randomly checked into the deposit voucher. For example, the customer needs to upload the voucher according to the tips and requirements when a certain amount of deposit is checked.",
             "vi": "Theo yêu cầu quy định, tiền gửi điện tử của khách hàng sẽ được kiểm tra ngẫu nhiên vào chứng từ tiền gửi. Ví dụ: khách hàng cần tải lên giấy tờ xác nhận theo các mẹo và yêu cầu khi kiểm tra một số tiền nhất định.",
-            "zh-Hant": "應監管要求，客護的網銀入金會隨機抽查入金憑證，如客護的某筆入金被抽查需要客護按照提示和要求上傳憑證。",
+            "zh-Hant": "應監管要求，客戶的網銀入金會隨機抽查入金憑證，如客戶的某筆入金被抽查需要客戶按照提示和要求上傳憑證。",
             "id": "Berdasarkan peraturan, bukti setoran nasabah akan diperiksa apabila nasabah menyetorkan dana dengan jumlah tertentu.",
             "es": "De acuerdo con los requisitos regulatorios, el depósito electrónico del cliente podrá ser comprobado ocasionalmente vía el comprobante de depósito. Por ejemplo, el cliente necesita cargar el cupón de acuerdo con los consejos y requisitos cuando se verifica una cierta cantidad de depósito."
         },
@@ -13492,7 +13492,7 @@ module.exports = {
             "zh": "客户出金时，如果有未上传和未审核通过的凭证，将限制客户出金，上传审核通过后可正常出金，没有未上传或者未审核的凭证客户可以正常出金。",
             "en": "When the customer withdrawal, if there are unuploaded and unaudited vouchers, the customer will be restricted to withdrawal. After passing the examination, the funds will be withdrew normally. If there are no unuploaded or unaudited certificates, the customer can withdraw normally.",
             "vi": "Khi khách hàng rút tiền, nếu chứng từ chưa được tải và chưa được kiểm toán, khách hàng sẽ bị hạn chế rút tiền. Sau khi vượt qua việc kiểm tra, số tiền sẽ được rút lại bình thường. Nếu không có chứng chỉ chưa được tải lên hoặc chưa được kiểm tra, khách hàng có thể rút tiền bình thường.",
-            "zh-Hant": "客護出金時，如果有未上傳和未審核通過的憑證，將限制客護出金，上傳審核通過後可正常出金，沒有未上傳或者未審核的憑證客護可以正常出金。",
+            "zh-Hant": "客戶出金時，如果有未上傳和未審核通過的憑證，將限制客戶出金，上傳審核通過後可正常出金，沒有未上傳或者未審核的憑證客戶可以正常出金。",
             "id": "Ketika nasabah melakukan penarikan dana, namun pada saat pengisian dana di awal tidak melampirkan bukti setoran, maka nasabah belum bisa melakukan penarikan sampai bukti setoran awal diunggah dan selesai diperiksa. Apabila nasabah sudah mengunggah bukti setoran di awal, penarikan akan berlangsung tanpa kendala.",
             "es": "Cuando el cliente reembolsa, si hay cupones no subidos y no auditados, el cliente tendrá restringidos los reembolsos. Tras auditoría, los fondos podrán ser reembolsados normalmente. Si no hay certificados sin subir o auditar, el cliente puede reembolsar normalmente."
         },
@@ -13508,7 +13508,7 @@ module.exports = {
             "zh": "1、客户必须使用本人银行卡入金；",
             "en": "1.The customer must use his bank card to deposit;",
             "vi": "1. Khách hàng phải dung thẻ ngân hàng của họ để gửi tiền",
-            "zh-Hant": "1、客護必須使用本人銀行卡入金；",
+            "zh-Hant": "1、客戶必須使用本人銀行卡入金；",
             "id": "1. Nasabah harus menggunakan rekening bank sendiri untuk mengisi dana;",
             "es": "1.El cliente debe utilizar su tarjeta bancaria para depositar;"
         },
@@ -13516,7 +13516,7 @@ module.exports = {
             "zh": "2、若使用他人银行卡，资金将被原路退回，客户需承担1.8%手续费；",
             "en": "2.If customer use someone else's bank card, the money will be returned and the customer shall bear a charge of 1.8%;",
             "vi": "2. Nếu khách hàng sử dụng thẻ ngân hàng của ai đó, tiền sẽ không được trả lại và khách hàng sẽ chịu phí phạt 1.8 %;",
-            "zh-Hant": "2、若使用他人銀行卡，資金將被原路退回，客護需承擔1.8%手續費；",
+            "zh-Hant": "2、若使用他人銀行卡，資金將被原路退回，客戶需承擔1.8%手續費；",
             "id": "2. Apabila nasabah menggunakan rekening bank milik orang lain, maka dana akan ditolak dan dikembalikan ke rekening awal. Nasabah akan dikenakan biaya sebesar 1,8%;",
             "es": "2.Si el cliente utiliza la tarjeta bancaria de otra persona, el dinero será devuelto y el cliente deberá pagar un cargo del 1,8%;"
         },
@@ -13524,7 +13524,7 @@ module.exports = {
             "zh": "3、若已产生交易订单，客户需在收到通知后1个工作日内全部平仓，否则系统将进行强制平仓。平仓后资金原路退回，账号将被关闭不予使用。",
             "en": "3.If a trading order has been generated, the customer shall close all the positions within 1 working day after receiving the notice, otherwise the system will be forced to close the positions. The fund will be returned after closing the positions, and the account will be closed and not used.",
             "vi": "3. Nếu lệnh giao dịch đã được tạo, khách hàng sẽ đóng tất cả các vị thế trong vòng 1 ngày làm việc sau khi nhận được thông báo, nếu không hệ thống sẽ bị buộc phải đóng các vị thế. Quỹ sẽ được trả lại sau khi đóng các vị thế, và tài khoản sẽ bị đóng và không được sử dụng.",
-            "zh-Hant": "3、若已產生交易訂單，客護需在收到通知後1個工作日內全部平倉，否則系統將進行強制平倉。平倉後資金原路退回，帳號將被關閉不予使用。",
+            "zh-Hant": "3、若已產生交易訂單，客戶需在收到通知後1個工作日內全部平倉，否則系統將進行強制平倉。平倉後資金原路退回，帳號將被關閉不予使用。",
             "id": "3. Semua posisi terbuka nasabah harus ditutup 1x24 jam (hari kerja) sejak nasabah menerima pesan pemberitahuan. Jika sudah melewati waktu yang ditentukan, sistem akan menutup secara otomatis posisi tersebut. Dana akan dikembalikan setelah posisi sudah tertutup sepenuhnya dan akun tidak dapat lagi digunakan.",
             "es": "3.Si se ha generado una orden de trading, el cliente cerrará todas las posiciones en 1 día laborable tras recibir el aviso; de lo contrario, el sistema cerrará las posiciones. Los fondos serán devueltos tras cerrar las posiciones, y la cuenta se cerrará y no se podrá utilizar."
         },
@@ -13580,7 +13580,7 @@ module.exports = {
             "zh": "凭证信息必须为实名认证本人银行账户。",
             "en": "The voucher information must be verified bank account of customer himself.",
             "vi": "Giấy tờ xác nhận phải được xác nhận lại tài khoản ngân hàng của chính khách hàng.",
-            "zh-Hant": "憑證信息必須為實名認證本人銀行帳護。",
+            "zh-Hant": "憑證信息必須為實名認證本人銀行賬戶。",
             "id": "Bukti setoran harus memiliki informasi yang sama dengan nama pemilik akun.",
             "es": "La información del cupón debe corresponder con la cuenta banco verificada por el cliente."
         },
@@ -13748,7 +13748,7 @@ module.exports = {
             "zh": "账户余额：",
             "en": "Account balance: ",
             "vi": "Số dư tài khoản: ",
-            "zh-Hant": "帳護余額：",
+            "zh-Hant": "賬戶余額：",
             "id": "Saldo Akun: ",
             "es": "Balance cuenta: "
         },
@@ -13860,7 +13860,7 @@ module.exports = {
             "zh": "请注意，我们不接受直接支付到我们银行账户的现金付款。为了您的注资能及时、准确到账，在填写电汇申请单时，",
             "en": "Please note that we do not accept cash payments directly to our bank account. In order to receive your payment timely and accurately, please fill in the wire transfer application form. ",
             "vi": "Xin lưu ý rằng chúng tôi không chấp nhận thanh toán bằng tiền mặt trực tiếp vào tài khoản ngân hàng của chúng tôi. Để nhận được thanh toán của bạn kịp thời và chính xác, vui lòng điền vào biểu mẫu đăng ký chuyển khoản ngân hàng.",
-            "zh-Hant": "請註意，我們不接受直接支付到我們銀行帳護的現金付款。為了您的註資能及時、準確到帳，在填寫電匯申請單時，",
+            "zh-Hant": "請註意，我們不接受直接支付到我們銀行賬戶的現金付款。為了您的註資能及時、準確到帳，在填寫電匯申請單時，",
             "id": "Perlu dicatata bahwa kami tidak menerima pengisian dana secara tunai. Untuk memastikan bahwa pengisian dana anda berjalan dengan lancar, mohon isi formulir dibawah ini",
             "es": "Por favor, tenga presente que no aceptamos pagos en efectivo directamente a nuestra cuenta de banco. Para recibir sus pagos de modo preciso, por favor, complete el formulario de solicitud de transferencia. "
         },
@@ -13940,7 +13940,7 @@ module.exports = {
             "zh": "提现账户",
             "en": "Account",
             "vi": "Tài khoản",
-            "zh-Hant": "提現帳護",
+            "zh-Hant": "提現賬戶",
             "id": "Akun",
             "es": "Cuenta"
         },
@@ -14020,7 +14020,7 @@ module.exports = {
             "zh": "填写开户行",
             "en": "Fill in the opening account bank",
             "vi": "Tên ngân hàng (bằng tiếng Anh)",
-            "zh-Hant": "填寫開護行",
+            "zh-Hant": "填寫開戶行",
             "id": "Isi data pembukaan rekening bank",
             "es": "Rellena el banco apertura cuenta."
         },
@@ -14136,7 +14136,7 @@ module.exports = {
             "vi": "Xác Nhận Ngay!",
             "zh-Hant": "Confirm Now!",
             "id": "Konfirmasi Sekarang!",
-            "es": "¡Confirmar Ahora!"
+            "es": "Confirmar ahora!"
         },
         "gainRebateUs":{
             "zh": "You can gain rebate US ",
