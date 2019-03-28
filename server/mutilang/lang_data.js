@@ -9766,7 +9766,7 @@ module.exports = {
             "vi": "Trở Thành Master",
             "zh-Hant": "成為高手",
             "id": "Menjadi Master",
-            "es": "Conviértase en un Master"
+            "es": "Solicitud Máster"
         },
         "eliteTeam": {
             "zh": "精英团队",
@@ -12243,7 +12243,7 @@ module.exports = {
         "vi": "Trở thành Bậc thầy TigerWit và nhận 20% hoa hồng lợi nhuận từ người sao chép.",
         "zh-Hant": "成為TigerWit高手，妳將獲得跟隨者盈利的20%。",
         "id": "Ayo jadi Master di TigerWit dan hasilkan komisi hingga 20% dari total keuntungan pengikut anda.",
-        "es": "Conviértase en Master TigerWit y gane un 20% de comisión sobre los beneficios de sus seguidores."
+        "es": "Sea un TigerWit Máster y gane un 20% comisión sobre beneficio seguidores."
     },
     "newhome_16": {
         "zh": "选择高手",
@@ -12286,12 +12286,12 @@ module.exports = {
         "es": "Apalancamiento flexible"
     },
     "newhome_20": {
-        "zh": "可选择50/100/200倍杠杆",
-        "en": "Choose 50/100/200:1",
-        "vi": "Chọn 50/100/200:1",
-        "zh-Hant": "可選擇50/100/200倍杠桿",
-        "id": "Pilih dari 1:50/100/200",
-        "es": "Seleccione 50/100/200:1"
+        "zh": "可选择100/200/400倍杠杆",
+        "en": "Choose 100/200/400:1",
+        "vi": "Chọn 100/200/400:1",
+        "zh-Hant": "可選擇100/200/400倍杠桿",
+        "id": "Pilih dari 1:100/200/400",
+        "es": "Seleccione 100/200/400:1"
     },
     "newhome_21": {
         "zh": "最低$50即可入金",
@@ -14159,8 +14159,8 @@ module.exports = {
             "en": "US",
             "vi": "US",
             "zh-Hant": "US",
-            "id": "Amerika Serikat",
-            "es": "NOSOTROS"
+            "id": "US",
+            "es": "US"
         },
         "lot":{
             "zh": "lot",
@@ -14173,17 +14173,17 @@ module.exports = {
         "within":{
             "zh": "within ",
             "en": "within ",
-            "vi": "trong vòng",
+            "vi": "trong vòng ",
             "zh-Hant": "within ",
-            "id": "Dalam",
+            "id": "Dalam ",
             "es": "dentro de "
         },
         "days":{
             "zh": " days",
             "en": " days",
-            "vi": "ngày",
+            "vi": " ngày",
             "zh-Hant": " days",
-            "id": "Hari",
+            "id": " Hari",
             "es": " días"
         },
         "whyChoose1":{
