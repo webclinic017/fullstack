@@ -90,6 +90,7 @@
             account.checkLogined().then(function (logined) {
                 if (logined) {
                     ranklist.getMastersTrialList(2).then(function (data) {
+                        if(!data) return;
                         if (data.is_succ) {
                             $scope.masterTrialList = data.data;
                         }
