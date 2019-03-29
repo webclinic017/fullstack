@@ -22,8 +22,52 @@
     </div>
 </div> -->
 <div class="new_body pd-bt-50">
-    <div class="ranklist_banner"></div>
-    <div class="mg-200__bg">
+    <div class="ranklist_banner" ng-class="{'relative': masterTrialList.list && masterTrialList.list.length > 0}">
+        <div class="ranklist_banner__sup" ng-if="masterTrialList.list && masterTrialList.list.length > 0">
+            <div class="ranklist_banner__sup-tit">
+                <h5>{{masterTrialList.pop_title}}</h5>
+                <p>{{masterTrialList.pop_desc}}</p>
+            </div>
+            <ul class="ranklist_banner__sup-con clearfix pd-bt-50">
+                <li class="clearfix" ng-repeat="trial in masterTrialList.list track by $index" ng-class="{'fl': $index % 2 === 0, 'fr': $index % 2 === 1}">
+                    <div class="head-img fl mg-rg-20">
+                        <img ng-src="/avatar/{{ trial.user_code }}_150.jpg" alt="avatar">
+                    </div>
+                    <div class="content fl">
+                        <div class="clearfix">
+                            <div class="win fl">
+                                <div class="rate" ng-class="{'font-danger': (trial.thirty_profit_rate + '').indexOf('-') < 0, 'font-success': (trial.thirty_profit_rate + '').indexOf('-') != -1}" ng-if="lang.hostIsCn()">
+                                    {{trial.thirty_profit_rate || 0}}%
+                                </div>
+
+                                <div class="num" ng-class="{'font-success': (trial.thirty_profit_rate + '').indexOf('-') < 0, 'font-danger': (trial.thirty_profit_rate + '').indexOf('-') != -1}" ng-if="!lang.hostIsCn()">
+                                    {{trial.thirty_profit_rate || 0}}%
+                                </div>
+                                <p>{{ lang.text("tigerWitID.master.returnLast30D") }}</p>
+                                <p>{{ lang.text("tigerWitID.master.followers") }}<span class="mg-lf-15">{{trial.history_copy_count}}</span></p>
+                            </div>
+                            <div class="win fl mg-lf-50">
+                                <div class="rate" ng-class="{'font-danger': (trial.thirty_win_rate + '').indexOf('-') < 0, 'font-success': (trial.thirty_win_rate + '').indexOf('-') != -1}" ng-if="lang.hostIsCn()">
+                                    {{trial.thirty_win_rate || 0}}%
+                                </div>
+
+                                <div class="rate" ng-class="{'font-success': (trial.thirty_win_rate + '').indexOf('-') < 0, 'font-danger': (trial.thirty_win_rate + '').indexOf('-') != -1}" ng-if="!lang.hostIsCn()">
+                                    {{trial.thirty_win_rate || 0}}%
+                                </div>
+                                <p>{{ lang.text("tigerWitID.master.accuracyLast30D") }}</p>
+                            </div>
+                        </div>
+
+                        <div class="name clearfix mg-tp-20">
+                            <h6 class="fl">{{trial.username}}</h6>
+                            <a ng-href="/trader/{{trial.user_code}}/#/trader/summary" class="tw-btn tw-btn-sm tw-btn-capsule-gradient fl mg-lf-15" target="_blank">{{ lang.text("tigerWitID.copy") }}</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="mg-200__bg" ng-class="{'mg-tp-40': masterTrialList.list && masterTrialList.list.length > 0}">
         <div class="ranklist_banner__tip">
             <h3 class="mg-200__circle-title pd-bt-20">{{ lang.text("tigerWitID.master.copyTrading") }}</h3>
             <p class="step pd-lf-50">
@@ -47,7 +91,7 @@
         </div>
     </div>
     <div class="ranklist_parent">
-        <div class="ranklist">
+        <div class="ranklist list_width">
             <div class="ranklist__navbar">
                 <ul class="ranklist__navbar-lst clearfix">
                     <li ng-class="{active: rankOrder == 'thirty_profit_rate'}" ng-click="[changeRankOrder('thirty_profit_rate'), toTrackEvent('master page', 'global_master_profitability')]">

@@ -141,6 +141,7 @@
         };
         var ranklist = {
             getMastersListApi: urlOrigin2 + '/master/list',
+            getMastersTrialListApi: urlOrigin2 + '/master/trial_list', // 获取体验高手列表
             getIndexMastersApi: urlOrigin2 + '/master/index',
             getOrderInfoApi: o + '/action/public/v3/closed_fund_leads' // 暂无 定期跟单预约
         };

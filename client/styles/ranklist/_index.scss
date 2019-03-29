@@ -26,12 +26,95 @@
             }
         }
     }
+    @include e(sup) {
+        width: 1200px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        margin-left: -600px;
+        @include responsive(wide-screens) {
+            margin-left: -550px;
+            width: 1100px;
+        }
+        @include m(tit){
+            margin-bottom: 39px;
+            > h5{
+                font-size:38px;
+                font-weight:600;
+                color:rgba(255,255,255,1);
+                line-height:53px;
+                margin: 0;
+            }
+            > p{
+
+                font-size:26px;
+                font-weight:400;
+                color:rgba(255,255,255,0.6);
+                line-height:37px;
+            }
+        }
+        @include m(con){
+            > li{
+                .head-img{
+                    img{
+                        width:130px;
+                        height:130px;
+                        border-radius: 100%;
+                        display: inline-block;
+                    }
+                }
+                .content{
+                    .name{
+                        h6{
+                            font-size:26px;
+                            font-weight:600;
+                            color:rgba(255,255,255,1);
+                            line-height:37px;
+                            margin: 0;
+                        }
+
+                    }
+                    .win{
+                      .rate{
+                        font-size:44px;
+                        font-weight:600;
+                        line-height:62px;
+
+                      }  
+                      p{
+                        font-size:18px;
+                        font-weight:400;
+                        color:rgba(255,255,255,0.8);
+                        line-height:25px;
+                        span{
+
+                            font-size:24px;
+                            font-weight:600;
+                            color:rgba(255,255,255,1);
+                            line-height:33px;
+
+                        }
+                      }
+                    }
+                }
+            }
+        }
+    }
+    
 }
 .ranklist_parent {
-    width: 1207px;
+    // 复制跟单列表
+    width: 1211px;
     margin: 0 auto;
-    padding: 0 58px;
+    padding: 0;
     background: #FAFAFA;
+    .list_width{
+        margin: 0 auto;
+        width: 1060px;
+    }
+    @include responsive(wide-screens) {
+        width: 1110px;
+    }
 }
 @include b(ranklist) {
     padding-top: 20px;
