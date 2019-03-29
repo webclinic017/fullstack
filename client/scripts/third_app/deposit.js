@@ -72,6 +72,7 @@ $(eleDeposit.payDepositBtn).on("tap", function () {
   } else {
     confirmDeposit();
   }
+  $("input").blur();
   return false;
 });
 $(eleDeposit.payDepositMsgBtn).on("tap", function () {
@@ -398,6 +399,7 @@ function openChangeDepositTypeMdl () {
   var html=bt('template_deposit_type',depositTemplate);
   $("#third_app_bottom_template").html(html);
   openBottomMdl();
+  $("input").blur();
   return false;
 }
 //更改充值方式

@@ -33,6 +33,7 @@ $(eleWithdraw.payWithdrawBtn).on("tap", function () {
   } else {
     confirmWithdraw();
   }
+  $("input").blur();
   return false;
 });
 $(eleWithdraw.payWithdrawMsgBtn).on("tap", function () {
@@ -140,6 +141,7 @@ $(eleWithdraw.payAccountLst).on("tap", "li", function () {
       notInsertTemp: false
     });
   }
+  $("input").blur();
   return false;
 });
 //监听amout
