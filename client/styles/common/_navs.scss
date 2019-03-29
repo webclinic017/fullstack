@@ -514,6 +514,7 @@
 
     @include e(username) {
         @extend .text-inline;
+        max-width: 120px;
         display: inline-block;
         vertical-align: middle;
         color: $white-100;

@@ -201,7 +201,7 @@
 }
 
 .mg-tp-40 {
-    margin-top: 40px;
+    margin-top: 40px !important;
 }
 
 .mg-tp-48{
@@ -267,7 +267,7 @@
     margin-left: 10px;
 }
 .mg-lf-15 {
-    margin-left: 15px;
+    margin-left: 15px !important;
 }
 
 .mg-lf-20 {
@@ -278,6 +278,9 @@
     margin-left: 25px;
 }
 
+.mg-lf-50 {
+    margin-left: 50px;
+}
 .mg-lf-30 {
     margin-left: 30px;
 }

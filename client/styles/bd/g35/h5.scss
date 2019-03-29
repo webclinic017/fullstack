@@ -35,7 +35,7 @@
   }
 }
 @include b(m_global_t35) {
-  height: 2400px;
+  // height: 2400px;
   background-image: url('/images/bd_g35/h5_bg.png');
   background-position: center top;
   background-size: auto 100%;
@@ -151,7 +151,6 @@
   }
   @include e(cont-1) {
     margin-top: 20px;
-    margin-left: 20px;
     .cont-left {
       float: left;
       height: 375px;
@@ -162,7 +161,7 @@
     }
     .cont-right {
       float: left;
-      padding-left: 20px;
+      padding-left: 10px;
 
       li {
         padding: 5px 0px;
@@ -180,27 +179,27 @@
           padding-top: 2px;
         }
         &.l1 {
-          width: 175px;
+          width: 195px;
           background: rgba(5,8,39,.4);
         }
         &.l2 {
-          width: 195px;
+          width: 215px;
           background: rgba(220,220,220,.4);
         }
         &.l3 {
-          width: 215px;
+          width: 235px;
           background: rgba(5,8,39,.4);
         }
         &.l4 {
-          width: 235px;
+          width: 255px;
           background: rgba(220,220,220,.4);
         }
         &.l5 {
-          width: 255px;
+          width: 275px;
           background: rgba(5,8,39,.4);
         }
         &.l6 {
-          width: 275px;
+          width: 295px;
           background: rgba(220,220,220,.4);
           margin-bottom: 0px;
         }
@@ -295,5 +294,6 @@
     color: #6e859e;
     font-size: 12px;
     margin-top: 50px;
+    margin-bottom: 50px;
   }
 }

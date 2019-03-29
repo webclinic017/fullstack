@@ -35,7 +35,7 @@
         }
 
         $scope.$on('goState', function (e, data) {
-            if($location.search().isAgent) {
+            if ($location.search().isAgent) {
                 agentStatus()
             } else {
                 goState(data)
@@ -55,7 +55,7 @@
         // 代理商认证
         function agentStatus() {
             $scope.$emit('gloabl.agentAuthStatus', {
-                callback: function() {
+                callback: function () {
                     $timeout(function () {
                         $state.go($state.current.name, {
                             subpage: $scope.flow.authStatusMap[$scope.personal.agentAuthStatus.status],
@@ -65,10 +65,10 @@
                 }
             })
         }
-        if($location.search().isAgent) {
+        if ($location.search().isAgent) {
             agentStatus()
         } else {
-            
+
             if ($scope.personal.verify_status) {
                 // 防止不能跳转到本页
                 setVerifyStatus();
@@ -94,7 +94,7 @@
         }
         // 如果处于待更新证件且认证成功过的情况跳入上传身份证页面
         function setVerifyStatus() {
-            if($scope.personal.updatePapers.hint == 1 && $scope.personal.updatePapers.profile_check == 3) {
+            if ($scope.personal.updatePapers.hint == 1 && $scope.personal.updatePapers.profile_check == 3) {
                 $scope.personal.verify_status = 3;
             }
         }
@@ -138,7 +138,7 @@
                         msgClass: 'font-danger',
                         btns: {}
                     }
-                    obj.btns[$scope.lang.text("tigerWitID.ok")] = function(){}
+                    obj.btns[$scope.lang.text("tigerWitID.ok")] = function () { }
                     $layer(obj)
 
                     $scope.personal.showAuthenMsg = true
@@ -190,7 +190,7 @@
                 muiltiSelect[question.id][$index] = option.checked ? option.key : undefined;
                 console.log(muiltiSelect[question.id]);
             }
-            else if(question.data.type == 4) {
+            else if (question.data.type == 4) {
                 kycInfo[question.id] = question.answer;
             }
             // 单选
@@ -240,7 +240,7 @@
 
             $scope.clickable = false;
 
-            if($location.search().isAgent) {
+            if ($location.search().isAgent) {
                 angular.extend(kycInfo, {
                     type: 2
                 })
@@ -279,8 +279,8 @@
                 }
             });
         }
-        if($location.search().isAgent) {
-            getKyc({type: 2});
+        if ($location.search().isAgent) {
+            getKyc({ type: 2 });
         } else {
             getKyc();
         }
@@ -334,6 +334,7 @@
                 value: undefined
             },
             address: '',
+            postCode: '',
             hasSendCode: false,
             waitTime: 59
         }
@@ -399,6 +400,9 @@
             },
             address: {
                 show: false
+            },
+            postCode: {
+                show: false
             }
         }
 
@@ -417,15 +421,15 @@
                 msg: ''
             }
         }
-        var personalIsNan = $scope.$watch('personal.user_code', function(n){
-            if(!n) return;
+        var personalIsNan = $scope.$watch('personal.user_code', function (n) {
+            if (!n) return;
             $scope.completeInfo.username = $scope.personal.username;
             $scope.completeInfo.email = ($scope.personal.email || '');
             $scope.completeInfo.phone = ($scope.personal.phone || '');
             $scope.completeInfo.areaCode.value = '+' + ($scope.personal.phone_code || '86');
             $scope.frontErr.email.reg = $scope.completeInfo.email ? /[\s\S]*/ : validator.regType.email.reg;
             $scope.frontErr.phone.reg = $scope.completeInfo.phone ? /[\s\S]*/ : validator.regType.phone.reg;
-            $scope.stopWatch = function(){
+            $scope.stopWatch = function () {
                 return personalIsNan()
             }
             $scope.stopWatch()
@@ -438,9 +442,9 @@
         $scope.selectRegion = selectRegion;
         $scope.address = {};
 
-        $scope.$watch('worldList', function(n, o){
-            if(n.length > 0) {
-                angular.forEach(n, function(item, index){
+        $scope.$watch('worldList', function (n, o) {
+            if (n.length > 0) {
+                angular.forEach(n, function (item, index) {
                     $scope.areaCodes.push({
                         key: item.name,
                         value: '+' + item.phone_code,
@@ -481,9 +485,9 @@
                     getRegions('province', 'provinces', $scope.completeInfo.country.value);
                     getRegions('city', 'cities', $scope.completeInfo.province.value);
                 }
-                if (!$scope.completeInfo.country.value) {
-                    getRegions('province', 'provinces', 'CN');
-                }
+                // if (!$scope.completeInfo.country.value) {
+                //     getRegions('province', 'provinces', 'CN');
+                // }
             });
         }
 
@@ -529,7 +533,10 @@
                         value: undefined
                     };
                     $scope.address.cities = [];
-                    getRegions('province', 'provinces', regionCode);
+                    $scope.address.provinces = [];
+                    if(regionCode == 'CN'){
+                        getRegions('province', 'provinces', regionCode);
+                    }
                     break;
                 case 'province':
                     $scope.completeInfo.city = {
@@ -543,11 +550,11 @@
             }
         }
 
-        $scope.sendCode = function(type) {
-            if(type == 'phone' && !$scope.completeInfo.areaCode.value){
+        $scope.sendCode = function (type) {
+            if (type == 'phone' && !$scope.completeInfo.areaCode.value) {
                 $scope.showErr('areaCode');
             }
-            if(!$scope.completeInfo[type]){
+            if (!$scope.completeInfo[type]) {
                 $scope.showErr(type);
                 return
             }
@@ -557,16 +564,16 @@
                 1,
                 $scope.completeInfo.areaCode.value.replace(/\+/gi, '') || null,
                 type == 'phone' ? 1 : 2
-            ).then(function(data){
+            ).then(function (data) {
                 $scope.completeInfo.hasSendCode = data.is_succ
                 $scope.codeErr[type] = {
                     show: !data.is_succ,
                     msg: data.message
                 }
-                if($scope.completeInfo.hasSendCode){
-                    $interval(function(){
+                if ($scope.completeInfo.hasSendCode) {
+                    $interval(function () {
                         $scope.completeInfo.waitTime -= 1
-                        if($scope.completeInfo.waitTime == 0){
+                        if ($scope.completeInfo.waitTime == 0) {
                             $scope.completeInfo.hasSendCode = false
                             $scope.completeInfo.waitTime = 59
                         }
@@ -576,22 +583,23 @@
         }
 
         $scope.submitCompleteForm = function () {
-            if(!$scope.personal.phone){
+            if (!$scope.personal.phone) {
                 $scope.showErr('phone');
                 $scope.showErr('areaCode');
                 $scope.showErr('phoneCode');
             }
-            if(!$scope.personal.email){
+            if (!$scope.personal.email) {
                 $scope.showErr('email');
                 $scope.showErr('emailCode');
             }
             $scope.showErr('username');
             $scope.showErr('country')
-            if($scope.completeInfo.country.value == 'CN'){
+            // if ($scope.completeInfo.country.value == 'CN') {
                 $scope.showErr('province');
                 $scope.showErr('city');
-            }
+            // }
             $scope.showErr('address');
+            $scope.showErr('postCode');
 
             console.log('$scope.completeForm.$invalid', $scope.completeForm.$invalid);
             console.log('$scope.completeInfo', $scope.completeInfo);
@@ -602,20 +610,20 @@
 
             $scope.completeInfo.clickable = false;
 
-            if(!$scope.personal.email || !$scope.personal.phone){
+            if (!$scope.personal.email || !$scope.personal.phone) {
                 account.checkCode(
                     $scope.personal.phone ? $scope.completeInfo.email : $scope.completeInfo.phone,
                     $scope.personal.phone ? $scope.completeInfo.emailCode : $scope.completeInfo.phoneCode,
                     $scope.personal.phone ? 2 : 1,
                     $scope.personal.phone ? null : $scope.completeInfo.areaCode.value.replace(/\+/gi, '')
-                ).then(function(data){
-                    if(data.is_succ){
+                ).then(function (data) {
+                    if (data.is_succ) {
                         confirmSubmit()
                     } else {
                         $scope.completeInfo.clickable = true;
                         $scope.backErr.show = true;
                         $scope.backErr.msg = data.message;
-    
+
                         $timeout(function () {
                             $scope.backErr.show = false;
                             $scope.backErr.msg = '';
@@ -626,27 +634,30 @@
                 confirmSubmit()
             }
 
-            function confirmSubmit(){
+            function confirmSubmit() {
+                var state_code = $scope.completeInfo.country.value == 'CN' ? $scope.completeInfo.province.value : $scope.completeInfo.province.key;
+                var city_code = $scope.completeInfo.country.value == 'CN' ? $scope.completeInfo.city.value : $scope.completeInfo.city.key;
                 var params = {
                     username: $scope.completeInfo.username,
                     world_code: $scope.completeInfo.country.value,
-                    state_code: $scope.completeInfo.province.value,
-                    city_code: $scope.completeInfo.city.value,
+                    state_code: state_code,
+                    city_code: city_code,
                     address: $scope.completeInfo.address,
+                    post_code: $scope.completeInfo.postCode,
                     is_live: $scope.personal.is_live || null
                 }
-                if(!$scope.personal.email){
+                if (!$scope.personal.email) {
                     params.email = $scope.completeInfo.email || null
                     params.code = $scope.completeInfo.emailCode || null
-                } 
-                if(!$scope.personal.phone){
+                }
+                if (!$scope.personal.phone) {
                     params.phone = $scope.completeInfo.phone || null
                     params.code = $scope.completeInfo.phoneCode || null
                     params.phone_code = $scope.completeInfo.areaCode.value.replace(/\+/gi, '') || null
                 }
                 // 神策数据统计
                 sa.track('btn_verify');
-                account.updataUserInfo( params ).then(function (data) {
+                account.updataUserInfo(params).then(function (data) {
                     $scope.completeInfo.clickable = true;
                     if (data.is_succ) {
                         // 向authenController发送信息
@@ -791,7 +802,7 @@
             }
         ]
         $scope.$watch('personal.updatePapers', function (newVal, oldVal) {
-            if(JSON.stringify(newVal) != "{}" && newVal.hint == 1){
+            if (JSON.stringify(newVal) != "{}" && newVal.hint == 1) {
                 $scope.realnameInfo.realname = newVal.real_name;
                 $scope.realnameInfo.id_type.key = $scope.idType[newVal.idcard_type].key;
                 $scope.realnameInfo.id_type.value = $scope.idType[newVal.idcard_type].value;
@@ -799,7 +810,7 @@
                 $scope.realnameInfo.gender.key = $scope.genders[newVal.gender].key;
                 $scope.realnameInfo.gender.value = $scope.genders[newVal.gender].value;
                 var date = newVal.birth;
-                $scope.realnameInfo.birthday = date.substr(0,4)+'-'+date.substr(4,2)+'-'+date.substr(6,2);
+                $scope.realnameInfo.birthday = date.substr(0, 4) + '-' + date.substr(4, 2) + '-' + date.substr(6, 2);
             }
         }, true)
         $scope.frontErr = {
@@ -881,7 +892,7 @@
             $scope.$apply(function () {
                 $scope.verification.id[data.face + 'Status'] = 2;
             });
-            if($scope.realnameInfo.id_type.value == '0' || $scope.realnameInfo.id_type.value == '5' || $scope.realnameInfo.id_type.value == '4'){
+            if ($scope.realnameInfo.id_type.value == '0' || $scope.realnameInfo.id_type.value == '5' || $scope.realnameInfo.id_type.value == '4') {
                 if ($scope.uploadFinish.hasOwnProperty('front') &&
                     $scope.uploadFinish.hasOwnProperty('back') &&
                     ($scope.backErr.system.status != 3)
@@ -891,10 +902,10 @@
                     // 神策数据统计
                     sa.track('btn_verify');
                 }
-            }else{
+            } else {
                 if ($scope.uploadFinish.hasOwnProperty('front') &&
                     ($scope.backErr.system.status != 3)
-                ) { 
+                ) {
                     // 向authenController发送信息
                     $scope.$emit('goState', data.data);
                     // 神策数据统计
@@ -929,8 +940,8 @@
             showErr('gender');
             showErr('birthday');
 
-         
-            if(twoDecide()) {
+
+            if (twoDecide()) {
                 if ($scope.realnameForm.$invalid) {
                     return
                 }
@@ -963,8 +974,8 @@
             }
         }
         // 更新证件
-        function updatePaper(){
-            if(twoDecide()) {
+        function updatePaper() {
+            if (twoDecide()) {
                 $scope.clickable = false;
                 paperUpdate();
             }
@@ -981,7 +992,7 @@
             }
             return true;
         }
-        function paperUpdate(){
+        function paperUpdate() {
             angular.forEach($scope.readyToUpload, function (data, index, array) {
                 data.submit();
             });
@@ -1050,12 +1061,12 @@
         $scope.clickable = true;
         $scope.addressImg = undefined;
         $scope.uploadAddress = uploadAddress;
-        function uploadAddress(){
-            if($scope.addressImg){
+        function uploadAddress() {
+            if ($scope.addressImg) {
                 $scope.clickable = false;
-                account.setUploadAddressProve({file: $scope.addressImg}).then(function (data) {
+                account.setUploadAddressProve({ file: $scope.addressImg }).then(function (data) {
                     $scope.clickable = true;
-                    if(!data) return;
+                    if (!data) return;
                     if (data.is_succ) {
                         // 向authenController发送信息
                         $scope.$emit('goState', data.data);
@@ -1069,7 +1080,7 @@
                         }, 2000);
                     }
                 })
-            }else {
+            } else {
                 $scope.backErr.show = true;
                 $scope.backErr.msg = $scope.lang.text('tigerWitID.authen.pUploadAddress');
 
