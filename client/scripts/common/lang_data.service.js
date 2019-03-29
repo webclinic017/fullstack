@@ -87,7 +87,7 @@
                 "vi": "Nhận Mã xác nhận",
                 "zh-Hant": "獲取驗證碼",
                 "id": "Dapatkan Kode verifikasi",
-                "es": "Obtener código verificación"
+                "es": "Obtain verification code"
             },
             "register8": {
                 "en": "Please enter phone number",
@@ -303,7 +303,7 @@
                 "vi": "Cách đây",
                 "zh-Hant": "前",
                 "id": "Sebelumnya",
-                "es": ""
+                "es": " "
             },
             "actLogin1": {
                 "zh": "快捷登录",
@@ -687,7 +687,7 @@
                         "zh": "客户协议",
                         "en": "Client Agreement",
                         "vi": "Hợp Đồng khách hàng",
-                        "zh-Hant": "客護協議",
+                        "zh-Hant": "客戶協議",
                         "id": "Perjanjian Klien",
                         "es": "Acuerdo Cliente"
                     },
@@ -977,7 +977,7 @@
                         "vi": " ",
                         "zh-Hant": "郵箱",
                         "id": " ",
-                        "es": ""
+                        "es": " "
                     },
                     "tip6_21": {
                         "zh": "手机号：",
@@ -1227,7 +1227,7 @@
                         "zh": "账户概况",
                         "en": "My Account",
                         "vi": "Tài khoản của tôi",
-                        "zh-Hant": "帳護概況",
+                        "zh-Hant": "賬戶概況",
                         "id": "Akun Saya",
                         "es": "Mi cuenta"
                     },
@@ -1291,7 +1291,7 @@
                         "zh": "交易账户",
                         "en": "Trade Account",
                         "vi": "Tài Khoản Giao Dịch",
-                        "zh-Hant": "交易帳護",
+                        "zh-Hant": "交易賬戶",
                         "id": "Akun Transaksi",
                         "es": "Cuenta Trade"
                     },
@@ -1299,7 +1299,7 @@
                         "zh": "升级到真实账户",
                         "en": "Upgrade to a live account",
                         "vi": "Nâng cấp lên tài khoản thực",
-                        "zh-Hant": "升級到真實帳護",
+                        "zh-Hant": "升級到真實賬戶",
                         "id": "Perbarui ke Akun Live",
                         "es": "Upgrade a cuenta Real"
                     },
@@ -1379,7 +1379,7 @@
                         "zh": "高手分成收益与代理商佣金收益会存入钱包，您可以提现或划入交易帐户。",
                         "en": "The earnings you gained with the master and the agent will be deposited in the wallet，You can choose to withdrawal or transfer to the trading account.",
                         "vi": "Thu nhập bạn kiếm được với bậc thầy và đại lý sẽ được gửi vào ví ， Bạn có thể chọn rút tiền hoặc chuyển khoản vào tài khoản giao dịch.",
-                        "zh-Hant": "高手分成收益與代理商傭金收益會存入錢包，您可以提現或劃入交易帳護。",
+                        "zh-Hant": "高手分成收益與代理商傭金收益會存入錢包，您可以提現或劃入交易賬戶。",
                         "id": " Komisi yang anda dapatkan dari Master dan Agen anda akan dimasukkan ke Dompet. Anda dapat memindahkan dana tersebut ke akun trading atau ditarik ",
                         "es": "Las ganancias obtenidas vía Master o agente serán depositadas en su wallet，Puede seleccionar reembolsar o transferir a cuenta trading."
                     },
@@ -1387,7 +1387,7 @@
                         "zh": "快捷开户",
                         "en": "Open account",
                         "vi": "Mở tài khoản",
-                        "zh-Hant": "快捷開護",
+                        "zh-Hant": "快捷開戶",
                         "id": "Buka Akun",
                         "es": "Abrir cuenta"
                     },
@@ -1403,7 +1403,7 @@
                         "zh": "恭喜您已开通TigerWit体验金账户",
                         "en": "Congratulations on opening the TigerWit trail account",
                         "vi": "Chúc mừng bạn đã mở thành công tài khoản trải nghiệm trên TigerWit",
-                        "zh-Hant": "恭喜您已開通TigerWit體驗金帳護",
+                        "zh-Hant": "恭喜您已開通TigerWit體驗金賬戶",
                         "id": "Selamat, anda telah membuka Akun Pengalaman",
                         "es": "Felicidades por abrir una cuenta de Práctica TigerWit"
                     },
@@ -1411,7 +1411,7 @@
                         "zh": "体验金账户体验期限为30天，过期后账户资金将被清除，建议尽快升级到真实账户。",
                         "en": "Your trail account is valid for 30 days. Virtual funds will be cleared from this account 30 days after opening. You can upgrade to a live account at any time.",
                         "vi": "Tài khoản trải nghiệm của bạn sẽ có hiệu lực trong 30 ngày. Tiền ảo sẽ bị xóa khỏi tài khoản này 30 ngày sau khi mở. Bạn có thể nâng cấp lên tài khoản thực bất kỳ lúc nào.",
-                        "zh-Hant": "體驗金帳護體驗期限為30天，過期後帳護資金將被清除，建議盡快升級到真實帳護。",
+                        "zh-Hant": "體驗金賬戶體驗期限為30天，過期後賬戶資金將被清除，建議盡快升級到真實賬戶。",
                         "id": "Akun pengelaman anda akan berlaku selama 30 hari. Dana virtual akan dihapus secara otomatis setelah 30 hari. Anda dapat membuka Akun Live kapanpun anda inginkan.",
                         "es": "Su cuenta de Práctica tiene una caducidad de 30 días. Los fondos virtuales se eliminarán de esta cuenta 30 días después de la apertura. Puede upgrade a cuenta Real en cualquier momento."
                     },
@@ -1419,7 +1419,7 @@
                         "zh": "请注意：体验金账户资金及盈利不可提现。",
                         "en": "Please note: trail account funds and profits are not available.",
                         "vi": "Vui lòng chú ý: Quỹ và lợi nhuận của tài khoản trải nghiệm sẽ không có thực.",
-                        "zh-Hant": "請註意：體驗金帳護資金及盈利不可提現。",
+                        "zh-Hant": "請註意：體驗金賬戶資金及盈利不可提現。",
                         "id": "Catatan: Saldo di akun pengalaman tidak tersedia.",
                         "es": "Por favor, note: los fondos de la cuenta de práctica y los beneficios no están disponibles."
                     },
@@ -1427,7 +1427,7 @@
                         "zh": "升级为真实账户只需完成以下操作：",
                         "en": "Upgrading to a live account only requires the following steps: ",
                         "vi": "Để nâng cấp lên thành tài khoản thực chỉ cần làm theo các bước sau:",
-                        "zh-Hant": "升級為真實帳護只需完成以下操作：",
+                        "zh-Hant": "升級為真實賬戶只需完成以下操作：",
                         "id": "Untuk memperbarui akun menjadi Akun Live, silahkan ikuti langkah berikut ini:",
                         "es": "Upgrade a cuenta Real sólo requiere los siguientes pasos: "
                     },
@@ -1443,7 +1443,7 @@
                         "zh": "充值激活账户。",
                         "en": "Deposit to activate the account.",
                         "vi": "Sao Chép.",
-                        "zh-Hant": "充值激活帳護。",
+                        "zh-Hant": "充值激活賬戶。",
                         "id": "Isi dana untuk mengaktifkan akun",
                         "es": "Deposite para activar la cuenta."
                     },
@@ -1451,7 +1451,7 @@
                         "zh": "TigerWit真实交易账户",
                         "en": "TigerWit Live trading account",
                         "vi": "Tài khoản giao dịch Thực của TigerWit",
-                        "zh-Hant": "TigerWit真實交易帳護",
+                        "zh-Hant": "TigerWit真實交易賬戶",
                         "id": "Akun Trading Live TigerWit",
                         "es": "TigerWit Cuenta de Trading Real"
                     },
@@ -1475,7 +1475,7 @@
                         "zh": "TigerWit保护客户资金安全。",
                         "en": "TigerWit protect the safety of customer funds.",
                         "vi": "TigerWit bảo vệ quỹ an toàn của khách hàng",
-                        "zh-Hant": "TigerWit保護客護資金安全。",
+                        "zh-Hant": "TigerWit保護客戶資金安全。",
                         "id": "TigerWit melindungi keamanan dana nasabah",
                         "es": "TigerWit protege la seguridad de los fondos de los clientes."
                     },
@@ -1483,7 +1483,7 @@
                         "zh": "客户资金完全与公司资金隔离，保存在独立银行账户中，确保属于客户的资金不会被用于任何其他目的。",
                         "en": "Customer funds are completely segregated from company funds and kept in separate bank accounts to ensure that funds belonging to customers are not used for any other purpose.",
                         "vi": "Quỹ khách hàng được tách biệt hoàn toàn khỏi quỹ của công ty và được giữ trong các tài khoản ngân hàng riêng biệt để đảm bảo rằng các quỹ thuộc về khách hàng không được sử dụng cho bất kỳ mục đích nào khác.",
-                        "zh-Hant": "客護資金完全與公司資金隔離，保存在獨立銀行帳護中，確保屬於客護的資金不會被用於任何其他目的。",
+                        "zh-Hant": "客戶資金完全與公司資金隔離，保存在獨立銀行賬戶中，確保屬於客戶的資金不會被用於任何其他目的。",
                         "id": " Dana nasabah akan berada direkening yang terpisah dari rekening perusahaan untuk memastikan bahwa dana milik nasabah tidak digunakan untuk tujuan yang lain. ",
                         "es": "Los fondos de los clientes están completamente separados de los fondos de la compañía y se mantienen en cuentas bancarias segregadas para garantizar que los fondos de los clientes no se utilicen para ningún otro propósito."
                     },
@@ -1499,7 +1499,7 @@
                         "zh": "您尚未开通任何账户，请先开户",
                         "en": "You have not opened any account, please open it first",
                         "vi": "Bạn đã không mở bất kỳ tài khoản nào, vui lòng mở cái đầu tiên",
-                        "zh-Hant": "您尚未開通任何帳護，請先開護",
+                        "zh-Hant": "您尚未開通任何賬戶，請先開戶",
                         "id": "Anda belum membuka akun. Silahkan buka akun terlebih dahulu",
                         "es": "No ha abierto ninguna cuenta, por favor, ábrala primero"
                     },
@@ -1507,7 +1507,7 @@
                         "zh": "您当前的账户类型不支持使用该功能，请及时升级账户",
                         "en": "Your current account type does not support using this function, please update the account in time",
                         "vi": "Loại tài khoản hiện tại của bạn không hỗ trợ sử dụng chức năng này, vui lòng cập nhật tài khoản kịp thời",
-                        "zh-Hant": "您當前的帳護類型不支持使用該功能，請及時升級帳護",
+                        "zh-Hant": "您當前的賬戶類型不支持使用該功能，請及時升級賬戶",
                         "id": " Jenis akun anda saat ini tidak dapat menggunakan fitur ini, silahkan perbarui akun anda.",
                         "es": "Su tipo de cuenta actual no admite el uso de esta función, actualice la cuenta a tiempo"
                     },
@@ -1533,7 +1533,7 @@
                         "vi": " ",
                         "zh-Hant": "審核時間：",
                         "id": "Jam pemeriksaan",
-                        "es": ""
+                        "es": " "
                     },
                     "tip16": {
                         "zh": "工作日10:00-18:00：将在30分钟左右完成审核",
@@ -1579,7 +1579,7 @@
                         "zh": "恭喜您已开通TigerWit真实交易账户",
                         "en": "Congratulations on opening your TigerWit real transaction account",
                         "vi": "Chúc mừng bạn đã mở tài khoản giao dịch thật của TigerWit",
-                        "zh-Hant": "恭喜您已開通TigerWit真實交易帳護",
+                        "zh-Hant": "恭喜您已開通TigerWit真實交易賬戶",
                         "id": " Selamat, anda telah membuka akun Live",
                         "es": "Felicidades por abrir su cuenta Real de transacciones TigerWit"
                     },
@@ -1595,7 +1595,7 @@
                         "zh": "由于受最高监管的约束，需要您提供相关信息，我们只询问与开户相关的问题。您的资料始终保密，绝不公开。",
                         "en": "Due to the highest regulatory constraints, you need to provide relevant information, we only ask questions related to account opening. Your information is always confidential and never public.",
                         "vi": "Do các ràng buộc pháp lý cao nhất, bạn cần cung cấp thông tin liên quan, chúng tôi chỉ đặt câu hỏi liên quan đến việc mở tài khoản. Thông tin của bạn luôn được bảo mật và không bao giờ công khai.",
-                        "zh-Hant": "由於受最高監管的約束，需要您提供相關信息，我們只詢問與開護相關的問題。您的資料始終保密，絕不公開。",
+                        "zh-Hant": "由於受最高監管的約束，需要您提供相關信息，我們只詢問與開戶相關的問題。您的資料始終保密，絕不公開。",
                         "id": " Sesuai dengan persyaratan hukum, anda harus memberikan informasi yang valid, kami hanya akan mengajukan pertanyaan yang berkaitan dengan pembukaan akun. Informasi anda akan selalu terjaga dan aman.",
                         "es": "Debido a requisitos regulatorios, debe proporcionarnos información relevante; sólo hacemos preguntas relacionadas con la apertura de su cuenta. Su información es siempre confidencial y nunca se hará pública."
                     },
@@ -1653,7 +1653,7 @@
                         "vi": "Vui lòng chọn loại chứng chỉ",
                         "zh-Hant": "請選擇您的證件類型",
                         "id": "silahkan pilih Jenis dokumen",
-                        "es": "Por favor, seleccione el tipo de certificado"
+                        "es": "Seleccione tipo de certificado"
                     },
                     "certificateNumber": {
                         "zh": "证件号码",
@@ -1843,7 +1843,7 @@
                         "zh": "您的账户尚未完成认证审核，将无法进行交易和资金相关操作，点击此处完成审核。",
                         "en": "This account has not yet been certified, trading and money-related operations will not be possible，click here to complete the review.",
                         "vi": "Tài khoản này chưa được chứng nhận, giao dịch và các hoạt động liên quan đến tiền bạc sẽ không thể thực hiện được ， nhấp vào đây để hoàn thành việc xem xét.",
-                        "zh-Hant": "您的帳護尚未完成認證審核，將無法進行交易和資金相關操作，點擊此處完成審核。",
+                        "zh-Hant": "您的賬戶尚未完成認證審核，將無法進行交易和資金相關操作，點擊此處完成審核。",
                         "id": " Akun ini belum diverifikasi, tidak dapat melakukan trading ataupun transaksi lainnya. Klik disini untuk verifikasi ",
                         "es": "Esta cuenta aún no ha sido certificada, las operaciones de trading y relacionadas con el dinero no serán posibles，haga clic aquí para completar la revisión."
                     },
@@ -1851,7 +1851,7 @@
                         "zh": "您当前账户为体验金账户，升级至真实账户只需两步：",
                         "en": "Your current account is an experiential account, which can be upgraded to live account in two steps: ",
                         "vi": "Tài khoản hiện tại của bạn là tài khoản trải nghiệm, có thể được nâng cấp lên tài khoản thực theo hai bước: ",
-                        "zh-Hant": "您當前帳護為體驗金帳護，升級至真實帳護只需兩步：",
+                        "zh-Hant": "您當前賬戶為體驗金賬戶，升級至真實賬戶只需兩步：",
                         "id": " Akun anda saat ini adalah akun demo. Anda dapat memperbarui akun anda menjadi akun live hanya dengan 2 langkah saja:",
                         "es": "Su cuenta actual es una cuenta de práctica, la cual puede convertirse en cuenta real en dos pasos: "
                     },
@@ -1923,7 +1923,7 @@
                         "zh": "开通真实账户后，将不再支持开通体验金账户",
                         "en": "After opening live account, it will no longer be supported to open trail account",
                         "vi": "Sau khi mở tài khoản thực, tài khoản sẽ không còn được hỗ trợ để mở tài khoản trải nghiệm",
-                        "zh-Hant": "開通真實帳護後，將不再支持開通體驗金帳護",
+                        "zh-Hant": "開通真實賬戶後，將不再支持開通體驗金賬戶",
                         "id": " Setelah membuka Akun Live, akun pengalaman anda tidak dapat lagi digunakan ",
                         "es": "Después de abrir una cuenta real, ya no será posible abrir una cuenta de práctica"
                     },
@@ -1931,7 +1931,7 @@
                         "zh": "体验金账户",
                         "en": "Trail account",
                         "vi": "Tài khoản trải nghiệm",
-                        "zh-Hant": "體驗金帳護",
+                        "zh-Hant": "體驗金賬戶",
                         "id": "Akun Pengalaman",
                         "es": "Cuenta de práctica"
                     },
@@ -1981,7 +1981,7 @@
                         "vi": " ",
                         "zh-Hant": "操作",
                         "id": " ",
-                        "es": ""
+                        "es": " "
                     },
                     "agentManagement": {
                         "zh": "代理商管理后台",
@@ -2215,7 +2215,7 @@
                         "zh": "交易账户",
                         "en": "Trade Account",
                         "vi": "Tài Khoản Giao Dịch",
-                        "zh-Hant": "交易帳護",
+                        "zh-Hant": "交易賬戶",
                         "id": "Akun Transaksi",
                         "es": "Cuenta Trade"
                     },
@@ -2255,7 +2255,7 @@
                         "zh": "交易子账户",
                         "en": "Trade Sub-accounts",
                         "vi": "Giao Dịch Tài Khoản Phụ",
-                        "zh-Hant": "交易子帳護",
+                        "zh-Hant": "交易子賬戶",
                         "id": "Akun Tambahan",
                         "es": "Trade Sub-cuentas"
                     },
@@ -2273,7 +2273,7 @@
                         "vi": "Trở Thành Bậc Thầy",
                         "zh-Hant": "申請高手",
                         "id": "Menjadi Master",
-                        "es": "Conviértase en un Master"
+                        "es": "Solicitud Máster"
                     },
                     "netAssetValue": {
                         "zh": "资产净值",
@@ -2303,9 +2303,9 @@
                         "zh": "充值激活账户",
                         "en": "Deposit to activate",
                         "vi": "Sao Chép",
-                        "zh-Hant": "充值激活帳護",
-                        "id": "Isi dana untuk mengaktifkan akun",
-                        "es": "Depositar para Activar "
+                        "zh-Hant": "充值激活賬戶",
+                        "id": "aktivasi refill",
+                        "es": "Depositar y activar"
                     },
                     "openTrades": {
                         "zh": "当前交易",
@@ -2487,7 +2487,7 @@
                         "zh": "您的开户信息已经发送至您的邮箱",
                         "en": "Your account information has been sent to your mailbox",
                         "vi": "Thông tin tài khoản của bạn đã được gửi vào hộp thư của bạn",
-                        "zh-Hant": "您的開護信息已經發送至您的郵箱",
+                        "zh-Hant": "您的開戶信息已經發送至您的郵箱",
                         "id": "Informasi Akun anda telah dikirim ke kotak surat anda",
                         "es": "La información de su cuenta ha sido enviada a su mailbox."
                     },
@@ -2519,7 +2519,7 @@
                         "zh": "用户开户至今扣除的分成总和",
                         "en": "Total deductions commission of user from open account date",
                         "vi": "Tổng số tiền hoa hồng khấu trừ của người dùng từ ngày mở tài khoản",
-                        "zh-Hant": "用護開護至今扣除的分成總和",
+                        "zh-Hant": "用戶開戶至今扣除的分成總和",
                         "id": " Total komisi yang dipotong sejak pembukaan akun ",
                         "es": "Total deducciones comisión del usuario desde la fecha apertura de la cuenta abierta."
                     },
@@ -2775,7 +2775,7 @@
                         "zh": "交易账户下最多支持免费创建七个账号；",
                         "en": "Up to 7 sub-accounts can be created for free under the trading account;",
                         "vi": "Có thể tạo tối đa 7 tài khoản phụ miễn phí trong tài khoản giao dịch;",
-                        "zh-Hant": "交易帳護下最多支持免費創建七個帳號；",
+                        "zh-Hant": "交易賬戶下最多支持免費創建七個帳號；",
                         "id": " 1 akun transaksi dapat memiliki hingga 7 akun tambahan untuk berbagai keperluan;",
                         "es": "Se pueden crear hasta 7 subcuentas de forma gratuita en la cuenta de trading;"
                     },
@@ -2831,7 +2831,7 @@
                         "zh": "用户真实入金后平仓产生的收益总数",
                         "en": "Total earnings of closing position after deposit",
                         "vi": "Tổng số tiền kiếm được của lệnh đóng sau khi gửi tiền",
-                        "zh-Hant": "用護真實入金後平倉產生的收益總數",
+                        "zh-Hant": "用戶真實入金後平倉產生的收益總數",
                         "id": "Total keuntungan dari semua transaksi",
                         "es": "Ganancias totales posiciones cerradas después del depósito"
                     },
@@ -2911,7 +2911,7 @@
                         "zh": "选择交易账户",
                         "en": "Choose trading account",
                         "vi": "Chọn tài khoản giao dịch",
-                        "zh-Hant": "選擇交易帳護",
+                        "zh-Hant": "選擇交易賬戶",
                         "id": "Tutup Akun Transaksi",
                         "es": "seleccionar cuenta de trading"
                     },
@@ -2919,7 +2919,7 @@
                         "zh": "账户余额",
                         "en": "Account balance",
                         "vi": "Số dư tài khoản",
-                        "zh-Hant": "帳護余額",
+                        "zh-Hant": "賬戶余額",
                         "id": "Saldo Akun",
                         "es": "Balance cuenta"
                     },
@@ -2927,7 +2927,7 @@
                         "zh": "账户余额：",
                         "en": "Account balance: ",
                         "vi": "Số dư tài khoản: ",
-                        "zh-Hant": "帳護余額：",
+                        "zh-Hant": "賬戶余額：",
                         "id": "Saldo Akun: ",
                         "es": "Balance cuenta: "
                     },
@@ -2935,7 +2935,7 @@
                         "zh": "您的账户正在审核中, 请等待审核通过再进行此操作",
                         "en": "Account is under review, please re-operation after submission",
                         "vi": "Tài khoản đang được xem xét, vui lòng tái hoạt động sau khi nộp hồ sơ",
-                        "zh-Hant": "您的帳護正在審核中, 請等待審核通過再進行此操作",
+                        "zh-Hant": "您的賬戶正在審核中, 請等待審核通過再進行此操作",
                         "id": "Akun dalam peninjauan, silahkan transaksi kembali setelah peninjauan selesai",
                         "es": "La cuenta está bajo revisión, vuelva a operar después de enviar."
                     },
@@ -2943,7 +2943,7 @@
                         "zh": "您的账户正在审核中，请等待审核通过后再进行复制操作",
                         "en": "Account is under review, please re-follow after submission",
                         "vi": "Tài khoản đang được xem xét, vui lòng sao chép lại sau khi nộp hồ sơ",
-                        "zh-Hant": "您的帳護正在審核中，請等待審核通過後再進行復制操作",
+                        "zh-Hant": "您的賬戶正在審核中，請等待審核通過後再進行復制操作",
                         "id": "Akun dalam peninjauan, silahkan ulangi mengikuti setelah peninjauan selesai",
                         "es": "La cuenta está bajo revisión, vuelva a seguir después de enviar."
                     },
@@ -2951,7 +2951,7 @@
                         "zh": "您的账户正在审核中，请等待审核通过后再进行提现操作",
                         "en": "Account is under review, please re-withdraw after submission",
                         "vi": "Tài khoản đang được xem xét , vui lòng rút tiền lại sau khi nộp hồ sơ",
-                        "zh-Hant": "您的帳護正在審核中，請等待審核通過後再進行提現操作",
+                        "zh-Hant": "您的賬戶正在審核中，請等待審核通過後再進行提現操作",
                         "id": "Akun dalam peninjauan, silahkan lakukan penarikan ulang setelah peninjauan selesai",
                         "es": "La cuenta está en proceso de revisión, por favor, vuelva a reembolsar después de enviar."
                     },
@@ -2959,7 +2959,7 @@
                         "zh": "您的账户正在审核中，请等待审核通过后再进行充值操作",
                         "en": "Account is under review, please re-deposit after submission",
                         "vi": "Tài khoản đang được xem xét, vui lòng gửi tiền lại sau khi nộp hồ sơ",
-                        "zh-Hant": "您的帳護正在審核中，請等待審核通過後再進行充值操作",
+                        "zh-Hant": "您的賬戶正在審核中，請等待審核通過後再進行充值操作",
                         "id": "Akun dalam peninjauan, silahkan lakukan pengisian dana kembali setelah peninjauan selesai",
                         "es": "La cuenta está bajo revisión, vuelva a depositar después de la presentación"
                     }
@@ -4077,7 +4077,7 @@
                         "zh": "请注意，我们无法就任何特定投资，账户，投资组合或策略的表现提供任何保证。",
                         "en": "Caution, we cannot provide any assurance of the performance of any specific investment, account, portfolio or strategy.",
                         "vi": "Thận trọng, chúng tôi không thể cung cấp bất kỳ sự đảm bảo nào về hiệu suất của bất kỳ đầu tư, tài khoản, danh mục đầu tư hoặc chiến lược cụ thể nào.",
-                        "zh-Hant": "請註意，我們無法就任何特定投資，帳護，投資組合或策略的表現提供任何保證。",
+                        "zh-Hant": "請註意，我們無法就任何特定投資，賬戶，投資組合或策略的表現提供任何保證。",
                         "id": " Peringatan, kami tidak menjamin segala hasil investasi, akun, portofolio, maupun strategi ",
                         "es": "Precaución, tenga presente que no ofrecemos garantías sobre el rendimiento de una inversión, cuenta, portfolio o estrategia en particular."
                     },
@@ -4305,7 +4305,7 @@
                         "zh": "请选择开户行",
                         "en": "Select opening account bank",
                         "vi": "Chọn mở một tài khoản ngân hàng",
-                        "zh-Hant": "請選擇開護行",
+                        "zh-Hant": "請選擇開戶行",
                         "id": "Pilih buka rekening bank",
                         "es": "Seleccione cuenta de apertura bancaria"
                     },
@@ -4313,7 +4313,7 @@
                         "zh": "选择开户行",
                         "en": "Select opening account bank",
                         "vi": "Chọn mở một tài khoản ngân hàng",
-                        "zh-Hant": "選擇開護行",
+                        "zh-Hant": "選擇開戶行",
                         "id": " Pilih buka rekening bank ",
                         "es": "Seleccione cuenta de apertura bancaria"
                     },
@@ -4321,7 +4321,7 @@
                         "zh": "选择开户行：",
                         "en": "Select opening account bank: ",
                         "vi": "Chọn mở một tài khoản ngân hàng: ",
-                        "zh-Hant": "選擇開護行：",
+                        "zh-Hant": "選擇開戶行：",
                         "id": " Pilih buka rekening bank",
                         "es": "Seleccione cuenta de apertura banco: "
                     },
@@ -4369,7 +4369,7 @@
                         "zh": "填写开户行",
                         "en": "Fill in the opening account bank",
                         "vi": "Tên ngân hàng (bằng tiếng Anh)",
-                        "zh-Hant": "填寫開護行",
+                        "zh-Hant": "填寫開戶行",
                         "id": "Isi data pembukaan rekening bank",
                         "es": "Escriba cuenta banco apertura"
                     },
@@ -4377,7 +4377,7 @@
                         "zh": "填写开户行：",
                         "en": "Fill in the opening account bank: ",
                         "vi": "Tên ngân hàng (bằng tiếng Anh): ",
-                        "zh-Hant": "填寫開護行：",
+                        "zh-Hant": "填寫開戶行：",
                         "id": " Isi data pembukaan rekening bank ",
                         "es": "Escriba cuenta banco apertura: "
                     },
@@ -4409,7 +4409,7 @@
                         "zh": "请选择开户省",
                         "en": "Select opening account province",
                         "vi": "Chọn mở tài khoản tỉnh",
-                        "zh-Hant": "請選擇開護省",
+                        "zh-Hant": "請選擇開戶省",
                         "id": "Pilih provinsi",
                         "es": "Seleccione provincia apertura cuenta "
                     },
@@ -4417,7 +4417,7 @@
                         "zh": "请选择开户市",
                         "en": "Select opening account city",
                         "vi": "Chọn mở tài khoản thành phố",
-                        "zh-Hant": "請選擇開護市",
+                        "zh-Hant": "請選擇開戶市",
                         "id": "Pilih kota",
                         "es": "Seleccione  ciudad apertura cuenta "
                     },
@@ -4433,7 +4433,7 @@
                         "zh": "请输入开户地址",
                         "en": "Enter opening account address",
                         "vi": "Tỉnh",
-                        "zh-Hant": "請輸入開護地址",
+                        "zh-Hant": "請輸入開戶地址",
                         "id": "Masukkan alamat rekening",
                         "es": "Ingrese la dirección de la cuenta de apertura"
                     },
@@ -4465,7 +4465,7 @@
                         "zh": "开户地址",
                         "en": "Opening account bank’s address",
                         "vi": "Tỉnh",
-                        "zh-Hant": "開護地址",
+                        "zh-Hant": "開戶地址",
                         "id": "Alamat bank",
                         "es": "Dirección apertura cuenta banco."
                     },
@@ -4473,7 +4473,7 @@
                         "zh": "开户地址：",
                         "en": "Opening account bank’s address: ",
                         "vi": "Tỉnh: ",
-                        "zh-Hant": "開護地址：",
+                        "zh-Hant": "開戶地址：",
                         "id": "Alamat bank",
                         "es": "Dirección apertura cuenta banco: "
                     },
@@ -4887,7 +4887,7 @@
                         "zh": "1、注册即获得邀请类红包“人从众”，邀请3名好友注册，且至少有1人入金并完成1手交易即可兑现, 每位用户仅可领取一次；",
                         "en": "1. A reward coupon will be delivered to your account when you registered, it can be cashed once you invited three friends and at least one of them deposited and had one lot transaction.",
                         "vi": "1. Một phiếu thưởng sẽ được gửi đến tài khoản của bạn khi bạn đăng ký, nó có thể được đổi thành tiền mặt khi bạn mời ba người bạn và ít nhất một người trong số họ gửi tiền và có một giao dịch rất nhiều.",
-                        "zh-Hant": "1、註冊即獲得邀請類紅包“人從眾”，邀請3名好友註冊，且至少有1人入金並完成1手交易即可兌現, 每位用護僅可領取壹次；",
+                        "zh-Hant": "1、註冊即獲得邀請類紅包“人從眾”，邀請3名好友註冊，且至少有1人入金並完成1手交易即可兌現, 每位用戶僅可領取壹次；",
                         "id": "1. Hadiah akan langsung dikirim ke akun anda apabila anda sudah terdaftar di sistem, dan hadiah tersebut dapat dicairkan apabila anda telah mengundang 3 teman lain dan salah satunya telah melakukan penyetoran dana serta bertransaksi minimal 1 lot.",
                         "es": "1. Un cupón de recompensa será enviado a su cuenta cuando se registre; podrá ser liquidado una vez que haya invitado a tres amigos y al menos uno de ellos haya depositado y haya operado un lote."
                     },
@@ -4903,7 +4903,7 @@
                         "zh": "3、同一手机号，身份证号和银行卡号视为同一用户；",
                         "en": "3.Same cellphone, ID and bank card number will be treated as same user.",
                         "vi": "3. Số điện thoại di động, ID và số thẻ ngân hàng trùng khớp sẽ được coi là cùng một người dùng.",
-                        "zh-Hant": "3、同壹手機號，身份證號和銀行卡號視為同壹用護；",
+                        "zh-Hant": "3、同壹手機號，身份證號和銀行卡號視為同壹用戶；",
                         "id": "3. Identitas, nomor telepon dan rekening bank yang sama akan dianggap sebagai satu orang saja.",
                         "es": "3. Mismo móvil, ID y número de tarjeta de banco serán tratados como el mismo usuario. "
                     },
@@ -5227,7 +5227,7 @@
                         "zh": "充值账户",
                         "en": "Deposit account",
                         "vi": "Tài khoản gửi tiền",
-                        "zh-Hant": "充值帳護",
+                        "zh-Hant": "充值賬戶",
                         "id": "Isi Dana Akun",
                         "es": "Cuenta de depósito"
                     },
@@ -5235,7 +5235,7 @@
                         "zh": "充值账户",
                         "en": "Account",
                         "vi": "Tài khoản",
-                        "zh-Hant": "充值帳護",
+                        "zh-Hant": "充值賬戶",
                         "id": "Akun",
                         "es": "Cuenta"
                     },
@@ -5315,7 +5315,7 @@
                         "zh": "提现账户",
                         "en": "Withdraw account",
                         "vi": "Tài khoản rút tiền",
-                        "zh-Hant": "提現帳護",
+                        "zh-Hant": "提現賬戶",
                         "id": "Tarik dari akun",
                         "es": "Cuenta Reembolsar"
                     },
@@ -5323,7 +5323,7 @@
                         "zh": "提现账户",
                         "en": "Account",
                         "vi": "Tài khoản",
-                        "zh-Hant": "提現帳護",
+                        "zh-Hant": "提現賬戶",
                         "id": "Akun",
                         "es": "Cuenta"
                     },
@@ -5331,7 +5331,7 @@
                         "zh": "交易账户",
                         "en": "Trading account",
                         "vi": "Tài Khoản Giao Dịch",
-                        "zh-Hant": "交易帳護",
+                        "zh-Hant": "交易賬戶",
                         "id": "Akun transaksi",
                         "es": "Cuenta trading"
                     },
@@ -5371,7 +5371,7 @@
                         "zh": "提示：您还有持仓订单，请平仓后再提现如有疑问，请联系您的客户经理或联系客服",
                         "en": "Notice:You have position orders, please close out and then withdrawal If you have any questions, please contact your account manager or contact customer service ",
                         "vi": "Lưu ý: Bạn có lệnh giao dịch, vui lòng đóng và rút tiền Nếu bạn có bất kỳ câu hỏi nào, vui lòng liên hệ với người quản lý tài khoản của bạn hoặc liên hệ với dịch vụ khách hàng ",
-                        "zh-Hant": "提示：您還有持倉訂單，請平倉後再提現如有疑問，請聯系您的客護經理或聯系客服",
+                        "zh-Hant": "提示：您還有持倉訂單，請平倉後再提現如有疑問，請聯系您的客戶經理或聯系客服",
                         "id": " Peringatan : Silahkan tutup semua posisi yang masih terbuka sebelum melakukan penarikan. Apabila anda memiliki pertanyaan, silahkan hubungi akun manajer anda atau hubungi layanan pelanggan kami ",
                         "es": "Notificación:Tiene órdenes con posiciones, por favor cierre éstas y después reembolse.  Para cualquier cuestión, por favor, contacte con su gestor de cuenta o con el Servicio al Cliente"
                     },
@@ -5379,7 +5379,7 @@
                         "zh": "提示：您未实名认证，请完成实名认证，如有疑问，请联系您的客户经理或联系客服",
                         "en": "Notice:You don't have real-name authentication，please complete it If you have any questions, please contact your account manager or contact customer service ",
                         "vi": "Lưu ý: Bạn không có xác thực tên thật ， vui lòng hoàn thành nếu bạn có bất kỳ câu hỏi nào, vui lòng liên hệ với người quản lý tài khoản của bạn hoặc liên hệ với bộ phận dịch vụ khách hàng ",
-                        "zh-Hant": "提示：您未實名認證，請完成實名認證，如有疑問，請聯系您的客護經理或聯系客服",
+                        "zh-Hant": "提示：您未實名認證，請完成實名認證，如有疑問，請聯系您的客戶經理或聯系客服",
                         "id": " Peringatan : Akun Anda belum melewati sertifikasi, mohon dilengkapi terlebih dahulu. Silahkan hubungi akun manajer anda atau hubungi layanan pelanggan kami ",
                         "es": "Notificación:No autentificación nombre real，por favor, contacte con su Gestor de Cuenta o con el Servicio al Cliente"
                     },
@@ -5387,7 +5387,7 @@
                         "zh": "提示：您还有正在复制的高手，请取消复制关系后再提现，如有疑问，请联系您的客户经理或联系客服",
                         "en": "Notice: You still have following masters,please cancel the follow relationship then withdraw the money If you have any questions, please contact your account manager or contact customer service ",
                         "vi": "Lưu ý: Bạn vẫn có quan hệ sao chép bậc thầy, vui lòng hủy bỏ mối quan hệ sau đó rút tiền Nếu bạn có bất kỳ câu hỏi nào, vui lòng liên hệ với người quản lý tài khoản của bạn hoặc liên hệ với dịch vụ khách hàng ",
-                        "zh-Hant": "提示：您還有正在復制的高手，請取消復制關系後再提現，如有疑問，請聯系您的客護經理或聯系客服",
+                        "zh-Hant": "提示：您還有正在復制的高手，請取消復制關系後再提現，如有疑問，請聯系您的客戶經理或聯系客服",
                         "id": " Peringatan : anda masih mengikuti Master, mohon Berhenti mengikuti Master terlebih dahulu sebelum melakukan penarikan dana. Apabila anda memiliki pertanyaan, silahkan hubungi akun manajer anda atau hubungi layanan pelanggan kami",
                         "es": "Notificación: Todavía sigue a masters,por favor, cancele la relación de seguimiento y después reembolse el dinero. Para cualquier cuestión, por favor, contacte con su Gestor de Cuenta o con el Servicio al Cliente "
                     },
@@ -5403,7 +5403,7 @@
                         "zh": "现在提现会导致您的账户红包失效，是否继续提现？",
                         "en": "Now withdrawal will lead to lose efficacy for your reward,Whether or not to continue?",
                         "vi": "Bây giờ rút tiền sẽ dẫn đến mất hiệu lực cho phần thưởng của bạn,bạn có tiếp tục hay không?",
-                        "zh-Hant": "現在提現會導致您的帳護紅包失效，是否繼續提現？",
+                        "zh-Hant": "現在提現會導致您的賬戶紅包失效，是否繼續提現？",
                         "id": " Penarikan akan membatalkan hadiah anda, apakah ingin terus melanjutkan? ",
                         "es": "Reembolsar ahora pudiera conllevar una pérdida de eficacia en su recompensa, ¿Desea continuar o no?"
                     },
@@ -5411,7 +5411,7 @@
                         "zh": "出金银行卡用户姓名必须与开户姓名一致",
                         "en": "The name of the bank card must be the same as the name of the account",
                         "vi": "Tên của thẻ ngân hàng phải trùng khớp với tên của tài khoản",
-                        "zh-Hant": "出金銀行卡用護姓名必須與開護姓名壹致",
+                        "zh-Hant": "出金銀行卡用戶姓名必須與開戶姓名壹致",
                         "id": " Nama pemilik rekening bank harus sama dengan nama pemilik akun ",
                         "es": "El nombre de la tarjeta bancaria debe ser el mismo que el nombre de la cuenta"
                     },
@@ -5475,7 +5475,7 @@
                         "zh": "开户行",
                         "en": "Bank",
                         "vi": "Ngân hàng",
-                        "zh-Hant": "開護行",
+                        "zh-Hant": "開戶行",
                         "id": "Bank",
                         "es": "Banco"
                     },
@@ -5587,7 +5587,7 @@
                         "zh": "当前交易账户余额",
                         "en": "Account Balance",
                         "vi": "Số Dư Tài Khoản",
-                        "zh-Hant": "當前交易帳護余額",
+                        "zh-Hant": "當前交易賬戶余額",
                         "id": "Saldo Akun",
                         "es": "Saldo de la cuenta"
                     },
@@ -5643,7 +5643,7 @@
                         "zh": "每个账户每月拥有4次免费提现机会，超过4次每笔提现将收取xx手续费。",
                         "en": "Each account has 4 free opportunities per month, more than 4 times each will be charged xx fee.",
                         "vi": "Mỗi tài khoản có 4 cơ hội miễn phí mỗi tháng, nhiều hơn 4 lần mỗi lần sẽ bị tính phí xx.",
-                        "zh-Hant": "每個帳護每月擁有4次免費提現機會，超過4次每筆提現將收取xx手續費。",
+                        "zh-Hant": "每個賬戶每月擁有4次免費提現機會，超過4次每筆提現將收取xx手續費。",
                         "id": " Setiap akun dapat melakukan penarikan hingga 4 kali dalam 1 bulan, apabila melakukan penarikan lebih dari 4 kali dalam sebulan maka akan dikenakan biaya sebesar 1 $ per 1 kali penarikan. ",
                         "es": "Cada cuenta dispone de 4 oportunidades gratuitas por mes; más de 4 veces, se cobrará una tarifa xx por cada uno."
                     },
@@ -5659,7 +5659,7 @@
                         "zh": "请绑定认证用户本人的银行卡",
                         "en": "Please bind the user’s own bank card",
                         "vi": "Vui lòng liên kết thẻ ngân hàng của riêng người dùng",
-                        "zh-Hant": "請邦定認證用護本人的銀行卡",
+                        "zh-Hant": "請邦定認證用戶本人的銀行卡",
                         "id": "Mohon daftarkan nomor rekening anda",
                         "es": "Por favor, asocie la propia tarjeta bancaria del usuario."
                     },
@@ -5707,7 +5707,7 @@
                         "zh": "开户省",
                         "en": "Province",
                         "vi": "Tỉnh",
-                        "zh-Hant": "開護省",
+                        "zh-Hant": "開戶省",
                         "id": "Provinsi",
                         "es": "Provincia"
                     },
@@ -5715,7 +5715,7 @@
                         "zh": "开户省：",
                         "en": "Province: ",
                         "vi": "Tỉnh: ",
-                        "zh-Hant": "開護省：",
+                        "zh-Hant": "開戶省：",
                         "id": "Provinsi",
                         "es": "Provincia: "
                     },
@@ -5723,7 +5723,7 @@
                         "zh": "开户市",
                         "en": "City",
                         "vi": "Thành Phố",
-                        "zh-Hant": "開護市",
+                        "zh-Hant": "開戶市",
                         "id": "Kota",
                         "es": "Ciudad"
                     },
@@ -5731,7 +5731,7 @@
                         "zh": "开户市：",
                         "en": "City: ",
                         "vi": "Thành phố: ",
-                        "zh-Hant": "開護市：",
+                        "zh-Hant": "開戶市：",
                         "id": "Kota",
                         "es": "Ciudad: "
                     },
@@ -5747,7 +5747,7 @@
                         "zh": "高手分成收益与代理商佣金收益会存入钱包，您可以提现或划入交易账户",
                         "en": "The winner is divided into earnings and the agency’s commission income will be credited to the purse, which you can cash in or out of the trading account",
                         "vi": "Người chiến thắng được chia thành thu nhập và thu nhập hoa hồng của đại lý sẽ được ghi có vào ví, bạn có thể rút tiền vào hoặc ra khỏi tài khoản giao dịch",
-                        "zh-Hant": "高手分成收益與代理商傭金收益會存入錢包，您可以提現或劃入交易帳護",
+                        "zh-Hant": "高手分成收益與代理商傭金收益會存入錢包，您可以提現或劃入交易賬戶",
                         "id": " Hadiah akan dibagikan dan dikirim ke dompet masing-masing pemenang yang dapat ditarik atau dimasukkan ke akun transaksi ",
                         "es": "Cada ganadora es dividida en ganancias y la comisión de agencia será creditada, pudiendo ser retirada a, ó, desde la cuenta de trading"
                     },
@@ -5755,7 +5755,7 @@
                         "zh": "不同银行在购汇和汇款中会收取不同的手续费（一般为手续费、电报费和中转行费用），对于购汇和汇款中产生的费用由客户自行承担，TigerWit不收取电汇入金手续费，入金金额将以实际到账为准。",
                         "en": "Different banks in the purchase of foreign exchange and remittances will charge different fees (usually fee, telegraph fee and transit costs), the costs incurred in the purchase of foreign exchange and remittance shall be borne by the customer, TigerWit does not charge wire transfer fees, deposit amount will be the actual account.",
                         "vi": "Các ngân hàng khác nhau trong việc mua ngoại tệ và kiều hối sẽ tính các khoản phí khác nhau (thường là phí, phí điện báo và chi phí quá cảnh), chi phí phát sinh khi mua ngoại tệ và chuyển tiền sẽ do khách hàng chịu, TigerWit không tính phí chuyển khoản ngân hàng , số tiền gửi sẽ là tài khoản thực.",
-                        "zh-Hant": "不同銀行在購匯和匯款中會收取不同的手續費（壹般為手續費、電報費和中轉行費用），對於購匯和匯款中產生的費用由客護自行承擔，TigerWit不收取電匯入金手續費，入金金額將以實際到帳為準。",
+                        "zh-Hant": "不同銀行在購匯和匯款中會收取不同的手續費（壹般為手續費、電報費和中轉行費用），對於購匯和匯款中產生的費用由客戶自行承擔，TigerWit不收取電匯入金手續費，入金金額將以實際到帳為準。",
                         "id": " TigerWit tidak membebankan biaya transfer apapun, namun pembelian valutas asing dan pengiriman dana melalui bank akan dikenakan biaya yang berbeda-beda tergantung kebijakan bank tersebut, biaya akan ditanggung oleh nasabah. Dana yang diterima oleh TigerWit adalah dana yang telah dipotong biaya-biaya bank. ",
                         "es": "Cada banco por la compra de divisas y envíos cobra tarifas diferente (generalmente, comisiones, tarifas de telégrafo y costos de tránsito), los costes incurridos en la compra de divisas y remesas correrán a cargo del cliente, TigerWit no cobra tarifas de transferencia bancaria y acreditará el importe recibido del depósito en la cuenta real."
                     },
@@ -5763,7 +5763,7 @@
                         "zh": "请注意，我们不接受直接支付到我们银行账户的现金付款。为了您的注资能及时、准确到帐，在填写电汇申请单时，请您务必在汇款附言一栏里填写您的交易账号。同时请提供您的电话号码，以便我们与您取得联系。",
                         "en": "Please note that we do not accept cash payments directly to our bank account. In order to ensure that your deposit immediate arrived at the account, please note your trading account and telephone number in the application form so that we can contact you.",
                         "vi": "Xin lưu ý rằng chúng tôi không chấp nhận thanh toán bằng tiền mặt trực tiếp vào tài khoản ngân hàng của chúng tôi. Để đảm bảo rằng khoản tiền gửi của bạn ngay lập tức đến tài khoản, vui lòng lưu ý tài khoản giao dịch và số điện thoại của bạn trong biểu mẫu đơn đăng ký để chúng tôi có thể liên hệ với bạn.",
-                        "zh-Hant": "請註意，我們不接受直接支付到我們銀行帳護的現金付款。為了您的註資能及時、準確到帳，在填寫電匯申請單時，請您務必在匯款附言壹欄裏填寫您的交易帳號。同時請提供您的電話號碼，以便我們與您取得聯系。",
+                        "zh-Hant": "請註意，我們不接受直接支付到我們銀行賬戶的現金付款。為了您的註資能及時、準確到帳，在填寫電匯申請單時，請您務必在匯款附言壹欄裏填寫您的交易帳號。同時請提供您的電話號碼，以便我們與您取得聯系。",
                         "id": " Kami tidak menerima pengisian dana secara tunai. Untuk memastikan bahwa pengisian dana anda berjalan dengan lancar, mohon masukkan nomor akun dan nomor telepon anda di dalam formulir pengisian dana. ",
                         "es": "Por favor, tenga en cuenta que no aceptamos pagos en efectivo directamente en nuestra cuenta bancaria. Para asegurarse de que su depósito llegue a la cuenta de inmediato, anote su cuenta de trading y su número de teléfono en el formulario de solicitud para que podamos contactarlo."
                     },
@@ -5779,7 +5779,7 @@
                         "zh": "TigerWit将根据各国适用法律尽最大努力以实际行动配合反洗钱及反恐怖方面的所有法律法规，具体包括报告及冻结可疑资产等。TigerWit将不定期地查看账户记录以获取有洗钱嫌疑的交易证据，包括对如下几项的监控：",
                         "en": "TigerWit will do its best to cooperate with all laws and regulations on anti-money laundering and anti-terrorism, including reporting and freezing of suspicious assets, in accordance with the applicable laws of each country. TigerWit will view the account records from time to time to obtain evidence of transaction evidence of money laundering, including the following: ",
                         "vi": "TigerWit sẽ cố hết sức hợp tác với tất cả các luật và quy định về chống rửa tiền và chống khủng bố, bao gồm báo cáo và đóng băng các tài sản đáng ngờ, phù hợp với luật áp dụng của mỗi quốc gia. TigerWit sẽ xem hồ sơ tài khoản theo thời gian để có được bằng chứng về bằng chứng giao dịch về rửa tiền, bao gồm những điều sau đây: ",
-                        "zh-Hant": "TigerWit將根據各國這用法律盡最大努力以實際行動配合反洗錢及反恐怖方面的所有法律法規，具體包括報告及凍結可疑資產等。TigerWit將不定期地查看帳護記錄以獲取有洗錢嫌疑的交易證據，包括對如下幾項的監控：",
+                        "zh-Hant": "TigerWit將根據各國這用法律盡最大努力以實際行動配合反洗錢及反恐怖方面的所有法律法規，具體包括報告及凍結可疑資產等。TigerWit將不定期地查看賬戶記錄以獲取有洗錢嫌疑的交易證據，包括對如下幾項的監控：",
                         "id": "TigerWit selalu berkomitmen untuk mentaati seluruh peraturan dan hukum terutama mengenai anti pencucian uang dan anti teroris, dengan melaporkan dan membekukan aset yang mencurigakan. Sesuai dengan hukum di masing-masing negara, TigerWit akan memantau seluruh transaksi keuangan yang terjadi, dan untuk mencegah terjadi tindak pencucian uang dengan peraturan sebagai berikut:",
                         "es": "TigerWit hará todo lo posible por cooperar con todas las leyes y regulaciones contra el lavado de dinero y el antiterrorismo, incluidos reporting  y la congelación de activos sospechosos, de conformidad con las leyes aplicables de cada país. TigerWit analizará los registros de la cuenta de vez en cuando para obtener evidencias de posibles transacciones de lavado de dinero, que incluye lo siguiente: "
                     },
@@ -5787,7 +5787,7 @@
                         "zh": "账户资金出入情况。电汇入金的用户，提现时若金额低于电汇入金时金额，TigerWit只支持将提现金额提现至入金银行卡。",
                         "en": "Account funds access situation. If the deposit was made by wire transfer, funds may be withdrawn only by wire transfer to the same bank and to the same account from which it originated.",
                         "vi": "Tình trạng truy cập quỹ tài khoản. Nếu khoản tiền gửi được thực hiện bằng chuyển khoản ngân hàng, tiền có thể được rút chỉ bằng chuyển khoản ngân hàng đến cùng một ngân hàng và cho cùng một tài khoản mà từ đó nó được bắt nguồn.",
-                        "zh-Hant": "帳護資金出入情況。電匯入金的用護，提現時若金額低於電匯入金時金額，TigerWit只支持將提現金額提現至入金銀行卡。",
+                        "zh-Hant": "賬戶資金出入情況。電匯入金的用戶，提現時若金額低於電匯入金時金額，TigerWit只支持將提現金額提現至入金銀行卡。",
                         "id": "Dana masuk dan dana keluar. Apabila pengisian dana dilakukan melalui transfer antar bank, maka dana hanya boleh ditarik ke rekening yang sama dengan rekening pengirim di awal . ",
                         "es": "Situación Acceso a los Fondos Cuenta. Si el depósito se realizó mediante transferencia bancaria, los fondos sólo se pueden retirar mediante transferencia bancaria al mismo banco y a la misma cuenta."
                     },
@@ -5875,7 +5875,7 @@
                         "zh": "收款人开户行（Bank）：",
                         "en": "Beneficiary’s Bank Name: ",
                         "vi": "Tên Ngân Hàng Của Người Thụ Hưởng: ",
-                        "zh-Hant": "收款人開護行（Bank）：",
+                        "zh-Hant": "收款人開戶行（Bank）：",
                         "id": " Negara bank penerima: ",
                         "es": "Banco Beneficiario Nombre: "
                     },
@@ -5939,7 +5939,7 @@
                         "zh": "账户净值",
                         "en": "Equity",
                         "vi": "Vốn thực",
-                        "zh-Hant": "帳護凈值",
+                        "zh-Hant": "賬戶凈值",
                         "id": "Ekuitas",
                         "es": "Equity"
                     },
@@ -6131,7 +6131,7 @@
                         "zh": "应监管要求，客户的网银入金会随机抽查入金凭证，如客户的某笔入金被抽查需要客户按照提示和要求上传凭证。",
                         "en": "According to the regulatory requirements, the customer's e-deposit will be randomly checked into the deposit voucher. For example, the customer needs to upload the voucher according to the tips and requirements when a certain amount of deposit is checked.",
                         "vi": "Theo yêu cầu quy định, tiền gửi điện tử của khách hàng sẽ được kiểm tra ngẫu nhiên vào chứng từ tiền gửi. Ví dụ: khách hàng cần tải lên giấy tờ xác nhận theo các mẹo và yêu cầu khi kiểm tra một số tiền nhất định.",
-                        "zh-Hant": "應監管要求，客護的網銀入金會隨機抽查入金憑證，如客護的某筆入金被抽查需要客護按照提示和要求上傳憑證。",
+                        "zh-Hant": "應監管要求，客戶的網銀入金會隨機抽查入金憑證，如客戶的某筆入金被抽查需要客戶按照提示和要求上傳憑證。",
                         "id": "Berdasarkan peraturan, bukti setoran nasabah akan diperiksa apabila nasabah menyetorkan dana dengan jumlah tertentu.",
                         "es": "De acuerdo con los requisitos regulatorios, el depósito electrónico del cliente pudiera ser comprobado aleatoriamente. Por ejemplo, el cliente necesita cargar el cupón siguiendo los consejos y requisitos necesarios al verificar depósitos de un determinado importe."
                     },
@@ -6139,7 +6139,7 @@
                         "zh": "客户出金时，如果有未上传和未审核通过的凭证，将限制客户出金，上传审核通过后可正常出金，没有未上传或者未审核的凭证客户可以正常出金。",
                         "en": "When the customer withdrawal, if there are unuploaded and unaudited vouchers, the customer will be restricted to withdrawal. After passing the examination, the funds will be withdrew normally. If there are no unuploaded or unaudited certificates, the customer can withdraw normally.",
                         "vi": "Khi khách hàng rút tiền, nếu chứng từ chưa được tải và chưa được kiểm toán, khách hàng sẽ bị hạn chế rút tiền. Sau khi vượt qua việc kiểm tra, số tiền sẽ được rút lại bình thường. Nếu không có chứng chỉ chưa được tải lên hoặc chưa được kiểm tra, khách hàng có thể rút tiền bình thường.",
-                        "zh-Hant": "客護出金時，如果有未上傳和未審核通過的憑證，將限制客護出金，上傳審核通過後可正常出金，沒有未上傳或者未審核的憑證客護可以正常出金。",
+                        "zh-Hant": "客戶出金時，如果有未上傳和未審核通過的憑證，將限制客戶出金，上傳審核通過後可正常出金，沒有未上傳或者未審核的憑證客戶可以正常出金。",
                         "id": "Ketika nasabah melakukan penarikan dana, namun pada saat pengisian dana di awal tidak melampirkan bukti setoran, maka nasabah belum bisa melakukan penarikan sampai bukti setoran awal diunggah dan selesai diperiksa. Apabila nasabah sudah mengunggah bukti setoran di awal, penarikan akan berlangsung tanpa kendala.",
                         "es": "Cuando el cliente reembolso, si hay cupones no subidos y no auditados, el cliente tendrá restringidos los reembolsos. Después de pasar auditoría, los fondos podrán ser reembolsados normalmente. Si no hay certificados sin cargar o sin auditar, el cliente puede reembolsar normalmente."
                     },
@@ -6147,7 +6147,7 @@
                         "zh": "1、客户必须使用本人银行卡入金；",
                         "en": "1.The customer must use his bank card to deposit；",
                         "vi": "1. Khách hàng phải dung thẻ ngân hàng của họ để gửi tiền;",
-                        "zh-Hant": "1、客護必須使用本人銀行卡入金；",
+                        "zh-Hant": "1、客戶必須使用本人銀行卡入金；",
                         "id": "1. Nasabah harus menggunakan rekening bank sendiri untuk mengisi dana;",
                         "es": "1.El cliente debe usar su tarjeta banco para depositar；"
                     },
@@ -6155,7 +6155,7 @@
                         "zh": "2、若使用他人银行卡，资金将被原路退回，客户需承担1.8%手续费；",
                         "en": "2.If customer use someone else's bank card, the money will be returned and the customer shall bear a charge of 1.8%;",
                         "vi": "2. Nếu khách hàng sử dụng thẻ ngân hàng của ai đó, tiền sẽ không được trả lại và khách hàng sẽ chịu phí phạt 1.8 %;",
-                        "zh-Hant": "2、若使用他人銀行卡，資金將被原路退回，客護需承擔1.8%手續費；",
+                        "zh-Hant": "2、若使用他人銀行卡，資金將被原路退回，客戶需承擔1.8%手續費；",
                         "id": "2. Apabila nasabah menggunakan rekening bank milik orang lain, maka dana akan ditolak dan dikembalikan ke rekening awal. Nasabah akan dikenakan biaya sebesar 1,8%;",
                         "es": "2.Si el cliente utiliza la tarjeta bancaria de otra persona, el dinero será devuelto y el cliente deberá pagar un cargo del 1,8%;"
                     },
@@ -6163,7 +6163,7 @@
                         "zh": "3、若已产生交易订单，客户需在收到通知后1个工作日内全部平仓，否则系统将进行强制平仓。平仓后资金原路退回，账号将被关闭不予使用。",
                         "en": "3.If a trading order has been generated, the customer shall close all the positions within 1 working day after receiving the notice, otherwise the system will be forced to close the positions. The fund will be returned after closing the positions, and the account will be closed and not used.",
                         "vi": "3. Nếu lệnh giao dịch đã được tạo, khách hàng sẽ đóng tất cả các vị thế trong vòng 1 ngày làm việc sau khi nhận được thông báo, nếu không hệ thống sẽ bị buộc phải đóng các vị thế. Quỹ sẽ được trả lại sau khi đóng các vị thế, và tài khoản sẽ bị đóng và không được sử dụng.",
-                        "zh-Hant": "3、若已產生交易訂單，客護需在收到通知後1個工作日內全部平倉，否則系統將進行強制平倉。平倉後資金原路退回，帳號將被關閉不予使用。",
+                        "zh-Hant": "3、若已產生交易訂單，客戶需在收到通知後1個工作日內全部平倉，否則系統將進行強制平倉。平倉後資金原路退回，帳號將被關閉不予使用。",
                         "id": "3. Semua posisi terbuka nasabah harus ditutup 1x24 jam (hari kerja) sejak nasabah menerima pesan pemberitahuan. Jika sudah melewati waktu yang ditentukan, sistem akan menutup secara otomatis posisi tersebut. Dana akan dikembalikan setelah posisi sudah tertutup sepenuhnya dan akun tidak dapat lagi digunakan.",
                         "es": "3.Si se ha generado una orden de trading, el cliente cerrará todas las posiciones dentro de 1 día hábil después de recibir el aviso, de lo contrario el sistema cerrará las posiciones. Los fondos se devolverán después de cerrar las posiciones, y la cuenta se cerrará y no podrá utilizarse."
                     },
@@ -6299,7 +6299,7 @@
                         "zh": "请注意，我们不接受直接支付到我们银行账户的现金付款。为了您的注资能及时、准确到账，在填写电汇申请单时，请您务必在汇款附言一栏里填写您的交易账号。",
                         "en": "Please note that we do not accept cash payments directly to our bank account. In order to receive your payment timely and accurately, please be sure to fill in your transaction account in the attached column of the remittance form.",
                         "vi": "Xin lưu ý rằng chúng tôi không chấp nhận thanh toán bằng tiền mặt trực tiếp vào tài khoản ngân hàng của chúng tôi. Để nhận được thanh toán của bạn kịp thời và chính xác, vui lòng đảm bảo điền vào tài khoản giao dịch của bạn trong cột đính kèm của biểu mẫu chuyển tiền.",
-                        "zh-Hant": "請註意，我們不接受直接支付到我們銀行帳護的現金付款。為了您的註資能及時、準確到帳，在填寫電匯申請單時，請您務必在匯款附言壹欄裏填寫您的交易帳號。",
+                        "zh-Hant": "請註意，我們不接受直接支付到我們銀行賬戶的現金付款。為了您的註資能及時、準確到帳，在填寫電匯申請單時，請您務必在匯款附言壹欄裏填寫您的交易帳號。",
                         "id": "Perlu dicatat bahwa kami tidak menerima uang tunai untuk pengisian dana. Mohon pastikan anda telah mengisi formulir pengiriman dana secara lengkap dan akurat agar proses pengisian dana dapat berjalan dengan lancar. ",
                         "es": "Tenga en cuenta que no aceptamos pagos en efectivo directamente a nuestra cuenta bancaria. Para recibir su pago de manera oportuna y precisa, asegúrese de completar su cuenta de transacción en la columna adjunta del formulario de envío."
                     },
@@ -6395,7 +6395,7 @@
                         "zh": "凭证信息必须为实名认证本人银行账户。",
                         "en": "The voucher information must be verified bank account of customer himself.",
                         "vi": "Giấy tờ xác nhận phải được xác nhận lại tài khoản ngân hàng của chính khách hàng.",
-                        "zh-Hant": "憑證信息必須為實名認證本人銀行帳護。",
+                        "zh-Hant": "憑證信息必須為實名認證本人銀行賬戶。",
                         "id": "Bukti setoran harus memiliki informasi yang sama dengan nama pemilik akun.",
                         "es": "La información del cupón debe ser la cuenta bancaria verificada del propio cliente."
                     },
@@ -6547,7 +6547,7 @@
                         "zh": "如有疑问，请联系您的客户经理或联系客服",
                         "en": "If you have any questions, please contact your account manager or customer service",
                         "vi": "Nếu bạn có bất kỳ câu hỏi nào, vui lòng liên hệ với tài khoản quản lý hoặc dịch vụ chăm sóc khách hàng",
-                        "zh-Hant": "如有疑問，請聯系您的客護經理或聯系客服",
+                        "zh-Hant": "如有疑問，請聯系您的客戶經理或聯系客服",
                         "id": "Apabila anda memiliki pertanyaan, silahkan hubungi akun manajer anda atau hubungi layanan pelanggan kami ",
                         "es": "Si tiene alguna pregunta, por favor, contacte con un Gestor de Cuenta o con el servicio de Atención al Cliente."
                     },
@@ -6755,7 +6755,7 @@
                         "zh": "请注意，我们不接受直接支付到我们银行账户的现金付款。为了您的注资能及时、准确到账，在填写电汇申请单时，",
                         "en": "Please note that we do not accept cash payments directly to our bank account. In order to receive your payment timely and accurately, please fill in the wire transfer application form. ",
                         "vi": "Xin lưu ý rằng chúng tôi không chấp nhận thanh toán bằng tiền mặt trực tiếp vào tài khoản ngân hàng của chúng tôi. Để nhận được thanh toán của bạn kịp thời và chính xác, vui lòng điền vào biểu mẫu đăng ký chuyển khoản ngân hàng.",
-                        "zh-Hant": "請註意，我們不接受直接支付到我們銀行帳護的現金付款。為了您的註資能及時、準確到帳，在填寫電匯申請單時，",
+                        "zh-Hant": "請註意，我們不接受直接支付到我們銀行賬戶的現金付款。為了您的註資能及時、準確到帳，在填寫電匯申請單時，",
                         "id": "Perlu dicatata bahwa kami tidak menerima pengisian dana secara tunai. Untuk memastikan bahwa pengisian dana anda berjalan dengan lancar, mohon isi formulir dibawah ini",
                         "es": "Por favor, tenga presente que no aceptamos pagos en efectivo directamente en la cuenta. Para recibir su "
                     },
@@ -6805,7 +6805,7 @@
                         "vi": " ",
                         "zh-Hant": " 美金",
                         "id": " ",
-                        "es": ""
+                        "es": " "
                     },
                     "tip65_1": {
                         "zh": "出金金额最少为 ",
@@ -6821,7 +6821,7 @@
                         "vi": " ",
                         "zh-Hant": " 美金",
                         "id": " ",
-                        "es": ""
+                        "es": " "
                     },
                     "depositStipulation": {
                         "zh": "入金规定",
@@ -6861,7 +6861,7 @@
                         "zh": "用户复制高手的复制资金不可超过高手当前账户级别的限额；",
                         "en": "The user’s copy of the funds shall not exceed the current account level limit",
                         "vi": "Sao chép tiền của người dùng không được vượt quá giới hạn cấp tài khoản hiện tại",
-                        "zh-Hant": "用護復制高手的復制資金不可超過高手當前帳護級別的限額；",
+                        "zh-Hant": "用戶復制高手的復制資金不可超過高手當前賬戶級別的限額；",
                         "id": " Dana nasabah untuk mengikuti Master tidak boleh melebihi batas yang telah ditentukan untuk jenis akun ini ",
                         "es": "La copia de los fondos del usuario no debe exceder el límite de nivel de cuenta actual"
                     },
@@ -6869,7 +6869,7 @@
                         "zh": "若当前累计复制资金量达到限额，系统将提醒高手进行账户升级，高手确认并更改账户级别后，用户方能继续复制；",
                         "en": "If the current cumulative amount of funds to meet the limit, the system will remind the master to upgrade the account, experts confirm and change the account level, the user can continue to copy",
                         "vi": "Nếu số tiền tích lũy hiện tại của các quỹ để đáp ứng các giới hạn, hệ thống sẽ nhắc nhở bậc thầy để nâng cấp tài khoản, các chuyên gia xác nhận và thay đổi cấp tài khoản, người dùng có thể tiếp tục sao chép",
-                        "zh-Hant": "若當前累計復制資金量達到限額，系統將提醒高手進行帳護升級，高手確認並更改帳護級別後，用護方能繼續復制；",
+                        "zh-Hant": "若當前累計復制資金量達到限額，系統將提醒高手進行賬戶升級，高手確認並更改賬戶級別後，用戶方能繼續復制；",
                         "id": " Apabila dana yang terkumpul sudah mencapai batas, sistem akan mengingatkan Master untuk memperbarui akunnya. Setelah melewati proses dan tingkat akun Master telah ditingkatkan, nasabah baru dapat mengikuti Master tersebut ",
                         "es": "Si la cantidad acumulada actual de fondos alcanza el límite, el sistema recordará al Master que haga un upgrade en la cuenta;  una vez confirmado y cambiado el nivel de la cuenta, el usuario puede seguir replicando"
                     },
@@ -6877,7 +6877,7 @@
                         "zh": "高手只能使用账户级别内支持的杠杆进行交易，复制者跟随高手进行同杠杆开仓交易。",
                         "en": "The master can only use the account level to support the leverage of the transaction, the user to follow the master with the lever to open the transaction.",
                         "vi": "Bậc Thầy chỉ có thể sử dụng cấp độ tài khoản để hỗ trợ đòn bẩy của giao dịch, người dùng phải làm theo chủ với đòn bẩy để mở giao dịch.",
-                        "zh-Hant": "高手只能使用帳護級別內支持的杠桿進行交易，復制者跟隨高手進行同杠桿開倉交易。",
+                        "zh-Hant": "高手只能使用賬戶級別內支持的杠桿進行交易，復制者跟隨高手進行同杠桿開倉交易。",
                         "id": " Master hanya dapat menggunakan daya ungkit yang telah disesuaikan dengan tingkat akun Master.Nasabah yang mengikuti Master juga akan disesuaikan daya ungkitnya setara dengan Master. ",
                         "es": "El master sólo puede usar el nivel de cuenta para soportar el apalancamiento de la transacción; el usuario para seguir al maestro con la palanca para abrir la transacción."
                     },
@@ -6933,7 +6933,7 @@
                         "zh": "榜单投资者被其他用户复制跟随，会获得复制者20%的盈利分成，",
                         "en": "The list of investors is copied by other users, will get 20% of the profits of the replicator,",
                         "vi": "Danh sách các nhà đầu tư được sao chép bởi những người dùng khác, sẽ nhận được 20% lợi nhuận của người sao chép,",
-                        "zh-Hant": "榜單投資者被其他用護復制跟隨，會獲得復制者20%的盈利分成，",
+                        "zh-Hant": "榜單投資者被其他用戶復制跟隨，會獲得復制者20%的盈利分成，",
                         "id": " Daftar Master yang diikuti oleh nasabah, Master akan mendapatkan 20% dari total keuntungan yang dihasilkan oleh nasabah, ",
                         "es": "La lista de inversores es copiada por otros usuarios; obtendrá el 20% de las ganancias del replicador,"
                     },
@@ -6949,7 +6949,7 @@
                         "zh": "开通TigerWit真实账户并完成实名认证",
                         "en": "Open the real account of the TigerWit and complete the verification",
                         "vi": "Mở tài khoản thực của TigerWit và hoàn thành xác minh",
-                        "zh-Hant": "開通TigerWit真實帳護並完成實名認證",
+                        "zh-Hant": "開通TigerWit真實賬戶並完成實名認證",
                         "id": " Buka akun Live di TigerWit dan selesaikan verifikasi",
                         "es": "Abra una cuenta real TigerWit y complete la verificación"
                     },
@@ -6973,7 +6973,7 @@
                         "zh": "账户余额不得低于$500",
                         "en": "Account balance should not be less than $ 500",
                         "vi": "Số dư tài khoản không được nhỏ hơn 500 đô la",
-                        "zh-Hant": "帳護余額不得低於$500",
+                        "zh-Hant": "賬戶余額不得低於$500",
                         "id": " Menjaga Saldo akun agar tidak kurang dari 500$",
                         "es": "Saldo en cuenta no inferior a $ 500"
                     },
@@ -7037,7 +7037,7 @@
                         "zh": "您的交易账户已被推荐到高手榜，请重新登录后查看。",
                         "en": "Your trading account has been recommended to the master list. Please check back again.",
                         "vi": "Tài khoản giao dịch của bạn đã được đề xuất vào danh sách chính. Vui lòng kiểm tra lại.",
-                        "zh-Hant": "您的交易帳護已被推薦到高手榜，請重新登錄後查看。",
+                        "zh-Hant": "您的交易賬戶已被推薦到高手榜，請重新登錄後查看。",
                         "id": " Akun transaksi anda direkomendasikan untuk menjadi Master. Silakan lihat lebih detail. ",
                         "es": "Su cuenta de trading ha sido recomendada en la lista maestra. Por favor, compruebe de nuevo."
                     },
@@ -7461,7 +7461,7 @@
                         "zh": "账户余额不得低于500美金",
                         "en": "Maintain an account balance of at least USD500",
                         "vi": "Duy trì số dư tài khoản tối thiểu là 500 USD",
-                        "zh-Hant": "帳護余額不得低於500美金",
+                        "zh-Hant": "賬戶余額不得低於500美金",
                         "id": "Menjaga saldo akun diatas 500 $",
                         "es": "Mantener un balance de cuenta de al menos USD500"
                     },
@@ -7487,7 +7487,7 @@
                         "zh": "TigerWit交易账户支持开通多个子账号用于不同交易策略。",
                         "en": "TigerWit transaction account supports opening multiple sub-accounts for different transaction strategies.",
                         "vi": "Tài khoản giao dịch TigerWit hỗ trợ mở nhiều tài khoản phụ cho các chiến lược giao dịch khác nhau.",
-                        "zh-Hant": "TigerWit交易帳護支持開通多個子帳號用於不同交易策略。",
+                        "zh-Hant": "TigerWit交易賬戶支持開通多個子帳號用於不同交易策略。",
                         "id": "Anda dapat membuka akun tambahan baru di TigerWit yang dapat digunakan untuk strategi transaksi yang berbeda ",
                         "es": "La cuenta de transacciones de TigerWit permite la apertura de múltiples sub-cuentas para diferentes estrategias de trading."
                     },
@@ -7583,7 +7583,7 @@
                         "zh": "为了不影响您自主开仓， 系统自动为您创建了自主交易账号。请在“我的-账户管理”查看。",
                         "en": "In order not to affect your independent open position, the system automatically created an independent trading account for you. Please check in Trade Account.",
                         "vi": "Để không ảnh hưởng đến vị thế mở độc lập của bạn, hệ thống sẽ tự động tạo một tài khoản giao dịch độc lập cho bạn. Vui lòng kiểm tra trong Tài khoản giao dịch.",
-                        "zh-Hant": "為了不影響您自主開倉， 系統自動為您創建了自主交易帳號。請在“我的-帳護管理”查看。",
+                        "zh-Hant": "為了不影響您自主開倉， 系統自動為您創建了自主交易帳號。請在“我的-賬戶管理”查看。",
                         "id": " Sistem akan membuatkan akun transaksi yang terpisah dari akun copy agar tidak menganggu akun saat ini. ",
                         "es": "Para no afectar su posición abierta independiente, el sistema le ha creado automáticamente una cuenta de trading independiente. Por favor, compruebe en Cuenta Trade."
                     },
@@ -7897,7 +7897,7 @@
                         "zh": "您的账户尚未通过认证审核，请先完善资料。",
                         "en": "Incomplete for the information, please continue to improve.",
                         "vi": "Chưa đầy đủ thông tin, vui lòng tiếp tục cải thiện.",
-                        "zh-Hant": "您的帳護尚未通過認證審核，請先完善資料。",
+                        "zh-Hant": "您的賬戶尚未通過認證審核，請先完善資料。",
                         "id": " Informasi kurang lengkap, lengkapi terlebih dahulu untuk melanjutkan. ",
                         "es": "Información Incompleta, por favor, continúe."
                     },
@@ -7963,7 +7963,7 @@
                         "zh": "账户设置",
                         "en": "Settings",
                         "vi": "Cài đặt",
-                        "zh-Hant": "帳護設置",
+                        "zh-Hant": "賬戶設置",
                         "id": "Pengaturan",
                         "es": "Ajustes"
                     },
@@ -8059,7 +8059,7 @@
                         "zh": "用户名（当前）",
                         "en": "User Name(Current) ",
                         "vi": "Tên người dung (Hiện tại) ",
-                        "zh-Hant": "用護名（當前）",
+                        "zh-Hant": "用戶名（當前）",
                         "id": "Nama Pengguna(Saat ini) ",
                         "es": "Nombre Usuario(Actual) "
                     },
@@ -8067,7 +8067,7 @@
                         "zh": "用户名（英文）",
                         "en": "User Name(English) ",
                         "vi": "Tên người dung (Tiếng Anh) ",
-                        "zh-Hant": "用護名（英文）",
+                        "zh-Hant": "用戶名（英文）",
                         "id": "Nama Pengguna(English) ",
                         "es": "Nombre Usuario(Inglés) "
                     },
@@ -8075,7 +8075,7 @@
                         "zh": "用户名（当前）：",
                         "en": "User Name(Current): ",
                         "vi": "Tên người dung (Hiện tại): ",
-                        "zh-Hant": "用護名（當前）：",
+                        "zh-Hant": "用戶名（當前）：",
                         "id": "Nama Pengguna(Saat ini): ",
                         "es": "Nombre Usuario(Actual): "
                     },
@@ -8083,7 +8083,7 @@
                         "zh": "用户名（英文）：",
                         "en": "User Name(English): ",
                         "vi": "Tên người dung (Tiếng Anh): ",
-                        "zh-Hant": "用護名（英文）：",
+                        "zh-Hant": "用戶名（英文）：",
                         "id": "Nama Pengguna(English): ",
                         "es": "Nombre Usuario(Inglés): "
                     },
@@ -8139,7 +8139,7 @@
                         "zh": "账户安全",
                         "en": "Security",
                         "vi": "Bảo mật",
-                        "zh-Hant": "帳護安全",
+                        "zh-Hant": "賬戶安全",
                         "id": "Keamanan",
                         "es": "Seguridad"
                     },
@@ -8213,7 +8213,7 @@
                         "vi": "Nhận Mã xác nhận",
                         "zh-Hant": "獲取驗證碼",
                         "id": "Dapatkan Kode Verifikasi",
-                        "es": "Obtener código de verificación"
+                        "es": "Código verificación otro email"
                     },
                     "mailboxSettings": {
                         "zh": "电子邮箱设置",
@@ -8235,7 +8235,7 @@
                         "zh": "钱包不支持单独激活，交易类账户开通成功后，钱包将自动激活。",
                         "en": "Wallet does not support individual activation，after successful opening of transaction account, wallet will be automatically activated.",
                         "vi": "Wallet không hỗ trợ kích hoạt riêng lẻ ， sau khi mở tài khoản giao dịch thành công, ví tiền sẽ được kích hoạt tự động.",
-                        "zh-Hant": "錢包不支持單獨激活，交易類帳護開通成功後，錢包將自動激活。",
+                        "zh-Hant": "錢包不支持單獨激活，交易類賬戶開通成功後，錢包將自動激活。",
                         "id": " Dompet akan diaktivasi secara otomatis setelah berhasil membuka akun transaksi ",
                         "es": "Wallet no permite activación individual，después de abrir una cuenta de operaciones, su Wallet se activará automáticamente."
                     },
@@ -8243,7 +8243,7 @@
                         "zh": "开通真实账户",
                         "en": "Live Account",
                         "vi": "Tài khoản Thực",
-                        "zh-Hant": "開通真實帳護",
+                        "zh-Hant": "開通真實賬戶",
                         "id": "Akun Live",
                         "es": "Cuenta Real"
                     },
@@ -8251,7 +8251,7 @@
                         "zh": "开户即得$200交易红包，入金可获$800红包！",
                         "en": "Open a live account and receive a $200 coupon, deposit and receive $800 coupon.",
                         "vi": "Mở tài khoản thực và nhận phiếu thưởng $ 200, gửi tiền và nhận phiếu thưởng $ 800.",
-                        "zh-Hant": "開護即得$200交易紅包，入金可獲$800紅包！",
+                        "zh-Hant": "開戶即得$200交易紅包，入金可獲$800紅包！",
                         "id": " Buka akun live sekarang juga dan dapatkan kupon senilai 200$ dan 800$ ",
                         "es": "Abra una cuenta real y reciba un cupón de $200, deposite y reciba un cupón de $800."
                     },
@@ -8299,7 +8299,7 @@
                         "zh": "开通体验金账户",
                         "en": "Open an trail account",
                         "vi": "Mở tài khoản trải nghiệm",
-                        "zh-Hant": "開通體驗金帳護",
+                        "zh-Hant": "開通體驗金賬戶",
                         "id": "Buka Akun Pengalaman",
                         "es": "Abrir una cuenta Práctica"
                     },
@@ -8307,7 +8307,7 @@
                         "zh": "开户即送$10000交易体验金。",
                         "en": "Open the trail account and receive a $10000 virtual balance.",
                         "vi": "Mở tài khoản trải nghiệm và nhận số dư ảo 10.000 đô la.",
-                        "zh-Hant": "開護即送$10000交易體驗金。",
+                        "zh-Hant": "開戶即送$10000交易體驗金。",
                         "id": " Buka Akun pengalaman dan dapatkan dana virtual senilai 10,000$ ",
                         "es": "Abra la cuenta de práctica y reciba $10000 virtuales de balance"
                     },
@@ -8499,7 +8499,7 @@
                         "zh": "为了您的账户安全，请先验证身份",
                         "en": "To ensure your account is safe, please verify your identity first",
                         "vi": "Để đảm bảo tài khoản của bạn an toàn, trước tiên hãy xác minh danh tính của bạn",
-                        "zh-Hant": "為了您的帳護安全，請先驗證身份",
+                        "zh-Hant": "為了您的賬戶安全，請先驗證身份",
                         "id": " Untuk memastikan akun anda aman, silahkan verifikasi identitas anda terlebih dahulu ",
                         "es": "Para garantizar que su cuenta esté segura, por favor, primero verifique su identidad"
                     },
@@ -8595,7 +8595,7 @@
                         "zh": "请为账户设置昵称",
                         "en": "Please set nickname",
                         "vi": "Vui lòng đặt biệt hiệu",
-                        "zh-Hant": "請為帳護設置昵稱",
+                        "zh-Hant": "請為賬戶設置昵稱",
                         "id": " Silahkan masukkan nama pengguna ",
                         "es": "Por favor, establece el nickname"
                     },
@@ -8696,20 +8696,20 @@
                         "es": "Dirección residencial"
                     },
                     "selectProvincesCities": {
-                        "zh": "请选择省/市",
-                        "en": "Please select provinces/cities",
-                        "vi": "Vui lòng chọn tỉnh/ thành phố",
-                        "zh-Hant": "請選擇省/市",
-                        "id": "Silahkan pilih provinsi/kota",
-                        "es": "Seleccione provincias/ciudades"
+                        "zh": "请选择您的省/市",
+                        "en": "Please select state/region",
+                        "vi": "Vui lòng chọn bang/vùng",
+                        "zh-Hant": "請選擇您的省/市",
+                        "id": "Silahkan pilih daerah/provinsi",
+                        "es": "Por favor elija estado/región"
                     },
                     "selectCityDistrict": {
-                        "zh": "请选择市/区",
-                        "en": "Please select city/district",
-                        "vi": "Vui lòng chọn thành phố/ quận",
-                        "zh-Hant": "請選擇市/區",
-                        "id": " Silahkan pilih provinsi/daerah ",
-                        "es": "Por favor seleccione la ciudad/distrito"
+                        "zh": "请选择您的市/区",
+                        "en": "Please select city",
+                        "vi": "Vui lòng chọn thành phố",
+                        "zh-Hant": "請選擇您的市/區",
+                        "id": "Silahkan pilih kota",
+                        "es": "Por favor elija ciudad"
                     },
                     "enterAddress": {
                         "zh": "请输入完整居住地址",
@@ -8723,7 +8723,7 @@
                         "zh": "请您先开通账户！",
                         "en": "Please open account first!",
                         "vi": "Vui lòng chọn mở tài khoản đầu tiên",
-                        "zh-Hant": "請您先開通帳護！",
+                        "zh-Hant": "請您先開通賬戶！",
                         "id": "Mohon buka akun terlebih dahulu",
                         "es": "Por favor, ¡Abra la cuenta primero!"
                     },
@@ -8731,7 +8731,7 @@
                         "zh": "请输入用户名",
                         "en": "Enter username",
                         "vi": "Nhập tên người dùng",
-                        "zh-Hant": "請輸入用護名",
+                        "zh-Hant": "請輸入用戶名",
                         "id": "Masukkan nama pengguna",
                         "es": "Introduzca su nombre de usuario"
                     },
