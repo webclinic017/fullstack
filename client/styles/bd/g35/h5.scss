@@ -35,7 +35,7 @@
   }
 }
 @include b(m_global_t35) {
-  height: 2400px;
+  // height: 2400px;
   background-image: url('/images/bd_g35/h5_bg.png');
   background-position: center top;
   background-size: auto 100%;
@@ -151,7 +151,6 @@
   }
   @include e(cont-1) {
     margin-top: 20px;
-    margin-left: 20px;
     .cont-left {
       float: left;
       height: 375px;
@@ -162,7 +161,7 @@
     }
     .cont-right {
       float: left;
-      padding-left: 20px;
+      padding-left: 10px;
 
       li {
         padding: 5px 0px;
@@ -295,5 +294,6 @@
     color: #6e859e;
     font-size: 12px;
     margin-top: 50px;
+    margin-bottom: 50px;
   }
 }

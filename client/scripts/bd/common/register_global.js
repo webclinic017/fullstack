@@ -130,7 +130,6 @@ $(document).ready(function () {
       lp: oReg.search_arr.lp || null,
       key: oReg.search_arr.key || null,
       is_agree: is_agree == 'is_agree' ? 1 : 0,
-      lang: 'en'
     }).then(function (data) {
       if (!data) return;
       if (data.is_succ) {
