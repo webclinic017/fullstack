@@ -19,7 +19,7 @@
             username: copiedTrader.username,          // 高手 username
             // avatar: copiedTrader.lgAvatar,         // 高手头像
             amount: copiedTrader.copied || undefined, // 需填写的复制金额，若已经复制则为本人复制高手的复制金额
-            minCopyAmount: 200, 
+            minCopyAmount: copiedTrader.minCopyAmount || '', 
             surplusAmount: passedScope.surplusAmount || undefined
         };
 
