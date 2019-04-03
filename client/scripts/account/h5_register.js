@@ -372,8 +372,8 @@
                     invite_status: $.cookie('invite_status') || null,
                     account: $("#telephone").val() || null,
                     account_type: 1,
-                    phone_code: '86',
-                    world_code: 'CN',
+                    phone_code: areaCode || '86',
+                    world_code: world_code || 'CN',
                     // password: $("#password").val() || null,
                     password: $("#verify_code").val() || $("#password").val() || null,
                     login_type: 2, // 登录验证方式，1-密码登录，2-验证码登录
@@ -465,14 +465,5 @@
             });
             
         }
-
-        $('#regist_btn3').on('touchend',function(e){
-            if (oReg.search_arr.panda_download_url && oReg.search_arr.panda_download_url === 'oppo') {
-                // pandafx download url of oppo
-                window.location.href = "http://adsfs.oppomobile.com/mp/app/B/detail.html?im=$im1$&pkg=com.pandaforex.forex";
-            } else {
-                window.location.href = $(e.target).attr('data-url');
-            }
-        })
     });
 }());

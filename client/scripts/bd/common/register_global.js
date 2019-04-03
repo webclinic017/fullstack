@@ -7,7 +7,6 @@ $(document).ready(function () {
     count: 60,
     unable: false
   };
-
   /*获取查询字段*/
   function getSearch() {
     var url = location.href;
@@ -43,13 +42,8 @@ $(document).ready(function () {
    }
 
   oReg.search_arr = getSearch();
-  oReg.search_source = {};
-  $.each(oReg.search_arr, function (index, value) {
-    if (oReg.source.test(index)) {
-    oReg.search_source[index] = value;
-    }
-  });
-  //  console.log(JSON.stringify(oReg.search_source));
+  oReg.search_source = checkUserSource();
+  // console.log(oReg.search_source);
   /* 客户推广参数写入 */
   publicRequest('setUserSource', 'POST', {
     source: JSON.stringify(oReg.search_source)
@@ -81,7 +75,7 @@ $(document).ready(function () {
     if (oReg.email.test($("#email").val())) {
       return true;
     } else {
-      openLayer('Email format error');
+      openLayer(lang.text('registerJs.emailFormatError'));
       return false;
     }
   }
@@ -90,7 +84,7 @@ $(document).ready(function () {
     if ($("#verify_code").val()) {
       return true;
     } else {
-      openLayer('Please enter your verification code');
+      openLayer(lang.text('thirdH5.fill_ver_code'));
       return false;
     }
   }
@@ -114,7 +108,7 @@ $(document).ready(function () {
  
   function toRegister (is_agree) {
     if (!$("#country").val()) {
-        openLayer('Please select your country/area');
+        openLayer(lang.text('registerJs.selectCountry'));
         return;
     }
     if (!checkEmail()) return;
@@ -142,13 +136,12 @@ $(document).ready(function () {
       lp: oReg.search_arr.lp || null,
       key: oReg.search_arr.key || null,
       is_agree: is_agree == 'is_agree' ? 1 : 0,
-      register_rule: JSON.stringify(oReg.search_source),
-      lang: 'en'
+      register_rule: JSON.stringify(oReg.search_source)
     }).then(function (data) {
       if (!data) return;
       if (data.is_succ) {
         layer.closeAll();
-        openLayer("Register Successful");
+        openLayer(lang.text('registerJs.registerSucc'));
         if (!isMobile()) {
           writeCookie({nameKey: 'token', nameValue: data.data.token});
           writeCookie({nameKey: 'user_code', nameValue: data.data.user_code});
@@ -218,10 +211,10 @@ $(document).ready(function () {
             sendInfo.unable = false;
             sendInfo.count = 60;
             $("#verify_code_btn").removeClass("unable");
-            $("#verify_code_btn").html("Resend");
+            $("#verify_code_btn").html(lang.text('registerJs.resend'));
             clearInterval(timer);
           } else {
-            $("#verify_code_btn").html("Resend ("+sendInfo.count+")");
+            $("#verify_code_btn").html(lang.text('registerJs.resend') + " ("+sendInfo.count+")");
           }
         }, 1000);
       } else {

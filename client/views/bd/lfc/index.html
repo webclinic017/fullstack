@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="description" content="With a strong technological core, TigerWit offers its clients exceptional capabilities to trade in the markets. Forex margin trading system.Forex analysis software,Forex demo trading platform,Forex strategy, Forex financing,forex trading master.">
+  <meta name="keywords" content="TigerWit, Foreign Exchange Investment and Financing, Gold and Silver Trading Platform, Forex Trading Platform, Forex Trading Master, Forex Inducing Broker,Electronic Finance.">
+  <title>TigerWit Global</title>
+    <% include /common/vendor/web.css.html %>
+    <!-- build:css(.tmp) /styles/web.css -->
+    <link rel="stylesheet" href="/styles/web.css">
+    <!-- endbuild -->
+    <% include /common/statistic/main.html %>
+    <% include /common/vendor/web.js.html %>
+    <script>
+      var pageInfo = '<%= pageInfo%>'
+    </script>
+</head>
+
+<body>
+  <div class="bd_lfc">
+    <div class="bd_lfc_navbar clearfix">
+      <div class="pic fl"><img class="w" src="/white_label/bd_lfc/lfc-logo-w.png" alt=""><img class="b" src="/white_label/bd_lfc/lfc-logo-b.png" alt=""></div>
+      <ul class="nav fr">
+        <li data-page="home" class="active"><span>Home</span></li>
+        <li data-page="app"><span>App</span></li>
+        <li data-page="about"><span>About us</span></li>
+      </ul>
+    </div>
+    <div class="bd_lfc_page_wrapper home">
+      <% include ./home.html %>
+    </div>
+    <div class="bd_lfc_page_wrapper app">
+      <% include ./app.html %>
+    </div>
+    <div class="bd_lfc_page_wrapper about">
+      <% include ./about.html %>
+    </div>
+    <div class="bd_lfc_footer">
+      <p class="global">
+        Trading CFDs involves risk and can result in loss of your capital
+      </p>
+      <p class="uk">
+        CFDs are complex instruments and come with a high risk of losing money rapidly due to leverage. <strong>64% of retail</strong> <br>
+        <strong>investor accounts lose money when trading CFDs with this provider.</strong> You should consider whether you <br>
+        understand how CFDs work and whether you can afford to take the High risk of losing your money.
+      </p>
+    </div>
+  </div>
+  <%- include('/common/statistic/_all.html') %>
+</body>
+
+<!-- build:js(client) /scripts/bd_lfc.js -->
+<script src="/scripts/bd/common/publicAjax.js"></script>
+<script src="/scripts/plugins/plugins.js"></script>
+<script src="/scripts/plugins/layer.js"></script>
+<script src="/scripts/bd/lfc/index.js"></script>
+<!-- endbuild -->
+</html>

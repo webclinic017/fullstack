@@ -72,6 +72,7 @@ $(eleDeposit.payDepositBtn).on("tap", function () {
   } else {
     confirmDeposit();
   }
+  $("input").blur();
   return false;
 });
 $(eleDeposit.payDepositMsgBtn).on("tap", function () {
@@ -104,6 +105,9 @@ $(document).on("tap", eleDeposit.payDepositSubmitBtn, function () {
     $("#third_app_middle_template").html(html);
     openMiddleMdl();
   }else{
+    if(depositType === 'payment_1'){
+      copyText(personalInfo.user_code)
+    }
     openLoadingMdl();
     submitDeposit();
   }
@@ -173,7 +177,9 @@ function computeAmount () {
       amountDollar: amount,
       amountCur: amountCur,
       amountFee: amountFee,
-      amountTotal: selectKeyFromType('poundage_status') ? Number(amountCur)+Number(amountFee) : amountCur
+      amountTotal: selectKeyFromType('poundage_status') ? Number(amountCur)+Number(amountFee) : amountCur,
+      depositType: depositType,
+      userCode: personalInfo.user_code
     }
   }
   var html=bt('template_asset_confirm',depositTemplate);
@@ -393,6 +399,7 @@ function openChangeDepositTypeMdl () {
   var html=bt('template_deposit_type',depositTemplate);
   $("#third_app_bottom_template").html(html);
   openBottomMdl();
+  $("input").blur();
   return false;
 }
 //更改充值方式

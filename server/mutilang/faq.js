@@ -224,10 +224,10 @@ module.exports = {
         id:"__id__"
     },
     faqTrade8:{
-        zh:"A：对于外汇和贵金属，TigerWit向客户同时提供3种杠杆， 50倍、100倍和200倍。",
-        en:"A: Fx, Precious metals: TigerWit offers 3 kinds of leverage, 50 leverage, 100 leverage, 200 leverage. ",
+        zh:"A：对于外汇和贵金属，TigerWit向客户同时提供3种杠杆，100倍、200倍和400倍。",
+        en:"A: Fx, Precious metals: TigerWit offers 3 kinds of leverage, 100 leverage, 200 leverage, 400 leverage. ",
         vi:"^^-^^",
-        "zh-Hant":"A：對於外匯和貴金屬，TigerWit向客戶同時提供3種杠桿， 50倍、100倍和200倍。",
+        "zh-Hant":"A：對於外匯和貴金屬，TigerWit向客戶同時提供3種杠桿， 100倍、200倍和400倍。",
         id:"__id__"
     },
     faqTrade9:{
@@ -245,10 +245,10 @@ module.exports = {
         id:"__id__"
     },
     faqTrade11:{
-        zh:"A：杠杆无需调整，体现在产品中，直接交易对应的产品就可以了。交易品种后面的数字代表杠杆大小，没有数字默认是100倍的杠杆。例如：GBPUSD50代表50倍杠杆，GBPUSD200代表200倍杠杆，GBPUSD代表100倍杠杆。",
+        zh:"A：杠杆无需调整，体现在产品中，直接交易对应的产品就可以了。交易品种后面的数字代表杠杆大小，没有数字默认是100倍的杠杆。例如：GBPUSD200代表200倍杠杆，GBPUSD代表100倍杠杆。",
         en:"A: Leverage reflected in the product. The number behind the product represents the lever level, No number stands for 100 leverage.",
         vi:"^^-^^",
-        "zh-Hant":"A：杠桿無需調整，體現在產品中，直接交易對應的產品就可以了。交易品種後面的數字代表杠桿大小，沒有數字默認是100倍的杠桿。例如：GBPUSD50代表50倍杠桿，GBPUSD200代表200倍杠桿，GBPUSD代表100倍杠桿。",
+        "zh-Hant":"A：杠桿無需調整，體現在產品中，直接交易對應的產品就可以了。交易品種後面的數字代表杠桿大小，沒有數字默認是100倍的杠桿。例如：GBPUSD200代表200倍杠桿，GBPUSD代表100倍杠桿。",
         id:"__id__"
     },
     faqTrade12:{

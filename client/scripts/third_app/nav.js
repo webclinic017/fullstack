@@ -158,6 +158,7 @@ function openChangeAccountMdl (msg) {
   var html=bt('template_deposit_account',depositTemplate);
   $("#third_app_bottom_template").html(html);
   openBottomMdl();
+  $("input").blur();
   return false;
 }
 //获取银行列表

@@ -5,32 +5,32 @@
     angular.module('fullstackApp')
         .controller('RanklistAllController', RanklistAllController);
 
-    RanklistAllController.$inject = ['$scope', '$document', '$state', 'ranklist'];
+    RanklistAllController.$inject = ['$scope', '$document', '$state', 'ranklist', 'account'];
 
-    function RanklistAllController($scope, $document, $state, ranklist) {
-        
+    function RanklistAllController($scope, $document, $state, ranklist, account) {
+
         var pagesize = 9;
         $scope.rankOrder = 'thirty_profit_rate';
         $scope.search = {};
         $scope.ranklist = [];
+        $scope.masterTrialList = {};
         $scope.pagebar = {
             config: {
                 // total: , // 总页数
-                page: 1    
+                page: 1
             },
             pages: [],
             pagesBtn: [],
             // selectPage: , bind to pagination.selectPage
-            getList: getMastersList           
+            getList: getMastersList
         };
-
         $scope.showSearchList = showSearchList;
         $scope.getMastersList = getMastersList;
         $scope.changeRankOrder = changeRankOrder;
 
         getMastersList();
 
-        function changeRankOrder (order) {
+        function changeRankOrder(order) {
             if (order) {
                 if ($scope.rankOrder == order) return;
             }
@@ -38,7 +38,7 @@
             getMastersList(1);
         }
 
-        function getMastersList (page) {
+        function getMastersList(page) {
             page = page ? page : 1;
             var offset = 9 * (page - 1);
             // $scope.ranklist = [];
@@ -48,7 +48,7 @@
                 // console.info(data);
                 if (data.is_succ) {
                     data = data.data;
-                    $scope.ranklist = data.records.slice(0,9);
+                    $scope.ranklist = data.records.slice(0, 9);
                     $scope.$broadcast('hideLoadingImg');
 
                     // 最大跌幅＊100
@@ -60,7 +60,7 @@
                     angular.extend($scope.pagebar.config, {
                         total: getTotal(data.record_count, 9),
                         page: page
-                    }); 
+                    });
                 }
             });
         }
@@ -78,12 +78,27 @@
             return total;
         }
 
-        function showSearchList (e, type) {
+        function showSearchList(e, type) {
             e.stopPropagation();
             $scope.search = {};
             $scope.search[type] = true;
         }
 
+        // 获取体验高手列表
+        getMastersTrialList()
+        function getMastersTrialList() {
+            account.checkLogined().then(function (logined) {
+                if (logined) {
+                    ranklist.getMastersTrialList(2).then(function (data) {
+                        if(!data) return;
+                        if (data.is_succ) {
+                            $scope.masterTrialList = data.data;
+                        }
+                    })
+                }
+            })
+
+        }
         // $document.on('click', function () {
         //     $scope.$apply(function () {
         //         $scope.search = {};

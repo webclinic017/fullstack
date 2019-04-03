@@ -1,7 +1,7 @@
 <div class="sys_modal_v2 slim_case">
     <button class="close" ng-click="closeModal()" ng-if="type !== 'HotMessage'">&times;</button>
 
-    <h5 class="sys_modal_v2__title" >
+    <h5 class="sys_modal_v2__title">
         {{msgInfo.msgTitle || lang.text('tigerWitID.depositWithdrawal.notice')}}
     </h5>
 
@@ -25,7 +25,8 @@
 
     <div class="sys_modal_v2__content" ng-if="type === 'confirmDeposit'">
         <div class="sys_modal_v2__info mg-bt-15">
-            <p class="deposit_modal__tit" style="font-family: initial;">{{msgInfo.currency.currency_symbol}} {{msgInfo.amountTotal}}</p>
+            <p class="deposit_modal__tit" style="font-family: initial;">{{msgInfo.currency.currency_symbol}}
+                {{msgInfo.amountTotal}}</p>
             <ul class="deposit_modal__lst">
                 <li class="clearfix">
                     <span class="fl">{{lang.text('tigerWitID.depositWithdrawal.depositAmountM')}}</span>
@@ -33,26 +34,33 @@
                 </li>
                 <li class="clearfix" ng-if="msgInfo.currency.currency !== 'USD'">
                     <span class="fl">{{lang.text('tigerWitID.depositWithdrawal.tip59_1')}}{{msgInfo.currency.currency_name}}{{lang.text('tigerWitID.depositWithdrawal.tip59_2')}}</span>
-                    <span class="fr" style="font-family: initial;">{{msgInfo.currency.currency_symbol}} {{msgInfo.amountRMB}}</span>
+                    <span class="fr" style="font-family: initial;">{{msgInfo.currency.currency_symbol}}
+                        {{msgInfo.amountRMB}}</span>
                 </li>
                 <li class="clearfix">
                     <span class="fl">{{lang.text('tigerWitID.details.commission')}}：</span>
-                    <span class="fr" style="font-family: initial;">{{msgInfo.currency.currency_symbol}} {{msgInfo.isFree ? msgInfo.amountFee : '0.00'}}</span>
+                    <span class="fr" style="font-family: initial;">{{msgInfo.currency.currency_symbol}}
+                        {{msgInfo.isFree ? msgInfo.amountFee : '0.00'}}</span>
                 </li>
                 <li class="clearfix" ng-if="!msgInfo.isFree">
                     <span class="fl"></span>
-                    <span class="fr" style="font-family: initial; text-decoration: line-through; color: #f23244;">{{msgInfo.currency.currency_symbol}} {{msgInfo.amountFee}}</span>
+                    <span class="fr" style="font-family: initial; text-decoration: line-through; color: #f23244;">{{msgInfo.currency.currency_symbol}}
+                        {{msgInfo.amountFee}}</span>
                 </li>
             </ul>
             <!-- <p class="deposit_modal__tip" ng-bind-html="formatText(msgInfo.desc) | bindhtml"></p> -->
             <pre class="deposit_modal__tip" ng-bind="formatText(msgInfo.desc)"></pre>
         </div>
 
-        <p class="btn_wrapper mg-bt-15">
-            <button class="btn btn-primary-gradient btn-sm" ng-click="goOnDeposit()">
+        <div class="btn_wrapper mg-bt-15">
+            <p ng-if="basicInfo.depositType == 'payment_1'" class="mg-bt-15">{{lang.text('tigerWitID.depositWithdrawal.clientAccountM')}}{{ basicInfo.userCode }} </p>
+            <button class="btn btn-primary-gradient btn-sm" ng-if="basicInfo.depositType == 'payment_1'" ng-click="[copyUserCode(), goOnDeposit()]">
+                {{lang.text('tigerWitID.depositWithdrawal.copyAccountPay')}}
+            </button>
+            <button class="btn btn-primary-gradient btn-sm" ng-if="basicInfo.depositType != 'payment_1'" ng-click="goOnDeposit()">
                 {{msgInfo.msgBtn}}
             </button>
-        </p>
+        </div>
     </div>
 
     <div class="sys_modal_v2__content" ng-if="type === 'depositLimit'">
@@ -61,10 +69,12 @@
         </p>
 
         <p class="btn_wrapper mg-bt-15">
-            <button ng-click="[closeModal(), gotoEvidence()]" class="btn btn-info btn-sm" style="width: 70%; border-radius: 100px;" ng-if="lang.isThird()">
+            <button ng-click="[closeModal(), gotoEvidence()]" class="btn btn-info btn-sm" style="width: 70%; border-radius: 100px;"
+                ng-if="lang.isThird()">
                 {{lang.text('tigerWitID.depositWithdrawal.uploadVoucher')}}
             </button>
-            <a ui-sref="space.asset.subpage({subpage: 'evidence'})" ng-click="closeModal()" class="btn btn-info btn-sm" style="width: 70%; border-radius: 100px;" ng-if="!lang.isThird()">
+            <a ui-sref="space.asset.subpage({subpage: 'evidence'})" ng-click="closeModal()" class="btn btn-info btn-sm"
+                style="width: 70%; border-radius: 100px;" ng-if="!lang.isThird()">
                 {{lang.text('tigerWitID.depositWithdrawal.uploadVoucher')}}
             </a>
             <button class="btn btn-primary-gradient btn-sm" style="width: 70%; margin-top:20px;" ng-click="[closeModal(), goOnDeposit()]">
@@ -87,14 +97,14 @@
 
     <div class="sys_modal_v2__content" ng-if="type === 'depositRule'">
         <p class="sys_modal_v2__info mg-bt-15">
-            <p class="mg-bt-10">{{lang.text('tigerWitID.depositWithdrawal.tip19')}}</p> 
-            <p>{{lang.text('tigerWitID.depositWithdrawal.tip20')}}</p> 
+            <p class="mg-bt-10">{{lang.text('tigerWitID.depositWithdrawal.tip19')}}</p>
+            <p>{{lang.text('tigerWitID.depositWithdrawal.tip20')}}</p>
             <p class="mg-bt-10 mg-tp-15">{{lang.text('tigerWitID.depositWithdrawal.depositStipulation')}}</p>
             <p>{{lang.text('tigerWitID.depositWithdrawal.tip21')}}</p>
             <p>{{lang.text('tigerWitID.depositWithdrawal.tip22')}}</p>
             <p>{{lang.text('tigerWitID.depositWithdrawal.tip23')}}</p>
             <p class="mg-bt-10 mg-tp-15">{{lang.text('tigerWitID.depositWithdrawal.tip24')}}</p>
-            <p>{{lang.text('tigerWitID.depositWithdrawal.tip25')}}</p> 
+            <p>{{lang.text('tigerWitID.depositWithdrawal.tip25')}}</p>
             <p>{{lang.text('tigerWitID.depositWithdrawal.tip26')}}</p>
         </p>
 
@@ -137,28 +147,30 @@
     </div>
     <div class="sys_modal_v2__content" ng-if="type === 'bindBankCard'">
         <div class="sys_modal_v2__info mg-bt-15 deposit_modal__bank_card">
-           <p class="mg-bt-10"><span class="tit">{{lang.text('tigerWitID.wallet.name')}}</span><span class="name">{{msgInfo.cardName}}</span></p>
-           <p><span>{{lang.text('tigerWitID.depositWithdrawal.bankCardNumber')}}</span></p>
-           <p class="form-control-wrapper">
-               <input class="form-control" type="text" ng-focus="depositCard.backErr = false" ng-model="depositCard.num" placeholder="{{lang.text('tigerWitID.depositWithdrawal.enterCardNumber')}}">
-           </p>
-           <p class="back_err" ng-if="depositCard.backErr">
+            <p class="mg-bt-10"><span class="tit">{{lang.text('tigerWitID.wallet.name')}}</span><span class="name">{{msgInfo.cardName}}</span></p>
+            <p><span>{{lang.text('tigerWitID.depositWithdrawal.bankCardNumber')}}</span></p>
+            <p class="form-control-wrapper">
+                <input class="form-control" type="text" ng-focus="depositCard.backErr = false" ng-model="depositCard.num"
+                    placeholder="{{lang.text('tigerWitID.depositWithdrawal.enterCardNumber')}}">
+            </p>
+            <p class="back_err" ng-if="depositCard.backErr">
                 {{depositCard.backMsg}}
-           </p>
-           <p class="tip mg-tp-20">
+            </p>
+            <p class="tip mg-tp-20">
                 <span class="mg-bt-10">{{lang.text('tigerWitID.details.precautions')}}</span>
                 {{lang.text('tigerWitID.depositWithdrawal.tip27')}}<br>
                 {{lang.text('tigerWitID.depositWithdrawal.tip28')}}<br>
                 {{lang.text('tigerWitID.depositWithdrawal.tip29')}}<br>
                 {{lang.text('telephone')}}
-           </p>
+            </p>
         </div>
 
         <p class="btn_wrapper mg-bt-15">
             <button ng-show="!isLoading" class="btn btn-primary-gradient btn-sm" ng-click="bindBankCard()">
                 {{lang.text('tigerWitID.confirm')}}
             </button>
-            <button ng-show="isLoading" class="btn btn-primary-gradient btn-sm"><i class="loading_spinner fa fa-spinner"></i> {{lang.text('tigerWitID.submitting')}}</button>
+            <button ng-show="isLoading" class="btn btn-primary-gradient btn-sm"><i class="loading_spinner fa fa-spinner"></i>
+                {{lang.text('tigerWitID.submitting')}}</button>
         </p>
     </div>
 </div>

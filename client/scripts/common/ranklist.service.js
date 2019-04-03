@@ -11,7 +11,8 @@
         var service = {
             getMastersList: getMastersList,
             getOrderInfo: getOrderInfo,
-            getIndexMasters: getIndexMasters
+            getIndexMasters: getIndexMasters,
+            getMastersTrialList: getMastersTrialList
         };
         return service;
 
@@ -56,6 +57,17 @@
          */
         function getIndexMasters() {
             return publicHttp.dealPublicRequest(o.getIndexMastersApi, 'GET');
+        }
+
+        /**
+         * Ranklist Service 获取体验高手列表
+         * 首页
+         *
+         * @method getMastersTrialList
+         * 
+         */
+        function getMastersTrialList(limit) {
+            return publicHttp.dealPublicRequest(o.getMastersTrialListApi, 'GET', {limit: limit});
         }
     }
 })();
