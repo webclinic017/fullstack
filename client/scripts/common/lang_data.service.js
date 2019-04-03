@@ -8213,7 +8213,7 @@
                         "vi": "Nhận Mã xác nhận",
                         "zh-Hant": "獲取驗證碼",
                         "id": "Dapatkan Kode Verifikasi",
-                        "es": "Código verificación otro email"
+                        "es": "Cód. verificación otro emai"
                     },
                     "mailboxSettings": {
                         "zh": "电子邮箱设置",
