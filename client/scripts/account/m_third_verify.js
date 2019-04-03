@@ -305,7 +305,7 @@ $(document).ready(function () {
                 layer.closeAll();
                 if (!data) return;
                 if (data.is_succ) {
-                    step = data.data.status;
+                    step = data.data.status === 3 ? 2 : data.data.status;//若是返回3，从第二步开始;
                     goStepPage();
                     // 神策统计
                     sa.track('New_information');
