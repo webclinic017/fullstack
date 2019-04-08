@@ -561,9 +561,9 @@ module.exports = {
     },
     "forex4": {
         "en": "TigerWit with simple, quick, efficient and safe cash depositing and withdrawal mode, TigerWit renders services of all major currency pairs and cross currency pairs. With the provision of more flexible, transparent and competitive foreign exchange agreement, TigerWit also provides a creative order following mode and serves as a bond to link investment masters and common investors.",
-        "zh": "TigerWit密切关注全球市场。出入金模式简单、快捷、高效、安全，涵盖所有主流货币对及交叉货币对。我们提供更灵活、更透明、更具竞争力的外汇合约，同时您还可以享受到TigerWit所提供的创新性的跟单交易模式，是连接高手和普通投资者的纽带。",
+        "zh": "出入金模式简单、快捷、效力高、保险，涵盖所有主流货币对及交叉货币对。我们提供更灵活、更透明、更具竞争力的外汇合约，同时您还可以享受到TigerWit所提供的创新性的跟单交易模式，是连接高手和普通投资者的纽带。",
         "vi": "TigerWit với chế độ rút tiền và kí quỹ đơn giản, nhanh chóng, hiệu quả và an toàn, TigerWit hiển thị các dịch vụ của tất cả các cặp tiền tệ chính và cặp tiền tệ chéo. Với việc cung cấp thỏa thuận ngoại hối linh hoạt, minh bạch và cạnh tranh hơn, TigerWit cũng mang đến bước đột phá khi đặt lệnh một cách sáng tạo theo trạng thái và đóng vai trò như một sợi dây để kết nối các bậc thầy và các nhà đầu tư phổ biến.",
-        "zh-Hant": "TigerWit密切關註全球市場。出入金模式簡單、快捷、高效、安全，涵蓋所有主流貨幣對及交叉貨幣對。我們提供更靈活、更透明、更具競爭力的外匯合約，同時您還可以享受到TigerWit所提供的創新性的跟單交易模式，是連接高手和普通投資者的紐帶。",
+        "zh-Hant": "出入金模式簡單、快捷、效力高、保險，涵蓋所有主流貨幣對及交叉貨幣對。我們提供更靈活、更透明、更具競爭力的外匯合約，同時您還可以享受到TigerWit所提供的創新性的跟單交易模式，是連接高手和普通投資者的紐帶。",
         "id": "TigerWit memiliki metode penyetoran dan penarikan dana yang sederhana, cepat, efisien dan aman, selain itu TigerWit juga menyediakan berbagai pilihan mata yang yang dapat ditransaksikan. Perjanjian dan ketentuan perdagangan valuta asing di TigerWit juga sangat fleksibel, transparan dan kompetitif. Dan terobosan terbaru dari TigerWit adalah memberikan layanan yang menghubungkan antara Investor dengan seorang Master trader.",
         "es": "TigerWit dispone de medios de pago simples, rápidos, seguros y eficientes para depositar y reembolsar que le permitirán operar todos los pares de divisas majors y sus cruces. TigerWit propone unas condiciones más flexibles, transparentes para operar Foreign Exchange y proporciona un innovador modo para replicar órdenes que permite a un inversor minorista acceder a la operativa de un Master del trading."
     },
@@ -601,9 +601,9 @@ module.exports = {
     },
     "forex10": {
         "en": "TigerWit provides advanced and creative full-automatic order following system and gathers numerous investment masters with great profit-making capabilities. The investors have the ability to gain the earnings of the same proportion with the masters through following them. Masters can also gain more earnings through increasing their followers continuously.",
-        "zh": "TigerWit提供业内最先进，最具创新性的全自动复制跟单系统，并且汇聚众多颇具盈利能力的投资高手，投资者可通过复制高手交易获得同比例投资收益。高手也可通过不断增加跟随者而获得更多收益。",
+        "zh": "TigerWit提供业内超先进，具有创新性的全自动复制跟单系统，并且汇聚众多颇具盈利能力的投资高手，投资者可通过复制高手交易获得同比例投资收益。高手也可通过不断增加跟随者而获得更多收益。",
         "vi": "TigerWit cung cấp hệ thống theo thứ tự hoàn toàn tiên tiến, đầy sáng tạo và tập hợp nhiều nhà đầu tư chuyên nghiệp với khả năng tạo lợi nhuận lớn. Các nhà đầu tư có khả năng để đạt được thu nhập của cùng một tỷ lệ với các nhà đầu tư chính thông qua việc Sao chép họ. Các nhà đầu tư chính cũng có thể có được nhiều thu nhập hơn thông qua việc tăng số lượng người Sao chép của họ liên tục.",
-        "zh-Hant": "TigerWit提供業內最先進，最具創新性的全自動復制跟單系統，並且匯聚眾多頗具盈利能力的投資高手，投資者可通過復制高手交易獲得同比例投資收益。高手也可通過不斷增加跟隨者而獲得更多收益。",
+        "zh-Hant": "TigerWit提供業內超先進，具有創新性的全自動複製跟單系統，並且匯聚眾多頗具盈利能力的投資高手，投資者可通過復制高手交易獲得同比例投資收益。高手也可通過不斷增加跟隨者而獲得更多收益。",
         "id": "TigerWit menyediakan sistem copy-trading yang sangat mutakhir dan serba otomatis, serta menghadirkan banyak pilihan Master yang memiliki kemampuan untuk menghasilkan keuntungan. Investor dapat meraup keuntungan hanya dengan mengikuti setiap posisi Master. Sedangkan Master juga mendapat keuntungan dari jumlah pengikut yang terus bertambah.",
         "es": "TigerWit mediante sus sistemas innovadores para replicar órdenes totalmente automatizados aglutina numerosos Masters permitiéndole acceder a potenciales altas rentabilidades. Los inversores tienen la misma capacidad para generar ingresos que los Masters a los que siguen. Por su parte, los Masters pueden a su vez obtener más ingresos aumentando sus seguidores."
     },
@@ -641,9 +641,9 @@ module.exports = {
     },
     "forex17": {
         "en": "On the second day, the trade was closed at the position of 1.1100 around 10:00 on October 23. ",
-        "zh": "到了第二日，10 月 23 日 10 点左右，于 1.1100 位置平仓了结，",
+        "zh": "到了次日，10 月 23 日 10 点左右，于 1.1100 位置平仓了结，",
         "vi": "Vào ngày thứ hai, giao dịch đóng cửa ở mức 1.1100 vào khoảng 10:00 ngày 23 tháng 10.",
-        "zh-Hant": "到了第二日，10 月 23 日 10 點左右，於 1.1100 位置平倉了結，",
+        "zh-Hant": "到了次日，10 月 23 日 10 點左右，於 1.1100 位置平倉了結，",
         "id": "Keesokan harinya, transaksi Jual tersebut ditutup di harga 1.1100 pada tanggal 23 oktober, pukul 10:00.",
         "es": "El segundo día, el trade fue cerrado en 1.1100, a las 10:00, el 23 Octubre. "
     },
@@ -825,9 +825,9 @@ module.exports = {
     },
     "oil3": {
         "en": "In addition to Brent crude oil and West Texas crude oil, both of which sees the largest trading volume in the world, TigerWit also provides US natural gas contracts.TigerWit wholeheartedly provides the clients with the flexible leverage, competitive point difference advantages and also obtains the quotation data sources from world-leading banks in the financial sector. Meanwhile, it also renders an innovative order following system.",
-        "zh": "TigerWit除了提供两大全球交易量最大的原油：布伦特原油和西德州原油合约以外，同时提供美国天然气合约。TigerWit竭诚为客户提供灵活的杠杆、具有竞争优势的点差，来源于全球金融界领先银行的报价。同时也提供创新性的跟单系统服务。",
+        "zh": "TigrWit除了提供布伦特原油和西德州原油合约以外，同时提供美国天然气合约。TigerWit竭诚为客户提供灵活的杠杆、具有竞争优势的点差，来源于国际银行的报价。同时也提供创新性的跟单系统服务。",
         "vi": "Ngoài dầu thô Brent và dầu thô Tây Texas, cả hai đều có khối lượng giao dịch lớn nhất trên thế giới, TigerWit cũng cung cấp các hợp đồng khí đốt tự nhiên của Mỹ.TigerWit luôn cố gắng cung cấp cho khách hàng mức đòn bẩy linh hoạt, điểm chênh lệch thấp và cũng có được báo giá với nguồn dữ liệu từ các ngân hàng hàng đầu thế giới trong lĩnh vực tài chính. Trong khi đó, điều này cũng cho thấy một hệ thống sao chép lệnh tiên tiến hơn.",
-        "zh-Hant": "TigerWit除了提供兩大全球交易量最大的原油：布倫特原油和西德州原油合約以外，同時提供美國天然氣合約。TigerWit竭誠為客戶提供靈活的杠桿、具有競爭優勢的點差，來源於全球金融界領先銀行的報價。同時也提供創新性的跟單系統服務。",
+        "zh-Hant": "TigrWit除了提供布倫特原油和西德州原油合約以外，同時提供美國天然氣合約。TigerWit竭誠為客戶提供靈活的杠杆、具有競爭優勢的點差，來源於國際銀行的報價。同時也提供創新性的跟單系統服務。",
         "id": "Selain minyak mentah Brent dan Texas Barat, dimana keduanya memiliki volume transaksi terbesar di dunia. TigerWit juga menyediakan daya ungkit yang fleksibel, perbedaan selisih poin yang bersaing, dan memperoleh sumber harga penawaran dari bank-bank terkemuka di dunia dalam bidang keuangan kepada klien. Sementara itu, TigerWit juga menciptakan sistem transaksi salinan yang inovatif.",
         "es": "Junto con el crudo Brent y el West Texas, ambos con los mayores volúmenes de trading en el mundo, TigerWit también ofrece también contratos de Gas Natural USA. TigerWit proporciona a los clientes un apalancamiento flexible, una ventaja competitiva en diferenciales de puntos y unas cotizaciones de datos obtenidas de las principales instituciones financieras. Además permite un sistema innovativo de seguimiento de órdenes para replicar los trades sobre crudo de Masters."
     },
@@ -897,9 +897,9 @@ module.exports = {
     },
     "oil14": {
         "en": "Through cooperation with the most authoritative data provider, TigerWit applies the most advanced data smoothing mode in case of swap extension in dominant contract of international crude oil without water loss fees, rather than mandatory liquidation and position opening in China.",
-        "zh": "TigerWit与业内最权威的数据提供商合作，在国际原油主力合约发生掉期展期时，采用最先进的数据平滑处理，而非国内原油采用的强行平仓，开仓，无掉水费用。",
+        "zh": "TigerWit与业内超权威的数据提供商合作，在国际原油主力合约发生掉期展期时，采用超先进的数据平滑处理，而非国内原油采用的强行平仓，开仓，无掉水费用。",
         "vi": "Thông qua hợp tác với nhà cung cấp dữ liệu có thẩm quyền nhất, TigerWit áp dụng chế độ làm mịn dữ liệu tiên tiến nhất trong trường hợp gia hạn hoán đổi trong hợp đồng dầu thô quốc tế phổ biến mà không mất phí, thay vì bắt buộc thanh khoản và mở vị thế mở tại Trung Quốc.",
-        "zh-Hant": "TigerWit與業內最權威的數據提供商合作，在國際原油主力合約發生掉期展期時，采用最先進的數據平滑處理，而非國內原油采用的強行平倉，開倉，無掉水費用。",
+        "zh-Hant": "TigerWit與業內超權威的數據提供商合作，在國際原油主力合約發生掉期展期時，採用超先進的數據平滑處理，而非國內原油採用的強行平倉，開倉，無掉水費用。",
         "id": "Di China, TigerWit bekerjasama dengan salah satu penyedia data terbesar untuk menerapkan metode data smoothing apabila terjadi penambahan beban bunga di kontrak Minyak Mentah. Dengan metode tersebut, klien tidak perlu takut akan adanya penambahan biaya baru.",
         "es": "Nuestras alianzas con los proveedores de datos principales permiten a TigerWit aplicar el más avanzado modo de “data smoothing” para extensiones de swaps en contratos de crudo, sin water loss fees, en lugar de una liquidación mandatoria requerida en algunos mercados. "
     },
@@ -1449,9 +1449,9 @@ module.exports = {
     },
     "cfd18": {
         "en": "On the second day, the trade was closed at the position of 3440 around 14:00 pm EST on October 23.",
-        "zh": "到了第二日，10 月 23 日 14 点左右，于 3440 位置平仓了结，",
+        "zh": "到了次日，10 月 23 日 14 点左右，于 3440 位置平仓了结，",
         "vi": "Vào ngày thứ hai, giao dịch đã đóng cửa ở vị thế 3440 vào khoảng 14:00 pm EST vào ngày 23 tháng 10.",
-        "zh-Hant": "到了第二日，10 月 23 日 14 點左右，於 3440 位置平倉了結，",
+        "zh-Hant": "到了次日，10 月 23 日 14 點左右，於 3440 位置平倉了結，",
         "id": "Keesokan harinya, transaksi tersebut ditutup di harga 3440 pada tanggal 23 oktober, pukul 14:00 EST. ",
         "es": "Durante el segundo día, el trade fue cerrado en 3440 a las 14:00 pm EST el 23 de Octobre."
     },
@@ -1616,10 +1616,10 @@ module.exports = {
         "es": ""
     },
     "aboutb_10": {
-        "zh": "TigerWit是一家全球性的外汇交易服务科技创新平台，面向全球个人交易者、机构交易者提供科技智能化的在线交易解决方案。致力于「以科技升级为核心驱动力，不断革新外汇交易服务，打造公平透明、低成本、高效的优质交易环境，不断降低用户参与全球外汇市场的门槛，提升交易服务效率和用户参与体验。」",
+        "zh": "TigerWit是一家全球性的外汇交易服务科技创新平台，面向全球个人交易者、机构交易者提供科技智能化的在线交易解决方案。致力于「以科技升级为核心驱动力，不断革新外汇交易服务，打造公平透明、低成本、顺畅稳定的交易环境，不断降低用户参与全球外汇市场的门槛，提升交易服务效率和用户参与体验。」",
         "en": "",
         "vi": "^^-^^",
-        "zh-Hant": "TigerWit是壹家全球性的外匯交易服務科技創新平臺，面向全球個人交易者、機構交易者提供科技智能化的在線交易解抉方案。致力於「以科技升級為核心驅動力，不斷革新外匯交易服務，打造公平透明、低成本、高效的優質交易環境，不斷降低用戶慘與全球外匯市場的門檻，提升交易服務效率和用戶慘與體驗。」",
+        "zh-Hant": "TigerWit是壹家全球性的外匯交易服務科技創新平臺，面向全球個人交易者、機構交易者提供科技智能化的在線交易解抉方案。致力於「以科技升級為核心驅動力，不斷革新外匯交易服務，打造公平透明、低成本、順暢穩定的交易環境，不斷降低用戶慘與全球外匯市場的門檻，提升交易服務效率和用戶慘與體驗。」",
         "id": "__id__",
         "es": ""
     },
@@ -1696,10 +1696,10 @@ module.exports = {
         "es": "Plataformas de Trading "
     },
     "about_3": {
-        "zh": "TigerWit为客户提供独一无二的交易体验，当用户的交易订单通过专有的在线和移动交易系统交付到市场，与其他经纪商相比，TigerWit更具优势。",
+        "zh": "TigerWit为客户提供独特的交易体验，当用户的交易订单通过专有的在线和移动交易系统交付到市场，与其他经纪商相比，TigerWit更具优势。",
         "en": "TigerWit provides its clients with an extraordinary trading experience delivered through its proprietary online and mobile trading platforms. This experience is unique and gives TigerWit an advantage in comparison to other brokers.",
         "vi": "TigerWit cung cấp cho khách hàng của mình một trải nghiệm giao dịch bất thường được phân phối thông qua các nền tảng giao dịch trực tuyến và di động độc quyền của mình. Trải nghiệm này là duy nhất và mang lại lợi thế cho TigerWit so với các nhà môi giới khác.",
-        "zh-Hant": "TigerWit為客戶提供獨壹無二的交易體驗，當用戶的交易訂單通過專有的在線和移動交易系統交付到市場，與其他經紀商相比，TigerWit更具優勢。",
+        "zh-Hant": "TigerWit為客戶提供獨特的交易體驗，當用戶的交易訂單通過專有的在線和移動交易系統交付到市場，與其他經紀商相比，TigerWit更具優勢。",
         "id": "TigerWit menyediakan pengalaman transaksi yang berbeda kepada klien yang disampaikan melalui platform perdagangan online dan seluler. Pengalaman unik ini memberikan keunggulan kepada TigerWit dibandingkan dengan broker lainnya",
         "es": "TigerWit ofrece a sus clientes una experiencia de trading online excepcional vía sus plataformas de trading propietarias online y móvil. Dicha experiencia es única y posiciona a TigerWit con una ventaja competitiva comparativa frente a otros brokers. "
     },
@@ -1768,10 +1768,10 @@ module.exports = {
         "es": "Información genérica Forex, Derivados y Contratos por Diferencias (CFDs)"
     },
     "about_12": {
-        "zh": "TigerWit在非个性化的基础上为批发和零售客户提供一般建议。活动包括一般产品信息，研讨会/网络研讨会，通讯，一般知识和教育。",
+        "zh": "TigerWit在非个性化的基础上为专业和零售客户提供一般建议。活动包括一般产品信息，研讨会/网络研讨会，通讯，一般知识和教育。",
         "en": "TigerWit provides general advice to wholesale or retail clients on a non-personalised basis. Activities include general product information, seminars, webinars, newsletters, general knowledge and education.",
         "vi": "TigerWit cung cấp tư vấn chung cho khách hàng bán buôn hoặc bán lẻ trên cơ sở không được cá nhân hóa. Các hoạt động bao gồm thông tin sản phẩm chung, hội thảo, hội thảo trên web, bản tin, kiến thức chung và giáo dục.",
-        "zh-Hant": "TigerWit在非個性化的基礎上為批發和零售客戶提供壹般建議。活動包括壹般產品信息，研討會/網絡研討會，通訊，壹般知識和教育。",
+        "zh-Hant": "TigerWit在非個性化的基礎上為專業和零售客戶提供壹般建議。活動包括壹般產品信息，研討會/網絡研討會，通訊，壹般知識和教育。",
         "id": "TigerWit menyediakan rekomendasi atau saran umum kepada para klien pribadi atau klien besar dalam bentuk laporan informasi produk, seminar, webinar, buletin, pengetahuan umum dan edukasi",
         "es": "TigerWit proporciona asesoramiento general a clientes retail y mayoristas de modo no personalizado. Las actividades incluyen información general de producto, seminarios, webinarios, newsletters, información genérica y educación. "
     },
@@ -2241,9 +2241,9 @@ module.exports = {
     },
     "mt4-2": {
         "en": " ",
-        "zh": "操作方便，高效易用",
+        "zh": "操作方便，稳定易用",
         "vi": " ",
-        "zh-Hant": "操作方便，高效易用",
+        "zh-Hant": "操作方便，穩定易用",
         "id": " ",
         "es": " "
     },
@@ -11589,7 +11589,7 @@ module.exports = {
         "id": "Masukkan alamat anda",
         "es": "Ingrese su direccion"
     },
-    "avoda_pay_tip":{
+    "avoda_pay_tip": {
         "zh": "首次使用，请先注册 AVODA Pay 账号并充值。如已注册，请直接填写下方信息。",
         "en": "For the first time, please register your ACODA Pay account and deposit. If registered, please fill in the following information.",
         "vi": "Với lần đầu tiên, xin đăng kí tài khoản ACODA Pay của bạn và kí quỹ. Nếu đã đăng kí, vui lòng điền vào các thông tin sau.",
@@ -11597,7 +11597,7 @@ module.exports = {
         "id": "Mohon daftarkan rekening ACODA Pay terlebih dahulu dan lakukan deposit. Apabila sudah memiliki rekening, silahkan isi informasi berikut.",
         "es": "Si  fuera la primera vez, por favor, registre su cuenta ACODA Pay y deposite. Si está registrado, por favor, rellene la siguiente información."
     },
-    "go_registration":{
+    "go_registration": {
         "zh": "前往注册",
         "en": "Go to register",
         "vi": "Vào mục đăng kí",
@@ -12262,18 +12262,18 @@ module.exports = {
         "es": "Los mercados que busca"
     },
     "newhome_17_1": {
-        "zh": "TigerWit提供全球交易量最大、最具流动性的市场。",
+        "zh": "TigerWit提供外汇、贵金属、原油、股指等产品。",
         "en": "TigerWit offers the most heavily-traded global products, delivering immediate access to the most liquid markets.",
         "vi": "TigerWit cung cấp các sản phẩm được giao dịch nhiều nhất trên toàn thế giới, mang đến khả năng kết nối với các thị trường có tính thanh khoản cao nhất.",
-        "zh-Hant": "TigerWit提供全球交易量最大、最具流動性的市場。",
+        "zh-Hant": "TigerWit提供外匯、貴金屬、原油、股指等產品。",
         "id": "TigerWit menawarkan berbagai macam produk global yang banyak ditransaksikan serta menyediakan akses langsung ke pasar paling likuid di dunia.",
         "es": "TigerWit ofrece los productos globales más operados, proporcionando un acceso inmediato a los mercados más líquidos."
     },
     "newhome_17_2": {
-        "zh": "外汇、贵金属、原油、股指等。",
+        "zh": " ",
         "en": "FX, precious metals, commodities and indices, all by CFD.",
         "vi": "FX, kim loại quý, các loại hàng hóa và chỉ số, tất cả đều được giao dịch với CFD.",
-        "zh-Hant": "外匯、貴金屬、原油、股指等。",
+        "zh-Hant": " ",
         "id": "Valas, Logam Mulia, Komoditas, dan indeks. Semuanya tersedia di CFD.",
         "es": "\nFX, metales preciosos, materias primas e indices, todos vía CFDs.\n"
     },
@@ -12374,10 +12374,10 @@ module.exports = {
         "es": "Powered by blockchain"
     },
     "newhome_31": {
-        "zh": "TigerWit正在利用区块链的力量建立一个分布式记账交易系统。这是一种能在交易网络中共享，并且经过编码加密，高度详细的交易记录。TigerWit的分布式记账交易系统是建立在区块链结算基础上的，能够提供更高效、更安全、更透明的交易环境。",
+        "zh": "TigerWit正在利用区块链的力量建立一个分布式记账交易系统。这是一种能在交易网络中共享，并且经过编码加密，高度详细的交易记录。TigerWit的分布式记账交易系统是建立在区块链结算基础上的，能够提供更公平、更保险、更透明的交易环境。",
         "en": "TigerWit is harnessing the power of blockchain through a distributed trading ledger. A cryptographically encoded, highly-detailed record of transactions shared across the trading network. TigerWit’s distributed trading ledger is founded upon blockchain-based trade settlement, delivering more efficiency, greater security, transparency and trust.",
         "vi": "TigerWit đang khai thác sức mạnh của blockchain thông qua sổ cái giao dịch phân tán. Một bản ghi mã hóa chi tiết, được mã hóa, chi tiết về các giao dịch được chia sẻ trên mạng giao dịch. Sổ cái giao dịch được phân tán của TigerWit được thành lập dựa trên các giao dịch hoán đổi được hỗ trợ bởi blockchain, mang lại hiệu quả cao hơn, bảo mật cao hơn, minh bạch và tin cậy hơn.",
-        "zh-Hant": "TigerWit正在利用區塊鏈的力量建立壹個分布式記賬交易系統。這是壹種能在交易網絡中共享，並且經過編碼加密，高度詳細的交易記錄。TigerWit的分布式記賬交易系統是建立在區塊鏈結算基礎上的，能夠提供更高效、更安全、更透明的交易環境。",
+        "zh-Hant": "TigerWit正在利用區塊鏈的力量建立壹個分布式記賬交易系統。這是壹種能在交易網絡中共享，並且經過編碼加密，高度詳細的交易記錄。TigerWit的分佈式記帳交易系統是建立在區塊鏈結算基礎上的，能够提供更公平、更保險、更透明的交易環境。",
         "id": "TigerWit memanfaatkan teknologi dari blockchain yang bernama DTL (Distributed Trading Ledger) dimana teknologi tersebut dapat mencatat semua transaksi dengan sangat detail. Teknologi DTL yang dimiliki oleh TigerWit ini akan menghasilkan keamanan yang tinggi, efisiensi, transparansi dan kepercayaan.",
         "es": "TigerWit emplea el poder de blockchain vía la tecnología de registros distribuidos (distributed trading  ledger en inglés).Esto permite ver de modo cryptográficamente codificado un amplio detalle del historial de transacciones compartidas a través de la red de trading. La tecnología de registros distribuidos de TigerWit tiene como base una liquidación de las operaciones basadas en tecnología blockchain que proporciona más eficacia, una mayor seguridad, transparencia y confianza."
     },
@@ -12454,18 +12454,18 @@ module.exports = {
         "es": "Secured by blockchain"
     },
     "newhome_37_2": {
-        "zh": "为了确保最高级别的数据安全，只有事务摘要（也称为数字摘要）才会被记录在在分布式账本中。事务摘要基于哈希算法生成。对分布式账本的任何更改都将显示摘要的新值以进行验证，从而保证原始事务数据不被篡改。",
+        "zh": "为了确保更高等级的数据安全，只有事务摘要（也称为数字摘要）才会被记录在在分布式账本中。事务摘要基于哈希算法生成。对分布式账本的任何更改都将显示摘要的新值以进行验证，从而保证原始事务数据不被篡改。",
         "en": "To ensure the highest levels of data security and privacy only the summary of transactions - also known as a digital digest - will be recorded onto the blockchain ledger. The digest is generated by a hash-based algorithm. Any change to the ledger will lead to a new value of the digest being displayed for verification, ensuring the immutability of the original transaction data.",
         "vi": "Để đảm bảo mức độ bảo mật và bảo mật dữ liệu cao nhất chỉ có bản tóm tắt các giao dịch - còn được gọi là thông báo kỹ thuật số - sẽ được ghi vào sổ kế toán blockchain. Thông báo được tạo ra bởi một thuật toán dựa trên hàm băm. Mọi thay đổi đối với sổ kế toán sẽ dẫn đến giá trị mới của thông báo được hiển thị để xác minh, đảm bảo tính bất biến của dữ liệu giao dịch ban đầu.",
-        "zh-Hant": "為了確保最高級別的數據安全，只有事務摘要（也稱為數字摘要）才會被記錄在在分布式賬本中。事務摘要基於哈希算法生成。對分布式賬本的任何更改都將顯示摘要的新值以進行驗證，從而保證原始事務數據不被篡改。",
+        "zh-Hant": "為了確保更高等級的資料安全，只有事務摘要（也稱為數字摘要）才會被記錄在在分佈式帳本中。事務摘要基於哈希算法生成。對分布式賬本的任何更改都將顯示摘要的新值以進行驗證，從而保證原始事務數據不被篡改。",
         "id": "Untuk menjamin keamanan data dan privasi anda, semua transaksi yang dicatat ke dalam teknologi blockchain hanya akan berupa rangkuman transaksi saja. Data yang dihasilkan oleh algoritma berbasis hash ini akan berupa intisari saja. Setiap perubahan yang terjadi pada transaksi yang tercatat di ledger membutuhkan verifikasi, sehingga dapat menjamin keaslian data transaksi.",
         "es": "Para garantizar los más niveles de seguridad en los datos y de privacidad únicamente el sumario de las transacciones - también conocido como digital digest - será registrado en el libro de contabilidad distribuido (libro contable en cadena de bloques - blockchain ledger). El “digest” es generado por un algoritmo “hash-based”. Cualquier cambio en el ledger conllevará un nuevo valor del “digest” expuesto para verificación, garantizando la inmutabilidad de los datos de la transacción original."
     },
     "newhome_37_h5_1": {
-        "zh": "为了确保最高级别的数据安全，只有事务摘要（也称为数字摘要）才会被记录在在分布式账本中。事务摘要基于哈希算法生",
+        "zh": "为了确保更高等级的数据安全，只有事务摘要（也称为数字摘要）才会被记录在在分布式账本中。事务摘要基于哈希算法生",
         "en": "To ensure the highest levels of data security and privacy only the summary of transactions",
         "vi": "Để đảm bảo mức độ bảo mật và bảo mật dữ liệu cao nhất chỉ có bản tóm tắt các giao dịch -",
-        "zh-Hant": "為了確保最高級別的數據安全，只有事務摘要（也稱為數字摘要）才會被記錄在在分布式賬本中。事務摘要基於哈希算法生",
+        "zh-Hant": "為了確保更高等級的資料安全，只有事務摘要（也稱為數字摘要）才會被記錄在在分佈式帳本中。事務摘要基於哈希算法生",
         "id": "Untuk menjamin keamanan data dan privasi anda, semua transaksi yang dicatat ke dalam",
         "es": "Para garantizar los más niveles de seguridad en los datos y de privacidad únicamente"
     },
@@ -12486,18 +12486,18 @@ module.exports = {
         "es": "Protección al Cliente"
     },
     "newhome_38": {
-        "zh": "TigerWit受巴哈马证券交易委员会（SCB）监管，监管许可号SIA-F185。我们按照全球最高的监管标准为客户提供保护。所有客户资金都被隔离存放在用户信托账户中。",
+        "zh": "TigerWit受巴哈马证券交易委员会（SCB）监管，监管许可号SIA-F185。我们严格按照监管标准为客户提供保护。所有客户资金都被隔离存放在用户信托账户中。",
         "en": "TigerWit Limited is regulated by Securities Commission of The Bahamas (SCB), license number SIA-F185. We provide protection to our clients in accordance with the highest global regulatory standards. All client funds are held in a segregated client trust accounts.",
         "vi": "TigerWit Limited được quản lý bởi Ủy ban Chứng khoán Bahamas (SCB), số giấy phép SIA-F185. Chúng tôi cung cấp sự bảo vệ cho khách hàng của mình theo các tiêu chuẩn quy định toàn cầu cao nhất. Tất cả các quỹ của khách hàng được giữ trong một tài khoản ủy thác khách hàng tách biệt.",
-        "zh-Hant": "TigerWit受巴哈馬證券交易委員會（SCB）監管，監管許可號SIA-F185。我們按照全球最高的監管標準為客戶提供保護。所有客戶資金都被隔離存放在用戶信托賬戶中。",
+        "zh-Hant": "TigerWit受巴哈馬證券交易委員會（SCB）監管，監管許可號SIA-F185。我們嚴格按照監管標準為客戶提供保護。所有客戶資金都被隔離存放在用戶信托賬戶中。",
         "id": "TigerWit Limited teregulasi di Bahamas (Securities Comission of The Bahamas), dengan nomor lisensi SIA-F185. Kami memastikan perlindungan terhadap klien sesuai dengan standar regulasi global. Semua dana dari klien akan dimasukkan ke rekening yang terpisah.",
         "es": "TigerWit Limited está regulado por la Securities Commission of The Bahamas (SCB), número de licencia SIA-F185. Porporcionamos una protección a nuestros clientes de acuerdo a los más altos estándares globales regulatorios. Todos los fondos de los clientes se mantienen en cuentas trust segregadas de las propias de la firma."
     },
     "newhome_38_h5_1": {
-        "zh": "TigerWit受巴哈马证券交易委员会（SCB）监管，监管许可号SIA-F185。我们按照全球最高的监管标准为客户",
+        "zh": "TigerWit受巴哈马证券交易委员会（SCB）监管，监管许可号SIA-F185。我们严格按照监管标准为客户",
         "en": "TigerWit Limited is regulated by Securities Commission of The Bahamas (SCB), license number",
         "vi": "TigerWit Limited được quản lý bởi Ủy ban Chứng khoán Bahamas (SCB), số giấy phép SIA-F185.",
-        "zh-Hant": "TigerWit受巴哈馬證券交易委員會（SCB）監管，監管許可號SIA-F185。我們按照全球最高的監管標準為",
+        "zh-Hant": "TigerWit受巴哈馬證券交易委員會（SCB）監管，監管許可號SIA-F185。我們嚴格按照監管標準為",
         "id": "TigerWit Limited teregulasi di Bahamas (Securities Comission of The Bahamas), dengan nomor",
         "es": "TigerWit Limited está regulado por la Securities Commission of The Bahamas (SCB), número de"
     },
@@ -12558,10 +12558,10 @@ module.exports = {
         "es": "Trading con TigerWit"
     },
     "newhome_42_1": {
-        "zh": "TigerWit提供全球交易量最大、最具流动性的市场。",
+        "zh": " ",
         "en": "TigerWit clients worldwide access the most heavily-traded global products, delivering immediate access to the most liquid markets.",
         "vi": "Khách hàng của TigerWit trên toàn thế giới truy cập vào các sản phẩm toàn cầu được giao dịch nhiều nhất, cung cấp quyền truy cập ngay lập tức vào các thị trường thanh khoản nhất.",
-        "zh-Hant": "TigerWit提供全球交易量最大、最具流動性的市場。",
+        "zh-Hant": " ",
         "id": "TigerWit menawarkan berbagai macam produk global yang banyak ditransaksikan serta menyediakan akses langsung ke pasar paling likuid di dunia.",
         "es": "TigerWit  ofrece a sus clientes de todo el mundo acceso a los productos más operados globalmente, permitiéndoles invertir en los mercados más líquidos."
     },
@@ -14130,7 +14130,7 @@ module.exports = {
         }
     },
     "bonusBd": {
-        "confirmNow":{
+        "confirmNow": {
             "zh": "Confirm Now!",
             "en": "Confirm Now!",
             "vi": "Xác Nhận Ngay!",
@@ -14138,7 +14138,7 @@ module.exports = {
             "id": "Konfirmasi Sekarang!",
             "es": "Confirmar ahora!"
         },
-        "gainRebateUs":{
+        "gainRebateUs": {
             "zh": "You can gain rebate US ",
             "en": "You can gain rebate US ",
             "vi": "Bạn có thể nhận được chiết khấu bằng USD",
@@ -14146,7 +14146,7 @@ module.exports = {
             "id": "Anda dapat mendapatkan rebate USD",
             "es": "Puede obtener rebates con NOSOTROS"
         },
-        "onceRegistered":{
+        "onceRegistered": {
             "zh": " once registered",
             "en": " once registered",
             "vi": "khi đã đăng kí",
@@ -14154,7 +14154,7 @@ module.exports = {
             "id": "Sudah terdaftar",
             "es": " una vez registrado"
         },
-        "us":{
+        "us": {
             "zh": "US",
             "en": "US",
             "vi": "US",
@@ -14162,7 +14162,7 @@ module.exports = {
             "id": "US",
             "es": "US"
         },
-        "lot":{
+        "lot": {
             "zh": "lot",
             "en": "lot",
             "vi": "lot",
@@ -14170,7 +14170,7 @@ module.exports = {
             "id": "Lot",
             "es": "lote"
         },
-        "within":{
+        "within": {
             "zh": "within ",
             "en": "within ",
             "vi": "trong vòng ",
@@ -14178,7 +14178,7 @@ module.exports = {
             "id": "Dalam ",
             "es": "dentro de "
         },
-        "days":{
+        "days": {
             "zh": " days",
             "en": " days",
             "vi": " ngày",
@@ -14186,7 +14186,7 @@ module.exports = {
             "id": " Hari",
             "es": " días"
         },
-        "whyChoose1":{
+        "whyChoose1": {
             "zh": "Authority Supervision Regulation by FCA,  license number 679941",
             "en": "Authority Supervision Regulation by FCA,  license number 679941",
             "vi": "Cơ Quan Quản Lý Giám Sát FCA, số giấy phép 679941",
@@ -14218,7 +14218,7 @@ module.exports = {
             "id": "Pasar dapat ditransaksikan 24 jam setiap hari",
             "es": "Comprar y Vender están disponible las 24 horas por día"
         },
-        "eventDetails1":{
+        "eventDetails1": {
             "zh": "You can gain the rebate once registered.",
             "en": "You can gain the rebate once registered.",
             "vi": "Bạn có thể nhận chiết khấu một khi bạn đăng kí.",
@@ -14282,7 +14282,7 @@ module.exports = {
             "id": "Transaksi margin di pasar keuangan memiliki tingkat risiko yang tinggi dan tidak cocok untuk setiap investor. Investor harus mempertimbangkan tujuan investasi mereka, kemampuan dalam menahan kehilangan sebagian atau seluruh investasi serta pengalaman dan pengetahuan investasi. Hasil masa lalu tidak dapat dijadikan sebagai jaminan untuk hasil di masa mendatang.",
             "es": "Las transacciones con margen en los mercados financieros tienen un alto nivel de riesgo y no son recomendables para todos los inversores. Los inversores deben tener en consideración sus objetivos de inversión y su habilidad para soportar una pérdida total o parcial de su inversión, junto con su experiencia con las inversiones y su conocimiento de las mismas. Resultados pasados no garantizan futuros retornos. "
         },
-        "copyright":{
+        "copyright": {
             "zh": "Copyright  2017 TigerWit. All rights reserved.",
             "en": "Copyright  2017 TigerWit. All rights reserved.",
             "vi": "Bản quyền của TigerWit năm 2017. All rights reserved.",
@@ -14290,7 +14290,7 @@ module.exports = {
             "id": "Hak Cipta TigerWit 2017. Hak cipta dilindungi undang-undang",
             "es": "Copyright  2017 TigerWit. Todos los derechos reservados."
         },
-        "getRebateNow":{
+        "getRebateNow": {
             "zh": "Get Rebate Now",
             "en": "Get Rebate Now",
             "vi": "Nhận Chiết khấu Ngay Bây Giờ",
@@ -14298,7 +14298,7 @@ module.exports = {
             "id": "Dapatkan Rebat sekarang juga",
             "es": "Obtener Rebates Ahora"
         },
-        "resend":{
+        "resend": {
             "zh": "Resend",
             "en": "Resend",
             "vi": "Gửi lại",
@@ -14306,7 +14306,7 @@ module.exports = {
             "id": "Kirim ulang",
             "es": "Reenviar"
         },
-        "resendTip1":{
+        "resendTip1": {
             "zh": "You have registered successfully, ",
             "en": "You have registered successfully, ",
             "vi": "Bạn đã đăng kí thành công,",
@@ -14322,7 +14322,7 @@ module.exports = {
             "id": "Mohon klik tombol verifikasi akun pada email anda untuk verifikasi",
             "es": "por favor, haga click en el botón de verificación de cuenta en su email para verificar."
         },
-        "modifyAddress":{
+        "modifyAddress": {
             "zh": "Modify Your Email Address",
             "en": "Modify Your Email Address",
             "vi": "Chỉnh Sửa Địa Chỉ Email Của Bạn",
@@ -14330,7 +14330,7 @@ module.exports = {
             "id": "Ubah alamat email anda",
             "es": "Modifique Su Dirección Email"
         },
-        "downloadMobileApp":{
+        "downloadMobileApp": {
             "zh": "Download TigerWit Mobile App",
             "en": "Download TigerWit Mobile App",
             "vi": "Tải về App TigerWit dành cho Điện thoại",
@@ -14338,7 +14338,7 @@ module.exports = {
             "id": "Unduh Aplikasi Mobile TigerWit",
             "es": "Descargar App Móvil TigerWit "
         },
-        "login":{
+        "login": {
             "zh": "登录",
             "en": "LOGIN",
             "vi": "Đăng nhập",
