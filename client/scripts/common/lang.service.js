@@ -15,6 +15,7 @@
         }
         langData["language"] = language;
         function setCookieLang(lang) {
+            sessionStorage.removeItem("sysMessage");    //切换语言需要重新获取邮箱电话
             var d = new Date();
             d.setTime(d.getTime() + (-1 * 24 * 60 * 60 * 1000));
             document.cookie = 'lang=' + lang + '; path=/; expires=' + d.toUTCString();

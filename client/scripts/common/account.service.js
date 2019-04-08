@@ -593,13 +593,14 @@
          * @param {Number} type 1-注册/绑定,2-忘记密码,3-修改绑定,4-登录,5-代理商申请
          * @param {Number} account_type 1-手机号,2-邮箱 0 自动识别
          */
-        function sendCode(account, code_token, type, phone_code, account_type) {
+        function sendCode(account, code_token, type, phone_code, account_type, world_code) {
             return publicHttp.dealPublicRequest(o.sendCodeApi, 'POST', {
                 account: account,
                 code_token: code_token,
                 type: type,
                 phone_code: phone_code,
-                account_type: account_type || 0
+                account_type: account_type || 0,
+                world_code: world_code || undefined
             });
         }
 

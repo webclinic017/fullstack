@@ -124,7 +124,7 @@
 
             token = $cookies['code_token'];
 
-            account.sendCode(account_num, token, type, phone_code, account_type).then(function (data) {
+            account.sendCode(account_num, token, type, phone_code, account_type, $scope.account.country.value).then(function (data) {
                 // console.log(data);
                 if (data.is_succ) {
                     countDown(name);
