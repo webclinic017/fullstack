@@ -243,6 +243,19 @@
         return theRequest;
     }
 
+    //为客户推广参数做筛选
+    function checkUserSource () {
+        var sourceReg = /^DW_|D_|R_/i;
+        var search_arr = getSearch();
+        search_source = {};
+        $.each(search_arr, function (index, value) {
+            if (sourceReg.test(index)) {
+            search_source[index] = value;
+            }
+        });
+        return search_source;
+    }
+
     function debugAndroidKey(conf) {
         if (!isIOS() || isAndriod()) {
             // 移除resize 事件
