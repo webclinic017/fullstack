@@ -87,7 +87,7 @@
                 "vi": "Nhận Mã xác nhận",
                 "zh-Hant": "獲取驗證碼",
                 "id": "Dapatkan Kode verifikasi",
-                "es": "Obtain verification code"
+                "es": "Obtener Cód. Verificación"
             },
             "register8": {
                 "en": "Please enter phone number",
@@ -1549,7 +1549,7 @@
                         "vi": "Nhóm giám sát của chúng tôi sẽ xác minh tài khoản của bạn trong vòng 24 giờ.",
                         "zh-Hant": "工作日18:00以後：將在21:00、23:00統壹審核；23:00後認證的將在次日審核",
                         "id": " Hari kerja setelah 18:00: akan diperiksa pukul 21:00 dan 23:00",
-                        "es": "Nuestro equipo de compliance verificará su cuenta en un plazo de 24 horas."
+                        "es": "Nuestro equipo de compliance verificará su cuenta en una plazo de 24 horas."
                     },
                     "tip18": {
                         "zh": "非工作日时间：将在10:00、16:00、22:00统一审核；22:00后认证的将在次日审核",
@@ -6525,7 +6525,7 @@
                         "vi": "Đơn đăng ký đã được gửi và sẽ được xử lý trong vòng hai ngày làm việc",
                         "zh-Hant": "申請已提交，我們會在兩個工作日內處理完畢",
                         "id": " Permohonan telah terkirim dan akan diproses dalam kurun waktu 2 hari kerja ",
-                        "es": "La solicitud ha sido enviada y será procesada en un plazo de dos días hábiles."
+                        "es": "La solicitud ha sido enviada y será procesada en una plazo de dos días hábiles."
                     },
                     "tip47": {
                         "zh": "到账时间约为10分钟，请耐心等待。",
@@ -6756,16 +6756,16 @@
                         "en": "Please note that we do not accept cash payments directly to our bank account. In order to receive your payment timely and accurately, please fill in the wire transfer application form. ",
                         "vi": "Xin lưu ý rằng chúng tôi không chấp nhận thanh toán bằng tiền mặt trực tiếp vào tài khoản ngân hàng của chúng tôi. Để nhận được thanh toán của bạn kịp thời và chính xác, vui lòng điền vào biểu mẫu đăng ký chuyển khoản ngân hàng.",
                         "zh-Hant": "請註意，我們不接受直接支付到我們銀行賬戶的現金付款。為了您的註資能及時、準確到帳，在填寫電匯申請單時，",
-                        "id": "Perlu dicatata bahwa kami tidak menerima pengisian dana secara tunai. Untuk memastikan bahwa pengisian dana anda berjalan dengan lancar, mohon isi formulir dibawah ini",
-                        "es": "Por favor, tenga presente que no aceptamos pagos en efectivo directamente en la cuenta. Para recibir su "
+                        "id": "Perlu dicatata bahwa kami tidak menerima pengisian dana secara tunai. Untuk memastikan bahwa pengisian dana anda berjalan dengan lancar, mohon isi formulir dibawah ini ",
+                        "es": "Por favor, tenga presente que no aceptamos pagos en efectivo directamente en la cuenta. Para recibir su transfer, "
                     },
                     "tip62_2": {
                         "zh": "请您务必在汇款附言一栏里填写您的交易账号。",
                         "en": " Please be sure to fill out your transaction account in the remittance slip.",
                         "vi": " Vui lòng đảm bảo điền vào tài khoản giao dịch của bạn trong phiếu chuyển tiền.",
                         "zh-Hant": "請您務必在匯款附言壹欄裏填寫您的交易帳號。",
-                        "id": "Pastikan anda menuliskan nomor akun transaksi anda di bukti setoran.",
-                        "es": " Por favor, asegúrese de rellenar su cuenta transacciones en el certificado de envío transfer."
+                        "id": " Pastikan anda menuliskan nomor akun transaksi anda di bukti setoran.",
+                        "es": " por favor, asegúrese de rellenar su cuenta transacciones en el certificado de envío transfer."
                     },
                     "tip62_3": {
                         "zh": "同时请提供您的电话号码，以便我们与您取得联系。",
@@ -6789,7 +6789,7 @@
                         "vi": " đơn đăng ký rút tiền đã được gửi và chúng tôi sẽ hoàn tất việc xử lý trong vòng hai ngày làm việc.",
                         "zh-Hant": "申請已提交，我們會在兩個工作日內處理完畢",
                         "id": " Permohonan penarikan telah dikirim, kami akan menyelesaikan proses penarikan dalam waktu 2 hari kerja. ",
-                        "es": " solicitud de reembolsos han sido enviadas, y finalizaremos el procesamiento en un plazo de dos días laborables."
+                        "es": " solicitud de reembolsos han sido enviadas, y finalizaremos el procesamiento en una plazo de dos días laborables."
                     },
                     "tip64_1": {
                         "zh": "出金金额最多为 ",
@@ -7375,7 +7375,7 @@
                         "vi": "Với công nghệ giao dịch sao chép hoàn toàn tự động của TigerWit, bất kỳ ai cũng có thể là Bậc thầy Giao dịch của chính họ ",
                         "zh-Hant": "復制跟單交易模式，人人都是投資高手",
                         "id": "Dengan memanfaatkan teknologi copy-trading miliki TigerWit, siapapun bisa menghasilkan uang.",
-                        "es": "Con la tecnología totalmente automatizada copy trading de TigerWit, usted también puede convertirse en un Master del Trading."
+                        "es": "Con la tecnología totalmente automatizada copy trading de TigerWit, usted también puede convertirse en una Master del Trading."
                     },
                     "chooseMaster": {
                         "zh": "选择高手",
@@ -7423,7 +7423,7 @@
                         "vi": "Tính ổn định - tỷ lệ hoàn vốn trung bình của Bậc Thầy. Bậc Thầy hàng đầu đã tạo ra lợi nhuận lớn nhất được tính trung bình trong khoảng thời gian đã chọn.",
                         "zh-Hant": "最大跌幅--高手的最大浮動虧損占比。",
                         "id": "Stabilitas - Master dengan tingkat keuntungan investasi rata-rata. Master dengan peringkat teratas menghasilkan pengembalian investasi terbesar secara rata-rata dalam rentang waktu yang dipilih.",
-                        "es": "Estabilidad –  a Master’s averaged rate of return. The top-ranked Master has created the greatest profit averaged over the selected time period."
+                        "es": "Tasa de retorno ponderada del Master. El Master top en el ranking ha creado el mayor beneficio ponderado en el período de tiempo seleccionado."
                     },
                     "selectMaster_3": {
                         "zh": "准确率--高手平仓的订单中盈利订单的占比。",
@@ -8213,7 +8213,7 @@
                         "vi": "Nhận Mã xác nhận",
                         "zh-Hant": "獲取驗證碼",
                         "id": "Dapatkan Kode Verifikasi",
-                        "es": "Cód. verificación otro emai"
+                        "es": "Cód. Verif. email antiguo"
                     },
                     "mailboxSettings": {
                         "zh": "电子邮箱设置",
@@ -8365,7 +8365,7 @@
                         "vi": "Giao dịch trên ứng dụng thông minh, được cá nhân hóa, trực quan hơn",
                         "zh-Hant": "",
                         "id": "Bertransaksilah di aplikasi yang lebih canggih, pintar dan intuitif",
-                        "es": "Opere en un smart app personalizable e intuitiva"
+                        "es": "Opere en una smart app personalizable e intuitiva"
                     },
                     "openAcount5": {
                         "zh": "",
@@ -8381,7 +8381,7 @@
                         "vi": "Trở thành một Bậc Thầy và chia sẻ lợi nhuận của người sao chép của bạn",
                         "zh-Hant": "",
                         "id": "Jadilah seorang Master dan dapatkan bagi hasil dari keuntungan investor yang mengikuti anda",
-                        "es": "Conviértase en un master y comparta los beneficios de sus seguidores"
+                        "es": "Conviértase en una master y comparta los beneficios de sus seguidores"
                     },
                     "openAcount7": {
                         "zh": "",
@@ -8413,7 +8413,7 @@
                         "vi": "Mở một tài khoản Trải nghiệm và thực hành giao dịch trong một môi trường phi rủi ro với 10,000 USD trong quỹ ảo.",
                         "zh-Hant": "",
                         "id": "Buka akun Pengalaman dan berlatihlah transaksi tanpa risiko menggunakan dana virtual sebesar 10,000$",
-                        "es": "Abra una cuenta demo y practique en un entorno sin riesgo con USD10,000 en fondos virtuales."
+                        "es": "Abra una cuenta demo y practique en una entorno sin riesgo con USD10,000 en fondos virtuales."
                     },
                     "openAcount11": {
                         "zh": "",
@@ -9464,7 +9464,7 @@
                     "vi": "Hoặc",
                     "zh-Hant": "或",
                     "id": "Atau",
-                    "es": "o"
+                    "es": "or"
                 },
                 "revocation": {
                     "zh": "撤销",

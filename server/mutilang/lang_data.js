@@ -2069,7 +2069,7 @@ module.exports = {
         "vi": "Sao chép các lệnh đang mở của bậc thầy",
         "zh-Hant": "復制高手開倉",
         "id": "Ikuti Posisi Master",
-        "es": "● Seguir posiciones abiertas Master"
+        "es": "Seguir posiciones abiertas Master"
     },
     "copyRule7": {
         "zh": "1. 复制成功后，高手开仓，账户跟随高手同步开仓。",
@@ -2285,7 +2285,7 @@ module.exports = {
         "vi": "vi",
         "zh-Hant": "zh-Hant",
         "id": "id",
-        "es": "en"
+        "es": "es"
     },
     "sidebar1": {
         "en": "Learning Center",
@@ -9149,7 +9149,7 @@ module.exports = {
         "vi": "- Một chính sách ‘cần biết’ quy định việc phát tán thông tin bảo mật hoặc nội bộ trong Tập đoàn",
         "zh-Hant": "- “需者方知”政策，管理保密信息或內部信息在集團內的傳播",
         "id": "- A ‘need to know’ policy governing the dissemination of confidential or inside information within the Group",
-        "es": ""
+        "es": " "
     },
     "amtConflicts33": {
         "zh": "- 利用“防火墙”限制保密信息及内部信息在本公司流通，以及部门之间物理隔离",
@@ -9157,7 +9157,7 @@ module.exports = {
         "vi": "- Các rào cản tại Trung Quốc hạn chế dòng của thông tin bảo mật và bên trong trong công ty chúng tôi, và sự phân chia vật lý giữa các phòng ban",
         "zh-Hant": "- 利用“防火墻”限制保密信息及內部信息在本公司流通，以及部門之間物理隔離",
         "id": "- Chinese walls restricting the flow of confidential and inside information within our company, and physical separation of departments",
-        "es": ""
+        "es": " "
     },
     "amtConflicts34": {
         "zh": "- 管理电子数据访问的程序",
@@ -9165,7 +9165,7 @@ module.exports = {
         "vi": "- Thủ tục điều chỉnh quyền truy cập vào dữ liệu điện tử",
         "zh-Hant": "- 管理電子數據訪問的程序",
         "id": "- Procedures governing access to electronic data",
-        "es": ""
+        "es": " "
     },
     "amtConflicts35": {
         "zh": "- 职权分离，避免由一人兼任数职而可能产生的利益冲突",
@@ -9181,7 +9181,7 @@ module.exports = {
         "vi": "- Các yêu cầu giao dịch tài khoản cá nhân áp dụng cho người liên đới liên quan đến khoản đầu tư của họ",
         "zh-Hant": "- 適用於相關人員自行投資時的個人賬戶交易規定",
         "id": "- Personal account dealing requirements applicable to relevant persons in relation to their own investments",
-        "es": ""
+        "es": " "
     },
     "amtConflicts37": {
         "zh": "- 礼品及赠予记录，登记某些福利的招揽、提供或收取",
@@ -9197,7 +9197,7 @@ module.exports = {
         "vi": "- Việc nghiêm cấm các lợi ích kinh doanh bên ngoài xung đột với lợi ích của chúng tôi theo ý kiến của các nhân viên và nhân viên của Nhóm có liên quan, trừ khi được hội đồng quản trị phê duyệt.",
         "zh-Hant": "- 除非提供董事會批準，禁止外部商業利益與集團就其高級職員與員工的利益產生沖突",
         "id": "- The prohibition of external business interests conflicting with our interests as far as the Group’s officers and employees are concerned, unless board approval is provided",
-        "es": ""
+        "es": " "
     },
     "amtConflicts39": {
         "zh": "- 一项旨在限制因给予和接受赠予而引起利益冲突的政策",
@@ -9301,7 +9301,7 @@ module.exports = {
         "vi": "Địa Chỉ Bổ Sung",
         "zh-Hant": "其他聯系人",
         "id": "Additional Contacts",
-        "es": " Contactos Adicionales"
+        "es": "Contactos Adicionales"
     },
     "amtConflicts53": {
         "zh": "TigerWit 合规部门",
@@ -9932,7 +9932,7 @@ module.exports = {
             "vi": "Với nền tảng công nghệ vững chắc được xây dựng trên triết lý của sự minh bạch, uy tín và liêm chính, TigerWit mang đến cho khách hàng của mình khả năng phi thường để giao dịch với các thị trường.",
             "zh-Hant": "團隊匯集了具有不同學術和應用背景的專業人士，分別在外匯交易、差價合約、監管合規性、投資管理、在線平臺研發和全球營銷等方面擁有豐富的經驗，為您的資金保駕護航！",
             "id": "Dengan menggunakan teknologi yang kuat dan dirancang atas dasar keterbukaan, kredibilitas dan Integritas, TigerWIt menawarkan pengalaman transaksi di pasar dengan kemampuan yang berbeda dengan yang lainnya.",
-            "es": "Con una infraestructura tecnológica robusta apoyada en una filosofía de transparecia, credibilidad e integridad, TigerWit ofrece a sus clientes innovadoras herramientas para operar los mercados. "
+            "es": "Con una infraestructura tecnológica robusta apoyada en una filosofía de transparencia, credibilidad e integridad, TigerWit ofrece a sus clientes innovadoras herramientas para operar los mercados."
         },
         "whatOffer": {
             "zh": "我们提供什么？",
@@ -12812,7 +12812,7 @@ module.exports = {
             "vi": "Hai từ có ý nghĩa rất nhiều. Nó đơn giản là giao dịch tốt nhất. Được hỗ trợ bởi blockchain. Giao dịch các thị trường bạn muốn, theo cách bạn muốn; FX, kim loại quý, hàng hóa và chỉ số. Ứng dụng nhanh chóng mang đến sự thuận tiện khi sử dụng, dựa trên sổ cái giao dịch phân tán của TigerWit.",
             "zh-Hant": "",
             "id": "Menjadi yang terbaik di dunia trading dengan didukung oleh blockchain.Trading dipasar manapun, dengan strategi apapun. Valas, logam mulia, komoditas dan indeks. Dengan menggunakan aplikasi yang cepat dan gampang digunakan, serta didukung oleh teknologi distributed trading ledger.",
-            "es": "Estas dos palabras significan mucho. Es simplemente lo mejor en el trading. Powered by blockchain. Opere los mercados que busca, del modo que desea; FX, metales preciosos, commodities e indices. En un app tan ágil que es un placer usarla, basada en TigerWit distributed trading ledger."
+            "es": "Estas dos palabras significan mucho. Es simplemente lo mejor en el trading. Powered by blockchain. Opere los mercados que busca, del modo que desea; FX, metales preciosos, commodities e indices. En una app tan ágil que es un placer usarla, basada en TigerWit distributed trading ledger."
         },
         "about29": {
             "zh": "",
@@ -14131,12 +14131,12 @@ module.exports = {
     },
     "bonusBd": {
         "confirmNow": {
-            "zh": "Confirm Now!",
-            "en": "Confirm Now!",
-            "vi": "Xác Nhận Ngay!",
-            "zh-Hant": "Confirm Now!",
-            "id": "Konfirmasi Sekarang!",
-            "es": "Confirmar ahora!"
+            "zh": "注册",
+            "en": "Confirm Now",
+            "vi": "Người đăng kí",
+            "zh-Hant": "註冊",
+            "id": "Daftar",
+            "es": "Registro"
         },
         "gainRebateUs": {
             "zh": "You can gain rebate US ",
