@@ -9149,7 +9149,7 @@ module.exports = {
         "vi": "- Một chính sách ‘cần biết’ quy định việc phát tán thông tin bảo mật hoặc nội bộ trong Tập đoàn",
         "zh-Hant": "- “需者方知”政策，管理保密信息或內部信息在集團內的傳播",
         "id": "- A ‘need to know’ policy governing the dissemination of confidential or inside information within the Group",
-        "es": " "
+        "es": "-Una política \"Need to know\" gobierna la diseminación de información confidencial o interna dentro del Grupo"
     },
     "amtConflicts33": {
         "zh": "- 利用“防火墙”限制保密信息及内部信息在本公司流通，以及部门之间物理隔离",
@@ -9157,7 +9157,7 @@ module.exports = {
         "vi": "- Các rào cản tại Trung Quốc hạn chế dòng của thông tin bảo mật và bên trong trong công ty chúng tôi, và sự phân chia vật lý giữa các phòng ban",
         "zh-Hant": "- 利用“防火墻”限制保密信息及內部信息在本公司流通，以及部門之間物理隔離",
         "id": "- Chinese walls restricting the flow of confidential and inside information within our company, and physical separation of departments",
-        "es": " "
+        "es": "- \"Chinese walls\" restringen el flujo de información interna y confidencial dentro de nuestra empresa y la separación física de departamentos"
     },
     "amtConflicts34": {
         "zh": "- 管理电子数据访问的程序",
@@ -9165,7 +9165,7 @@ module.exports = {
         "vi": "- Thủ tục điều chỉnh quyền truy cập vào dữ liệu điện tử",
         "zh-Hant": "- 管理電子數據訪問的程序",
         "id": "- Procedures governing access to electronic data",
-        "es": " "
+        "es": "- Procesos gobiernan acceso datos electrónicos"
     },
     "amtConflicts35": {
         "zh": "- 职权分离，避免由一人兼任数职而可能产生的利益冲突",
@@ -9181,7 +9181,7 @@ module.exports = {
         "vi": "- Các yêu cầu giao dịch tài khoản cá nhân áp dụng cho người liên đới liên quan đến khoản đầu tư của họ",
         "zh-Hant": "- 適用於相關人員自行投資時的個人賬戶交易規定",
         "id": "- Personal account dealing requirements applicable to relevant persons in relation to their own investments",
-        "es": " "
+        "es": "-Requisitos personales de dealing aplicables a las personas relevantes en relación con sus propias inversiones"
     },
     "amtConflicts37": {
         "zh": "- 礼品及赠予记录，登记某些福利的招揽、提供或收取",
@@ -9197,7 +9197,7 @@ module.exports = {
         "vi": "- Việc nghiêm cấm các lợi ích kinh doanh bên ngoài xung đột với lợi ích của chúng tôi theo ý kiến của các nhân viên và nhân viên của Nhóm có liên quan, trừ khi được hội đồng quản trị phê duyệt.",
         "zh-Hant": "- 除非提供董事會批準，禁止外部商業利益與集團就其高級職員與員工的利益產生沖突",
         "id": "- The prohibition of external business interests conflicting with our interests as far as the Group’s officers and employees are concerned, unless board approval is provided",
-        "es": " "
+        "es": "-La prohibición de intereses en negocios externos que tengan conflicto con nuestros intereses de los directores del Grupo y de los empleados, a no ser que se cuente con aprobación del consejo"
     },
     "amtConflicts39": {
         "zh": "- 一项旨在限制因给予和接受赠予而引起利益冲突的政策",
@@ -13862,7 +13862,7 @@ module.exports = {
             "vi": "Xin lưu ý rằng chúng tôi không chấp nhận thanh toán bằng tiền mặt trực tiếp vào tài khoản ngân hàng của chúng tôi. Để nhận được thanh toán của bạn kịp thời và chính xác, vui lòng điền vào biểu mẫu đăng ký chuyển khoản ngân hàng.",
             "zh-Hant": "請註意，我們不接受直接支付到我們銀行賬戶的現金付款。為了您的註資能及時、準確到帳，在填寫電匯申請單時，",
             "id": "Perlu dicatata bahwa kami tidak menerima pengisian dana secara tunai. Untuk memastikan bahwa pengisian dana anda berjalan dengan lancar, mohon isi formulir dibawah ini",
-            "es": "Por favor, tenga presente que no aceptamos pagos en efectivo directamente a nuestra cuenta de banco. Para recibir sus pagos de modo preciso, por favor, complete el formulario de solicitud de transferencia. "
+            "es": "Por favor, tenga presente que no aceptamos depósitos en efectivo directamente en nuestra cuenta de banco. Para recibir su pago de manera puntual y precisa, por favor complete el formulario de solicitud de transfer. "
         },
         "transferTip2": {
             "zh": "请您务必在汇款附言一栏里填写您的交易账号。",
@@ -13870,7 +13870,7 @@ module.exports = {
             "vi": " Vui lòng đảm bảo điền vào tài khoản giao dịch của bạn trong phiếu chuyển tiền.",
             "zh-Hant": "請您務必在匯款附言壹欄裏填寫您的交易帳號。",
             "id": "Pastikan anda menuliskan nomor akun transaksi anda di bukti setoran.",
-            "es": " Por favor, asegúrese de incluir su cuenta de transacciones en el certificado de envío."
+            "es": " Recuerde incluir su cuenta de trading en el certificado de envío transfer."
         },
         "transferTip3": {
             "zh": "同时请提供您的电话号码，以便我们与您取得联系。",
