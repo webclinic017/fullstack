@@ -134,10 +134,10 @@
                 },
                 android: {
                     app_info: {
-                        version_name : "V2.1.1",
-                        description: "Fix bugs",
-                        updated_description: "Version 2.1.1 available",
-                        url : "https://static.tigerwitfx.com/downloads/apk/tigerwit_uk_v2.1.1.apk",
+                        version_name : "V2.3.1",
+                        description: "Fixed some bugs.",
+                        updated_description: "Optimize the user experience of the blockchain function module.",
+                        url : "https://static.tigerwitfx.com/downloads/apk/tigerwit_uk_v2.3.1.apk",
                         force_update : false
                     }
                 }
@@ -153,10 +153,10 @@
                 },
                 android: {
                     app_info: {
-                        version_name : "V2.1.1",
-                        description: "Fix bugs",
-                        updated_description: "Version 2.1.1 available",
-                        url : "https://static.tigerwitfx.com/downloads/apk/tigerwit_uk_v2.1.1.apk",
+                        version_name : "V2.3.1",
+                        description: "Fixed some bugs.",
+                        updated_description: "Optimize the user experience of the blockchain function module.",
+                        url : "https://static.tigerwitfx.com/downloads/apk/tigerwit_uk_v2.3.1.apk",
                         force_update : false
                     }
                 } 
