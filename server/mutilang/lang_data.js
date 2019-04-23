@@ -2773,7 +2773,7 @@ module.exports = {
         "vi": "- am hiểu về các vấn đề đầu tư.",
         "zh-Hant": "- 對投資事務有著深刻的了解。",
         "id": "- are knowledgeable in investment matters. ",
-        "es": ""
+        "es": "- tiene conocimientos en materia de inversiones."
     },
     "amtLegal10": {
         "zh": "- 能够承担投资的经济风险。",
@@ -2781,7 +2781,7 @@ module.exports = {
         "vi": "- có thể chịu rủi ro kinh tế của khoản đầu tư.",
         "zh-Hant": "- 能夠承擔投資的經濟風險。",
         "id": "- are able to bear the economic risk of the investment. ",
-        "es": ""
+        "es": "- puede soportar el riesgo bajista de una inversión."
     },
     "amtLegal11": {
         "zh": "- 了解有关的风险。",
@@ -2797,7 +2797,7 @@ module.exports = {
         "vi": "- tin rằng đầu tư phù hợp với mục tiêu đầu tư cụ thể và nhu cầu tài chính của họ.",
         "zh-Hant": "- 認為投資適合他們特定的投資目標和財務需要。",
         "id": "- believe that the investment is suitable for their particular investment objective and financial needs.",
-        "es": ""
+        "es": "- entiende que su inversión es conveniente para sus objetivos de inversión particulares y necesidades financieras."
     },
     "amtLegal13": {
         "zh": "- 对投资的流动性没有需要",
@@ -2805,7 +2805,7 @@ module.exports = {
         "vi": "không cần thanh khoản đầu tư.",
         "zh-Hant": "- 對投資的流動性沒有需要",
         "id": "- have no need for liquidity of investment. ",
-        "es": ""
+        "es": "- no necesita la liquidez de la inversión."
     },
     "amtLegal14": {
         "zh": "如果任何非专业投资者投资于金融工具，建议投资者只应当投入打算长期投资的数额的一部分。此外建议所有的投资者在投资于金融工具前应当寻求专业投资顾问的建议。",
