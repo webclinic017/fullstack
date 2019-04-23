@@ -106,8 +106,8 @@
         });
 
         function setTabList () {
-            console.log(lang.currentLanguage());
-            var lst = agreementList[$scope.listType][lang.currentLanguage()].split(',');
+            // console.log(lang.currentLanguage());
+            var lst = agreementList[$scope.listType][lang.currentLanguage()] ? agreementList[$scope.listType][lang.currentLanguage()].split(',') : agreementList[$scope.listType]["en"].split(',');
             angular.forEach(lst, function (value, index) {
                 $scope.tabList.push({
                     title: value,
