@@ -124,6 +124,30 @@ $(document).ready(function () {
 
     // 请求当前用户认证到哪一步
     setUserCookie();
+    
+    /**
+     * 测试代码 START
+     */
+    // setTimeout(function () {
+    //     layer.closeAll();
+    //     // getKycList();
+    //     getCountries();
+    //     step = 2;
+    //     $(ele.wrapper).addClass("active");
+    //     goStepPage();
+
+    //     laydate.render({
+    //         elem: '#birth',
+    //         lang: lang.curLang() === 'en' ? 'en' : 'cn'
+    //     });
+    //     cardCountry = 'CN'
+    //     initCardTypeInfo();
+    //     initStateInfo();
+    //     setCNCountry();
+    // }, 1000);
+    /**
+     * END
+     */
 
     function setUserCookie () {
         var user_id = getUrlParam("user_id") || '';
@@ -151,7 +175,7 @@ $(document).ready(function () {
             getUserStatus();
             getKycList();
             getCountries();
-
+            initStateInfo();
         }, 300);
     }
 
@@ -169,9 +193,7 @@ $(document).ready(function () {
                     // console.log(countryList.data);
                     if (countryList.data) {
                         if (lang.curLang() == 'cn') {
-                            $(".m_third_userinfo select").find("option[value=CN]").first().attr("selected", true);
-                            $(ele.userinfoCountry).val('中国');
-                            $(ele.userinfoCountry).attr("data-country", "CN");
+                            setCNCountry();
                         }
                     } else {
                         isSetCountryCache = true;
@@ -211,12 +233,11 @@ $(document).ready(function () {
                                 $(ele.userinfoCountry).val(value.name);
                             }
                         });
-                        $(".m_third_userinfo select").find("option[value="+userCacheInfo.world_code+"]").first().attr("selected", true);
-                        $(ele.userinfoCountry).attr("data-country", userCacheInfo.world_code);
+                        $(".m_third_userinfo select.country_list").find("option[value="+userCacheInfo.world_code+"]").first().attr("selected", true);
+                        $(ele.userinfoCountry).attr("data-type", userCacheInfo.world_code);
+                        setCNCountry(true);
                     } else if (lang.curLang() == 'cn') {
-                        $(".m_third_userinfo select").find("option[value=CN]").first().attr("selected", true);
-                        $(ele.userinfoCountry).val('中国');
-                        $(ele.userinfoCountry).attr("data-country", "CN");
+                        setCNCountry()
                     }
                 } else {
                     isSetCountryCache = true;
@@ -246,19 +267,6 @@ $(document).ready(function () {
             }
         });
     }
-    // setTimeout(function () {
-    //     layer.closeAll();
-    //     // getKycList();
-    //     // getCountries();
-    //     step = 8;
-    //     $(ele.wrapper).addClass("active");
-    //     goStepPage();
-
-    //     laydate.render({
-    //         elem: '#birth',
-    //         lang: lang.curLang() === 'en' ? 'en' : 'cn'
-    //     });
-    // }, 1000);
     
     $(ele.indexBtn).on("tap", function () {
         openH5AgmentModal(100402, function(resolve, e){
@@ -272,10 +280,6 @@ $(document).ready(function () {
                 if (data.is_succ) {
                     step = 1;
                     goStepPage();
-                    // 神策统计
-                    sa.track('New_Selectiontype', {
-                        account_type: '真实账户'
-                    });
                 } else {
                     layer.open({
                         content: data.message,
@@ -307,8 +311,6 @@ $(document).ready(function () {
                 if (data.is_succ) {
                     step = data.data.status === 3 ? 2 : data.data.status;//若是返回3，从第二步开始;
                     goStepPage();
-                    // 神策统计
-                    sa.track('New_information');
                 } else {
                     layer.open({
                         content: data.message,
@@ -395,19 +397,23 @@ $(document).ready(function () {
     // userinfo
     $(ele.userinfoBtn).on("tap", function (e) {
         e.preventDefault();
-        // console.log($(ele.userinfoEmail).val(), $(ele.userinfoCountry).val(), $(ele.userinfoCountry).attr("data-country"), $(ele.userinfoAddress).val())
+        console.log($(".m_third_userinfo .state_global .state").val());
+        // console.log($(ele.userinfoEmail).val(), $(ele.userinfoCountry).val(), $(ele.userinfoCountry).attr("data-type"), $(ele.userinfoAddress).val())
         if ($(ele.userinfoEmail).val() && $(ele.userinfoCountry).val() && $(ele.userinfoAddress).val()) {
             layer.open({type: 2, shadeClose: false});
+            cardCountry = $(ele.userinfoCountry).attr("data-type");
             publicRequest('thirdSetUserInfo', 'PUT', {
                 email: $(ele.userinfoEmail).val(),
-                world_code: $(ele.userinfoCountry).attr("data-country"),
-                address: $(ele.userinfoAddress).val()
+                world_code: cardCountry,
+                address: $(ele.userinfoAddress).val(),
+                state_code: cardCountry === 'CN' ? $(".m_third_userinfo .state_cn .state").attr("data-type") : $(".m_third_userinfo .state_global .state").val(),
+                city_code: cardCountry === 'CN' ? $(".m_third_userinfo .city_cn .city").attr("data-type") : $(".m_third_userinfo .city_global .city").val(),
+                post_code: $(".m_third_userinfo .post_code").val()
             }).then(function (data) {
                 // console.log(data);
                 layer.closeAll();
                 if (!data) return;
                 if (data.is_succ) {
-                    cardCountry = $(ele.userinfoCountry).attr("data-country");
                     step = data.data.status;
                     initCardTypeInfo();
                     //加载证件类型缓存
@@ -418,7 +424,7 @@ $(document).ready(function () {
                                     $(ele.usernameCardType).val(value.key);
                                 }
                             });
-                            $(".m_third_username select").find("option[value="+userCacheInfo.idcard_type+"]").first().attr("selected", true);
+                            $(".m_third_username select.card_type_list").find("option[value="+userCacheInfo.idcard_type+"]").first().attr("selected", true);
                             $(ele.usernameCardType).attr("data-type", userCacheInfo.idcard_type);
                         }
                     } catch (e) {}
@@ -447,13 +453,40 @@ $(document).ready(function () {
         var op = $(this).find('option:selected');
         // console.log($(op).val(), $(op).text());
         if ($(op).val()) {
-            $(ele.userinfoCountry).val($(op).text());
-            $(ele.userinfoCountry).attr("data-country", $(op).val());
+            $(this).prev().val($(op).text());
+            $(this).prev().attr("data-type", $(op).val());
         } else {
-            $(ele.userinfoCountry).val(undefined);
+            $(this).prev().val(undefined);
+            $(this).prev().attr("data-type", undefined);
+        }
+        if ($(this).prev().hasClass('country')) {
+            if ($(this).prev().attr("data-type") !== 'CN') {
+                $(".m_third_userinfo .state_cn").removeClass('active');
+                $(".m_third_userinfo .city_cn").removeClass('active');
+                $(".m_third_userinfo .state_global").addClass('active');
+                $(".m_third_userinfo .city_global").addClass('active');
+            } else {
+                $(".m_third_userinfo .state_cn").addClass('active');
+                $(".m_third_userinfo .city_cn").addClass('active');
+                $(".m_third_userinfo .state_global").removeClass('active');
+                $(".m_third_userinfo .city_global").removeClass('active');
+            }
+        }
+        if ($(this).prev().hasClass('state')) {
+            initCityInfo($(op).val());
         }
     });
 
+    function setCNCountry (simp) {
+        $(".m_third_userinfo .state_cn").addClass('active');
+        $(".m_third_userinfo .city_cn").addClass('active');
+        $(".m_third_userinfo .state_global").removeClass('active');
+        $(".m_third_userinfo .city_global").removeClass('active');
+        if (simp) return;
+        $(".m_third_userinfo select.country_list").find("option[value=CN]").first().attr("selected", true);
+        $(ele.userinfoCountry).val('中国');
+        $(ele.userinfoCountry).attr("data-type", "CN");
+    }
     // 获取国家、地区列表
     function getCountries () {
         publicRequest('thirdCountries', 'GET').then(function (data) {
@@ -465,7 +498,7 @@ $(document).ready(function () {
                 //使用template模版
                 var html=bt('template_country_info',countryList);
                 //渲染
-                $(".m_third_userinfo select").html(html);
+                $(".m_third_userinfo select.country_list").html(html);
 
                 //设置缓存
                 if (!isSetCountryCache) return;
@@ -475,12 +508,11 @@ $(document).ready(function () {
                             $(ele.userinfoCountry).val(value.name);
                         }
                     });
-                    $(".m_third_userinfo select").find("option[value="+userCacheInfo.world_code+"]").first().attr("selected", true);
-                    $(ele.userinfoCountry).attr("data-country", userCacheInfo.world_code);
+                    $(".m_third_userinfo select.country_list").find("option[value="+userCacheInfo.world_code+"]").first().attr("selected", true);
+                    $(ele.userinfoCountry).attr("data-type", userCacheInfo.world_code);
+                    setCNCountry(true);
                 } else if (lang.curLang() == 'cn') {
-                    $(".m_third_userinfo select").find("option[value=CN]").first().attr("selected", true);
-                    $(ele.userinfoCountry).val('中国');
-                    $(ele.userinfoCountry).attr("data-country", "CN");
+                    setCNCountry();
                 }
             }
         });
@@ -539,22 +571,63 @@ $(document).ready(function () {
         var op = $(this).find('option:selected');
         // console.log($(op).val(), $(op).text());
         if ($(op).val()) {
-            $(ele.usernameCardType).val($(op).text());
-            $(ele.usernameCardType).attr("data-type", $(op).val());
+            $(this).prev().val($(op).text());
+            $(this).prev().attr("data-type", $(op).val());
         } else {
-            $(ele.usernameCardType).val(undefined);
+            $(this).prev().val(undefined);
         }
     });
     // 初始化证件类型
     function initCardTypeInfo () {
-        console.log(cardTypeListTemp.cn);
+        // console.log(cardTypeListTemp.cn);
         cardTypeList = {
             data: cardCountry === 'CN' ? cardTypeListTemp.cn : cardTypeListTemp.en
         };
         //使用template模版
         var html=bt('template_card_info',cardTypeList);
         //渲染
-        $(".m_third_username select").html(html);
+        $(".m_third_username select.card_type_list").html(html);
+    }
+    // 初始化省/区
+    function initStateInfo () {
+        // if (cardCountry !== 'CN') {
+        //     $(".m_third_userinfo .state_global").addClass('active');
+        //     $(".m_third_userinfo .city_global").addClass('active');
+        //     return;
+        // }
+        // $(".m_third_userinfo .state_cn").addClass('active');
+        // $(".m_third_userinfo .city_cn").addClass('active');
+        publicRequest('thirdStateList', 'GET', {
+            country_code: 'CN'
+        }).then(function (data) {
+            // console.log(data);
+            if (data.is_succ) {
+                var stateList = {
+                    data: data.data
+                };
+                //使用template模版
+                var html=bt('template_country_info',stateList);
+                //渲染
+                $(".m_third_userinfo select.state_list").html(html);
+            }
+        });
+    }
+    // 初始化城市
+    function initCityInfo (parentCode) {
+        publicRequest('thirdCitiesList', 'GET', {
+            parent_code: parentCode
+        }).then(function (data) {
+            // console.log(data);
+            if (data.is_succ) {
+                var cityList = {
+                    data: data.data
+                };
+                //使用template模版
+                var html=bt('template_country_info',cityList);
+                //渲染
+                $(".m_third_userinfo select.city_list").html(html);
+            }
+        });
     }
     // card
     $(ele.cardFile).on('change', function(e) {
