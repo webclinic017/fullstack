@@ -70,7 +70,7 @@
         }
         document.body.removeChild(textArea);
     }
-    
+
     //获取search参数
     function getQueryString(name) {
         var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
@@ -244,13 +244,13 @@
     }
 
     //为客户推广参数做筛选
-    function checkUserSource () {
+    function checkUserSource() {
         var sourceReg = /^DW_|D_|R_/i;
         var search_arr = getSearch();
         search_source = {};
         $.each(search_arr, function (index, value) {
             if (sourceReg.test(index)) {
-            search_source[index] = value;
+                search_source[index] = value;
             }
         });
         return search_source;
@@ -409,24 +409,18 @@
             "zh-Hant": "",
             "vi": "",
             "id": "",
-            "es": ""
+            "es": "",
+            "pt-BR": ""
         },
         "third": {
-            "loginAgain": {
-                "zh": "请重新登录",
-                "en": "Please login again",
-                "vi": "Vui lòng đăng nhập lại",
-                "zh-Hant": "請重新登錄",
-                "id": "Silahkan masuk kembali",
-                "es": "Por favor, vuelva a iniciar sesión"
-            },
             "fillInfoTip": {
                 "zh": "请填写完整信息",
                 "en": "Please fill in the complete information",
                 "vi": "Hãy điền đầy đủ thông tin",
                 "zh-Hant": "請填寫完整信息",
                 "id": "Mohon masukkan informasi yang lengkap",
-                "es": "Por favor, introduzca la información completa"
+                "es": "Por favor, introduzca la información completa",
+                "pt-BR": "Por favor completes as seguintes informações"
             },
             "select": {
                 "zh": "请选择",
@@ -434,7 +428,8 @@
                 "vi": "Vui lòng chọn",
                 "zh-Hant": "請選擇",
                 "id": "Silahkan pilih",
-                "es": "Por favor, seleccione"
+                "es": "Por favor, seleccione",
+                "pt-BR": "Por favor, selecione"
             },
             "uploadCard": {
                 "zh": "请上传证件",
@@ -442,7 +437,8 @@
                 "vi": "Xin hãy tải lên tờ",
                 "zh-Hant": "請上傳證件",
                 "id": "Silahkan unggah paspor anda",
-                "es": "Por favor, suba su pasaporte"
+                "es": "Por favor, suba su pasaporte",
+                "pt-BR": "Por favor, faça o upload do seu passaporte"
             },
             "systemTip": {
                 "zh": "您当前的手机版本不支持图片上传功能，请升级手机系统或更换手机。",
@@ -450,7 +446,8 @@
                 "vi": "Phiên bản điện thoại di động hiện thời của bạn không hỗ trợ chức năng hình ảnh đã được tải lên, xin nâng cấp hệ thống điện thoại hoặc thay thế điện thoại di động.",
                 "zh-Hant": "您當前的手機版本不支持圖片上傳功能，請陞級手機系統或更換手機。",
                 "id": "Sistem ponsel Anda saat ini tidak mendukung fungsi upload gambar, silakan update sistem atau mengubah ponsel Anda.",
-                "es": "El sistema de su móvil actual no es compatible con la función de carga de imágenes, actualice el sistema o cambie su móvil."
+                "es": "El sistema de su móvil actual no es compatible con la función de carga de imágenes, actualice el sistema o cambie su móvil.",
+                "pt-BR": "O sistema atual do seu celular não suporta a função de upload de imagens, atualize o sistema ou altere seu celular."
             },
             "frontCardTip": {
                 "zh": "点击上传证件正面",
@@ -458,7 +455,8 @@
                 "vi": "Lượt tải lên mặt trước tờ",
                 "zh-Hant": "點擊上傳證件正面",
                 "id": "Unggah halaman depan",
-                "es": "Subir el lado frontal"
+                "es": "Subir el lado frontal",
+                "pt-BR": "Carregar o lado da frente"
             },
             "backCardTip": {
                 "zh": "点击上传证件反面",
@@ -466,7 +464,8 @@
                 "vi": "Lượt tải lên mặt sau tờ",
                 "zh-Hant": "點擊上傳證件反面",
                 "id": "Unggah halaman belakang",
-                "es": "Subir la parte trasera"
+                "es": "Subir la parte trasera",
+                "pt-BR": "Carregar o verso"
             },
             "cardTip": {
                 "zh": "上传图片",
@@ -474,7 +473,8 @@
                 "vi": "Đang tải hình ảnh",
                 "zh-Hant": "上傳圖片",
                 "id": "Upload gambar",
-                "es": "Subir imagen"
+                "es": "Subir imagen",
+                "pt-BR": "Fazer upload da imagem"
             },
             "third_username8": {
                 "zh": "台湾居民来往大陆通行证",
@@ -482,7 +482,8 @@
                 "vi": "Giấy phép du lịch đại lục cho cư dân Đài Loan, (MTP)",
                 "zh-Hant": "臺灣居民來往大陸通行證",
                 "id": "Izin wisata untuk penduduk Taiwan",
-                "es": "Permiso de viaje continental para residentes de Taiwan, (MTP)"
+                "es": "Permiso de viaje continental para residentes de Taiwan, (MTP)",
+                "pt-BR": "Licença de viagem para residentes de Taiwan, (MTP)"
             },
             "third_username9": {
                 "zh": "大陆居民身份证",
@@ -490,7 +491,8 @@
                 "vi": "Thẻ ID Trung Quốc",
                 "zh-Hant": "大陸居民身份證",
                 "id": "KTP (Kartu Tanda Penduduk)",
-                "es": "Tarjeta de identificación china"
+                "es": "Tarjeta de identificación china",
+                "pt-BR": "Cartão de identificação chinesa"
             },
             "third_username10": {
                 "zh": "港澳居民来往内地通行证",
@@ -498,7 +500,8 @@
                 "vi": "Giấy phép du lịch đại lục cho cư dân Hồng Kông và Macao",
                 "zh-Hant": "港澳居民來往內地通行證",
                 "id": "Izin wisata untuk penduduk Hong Kong dan Macao",
-                "es": "Permiso de viaje continental para los residentes de Hong Kong y Macao"
+                "es": "Permiso de viaje continental para los residentes de Hong Kong y Macao",
+                "pt-BR": "Licença de viagem para residentes de Hong Kong e Macao"
             },
             "third_username11": {
                 "zh": "护照",
@@ -506,7 +509,8 @@
                 "vi": "Hộ chiếu",
                 "zh-Hant": "護照",
                 "id": "Paspor",
-                "es": "Pasaporte"
+                "es": "Pasaporte",
+                "pt-BR": "Passaporte"
             },
             "third_username12": {
                 "zh": "驾驶证",
@@ -514,7 +518,8 @@
                 "vi": "Giấy phép Lái Xe",
                 "zh-Hant": "駕駛證",
                 "id": "SIM (Surat Izin Mengemudi)",
-                "es": "Licencia de conducir"
+                "es": "Licencia de conducir",
+                "pt-BR": "Carteira de motorista"
             },
             "third_username13": {
                 "zh": "身份证",
@@ -522,105 +527,28 @@
                 "vi": "Thẻ ID",
                 "zh-Hant": "身份證",
                 "id": "Nomor KTP",
-                "es": "Tarjeta ID"
+                "es": "Tarjeta ID",
+                "pt-BR": "Cartão de identificação"
+            },
+            "loginAgain": {
+                "zh": "请重新登录",
+                "en": "Please login again",
+                "vi": "Vui lòng đăng nhập lại",
+                "zh-Hant": "請重新登錄",
+                "id": "Silahkan masuk kembali",
+                "es": "Por favor, vuelva a iniciar sesión",
+                "pt-BR": "Por favor faça login novamente"
             }
         },
         "thirdH5": {
-            "isHasAvodaAccount": {
-                "zh": "是否拥有AVODA Pay账号",
-                "en": "Do you have an AVODA Pay account",
-                "vi": "Bạn có tài khoản AVODA Pay không?",
-                "zh-Hant": "是否擁有AVODA Pay賬號",
-                "id": "Apakah anda memiliki rekening AVODA PAY",
-                "es": "Do you have an AVODA Pay account"
-            },
-            "hasAvodaAccount": {
-                "zh": "是 — 直接填写基本信息进行充值",
-                "en": "Yes - Fill in the basic information directly to deposit",
-                "vi": "Có - Điền thông tin cơ bản để nạp tiền trực tiếp",
-                "zh-Hant": "是 — 直接填寫基本信息進行充值",
-                "id": "Ya - Masukkan informasi deposit",
-                "es": "Yes - Fill in the basic information directly to deposit"
-            },
-            "noAvodaAccount": {
-                "zh": "否 — 跳转AVODA Pay平台注册并充值",
-                "en": "No - Jump to AVODA Pay platform to register and deposit",
-                "vi": "Không - Đi đến nền tảng AVODA Pay để đăng kí và nạp tiền",
-                "zh-Hant": "否 — 跳轉AVODA Pay平臺註冊並充值",
-                "id": "Tidak - Masuk ke platform AVODA PAY untuk daftar dan deposit",
-                "es": "No - Jump to AVODA Pay platform to register and deposit"
-            },
-            "recreate_order": {
-                "zh": "请重新创建订单",
-                "en": "Please recreate the order",
-                "vi": "Vui lòng tạo lại lệnh",
-                "zh-Hant": "請重新創建訂單",
-                "id": "Silahkan Masukkan kembali",
-                "es": "Por favor, recree la orden"
-            },
-            "fill_name": {
-                "zh": "请填写姓名",
-                "en": "Please fill in your name.",
-                "vi": "Vui lòng điền họ và tên",
-                "zh-Hant": "請填寫姓名",
-                "id": "Silahkan Masukkan Nama",
-                "es": "Por favor, rellene su nombre"
-            },
-            "fill_id_num": {
-                "zh": "请填写身份证号",
-                "en": "Please fill in your ID number.",
-                "vi": "Vui lòng nhập số ID",
-                "zh-Hant": "請填寫身份證號",
-                "id": "Silahkan Masukkan nomor ID",
-                "es": "Por favor, rellene su número ID"
-            },
-            "fill_phone": {
-                "zh": "请填写手机号",
-                "en": "Please fill in your phone number",
-                "vi": "Vui lòng nhập số điện thoại",
-                "zh-Hant": "請填寫手機號",
-                "id": "Silahkan Masukkan Nomor telepon",
-                "es": "Por favor, rellene su número de teléfono"
-            },
-            "fill_correct_phone": {
-                "zh": "请填写正确的手机号",
-                "en": "Please fill in correct phone number",
-                "vi": "Vui lòng nhập đúng số điện thoại",
-                "zh-Hant": "請填寫正確的手機號",
-                "id": "Silahkan Masukkan Nomor telepon yang aktif",
-                "es": "Por favor, rellene su número de teléfono correcto"
-            },
-            "verificationCodeSent": {
-                "zh": "验证码已发送",
-                "en": "has been sent",
-                "vi": "Đã gửi",
-                "zh-Hant": "驗證碼已發送",
-                "id": "Telah dikirim",
-                "es": "Enviar"
-            },
-            "fill_ver_code": {
-                "zh": "请填写验证码",
-                "en": "Please fill in verification code.",
-                "vi": "Vui lòng nhập mã xác nhận",
-                "zh-Hant": "請填寫驗證碼",
-                "id": "Silahkan Kode Verifikasi",
-                "es": "Por favor, rellene el código de verificación"
-            },
-            "mRegister05": {
-                "zh": "获取验证码",
-                "en": "Send code",
-                "vi": "Gửi mã",
-                "zh-Hant": "獲取驗證碼",
-                "id": "Kirim Kode",
-                "es": "Enviar código"
-            },
             "selectAccountPro": {
                 "zh": "请选择开户省",
                 "en": "Select opening account province",
                 "vi": "Chọn mở tài khoản tỉnh",
                 "zh-Hant": "請選擇開戶省",
                 "id": "Pilih provinsi",
-                "es": "Seleccione provincia cuenta apertura"
+                "es": "Seleccione provincia cuenta apertura",
+                "pt-BR": "Selecionar região da abertura de conta"
             },
             "enterCardNumber": {
                 "zh": "请填写银行卡号",
@@ -628,7 +556,8 @@
                 "vi": "Số tài khoản ngân hàng",
                 "zh-Hant": "請填寫銀行卡號",
                 "id": "Nomor rekening",
-                "es": "Número Tarjeta"
+                "es": "Número Tarjeta",
+                "pt-BR": "Número do cartão"
             },
             "fillWithdrawAccount": {
                 "zh": "请填写电汇账号",
@@ -636,7 +565,8 @@
                 "vi": "Vui lòng điền tài khoản rút tiền",
                 "zh-Hant": "請填寫電匯賬號",
                 "id": "Silahkan isi akun penarikan",
-                "es": "Por favor, rellene cuenta reembolso"
+                "es": "Por favor, rellene cuenta reembolso",
+                "pt-BR": "Por favor, preencha a conta para saque"
             },
             "chooseCountry": {
                 "zh": "请选择银行所在的国家",
@@ -644,7 +574,8 @@
                 "vi": "Vui lòng chọn quốc gia",
                 "zh-Hant": "請選擇銀行所在的國家",
                 "id": "Silahkan pilih Negara",
-                "es": "Por favor, elija el país"
+                "es": "Por favor, elija el país",
+                "pt-BR": "Por favor selecione um país"
             },
             "fillBankName": {
                 "zh": "请输入银行的英文全称（包括支行名称）",
@@ -652,7 +583,8 @@
                 "vi": "Xin điền tên Tiếng Anh đầy đủ (gồm tên chi nhánh)",
                 "zh-Hant": "請輸入銀行的英文全稱（包括支行名稱）",
                 "id": "Silahkan isi nama bank (termasuk nama cabang)",
-                "es": "Nombre completo del banco inglés (incluya nombre sucursal)"
+                "es": "Nombre completo del banco inglés (incluya nombre sucursal)",
+                "pt-BR": "Preencha o nome completo do banco em inglês (inclua o nome da filial)"
             },
             "fillBicSwiftCode": {
                 "zh": "请填写 BIC/Swift code",
@@ -660,7 +592,8 @@
                 "vi": "Xin điền vào Mã BIC/Swift",
                 "zh-Hant": "請填寫 BIC/Swift code",
                 "id": "Silahkan isi BIC/Kode Swift",
-                "es": "Por favor, rellene el código BIC/Swift"
+                "es": "Por favor, rellene el código BIC/Swift",
+                "pt-BR": "Por favor preencha código Swift/BIC"
             },
             "enterBranchBankName": {
                 "zh": "请输入支行名称",
@@ -668,7 +601,8 @@
                 "vi": "Nhập tên chi nhánh ngân hàng",
                 "zh-Hant": "請輸入支行名稱",
                 "id": "Masukkan nama cabang bank",
-                "es": "Ingrese nombre sucursal banco"
+                "es": "Ingrese nombre sucursal banco",
+                "pt-BR": "Inserir nome da filial do banco"
             },
             "selectAccountCity": {
                 "zh": "请选择开户市",
@@ -676,7 +610,8 @@
                 "vi": "Chọn mở tài khoản thành phố",
                 "zh-Hant": "請選擇開戶市",
                 "id": "Pilih kota",
-                "es": "Seleccione ciudad cuenta apertura"
+                "es": "Seleccione ciudad cuenta apertura",
+                "pt-BR": "Selecionar cidade da abertura de conta"
             },
             "enterReservedPhoneNumber": {
                 "zh": "请填写该银行卡的预留手机号",
@@ -684,7 +619,8 @@
                 "vi": "Vui lòng điền số điện thoại dự phòng của thẻ ngân hàng theo yêu cầu",
                 "zh-Hant": "請填寫該銀行卡的預留手機號",
                 "id": "Mohon isi nomor telepon yang terdaftar di bank",
-                "es": "Por favor, ingrese el número de teléfono asignado al banco"
+                "es": "Por favor, ingrese el número de teléfono asignado al banco",
+                "pt-BR": "Favor preencher o telefone do banco do cartão"
             },
             "enterBankName": {
                 "zh": "请填写您的银行名称",
@@ -692,7 +628,8 @@
                 "vi": "Tên tài khoản ngân hàng",
                 "zh-Hant": "請填寫您的銀行名稱",
                 "id": "Nama Bank",
-                "es": "Nombre banco"
+                "es": "Nombre banco",
+                "pt-BR": "Nome do Banco"
             },
             "addSuccess": {
                 "zh": "添加成功",
@@ -700,7 +637,8 @@
                 "vi": "Thành công",
                 "zh-Hant": "添加成功",
                 "id": "Sukses",
-                "es": "Éxito"
+                "es": "Éxito",
+                "pt-BR": "Feito com sucesso"
             },
             "fillAccount": {
                 "zh": "请填写账号",
@@ -708,7 +646,8 @@
                 "vi": "Điền vào tài khoản",
                 "zh-Hant": "請填寫賬號",
                 "id": "Isi informasi",
-                "es": "Introduzca la cuenta"
+                "es": "Introduzca la cuenta",
+                "pt-BR": "Preencha a conta"
             },
             "completeInfo": {
                 "zh": "请完善第三方账户信息",
@@ -716,7 +655,8 @@
                 "vi": "Vui lòng xóa thông tin tài khoản bên thứ ba",
                 "zh-Hant": "請完善第三方賬戶信息",
                 "id": "Silahkan lengkapi informasi rekening pihak ke tiga",
-                "es": "Por favor, complete información cuenta tercero"
+                "es": "Por favor, complete información cuenta tercero",
+                "pt-BR": "Por favor complete informações da conta de terceiros"
             },
             "paymentRule": {
                 "zh": "网银支付规则",
@@ -724,7 +664,8 @@
                 "vi": "Quy tắc cho phương thức thanh toán trực tuyến",
                 "zh-Hant": "網銀支付規則",
                 "id": "Peraturan untuk pembayaran melalui online banking",
-                "es": "Reglas pagos banca online"
+                "es": "Reglas pagos banca online",
+                "pt-BR": "Regras para pagamento bancário online"
             },
             "thirdParty": {
                 "zh": "第三方充值教程",
@@ -732,7 +673,8 @@
                 "vi": "Hướng dẫn gửi tiền của bên thứ ba",
                 "zh-Hant": "第三方充值教程",
                 "id": "Cara mengisi dana melalui pihak ketiga",
-                "es": "Depósitos terceros tutorial"
+                "es": "Depósitos terceros tutorial",
+                "pt-BR": "Tutorial de depósito por terceiros"
             },
             "depositOptionsJ": {
                 "zh": "支付方式",
@@ -740,7 +682,8 @@
                 "vi": "Chọn lựa",
                 "zh-Hant": "支付方式",
                 "id": "Pilihan",
-                "es": "Opción"
+                "es": "Opción",
+                "pt-BR": "Opçōes"
             },
             "pleaseSelect": {
                 "zh": "请选择",
@@ -748,7 +691,8 @@
                 "vi": "Vui lòng chọn",
                 "zh-Hant": "請選擇",
                 "id": "Silahkan pilih",
-                "es": "Por favor, seleccione"
+                "es": "Por favor, seleccione",
+                "pt-BR": "Por favor, selecione"
             },
             "walletBalanceM": {
                 "zh": "钱包余额：",
@@ -756,7 +700,8 @@
                 "vi": "Số dư trong ví: ",
                 "zh-Hant": "錢包余額：",
                 "id": "Saldo Dompet: ",
-                "es": "Balance Wallet: "
+                "es": "Balance Wallet: ",
+                "pt-BR": "Saldo da carteira:"
             },
             "uploadVoucher": {
                 "zh": "上传凭证",
@@ -764,7 +709,8 @@
                 "vi": "Tải lên",
                 "zh-Hant": "上傳憑證",
                 "id": "Unggah Dokumen",
-                "es": "Subir cupón"
+                "es": "Subir cupón",
+                "pt-BR": "Fazer upload do voucher"
             },
             "submitSuccess": {
                 "zh": "提交成功",
@@ -772,7 +718,8 @@
                 "vi": "Đã gửi thành công",
                 "zh-Hant": "提交成功",
                 "id": "Berhasil terkirim",
-                "es": "Enviar éxito"
+                "es": "Enviar éxito",
+                "pt-BR": "Enviar com sucesso"
             },
             "withdrawAccountJ": {
                 "zh": "提现账户",
@@ -780,7 +727,8 @@
                 "vi": "Tài khoản",
                 "zh-Hant": "提現賬戶",
                 "id": "Akun",
-                "es": "Cuenta"
+                "es": "Cuenta",
+                "pt-BR": "Conta"
             },
             "experienceAccount": {
                 "zh": "体验金账号",
@@ -788,7 +736,8 @@
                 "vi": "Tài khoản trải nghiệm",
                 "zh-Hant": "體驗金帳號",
                 "id": "Akun Pengalaman",
-                "es": "Cuenta Práctica"
+                "es": "Cuenta Práctica",
+                "pt-BR": "Conta teste"
             },
             "tradingAccount": {
                 "zh": "自主交易账号",
@@ -796,7 +745,8 @@
                 "vi": "Tài khoản giao dịch",
                 "zh-Hant": "自主交易帳號",
                 "id": "Akun Transaksi",
-                "es": "Cuenta trading"
+                "es": "Cuenta trading",
+                "pt-BR": "Conta de negociação"
             },
             "copyAccounts": {
                 "zh": "跟随账号",
@@ -804,7 +754,8 @@
                 "vi": "Tài khoản sao chép",
                 "zh-Hant": "跟隨帳號",
                 "id": "Sao Chép",
-                "es": "Cuenta copy"
+                "es": "Cuenta copy",
+                "pt-BR": "Conta de cópia"
             },
             "masterAccount": {
                 "zh": "高手账号",
@@ -812,7 +763,8 @@
                 "vi": "tài khoản bậc thầy",
                 "zh-Hant": "高手帳號",
                 "id": "Akun Master",
-                "es": "Cuenta master"
+                "es": "Cuenta master",
+                "pt-BR": "Conta principal"
             },
             "wallet": {
                 "zh": "钱包",
@@ -820,7 +772,8 @@
                 "vi": "Ví",
                 "zh-Hant": "錢包",
                 "id": "Dompet",
-                "es": "Wallet"
+                "es": "Wallet",
+                "pt-BR": "Carteira"
             },
             "detailsRemittance": {
                 "zh": "汇款详情",
@@ -828,7 +781,8 @@
                 "vi": "Chi tiết chuyển tiền",
                 "zh-Hant": "匯款詳情",
                 "id": "Detail pengiriman",
-                "es": "Detalles envío"
+                "es": "Detalles envío",
+                "pt-BR": "Detalhes do remetente"
             },
             "rechargeTo": {
                 "zh": "充值到",
@@ -836,7 +790,8 @@
                 "vi": "Nạp tiền",
                 "zh-Hant": "充值到",
                 "id": "Setor ke",
-                "es": "Depositar a "
+                "es": "Depositar a ",
+                "pt-BR": "Depositar para"
             },
             "minimum": {
                 "zh": "最低",
@@ -844,7 +799,8 @@
                 "vi": "Ít nhất",
                 "zh-Hant": "最低",
                 "id": "Minimal",
-                "es": "Mínimo"
+                "es": "Mínimo",
+                "pt-BR": "Mínimo"
             },
             "highest": {
                 "zh": "最高",
@@ -852,7 +808,8 @@
                 "vi": "Nhiều nhất",
                 "zh-Hant": "最高",
                 "id": "Maksimal",
-                "es": "Máximo"
+                "es": "Máximo",
+                "pt-BR": "Máximo"
             },
             "viewVoucher": {
                 "zh": "查看凭证",
@@ -860,7 +817,8 @@
                 "vi": "Phiếu giảm giá",
                 "zh-Hant": "查看憑證",
                 "id": "Bukti Setor",
-                "es": "Cupones"
+                "es": "Cupones",
+                "pt-BR": "Vouchers"
             },
             "unsuccessful": {
                 "zh": "撤销成功",
@@ -868,7 +826,8 @@
                 "vi": "Thành công",
                 "zh-Hant": "撤銷成功",
                 "id": "Sukses",
-                "es": "Éxito"
+                "es": "Éxito",
+                "pt-BR": "Feito com sucesso"
             },
             "deleteSuccessful": {
                 "zh": "删除成功",
@@ -876,7 +835,8 @@
                 "vi": "Thành công",
                 "zh-Hant": "删除成功",
                 "id": "Sukses",
-                "es": "Éxito"
+                "es": "Éxito",
+                "pt-BR": "Feito com sucesso"
             },
             "account": {
                 "zh": "账户",
@@ -884,7 +844,8 @@
                 "vi": "Tài khoản",
                 "zh-Hant": "帳戶",
                 "id": "Akun",
-                "es": "Cuenta"
+                "es": "Cuenta",
+                "pt-BR": "Conta"
             },
             "enterNumPassword": {
                 "zh": "请输入帐号和密码",
@@ -892,7 +853,8 @@
                 "vi": "Vui lòng nhập số tài khoản và mật khẩu.",
                 "zh-Hant": "請輸入帳號和密碼",
                 "id": "SIlahkan masukkan nomor akun dan kata sandi anda.",
-                "es": "Por favor, introduzca su número de cuenta y contraseña."
+                "es": "Por favor, introduzca su número de cuenta y contraseña.",
+                "pt-BR": "Por favor entre com seu número da conta e senha."
             },
             "beneficiaryName": {
                 "zh": "收款人名称（Company）：",
@@ -900,7 +862,8 @@
                 "vi": "Tên Người thụ hưởng: ",
                 "zh-Hant": "收款人名稱（Company）：",
                 "id": " Nama Penerima: ",
-                "es": "Nombre Beneficiario: "
+                "es": "Nombre Beneficiario: ",
+                "pt-BR": "Nome do Beneficiário:"
             },
             "beneficiaryBank": {
                 "zh": "收款行所在国家（地区）：",
@@ -908,7 +871,8 @@
                 "vi": "Ngân hàng quốc gia của Người thụ hưởng (Khu vực: ",
                 "zh-Hant": "收款行所在國家（地區）：",
                 "id": " Negara bank penerima (Daerah): ",
-                "es": "Banco Beneficiario(Región): "
+                "es": "Banco Beneficiario(Región): ",
+                "pt-BR": "País do Banco do Beneficiário(Região):"
             },
             "australia": {
                 "zh": "澳大利亚",
@@ -916,7 +880,8 @@
                 "vi": "ÚC",
                 "zh-Hant": "澳大利亞",
                 "id": "AUSTRALIA",
-                "es": "AUSTRALIA"
+                "es": "AUSTRALIA",
+                "pt-BR": "AUSTRÁLIA"
             },
             "beneA_CNo": {
                 "zh": "收款人账号（Account）：",
@@ -924,7 +889,8 @@
                 "vi": "Bene’s A/C? NO: ",
                 "zh-Hant": "收款人帳號（Account）：",
                 "id": "Nomor rekening Bene: ",
-                "es": "Bene’s A/C/ Nº: "
+                "es": "Bene’s A/C/ Nº: ",
+                "pt-BR": "Número da conta do Beneficiário:"
             },
             "swift": {
                 "zh": "收款银行机构鉴定代码（Swift）：",
@@ -932,7 +898,8 @@
                 "vi": "Swift: ",
                 "zh-Hant": "收款銀行機構鑒定代碼（Swift）：",
                 "id": "Swift: ",
-                "es": "Swift: "
+                "es": "Swift: ",
+                "pt-BR": "Swift:"
             },
             "beneficiaryBankName": {
                 "zh": "收款人开户行（Bank）：",
@@ -940,7 +907,8 @@
                 "vi": "Tên Ngân Hàng Của Người Thụ Hưởng: ",
                 "zh-Hant": "收款人開戶行（Bank）：",
                 "id": " Negara bank penerima: ",
-                "es": "Nombre Banco Beneficiario: "
+                "es": "Nombre Banco Beneficiario: ",
+                "pt-BR": "Nome do Banco do Beneficiário:"
             },
             "beneficiaryBankAddress": {
                 "zh": "银行地址（Address）：",
@@ -948,7 +916,8 @@
                 "vi": "Địa Chỉ Ngân Hàng Của Người Thụ Hưởng: ",
                 "zh-Hant": "銀行地址（Address）：",
                 "id": "Alamat Bank Penerima: ",
-                "es": "Dirección Banco Beneficiario: "
+                "es": "Dirección Banco Beneficiario: ",
+                "pt-BR": "Endereço do Banco do Beneficiário:"
             },
             "bsb": {
                 "zh": "清算号（BSB）：",
@@ -956,7 +925,8 @@
                 "vi": "BSB: ",
                 "zh-Hant": "清算號（BSB）：",
                 "id": "BSB: ",
-                "es": "BSB: "
+                "es": "BSB: ",
+                "pt-BR": "BSB:"
             },
             "beneficiaryAddress": {
                 "zh": "收款人地址（Address）：",
@@ -964,7 +934,8 @@
                 "vi": "Địa Chỉ Của Người Thụ Hưởng: ",
                 "zh-Hant": "收款人地址（Address）：",
                 "id": "Alamat Penerima dana: ",
-                "es": "Dirección Beneficiario: "
+                "es": "Dirección Beneficiario: ",
+                "pt-BR": "Endereço do Beneficiário:"
             },
             "bankCardTip": {
                 "zh": "请选择银行卡",
@@ -972,17 +943,118 @@
                 "vi": "‘Vui lòng chọn thẻ ngân hàng.",
                 "zh-Hant": "請選擇銀行卡",
                 "id": "Silahkan Pilih nomor rekening",
-                "es": "Por favor, seleccione una tarjeta banco"
+                "es": "Por favor, seleccione una tarjeta banco",
+                "pt-BR": "Por favor selece o cartão bancário"
+            },
+            "isHasAvodaAccount": {
+                "zh": "是否拥有AVODA Pay账号",
+                "en": "Do you have an AVODA Pay account",
+                "vi": "Bạn có tài khoản AVODA Pay không?",
+                "zh-Hant": "是否擁有AVODA Pay賬號",
+                "id": "Apakah anda memiliki rekening AVODA PAY",
+                "es": "Do you have an AVODA Pay account",
+                "pt-BR": "Você tem uma conta AVODA Pay?"
+            },
+            "hasAvodaAccount": {
+                "zh": "是 — 直接填写基本信息进行充值",
+                "en": "Yes - Fill in the basic information directly to deposit",
+                "vi": "Có - Điền thông tin cơ bản để nạp tiền trực tiếp",
+                "zh-Hant": "是 — 直接填寫基本信息進行充值",
+                "id": "Ya - Masukkan informasi deposit",
+                "es": "Yes - Fill in the basic information directly to deposit",
+                "pt-BR": "Sim - Preencha as informações básicas diretamente para depositar"
+            },
+            "noAvodaAccount": {
+                "zh": "否 — 跳转AVODA Pay平台注册并充值",
+                "en": "No - Jump to AVODA Pay platform to register and deposit",
+                "vi": "Không - Đi đến nền tảng AVODA Pay để đăng kí và nạp tiền",
+                "zh-Hant": "否 — 跳轉AVODA Pay平臺註冊並充值",
+                "id": "Tidak - Masuk ke platform AVODA PAY untuk daftar dan deposit",
+                "es": "No - Jump to AVODA Pay platform to register and deposit",
+                "pt-BR": "Não - Salta para a plataforma AVODA Pay para registar e depositar"
+            },
+            "recreate_order": {
+                "zh": "请重新创建订单",
+                "en": "Please recreate the order",
+                "vi": "Vui lòng tạo lại lệnh",
+                "zh-Hant": "請重新創建訂單",
+                "id": "Silahkan Masukkan kembali",
+                "es": "Por favor, recree la orden",
+                "pt-BR": "Por favor, recrie o pedido"
+            },
+            "fill_name": {
+                "zh": "请填写姓名",
+                "en": "Please fill in your name.",
+                "vi": "Vui lòng điền họ và tên",
+                "zh-Hant": "請填寫姓名",
+                "id": "Silahkan Masukkan Nama",
+                "es": "Por favor, rellene su nombre",
+                "pt-BR": "Por favor, preencha seu nome."
+            },
+            "fill_id_num": {
+                "zh": "请填写身份证号",
+                "en": "Please fill in your ID number.",
+                "vi": "Vui lòng nhập số ID",
+                "zh-Hant": "請填寫身份證號",
+                "id": "Silahkan Masukkan nomor ID",
+                "es": "Por favor, rellene su número ID",
+                "pt-BR": "Por favor, preencha o seu número deidentidade."
+            },
+            "fill_phone": {
+                "zh": "请填写手机号",
+                "en": "Please fill in your phone number",
+                "vi": "Vui lòng nhập số điện thoại",
+                "zh-Hant": "請填寫手機號",
+                "id": "Silahkan Masukkan Nomor telepon",
+                "es": "Por favor, rellene su número de teléfono",
+                "pt-BR": "Por favor, preencha o seu número de telefone"
+            },
+            "fill_correct_phone": {
+                "zh": "请填写正确的手机号",
+                "en": "Please fill in correct phone number",
+                "vi": "Vui lòng nhập đúng số điện thoại",
+                "zh-Hant": "請填寫正確的手機號",
+                "id": "Silahkan Masukkan Nomor telepon yang aktif",
+                "es": "Por favor, rellene su número de teléfono correcto",
+                "pt-BR": "Por favor, preencha o número de telefone correto"
+            },
+            "verificationCodeSent": {
+                "zh": "验证码已发送",
+                "en": "has been sent",
+                "vi": "Đã gửi",
+                "zh-Hant": "驗證碼已發送",
+                "id": "Telah dikirim",
+                "es": "Enviar",
+                "pt-BR": "enviado"
+            },
+            "fill_ver_code": {
+                "zh": "请填写验证码",
+                "en": "Please fill in verification code.",
+                "vi": "Vui lòng nhập mã xác nhận",
+                "zh-Hant": "請填寫驗證碼",
+                "id": "Silahkan Kode Verifikasi",
+                "es": "Por favor, rellene el código de verificación",
+                "pt-BR": "Por favor, preencha o código de verificação."
+            },
+            "mRegister05": {
+                "zh": "获取验证码",
+                "en": "Send code",
+                "vi": "Gửi mã",
+                "zh-Hant": "獲取驗證碼",
+                "id": "Kirim Kode",
+                "es": "Enviar código",
+                "pt-BR": "Enviar código"
             }
         },
-        "registerJs":{
+        "registerJs": {
             "selectCountry": {
                 "zh": "Please select your country/area",
                 "en": "Please select your country/area",
                 "vi": "Vui lòng chọn quốc gia/khu vực",
                 "zh-Hant": "Please select your country/area",
                 "id": "Silahkan pilih Negara/Wilayah anda",
-                "es": "Por favor seleccione su país / área"
+                "es": "Por favor seleccione su país / área",
+                "pt-BR": "Por favor, selecione seu país/área"
             },
             "emailFormatError": {
                 "zh": "Email format error",
@@ -990,7 +1062,8 @@
                 "vi": "Email không đúng",
                 "zh-Hant": "Email format error",
                 "id": "Format email salah",
-                "es": "Formato email error"
+                "es": "Formato email error",
+                "pt-BR": "Erro no formato do e-mail"
             },
             "incorrectVerCode": {
                 "zh": "Incorrect verification code",
@@ -998,7 +1071,8 @@
                 "vi": "Mã xác nhận không đúng",
                 "zh-Hant": "Incorrect verification code",
                 "id": "Kode verifikasi salah",
-                "es": "Código verificación incorrecto"
+                "es": "Código verificación incorrecto",
+                "pt-BR": "Código de verificação incorreto"
             },
             "resend": {
                 "zh": "Resend",
@@ -1006,7 +1080,8 @@
                 "vi": "Gửi lại",
                 "zh-Hant": "Resend",
                 "id": "Kirim ulang",
-                "es": "Reenviar"
+                "es": "Reenviar",
+                "pt-BR": "Reenviar"
             },
             "registerSucc": {
                 "zh": "Register Successful",
@@ -1014,7 +1089,8 @@
                 "vi": "Đăng kí thành công",
                 "zh-Hant": "Register Successful",
                 "id": "Berhasil mendaftar",
-                "es": "Register Successful"
+                "es": "Register Successful",
+                "pt-BR": "Registrado com sucesso"
             },
             "": {
                 "zh": "",
@@ -1022,7 +1098,8 @@
                 "vi": "",
                 "zh-Hant": "",
                 "id": "",
-                "es": ""
+                "es": "",
+                "pt-BR": ""
             }
         }
     }
