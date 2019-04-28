@@ -397,19 +397,19 @@ $(document).ready(function () {
     // userinfo
     $(ele.userinfoBtn).on("tap", function (e) {
         e.preventDefault();
-        console.log($(".m_third_userinfo .state_global .state").val());
         // console.log($(ele.userinfoEmail).val(), $(ele.userinfoCountry).val(), $(ele.userinfoCountry).attr("data-type"), $(ele.userinfoAddress).val())
-        if ($(ele.userinfoEmail).val() && $(ele.userinfoCountry).val() && $(ele.userinfoAddress).val()) {
+        var info = {
+            email: $(ele.userinfoEmail).val(),
+            world_code: cardCountry,
+            address: $(ele.userinfoAddress).val(),
+            state_code: cardCountry === 'CN' ? $(".m_third_userinfo .state_cn .state").attr("data-type") : $(".m_third_userinfo .state_global .state").val(),
+            city_code: cardCountry === 'CN' ? $(".m_third_userinfo .city_cn .city").attr("data-type") : $(".m_third_userinfo .city_global .city").val(),
+            post_code: $(".m_third_userinfo .post_code").val()
+        };
+        if (info.email && info.address && info.world_code && info.state_code && info.city_code && info.post_code) {
             layer.open({type: 2, shadeClose: false});
             cardCountry = $(ele.userinfoCountry).attr("data-type");
-            publicRequest('thirdSetUserInfo', 'PUT', {
-                email: $(ele.userinfoEmail).val(),
-                world_code: cardCountry,
-                address: $(ele.userinfoAddress).val(),
-                state_code: cardCountry === 'CN' ? $(".m_third_userinfo .state_cn .state").attr("data-type") : $(".m_third_userinfo .state_global .state").val(),
-                city_code: cardCountry === 'CN' ? $(".m_third_userinfo .city_cn .city").attr("data-type") : $(".m_third_userinfo .city_global .city").val(),
-                post_code: $(".m_third_userinfo .post_code").val()
-            }).then(function (data) {
+            publicRequest('thirdSetUserInfo', 'PUT', info).then(function (data) {
                 // console.log(data);
                 layer.closeAll();
                 if (!data) return;
