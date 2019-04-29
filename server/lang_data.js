@@ -21,7 +21,8 @@ module.exports = function () {
             vi:"TigerWit",
             "zh-Hant":"小老虎",
             id:"TigerWit",
-            es:"TigerWit"
+            es:"TigerWit",
+            'pt-BR': 'TigerWit'
         },
         companyZhName:{
             zh:"TigerWit",
@@ -29,7 +30,8 @@ module.exports = function () {
             vi:"TigerWit",
             "zh-Hant":"TigerWit",
             id:"TigerWit",
-            es:"TigerWit"
+            es:"TigerWit",
+            'pt-BR': 'TigerWit'
         },
         companyEnName:{
             zh:"TigerWit",
@@ -37,7 +39,8 @@ module.exports = function () {
             vi:"TigerWit",
             "zh-Hant":"TigerWit",
             id:"TigerWit",
-            es:"TigerWit"
+            es:"TigerWit",
+            'pt-BR': 'TigerWit'
         },
         title:{
             zh:"TigerWit",
@@ -45,7 +48,8 @@ module.exports = function () {
             vi:"TigerWit",
             "zh-Hant":"TigerWit",
             id:"TigerWit",
-            es:"TigerWit"
+            es:"TigerWit",
+            'pt-BR': 'TigerWit'
         },
         webSite:{
             zh:"www.tigerwit.com",
@@ -53,7 +57,8 @@ module.exports = function () {
             vi:"www.tigerwit.com",
             "zh-Hant":"www.tigerwit.com",
             id:"www.tigerwit.com",
-            es:"www.tigerwit.com"
+            es:"www.tigerwit.com",
+            'pt-BR': 'www.tigerwit.com'
         },
         webMt4Download:{
             zh:"https://download.mql5.com/cdn/web/tiger.wit.group/mt4/tigerwit4setup.exe",
@@ -61,7 +66,8 @@ module.exports = function () {
             vi:"https://download.mql5.com/cdn/web/tiger.wit.group/mt4/tigerwit4setup.exe",
             "zh-Hant":"https://download.mql5.com/cdn/web/tiger.wit.group/mt4/tigerwit4setup.exe",
             id:"https://download.mql5.com/cdn/web/tiger.wit.group/mt4/tigerwit4setup.exe",
-            es:"https://download.mql5.com/cdn/web/tiger.wit.group/mt4/tigerwit4setup.exe"
+            es:"https://download.mql5.com/cdn/web/tiger.wit.group/mt4/tigerwit4setup.exe",
+            'pt-BR': 'https://download.mql5.com/cdn/web/tiger.wit.group/mt4/tigerwit4setup.exe'
         },
         androidApp: {
             zh: versionAndroidApp,
@@ -69,7 +75,8 @@ module.exports = function () {
             vi: versionAndroidApp,
             "zh-Hant": versionAndroidApp,
             id: versionAndroidApp,
-            es: versionAndroidApp
+            es: versionAndroidApp,
+            'pt-BR': versionAndroidApp
         },
         download:{
             zh:"http://android.myapp.com/myapp/detail.htm?apkName=com.tigerwit.forex",
@@ -77,7 +84,8 @@ module.exports = function () {
             vi:"http://android.myapp.com/myapp/detail.htm?apkName=com.tigerwit.forex",
             "zh-Hant":"http://android.myapp.com/myapp/detail.htm?apkName=com.tigerwit.forex",
             id:"http://android.myapp.com/myapp/detail.htm?apkName=com.tigerwit.forex",
-            es:"http://android.myapp.com/myapp/detail.htm?apkName=com.tigerwit.forex"
+            es:"http://android.myapp.com/myapp/detail.htm?apkName=com.tigerwit.forex",
+            'pt-BR': 'http://android.myapp.com/myapp/detail.htm?apkName=com.tigerwit.forex'
         },
         downloadGlobalIos:{
             zh:"http://20805457p.rfihub.com/ca.gif?rb=36314&ca=20805457&_o=36314&_t=20805457&rd=http://hyperurl.co/4roggv?utm_source=website&utm_medium=appstorebutton",
@@ -85,7 +93,8 @@ module.exports = function () {
             vi:"http://20805457p.rfihub.com/ca.gif?rb=36314&ca=20805457&_o=36314&_t=20805457&rd=http://hyperurl.co/4roggv?utm_source=website&utm_medium=appstorebutton",
             "zh-Hant":"http://20805457p.rfihub.com/ca.gif?rb=36314&ca=20805457&_o=36314&_t=20805457&rd=http://hyperurl.co/4roggv?utm_source=website&utm_medium=appstorebutton",
             id:"http://20805457p.rfihub.com/ca.gif?rb=36314&ca=20805457&_o=36314&_t=20805457&rd=http://hyperurl.co/4roggv?utm_source=website&utm_medium=appstorebutton",
-            es:"http://20805457p.rfihub.com/ca.gif?rb=36314&ca=20805457&_o=36314&_t=20805457&rd=http://hyperurl.co/4roggv?utm_source=website&utm_medium=appstorebutton"
+            es:"http://20805457p.rfihub.com/ca.gif?rb=36314&ca=20805457&_o=36314&_t=20805457&rd=http://hyperurl.co/4roggv?utm_source=website&utm_medium=appstorebutton",
+            'pt-BR': 'http://20805457p.rfihub.com/ca.gif?rb=36314&ca=20805457&_o=36314&_t=20805457&rd=http://hyperurl.co/4roggv?utm_source=website&utm_medium=appstorebutton'
         },
         downloadCnIos:{
             zh:"https://itunes.apple.com/cn/app/id1091437876",
@@ -93,7 +102,8 @@ module.exports = function () {
             vi:"https://itunes.apple.com/cn/app/id1091437876",
             "zh-Hant":"https://itunes.apple.com/cn/app/id1091437876",
             id:"https://itunes.apple.com/cn/app/id1091437876",
-            es:"https://itunes.apple.com/cn/app/id1091437876"
+            es:"https://itunes.apple.com/cn/app/id1091437876",
+            'pt-BR': 'https://itunes.apple.com/cn/app/id1091437876'
         },
         downloadGlobalAndroid:{
             zh:"http://20805458p.rfihub.com/ca.gif?rb=36314&ca=20805458&_o=36314&_t=20805458&rd=https://play.google.com/store/apps/details?id=com.tigerwit.forex",
@@ -101,7 +111,8 @@ module.exports = function () {
             vi:"http://20805458p.rfihub.com/ca.gif?rb=36314&ca=20805458&_o=36314&_t=20805458&rd=https://play.google.com/store/apps/details?id=com.tigerwit.forex",
             "zh-Hant":"http://20805458p.rfihub.com/ca.gif?rb=36314&ca=20805458&_o=36314&_t=20805458&rd=https://play.google.com/store/apps/details?id=com.tigerwit.forex",
             id:"http://20805458p.rfihub.com/ca.gif?rb=36314&ca=20805458&_o=36314&_t=20805458&rd=https://play.google.com/store/apps/details?id=com.tigerwit.forex",
-            es:"http://20805458p.rfihub.com/ca.gif?rb=36314&ca=20805458&_o=36314&_t=20805458&rd=https://play.google.com/store/apps/details?id=com.tigerwit.forex"
+            es:"http://20805458p.rfihub.com/ca.gif?rb=36314&ca=20805458&_o=36314&_t=20805458&rd=https://play.google.com/store/apps/details?id=com.tigerwit.forex",
+            'pt-BR': 'http://20805458p.rfihub.com/ca.gif?rb=36314&ca=20805458&_o=36314&_t=20805458&rd=https://play.google.com/store/apps/details?id=com.tigerwit.forex'
         },
         downloadGlobalApp:{
             zh: "/m/blank?system=global",
@@ -109,7 +120,8 @@ module.exports = function () {
             vi: "/m/blank?system=global",
             "zh-Hant": "/m/blank?system=global",
             "id": "/m/blank?system=global",
-            es: "/m/blank?system=global"
+            es: "/m/blank?system=global",
+            'pt-BR': '/m/blank?system=global'
         },
         downloadCnApp:{
             zh: "/m/blank?system=cn",
@@ -117,7 +129,8 @@ module.exports = function () {
             vi: "/m/blank?system=cn",
             "zh-Hant": "/m/blank?system=cn",
             "id": "/m/blank?system=cn",
-            es: "/m/blank?system=cn"
+            es: "/m/blank?system=cn",
+            'pt-BR': '/m/blank?system=cn'
         }
     };
 
