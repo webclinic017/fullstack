@@ -232,7 +232,7 @@ $(document).on("tap", "#third_app_bottom_template .bank_item", function () {
     if(cSource === 'withdraw_type'){
       thirdThirdWithdrawBankId = cId;
       $(eleWithdraw.payAccountLstBankAdd).empty();
-      $(eleWithdraw.payAccountLstBankAdd).append("银行卡： <span class='bank-account s-select' data-type='bank_account'><p>"+cName+'('+cNo.substring(cNo.length-4)+')'+"</p></span>")
+      $(eleWithdraw.payAccountLstBankAdd).append(lang.text("thirdH5.bankCardNameM") + " <span class='bank-account s-select' data-type='bank_account'><p>"+cName+'('+cNo.substring(cNo.length-4)+')'+"</p></span>")
     }else{
       // 清空第三方账户选择的内容
       thirdThirdType = '';
@@ -249,7 +249,7 @@ $(document).on("tap", "#third_app_bottom_template .bank_item", function () {
         thirdThirdWithdrawType = $(this).attr("data-withdraw-type");
         if(thirdThirdWithdrawType == 1){
           $(eleWithdraw.payAccountLstBankAdd).empty();
-          $(eleWithdraw.payAccountLstBankAdd).append("银行卡： <span class='bank-account link-color' data-type='bank_account'>点击绑定银行卡</span>")
+          $(eleWithdraw.payAccountLstBankAdd).append(lang.text("thirdH5.bankCardNameM") + " <span class='bank-account link-color' data-type='bank_account'>"+ lang.text("thirdH5.bindBankCard") +"</span>")
         }
       }
       var tp = '<li class="s-select" data-select="bank_chosen" data-type="'+ cType +'"><p>'+cName+'('+cNo.substring(cNo.length-4)+')'+'</p></li>';
@@ -296,7 +296,7 @@ $(document).on("tap", "#third_app_bottom_template .third_app_template_del_bank",
         if(cSource === 'withdraw_type'){
             thirdThirdWithdrawBankId = '';
             $(eleWithdraw.payAccountLstBankAdd).empty();
-            $(eleWithdraw.payAccountLstBankAdd).append("银行卡： <span class='bank-account link-color' data-type='bank_account'>点击绑定银行卡</span>")
+            $(eleWithdraw.payAccountLstBankAdd).append(lang.text("thirdH5.bankCardNameM") + " <span class='bank-account link-color' data-type='bank_account'>"+ lang.text("thirdH5.bindBankCard") +"</span>")
         }else{
             withdrawType = undefined;
             withdrawBankId = undefined;
