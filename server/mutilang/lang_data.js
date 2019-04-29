@@ -11749,6 +11749,54 @@ module.exports = {
         "id": "Nomor KTP",
         "es": "Tarjeta ID"
     },
+    "third_username14": {
+        "zh": "请选择您的省/市",
+        "en": "Please select state/region",
+        "vi": "Vui lòng chọn bang/vùng",
+        "zh-Hant": "請選擇您的省/市",
+        "id": "Silahkan pilih daerah/provinsi",
+        "es": "Por favor elija estado/región"
+    },
+    "third_username15": {
+        "zh": "请选择您的市/区",
+        "en": "Please select city",
+        "vi": "Vui lòng chọn thành phố",
+        "zh-Hant": "請選擇您的市/區",
+        "id": "Silahkan pilih kota",
+        "es": "Por favor elija ciudad"
+    },
+    "third_username16": {
+        "zh": "请输入您的详细地址（与身份证保持一致）",
+        "en": "Please enter detailed address (same as ID card)",
+        "vi": "Vui lòng nhập Địa chỉ cụ thể (Địa chỉ trên chứng minh thư)",
+        "zh-Hant": "請輸入您的詳細地址（與身份證保持一致）",
+        "id": "Silakan masuk alamat lengkap (Sesuai ID)",
+        "es": "Por favor ingrese dirección detallada(igual tarjeta ID)"
+    },
+    "third_username17": {
+        "zh": "请输入邮政编码",
+        "en": "ZIP Code",
+        "vi": "ZIP code",
+        "zh-Hant": "请输入郵政編碼",
+        "id": "Kode Pos",
+        "es": "Código ZIP"
+    },
+    "third_username18": {
+        "zh": "请输入您的省/市",
+        "en": "Please enter state/region",
+        "vi": "Vui lòng nhập bang/vùng",
+        "zh-Hant": "請輸入您的省/市",
+        "id": "Silakan masuk daerah/provinsi",
+        "es": "Por favor ingrese estado/región"
+    },
+    "third_username19": {
+        "zh": "请输入您的市/区",
+        "en": "Please enter city",
+        "vi": "Vui lòng nhập thành phố",
+        "zh-Hant": "請輸入您的市/區",
+        "id": "Silakan masuk kota",
+        "es": "Por favor ingrese ciudad"
+    },
     "third_uploadCard": {
         "zh": "证件类型：",
         "en": "Type of Certificate: ",
