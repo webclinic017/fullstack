@@ -72,11 +72,11 @@ module.exports = function (req, res) {
     function decideLang(){
         var lang = 'zh';
         var urlL, cookieL, browserL;
-        if(urlL == urlLang()){
+        if(urlL = urlLang()){
             return urlL;
-        }else if(cookieL == cookieLang()){
+        }else if(cookieL = cookieLang()){
             return cookieL
-        }else if(browserL == browserLang()){
+        }else if(browserL = browserLang()){
             return browserL
         }else {
             return lang
