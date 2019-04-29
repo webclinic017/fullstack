@@ -398,6 +398,7 @@ $(document).ready(function () {
     $(ele.userinfoBtn).on("tap", function (e) {
         e.preventDefault();
         // console.log($(ele.userinfoEmail).val(), $(ele.userinfoCountry).val(), $(ele.userinfoCountry).attr("data-type"), $(ele.userinfoAddress).val())
+        cardCountry = $(ele.userinfoCountry).attr("data-type");
         var info = {
             email: $(ele.userinfoEmail).val(),
             world_code: cardCountry,
@@ -406,9 +407,9 @@ $(document).ready(function () {
             city_code: cardCountry === 'CN' ? $(".m_third_userinfo .city_cn .city").attr("data-type") : $(".m_third_userinfo .city_global .city").val(),
             post_code: $(".m_third_userinfo .post_code").val()
         };
+        // console.log(info);
         if (info.email && info.address && info.world_code && info.state_code && info.city_code && info.post_code) {
             layer.open({type: 2, shadeClose: false});
-            cardCountry = $(ele.userinfoCountry).attr("data-type");
             publicRequest('thirdSetUserInfo', 'PUT', info).then(function (data) {
                 // console.log(data);
                 layer.closeAll();
