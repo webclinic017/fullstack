@@ -276,6 +276,12 @@
             border: 1px solid #ccc;
             border-radius: 4px;
         }
+        &.state_cn, &.state_global, &.city_cn, &.city_global {
+            display: none;
+            &.active {
+                display: block;
+            }
+        }
     }
     @include e(btn) {
         padding-top: px2rem(32);

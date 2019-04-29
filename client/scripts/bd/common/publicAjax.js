@@ -64,6 +64,8 @@
         thirdSetPassword: origin_third + '/user/account', //post
         thirdChangePassword: origin_third + '/user/passwd', //put
         thirdCountries: origin_third + '/region/countries', // get
+        thirdStateList: origin_third + '/region/provinces', // get
+        thirdCitiesList: origin_third + '/region/cities', // get
         thirdGetCacheInfo: origin_third + '/user/auth_info', // get
         thirdUploadAddress: origin_third + '/user/upload_address_prove', //post
 
