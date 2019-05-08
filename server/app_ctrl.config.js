@@ -94,10 +94,10 @@
                 },
                 android: {
                     app_info: {
-                        version_name : "V3.5.0",
-                        description: "This update: \n1.Optimize user experience\n2.Fix bugs",
+                        version_name : "V3.5.1",
+                        description: "This update: \n1.Optimized onboarding process, easier to register an account.\n2.Bitcoin, Ethereum, Litecoin and Ripple trading\n3.Simplified the withdrawal process\n4.Modified user interface",
                         updated_description: "70% users are using new version",
-                        url: "https://static.tigerwitfx.com/downloads/apk/tigerwit_v3.5.0.apk",
+                        url: "https://static.tigerwitfx.com/downloads/apk/tigerwit_v3.5.1.apk",
                         force_update : false
                     }
                 }
@@ -113,10 +113,10 @@
                 },
                 android: {
                     app_info: {
-                        version_name : "V3.5.0",
-                        description: "本次更新：\n1.优化用户体验\n2.修复bugs",
+                        version_name : "V3.5.1",
+                        description: "本次更新：\n1.简化了注册流程\n2.添加新的交易品种\n3.简化提现流程\n4.优化了UI",
                         updated_description: "70%的用户正在使用新版本",
-                        url: "https://static.tigerwitfx.com/downloads/apk/tigerwit_v3.5.0.apk",
+                        url: "https://static.tigerwitfx.com/downloads/apk/tigerwit_v3.5.1.apk",
                         force_update : false
                     }
                 }
