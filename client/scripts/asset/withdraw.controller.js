@@ -49,6 +49,7 @@
                 //third_type: ,   //第三方平台ID-出金接口的third_type参数
                 //platform: ,    	//平台昵称
                 //status: ,    	//状态：0不可用，1可用
+                // withdraw_type: 1   // 是否需要添加银行卡1需要0不需要
             },
             transfer: {
                 // id	
@@ -283,6 +284,7 @@
                     $scope.withdraw.third.third_type = data.data.third_type;
                     $scope.withdraw.third.platform = data.data.platform;
                     $scope.withdraw.third.status = data.data.status;
+                    $scope.withdraw.third.withdraw_type = data.data.withdraw_type;
                 }
             });
         }
@@ -438,6 +440,7 @@
                         parentScope.withdraw.third.third_type = third.third_type;
                         parentScope.withdraw.third.platform = third.platform;
                         parentScope.withdraw.third.status = third.status;
+                        parentScope.withdraw.third.withdraw_type = third.withdraw_type;
                         // 更改选中状态
                         // parentScope.hasChooseedCard = true;
                         closeModal()
@@ -610,10 +613,11 @@
             $scope.$emit('global.checkAuthenFlow', {
                 ctrlName: 'AssetWithdrawController',
                 callback: function () {
-                    if ($scope.withdraw.accountType === 'bank' && $scope.withdraw.card.country === 'CN') {
-                        if (!checkCardPhone($scope.withdraw.card)) { return }
+                    if($scope.withdraw.card.country === 'CN'){
+                        if ($scope.withdraw.accountType === 'bank' || ($scope.withdraw.accountType === 'third_account' && $scope.withdraw.third.withdraw_type === 1)) {
+                            if (!checkCardPhone($scope.withdraw.card)) { return }
+                        }
                     }
-
                     showErr('amount');
                     var withdrawForm = {
                         amount: true
@@ -639,6 +643,9 @@
                     } else if ($scope.withdraw.accountType === 'third_account') {
                         paramsAsset.third_type = $scope.withdraw.third.third_type;
                         paramsAsset.third_account = $scope.withdraw.third.account_f;
+                        if($scope.withdraw.third.withdraw_type === 1){
+                            paramsAsset.bank_card_id = $scope.withdraw.card.id;
+                        }
                     } else if($scope.withdraw.accountType === 'transfer'){
                         paramsAsset.third_type = $scope.withdrawTypeLst[$scope.withdraw.accountType].platform;
                         paramsAsset.bank_card_id = $scope.withdraw.transfer.id;

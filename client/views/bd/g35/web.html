@@ -2,219 +2,227 @@
 <html lang="en">
 
 <head>
-    <!-- 需要兼容 -->
-    <% include /common/meta/web.html %>  
-    <!-- 主翻译 -->
-    <% include /common/vendor/h5.utiljs.html %>
-    <% include /common/statistic/main.html %>
-    <!-- build:css(.tmp) /styles/web.css -->
-    <link rel="stylesheet" href="/styles/web.css">
-    <!-- endbuild -->
-    <% include /common/vendor/web.js.html %>
+  <!-- 需要兼容 -->
+  <% include /common/meta/web.html %>
+  <!-- 主翻译 -->
+  <% include /common/vendor/h5.utiljs.html %>
+  <% include /common/statistic/main.html %>
+  <!-- build:css(.tmp) /styles/web.css -->
+  <link rel="stylesheet" href="/styles/web.css">
+  <!-- endbuild -->
+  <% include /common/vendor/web.js.html %>
 </head>
 
 <body ng-app="fullstackApp" class="tw_en">
-    <div ng-controller="GlobalController">
-        <% include /common/nav/web.header.html %>
-        <div class="global_t35">
-            <div class="container relative">
-              <div class="global_t35__register_box">
-                <div class="form-control-wrapper">
-                  <select class="form-control" name="country" id="country">
-                    <option value=""><%= lang.text('third_placeholder4')%></option>
-                  </select>
-                </div>
-                <div class="form-control-wrapper">
-                  <input type="text" class="form-control" name="email" id="email" placeholder="<%= lang.text('partner.email')%>">
-                </div>
-                <div class="form-control-wrapper">
-                  <input type="number" class="form-control" name="code" id="verify_code" placeholder="<%= lang.text('mRegister03')%>" style="padding-right: 168px;">
-                  <p class="verify_code_btn_wrapper">
-                      <span class="verify_code_btn" id="verify_code_btn"><%= lang.text('mRegister05')%></span>
-                  </p>
-                </div>
-        
-                <div class="global_t35__btn_wrapper">
-                  <button id="submit_form" class="global_t35__btn"><%= lang.text('bonusBd.confirmNow')%></button>
-                </div>
-              </div>
-              <div class="">
-                <div class="global_t35__focus">
-                  <img src="<%= lang.image('freesignTitle')%>" alt="">
-                </div>
-                <div class="global_t35__focus_tip">
-                    <%= lang.text('bonusBd.gainRebateUs')%><span> $200 </span><%= lang.text('bonusBd.onceRegistered')%>
-                </div>
-                
-              </div>
-              <div class="global_t35__title t1">
-                <img src="<%= lang.image('rebateplanTitle')%>" alt="">
-                <img class="bar" src="/images/bd_g35/web_bar.png" alt="">
-              </div>
-              <ul class="global_t35__plan clearfix">
-                <li class="clearfix l1">
-                  <div class="l">
-                    <p>
-                      <%= lang.text('bonusBd.us')%><br>
-                      <span>$2.00</span>
-                    </p>
-                  </div>
-                  <div class="r">
-                    <p>0.5 <%= lang.text('bonusBd.lot')%></br>
-                    <%= lang.text('bonusBd.within')%>14<%= lang.text('bonusBd.days')%></p>
-                  </div>
-                </li>
-                <li class="clearfix l2">
-                  <div class="l">
-                    <p><%= lang.text('bonusBd.us')%><br>
-                    <span>$6.00</span></p>
-                  </div>
-                  <div class="r">
-                    <p>3 <%= lang.text('bonusBd.lot')%></p>
-                    <p><%= lang.text('bonusBd.within')%>30<%= lang.text('bonusBd.days')%></p>
-                  </div>
-                </li>
-                <li class="clearfix l3">
-                  <div class="l">
-                    <p><%= lang.text('bonusBd.us')%><br>
-                    <span>$18.00</span></p>
-                  </div>
-                  <div class="r">
-                    <p>8 <%= lang.text('bonusBd.lot')%></p>
-                    <p><%= lang.text('bonusBd.within')%>60<%= lang.text('bonusBd.days')%></p>
-                  </div>
-                </li>
-                <li class="clearfix l4">
-                  <div class="l">
-                    <p><%= lang.text('bonusBd.us')%><br>
-                    <span>$25.00</span></p>
-                  </div>
-                  <div class="r">
-                    <p>15 <%= lang.text('bonusBd.lot')%></p>
-                    <p><%= lang.text('bonusBd.within')%>90<%= lang.text('bonusBd.days')%></p>
-                  </div>
-                </li>
-                <li class="clearfix l5">
-                  <div class="l">
-                    <p><%= lang.text('bonusBd.us')%><br>
-                    <span>$50.00</span></p>
-                  </div>
-                  <div class="r">
-                    <p>30 <%= lang.text('bonusBd.lot')%></p>
-                    <p><%= lang.text('bonusBd.within')%>90<%= lang.text('bonusBd.days')%></p>
-                  </div>
-                </li>
-                <li class="clearfix l6">
-                  <div class="l">
-                    <p><%= lang.text('bonusBd.us')%><br>
-                    <span>$99.00</span></p>
-                  </div>
-                  <div class="r">
-                    <p>50 <%= lang.text('bonusBd.lot')%></p>
-                    <p><%= lang.text('bonusBd.within')%>90<%= lang.text('bonusBd.days')%></p>
-                  </div>
-                </li>
-              </ul>
-              <div class="global_t35__title t2">
-                <img src="<%= lang.image('whyChooseTitle')%>" alt="">
-              </div>
-              <ul class="global_t35__cont clearfix">
-                <li>
-                  <p><img src="/images/bd_g35/comm_icon1.png" alt=""></p>
-                  <p><%= lang.text('bonusBd.whyChoose1')%></p>
-                </li>
-                <li>
-                  <p><img src="/images/bd_g35/comm_icon2.png" alt=""></p>
-                  <p><%= lang.text('bonusBd.whyChoose2')%></p>
-                </li>
-                <li>
-                  <p><img src="/images/bd_g35/comm_icon3.png" alt=""></p>
-                  <p><%= lang.text('bonusBd.whyChoose3')%></p>
-                </li>
-                <li>
-                  <p><img src="/images/bd_g35/comm_icon4.png" alt=""></p>
-                  <p><%= lang.text('bonusBd.whyChoose4')%></p>
-                </li>
-              </ul>
-              <ul class="global_t35__download clearfix">
-                <li>
-                  <a href="<%= lang.text('downloadGlobalApp')%>">
-                    <img src="<%= lang.image('downloadAppGlobal')%>" alt="">
-                  </a>
-                </li>
-                <li>
-                  <a href="<%= lang.text('downloadCnApp')%>">
-                    <img src="<%= lang.image('downloadAppCn')%>" alt="">
-                  </a>
-                </li>
-              </ul>
-              <div class="global_t35__title t3">
-                <img src="<%= lang.image('eventDetailsTitle')%>" alt="">
-              </div>
-              <div class="global_t35__details">
-                <span></span>
-                <p>
-                    <%= lang.text('bonusBd.eventDetails1')%>
-                </p>
-              </div>
-              <div class="global_t35__details">
-                <span></span>
-                <p>
-                    <%= lang.text('bonusBd.eventDetails2')%>
-                </p>
-              </div>
-              <div class="global_t35__details">
-                <span></span>
-                <p>
-                    <%= lang.text('bonusBd.eventDetails3')%>
-                </p>
-              </div>
-              <div class="global_t35__details">
-                <span></span>
-                <p>
-                    <%= lang.text('bonusBd.eventDetails4')%>
-                </p>
-              </div>
-              <div class="global_t35__details">
-                <span></span>
-                <p>
-                    <%= lang.text('bonusBd.eventDetails5')%>
-                </p>
-              </div>
-              <div class="global_t35__details">
-                <span></span>
-                <p>
-                    <%= lang.text('bonusBd.eventDetails6')%> 
-                </p>
-              </div>
-              <div class="global_t35__warning">
-                <p class="tit"><%= lang.text('bonusBd.eventDetails7')%> </p>
-                <p class="tit">
-                    <%= lang.text('bonusBd.eventDetails8')%>
-                </p>
-                <p><%= lang.text('bonusBd.copyright')%></p>
-              </div>
-            </div>
-        </div>
-        <% include /common/nav/web.footer.html %>
+  <div ng-controller="GlobalController">
+    <% include /common/nav/web.header.html %>
+    <div class="global_t35">
+      <div class="container relative">
+        <div class="global_t35__register_box">
+          <div class="form-control-wrapper">
+            <select class="form-control" name="country" id="country">
+              <option value=""><%= lang.text('third_placeholder4')%></option>
+            </select>
+          </div>
+          <div class="form-control-wrapper">
+            <input type="text" class="form-control" name="email" id="email"
+              placeholder="<%= lang.text('partner.email')%>">
+          </div>
+          <div class="form-control-wrapper">
+            <input type="number" class="form-control" name="code" id="verify_code"
+              placeholder="<%= lang.text('mRegister03')%>" style="padding-right: 168px;">
+            <p class="verify_code_btn_wrapper">
+              <span class="verify_code_btn" id="verify_code_btn"><%= lang.text('mRegister05')%></span>
+            </p>
+          </div>
 
-        <div class="global_t35__layer_wrapper">
-          <div id="bd_layer_modal">
-            <p class="tit"><%= lang.text('bonusBd.resendTip1')%><%= lang.text('bonusBd.resendTip2')%></p>
-            <div class="cont clearfix">
-              <p class="">
-                <a onclick="resendEmail()" href="javascript:;"><%= lang.text('bonusBd.resend')%></a>
-              </p>
-              <p class="">
-                <a href="/space/#/account/login"><%= lang.text('bonusBd.login')%></a>
-              </p>
-            </div>
-            <span class="tip" onclick="layer.closeAll()"><%= lang.text('bonusBd.modifyAddress')%>*</span>
+          <div class="global_t35__btn_wrapper">
+            <button id="submit_form" class="global_t35__btn"><%= lang.text('bonusBd.confirmNow')%></button>
           </div>
         </div>
+        <div class="">
+          <div class="global_t35__focus">
+            <img src="<%= lang.image('freesignTitle')%>" alt="">
+          </div>
+          <div class="global_t35__focus_tip">
+            <%= lang.text('bonusBd.gainRebateUs')%><span> $200 </span><%= lang.text('bonusBd.onceRegistered')%>
+          </div>
+
+        </div>
+        <div class="global_t35__title t1">
+          <img src="<%= lang.image('rebateplanTitle')%>" alt="">
+          <img class="bar" src="/images/bd_g35/web_bar.png" alt="">
+        </div>
+        <ul class="global_t35__plan clearfix">
+          <li class="clearfix l1">
+            <div class="l">
+              <p>
+                <!-- <%= lang.text('bonusBd.us')%><br> -->
+                <span>$2.00</span>
+              </p>
+            </div>
+            <div class="r">
+              <p>0.5 <%= lang.text('bonusBd.lot')%></br>
+                <%= lang.text('bonusBd.within')%>14<%= lang.text('bonusBd.days')%></p>
+            </div>
+          </li>
+          <li class="clearfix l2">
+            <div class="l">
+              <p>
+                <!-- <%= lang.text('bonusBd.us')%><br> -->
+                <span>$6.00</span>
+              </p>
+            </div>
+            <div class="r">
+              <p>3 <%= lang.text('bonusBd.lot')%></p>
+              <p><%= lang.text('bonusBd.within')%>30<%= lang.text('bonusBd.days')%></p>
+            </div>
+          </li>
+          <li class="clearfix l3">
+            <div class="l">
+              <p>
+                <!-- <%= lang.text('bonusBd.us')%><br> -->
+                <span>$18.00</span></p>
+            </div>
+            <div class="r">
+              <p>8 <%= lang.text('bonusBd.lot')%></p>
+              <p><%= lang.text('bonusBd.within')%>60<%= lang.text('bonusBd.days')%></p>
+            </div>
+          </li>
+          <li class="clearfix l4">
+            <div class="l">
+              <p>
+                <!-- <%= lang.text('bonusBd.us')%><br> -->
+                <span>$25.00</span></p>
+            </div>
+            <div class="r">
+              <p>15 <%= lang.text('bonusBd.lot')%></p>
+              <p><%= lang.text('bonusBd.within')%>90<%= lang.text('bonusBd.days')%></p>
+            </div>
+          </li>
+          <li class="clearfix l5">
+            <div class="l">
+              <p>
+                <!-- <%= lang.text('bonusBd.us')%><br> -->
+                <span>$50.00</span></p>
+            </div>
+            <div class="r">
+              <p>30 <%= lang.text('bonusBd.lot')%></p>
+              <p><%= lang.text('bonusBd.within')%>90<%= lang.text('bonusBd.days')%></p>
+            </div>
+          </li>
+          <li class="clearfix l6">
+            <div class="l">
+              <p>
+                <!-- <%= lang.text('bonusBd.us')%><br> -->
+                <span>$99.00</span></p>
+            </div>
+            <div class="r">
+              <p>50 <%= lang.text('bonusBd.lot')%></p>
+              <p><%= lang.text('bonusBd.within')%>90<%= lang.text('bonusBd.days')%></p>
+            </div>
+          </li>
+        </ul>
+        <div class="global_t35__title t2">
+          <img src="<%= lang.image('whyChooseTitle')%>" alt="">
+        </div>
+        <ul class="global_t35__cont clearfix">
+          <li>
+            <p><img src="/images/bd_g35/comm_icon1.png" alt=""></p>
+            <p><%= lang.text('bonusBd.whyChoose1')%></p>
+          </li>
+          <li>
+            <p><img src="/images/bd_g35/comm_icon2.png" alt=""></p>
+            <p><%= lang.text('bonusBd.whyChoose2')%></p>
+          </li>
+          <li>
+            <p><img src="/images/bd_g35/comm_icon3.png" alt=""></p>
+            <p><%= lang.text('bonusBd.whyChoose3')%></p>
+          </li>
+          <li>
+            <p><img src="/images/bd_g35/comm_icon4.png" alt=""></p>
+            <p><%= lang.text('bonusBd.whyChoose4')%></p>
+          </li>
+        </ul>
+        <ul class="global_t35__download clearfix">
+          <li>
+            <a href="<%= lang.text('downloadGlobalApp')%>">
+              <img src="<%= lang.image('downloadAppGlobal')%>" alt="">
+            </a>
+          </li>
+          <li>
+            <a href="<%= lang.text('downloadCnApp')%>">
+              <img src="<%= lang.image('downloadAppCn')%>" alt="">
+            </a>
+          </li>
+        </ul>
+        <div class="global_t35__title t3">
+          <img src="<%= lang.image('eventDetailsTitle')%>" alt="">
+        </div>
+        <div class="global_t35__details">
+          <span></span>
+          <p>
+            <%= lang.text('bonusBd.eventDetails1')%>
+          </p>
+        </div>
+        <div class="global_t35__details">
+          <span></span>
+          <p>
+            <%= lang.text('bonusBd.eventDetails2')%>
+          </p>
+        </div>
+        <div class="global_t35__details">
+          <span></span>
+          <p>
+            <%= lang.text('bonusBd.eventDetails3')%>
+          </p>
+        </div>
+        <div class="global_t35__details">
+          <span></span>
+          <p>
+            <%= lang.text('bonusBd.eventDetails4')%>
+          </p>
+        </div>
+        <div class="global_t35__details">
+          <span></span>
+          <p>
+            <%= lang.text('bonusBd.eventDetails5')%>
+          </p>
+        </div>
+        <div class="global_t35__details">
+          <span></span>
+          <p>
+            <%= lang.text('bonusBd.eventDetails6')%>
+          </p>
+        </div>
+        <div class="global_t35__warning">
+          <p class="tit"><%= lang.text('bonusBd.eventDetails7')%> </p>
+          <p class="tit">
+            <%= lang.text('bonusBd.eventDetails8')%>
+          </p>
+          <p><%= lang.text('bonusBd.copyright')%></p>
+        </div>
+      </div>
     </div>
-    <!-- 注册协议相关弹窗 -->
-    <%include /common/component/agment_mdl.html %>  
+    <% include /common/nav/web.footer.html %>
+
+    <div class="global_t35__layer_wrapper">
+      <div id="bd_layer_modal">
+        <p class="tit"><%= lang.text('bonusBd.resendTip1')%><%= lang.text('bonusBd.resendTip2')%></p>
+        <div class="cont clearfix">
+          <p class="">
+            <a onclick="resendEmail()" href="javascript:;"><%= lang.text('bonusBd.resend')%></a>
+          </p>
+          <p class="">
+            <a href="/space/#/account/login"><%= lang.text('bonusBd.login')%></a>
+          </p>
+        </div>
+        <span class="tip" onclick="layer.closeAll()"><%= lang.text('bonusBd.modifyAddress')%>*</span>
+      </div>
+    </div>
+  </div>
+  <!-- 注册协议相关弹窗 -->
+  <%include /common/component/agment_mdl.html %>
 </body>
 
 <!-- build:js(client) /scripts/bd_g35.js -->

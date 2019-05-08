@@ -9,6 +9,8 @@ var canWithdrawAmount = 0; //可提现金额
 var withdrawNotice = ''; //提现提示语
 var thirdThirdType = '';  // 第三方平台ID-出金接口的third_type参数
 var thirdThirdAccount = '';  // 完整账号-出金接口的third_account参数
+var thirdThirdWithdrawType = '';  // 第三方出金时withdraw_type参数
+var thirdThirdWithdrawBankId = '';  // 第三方出金时withdraw_type参数为1时银行卡ID
 var eleWithdraw = {
   payWithdraw: '#third_app_withdraw',
   payWithdrawMsg: '#third_app_withdraw_message',
@@ -21,7 +23,8 @@ var eleWithdraw = {
   payWithdrawBtn: '#third_app_withdraw_btn',
   payWithdrawAmount: '#third_app_withdraw_amount',
   payWithdrawLLimit: '#third_app_withdraw_limit',
-  payWithdrawSubmitBtn: '#withdraw_submit_btn'
+  payWithdrawSubmitBtn: '#withdraw_submit_btn',
+  payAccountLstBankAdd: "#third_app_withdraw__bank_add"
 };
 /*
  * 提现
@@ -50,6 +53,9 @@ $(document).on("tap", eleWithdraw.payWithdrawSubmitBtn, function () {
 function confirmWithdraw () {
   if (withdrawType === 'bank_account') {
     if(!checkCardPhone(withdrawBankId)){ return }
+  }
+  if(withdrawType === 'third_account' && thirdThirdWithdrawType == 1){
+    if(!checkCardPhone(thirdThirdWithdrawBankId)){ return }
   }
   var amount = Number($(eleWithdraw.payWithdrawAmount).val()).toFixed(2);
   var amountCur = (amount*selectKeyFromTypeForWithdraw('currency')[0].rate_out).toFixed(2);
@@ -84,6 +90,10 @@ function submitWithdraw () {
   } else if(withdrawType === 'third_account'){
     params.third_type = thirdThirdType;
     params.third_account = thirdThirdAccount;
+    if(thirdThirdWithdrawType == 1){
+      params.bank_card_id = thirdThirdWithdrawBankId;
+    }
+
   }else if(withdrawType === 'transfer'){
     params.third_type = selectKeyFromTypeForWithdraw('platform');
     params.bank_card_id = withdrawBankId;
@@ -144,6 +154,21 @@ $(eleWithdraw.payAccountLst).on("tap", "li", function () {
   $("input").blur();
   return false;
 });
+// 当第三方账号withdraw_type为1时需要添加银行卡
+$(eleWithdraw.payAccountLstBankAdd).on("tap", ".bank-account", function () {
+  var cType = $(this).attr("data-type");
+  console.log(cType)
+  openLoadingMdl();
+  getBankLst({
+    listType: cType,
+    pageType: 'withdraw',
+    bankId: thirdThirdWithdrawBankId,
+    notInsertTemp: false,
+    source: 'withdraw_type'   // 来源
+  });
+  $("input").blur();
+  return false;
+})
 //监听amout
 $(eleWithdraw.payWithdrawAmount).on("input propertychange", function () {
   setWithdrawBtnStatus();
@@ -245,6 +270,13 @@ function setWithdrawBtnStatus () {
     $(eleWithdraw.payWithdrawBtn).addClass('disabled');
     return;
   }
+  if(withdrawType === 'third_account' && thirdThirdWithdrawType == 1){
+    if(!thirdThirdWithdrawBankId){
+      withdrawBtnStatus = false;
+      $(eleWithdraw.payWithdrawBtn).addClass('disabled');
+      return;
+    }
+  }
   //1.监听amout变化
   if (!amount || amount < 20 || amount > canWithdrawAmount) {
     depositBtnStatus = false;
@@ -285,6 +317,11 @@ function addWithdrawAccount () {
   //重新渲染提现到列表时，已选择的提现到帐号一律清空重置
   withdrawType = undefined;
   withdrawBankId = undefined;
+  thirdThirdType = '';
+  thirdThirdAccount = '';
+  thirdThirdWithdrawBankId = '';
+  thirdThirdWithdrawType = '';
+  $(eleWithdraw.payAccountLstBankAdd).empty();
   setWithdrawBtnStatus();
 }
 //根据当前充值方式找到对应字段
