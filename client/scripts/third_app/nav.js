@@ -198,7 +198,8 @@ function getBankLst (params) {
           type: listType,
           pageType: params.pageType,
           id: params.bankId,
-          lst: data.data
+          lst: data.data,
+          source: params.source
         }
       };
       if (listType === 'bank_account') {
@@ -222,21 +223,40 @@ $(document).on("tap", "#third_app_bottom_template .bank_item", function () {
   var cType = $(this).attr("data-type");
   var cSelectId = $(this).attr("data-select-id");
   var cPageType = $(this).attr("data-page");
+  var cSource = $(this).attr("data-source");
   if (cId == cSelectId) return;
   $("#third_app_bottom_template .bank_item").removeClass('active');
   $(this).addClass('active');
   closeAllMdl();
   if (cPageType == 'withdraw') {
-    withdrawType = cType;
-    withdrawBankId = cId;
-    if(withdrawType == 'third_account') {
-      thirdThirdType = $(this).attr("data-third-type");
-      thirdThirdAccount = $(this).attr("data-third-account");
+    if(cSource === 'withdraw_type'){
+      thirdThirdWithdrawBankId = cId;
+      $(eleWithdraw.payAccountLstBankAdd).empty();
+      $(eleWithdraw.payAccountLstBankAdd).append(lang.text("thirdH5.bankCardNameM") + " <span class='bank-account s-select' data-type='bank_account'><p>"+cName+'('+cNo.substring(cNo.length-4)+')'+"</p></span>")
+    }else{
+      // 清空第三方账户选择的内容
+      thirdThirdType = '';
+      thirdThirdAccount = '';
+      thirdThirdWithdrawBankId = '';
+      thirdThirdWithdrawType = '';
+      $(eleWithdraw.payAccountLstBankAdd).empty();
+      
+      withdrawType = cType;
+      withdrawBankId = cId; 
+      if(withdrawType == 'third_account') {
+        thirdThirdType = $(this).attr("data-third-type");
+        thirdThirdAccount = $(this).attr("data-third-account");
+        thirdThirdWithdrawType = $(this).attr("data-withdraw-type");
+        if(thirdThirdWithdrawType == 1){
+          $(eleWithdraw.payAccountLstBankAdd).empty();
+          $(eleWithdraw.payAccountLstBankAdd).append(lang.text("thirdH5.bankCardNameM") + " <span class='bank-account link-color' data-type='bank_account'>"+ lang.text("thirdH5.bindBankCard") +"</span>")
+        }
+      }
+      var tp = '<li class="s-select" data-select="bank_chosen" data-type="'+ cType +'"><p>'+cName+'('+cNo.substring(cNo.length-4)+')'+'</p></li>';
+      $(eleWithdraw.payAccountLst).find("li[data-select=bank_chosen]").remove();
+      $(eleWithdraw.payAccountLst).find("li").removeClass('active');
+      $(eleWithdraw.payAccountLst).find("li[data-type="+ withdrawType +"]").addClass('active').after(tp);
     }
-    var tp = '<li class="s-select" data-select="bank_chosen" data-type="'+ cType +'"><p>'+cName+'('+cNo.substring(cNo.length-4)+')'+'</p></li>';
-    $(eleWithdraw.payAccountLst).find("li[data-select=bank_chosen]").remove();
-    $(eleWithdraw.payAccountLst).find("li").removeClass('active');
-    $(eleWithdraw.payAccountLst).find("li[data-type="+ withdrawType +"]").addClass('active').after(tp);
     setWithdrawBtnStatus();
   }
   if (cPageType == 'deposit') {
@@ -252,6 +272,7 @@ $(document).on("tap", "#third_app_bottom_template .third_app_template_del_bank",
   var cSelectId = $(this).attr("data-select-id");
   var cType = $(this).attr("data-type");
   var cPageType = $(this).attr("data-page");
+  var cSource = $(this).attr("data-source");
   openLoadingMdl();
   var different = {
     'bank_account': {
@@ -272,12 +293,27 @@ $(document).on("tap", "#third_app_bottom_template .third_app_template_del_bank",
       openMessageMdl(lang.text("thirdH5.deleteSuccessful"), true);
       $("#third_app_bottom_template .bank_item[data-id="+cId+"]").remove();
       if (cPageType === 'withdraw' && cId == cSelectId) {
-        withdrawType = undefined;
-        withdrawBankId = undefined;
-        $(eleWithdraw.payAccountLst).find("li").removeClass('active');
-        $(eleWithdraw.payAccountLst).find("li[data-select=bank_chosen]").remove();
+        if(cSource === 'withdraw_type'){
+            thirdThirdWithdrawBankId = '';
+            $(eleWithdraw.payAccountLstBankAdd).empty();
+            $(eleWithdraw.payAccountLstBankAdd).append(lang.text("thirdH5.bankCardNameM") + " <span class='bank-account link-color' data-type='bank_account'>"+ lang.text("thirdH5.bindBankCard") +"</span>")
+        }else{
+            withdrawType = undefined;
+            withdrawBankId = undefined;
+            $(eleWithdraw.payAccountLst).find("li").removeClass('active');
+            $(eleWithdraw.payAccountLst).find("li[data-select=bank_chosen]").remove();
+
+            if(cType === 'third_account'){
+              thirdThirdType = '';
+              thirdThirdAccount = '';
+              thirdThirdWithdrawBankId = '';
+              thirdThirdWithdrawType = '';
+              $(eleWithdraw.payAccountLstBankAdd).empty();
+            }
+        }
         setWithdrawBtnStatus();
       }
+      
       if (cPageType === 'deposit' && cId == cSelectId) {
         depositBankId = undefined;
         $(eleDeposit.paySelectBankName).html(lang.text("thirdH5.bankCardTip"));

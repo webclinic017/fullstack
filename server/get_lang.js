@@ -1,5 +1,5 @@
 module.exports = function (req, res) {
-    var langArr = ['zh', 'cn', 'en', 'vi', 'zh-Hant', 'id', 'es'];
+    var langArr = ['zh', 'cn', 'en', 'vi', 'zh-Hant', 'id', 'es', 'pt-BR'];
     var querystring = require("querystring");
     var defaultLang = {
         browserLang: browserLang,
@@ -56,7 +56,7 @@ module.exports = function (req, res) {
         if(cookieLang && langArr.indexOf(cookieLang) !== -1){
             lang = cookieLang;
         }
-        // ['zh', cn', 'en', 'vi', 'zh-Hant', 'id']
+        // ['zh', cn', 'en', 'vi', 'zh-Hant', 'id', 'pt-BR']
         return lang;
     }
     function urlLang(){
@@ -66,7 +66,7 @@ module.exports = function (req, res) {
         if(urlLang && langArr.indexOf(urlLang) !== -1){
             lang = urlLang;
         }
-        // ['zh', cn', 'en', 'vi', 'zh-Hant', 'id']
+        // ['zh', cn', 'en', 'vi', 'zh-Hant', 'id', 'pt-BR']
         return lang;
     }
     function decideLang(){

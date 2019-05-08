@@ -46,7 +46,7 @@
         // 获取消息列表
         function getNoticeList(page, type) {
             $scope.noticeList[type] = []
-            type = type ? type : $scope.currentMsg; 
+            type = type ? type : $scope.currentMsg;
             $scope.$broadcast('showLoadingImg');
             $scope.page = page;
             var offset = (page - 1) * pagesize;
@@ -74,7 +74,7 @@
 
         // 获取未读消息
         function getUnreadMsg() {
-            $scope.$emit('global.getUnReadMsgLength', {ctrlName: 'NoticeIndexController'})
+            $scope.$emit('global.getUnReadMsgLength', { ctrlName: 'NoticeIndexController' })
         }
 
         // 展开/收起 消息 status-> 0 收起 1 展开
@@ -109,7 +109,7 @@
                         if (item.indexOf(splitor1) != -1) {
                             var splitedStr = item.split(splitor1);
                             taggedStr += "<span class='info_desp'>" + splitedStr[0] + splitor1 + "</span>" + splitedStr[1] + "</br>"
-                        } 
+                        }
                         // else if (item.indexOf(splitor2) != -1) {
                         //     var splitedStr = item.split(splitor2);
                         //     taggedStr += "<span class='info_desp'>" + splitedStr[0] + splitor2 + "</span>" + splitedStr[1] + "</br>"
