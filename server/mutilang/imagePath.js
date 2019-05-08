@@ -44,7 +44,7 @@
         vi: indexBasePath + "/home/focus-globalVi-1.0.png",
         "zh-Hant": indexBasePath + "/home/focus-globalZhHant-1.0.png",
         es: indexBasePath + "/home/focus-cnEn-1.0.png",
-        'pt-BR': indexBasePath + "/home/focus-cnEn-1.0.png"
+        'pt-BR': indexBasePath + "/home/focus-globalPtBR.png"
     }, //
     homeFocusGlobal: {
         en: indexBasePath + "/home/focus-globalEn-1.0.png",
@@ -53,7 +53,7 @@
         vi: indexBasePath + "/home/focus-globalVi-1.0.png",
         "zh-Hant": indexBasePath + "/home/focus-globalZhHant-1.0.png",
         es: indexBasePath + "/home/focus-globalEn-1.0.png",
-        'pt-BR': indexBasePath + "/home/focus-globalEn-1.0.png"
+        'pt-BR': indexBasePath + "/home/focus-globalPtBR.png"
     }, //
     homeAppIos: {
         en: indexBasePath + "/home/focus-icon-ios-en.png",
@@ -62,7 +62,7 @@
         vi: indexBasePath + "/home/focus-icon-ios-vi.png",
         "zh-Hant": indexBasePath + "/home/focus-icon-ios-cn-1.0.png",
         es: indexBasePath + "/home/focus-icon-ios-en.png",
-        'pt-BR': indexBasePath + "/home/focus-icon-ios-en.png"
+        'pt-BR': indexBasePath + "/home/focus-icon-ios-pt-BR.png"
     }, //
     homeAppAndroidCn: {
         en: indexBasePath + "/home/focus-icon-android-en.png",
@@ -71,7 +71,7 @@
         vi: indexBasePath + "/home/focus-icon-android-vi.png",
         "zh-Hant": indexBasePath + "/home/focus-icon-android-cn.png",
         es: indexBasePath + "/home/focus-icon-android-en.png",
-        'pt-BR': indexBasePath + "/home/focus-icon-android-en.png"
+        'pt-BR': indexBasePath + "/home/focus-icon-android-pt-BR.png"
     }, //
     homeAppAndroidGlobal: {
         en: indexBasePath + "/home/focus-icon-google-en-1.0.png",
@@ -80,7 +80,7 @@
         vi: indexBasePath + "/home/focus-icon-google-vi.png",
         "zh-Hant": indexBasePath + "/home/focus-icon-google-cn.png",
         es: indexBasePath + "/home/focus-icon-google-en-1.0.png",
-        'pt-BR': indexBasePath + "/home/focus-icon-google-en-1.0.png"
+        'pt-BR': indexBasePath + "/home/focus-icon-google-pt-BR.png"
     }, // 
     homeToolsBgCn: {
         en: indexBasePath + "/home/tools-bg-cnEn.png",
@@ -89,7 +89,7 @@
         vi: indexBasePath + "/home/tools-bg-globalVi.png",
         "zh-Hant": indexBasePath + "/home/tools-bg-globalZhHant.png",
         es: indexBasePath + "/home/tools-bg-cnEn.png",
-        'pt-BR': indexBasePath + "/home/tools-bg-cnEn.png"
+        'pt-BR': indexBasePath + "/home/tools-bg-globalPtBR.png"
     }, //
     homeToolsBgGlobal: {
         en: indexBasePath + "/home/tools-bg-globalEn.png",
@@ -98,7 +98,7 @@
         vi: indexBasePath + "/home/tools-bg-globalVi.png",
         "zh-Hant": indexBasePath + "/home/tools-bg-globalZhHant.png",
         es: indexBasePath + "/home/tools-bg-globalEn.png",
-        'pt-BR': indexBasePath + "/home/tools-bg-globalEn.png"
+        'pt-BR': indexBasePath + "/home/tools-bg-globalPtBR.png"
     }, //
     homeMap: {
         en: indexBasePath + "/home/client-map-en-en.png",
@@ -107,7 +107,7 @@
         vi: indexBasePath + "/home/client-map-vi-vi.png",
         "zh-Hant": indexBasePath + "/home/client-map-cn-ht.png",
         es: indexBasePath + "/home/client-map-en-en.png",
-        'pt-BR': indexBasePath + "/home/client-map-en-en.png"
+        'pt-BR': indexBasePath + "/home/client-map-pt-BR.png"
     }, //
     downloadAppCn: {
         en: indexBasePath + "/download/focus-icon-cn-en.png",
@@ -202,7 +202,7 @@
         vi: indexBasePath + "/m_download_global/section6-bg-vi.png",
         "zh-Hant": indexBasePath + "/m_download_global/section6-bg-zh-Hant.png",
         es: indexBasePath + "/m_download_global/section6-bg-en.png",
-        'pt-BR': indexBasePath + "/m_download_global/section6-bg-en.png"
+        'pt-BR': indexBasePath + "/m_download_global/section6-bg-pt-BR.png"
     }, //
 
     downloadCnH5App: {
@@ -212,7 +212,7 @@
         vi: indexBasePath + "/m_download_global/focus-icon-cn-vi-a.png",
         "zh-Hant": indexBasePath + "/m_download_global/focus-icon-cn-zh-Hant.png",
         es: indexBasePath + "/m_download_global/focus-icon-cn-es-a.png",
-        'pt-BR': indexBasePath + "/m_download_global/focus-icon-cn-es-a.png"
+        'pt-BR': indexBasePath + "/m_download_global/focus-icon-cn-pt-BR.png"
     }, //
     downloadGlobalH5App: {
         en: indexBasePath + "/m_download_global/focus-icon-global-en.png",
@@ -221,7 +221,7 @@
         vi: indexBasePath + "/m_download_global/focus-icon-global-vi-a.png",
         "zh-Hant": indexBasePath + "/m_download_global/focus-icon-global-zh-Hant.png",
         es: indexBasePath + "/m_download_global/focus-icon-global-es-a.png",
-        'pt-BR': indexBasePath + "/m_download_global/focus-icon-global-es-a.png"
+        'pt-BR': indexBasePath + "/m_download_global/focus-icon-global-pt-BR.png"
     }, //
     
     freesignTitle: {

@@ -40,7 +40,7 @@ if ($(".m_vue").attr("data-type") === "helpNavi") {
                     $curTarget.parent().find(DESP_CLASS).slideToggle();
                 }
                 if (oAction.actionName == 'backTop') {
-                    $(document.body).animate({ scrollTop: 0 }, WAIT_TIME, ANIMATE_BSR, function () {
+                    $("body,html").animate({ scrollTop: 0 }, WAIT_TIME, ANIMATE_BSR, function () {
                         TOP_BAR.stop().fadeOut(WAIT_TIME);
                         TOP_BAR_SHOWED = false;
                     });

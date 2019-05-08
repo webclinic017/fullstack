@@ -50,7 +50,8 @@
       pid: pid,
       unit: unit,
       key: key,
-      lp: lp
+      lp: lp,
+      world_code: type == 'vi' ? 'VN' : 'ID'
     }).then(function (data) {
       // console.log(data);
       layer.closeAll();
