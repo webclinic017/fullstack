@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <% include /common/meta/web.html %>
     <% include /common/vendor/web.css.html %>
@@ -10,6 +11,7 @@
 
     <% include /common/statistic/main.html %>
 </head>
+
 <body ng-app="fullstackApp" class="<%= lang_class%>">
     <div ng-controller="GlobalController">
         <div class="header">
@@ -42,11 +44,13 @@
                                     </ul>
                                     <div class="code global">
                                         <div class="img_box">
-                                            <img class="mg-bt-10" src="/images/web/download_m_blank_global_20190226.png" alt="code" draggable=false>
+                                            <img class="mg-bt-10" src="/images/web/download_m_blank_global_20190226.png"
+                                                alt="code" draggable=false>
                                             <span><%= lang.text('mRegister11')%></span>
                                         </div>
                                         <div class="img_box">
-                                            <img class="mg-bt-10" src="/images/web/download_m_blank_cn_20190226.png" alt="code" draggable=false>
+                                            <img class="mg-bt-10" src="/images/web/download_m_blank_cn_20190226.png"
+                                                alt="code" draggable=false>
                                             <span><%= lang.text('mRegister12')%></span>
                                         </div>
                                         <p><%= lang.text('downloadApp.tip5')%></p>
@@ -58,66 +62,80 @@
                     </div>
                     <div class="swiper-container" tw-carousel data-type="gradient">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide" style='background: url("<%= lang.image('downloadFocus')%>")  no-repeat top center'>
+
+                            <%if (lang.areaId != 1) {%>
+                            <div class="swiper-slide"
+                                style='background: url("<%= lang.image('downloadGlobalFocus')%>")  no-repeat top center'>
                                 <!-- <div class="download_banner__ctn-des">
                                     <h2><%= lang.text('downloadApp.tip1')%></h2>
                                     <span><%= lang.text('downloadApp.tip2')%></span>
                                 </div> -->
                             </div>
+                            <%} else {%>
+                            <div class="swiper-slide"
+                                style='background: url("<%= lang.image('downloadFocus')%>")  no-repeat top center'>
+                                <!-- <div class="download_banner__ctn-des">
+                                            <h2><%= lang.text('downloadApp.tip1')%></h2>
+                                            <span><%= lang.text('downloadApp.tip2')%></span>
+                                        </div> -->
+                            </div>
+                            <%}%>     
                         </div>
                         <div class="swiper-pagination"></div>
                     </div>
                 </div>
                 <div class="download_title">
                     <h3><%= lang.text('downloadApp.tip15')%></h3>
-                    <p><%= lang.text('downloadApp.tip16')%></p>
+                            <p><%= lang.text('downloadApp.tip16')%></p>
+                        </div>
+                    </div>
+                    <div class="index_new__container">
+                        <div class="index_new__float_box">
+                            <div class="index_new__float clearfix">
+                                <div class="fl f">
+                                    <h3><%= lang.text("newhome_43")%></h3>
+                                    <p><%= lang.text("newhome_44")%></p>
+                                    <p><%= lang.text("newhome_45")%></p>
+                                </div>
+                                <div class="b text-center">
+                                    <a href="/space/#/account/register"
+                                        class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient"><%= lang.text("newhome_46")%></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="index_new__camber">
+
+                    </div>
+                </div>
+                <div class="footer">
+                    <%- include('/common/nav/web.footer.html') %>
                 </div>
             </div>
-            <div class="index_new__container">
-                <div class="index_new__float_box">
-                    <div class="index_new__float clearfix">
-                    <div class="fl f">
-                        <h3><%= lang.text("newhome_43")%></h3>
-                        <p><%= lang.text("newhome_44")%></p>
-                        <p><%= lang.text("newhome_45")%></p>
-                    </div>
-                    <div class="b text-center">
-                        <a href="/space/#/account/register" class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient"><%= lang.text("newhome_46")%></a>
-                    </div>
-                    </div>
-                </div>
-            </div>
-            <div class="index_new__camber">
+            <%- include('/common/vendor/web.js.html') %>
+            <!-- build:js(client) /scripts/web_download.js -->
+            <script src="/scripts/plugins/sha1.js"></script>
+            <script src="/scripts/common/config.service.js"></script>
+            <script src="/scripts/common/account.service.js"></script>
+            <script src="/scripts/common/authorization.service.js"></script>
+            <script src="/scripts/common/ranklist.service.js"></script>
+            <script src="/scripts/common/product.service.js"></script>
+            <script src="/scripts/common/lang.service.js"></script>
+            <script src="/scripts/common/lang_data.service.js"></script>
+            <script src="/scripts/common/redbag.service.js"></script>
 
-            </div>
-        </div>
-        <div class="footer">
-            <%- include('/common/nav/web.footer.html') %>
-        </div>
-    </div>
-    <%- include('/common/vendor/web.js.html') %>
-    <!-- build:js(client) /scripts/web_download.js -->
-    <script src="/scripts/plugins/sha1.js"></script>
-    <script src="/scripts/common/config.service.js"></script>
-    <script src="/scripts/common/account.service.js"></script>
-    <script src="/scripts/common/authorization.service.js"></script>
-    <script src="/scripts/common/ranklist.service.js"></script>
-    <script src="/scripts/common/product.service.js"></script>
-    <script src="/scripts/common/lang.service.js"></script>
-    <script src="/scripts/common/lang_data.service.js"></script>
-    <script src="/scripts/common/redbag.service.js"></script>
+            <script src="/scripts/common/global.controller.js"></script>
 
-    <script src="/scripts/common/global.controller.js"></script>
+            <script src="/scripts/common/navbar.directive.js"></script>
+            <script src="/scripts/common/dropdown.directive.js"></script>
+            <script src="/scripts/common/carousel.directive.js"></script>
+            <script src="/scripts/common/line_chart.directive.js"></script>
+            <script src="/scripts/common/progress.directive.js"></script>
 
-    <script src="/scripts/common/navbar.directive.js"></script>
-    <script src="/scripts/common/dropdown.directive.js"></script>
-    <script src="/scripts/common/carousel.directive.js"></script>
-    <script src="/scripts/common/line_chart.directive.js"></script>
-    <script src="/scripts/common/progress.directive.js"></script>
+            <script src="/scripts/ranklist/all.controller.js"></script>
 
-    <script src="/scripts/ranklist/all.controller.js"></script>
-
-    <script src="/scripts/web/download.controller.js"></script>
-    <!-- endbuild -->
+            <script src="/scripts/web/download.controller.js"></script>
+            <!-- endbuild -->
 </body>
+
 </html>
