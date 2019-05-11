@@ -86,8 +86,8 @@
             en: {
                 ios: {
                     app_info: {
-                        version_name : "V4.1.2",
-                        description: "This update: \n1. Add Indonesian;\n2. Add a new deposit way;\n3. Fix known bugs and optimize user experience.",
+                        version_name : "V4.3.2",
+                        description: "This update: \n1. Updated the margin mode to the larger leg margin mode;\n2. Updated the margin calculation formula;\n3. Updated the position withdrawal limit;\n4. Updated the leverage of energy products.",
                         updated_description: "70% users are using new version",
                         force_update : true
                     }
@@ -105,8 +105,8 @@
             cn: {
                 ios: {
                     app_info: {
-                        version_name : "V4.1.2",
-                        description: "本次更新：\n1.新增印尼语语言包；\n2.新增充值方式；\n3.修复已知bug，优化用户体验。",
+                        version_name : "V4.3.2",
+                        description: "本次更新：\n1.更新了保证金模式为单边保证金模式；\n2.更新了保证金计算公式；\n3.更新了持仓提现限额；\n4.更新了能源产品的杠杆。",
                         updated_description: "70%的用户正在使用新版本",
                         force_update : true
                     }
@@ -118,6 +118,28 @@
                         updated_description: "70%的用户正在使用新版本",
                         url: "https://static.tigerwitfx.com/downloads/apk/tigerwit_v3.5.1.apk",
                         force_update : false
+                    }
+                }
+            }
+        },
+        globalpro: {
+            en: {
+                ios: {
+                    app_info: {
+                        version_name : "V1.3.1",
+                        description: "This update: \n1. Updated the margin mode to the larger leg margin mode;\n2. Updated the margin calculation formula;\n3. Updated the position withdrawal limit;\n4. Updated the leverage of energy products.",
+                        updated_description: "70% users are using new version",
+                        force_update : true
+                    }
+                }
+            },
+            cn: {
+                ios: {
+                    app_info: {
+                        version_name : "V1.3.1",
+                        description: "本次更新：\n1.更新了保证金模式为单边保证金模式；\n2.更新了保证金计算公式；\n3.更新了持仓提现限额；\n4.更新了能源产品的杠杆。",
+                        updated_description: "70%的用户正在使用新版本",
+                        force_update : true
                     }
                 }
             }
