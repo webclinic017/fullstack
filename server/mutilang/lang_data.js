@@ -15866,6 +15866,51 @@ module.exports = {
         "es": "Si  fuera la primera vez, por favor, registre su cuenta ACODA Pay y deposite. Si está registrado, por favor, rellene la siguiente información.",
         "pt-BR": "Por favor registre sua conta ACODA Pay e deposite. Se já for registrado, por favor preencha as seguintes informações."
     },
+    "lcpagTip1": {
+        "zh": "你将使用一下入金方式，请完成以下信息：",
+        "en": "You will use LCPAG to deposit please complete the information:",
+        "vi": "You will use LCPAG to deposit please complete the information:",
+        "zh-Hant": "You will use LCPAG to deposit please complete the information:",
+        "id": "You will use LCPAG to deposit please complete the information:",
+        "es": "Empleará LCPAG para depositar, por favor complete la información:",
+        "pt-BR": "You will use LCPAG to deposit please complete the information:"
+    },
+    "lcpagTip2": {
+        "zh": "金额",
+        "en": "amount",
+        "vi": "amount",
+        "zh-Hant": "amount",
+        "id": "amount",
+        "es": "Importe",
+        "pt-BR": "amount"
+    },
+    "lcpagTip3": {
+        "zh": "商户",
+        "en": "Business",
+        "vi": "Business",
+        "zh-Hant": "Business",
+        "id": "Business",
+        "es": "Business",
+        "pt-BR": "Business"
+    },
+    "lcpagTip4": {
+        "zh": "LCPag账户",
+        "en": "LCpag Account",
+        "vi": "LCpag Account",
+        "zh-Hant": "LCpag Account",
+        "id": "LCpag Account",
+        "es": "Cuenta LCPAG",
+        "pt-BR": "LCpag Account"
+    },
+    "lcpagTip5": {
+        "zh": "安全码",
+        "en": "Code tow factors",
+        "vi": "Code tow factors",
+        "zh-Hant": "Code tow factors",
+        "id": "Code tow factors",
+        "es": "Código 2 factores",
+        "pt-BR": "Code tow factors"
+    },
     "go_registration": {
         "zh": "前往注册",
         "en": "Go to register",
