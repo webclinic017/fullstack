@@ -161,14 +161,23 @@
       }
     }
   }
-  .bd_lfc_home_video {
-    margin-top: 80px;
-    margin-bottom: 80px;
+  .bd_lfc_home_video_title {
+    color: #ffd521;
+    font-size: 36px;
     text-align: center;
-    display: none;
+    width: 65%;
+    margin: 0 auto;
+  }
+  .bd_lfc_home_video, .bd_lfc_home_video_new {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
     video {
       width: 70%;
     }
+  }
+  .bd_lfc_home_video {
+    display: none;
   }
   .bd_lfc_app_cont {
     position: relative;
