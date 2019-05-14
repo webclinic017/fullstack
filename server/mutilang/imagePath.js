@@ -128,41 +128,41 @@
             'pt-BR': indexBasePath + "/download/focus-icon-global-es.png"
         }, //
         downloadFocus: {
-            en: indexBasePath + "/download/download_banner-en.png",
-            id: indexBasePath + "/download/download_banner-en.png",
-            zh: indexBasePath + "/download/download_banner.png",
-            vi: indexBasePath + "/download/download_banner-vi.png",
-            "zh-Hant": indexBasePath + "/download/download_banner-zh-Hant.png",
-            es: indexBasePath + "/download/download_banner-en.png",
+            en: indexBasePath + "/download/download_banner-global-en.png",
+            id: indexBasePath + "/download/download_banner-global-en.png",
+            zh: indexBasePath + "/download/download_banner-cn-cn.png",
+            vi: indexBasePath + "/download/download_banner-global-vi.png",
+            "zh-Hant": indexBasePath + "/download/download_banner-global-zh-Hant.png",
+            es: indexBasePath + "/download/download_banner-global-en.png",
             'pt-BR': indexBasePath + "/download/download_banner-cn-pt-BR.png"
         }, //
         downloadGlobalFocus: {
-            en: indexBasePath + "/download/download_banner-en.png",
-            id: indexBasePath + "/download/download_banner-en.png",
-            zh: indexBasePath + "/download/download_banner.png",
-            vi: indexBasePath + "/download/download_banner-vi.png",
-            "zh-Hant": indexBasePath + "/download/download_banner-zh-Hant.png",
-            es: indexBasePath + "/download/download_banner-en.png",
+            en: indexBasePath + "/download/download_banner-global-en.png",
+            id: indexBasePath + "/download/download_banner-global-en.png",
+            zh: indexBasePath + "/download/download_banner-cn-cn.png",
+            vi: indexBasePath + "/download/download_banner-global-vi.png",
+            "zh-Hant": indexBasePath + "/download/download_banner-global-zh-Hant.png",
+            es: indexBasePath + "/download/download_banner-global-en.png",
             'pt-BR': indexBasePath + "/download/download_banner-global-pt-BR.png"
         }, //
-        footerCustomerCn: {
-            en: indexBasePath + "/footer-layer/cn-en.png",
-            id: indexBasePath + "/footer-layer/cn-en.png",
-            zh: indexBasePath + "/footer-layer/cn-cn-new.png",
-            vi: indexBasePath + "/footer-layer/global-vi.png",
-            "zh-Hant": indexBasePath + "/footer-layer/global-zh-hant.png",
-            es: indexBasePath + "/footer-layer/cn-en.png",
-            'pt-BR': indexBasePath + "/footer-layer/cn-en.png"
-        }, // 
-        footerCustomerGloabal: {
-            en: indexBasePath + "/footer-layer/global-en-new.png",
-            id: indexBasePath + "/footer-layer/global-en-new.png",
-            zh: indexBasePath + "/footer-layer/global-cn.png",
-            vi: indexBasePath + "/footer-layer/global-vi.png",
-            "zh-Hant": indexBasePath + "/footer-layer/global-zh-hant.png",
-            es: indexBasePath + "/footer-layer/global-en-new.png",
-            'pt-BR': indexBasePath + "/footer-layer/global-en-new.png"
-        }, //
+        // footerCustomerCn: {
+        //     en: indexBasePath + "/footer-layer/cn-en.png",
+        //     id: indexBasePath + "/footer-layer/cn-en.png",
+        //     zh: indexBasePath + "/footer-layer/cn-cn-new.png",
+        //     vi: indexBasePath + "/footer-layer/global-vi.png",
+        //     "zh-Hant": indexBasePath + "/footer-layer/global-zh-hant.png",
+        //     es: indexBasePath + "/footer-layer/cn-en.png",
+        //     'pt-BR': indexBasePath + "/footer-layer/cn-en.png"
+        // }, // 
+        // footerCustomerGloabal: {
+        //     en: indexBasePath + "/footer-layer/global-en-new.png",
+        //     id: indexBasePath + "/footer-layer/global-en-new.png",
+        //     zh: indexBasePath + "/footer-layer/global-cn.png",
+        //     vi: indexBasePath + "/footer-layer/global-vi.png",
+        //     "zh-Hant": indexBasePath + "/footer-layer/global-zh-hant.png",
+        //     es: indexBasePath + "/footer-layer/global-en-new.png",
+        //     'pt-BR': indexBasePath + "/footer-layer/global-en-new.png"
+        // }, 
         // recordForm: {
         //     en: indexBasePath + "/agent/proxy/record-form-en.png",
         //     id: indexBasePath + "/agent/proxy/record-form-en.png",
@@ -222,7 +222,7 @@
             "zh-Hant": indexBasePath + "/m_download_global/focus-icon-cn-zh-Hant.png",
             es: indexBasePath + "/m_download_global/focus-icon-cn-es-a.png",
             'pt-BR': indexBasePath + "/m_download_global/focus-icon-cn-pt-BR.png"
-        }, //
+        },
         downloadGlobalH5App: {
             en: indexBasePath + "/m_download_global/focus-icon-global-en.png",
             id: indexBasePath + "/m_download_global/focus-icon-global-id-a.png",
@@ -231,7 +231,7 @@
             "zh-Hant": indexBasePath + "/m_download_global/focus-icon-global-zh-Hant.png",
             es: indexBasePath + "/m_download_global/focus-icon-global-es-a.png",
             'pt-BR': indexBasePath + "/m_download_global/focus-icon-global-pt-BR.png"
-        }, //
+        },
 
         freesignTitle: {
             en: indexBasePath + "/bd/bonus/freesign-web-en.png",

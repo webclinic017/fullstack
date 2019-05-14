@@ -11295,7 +11295,7 @@ module.exports = {
         "endTrial": {
             "zh": "磨合结束，成为代理",
             "en": "End of trial, become an official agent",
-            "vi": "Kết thúc thời gian thử nghiệm, trở thành một đại lý chính thức",
+            "vi": "Kết thúc thử nghiệm, thành đại lý chính thức",
             "zh-Hant": "磨合結束，成為代理",
             "id": "Telah melewati masa percobaan, jadi Mitra resmi",
             "es": "Fin período prueba, conviértase en una agente oficial ",
@@ -11643,7 +11643,7 @@ module.exports = {
             "zh-Hant": "TigerWit does not charge any commission - only spread. Our FX spreads are variable and from 0.6. Overnight swaps and financing adjustments are applied to positions held overnight.",
             "id": "TigerWit tidak membebankan komisi apapun. Spread Valuta Asing kami juga sangat bervariasi, bunga menginap akan dikenakan apabila ada posisi yang ditahan melebihi jam pembukaan pasar.",
             "es": "TigerWit no carga ninguna comisión – sólo spread. Nuestros spreads en FX son variables, empezando desde 0.6. Los swaps overnight y ajustes financieros se aplicarán para aquellas posiciones mantenidas overnight. ",
-            "pt-BR": "TigerWit não cobra nenhuma comissão - apenas spread. Nossos spreads de FX são variáveis "
+            "pt-BR": "TigerWit não cobra nenhuma comissão - apenas spread. Nossos spreads de FX são variáveis ​​e de 0,6. Swaps overnight e ajustes de financiamento são aplicados em posições mantidas durante a noite."
         },
         "deal5Q": {
             "zh": "What is the minimum order size?",

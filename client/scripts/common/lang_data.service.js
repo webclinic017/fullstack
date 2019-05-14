@@ -817,7 +817,7 @@
                         "en": "The phone number already exists",
                         "vi": "Số điện thoại đã tồn tại",
                         "zh-Hant": "手機號已存在",
-                        "id": "nomor telepon telah terdaftar",
+                        "id": "Nomor telepon ini telah terdaftar",
                         "es": "El número de teléfono ya existe",
                         "pt-BR": "O número de telefone já está cadastrado"
                     },
