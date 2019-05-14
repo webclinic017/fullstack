@@ -1833,6 +1833,24 @@
                         "es": "Nombre real",
                         "pt-BR": "Nome real"
                     },
+                    "lastName": {
+                        "zh": "姓",
+                        "en": "last name",
+                        "vi": "tên",
+                        "zh-Hant": "姓",
+                        "id": "Nama Depan",
+                        "es": "Nombre real",
+                        "pt-BR": " "
+                    },
+                    "firstName": {
+                        "zh": "名",
+                        "en": "first name",
+                        "vi": "họ",
+                        "zh-Hant": "名",
+                        "id": "Nama Belakang",
+                        "es": "Nombre real",
+                        "pt-BR": " "
+                    },
                     "fillName": {
                         "zh": "请输入真实姓名",
                         "en": "Please fill in name",

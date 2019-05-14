@@ -11393,6 +11393,15 @@ module.exports = {
         "pt-BR": "isto é comentários, nenhuma tradução exigida"
     },
     "faqEnglish": {
+        "faqCommon0": {
+            "zh": "回到顶部",
+            "en": "Back to top",
+            "vi": "Về phía trên.",
+            "zh-Hant": "回到頂部",
+            "id": "Kembali ke atas",
+            "es": "Arriba.",
+            "pt-BR": "De Volta para o Topo"
+        },
         "real1Q": {
             "zh": "What types of account are available?",
             "en": "What types of account are available?",
