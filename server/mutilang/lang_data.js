@@ -13236,7 +13236,7 @@ module.exports = {
     },
     "third_verify3": {
         "zh": "工作日10:00-18:00：将在30分钟左右完成审核",
-        "en": "We are pleasured to inform you that your information has been submitted.",
+        "en": "Your information has been succesfully submitted.",
         "vi": "Chúng tôi vui mừng thông báo rằng thông tin của bạn đã được gửi.",
         "zh-Hant": "工作日10:00-18:00：將在30分鐘左右完成審核",
         "id": "Kami dengan senang hati memberitahukan kepada anda bahwa informasi anda telah dikirimkan",
@@ -13245,7 +13245,7 @@ module.exports = {
     },
     "third_verify4": {
         "zh": "工作日18:00以后：将在21:00、23:00统一审核；23:00后认证的将在次日审核",
-        "en": "Our compliance team will verify your account within 24 hours.",
+        "en": "our compliance team will verify your account within 24 hours.",
         "vi": "Đội Kiểm soát của chúng tôi sẽ xác minh tài khoản của bạn trong vòng 24 giờ.",
         "zh-Hant": "工作日18:00以後：將在21:00、23:00統壹審核；23:00後認證的將在次日審核",
         "id": "Tim kepatuhan kami akan melakukan verifikasi pada akun anda dalam waktu 24 jam",
@@ -13254,7 +13254,7 @@ module.exports = {
     },
     "third_verify5": {
         "zh": "非工作日时间：将在10:00、16:00、22:00统一审核；22:00后认证的将在次日审核",
-        "en": "If there are more information to be required you will be contacted by phone or email.",
+        "en": "If there is any more information required, you will be contacted by phone or email shortly.",
         "vi": "Nếu chúng tôi cần thêm thông tin, chúng tôi sẽ liên hệ với bạn qua email hoặc số điện thoại.",
         "zh-Hant": "非工作日時間：將在10:00、16:00、22:00統壹審核；22:00後認證的將在次日審核",
         "id": "Apabila ada informasi yang kami perlukan dari anda, kami akan menghubungi anda melalui telepon atau email",

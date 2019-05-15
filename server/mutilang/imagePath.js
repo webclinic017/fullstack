@@ -116,7 +116,7 @@
             vi: indexBasePath + "/download/focus-icon-cn-vi-a.png",
             "zh-Hant": indexBasePath + "/download/focus-icon-cn-zh-Hant.png",
             es: indexBasePath + "/download/focus-icon-cn-es.png",
-            'pt-BR': indexBasePath + "/download/focus-icon-cn-es.png"
+            'pt-BR': indexBasePath + "/download/focus-icon-cn-pt-br.png"
         }, //
         downloadAppGlobal: {
             en: indexBasePath + "/download/focus-icon-global-en.png",
@@ -125,7 +125,7 @@
             vi: indexBasePath + "/download/focus-icon-global-vi-a.png",
             "zh-Hant": indexBasePath + "/download/focus-icon-global-zh-Hant.png",
             es: indexBasePath + "/download/focus-icon-global-es.png",
-            'pt-BR': indexBasePath + "/download/focus-icon-global-es.png"
+            'pt-BR': indexBasePath + "/download/focus-icon-global-pt-br.png"
         }, //
         downloadFocus: {
             en: indexBasePath + "/download/download_banner-global-en.png",
@@ -240,7 +240,7 @@
             vi: indexBasePath + "/bd/bonus/freesign-web-vi.png",
             "zh-Hant": indexBasePath + "/bd/bonus/freesign-web-en.png",
             es: indexBasePath + "/bd/bonus/freesign-web-es.png",
-            'pt-BR': indexBasePath + "/bd/bonus/freesign-web-es.png"
+            'pt-BR': indexBasePath + "/bd/bonus/freesign-web-pt-br.png"
         }, //
         rebateplanTitle: {
             en: indexBasePath + "/bd/bonus/rebateplan-en.png",
@@ -249,7 +249,7 @@
             vi: indexBasePath + "/bd/bonus/rebateplan-vi.png",
             "zh-Hant": indexBasePath + "/bd/bonus/rebateplan-en.png",
             es: indexBasePath + "/bd/bonus/rebateplan-es.png",
-            'pt-BR': indexBasePath + "/bd/bonus/rebateplan-es.png"
+            'pt-BR': indexBasePath + "/bd/bonus/rebateplan-pt-br.png"
         }, //
         whyChooseTitle: {
             en: indexBasePath + "/bd/bonus/why-choose-en.png",
@@ -258,7 +258,7 @@
             vi: indexBasePath + "/bd/bonus/why-choose-vi.png",
             "zh-Hant": indexBasePath + "/bd/bonus/why-choose-en.png",
             es: indexBasePath + "/bd/bonus/why-choose-es.png",
-            'pt-BR': indexBasePath + "/bd/bonus/why-choose-es.png"
+            'pt-BR': indexBasePath + "/bd/bonus/why-choose-pt-br.png"
         }, //
         eventDetailsTitle: {
             en: indexBasePath + "/bd/bonus/event-details-en.png",
@@ -267,7 +267,7 @@
             vi: indexBasePath + "/bd/bonus/event-details-vi.png",
             "zh-Hant": indexBasePath + "/bd/bonus/event-details-en.png",
             es: indexBasePath + "/bd/bonus/event-details-es.png",
-            'pt-BR': indexBasePath + "/bd/bonus/event-details-es.png"
+            'pt-BR': indexBasePath + "/bd/bonus/event-details-pt-br.png"
         }, //
         freesignH5Title: {
             en: indexBasePath + "/bd/bonus/freesign-h5-en.png",
@@ -276,7 +276,7 @@
             vi: indexBasePath + "/bd/bonus/freesign-h5-vi.png",
             "zh-Hant": indexBasePath + "/bd/bonus/freesign-h5-en.png",
             es: indexBasePath + "/bd/bonus/freesign-h5-es.png",
-            'pt-BR': indexBasePath + "/bd/bonus/freesign-h5-es.png"
+            'pt-BR': indexBasePath + "/bd/bonus/freesign-h5-pt-br.png"
         }, //
         // : {
         //     en: indexBasePath + "",
