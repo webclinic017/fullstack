@@ -817,7 +817,7 @@
                         "en": "The phone number already exists",
                         "vi": "Số điện thoại đã tồn tại",
                         "zh-Hant": "手機號已存在",
-                        "id": "nomor telepon telah terdaftar",
+                        "id": "Nomor telepon ini telah terdaftar",
                         "es": "El número de teléfono ya existe",
                         "pt-BR": "O número de telefone já está cadastrado"
                     },
@@ -1727,7 +1727,7 @@
                     },
                     "tip16": {
                         "zh": "工作日10:00-18:00：将在30分钟左右完成审核",
-                        "en": "We are pleasured to inform you that your information has been submitted. ",
+                        "en": "Your information has been succesfully submitted. ",
                         "vi": "Chúng tôi rất vui được thông báo với bạn rằng thông tin của bạn đã được gửi. ",
                         "zh-Hant": "工作日10:00-18:00：將在30分鐘左右完成審核",
                         "id": " Hari kerja 10:00 - 18:00: pemeriksaan biasanya selesai dalam waktu 30 menit ",
@@ -1736,7 +1736,7 @@
                     },
                     "tip17": {
                         "zh": "工作日18:00以后：将在21:00、23:00统一审核；23:00后认证的将在次日审核",
-                        "en": "Our compliance team will verify your account within 24 hours.",
+                        "en": "our compliance team will verify your account within 24 hours.",
                         "vi": "Nhóm giám sát của chúng tôi sẽ xác minh tài khoản của bạn trong vòng 24 giờ.",
                         "zh-Hant": "工作日18:00以後：將在21:00、23:00統壹審核；23:00後認證的將在次日審核",
                         "id": " Hari kerja setelah 18:00: akan diperiksa pukul 21:00 dan 23:00",
@@ -1754,7 +1754,7 @@
                     },
                     "tip19": {
                         "zh": "请留意查询您的审核状态。",
-                        "en": "If there are more information to be required you will be contacted by phone or email.",
+                        "en": "If there is any more information required, you will be contacted by phone or email shortly.",
                         "vi": "Nếu có thêm thông tin cần thiết, bạn sẽ được liên lạc qua điện thoại hoặc email.",
                         "zh-Hant": "請留意查詢您的審核狀態。",
                         "id": " Silahkan cek status peninjauan anda",
@@ -1832,6 +1832,24 @@
                         "id": "Nama asli",
                         "es": "Nombre real",
                         "pt-BR": "Nome real"
+                    },
+                    "lastName": {
+                        "zh": "姓",
+                        "en": "last name",
+                        "vi": "tên",
+                        "zh-Hant": "姓",
+                        "id": "Nama Depan",
+                        "es": "Nombre real",
+                        "pt-BR": " "
+                    },
+                    "firstName": {
+                        "zh": "名",
+                        "en": "first name",
+                        "vi": "họ",
+                        "zh-Hant": "名",
+                        "id": "Nama Belakang",
+                        "es": "Nombre real",
+                        "pt-BR": " "
                     },
                     "fillName": {
                         "zh": "请输入真实姓名",
@@ -2231,7 +2249,7 @@
                     },
                     "agentManagement": {
                         "zh": "代理商管理后台",
-                        "en": "Agent management",
+                        "en": "Partners portal",
                         "vi": "Quản lý đại lý",
                         "zh-Hant": "代理商管理後臺",
                         "id": "Manajemen Agen",

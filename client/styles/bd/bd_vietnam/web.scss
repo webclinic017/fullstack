@@ -115,6 +115,21 @@
           background-color: #fff;
           border-radius: 10px;
         }
+        &.front-settings{
+          position: relative;
+          .phone_code{
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 36px;
+            margin: 2px 0 0 2px;
+            border: none !important;
+            width: 87px;
+          }
+          .form-control{
+            padding-left: 97px;
+          }
+        }
       }
       .btn {
         background: #00c86b;

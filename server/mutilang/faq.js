@@ -287,13 +287,6 @@ module.exports = {
         vi: "^^-^^",
         "zh-Hant": "交易平臺時間周二到周五01:00-02:00休市，不提供報價"
     },
-    faqCommon0: {
-        zh: "回到顶部",
-        en: "Back to top",
-        vi: "^^-^^",
-        "zh-Hant": "回到頂部",
-        id: "__id__"
-    },
     faqAccount1: {
         zh: "Q：怎样开设一个账户？",
         en: "Q: How to open an account?",
