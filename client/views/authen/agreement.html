@@ -1,0 +1,77 @@
+<div class="authen_content ctn center">
+    <div class="authen_content__title">
+        <h2>上传协议</h2>
+    </div>
+    <div class="kyc mg-tp-20">
+        <p class="authen_content__tip font-danger">协议被驳回，原因： </p>
+
+        <div class="authen_content__flow">
+            <div class="authen_content__flow-title">流程</div>
+            <ul class="authen_content__flow-content">
+                <li><span>1</span>下载协议</li>
+                <li></li>
+                <li><span>2</span>打印纸质版 签署协议</li>
+                <li></li>
+                <li><span>3</span>拍照上传协议</li>
+            </ul>
+
+            <a class="authen_content__flow-button mg-tp-30 cursor_pointer">↓点击下载协议</a>
+        </div>
+
+
+        <p class="authen_content__tip pd-tp-50">提示：请上传个人信息页与最后签名页</p>
+        <div class="row pd-tp-20">
+            <div class="col-xs-4">
+                <div class="upload_id_card">
+                    <i class="upload_id_card__icon fa fa-camera"></i>
+                    <h2 class="upload_id_card__title">
+                        上传银行账户信息页
+                    </h2>
+                    <div tw-upload-file-base64 data-file-name="agreementImg[0]"></div>
+                </div>
+            </div>
+
+            <div class="col-xs-4">
+                <div class="upload_id_card">
+                    <i class="upload_id_card__icon fa fa-camera"></i>
+                    <h2 class="upload_id_card__title">
+                        上传银行账户信息页
+                    </h2>
+                    <div tw-upload-file-base64 data-file-name="agreementImg[1]"></div>
+                </div>
+            </div>
+
+            <div class="col-xs-4">
+                <div class="upload_id_card">
+                    <i class="upload_id_card__icon fa fa-camera"></i>
+                    <h2 class="upload_id_card__title">
+                        上传签名页
+                    </h2>
+                    <div tw-upload-file-base64 data-file-name="agreementImg[2]"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <p class="text-left mg-tp-15 font-dark">
+            {{lang.text('tigerWitID.myAccount.tip26')}}
+        </p>
+        <div class="text-center mg-tp-50">
+            <div ng-show="backErr.show">
+                <p class="alert-system">
+                    {{ backErr.msg }}
+                </p>
+            </div>
+            <div class="btn_wrapper text-left">
+                <button class="btn btn-sm tw-btn-capsule-gradient" ng-if="clickable" ng-click="uploadAgreement()">
+                    {{lang.text('tigerWitID.submit')}}
+                </button>
+
+                <a class="btn btn-sm tw-btn-capsule-gradient" ng-if="!clickable">
+                    <i class="loading_spinner fa fa-spinner"></i>
+                    {{lang.text('tigerWitID.submitting')}}
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

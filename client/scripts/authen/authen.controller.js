@@ -8,6 +8,7 @@
         .controller('AuthenCompleteController', AuthenCompleteController)
         .controller('AuthenRealnameController', AuthenRealnameController)
         .controller('AuthenAddressController', AuthenAddressController)
+        .controller('AuthenAgreementController', AuthenAgreementController)
         .controller('AuthenSubmitController', function () { })
         .controller('AuthenSuccessController', function () { });
 
@@ -16,6 +17,7 @@
     AuthenCompleteController.$inject = ['$scope', 'validator', 'account', '$timeout', '$interval', '$location', '$modal', '$cookies'];
     AuthenRealnameController.$inject = ['$scope', '$state', '$modal', 'validator', 'account', '$location', '$layer'];
     AuthenAddressController.$inject = ['$scope', '$state', '$modal', 'validator', 'account', '$timeout'];
+    AuthenAgreementController.$inject = ['$scope', '$state', '$modal', 'validator', 'account', '$timeout'];
 
     // 主控制器
     function AuthenController($scope, $cookies, $location, account, $state, $stateParams, $timeout, $modal, $layer) {
@@ -1089,6 +1091,21 @@
                     $scope.backErr.msg = '';
                 }, 2000);
             }
+        }
+    }
+
+    // Address
+    function AuthenAgreementController($scope, $state, $modal, validator, account, $timeout) {
+        $scope.backErr = {
+            show: false,
+            msg: ''
+        }
+        $scope.clickable = true;
+        $scope.agreementImg = [];
+
+        $scope.uploadAgreement = uploadAgreement;
+        function uploadAgreement(){
+            console.log($scope.agreementImg)
         }
     }
 })();

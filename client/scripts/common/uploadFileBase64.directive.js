@@ -45,7 +45,10 @@
                         $(target).parent().append($img);
                         
                     };
-                    reader.readAsDataURL(file);
+                    if(file){
+                        reader.readAsDataURL(file);
+                    }
+                    
                 }
                 
             }
