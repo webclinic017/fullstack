@@ -1,0 +1,52 @@
+@include b(vietnam_bonus) {
+  background-color: #fff;
+  font-size: px2rem(28);
+  padding: px2rem(40);
+  @include e(title) {
+    font-weight: 600;
+  }
+  @include e(con) {
+    
+    
+  }
+
+  @include e(lst) {
+    > li{
+      @include displayFlex();
+      span:nth-child(1){
+        margin-right: px2rem(54);
+      }
+      span:nth-child(2){
+        @include flex(1);
+      }
+    }
+  }
+
+  @include e(banner) {
+    width: 100%;
+    >img{
+      width: 100%;
+    }
+    
+  }
+  @include e(bonus) {
+    overflow: hidden;
+    > li{
+      float: left;
+      margin: px2rem(20) px2rem(30);
+      width: 33%;
+      min-width: px2rem(150);
+      position: relative;
+      > img{
+        display: block;
+        width: 100%;
+      }
+      > span{
+        color: #fff;
+        position: absolute;
+        bottom: px2rem(10);
+        right: px2rem(15);
+      }
+    }
+  }
+}
