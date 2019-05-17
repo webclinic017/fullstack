@@ -12014,7 +12014,7 @@ module.exports = {
             "zh-Hant": "TigerWit is proud to partner with",
             "id": "TigerWit bangga menjadi mitra dengan",
             "es": "TigerWit se enorgullece de asociarse con ",
-            "pt-BR": "TigerWit is proud to partner with"
+            "pt-BR": "A TigerWit tem orgulho de fazer parceria com"
         },
         "liverpool2": {
             "zh": "Liverpool Football Club",
@@ -12032,7 +12032,7 @@ module.exports = {
             "zh-Hant": "For the latest news and updates on our partnership with Liverpool FC, ",
             "id": "Untuk mengikuti perkembangan dan berita terbaru mengenai kemitraan kami dengan Liverpool FC, ",
             "es": "Para las últimas noticias y actualizaciones sobre nuestro patrocinio con el Liverpool FC, ",
-            "pt-BR": "For the latest news and updates on our partnership with Liverpool FC,"
+            "pt-BR": "Para as últimas notícias e atualizações sobre a nossa parceria com o Liverpool FC,"
         },
         "liverpool4": {
             "zh": "make sure to follow our Facebook page.",
@@ -12041,7 +12041,7 @@ module.exports = {
             "zh-Hant": "make sure to follow our Facebook page.",
             "id": "pastikan anda telah mengikuti halaman Facebook kami.",
             "es": "siga nuestra página de Facebook",
-            "pt-BR": "make sure to follow our Facebook page."
+            "pt-BR": "não deixe de seguir nossa página no Facebook."
         },
         "liverpool5": {
             "zh": "Today is a proud day for TigerWit, we are launching our innovative blockchain-based trading app and partnering with Liverpool FC. TigerWit believes in a market that does not discriminate or play favourites. We have developed a pioneering blockchain-based settlement system that instills trust by delivering greater security and process efficiency. Trading should be, and can be, more transparent and fair for all traders, regardless of experience or the size of their account.",
@@ -12050,7 +12050,7 @@ module.exports = {
             "zh-Hant": "Today is a proud day for TigerWit, we are launching our innovative blockchain-based trading app and partnering with Liverpool FC. TigerWit believes in a market that does not discriminate or play favourites. We have developed a pioneering blockchain-based settlement system that instills trust by delivering greater security and process efficiency. Trading should be, and can be, more transparent and fair for all traders, regardless of experience or the size of their account.",
             "id": "Hari ini merupakan hari kebanggaan bagi TigerWit, karena kami meluncurkan aplikasi trading yang didukung oleh teknologi blockchain serta bermitra dengan Liverpool FC. TigerWit yakin bahwa kami harus terus mengembangkan dan menghadirkan sistem dan teknologi blockchain yang aman dan efisien. Sehingga lingkungan trading untuk para trader akan menjadi lebih transparan dan adil tanpa terkecuali.",
             "es": "Hoy es un día del que estamos orgullosos en TigerWit, hemos presentado nuestra innovadora App basada en tecnología blockchain y anunciamos nuestra alianza con el Liverpool FC. TigerWit cree firmemente en un mercado que no discrimine o beneficie a ninguno de los distintos actores. Hemos desarrollado una App pionera con un sistema de liquidación en blockchain que resulta en una mayor transparencia, eficiencia y seguridad en los procesos. El Trading debería ser, y puede ser, más transparente y justo para todos los traders, independientemente del tamaño de su cuenta.",
-            "pt-BR": "Today is a proud day for TigerWit, we are launching our innovative blockchain-based trading app and partnering with Liverpool FC. TigerWit believes in a market that does not discriminate or play favourites. We have developed a pioneering blockchain-based settlement system that instills trust by delivering greater security and process efficiency. Trading should be, and can be, more transparent and fair for all traders, regardless of experience or the size of their account."
+            "pt-BR": "Hoje é um dia de orgulho para a TigerWit, estamos lançando nosso inovador aplicativo de comércio baseado em blockchain e em parceria com o Liverpool FC. A TigerWit acredita em um mercado que não discrimina ou reproduz favoritos. Desenvolvemos um sistema pioneiro de assentamento baseado em blockchain que infunde a confiança, oferecendo maior segurança e eficiência de processo. A negociação deve ser, e pode ser, mais transparente e justa para todos os traders, independentemente da experiência ou do tamanho da sua conta."
         },
         "liverpool6": {
             "zh": "Tim Hughes",
@@ -12068,7 +12068,7 @@ module.exports = {
             "zh-Hant": "TigerWit CEO",
             "id": "CEO TigerWIt",
             "es": "TigerWit CEO",
-            "pt-BR": "TigerWit CEO"
+            "pt-BR": "CEO da TigerWit"
         },
         "liverpool8": {
             "zh": "As our official Online Foreign Exchange Trading Partner, we are very excited to develop our partnership with TigerWit. Liverpool FC has a large number of fans across the globe, particularly in TigerWit’s core markets in the UK, Europe and Asia. Through this new partnership with TigerWit, we look forward to marketing activations, which help bring our fans around the world even closer to the Club.",
@@ -12077,7 +12077,7 @@ module.exports = {
             "zh-Hant": "As our official Online Foreign Exchange Trading Partner, we are very excited to develop our partnership with TigerWit. Liverpool FC has a large number of fans across the globe, particularly in TigerWit’s core markets in the UK, Europe and Asia. Through this new partnership with TigerWit, we look forward to marketing activations, which help bring our fans around the world even closer to the Club.",
             "id": "Kami sangat gembira dapat menjadi bagian dan mitra resmi untuk perdagangan valuta asing bersama TigerWit. Liverpool FC memiliki banyak penggemar di seluruh dunia, terutama di pasar Inggris, eropa dan asia. Saya harap, melalui kerjasama antara Liverpool FC dengan TigerWit ini dapat menghadirkan ide pemasaran yang innovatif dan dapat membawa penggemar kami merasa lebih dekat dengan klub.",
             "es": "Como nuestro Socio Oficial de Online Foreign Exchange Trading , estamos deseando desarrollar nuestra asociación con TigerWit. El Liverpool FC tiene un base de seguidores muy extensa globalmente y está presente en los mercados estratégicos de TigerWit, con los que iniciaremos actividades de marketing para acercar a nuestros seguidores aún más a nuestro Club.",
-            "pt-BR": "As our official Online Foreign Exchange Trading Partner, we are very excited to develop our partnership with TigerWit. Liverpool FC has a large number of fans across the globe, particularly in TigerWit’s core markets in the UK, Europe and Asia. Through this new partnership with TigerWit, we look forward to marketing activations, which help bring our fans around the world even closer to the Club."
+            "pt-BR": "Como nosso parceiro comercial oficial de operações de câmbio, estamos muito entusiasmados em desenvolver nossa parceria com a TigerWit. O Liverpool FC tem um grande número de fãs em todo o mundo, especialmente nos principais mercados da TigerWit no Reino Unido, Europa e Ásia. Através desta nova parceria com a TigerWit, estamos ansiosos para ativações de marketing, que ajudam a trazer os nossos fãs ao redor do mundo para ainda mais perto do clube."
         },
         "liverpool9": {
             "zh": "Billy Hogan",
@@ -12095,7 +12095,7 @@ module.exports = {
             "zh-Hant": "Managing Director and Chief",
             "id": "Direktur Utama dan Ketua",
             "es": "Director General y ",
-            "pt-BR": "Managing Director and Chief"
+            "pt-BR": "Diretor Administrativo e Chefe"
         },
         "liverpool11": {
             "zh": "Commercial Officer,Liverpool FC",
@@ -12104,7 +12104,7 @@ module.exports = {
             "zh-Hant": "Commercial Officer,Liverpool FC",
             "id": "Pejabat Komersial. Liverpool FC",
             "es": "Chief Commercial Officer,Liverpool FC",
-            "pt-BR": "Commercial Officer,Liverpool FC"
+            "pt-BR": "Diretor Comercial, Liverpool FC"
         },
         "liverpool12": {
             "zh": "Visit Liverpool FC",
@@ -12113,7 +12113,7 @@ module.exports = {
             "zh-Hant": "Visit Liverpool FC",
             "id": "Kunjungi Liverpool LC",
             "es": "Visite Liverpool FC",
-            "pt-BR": "Visit Liverpool FC"
+            "pt-BR": "Visite o Liverpool FC"
         }
     },
     "_comment_medianewsandcontact": {
