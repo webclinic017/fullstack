@@ -2309,6 +2309,132 @@
                         "id": "Gambar memantulkan cahaya",
                         "es": "Imagen reflectante",
                         "pt-BR": "Imagem reflexiva"
+                    },
+                    "processM": {
+                        "zh": "流程：",
+                        "en": "Process:",
+                        "vi": "Quá trình: ",
+                        "zh-Hant": "流程：",
+                        "id": "Proses:",
+                        "es": "Procesar:",
+                        "pt-BR": "Processo:"
+                    },
+                    "downloadContract": {
+                        "zh": "下载协议",
+                        "en": "download the contract",
+                        "vi": "tải hợp đồng",
+                        "zh-Hant": "下載協議",
+                        "id": "Unduh Kontrak",
+                        "es": "descargar contrato",
+                        "pt-BR": "baixe o contrato"
+                    },
+                    "printSign": {
+                        "zh": "打印纸质版 签署协议",
+                        "en": "print to sign",
+                        "vi": "in ra để kí",
+                        "zh-Hant": "打印紙質版 簽署協議",
+                        "id": "Cetak untuk tanda tangan",
+                        "es": "imprimir para firmar",
+                        "pt-BR": "imprimir para assinar"
+                    },
+                    "uploadContract": {
+                        "zh": "拍照上传协议",
+                        "en": "upload the signed contract",
+                        "vi": "tải hợp đồng đã kí lên",
+                        "zh-Hant": "拍照上傳協議",
+                        "id": "Unggah kontrak yang sudah ditanda tangani",
+                        "es": "suba el contrato firmado",
+                        "pt-BR": "carregar o contrato assinado"
+                    },
+                    "uploadContract2": {
+                        "zh": "上传协议",
+                        "en": "upload the signed contract",
+                        "vi": "Gửi lên Hợp Đồng",
+                        "zh-Hant": "上傳協議",
+                        "id": "Unggah Kontrak",
+                        "es": "Subir el Contrato",
+                        "pt-BR": "carregar o contrato assinado"
+                    },
+                    "uploadNote": {
+                        "zh": "提示：请上传个人信息页、银行账户信息页和最后签名页。",
+                        "en": "Tip: please upload the personal information page, bank account information page and the last signature page.",
+                        "vi": "Lời khuyên: vui lòng tải lên trang thông tin cá nhân trang địa chỉ ngân hàng và chữ kí mới nhất.",
+                        "zh-Hant": "提示：請上傳個人信息頁、銀行帳護信息頁和最後簽名頁。",
+                        "id": "Tips : silahkan unggah halaman data pribadi, informasi rekening bank dan halaman terakhir yang bertanda tangan.",
+                        "es": "Consejo: por favor, suba la página de información personal, la página de información cuenta de banco y la última página con la firma.",
+                        "pt-BR": "Dica: faça o upload da página de informações pessoais, da página de informações da conta bancária e da última página de assinatura."
+                    },
+                    "downloadContractBtn": {
+                        "zh": "点击下载协议",
+                        "en": "Click download",
+                        "vi": "Nhấp để tải",
+                        "zh-Hant": "點擊下載協議",
+                        "id": "Klik untuk unduh",
+                        "es": "Click descarga",
+                        "pt-BR": "Clique em download"
+                    },
+                    "saveSubmit": {
+                        "zh": "保存并提交审核",
+                        "en": "Save and submit",
+                        "vi": "Lưu và nộp",
+                        "zh-Hant": "保存並提交審核",
+                        "id": "Simpan dan kirim",
+                        "es": "Guardar y enviar",
+                        "pt-BR": "Guardar e submeter"
+                    },
+                    "personalInformationPage": {
+                        "zh": "个人信息页",
+                        "en": "Personal information page",
+                        "vi": "Trang thông tin cá nhân",
+                        "zh-Hant": "個人信息頁",
+                        "id": "Halaman data pribadi",
+                        "es": "Página información personal",
+                        "pt-BR": "Página de informações pessoais"
+                    },
+                    "bankAccountPage": {
+                        "zh": "银行账户信息页",
+                        "en": "Bank account information page",
+                        "vi": "Trang địa chỉ ngân hàng",
+                        "zh-Hant": "銀行帳護信息頁",
+                        "id": "Halaman informasi rekening bank",
+                        "es": "Página información cuenta banco",
+                        "pt-BR": "Página de informações da conta bancária"
+                    },
+                    "bankAccountPageExplain": {
+                        "zh": "（如没有，可不填写）",
+                        "en": "(If not, you can leave it blank)",
+                        "vi": "(Nếu không bạn có thể để trống nó)",
+                        "zh-Hant": "（如沒有，可不填寫）",
+                        "id": "(Jika tidak, kosongkan saja)",
+                        "es": "(Si no, puede dejarlo en blanco)",
+                        "pt-BR": "(Se não, você pode deixar em branco)"
+                    },
+                    "signaturePage": {
+                        "zh": "签名页",
+                        "en": "Signature page",
+                        "vi": "Trang chữ kí",
+                        "zh-Hant": "簽名頁",
+                        "id": "Halaman bertanda tangan",
+                        "es": "Página firma",
+                        "pt-BR": "Página de assinatura"
+                    },
+                    "completelyUpload": {
+                        "zh": "请完整上传个人信息页和签名页",
+                        "en": "Please upload the personal information page and the signature page completely",
+                        "vi": "Vui lòng tải lên đầy đủ trang thông tin cá nhân và trang chữ kí",
+                        "zh-Hant": "請完整上傳個人信息頁和簽名頁",
+                        "id": "Mohon unggah halaman data pribadi dan halaman bertanda tangan secara lengkap",
+                        "es": "Por favor, suba la página de información personal y de la firma completamente",
+                        "pt-BR": "Por favor carregue a página de informação pessoal e a página de assinatura completamente"
+                    },
+                    "contractSuccess": {
+                        "zh": "协议提交成功",
+                        "en": "The contract has been submitted successfully",
+                        "vi": "Hợp đồng đã được gửi thành công",
+                        "zh-Hant": "協議提交成功",
+                        "id": "Kontrak telah berhasil dikirim",
+                        "es": "El contrato ha sido enviado con éxito",
+                        "pt-BR": "O contrato foi enviado com sucesso"
                     }
                 },
                 "tip": {

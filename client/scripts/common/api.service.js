@@ -54,6 +54,8 @@
             setAgentPromotionApi: urlOrigin2 + '/user/ib_agent',
             setUploadAddressProveApi: urlOrigin2 + '/user/upload_address_prove',
             openTrialAccountApi: urlOrigin2 + '/user/account/trial',
+            uploadAgentProtocolApi: urlOrigin2 + '/upload/agent/protocol',
+            agentProtocolApi: urlOrigin2 + '/agent/protocol',
 
 
             // getRCaptchaApi: urlOrigin2 + '/validation/send_phone_code',

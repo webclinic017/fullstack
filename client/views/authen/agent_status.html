@@ -2,10 +2,10 @@
     <h3 class="agent_activate__title text-center">
         {{lang.text('tigerWitID.partner.activeAgentFlow')}}
     </h3>
-    <div class="text-center pd-tp-50 pd-bt-30">
+    <div class="text-center pd-tp-50">
         <ul class="agent_activate__flow clearfix">
             <!-- info->status	int	完善资料：0:未完成,1:完成 -->
-            <li class="fl" ng-class="{'complete': personal.agentAuthStatus.info.status == 1}">
+            <li class="fl pd-bt-30" ng-class="{'complete': personal.agentAuthStatus.info.status == 1}">
                 <strong class="num">1</strong>
                 <div class="content ">
                     <h5 class="pd-tp-30 pd-bt-10">{{lang.text('tigerWitID.partner.completeInformation')}}</h5>
@@ -16,7 +16,7 @@
             </li>
             <!-- kyc->status	int	投资信息确认： 0:未完成,1:完成
             kyc->auth_status	int	投资信息确认审核状态：0:待审核,1:已通过,2已拒绝,3未提交 -->
-            <li class="fl" ng-class="{'complete': personal.agentAuthStatus.kyc.status == 1}">
+            <li class="fl pd-bt-30" ng-class="{'complete': personal.agentAuthStatus.kyc.status == 1}">
                 <strong class="num">2</strong>
                 <div class="content ">
                     <h5 class="pd-tp-30 pd-bt-10">{{lang.text('tigerWitID.partner.tradingExperience')}}</h5>
@@ -28,7 +28,7 @@
             <!-- idcard->status	int	实名认证：0:未完成,1:完成
             idcard->auth_status	int	实名认证审核状态：0:未认证,1:已拒绝,2:需要审核,3:已通过,4:身份证过期
             idcard->reason	string	实名认证审核决绝原因 -->
-            <li class="fl" ng-class="{'complete': personal.agentAuthStatus.idcard.status == 1}">
+            <li class="fl pd-bt-30" ng-class="{'complete': personal.agentAuthStatus.idcard.status == 1}">
                 <strong class="num">3</strong>
                 <div class="content ">
                     <h5 class="pd-tp-30 pd-bt-10">{{lang.text('tigerWitID.partner.iDVerification')}}</h5>
@@ -40,7 +40,7 @@
             <!-- addr->status	int	地址证明：0:未完成,1:完成,2:不需要认证
             addr->auth_status	int	实名认证审核状态：0:未认证,1:已拒绝,2:需要审核,3:已通过,4:身份证过期
             addr->reason	string	实名认证审核决绝原因 -->
-            <li class="fl" ng-class="{'complete': personal.agentAuthStatus.addr.status == 1}" ng-if="personal.agentAuthStatus.addr.status != 2">
+            <li class="fl pd-bt-30" ng-class="{'complete': personal.agentAuthStatus.addr.status == 1}" ng-if="personal.agentAuthStatus.addr.status != 2">
                 <strong class="num">4</strong>
                 <div class="content ">
                     <h5 class="pd-tp-30 pd-bt-10">{{lang.text('tigerWitID.authen.address')}}</h5>
@@ -49,9 +49,21 @@
                     <i class="not_complete" ng-if="personal.agentAuthStatus.addr.status == 0"><span>{{lang.text('tigerWitID.noMetNeed')}}</span></i>
                 </div>
             </li>
-            <!-- status	int	当前进度：1:完善资料,2:投资信息确认,3:实名认证,4:地址证明,5:待审核,6:已激活 -->
-            <li class="fl" ng-class="{'complete': personal.agentAuthStatus.status == 6}">
+            <!-- protocol->status	int	认证协议：0:未完成,1:完成,2:不需要认证
+            protocol->auth_status	int	协议状态：0:未申请，1:待审核,2:已拒绝,3:已通过
+            protocol->reason	string	协议审核拒绝原因 -->
+            <li class="fl pd-bt-30" ng-class="{'complete': personal.agentAuthStatus.protocol.status == 1}" ng-if="personal.agentAuthStatus.protocol.status != 2">
                 <strong class="num">{{ personal.agentAuthStatus.addr.status != 2 ? '5' : '4' }}</strong>
+                <div class="content ">
+                    <h5 class="pd-tp-30 pd-bt-10">{{lang.text('tigerWitID.myAccount.uploadContract2')}}</h5>
+                    <p><img src="/white_label/authen/{{ personal.agentAuthStatus.protocol.status == 1 ? 'activate5' : 'activate5-no'}}.png" alt=""></p>
+                    <p class="mg-tp-10">{{(personal.agentAuthStatus.protocol.reason || '') + protocolAuthStatus[personal.agentAuthStatus.protocol.auth_status]}}</p>
+                    <i class="not_complete" ng-if="personal.agentAuthStatus.protocol.status == 0"><span>{{lang.text('tigerWitID.noMetNeed')}}</span></i>
+                </div>
+            </li>
+            <!-- status	int	当前进度：1:完善资料,2:投资信息确认,3:实名认证,4:地址证明,5:待审核, 8:上传协议,6:已激活 -->
+            <li class="fl pd-bt-30" ng-class="{'complete': personal.agentAuthStatus.status == 6}">
+                <strong class="num">{{ (personal.agentAuthStatus.addr.status != 2 && personal.agentAuthStatus.protocol.status != 2) ? '6' : (personal.agentAuthStatus.addr.status == 2 && personal.agentAuthStatus.protocol.status == 2 ? '4' : '5') }}</strong>
                 <div class="content ">
                     <h5 class="pd-tp-30 pd-bt-10">{{lang.text('tigerWitID.partner.activeSucc')}}</h5>
                     <p><img src="/white_label/authen/{{ personal.agentAuthStatus.status == 6 ? 'activate4' : 'activate4-no' }}.png" alt=""></p>

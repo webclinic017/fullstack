@@ -14,6 +14,8 @@
     function AgentStatusController($rootScope, $scope, account) {
         $scope.kycAuthStatus = [$scope.lang.text('tigerWitID.partner.pending'), $scope.lang.text('tigerWitID.partner.approved'), $scope.lang.text('tigerWitID.partner.rejected'), $scope.lang.text('tigerWitID.partner.unverified')];
         $scope.idcardAuthStatus = [$scope.lang.text('tigerWitID.partner.unverified'), $scope.lang.text('tigerWitID.partner.rejected'), $scope.lang.text('tigerWitID.partner.pending'), $scope.lang.text('tigerWitID.partner.approved'), $scope.lang.text('tigerWitID.partner.certificateExpired')];
+        $scope.protocolAuthStatus = [$scope.lang.text('tigerWitID.partner.unverified'), $scope.lang.text('tigerWitID.partner.pending'), $scope.lang.text('tigerWitID.partner.rejected'), $scope.lang.text('tigerWitID.partner.approved')];
+
 
         $scope.$emit('gloabl.agentAuthStatus')
     }
