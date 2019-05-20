@@ -70,7 +70,7 @@ module.exports = function (req, res) {
         return lang;
     }
     function decideLang(){
-        var lang = 'zh';
+        var lang = 'en';
         var urlL, cookieL, browserL;
         if(urlL = urlLang()){
             return urlL;
