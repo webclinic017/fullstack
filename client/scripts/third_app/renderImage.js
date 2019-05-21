@@ -7,7 +7,7 @@ function previewBase64(file, targetRes) {
 
       $(img).on('load', function (e) {
           targetRes.data=new Image();
-          renderImage(targetRes.data, img, { maxWidth: 640, maxHeight: 640, quality: 0.5 });
+          renderImage(targetRes.data, img, { maxWidth: 1920, maxHeight: 1920, quality: 0.8 });
       
       });
       
