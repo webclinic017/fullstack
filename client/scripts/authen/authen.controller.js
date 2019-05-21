@@ -1113,7 +1113,7 @@
             if($scope.agreementImg[1]){
                 $scope.agreementImgNum = 3;
             }
-            for (let index = 0; index < $scope.agreementImg.length; index++) {
+            for (var index = 0; index < $scope.agreementImg.length; index++) {
                 if($scope.agreementImg[index]){
                     upload($scope.agreementImg[index]);
                 }
