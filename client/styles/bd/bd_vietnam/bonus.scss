@@ -1,4 +1,6 @@
 @include b(vietnam_bonus) {
+  background: url('/white_label/bd/bonus/bonus-bg.png') no-repeat bottom left;
+  background-size: 100%;
   background-color: #fff;
   font-size: px2rem(28);
   padding: px2rem(40);
@@ -30,23 +32,35 @@
     
   }
   @include e(bonus) {
-    overflow: hidden;
+    @include displayFlex();
+    @include alignItems(flex-end);
+    @include flexWrap(wrap);
     > li{
-      float: left;
-      margin: px2rem(20) px2rem(30);
-      width: 33%;
+      @include flex(1);
+      padding: px2rem(20) px2rem(30);
       min-width: px2rem(150);
-      position: relative;
-      > img{
-        display: block;
-        width: 100%;
-      }
-      > span{
-        color: #fff;
-        position: absolute;
-        bottom: px2rem(10);
-        right: px2rem(15);
-      }
+      > div{
+        position: relative;
+        > img{
+          display: block;
+          width: 100%;
+        }
+        > span{
+          color: #fff;
+          position: absolute;
+          bottom: px2rem(2);
+          right: px2rem(4);
+        }
+        &.bonus-open{
+          > span{
+            color: $primary-darker;
+            top: 50%;
+            margin-top: px2rem(-16);
+            right: 50%;
+            margin-right: px2rem(-30);
+          }
+        }
+      }  
     }
   }
 }

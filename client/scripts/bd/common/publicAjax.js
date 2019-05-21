@@ -44,8 +44,10 @@
         getSymbols: origin_app + '/symbol/list', //get
         // 荣耀王者活动
         checkLogined: origin_app + '/auth/check', // get
+            // 获取红包的状态
         getRedBagPool: origin_app + '/bonus/index', // get
-        receiveRedbag: origin_app + '/bonus/receive', // put
+            // 领取红包
+        receiveRedbag: origin_app + '/bonus/receive', // put GET
         checkHonorStatus: origin_app + '/king/show', // get
         receiveHonor: origin_app + '/king/receive', // post
         exchangeHonor: origin_app + '/king/exchange', // post
