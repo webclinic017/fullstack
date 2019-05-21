@@ -39,20 +39,20 @@
         },
         homeFocusCn: {
             en: indexBasePath + "/home/focus-cnEn-1.0.png",
-            id: indexBasePath + "/home/focus-cnEn-1.0.png",
+            id: indexBasePath + "/home/focus-cnId.png",
             zh: indexBasePath + "/home/focus-cnCn-1.0.png",
-            vi: indexBasePath + "/home/focus-globalVi-1.0.png",
-            "zh-Hant": indexBasePath + "/home/focus-globalZhHant-1.0.png",
-            es: indexBasePath + "/home/focus-cnEn-1.0.png",
+            vi: indexBasePath + "/home/focus-cnVi.png",
+            "zh-Hant": indexBasePath + "/home/focus-cnZhHant.png",
+            es: indexBasePath + "/home/focus-cnEs.png",
             'pt-BR': indexBasePath + "/home/focus-cnPtBR.png"
         }, //
         homeFocusGlobal: {
             en: indexBasePath + "/home/focus-globalEn-1.0.png",
-            id: indexBasePath + "/home/focus-globalEn-1.0.png",
+            id: indexBasePath + "/home/focus-globalId.png",
             zh: indexBasePath + "/home/focus-globalCn-1.0.png",
             vi: indexBasePath + "/home/focus-globalVi-1.0.png",
             "zh-Hant": indexBasePath + "/home/focus-globalZhHant-1.0.png",
-            es: indexBasePath + "/home/focus-globalEn-1.0.png",
+            es: indexBasePath + "/home/focus-globalEs.png",
             'pt-BR': indexBasePath + "/home/focus-globalPtBR.png"
         }, //
         homeAppIos: {
@@ -61,7 +61,7 @@
             zh: indexBasePath + "/home/focus-icon-ios-cn-1.0.png",
             vi: indexBasePath + "/home/focus-icon-ios-vi.png",
             "zh-Hant": indexBasePath + "/home/focus-icon-ios-cn-1.0.png",
-            es: indexBasePath + "/home/focus-icon-ios-en.png",
+            es: indexBasePath + "/home/focus-icon-ios-es.png",
             'pt-BR': indexBasePath + "/home/focus-icon-ios-pt-BR.png"
         }, //
         homeAppAndroidCn: {
@@ -70,7 +70,7 @@
             zh: indexBasePath + "/home/focus-icon-android-cn.png",
             vi: indexBasePath + "/home/focus-icon-android-vi.png",
             "zh-Hant": indexBasePath + "/home/focus-icon-android-cn.png",
-            es: indexBasePath + "/home/focus-icon-android-en.png",
+            es: indexBasePath + "/home/focus-icon-android-es.png",
             'pt-BR': indexBasePath + "/home/focus-icon-android-pt-BR.png"
         }, //
         homeAppAndroidGlobal: {
@@ -79,25 +79,25 @@
             zh: indexBasePath + "/home/focus-icon-google-cn.png",
             vi: indexBasePath + "/home/focus-icon-google-vi.png",
             "zh-Hant": indexBasePath + "/home/focus-icon-google-cn.png",
-            es: indexBasePath + "/home/focus-icon-google-en-1.0.png",
+            es: indexBasePath + "/home/focus-icon-google-es.png",
             'pt-BR': indexBasePath + "/home/focus-icon-google-pt-BR.png"
         }, // 
         homeToolsBgCn: {
             en: indexBasePath + "/home/tools-bg-cnEn.png",
-            id: indexBasePath + "/home/tools-bg-cnEn.png",
+            id: indexBasePath + "/home/tools-bg-cnId.png",
             zh: indexBasePath + "/home/tools-bg-cnCn.png",
-            vi: indexBasePath + "/home/tools-bg-globalVi.png",
-            "zh-Hant": indexBasePath + "/home/tools-bg-globalZhHant.png",
-            es: indexBasePath + "/home/tools-bg-cnEn.png",
+            vi: indexBasePath + "/home/tools-bg-cnVi.png",
+            "zh-Hant": indexBasePath + "/home/tools-bg-cnZhHant.png",
+            es: indexBasePath + "/home/tools-bg-cnEs.png",
             'pt-BR': indexBasePath + "/home/tools-bg-cnPtBR.png"
         }, //
         homeToolsBgGlobal: {
             en: indexBasePath + "/home/tools-bg-globalEn.png",
-            id: indexBasePath + "/home/tools-bg-globalEn.png",
+            id: indexBasePath + "/home/tools-bg-globalId.png",
             zh: indexBasePath + "/home/tools-bg-globalCn.png",
             vi: indexBasePath + "/home/tools-bg-globalVi.png",
             "zh-Hant": indexBasePath + "/home/tools-bg-globalZhHant.png",
-            es: indexBasePath + "/home/tools-bg-globalEn.png",
+            es: indexBasePath + "/home/tools-bg-globalEs.png",
             'pt-BR': indexBasePath + "/home/tools-bg-globalPtBR.png"
         }, //
         homeMap: {
@@ -106,7 +106,7 @@
             zh: indexBasePath + "/home/client-map-cn-cn.png",
             vi: indexBasePath + "/home/client-map-vi-vi.png",
             "zh-Hant": indexBasePath + "/home/client-map-cn-ht.png",
-            es: indexBasePath + "/home/client-map-en-en.png",
+            es: indexBasePath + "/home/client-map-es-es.png",
             'pt-BR': indexBasePath + "/home/client-map-pt-BR.png"
         }, //
         downloadAppCn: {

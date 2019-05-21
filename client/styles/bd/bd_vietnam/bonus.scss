@@ -6,6 +6,7 @@
   padding: px2rem(40);
   @include e(title) {
     font-weight: 600;
+    font-size: px2rem(36);
   }
   @include e(con) {
     
