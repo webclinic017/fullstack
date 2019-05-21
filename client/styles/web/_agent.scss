@@ -36,12 +36,22 @@
             margin: 0 auto;
             padding: 20px 0 50px;
             .offer {
-                text-align: center;
+                overflow: hidden;
                 > li {
-                    display: inline-block;
-                    padding: 50px 27px;
+                    // text-align: center;
+                    width: 50%;
+                    float: left;
+                    padding: 23px 50px 23px 80px;
+                    @include displayFlex();
                     > img {
                         vertical-align: middle;
+                    }
+                    > span{
+                        // display: block;
+                        padding: 10px 0 0 20px;
+                    }
+                    &:nth-child(odd){
+                        padding-left: 150px;
                     }
                 }
             }

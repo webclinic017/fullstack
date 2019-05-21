@@ -12,6 +12,7 @@
   $("#btn-form").on("click", function () {
     var type = $(this).attr("data-type") || 'vi';
     var name = $(".form-item input[data-name=name]").val();
+    var phone_code = $(".form-item select[data-name=phone_code]").val();
     var phone = $(".form-item input[data-name=phone]").val();
     var email = $(".form-item input[data-name=email]").val();
     // console.log(phone, email)
@@ -23,6 +24,10 @@
       email: {
         vi: 'Hộp thư định dạng sai lầm',
         id: 'Format kotak surat salah'
+      },
+      phone_code: {
+        vi: 'Vui lòng chọn mã khu vực',
+        id: 'Silahkan pilih kode area'
       },
       phone: {
         vi: 'Định dạng sai số điện thoại di động',
@@ -37,6 +42,10 @@
       layer.msg(msgFront.email[type]);
       return;
     }
+    if (!phone_code) {
+      layer.msg(msgFront.phone_code[type]);
+      return;
+    }
     if (!reg.phone.test(phone)) {
       layer.msg(msgFront.phone[type]);
       return;
@@ -45,6 +54,7 @@
     $.post('/api/v3/auth/page_signup', {
       username: name,
       phone: phone,
+      phone_code: phone_code,
       email: email,
       lang: type,
       pid: pid,
@@ -62,6 +72,18 @@
       }
     });
     return false;
+  });
+
+  // 获取国家列表
+  publicRequest('getCountries', 'GET').then(function (data) {
+    // console.log(data);
+    if (data.is_succ) {
+        var optionStr = ''
+        for (var i=0; i<data.data.length;i++) {
+            optionStr += '<option value="'+data.data[i].phone_code+'">+'+data.data[i].phone_code+'</option>';
+        }
+        $(".form-item select[data-name='phone_code']").append(optionStr);
+    }
   });
 
   //获取url中的参数
