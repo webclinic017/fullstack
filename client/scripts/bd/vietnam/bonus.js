@@ -41,7 +41,7 @@
         var isReceive = $(this).data('isreceive');
         if(isReceive && isReceive == 2){
             layer.open({type: 2});
-            publicRequest('receiveRedbag', 'GET', {id: id}).then(function (data) {
+            publicRequest('receiveRedbag', 'PUT', {id: id}).then(function (data) {
                 layer.closeAll();
                 if (data.is_succ) {
                     layerMsg(data.message);
