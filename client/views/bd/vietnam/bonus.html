@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="keywords" content="<%= lang.text('companyEnName')%> 跟单交易 外汇 CFD 指数 股指 互联网金融">
+    <meta name="description"
+        content="<%= lang.text('companyEnName')%>倾力打造一个高手云集的平台，普通投资者可以选择随时随地跟随高手进行交易，随意选择想要跟随的金额，并且从中获利。">
+    <meta name="apple-mobile-web-app-title" content="<%= lang.text('companyEnName')%>">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <!--禁用缓存-->
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>
+        LANDING
+    </title>
+</head>
+<!-- 引入H5 CSS -->
+<!-- build:css(.tmp) /styles/h5_common.css -->
+<link rel="stylesheet" href="/styles/h5_common.css">
+<!-- endbuild -->
+
+<% include /common/vendor/h5.utiljs.html %>
+<% include /common/statistic/main.html %>
+
+<body>
+    <div class="vietnam_bonus__banner">
+        <img src="/white_label/bd/bonus/bonus-banner-vi.png" alt="">
+    </div>
+    <div class="vietnam_bonus">
+        <h6 class="vietnam_bonus__title mg-tp-30">TigerWit là Đối tác nền tảng giao dịch ngoại hối trực tuyến
+            chính thức của Câu lạc bộ bóng đá Liverpool.</h6>
+        <p class="vietnam_bonus__con mg-tp-50">Kỷ niệm mùa giải tuyệt vời của Câu lạc bộ bóng đá Liverpool
+            (LFC), chúng tôi muốn tất cả các nhà giao dịch của mình nhận ưu đãi của chương trình
+            CASHBACK HUGE REDPACKET của mình. Vâng, chúng tôi sẽ tặng tới $ 10.000USD cho tất cả các nhà
+            giao dịch đang hoạt động trên tài khoản thực của mình. Giao dịch ngay để nhận ưu đãi RedPacket
+            Cashback trong tài khoản của bạn ngay lập tức.</p>
+        <h6 class="vietnam_bonus__title mg-tp-30">Để đủ điều kiện nhận RedPquet Cashback Bonanza, vui lòng hoàn
+            thành một trong các điều kiện sau:</h6>
+        <ul class="vietnam_bonus__lst mg-tp-50">
+            <li><span>● </span><span>Giao dịch 10 lô trong vòng 30 ngày và nhận lại $50 đô lai*</span></li>
+            <li><span>● </span><span>Giao dịch 20 lô trong vòng 60 ngày và nhận lại $100 đô la*</span></li>
+            <li><span>● </span><span>Giao dịch 30 lô trong vòng 90 ngày và nhận được tiền hoàn lại
+                    $200*</span></li>
+        </ul>
+        <p class="vietnam_bonus__con mg-tp-50">* Đối với các khách hàng trước đây đã gửi tới $ 500USD sẽ đủ
+            điều kiện hoàn lại tiền</p>
+        <h6 class="vietnam_bonus__title mg-tp-30">Terms & Conditions:</h6>
+        <ul class="vietnam_bonus__lst mg-tp-50">
+            <li><span>1. </span><span>Quỹ hoàn lại tiền sẽ có sẵn trong ví để khách hàng rút tiền từ tài
+                    khoản trực tiếp của họ</span></li>
+            <li><span>2. </span><span>Khách hàng phải hoàn thành giao dịch trong khoảng thời gian quy định;
+                    chúng tôi không thực hiện yêu cầu hoàn lại tiền ngoài thời gian này.</span></li>
+            <li><span>3. </span><span>Số lượng giao dịch bắt buộc chỉ áp dụng đối với các cặp tiền, kim
+                    loại quý và năng lượng. Các sản phẩm USD / CNY và CFD không đủ điều kiện để hoàn
+                    lại tiền.</span></li>
+            <li><span>4. </span><span>Chương trình khuyến mãi này được mở cho các nhà giao dịch hoạt động
+                    với tài khoản Live hiện có.</span></li>
+            <li><span>5. </span><span>Các rô-bốt giao dịch EA có thể tham gia vào chương trình khuyến mãi
+                    hoàn lại tiền nhưng không được giao dịch scalping. Người dùng vi phạm các quy tắc giao
+                    dịch này sẽ bị loại.</span></li>
+            <li><span>6. </span><span>TigerWit có quyền sửa đổi các điều khoản và điều kiện bất cứ lúc nào
+                    trong thời gian khuyến mại. Người dùng sẽ được thông báo về bất kỳ thay đổi nào đối
+                    với các điều khoản và thể lệ.</span></li>
+        </ul>
+        <h6 class="vietnam_bonus__title mg-tp-50 text-center">Bấm vào một trong các gói Đỏ</h6>
+        <div class="mg-tp-30">
+            <ul class="vietnam_bonus__bonus" id="bonusStatus">
+            </ul>
+        </div>
+        <h6 class="vietnam_bonus__title mg-tp-30 text-center">Giao dịch CFD có các rủi ro và có thể dẫn đến việc thua lỗ
+            nguồn vốn của bạn</h6>
+    </div>
+</body>
+<% include /common/vendor/h5.js.html %>
+<!-- build:js(client) /scripts/bd_vietnam_bonus.js -->
+<script src="/scripts/bd/vietnam/bonus.js"></script>
+<!-- endbuild -->
+
+</html>
