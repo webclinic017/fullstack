@@ -141,6 +141,7 @@ $(eleWithdraw.payAccountLst).on("tap", "li", function () {
     withdrawType = cType;
     withdrawBankId = undefined;
     $(eleWithdraw.payAccountLst).find("li[data-select=bank_chosen]").remove();
+    $(eleWithdraw.payAccountLstBankAdd).empty();
     setWithdrawBtnStatus();
   } else {
     openLoadingMdl();

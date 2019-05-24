@@ -1,10 +1,14 @@
 
-if (getUrlParam('world_code') === 'CN') {
+$(".third_app_bank__item.is_bank_input").css("display", "block"); // 填写银行名称先显示
+if(getUrlParam('world_code') === 'CN' || getUrlParam('platform')){
   getBankNames();
+}
+var bankNameList = [];   // 银行名称列表
+if (getUrlParam('world_code') === 'CN') {
   getProvinces();
   $(".third_app_bank__item.is_cn").css("display", "block");
 } else {
-  $(".third_app_bank__item.is_global").css("display", "block");
+  // $(".third_app_bank__item.is_global").css("display", "block");
   if (getUrlParam('world_code') !== 'VN') {
     $(".third_app_bank__item.is_vn").css("display", "block");
   }
@@ -58,9 +62,24 @@ $("#third_app_bank_btn").on("tap", function () {
     openMessageMdl(lang.text("thirdH5.enterCardNumber"));
     return false;
   }
-  if (personalInfo.region.world_code === 'CN' && !bank_name) {
-    openMessageMdl(lang.text("thirdH5.enterBankName"));
-    return false;
+  if(getUrlParam('platform')){
+    if(bankNameList.length > 0 && !bank_name){
+      openMessageMdl(lang.text("thirdH5.enterBankName"));
+      return false;
+    }
+    if(!bankNameList.length && !bankOther){
+      openMessageMdl(lang.text("thirdH5.fillBank"));
+      return false;
+    }
+  }else{
+    if (personalInfo.region.world_code === 'CN' && !bank_name) {
+      openMessageMdl(lang.text("thirdH5.enterBankName"));
+      return false;
+    }
+    if (personalInfo.region.world_code !== 'CN' && !bankOther) {
+      openMessageMdl(lang.text("thirdH5.fillBank"));
+      return false;
+    }
   }
   if (personalInfo.region.world_code === 'CN' && !province) {
     openMessageMdl(lang.text("thirdH5.selectAccountPro"));
@@ -78,10 +97,6 @@ $("#third_app_bank_btn").on("tap", function () {
     openMessageMdl(lang.text("thirdH5.enterReservedPhoneNumber"));
     return false;
   }
-  if (personalInfo.region.world_code !== 'CN' && !bankOther) {
-    openMessageMdl("Fill in the opening account bank");
-    return false;
-  }
   if (personalInfo.region.world_code !== 'CN' && personalInfo.region.world_code !== 'VN' && !swift_code) {
     openMessageMdl("Please fill in the bank identification code");
     return false;
@@ -92,13 +107,25 @@ $("#third_app_bank_btn").on("tap", function () {
     card_no: card,
     bank_addr: address
   };
+  if(getUrlParam('platform')){
+    oParams.platform = getUrlParam('platform');
+    if(bankNameList.length > 0){
+      oParams.bank_name = bank_name;
+    }else{
+      oParams.bank_name = bankOther;
+    }
+  }else{
+    if (personalInfo.region.world_code === 'CN') {
+      oParams.bank_name = bank_name;
+    }else{
+      oParams.bank_name = bankOther;
+    }
+  }
   if (personalInfo.region.world_code === 'CN') {
-    oParams.bank_name = bank_name;
     oParams.province = province;
     oParams.city = city;
     oParams.phone = phone;
   } else {
-    oParams.bank_name = bankOther;
     if (personalInfo.region.world_code !== 'VN') {
       oParams.swift_code = swift_code;
     }
@@ -129,6 +156,18 @@ function getBankNames() {
   }).then(function (data) {
     if (!data) return;
     if (data.is_succ) {
+      bankNameList = data.data;
+      if(getUrlParam('platform')){
+        if(data.data.length > 0){
+          $(".third_app_bank__item.is_bank_select").css("display", "block");
+          $(".third_app_bank__item.is_bank_input").css("display", "none");
+        }
+      }else{
+        if(getUrlParam('world_code') === 'CN'){
+          $(".third_app_bank__item.is_bank_select").css("display", "block");
+          $(".third_app_bank__item.is_bank_input").css("display", "none");
+        }
+      }
       setOptions('third_app_bank_bank_name', 'name', 'code', data.data);
     }
   });

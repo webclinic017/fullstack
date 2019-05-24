@@ -105,8 +105,8 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="row" ng-if="card.world && card.world.world_code === 'CN'">
+                <!-- 判断不是第三方platform -->
+                <div class="row" ng-if="!platform && card.world && card.world.world_code === 'CN'">
                     <div class="col-xs-3 text-left">
                         <label>{{lang.text('tigerWitID.wallet.selectBankM')}}</label>
                     </div>
@@ -132,7 +132,60 @@
                         </div>
                     </div>
                 </div>
-                <div class="row" ng-if="card.world && card.world.world_code !== 'CN'">
+                <div class="row" ng-if="!platform && card.world && card.world.world_code !== 'CN'">
+                    <div class="col-xs-3 text-left">
+                        <label>{{lang.text('tigerWitID.wallet.fillBankM')}}</label>
+                    </div>
+
+                    <div class="col-xs-9">
+                        <div class="form-control-wrapper">
+                            <input class="form-control"
+                                    name="bankOther"
+                                    type="text"
+                                    required
+                                    ng-class="{'form-control-error': frontErr.bankOther.show && cardForm.bankOther.$invalid}"
+                                    ng-model="card.bankOther"
+                                    placeholder="{{lang.text('tigerWitID.wallet.bankName')}}"
+                                    ng-focus="hideErr('bankOther')"
+                                    ng-blur="showErr('bankOther')">
+
+                            <div ng-show="frontErr.bankOther.show">
+                                <p class="alert alert-arrow_tp_lf" ng-show="cardForm.bankOther.$error.required">
+                                    {{lang.text('tigerWitID.wallet.bankName')}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 判断是第三方platform -->
+                <div class="row" ng-if="platform && banks.length > 0">
+                    <div class="col-xs-3 text-left">
+                        <label>{{lang.text('tigerWitID.wallet.selectBankM')}}</label>
+                    </div>
+
+                    <div class="col-xs-9">
+                        <div class="form-control-wrapper">
+                            <select class="form-control"
+                                    name="bank"
+                                    required
+                                    ng-class="{'form-control-error': frontErr.bank.show && cardForm.bank.$invalid}"
+                                    ng-model="card.bank"
+                                    ng-options="bank.name for bank in banks"
+                                    ng-focus="hideErr('bank')"
+                                    ng-blur="showErr('bank')">
+                                <option value="">{{lang.text('tigerWitID.pleaseSelect')}}</option>
+                            </select>
+
+                            <div ng-show="frontErr.bank.show">
+                                <p class="alert alert-arrow_tp_lf" ng-show="cardForm.bank.$error.required">
+                                    {{lang.text('tigerWitID.wallet.pSelectBank')}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" ng-if="platform && !banks.length">
                     <div class="col-xs-3 text-left">
                         <label>{{lang.text('tigerWitID.wallet.fillBankM')}}</label>
                     </div>

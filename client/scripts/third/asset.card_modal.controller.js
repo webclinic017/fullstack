@@ -70,7 +70,9 @@
         getWorlds();
         getProvince();
 
-        asset.getBanks().then(function (data) {
+        asset.getBanks({
+            type: 1,
+        }).then(function (data) {
             // console.log(data);
             if (data.is_succ) {
                 $scope.banks = data.data;

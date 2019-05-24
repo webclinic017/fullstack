@@ -65,11 +65,11 @@
                 $scope.deleteCard = function () {
                     asset.deleteCard(params.card.id).then(function (data) {
                         if (data.is_succ) {
-                            getCardList().then(function () {
-                                if ($scope.cardList.length == 0) {
-                                    params.parentScope[params.page].card = {}
-                                }
-                            })
+                            // getCardList().then(function () {
+                            //     if ($scope.cardList.length == 0) {
+                            //         params.parentScope[params.page].card = {}
+                            //     }
+                            // })
                             params.getCard()
                             closeModal()
                         }
@@ -78,7 +78,8 @@
 
                 function getCardList() {
                   $scope.$emit('showLoadingImg');
-                  return asset.getCardList().then(function (data) {
+                  var param = (params.parentScope.withdraw.accountType === 'third_account') ? {platform: params.parentScope.withdraw.third.third_type} : {};
+                  return asset.getCardList(param).then(function (data) {
                       $scope.$broadcast('hideLoadingImg');
                       if (!data) {
                           console.info('获取银行卡列表失败！')
@@ -117,7 +118,8 @@
                         passedScope: function () {
                             return {
                                 personal: $scope.lang.isThird() ? $scope.main : $scope.personal,
-                                card: $scope[page].card
+                                card: $scope[page].card,
+                                platform: (page == 'withdraw' && $scope[page].accountType === 'third_account') ? $scope[page].third.third_type : ''  // 是否为第三方的银行卡
                             };
                         }
                     }
