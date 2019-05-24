@@ -158,3 +158,11 @@
     -ms-flex-direction: $dire;
     flex-direction: $dire;
 }
+
+@mixin flexWrap($dire) {
+    -webkit-flex-wrap: $dire;
+    -moz-flex-wrap: $dire;
+    -ms-flex-wrap: $dire;
+    -o-flex-wrap: $dire;
+    flex-wrap: $dire;
+}
