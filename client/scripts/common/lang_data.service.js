@@ -334,13 +334,13 @@
                 "pt-BR": "sem dados"
             },
             "TradingHistory10": {
-                "en": "ago",
+                "en": " ago",
                 "zh": "前",
-                "vi": "Cách đây",
+                "vi": " Cách đây",
                 "zh-Hant": "前",
-                "id": "Sebelumnya",
+                "id": " Sebelumnya",
                 "es": " ",
-                "pt-BR": "atrás"
+                "pt-BR": " atrás"
             },
             "actLogin1": {
                 "zh": "快捷登录",
@@ -4451,7 +4451,7 @@
                         "zh-Hant": "近七日交易狀況",
                         "id": "Rata-rata keuntungan dalam 7 hari",
                         "es": "7-días Tasa Retorno ",
-                        "pt-BR": "Taxa de retorno de 7-dias"
+                        "pt-BR": "Taxa de retorno últimos 7 dias"
                     },
                     "numberMonthlyAverage": {
                         "zh": "月平均交易笔数",
@@ -8301,7 +8301,7 @@
                         "zh-Hant": "復制跟單交易模式，人人都是投資高手",
                         "id": "Dengan memanfaatkan teknologi copy-trading miliki TigerWit, siapapun bisa menghasilkan uang.",
                         "es": "Con la tecnología totalmente automatizada copy trading de TigerWit, usted también puede convertirse en una Master del Trading.",
-                        "pt-BR": "Com a tecnologia de troca de cópias totalmente automatizada da TigerWit, qualquer um pode ser o mestre de suas próprias negociações"
+                        "pt-BR": "Com a tecnologia para copiar as negociações totalmente automatizada da TigerWit, qualquer um pode ser o mestre de suas próprias negociações"
                     },
                     "chooseMaster": {
                         "zh": "选择高手",
@@ -8355,7 +8355,7 @@
                         "zh-Hant": "最大跌幅--高手的最大浮動虧損占比。",
                         "id": "Stabilitas - Master dengan tingkat keuntungan investasi rata-rata. Master dengan peringkat teratas menghasilkan pengembalian investasi terbesar secara rata-rata dalam rentang waktu yang dipilih.",
                         "es": "Estabilidad – Tasa de retorno ponderada del Master. El Master top en el ranking ha creado el mayor beneficio ponderado en el período de tiempo seleccionado.",
-                        "pt-BR": "Estabilidade - uma taxa média de retorno da Master. O mestre do topo do ranking criou o maior lucro médio durante o período de tempo selecionado."
+                        "pt-BR": "Estabilidade - uma taxa média de retorno do mestre. O mestre do topo do ranking criou o maior lucro médio durante o período de tempo selecionado."
                     },
                     "selectMaster_3": {
                         "zh": "准确率--高手平仓的订单中盈利订单的占比。",
@@ -8364,7 +8364,7 @@
                         "zh-Hant": "準確率--高手平倉的訂單中盈利訂單的占比。",
                         "id": "Konsistensi - Master dengan total rasio transaksi menang dibandingkan dengan transaksi yang kalah. Master dengan peringkat teratas memiliki rasio transaksi menang yang paling tinggi dalam rentang waktu yang dipilih.",
                         "es": "Consistencia - el ratio de posiciones ganadoras frente a perdedoras del Master. El Master en el top del ranking tiene el mayor ratio de trades ganadores frente a perdedores en el período de tiempo seleccionado.",
-                        "pt-BR": "Consistência - a proporção geral em ganhos e perdas nas negociações de um Master. O Master mais bem classificado tem a maior proporção de ganhos em negociações ao longo do período de tempo selecionado."
+                        "pt-BR": "Consistência - a proporção geral em ganhos e perdas nas negociações de um mestre. O mestre mais bem classificado tem a maior proporção de ganhos em negociações ao longo do período de tempo selecionado."
                     },
                     "qualifyMaster": {
                         "zh": "成为高手，你将满足以下条件：",
@@ -8382,7 +8382,7 @@
                         "zh-Hant": "入金並連續自主交易20個工作日以上",
                         "id": "Telah melakukan transaksi dalam kurun waktu lebih dari 20 hari",
                         "es": "Operar directamente más de 20 días",
-                        "pt-BR": "Comércio por mais de 20 dias"
+                        "pt-BR": "Negocie por mais de 20 dias"
                     },
                     "qualifyMaster_2": {
                         "zh": "近30日内的收益回报率大于20%",
@@ -8391,7 +8391,7 @@
                         "zh-Hant": "近30日內的收益回報率大於20%",
                         "id": "Menghasilkan keuntungan lebih dari 20% dalam kurun waktu 30 hari",
                         "es": "Obtener tasa retorno 30 días mayor del 20%",
-                        "pt-BR": "Obtenha uma taxa de retorno de 30 dias maior que 20%"
+                        "pt-BR": "Obtenha uma taxa de retorno nos últimos 30 dias maior que 20%"
                     },
                     "qualifyMaster_3": {
                         "zh": "账户余额不得低于500美金",
@@ -10756,18 +10756,18 @@
                     "en": " Hour",
                     "vi": " Giờ",
                     "zh-Hant": "時",
-                    "id": "Giờ",
+                    "id": " Giờ",
                     "es": " Hora",
-                    "pt-BR": "  Hora"
+                    "pt-BR": " Horas"
                 },
                 "Ahour": {
                     "zh": "小时",
                     "en": " Hour",
                     "vi": " Giờ",
                     "zh-Hant": "小時",
-                    "id": "Jam",
+                    "id": " Jam",
                     "es": " Hora",
-                    "pt-BR": "  Hora"
+                    "pt-BR": " Horas"
                 },
                 "minute": {
                     "zh": "分",
