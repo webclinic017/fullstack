@@ -1,18 +1,20 @@
-function previewBase64(file, targetRes) {
-  var reader = new FileReader();
-
-  reader.onload = function(e) {
-      var img = new Image();
-      img.src = e.target.result;
-
-      $(img).on('load', function (e) {
-          targetRes.data=new Image();
-          renderImage(targetRes.data, img, { maxWidth: 1920, maxHeight: 1920, quality: 0.8 });
-      
-      });
-      
-  };
-  reader.readAsDataURL(file);
+var previewBase64 = function (file, targetRes) {
+    return new Promise(function (resolve, reject) {
+      var reader = new FileReader();
+  
+      reader.onload = function(e) {
+          var img = new Image();
+          img.src = e.target.result;
+        
+          $(img).on('load', function (e) {
+              targetRes.data=new Image();
+              renderImage(targetRes.data, img, { maxWidth: 1920, maxHeight: 1920, quality: 0.8 });
+              resolve();
+          });
+          
+      };
+      reader.readAsDataURL(file);
+    })
 }
 
 function renderImage (target, img, options) {

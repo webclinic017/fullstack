@@ -29,14 +29,15 @@ $(eleEvidence.pageEvidenceDetails).on('change', 'input[name=file]', function (e)
   };
   var id = $(this).attr("data-id");
   var action = $(this).attr("data-action");
-  previewBase64(file, result);
-  setTimeout(function () {
-    // console.log(result);
-    evidenceUploadFiles[id][action] = result.data.src;
-    $(".third_app_evidence_file_btn[data-id="+id+"]").removeClass('active');
-    $(".third_app_evidence_submit_btn[data-id="+id+"]").addClass('active');
-    insertFile(id);
-  }, 30);
+  previewBase64(file, result).then(function () {
+    setTimeout(function () {
+      // console.log(result);
+      evidenceUploadFiles[id][action] = result.data.src;
+      $(".third_app_evidence_file_btn[data-id="+id+"]").removeClass('active');
+      $(".third_app_evidence_submit_btn[data-id="+id+"]").addClass('active');
+      insertFile(id);
+    }, 30);
+  });
 });
 $(eleEvidence.pageEvidenceDetails).on('tap', '.third_app_evidence_submit_btn', function () {
   var id = $(this).attr('data-id');
