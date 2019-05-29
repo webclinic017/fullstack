@@ -3363,7 +3363,7 @@ module.exports = {
         "zh-Hant": "1.除非有相反的說明，客戶協議中包含的術語應具有特定含義，並可酌情以單數或復數使用。",
         "id": "1.Unless indicated to the contrary, the defined terms included in the Client Agreement shall have a specific meaning and may be used in the singular or plural as appropriate.",
         "es": "1.A no ser que se indique lo contrario, los términos definidos incluidos en el Acuerdo de Cliente deben tener un significado específico y se emplearán en singular o plural según sea apropiado. ",
-        "pt-BR": "1. Salvo indicação do contrário, os termos definidos incluídos no Contrato de Cliente terão um significado específico e poderão ser usados "
+        "pt-BR": "1. Salvo indicação do contrário, os termos definidos incluídos no Contrato de Cliente terão um significado específico e poderão ser usados ​conforme apropriado."
     },
     "amtClient16": {
         "zh": "除非另有规定，本客户协议中使用的术语应具有 SCB 规则和条例赋予的相同含义。",
@@ -3390,7 +3390,7 @@ module.exports = {
         "zh-Hant": "余額 - 指交易賬戶中可用於交易金融工具的資金。",
         "id": "Balance - shall mean the funds available in a trading account that may be used for trading financial instruments.",
         "es": "Balance - los fondos disponibles en una cuenta de trading que pudieran ser empleados para hacer trading de instrumentos financieros. ",
-        "pt-BR": "Saldo - significa os fundos disponíveis em uma conta de negociação que podem ser usados "
+        "pt-BR": "Saldo - fundos disponíveis em uma conta de negociação que podem ser usados ​​para negociação de outros produtos."
     },
     "amtClient19": {
         "zh": "余额货币 - 指交易账户用来计价的货币。应该注意的是，所有费用（包括差价、佣金和掉期）都是以该货币进行计算的。",
@@ -3453,7 +3453,7 @@ module.exports = {
         "zh-Hant": "差價合約 (CFD) - 指涉及以下內容的 CFD：現貨外匯（“外匯”）、股票、現貨金屬、期貨或任何可通過 TigerWit 交易平臺進行交易的 CFD相關工具；可在 http://global.tigerwit.com.獲得金融工具的完整列表。",
         "id": "Contract for Difference (CFD) - shall mean a CFD on: spot foreign exchange (‘FX’), shares, indices, spot metals, futures or any other CFD related instrument that is available for trading through the TigerWit trading platform(s). A full list of the financial instruments is available online at http://global.tigerwit.com.",
         "es": "Contrato por Diferencias (CFD) - un CFD en: divisas al contado ('FX'), acciones, índices, metales al contado, futuros o cualquier otro instrumento relacionado con el CFD que esté disponible para operar a través de la(s) plataforma(s) de trading de TigerWit. Puede consultar una lista completa de los instrumentos financieros disponibles online en http://global.tigerwit.com.",
-        "pt-BR": "Contrato por Diferença (CFD) - significará um CFD sobre: "
+        "pt-BR": "Contrato por Diferença (CFD) - significará um CFD sobre: câmbio à vista (“FX”), ações, índices, metais spot, futuros ou qualquer outro instrumento relacionado a CFD que esteja disponível para negociação através da (s) plataforma (s) de negociação TigerWit. Uma lista completa dos instrumentos financeiros está disponível online em http://global.tigerwit.com."
     },
     "amtClient26": {
         "zh": "账户净值 - 表示余额加/减任何未平仓头寸的利润/损失。",
@@ -15602,7 +15602,7 @@ module.exports = {
             "zh-Hant": "高手帳號",
             "id": "Akun Master",
             "es": "Cuenta Master",
-            "pt-BR": "Conta principal"
+            "pt-BR": "Conta Princ"
         },
         "withdrawAccountJ": {
             "zh": "提现账户",

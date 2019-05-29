@@ -2780,7 +2780,7 @@
                         "zh-Hant": "高手帳號",
                         "id": "Akun Master",
                         "es": "Cuenta Master",
-                        "pt-BR": "Conta principal"
+                        "pt-BR": "Conta Princ"
                     },
                     "masterLevelCommission": {
                         "zh": "高手等级&佣金",
@@ -3104,7 +3104,7 @@
                         "zh-Hant": "帳號名稱包含2-8個字符，支持中英文，數字",
                         "id": "terdiri dari 2-8 karakter, yang dapat disusun dengan huruf alfabet, dan angka",
                         "es": "El nombre de la cuenta contiene 2-8 caracteres y soporta Chino，Inglés y Números.",
-                        "pt-BR": "O nome da conta contém de 2 a 8 caracteres e suporta caracteres chineses, ingleses e números."
+                        "pt-BR": "Noma da conta contém 2 a 8 caracteres, suporta letras chinesas, inglesas e números."
                     },
                     "details": {
                         "zh": "查看详情",
@@ -8400,7 +8400,7 @@
                         "zh-Hant": "賬戶余額不得低於500美金",
                         "id": "Menjaga saldo akun diatas 500 $",
                         "es": "Mantener un balance de cuenta de al menos USD500",
-                        "pt-BR": "Manter um saldo de conta de pelo menos US $ 500"
+                        "pt-BR": "Manter um saldo de conta de pelo menos US $500"
                     },
                     "title": {
                         "zh": "",
@@ -8465,7 +8465,7 @@
                         "zh-Hant": "高手帳號",
                         "id": "Akun Master",
                         "es": "Cuenta Master",
-                        "pt-BR": "Conta principal"
+                        "pt-BR": "Conta Princ"
                     },
                     "copyAccount": {
                         "zh": "跟单账号",
@@ -9036,7 +9036,7 @@
                         "zh-Hant": "舊郵箱驗證碼",
                         "id": "Email kode verifikasi sudah tidak berlaku",
                         "es": "Código verificación email antigüo",
-                        "pt-BR": "Código de verificação de e-mail antigo"
+                        "pt-BR": "Código de verif. e-mail antigo"
                     },
                     "clickGet": {
                         "zh": "获取验证码",
@@ -9243,7 +9243,7 @@
                         "zh-Hant": "驗證碼",
                         "id": "Kode Verifikasi",
                         "es": "Código de verificación",
-                        "pt-BR": "Carteira não suporta a ativação individual, após a abertura bem-sucedida da conta de transação, a carteira será ativada automaticamente."
+                        "pt-BR": "Código de verificação"
                     },
                     "getVerificationCode": {
                         "zh": "获取验证码",
