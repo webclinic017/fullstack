@@ -70,7 +70,9 @@
             getAdvertiseRecords: urlOrigin2 + '/position/records',
             getFunctionSwitch: '/napi?action=get_function_switch',
             getIdcardApi: urlOrigin2 + '/user/idcard',
-            getEmailPhone: urlOrigin2 + '/sys/messages'
+            getEmailPhone: urlOrigin2 + '/sys/messages',
+            setIslamicStatusApi: urlOrigin2 + '/user/set_islamic_status',
+            transferIslamicApi: urlOrigin2 + '/user/transfer_islamic'
         };
         var asset = {
             withdrawApi: urlOrigin2 + '/payment/withdraw',

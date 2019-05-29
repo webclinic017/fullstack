@@ -83,6 +83,7 @@
                         });
                         getAuthStatus()
                         $scope.$broadcast('global_controller_has_get_info');
+                        $scope.writeCookie({nameKey: 'world_code', nameValue: $scope.personal.region.world_code});
                     });
                 }
             });
@@ -215,6 +216,7 @@
                     writeCookie({ nameKey: 'username', nameValue: '', expires: -1 });
                     writeCookie({ nameKey: 'username_en', nameValue: '', expires: -1 });
                     writeCookie({nameKey: 'area_id', nameValue: '', expires: -1 });
+                    writeCookie({nameKey: 'world_code', nameValue: '', expires: -1 });
                     account.hasChecked = false;
                     $window.location.href = '/space/#/account/login';
                     // $state.go('account.subpage', {params: 'login'});
@@ -375,12 +377,20 @@
                     }
                 },
                 controller: ['$scope', 'passedScope', '$modalInstance', '$state', '$timeout', '$location', '$layer', 'lang', function ($scope, passedScope, $modalInstance, $state, $timeout, $location, $layer, lang) {
+                    var worldCode = globalScope.personal.region ? globalScope.personal.region.world_code : $cookies["world_code"];
+                    // 检测注册国际是否是伊斯兰国家
+                    $scope.isIslamic = false;
+                    angular.forEach(globalScope.worldList, function (value, index) {
+                        if (value.code === worldCode && value.type === 'islamic') {
+                            // console.log(value);
+                            $scope.isIslamic = true;
+                        }
+                    })
                     $scope.closeModal = closeModal;
                     $scope.position = passedScope.position;
                     $scope.lang = lang;
-                    if($scope.position != "register" && globalScope.personal.open_account_type >= 0){
-                        $scope.open_account_type = globalScope.personal.open_account_type; //判断是否显示开通体验金
-                    }
+                    $scope.deleteDemo = globalScope.personal.verify_status == 5;
+                    
                     $scope.loading = {
                         demo: false
                     }
@@ -389,64 +399,101 @@
                     }
 
                     $scope.openDemo = function () {
-                        globalScope.personal.is_live = '2'
-                        $scope.loading.demo = true
-                        getAuthStatus({
-                            is_live: globalScope.personal.is_live
-                        }).then(function (data) {
-                            if (!data) return;
-                            // console.log(data);
-                            if (data.is_succ) {
-                                if (data.data.status == 0) {
-                                    account.openTrialAccount().then(function (data) {
-                                        if (!data) return;
-                                        // console.log(data);
-                                        if (data.is_succ) {
-                                            $scope.loading.demo = false;
-                                            globalScope.personal.is_live = 1;
-                                            globalScope.personal.verify_status = data.data.status;
-                                            $state.go('authen.subpage')
-                                            closeModal()
-                                            toAuthenTypeSensorsdata('体验金账户');
+                        
+                        if ($scope.isIslamic) {
+                            $modal.open({
+                                templateUrl: '/views/account/islamic_modal.html',
+                                size: 'sm',
+                                backdrop: 'false',
+                                resolve: {
+                                    passedScope: function () {
+                                        return {
+                                            confirmDemo: confirmDemo
                                         }
-                                    })
-                                } else {
-                                    $scope.loading.demo = false
+                                    }
+                                },
+                                controller: ['$scope', 'passedScope', '$modalInstance', 'lang', function ($scope, passedScope, $modalInstance, lang) {
+                                    $scope.lang = lang;
+                                    $scope.loading = 0;
+                                    $scope.modalType = 0;
+
+                                    $scope.closeModal = closeModal;
+                                    $scope.submitConfrim = submitConfrim;
+
+                                    function submitConfrim () {
+                                        closeModal();
+                                        passedScope.confirmDemo && passedScope.confirmDemo();
+                                    }
+                                    function closeModal() {
+                                        $modalInstance.dismiss();
+                                    }
+                                }]
+                            });
+                        } else {
+                            confirmDemo();
+                        }
+
+                        function confirmDemo () {
+                            globalScope.personal.is_live = '2'
+                            $scope.loading.demo = true
+                            getAuthStatus({
+                                is_live: globalScope.personal.is_live
+                            }).then(function (data) {
+                                if (!data) return;
+                                // console.log(data);
+                                if (data.is_succ) {
+                                    if (data.data.status == 0) {
+                                        account.openTrialAccount().then(function (data) {
+                                            if (!data) return;
+                                            // console.log(data);
+                                            if (data.is_succ) {
+                                                $scope.loading.demo = false;
+                                                globalScope.personal.is_live = 1;
+                                                globalScope.personal.verify_status = data.data.status;
+                                                $state.go('authen.subpage')
+                                                closeModal()
+                                            }
+                                        })
+                                    } else {
+                                        $scope.loading.demo = false
+                                    }
                                 }
-                            }
-
-
-                        })
-
-
+    
+    
+                            })
+                        }
 
                     }
                     $scope.confirmLive = function () {
-                        $modalInstance.dismiss()
-                        $timeout(function () {
-                            var obj = {
-                                title: lang.text('tigerWitID.prompt'),
-                                // msgClass: 'font-danger',
-                                size: 'sm',
-                                btnsClass: 'text-right',
-                                msg: lang.text("tigerWitID.myAccount.tip38"),
-                                autoClose: false,
-                                btns: {}
-                            }
-                            obj.btns[lang.text("tigerWitID.cancel")] = function () { }
-                            obj.btns[lang.text("tigerWitID.continue")] = function (oScope) {
-                                globalScope.personal.is_live = '1'
-                                oScope.loading = 1
-                                getAuthStatus({
-                                    is_live: globalScope.personal.is_live
-                                }).then(function () {
-                                    oScope.loading = 2
-                                    $state.go('authen.subpage')
-                                    toAuthenTypeSensorsdata('真实账户');
-                                })
-                            }
-                            $layer(obj)
-                        }, 450)
+                        $modalInstance.dismiss();
+                        if ($scope.isIslamic) {
+                            confirmIslamic(true);
+                        } else {
+                            $state.go('authen.subpage');
+                        }
+                        // $timeout(function () {
+                        //     var obj = {
+                        //         title: lang.text('tigerWitID.prompt'),
+                        //         // msgClass: 'font-danger',
+                        //         size: 'sm',
+                        //         btnsClass: 'text-right',
+                        //         msg: lang.text("tigerWitID.myAccount.tip38"),
+                        //         autoClose: false,
+                        //         btns: {}
+                        //     }
+                        //     obj.btns[lang.text("tigerWitID.cancel")] = function () { }
+                        //     obj.btns[lang.text("tigerWitID.continue")] = function (oScope) {
+                        //         globalScope.personal.is_live = '1'
+                        //         oScope.loading = 1
+                        //         getAuthStatus({
+                        //             is_live: globalScope.personal.is_live
+                        //         }).then(function () {
+                        //             oScope.loading = 2
+                        //             $state.go('authen.subpage')
+                        //         })
+                        //     }
+                        //     $layer(obj)
+                        // }, 450)
                     }
 
                     function closeModal() {
@@ -455,9 +502,116 @@
                 }]
             });
         }
+        $scope.confirmIslamic = confirmIslamic;
+        function confirmIslamic (islamic) {
+            if (islamic) {
+                confirmIsApply();
+            } else {
+                var worldCode = $scope.personal.region ? $scope.personal.region.world_code : $cookies["world_code"];
+                // 检测注册国际是否是伊斯兰国家
+                var isIslamic = false;
+                angular.forEach($scope.worldList, function (value, index) {
+                    if (value.code === worldCode && value.type === 'islamic') {
+                        // console.log(value);
+                        isIslamic = true;
+                    }
+                });
+                // console.log(isIslamic);
+                if (isIslamic) {
+                    confirmIsApply();
+                } else {
+                    $state.go('authen.subpage');
+                }
+            }
+        }
+        function confirmIsApply () {
+            if ($scope.personal.islamic_status) {
+                $state.go('authen.subpage');
+            } else {
+                $modal.open({
+                    templateUrl: '/views/account/islamic_modal.html',
+                    size: 'sm',
+                    backdrop: 'false',
+                    resolve: {
+                        passedScope: function () {
+                            return {}
+                        }
+                    },
+                    controller: ['$scope', 'passedScope', '$modalInstance', 'lang', function ($scope, passedScope, $modalInstance, lang) {
+                        $scope.lang = lang;
+                        $scope.loading = 0;
+                        $scope.modalType = 1;
+
+                        $scope.closeModal = closeModal;
+                        $scope.submitConfrim = submitConfrim;
+
+                        function submitConfrim (type) {
+                            if (type === 'no') {
+                                $scope.loading = 1;
+                                account.setIslamicStatus(1).then(function (data) {
+                                    if (data.is_succ) {
+                                        getAuthStatus({
+                                            is_live: globalScope.personal.is_live
+                                        }).then(function () {
+                                            closeModal();
+                                            $state.go('authen.subpage')
+                                        });
+                                    } else {
+                                        $scope.loading = 2;
+                                        $scope.errMsg = data.message;
+                                    }
+                                });
+                            } else {
+                                closeModal();
+                                $state.go('authen.subpage');
+                            }
+                        }
+                        function closeModal() {
+                            $modalInstance.dismiss();
+                        }
+                    }]
+                });
+            }
+        }
+        $scope.openChangeIslamicModal = function () {
+            $modal.open({
+                templateUrl: '/views/account/islamic_modal.html',
+                size: 'sm',
+                backdrop: 'false',
+                resolve: {
+                    passedScope: function () {
+                        return {}
+                    }
+                },
+                controller: ['$scope', 'passedScope', '$modalInstance', 'lang', function ($scope, passedScope, $modalInstance, lang) {
+                    $scope.lang = lang;
+                    $scope.loading = 0;
+                    $scope.modalType = 2;
+                    $scope.islamic_status = globalScope.personal.islamic_status;
+
+                    $scope.closeModal = closeModal;
+                    $scope.submitConfrim = submitConfrim;
+
+                    function submitConfrim () {
+                        $scope.loading = 1;
+                        account.transferIslamic().then(function (data) {
+                            $scope.loading = 2;
+                            $scope.errMsg = data.message;
+                            if (data.is_succ) {
+                                globalScope.personal.islamic_remain_num--;
+                            }
+                            // console.log(data);
+                        });
+                    }
+                    function closeModal() {
+                        $modalInstance.dismiss();
+                    }
+                }]
+            });
+        }
 
         // 获取认证状态
-        // status 1:没填kyc,2:没填写昵称邮箱,3:未上传过身份证,4:审核拒绝,5:待审核,6:审核通过,7:上传真实地址, 10:开户完成
+        // status 1:没填kyc,2:没填写昵称邮箱,3:未上传过身份证,4:审核拒绝,5:待审核,6:审核通过,7:上传真实地址, 10:开户完成, 8:伊斯兰账户协议
         // account_status 0:没开通,1:真实,2:模拟
         // status=10只有在添加认证信息结束的时候我会返回10，app主动请求获取用户认证状态的最终状态是6(审核通过)不会有10
         function getAuthStatus(para) {
@@ -485,7 +639,7 @@
                         dredged_type: accountStatusMap[accountStatus],
                         passedAuthen: passedAuthen,
                         account_status: accountStatus,
-                        open_account_type: data.data.open_account_type // 1 为只能开通真实账户
+                        // open_account_type: data.data.open_account_type // 1 为只能开通真实账户
                     }
                     angular.extend($scope.personal, params);
                     if (accountStatus == '1') {

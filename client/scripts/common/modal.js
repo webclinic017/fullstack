@@ -135,7 +135,9 @@
             
             var OPENED_MODAL_CLASS = 'modal-open';
 
-            var backdropDomEl, backdropScope;
+            var backdropDomEl = [];
+            var backdropScope = [];
+            var currentIndex = -1;
             var openedWindows = $$stackedMap.createNew();
             var $modalStack = {};
 
@@ -151,11 +153,11 @@
                 return topBackdropIndex;
             }
 
-            $rootScope.$watch(backdropIndex, function(newBackdropIndex){
-                if (backdropScope) {
-                    backdropScope.index = newBackdropIndex;
-                }
-            });
+            // $rootScope.$watch(backdropIndex, function(newBackdropIndex){
+            //     if (backdropScope) {
+            //         backdropScope.index = newBackdropIndex;
+            //     }
+            // });
 
             function removeModalWindow(modalInstance) {
 
@@ -175,14 +177,16 @@
 
             function checkRemoveBackdrop() {
                 //remove backdrop if no longer needed
-                if (backdropDomEl && backdropIndex() == -1) {
-                    var backdropScopeRef = backdropScope;
-                    removeAfterAnimate(backdropDomEl, backdropScope, 150, function () {
+                // console.log(backdropDomEl, currentIndex);
+                if (backdropDomEl[currentIndex]) {
+                    var backdropScopeRef = backdropScope[currentIndex];
+                    removeAfterAnimate(backdropDomEl[currentIndex], backdropScope[currentIndex], 150, function () {
                         backdropScopeRef.$destroy();
                         backdropScopeRef = null;
                     });
-                    backdropDomEl = undefined;
-                    backdropScope = undefined;
+                    backdropDomEl[currentIndex] = undefined;
+                    backdropScope[currentIndex] = undefined;
+                    currentIndex--;
                 }
             }
 
@@ -243,17 +247,17 @@
                     backdrop: modal.backdrop,
                     keyboard: modal.keyboard
                 });
-
                 var body = $document.find('body').eq(0),
                 currBackdropIndex = backdropIndex();
+                currentIndex++;
 
-                if (currBackdropIndex >= 0 && !backdropDomEl) {
-                    backdropScope = $rootScope.$new(true);
-                    backdropScope.index = currBackdropIndex;
-                    var angularBackgroundDomEl = angular.element('<div modal-backdrop></div>');
+                if (currBackdropIndex >= 0) {
+                    backdropScope[currentIndex] = $rootScope.$new(true);
+                    backdropScope[currentIndex].index = currBackdropIndex;
+                    var angularBackgroundDomEl = angular.element('<div modal-backdrop class="index'+currBackdropIndex+'"></div>');
                     angularBackgroundDomEl.attr('backdrop-class', modal.backdropClass);
-                    backdropDomEl = $compile(angularBackgroundDomEl)(backdropScope);
-                    body.append(backdropDomEl);
+                    backdropDomEl[currentIndex] = $compile(angularBackgroundDomEl)(backdropScope[currentIndex]);
+                    body.append(backdropDomEl[currentIndex]);
                 }
 
                 var angularDomEl = angular.element('<div modal-window></div>');

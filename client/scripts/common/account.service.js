@@ -67,7 +67,9 @@
             setAgentPromotion: setAgentPromotion,
             setUploadAddressProve: setUploadAddressProve,
             getEmailPhone: getEmailPhone,
-            openTrialAccount: openTrialAccount
+            openTrialAccount: openTrialAccount,
+            setIslamicStatus: setIslamicStatus,
+            transferIslamic: transferIslamic
         };
         var resolveValue;
         return service;
@@ -679,6 +681,14 @@
         function openTrialAccount(params) {
             return publicHttp.dealPublicRequest(o.openTrialAccountApi, 'POST', params);
         }
-
+        //伊斯兰账号
+        function setIslamicStatus (islamicStatus) {
+            return publicHttp.dealPublicRequest(o.setIslamicStatusApi, 'PUT', {
+                islamic_status: islamicStatus
+            });
+        }
+        function transferIslamic () {
+            return publicHttp.dealPublicRequest(o.transferIslamicApi, 'PUT');
+        }
     }
 })();

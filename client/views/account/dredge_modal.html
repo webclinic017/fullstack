@@ -9,19 +9,19 @@
       <p class="sys_modal_v2__desp pd-tp-5">&nbsp; <span class="font-danger">*</span> {{lang.text('tigerWitID.settings.openLiveAccountTip4')}}</p>
       <p class="sys_modal_v2__desp pd-tp-5">&nbsp; <span class="font-danger">*</span> {{lang.text('tigerWitID.settings.openLiveAccountTip5')}}</p>
       <div class="btn_wrapper">
-          <a class="btn btn-primary-gradient btn-sm" ng-click="[confirmLive(), toTrackEvent('Open live account', 'create_live_account')]">
+          <a class="btn btn-primary-gradient btn-sm" ng-click="confirmLive()">
             {{lang.text('tigerWitID.settings.freeOpening')}}
           </a>
       </div>
     </div>
-    <div class="text-left" ng-show="open_account_type != 1">
+    <div class="text-left" ng-show="!deleteDemo">
       <h3 class="sys_modal_v2__title text-center">{{lang.text('tigerWitID.settings.openExperienceAccount')}}</h3>
       <p class="sys_modal_v2__desp">{{lang.text('tigerWitID.settings.openExperienceAccountTip1')}}</p>
       <p class="sys_modal_v2__desp pd-tp-10">{{lang.text('tigerWitID.settings.openExperienceAccountTip2')}}</p>
       <p class="sys_modal_v2__desp pd-tp-5">&nbsp; <span class="font-danger">*</span> {{lang.text('tigerWitID.settings.openExperienceAccountTip3')}}</p>
       <p class="sys_modal_v2__desp pd-tp-5">&nbsp; <span class="font-danger">*</span> {{lang.text('tigerWitID.settings.openExperienceAccountTip4')}}</p>
       <div class="btn_wrapper">
-          <a class="btn btn-primary-gradient btn-sm" ng-click="[openDemo(), toTrackEvent('Open experience account', 'create_experience_account'), toTrackEvent('Open experience account', 'finish_experience_account')]">
+          <a class="btn btn-primary-gradient btn-sm" ng-click="openDemo()">
             <i class="loading fa fa-spinner loading_spinner" ng-show="loading.demo"></i>
             {{lang.text('tigerWitID.settings.freeOpening')}}
           </a>
@@ -38,19 +38,19 @@
       <p class="sys_modal_v2__desp pd-tp-5">&nbsp; <span class="font-danger">*</span> {{lang.text('tigerWitID.settings.openAcount6')}}</p>
       <p class="sys_modal_v2__desp pd-tp-5">&nbsp; <span class="font-danger">*</span> {{lang.text('tigerWitID.settings.openAcount7')}}</p>
       <div class="btn_wrapper">
-          <a class="btn btn-primary-gradient btn-sm" ng-click="[confirmLive(), toTrackEvent('Open live account', 'create_live_account')]">
+          <a class="btn btn-primary-gradient btn-sm" ng-click="confirmLive()">
             {{lang.text('tigerWitID.settings.openAcount8')}}
           </a>
       </div>
     </div>
-    <div class="text-left" ng-show="open_account_type != 1">
+    <div class="text-left" ng-show="!deleteDemo">
       <h3 class="sys_modal_v2__title text-center">{{lang.text('tigerWitID.settings.openAcount9')}}</h3>
       <p class="sys_modal_v2__desp">{{lang.text('tigerWitID.settings.openAcount10')}}</p>
       <p class="sys_modal_v2__desp pd-tp-5">&nbsp; <span class="font-danger">*</span> {{lang.text('tigerWitID.settings.openAcount11')}}</p>
       <p class="sys_modal_v2__desp pd-tp-5">&nbsp; <span class="font-danger">*</span> {{lang.text('tigerWitID.settings.openAcount12')}}</p>
       <p class="sys_modal_v2__desp pd-tp-5">&nbsp; <span class="font-danger">*</span> {{lang.text('tigerWitID.settings.openAcount13')}}</p>
       <div class="btn_wrapper">
-          <a class="btn btn-primary-gradient btn-sm" ng-click="[openDemo(), toTrackEvent('Open experience account', 'create_experience_account'), toTrackEvent('Open experience account', 'finish_experience_account')]">
+          <a class="btn btn-primary-gradient btn-sm" ng-click="openDemo()">
             <i class="loading fa fa-spinner loading_spinner" ng-show="loading.demo"></i>
             {{lang.text('tigerWitID.settings.openAcount14')}}
           </a>
