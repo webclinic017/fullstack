@@ -10841,7 +10841,7 @@ module.exports = {
         "vi": "Chính sách tài khoản Islamic",
         "zh-Hant": "伊斯蘭帳戶政策",
         "id": "Kebijakan Akun Islami",
-        "es": "",
+        "es": "Política de cuentas islámicas",
         "pt-BR": "Política de Contas Islâmica"
     },
     "amtIslamic2": {
@@ -10850,7 +10850,7 @@ module.exports = {
         "vi": "Đọc và hiểu các điều khoản và điều kiện bổ sung được áp dụng cho tài khoản Islamic.",
         "zh-Hant": "閱讀和理解適用於伊斯蘭帳戶的附加條款和條件。",
         "id": "Baca dan pahami syarat dan ketentuan yang berlaku untuk Akun Islami ",
-        "es": "",
+        "es": "Lea y comprenda los términos y condiciones adicionales que se aplican a una cuenta islámica.",
         "pt-BR": "Leia e entenda os termos e condições adicionais que se aplicam a uma conta islâmica"
     },
     "amtIslamic3": {
@@ -13818,6 +13818,15 @@ module.exports = {
         "id": "Indeks",
         "es": "Indices",
         "pt-BR": "índices"
+    },
+    "newhome_8": {
+        "zh": "虚拟货币",
+        "en": "Bitcoin",
+        "vi": "Bitcoin",
+        "zh-Hant": "虛擬貨幣",
+        "id": "Bitcoin",
+        "es": "Bitcoin",
+        "pt-BR": "Bitcoin"
     },
     "newhome_9_1": {
         "zh": "下载注册交易账户",
