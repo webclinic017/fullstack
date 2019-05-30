@@ -213,7 +213,7 @@ module.exports = {
         "zh-Hant": "首頁",
         "id": "Beranda",
         "es": "Home",
-        "pt-BR": "Casa"
+        "pt-BR": "Ínicio"
     },
     "navbar2": {
         "en": "Copy trading",
@@ -231,7 +231,7 @@ module.exports = {
         "zh-Hant": "高手跟單",
         "id": "Ikuti seorang Master",
         "es": "Seguir a un Master",
-        "pt-BR": "Siga um mestre"
+        "pt-BR": "Siga um Master Trader"
     },
     "navbar4": {
         "en": "Follow masters' move regularly",
@@ -3363,7 +3363,7 @@ module.exports = {
         "zh-Hant": "1.除非有相反的說明，客戶協議中包含的術語應具有特定含義，並可酌情以單數或復數使用。",
         "id": "1.Unless indicated to the contrary, the defined terms included in the Client Agreement shall have a specific meaning and may be used in the singular or plural as appropriate.",
         "es": "1.A no ser que se indique lo contrario, los términos definidos incluidos en el Acuerdo de Cliente deben tener un significado específico y se emplearán en singular o plural según sea apropiado. ",
-        "pt-BR": "1. Salvo indicação do contrário, os termos definidos incluídos no Contrato de Cliente terão um significado específico e poderão ser usados "
+        "pt-BR": "1. Salvo indicação do contrário, os termos definidos incluídos no Contrato de Cliente terão um significado específico e poderão ser usados ​conforme apropriado."
     },
     "amtClient16": {
         "zh": "除非另有规定，本客户协议中使用的术语应具有 SCB 规则和条例赋予的相同含义。",
@@ -3372,7 +3372,7 @@ module.exports = {
         "zh-Hant": "除非另有規定，本客戶協議中使用的術語應具有 SCB 規則和條例賦予的相同含義。",
         "id": "Unless otherwise defined the terms used in this Client Agreement shall have the same meaning given under SCB Rules and Regulations.",
         "es": "A no ser que se definan de otro modo; todo término definido en esta Política tendrá el mismo significado dado por la regulación SCB.",
-        "pt-BR": "A menos que definido de outra forma, os termos usados "
+        "pt-BR": "A menos que definido de outra forma, os termos usados neste Contrato de Cliente terão o mesmo significado dado nas Regras e Regulamentos da SCB."
     },
     "amtClient17": {
         "zh": "授权代表- 指客户明确授权，代表他/她行事的自然人或法人。通过授权委托书记录上述关系，其副本由本公司持有。",
@@ -3390,7 +3390,7 @@ module.exports = {
         "zh-Hant": "余額 - 指交易賬戶中可用於交易金融工具的資金。",
         "id": "Balance - shall mean the funds available in a trading account that may be used for trading financial instruments.",
         "es": "Balance - los fondos disponibles en una cuenta de trading que pudieran ser empleados para hacer trading de instrumentos financieros. ",
-        "pt-BR": "Saldo - significa os fundos disponíveis em uma conta de negociação que podem ser usados "
+        "pt-BR": "Saldo - fundos disponíveis em uma conta de negociação que podem ser usados ​​para negociação de outros produtos."
     },
     "amtClient19": {
         "zh": "余额货币 - 指交易账户用来计价的货币。应该注意的是，所有费用（包括差价、佣金和掉期）都是以该货币进行计算的。",
@@ -3453,7 +3453,7 @@ module.exports = {
         "zh-Hant": "差價合約 (CFD) - 指涉及以下內容的 CFD：現貨外匯（“外匯”）、股票、現貨金屬、期貨或任何可通過 TigerWit 交易平臺進行交易的 CFD相關工具；可在 http://global.tigerwit.com.獲得金融工具的完整列表。",
         "id": "Contract for Difference (CFD) - shall mean a CFD on: spot foreign exchange (‘FX’), shares, indices, spot metals, futures or any other CFD related instrument that is available for trading through the TigerWit trading platform(s). A full list of the financial instruments is available online at http://global.tigerwit.com.",
         "es": "Contrato por Diferencias (CFD) - un CFD en: divisas al contado ('FX'), acciones, índices, metales al contado, futuros o cualquier otro instrumento relacionado con el CFD que esté disponible para operar a través de la(s) plataforma(s) de trading de TigerWit. Puede consultar una lista completa de los instrumentos financieros disponibles online en http://global.tigerwit.com.",
-        "pt-BR": "Contrato por Diferença (CFD) - significará um CFD sobre: "
+        "pt-BR": "Contrato por Diferença (CFD) - significará um CFD sobre: câmbio à vista (“FX”), ações, índices, metais spot, futuros ou qualquer outro instrumento relacionado a CFD que esteja disponível para negociação através da (s) plataforma (s) de negociação TigerWit. Uma lista completa dos instrumentos financeiros está disponível online em http://global.tigerwit.com."
     },
     "amtClient26": {
         "zh": "账户净值 - 表示余额加/减任何未平仓头寸的利润/损失。",
@@ -3750,7 +3750,7 @@ module.exports = {
         "zh-Hant": "任何通過客戶個人交易賬戶在線接收或通過電話接收、確認客戶個人交易賬號的指令都將被視為由客戶傳達。本公司無需確認該指令的真實性或傳達該指令之人士的身份。由於第三方未經授權以客戶名義發出的指令所造成的任何損失，本公司對此概不負責。",
         "id": "Any instruction received online through a client's personal trading account or by telephone confirming a client's personal trading account number, will be deemed to be communicated by the client. The Firm is not required to confirm the authenticity of the instruction or the identity of the person communicating the instruction. The Firm shall not be liable for any loss arising from an instruction sent by a third party unauthorised to act on the client's behalf.",
         "es": "Cualquier instrucción recibida online a través de la cuenta de trading personal de un cliente o por teléfono confirmando el número de cuenta de trading personal de un cliente, se considerará una instrucción comunicada por el cliente. No se requiere que la Firma confirme la autenticidad de la instrucción o la identidad de la persona que comunica la instrucción. La Firma no será responsable por cualquier pérdida que surja de una instrucción enviada por un tercero no autorizado para actuar en nombre del cliente.",
-        "pt-BR": "1.TigerWit deve agir, em todos os momentos, como principal para todas as negociações realizadas por um cliente."
+        "pt-BR": "Qualquer instrução recebida on-line através da conta de negociação pessoal de um cliente ou por telefone confirmando o número da conta de negociação pessoal de um cliente, será considerada como sendo comunicada pelo cliente. A Empresa não é obrigada a confirmar a autenticidade da instrução ou a identidade da pessoa que comunica a instrução. A Empresa não será responsável por qualquer perda decorrente de uma instrução enviada por terceiros, não autorizada a agir em nome do cliente."
     },
     "amtClient59": {
         "zh": "除非另有特别约定，本公司不接受授权代表作为客户。但授权代表可以代表客户向本公司发出交易指令。",
@@ -5685,7 +5685,7 @@ module.exports = {
         "zh-Hant": "如果您的個人身份信息發生變更，您必須知會我們，請發送郵件至",
         "id": "If your personally identifiable information changes, you must inform us accordingly; please e-mail us ",
         "es": "Si su información personal de identificación cambiara, debe informarnos acordemente; por favor envíenos un e-mail ",
-        "pt-BR": "Se suas informações pessoalmente identificáveis mudarem, você deve nos informar de acordo; por favor envie-nos um e-mail"
+        "pt-BR": "Se suas informações pessoalmente identificáveis mudarem, você deve nos informar de acordo; por favor envie-nos um e-mail "
     },
     "amtCookie30": {
         "zh": "法律免责声明",
@@ -5748,7 +5748,7 @@ module.exports = {
         "zh-Hant": "如果您對隱私政策有何問題，請發送郵件至",
         "id": "If you have any enquiries regarding the ‘Privacy Policy’ please e-mail ",
         "es": "Para cualquier consulta relacionada con la If you have any enquiries regarding the ‘Política de Privacidad’ por favor, envíe e-mail ",
-        "pt-BR": "Se você tiver alguma dúvida sobre a \"Política de Privacidade\", envie um e-mail"
+        "pt-BR": "Se você tiver alguma dúvida sobre a \"Política de Privacidade\", envie um e-mail "
     },
     "amtBusiness1": {
         "zh": "序言",
@@ -7413,7 +7413,7 @@ module.exports = {
         "zh-Hant": "我同意並授權TigerWit從我在任壹自然月內已平倉的訂單實時扣除20%利潤，並於下壹自然月15日前核對上壹自然月整體盈利金額並核算傭金或獎金後，將其支付給“交易高手”作為跟單傭金或獎勵。我確定已知曉跟單交易中存在的風險，知曉“交易高手”歷史成績或歷史業績不代表未來成績或業績，任何跟單操作導致的損失及責任由我個人承擔。",
         "id": "I agree and authorize TigerWit to deduct 20% profits in real time from the concluded order at any natural month and check the overall amount of profits of the previous natural month prior to the 15th day of the following month. The 20% profit is the only fee for “trading master”. In addition, after calculating the commissions or bonuses, they will be paid to the \"trading master\" as commissions or bonuses for the following orders. I have confirmed and acknowledged that there are risks in order following trading and also learned that the historical performance of the \"trading master\" does not represent performance in the future and that all losses and responsibilities incurred by order following shall be borne by myself.",
         "es": "Estoy de acuerdo y autorizo ​​a TigerWit a deducir el 20% de las ganancias en tiempo real de la orden concluida en cualquier mes natural y verificar el monto total de las ganancias del mes natural anterior antes del día 15 del mes siguiente. El beneficio del 20% es la única comisión para el \"Master Trading\". Además, después de calcular las comisiones o bonificaciones, se pagarán al \"Master Trading\" como comisiones. He confirmado y reconocido que existen riesgos al replicar órdenes y también entiendo que el historial del \"Master Trading\" no representa ni garantiza retornos futuros y que todas las pérdidas y responsabilidades incurridas al replicar órdenes recaen en mi persona.",
-        "pt-BR": "Eu concordo e autorizo "
+        "pt-BR": "Eu concordo e autorizo ​​a TigerWit a deduzir 20% dos lucros em tempo real do pedido concluído em qualquer mês natural e verificar o montante total dos lucros do mês anterior anterior ao 15º dia do mês seguinte. Além disso, após o cálculo das comissões ou bônus, eles serão pagos ao \"mestre de negociação\" como comissões ou bônus para as seguintes ordens. Confirmei e reconheci que há riscos na ordem após a negociação e também aprendi que o desempenho histórico do \"mestre de negociação\" não representa o desempenho no futuro e que todas as perdas e responsabilidades incorridas pela ordem seguinte serão suportadas por mim."
     },
     "amtStatement6": {
         "zh": "TigerWit交易平台风险提示及免责条款",
@@ -7494,7 +7494,7 @@ module.exports = {
         "zh-Hant": "8. TigerWit在獲得客戶同意並授權的情況下，可以為客戶開啟跟單操作及進行跟單交易、按約定實時扣除客戶跟單凈利潤盈利中的20%支付給“交易高手”作為傭金或獎勵。客戶已知曉並同意接受該跟單交易模式，接受利潤扣除方案，並願意接受該交易模式的交易風險。",
         "id": "8. With the consent and authorization of the client, TigerWit can initiate order following operation, perform order following transactions and deduct 20% of net profits earned by the client by order following to pay to the \"trading master\" as commissions or bonuses. The client has acknowledged and agreed to accept this order following mode and the profit deduction scheme and is also willing to bear the trading risks caused thereby.",
         "es": "8. Con el consentimiento y la autorización del cliente, TigerWit puede iniciar operaciones de réplica de órdenes y deducir el 20% de las ganancias netas obtenidas por el cliente como pago al \"Master Trading\" de sus comisiones. El cliente ha reconocido y aceptado aceptar este modo de seguimiento de órdenes y el esquema de deducción de beneficios y, de igual modo, está dispuesto a asumir los riesgos causados ​​por ello.",
-        "pt-BR": "8. Com o consentimento e autorização do cliente, a TigerWit pode iniciar o pedido após a operação, executar a ordem após as transações e deduzir 20% do lucro líquido obtido pelo cliente mediante o pagamento seguinte ao \"mestre de negociação\" como comissões ou bônus. O cliente reconheceu e concordou em aceitar este pedido seguindo o modo e o esquema de dedução de lucro e também está disposto a suportar os riscos de negociação causados "
+        "pt-BR": "8. Com o consentimento e autorização do cliente, a TigerWit pode iniciar o pedido após a operação, executar a ordem após as transações e deduzir 20% do lucro líquido obtido pelo cliente mediante o pagamento seguinte ao \"mestre de negociação\" como comissões ou bônus. O cliente reconheceu e concordou em aceitar este pedido seguindo o modo e o esquema de dedução de lucro e também está disposto a suportar os riscos de negociação causados ​​por ele."
     },
     "copytransaction0": {
         "zh": "复制交易声明",
@@ -7584,7 +7584,7 @@ module.exports = {
         "zh-Hant": "8. TigerWit在獲得客戶同意並授權的情況下，可以為客戶開啟跟單操作及進行跟單交易、按約定實時扣除客戶跟單凈利潤盈利中的20%支付給“交易高手”作為傭金或獎勵。客戶已知曉並同意接受該跟單交易模式，接受利潤扣除方案，並願意接受該交易模式的交易風險。",
         "id": "8. With the consent and authorization of the client, TigerWit can initiate order following operation, perform order following transactions and deduct 20% of net profits earned by the client by order following to pay to the \"trading master\" as commissions or bonuses. The client has acknowledged and agreed to accept this order following mode and the profit deduction scheme and is also willing to bear the trading risks caused thereby.",
         "es": "8. Con el consentimiento y la autorización del cliente, TigerWit puede iniciar las operaciones de réplica de órdenes; realizando transacciones y deduciendo el 20% de las ganancias netas que el cliente obtenga al copiar las órdenes del \"Master trading\" como comisión. El cliente ha aceptado este sistema de seguimiento de órdenes y el esquema de deducción de comisiones y declara que acepta los riesgos derivados.",
-        "pt-BR": "8. Com o consentimento e autorização do cliente, a TigerWit pode iniciar o pedido após a operação, executar a ordem após as transações e deduzir 20% do lucro líquido obtido pelo cliente mediante o pagamento seguinte ao \"mestre de negociação\" como comissões ou bônus. O cliente reconheceu e concordou em aceitar este pedido seguindo o modo e o esquema de dedução de lucro e também está disposto a suportar os riscos de negociação causados "
+        "pt-BR": "8. Com o consentimento e autorização do cliente, a TigerWit pode iniciar o pedido após a operação, executar a ordem após as transações e deduzir 20% do lucro líquido obtido pelo cliente mediante o pagamento seguinte ao \"mestre de negociação\" como comissões ou bônus. O cliente reconheceu e concordou em aceitar este pedido seguindo o modo e o esquema de dedução de lucro e também está disposto a suportar os riscos de negociação causados ​​por ele."
     },
     "copytransaction1": {
         "zh": "客户声明",
@@ -7629,7 +7629,7 @@ module.exports = {
         "zh-Hant": "我同意並授權TigerWit從我在任壹自然月內已平倉的訂單實時扣除20%利潤，並於下壹自然月15日前核對上壹自然月整體盈利金額並核算傭金或獎金後，將其支付給“交易高手”作為跟單傭金或獎勵。我確定已知曉跟單交易中存在的風險，知曉“交易高手”歷史成績或歷史業績不代表未來成績或業績，任何跟單操作導致的損失及責任由我個人承擔。",
         "id": "I agree and authorize TigerWit to deduct 20% profits in real time from the concluded order at any natural month and check the overall amount of profits of the previous natural month prior to the 15th day of the following month. In addition, after calculating the commissions or bonuses, they will be paid to the \"trading master\" as commissions or bonuses for the following orders. I have confirmed and acknowledged that there are risks in order following trading and also learned that the historical performance of the \"trading master\" does not represent performance in the future and that all losses and responsibilities incurred by order following shall be borne by myself.",
         "es": "Estoy de acuerdo y autorizo a TigerWit a deducir el 20% de los beneficios, en tiempo real de las órdenes cerradas en cualquier mes, y a verificar el importe total de los beneficios del mes anterior antes del día 15 del mes siguiente. Además, después de calcular las comisiones o bonificaciones, éstas se pagarán al \"Trading Master\" como comisiones o bonificaciones por las  órdenes replicadas. Confirmo que conozco la existencia de riesgos en el copy trading y que el historial de rendimiento pasado en el trading no es indicativo de rendimientos futuros; todas las pérdidas y responsabilidades incurridas al replicar órdenes serán asumidas por mi persona.",
-        "pt-BR": "Eu concordo e autorizo "
+        "pt-BR": "Eu concordo e autorizo ​​a TigerWit a deduzir 20% dos lucros em tempo real do pedido concluído em qualquer mês natural e verificar o montante total dos lucros do mês anterior anterior ao 15º dia do mês seguinte. Além disso, após o cálculo das comissões ou bônus, eles serão pagos ao \"mestre de negociação\" como comissões ou bônus para as seguintes ordens. Confirmei e reconheci que há riscos na ordem após a negociação e também aprendi que o desempenho histórico do \"mestre de negociação\" não representa o desempenho no futuro e que todas as perdas e responsabilidades incorridas pela ordem seguinte serão suportadas por mim."
     },
     "amtCategorization1": {
         "zh": "序言",
@@ -9735,7 +9735,7 @@ module.exports = {
         "zh-Hant": "11.某些因素可能快速影響標的金融工具的價格，而對金融工具所報出的實價來源於此。這些因素可能影響以上所列的部分因素。本公司將采取壹切合理措施，以盡可能為客戶獲得最佳價格。",
         "id": "11.Some factors may affect rapidly the price of the underlying financial instruments from which the quoted firm price for its Financial Instruments is derived. These factors may influence some of the factors listed above. The Firm will take all reasonable steps to obtain the best possible result for its Clients.",
         "es": "11.Algunos factores pueden afectar rápidamente el precio de los instrumentos financieros subyacentes, de los cuales se deriva el precio cotizado para sus Instrumentos Financieros. Estos factores pueden influir en algunos de los factores enumerados anteriormente. La Firma adoptará todos los pasos razonables para obtener el mejor resultado posible para sus Clientes.",
-        "pt-BR": "11.Alguns fatores podem afetar rapidamente o preço dos instrumentos financeiros subjacentes dos quais o preço firme cotado para seus Instrumentos Financeiros é derivado. Esses fatores podem influenciar alguns dos fatores listados acima. O Escritório tomará todas as medidas razoáveis "
+        "pt-BR": "11.Alguns fatores podem afetar rapidamente o preço dos instrumentos financeiros subjacentes dos quais o preço firme cotado para seus Instrumentos Financeiros é derivado. Esses fatores podem influenciar alguns dos fatores listados acima. O Escritório tomará todas as medidas razoáveis ​​para obter o melhor resultado possível para seus Clientes."
     },
     "amtExecution125": {
         "zh": "本公司并没有穷尽考虑第 3.2 到 3.9 款所列的全部因素，而且出现以上因素的订单将不被视作优先考虑因素。",
@@ -10320,7 +10320,7 @@ module.exports = {
         "zh-Hant": "- 適用於相關人員自行投資時的個人賬戶交易規定",
         "id": "- Personal account dealing requirements applicable to relevant persons in relation to their own investments",
         "es": "- Requisitos personales de dealing aplicables a las personas relevantes en relación con sus propias inversiones",
-        "pt-BR": "- Requisitos de tratamento de conta pessoal aplicáveis "
+        "pt-BR": "- Requisitos de tratamento de conta pessoal aplicáveis ​​a pessoas relevantes em relação aos seus próprios investimentos"
     },
     "amtConflicts37": {
         "zh": "- 礼品及赠予记录，登记某些福利的招揽、提供或收取",
@@ -10978,7 +10978,7 @@ module.exports = {
             "zh-Hant": "成為高手",
             "id": "Menjadi Master",
             "es": "Solicitud Máster",
-            "pt-BR": "Tornar-se um mestre"
+            "pt-BR": "Tornar-se um Master Trader"
         },
         "eliteTeam": {
             "zh": "精英团队",
@@ -12413,7 +12413,7 @@ module.exports = {
         "zh-Hant": "影響排名因素最終以TigerWit官方統計數據為準。若需人工服務，請聯系客服或者發郵件至：",
         "id": "Peringkat Master ditentukan dari statistik resmi TigerWit. Jika anda membutuhkan bantuan, silahkan hubungi layanan pelanggan kami atau kirimkan email ke: ",
         "es": "Los factores que afectan al ranking se basan en última instancia en las estadísticas oficiales de TigerWit. Para cualquier consulta no dude en contactar con Atención al Cliente o enviarnos un email a: ",
-        "pt-BR": "Os fatores que afetam o ranking são baseados nas estatísticas oficiais da TigerWit. Se você precisar de alguma ajuda, entre em contato com o atendimento ao cliente ou envie um e-mail para:"
+        "pt-BR": "Os fatores que afetam o ranking são baseados nas estatísticas oficiais da TigerWit. Se você precisar de alguma ajuda, entre em contato com o atendimento ao cliente ou envie um e-mail para: "
     },
     "tobeMaster18": {
         "zh": "开通TigerWit真实账户并完成实名认证；",
@@ -13636,8 +13636,8 @@ module.exports = {
         "vi": "Giao dịch trên nhiều thị trường",
         "zh-Hant": "妳需要的交易市場",
         "id": "Trading dipasar manapun",
-        "es": "Opere los mercados que busca ",
-        "pt-BR": "Negocie os mercados que você quer"
+        "es": "Opere los mercados que busca",
+        "pt-BR": "Negocie nos mercados que você"
     },
     "newhome_1_1": {
         "zh": "你需要的交易方式",
@@ -13646,7 +13646,7 @@ module.exports = {
         "zh-Hant": "妳需要的交易方式",
         "id": "Dengan cara yang anda inginkan",
         "es": "Del modo que desea",
-        "pt-BR": "A maneira que você quer negociar"
+        "pt-BR": "Da maneira que você gosta"
     },
     "newhome_1_2": {
         "zh": "区块链助力",
@@ -13655,7 +13655,7 @@ module.exports = {
         "zh-Hant": "區塊鏈助力",
         "id": "Didukung oleh teknologi blockchain",
         "es": "Powered by blockchain",
-        "pt-BR": "Alimentado por blockchain"
+        "pt-BR": "Powered by blockchain"
     },
     "newhome_2": {
         "zh": "打开官网或APP，开始交易。",
@@ -13719,6 +13719,15 @@ module.exports = {
         "id": "Buka Akun",
         "es": "Abra una cuenta",
         "pt-BR": "Abrir uma conta"
+    },
+    "scanCodeOpenAccount": {
+        "zh": "扫码注册交易账户",
+        "en": "Scan code to open an account",
+        "vi": "Quét mã để mở một tài khoản",
+        "zh-Hant": "掃碼註冊交易賬戶",
+        "id": "Scan kode untuk membuka akun",
+        "es": "Escanear código para abrir una cuenta",
+        "pt-BR": "Escanear código para abrir uma conta"
     },
     "newhome_10": {
         "zh": "复制跟单",
@@ -13843,8 +13852,8 @@ module.exports = {
         "vi": "Mở tài khoản thực với",
         "zh-Hant": "開戶僅需$50",
         "id": "Buka akun Live dengan",
-        "es": "Abra una cuenta Real con ",
-        "pt-BR": "Abrir uma Conta Ativa com"
+        "es": "Abra una cuenta Real con",
+        "pt-BR": "Abrir uma Conta Real com"
     },
     "newhome_23": {
         "zh": " ",
@@ -13916,7 +13925,7 @@ module.exports = {
         "zh-Hant": "區塊鏈助力",
         "id": "Didukung oleh teknologi blockchain",
         "es": "Powered by blockchain",
-        "pt-BR": "Alimentado por blockchain"
+        "pt-BR": "Powered by blockchain"
     },
     "newhome_31": {
         "zh": "TigerWit正在利用区块链的力量建立一个分布式记账交易系统。这是一种能在交易网络中共享，并且经过编码加密，高度详细的交易记录。TigerWit的分布式记账交易系统是建立在区块链结算基础上的，能够提供更公平、更保险、更透明的交易环境。",
@@ -13943,7 +13952,7 @@ module.exports = {
         "zh-Hant": "妳需要的交易方式",
         "id": "Dengan cara yang anda inginkan",
         "es": "Del modo que desea operar",
-        "pt-BR": "A maneira que você quer negociar"
+        "pt-BR": "Da maneira que você gosta"
     },
     "newhome_33": {
         "zh": "一个流畅、智能、便捷的交易APP",
@@ -13997,7 +14006,7 @@ module.exports = {
         "zh-Hant": "值得信賴",
         "id": "Handal dan Terpercaya",
         "es": "Robusta y Transparente",
-        "pt-BR": "Confiável e confiável"
+        "pt-BR": "Confiável e  seguro"
     },
     "newhome_37_1": {
         "zh": "区块链技术保护",
@@ -14105,7 +14114,7 @@ module.exports = {
         "zh-Hant": "開設壹個真實賬戶，最多可使用七個子賬戶進行自主交易和復制跟單交易。",
         "id": "Buka akun live dan dapatkan 7 akun tambahan yang dapat dipakai untuk berbagai macam strategi atau copy-trading.",
         "es": "Abra una cuenta Real y disponga de hasta siete sub-cuentas para operar y copy-trading.",
-        "pt-BR": "Abra uma conta do Live e use até sete subcontas para autodirecionamento e troca de cópias."
+        "pt-BR": "Abra uma Conta Real e use até sete subcontas para negociar ou copiar Mestres."
     },
     "newhome_46": {
         "zh": "立即注册",
@@ -15602,7 +15611,7 @@ module.exports = {
             "zh-Hant": "高手帳號",
             "id": "Akun Master",
             "es": "Cuenta Master",
-            "pt-BR": "Conta principal"
+            "pt-BR": "Conta Princ"
         },
         "withdrawAccountJ": {
             "zh": "提现账户",
