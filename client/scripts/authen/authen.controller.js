@@ -1099,36 +1099,17 @@
     function AuthenAgreementController($scope, account) {
         $scope.clickable = true;
         $scope.agreementImg = [];
-        $scope.agreementImgNum = 2;  // 上传数量
-        $scope.agreementImgSuccNum = 0;  // 上传成功数量
         $scope.uploadAgreement = uploadAgreement;
         $scope.agentProtocol = agentProtocol;
         function uploadAgreement(){
-            $scope.agreementImgSuccNum = 0; 
             if(!$scope.agreementImg[0] || !$scope.agreementImg[2]){
                 layer.msg($scope.lang.text("tigerWitID.myAccount.completelyUpload"))
                 return
             }
             $scope.clickable = false;
-            if($scope.agreementImg[1]){
-                $scope.agreementImgNum = 3;
-            }
-            for (var index = 0; index < $scope.agreementImg.length; index++) {
-                if($scope.agreementImg[index]){
-                    upload($scope.agreementImg[index]);
-                }
-                
-            }
-        }
-        function upload(img){
-            account.uploadAgentProtocol({
-                file: img
-            }).then(function(data){
+            account.uploadAgentProtocol({file: $scope.agreementImg}).then(function(data){
                 if(data.is_succ){
-                    $scope.agreementImgSuccNum++;
-                    if($scope.agreementImgSuccNum == $scope.agreementImgNum) {
-                        $scope.$emit('goState');
-                    }
+                    $scope.$emit('goState');
                 }else{
                     $scope.clickable = true;
                     layer.msg(data.message)
