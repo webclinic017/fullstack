@@ -140,10 +140,12 @@
         }    
     }
     @include e(item) {
-        height: 100px;
+        min-height: 100px;
         padding-right: 90px;
+        padding-top: 10px;
+        padding-bottom: 10px;
 
-        &:nth-child(3n) {
+        &:nth-child(3) {
             padding-right: 15px;
         }
 
@@ -162,13 +164,6 @@
         }
         .tip {
             color: #303030;
-        }
-    }
-    @include e(content) {
-        &.en {
-            .blog_agreement__item {
-                height: 145px;
-            }
         }
     }
 }

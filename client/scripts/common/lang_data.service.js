@@ -334,13 +334,13 @@
                 "pt-BR": "sem dados"
             },
             "TradingHistory10": {
-                "en": "ago",
+                "en": " ago",
                 "zh": "前",
-                "vi": "Cách đây",
+                "vi": " Cách đây",
                 "zh-Hant": "前",
-                "id": "Sebelumnya",
+                "id": " Sebelumnya",
                 "es": " ",
-                "pt-BR": "atrás"
+                "pt-BR": " atrás"
             },
             "actLogin1": {
                 "zh": "快捷登录",
@@ -2780,7 +2780,7 @@
                         "zh-Hant": "高手帳號",
                         "id": "Akun Master",
                         "es": "Cuenta Master",
-                        "pt-BR": "Conta principal"
+                        "pt-BR": "Conta Princ"
                     },
                     "masterLevelCommission": {
                         "zh": "高手等级&佣金",
@@ -3104,7 +3104,7 @@
                         "zh-Hant": "帳號名稱包含2-8個字符，支持中英文，數字",
                         "id": "terdiri dari 2-8 karakter, yang dapat disusun dengan huruf alfabet, dan angka",
                         "es": "El nombre de la cuenta contiene 2-8 caracteres y soporta Chino，Inglés y Números.",
-                        "pt-BR": "O nome da conta contém de 2 a 8 caracteres e suporta caracteres chineses, ingleses e números."
+                        "pt-BR": "Noma da conta contém 2 a 8 caracteres, suporta letras chinesas, inglesas e números."
                     },
                     "details": {
                         "zh": "查看详情",
@@ -4451,7 +4451,7 @@
                         "zh-Hant": "近七日交易狀況",
                         "id": "Rata-rata keuntungan dalam 7 hari",
                         "es": "7-días Tasa Retorno ",
-                        "pt-BR": "Taxa de retorno de 7-dias"
+                        "pt-BR": "Taxa de retorno últimos 7 dias"
                     },
                     "numberMonthlyAverage": {
                         "zh": "月平均交易笔数",
@@ -8301,7 +8301,7 @@
                         "zh-Hant": "復制跟單交易模式，人人都是投資高手",
                         "id": "Dengan memanfaatkan teknologi copy-trading miliki TigerWit, siapapun bisa menghasilkan uang.",
                         "es": "Con la tecnología totalmente automatizada copy trading de TigerWit, usted también puede convertirse en una Master del Trading.",
-                        "pt-BR": "Com a tecnologia de troca de cópias totalmente automatizada da TigerWit, qualquer um pode ser o mestre de suas próprias negociações"
+                        "pt-BR": "Com a tecnologia para copiar as negociações totalmente automatizada da TigerWit, qualquer um pode ser o mestre de suas próprias negociações"
                     },
                     "chooseMaster": {
                         "zh": "选择高手",
@@ -8355,7 +8355,7 @@
                         "zh-Hant": "最大跌幅--高手的最大浮動虧損占比。",
                         "id": "Stabilitas - Master dengan tingkat keuntungan investasi rata-rata. Master dengan peringkat teratas menghasilkan pengembalian investasi terbesar secara rata-rata dalam rentang waktu yang dipilih.",
                         "es": "Estabilidad – Tasa de retorno ponderada del Master. El Master top en el ranking ha creado el mayor beneficio ponderado en el período de tiempo seleccionado.",
-                        "pt-BR": "Estabilidade - uma taxa média de retorno da Master. O mestre do topo do ranking criou o maior lucro médio durante o período de tempo selecionado."
+                        "pt-BR": "Estabilidade - uma taxa média de retorno do mestre. O mestre do topo do ranking criou o maior lucro médio durante o período de tempo selecionado."
                     },
                     "selectMaster_3": {
                         "zh": "准确率--高手平仓的订单中盈利订单的占比。",
@@ -8364,7 +8364,7 @@
                         "zh-Hant": "準確率--高手平倉的訂單中盈利訂單的占比。",
                         "id": "Konsistensi - Master dengan total rasio transaksi menang dibandingkan dengan transaksi yang kalah. Master dengan peringkat teratas memiliki rasio transaksi menang yang paling tinggi dalam rentang waktu yang dipilih.",
                         "es": "Consistencia - el ratio de posiciones ganadoras frente a perdedoras del Master. El Master en el top del ranking tiene el mayor ratio de trades ganadores frente a perdedores en el período de tiempo seleccionado.",
-                        "pt-BR": "Consistência - a proporção geral em ganhos e perdas nas negociações de um Master. O Master mais bem classificado tem a maior proporção de ganhos em negociações ao longo do período de tempo selecionado."
+                        "pt-BR": "Consistência - a proporção geral em ganhos e perdas nas negociações de um mestre. O mestre mais bem classificado tem a maior proporção de ganhos em negociações ao longo do período de tempo selecionado."
                     },
                     "qualifyMaster": {
                         "zh": "成为高手，你将满足以下条件：",
@@ -8382,7 +8382,7 @@
                         "zh-Hant": "入金並連續自主交易20個工作日以上",
                         "id": "Telah melakukan transaksi dalam kurun waktu lebih dari 20 hari",
                         "es": "Operar directamente más de 20 días",
-                        "pt-BR": "Comércio por mais de 20 dias"
+                        "pt-BR": "Negocie por mais de 20 dias"
                     },
                     "qualifyMaster_2": {
                         "zh": "近30日内的收益回报率大于20%",
@@ -8391,7 +8391,7 @@
                         "zh-Hant": "近30日內的收益回報率大於20%",
                         "id": "Menghasilkan keuntungan lebih dari 20% dalam kurun waktu 30 hari",
                         "es": "Obtener tasa retorno 30 días mayor del 20%",
-                        "pt-BR": "Obtenha uma taxa de retorno de 30 dias maior que 20%"
+                        "pt-BR": "Obtenha uma taxa de retorno nos últimos 30 dias maior que 20%"
                     },
                     "qualifyMaster_3": {
                         "zh": "账户余额不得低于500美金",
@@ -8400,7 +8400,7 @@
                         "zh-Hant": "賬戶余額不得低於500美金",
                         "id": "Menjaga saldo akun diatas 500 $",
                         "es": "Mantener un balance de cuenta de al menos USD500",
-                        "pt-BR": "Manter um saldo de conta de pelo menos US $ 500"
+                        "pt-BR": "Manter um saldo de conta de pelo menos US $500"
                     },
                     "title": {
                         "zh": "",
@@ -8465,7 +8465,7 @@
                         "zh-Hant": "高手帳號",
                         "id": "Akun Master",
                         "es": "Cuenta Master",
-                        "pt-BR": "Conta principal"
+                        "pt-BR": "Conta Princ"
                     },
                     "copyAccount": {
                         "zh": "跟单账号",
@@ -9036,7 +9036,7 @@
                         "zh-Hant": "舊郵箱驗證碼",
                         "id": "Email kode verifikasi sudah tidak berlaku",
                         "es": "Código verificación email antigüo",
-                        "pt-BR": "Código de verificação de e-mail antigo"
+                        "pt-BR": "Código de verif. e-mail antigo"
                     },
                     "clickGet": {
                         "zh": "获取验证码",
@@ -9243,7 +9243,7 @@
                         "zh-Hant": "驗證碼",
                         "id": "Kode Verifikasi",
                         "es": "Código de verificación",
-                        "pt-BR": "Carteira não suporta a ativação individual, após a abertura bem-sucedida da conta de transação, a carteira será ativada automaticamente."
+                        "pt-BR": "Código de verificação"
                     },
                     "getVerificationCode": {
                         "zh": "获取验证码",
@@ -10756,18 +10756,18 @@
                     "en": " Hour",
                     "vi": " Giờ",
                     "zh-Hant": "時",
-                    "id": "Giờ",
+                    "id": " Giờ",
                     "es": " Hora",
-                    "pt-BR": "  Hora"
+                    "pt-BR": " Horas"
                 },
                 "Ahour": {
                     "zh": "小时",
                     "en": " Hour",
                     "vi": " Giờ",
                     "zh-Hant": "小時",
-                    "id": "Jam",
+                    "id": " Jam",
                     "es": " Hora",
-                    "pt-BR": "  Hora"
+                    "pt-BR": " Horas"
                 },
                 "minute": {
                     "zh": "分",
