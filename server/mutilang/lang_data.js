@@ -71,6 +71,15 @@ module.exports = {
         "es": "Ingresar ",
         "pt-BR": "Login"
     },
+    "directory": {
+        "en": "Directory",
+        "zh": "目录",
+        "vi": "Thư mục",
+        "zh-Hant": "目錄",
+        "id": "Direktori",
+        "es": "Índice",
+        "pt-BR": "Directory"
+    },
     "register": {
         "en": "Open an account",
         "zh": "注册",
