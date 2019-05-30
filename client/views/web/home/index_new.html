@@ -31,18 +31,30 @@
         <a href="/space/#/account/register" class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient focus_btn"
           ng-click="toTrackEvent('home page', 'global_home_first_open_account')"><%= lang.text("link_register")%></a>
       </div>
-      <div class="index_new__focus-btn_box pd-tp-30">
-        <%= lang.text("newhome_9_1")%>
-      </div>
-      <div class="index_new__focus-download">
-        <a href="<%= lang.text('downloadGlobalIos') %>"><img src="<%= lang.image('homeAppIos')%>" alt=""></a>
-        <%if (lang.areaId != 1) {%>
-        <a href="<%= lang.text('downloadGlobalAndroid') %>"><img src="<%= lang.image('homeAppAndroidGlobal')%>"
-            alt=""></a>
-        <%} else {%>
-        <a href="<%= lang.text('androidApp') %>"><img src="<%= lang.image('homeAppAndroidCn')%>" alt=""></a>
+      <div class="index_new__focus-btn_box pd-tp-50 clearfix">
+        <%if (lang.currentLanguage() === 'cn' || lang.areaId == 1) {%>
+        <div class="market-h5 fl mg-rg-80">
+          <div class="mg-bt-20"><%= lang.text("scanCodeOpenAccount")%></div>
+          <img src="/white_label/home/market-h5.png" alt=""></a>
+        </div>
         <%}%>
-      </div>
+        <div class="download-btn fl">
+          <div class="mg-bt-30">
+            <%= lang.text("newhome_9_1")%>
+          </div>
+          <div >
+            <div class="mg-bt-15">
+              <a href="<%= lang.text('downloadGlobalIos') %>"><img src="<%= lang.image('homeAppIos')%>" alt=""></a>
+            </div>
+            <%if (lang.areaId != 1) {%>
+            <a href="<%= lang.text('downloadGlobalAndroid') %>"><img src="<%= lang.image('homeAppAndroidGlobal')%>"
+                alt=""></a>
+            <%} else {%>
+            <a href="<%= lang.text('androidApp') %>"><img src="<%= lang.image('homeAppAndroidCn')%>" alt=""></a>
+            <%}%>
+          </div>
+        </div>
+      </div>  
     </div>
   </div>
   <div class="index_new__container">

@@ -3372,7 +3372,7 @@ module.exports = {
         "zh-Hant": "除非另有規定，本客戶協議中使用的術語應具有 SCB 規則和條例賦予的相同含義。",
         "id": "Unless otherwise defined the terms used in this Client Agreement shall have the same meaning given under SCB Rules and Regulations.",
         "es": "A no ser que se definan de otro modo; todo término definido en esta Política tendrá el mismo significado dado por la regulación SCB.",
-        "pt-BR": "A menos que definido de outra forma, os termos usados "
+        "pt-BR": "A menos que definido de outra forma, os termos usados neste Contrato de Cliente terão o mesmo significado dado nas Regras e Regulamentos da SCB."
     },
     "amtClient17": {
         "zh": "授权代表- 指客户明确授权，代表他/她行事的自然人或法人。通过授权委托书记录上述关系，其副本由本公司持有。",
@@ -3750,7 +3750,7 @@ module.exports = {
         "zh-Hant": "任何通過客戶個人交易賬戶在線接收或通過電話接收、確認客戶個人交易賬號的指令都將被視為由客戶傳達。本公司無需確認該指令的真實性或傳達該指令之人士的身份。由於第三方未經授權以客戶名義發出的指令所造成的任何損失，本公司對此概不負責。",
         "id": "Any instruction received online through a client's personal trading account or by telephone confirming a client's personal trading account number, will be deemed to be communicated by the client. The Firm is not required to confirm the authenticity of the instruction or the identity of the person communicating the instruction. The Firm shall not be liable for any loss arising from an instruction sent by a third party unauthorised to act on the client's behalf.",
         "es": "Cualquier instrucción recibida online a través de la cuenta de trading personal de un cliente o por teléfono confirmando el número de cuenta de trading personal de un cliente, se considerará una instrucción comunicada por el cliente. No se requiere que la Firma confirme la autenticidad de la instrucción o la identidad de la persona que comunica la instrucción. La Firma no será responsable por cualquier pérdida que surja de una instrucción enviada por un tercero no autorizado para actuar en nombre del cliente.",
-        "pt-BR": "1.TigerWit deve agir, em todos os momentos, como principal para todas as negociações realizadas por um cliente."
+        "pt-BR": "Qualquer instrução recebida on-line através da conta de negociação pessoal de um cliente ou por telefone confirmando o número da conta de negociação pessoal de um cliente, será considerada como sendo comunicada pelo cliente. A Empresa não é obrigada a confirmar a autenticidade da instrução ou a identidade da pessoa que comunica a instrução. A Empresa não será responsável por qualquer perda decorrente de uma instrução enviada por terceiros, não autorizada a agir em nome do cliente."
     },
     "amtClient59": {
         "zh": "除非另有特别约定，本公司不接受授权代表作为客户。但授权代表可以代表客户向本公司发出交易指令。",
@@ -13719,6 +13719,15 @@ module.exports = {
         "id": "Buka Akun",
         "es": "Abra una cuenta",
         "pt-BR": "Abrir uma conta"
+    },
+    "scanCodeOpenAccount": {
+        "zh": "扫码注册交易账户",
+        "en": "Scan code to open an account",
+        "vi": "Quét mã để mở một tài khoản",
+        "zh-Hant": "掃碼註冊交易賬戶",
+        "id": "Scan kode untuk membuka akun",
+        "es": "Escanear código para abrir una cuenta",
+        "pt-BR": "Escanear código para abrir uma conta"
     },
     "newhome_10": {
         "zh": "复制跟单",

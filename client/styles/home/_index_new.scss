@@ -17,7 +17,7 @@
     background-position: center center;
     background-size: auto 100%;
     color: #fff;
-    padding-top: 310px;
+    padding-top: 270px;
     &.cnCn {
       background-image: url("/white_label/home/focus-cnCn.png");
     }
@@ -37,7 +37,7 @@
     }
     @include m(sub_tit) {
       margin-top: 15px;
-      margin-bottom: 75px;
+      margin-bottom: 50px;
     }
     @include m(icon_box) {
       margin-bottom: 34px;
@@ -55,16 +55,17 @@
     }
     @include m(btn_box) {
       font-size: 20px;
-      // .tw-btn-capsule-bordered {
-      //   margin-left: 10px;
-      //   color: #fff;
-      // }
       .focus_btn {
         width: 310px;
       }
-    }
-    @include m(download) {
-      padding-top: 16px;
+      .market-h5{
+        img{
+          width: 118px;
+        }
+      }
+      .download-btn{
+
+      }
     }
   }
   @include e(copy) {
