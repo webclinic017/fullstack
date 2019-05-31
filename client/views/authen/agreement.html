@@ -3,7 +3,7 @@
         <h2>{{lang.text('tigerWitID.myAccount.uploadContract2')}}</h2>
     </div>
     <div class="kyc mg-tp-20">
-        <p class="authen_content__tip font-danger">{{(personal.agentAuthStatus.protocol.reason || '')}} </p>
+        <p class="authen_content__tip font-danger">{{lang.text('tigerWitID.myAccount.rejectedReason')}}{{(personal.agentAuthStatus.protocol.reason || '')}} {{lang.text('tigerWitID.myAccount.tryAgain')}}</p>
 
         <div class="authen_content__flow">
             <div class="authen_content__flow-title">{{lang.text('tigerWitID.myAccount.processM')}}</div>

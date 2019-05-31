@@ -2355,6 +2355,24 @@
                         "es": "Subir el Contrato",
                         "pt-BR": "carregar o contrato assinado"
                     },
+                    "rejectedReason": {
+                        "zh": "协议被驳回，原因：",
+                        "en": "The contract has been rejected. Reason: ",
+                        "vi": "Hợp đồng đã bị từ chối. Lý do: ",
+                        "zh-Hant": "協議被駁回，原因：",
+                        "id": "Kontrak ditolak. Alasan: ",
+                        "es": "El contrato ha sido rechazado. Razón: ",
+                        "pt-BR": "O contrato foi rejeitado. Motivo: "
+                    },
+                    "tryAgain": {
+                        "zh": "您可以重新尝试",
+                        "en": "Please try again.",
+                        "vi": "Vui lòng thử lại",
+                        "zh-Hant": "您可以重新嘗試",
+                        "id": "Silahkan coba kembali.",
+                        "es": "Por favor, pruebe de nuevo",
+                        "pt-BR": "Por favor, tente novamente."
+                    },
                     "uploadNote": {
                         "zh": "提示：请上传个人信息页、银行账户信息页和最后签名页。",
                         "en": "Tip: please upload the personal information page, bank account information page and the last signature page.",
