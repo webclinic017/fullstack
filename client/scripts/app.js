@@ -54,9 +54,9 @@
                // Allow loading from our assets domain.  Notice the difference between * and **.
                'http://bd.tigerwit.com/**']);
         }])
-        .config(['$locationProvider', function($locationProvider) {
-            $locationProvider.html5Mode(true);
-          }])
+        // .config(['$locationProvider', function($locationProvider) {
+        //     $locationProvider.html5Mode(true);
+        //   }])
         // .config(['$compileProvider', function ($compileProvider) {
         //     $compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|local|data):/);
         // }])
