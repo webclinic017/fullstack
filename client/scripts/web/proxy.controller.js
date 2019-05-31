@@ -6,12 +6,12 @@
         .module('fullstackApp')
         .controller('AgentProxyController', AgentProxyController);
 
-    AgentProxyController.$inject = ['$scope', "$location", "account", "fun"];
+    AgentProxyController.$inject = ['$scope', "$location", "account"];
 
-    function AgentProxyController ($scope, $location, account, fun) {
+    function AgentProxyController ($scope, $location, account) {
         // console.log($scope.getDomain());
         $scope.spread = false;
-        var ib_pid = fun.getSearch().ib_pid;
+        var ib_pid = $location.search().ib_pid;
         var link = '/space/#/account/register';
         if(ib_pid) {
             $scope.spread = true;

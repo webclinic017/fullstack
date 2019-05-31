@@ -6,11 +6,11 @@
         .module('fullstackApp')
         .controller('AgentProxyController', AgentProxyController);
 
-    AgentProxyController.$inject = ['$scope', "$location", "account", "fun"];
+    AgentProxyController.$inject = ['$scope', "$location", "account"];
 
-    function AgentProxyController ($scope, $location, account, fun) {
+    function AgentProxyController ($scope, $location, account) {
         $scope.spread = false;
-        var ib_pid = fun.getSearch().ib_pid;
+        var ib_pid = $location.search().ib_pid;
         var link = '/m/h5_register/reg';
         if(ib_pid) {
             $scope.spread = true;
