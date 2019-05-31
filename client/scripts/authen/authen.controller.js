@@ -1098,6 +1098,7 @@
     // Agreement  代理商上传协议
     function AuthenAgreementController($scope, account) {
         $scope.clickable = true;
+        $scope.flagClick = true;
         $scope.agreementImg = [];
         $scope.uploadAgreement = uploadAgreement;
         $scope.agentProtocol = agentProtocol;
@@ -1117,7 +1118,12 @@
             })
         }
         function agentProtocol(){
+            if(!$scope.flagClick){
+                return
+            }
+            $scope.flagClick = false;
             account.agentProtocol().then(function(data){
+                $scope.flagClick = true;
                 if(data.is_succ){
                     var url;
                     if($scope.lang.isDemo()){
@@ -1125,7 +1131,10 @@
                     }else{
                         url = 'https://img.tigerwit.com'
                     }
-                    window.open(url + data.data.imgUrl)
+                    var flag = window.open(url + data.data.imgUrl)
+                    if(flag == null) {
+                        alert("Enable popup filtering in your browser!\n\n Please turn off this function temporarily!") ;  
+                    }
                 }
             })
         }
