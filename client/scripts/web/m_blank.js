@@ -1,5 +1,6 @@
 ;$(document).ready(function () {
     var system = getQueryString('system');
+    var userAgent = navigator.userAgent;
     if (system === 'download_mt4') {
         if(/MicroMessenger/gi.test(userAgent)) {
             // 微信浏览器中
@@ -16,7 +17,6 @@
             source: JSON.stringify(search_source)
         }).then(function () {
             if (isAndriod() || isWindows()) {
-                var userAgent = navigator.userAgent;
                 if(/MicroMessenger/gi.test(userAgent)) {
                     // 微信浏览器中
                     $(".weixinTip").css("display", "block");
