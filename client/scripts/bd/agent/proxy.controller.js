@@ -10,6 +10,7 @@
 
     function AgentProxyController ($scope, $location, account, fun) {
         $scope.spread = false;
+        // 使用$location会导致跳转问题
         var ib_pid = fun.getSearch().ib_pid;
         var link = '/m/h5_register/reg';
         if(ib_pid) {
