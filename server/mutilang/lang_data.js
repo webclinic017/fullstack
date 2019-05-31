@@ -3249,13 +3249,13 @@ module.exports = {
         "pt-BR": "Introdução"
     },
     "amtClient2": {
-        "zh": "1.TigerWit Limited（以下统称为“TigerWit”、“公司”或”本公司”）在巴哈马国注册成立（注册证书编号 198255B）。我们 的 注 册 办 事 处 位 于 201 Church Street, Sandyport, P. O. Box SP 64368.Nassau, TheBahamas。TigerWit 受巴哈马证券监察委员会授权和监管（注册编号 SIA-F185）。",
-        "en": "1.TigerWit Limited (hereinafter referred to as ‘TigerWit’, the ‘Firm’ or the 'Company') is incorporated (Certificate of Incorporation No. 198255B) in The Commonwealth of The Bahamas. Our registered office is 201 Church Street, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. TigerWit is authorised and regulated by the Securities Commission of The Bahamas (licence No. SIA-F185).",
-        "vi": "1.1 TigerWit Limited (sau đây gọi tắt là TigerWit, Công ty hoặc 'Công ty') được thành lập (Giấy chứng nhận thành lập số 198255B) trong Khối thịnh vượng chung Bahamas. Văn phòng đăng ký của chúng tôi là 201 Church Street, Sandyport, P. O. Box SP64368. Nassau, Bahamas. TigerWit được ủy quyền và quản lý bởi Ủy ban Chứng khoán Bahamas (giấy phép số SIA-F185).",
-        "zh-Hant": "1.TigerWit Limited（以下統稱為“TigerWit”、“公司”或”本公司”）在巴哈馬國註冊成立（註冊證書編號 198255B）。我們 的 註 冊 辦 事 處 位 於 201 Church Street, Sandyport, P. O. Box SP 64368.Nassau, TheBahamas。TigerWit 受巴哈馬證券監察委員會授權和監管（註冊編號 SIA-F185）。",
-        "id": "1.TigerWit Limited (hereinafter referred to as ‘TigerWit’, the ‘Firm’ or the 'Company') is incorporated (Certificate of Incorporation No. 198255B) in The Commonwealth of The Bahamas. Our registered office is 201 Church Street, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. TigerWit is authorised and regulated by the Securities Commission of The Bahamas (licence No. SIA-F185).",
-        "es": "TigerWit Limited (a partir de ahora referido como ‘TigerWit’ o la ‘Firma’ o la ‘Empresa’) está incorporada (Certificado de Incorporación No. 198255B) en La Commonwealth of The Bahamas. Nuestra oficina registrada es 201 Church Street, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. TigerWit está autorizada y regulada por la Securities Commission of The Bahamas (licencia No. SIA-F185).",
-        "pt-BR": "1.TigerWit Limited (doravante referida como \"TigerWit\", a \"Firma\" ou a \"Empresa\") é incorporada (Certificado de Incorporação No. 198255B) na Comunidade das Bahamas. Nossa sede é 201 Church Street, Sandyport, P. O. Box SP 64368. Nassau, Bahamas. A TigerWit é autorizada e regulamentada pela Comissão de Valores Mobiliários das Bahamas (licença No. SIA-F185)."
+        "zh": "1.TigerWit Limited（以下统称为“TigerWit”、“公司”或”本公司”）在巴哈马国注册成立（注册证书编号 198255B）。我们 的 注 册 办 事 处 位 于 Sea Sky Lane, Sandyport, P. O. Box SP 64368.Nassau, TheBahamas。TigerWit 受巴哈马证券监察委员会授权和监管（注册编号 SIA-F185）。",
+        "en": "1.TigerWit Limited (hereinafter referred to as ‘TigerWit’, the ‘Firm’ or the 'Company') is incorporated (Certificate of Incorporation No. 198255B) in The Commonwealth of The Bahamas. Our registered office is Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. TigerWit is authorised and regulated by the Securities Commission of The Bahamas (licence No. SIA-F185).",
+        "vi": "1.1 TigerWit Limited (sau đây gọi tắt là TigerWit, Công ty hoặc 'Công ty') được thành lập (Giấy chứng nhận thành lập số 198255B) trong Khối thịnh vượng chung Bahamas. Văn phòng đăng ký của chúng tôi là Sea Sky Lane, Sandyport, P. O. Box SP64368. Nassau, Bahamas. TigerWit được ủy quyền và quản lý bởi Ủy ban Chứng khoán Bahamas (giấy phép số SIA-F185).",
+        "zh-Hant": "1.TigerWit Limited（以下統稱為“TigerWit”、“公司”或”本公司”）在巴哈馬國註冊成立（註冊證書編號 198255B）。我們 的 註 冊 辦 事 處 位 於 Sea Sky Lane, Sandyport, P. O. Box SP 64368.Nassau, TheBahamas。TigerWit 受巴哈馬證券監察委員會授權和監管（註冊編號 SIA-F185）。",
+        "id": "1.TigerWit Limited (hereinafter referred to as ‘TigerWit’, the ‘Firm’ or the 'Company') is incorporated (Certificate of Incorporation No. 198255B) in The Commonwealth of The Bahamas. Our registered office is Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. TigerWit is authorised and regulated by the Securities Commission of The Bahamas (licence No. SIA-F185).",
+        "es": "TigerWit Limited (a partir de ahora referido como ‘TigerWit’ o la ‘Firma’ o la ‘Empresa’) está incorporada (Certificado de Incorporación No. 198255B) en La Commonwealth of The Bahamas. Nuestra oficina registrada es Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. TigerWit está autorizada y regulada por la Securities Commission of The Bahamas (licencia No. SIA-F185).",
+        "pt-BR": "1.TigerWit Limited (doravante referida como \"TigerWit\", a \"Firma\" ou a \"Empresa\") é incorporada (Certificado de Incorporação No. 198255B) na Comunidade das Bahamas. Nossa sede é Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, Bahamas. A TigerWit é autorizada e regulamentada pela Comissão de Valores Mobiliários das Bahamas (licença No. SIA-F185)."
     },
     "amtClient3": {
         "zh": "确认书",
@@ -4537,12 +4537,12 @@ module.exports = {
     },
     "amtClient145": {
         "zh": "您可以申请一份我们持有的您的相关信息的副本。如果您索要全部或部分信息的副本，请写信 至 ： 收 件 人 ： 数 据 管 理 员 ， 地 址 为 201Church Street, Sandyport, PO Box SP 64368, Nassau, The Bahamas.我们可能会就此项服务收取少量费用。",
-        "en": "You may request a copy of the information that we hold about you. If you would like a copy of all or some of the information please write to: The Data Controller, 201 Church Street, Sandyport, PO Box SP 64368, Nassau, The Bahamas. We may make a small charge for this service.",
-        "vi": "Bạn có thể yêu cầu một bản sao thông tin mà chúng tôi có về bạn. Nếu bạn muốn một bản sao của tất cả hoặc một số thông tin xin vui lòng viết thư cho: Bộ điều khiển dữ liệu, 201 Church Street, Sandyport, PO Box SP 64368, Nassau, Bahamas. Chúng tôi có thể tính một khoản phí nhỏ cho dịch vụ này.",
+        "en": "You may request a copy of the information that we hold about you. If you would like a copy of all or some of the information please write to: The Data Controller, Sea Sky Lane, Sandyport, PO Box SP 64368, Nassau, The Bahamas. We may make a small charge for this service.",
+        "vi": "Bạn có thể yêu cầu một bản sao thông tin mà chúng tôi có về bạn. Nếu bạn muốn một bản sao của tất cả hoặc một số thông tin xin vui lòng viết thư cho: Bộ điều khiển dữ liệu, Sea Sky Lane, Sandyport, PO Box SP 64368, Nassau, Bahamas. Chúng tôi có thể tính một khoản phí nhỏ cho dịch vụ này.",
         "zh-Hant": "您可以申請壹份我們持有的您的相關信息的副本。如果您索要全部或部分信息的副本，請寫信 至 ： 收 件 人 ： 數 據 管 理 員 ， 地 址 為 201Church Street, Sandyport, PO Box SP 64368, Nassau, The Bahamas.我們可能會就此項服務收取少量費用。",
-        "id": "You may request a copy of the information that we hold about you. If you would like a copy of all or some of the information please write to: The Data Controller, 201 Church Street, Sandyport, PO Box SP 64368, Nassau, The Bahamas. We may make a small charge for this service.",
-        "es": "Puede solicitar una copia de la información que tenemos sobre usted. Si desea una copia de toda o parte de la información, escriba a: El controlador de datos, 201 Church Street, Sandyport, PO Box SP 64368, Nassau, Las Bahamas. Podemos hacer un pequeño cargo por este servicio.",
-        "pt-BR": "Você pode solicitar uma cópia das informações que temos sobre você. Se você quiser uma cópia de todas ou algumas das informações, por favor escreva para: The Data Controller, 201 Church Street, Sandyport, PO Box SP 64368, Nassau, Bahamas. Podemos cobrar uma pequena taxa por este serviço."
+        "id": "You may request a copy of the information that we hold about you. If you would like a copy of all or some of the information please write to: The Data Controller, Sea Sky Lane, Sandyport, PO Box SP 64368, Nassau, The Bahamas. We may make a small charge for this service.",
+        "es": "Puede solicitar una copia de la información que tenemos sobre usted. Si desea una copia de toda o parte de la información, escriba a: El controlador de datos, Sea Sky Lane, Sandyport, PO Box SP 64368, Nassau, Las Bahamas. Podemos hacer un pequeño cargo por este servicio.",
+        "pt-BR": "Você pode solicitar uma cópia das informações que temos sobre você. Se você quiser uma cópia de todas ou algumas das informações, por favor escreva para: The Data Controller, Sea Sky Lane, Sandyport, PO Box SP 64368, Nassau, Bahamas. Podemos cobrar uma pequena taxa por este serviço."
     },
     "amtClient146": {
         "zh": "2.除了在有合法管辖权的监管机构要求的情况下，TigerWit 不得向第三方披露客户的任何保密信息；除非政府机构及其他机构另有指示，此类信息将基于“需者方知”原则进行披露，但须符合适用法律的规定。在此情况下，公司应明确告知第三方信息的保密性质。",
@@ -4914,13 +4914,13 @@ module.exports = {
         "pt-BR": "Lei Aplicável, Jurisdição e Resolução de Conflitos"
     },
     "amtClient187": {
-        "zh": "1.客户可以向合规专员提出书面投诉，投诉地址为 201 Church Street, Sandyport, PO BoxSP 64368, Nassau, The Bahamas。如果客户仍不满意于 TigerWit 随后开展的调查与回复，客户可以联系巴哈马证券监察委员会。完整详情载于我们的内部投诉程序，可随时根据要求向客户提供。",
-        "en": "1.The client may raise a complaint in writing to the Compliance Officer, 201 Church Street, Sandyport, PO Box SP 64368, Nassau, The Bahamas. If following TigerWit's subsequent investigation and response the client is still not satisfied he/she may contact the Securities Commission of The Bahamas. Full details are contained within our internal complaints procedure, which is available to the client on request at any time.",
-        "vi": "1.Khách hàng có thể khiếu nại bằng văn bản cho Cán bộ Kiểm Soát, 201 Church Street, Sandyport, PO Box SP 64368, Nassau, Bahamas. Nếu sau việc điều tra và phản hồi tiếp theo của TigerWit, khách hàng vẫn không hài lòng họ có thể liên lạc với Ủy ban Chứng khoán Bahamas. Chi tiết đầy đủ được trình bày trong phần thủ tục khiếu nại nội bộ của chúng tôi, có sẵn cho khách hàng theo yêu cầu bất cứ lúc nào.",
-        "zh-Hant": "1.客戶可以向合規專員提出書面投訴，投訴地址為 201 Church Street, Sandyport, PO BoxSP 64368, Nassau, The Bahamas。如果客戶仍不滿意於 TigerWit 隨後開展的調查與回復，客戶可以聯系巴哈馬證券監察委員會。完整詳情載於我們的內部投訴程序，可隨時根據要求向客戶提供。",
-        "id": "1.The client may raise a complaint in writing to the Compliance Officer, 201 Church Street, Sandyport, PO Box SP 64368, Nassau, The Bahamas. If following TigerWit's subsequent investigation and response the client is still not satisfied he/she may contact the Securities Commission of The Bahamas. Full details are contained within our internal complaints procedure, which is available to the client on request at any time.",
-        "es": "1.El cliente puede presentar una reclamación por escrito al Compliance Officer, dirección en 201 Church Street, Sandyport, PO Box SP 64368, Nassau, Las Bahamas. Si después de la investigación y respuestas posteriores de TigerWit, el cliente todavía no está satisfecho, puede comunicarse con la Comisión de Valores de las Bahamas. Los detalles completos se encuentran en nuestro procedimiento interno de reclamaciones, que está disponible para el cliente a petición en cualquier momento.",
-        "pt-BR": "1. O cliente pode apresentar uma reclamação por escrito ao Diretor de Compliance, 201 Church Street, Sandyport, PO Box SP 64368, Nassau, Bahamas. Se após a investigação e resposta subseqüentes da TigerWit, o cliente ainda não estiver satisfeito, ele / ela pode entrar em contato com a Comissão de Valores Mobiliários das Bahamas. Todos os detalhes estão contidos em nosso procedimento interno de reclamações, que está disponível para o cliente, a pedido, a qualquer momento."
+        "zh": "1.客户可以向合规专员提出书面投诉，投诉地址为 Sea Sky Lane, Sandyport, PO BoxSP 64368, Nassau, The Bahamas。如果客户仍不满意于 TigerWit 随后开展的调查与回复，客户可以联系巴哈马证券监察委员会。完整详情载于我们的内部投诉程序，可随时根据要求向客户提供。",
+        "en": "1.The client may raise a complaint in writing to the Compliance Officer, Sea Sky Lane, Sandyport, PO Box SP 64368, Nassau, The Bahamas. If following TigerWit's subsequent investigation and response the client is still not satisfied he/she may contact the Securities Commission of The Bahamas. Full details are contained within our internal complaints procedure, which is available to the client on request at any time.",
+        "vi": "1.Khách hàng có thể khiếu nại bằng văn bản cho Cán bộ Kiểm Soát, Sea Sky Lane, Sandyport, PO Box SP 64368, Nassau, Bahamas. Nếu sau việc điều tra và phản hồi tiếp theo của TigerWit, khách hàng vẫn không hài lòng họ có thể liên lạc với Ủy ban Chứng khoán Bahamas. Chi tiết đầy đủ được trình bày trong phần thủ tục khiếu nại nội bộ của chúng tôi, có sẵn cho khách hàng theo yêu cầu bất cứ lúc nào.",
+        "zh-Hant": "1.客戶可以向合規專員提出書面投訴，投訴地址為 Sea Sky Lane, Sandyport, PO BoxSP 64368, Nassau, The Bahamas。如果客戶仍不滿意於 TigerWit 隨後開展的調查與回復，客戶可以聯系巴哈馬證券監察委員會。完整詳情載於我們的內部投訴程序，可隨時根據要求向客戶提供。",
+        "id": "1.The client may raise a complaint in writing to the Compliance Officer, Sea Sky Lane, Sandyport, PO Box SP 64368, Nassau, The Bahamas. If following TigerWit's subsequent investigation and response the client is still not satisfied he/she may contact the Securities Commission of The Bahamas. Full details are contained within our internal complaints procedure, which is available to the client on request at any time.",
+        "es": "1.El cliente puede presentar una reclamación por escrito al Compliance Officer, dirección en Sea Sky Lane, Sandyport, PO Box SP 64368, Nassau, Las Bahamas. Si después de la investigación y respuestas posteriores de TigerWit, el cliente todavía no está satisfecho, puede comunicarse con la Comisión de Valores de las Bahamas. Los detalles completos se encuentran en nuestro procedimiento interno de reclamaciones, que está disponible para el cliente a petición en cualquier momento.",
+        "pt-BR": "1. O cliente pode apresentar uma reclamação por escrito ao Diretor de Compliance, Sea Sky Lane, Sandyport, PO Box SP 64368, Nassau, Bahamas. Se após a investigação e resposta subseqüentes da TigerWit, o cliente ainda não estiver satisfeito, ele / ela pode entrar em contato com a Comissão de Valores Mobiliários das Bahamas. Todos os detalhes estão contidos em nosso procedimento interno de reclamações, que está disponível para o cliente, a pedido, a qualquer momento."
     },
     "amtClient188": {
         "zh": "客户同意，本客户协议及本公司根据本协议提供的任何投资和/或辅助服务均适用于巴哈马国法律。",
@@ -5769,13 +5769,13 @@ module.exports = {
         "pt-BR": "Introdução"
     },
     "amtBusiness2": {
-        "zh": "1.TigerWit Limited（以下统称为“TigerWit”、“公司”或“本公司”）在 巴 哈 马 国 注 册 成 立 （ 注 册 证 书 编 号198255B）。我们的注册办事处位于 201 ChurchStreet, Sandyport, P. O. Box SP 64368.Nassau, TheBahamas。TigerWit 受巴哈马证券监察委员会授权和监管（注册编号 SIA-F185）。",
-        "en": "1.TigerWit Limited (hereinafter referred to as ‘TigerWit’, the ‘Firm’ or the 'Company') is incorporated (Certificate of Incorporation No. 198255B) in The Commonwealth of The Bahamas. Our registered office is 201 Church Street, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. TigerWit is authorised and regulated by the Securities Commission of The Bahamas (licence No. SIA-F185).",
-        "vi": "1.TigerWit Limited (sau đây gọi tắt là \"TigerWit\", \"Doanh nghiệp\" hoặc \"Công ty\") được thành lập (Giấy chứng nhận thành lập số 198255B) trong Khối thịnh vượng chung Bahamas. Văn phòng đăng ký của chúng tôi là 201 Church Street, Sandyport, P. O. Box SP 64368. Nassau, Bahamas. TigerWit được ủy quyền và quản lý bởi Ủy ban Chứng khoán Bahamas (giấy phép số SIA-F185).",
-        "zh-Hant": "1.TigerWit Limited（以下統稱為“TigerWit”、“公司”或“本公司”）在 巴 哈 馬 國 註 冊 成 立 （ 註 冊 證 書 編 號198255B）。我們的註冊辦事處位於 201 ChurchStreet, Sandyport, P. O. Box SP 64368.Nassau, TheBahamas。TigerWit 受巴哈馬證券監察委員會授權和監管（註冊編號 SIA-F185）。",
-        "id": "1.TigerWit Limited (hereinafter referred to as ‘TigerWit’, the ‘Firm’ or the 'Company') is incorporated (Certificate of Incorporation No. 198255B) in The Commonwealth of The Bahamas. Our registered office is 201 Church Street, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. TigerWit is authorised and regulated by the Securities Commission of The Bahamas (licence No. SIA-F185).",
-        "es": "1. TigerWit Limited (en lo sucesivo denominado \"TigerWit\", la \"Firma\" o la \"Compañía\") se incorpora (Certificado de Incorporación Nº. 198255B) en La Commonwealth de las Bahamas. Nuestro domicilio social es 201 Church Street, Sandyport, P. O. Box SP 64368. Nassau, Bahamas. TigerWit está autorizado y regulado por la Comisión de Valores de Las Bahamas (licencia Nº. SIA-F185).",
-        "pt-BR": "1.TigerWit Limited (doravante referida como \"TigerWit\", a \"Firma\" ou a \"Empresa\") é incorporada (Certificado de Incorporação No. 198255B) na Comunidade das Bahamas. Nossa sede é 201 Church Street, Sandyport, P. O. Box SP 64368. Nassau, Bahamas. A TigerWit é autorizada e regulamentada pela Comissão de Valores Mobiliários das Bahamas (licença No. SIA-F185)."
+        "zh": "1.TigerWit Limited（以下统称为“TigerWit”、“公司”或“本公司”）在 巴 哈 马 国 注 册 成 立 （ 注 册 证 书 编 号198255B）。我们的注册办事处位于 Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas。TigerWit 受巴哈马证券监察委员会授权和监管（注册编号 SIA-F185）。",
+        "en": "1.TigerWit Limited (hereinafter referred to as ‘TigerWit’, the ‘Firm’ or the 'Company') is incorporated (Certificate of Incorporation No. 198255B) in The Commonwealth of The Bahamas. Our registered office is Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. TigerWit is authorised and regulated by the Securities Commission of The Bahamas (licence No. SIA-F185).",
+        "vi": "1.TigerWit Limited (sau đây gọi tắt là \"TigerWit\", \"Doanh nghiệp\" hoặc \"Công ty\") được thành lập (Giấy chứng nhận thành lập số 198255B) trong Khối thịnh vượng chung Bahamas. Văn phòng đăng ký của chúng tôi là Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, Bahamas. TigerWit được ủy quyền và quản lý bởi Ủy ban Chứng khoán Bahamas (giấy phép số SIA-F185).",
+        "zh-Hant": "1.TigerWit Limited（以下統稱為“TigerWit”、“公司”或“本公司”）在 巴 哈 馬 國 註 冊 成 立 （ 註 冊 證 書 編 號198255B）。我們的註冊辦事處位於 Sea Sky Lane, Sandyport, P. O. Box SP 64368.Nassau, TheBahamas。TigerWit 受巴哈馬證券監察委員會授權和監管（註冊編號 SIA-F185）。",
+        "id": "1.TigerWit Limited (hereinafter referred to as ‘TigerWit’, the ‘Firm’ or the 'Company') is incorporated (Certificate of Incorporation No. 198255B) in The Commonwealth of The Bahamas. Our registered office is Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. TigerWit is authorised and regulated by the Securities Commission of The Bahamas (licence No. SIA-F185).",
+        "es": "1. TigerWit Limited (en lo sucesivo denominado \"TigerWit\", la \"Firma\" o la \"Compañía\") se incorpora (Certificado de Incorporación Nº. 198255B) en La Commonwealth de las Bahamas. Nuestro domicilio social es Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, Bahamas. TigerWit está autorizado y regulado por la Comisión de Valores de Las Bahamas (licencia Nº. SIA-F185).",
+        "pt-BR": "1.TigerWit Limited (doravante referida como \"TigerWit\", a \"Firma\" ou a \"Empresa\") é incorporada (Certificado de Incorporação No. 198255B) na Comunidade das Bahamas. Nossa sede é Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, Bahamas. A TigerWit é autorizada e regulamentada pela Comissão de Valores Mobiliários das Bahamas (licença No. SIA-F185)."
     },
     "amtBusiness3": {
         "zh": "确认书",
@@ -7650,13 +7650,13 @@ module.exports = {
         "pt-BR": "Introdução"
     },
     "amtCategorization2": {
-        "zh": "1.TigerWit Limited（以下统称为“TigerWit”、“公司”或“本公司”）在 巴 哈 马 国 注 册 成 立 （ 注 册 证 书 编 号198255B）。我们的注册办事处位于 201 ChurchStreet, Sandyport, P. O. Box SP 64368.Nassau, TheBahamas。TigerWit 受巴哈马证券监察委员会授权和监管（注册编号 SIA-F185）。",
-        "en": "1.TigerWit Limited (hereinafter referred to as ‘TigerWit’, the ‘Firm’ or the 'Company') is incorporated (Certificate of Incorporation No. 198255B) in The Commonwealth of The Bahamas. Our registered office is 201 Church Street, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. TigerWit is authorised and regulated by the Securities Commission of The Bahamas (licence No. SIA-F185).",
-        "vi": "1.TigerWit Limited (sau đây gọi tắt là \"TigerWit\", \"Công ty\" hoặc \"Công ty\") được thành lập (Giấy chứng nhận thành lập số 198255B) trong Khối thịnh vượng chung Bahamas. Văn phòng đăng ký của chúng tôi là 201 Church Street, Sandyport, P. O. Box SP 64368. Nassau, Bahamas. TigerWit được ủy quyền và quản lý bởi Ủy ban Chứng khoán Bahamas (giấy phép số SIA-F185).",
-        "zh-Hant": "1.TigerWit Limited（以下統稱為“TigerWit”、“公司”或“本公司”）在 巴 哈 馬 國 註 冊 成 立 （ 註 冊 證 書 編 號198255B）。我們的註冊辦事處位於 201 ChurchStreet, Sandyport, P. O. Box SP 64368.Nassau, TheBahamas。TigerWit 受巴哈馬證券監察委員會授權和監管（註冊編號 SIA-F185）。",
-        "id": "1.TigerWit Limited (hereinafter referred to as ‘TigerWit’, the ‘Firm’ or the 'Company') is incorporated (Certificate of Incorporation No. 198255B) in The Commonwealth of The Bahamas. Our registered office is 201 Church Street, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. TigerWit is authorised and regulated by the Securities Commission of The Bahamas (licence No. SIA-F185).",
-        "es": "1. TigerWit Limited (en lo sucesivo denominado \"TigerWit\", la \"Firma\" o la \"Compañía\") se incorpora (Certificado de Incorporación Nº. 198255B) en La Commonwealth de las Bahamas. Nuestro domicilio social es 201 Church Street, Sandyport, P. O. Box SP 64368. Nassau, Bahamas. TigerWit está autorizado y regulado por la Comisión de Valores de Las Bahamas (licencia Nº. SIA-F185).",
-        "pt-BR": "1.TigerWit Limited (doravante referida como \"TigerWit\", a \"Firma\" ou a \"Empresa\") é incorporada (Certificado de Incorporação No. 198255B) na Comunidade das Bahamas. Nossa sede é 201 Church Street, Sandyport, P. O. Box SP 64368. Nassau, Bahamas. A TigerWit é autorizada e regulamentada pela Comissão de Valores Mobiliários das Bahamas (licença No. SIA-F185)."
+        "zh": "1.TigerWit Limited（以下统称为“TigerWit”、“公司”或“本公司”）在 巴 哈 马 国 注 册 成 立 （ 注 册 证 书 编 号198255B）。我们的注册办事处位于 Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas。TigerWit 受巴哈马证券监察委员会授权和监管（注册编号 SIA-F185）。",
+        "en": "1.TigerWit Limited (hereinafter referred to as ‘TigerWit’, the ‘Firm’ or the 'Company') is incorporated (Certificate of Incorporation No. 198255B) in The Commonwealth of The Bahamas. Our registered office is Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. TigerWit is authorised and regulated by the Securities Commission of The Bahamas (licence No. SIA-F185).",
+        "vi": "1.TigerWit Limited (sau đây gọi tắt là \"TigerWit\", \"Công ty\" hoặc \"Công ty\") được thành lập (Giấy chứng nhận thành lập số 198255B) trong Khối thịnh vượng chung Bahamas. Văn phòng đăng ký của chúng tôi là Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, Bahamas. TigerWit được ủy quyền và quản lý bởi Ủy ban Chứng khoán Bahamas (giấy phép số SIA-F185).",
+        "zh-Hant": "1.TigerWit Limited（以下統稱為“TigerWit”、“公司”或“本公司”）在 巴 哈 馬 國 註 冊 成 立 （ 註 冊 證 書 編 號198255B）。我們的註冊辦事處位於 Sea Sky Lane, Sandyport, P. O. Box SP 64368.Nassau, TheBahamas。TigerWit 受巴哈馬證券監察委員會授權和監管（註冊編號 SIA-F185）。",
+        "id": "1.TigerWit Limited (hereinafter referred to as ‘TigerWit’, the ‘Firm’ or the 'Company') is incorporated (Certificate of Incorporation No. 198255B) in The Commonwealth of The Bahamas. Our registered office is Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. TigerWit is authorised and regulated by the Securities Commission of The Bahamas (licence No. SIA-F185).",
+        "es": "1. TigerWit Limited (en lo sucesivo denominado \"TigerWit\", la \"Firma\" o la \"Compañía\") se incorpora (Certificado de Incorporación Nº. 198255B) en La Commonwealth de las Bahamas. Nuestro domicilio social es Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, Bahamas. TigerWit está autorizado y regulado por la Comisión de Valores de Las Bahamas (licencia Nº. SIA-F185).",
+        "pt-BR": "1.TigerWit Limited (doravante referida como \"TigerWit\", a \"Firma\" ou a \"Empresa\") é incorporada (Certificado de Incorporação No. 198255B) na Comunidade das Bahamas. Nossa sede é Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, Bahamas. A TigerWit é autorizada e regulamentada pela Comissão de Valores Mobiliários das Bahamas (licença No. SIA-F185)."
     },
     "amtCategorization3": {
         "zh": "2.无论是哪一种客户类型，本公司均不向客户提供投资建议。",
@@ -8640,13 +8640,13 @@ module.exports = {
         "pt-BR": "Introdução"
     },
     "amtExecution2": {
-        "zh": "1.TigerWit Limited（以下统称为“TigerWit”、“公司”或“本公司”）在 巴 哈 马 国 注 册 成 立 （ 注 册 证 书 编 号198255B）。我们的注册办事处位于 201 ChurchStreet, Sandyport, P. O. Box SP 64368.Nassau, TheBahamas。TigerWit 受巴哈马证券监察委员会授权和监管（注册编号 SIA-F185）。",
-        "en": "1.TigerWit Limited (hereinafter referred to as ‘TigerWit’, the ‘Firm’ or the 'Company') is incorporated (Certificate of Incorporation No. 198255B) in The Commonwealth of The Bahamas. Our registered office is 201 Church Street, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. TigerWit is authorised and regulated by the Securities Commission of The Bahamas (licence No. SIA-F185).",
-        "vi": "1.TigerWit Limited (sau đây gọi tắt là \"TigerWit\", \"Doanh nghiệp\" hoặc \"Công ty\") được thành lập (Giấy chứng nhận thành lập số 198255B) trong Khối thịnh vượng chung Bahamas. Văn phòng đăng ký của chúng tôi là 201 Church Street, Sandyport, P. O. Box SP 64368. Nassau, Bahamas. TigerWit được ủy quyền và quản lý bởi Ủy ban Chứng khoán Bahamas (giấy phép số SIA-F185).",
-        "zh-Hant": "1.TigerWit Limited（以下統稱為“TigerWit”、“公司”或“本公司”）在 巴 哈 馬 國 註 冊 成 立 （ 註 冊 證 書 編 號198255B）。我們的註冊辦事處位於 201 ChurchStreet, Sandyport, P. O. Box SP 64368.Nassau, TheBahamas。TigerWit 受巴哈馬證券監察委員會授權和監管（註冊編號 SIA-F185）。",
-        "id": "1.TigerWit Limited (hereinafter referred to as ‘TigerWit’, the ‘Firm’ or the 'Company') is incorporated (Certificate of Incorporation No. 198255B) in The Commonwealth of The Bahamas. Our registered office is 201 Church Street, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. TigerWit is authorised and regulated by the Securities Commission of The Bahamas (licence No. SIA-F185).",
-        "es": "1. TigerWit Limited (en lo sucesivo denominado \"TigerWit\", la \"Firma\" o la \"Compañía\") se incorpora (Certificado de Incorporación Nº. 198255B) en el Commonwealth de las Bahamas. Nuestro domicilio social es 201 Church Street, Sandyport, P. O. Box SP 64368. Nassau, Bahamas. TigerWit está autorizado y regulado por la Comisión de Valores de Las Bahamas (licencia Nº. SIA-F185).",
-        "pt-BR": "1.TigerWit Limited (doravante referida como \"TigerWit\", a \"Firma\" ou a \"Empresa\") é incorporada (Certificado de Incorporação No. 198255B) na Comunidade das Bahamas. Nossa sede é 201 Church Street, Sandyport, P. O. Box SP 64368. Nassau, Bahamas. A TigerWit é autorizada e regulamentada pela Comissão de Valores Mobiliários das Bahamas (licença No. SIA-F185)."
+        "zh": "1.TigerWit Limited（以下统称为“TigerWit”、“公司”或“本公司”）在 巴 哈 马 国 注 册 成 立 （ 注 册 证 书 编 号198255B）。我们的注册办事处位于 Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas。TigerWit 受巴哈马证券监察委员会授权和监管（注册编号 SIA-F185）。",
+        "en": "1.TigerWit Limited (hereinafter referred to as ‘TigerWit’, the ‘Firm’ or the 'Company') is incorporated (Certificate of Incorporation No. 198255B) in The Commonwealth of The Bahamas. Our registered office is Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. TigerWit is authorised and regulated by the Securities Commission of The Bahamas (licence No. SIA-F185).",
+        "vi": "1.TigerWit Limited (sau đây gọi tắt là \"TigerWit\", \"Doanh nghiệp\" hoặc \"Công ty\") được thành lập (Giấy chứng nhận thành lập số 198255B) trong Khối thịnh vượng chung Bahamas. Văn phòng đăng ký của chúng tôi là Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, Bahamas. TigerWit được ủy quyền và quản lý bởi Ủy ban Chứng khoán Bahamas (giấy phép số SIA-F185).",
+        "zh-Hant": "1.TigerWit Limited（以下統稱為“TigerWit”、“公司”或“本公司”）在 巴 哈 馬 國 註 冊 成 立 （ 註 冊 證 書 編 號198255B）。我們的註冊辦事處位於 Sea Sky Lane, Sandyport, P. O. Box SP 64368.Nassau, TheBahamas。TigerWit 受巴哈馬證券監察委員會授權和監管（註冊編號 SIA-F185）。",
+        "id": "1.TigerWit Limited (hereinafter referred to as ‘TigerWit’, the ‘Firm’ or the 'Company') is incorporated (Certificate of Incorporation No. 198255B) in The Commonwealth of The Bahamas. Our registered office is Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. TigerWit is authorised and regulated by the Securities Commission of The Bahamas (licence No. SIA-F185).",
+        "es": "1. TigerWit Limited (en lo sucesivo denominado \"TigerWit\", la \"Firma\" o la \"Compañía\") se incorpora (Certificado de Incorporación Nº. 198255B) en el Commonwealth de las Bahamas. Nuestro domicilio social es Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, Bahamas. TigerWit está autorizado y regulado por la Comisión de Valores de Las Bahamas (licencia Nº. SIA-F185).",
+        "pt-BR": "1.TigerWit Limited (doravante referida como \"TigerWit\", a \"Firma\" ou a \"Empresa\") é incorporada (Certificado de Incorporação No. 198255B) na Comunidade das Bahamas. Nossa sede é Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, Bahamas. A TigerWit é autorizada e regulamentada pela Comissão de Valores Mobiliários das Bahamas (licença No. SIA-F185)."
     },
     "amtExecution3": {
         "zh": "2.本订单执行政策（以下称“本政策”）构成客户协议的一部分。所以，您与本公司签署客户协议，即同意本公司所提供的与金融工具有关的执行政策的条款，本文件所载合同规范可在网站 http://global.tigerwit.com（“金融工具”）在线获取。",
@@ -10017,13 +10017,13 @@ module.exports = {
         "pt-BR": "Introdução"
     },
     "amtConflicts2": {
-        "zh": "1.TigerWit Limited（以下统称为“TigerWit”、“公司”或“本公司”）在 巴 哈 马 国 注 册 成 立 （ 注 册 证 书 编 号198255B）。我们的注册办事处位于 201 ChurchStreet, Sandyport, P. O. Box SP 64368.Nassau, TheBahamas。TigerWit 受巴哈马证券监察委员会授权和监管（注册编号 SIA-F185）。",
-        "en": "1.TigerWit Limited (hereinafter referred to as ‘TigerWit’, the ‘Firm’ or the 'Company') is incorporated (Certificate of Incorporation No. 198255B) in The Commonwealth of The Bahamas. Our registered office is 201 Church Street, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. TigerWit is authorised and regulated by the Securities Commission of The Bahamas (licence No. SIA-F185).",
-        "vi": "1.TigerWit Limited (sau đây gọi tắt là \"TigerWit\", \"Công ty\" hoặc \"Công ty\") được thành lập (Giấy chứng nhận thành lập số 198255B) trong Khối thịnh vượng chung Bahamas. Văn phòng đăng ký của chúng tôi là 201 Church Street, Sandyport, P. O. Box SP 64368. Nassau, Bahamas. TigerWit được ủy quyền và quản lý bởi Ủy ban Chứng khoán Bahamas (giấy phép số SIA-F185).",
-        "zh-Hant": "1.TigerWit Limited（以下統稱為“TigerWit”、“公司”或“本公司”）在 巴 哈 馬 國 註 冊 成 立 （ 註 冊 證 書 編 號198255B）。我們的註冊辦事處位於 201 ChurchStreet, Sandyport, P. O. Box SP 64368.Nassau, TheBahamas。TigerWit 受巴哈馬證券監察委員會授權和監管（註冊編號 SIA-F185）。",
-        "id": "1.TigerWit Limited (hereinafter referred to as ‘TigerWit’, the ‘Firm’ or the 'Company') is incorporated (Certificate of Incorporation No. 198255B) in The Commonwealth of The Bahamas. Our registered office is 201 Church Street, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. TigerWit is authorised and regulated by the Securities Commission of The Bahamas (licence No. SIA-F185).",
-        "es": "1. TigerWit Limited (en lo sucesivo denominado \"TigerWit\", la \"Firma\" o la \"Compañía\") se incorpora (Certificado de Incorporación No. 198255B) en el Commonwealth de las Bahamas. Nuestro domicilio social es 201 Church Street, Sandyport, P. O. Box SP 64368. Nassau, Bahamas. TigerWit está autorizado y regulado por la Comisión de Valores de Las Bahamas (licencia No. SIA-F185).",
-        "pt-BR": "1.TigerWit Limited (doravante referida como \"TigerWit\", a \"Firma\" ou a \"Empresa\") é incorporada (Certificado de Incorporação No. 198255B) na Comunidade das Bahamas. Nossa sede é 201 Church Street, Sandyport, P. O. Box SP 64368. Nassau, Bahamas. A TigerWit é autorizada e regulamentada pela Comissão de Valores Mobiliários das Bahamas (licença No. SIA-F185)."
+        "zh": "1.TigerWit Limited（以下统称为“TigerWit”、“公司”或“本公司”）在 巴 哈 马 国 注 册 成 立 （ 注 册 证 书 编 号198255B）。我们的注册办事处位于 Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas。TigerWit 受巴哈马证券监察委员会授权和监管（注册编号 SIA-F185）。",
+        "en": "1.TigerWit Limited (hereinafter referred to as ‘TigerWit’, the ‘Firm’ or the 'Company') is incorporated (Certificate of Incorporation No. 198255B) in The Commonwealth of The Bahamas. Our registered office is Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. TigerWit is authorised and regulated by the Securities Commission of The Bahamas (licence No. SIA-F185).",
+        "vi": "1.TigerWit Limited (sau đây gọi tắt là \"TigerWit\", \"Công ty\" hoặc \"Công ty\") được thành lập (Giấy chứng nhận thành lập số 198255B) trong Khối thịnh vượng chung Bahamas. Văn phòng đăng ký của chúng tôi là Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, Bahamas. TigerWit được ủy quyền và quản lý bởi Ủy ban Chứng khoán Bahamas (giấy phép số SIA-F185).",
+        "zh-Hant": "1.TigerWit Limited（以下統稱為“TigerWit”、“公司”或“本公司”）在 巴 哈 馬 國 註 冊 成 立 （ 註 冊 證 書 編 號198255B）。我們的註冊辦事處位於 Sea Sky Lane, Sandyport, P. O. Box SP 64368.Nassau, TheBahamas。TigerWit 受巴哈馬證券監察委員會授權和監管（註冊編號 SIA-F185）。",
+        "id": "1.TigerWit Limited (hereinafter referred to as ‘TigerWit’, the ‘Firm’ or the 'Company') is incorporated (Certificate of Incorporation No. 198255B) in The Commonwealth of The Bahamas. Our registered office is Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. TigerWit is authorised and regulated by the Securities Commission of The Bahamas (licence No. SIA-F185).",
+        "es": "1. TigerWit Limited (en lo sucesivo denominado \"TigerWit\", la \"Firma\" o la \"Compañía\") se incorpora (Certificado de Incorporación No. 198255B) en el Commonwealth de las Bahamas. Nuestro domicilio social es Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, Bahamas. TigerWit está autorizado y regulado por la Comisión de Valores de Las Bahamas (licencia No. SIA-F185).",
+        "pt-BR": "1.TigerWit Limited (doravante referida como \"TigerWit\", a \"Firma\" ou a \"Empresa\") é incorporada (Certificado de Incorporação No. 198255B) na Comunidade das Bahamas. Nossa sede é Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, Bahamas. A TigerWit é autorizada e regulamentada pela Comissão de Valores Mobiliários das Bahamas (licença No. SIA-F185)."
     },
     "amtConflicts3": {
         "zh": "2.本公司向客户及潜在客户提供利益冲突政策（以下简称本“政策”）的摘要。",
@@ -10548,28 +10548,28 @@ module.exports = {
         "pt-BR": "Comissão de Valores Mobiliários das Bahamas"
     },
     "amtComplaint8": {
-        "zh": "3rd Floor, Charlotte House",
-        "en": "3rd Floor, Charlotte House",
-        "vi": "Tầng 3, Charlotte House",
-        "zh-Hant": "3rd Floor, Charlotte House",
-        "id": "3rd Floor, Charlotte House",
-        "es": "3rd Floor, Charlotte House",
-        "pt-BR": "3rd Floor, Charlotte House"
+        "zh": "31A East Bay Street",
+        "en": "31A East Bay Street",
+        "vi": "31A East Bay Street",
+        "zh-Hant": "31A East Bay Street",
+        "id": "31A East Bay Street",
+        "es": "31A East Bay Street",
+        "pt-BR": "31A East Bay Street"
     },
     "amtComplaint9": {
-        "zh": "Shirley and Charlotte",
-        "en": "Shirley and Charlotte Streets",
-        "vi": "Đường Shirley và Charlotte",
-        "zh-Hant": "Shirley and Charlotte",
-        "id": "Shirley and Charlotte Streets",
-        "es": "Shirley and Charlotte Streets",
-        "pt-BR": "Shirley and Charlotte Streets"
+        "zh": "2nd Floor Poinciana House",
+        "en": "2nd Floor Poinciana House",
+        "vi": "Nhà Poinsana Tầng hai",
+        "zh-Hant": "2nd Floor Poinciana House",
+        "id": "2nd Floor Poinciana House",
+        "es": "2nd Floor Poinciana House",
+        "pt-BR": "2nd Floor Poinciana House"
     },
     "amtComplaint10": {
-        "zh": "Streets PO Box N8347",
+        "zh": "PO Box N8347",
         "en": "PO Box N8347",
         "vi": "PO Box N8347",
-        "zh-Hant": "Streets PO Box N8347",
+        "zh-Hant": "PO Box N8347",
         "id": "PO Box N8347",
         "es": "PO Box N8347",
         "pt-BR": "PO Box N8347"
@@ -10611,13 +10611,13 @@ module.exports = {
         "pt-BR": "Introdução"
     },
     "amtComplaint16": {
-        "zh": "1.TigerWit Limited（以下统称为“TigerWit”、“公司”或“本公司”）在 巴 哈 马 国 注 册 成 立 （ 注 册 证 书 编 号198255B）。我们的注册办事处位于 201 ChurchStreet, Sandyport, P. O. Box SP 64368.Nassau, TheBahamas。TigerWit 受巴哈马证券监察委员会授权和监管（注册编号 SIA-F185）。",
-        "en": "1.TigerWit Limited (hereinafter referred to as ‘TigerWit’, the ‘Firm’ or the 'Company') is incorporated (Certificate of Incorporation No. 198255B) in The Commonwealth of The Bahamas. Our registered office is 201 Church Street, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. TigerWit is authorised and regulated by the Securities Commission of The Bahamas (licence No. SIA-F185).",
-        "vi": "1.TigerWit Limited (sau đây gọi tắt là \"TigerWit\", \"Công ty\" hoặc \"Công ty\") được thành lập (Giấy chứng nhận thành lập số 198255B) trong Khối thịnh vượng chung Bahamas. Văn phòng đăng ký của chúng tôi là 201 Church Street, Sandyport, P. O. Box SP 64368. Nassau, Bahamas. TigerWit được ủy quyền và quản lý bởi Ủy ban Chứng khoán Bahamas (giấy phép số SIA-F185).",
-        "zh-Hant": "1.TigerWit Limited（以下統稱為“TigerWit”、“公司”或“本公司”）在 巴 哈 馬 國 註 冊 成 立 （ 註 冊 證 書 編 號198255B）。我們的註冊辦事處位於 201 ChurchStreet, Sandyport, P. O. Box SP 64368.Nassau, TheBahamas。TigerWit 受巴哈馬證券監察委員會授權和監管（註冊編號 SIA-F185）。",
-        "id": "1.TigerWit Limited (hereinafter referred to as ‘TigerWit’, the ‘Firm’ or the 'Company') is incorporated (Certificate of Incorporation No. 198255B) in The Commonwealth of The Bahamas. Our registered office is 201 Church Street, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. TigerWit is authorised and regulated by the Securities Commission of The Bahamas (licence No. SIA-F185).",
-        "es": "1. TigerWit Limited (a partir de ahora ‘TigerWit’, o la ‘Firma’ o la 'Compañía') está incorporada en (Certificado de Incorporación No. 198255B) The Commonwealth of The Bahamas. Nuestra oficina registrada es 201 Church Street, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. TigerWit está autorizado y regulado por la Securities Commission of The Bahamas (Licencia No. SIA-F185).",
-        "pt-BR": "1.TigerWit Limited (doravante referida como \"TigerWit\", a \"Firma\" ou a \"Empresa\") é incorporada (Certificado de Incorporação No. 198255B) na Comunidade das Bahamas. Nossa sede é 201 Church Street, Sandyport, P. O. Box SP 64368. Nassau, Bahamas. A TigerWit é autorizada e regulamentada pela Comissão de Valores Mobiliários das Bahamas (licença No. SIA-F185)."
+        "zh": "1.TigerWit Limited（以下统称为“TigerWit”、“公司”或“本公司”）在 巴 哈 马 国 注 册 成 立 （ 注 册 证 书 编 号198255B）。我们的注册办事处位于 Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas。TigerWit 受巴哈马证券监察委员会授权和监管（注册编号 SIA-F185）。",
+        "en": "1.TigerWit Limited (hereinafter referred to as ‘TigerWit’, the ‘Firm’ or the 'Company') is incorporated (Certificate of Incorporation No. 198255B) in The Commonwealth of The Bahamas. Our registered office is Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. TigerWit is authorised and regulated by the Securities Commission of The Bahamas (licence No. SIA-F185).",
+        "vi": "1.TigerWit Limited (sau đây gọi tắt là \"TigerWit\", \"Công ty\" hoặc \"Công ty\") được thành lập (Giấy chứng nhận thành lập số 198255B) trong Khối thịnh vượng chung Bahamas. Văn phòng đăng ký của chúng tôi là Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, Bahamas. TigerWit được ủy quyền và quản lý bởi Ủy ban Chứng khoán Bahamas (giấy phép số SIA-F185).",
+        "zh-Hant": "1.TigerWit Limited（以下統稱為“TigerWit”、“公司”或“本公司”）在 巴 哈 馬 國 註 冊 成 立 （ 註 冊 證 書 編 號198255B）。我們的註冊辦事處位於 Sea Sky Lane, Sandyport, P. O. Box SP 64368.Nassau, TheBahamas。TigerWit 受巴哈馬證券監察委員會授權和監管（註冊編號 SIA-F185）。",
+        "id": "1.TigerWit Limited (hereinafter referred to as ‘TigerWit’, the ‘Firm’ or the 'Company') is incorporated (Certificate of Incorporation No. 198255B) in The Commonwealth of The Bahamas. Our registered office is Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. TigerWit is authorised and regulated by the Securities Commission of The Bahamas (licence No. SIA-F185).",
+        "es": "1. TigerWit Limited (a partir de ahora ‘TigerWit’, o la ‘Firma’ o la 'Compañía') está incorporada en (Certificado de Incorporación No. 198255B) The Commonwealth of The Bahamas. Nuestra oficina registrada es Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. TigerWit está autorizado y regulado por la Securities Commission of The Bahamas (Licencia No. SIA-F185).",
+        "pt-BR": "1.TigerWit Limited (doravante referida como \"TigerWit\", a \"Firma\" ou a \"Empresa\") é incorporada (Certificado de Incorporação No. 198255B) na Comunidade das Bahamas. Nossa sede é Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, Bahamas. A TigerWit é autorizada e regulamentada pela Comissão de Valores Mobiliários das Bahamas (licença No. SIA-F185)."
     },
     "amtComplaint17": {
         "zh": "条款解释",
