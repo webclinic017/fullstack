@@ -8,19 +8,19 @@ $(document).ready(function () {
     unable: false
   };
   /*获取查询字段*/
-  function getSearch() {
-    var url = location.href;
-    /*获取url中"?"符后的字串*/
-    var theRequest = new Object();
-    if (url.indexOf("?") != -1) {
-        var str = url.split('?')[1];
-        strs = str.split("&");
-        for (var i = 0; i < strs.length; i++) {
-            theRequest[strs[i].split("=")[0]] = (strs[i].split("=")[1]);
-        }
-    }
-    return theRequest;
-  }
+  // function getSearch() {
+  //   var url = location.href;
+  //   /*获取url中"?"符后的字串*/
+  //   var theRequest = new Object();
+  //   if (url.indexOf("?") != -1) {
+  //       var str = url.split('?')[1];
+  //       strs = str.split("&");
+  //       for (var i = 0; i < strs.length; i++) {
+  //           theRequest[strs[i].split("=")[0]] = (strs[i].split("=")[1]);
+  //       }
+  //   }
+  //   return theRequest;
+  // }
   function getDomain() {
     var domain = location.hostname.match(/\.\w+\.com/) ? location.hostname.match(/\.\w+\.com/)[0] : '.tigerwit.com';
     // console.log(url.match(/\.\w+\.com/)[0]);
