@@ -125,7 +125,7 @@
     });
 
     function setTabList () {
-        var lst = agreementList[listType][nodeResponseInfo.currentLang].split(',');
+        var lst = agreementList[listType][nodeResponseInfo.currentLang] ? agreementList[listType][nodeResponseInfo.currentLang].split(',') : agreementList[listType]['en'].split(',');
 
         $.each(lst, function (index, value) {
             tabList.push({

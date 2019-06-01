@@ -607,7 +607,10 @@
                     $scope.callback = params.callback || null;
                     $scope.closeModal = closeModal;
                     $scope.toUrl = function () {
-                        window.open($scope.msgInfo.msgUrl);
+                        var flag = window.open($scope.msgInfo.msgUrl);
+                        if(flag == null) {
+                            alert("Enable popup filtering in your browser!\n\n Please turn off this function temporarily!") ;  
+                        }
                     };
                     function closeModal() {
                         $modalInstance.dismiss();

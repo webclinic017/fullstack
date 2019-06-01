@@ -68,8 +68,13 @@
             setUploadAddressProve: setUploadAddressProve,
             getEmailPhone: getEmailPhone,
             openTrialAccount: openTrialAccount,
+<<<<<<< HEAD
             setIslamicStatus: setIslamicStatus,
             transferIslamic: transferIslamic
+=======
+            uploadAgentProtocol: uploadAgentProtocol,
+            agentProtocol: agentProtocol
+>>>>>>> 589c464a6e8b0fef29caaa2bcb1876c21a342b42
         };
         var resolveValue;
         return service;
@@ -690,5 +695,16 @@
         function transferIslamic () {
             return publicHttp.dealPublicRequest(o.transferIslamicApi, 'PUT');
         }
+
+        // 代理商上传协议
+        function uploadAgentProtocol(params) {
+            return publicHttp.dealPublicRequest(o.uploadAgentProtocolApi, 'POST', params);
+        }
+
+        // 代理商下载协议
+        function agentProtocol() {
+            return publicHttp.dealPublicRequest(o.agentProtocolApi, 'GET');
+        }
+
     }
 })();

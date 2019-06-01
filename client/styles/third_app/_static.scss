@@ -95,7 +95,7 @@
       opacity: 0;
     }
 
-    &.is_cn, &.is_global, &.is_vn {
+    &.is_cn, &.is_global, &.is_vn, &.is_bank_select, &.is_bank_input {
       display: none;
     }
   }

@@ -640,13 +640,13 @@
                 "pt-BR": "sem dados"
             },
             "TradingHistory10": {
-                "en": "ago",
+                "en": " ago",
                 "zh": "前",
-                "vi": "Cách đây",
+                "vi": " Cách đây",
                 "zh-Hant": "前",
-                "id": "Sebelumnya",
+                "id": " Sebelumnya",
                 "es": " ",
-                "pt-BR": "atrás"
+                "pt-BR": " atrás"
             },
             "actLogin1": {
                 "zh": "快捷登录",
@@ -2615,6 +2615,150 @@
                         "id": "Gambar memantulkan cahaya",
                         "es": "Imagen reflectante",
                         "pt-BR": "Imagem reflexiva"
+                    },
+                    "processM": {
+                        "zh": "流程：",
+                        "en": "Process:",
+                        "vi": "Quá trình: ",
+                        "zh-Hant": "流程：",
+                        "id": "Proses:",
+                        "es": "Procesar:",
+                        "pt-BR": "Processo:"
+                    },
+                    "downloadContract": {
+                        "zh": "下载协议",
+                        "en": "download the contract",
+                        "vi": "tải hợp đồng",
+                        "zh-Hant": "下載協議",
+                        "id": "Unduh Kontrak",
+                        "es": "descargar contrato",
+                        "pt-BR": "baixe o contrato"
+                    },
+                    "printSign": {
+                        "zh": "打印纸质版 签署协议",
+                        "en": "print to sign",
+                        "vi": "in ra để kí",
+                        "zh-Hant": "打印紙質版 簽署協議",
+                        "id": "Cetak untuk tanda tangan",
+                        "es": "imprimir para firmar",
+                        "pt-BR": "imprimir para assinar"
+                    },
+                    "uploadContract": {
+                        "zh": "拍照上传协议",
+                        "en": "upload the signed contract",
+                        "vi": "tải hợp đồng đã kí lên",
+                        "zh-Hant": "拍照上傳協議",
+                        "id": "Unggah kontrak yang sudah ditanda tangani",
+                        "es": "suba el contrato firmado",
+                        "pt-BR": "carregar o contrato assinado"
+                    },
+                    "uploadContract2": {
+                        "zh": "上传协议",
+                        "en": "upload the signed contract",
+                        "vi": "Gửi lên Hợp Đồng",
+                        "zh-Hant": "上傳協議",
+                        "id": "Unggah Kontrak",
+                        "es": "Subir el Contrato",
+                        "pt-BR": "carregar o contrato assinado"
+                    },
+                    "rejectedReason": {
+                        "zh": "协议被驳回，原因：",
+                        "en": "The contract has been rejected. Reason: ",
+                        "vi": "Hợp đồng đã bị từ chối. Lý do: ",
+                        "zh-Hant": "協議被駁回，原因：",
+                        "id": "Kontrak ditolak. Alasan: ",
+                        "es": "El contrato ha sido rechazado. Razón: ",
+                        "pt-BR": "O contrato foi rejeitado. Motivo: "
+                    },
+                    "tryAgain": {
+                        "zh": "您可以重新尝试",
+                        "en": "Please try again.",
+                        "vi": "Vui lòng thử lại",
+                        "zh-Hant": "您可以重新嘗試",
+                        "id": "Silahkan coba kembali.",
+                        "es": "Por favor, pruebe de nuevo",
+                        "pt-BR": "Por favor, tente novamente."
+                    },
+                    "uploadNote": {
+                        "zh": "提示：请上传个人信息页、银行账户信息页和最后签名页。",
+                        "en": "Tip: please upload the personal information page, bank account information page and the last signature page.",
+                        "vi": "Lời khuyên: vui lòng tải lên trang thông tin cá nhân trang địa chỉ ngân hàng và chữ kí mới nhất.",
+                        "zh-Hant": "提示：請上傳個人信息頁、銀行帳護信息頁和最後簽名頁。",
+                        "id": "Tips : silahkan unggah halaman data pribadi, informasi rekening bank dan halaman terakhir yang bertanda tangan.",
+                        "es": "Consejo: por favor, suba la página de información personal, la página de información cuenta de banco y la última página con la firma.",
+                        "pt-BR": "Dica: faça o upload da página de informações pessoais, da página de informações da conta bancária e da última página de assinatura."
+                    },
+                    "downloadContractBtn": {
+                        "zh": "点击下载协议",
+                        "en": "Click download",
+                        "vi": "Nhấp để tải",
+                        "zh-Hant": "點擊下載協議",
+                        "id": "Klik untuk unduh",
+                        "es": "Click descarga",
+                        "pt-BR": "Clique em download"
+                    },
+                    "saveSubmit": {
+                        "zh": "保存并提交审核",
+                        "en": "Save and submit",
+                        "vi": "Lưu và nộp",
+                        "zh-Hant": "保存並提交審核",
+                        "id": "Simpan dan kirim",
+                        "es": "Guardar y enviar",
+                        "pt-BR": "Guardar e submeter"
+                    },
+                    "personalInformationPage": {
+                        "zh": "个人信息页",
+                        "en": "Personal information page",
+                        "vi": "Trang thông tin cá nhân",
+                        "zh-Hant": "個人信息頁",
+                        "id": "Halaman data pribadi",
+                        "es": "Página información personal",
+                        "pt-BR": "Página de informações pessoais"
+                    },
+                    "bankAccountPage": {
+                        "zh": "银行账户信息页",
+                        "en": "Bank account information page",
+                        "vi": "Trang địa chỉ ngân hàng",
+                        "zh-Hant": "銀行帳護信息頁",
+                        "id": "Halaman informasi rekening bank",
+                        "es": "Página información cuenta banco",
+                        "pt-BR": "Página de informações da conta bancária"
+                    },
+                    "bankAccountPageExplain": {
+                        "zh": "（如没有，可不填写）",
+                        "en": "(If not, you can leave it blank)",
+                        "vi": "(Nếu không bạn có thể để trống nó)",
+                        "zh-Hant": "（如沒有，可不填寫）",
+                        "id": "(Jika tidak, kosongkan saja)",
+                        "es": "(Si no, puede dejarlo en blanco)",
+                        "pt-BR": "(Se não, você pode deixar em branco)"
+                    },
+                    "signaturePage": {
+                        "zh": "签名页",
+                        "en": "Signature page",
+                        "vi": "Trang chữ kí",
+                        "zh-Hant": "簽名頁",
+                        "id": "Halaman bertanda tangan",
+                        "es": "Página firma",
+                        "pt-BR": "Página de assinatura"
+                    },
+                    "completelyUpload": {
+                        "zh": "请完整上传个人信息页和签名页",
+                        "en": "Please upload the personal information page and the signature page completely",
+                        "vi": "Vui lòng tải lên đầy đủ trang thông tin cá nhân và trang chữ kí",
+                        "zh-Hant": "請完整上傳個人信息頁和簽名頁",
+                        "id": "Mohon unggah halaman data pribadi dan halaman bertanda tangan secara lengkap",
+                        "es": "Por favor, suba la página de información personal y de la firma completamente",
+                        "pt-BR": "Por favor carregue a página de informação pessoal e a página de assinatura completamente"
+                    },
+                    "contractSuccess": {
+                        "zh": "协议提交成功",
+                        "en": "The contract has been submitted successfully",
+                        "vi": "Hợp đồng đã được gửi thành công",
+                        "zh-Hant": "協議提交成功",
+                        "id": "Kontrak telah berhasil dikirim",
+                        "es": "El contrato ha sido enviado con éxito",
+                        "pt-BR": "O contrato foi enviado com sucesso"
                     }
                 },
                 "tip": {
@@ -3086,7 +3230,7 @@
                         "zh-Hant": "高手帳號",
                         "id": "Akun Master",
                         "es": "Cuenta Master",
-                        "pt-BR": "Conta principal"
+                        "pt-BR": "Conta Princ"
                     },
                     "masterLevelCommission": {
                         "zh": "高手等级&佣金",
@@ -3410,7 +3554,7 @@
                         "zh-Hant": "帳號名稱包含2-8個字符，支持中英文，數字",
                         "id": "terdiri dari 2-8 karakter, yang dapat disusun dengan huruf alfabet, dan angka",
                         "es": "El nombre de la cuenta contiene 2-8 caracteres y soporta Chino，Inglés y Números.",
-                        "pt-BR": "O nome da conta contém de 2 a 8 caracteres e suporta caracteres chineses, ingleses e números."
+                        "pt-BR": "Noma da conta contém 2 a 8 caracteres, suporta letras chinesas, inglesas e números."
                     },
                     "details": {
                         "zh": "查看详情",
@@ -4757,7 +4901,7 @@
                         "zh-Hant": "近七日交易狀況",
                         "id": "Rata-rata keuntungan dalam 7 hari",
                         "es": "7-días Tasa Retorno ",
-                        "pt-BR": "Taxa de retorno de 7-dias"
+                        "pt-BR": "Taxa de retorno últimos 7 dias"
                     },
                     "numberMonthlyAverage": {
                         "zh": "月平均交易笔数",
@@ -8607,7 +8751,7 @@
                         "zh-Hant": "復制跟單交易模式，人人都是投資高手",
                         "id": "Dengan memanfaatkan teknologi copy-trading miliki TigerWit, siapapun bisa menghasilkan uang.",
                         "es": "Con la tecnología totalmente automatizada copy trading de TigerWit, usted también puede convertirse en una Master del Trading.",
-                        "pt-BR": "Com a tecnologia de troca de cópias totalmente automatizada da TigerWit, qualquer um pode ser o mestre de suas próprias negociações"
+                        "pt-BR": "Com a tecnologia para copiar as negociações totalmente automatizada da TigerWit, qualquer um pode ser o mestre de suas próprias negociações"
                     },
                     "chooseMaster": {
                         "zh": "选择高手",
@@ -8661,7 +8805,7 @@
                         "zh-Hant": "最大跌幅--高手的最大浮動虧損占比。",
                         "id": "Stabilitas - Master dengan tingkat keuntungan investasi rata-rata. Master dengan peringkat teratas menghasilkan pengembalian investasi terbesar secara rata-rata dalam rentang waktu yang dipilih.",
                         "es": "Estabilidad – Tasa de retorno ponderada del Master. El Master top en el ranking ha creado el mayor beneficio ponderado en el período de tiempo seleccionado.",
-                        "pt-BR": "Estabilidade - uma taxa média de retorno da Master. O mestre do topo do ranking criou o maior lucro médio durante o período de tempo selecionado."
+                        "pt-BR": "Estabilidade - uma taxa média de retorno do mestre. O mestre do topo do ranking criou o maior lucro médio durante o período de tempo selecionado."
                     },
                     "selectMaster_3": {
                         "zh": "准确率--高手平仓的订单中盈利订单的占比。",
@@ -8670,7 +8814,7 @@
                         "zh-Hant": "準確率--高手平倉的訂單中盈利訂單的占比。",
                         "id": "Konsistensi - Master dengan total rasio transaksi menang dibandingkan dengan transaksi yang kalah. Master dengan peringkat teratas memiliki rasio transaksi menang yang paling tinggi dalam rentang waktu yang dipilih.",
                         "es": "Consistencia - el ratio de posiciones ganadoras frente a perdedoras del Master. El Master en el top del ranking tiene el mayor ratio de trades ganadores frente a perdedores en el período de tiempo seleccionado.",
-                        "pt-BR": "Consistência - a proporção geral em ganhos e perdas nas negociações de um Master. O Master mais bem classificado tem a maior proporção de ganhos em negociações ao longo do período de tempo selecionado."
+                        "pt-BR": "Consistência - a proporção geral em ganhos e perdas nas negociações de um mestre. O mestre mais bem classificado tem a maior proporção de ganhos em negociações ao longo do período de tempo selecionado."
                     },
                     "qualifyMaster": {
                         "zh": "成为高手，你将满足以下条件：",
@@ -8688,7 +8832,7 @@
                         "zh-Hant": "入金並連續自主交易20個工作日以上",
                         "id": "Telah melakukan transaksi dalam kurun waktu lebih dari 20 hari",
                         "es": "Operar directamente más de 20 días",
-                        "pt-BR": "Comércio por mais de 20 dias"
+                        "pt-BR": "Negocie por mais de 20 dias"
                     },
                     "qualifyMaster_2": {
                         "zh": "近30日内的收益回报率大于20%",
@@ -8697,7 +8841,7 @@
                         "zh-Hant": "近30日內的收益回報率大於20%",
                         "id": "Menghasilkan keuntungan lebih dari 20% dalam kurun waktu 30 hari",
                         "es": "Obtener tasa retorno 30 días mayor del 20%",
-                        "pt-BR": "Obtenha uma taxa de retorno de 30 dias maior que 20%"
+                        "pt-BR": "Obtenha uma taxa de retorno nos últimos 30 dias maior que 20%"
                     },
                     "qualifyMaster_3": {
                         "zh": "账户余额不得低于500美金",
@@ -8706,7 +8850,7 @@
                         "zh-Hant": "賬戶余額不得低於500美金",
                         "id": "Menjaga saldo akun diatas 500 $",
                         "es": "Mantener un balance de cuenta de al menos USD500",
-                        "pt-BR": "Manter um saldo de conta de pelo menos US $ 500"
+                        "pt-BR": "Manter um saldo de conta de pelo menos US $500"
                     },
                     "title": {
                         "zh": "",
@@ -8771,7 +8915,7 @@
                         "zh-Hant": "高手帳號",
                         "id": "Akun Master",
                         "es": "Cuenta Master",
-                        "pt-BR": "Conta principal"
+                        "pt-BR": "Conta Princ"
                     },
                     "copyAccount": {
                         "zh": "跟单账号",
@@ -9342,7 +9486,7 @@
                         "zh-Hant": "舊郵箱驗證碼",
                         "id": "Email kode verifikasi sudah tidak berlaku",
                         "es": "Código verificación email antigüo",
-                        "pt-BR": "Código de verificação de e-mail antigo"
+                        "pt-BR": "Código de verif. e-mail antigo"
                     },
                     "clickGet": {
                         "zh": "获取验证码",
@@ -9549,7 +9693,7 @@
                         "zh-Hant": "驗證碼",
                         "id": "Kode Verifikasi",
                         "es": "Código de verificación",
-                        "pt-BR": "Carteira não suporta a ativação individual, após a abertura bem-sucedida da conta de transação, a carteira será ativada automaticamente."
+                        "pt-BR": "Código de verificação"
                     },
                     "getVerificationCode": {
                         "zh": "获取验证码",
@@ -11062,18 +11206,18 @@
                     "en": " Hour",
                     "vi": " Giờ",
                     "zh-Hant": "時",
-                    "id": "Giờ",
+                    "id": " Giờ",
                     "es": " Hora",
-                    "pt-BR": "  Hora"
+                    "pt-BR": " Horas"
                 },
                 "Ahour": {
                     "zh": "小时",
                     "en": " Hour",
                     "vi": " Giờ",
                     "zh-Hant": "小時",
-                    "id": "Jam",
+                    "id": " Jam",
                     "es": " Hora",
-                    "pt-BR": "  Hora"
+                    "pt-BR": " Horas"
                 },
                 "minute": {
                     "zh": "分",

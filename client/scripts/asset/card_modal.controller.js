@@ -9,6 +9,7 @@
 
     function AssetCardController($scope, config, $state, $modalInstance, validator, account, asset, passedScope, lang) {
         $scope.personal = passedScope.personal;
+        $scope.platform = passedScope.platform;
         $scope.card = {
             //number: ,         // 卡号
             //bank: ,           // 银行
@@ -70,13 +71,17 @@
 
         getWorlds();
         getProvince();
-
-        asset.getBanks().then(function (data) {
-            // console.log(data);
-            if (data.is_succ) {
-                $scope.banks = data.data;
-            }
-        });
+        getBanks();
+        function getBanks(){
+            asset.getBanks({
+                type: 1,
+            }).then(function (data) {
+                // console.log(data);
+                if (data.is_succ) {
+                    $scope.banks = data.data;
+                }
+            });
+        }
 
         // 如果是修改银行卡，要初始化表单元素数据
         if (typeof passedScope.card !== 'undefined') {
@@ -152,14 +157,26 @@
             showErr('number');
             showErr('address');
 
+            if($scope.platform){
+                if($scope.banks.length){
+                    showErr('bank');
+                }else{
+                    showErr('bankOther');
+                }
+            }else{
+                if ($scope.card.world && $scope.card.world.world_code === 'CN') {
+                    showErr('bank');
+                }
+                if ($scope.card.world && $scope.card.world.world_code !== 'CN') {
+                    showErr('bankOther');
+                }
+            }
             if ($scope.card.world && $scope.card.world.world_code === 'CN') {
-                showErr('bank');
                 showErr('province');
                 showErr('city');
                 showErr('phone');
             }
             if ($scope.card.world && $scope.card.world.world_code !== 'CN') {
-                showErr('bankOther');
                 if ($scope.card.world.world_code !== 'VN') {
                     showErr('swift_code');
                 }
@@ -175,13 +192,25 @@
                 country: $scope.card.world.world_code,
                 bank_addr: $scope.card.address,
             };
+            if($scope.platform){
+                oParams.platform = $scope.platform;
+                if($scope.banks.length){
+                    oParams.bank_name = $scope.card.bank.code;
+                }else{
+                    oParams.bank_name = $scope.card.bankOther;
+                }
+            }else{
+                if ($scope.card.world && $scope.card.world.world_code === 'CN') {
+                    oParams.bank_name = $scope.card.bank.code;
+                } else {
+                    oParams.bank_name = $scope.card.bankOther;
+                }
+            }
             if ($scope.card.world && $scope.card.world.world_code === 'CN') {
-                oParams.bank_name = $scope.card.bank.code;
                 oParams.province = $scope.card.province.code;
                 oParams.city = $scope.card.city.code;
                 oParams.phone = $scope.card.phone;
             } else {
-                oParams.bank_name = $scope.card.bankOther;
                 if ($scope.card.world.world_code !== 'VN') {
                     oParams.swift_code = $scope.card.swift_code;
                 }
