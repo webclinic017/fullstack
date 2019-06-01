@@ -333,10 +333,8 @@
          * @method getBanks
          * 
          */
-        function getBanks() {
-            return publicHttp.dealPublicRequest(o.getBanksApi, 'GET', {
-                type: 1,
-            });
+        function getBanks(params) {
+            return publicHttp.dealPublicRequest(o.getBanksApi, 'GET', params);
         }
 
         /**

@@ -171,10 +171,11 @@ function getBankLst (params) {
    *  notInsertTemp 是否加载弹窗 true、false
    *  */
   var listType = params.listType || '';
+  var bankAccountParams = (params.source === 'withdraw_type' ? {platform: thirdThirdType} : null);
   var different = {
     'bank_account': {
       id: 'template_withdraw_bank_list',
-      params: ['getThirdBankLst', 'GET']
+      params: ['getThirdBankLst', 'GET', bankAccountParams]
     },
     // 获取第三方账号列表
     'third_account': {
@@ -327,10 +328,12 @@ $(document).on("tap", "#third_app_bottom_template .third_app_template_del_bank",
 });
 $(document).on("tap", "#third_app_bottom_template .third_app_add_card", function () {
   var cType = $(this).attr("data-type");
+  var cSource = $(this).attr("data-source");
+  var cSourceUrl = (cSource === 'withdraw_type' ? '&platform='+thirdThirdType : '');
   closeAllMdl();
   var different = {
     'bank_account': {
-      link: '/m/third/add_bank?world_code='+personalInfo.region.world_code
+      link: '/m/third/add_bank?world_code='+personalInfo.region.world_code + cSourceUrl
     },
     'transfer': {
       link: '/m/third/add_transfer'
