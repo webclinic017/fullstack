@@ -1,0 +1,45 @@
+<div class="sys_modal_v2 slim_case">
+<!--modalType 0 开通体验金 1 开通真实 2 转换账户-->
+  <div class="sys_modal_v2__content">
+      <div class="sys_modal_v2__tip pd-bt-10" ng-if="loading != 2">
+          <span ng-if="modalType == 0">{{ lang.text('islamic_message1') }}</span>
+          <div ng-if="modalType == 1">
+            <p>{{lang.text('islamic_message2')}}</p>
+            <p class="mg-tp-10">{{lang.text('islamic_message3')}} <a href="/agreement/islamic" target="_blank" style="color: #5496E4">{{lang.text('islamic_message4')}}</a> {{lang.text('islamic_message4_1')}}</p>
+            <p class="mg-tp-10">{{lang.text('islamic_message5')}}</p>
+          </div>
+          <div ng-if="modalType == 2">
+            <p ng-if="islamic_status == 2">{{lang.text('islamic_message31')}}</p>
+            <p ng-if="islamic_status == 1">{{lang.text('islamic_message32')}}</p>
+            <p class="mg-tp-10">{{lang.text('islamic_message33')}}</p>
+          </div>
+      </div>
+      <div class="sys_modal_v2__tip pd-bt-10 text-center" ng-if="loading == 2">
+        {{errMsg}}
+      </div>
+      <p class="mg-tp-20 text-center" ng-if="loading == 0">
+        <a class="btn tw-btn-capsule-bordered btn-lt" ng-if="modalType == 0 || modalType == 2" ng-click="closeModal()">
+          {{lang.text('tigerWitID.cancel')}}
+        </a>
+        <a class="btn tw-btn-capsule-gradient btn-lt mg-lf-10" ng-if="modalType == 0 || modalType == 2" ng-click="submitConfrim()">
+          {{lang.text('islamic_confirm')}}
+        </a>
+        <a class="btn tw-btn-capsule-bordered btn-lt" ng-if="modalType == 1" ng-click="submitConfrim('no')">
+          {{lang.text('islamic_message7')}}
+        </a>
+        <a class="btn tw-btn-capsule-gradient btn-lt mg-lf-10" ng-if="modalType == 1" ng-click="submitConfrim('yes')">
+          {{lang.text('islamic_message6')}}
+        </a>
+      </p>
+      <p class="mg-tp-20 text-center" ng-if="loading == 1">
+          <a class="btn tw-btn-capsule-gradient btn-lt">
+              {{lang.text('tigerWitID.submitting')}}..
+          </a>
+      </p>
+      <p class="mg-tp-20 text-center" ng-if="loading == 2">
+          <a class="btn tw-btn-capsule-gradient btn-lt" ng-click="closeModal()">
+              {{lang.text('islamic_confirm')}}
+          </a>
+      </p>
+  </div>
+</div>

@@ -110,6 +110,12 @@
             <li class="space_sidebar__nav-menu" ui-sref-active="active">
                 <a ui-sref="space.setting.subpage({subpage: 'name'})">{{lang.text('tigerWitID.settings.title')}}</a>
             </li>
+            <li class="space_sidebar__nav-menu" ng-if="personal.account_status == 1 && personal.islamic_remain_num > 0">
+                <a style="cursor: pointer" ng-click="openChangeIslamicModal()">
+                    <span ng-if="personal.islamic_status == 1">{{lang.text('islamic_message8')}}</span>
+                    <span ng-if="personal.islamic_status == 2">{{lang.text('islamic_message9')}}</span>
+                </a>
+            </li>
         </ul>
 
         <div class="space_sidebar__logout">

@@ -9,6 +9,312 @@
     function langData() {
 
         var lang_data = {
+            "islamic_confirm": {
+                "zh": "确认",
+                "en": "Submit",
+                "vi": "Gửi đi",
+                "zh-Hant": "確認",
+                "id": "Kirim",
+                "es": "Enviar",
+                "pt-BR": "Enviar"
+            },
+            "islamic_message1": {
+                "zh": "伊斯兰体验金账户将使用与标准实时账户相同的点差、隔夜息、手续费。 您若想使用伊斯兰账户，需要开通真实伊斯兰账户进行无库存费交易。",
+                "en": "Demo Islamic accounts use the same spreads, swaps and commissions as standard live accounts. You will need to open a live Islamic account for swap-free trading.",
+                "vi": "Các tài khoản trải nghiệm Islamic sử dụng cùng mức spread, mức swap và hoa hồng như tiêu chuẩn của tài khoản thực. Bạn sẽ cần phải mở một tài khoản thực Islamic để giao dịch không mất phí swap.",
+                "zh-Hant": "伊斯蘭體驗金賬戶將使用與標準實時賬戶相同的點差、隔夜息、手續費。 您若想使用伊斯蘭賬戶，需要開通真實伊斯蘭賬戶進行無庫存費交易。",
+                "id": "Akun Islami Demo menggunakan spread, swap dan komisi yang sama seperti akun live standar. Untuk mendapatkan free-swap, anda dapat membuka akun islami live.",
+                "es": "Las cuentas demo islámicas utilizan los mismos diferenciales, canjes y comisiones que las cuentas reales estándar. Deberá abrir una cuenta islámica en vivo para realizar transacciones sin swap.",
+                "pt-BR": "As contas islâmicas de demonstração usam os mesmos spreads, swaps e comissões como contas ao vivo padrão. Você precisará abrir uma conta islâmica ao vivo para negociação sem swap."
+            },
+            "islamic_message2": {
+                "zh": "你有资格申请一个伊斯兰账户",
+                "en": "You are eligible to apply for an Islamic account",
+                "vi": "Bạn đủ điều kiện để đăng kí tài khoản Islamic.",
+                "zh-Hant": "你有資格申請一個伊斯蘭賬戶",
+                "id": "Anda dapat mengajukan aplikasi untuk mendapatkan akun Islami",
+                "es": "Eres elegible para solicitar una cuenta islámica",
+                "pt-BR": "Você é elegível para se candidatar a uma conta islâmica "
+            },
+            "islamic_message3": {
+                "zh": "TigerWit的伊斯兰账户支持有伊斯兰信仰的投资者。不收取隔夜费用，请参阅我们的",
+                "en": "Traders of Islamic faith can take advantage of our TigerWit Islamic accounts. Trade swap-free on overnight positions. Time limits apply. Please see our ",
+                "vi": "Nhà giao dịch Islamic có thể tận dụng tài khoản Islamic TigerWit của chúng tôi. Nhà giao dịch được giao dịch dịch miễn phí mức swap nhưng sẽ giới hạn thời gian áp dụng. Xin vui lòng xem các ",
+                "zh-Hant": "TigerWit的伊斯蘭賬戶支持有伊斯蘭信仰的投資者。不收取隔夜費用，請參閱我們的",
+                "id": "Untuk trader yang menganut agama Islam dapat memanfaatkan akun Islami TigerWit. Trader akan mendapatkan free-swap untuk posisi yang menginap. Silahkan lihat ",
+                "es": "Los traders de divisas que profesen de la fe islámica , pueden aprovechar nuestras cuentas islámicas TigerWit. Trading libre de swaps en posiciones durante la noche. Se aplican límites de tiempo. Para mas información, por favor vea nuestros ",
+                "pt-BR": "Os comerciantes da fé islâmica podem tirar proveito de nossas contas islâmicas TigerWit. Comércio livre de swap nas posições overnight. Os prazos são aplicáveis. Por favor, consulte nossos "
+            },
+            "islamic_message4": {
+                "zh": "条款和条件",
+                "en": "terms and conditions ",
+                "vi": "điều khoản và điều kiện ",
+                "zh-Hant": "條款和條件",
+                "id": "syarat dan ketentuan ",
+                "es": "términos y condiciones",
+                "pt-BR": "termos e condições "
+            },
+            "islamic_message4_1": {
+                "zh": "。",
+                "en": "for more information.",
+                "vi": "của chúng tôi để biết thêm thông tin.",
+                "zh-Hant": "。",
+                "id": "lebih lanjut.",
+                "es": ".",
+                "pt-BR": "para mais informações."
+            },
+            "islamic_message5": {
+                "zh": "你想继续申请伊斯兰账户吗?",
+                "en": "Would you like to continue with the Islamic account application?",
+                "vi": "Bạn có muốn tiếp tục đăng kí tài khoản Islamic? ",
+                "zh-Hant": "你想繼續申請伊斯蘭賬戶嗎?",
+                "id": "Apakah anda ingin melanjutkan aplikasi mendapatkan akun Islami?",
+                "es": "¿Te gustaría continuar con la aplicación de la cuenta islámica? ",
+                "pt-BR": "Você gostaria de continuar com o aplicativo de conta islâmica? "
+            },
+            "islamic_message6": {
+                "zh": "是的",
+                "en": "Yes",
+                "vi": "Đồng ý",
+                "zh-Hant": "是的",
+                "id": "Ya",
+                "es": "Sí",
+                "pt-BR": "Sim"
+            },
+            "islamic_message7": {
+                "zh": "不",
+                "en": "No",
+                "vi": "Không",
+                "zh-Hant": "不",
+                "id": "Tidak",
+                "es": "No",
+                "pt-BR": "Não"
+            },
+            "islamic_message8": {
+                "zh": "切换为伊斯兰账户",
+                "en": "Request Islamic Account",
+                "vi": "Yêu cầu tài khoản Islamic",
+                "zh-Hant": "切換為伊斯蘭賬戶",
+                "id": "Permintaan Akun Islami",
+                "es": "equest Islamic Account",
+                "pt-BR": "equest Islamic Account"
+            },
+            "islamic_message9": {
+                "zh": "切换为标准账户",
+                "en": "Request Standard Account",
+                "vi": "Yêu cầu tài khoản tiêu chuẩn",
+                "zh-Hant": "切換為標準賬戶",
+                "id": "Permintaan Akun Standar",
+                "es": "Request Standard Account",
+                "pt-BR": "Request Standard Account"
+            },
+            "islamic_message10": {
+                "zh": "申请伊斯兰账户",
+                "en": "Apply for Islamic account",
+                "vi": "Áp dụng cho tài khoản Islamic",
+                "zh-Hant": "申請伊斯蘭賬戶",
+                "id": "Dapatkan Akun Islami",
+                "es": "Solicitar una cuenta islámica",
+                "pt-BR": "Candidate-se a conta islâmica"
+            },
+            "islamic_message11": {
+                "zh": "伊斯兰账户条款：",
+                "en": "Conditions of an Islamic account.",
+                "vi": "Các điều kiện của một tài khoản Islamic.",
+                "zh-Hant": "伊斯蘭賬戶條款：",
+                "id": "Ketentuan untuk Akun Islami",
+                "es": "Condiciones de una cuenta islámica.",
+                "pt-BR": "Condições de uma conta islâmica."
+            },
+            "islamic_message13": {
+                "zh": "· 10天内不收取账户管理费；",
+                "en": "· Swap free trading for 10 days",
+                "vi": "· Giao dịch miễn phí mức swap trong vòng 10 ngày",
+                "zh-Hant": "· 10天內不收取賬戶管理費；",
+                "id": "· Free Swap selama 10 hari",
+                "es": "· Intercambio comercial libre por 10 días",
+                "pt-BR": "· Troca livre de negociação por 10 dias"
+            },
+            "islamic_message14": {
+                "zh": "· 没有附加费用；",
+                "en": "· No additional charges",
+                "vi": "· Không tính thêm phí",
+                "zh-Hant": "· 沒有附加費用；",
+                "id": "· Tidak ada biaya tambahan",
+                "es": "· Sin cargos adicionales",
+                "pt-BR": "· Sem custos adicionais"
+            },
+            "islamic_message15": {
+                "zh": "· 享受伊斯兰高手跟单；",
+                "en": "· Islamic Copy Trading",
+                "vi": "· Sao Chép Giao Dịch Islamic",
+                "zh-Hant": "· 享受伊斯蘭高手跟單；",
+                "id": "· Copy Trading Islami",
+                "es": "· Comercio de copias islámicas",
+                "pt-BR": "· Comércio de cópia islâmica"
+            },
+            "islamic_message16": {
+                "zh": "· 所有子账号都可转换成伊斯兰账户 ",
+                "en": "· All sub accounts will be converted to Islamic",
+                "vi": "· Tất cả các tài khoản phụ sẽ được chuyển đổi sang Islamic",
+                "zh-Hant": "· 所有子賬號都可轉換成伊斯z蘭賬戶",
+                "id": "· Semua akun tambahan akan berubah menjadi Akun Islami",
+                "es": "· Todas las subcuentas serán convertidas al islámico.",
+                "pt-BR": "· Todas as subcontas serão convertidas em islâmicas"
+            },
+            "islamic_message17": {
+                "zh": "条款摘要",
+                "en": "Terms & Conditions Summary",
+                "vi": "Tóm tắt các Điều khoản & Điều kiện",
+                "zh-Hant": "條款摘要",
+                "id": "Ringkasan Syarat & Ketentuan",
+                "es": "Resumen de términos y condiciones",
+                "pt-BR": "Resumo dos Termos e Condições"
+            },
+            "islamic_message18": {
+                "zh": "除了TigerWit条件和条款（包括商业条件和条款）适用于您的TigerWit交易账户外，还有以下条件适用：",
+                "en": "In addition to the TigerWit Conditions and Clauses, including the Terms and Conditions of Business, which apply to your TigerWit trading account the following conditions will apply:",
+                "vi": "Ngoài các Điều khoản và Điều kiện của TigerWit, bao gồm các Điều khoản và Điều kiện kinh doanh, áp dụng cho tài khoản giao dịch TigerWit của bạn, các điều kiện sau cũng sẽ được áp dụng:",
+                "zh-Hant": "除了TigerWit條件和條款（包括商業條件和條款）適用於您的TigerWit交易賬戶外，還有以下條件適用：",
+                "id": "Syarat dan Ketentuan ini merupakan tambahan kebijakan dari dokumen ketentuan dan klausul TigerWit, serta pada syarat dan ketentuan bisnis. Syarat dan ketentuan berlaku untuk akun transaksi TigerWit yaitu :",
+                "es": "Además de las Condiciones y cláusulas de TigerWit, incluidos los Términos y Condiciones de Negocio, que se aplican a su cuenta de operaciones TigerWit, se aplicarán las siguientes condiciones:",
+                "pt-BR": "Além das Condições e Cláusulas TigerWit, incluindo os Termos e Condições de Negócios, que se aplicam à sua conta de negociação TigerWit, as seguintes condições serão aplicadas:"
+            },
+            "islamic_message19": {
+                "zh": "开仓后前十日无需支付隔夜息，展期费和佣金；",
+                "en": "No swap charges, rollover fees or commissions will be applied to each new position for the first 10 days that the position is open.",
+                "vi": "Không mất phí qua đêm, phí gia hạn lệnh hoặc hoa hồng. Chính sách này sẽ được áp dụng cho từng lệnh mới trong 10 ngày đầu tiên kể từ khi lệnh này được mở.",
+                "zh-Hant": "開倉後前十日無需支付隔夜息，展期費和佣金；",
+                "id": "Setiap posisi baru selama 10 hari sejak posisi dibuka tidak akan dikenakan biaya swap, biaya menginap ataupun komisi.",
+                "es": "No se aplicarán cargos de swap, cargos por transferencia o cargos diarios a cada nueva posición durante los primeros 10 días que la posición esté abierta.",
+                "pt-BR": "Não serão aplicadas taxas de swap, taxas de rollover ou comissões a cada nova posição nos primeiros 10 dias em que a posição estiver aberta."
+            },
+            "islamic_message20": {
+                "zh": "若十日之后继续持仓，TigerWit将会就持仓单收取账户管理费直到平仓。对于每笔订单，如果您是全部持仓，将收取每笔订单的全额每日管理费；如果是部分持仓，将收取部分开仓的管理费。请参阅费用标准：",
+                "en": "If the position remains open after 10 days, a daily administration fee will be applied by TigerWit until the position is closed. The administration fee will apply in full for each day or part thereof that a position remains open. Please see our fee’s below:",
+                "vi": "Nếu lệnh vẫn mở sau 10 ngày, phí quản lí hàng ngày sẽ được TigerWit áp dụng cho đến khi lệnh này bị đóng. Phí này sẽ được áp dụng mỗi ngày hoặc trong thời gian mà lệnh vẫn mở. Xin vui lòng xem mức phí của chúng tôi dưới đây: ",
+                "zh-Hant": "若十日之後繼續持倉，TigerWit將會就持倉單收取賬戶管理費直到平倉。對於每筆訂單，如果您是全部持倉，將收取每筆訂單的全額每日管理費；如果是部分持倉，將收取部分開倉的管理費。請參閱費用標準：",
+                "id": "Apabila posisi terbuka telah melewati jangka waktu 10 hari, maka akan dikenakan biaya administrasi harian oleh TigerWit hingga posisi ditutup. Biaya administrasi akan berlaku setiap ataupun setengah hari. Berikut adalah biaya yang akan dibebankan setelah sepuluh hari :",
+                "es": "Si la posición permanece abierta después de 10 días, TigerWit aplicará una tarifa de administración diaria de $ 25 por lote hasta que se cierre la posición. La tarifa de administración se aplicará en su totalidad por cada día o parte del mismo que una posición permanezca abierta.",
+                "pt-BR": "Se a posição permanecer aberta após 10 dias, uma taxa de administração diária será aplicada pela TigerWit até que a posição seja fechada. A taxa de administração será aplicada integralmente para cada dia ou parte do mesmo que uma posição permanecer aberta. Por favor, veja nossa taxa abaixo:"
+            },
+            "islamic_message21": {
+                "zh": "外汇、贵金属、能源、加密货币：每自然日每标准手收取$25；",
+                "en": "Fx, Metals & Crypto’s: $25 per lot, per day.",
+                "vi": "Fx, Kim loại & Tiền điện tử: 25USD/lot mỗi ngày.",
+                "zh-Hant": "外匯、貴金屬、能源、加密貨幣：每自然日每標準手收取$25；",
+                "id": "FX, Logam Mulia & Crypto: $ 25 per lot, per hari.",
+                "es": " ",
+                "pt-BR": "Fx, Metals & Crypto’s: $ 25 por lote, por dia."
+            },
+            "islamic_message22": {
+                "zh": "差价合约：每自然日每标准手$5。",
+                "en": "Indices: $5 per lot, per day. ",
+                "vi": "Chỉ số: 5USD/lot mỗi ngày.",
+                "zh-Hant": "差價合約：每自然日每標準手$5。",
+                "id": "Indeks Saham: $ 5 per lot, per hari.",
+                "es": " ",
+                "pt-BR": "Índices: US $ 5 por lote, por dia."
+            },
+            "islamic_message23": {
+                "zh": "任何现有TigerWit账户都可以切换为伊斯兰账户，若要转换账户类型，需达到以下条件：",
+                "en": "Any existing TigerWit accounts will be converted to an Islamic account at the time that the new TigerWit Islamic account is open. As part of the conversion, all positions will be closed at the next available price for the relevant instrument(s), all funds will be moved to the Wallet and all existing copy trading arrangements will cease.",
+                "vi": "Mọi tài khoản TigerWit hiện tại sẽ được chuyển đổi thành tài khoản Islamic ngay khi tài khoản Islamic TigerWit được mở. Vì là một phần của chuyển đổi, tất cả các lệnh sẽ được đóng ở mức giá khả dụng tiếp theo cho (các) sản phẩm có liên quan, tất cả tiền sẽ được chuyển sang Ví và tất cả các lệnh giao dịch sao chép hiện tại sẽ chấm dứt. ",
+                "zh-Hant": "任何現有TigerWit賬戶都可以切換為伊斯蘭賬戶，若要轉換賬戶類型，需達到以下條件：",
+                "id": "Setiap akun TigerWit yang ada akan dikonversikan ke dalam bentuk Akun Islami pada saat akun Islami TigerWit dibuka. Akibatnya, semua posisi akan ditutup pada harga instrumen masing-masing, semua dana akan dipindahkan ke Wallet dan semua transaksi copy yang ada akan dihentikan.",
+                "es": "Todas las cuentas de TigerWit existentes se convertirán en una cuenta islámica en el momento en que la nueva cuenta de TigerWit Islamica esté abierta. No será posible revertir ninguna de estas cuentas a un formato de cuenta no islámico. Como parte de la conversión, todas las posiciones se cerrarán al siguiente precio disponible para el (los) instrumento (s) correspondiente (s), todos los fondos se transferirán a la Cartera y todos los acuerdos existentes de comercio tímido cesarán. ",
+                "pt-BR": "Quaisquer contas TigerWit existentes serão convertidas em uma conta islâmica no momento em que a nova conta islâmica TigerWit for aberta. Como parte da conversão, todas as posições serão fechadas no próximo preço disponível para o (s) instrumento (s) relevante (s), todos os fundos serão movidos para a Wallet e todos os copy tradings existentes cessarão. "
+            },
+            "islamic_message24": {
+                "zh": "所有持仓单必须全部平仓；",
+                "en": " ",
+                "vi": " ",
+                "zh-Hant": "所有持倉單必須全部平倉；",
+                "id": " ",
+                "es": " ",
+                "pt-BR": " "
+            },
+            "islamic_message25": {
+                "zh": "所有跟随关系必须全部取消；",
+                "en": " ",
+                "vi": " ",
+                "zh-Hant": "所有跟隨關係必須全部取消；",
+                "id": " ",
+                "es": " ",
+                "pt-BR": " "
+            },
+            "islamic_message26": {
+                "zh": "所有子账户资金必须转移到钱包中",
+                "en": " ",
+                "vi": " ",
+                "zh-Hant": "所有子賬戶資金必須轉移到錢包中",
+                "id": " ",
+                "es": " ",
+                "pt-BR": " "
+            },
+            "islamic_message27": {
+                "zh": "关于跟单交易，伊斯兰账户只可以跟随伊斯兰账户高手。",
+                "en": "In relation to copy trading, an Islamic account holder may only follow a Master account which also operates under the TigerWit Islamic account structure.",
+                "vi": "Về giao dịch sao chép, chủ tài khoản Islamic chỉ có thể theo tài khoản của các Bậc thầy hoạt động theo cùng cấu trúc tài khoản Islamic TigerWit.",
+                "zh-Hant": "關於跟單交易，伊斯蘭賬戶只可以跟隨伊斯蘭賬戶高手。",
+                "id": "Sehubungan dengan copy trading, pemegang akun Islami hanya dapat mengikuti akun Master yang menggunakan akun Islami TigerWit.",
+                "es": "En relación con el copy trading, el titular de una cuenta islámica solo puede seguir una cuenta maestra que también opera bajo la estructura de cuenta TigerWit Islamic. ",
+                "pt-BR": "Em relação ao copy trading, um titular de conta islâmica só pode seguir uma conta principal que também opera sob a estrutura de conta islâmica do TigerWit. "
+            },
+            "islamic_message28": {
+                "zh": "我已阅读并接受伊斯兰账户的条件和条款。",
+                "en": "I have read and accept the tßerms and conditions of an Islamic account",
+                "vi": "Tôi đã đọc và chấp nhận các điều khoản và điều kiện của tài khoản Islamic",
+                "zh-Hant": "我已閱讀並接受伊斯蘭賬戶的條件和條款。",
+                "id": "Saya telah membaca dan menyetujui syarat dan ketentuan untuk Akun Islami",
+                "es": "He leído y acepto los términos y condiciones de una cuenta islámica",
+                "pt-BR": "Li e aceito os termos e condições de uma conta islâmica"
+            },
+            "islamic_message29": {
+                "zh": "申请伊斯兰账户",
+                "en": "Apply",
+                "vi": "Áp dụng",
+                "zh-Hant": "申請伊斯蘭賬戶",
+                "id": "Lanjutkan",
+                "es": "Aplicar",
+                "pt-BR": "Aplique"
+            },
+            "islamic_message30": {
+                "zh": "不，我想要标准账户",
+                "en": "No I would like a standard account",
+                "vi": "Không, tôi muốn có một tài khoản tiêu chuẩn",
+                "zh-Hant": "不，我想要標準賬戶",
+                "id": "Tidak, saya ingin menggunakan akun standar",
+                "es": "No me gustaría una cuenta estándar",
+                "pt-BR": "Não, eu gostaria de uma conta padrão"
+            },
+            "islamic_message31": {
+                "zh": "您当前的账户类型是【伊斯兰账户】，一旦您切换回标准账户, 您将无法重新激活您的伊斯兰账户类型。",
+                "en": "Your current account type is [Islamic]. Once you convert to a back to a standard account, you will not be able to reactivate your Islamic account type again.",
+                "vi": "Loại tài khoản hiện tại của bạn là [Islamic]. Một khi bạn chuyển đổi trở lại tài khoản chuẩn ban đầu, bạn sẽ không thể kích hoạt lại loại tài khoản Islamic của mình.",
+                "zh-Hant": "您當前的賬戶類型是【伊斯蘭賬戶】，一旦您切換回標準賬戶, 您將無法重新激活您的伊斯蘭賬戶類型。",
+                "id": "Akun anda saat ini adalah (Islami). Apabila anda merubah akun anda menjadi Akun Standar, maka anda tidak dapat lagi mengaktifkan kembali akun islami anda.",
+                "es": "Su tipo de cuenta actual es [Islámico]. Una vez que realice la conversión a una cuenta estándar, no podrá reactivar su tipo de cuenta Islámica nuevamente. ",
+                "pt-BR": "Seu tipo de conta atual é [islâmico]. Depois de converter para uma conta padrão, você não poderá reativar seu tipo de conta islâmica novamente. "
+            },
+            "islamic_message32": {
+                "zh": "您当前的账户类型是【标准】，如果您切换为伊斯兰账户，您将享受在伊斯兰交易条件下的权益。",
+                "en": "Your current account type is [Standard]. If you convert to an Islamic account, you will be able to enjoy the benefits of swap-free trading under Islamic trading conditions.",
+                "vi": "Loại tài khoản hiện tại của bạn là [Tiêu chuẩn]. Nếu bạn chuyển đổi sang tài khoản Islamic, bạn sẽ có cơ hội giao dịch mà không mất phí Swap trong điều kiện giao dịch Islamic.",
+                "zh-Hant": "您當前的賬戶類型是【標準】，如果您切換為伊斯蘭賬戶，您將享受在伊斯蘭交易條件下的權益。",
+                "id": "Akun anda saat ini adalah (Standar). Apabila anda merubah akun anda menjadi Akun Islami, maka anda tidak dapat lagi menikmati free-swap. ",
+                "es": "Su tipo de cuenta actual es [Estándar]. Si se convierte a una cuenta islámica, podrá disfrutar de los beneficios del intercambio sin swap bajo las condiciones comerciales islámicas. ",
+                "pt-BR": "Seu tipo de conta atual é [Padrão]. Se você converter para uma conta islâmica, poderá aproveitar os benefícios do comércio livre de swap sob condições comerciais islâmicas."
+            },
+            "islamic_message33": {
+                "zh": "您确定要继续吗?",
+                "en": "Are you sure you would like to continue?",
+                "vi": "Bạn có chắc chắn muốn tiếp tục không? ",
+                "zh-Hant": "您確定要繼續嗎？",
+                "id": "Apakah anda yakin ingin tetap melanjutkan? ",
+                "es": "¿Está seguro de que desea continuar? ",
+                "pt-BR": "Tem certeza de que gostaria de continuar?"
+            },
             "_comment_data": {
                 "en": "this is comments, No translation required -- angularjs",
                 "zh": "",
@@ -2702,7 +3008,7 @@
                         "pt-BR": "Cancelar seguida"
                     },
                     "sureCancelFollow": {
-                        "zh": "是否确定取消复制?",
+                        "zh": "是否确认取消复制?",
                         "en": "Are you sure to cancel following ?",
                         "vi": "Bạn có chắc muốn hủy sao chép?",
                         "zh-Hant": "是否確定取消復制?",
@@ -3578,11 +3884,11 @@
                     },
                     "swap": {
                         "zh": "库存费",
-                        "en": "Swap",
-                        "vi": "Swap",
+                        "en": "adminstration fee",
+                        "vi": "adminstration fee",
                         "zh-Hant": "庫存費",
                         "id": "Bunga",
-                        "es": "Swap",
+                        "es": "adminstration fee",
                         "pt-BR": "Inverter"
                     },
                     "commission": {
