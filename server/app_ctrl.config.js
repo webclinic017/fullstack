@@ -86,18 +86,18 @@
             en: {
                 ios: {
                     app_info: {
-                        version_name : "V4.3.2",
-                        description: "This update: \n1. Updated the margin mode to the larger leg margin mode;\n2. Updated the margin calculation formula;\n3. Updated the position withdrawal limit;\n4. Updated the leverage of energy products.",
+                        version_name : "V4.3.3",
+                        description: "This update: \n1. Add Islamic accounts function;\n2. Add new trading products;\n3. Optimize interactive experience;\n4. Fix known bugs.",
                         updated_description: "70% users are using new version",
                         force_update : true
                     }
                 },
                 android: {
                     app_info: {
-                        version_name : "V3.5.2",
-                        description: "This update: \n1. Added Portuguese\n2. Fixed known bugs\n3. Optimized details",
+                        version_name : "V4.0.0",
+                        description: "This update: \n1. Add Islamic accounts function;\n2. Add new trading products;\n3. Optimize interactive experience;\n4. Fix known bugs",
                         updated_description: "70% users are using new version",
-                        url: "https://static.tigerwitfx.com/downloads/apk/tigerwit_v3.5.2.apk",
+                        url: "https://static.tigerwitfx.com/downloads/apk/tigerwit_v4.0.0.apk",
                         force_update : true
                     }
                 }
@@ -105,18 +105,18 @@
             cn: {
                 ios: {
                     app_info: {
-                        version_name : "V4.3.2",
-                        description: "本次更新：\n1.更新了保证金模式为单边保证金模式；\n2.更新了保证金计算公式；\n3.更新了持仓提现限额；\n4.更新了能源产品的杠杆。",
+                        version_name : "V4.3.3",
+                        description: "本次更新：\n1.增加伊斯兰账户；\n2.新增交易品种；\n3.优化交互体验；\n4.修复已知bug",
                         updated_description: "70%的用户正在使用新版本",
                         force_update : true
                     }
                 },
                 android: {
                     app_info: {
-                        version_name : "V3.5.2",
-                        description: "本次更新：\n1.增加葡萄牙语\n2.修复已知bug\n3.优化细节",
+                        version_name : "V4.0.0",
+                        description: "本次更新：\n1.增加伊斯兰账户；\n2.新增交易品种；\n3.优化交互体验；\n4.修复已知bug",
                         updated_description: "70%的用户正在使用新版本",
-                        url: "https://static.tigerwitfx.com/downloads/apk/tigerwit_v3.5.2.apk",
+                        url: "https://static.tigerwitfx.com/downloads/apk/tigerwit_v4.0.0.apk",
                         force_update : true
                     }
                 }
