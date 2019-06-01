@@ -8,6 +8,7 @@
         .controller('AuthenCompleteController', AuthenCompleteController)
         .controller('AuthenRealnameController', AuthenRealnameController)
         .controller('AuthenAddressController', AuthenAddressController)
+        .controller('AuthenAgreementController', AuthenAgreementController)
         .controller('AuthenSubmitController', function () { })
         .controller('AuthenSuccessController', function () { });
 
@@ -16,6 +17,7 @@
     AuthenCompleteController.$inject = ['$scope', 'validator', 'account', '$timeout', '$interval', '$location', '$modal', '$cookies'];
     AuthenRealnameController.$inject = ['$scope', '$state', '$modal', 'validator', 'account', '$location', '$layer'];
     AuthenAddressController.$inject = ['$scope', '$state', '$modal', 'validator', 'account', '$timeout'];
+    AuthenAgreementController.$inject = ['$scope', 'account'];
 
     // 主控制器
     function AuthenController($scope, $cookies, $location, account, $state, $stateParams, $timeout, $modal, $layer) {
@@ -30,6 +32,7 @@
                 "5": "submit",       // 待审核 -> 审核中页面
                 "6": 'success',      // 审核通过
                 "7": 'address',      // 真实地址
+                "10001": 'agreement',    // 上传协议
                 "10": 'success',     // 审核通过
             }
         }
@@ -1089,6 +1092,51 @@
                     $scope.backErr.msg = '';
                 }, 2000);
             }
+        }
+    }
+
+    // Agreement  代理商上传协议
+    function AuthenAgreementController($scope, account) {
+        $scope.clickable = true;
+        $scope.flagClick = true;
+        $scope.agreementImg = [];
+        $scope.uploadAgreement = uploadAgreement;
+        $scope.agentProtocol = agentProtocol;
+        function uploadAgreement(){
+            if(!$scope.agreementImg[0] || !$scope.agreementImg[2]){
+                layer.msg($scope.lang.text("tigerWitID.myAccount.completelyUpload"))
+                return
+            }
+            $scope.clickable = false;
+            account.uploadAgentProtocol({file: $scope.agreementImg}).then(function(data){
+                if(data.is_succ){
+                    $scope.$emit('goState');
+                }else{
+                    $scope.clickable = true;
+                    layer.msg(data.message)
+                }
+            })
+        }
+        function agentProtocol(){
+            if(!$scope.flagClick){
+                return
+            }
+            $scope.flagClick = false;
+            account.agentProtocol().then(function(data){
+                $scope.flagClick = true;
+                if(data.is_succ){
+                    var url;
+                    if($scope.lang.isDemo()){
+                        url = 'https://demoimg.tigerwit.com'
+                    }else{
+                        url = 'https://img.tigerwit.com'
+                    }
+                    var flag = window.open(url + data.data.imgUrl)
+                    if(flag == null) {
+                        alert("Enable popup filtering in your browser!\n\n Please turn off this function temporarily!") ;  
+                    }
+                }
+            })
         }
     }
 })();
