@@ -109,14 +109,22 @@
         $scope.openChangeWithTypeMdl = openChangeWithTypeMdl;
         $scope.openCurrency = openCurrency;
         $scope.selcetCurrency = selcetCurrency;
-
-        // 获取默认银行卡
         $scope.getCard = getCard;
-        getCard();
-        // 获取默认第三方
-        getThird();
-        // 获取默认电汇
-        getTransfer();
+
+        // 获取账户列表(统一处理)
+        getAssetCardList()
+        function getAssetCardList(){
+            if($scope.withdraw.accountType == 'transfer' && !($scope.withdraw.transfer.id)){
+                // 获取默认电汇
+                getTransfer();
+            }else if($scope.withdraw.accountType == 'bank'){
+                // 获取默认银行卡
+                getCard();
+            }else if($scope.withdraw.accountType == 'third_account'){
+                // 获取默认第三方
+                getThird();
+            }
+        }
 
         //绑定银行卡后获取银行卡信息
         $rootScope.$on('bindCardSuccess', function () {
@@ -237,7 +245,10 @@
 
         // 获取银行卡信息
         function getCard() {
-            asset.getCard().then(function (data) {
+            // 为区分第三方银行卡信息切换提现方式后清空重新请求
+            $scope.withdraw.card = {};
+            var params = ($scope.withdraw.accountType === 'third_account') ? {platform: $scope.withdraw.third.third_type} : {};
+            asset.getCard(params).then(function (data) {
                 if (!data) return;
                 // console.log(data);
                 if (data.is_succ && data.data) {
@@ -274,6 +285,8 @@
         }
         // 获取默认第三方信息
         function getThird() {
+            // 为区分第三方银行卡信息切换提现方式后清空重新请求
+            $scope.withdraw.third = {};
             asset.getDefaultThirdAccount().then(function (data) {
                 if (!data) return;
                 // console.log(data);
@@ -285,6 +298,9 @@
                     $scope.withdraw.third.platform = data.data.platform;
                     $scope.withdraw.third.status = data.data.status;
                     $scope.withdraw.third.withdraw_type = data.data.withdraw_type;
+                    if(data.data.withdraw_type == 1){
+                        getCard();
+                    }
                 }
             });
         }
@@ -441,6 +457,9 @@
                         parentScope.withdraw.third.platform = third.platform;
                         parentScope.withdraw.third.status = third.status;
                         parentScope.withdraw.third.withdraw_type = third.withdraw_type;
+                        if(third.withdraw_type == 1){
+                            getCard();
+                        }
                         // 更改选中状态
                         // parentScope.hasChooseedCard = true;
                         closeModal()
@@ -456,9 +475,9 @@
                             if (data.is_succ) {
                                 getThirdList($scope).then(function () {
                                     $scope.thirdList = parentScope.thirdList
-                                    if ($scope.thirdList.length == 0) {
-                                        parentScope.withdraw.third = {}
-                                    }
+                                    // if ($scope.thirdList.length == 0) {
+                                    //     parentScope.withdraw.third = {}
+                                    // }
                                 })
                                 getThird()
                                 closeModal()
@@ -813,9 +832,10 @@
 
         function changeWithdrawAccountType(accountType) {
             $scope.withdraw.accountType = accountType;
+            getAssetCardList();
             $scope.withdraw.currency = $scope.withdrawTypeLst[$scope.withdraw.accountType].currency.length ? $scope.withdrawTypeLst[$scope.withdraw.accountType].currency[0] : null;
         }
-
+        //  切换提现方式
         function openChangeWithTypeMdl() {
             $modal.open({
                 templateUrl: '/views/asset/withdraw_dep_type_modal.html',

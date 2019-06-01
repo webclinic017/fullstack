@@ -67,7 +67,9 @@
             setAgentPromotion: setAgentPromotion,
             setUploadAddressProve: setUploadAddressProve,
             getEmailPhone: getEmailPhone,
-            openTrialAccount: openTrialAccount
+            openTrialAccount: openTrialAccount,
+            uploadAgentProtocol: uploadAgentProtocol,
+            agentProtocol: agentProtocol
         };
         var resolveValue;
         return service;
@@ -678,6 +680,16 @@
         // 开通体验金账户
         function openTrialAccount(params) {
             return publicHttp.dealPublicRequest(o.openTrialAccountApi, 'POST', params);
+        }
+
+        // 代理商上传协议
+        function uploadAgentProtocol(params) {
+            return publicHttp.dealPublicRequest(o.uploadAgentProtocolApi, 'POST', params);
+        }
+
+        // 代理商下载协议
+        function agentProtocol() {
+            return publicHttp.dealPublicRequest(o.agentProtocolApi, 'GET');
         }
 
     }
