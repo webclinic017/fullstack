@@ -68,13 +68,10 @@
             setUploadAddressProve: setUploadAddressProve,
             getEmailPhone: getEmailPhone,
             openTrialAccount: openTrialAccount,
-<<<<<<< HEAD
             setIslamicStatus: setIslamicStatus,
-            transferIslamic: transferIslamic
-=======
+            transferIslamic: transferIslamic,
             uploadAgentProtocol: uploadAgentProtocol,
             agentProtocol: agentProtocol
->>>>>>> 589c464a6e8b0fef29caaa2bcb1876c21a342b42
         };
         var resolveValue;
         return service;
