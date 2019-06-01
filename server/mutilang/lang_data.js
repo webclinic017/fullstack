@@ -10844,6 +10844,123 @@ module.exports = {
         "es": "E-mail: ",
         "pt-BR": "E-mail:"
     },
+    "amtIslamic1": {
+        "zh": "伊斯兰账户政策",
+        "en": "Islamic Accounts Policy",
+        "vi": "Chính sách tài khoản Islamic",
+        "zh-Hant": "伊斯蘭帳戶政策",
+        "id": "Kebijakan Akun Islami",
+        "es": "Política de cuentas islámicas",
+        "pt-BR": "Política de Contas Islâmica"
+    },
+    "amtIslamic2": {
+        "zh": "阅读和理解适用于伊斯兰帐户的附加条款和条件。",
+        "en": "Read and understand the additional terms and conditions which apply to an Islamic account. ",
+        "vi": "Đọc và hiểu các điều khoản và điều kiện bổ sung được áp dụng cho tài khoản Islamic.",
+        "zh-Hant": "閱讀和理解適用於伊斯蘭帳戶的附加條款和條件。",
+        "id": "Baca dan pahami syarat dan ketentuan yang berlaku untuk Akun Islami ",
+        "es": "Lea y comprenda los términos y condiciones adicionales que se aplican a una cuenta islámica.",
+        "pt-BR": "Leia e entenda os termos e condições adicionais que se aplicam a uma conta islâmica"
+    },
+    "amtIslamic3": {
+        "zh": "伊斯兰账户的附加条款和条件",
+        "en": "Additional Terms and Conditions for Islamic Accounts",
+        "vi": "Additional Terms and Conditions for Islamic Accounts",
+        "zh-Hant": "Additional Terms and Conditions for Islamic Accounts",
+        "id": "Additional Terms and Conditions for Islamic Accounts",
+        "es": "Additional Terms and Conditions for Islamic Accounts",
+        "pt-BR": "Additional Terms and Conditions for Islamic Accounts"
+    },
+    "amtIslamic4": {
+        "zh": "除TigerWit条款和条款（包括适用于您的TigerWit交易账户的商业条款和条件）外，以下条件适用：",
+        "en": "In addition to the TigerWit Conditions and Clauses, including the Terms and Conditions of Business, which apply to your TigerWit trading account the following conditions will apply: ",
+        "vi": "In addition to the TigerWit Conditions and Clauses, including the Terms and Conditions of Business, which apply to your TigerWit trading account the following conditions will apply: ",
+        "zh-Hant": "In addition to the TigerWit Conditions and Clauses, including the Terms and Conditions of Business, which apply to your TigerWit trading account the following conditions will apply: ",
+        "id": "In addition to the TigerWit Conditions and Clauses, including the Terms and Conditions of Business, which apply to your TigerWit trading account the following conditions will apply: ",
+        "es": "In addition to the TigerWit Conditions and Clauses, including the Terms and Conditions of Business, which apply to your TigerWit trading account the following conditions will apply: ",
+        "pt-BR": "In addition to the TigerWit Conditions and Clauses, including the Terms and Conditions of Business, which apply to your TigerWit trading account the following conditions will apply: "
+    },
+    "amtIslamic5": {
+        "zh": "开仓后前十日无需支付隔夜息，展期费和佣金；",
+        "en": "No swap charges, rollover fees or commissions will be applied to each new position for the first 10 days that the position is open. ",
+        "vi": "No swap charges, rollover fees or commissions will be applied to each new position for the first 10 days that the position is open. ",
+        "zh-Hant": "No swap charges, rollover fees or commissions will be applied to each new position for the first 10 days that the position is open. ",
+        "id": "No swap charges, rollover fees or commissions will be applied to each new position for the first 10 days that the position is open. ",
+        "es": "No swap charges, rollover fees or commissions will be applied to each new position for the first 10 days that the position is open. ",
+        "pt-BR": "No swap charges, rollover fees or commissions will be applied to each new position for the first 10 days that the position is open. "
+    },
+    "amtIslamic6": {
+        "zh": "若十日之后继续持仓，TigerWit将会就持仓单收取账户管理费直到平仓。对于每笔订单，如果您是全部持仓，将收取每笔订单的全额每日管理费；如果是部分持仓，将收取部分开仓的管理费。请参阅费用标准：",
+        "en": "If the position remains open after 10 days, a daily administration fee will be applied by TigerWit until the position is closed. The administration fee will apply in full for each day or part thereof that a position remains open. Please see our fee’s below:  ",
+        "vi": "If the position remains open after 10 days, a daily administration fee will be applied by TigerWit until the position is closed. The administration fee will apply in full for each day or part thereof that a position remains open. Please see our fee’s below:  ",
+        "zh-Hant": "If the position remains open after 10 days, a daily administration fee will be applied by TigerWit until the position is closed. The administration fee will apply in full for each day or part thereof that a position remains open. Please see our fee’s below:  ",
+        "id": "If the position remains open after 10 days, a daily administration fee will be applied by TigerWit until the position is closed. The administration fee will apply in full for each day or part thereof that a position remains open. Please see our fee’s below:  ",
+        "es": "If the position remains open after 10 days, a daily administration fee will be applied by TigerWit until the position is closed. The administration fee will apply in full for each day or part thereof that a position remains open. Please see our fee’s below:  ",
+        "pt-BR": "If the position remains open after 10 days, a daily administration fee will be applied by TigerWit until the position is closed. The administration fee will apply in full for each day or part thereof that a position remains open. Please see our fee’s below:  "
+    },
+    "amtIslamic7": {
+        "zh": "外汇、贵金属、能源、加密货币：每自然日每标准手收取$25；",
+        "en": "Fx, Metals & Crypto’s: $25 per lot, per day.",
+        "vi": "Fx, Metals & Crypto’s: $25 per lot, per day.",
+        "zh-Hant": "Fx, Metals & Crypto’s: $25 per lot, per day.",
+        "id": "Fx, Metals & Crypto’s: $25 per lot, per day.",
+        "es": "Fx, Metals & Crypto’s: $25 per lot, per day.",
+        "pt-BR": "Fx, Metals & Crypto’s: $25 per lot, per day."
+    },
+    "amtIslamic8": {
+        "zh": "差价合约：每自然日每标准手$5。",
+        "en": "Indices: $5 per lot, per day.",
+        "vi": "Indices: $5 per lot, per day.",
+        "zh-Hant": "Indices: $5 per lot, per day.",
+        "id": "Indices: $5 per lot, per day.",
+        "es": "Indices: $5 per lot, per day.",
+        "pt-BR": "Indices: $5 per lot, per day."
+    },
+    "amtIslamic9": {
+        "zh": "任何现有TigerWit账户都可以切换为伊斯兰账户，若要转换账户类型，需达到以下条件：",
+        "en": "Any existing TigerWit accounts will be converted to an Islamic account at the time that the new TigerWit Islamic account is open.",
+        "vi": "Any existing TigerWit accounts will be converted to an Islamic account at the time that the new TigerWit Islamic account is open.",
+        "zh-Hant": "Any existing TigerWit accounts will be converted to an Islamic account at the time that the new TigerWit Islamic account is open.",
+        "id": "Any existing TigerWit accounts will be converted to an Islamic account at the time that the new TigerWit Islamic account is open.",
+        "es": "Any existing TigerWit accounts will be converted to an Islamic account at the time that the new TigerWit Islamic account is open.",
+        "pt-BR": "Any existing TigerWit accounts will be converted to an Islamic account at the time that the new TigerWit Islamic account is open."
+    },
+    "amtIslamic10": {
+        "zh": "所有持仓单必须全部平仓；",
+        "en": "As part of the conversion, all positions will be closed at the next available price for the relevant instrument(s),",
+        "vi": "As part of the conversion, all positions will be closed at the next available price for the relevant instrument(s),",
+        "zh-Hant": "As part of the conversion, all positions will be closed at the next available price for the relevant instrument(s),",
+        "id": "As part of the conversion, all positions will be closed at the next available price for the relevant instrument(s),",
+        "es": "As part of the conversion, all positions will be closed at the next available price for the relevant instrument(s),",
+        "pt-BR": "As part of the conversion, all positions will be closed at the next available price for the relevant instrument(s),"
+    },
+    "amtIslamic11": {
+        "zh": "所有跟随关系必须全部取消；",
+        "en": "all funds will be moved to the Wallet and all existing copy trading arrangements will cease.",
+        "vi": "all funds will be moved to the Wallet and all existing copy trading arrangements will cease.",
+        "zh-Hant": "all funds will be moved to the Wallet and all existing copy trading arrangements will cease.",
+        "id": "all funds will be moved to the Wallet and all existing copy trading arrangements will cease.",
+        "es": "all funds will be moved to the Wallet and all existing copy trading arrangements will cease.",
+        "pt-BR": "all funds will be moved to the Wallet and all existing copy trading arrangements will cease."
+    },
+    "amtIslamic12": {
+        "zh": "所有子账户资金必须转移到钱包中",
+        "en": " ",
+        "vi": " ",
+        "zh-Hant": " ",
+        "id": " ",
+        "es": " ",
+        "pt-BR": " "
+    },
+    "amtIslamic13": {
+        "zh": "关于跟单交易，伊斯兰账户只可以跟随伊斯兰账户高手。",
+        "en": "In relation to copy trading, an Islamic account holder may only follow a Master account which also operates under the TigerWit Islamic account structure.",
+        "vi": "In relation to copy trading, an Islamic account holder may only follow a Master account which also operates under the TigerWit Islamic account structure.",
+        "zh-Hant": "In relation to copy trading, an Islamic account holder may only follow a Master account which also operates under the TigerWit Islamic account structure.",
+        "id": "In relation to copy trading, an Islamic account holder may only follow a Master account which also operates under the TigerWit Islamic account structure.",
+        "es": "In relation to copy trading, an Islamic account holder may only follow a Master account which also operates under the TigerWit Islamic account structure.",
+        "pt-BR": "In relation to copy trading, an Islamic account holder may only follow a Master account which also operates under the TigerWit Islamic account structure."
+    },
     "downloadApp": {
         "title": {
             "zh": "下载APP",
@@ -13710,6 +13827,15 @@ module.exports = {
         "id": "Indeks",
         "es": "Indices",
         "pt-BR": "índices"
+    },
+    "newhome_8": {
+        "zh": "虚拟货币",
+        "en": "Bitcoin",
+        "vi": "Bitcoin",
+        "zh-Hant": "虛擬貨幣",
+        "id": "Bitcoin",
+        "es": "Bitcoin",
+        "pt-BR": "Bitcoin"
     },
     "newhome_9_1": {
         "zh": "下载注册交易账户",

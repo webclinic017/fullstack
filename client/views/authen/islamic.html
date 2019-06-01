@@ -1,0 +1,41 @@
+<div class="authen_content ctn center pd-tp-30">
+  <div class="authen_title" style="width: auto;">
+    <h2>{{lang.text('islamic_message10')}}</h2>
+  </div>
+  <div class="font-bold">
+    <p>{{lang.text('islamic_message11')}}</p>
+    <p>{{lang.text('islamic_message13')}}</p>
+    <p>{{lang.text('islamic_message14')}}</p>
+    <p>{{lang.text('islamic_message15')}}</p>
+    <p>{{lang.text('islamic_message16')}}</p>
+  </div>
+  <div class="mg-tp-15">
+    <h4>{{lang.text('islamic_message17')}}</h4>
+    <p>{{lang.text('islamic_message18')}}</p>
+    <p class="mg-tp-10">{{lang.text('islamic_message19')}}</p>
+    <p class="mg-tp-10">{{lang.text('islamic_message20')}}</p>
+    <p class="mg-tp-10">{{lang.text('islamic_message21')}}</p>
+    <p class="mg-tp-10">{{lang.text('islamic_message22')}}</p>
+    <p class="mg-tp-10">{{lang.text('islamic_message23')}}</p>
+    <p>{{lang.text('islamic_message24')}}</p>
+    <p>{{lang.text('islamic_message25')}}</p>
+    <p>{{lang.text('islamic_message26')}}</p>
+    <p class="mg-tp-10">{{lang.text('islamic_message27')}}</p>
+  </div>
+  <div style="margin: 20px 0px;">
+    <input type="checkbox" ng-model="applyIslamic">
+    {{lang.text('islamic_message28')}}
+  </div>
+  <div class="btn-wrapper">
+    <button class="btn tw-btn-capsule-gradient" ng-style="{cursor: waiting ? 'wait' : 'pointer'}" ng-click="submitApplyIslamic(2)">
+      {{lang.text('islamic_message29')}}
+    </button>
+  </div>
+  <p class="mg-tp-10">
+    <span style="color: #3793e7;" ng-style="{cursor: waiting ? 'wait' : 'pointer'}" ng-click="submitApplyIslamic(1)">{{lang.text('islamic_message30')}}</span>
+  </p>
+  
+  <div class="text-center font-danger mg-tp-40" ng-if="backErr.show">
+      <p>{{ backErr.msg }}</p>
+  </div>
+</div>

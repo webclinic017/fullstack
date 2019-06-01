@@ -306,6 +306,7 @@
                         writeCookie({nameKey: 'user_code', nameValue: data.data.user_code});
                         writeCookie({nameKey: 'username', nameValue: data.data.username});
                         writeCookie({nameKey: 'username_en', nameValue: data.data.username_en});
+                        writeCookie({nameKey: 'world_code', nameValue: 'CN'});
                         setTimeout(function () {
                             window.location.href = '/space/#/center?type=new';
                         }, 100);

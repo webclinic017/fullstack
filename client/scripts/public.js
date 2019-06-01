@@ -84,6 +84,7 @@
                 $rootScope.writeCookie({nameKey: 'user_code', nameValue: '', expires: -1, path: path});
                 $rootScope.writeCookie({nameKey: 'username', nameValue: '', expires: -1, path: path});
                 $rootScope.writeCookie({nameKey: 'username_en', nameValue: '', expires: -1, path: path});
+                $rootScope.writeCookie({nameKey: 'world_code', nameValue: '', expires: -1, path: path});
                 $window.location.href=u;
                 
             } else {

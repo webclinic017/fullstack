@@ -10,13 +10,15 @@
         .controller('AuthenAddressController', AuthenAddressController)
         .controller('AuthenAgreementController', AuthenAgreementController)
         .controller('AuthenSubmitController', function () { })
-        .controller('AuthenSuccessController', function () { });
+        .controller('AuthenSuccessController', function () { })
+        .controller('AuthenIslamicController', AuthenIslamicController);
 
     AuthenController.$inject = ['$scope', '$cookies', '$location', 'account', '$state', '$stateParams', '$timeout', '$modal', '$layer'];
     AuthenInvestInfoController.$inject = ['$scope', '$state', '$timeout', 'account', '$location', '$modal'];
     AuthenCompleteController.$inject = ['$scope', 'validator', 'account', '$timeout', '$interval', '$location', '$modal', '$cookies'];
     AuthenRealnameController.$inject = ['$scope', '$state', '$modal', 'validator', 'account', '$location', '$layer'];
     AuthenAddressController.$inject = ['$scope', '$state', '$modal', 'validator', 'account', '$timeout'];
+    AuthenIslamicController.$inject = ['$scope', '$state', '$modal', 'validator', 'account', '$timeout'];
     AuthenAgreementController.$inject = ['$scope', 'account'];
 
     // 主控制器
@@ -34,6 +36,7 @@
                 "7": 'address',      // 真实地址
                 "10001": 'agreement',    // 上传协议
                 "10": 'success',     // 审核通过
+                "8": 'islamic',      // 伊斯兰账户协议页面
             }
         }
 
@@ -340,7 +343,8 @@
             postCode: '',
             hasSendCode: false,
             waitTime: 59
-        }
+        };
+        $scope.isIslamic = false;
         // console.log($scope.completeInfo)
         // getUserInfo('username');
         // function getUserInfo(name) {
@@ -475,6 +479,13 @@
                             value: data.region.city_code
                         }
                     });
+                    // 检测注册国际是否是伊斯兰国家
+                    angular.forEach($scope.worldList, function (value, index) {
+                        if (value.code === data.region.world_code && value.type === 'islamic') {
+                            // console.log(value);
+                            $scope.isIslamic = true;
+                        }
+                    });
                     // console.log('$scope.basicInfo.locationWorld', $scope.basicInfo.locationWorld);
                     $scope.$broadcast('locationInfoReady');
                 }
@@ -523,10 +534,11 @@
         }
 
         // 选择一个 region
-        function selectRegion(regionName, regionCode) {
-            console.log($scope.completeInfo)
+        function selectRegion(regionName, regionCode, regionIslamic) {
+            // console.log($scope.completeInfo)
             switch (regionName) {
                 case 'country':
+                    $scope.isIslamic = regionIslamic === 'islamic' ? true : false;
                     $scope.completeInfo.province = {
                         key: undefined,
                         value: undefined
@@ -586,6 +598,8 @@
         }
 
         $scope.submitCompleteForm = function () {
+            console.log($scope.personal.islamic_status, $scope.isIslamic);
+            
             if (!$scope.personal.phone) {
                 $scope.showErr('phone');
                 $scope.showErr('areaCode');
@@ -604,8 +618,8 @@
             $scope.showErr('address');
             $scope.showErr('postCode');
 
-            console.log('$scope.completeForm.$invalid', $scope.completeForm.$invalid);
-            console.log('$scope.completeInfo', $scope.completeInfo);
+            // console.log('$scope.completeForm.$invalid', $scope.completeForm.$invalid);
+            // console.log('$scope.completeInfo', $scope.completeInfo);
 
             if ($scope.completeForm.$invalid) {
                 return
@@ -658,25 +672,61 @@
                     params.code = $scope.completeInfo.phoneCode || null
                     params.phone_code = $scope.completeInfo.areaCode.value.replace(/\+/gi, '') || null
                 }
-                // 神策数据统计
-                sa.track('btn_verify');
-                account.updataUserInfo(params).then(function (data) {
+                if ($scope.isIslamic && !$scope.personal.islamic_status) {
                     $scope.completeInfo.clickable = true;
-                    if (data.is_succ) {
-                        // 向authenController发送信息
-                        $scope.$emit('goState', data.data);
-
-                        sa.track('New_Personaldata');
-                    } else {
-                        $scope.backErr.show = true;
-                        $scope.backErr.msg = data.message;
-
-                        $timeout(function () {
-                            $scope.backErr.show = false;
-                            $scope.backErr.msg = '';
-                        }, 2000);
-                    }
-                });
+                    $modal.open({
+                        templateUrl: '/views/account/islamic_modal.html',
+                        size: 'sm',
+                        backdrop: 'false',
+                        resolve: {
+                            passedScope: function () {
+                                return {}
+                            }
+                        },
+                        controller: ['$scope', 'passedScope', '$modalInstance', 'lang', function ($scope, passedScope, $modalInstance, lang) {
+                            $scope.lang = lang;
+                            $scope.loading = 0;
+                            $scope.modalType = 1;
+    
+                            $scope.closeModal = closeModal;
+                            $scope.submitConfrim = submitConfrim;
+    
+                            function submitConfrim (type) {
+                                $scope.loading = 1;
+                                updataUserInfo(type);
+                                closeModal();
+                            }
+                            function closeModal() {
+                                $modalInstance.dismiss();
+                            }
+                        }]
+                    });
+                } else {
+                    updataUserInfo();
+                }
+                
+                function updataUserInfo (type) {
+                    $scope.completeInfo.clickable = false;
+                    if (type === 'yes') params.islamic_status = 0;
+                    if (type === 'no') params.islamic_status = 1;
+                    account.updataUserInfo(params).then(function (data) {
+                        $scope.completeInfo.clickable = true;
+                        if (data.is_succ) {
+                            // 向authenController发送信息
+                            $scope.$emit('goState', data.data);
+    
+                            sa.track('New_Personaldata');
+                        } else {
+                            $scope.backErr.show = true;
+                            $scope.backErr.msg = data.message;
+    
+                            $timeout(function () {
+                                $scope.backErr.show = false;
+                                $scope.backErr.msg = '';
+                            }, 2000);
+                        }
+                    });
+                }
             }
         }
 
@@ -1095,6 +1145,39 @@
         }
     }
 
+    //islamic
+    function AuthenIslamicController($scope, $state, $modal, validator, account, $timeout) {
+        $scope.applyIslamic = false;
+        $scope.waiting = false;
+        $scope.backErr = {
+            show: false,
+            msg: ''
+        }
+
+        $scope.submitApplyIslamic = submitApplyIslamic;
+
+        function submitApplyIslamic (status) {
+            console.log(status, $scope.applyIslamic);
+            if ($scope.waiting) return;
+            if (status == 2 && !$scope.applyIslamic) return;
+            $scope.waiting = true;
+            account.setIslamicStatus(status).then(function (data) {
+                console.log(data);
+                $scope.waiting = false;
+                if (data.is_succ) {
+                    $scope.$emit('goState', data.data);
+                } else {
+                    $scope.backErr.show = true;
+                    $scope.backErr.msg = data.message;
+
+                    $timeout(function () {
+                        $scope.backErr.show = false;
+                        $scope.backErr.msg = '';
+                    }, 2000);
+                }
+            });
+        }
+    }
     // Agreement  代理商上传协议
     function AuthenAgreementController($scope, account) {
         $scope.clickable = true;

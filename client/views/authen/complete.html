@@ -199,7 +199,7 @@
                                         ng-model="placeholderCountry"><i class="fa fa-search"></i></li>
                                 <li ng-repeat="world in worldList | filter : placeholderCountry" ng-class="{'selected': world.code == completeInfo.country.value}">
                                     <span data-value="{{world.code}}" data-disabled='{"disabled": {{world.disabled}}, "msg": "{{lang.text("tigerWitID.myAccount.unableCountry")}}"}'
-                                        ng-click="[world.disabled || selectRegion('country', world.code)]" ng-class="{'font-light': world.disabled}">{{world.name}}</span>
+                                        ng-click="[world.disabled || selectRegion('country', world.code, world.type)]" ng-class="{'font-light': world.disabled}">{{world.name}}</span>
                                 </li>
                             </ul>
                         </div>
@@ -353,7 +353,7 @@
             </div>
 
             <div class="text-left mg-tp-50 mg-bt-30">
-                <button class="btn btn-primary-gradient btn-sm" ng-if="completeInfo.clickable" ng-click="[submitCompleteForm(), toTrackEvent('Open live account', 'your_details')]">
+                <button class="btn btn-primary-gradient btn-sm" ng-if="completeInfo.clickable" ng-click="submitCompleteForm()">
                     {{lang.text('actLogin29')}}
                 </button>
 

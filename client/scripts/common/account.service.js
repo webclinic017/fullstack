@@ -68,6 +68,8 @@
             setUploadAddressProve: setUploadAddressProve,
             getEmailPhone: getEmailPhone,
             openTrialAccount: openTrialAccount,
+            setIslamicStatus: setIslamicStatus,
+            transferIslamic: transferIslamic,
             uploadAgentProtocol: uploadAgentProtocol,
             agentProtocol: agentProtocol
         };
@@ -680,6 +682,15 @@
         // 开通体验金账户
         function openTrialAccount(params) {
             return publicHttp.dealPublicRequest(o.openTrialAccountApi, 'POST', params);
+        }
+        //伊斯兰账号
+        function setIslamicStatus (islamicStatus) {
+            return publicHttp.dealPublicRequest(o.setIslamicStatusApi, 'PUT', {
+                islamic_status: islamicStatus
+            });
+        }
+        function transferIslamic () {
+            return publicHttp.dealPublicRequest(o.transferIslamicApi, 'PUT');
         }
 
         // 代理商上传协议
