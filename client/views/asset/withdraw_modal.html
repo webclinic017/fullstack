@@ -106,7 +106,7 @@
             <button ng-if="lang.isThird()" class="btn btn-primary-gradient btn-sm" ng-click="[params.callback(), closeModal()]">
                 {{lang.text('tigerWitID.confirm')}}
             </button>
-            <button ng-if="!lang.isThird()" class="btn btn-primary-gradient btn-sm" ng-click="[params.callback(params.callbackPara), closeModal()]">
+            <button ng-if="!lang.isThird()" class="btn btn-primary-gradient btn-sm" ng-click="[params.callback(), closeModal()]">
                 {{lang.text('tigerWitID.confirm')}}
             </button>
         </p>

@@ -40,6 +40,7 @@ $(eleWithdraw.payWithdrawBtn).on("tap", function () {
   return false;
 });
 $(eleWithdraw.payWithdrawMsgBtn).on("tap", function () {
+  $(eleWithdraw.payWithdrawAmount).val('');
   $(eleWithdraw.payWithdraw).css("display", "block");
   $(eleWithdraw.payWithdrawMsg).removeClass('active');
   return false;
