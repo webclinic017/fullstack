@@ -16389,7 +16389,79 @@ module.exports = {
             "es": "Ingreso",
             "pt-BR": "Login"
         }
-    }
+    },
+    mInvite05:{
+        zh:"你投资,我出钱!",
+        en:"你投资,我出钱!",
+        vi:"你投资,我出钱!",
+        "zh-Hant":"妳投資,我出錢!",
+        id:"你投资,我出钱!",
+        "es": "你投资,我出钱!",
+        "pt-BR": "你投资,我出钱!"
+    },
+    mInvite06:{
+        zh:"注册就送",
+        en:"Register to receive a ",
+        vi:"Register to receive a ",
+        "zh-Hant":"註冊就送",
+        id:"Register to receive a ",
+        "es": "Register to receive a ",
+        "pt-BR": "Register to receive a "
+    },
+    mInvite07:{
+        zh:"$10000体验金",
+        en:"$10000 coupons",
+        vi:"$10000 coupons",
+        "zh-Hant":"$10000體驗金",
+        id:"$10000 coupons",
+        "es": "$10000 coupons",
+        "pt-BR": "$10000 coupons"
+    },
+    mInvite08:{
+        zh:"在TigerWit, 已经有86253 人选择外汇跟单交易",
+        en:"In TigerWit, there have been 86,253 people who choose to follow the masters trading.",
+        vi:"In TigerWit, there have been 86,253 people who choose to follow the masters trading.",
+        "zh-Hant":"在老虎外匯, 已經有86253 人選擇外匯跟單交易",
+        id:"In TigerWit, there have been 86,253 people who choose to follow the masters trading.",
+        "es": "In TigerWit, there have been 86,253 people who choose to follow the masters trading.",
+        "pt-BR": "In TigerWit, there have been 86,253 people who choose to follow the masters trading."
+    },
+    mInvite09:{
+        zh:"我刚刚在老虎外汇领取了$10000体验金,好东西",
+        en:"I just received $10000 Coupons from TigerWit. ",
+        vi:"I just received $10000 Coupons from TigerWit.",
+        "zh-Hant":"我剛剛在老虎外匯領取了$10000體驗金,好東西",
+        id:"I just received $10000 Coupons from TigerWit.",
+        "es": "I just received $10000 Coupons from TigerWit.",
+        "pt-BR": "I just received $10000 Coupons from TigerWit."
+    },
+    mInvite10:{
+        zh:"必须分享,你也快来看看",
+        en:"Come and see!",
+        vi:"Come and see!",
+        "zh-Hant":"必須分享,妳也快來看看",
+        id:"Come and see!",
+        "es": "Come and see!",
+        "pt-BR": "Come and see!"
+    },
+    mInvite11:{
+        zh:"输入手机号",
+        en:"Enter Phone No.",
+        vi:"nter Phone No.",
+        "zh-Hant":"輸入手機號",
+        id:"nter Phone No.",
+        "es": "nter Phone No.",
+        "pt-BR": "nter Phone No."
+    },
+    mInvite12:{
+        zh:"领取奖励",
+        en:"Receive the award",
+        vi:"Receive the award",
+        "zh-Hant":"領取獎勵",
+        id:"Receive the award",
+        "es": "Receive the award",
+        "pt-BR": "Receive the award"
+    },
 };
 
 
