@@ -16535,23 +16535,23 @@ module.exports = {
             "es": "Khách hàng chiến thắng giải thưởng hiện vật có thể nhận phần thưởng của mình tại văn phòng TigerWit ở quốc gia đó.",
             "pt-BR": ""
         },
-        "": {
-            "en": "",
-            "zh": "",
-            "zh-Hant": "",
-            "vi": "",
-            "id": "",
-            "es": "",
-            "pt-BR": ""
+        "clickSpin": {
+            "en": "Click to spin",
+            "zh": "Click to spin",
+            "zh-Hant": "Click to spin",
+            "vi": "Nhấp để quay",
+            "id": "Klik untuk Putar",
+            "es": "Click to spin",
+            "pt-BR": "clique para girar"
         },
-        "": {
-            "en": "",
-            "zh": "",
-            "zh-Hant": "",
-            "vi": "",
-            "id": "",
-            "es": "",
-            "pt-BR": ""
+        "youWon": {
+            "en": "You won",
+            "zh": "You won",
+            "zh-Hant": "You won",
+            "vi": "Bạn đã thắng",
+            "id": "Anda menang",
+            "es": "You won",
+            "pt-BR": "você ganhou"
         },
         "": {
             "en": "",
