@@ -16389,6 +16389,179 @@ module.exports = {
             "es": "Ingreso",
             "pt-BR": "Login"
         }
+    },
+    "turntable": {
+        "oneListTit": {
+            "en": "Để nhận được các giải thưởng hấp dẫn trên, bạn chỉ cần làm theo các bước sau:",
+            "zh": "Để nhận được các giải thưởng hấp dẫn trên, bạn chỉ cần làm theo các bước sau:",
+            "zh-Hant": "Để nhận được các giải thưởng hấp dẫn trên, bạn chỉ cần làm theo các bước sau:",
+            "vi": "Để nhận được các giải thưởng hấp dẫn trên, bạn chỉ cần làm theo các bước sau:",
+            "id": "",
+            "es": "Để nhận được các giải thưởng hấp dẫn trên, bạn chỉ cần làm theo các bước sau:",
+            "pt-BR": "Para reivindicar seu prêmio, você precisará seguir estas etapas:"
+        },
+        "oneListPasso": {
+            "en": "Bước ",
+            "zh": "Bước ",
+            "zh-Hant": "Bước ",
+            "vi": "Bước ",
+            "id": "",
+            "es": "Bước ",
+            "pt-BR": "Passo "
+        },
+        "oneList1": {
+            "en": "Hãy quay bánh xe! Nếu bạn chiến thắng, hãy đăng kí ngay với chúng tôi để nhận giải thưởng.",
+            "zh": "Hãy quay bánh xe! Nếu bạn chiến thắng, hãy đăng kí ngay với chúng tôi để nhận giải thưởng.",
+            "zh-Hant": "Hãy quay bánh xe! Nếu bạn chiến thắng, hãy đăng kí ngay với chúng tôi để nhận giải thưởng.",
+            "vi": "Hãy quay bánh xe! Nếu bạn chiến thắng, hãy đăng kí ngay với chúng tôi để nhận giải thưởng.",
+            "id": "",
+            "es": "Hãy quay bánh xe! Nếu bạn chiến thắng, hãy đăng kí ngay với chúng tôi để nhận giải thưởng.",
+            "pt-BR": "Registre-se e gire a roda para ganhar um prêmio."
+        },
+        "oneList2": {
+            "en": "Tải ứng dụng TigerWit và đăng nhập.",
+            "zh": "Tải ứng dụng TigerWit và đăng nhập.",
+            "zh-Hant": "Tải ứng dụng TigerWit và đăng nhập.",
+            "vi": "Tải ứng dụng TigerWit và đăng nhập.",
+            "id": "",
+            "es": "Tải ứng dụng TigerWit và đăng nhập.",
+            "pt-BR": "Baixe o aplicativo TigerWit e faça o login."
+        },
+        "oneList3": {
+            "en": "Mở một Tài khoản Thực và thực hiện giao dịch.",
+            "zh": "Mở một Tài khoản Thực và thực hiện giao dịch.",
+            "zh-Hant": "Mở một Tài khoản Thực và thực hiện giao dịch.",
+            "vi": "Mở một Tài khoản Thực và thực hiện giao dịch.",
+            "id": "",
+            "es": "Mở một Tài khoản Thực và thực hiện giao dịch.",
+            "pt-BR": "abra uma conta do Live e faça uma trade."
+        },
+        "oneListcon1": {
+            "en": "Nếu bạn chiến thắng giải thưởng tiền mặt, số tiền sẽ nằm trong mục Ví tại ứng dụng của bạn. Bạn có thể chuyển số tiền đó vào tài khoản thực của bạn và thực hiện giao dịch.",
+            "zh": "Nếu bạn chiến thắng giải thưởng tiền mặt, số tiền sẽ nằm trong mục Ví tại ứng dụng của bạn. Bạn có thể chuyển số tiền đó vào tài khoản thực của bạn và thực hiện giao dịch.",
+            "zh-Hant": "Nếu bạn chiến thắng giải thưởng tiền mặt, số tiền sẽ nằm trong mục Ví tại ứng dụng của bạn. Bạn có thể chuyển số tiền đó vào tài khoản thực của bạn và thực hiện giao dịch.",
+            "vi": "Nếu bạn chiến thắng giải thưởng tiền mặt, số tiền sẽ nằm trong mục Ví tại ứng dụng của bạn. Bạn có thể chuyển số tiền đó vào tài khoản thực của bạn và thực hiện giao dịch.",
+            "id": "",
+            "es": "Nếu bạn chiến thắng giải thưởng tiền mặt, số tiền sẽ nằm trong mục Ví tại ứng dụng của bạn. Bạn có thể chuyển số tiền đó vào tài khoản thực của bạn và thực hiện giao dịch.",
+            "pt-BR": "Se você ganhou um prêmio em dinheiro, o cupom de prêmio em dinheiro estará na sua lista de cupons, que você pode transferir para sua carteira depois de ter feito uma troca."
+        },
+        "oneListcon2": {
+            "en": "Hoặc, nếu chiến thắng một giải thưởng bằng hiện vật, hãy kí quỹ ít nhất là 50$ và thực hiện 1 lệnh giao dịch. Nhân viên của chúng tôi sẽ liên lạc để giúp bạn quy đổi giải thưởng của mình.",
+            "zh": "Hoặc, nếu chiến thắng một giải thưởng bằng hiện vật, hãy kí quỹ ít nhất là 50$ và thực hiện 1 lệnh giao dịch. Nhân viên của chúng tôi sẽ liên lạc để giúp bạn quy đổi giải thưởng của mình.",
+            "zh-Hant": "Hoặc, nếu chiến thắng một giải thưởng bằng hiện vật, hãy kí quỹ ít nhất là 50$ và thực hiện 1 lệnh giao dịch. Nhân viên của chúng tôi sẽ liên lạc để giúp bạn quy đổi giải thưởng của mình.",
+            "vi": "Hoặc, nếu chiến thắng một giải thưởng bằng hiện vật, hãy kí quỹ ít nhất là 50$ và thực hiện 1 lệnh giao dịch. Nhân viên của chúng tôi sẽ liên lạc để giúp bạn quy đổi giải thưởng của mình.",
+            "id": "",
+            "es": "Hoặc, nếu chiến thắng một giải thưởng bằng hiện vật, hãy kí quỹ ít nhất là 50$ và thực hiện 1 lệnh giao dịch. Nhân viên của chúng tôi sẽ liên lạc để giúp bạn quy đổi giải thưởng của mình.",
+            "pt-BR": "Ou, se você ganhou um prêmio de produto, deposite um mínimo de US $ 50 e faça uma negociação. Nossa equipe entrará em contato para ajudá-lo a resgatar seu prêmio."
+        },
+        "twoListTit": {
+            "en": "Thể lệ",
+            "zh": "Thể lệ",
+            "zh-Hant": "Thể lệ",
+            "vi": "Thể lệ",
+            "id": "",
+            "es": "Thể lệ",
+            "pt-BR": ""
+        },
+        "twoList1": {
+            "en": "Giải thưởng bốc thăm chỉ có thể được nhập chỉ duy nhất một lần với mỗi người dùng. Mỗi người dùng chỉ có thể thắng một giải thưởng.",
+            "zh": "Giải thưởng bốc thăm chỉ có thể được nhập chỉ duy nhất một lần với mỗi người dùng. Mỗi người dùng chỉ có thể thắng một giải thưởng.",
+            "zh-Hant": "Giải thưởng bốc thăm chỉ có thể được nhập chỉ duy nhất một lần với mỗi người dùng. Mỗi người dùng chỉ có thể thắng một giải thưởng.",
+            "vi": "Giải thưởng bốc thăm chỉ có thể được nhập chỉ duy nhất một lần với mỗi người dùng. Mỗi người dùng chỉ có thể thắng một giải thưởng.",
+            "id": "",
+            "es": "Giải thưởng bốc thăm chỉ có thể được nhập chỉ duy nhất một lần với mỗi người dùng. Mỗi người dùng chỉ có thể thắng một giải thưởng.",
+            "pt-BR": ""
+        },
+        "twoList2": {
+            "en": "Khách hàng có thể sử dụng giải thưởng tiền mặt để đặt lệnh giao dịch và phải thực hiện ít nhất một giao dịch trước khi khách hàng rút giải thưởng tiền mặt của họ. Một khi giao dịch được thực hiện, khách hàng có thể rút giải thưởng tiền mặt cùng với bất kì khoản lợi nhuận nào mà họ có được.",
+            "zh": "Khách hàng có thể sử dụng giải thưởng tiền mặt để đặt lệnh giao dịch và phải thực hiện ít nhất một giao dịch trước khi khách hàng rút giải thưởng tiền mặt của họ. Một khi giao dịch được thực hiện, khách hàng có thể rút giải thưởng tiền mặt cùng với bất kì khoản lợi nhuận nào mà họ có được.",
+            "zh-Hant": "Khách hàng có thể sử dụng giải thưởng tiền mặt để đặt lệnh giao dịch và phải thực hiện ít nhất một giao dịch trước khi khách hàng rút giải thưởng tiền mặt của họ. Một khi giao dịch được thực hiện, khách hàng có thể rút giải thưởng tiền mặt cùng với bất kì khoản lợi nhuận nào mà họ có được.",
+            "vi": "Khách hàng có thể sử dụng giải thưởng tiền mặt để đặt lệnh giao dịch và phải thực hiện ít nhất một giao dịch trước khi khách hàng rút giải thưởng tiền mặt của họ. Một khi giao dịch được thực hiện, khách hàng có thể rút giải thưởng tiền mặt cùng với bất kì khoản lợi nhuận nào mà họ có được.",
+            "id": "",
+            "es": "Khách hàng có thể sử dụng giải thưởng tiền mặt để đặt lệnh giao dịch và phải thực hiện ít nhất một giao dịch trước khi khách hàng rút giải thưởng tiền mặt của họ. Một khi giao dịch được thực hiện, khách hàng có thể rút giải thưởng tiền mặt cùng với bất kì khoản lợi nhuận nào mà họ có được.",
+            "pt-BR": ""
+        },
+        "twoList3": {
+            "en": "Khách hàng chiến thắng giải thưởng tiền mặt phải kí quỹ vào tài khoản Thực tối thiểu là 50$ và thực hiện ít một giao dịch để được quy đổi giải thưởng của mình.",
+            "zh": "Khách hàng chiến thắng giải thưởng tiền mặt phải kí quỹ vào tài khoản Thực tối thiểu là 50$ và thực hiện ít một giao dịch để được quy đổi giải thưởng của mình.",
+            "zh-Hant": "Khách hàng chiến thắng giải thưởng tiền mặt phải kí quỹ vào tài khoản Thực tối thiểu là 50$ và thực hiện ít một giao dịch để được quy đổi giải thưởng của mình.",
+            "vi": "Khách hàng chiến thắng giải thưởng tiền mặt phải kí quỹ vào tài khoản Thực tối thiểu là 50$ và thực hiện ít một giao dịch để được quy đổi giải thưởng của mình.",
+            "id": "",
+            "es": "Khách hàng chiến thắng giải thưởng tiền mặt phải kí quỹ vào tài khoản Thực tối thiểu là 50$ và thực hiện ít một giao dịch để được quy đổi giải thưởng của mình.",
+            "pt-BR": ""
+        },
+        "twoList4": {
+            "en": "Chương trình ưu đãi này chỉ áp dụng cho khách hàng mới.",
+            "zh": "Chương trình ưu đãi này chỉ áp dụng cho khách hàng mới.",
+            "zh-Hant": "Chương trình ưu đãi này chỉ áp dụng cho khách hàng mới.",
+            "vi": "Chương trình ưu đãi này chỉ áp dụng cho khách hàng mới.",
+            "id": "",
+            "es": "Chương trình ưu đãi này chỉ áp dụng cho khách hàng mới.",
+            "pt-BR": ""
+        },
+        "twoList5": {
+            "en": "Các rô-bốt giao  dịch có thể tham gia vào chương trình ưu đãi hoàn tiền này nhưng không được thực hiện giao dịch scalping. Những người chơi không tuân thủ các nguyên tắc giao dịch sẽ bị loại.",
+            "zh": "Các rô-bốt giao  dịch có thể tham gia vào chương trình ưu đãi hoàn tiền này nhưng không được thực hiện giao dịch scalping. Những người chơi không tuân thủ các nguyên tắc giao dịch sẽ bị loại.",
+            "zh-Hant": "Các rô-bốt giao  dịch có thể tham gia vào chương trình ưu đãi hoàn tiền này nhưng không được thực hiện giao dịch scalping. Những người chơi không tuân thủ các nguyên tắc giao dịch sẽ bị loại.",
+            "vi": "Các rô-bốt giao  dịch có thể tham gia vào chương trình ưu đãi hoàn tiền này nhưng không được thực hiện giao dịch scalping. Những người chơi không tuân thủ các nguyên tắc giao dịch sẽ bị loại.",
+            "id": "",
+            "es": "Các rô-bốt giao  dịch có thể tham gia vào chương trình ưu đãi hoàn tiền này nhưng không được thực hiện giao dịch scalping. Những người chơi không tuân thủ các nguyên tắc giao dịch sẽ bị loại.",
+            "pt-BR": ""
+        },
+        "twoList6": {
+            "en": "TigerWit bảo lưu quyền thay đổi thể lệ chương trình bất kì thời điểm nào trong thời gian của chương trình ưu đãi. Người chơi sẽ được thông báo về bất kì sự thay đổi nào đối với thể lệ cuộc thi",
+            "zh": "TigerWit bảo lưu quyền thay đổi thể lệ chương trình bất kì thời điểm nào trong thời gian của chương trình ưu đãi. Người chơi sẽ được thông báo về bất kì sự thay đổi nào đối với thể lệ cuộc thi",
+            "zh-Hant": "TigerWit bảo lưu quyền thay đổi thể lệ chương trình bất kì thời điểm nào trong thời gian của chương trình ưu đãi. Người chơi sẽ được thông báo về bất kì sự thay đổi nào đối với thể lệ cuộc thi",
+            "vi": "TigerWit bảo lưu quyền thay đổi thể lệ chương trình bất kì thời điểm nào trong thời gian của chương trình ưu đãi. Người chơi sẽ được thông báo về bất kì sự thay đổi nào đối với thể lệ cuộc thi",
+            "id": "",
+            "es": "TigerWit bảo lưu quyền thay đổi thể lệ chương trình bất kì thời điểm nào trong thời gian của chương trình ưu đãi. Người chơi sẽ được thông báo về bất kì sự thay đổi nào đối với thể lệ cuộc thi",
+            "pt-BR": ""
+        },
+        "twoList7": {
+            "en": "Người chiến thắng các giải thưởng hiện vật cao nhất sẽ được công bố trên Instagram và Facebook của TigerWit",
+            "zh": "Người chiến thắng các giải thưởng hiện vật cao nhất sẽ được công bố trên Instagram và Facebook của TigerWit",
+            "zh-Hant": "Người chiến thắng các giải thưởng hiện vật cao nhất sẽ được công bố trên Instagram và Facebook của TigerWit",
+            "vi": "Người chiến thắng các giải thưởng hiện vật cao nhất sẽ được công bố trên Instagram và Facebook của TigerWit",
+            "id": "",
+            "es": "Người chiến thắng các giải thưởng hiện vật cao nhất sẽ được công bố trên Instagram và Facebook của TigerWit",
+            "pt-BR": ""
+        },
+        "twoList8": {
+            "en": "Khách hàng chiến thắng giải thưởng hiện vật có thể nhận phần thưởng của mình tại văn phòng TigerWit ở quốc gia đó.",
+            "zh": "Khách hàng chiến thắng giải thưởng hiện vật có thể nhận phần thưởng của mình tại văn phòng TigerWit ở quốc gia đó.",
+            "zh-Hant": "Khách hàng chiến thắng giải thưởng hiện vật có thể nhận phần thưởng của mình tại văn phòng TigerWit ở quốc gia đó.",
+            "vi": "Khách hàng chiến thắng giải thưởng hiện vật có thể nhận phần thưởng của mình tại văn phòng TigerWit ở quốc gia đó.",
+            "id": "",
+            "es": "Khách hàng chiến thắng giải thưởng hiện vật có thể nhận phần thưởng của mình tại văn phòng TigerWit ở quốc gia đó.",
+            "pt-BR": ""
+        },
+        "": {
+            "en": "",
+            "zh": "",
+            "zh-Hant": "",
+            "vi": "",
+            "id": "",
+            "es": "",
+            "pt-BR": ""
+        },
+        "": {
+            "en": "",
+            "zh": "",
+            "zh-Hant": "",
+            "vi": "",
+            "id": "",
+            "es": "",
+            "pt-BR": ""
+        },
+        "": {
+            "en": "",
+            "zh": "",
+            "zh-Hant": "",
+            "vi": "",
+            "id": "",
+            "es": "",
+            "pt-BR": ""
+        },
     }
 };
 

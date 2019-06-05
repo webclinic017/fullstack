@@ -17,7 +17,6 @@
     <title>
         <%= lang.text('companyZhName')%>
     </title>
-    <% include /common/statistic/h5.jrtt.html %>
 </head>
 <!-- 引入H5 CSS -->
 <!-- build:css(.tmp) /styles/h5_common.css -->
@@ -26,20 +25,13 @@
 
 <% include /common/vendor/h5.utiljs.html %>
 <% include /common/statistic/main.html %>
-<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 
 <body>
 
 <div class="bd_r01">
     <div class="bd_r01__focus">
-        <div class="bd_r01__focus-date">
-            2018年1月15日－2018年2月25日
-        </div>
-        <div class="bd_r01__focus-details">
-            <span>活动详情</span>
-        </div>
-
-        <div class="layer_contentBox" id="layer_contentBox">
+        <img src="<%= lang.image('turntableBanner')%>" alt="">
+        <!-- <div class="layer_contentBox" id="layer_contentBox">
             <div class="layer_bdt39 layer_bdr01">
                 <div class="rules">
                     <p class="tit">活动规则</p>
@@ -54,55 +46,138 @@
                 </div>
                 <p class="rule_close" onclick="layer.closeAll()"><i class="fa fa-times" aria-hidden="true"></i></p>
             </div>
-        </div>
+        </div> -->
     </div>
     <div class="bd_r01__box">
-        
-        <div class="bd_r01__condition">
-            <span class=""></span>
+        <div class="bd_r01__step">
+            <h6 class="bd_r01__step-tit"><%= lang.text('turntable.oneListTit')%></h6>
+            <ul class="bd_r01__step-list">
+                <li>
+                    <h5><%= lang.text('turntable.oneListPasso')%>1</h5>
+                    <p><%= lang.text('turntable.oneList1')%></p>
+                </li>
+                <li>
+                    <h5><%= lang.text('turntable.oneListPasso')%>2</h5>
+                    <p><%= lang.text('turntable.oneList2')%></p>
+                </li>
+                <li>
+                    <h5><%= lang.text('turntable.oneListPasso')%>3</h5>
+                    <p><%= lang.text('turntable.oneList3')%></p>
+                </li>
+            </ul>
+            <p class="bd_r01__step-p"><%= lang.text('turntable.oneListcon1')%></p>
+            <p class="bd_r01__step-p"><%= lang.text('turntable.oneListcon2')%></p>
+        </div>
+        <div class="bd_r01__btn">
+            <button class="btn" id="toRegister"><%= lang.text('register')%></button>
+            <button class="btn" id="toDownload"><%= lang.text('downloadApp.title')%></button>
+        </div>
+        <div class="layer_register" id="layer_register">
+            <div class="layerui_layercont-child">
+                <div class="layer_tit item-center" >
+                    Register RegisterRegisterRegisterRegisterRegister
+                </div>
+                <div class="layer_con">
+                    <div class="layer_register-con">
+                        <div class="form-control-wrapper">
+                            <!-- <span class="form-control after">
+                                <span class="areaCodeShow"><%=lang.text('mRegister01')%></span>
+                                <select name="phone_code" class="selector areaCode" style="border: none!important"></select>
+                            </span> -->
+                            <select class="form-control after areaCode" name="phone_code">
+                                <option value=""><%= lang.text('third_select')%></option>
+                            </select>
+                            <input type="text" class="form-control telephone" name="telephone" placeholder="<%= lang.text('mRegister02')%>">
+                        </div>
+                        <div class="form-control-wrapper">
+                            <input type="number" class="form-control verify_code" name="code" placeholder="<%= lang.text('mRegister03')%>">
+                            <span class="form-control before cursor_pointer verify_code_btn"><%= lang.text('mRegister05')%></span>
+                        </div>
+                        <div class="form-control-wrapper">
+                            <input type="text" class="form-control password" name="password" placeholder="<%= lang.text('password')%>">
+                        </div>
+                
+                    </div>
+                </div>
+                <div class="bd_r01__btn">
+                    <button class="submit_form btn"><%= lang.text('register')%></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="layer_download" id="layer_download">
+            <div class="layerui_layercont-child">
+                <div class="layer_tit item-center" >
+                    <img src="/white_label/bd/turntable/star-left.png" class="star-left" alt="">
+                    <img src="/white_label/bd/turntable/star-right.png" class="star-right" alt="">
+                    Register RegisterRegisterRegisterRegisterRegister
+                </div>
+                <div class="layer_con">
+                    <div class="layer_download-con">
+                    </div>
+                    <div class="layer_download-btn">
+                        <a href="<%= lang.text('downloadGlobalIos') %>"><img src="<%= lang.image('homeAppIos')%>" alt=""></a>
+                        <a href="<%= lang.text('downloadGlobalAndroid') %>"><img src="<%= lang.image('homeAppAndroidGlobal')%>" alt=""></a>
+                    </div>
+                </div>
+                <div class="bd_r01__btn">
+                    <button  onclick="layer.closeAll()" class="btn">close</button>
+                </div>
+            </div>
         </div>
         <div class="bd_r01__rotate_box">
             <div class="bd_r01__pointer">
-                <img src="/images/bd_r01/h5_rotate_pointer.png">
+                <img src="/white_label/bd/turntable/h5_rotate_pointer.png">
             </div>
             <div class="bd_r01__rotate">
                 <div class="bd_r01__rotate-pic">
-                    <img src="/images/bd_r01/h5_rotate.png">
+                    <img src="<%= lang.image('turntable')%>">
                 </div>
-                <span class="bd_r01__rotate-btn">
-                    <img src="/images/bd_r01/h5_rotate_start.png">
+                <span class="bd_r01__rotate-btn item-center" id="turntableStart">
+                    <span class="text-center">开始抽奖</span>
                 </span>
             </div>
 
-            <div class="layer_contentBox2" id="layer_contentBox2">
+            <!-- <div class="layer_contentBox2" id="layer_contentBox2">
                 <div class="layer_bdt39 layer_bdr01_dollar">
                     <div class="cont">
                         <p>恭喜您抽中<span class="num"></span>美金</p>
                         <p>奖品已放入您的零钱包！</p>
                     </div>
                     <div class="pic">
-                        <img src="/images/bd_r01/h5_dollar.png">
+                        <img src="/white_label/bd/turntable/h5_dollar.png">
                     </div>
                     <p class="rule_close" onclick="layer.closeAll()"><i class="fa fa-times" aria-hidden="true"></i></p>
                 </div>
-            </div>
+            </div> -->
         </div>
-        <div class="bd_r01__lst">
+        <!-- <div class="bd_r01__lst">
             <div class="bd_r01__lst-tit">
-                <img src="/images/bd_r01/h5_award_title.png">
+                <img src="/white_label/bd/turntable/h5_award_title.png">
             </div>
             <div class="bd_r01__lst-detail">
                 <ul class="list-1"></ul>
                 <ul class="list-2"></ul>
             </div>
-        </div>
-        <div class="bd_r01__client">
-            <img src="/images/bd_r01/h5_client.png">
+        </div> -->
+        <!-- <div class="bd_r01__client">
+            <img src="/white_label/bd/turntable/h5_client.png">
+        </div> --> 
+        <div class="bd_r01__footer">
+            <h6><%= lang.text('turntable.twoListTit')%></h6>
+            <ul>
+                <li><%= lang.text('turntable.twoList1')%></li>
+                <li><%= lang.text('turntable.twoList2')%></li>
+                <li><%= lang.text('turntable.twoList3')%></li>
+                <li><%= lang.text('turntable.twoList4')%></li>
+                <li><%= lang.text('turntable.twoList5')%></li>
+                <li><%= lang.text('turntable.twoList6')%></li>
+                <li><%= lang.text('turntable.twoList7')%></li>
+                <li><%= lang.text('turntable.twoList8')%></li>
+            </ul>
         </div>
     </div>
-    <div class="bd_r01__footer">
-        风险警示：市场有风险，投资需谨慎。金融市场的保证金交易存在较高风险， 可能并不适合所有投资者，增大杠杆意味着高风险与高收益并存。在您决定交易前， 应当谨慎考虑您的投资目标、投资经验及风险承受能力，并选择适合自己的投资方式。 TigerWit交易平台为广大交易高手及普通投资者提供复制交易服务， 交易高手的历史交易数据不代表未来操作能力，用户因此所产生的任何风险需自己承担。
-    </div>
+   
     
 </div>
 
@@ -110,11 +185,8 @@
 
 <% include /common/vendor/h5.js.html %>
 <!-- build:js(client) /scripts/m_turntable.js -->
-<script src="/scripts/bd/common/open_app.js"></script>
-<script src="/scripts/bd/common/wx_share_config.js"></script>
 <script src="/scripts/bd/turntable/index.js"></script>
+<script src="/scripts/bd/turntable/register.js"></script>
 <!-- endbuild -->
 
-<!-- 推广脚本footer -->
-<%- include('/common/statistic/all.html') %>
 </html>

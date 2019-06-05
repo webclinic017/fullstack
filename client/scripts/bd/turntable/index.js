@@ -1,28 +1,33 @@
 ;
 (function () {
-    var $rotate = $(".bd_r01 .bd_r01__rotate_box");
+    // var $rotate = $(".bd_r01 .bd_r01__rotate_box");
     var $startBtn = $(".bd_r01 .bd_r01__rotate-btn");
     var $rotateBox = $(".bd_r01 .bd_r01__rotate-pic");
-    var $detail = $(".bd_r01 .bd_r01__focus-details");
-    var $condition = $(".bd_r01 .bd_r01__condition span");
-    var $list1 = $(".bd_r01 .bd_r01__lst-detail .list-1");
-    var $list2 = $(".bd_r01 .bd_r01__lst-detail .list-2");
+    // var $detail = $(".bd_r01 .bd_r01__focus-details");
+    // var $condition = $(".bd_r01 .bd_r01__condition span");
+    // var $list1 = $(".bd_r01 .bd_r01__lst-detail .list-1");
+    // var $list2 = $(".bd_r01 .bd_r01__lst-detail .list-2");
 
     var time = 4000;
-    var baseNum = 72;   //旋转角度基数 360/5
-    var award = {   //奖项位置
-        "1": 5,
-        "2": 1,
-        "3": 4,
-        "4": 3,
-        "5": 2
+    var baseNum = 360/10;   //旋转角度基数 360/5
+    var award = {   //奖项位置 奖励：逆时针第几份
+        "1": 2,
+        "2": 4,
+        "3": 8,
+        "4": 10,
+        "5": 6,
+        "6": 1,
+        "7": 3,
+        "8": 5,
+        "9": 7,
+        "10": 9,
     };
-    var isInTigerApp = false;
     var isDrawAward = false;
     var rewardCount = 0;
     var msg = "网络错误";
-    var activityId = 1;
-    var rewardId = 1;
+    var activityId = 18;
+    var rewardId = 29;
+    var activity = 'Spin the Wheel – Lucky Draw'; // 抽奖标识
     var rewardLst = [
         {
             phone: "139****3321",
@@ -109,46 +114,58 @@
             prize: "8.8"
         }
     ];
-
-    setInterval(function () {
-        if ($rotate.hasClass('active')) {
-            $rotate.removeClass('active');
-        } else {
-            $rotate.addClass('active');
-        }
-    }, 1000);
-
-    if (isInTiger()) {
-        isInTigerApp = true;
-        checkReward();
-    } else {
-        toOpenApp();
-        $condition.html("请前往APP参与活动");
-    }
-    getRewardLst();
+    // layer.open({
+    //     shadeClose: true,
+    //     content: $("#layer_download").html(),
+    //     style: 'padding:0;width:90%;border-radius:0;color:#000;background:rgba(0,0,0,0);'
+    // });
+    // setInterval(function () {
+    //     if ($rotate.hasClass('active')) {
+    //         $rotate.removeClass('active');
+    //     } else {
+    //         $rotate.addClass('active');
+    //     }
+    // }, 1000);
+    checkReward();
     
-    $detail.on("tap", function () {
+    
+    // getRewardLst();
+    
+    // $detail.on("tap", function () {
+    //     layer.open({
+    //         shadeClose: true,
+    //         content: $("#layer_contentBox").html(),
+    //         style: 'padding:0;width:90%;border-radius:0;color:#000;background:rgba(0,0,0,0);'
+    //     });
+    //     $('.layui-m-layercont').css('padding', 0);
+    //     return false;
+    // });
+
+    $startBtn.on("click", function () {
+        if (isDrawAward) return;
+            getDrawPrize();
+
+        return false;
+    });
+    
+    $("#toRegister").on("click", function () {
         layer.open({
+            type: 1,
             shadeClose: true,
-            content: $("#layer_contentBox").html(),
+            content: $("#layer_register").html(),
+            className: 'registerLayer',
             style: 'padding:0;width:90%;border-radius:0;color:#000;background:rgba(0,0,0,0);'
         });
-        $('.layui-m-layercont').css('padding', 0);
-        return false;
-    });
-
-    $startBtn.on("tap", function () {
-        if (isDrawAward) return;
-        if (isInTigerApp) {
-            getDrawPrize();
-        } else {
-            toOpenApp();
-        }
-
-        return false;
-    });
-    
-    function getRewardLst () {
+    })
+    $("#toDownload").on("click", function () {
+        layer.open({
+            type: 1,
+            shadeClose: true,
+            content: $("#layer_download").html(),
+            style: 'padding:0;width:90%;border-radius:0;color:#000;background:rgba(0,0,0,0);'
+        });
+    })
+    // function getRewardLst () {
         // publicRequest('getRewardLst', 'GET', {
         //     activity_id: activityId,
         //     reward_id: rewardId,
@@ -161,64 +178,73 @@
         //         appendRewardLst(lst);
         //     }
         // });
-        appendRewardLst();
-    }
-
-    function appendRewardLst (list) {
-        // console.log(list);
-        if (list && list.length) {
-            rewardLst = rewardLst.concat(list);  
-        }
+    //     appendRewardLst();
+    // }
+    // 中奖列表
+    // function appendRewardLst (list) {
+    //     // console.log(list);
+    //     if (list && list.length) {
+    //         rewardLst = rewardLst.concat(list);  
+    //     }
         
-        $.each(rewardLst, function (index, value) {
-            var dom = "<li>恭喜 "+value.phone+" 抽中 "+value.prize+" 美金</li>";
-            $list1.append(dom);
-            $list2.append(dom);
-        });
+    //     $.each(rewardLst, function (index, value) {
+    //         var dom = "<li>恭喜 "+value.phone+" 抽中 "+value.prize+" 美金</li>";
+    //         $list1.append(dom);
+    //         $list2.append(dom);
+    //     });
 
-        var h = $list1.height();
-        // console.log(h);
-        $list1.css({top: 0});
-        $list2.css({top: h});
-        startRow(h);
-    }
+    //     var h = $list1.height();
+    //     // console.log(h);
+    //     $list1.css({top: 0});
+    //     $list2.css({top: h});
+    //     startRow(h);
+    // }
 
-    function startRow (h) {
-        var t1, t2;
+    // function startRow (h) {
+    //     var t1, t2;
 
-        setInterval(function () {
+    //     setInterval(function () {
             
-            t1 = $list1.position().top, t2 = $list2.position().top;
-            t1--, t2--;
+    //         t1 = $list1.position().top, t2 = $list2.position().top;
+    //         t1--, t2--;
 
-            if (t1 < -h) t1 = h;
-            if (t2 < -h) t2 = h;
+    //         if (t1 < -h) t1 = h;
+    //         if (t2 < -h) t2 = h;
 
-            $list1.css({top: t1});
-            $list2.css({top: t2});
-        }, 30);
-    }
+    //         $list1.css({top: t1});
+    //         $list2.css({top: t2});
+    //     }, 30);
+    // }
 
     function checkReward () {
-        publicRequest('checkReward', 'POST', {
-            activity_id: activityId,
-            reward_id: rewardId
-        }).then(function (data) {
-            // console.log(data.data);
-            if (data.is_succ) {
-                msg = data.data.message;
-                $condition.html(data.data.message);
-                rewardCount = data.data.num;
-            } else {
-                msg = data.message;
-                $condition.html(data.message);
-                layer.open({
-                    content: data.message,
-                    skin: 'msg',
-                    time: 2
-                });
-            }
-        });
+        $('#turntableStart').addClass('no-start').find('span').text('不可抽取');
+        if($.cookie("token")){
+            publicRequest('checkReward', 'POST', {
+                activity_id: activityId,
+                reward_id: rewardId,
+                activity: activity
+            }).then(function (data) {
+                // console.log(data.data);
+                if (data.is_succ) {
+                    msg = data.data.message;
+                    // $condition.html(data.data.message);
+                    rewardCount = data.data.num;
+                    if(rewardCount > 0){
+                        $('#turntableStart').removeClass('no-start').find('span').text('开始抽奖')
+                    }
+                    
+                } else {
+                    msg = data.message;
+                    // $condition.html(data.message);
+                    layer.open({
+                        content: data.message,
+                        skin: 'msg',
+                        time: 2
+                    });
+                }
+            });
+        }
+        
     }
 
     function getDrawPrize () {
@@ -236,9 +262,9 @@
         });
         var s = {
             activity_id: activityId,
-            reward_id: rewardId
+            reward_id: rewardId,
+            activity: activity
         };
-        getSearch().source && (s.source = 1);
         publicRequest('joinReward', 'POST', s).then(function (data) {
             // console.log(data.data);
             layer.closeAll();
@@ -259,13 +285,21 @@
                     isDrawAward = false;
 
                     checkReward();
-                    $(".layer_contentBox2 .layer_bdr01_dollar .num").html(data.data.prize);
+                    var tmp = '';
+                    if(data.data.type == 3){
+                        tmp += "<div class='practicality'><img src='/white_label/bd/turntable/practicality-"+ data.data.prize_flag +".png' alt=''></div>"
+                    }
+                    tmp += "<h6 class='tit'>"+ data.data.reward_name +"</h6>"
+                    // tmp +=  "<p class='con'>"+ +"</p>"
+
                     layer.open({
-                        shadeClose: false,
-                        content: $("#layer_contentBox2").html(),
-                        style: 'padding:0;width:85%;border-radius:0;color:#000;background:rgba(0,0,0,0);'
+                        type: 1,
+                        shadeClose: true,
+                        className: 'winPrize',
+                        content: $("#layer_download").html(),
+                        style: 'padding:0;width:90%;border-radius:0;color:#000;background:rgba(0,0,0,0);'
                     });
-                    $('.layui-m-layercont').css('padding', 0);
+                    $('.winPrize .layer_download-con').html(tmp)
                 }, 3000);
             } else {
                 isDrawAward = false;
@@ -276,21 +310,6 @@
                 });
             }
         });
-    }
-
-    function toOpenApp () {
-        var o;
-        var s = getSearch().source ? '?source=1' : '';
-        // console.log(s);
-        if (window.location.origin.indexOf("www.tigerwit.com") != -1) {
-            o = "www.tigerwit.com/bd/r01"+s;
-        } else {
-            o = "demo.tigerwit.com/bd/r01"+s;
-        }
-        // console.log(o);
-        if (isTigerCo()) {
-            openInApp(o);
-        }
     }
 
     // min 和 max 之间整数，包含min，不包含max

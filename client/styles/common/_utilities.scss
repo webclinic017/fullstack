@@ -574,6 +574,15 @@
     display: flex !important;         /* 新版本语法: Opera 12.1, Firefox 22+ */
     @include justifyContent(space-between);
 }
+.space-between-center{
+    display: -webkit-box !important;  /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+    display: -moz-box !important;     /* 老版本语法: Firefox (buggy) */
+    display: -ms-flexbox !important;  /* 混合版本语法: IE 10 */
+    display: -webkit-flex !important; /* 新版本语法: Chrome 21+ */
+    display: flex !important;         /* 新版本语法: Opera 12.1, Firefox 22+ */
+    @include alignItems(center);
+    @include justifyContent(space-between);
+}
 .flex1 {
     @include flex(1);
 }
