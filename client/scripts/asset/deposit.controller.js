@@ -18,7 +18,7 @@
         var parentScope = $scope;
         parentScope.hasChooseedCard = false
         parentScope.manageCardModalInstance = undefined;
-
+        $scope.depositTypeLstArray = []; // 支付方式列表原数组 ng-repeat
         $scope.depositTypeLst = {}; // 支付方式列表
         $scope.deposit = {
             card: {},
@@ -83,7 +83,8 @@
         asset.getDepositPlatform().then(function (data) {
             if (data.is_succ) {
                 // 因为使用此接口之前已经定义好了各支付方式的key，所以这里沿用以前的key，做一下替换
-                angular.forEach(data.data, function (value, index) {
+                $scope.depositTypeLstArray = data.data;
+                angular.forEach($scope.depositTypeLstArray, function (value, index) {
                     if (value.key === 'bank') value.key = 'invest';
                     if (value.key === 'transfer') value.key = 'tele';
                     if (value.key === 'cse_wallet') value.key = 'cseWallet';
@@ -288,7 +289,7 @@
                         return {
                             depositType: $scope.deposit.type,
                             walletAble: $scope.walletAble,
-                            depositTypeLst: $scope.depositTypeLst,
+                            depositTypeLst: $scope.depositTypeLstArray,
                             isWallet: $scope.accountIsWallet
                         };
                     }
@@ -313,6 +314,7 @@
                     $scope.changeType = changeType;
 
                     function selectType(type, status) {
+                        // console.log(type, status);
                         if (status === 2) return;
                         $scope.deposit.type = type;
                     }

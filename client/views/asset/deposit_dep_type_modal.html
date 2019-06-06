@@ -7,13 +7,13 @@
 
     <div class="sys_modal_v2__content">
         <ul class="deposit_modal__type">
-            <li class="row" ng-repeat="(key, value) in deposit.depositTypeLst" ng-class="{unable_select: value.status === 2}" ng-click="selectType(key, value.status)" ng-if="isWallet(key)">
+            <li class="row" ng-repeat="item in deposit.depositTypeLst" ng-class="{unable_select: item.status === 2}" ng-click="selectType(item.key, item.status)" ng-if="isWallet(item.key)">
                 <div class="col-xs-3 deposit_modal__type-icon">
-                    <span class="btn-select fr" ng-class="{active: deposit.type === key}"></span>
+                    <span class="btn-select fr" ng-class="{active: deposit.type === item.key}"></span>
                 </div>
                 <div class="col-xs-9 deposit_modal__type-cont">
-                    <p class="tit">{{value.name}}<span>{{value.hint}}</span></p>
-                    <p class="tip" ng-show="key !== 'wallet'">{{value.describe}}</p>
+                    <p class="tit">{{item.name}}<span>{{item.hint}}</span></p>
+                    <p class="tip" ng-show="key !== 'wallet'">{{item.describe}}</p>
                     <p class="tip" ng-show="key === 'wallet'">{{lang.text('tigerWitID.depositWithdrawal.walletBalanceM')}}${{ deposit.walletAble || '0.00' }}</p>
                 </div>
             </li>

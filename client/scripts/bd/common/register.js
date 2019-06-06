@@ -237,19 +237,25 @@
                 if (!checkTel()) return;
                 /*检测手机号是否已经存在*/
                 if (($("#telephone").val().trim() != "")) {
-                    publicRequest('checkExists', 'GET', {
-                        key: 3,
-                        value: $("#telephone").val()
-                    }).then(function (data) {
-                        if (!data) return;
-                        if (data.is_succ) {
-                            if (data.data) {
-                                layer.msg('此号码已注册!');
-                            } else {
-                                sendVerifyCode();
+                    // 代理商时
+                    if($.cookie('invite_status') == 0){
+                        sendVerifyCode();
+                    }else{
+                        publicRequest('checkExists', 'GET', {
+                            key: 3,
+                            value: $("#telephone").val()
+                        }).then(function (data) {
+                            if (!data) return;
+                            if (data.is_succ) {
+                                if (data.data) {
+                                    layer.msg('此号码已注册!');
+                                } else {
+                                    sendVerifyCode();
+                                }
                             }
-                        }
-                    });
+                        });
+                    }
+                    
                 }
             });
         }());

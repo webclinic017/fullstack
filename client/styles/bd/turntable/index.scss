@@ -54,28 +54,47 @@
         border-top-right-radius: 30px;
         border-top-left-radius: 30px;
         @include justifyContent(center);
-        .star-left{
+        .star-right, .star-left{
             position: absolute;
-            top: -20%;
-            left: -20%;
+            top: -20px;
+            height: 80px;
+        }
+        .star-left{
+            left: -20px;
         }
         .star-right{
-            position: absolute;
-            top: -20%;
-            right: -20%;
+            right: -20px;
         }
         > h6{
-            margin-top: 15px;
+            padding-top: 45px;
+            margin-bottom: 15px;
             font-size: 32px;
+        }
+        > p{
+            font-size: 20px;
         }
         @include responsive(phone-screens){
             height: px2rem(170);
             font-size: px2rem(32);
             line-height: px2rem(32);
-
+            .star-right, .star-left{
+                top: px2rem(-20);
+                height: px2rem(80);
+            }
+            .star-left{
+                left: px2rem(-20);
+            }
+            .star-right{
+                right: px2rem(-20);
+            }
             > h6{
-                margin-top: px2rem(15);
+                padding-top: px2rem(45);
+                margin-bottom: px2rem(15);
                 font-size: px2rem(32);
+            }
+
+            > p{
+                font-size: px2rem(20);
             }
         }
 
@@ -104,10 +123,10 @@
                     box-shadow: none;
                 }
                 &.after, &.before{
+                    min-width: 150px;
                     flex: 0;
                 }
                 &.after{
-                    min-width: 100px;
                     border-right: 1px solid #ccc !important;
                 }
 
@@ -117,11 +136,22 @@
                     border-left:  1px solid #ccc !important;
                 }
             }
+
+            @include responsive(phone-screens){
+                .form-control{
+                    &.after, &.before{
+                        min-width: px2rem(150);
+                    }
+                }
+            }
         }
 
     }
     .layer_download-con{
         .practicality{
+            >img{
+                height: 100px;
+            }
         }
         .tit{
             font-size: 32px;
@@ -132,16 +162,28 @@
             text-align: left;
         }
     }
+    .layer_download-code{
+        margin-top: 10px;
+        > img{
+            height: 100px;
+        }
+    }
     .layer_download-btn{
         > a{
             display: inline-block;
-            margin: 20px 30px 0;
+            padding: 20px 30px 0;
+            > img{
+                width: 100%;
+            }
         }
     }
 
     @include responsive(phone-screens){
         .layer_download-con{
             .practicality{
+                >img{
+                    height: px2rem(100);
+                }
             }
             .tit{
                 font-size: px2rem(32);
@@ -151,15 +193,21 @@
                 font-size: px2rem(14);
             }
         }
+        .layer_download-code{
+            > img{
+                height: px2rem(150);
+            }
+        }
         .layer_download-btn{
             > a{
-                margin: px2rem(20) px2rem(30) 0;
+                padding: px2rem(20) px2rem(30) 0;
+                width: 48%;
             }
         }
     }
 }
 @include b(bd_r01) {
-    .layer_register, .layer_download {
+    .layer_register, .layer_register_succ, .layer_download, .layer_won {
         display: none;
     }
     @include e(focus) {
@@ -248,6 +296,7 @@
         margin-top: 25px;
         >.btn{
             display: inline-block;
+            width: 182px;
             border-radius: 25px;
             margin: 15px;
             line-height: normal;   

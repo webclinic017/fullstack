@@ -1,3 +1,53 @@
+
+
+var rewardCount = 0;
+var msg = "网络错误";
+var activityId;
+var rewardId;
+var activity = 'Spin the Wheel – Lucky Draw'; // 抽奖标识
+var urlSearch = getSearch();
+if(urlSearch.world_code == 'pt-br'){
+    activityId = 8;
+    rewardId = 8;
+}else if(urlSearch.world_code == 'id'){
+    activityId = 7;
+    rewardId = 7;
+}else{
+    activityId = 6;
+    rewardId = 6;
+}
+// 获取当前状态
+function checkReward () {
+    if($.cookie("token")){
+        publicRequest('checkReward', 'POST', {
+            activity_id: activityId,
+            reward_id: rewardId,
+            activity: activity
+        }).then(function (data) {
+            // console.log(data.data);
+            if (data.is_succ) {
+                msg = data.data.message;
+                // $condition.html(data.data.message);
+                rewardCount = data.data.num;
+                if(rewardCount > 0){
+                    $('#turntableStart').removeClass('no-start').find('span').text(lang.text('turntable.clickSpin'))
+                }else{
+                    $('#turntableStart').addClass('no-start').find('span').text(lang.text('turntable.youWon'));
+                }
+                
+            } else {
+                msg = data.message;
+                // $condition.html(data.message);
+                layer.open({
+                    content: data.message,
+                    skin: 'msg',
+                    time: 2
+                });
+            }
+        });
+    }
+}
+
 ;
 (function () {
     // var $rotate = $(".bd_r01 .bd_r01__rotate_box");
@@ -23,11 +73,6 @@
         "10": 9,
     };
     var isDrawAward = false;
-    var rewardCount = 0;
-    var msg = "网络错误";
-    var activityId = 18;
-    var rewardId = 29;
-    var activity = 'Spin the Wheel – Lucky Draw'; // 抽奖标识
     var rewardLst = [
         {
             phone: "139****3321",
@@ -154,7 +199,7 @@
             shadeClose: true,
             content: $("#layer_register").html(),
             className: 'registerLayer',
-            style: 'padding:0;width:90%;border-radius:0;color:#000;background:rgba(0,0,0,0);'
+            style: 'padding:0;width:90%;max-width: 800px;border-radius:0;color:#000;background:rgba(0,0,0,0);'
         });
     })
     $("#toDownload").on("click", function () {
@@ -162,7 +207,7 @@
             type: 1,
             shadeClose: true,
             content: $("#layer_download").html(),
-            style: 'padding:0;width:90%;border-radius:0;color:#000;background:rgba(0,0,0,0);'
+            style: 'padding:0;width:90%;max-width: 800px;border-radius:0;color:#000;background:rgba(0,0,0,0);'
         });
     })
     // function getRewardLst () {
@@ -216,38 +261,12 @@
     //     }, 30);
     // }
 
-    function checkReward () {
-        $('#turntableStart').addClass('no-start').find('span').text('不可抽取');
-        if($.cookie("token")){
-            publicRequest('checkReward', 'POST', {
-                activity_id: activityId,
-                reward_id: rewardId,
-                activity: activity
-            }).then(function (data) {
-                // console.log(data.data);
-                if (data.is_succ) {
-                    msg = data.data.message;
-                    // $condition.html(data.data.message);
-                    rewardCount = data.data.num;
-                    if(rewardCount > 0){
-                        $('#turntableStart').removeClass('no-start').find('span').text('开始抽奖')
-                    }
-                    
-                } else {
-                    msg = data.message;
-                    // $condition.html(data.message);
-                    layer.open({
-                        content: data.message,
-                        skin: 'msg',
-                        time: 2
-                    });
-                }
-            });
-        }
-        
-    }
 
     function getDrawPrize () {
+        if(!$.cookie("token")){
+            $("#toRegister").click();
+            return
+        }
         if (rewardCount <= 0) {
             layer.open({
                 content: msg,
@@ -285,21 +304,31 @@
                     isDrawAward = false;
 
                     checkReward();
-                    var tmp = '';
+                    var tmp = ''; 
+                    var rewardTpl, rewardDetailsTpl, tit2;
                     if(data.data.type == 3){
+                        tit2 = lang.text('turntable.productPrize')
+                        rewardTpl = lang.text('turntable.productPrize1') + data.data.reward_name + lang.text('turntable.productPrize2');
+                        rewardDetailsTpl = lang.text('turntable.productPrizeDetails')
                         tmp += "<div class='practicality'><img src='/white_label/bd/turntable/practicality-"+ data.data.prize_flag +".png' alt=''></div>"
+                    }else{
+                        tit2 = lang.text('turntable.cashPrize')
+                        rewardDetailsTpl = lang.text('turntable.cashPrizeDetails')
+                        rewardTpl = lang.text('turntable.cashPrize1') + data.data.reward_name + lang.text('turntable.cashPrize2');
                     }
-                    tmp += "<h6 class='tit'>"+ data.data.reward_name +"</h6>"
-                    // tmp +=  "<p class='con'>"+ +"</p>"
+                    tmp += "<h6 class='tit'>"+ rewardTpl +"</h6>"
+                    tmp +=  "<p class='con'>"+ rewardDetailsTpl +"</p>"
 
                     layer.open({
                         type: 1,
                         shadeClose: true,
                         className: 'winPrize',
-                        content: $("#layer_download").html(),
-                        style: 'padding:0;width:90%;border-radius:0;color:#000;background:rgba(0,0,0,0);'
+                        content: $("#layer_won").html(),
+                        style: 'padding:0;width:90%;max-width: 800px;border-radius:0;color:#000;background:rgba(0,0,0,0);'
                     });
                     $('.winPrize .layer_download-con').html(tmp)
+                    $('.winPrize .layer_won_tit2').text(tit2)
+
                 }, 3000);
             } else {
                 isDrawAward = false;

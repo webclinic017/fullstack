@@ -16396,7 +16396,7 @@ module.exports = {
             "zh": "Để nhận được các giải thưởng hấp dẫn trên, bạn chỉ cần làm theo các bước sau:",
             "zh-Hant": "Để nhận được các giải thưởng hấp dẫn trên, bạn chỉ cần làm theo các bước sau:",
             "vi": "Để nhận được các giải thưởng hấp dẫn trên, bạn chỉ cần làm theo các bước sau:",
-            "id": "",
+            "id": "Untuk mendapatkan hadiah, anda dapat mengikuti langkah-langkah berikut ini:",
             "es": "Để nhận được các giải thưởng hấp dẫn trên, bạn chỉ cần làm theo các bước sau:",
             "pt-BR": "Para reivindicar seu prêmio, você precisará seguir estas etapas:"
         },
@@ -16405,7 +16405,7 @@ module.exports = {
             "zh": "Bước ",
             "zh-Hant": "Bước ",
             "vi": "Bước ",
-            "id": "",
+            "id": "Langkah ",
             "es": "Bước ",
             "pt-BR": "Passo "
         },
@@ -16414,7 +16414,7 @@ module.exports = {
             "zh": "Hãy quay bánh xe! Nếu bạn chiến thắng, hãy đăng kí ngay với chúng tôi để nhận giải thưởng.",
             "zh-Hant": "Hãy quay bánh xe! Nếu bạn chiến thắng, hãy đăng kí ngay với chúng tôi để nhận giải thưởng.",
             "vi": "Hãy quay bánh xe! Nếu bạn chiến thắng, hãy đăng kí ngay với chúng tôi để nhận giải thưởng.",
-            "id": "",
+            "id": "Daftarkan dan putar roda untuk memenangkan hadiah.",
             "es": "Hãy quay bánh xe! Nếu bạn chiến thắng, hãy đăng kí ngay với chúng tôi để nhận giải thưởng.",
             "pt-BR": "Registre-se e gire a roda para ganhar um prêmio."
         },
@@ -16423,7 +16423,7 @@ module.exports = {
             "zh": "Tải ứng dụng TigerWit và đăng nhập.",
             "zh-Hant": "Tải ứng dụng TigerWit và đăng nhập.",
             "vi": "Tải ứng dụng TigerWit và đăng nhập.",
-            "id": "",
+            "id": "Download aplikasi TigerWit dan Masuk.",
             "es": "Tải ứng dụng TigerWit và đăng nhập.",
             "pt-BR": "Baixe o aplicativo TigerWit e faça o login."
         },
@@ -16432,7 +16432,7 @@ module.exports = {
             "zh": "Mở một Tài khoản Thực và thực hiện giao dịch.",
             "zh-Hant": "Mở một Tài khoản Thực và thực hiện giao dịch.",
             "vi": "Mở một Tài khoản Thực và thực hiện giao dịch.",
-            "id": "",
+            "id": "Buka akun Live dan lakukan transaksi.",
             "es": "Mở một Tài khoản Thực và thực hiện giao dịch.",
             "pt-BR": "abra uma conta do Live e faça uma trade."
         },
@@ -16441,7 +16441,7 @@ module.exports = {
             "zh": "Nếu bạn chiến thắng giải thưởng tiền mặt, số tiền sẽ nằm trong mục Ví tại ứng dụng của bạn. Bạn có thể chuyển số tiền đó vào tài khoản thực của bạn và thực hiện giao dịch.",
             "zh-Hant": "Nếu bạn chiến thắng giải thưởng tiền mặt, số tiền sẽ nằm trong mục Ví tại ứng dụng của bạn. Bạn có thể chuyển số tiền đó vào tài khoản thực của bạn và thực hiện giao dịch.",
             "vi": "Nếu bạn chiến thắng giải thưởng tiền mặt, số tiền sẽ nằm trong mục Ví tại ứng dụng của bạn. Bạn có thể chuyển số tiền đó vào tài khoản thực của bạn và thực hiện giao dịch.",
-            "id": "",
+            "id": "Jika Anda telah memenangkan hadiah uang tunai, kupon hadiah uang tunai akan berada di daftar kupon Anda yang dapat Anda pindah ke dompet Anda setelah Anda melakukan perdagangan.",
             "es": "Nếu bạn chiến thắng giải thưởng tiền mặt, số tiền sẽ nằm trong mục Ví tại ứng dụng của bạn. Bạn có thể chuyển số tiền đó vào tài khoản thực của bạn và thực hiện giao dịch.",
             "pt-BR": "Se você ganhou um prêmio em dinheiro, o cupom de prêmio em dinheiro estará na sua lista de cupons, que você pode transferir para sua carteira depois de ter feito uma troca."
         },
@@ -16450,7 +16450,7 @@ module.exports = {
             "zh": "Hoặc, nếu chiến thắng một giải thưởng bằng hiện vật, hãy kí quỹ ít nhất là 50$ và thực hiện 1 lệnh giao dịch. Nhân viên của chúng tôi sẽ liên lạc để giúp bạn quy đổi giải thưởng của mình.",
             "zh-Hant": "Hoặc, nếu chiến thắng một giải thưởng bằng hiện vật, hãy kí quỹ ít nhất là 50$ và thực hiện 1 lệnh giao dịch. Nhân viên của chúng tôi sẽ liên lạc để giúp bạn quy đổi giải thưởng của mình.",
             "vi": "Hoặc, nếu chiến thắng một giải thưởng bằng hiện vật, hãy kí quỹ ít nhất là 50$ và thực hiện 1 lệnh giao dịch. Nhân viên của chúng tôi sẽ liên lạc để giúp bạn quy đổi giải thưởng của mình.",
-            "id": "",
+            "id": "Atau, jika Anda telah memenangkan hadiah produk, setor minimal $ 50 dan lakukan satu perdagangan. Tim kami akan menghubungi Anda, untuk membantu Anda menebus hadiah Anda.",
             "es": "Hoặc, nếu chiến thắng một giải thưởng bằng hiện vật, hãy kí quỹ ít nhất là 50$ và thực hiện 1 lệnh giao dịch. Nhân viên của chúng tôi sẽ liên lạc để giúp bạn quy đổi giải thưởng của mình.",
             "pt-BR": "Ou, se você ganhou um prêmio de produto, deposite um mínimo de US $ 50 e faça uma negociação. Nossa equipe entrará em contato para ajudá-lo a resgatar seu prêmio."
         },
@@ -16459,81 +16459,81 @@ module.exports = {
             "zh": "Thể lệ",
             "zh-Hant": "Thể lệ",
             "vi": "Thể lệ",
-            "id": "",
+            "id": "Syarat dan Ketentuan",
             "es": "Thể lệ",
-            "pt-BR": ""
+            "pt-BR": "T & Cs"
         },
         "twoList1": {
             "en": "Giải thưởng bốc thăm chỉ có thể được nhập chỉ duy nhất một lần với mỗi người dùng. Mỗi người dùng chỉ có thể thắng một giải thưởng.",
             "zh": "Giải thưởng bốc thăm chỉ có thể được nhập chỉ duy nhất một lần với mỗi người dùng. Mỗi người dùng chỉ có thể thắng một giải thưởng.",
             "zh-Hant": "Giải thưởng bốc thăm chỉ có thể được nhập chỉ duy nhất một lần với mỗi người dùng. Mỗi người dùng chỉ có thể thắng một giải thưởng.",
             "vi": "Giải thưởng bốc thăm chỉ có thể được nhập chỉ duy nhất một lần với mỗi người dùng. Mỗi người dùng chỉ có thể thắng một giải thưởng.",
-            "id": "",
+            "id": "Penarikan hadiah hanya berlaku 1 kali untuk 1 pengguna. Pengguna hanya dapat memenangkan 1 hadiah.",
             "es": "Giải thưởng bốc thăm chỉ có thể được nhập chỉ duy nhất một lần với mỗi người dùng. Mỗi người dùng chỉ có thể thắng một giải thưởng.",
-            "pt-BR": ""
+            "pt-BR": "o sorteio só pode ser inserido uma vez por usuário. Cada utilizador só pode ganhar um prêmio."
         },
         "twoList2": {
             "en": "Khách hàng có thể sử dụng giải thưởng tiền mặt để đặt lệnh giao dịch và phải thực hiện ít nhất một giao dịch trước khi khách hàng rút giải thưởng tiền mặt của họ. Một khi giao dịch được thực hiện, khách hàng có thể rút giải thưởng tiền mặt cùng với bất kì khoản lợi nhuận nào mà họ có được.",
             "zh": "Khách hàng có thể sử dụng giải thưởng tiền mặt để đặt lệnh giao dịch và phải thực hiện ít nhất một giao dịch trước khi khách hàng rút giải thưởng tiền mặt của họ. Một khi giao dịch được thực hiện, khách hàng có thể rút giải thưởng tiền mặt cùng với bất kì khoản lợi nhuận nào mà họ có được.",
             "zh-Hant": "Khách hàng có thể sử dụng giải thưởng tiền mặt để đặt lệnh giao dịch và phải thực hiện ít nhất một giao dịch trước khi khách hàng rút giải thưởng tiền mặt của họ. Một khi giao dịch được thực hiện, khách hàng có thể rút giải thưởng tiền mặt cùng với bất kì khoản lợi nhuận nào mà họ có được.",
             "vi": "Khách hàng có thể sử dụng giải thưởng tiền mặt để đặt lệnh giao dịch và phải thực hiện ít nhất một giao dịch trước khi khách hàng rút giải thưởng tiền mặt của họ. Một khi giao dịch được thực hiện, khách hàng có thể rút giải thưởng tiền mặt cùng với bất kì khoản lợi nhuận nào mà họ có được.",
-            "id": "",
+            "id": "Klien dapat menggunakan hadiah dana tunai tersebut untuk melakukan transaksi dan harus setidaknya menyelesaikan satu kali transaksi sebelum dapat menarik hadiahnya.",
             "es": "Khách hàng có thể sử dụng giải thưởng tiền mặt để đặt lệnh giao dịch và phải thực hiện ít nhất một giao dịch trước khi khách hàng rút giải thưởng tiền mặt của họ. Một khi giao dịch được thực hiện, khách hàng có thể rút giải thưởng tiền mặt cùng với bất kì khoản lợi nhuận nào mà họ có được.",
-            "pt-BR": ""
+            "pt-BR": "os clientes podem usar seu prêmio em dinheiro para colocar um comércio e devem fazer pelo menos um negócio antes que eles podem retirar o seu prêmio em dinheiro. Uma vez que tornou-se um comércio, os clientes poderão retirar seu prêmio em dinheiro, juntamente com quaisquer lucros obtidos."
         },
         "twoList3": {
             "en": "Khách hàng chiến thắng giải thưởng tiền mặt phải kí quỹ vào tài khoản Thực tối thiểu là 50$ và thực hiện ít một giao dịch để được quy đổi giải thưởng của mình.",
             "zh": "Khách hàng chiến thắng giải thưởng tiền mặt phải kí quỹ vào tài khoản Thực tối thiểu là 50$ và thực hiện ít một giao dịch để được quy đổi giải thưởng của mình.",
             "zh-Hant": "Khách hàng chiến thắng giải thưởng tiền mặt phải kí quỹ vào tài khoản Thực tối thiểu là 50$ và thực hiện ít một giao dịch để được quy đổi giải thưởng của mình.",
             "vi": "Khách hàng chiến thắng giải thưởng tiền mặt phải kí quỹ vào tài khoản Thực tối thiểu là 50$ và thực hiện ít một giao dịch để được quy đổi giải thưởng của mình.",
-            "id": "",
+            "id": "Klien yang mendapatkan hadiah Produk harus melakukan deposit ke Akun Live mereka minimal $ 50 dan menyelesaikan 1 kali transaksi.",
             "es": "Khách hàng chiến thắng giải thưởng tiền mặt phải kí quỹ vào tài khoản Thực tối thiểu là 50$ và thực hiện ít một giao dịch để được quy đổi giải thưởng của mình.",
-            "pt-BR": ""
+            "pt-BR": "os clientes quem ganhem um prêmio de produto devem depositar sua conta ao vivo com um mínimo de $50 e colocar pelo menos um comércio para resgatar seu prêmio."
         },
         "twoList4": {
             "en": "Chương trình ưu đãi này chỉ áp dụng cho khách hàng mới.",
             "zh": "Chương trình ưu đãi này chỉ áp dụng cho khách hàng mới.",
             "zh-Hant": "Chương trình ưu đãi này chỉ áp dụng cho khách hàng mới.",
             "vi": "Chương trình ưu đãi này chỉ áp dụng cho khách hàng mới.",
-            "id": "",
+            "id": "Promo ini hanya untuk klien baru.",
             "es": "Chương trình ưu đãi này chỉ áp dụng cho khách hàng mới.",
-            "pt-BR": ""
+            "pt-BR": "esta promoção está aberta para novos clientes apenas."
         },
         "twoList5": {
             "en": "Các rô-bốt giao  dịch có thể tham gia vào chương trình ưu đãi hoàn tiền này nhưng không được thực hiện giao dịch scalping. Những người chơi không tuân thủ các nguyên tắc giao dịch sẽ bị loại.",
             "zh": "Các rô-bốt giao  dịch có thể tham gia vào chương trình ưu đãi hoàn tiền này nhưng không được thực hiện giao dịch scalping. Những người chơi không tuân thủ các nguyên tắc giao dịch sẽ bị loại.",
             "zh-Hant": "Các rô-bốt giao  dịch có thể tham gia vào chương trình ưu đãi hoàn tiền này nhưng không được thực hiện giao dịch scalping. Những người chơi không tuân thủ các nguyên tắc giao dịch sẽ bị loại.",
             "vi": "Các rô-bốt giao  dịch có thể tham gia vào chương trình ưu đãi hoàn tiền này nhưng không được thực hiện giao dịch scalping. Những người chơi không tuân thủ các nguyên tắc giao dịch sẽ bị loại.",
-            "id": "",
+            "id": "Expert Advisors diperbolehkan digunakan dalam promosi ini namun tidak diperbolehkan menggunakan transaksi Scalping. Pengguna yang melanggar akan didiskualifikasi.",
             "es": "Các rô-bốt giao  dịch có thể tham gia vào chương trình ưu đãi hoàn tiền này nhưng không được thực hiện giao dịch scalping. Những người chơi không tuân thủ các nguyên tắc giao dịch sẽ bị loại.",
-            "pt-BR": ""
+            "pt-BR": "expert Advisors podem participar da promoção de cashback mas são proibidos de escalpelamento transações. Os usuários que infringem estas regras de negociação serão desclassificados."
         },
         "twoList6": {
             "en": "TigerWit bảo lưu quyền thay đổi thể lệ chương trình bất kì thời điểm nào trong thời gian của chương trình ưu đãi. Người chơi sẽ được thông báo về bất kì sự thay đổi nào đối với thể lệ cuộc thi",
             "zh": "TigerWit bảo lưu quyền thay đổi thể lệ chương trình bất kì thời điểm nào trong thời gian của chương trình ưu đãi. Người chơi sẽ được thông báo về bất kì sự thay đổi nào đối với thể lệ cuộc thi",
             "zh-Hant": "TigerWit bảo lưu quyền thay đổi thể lệ chương trình bất kì thời điểm nào trong thời gian của chương trình ưu đãi. Người chơi sẽ được thông báo về bất kì sự thay đổi nào đối với thể lệ cuộc thi",
             "vi": "TigerWit bảo lưu quyền thay đổi thể lệ chương trình bất kì thời điểm nào trong thời gian của chương trình ưu đãi. Người chơi sẽ được thông báo về bất kì sự thay đổi nào đối với thể lệ cuộc thi",
-            "id": "",
+            "id": "TigerWit berhak mengubah syarat dan ketentuan kapanpun diperlukan sepanjang periode promosi. Pengguna akan diberikan pemberitahuan apabila terdapat perubahan pada syarat dan ketentuan.",
             "es": "TigerWit bảo lưu quyền thay đổi thể lệ chương trình bất kì thời điểm nào trong thời gian của chương trình ưu đãi. Người chơi sẽ được thông báo về bất kì sự thay đổi nào đối với thể lệ cuộc thi",
-            "pt-BR": ""
+            "pt-BR": "TigerWit reserva-se o direito de modificar os termos e condições a qualquer momento durante o período promocional. Os usuários serão notificados de quaisquer alterações aos termos e condições."
         },
         "twoList7": {
             "en": "Người chiến thắng các giải thưởng hiện vật cao nhất sẽ được công bố trên Instagram và Facebook của TigerWit",
             "zh": "Người chiến thắng các giải thưởng hiện vật cao nhất sẽ được công bố trên Instagram và Facebook của TigerWit",
             "zh-Hant": "Người chiến thắng các giải thưởng hiện vật cao nhất sẽ được công bố trên Instagram và Facebook của TigerWit",
             "vi": "Người chiến thắng các giải thưởng hiện vật cao nhất sẽ được công bố trên Instagram và Facebook của TigerWit",
-            "id": "",
+            "id": "Pemenang hadiah akan diumumkan pada halaman Facebook dan Instagram TigerWit.",
             "es": "Người chiến thắng các giải thưởng hiện vật cao nhất sẽ được công bố trên Instagram và Facebook của TigerWit",
-            "pt-BR": ""
+            "pt-BR": "os vencedores dos prêmios top produto serão anunciados nas páginas TigerWit Instagram e Facebook."
         },
         "twoList8": {
             "en": "Khách hàng chiến thắng giải thưởng hiện vật có thể nhận phần thưởng của mình tại văn phòng TigerWit ở quốc gia đó.",
             "zh": "Khách hàng chiến thắng giải thưởng hiện vật có thể nhận phần thưởng của mình tại văn phòng TigerWit ở quốc gia đó.",
             "zh-Hant": "Khách hàng chiến thắng giải thưởng hiện vật có thể nhận phần thưởng của mình tại văn phòng TigerWit ở quốc gia đó.",
             "vi": "Khách hàng chiến thắng giải thưởng hiện vật có thể nhận phần thưởng của mình tại văn phòng TigerWit ở quốc gia đó.",
-            "id": "",
+            "id": "Klien yang memenangkan hadiah produk dapat mengambil hadiahnya dengan TigerWit di negaranya.",
             "es": "Khách hàng chiến thắng giải thưởng hiện vật có thể nhận phần thưởng của mình tại văn phòng TigerWit ở quốc gia đó.",
-            "pt-BR": ""
+            "pt-BR": "clientes que ganhem um prêmio de produto podem visitar seu escritório local de TigerWit para receber seus prêmios."
         },
         "clickSpin": {
             "en": "Click to spin",
@@ -16553,6 +16553,60 @@ module.exports = {
             "es": "You won",
             "pt-BR": "você ganhou"
         },
+        "downloadTigerWitApp": {
+            "en": "Download TigerWit app",
+            "zh": "Download TigerWit app",
+            "zh-Hant": "Download TigerWit app",
+            "vi": "Tải về ứng dụng TigerWit",
+            "id": "Unduh Aplikasi TigerWit",
+            "es": "Download TigerWit app",
+            "pt-BR": "Baixe o aplicativo TigerWit"
+        },
+        "registerWheel": {
+            "en": "Register with TigerWit now to spin the wheel",
+            "zh": "Register with TigerWit now to spin the wheel",
+            "zh-Hant": "Register with TigerWit now to spin the wheel",
+            "vi": "Đăng kí với TigerWit ngay để quay thưởng",
+            "id": "Daftar dengan TigerWit untuk memutar rodanya",
+            "es": "Register with TigerWit now to spin the wheel",
+            "pt-BR": "Registre-se agora no TigerWit para girar a roda"
+        },
+        "registerSuccess": {
+            "en": "Register Success",
+            "zh": "Register Success",
+            "zh-Hant": "Register Success",
+            "vi": "Đăng ký thành công",
+            "id": "Pendaftaran Sukses",
+            "es": "Registro exitoso",
+            "pt-BR": "Registo de sucesso"
+        },
+        "registerSuccessCon1": {
+            "en": "You have sucessfully registered,",
+            "zh": "You have sucessfully registered,",
+            "zh-Hant": "You have sucessfully registered,",
+            "vi": "Bạn vừa đăng kí thành công,",
+            "id": "Anda telah berhasil mendaftar,",
+            "es": "You have sucessfully registered,",
+            "pt-BR": "Você se registrou com sucesso,"
+        },
+        "registerSuccessCon2": {
+            "en": "You can now spin the wheel to win a prize, Good Luck!",
+            "zh": "You can now spin the wheel to win a prize, Good Luck!",
+            "zh-Hant": "You can now spin the wheel to win a prize, Good Luck!",
+            "vi": "Bây giờ bạn có thể quay trúng thưởng. Chúc bạn may mắn!",
+            "id": "Anda dapat memutar roda untuk memenangkan hadiah, Semoga Beruntung!",
+            "es": "You can now spin the wheel to win a prize, Good Luck!",
+            "pt-BR": "Agora você pode girar a roda para ganhar um prêmio, boa sorte!"
+        },
+        "congratulations": {
+            "en": "Congratulations!",
+            "zh": "Congratulations!",
+            "zh-Hant": "Congratulations!",
+            "vi": "Chúc mừng!",
+            "id": "Selamat!",
+            "es": "Felicitaciones!",
+            "pt-BR": "Parabéns!"
+        },
         "": {
             "en": "",
             "zh": "",
@@ -16562,6 +16616,78 @@ module.exports = {
             "es": "",
             "pt-BR": ""
         },
+    }, 
+    "mInvite05":{
+        zh:"你投资,我出钱!",
+        en:"你投资,我出钱!",
+        vi:"你投资,我出钱!",
+        "zh-Hant":"妳投資,我出錢!",
+        id:"你投资,我出钱!",
+        "es": "你投资,我出钱!",
+        "pt-BR": "你投资,我出钱!"
+    },
+    "mInvite06":{
+        zh:"注册就送",
+        en:"Register to receive a ",
+        vi:"Register to receive a ",
+        "zh-Hant":"註冊就送",
+        id:"Register to receive a ",
+        "es": "Register to receive a ",
+        "pt-BR": "Register to receive a "
+    },
+    "mInvite07":{
+        zh:"$10000体验金",
+        en:"$10000 coupons",
+        vi:"$10000 coupons",
+        "zh-Hant":"$10000體驗金",
+        id:"$10000 coupons",
+        "es": "$10000 coupons",
+        "pt-BR": "$10000 coupons"
+    },
+    "mInvite08":{
+        zh:"在TigerWit, 已经有86253 人选择外汇跟单交易",
+        en:"In TigerWit, there have been 86,253 people who choose to follow the masters trading.",
+        vi:"In TigerWit, there have been 86,253 people who choose to follow the masters trading.",
+        "zh-Hant":"在老虎外匯, 已經有86253 人選擇外匯跟單交易",
+        id:"In TigerWit, there have been 86,253 people who choose to follow the masters trading.",
+        "es": "In TigerWit, there have been 86,253 people who choose to follow the masters trading.",
+        "pt-BR": "In TigerWit, there have been 86,253 people who choose to follow the masters trading."
+    },
+    "mInvite09":{
+        zh:"我刚刚在老虎外汇领取了$10000体验金,好东西",
+        en:"I just received $10000 Coupons from TigerWit. ",
+        vi:"I just received $10000 Coupons from TigerWit.",
+        "zh-Hant":"我剛剛在老虎外匯領取了$10000體驗金,好東西",
+        id:"I just received $10000 Coupons from TigerWit.",
+        "es": "I just received $10000 Coupons from TigerWit.",
+        "pt-BR": "I just received $10000 Coupons from TigerWit."
+    },
+    "mInvite10":{
+        "zh":"必须分享,你也快来看看",
+        "en":"Come and see!",
+        "vi":"Come and see!",
+        "zh-Hant":"必須分享,妳也快來看看",
+        "id":"Come and see!",
+        "es": "Come and see!",
+        "pt-BR": "Come and see!"
+    },
+    "mInvite11":{
+        "zh":"输入手机号",
+        "en":"Enter Phone No.",
+        "vi":"nter Phone No.",
+        "zh-Hant":"輸入手機號",
+        "id":"nter Phone No.",
+        "es": "nter Phone No.",
+        "pt-BR": "nter Phone No."
+    },
+    "mInvite12":{
+        "zh":"领取奖励",
+        "en":"Receive the award",
+        "vi":"Receive the award",
+        "zh-Hant":"領取獎勵",
+        "id":"Receive the award",
+        "es": "Receive the award",
+        "pt-BR": "Receive the award"
     }
 };
 

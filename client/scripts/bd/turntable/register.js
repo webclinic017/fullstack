@@ -1,22 +1,20 @@
+
 ;
 (function () {
-
-
-    // 获取phonecode，默认值为 86
+    // 获取phonecode，默认值为 
     var areaCode;
     var world_code;
     var urlSearch = getSearch();
-    if(urlSearch.world_code = 'pt-br'){
+    if(urlSearch.world_code == 'pt-br'){
         world_code = 'PT';
-        areaCode = '351'
-    }else if(urlSearch.world_code = 'id'){
+        areaCode = '351';
+    }else if(urlSearch.world_code == 'id'){
         world_code = 'ID'
         areaCode = '62'
     }else{
         world_code = 'VN'
         areaCode = '84'
     }
-    
     // 获取区号列表
     var areaCodes = [];
     getCountries();
@@ -69,19 +67,19 @@
             var interval = null;
 
             /*loading层*/
-            layer.open({ type: 2, shadeClose: false });
+            var layer2 = layer.open({ type: 2, shadeClose: false });
             publicRequest('getPhoneCode', 'POST', {
                 account: $(".registerLayer .telephone").val(),
                 account_type: 1,
                 phone_code: $('.registerLayer .areaCode').val(),
                 type: 1
             }).then(function (data) {
-                layer.closeAll();
+                layer.close(layer2);
                 if (!data) return;
                 if (data.is_succ) {
                     /*提示*/
                     layer.open({
-                        content: lang.text('register.codeSent'),
+                        content: lang.text('turntable.verificationCodeSent'),
                         skin: 'msg',
                         anim: false,
                         time: 1.2 /*1.2秒后自动关闭*/
@@ -212,45 +210,42 @@
                 }
             });
         }());
-
         /*提交按钮*/
         ;
         (function () {
             $(".registerLayer").on('click', '.submit_form', toRegister);
             function toRegister (e, is_agree) {
-                if (!checkTel()) return;
-                if (!checkVerifyCode()) return;
-                if (!checkPassword()) return;
+                // if (!checkTel()) return;
+                // if (!checkVerifyCode()) return;
+                // if (!checkPassword()) return;
 
                 /*loading层*/
-                layer.open({ type: 2, shadeClose: false });
+                var layer2 = layer.open({ type: 2, shadeClose: false });
                 
                 publicRequest('regOrLogin', 'POST', {
-                    action: register,
+                    action: 'register',
                     account: $(".registerLayer .telephone").val() || null,
                     account_type: 1,
                     phone_code: $(".registerLayer .areaCode").val() || areaCode,
                     world_code: world_code,
                     code: $(".registerLayer .verify_code").val() || null,
                     password: $(".registerLayer .password").val() || null,
-                    activity: 'Spin the Wheel – Lucky Draw',
+                    activity: activity,
                     login_type: 3, // 登录验证方式，1-密码登录，2-验证码登录 3-验证码密码都有
                     is_agree: is_agree == 'is_agree' ? 1 : 0
                 }).then(function (data) {
                     // console.log(data);
                     if (!data) return;
                     if (data.is_succ) {
-                        writeCookie({nameKey: 'token', nameValue: data.data.token});
-                        writeCookie({nameKey: 'user_code', nameValue: data.data.user_code});
-                        writeCookie({nameKey: 'username', nameValue: data.data.username});
-                        writeCookie({nameKey: 'username_en', nameValue: data.data.username_en});
-                        writeCookie({nameKey: 'world_code', nameValue: world_code});
+                        $.cookie('token', data.data.token, {domain: getDomain()});
+                        layer.closeAll();
                         layer.open({
-                            content: lang.text('registerJs.registerSucc'),
-                            skin: 'msg',
-                            anim: false,
-                            time: 2 /*1.2秒后自动关闭*/
+                            type: 1,
+                            shadeClose: true,
+                            content: $("#layer_register_succ").html(),
+                            style: 'padding:0;width:90%;max-width: 800px;border-radius:0;color:#000;background:rgba(0,0,0,0);'
                         });
+                        checkReward()
                     } else {
                         if ((data.code == 100402) || (data.code == 100403)) {
                             openH5AgmentModal(data.code, function(resolve, e){
@@ -258,7 +253,7 @@
                                 layer.close(resolve.layIndex)
                             })
                         } else {
-                            layer.closeAll();
+                            layer.close(layer2);
                             layer.open({
                                 content: data.message,
                                 skin: 'msg',

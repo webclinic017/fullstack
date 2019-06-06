@@ -75,7 +75,7 @@
         <div class="layer_register" id="layer_register">
             <div class="layerui_layercont-child">
                 <div class="layer_tit item-center" >
-                    Register RegisterRegisterRegisterRegisterRegister
+                    <%= lang.text('turntable.registerWheel')%>
                 </div>
                 <div class="layer_con">
                     <div class="layer_register-con">
@@ -105,15 +105,30 @@
             </div>
         </div>
 
+        <div class="layer_register_succ" id="layer_register_succ">
+            <div class="layerui_layercont-child">
+                <div class="layer_tit item-center" >
+                    <%= lang.text('turntable.registerSuccess')%>
+                </div>
+                <div class="layer_con">
+                    <p><%= lang.text('turntable.registerSuccessCon1')%></p>
+                    <p><%= lang.text('turntable.registerSuccessCon2')%></p>
+                </div>
+                <div class="bd_r01__btn">
+                    <button class="btn" onclick="layer.closeAll()">close</button>
+                </div>
+            </div>
+        </div>
+
         <div class="layer_download" id="layer_download">
             <div class="layerui_layercont-child">
                 <div class="layer_tit item-center" >
-                    <img src="/white_label/bd/turntable/star-left.png" class="star-left" alt="">
-                    <img src="/white_label/bd/turntable/star-right.png" class="star-right" alt="">
-                    Register RegisterRegisterRegisterRegisterRegister
+                    <%= lang.text('turntable.downloadTigerWitApp')%>
                 </div>
                 <div class="layer_con">
-                    <div class="layer_download-con">
+                    <div class="layer_download-code">
+                        <img src="/images/web/download_m_blank_global_20190226.png"
+                        alt="code">
                     </div>
                     <div class="layer_download-btn">
                         <a href="<%= lang.text('downloadGlobalIos') %>"><img src="<%= lang.image('homeAppIos')%>" alt=""></a>
@@ -121,7 +136,33 @@
                     </div>
                 </div>
                 <div class="bd_r01__btn">
-                    <button  onclick="layer.closeAll()" class="btn">close</button>
+                    <button onclick="layer.closeAll()" class="btn">close</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="layer_won" id="layer_won">
+            <div class="layerui_layercont-child">
+                <div class="layer_tit" >
+                    <img src="/white_label/bd/turntable/star-left.png" class="star-left" alt="">
+                    <img src="/white_label/bd/turntable/star-right.png" class="star-right" alt="">
+                    <h6><%= lang.text('turntable.congratulations')%></h6>
+                    <p class="layer_won_tit2"></p>
+                </div>
+                <div class="layer_con">
+                    <div class="layer_download-con">
+                    </div>
+                    <div class="layer_download-code">
+                        <img src="/images/web/download_m_blank_global_20190226.png"
+                        alt="code">
+                    </div>
+                    <div class="layer_download-btn">
+                        <a href="<%= lang.text('downloadGlobalIos') %>"><img src="<%= lang.image('homeAppIos')%>" alt=""></a>
+                        <a href="<%= lang.text('downloadGlobalAndroid') %>"><img src="<%= lang.image('homeAppAndroidGlobal')%>" alt=""></a>
+                    </div>
+                </div>
+                <div class="bd_r01__btn">
+                    <button onclick="layer.closeAll()" class="btn">close</button>
                 </div>
             </div>
         </div>
@@ -134,7 +175,7 @@
                     <img src="<%= lang.image('turntable')%>">
                 </div>
                 <span class="bd_r01__rotate-btn item-center" id="turntableStart">
-                    <span class="text-center">开始抽奖</span>
+                    <span class="text-center"><%= lang.text('turntable.clickSpin')%></span>
                 </span>
             </div>
 
@@ -184,6 +225,8 @@
 </body>
 
 <% include /common/vendor/h5.js.html %>
+<!-- 注册协议相关弹窗 -->
+<% include /common/component/agment_mdl.html %>
 <!-- build:js(client) /scripts/m_turntable.js -->
 <script src="/scripts/bd/turntable/index.js"></script>
 <script src="/scripts/bd/turntable/register.js"></script>
