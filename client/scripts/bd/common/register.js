@@ -47,7 +47,7 @@
     $(function () {
         var oReg = {};
 
-        function sendVerifyCode() {
+        function sendVerifyCode(type) {
             function isDisabled() {
                 var flag = $("#verify_code_btn").hasClass("disable");
                 if (flag) {
@@ -66,7 +66,7 @@
                 account: $("#telephone").val(),
                 account_type: 1,
                 code_token: $.cookie("code_token"),
-                type: 1
+                type: type || 1
             }).then(function (data) {
                 layer.closeAll();
                 if (!data) return;
@@ -239,7 +239,7 @@
                 if (($("#telephone").val().trim() != "")) {
                     // 代理商时
                     if($.cookie('invite_status') == 0){
-                        sendVerifyCode();
+                        sendVerifyCode(4);
                     }else{
                         publicRequest('checkExists', 'GET', {
                             key: 3,
