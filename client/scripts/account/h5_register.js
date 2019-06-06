@@ -79,7 +79,7 @@
             }
         }
 
-        function sendVerifyCode() {
+        function sendVerifyCode(type) {
             function isDisabled() {
                 var flag = $("#verify_code_btn").hasClass("disable");
                 if (flag) {
@@ -120,14 +120,14 @@
                 account_type: 1,
                 phone_code: areaCode,
                 code_token: $.cookie("code_token"),
-                type: 1
+                type: type || 1
             }).then(function (data) {
                 layer.closeAll();
                 if (!data) return;
                 if (data.is_succ) {
                     /*提示*/
                     layer.open({
-                        content: lang.text('register.codeSent'),
+                        content: lang.text('turntable.verificationCodeSent'),
                         skin: 'msg',
                         anim: false,
                         time: 1.2 /*1.2秒后自动关闭*/
@@ -324,24 +324,30 @@
                 if (!checkTel()) return;
                 /*检测手机号是否已经存在*/
                 if (($("#telephone").val().trim() != "")) {
-                    publicRequest('checkExists', 'GET', {
-                        key: 3,
-                        value: $("#telephone").val()
-                    }).then(function (data) {
-                        if (!data) return;
-                        if (data.is_succ) {
-                            if (data.data) {
-                                layer.open({
-                                    content: lang.text('register.registerd'),
-                                    skin: 'msg',
-                                    anim: false,
-                                    time: 2 /*1.2秒后自动关闭*/
-                                });
-                            } else {
-                                sendVerifyCode();
+                    // 代理商时
+                    if($.cookie('invite_status') == 0){
+                        sendVerifyCode(4);
+                    }else{
+                        publicRequest('checkExists', 'GET', {
+                            key: 3,
+                            value: $("#telephone").val()
+                        }).then(function (data) {
+                            if (!data) return;
+                            if (data.is_succ) {
+                                if (data.data) {
+                                    layer.open({
+                                        content: lang.text('register.registerd'),
+                                        skin: 'msg',
+                                        anim: false,
+                                        time: 2 /*1.2秒后自动关闭*/
+                                    });
+                                } else {
+                                    sendVerifyCode();
+                                }
                             }
-                        }
-                    });
+                        });
+                    }
+                    
                 }
             });
         }());

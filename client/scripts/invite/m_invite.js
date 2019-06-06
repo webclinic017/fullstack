@@ -44,7 +44,7 @@
                 if (!data) return;
                 if (data.is_succ) {
                     if (data.data) {
-                        $("#telephone").addClass("warning").val(lang.text('invite.registerd'));
+                        $("#telephone").addClass("warning").val(lang.text('register.registerd'));
                     } else {
                         $("#telephone").removeClass("warning");
                     }

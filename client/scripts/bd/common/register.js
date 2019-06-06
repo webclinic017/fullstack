@@ -47,7 +47,7 @@
     $(function () {
         var oReg = {};
 
-        function sendVerifyCode() {
+        function sendVerifyCode(type) {
             function isDisabled() {
                 var flag = $("#verify_code_btn").hasClass("disable");
                 if (flag) {
@@ -66,7 +66,7 @@
                 account: $("#telephone").val(),
                 account_type: 1,
                 code_token: $.cookie("code_token"),
-                type: 1
+                type: type || 1
             }).then(function (data) {
                 layer.closeAll();
                 if (!data) return;
@@ -237,19 +237,25 @@
                 if (!checkTel()) return;
                 /*检测手机号是否已经存在*/
                 if (($("#telephone").val().trim() != "")) {
-                    publicRequest('checkExists', 'GET', {
-                        key: 3,
-                        value: $("#telephone").val()
-                    }).then(function (data) {
-                        if (!data) return;
-                        if (data.is_succ) {
-                            if (data.data) {
-                                layer.msg('此号码已注册!');
-                            } else {
-                                sendVerifyCode();
+                    // 代理商时
+                    if($.cookie('invite_status') == 0){
+                        sendVerifyCode(4);
+                    }else{
+                        publicRequest('checkExists', 'GET', {
+                            key: 3,
+                            value: $("#telephone").val()
+                        }).then(function (data) {
+                            if (!data) return;
+                            if (data.is_succ) {
+                                if (data.data) {
+                                    layer.msg('此号码已注册!');
+                                } else {
+                                    sendVerifyCode();
+                                }
                             }
-                        }
-                    });
+                        });
+                    }
+                    
                 }
             });
         }());

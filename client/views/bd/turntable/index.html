@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="keywords" content="<%= lang.text('companyEnName')%> 跟单交易 外汇 CFD 指数 股指 互联网金融">
+    <meta name="description" content="<%= lang.text('companyZhName')%>倾力打造一个高手云集的平台，普通投资者可以选择随时随地跟随高手进行交易，随意选择想要跟随的金额，并且从中获利。">
+    <meta name="apple-mobile-web-app-title" content="<%= lang.text('companyZhName')%>">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <!--禁用缓存-->
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>
+        <%= lang.text('companyZhName')%>
+    </title>
+</head>
+<!-- 引入H5 CSS -->
+<!-- build:css(.tmp) /styles/h5_common.css -->
+<link rel="stylesheet" href="/styles/h5_common.css">
+<!-- endbuild -->
+
+<% include /common/vendor/h5.utiljs.html %>
+<% include /common/statistic/main.html %>
+
+<body>
+
+<div class="bd_r01">
+    <div class="bd_r01__focus">
+        <img src="<%= lang.image('turntableBanner')%>" alt="">
+        <!-- <div class="layer_contentBox" id="layer_contentBox">
+            <div class="layer_bdt39 layer_bdr01">
+                <div class="rules">
+                    <p class="tit">活动规则</p>
+                    <p>1、活动期间，累计净入金≥1500美金，每周完成5手数交易，即可在当周内获得抽奖机会一次；第二周开始时将重新计算交易手数，每周满足活动条件均可参与抽奖；</p>
+                    <p>2、本活动中奖机率100%，奖品分别为888.8美金、188.8美金、88.8美金、18.8美金、8.8美金；</p>
+                    <p>3、抽中的奖品（美金）将直接存入“零钱包”，可用于交易或直接提现；</p>
+                    <p>4、如满足抽奖条件却未在活动期间内抽奖的用户，视为放弃本次抽奖机会；</p>
+                    <p>5、本活动参与用户不得滥用活动权利，如AB仓对冲操作外挂操作软件或其他经纪商进行对冲；</p>
+                    <p>6、本活动仅适用于外汇、贵金属以及能源类产品，美元/人民币和CFD（指数）类产品的交易手数不计入统计范围；</p>
+                    <p>7、本活动抽奖环节仅在TigerWit APP内操作；</p>
+                    <p>8、本活动最终解释权归TigerWit平台所有，如有疑问请咨询在线客服或拨打 400-809-8509 。</p>
+                </div>
+                <p class="rule_close" onclick="layer.closeAll()"><i class="fa fa-times" aria-hidden="true"></i></p>
+            </div>
+        </div> -->
+    </div>
+    <div class="bd_r01__box">
+        <div class="bd_r01__step">
+            <h6 class="bd_r01__step-tit"><%= lang.text('turntable.oneListTit')%></h6>
+            <ul class="bd_r01__step-list">
+                <li>
+                    <h5><%= lang.text('turntable.oneListPasso')%>1</h5>
+                    <p><%= lang.text('turntable.oneList1')%></p>
+                </li>
+                <li>
+                    <h5><%= lang.text('turntable.oneListPasso')%>2</h5>
+                    <p><%= lang.text('turntable.oneList2')%></p>
+                </li>
+                <li>
+                    <h5><%= lang.text('turntable.oneListPasso')%>3</h5>
+                    <p><%= lang.text('turntable.oneList3')%></p>
+                </li>
+            </ul>
+            <p class="bd_r01__step-p"><%= lang.text('turntable.oneListcon1')%></p>
+            <p class="bd_r01__step-p"><%= lang.text('turntable.oneListcon2')%></p>
+        </div>
+        <div class="bd_r01__btn">
+            <button class="btn" id="toRegister"><%= lang.text('register')%></button>
+            <button class="btn" id="toDownload"><%= lang.text('downloadApp.title')%></button>
+        </div>
+        <div class="layer_register" id="layer_register">
+            <div class="layerui_layercont-child">
+                <div class="layer_tit item-center" >
+                    <%= lang.text('turntable.registerWheel')%>
+                </div>
+                <div class="layer_con">
+                    <div class="layer_register-con">
+                        <div class="form-control-wrapper">
+                            <!-- <span class="form-control after">
+                                <span class="areaCodeShow"><%=lang.text('mRegister01')%></span>
+                                <select name="phone_code" class="selector areaCode" style="border: none!important"></select>
+                            </span> -->
+                            <select class="form-control after areaCode" name="phone_code">
+                                <option value=""><%= lang.text('third_select')%></option>
+                            </select>
+                            <input type="text" class="form-control telephone" name="telephone" placeholder="<%= lang.text('mRegister02')%>">
+                        </div>
+                        <div class="form-control-wrapper">
+                            <input type="number" class="form-control verify_code" name="code" placeholder="<%= lang.text('mRegister03')%>">
+                            <span class="form-control before cursor_pointer verify_code_btn"><%= lang.text('mRegister05')%></span>
+                        </div>
+                        <div class="form-control-wrapper">
+                            <input type="text" class="form-control password" name="password" placeholder="<%= lang.text('password')%>">
+                        </div>
+                
+                    </div>
+                </div>
+                <div class="bd_r01__btn">
+                    <button class="submit_form btn"><%= lang.text('register')%></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="layer_register_succ" id="layer_register_succ">
+            <div class="layerui_layercont-child">
+                <div class="layer_tit item-center" >
+                    <%= lang.text('turntable.registerSuccess')%>
+                </div>
+                <div class="layer_con">
+                    <p><%= lang.text('turntable.registerSuccessCon1')%></p>
+                    <p><%= lang.text('turntable.registerSuccessCon2')%></p>
+                </div>
+                <div class="bd_r01__btn">
+                    <button class="btn" onclick="layer.closeAll()">close</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="layer_download" id="layer_download">
+            <div class="layerui_layercont-child">
+                <div class="layer_tit item-center" >
+                    <%= lang.text('turntable.downloadTigerWitApp')%>
+                </div>
+                <div class="layer_con">
+                    <div class="layer_download-code">
+                        <img src="/images/web/download_m_blank_global_20190226.png"
+                        alt="code">
+                    </div>
+                    <div class="layer_download-btn">
+                        <a href="<%= lang.text('downloadGlobalIos') %>"><img src="<%= lang.image('homeAppIos')%>" alt=""></a>
+                        <a href="<%= lang.text('downloadGlobalAndroid') %>"><img src="<%= lang.image('homeAppAndroidGlobal')%>" alt=""></a>
+                    </div>
+                </div>
+                <div class="bd_r01__btn">
+                    <button onclick="layer.closeAll()" class="btn">close</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="layer_won" id="layer_won">
+            <div class="layerui_layercont-child">
+                <div class="layer_tit" >
+                    <img src="/white_label/bd/turntable/star-left.png" class="star-left" alt="">
+                    <img src="/white_label/bd/turntable/star-right.png" class="star-right" alt="">
+                    <h6><%= lang.text('turntable.congratulations')%></h6>
+                    <p class="layer_won_tit2"></p>
+                </div>
+                <div class="layer_con">
+                    <div class="layer_download-con">
+                    </div>
+                    <div class="layer_download-code">
+                        <img src="/images/web/download_m_blank_global_20190226.png"
+                        alt="code">
+                    </div>
+                    <div class="layer_download-btn">
+                        <a href="<%= lang.text('downloadGlobalIos') %>"><img src="<%= lang.image('homeAppIos')%>" alt=""></a>
+                        <a href="<%= lang.text('downloadGlobalAndroid') %>"><img src="<%= lang.image('homeAppAndroidGlobal')%>" alt=""></a>
+                    </div>
+                </div>
+                <div class="bd_r01__btn">
+                    <button onclick="layer.closeAll()" class="btn">close</button>
+                </div>
+            </div>
+        </div>
+        <div class="bd_r01__rotate_box">
+            <div class="bd_r01__pointer">
+                <img src="/white_label/bd/turntable/h5_rotate_pointer.png">
+            </div>
+            <div class="bd_r01__rotate">
+                <div class="bd_r01__rotate-pic">
+                    <img src="<%= lang.image('turntable')%>">
+                </div>
+                <span class="bd_r01__rotate-btn item-center" id="turntableStart">
+                    <span class="text-center"><%= lang.text('turntable.clickSpin')%></span>
+                </span>
+            </div>
+
+            <!-- <div class="layer_contentBox2" id="layer_contentBox2">
+                <div class="layer_bdt39 layer_bdr01_dollar">
+                    <div class="cont">
+                        <p>恭喜您抽中<span class="num"></span>美金</p>
+                        <p>奖品已放入您的零钱包！</p>
+                    </div>
+                    <div class="pic">
+                        <img src="/white_label/bd/turntable/h5_dollar.png">
+                    </div>
+                    <p class="rule_close" onclick="layer.closeAll()"><i class="fa fa-times" aria-hidden="true"></i></p>
+                </div>
+            </div> -->
+        </div>
+        <!-- <div class="bd_r01__lst">
+            <div class="bd_r01__lst-tit">
+                <img src="/white_label/bd/turntable/h5_award_title.png">
+            </div>
+            <div class="bd_r01__lst-detail">
+                <ul class="list-1"></ul>
+                <ul class="list-2"></ul>
+            </div>
+        </div> -->
+        <!-- <div class="bd_r01__client">
+            <img src="/white_label/bd/turntable/h5_client.png">
+        </div> --> 
+        <div class="bd_r01__footer">
+            <h6><%= lang.text('turntable.twoListTit')%></h6>
+            <ul>
+                <li><%= lang.text('turntable.twoList1')%></li>
+                <li><%= lang.text('turntable.twoList2')%></li>
+                <li><%= lang.text('turntable.twoList3')%></li>
+                <li><%= lang.text('turntable.twoList4')%></li>
+                <li><%= lang.text('turntable.twoList5')%></li>
+                <li><%= lang.text('turntable.twoList6')%></li>
+                <li><%= lang.text('turntable.twoList7')%></li>
+                <li><%= lang.text('turntable.twoList8')%></li>
+            </ul>
+        </div>
+    </div>
+   
+    
+</div>
+
+</body>
+
+<% include /common/vendor/h5.js.html %>
+<!-- 注册协议相关弹窗 -->
+<% include /common/component/agment_mdl.html %>
+<!-- build:js(client) /scripts/m_turntable.js -->
+<script src="/scripts/bd/turntable/index.js"></script>
+<script src="/scripts/bd/turntable/register.js"></script>
+<!-- endbuild -->
+
+</html>

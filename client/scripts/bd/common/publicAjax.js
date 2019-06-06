@@ -80,9 +80,9 @@
         setPendingTrade: origin_app + '/pending_trade/add',  //post
         getRealQuote: origin_app + '/symbol/realtime',  //get
         //新春抽奖
-        checkReward: origin_app + '/reward/check', //post
-        joinReward: origin_app + '/reward/join', //post
-        getRewardLst: origin_app + '/reward/list', //get
+        checkReward: origin + '/reward/check', //post
+        joinReward: origin + '/reward/join', //post
+        getRewardLst: origin + '/reward/list', //get
         // 申请高手
         recruitMaster: origin_app + '/master/auth_apply', //post
         // 刮奖活动 2018.4.20

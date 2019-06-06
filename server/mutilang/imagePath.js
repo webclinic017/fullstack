@@ -278,6 +278,24 @@
             es: indexBasePath + "/bd/bonus/freesign-h5-es.png",
             'pt-BR': indexBasePath + "/bd/bonus/freesign-h5-pt-br.png"
         }, //
+        turntableBanner: {
+            en: indexBasePath + "/bd/turntable/turntable-banner-vi.png",
+            id: indexBasePath + "/bd/turntable/turntable-banner-id.png",
+            zh: indexBasePath + "/bd/turntable/turntable-banner-vi.png",
+            vi: indexBasePath + "/bd/turntable/turntable-banner-vi.png",
+            "zh-Hant": indexBasePath + "/bd/turntable/turntable-banner-vi.png",
+            es: indexBasePath + "/bd/turntable/turntable-banner-vi.png",
+            "pt-BR": indexBasePath + "/bd/turntable/turntable-banner-pt-br.png"
+        }, //
+        turntable: {
+            en: indexBasePath + "/bd/turntable/h5_rotate-vi.png",
+            id: indexBasePath + "/bd/turntable/h5_rotate-id.png",
+            zh: indexBasePath + "/bd/turntable/h5_rotate-vi.png",
+            vi: indexBasePath + "/bd/turntable/h5_rotate-vi.png",
+            "zh-Hant": indexBasePath + "/bd/turntable/h5_rotate-vi.png",
+            es: indexBasePath + "/bd/turntable/h5_rotate-vi.png",
+            "pt-BR": indexBasePath + "/bd/turntable/h5_rotate-pt-br.png"
+        } //
         // : {
         //     en: indexBasePath + "",
         //     id: indexBasePath + "",

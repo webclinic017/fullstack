@@ -743,6 +743,12 @@ module.exports = function (app) {
         setEnvCf(req, res);
         res.render('bd/indonesia/bonus.html', extendPublic({}, req));
     });
+
+    //转盘抽奖页 2019.06.3
+    app.route('/bd/turntable').get(function (req, res) {
+        setEnvCf(req, res);
+        res.render('bd/turntable/index.html', extendPublic({}, req));
+    });
     // global活动页
     app.route('/bonus').get(function (req, res) {
         // checkGlobalOrCN(req, res, 'cn');
