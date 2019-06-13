@@ -1,7 +1,7 @@
 
 
 var rewardCount = 0;
-var msg = "网络错误";
+var msg = lang.text('turntable.registerFirst');
 var activityId;
 var rewardId;
 var activity = 'Spin the Wheel – Lucky Draw'; // 抽奖标识
