@@ -15,6 +15,11 @@
         world_code = 'VN'
         areaCode = '84'
     }
+    var search_source = checkUserSource();
+    /* 客户推广参数写入 */
+    publicRequest('setUserSource', 'POST', {
+        source: JSON.stringify(search_source)
+    });
     // 获取区号列表
     var areaCodes = [];
     getCountries();
