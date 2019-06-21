@@ -7,7 +7,7 @@
             $(".weixinTip").css("display", "block");
             return;
         } else {
-            window.location.href = "https://static.tigerwitfx.com/downloads/static/MetaTrader%204.apk";
+            window.location.href = "https://download.mql5.com/cdn/web/metaquotes.software.corp/mt4/metatrader4.apk?utm_campaign=www.metatrader4.com";
         }
     } else {
         var isCn = system === 'cn' ? true : false;

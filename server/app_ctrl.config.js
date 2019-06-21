@@ -94,11 +94,11 @@
                 },
                 android: {
                     app_info: {
-                        version_name : "V4.0.0",
-                        description: "This update: \n1. Add Islamic accounts function;\n2. Add new trading products;\n3. Optimize interactive experience;\n4. Fix known bugs",
+                        version_name : "V4.0.1",
+                        description: "This update: \n1. Optimize user experience\n2. Fixed known bugs",
                         updated_description: "70% users are using new version",
-                        url: "https://static.tigerwitfx.com/downloads/apk/tigerwit_v4.0.0.apk",
-                        force_update : true
+                        url: "https://static.tigerwitfx.com/downloads/apk/tigerwit_v4.0.1.apk",
+                        force_update : false
                     }
                 }
             },
@@ -113,11 +113,11 @@
                 },
                 android: {
                     app_info: {
-                        version_name : "V4.0.0",
-                        description: "本次更新：\n1.增加伊斯兰账户；\n2.新增交易品种；\n3.优化交互体验；\n4.修复已知bug",
+                        version_name : "V4.0.1",
+                        description: "本次更新：\n1.优化用户体验\n2.修复了已知bug",
                         updated_description: "70%的用户正在使用新版本",
-                        url: "https://static.tigerwitfx.com/downloads/apk/tigerwit_v4.0.0.apk",
-                        force_update : true
+                        url: "https://static.tigerwitfx.com/downloads/apk/tigerwit_v4.0.1.apk",
+                        force_update : false
                     }
                 }
             }
