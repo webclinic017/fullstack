@@ -21,6 +21,7 @@
             // document.cookie = 'ib_pid=' + ib_pid + '; path=/; domain='+$scope.getDomain()+'; expires=' + d.toUTCString();
             // document.cookie = 'invite_status=0; path=/; domain='+$scope.getDomain()+'; expires=' + d.toUTCString();
 
+            $scope.writeCookie({nameKey: 'pid', nameValue: null});
             $scope.writeCookie({nameKey: 'ib_pid', nameValue: ib_pid, expires: 1});
             $scope.writeCookie({nameKey: 'invite_status', nameValue: 0, expires: 1});
 
