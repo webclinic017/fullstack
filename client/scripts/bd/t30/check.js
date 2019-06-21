@@ -47,10 +47,12 @@ $(document).ready(function () {
             if (pid != '') {
                 // 清空重写
                 document.cookie = 'pid=' + null + ';path=/;domain=' + domainUrl+overdueExpTime;
+                document.cookie = 'ib_pid=' + null + ';path=/;domain=' + domainUrl+overdueExpTime;
                 document.cookie = 'unit=' + null + ';path=/;domain=' + domainUrl+overdueExpTime;
                 document.cookie = 'key=' + null + ';path=/;domain=' + domainUrl+overdueExpTime;
                 
                 document.cookie = 'pid=' + pid + ';path=/;domain=' + domainUrl+expTime;
+                document.cookie = 'invite_status=3;path=/;domain=' + domainUrl+expTime;
 
                 if (unit) {
                     document.cookie = 'unit=' + unit + ';path=/;domain=' + domainUrl+expTime;

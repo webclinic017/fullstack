@@ -181,10 +181,12 @@
                     if (pid != '') {
                         // 清空重写
                         document.cookie = 'pid=' + null + ';path=/;domain=' + domainUrl+overdueExpTime;
+                        document.cookie = 'ib_pid=' + null + ';path=/;domain=' + domainUrl+overdueExpTime;
                         document.cookie = 'unit=' + null + ';path=/;domain=' + domainUrl+overdueExpTime;
                         document.cookie = 'key=' + null + ';path=/;domain=' + domainUrl+overdueExpTime;
                         
                         document.cookie = 'pid=' + pid + ';path=/;domain=' + domainUrl+expTime;
+                        document.cookie = 'invite_status=3;path=/;domain=' + domainUrl+expTime;
 
                         if (unit) {
                             document.cookie = 'unit=' + unit + ';path=/;domain=' + domainUrl+expTime;
@@ -296,7 +298,7 @@
                     // password: $("#password").val() || null,
                     password: $("#verify_code").val() || null,
                     login_type: 2, // 登录验证方式，1-密码登录，2-验证码登录
-                    pid: oReg.search_arr.pid || null,
+                    pid: $.cookie('pid') || null,
                     unit: oReg.search_arr.unit || null,
                     lp: oReg.search_arr.lp || null,
                     key: oReg.search_arr.key || null,
@@ -330,6 +332,7 @@
             }
             // 客户推广
             if(oReg.search_arr.ib_pid) {
+                $.removeCookie('pid', {path: '/', domain: getDomain()})
                 $.cookie('ib_pid', oReg.search_arr.ib_pid, {expires: 1, path: '/', domain: getDomain()});
                 $.cookie('invite_status', 1, {expires: 1, path: '/', domain: getDomain()});
             }
