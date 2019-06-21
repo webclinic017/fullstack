@@ -16,8 +16,9 @@
         if(ib_pid) {
             $scope.spread = true;
             var d = new Date();
+            var overExpires = 'Thu, 01 Jan 1970 00:00:01 GMT;' // 过去时间
             d.setTime(d.getTime() + (1*24*60*60*1000));
-            document.cookie = 'pid=' + null + '; path=/; domain='+getDomain()+'; expires=' + d.toUTCString();
+            document.cookie = 'pid=' + null + '; path=/; domain='+getDomain()+'; expires=' + overExpires;
             document.cookie = 'ib_pid=' + ib_pid + '; path=/; domain='+getDomain()+'; expires=' + d.toUTCString();
             document.cookie = 'invite_status=0; path=/; domain='+getDomain()+'; expires=' + d.toUTCString();
             account.checkLogined().then(function (logined) {
