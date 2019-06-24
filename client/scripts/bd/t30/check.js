@@ -1,4 +1,5 @@
 /*
+    已删除（放弃）
     运营关于pid等信息存储要求：
         1.若链接中带有pid，所有相关字段信息清空重写
         2.若链接中未带有pid，则沿用原来信息
@@ -46,7 +47,6 @@ $(document).ready(function () {
 
             if (pid != '') {
                 // 清空重写
-                document.cookie = 'pid=' + null + ';path=/;domain=' + domainUrl+overdueExpTime;
                 document.cookie = 'ib_pid=' + null + ';path=/;domain=' + domainUrl+overdueExpTime;
                 document.cookie = 'unit=' + null + ';path=/;domain=' + domainUrl+overdueExpTime;
                 document.cookie = 'key=' + null + ';path=/;domain=' + domainUrl+overdueExpTime;

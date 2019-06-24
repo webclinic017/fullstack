@@ -286,6 +286,32 @@
 
             oReg.search_arr = getSearch();
 
+            var unit = oReg.search_arr.unit ? oReg.search_arr.unit : "";
+            var key = oReg.search_arr.key ? oReg.search_arr.key : "";
+            if(oReg.search_arr.pid){
+                // 清空重写
+                $.cookie('ib_pid', '', {path: '/', domain: getDomain(), expires: -1});
+                $.cookie('unit', '', {path: '/', domain: getDomain(), expires: -1});
+                $.cookie('key', '', {path: '/', domain: getDomain(), expires: -1});
+                $.cookie('pid', oReg.search_arr.pid, {path: '/', domain: getDomain(), expires: 7});
+                $.cookie('invite_status', 3, {path: '/', domain: getDomain(), expires: 7});
+                
+
+                if (unit) {
+                    $.cookie('unit', unit, {path: '/', domain: getDomain(), expires: 7});
+                }
+                if (key) {
+                    $.cookie('key', key, {path: '/', domain: getDomain(), expires: 7});
+                }
+            }
+
+            // 客户推广
+            if(oReg.search_arr.ib_pid) {
+                $.cookie('pid', '', {path: '/', domain: getDomain(), expires: -1});
+                $.cookie('ib_pid', oReg.search_arr.ib_pid, {expires: 1, path: '/', domain: getDomain()});
+                $.cookie('invite_status', 1, {expires: 1, path: '/', domain: getDomain()});
+            }
+
             /*获取lp*/
             if (!oReg.search_arr.lp) {
                 oReg.search_arr.lp = window.location.pathname.replace(/[\/:]/g, "").toLowerCase();
@@ -424,12 +450,6 @@
                     }
                 });
 
-            }
-            // 客户推广
-            if(oReg.search_arr.ib_pid) {
-                $.removeCookie('pid', {path: '/', domain: getDomain()})
-                $.cookie('ib_pid', oReg.search_arr.ib_pid, {expires: 1, path: '/', domain: getDomain()});
-                $.cookie('invite_status', 1, {expires: 1, path: '/', domain: getDomain()});
             }
             $("#submit_form").on("touchend", function (e) {
                 toRegister(e);

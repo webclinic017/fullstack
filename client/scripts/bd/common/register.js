@@ -22,20 +22,6 @@
     // console.log(url.match(/\.\w+\.com/)[0]);
     return domain;
    }
-   function writeCookie (params) {
-        params.expires = params.expires || 30;
-        params.path = params.path || '/';
-        /**
-         * params
-         *      nameKey: 名字
-         *      nameValue: 
-         *      expires: 过期时间 单位天
-         *      path
-         *  */
-        var oDate = new Date();
-        oDate.setTime(oDate.getTime() + (params.expires * 24 * 60 * 60 * 1000));
-        document.cookie = params.nameKey+'='+params.nameValue+';path='+params.path+';domain='+getDomain()+';expires='+oDate.toUTCString();
-    } 
 
     // set_token();
 
@@ -149,18 +135,10 @@
             var unit = '';
             var key = '';
 
-            var hostnameUrl = window.location.hostname;
-            var domainUrl = hostnameUrl.substring(hostnameUrl.indexOf('.') + 1) || "tigerwit.com";
             var href = window.location.href;
-            var oDate = new Date();
-            var overdueDate = new Date();
-            oDate.setTime(oDate.getTime() + (7 * 24 * 60 * 60 * 1000));
-            overdueDate.setTime(oDate.getTime() - (7 * 24 * 60 * 60 * 1000));
-            var expTime = ';expires='+oDate.toUTCString();
-            var overdueExpTime = ';expires='+overdueDate.toUTCString();
             lp = window.location.pathname.replace(/[\/:]/g, "").toLowerCase();
             if (lp != "") {
-                document.cookie = 'lp=' + lp + ';path=/;domain=' + domainUrl+expTime;
+                $.cookie('lp', lp, {path: '/', domain: getDomain(), expires: 7});
             }
             /*获取查询字段*/
             function getSearch() {
@@ -180,19 +158,18 @@
 
                     if (pid != '') {
                         // 清空重写
-                        document.cookie = 'pid=' + null + ';path=/;domain=' + domainUrl+overdueExpTime;
-                        document.cookie = 'ib_pid=' + null + ';path=/;domain=' + domainUrl+overdueExpTime;
-                        document.cookie = 'unit=' + null + ';path=/;domain=' + domainUrl+overdueExpTime;
-                        document.cookie = 'key=' + null + ';path=/;domain=' + domainUrl+overdueExpTime;
+                        $.cookie('ib_pid', '', {path: '/', domain: getDomain(), expires: -1});
+                        $.cookie('unit', '', {path: '/', domain: getDomain(), expires: -1});
+                        $.cookie('key', '', {path: '/', domain: getDomain(), expires: -1});
+                        $.cookie('pid', pid, {path: '/', domain: getDomain(), expires: 7});
+                        $.cookie('invite_status', 3, {path: '/', domain: getDomain(), expires: 7});
                         
-                        document.cookie = 'pid=' + pid + ';path=/;domain=' + domainUrl+expTime;
-                        document.cookie = 'invite_status=3;path=/;domain=' + domainUrl+expTime;
 
                         if (unit) {
-                            document.cookie = 'unit=' + unit + ';path=/;domain=' + domainUrl+expTime;
+                            $.cookie('unit', unit, {path: '/', domain: getDomain(), expires: 7});
                         }
                         if (key) {
-                            document.cookie = 'key=' + key + ';path=/;domain=' + domainUrl+expTime;
+                            $.cookie('key', key, {path: '/', domain: getDomain(), expires: 7});
                         }
                     }
                 }
@@ -310,11 +287,11 @@
                     if (data.is_succ) {
                         /*跳转到注册成功页面*/
                         layer.msg('注册成功!');
-                        writeCookie({nameKey: 'token', nameValue: data.data.token});
-                        writeCookie({nameKey: 'user_code', nameValue: data.data.user_code});
-                        writeCookie({nameKey: 'username', nameValue: data.data.username});
-                        writeCookie({nameKey: 'username_en', nameValue: data.data.username_en});
-                        writeCookie({nameKey: 'world_code', nameValue: 'CN'});
+                        $.cookie('token', data.data.token, {expires: 30, path: '/', domain: getDomain()});
+                        $.cookie('user_code', data.data.user_code, {expires: 30, path: '/', domain: getDomain()});
+                        $.cookie('username', data.data.username, {expires: 30, path: '/', domain: getDomain()});
+                        $.cookie('username_en', data.data.username_en, {expires: 30, path: '/', domain: getDomain()});
+                        $.cookie('world_code', 'CN', {expires: 30, path: '/', domain: getDomain()});
                         setTimeout(function () {
                             window.location.href = '/space/#/center?type=new';
                         }, 100);
@@ -332,7 +309,7 @@
             }
             // 客户推广
             if(oReg.search_arr.ib_pid) {
-                $.removeCookie('pid', {path: '/', domain: getDomain()})
+                $.cookie("pid", "", {path: '/', domain: getDomain(), expires: -1});
                 $.cookie('ib_pid', oReg.search_arr.ib_pid, {expires: 1, path: '/', domain: getDomain()});
                 $.cookie('invite_status', 1, {expires: 1, path: '/', domain: getDomain()});
             }
