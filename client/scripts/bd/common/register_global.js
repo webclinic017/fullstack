@@ -26,20 +26,6 @@ $(document).ready(function () {
     // console.log(url.match(/\.\w+\.com/)[0]);
     return domain;
   }
-  function writeCookie (params) {
-       params.expires = params.expires || 30;
-       params.path = params.path || '/';
-       /**
-        * params
-        *      nameKey: 名字
-        *      nameValue: 
-        *      expires: 过期时间 单位天
-        *      path
-        *  */
-       var oDate = new Date();
-       oDate.setTime(oDate.getTime() + (params.expires * 24 * 60 * 60 * 1000));
-       document.cookie = params.nameKey+'='+params.nameValue+';path='+params.path+';domain='+getDomain()+';expires='+oDate.toUTCString();
-   }
 
   oReg.search_arr = getSearch();
   oReg.search_source = checkUserSource();
@@ -91,7 +77,7 @@ $(document).ready(function () {
 
   // 客户推广
   if(oReg.search_arr.ib_pid) {
-    $.removeCookie('pid', {path: '/', domain: getDomain()})
+    $.cookie("pid", "", {path: '/', domain: getDomain(), expires: -1});
     $.cookie('ib_pid', oReg.search_arr.ib_pid, {expires: 1, path: '/', domain: getDomain()});
     $.cookie('invite_status', 1, {expires: 1, path: '/', domain: getDomain()});
   }
@@ -144,11 +130,11 @@ $(document).ready(function () {
         layer.closeAll();
         openLayer(lang.text('registerJs.registerSucc'));
         if (!isMobile()) {
-          writeCookie({nameKey: 'token', nameValue: data.data.token});
-          writeCookie({nameKey: 'user_code', nameValue: data.data.user_code});
-          writeCookie({nameKey: 'username', nameValue: data.data.username});
-          writeCookie({nameKey: 'username_en', nameValue: data.data.username_en});
-          writeCookie({nameKey: 'world_code', nameValue: $("#country").val()});
+          $.cookie('token', data.data.token, {expires: 30, path: '/', domain: getDomain()});
+          $.cookie('user_code', data.data.user_code, {expires: 30, path: '/', domain: getDomain()});
+          $.cookie('username', data.data.username, {expires: 30, path: '/', domain: getDomain()});
+          $.cookie('username_en', data.data.username_en, {expires: 30, path: '/', domain: getDomain()});
+          $.cookie('world_code', $("#country").val(), {expires: 30, path: '/', domain: getDomain()});
           setTimeout(function () {
               window.location.href = '/space/#/center?type=new';
           }, 100);
