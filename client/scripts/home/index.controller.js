@@ -51,12 +51,15 @@
         //     $scope.indexMasters[1] = data.data.retract[0];
         //     $scope.indexMasters[2] = data.data.win[0];
         // });
-
+        
+        function getDomain() {
+            var domain = location.hostname.match(/\.\w+\.com/) ? location.hostname.match(/\.\w+\.com/)[0] : '.tigerwit.com';
+            // console.log(url.match(/\.\w+\.com/)[0]);
+            return domain;
+        }
         function getUserParam() {
-            var hostnameUrl = window.location.hostname;
             var href = window.location.href;
             var originUrl = window.location.origin;
-            var domainUrl = hostnameUrl.substring(hostnameUrl.indexOf('.') + 1) || "tigerwit.com";
             var pid = '', lp = 'sy', unit = '', key = '', aGET = {};
             // var lp = window.location.pathname.replace(/[\/:]/g, "").toLowerCase();
             var oDate = new Date();
@@ -66,7 +69,7 @@
             var expTime = ';expires=' + oDate.toUTCString();
             var overdueExpTime = ';expires=' + overdueDate.toUTCString();
 
-            document.cookie = 'lp=' + lp + ';path=/;domain=' + domainUrl + expTime;
+            document.cookie = 'lp=' + lp + ';path=/;domain=' + getDomain() + expTime;
 
             if (href.indexOf('?') != -1) {
                 var aQuery = href.split('?')[1];
@@ -83,19 +86,18 @@
 
                 if (pid != '') {
                     // 清空重写
-                    document.cookie = 'pid=' + null + ';path=/;domain=' + domainUrl + overdueExpTime;
-                    document.cookie = 'ib_pid=' + null + ';path=/;domain=' + domainUrl + overdueExpTime;
-                    document.cookie = 'unit=' + null + ';path=/;domain=' + domainUrl + overdueExpTime;
-                    document.cookie = 'key=' + null + ';path=/;domain=' + domainUrl + overdueExpTime;
+                    document.cookie = 'ib_pid=' + null + ';path=/;domain=' + getDomain() + overdueExpTime;
+                    document.cookie = 'unit=' + null + ';path=/;domain=' + getDomain() + overdueExpTime;
+                    document.cookie = 'key=' + null + ';path=/;domain=' + getDomain() + overdueExpTime;
 
-                    document.cookie = 'pid=' + pid + ';path=/;domain=' + domainUrl + expTime;
-                    document.cookie = 'invite_status=3;path=/;domain=' + domainUrl + expTime;
+                    document.cookie = 'pid=' + pid + ';path=/;domain=' + getDomain() + expTime;
+                    document.cookie = 'invite_status=3;path=/;domain=' + getDomain() + expTime;
 
                     if (unit) {
-                        document.cookie = 'unit=' + unit + ';path=/;domain=' + domainUrl + expTime;
+                        document.cookie = 'unit=' + unit + ';path=/;domain=' + getDomain() + expTime;
                     }
                     if (key) {
-                        document.cookie = 'key=' + key + ';path=/;domain=' + domainUrl + expTime;
+                        document.cookie = 'key=' + key + ';path=/;domain=' + getDomain() + expTime;
                     }
                 }
             }
