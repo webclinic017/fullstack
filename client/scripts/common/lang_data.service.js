@@ -9965,6 +9965,96 @@
                         "es": "Abrir una cuenta de Práctica",
                         "pt-BR": "Abra uma conta teste"
                     },
+                    "openAccountNewTip1": {
+                        "zh": "",
+                        "en": "Please select an account type",
+                        "vi": "",
+                        "zh-Hant": "",
+                        "id": "",
+                        "es": "",
+                        "pt-BR": ""
+                    },
+                    "openAccountNewTip2": {
+                        "zh": "",
+                        "en": "Open a Live account and trade on the worlds most popular markets straight from your phone.",
+                        "vi": "",
+                        "zh-Hant": "",
+                        "id": "",
+                        "es": "",
+                        "pt-BR": ""
+                    },
+                    "openAccountNewTip3": {
+                        "zh": "",
+                        "en": "Open a Dome account and practice trading virtual funds on Live markets in real time.",
+                        "vi": "",
+                        "zh-Hant": "",
+                        "id": "",
+                        "es": "",
+                        "pt-BR": ""
+                    },
+                    "openAccountNewTip4": {
+                        "zh": "",
+                        "en": "",
+                        "vi": "",
+                        "zh-Hant": "",
+                        "id": "",
+                        "es": "",
+                        "pt-BR": ""
+                    },
+                    "openAccountNewTip5": {
+                        "zh": "",
+                        "en": "",
+                        "vi": "",
+                        "zh-Hant": "",
+                        "id": "",
+                        "es": "",
+                        "pt-BR": ""
+                    },
+                    "openAccountNewTip6": {
+                        "zh": "",
+                        "en": "",
+                        "vi": "",
+                        "zh-Hant": "",
+                        "id": "",
+                        "es": "",
+                        "pt-BR": ""
+                    },
+                    "openAccountNewTip7": {
+                        "zh": "",
+                        "en": "",
+                        "vi": "",
+                        "zh-Hant": "",
+                        "id": "",
+                        "es": "",
+                        "pt-BR": ""
+                    },
+                    "openAccountNewTip8": {
+                        "zh": "",
+                        "en": "",
+                        "vi": "",
+                        "zh-Hant": "",
+                        "id": "",
+                        "es": "",
+                        "pt-BR": ""
+                    },
+                    "openAccountNewTip9": {
+                        "zh": "",
+                        "en": "",
+                        "vi": "",
+                        "zh-Hant": "",
+                        "id": "",
+                        "es": "",
+                        "pt-BR": ""
+                    },
+                    "openAccountNewTip10": {
+                        "zh": "",
+                        "en": "",
+                        "vi": "",
+                        "zh-Hant": "",
+                        "id": "",
+                        "es": "",
+                        "pt-BR": ""
+                    },
                     "provideService": {
                         "zh": "定制您的个性化服务",
                         "en": "To provide you with personalized service",

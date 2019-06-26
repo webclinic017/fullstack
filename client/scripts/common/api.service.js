@@ -9,15 +9,16 @@
     function api($cookies) {
 
         var urlOrigin = $cookies["access_origin"] || '';    // node 中写入cookie
-        var urlOrigin2 = $cookies["access_origin2"] || '/api';    // node 中写入cookie
+        var urlOriginApi = $cookies["access_origin2"] || '/api';    // node 中写入cookie
         var o = urlOrigin;
         // console.log('urlOrigin2',urlOrigin2)
-        urlOrigin2 = urlOrigin2 + '/v3';
+        var urlOrigin2 = urlOriginApi + '/v3';
+        var urlOrigin3 = urlOriginApi + '/v4';
         var account = {
             getPersonalInfoDegreeApi: urlOrigin2 + '/user/perfect_degree',
             loginByMt4Api: urlOrigin2 + '/login/mt4_account',
             loginApi: urlOrigin2 + '/auth/login',
-            updataUserInfoApi: urlOrigin2 + '/user/auth_info',
+            updataUserInfoApi: urlOrigin3 + '/user/auth_info',
             updataId: urlOrigin2 + '/user/update_idno',
             setUsername: urlOrigin2 + '/user/username',
             checkLoginedApi: urlOrigin2 + '/auth/check',
@@ -46,8 +47,8 @@
             setPwdApi: urlOrigin2 + '/user/passwd',
             setPhoneApi: urlOrigin2 + '/user/phone',
             logoutApi: urlOrigin2 + '/auth/logout',
-            getKycApi: urlOrigin2 + '/user/kyc_map',
-            getAuthStatus: urlOrigin2 + '/user/auth_status',
+            getKycApi: urlOrigin3 + '/user/kyc_map',
+            getAuthStatus: urlOrigin3 + '/user/auth_status',
             setKycApi: urlOrigin2 + '/user/kyc',
             checkAgentApi: urlOrigin2 + '/auth/valid_agent',
             getAgentAuthStatusApi: urlOrigin2 + '/user/agent_auth_status',
@@ -56,7 +57,7 @@
             openTrialAccountApi: urlOrigin2 + '/user/account/trial',
             uploadAgentProtocolApi: urlOrigin2 + '/upload/agent/protocol',
             agentProtocolApi: urlOrigin2 + '/agent/protocol',
-
+            setAuthenAddressApi: urlOrigin3 + '/user/address',
 
             // getRCaptchaApi: urlOrigin2 + '/validation/send_phone_code',
             // sendEmailCodeApi: urlOrigin2 + '/validation/send_email_code',
@@ -73,7 +74,7 @@
             getFunctionSwitch: '/napi?action=get_function_switch',
             getIdcardApi: urlOrigin2 + '/user/idcard',
             getEmailPhone: urlOrigin2 + '/sys/messages',
-            setIslamicStatusApi: urlOrigin2 + '/user/set_islamic_status',
+            setIslamicStatusApi: urlOrigin3 + '/user/set_islamic_status',
             transferIslamicApi: urlOrigin2 + '/user/transfer_islamic'
         };
         var asset = {

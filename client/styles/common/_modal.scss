@@ -238,6 +238,31 @@
         margin-bottom: 0;
         text-align: center;
     }
+    
+    .dredge_box_list {
+        li {
+            float: left;
+            width: 50%;
+            .cont {
+                padding: 0px 10px;
+            }
+            &.deleteDemo {
+                width: 100%;
+                .cont {
+                    border: none !important;
+                }
+            }
+        }
+    }
+    .dredge_box_btn_list {
+        li {
+            float: left;
+            width: 50%;
+            &.deleteDemo {
+                width: 100%;
+            }
+        }
+    }
 }
 
 // 放大图片图层 － previewImage dirctive

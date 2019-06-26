@@ -52,7 +52,8 @@
             getSpreadInfo: getSpreadInfo,
             getUserGroup: getUserGroup,
             hasChecked: false,
-            getAuthStatus: getAuthStatus, //获取认证状态    
+            getAuthStatus: getAuthStatus, //获取认证状态
+            setAuthenAddress: setAuthenAddress, 
             getAdvertiseRecords: getAdvertiseRecords,
             // sendEmailCode: sendEmailCode,
             // getRCaptcha: getRCaptcha,
@@ -570,6 +571,11 @@
         // 获取认证状态
         function getAuthStatus(params) {
             return publicHttp.dealPublicRequest(o.getAuthStatus, 'GET', params)
+        }
+        
+        //完善认证地址
+        function setAuthenAddress(params) {
+            return publicHttp.dealPublicRequest(o.setAuthenAddressApi, 'PUT', params);
         }
 
         /**

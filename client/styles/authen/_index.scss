@@ -33,6 +33,14 @@
 // }
 
 @include b(authen_content) {
+    input, .contact_way {
+        border: none;
+        border-bottom: 1px solid #ccc;
+        &:focus {
+            box-shadow: none;
+        }
+    }
+
     padding: 105px 55px 50px;
     &.update{
         padding: 20px;
@@ -113,43 +121,62 @@
     .bind_phone {
         .form-control-wrapper {
             display: inline-block;
-            border: 1px solid $input-border;
+            border-bottom: 1px solid $input-border;
             border-radius: $input-border-radius;
             .select__input,.form-control {
                 border: none;
             }
             &.area_code {
-                width: 30%;
+                width: 15%;
                 border-right: none;
                 border-top-right-radius: 0;
                 border-bottom-right-radius: 0;
             }
             &.phone {
                 margin-left: -4px;
-                width: 70%;
+                width: 85%;
             }
         }
     }
     .contact_way {
         display: inline-block;
-        border: 1px solid $input-border;
         border-radius: $input-border-radius;
         >.form-control {
             border: none;
-            width: 60%;
+            width: 74%;
             display: inline-block;
         }
         .sender_btn{
             display: inline-block;
             cursor: pointer;
-            width: 35%;
+            width: 25%;
             text-align: center;
-            padding: $padding-base-vertical $padding-base-horizontal;
+            padding: 2px $padding-base-horizontal;
             border-left: 1px solid $input-border;
             line-height: $line-height-base;
             font-size: $font-size-base;
             color: $input-color;
             background-color: $input-bg;
+        }
+    }
+    .authen_btn_wrapper {
+        margin-top: 5px;
+        .authen_btn {
+            padding: 0px 30px;
+            height: 30px;
+            display: inline-block;
+            line-height: 30px;
+            border-radius: 20px;
+            border: 1px solid #aaa;
+            cursor: pointer;
+            margin-right: 10px;
+            &:hover {
+                border-color: #ffbf44;
+            }
+            &.active {
+                border-color: #ffbf44;
+                background-color: #ffbf44;
+            }
         }
     }
 }

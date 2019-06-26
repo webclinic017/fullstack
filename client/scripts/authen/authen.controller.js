@@ -5,38 +5,54 @@
     angular.module('fullstackApp')
         .controller('AuthenController', AuthenController)
         .controller('AuthenInvestInfoController', AuthenInvestInfoController)
-        .controller('AuthenCompleteController', AuthenCompleteController)
         .controller('AuthenRealnameController', AuthenRealnameController)
+        .controller('AuthenIdentityController', AuthenIdentityController)
         .controller('AuthenAddressController', AuthenAddressController)
         .controller('AuthenAgreementController', AuthenAgreementController)
         .controller('AuthenSubmitController', function () { })
         .controller('AuthenSuccessController', function () { })
-        .controller('AuthenIslamicController', AuthenIslamicController);
+        .controller('AuthenIslamicController', AuthenIslamicController)
+        .controller('AuthenAddressInfoController', AuthenAddressInfoController)
+        .controller('AuthenFundInfoController', AuthenFundInfoController)
 
     AuthenController.$inject = ['$scope', '$cookies', '$location', 'account', '$state', '$stateParams', '$timeout', '$modal', '$layer'];
     AuthenInvestInfoController.$inject = ['$scope', '$state', '$timeout', 'account', '$location', '$modal'];
-    AuthenCompleteController.$inject = ['$scope', 'validator', 'account', '$timeout', '$interval', '$location', '$modal', '$cookies'];
-    AuthenRealnameController.$inject = ['$scope', '$state', '$modal', 'validator', 'account', '$location', '$layer'];
+    AuthenRealnameController.$inject = ['$scope', 'validator', 'account', '$timeout', '$interval', '$location', '$modal', '$cookies'];
+    AuthenIdentityController.$inject = ['$scope', '$state', '$modal', 'validator', 'account', '$location', '$layer'];
     AuthenAddressController.$inject = ['$scope', '$state', '$modal', 'validator', 'account', '$timeout'];
     AuthenIslamicController.$inject = ['$scope', '$state', '$modal', 'validator', 'account', '$timeout'];
     AuthenAgreementController.$inject = ['$scope', 'account'];
+    AuthenAddressInfoController.$inject = ['$scope', 'account', '$modal', '$timeout'];
+    AuthenFundInfoController.$inject = ['$scope', 'account'];
 
     // 主控制器
     function AuthenController($scope, $cookies, $location, account, $state, $stateParams, $timeout, $modal, $layer) {
         $scope.dredgingType = 'unkown'  // 交易账户开通状态
         $scope.flow = {
             step: 1,
+            // authStatusMap: {
+            //     '1': 'investInfo',   // 投资信息 - kyc
+            //     '2': 'complete',     // 完成kyc 完善资料信息
+            //     '3': 'realname',     // 未上传过身份证
+            //     '4': 'realname',     // 审核拒绝 完善资料信息
+            //     "5": "submit",       // 待审核 -> 审核中页面
+            //     "6": 'success',      // 审核通过
+            //     "7": 'address',      // 真实地址
+            //     "10001": 'agreement',    // 上传协议
+            //     "10": 'success',     // 审核通过
+            //     "8": 'islamic',      // 伊斯兰账户协议页面
+            // }
             authStatusMap: {
-                '1': 'investInfo',   // 投资信息 - kyc
-                '2': 'complete',     // 完成kyc 完善资料信息
-                '3': 'realname',     // 未上传过身份证
-                '4': 'realname',     // 审核拒绝 完善资料信息
-                "5": "submit",       // 待审核 -> 审核中页面
-                "6": 'success',      // 审核通过
-                "7": 'address',      // 真实地址
-                "10001": 'agreement',    // 上传协议
-                "10": 'success',     // 审核通过
-                "8": 'islamic',      // 伊斯兰账户协议页面
+                '1': 'islamic',         //伊斯兰协议
+                '2': 'realname',        //完善资料
+                '3': 'addressInfo',     //完善地址
+                '4': 'investInfo',      //投资信息确认(KYC)
+                '5': 'fundInfo',        //财务细节调查
+                '6': 'address',         //上传地址证明
+                '7': 'identity',        //上传身份证明
+                '10': 'submit',         //待审核
+                '11': 'success',        //审核通过
+                "10001": 'agreement',   //上传协议 (代理商)
             }
         }
 
@@ -86,14 +102,12 @@
                         '2': 'demo',
                     }[$scope.personal.account_status]
                 });
-                showErr4()
             } else {
                 $scope.$emit('global.getAuthStatus', {
                     ctrlName: 'AuthenController',
                     callback: function (data) {
                         setVerifyStatus();
                         goState(data)
-                        showErr4()
                     }
                 })
             }
@@ -101,7 +115,7 @@
         // 如果处于待更新证件且认证成功过的情况跳入上传身份证页面
         function setVerifyStatus() {
             if ($scope.personal.updatePapers.hint == 1 && $scope.personal.updatePapers.profile_check == 3) {
-                $scope.personal.verify_status = 3;
+                $scope.personal.verify_status = 7;
             }
         }
 
@@ -134,23 +148,6 @@
                 }]
             });
         });
-
-        function showErr4() {
-            if ($scope.personal.verify_status == 4) {
-                if (!$scope.personal.showAuthenMsg) {
-                    var obj = {
-                        title: $scope.lang.text('tigerWitID.prompt'),
-                        msg: $scope.lang.text('tigerWitID.settings.tip12'),
-                        msgClass: 'font-danger',
-                        btns: {}
-                    }
-                    obj.btns[$scope.lang.text("tigerWitID.ok")] = function () { }
-                    $layer(obj)
-
-                    $scope.personal.showAuthenMsg = true
-                }
-            }
-        }
     }
 
     // kyc
@@ -174,6 +171,7 @@
         $scope.clickable = true;
         $scope.selectOption = selectOption;
         $scope.submitForm = submitForm;
+        $scope.kycInfo = {};
         var kycInfo = {};
         var muiltiSelect = {};
 
@@ -182,8 +180,8 @@
         }
 
         function selectOption(question, option, $index) {
-            console.log('question', question);
-            console.log('option', option);
+            // console.log('question', question);
+            // console.log('option', option);
             $scope.tip.questions.show = false;
             $scope.tip.questions.msg = undefined;
 
@@ -199,10 +197,12 @@
             else if (question.data.type == 4) {
                 kycInfo[question.id] = question.answer;
             }
-            // 单选
+            // 单选、下拉
             else {
                 kycInfo[question.id] = option.key;
             }
+            $scope.kycInfo = kycInfo;
+            console.log(kycInfo);
         }
 
         function mapMuiltiSelectToKycInfo() {
@@ -216,15 +216,15 @@
                 // console.log(temp);
                 kycInfo[index] = temp.join(',');
             });
-            console.log(kycInfo);
+            // console.log(kycInfo);
         }
 
         function submitForm() {
             mapMuiltiSelectToKycInfo();
             var isBreak = false;
             var hasFinishAll = false;
-            console.log(isBreak);
-            console.log(kycInfo);
+            // console.log(isBreak);
+            // console.log(kycInfo);
             angular.forEach($scope.questions, function (item, index) {
                 if (isBreak) {
                     return;
@@ -250,27 +250,12 @@
                 angular.extend(kycInfo, {
                     type: 2
                 })
-            } else {
-                angular.extend(kycInfo, {
-                    is_live: $scope.personal.is_live
-                })
             }
+
             account.setKyc(kycInfo).then(function (data) {
                 console.info(data);
                 $scope.clickable = true;
                 if (data.is_succ) {
-                    // 神策数据统计
-                    sa.setProfile({
-                        key_industry: kycInfo.industry,
-                        key_annual_income: kycInfo.annual_income,
-                        key_experience: kycInfo.interests_exp,
-                        key_market: kycInfo.trading_market,
-                        key_invest_obj: kycInfo.investment_objectives,
-                        key_risk_tendency: kycInfo.risk_tendency
-                    });
-                    // 神策数据统计
-                    sa.track('btn_kyc');
-                    sa.track('New_information');
                     $scope.tip.system.show = true;
                     $scope.tip.system.msg = $scope.lang.text("tigerWitID.settings.verificationSucc_1") + 'KYC' + $scope.lang.text("tigerWitID.settings.verificationSucc_2");
 
@@ -288,18 +273,25 @@
         if ($location.search().isAgent) {
             getKyc({ type: 2 });
         } else {
-            getKyc();
+            getKyc({ type: 0 });
         }
         function getKyc(params) {
             account.getKyc(params).then(function (data) {
                 $scope.$broadcast("hideLoadingImg");
-                console.info('data', data);
+                // console.info('data', data);
                 angular.forEach(data.data, function (data, index, array) {
                     var json = {};
                     json["id"] = data.name;
                     json["data"] = data;
-                    json["answer"] = undefined;
                     json["title"] = data["title"];
+                    if (data.type == 1) {
+                        json["answer"] = {
+                            key: undefined,
+                            value: undefined
+                        }
+                    } else {
+                        json["answer"] = undefined;
+                    }
                     $scope.questions.push(json);
                 });
                 console.log('questions', $scope.questions)
@@ -312,11 +304,18 @@
         }
     }
 
-    // complete
-    function AuthenCompleteController($scope, validator, account, $timeout, $interval, $location, $modal, $cookies) {
+    // realname
+    function AuthenRealnameController($scope, validator, account, $timeout, $interval, $location, $modal, $cookies) {
         // console.log('$scope.personal', $scope.personal)
         $scope.completeInfo = {
             username: '',
+            firstname: '',
+            lastname: '',
+            gender: {
+                key: '',
+                value: ''
+            },
+            birthday: '',
             email: '',
             emailCode: '',
             phone: '',
@@ -326,38 +325,19 @@
                 value: ''
             },
             clickable: true,
-            // overTime: 1500,
-            country: {
-                key: undefined,
-                value: undefined
-            },
-            province: {
-                key: undefined,
-                value: undefined
-            },
-            city: {
-                key: undefined,
-                value: undefined
-            },
-            address: '',
-            postCode: '',
             hasSendCode: false,
             waitTime: 59
         };
-        $scope.isIslamic = false;
-        // console.log($scope.completeInfo)
-        // getUserInfo('username');
-        // function getUserInfo(name) {
-        //     if ($scope.completeInfo.overTime <= 0) { return };
-        //     if ($scope.personal[name]) {
-        //         $scope.completeInfo[name] = $scope.personal[name];
-        //     } else {
-        //         $timeout(function () {
-        //             getUserInfo(name);
-        //             $scope.completeInfo.overTime -= 500;
-        //         }, 500);
-        //     }
-        // }
+        $scope.genders = [
+            {
+                key: $scope.lang.text("tigerWitID.female"),
+                value: '0'
+            },
+            {
+                key: $scope.lang.text("tigerWitID.male"),
+                value: '1'
+            }
+        ];
 
         $scope.exsit = {
             username: {
@@ -384,6 +364,12 @@
                 reg: new RegExp()
             },
             emailCode: {
+                show: false
+            },
+            gender: {
+                show: false
+            },
+            birthday: {
                 show: false
             },
             phone: {
@@ -444,11 +430,6 @@
 
         $scope.areaCodes = []
 
-        // 地址相关操作
-        initLocation();
-        $scope.selectRegion = selectRegion;
-        $scope.address = {};
-
         $scope.$watch('worldList', function (n, o) {
             if (n.length > 0) {
                 angular.forEach(n, function (item, index) {
@@ -459,111 +440,7 @@
                     })
                 })
             }
-        })
-
-        function initLocation() {
-            account.getLocation().then(function (data) {
-                if (data.is_succ) {
-                    data = data.data
-                    angular.extend($scope.completeInfo, {
-                        country: {
-                            key: data.region.world_name,
-                            value: data.region.world_code,
-                        },
-                        province: {
-                            key: data.region.state_name,
-                            value: data.region.state_code
-                        },
-                        city: {
-                            key: data.region.city_name,
-                            value: data.region.city_code
-                        }
-                    });
-                    // 检测注册国际是否是伊斯兰国家
-                    angular.forEach($scope.worldList, function (value, index) {
-                        if (value.code === data.region.world_code && value.type === 'islamic') {
-                            // console.log(value);
-                            $scope.isIslamic = true;
-                        }
-                    });
-                    // console.log('$scope.basicInfo.locationWorld', $scope.basicInfo.locationWorld);
-                    $scope.$broadcast('locationInfoReady');
-                }
-
-            });
-
-            $scope.$on('locationInfoReady', function () {
-                // getRegions('country', 'countries');
-
-                if ($scope.completeInfo.country.value == 'CN') {
-                    getRegions('province', 'provinces', $scope.completeInfo.country.value);
-                    getRegions('city', 'cities', $scope.completeInfo.province.value);
-                }
-                // if (!$scope.completeInfo.country.value) {
-                //     getRegions('province', 'provinces', 'CN');
-                // }
-            });
-        }
-
-        // 根据 region code 获取对应的 regions
-        function getRegions(regionName, regionsName, upperRegionCode) {
-            var tmp;
-
-            switch (regionName) {
-                case 'country':
-                    tmp = account.getWorlds();
-                    break;
-                case 'province':
-                    tmp = account.getStates(upperRegionCode);
-                    break;
-                case 'city':
-                    tmp = upperRegionCode && account.getCities(upperRegionCode);
-                    break;
-                default:
-                    break;
-            }
-
-            tmp && tmp.then(function (data) {
-                if (!data) return;
-                // console.log(data);
-                if (!data.is_succ) {
-                    return;
-                }
-                $scope.address[regionsName] = data.data;
-            });
-        }
-
-        // 选择一个 region
-        function selectRegion(regionName, regionCode, regionIslamic) {
-            // console.log($scope.completeInfo)
-            switch (regionName) {
-                case 'country':
-                    $scope.isIslamic = regionIslamic === 'islamic' ? true : false;
-                    $scope.completeInfo.province = {
-                        key: undefined,
-                        value: undefined
-                    };
-                    $scope.completeInfo.city = {
-                        key: undefined,
-                        value: undefined
-                    };
-                    $scope.address.cities = [];
-                    $scope.address.provinces = [];
-                    if(regionCode == 'CN'){
-                        getRegions('province', 'provinces', regionCode);
-                    }
-                    break;
-                case 'province':
-                    $scope.completeInfo.city = {
-                        key: undefined,
-                        value: undefined
-                    };
-                    getRegions('city', 'cities', regionCode);
-                    break;
-                default:
-                    break;
-            }
-        }
+        });
 
         $scope.sendCode = function (type) {
             if (type == 'phone' && !$scope.completeInfo.areaCode.value) {
@@ -598,8 +475,6 @@
         }
 
         $scope.submitCompleteForm = function () {
-            console.log($scope.personal.islamic_status, $scope.isIslamic);
-            
             if (!$scope.personal.phone) {
                 $scope.showErr('phone');
                 $scope.showErr('areaCode');
@@ -610,16 +485,8 @@
                 $scope.showErr('emailCode');
             }
             $scope.showErr('username');
-            $scope.showErr('country')
-            // if ($scope.completeInfo.country.value == 'CN') {
-                $scope.showErr('province');
-                $scope.showErr('city');
-            // }
-            $scope.showErr('address');
-            $scope.showErr('postCode');
-
-            // console.log('$scope.completeForm.$invalid', $scope.completeForm.$invalid);
-            // console.log('$scope.completeInfo', $scope.completeInfo);
+            $scope.showErr('gender');
+            $scope.showErr('birthday');
 
             if ($scope.completeForm.$invalid) {
                 return
@@ -652,70 +519,30 @@
             }
 
             function confirmSubmit() {
-                var state_code = $scope.completeInfo.country.value == 'CN' ? $scope.completeInfo.province.value : $scope.completeInfo.province.key;
-                var city_code = $scope.completeInfo.country.value == 'CN' ? $scope.completeInfo.city.value : $scope.completeInfo.city.key;
+
                 var params = {
                     username: $scope.completeInfo.username,
-                    world_code: $scope.completeInfo.country.value,
-                    state_code: state_code,
-                    city_code: city_code,
-                    address: $scope.completeInfo.address,
-                    post_code: $scope.completeInfo.postCode,
-                    is_live: $scope.personal.is_live || null
+                    first_name: $scope.completeInfo.firstname,
+                    last_name: $scope.completeInfo.lastname,
+                    gender: $scope.completeInfo.gender.value,
+                    birth: $scope.completeInfo.birthday
                 }
                 if (!$scope.personal.email) {
                     params.email = $scope.completeInfo.email || null
-                    params.code = $scope.completeInfo.emailCode || null
                 }
                 if (!$scope.personal.phone) {
                     params.phone = $scope.completeInfo.phone || null
-                    params.code = $scope.completeInfo.phoneCode || null
                     params.phone_code = $scope.completeInfo.areaCode.value.replace(/\+/gi, '') || null
                 }
-                if ($scope.isIslamic && !$scope.personal.islamic_status) {
-                    $scope.completeInfo.clickable = true;
-                    $modal.open({
-                        templateUrl: '/views/account/islamic_modal.html',
-                        size: 'sm',
-                        backdrop: 'false',
-                        resolve: {
-                            passedScope: function () {
-                                return {}
-                            }
-                        },
-                        controller: ['$scope', 'passedScope', '$modalInstance', 'lang', function ($scope, passedScope, $modalInstance, lang) {
-                            $scope.lang = lang;
-                            $scope.loading = 0;
-                            $scope.modalType = 1;
-    
-                            $scope.closeModal = closeModal;
-                            $scope.submitConfrim = submitConfrim;
-    
-                            function submitConfrim (type) {
-                                $scope.loading = 1;
-                                updataUserInfo(type);
-                                closeModal();
-                            }
-                            function closeModal() {
-                                $modalInstance.dismiss();
-                            }
-                        }]
-                    });
-                } else {
-                    updataUserInfo();
-                }
+                updataUserInfo();
                 
-                function updataUserInfo (type) {
+                function updataUserInfo () {
                     $scope.completeInfo.clickable = false;
-                    if (type === 'yes') params.islamic_status = 0;
-                    if (type === 'no') params.islamic_status = 1;
                     account.updataUserInfo(params).then(function (data) {
                         $scope.completeInfo.clickable = true;
                         if (data.is_succ) {
                             // 向authenController发送信息
                             $scope.$emit('goState', data.data);
-    
-                            sa.track('New_Personaldata');
                         } else {
                             $scope.backErr.show = true;
                             $scope.backErr.msg = data.message;
@@ -782,7 +609,7 @@
     }
 
     // id_card
-    function AuthenRealnameController($scope, $state, $modal, validator, account) {
+    function AuthenIdentityController($scope, $state, $modal, validator, account) {
         $scope.is_live = $scope.personal.is_live
         $scope.verification = {
             id: {
@@ -1221,5 +1048,301 @@
                 }
             })
         }
+    }
+    // addressInfo
+    function AuthenAddressInfoController($scope, account, $modal, $timeout) {
+        $scope.addressInfo = {
+            country: {
+                key: undefined,
+                value: undefined
+            },
+            province: {
+                key: undefined,
+                value: undefined
+            },
+            city: {
+                key: undefined,
+                value: undefined
+            },
+            address: '',
+            postCode: '',
+            type: {
+                key: undefined,
+                value: undefined
+            },
+            nationality: {
+                key: undefined,
+                value: undefined
+            },
+            tax_residency: {
+                key: undefined,
+                value: undefined
+            },
+            isNationality: true,
+            isTaxResidency: true,
+            clickable: true
+        };
+        $scope.frontErr = {
+            province: {
+                show: false
+            },
+            city: {
+                show: false
+            },
+            postCode: {
+                show: false
+            },
+            address: {
+                show: false
+            },
+            type: {
+                show: false
+            }
+        };
+        $scope.backErr = {
+            show: false,
+            msg: ''
+        };
+        $scope.isIslamic = false;
+        $scope.address = {};
+        $scope.types = [
+            {
+                key: $scope.lang.text("tigerWitID.yes"),
+                value: 1
+            },
+            {
+                key: $scope.lang.text("tigerWitID.no"),
+                value: 0
+            }
+        ];
+
+        // 地址相关操作
+        initLocation();
+        $scope.selectRegion = selectRegion;
+
+        function initLocation() {
+            account.getLocation().then(function (data) {
+                if (data.is_succ) {
+                    data = data.data
+                    angular.extend($scope.addressInfo, {
+                        country: {
+                            key: data.region.world_name,
+                            value: data.region.world_code,
+                        },
+                        province: {
+                            key: data.region.state_name,
+                            value: data.region.state_code
+                        },
+                        city: {
+                            key: data.region.city_name,
+                            value: data.region.city_code
+                        }
+                    });
+                    // 检测注册国际是否是伊斯兰国家
+                    angular.forEach($scope.worldList, function (value, index) {
+                        if (value.code === data.region.world_code && value.type === 'islamic') {
+                            // console.log(value);
+                            $scope.isIslamic = true;
+                        }
+                    });
+                    // console.log('$scope.basicInfo.locationWorld', $scope.basicInfo.locationWorld);
+                    $scope.$broadcast('locationInfoReady');
+                }
+
+            });
+
+            $scope.$on('locationInfoReady', function () {
+
+                if ($scope.addressInfo.country.value == 'CN') {
+                    getRegions('province', 'provinces', $scope.addressInfo.country.value);
+                    getRegions('city', 'cities', $scope.addressInfo.province.value);
+                }
+            });
+        }
+
+        // 根据 region code 获取对应的 regions
+        function getRegions(regionName, regionsName, upperRegionCode) {
+            var tmp;
+
+            switch (regionName) {
+                case 'country':
+                    tmp = account.getWorlds();
+                    break;
+                case 'province':
+                    tmp = account.getStates(upperRegionCode);
+                    break;
+                case 'city':
+                    tmp = upperRegionCode && account.getCities(upperRegionCode);
+                    break;
+                default:
+                    break;
+            }
+
+            tmp && tmp.then(function (data) {
+                if (!data) return;
+                // console.log(data);
+                if (!data.is_succ) {
+                    return;
+                }
+                $scope.address[regionsName] = data.data;
+            });
+        }
+
+        // 选择一个 region
+        function selectRegion(regionName, regionCode, regionIslamic) {
+            // console.log($scope.completeInfo)
+            switch (regionName) {
+                case 'country':
+                    $scope.isIslamic = regionIslamic === 'islamic' ? true : false;
+                    $scope.address.cities = [];
+                    $scope.address.provinces = [];
+                    if(regionCode == 'CN'){
+                        getRegions('province', 'provinces', regionCode);
+                        $scope.addressInfo.province = {
+                            key: undefined,
+                            value: undefined
+                        };
+                        $scope.addressInfo.city = {
+                            key: undefined,
+                            value: undefined
+                        };
+                    }
+                    break;
+                case 'province':
+                    $scope.addressInfo.city = {
+                        key: undefined,
+                        value: undefined
+                    };
+                    getRegions('city', 'cities', regionCode);
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        $scope.submitAddressInfoForm = function () {
+            $scope.showErr('province');
+            $scope.showErr('postCode');
+            $scope.showErr('address');
+            // $scope.showErr('type');
+
+            if ($scope.addressInfoForm.$invalid) {
+                console.log($scope.addressInfoForm);
+                return
+            }
+
+            $scope.addressInfo.clickable = false;
+            confirmSubmit()
+
+            function confirmSubmit() {
+                var params = {
+                    world_code: $scope.addressInfo.country.value,
+                    nationality: $scope.addressInfo.nationality.value,
+                    tax_residency: $scope.addressInfo.tax_residency.value,
+                    type: $scope.addressInfo.type.value,
+                    post_code: $scope.addressInfo.postCode
+                }
+                if ($scope.addressInfo.country.value === 'CN') {
+                    params.state_code = $scope.addressInfo.province.value;
+                    params.city_code = $scope.addressInfo.city.value;
+                    params.address = $scope.addressInfo.address;
+                } else {
+                    params.first_line_address = $scope.addressInfo.province.key;
+                    params.second_line_address = $scope.addressInfo.city.key;
+                    params.town = $scope.addressInfo.address;
+                }
+
+                if ($scope.isIslamic && !$scope.personal.islamic_status) {
+                    $scope.addressInfo.clickable = true;
+                    $modal.open({
+                        templateUrl: '/views/account/islamic_modal.html',
+                        size: 'sm',
+                        backdrop: 'false',
+                        resolve: {
+                            passedScope: function () {
+                                return {}
+                            }
+                        },
+                        controller: ['$scope', 'passedScope', '$modalInstance', 'lang', function ($scope, passedScope, $modalInstance, lang) {
+                            $scope.lang = lang;
+                            $scope.loading = 0;
+                            $scope.modalType = 1;
+    
+                            $scope.closeModal = closeModal;
+                            $scope.submitConfrim = submitConfrim;
+    
+                            function submitConfrim (type) {
+                                $scope.loading = 1;
+                                updataUserInfo(type);
+                                closeModal();
+                            }
+                            function closeModal() {
+                                $modalInstance.dismiss();
+                            }
+                        }]
+                    });
+                } else {
+                    updataUserInfo();
+                }
+
+                function updataUserInfo (type) {
+                    $scope.addressInfo.clickable = false;
+                    if (type === 'yes') params.islamic_status = 2;
+                    if (type === 'no') params.islamic_status = 1;
+                    account.setAuthenAddress(params).then(function (data) {
+                        $scope.addressInfo.clickable = true;
+                        if (data.is_succ) {
+                            // 向authenController发送信息
+                            $scope.$emit('goState', data.data);
+                        } else {
+                            $scope.backErr.show = true;
+                            $scope.backErr.msg = data.message;
+    
+                            $timeout(function () {
+                                $scope.backErr.show = false;
+                                $scope.backErr.msg = '';
+                            }, 2000);
+                        }
+                    });
+                }
+            }
+        };
+
+        $scope.checkNationality = function (status) {
+            $scope.addressInfo.isNationality = status;
+            if (status) {
+                $scope.addressInfo.nationality.key = undefined;
+                $scope.addressInfo.nationality.value = undefined;
+            } else {
+                $scope.addressInfo.nationality.key = $scope.addressInfo.country.key;
+                $scope.addressInfo.nationality.value = $scope.addressInfo.country.value;
+            }
+        };
+        $scope.checkTaxResidency = function (status) {
+            $scope.addressInfo.isTaxResidency = status;
+            if (status) {
+                $scope.addressInfo.tax_residency.key = undefined;
+                $scope.addressInfo.tax_residency.value = undefined;
+            } else {
+                $scope.addressInfo.tax_residency.key = $scope.addressInfo.country.key;
+                $scope.addressInfo.tax_residency.value = $scope.addressInfo.country.value;
+            }
+        };
+
+        $scope.showErr = function (name) {
+            if ($scope.frontErr[name]) {
+                $scope.frontErr[name].show = true;
+            }
+        }
+
+        $scope.hideErr = function (name) {
+            if ($scope.frontErr[name]) {
+                $scope.frontErr[name].show = false;
+            }
+        }
+    }
+    //fundInfo
+    function AuthenFundInfoController($scope, account) {
+
     }
 })();
