@@ -13,7 +13,6 @@
         .controller('AuthenSuccessController', function () { })
         .controller('AuthenIslamicController', AuthenIslamicController)
         .controller('AuthenAddressInfoController', AuthenAddressInfoController)
-        .controller('AuthenFundInfoController', AuthenFundInfoController)
 
     AuthenController.$inject = ['$scope', '$cookies', '$location', 'account', '$state', '$stateParams', '$timeout', '$modal', '$layer'];
     AuthenInvestInfoController.$inject = ['$scope', '$state', '$timeout', 'account', '$location', '$modal'];
@@ -23,7 +22,6 @@
     AuthenIslamicController.$inject = ['$scope', '$state', '$modal', 'validator', 'account', '$timeout'];
     AuthenAgreementController.$inject = ['$scope', 'account'];
     AuthenAddressInfoController.$inject = ['$scope', 'account', '$modal', '$timeout'];
-    AuthenFundInfoController.$inject = ['$scope', 'account'];
 
     // 主控制器
     function AuthenController($scope, $cookies, $location, account, $state, $stateParams, $timeout, $modal, $layer) {
@@ -150,13 +148,14 @@
         });
     }
 
-    // kyc
+    // kyc、fundInfo
     function AuthenInvestInfoController($scope, $state, $timeout, account, $location) {
         // window.onbeforeunload = function () {
         //     return '确认离开当前页面吗？未保存的数据将会丢失！'
         // }
         $scope.questions = [];
         $scope.isSetKyc = false;
+        $scope.pageType = 0;    //0 kyc, 1 财务细节, 2 代理商
 
         $scope.tip = {
             questions: {
@@ -178,7 +177,16 @@
         if ($state.current.name === 'space.setting.subpage') {
             $scope.type = 'setting';
         }
-
+        if ($location.search().isAgent) {
+            $scope.pageType = 2;
+        } else {
+            if ($state.params.subpage === 'fundInfo') {
+                $scope.pageType = 1;
+            } else {
+                $scope.pageType = 0;
+            }
+        }
+        getKyc({ type: $scope.pageType });
         function selectOption(question, option, $index) {
             // console.log('question', question);
             // console.log('option', option);
@@ -202,7 +210,7 @@
                 kycInfo[question.id] = option.key;
             }
             $scope.kycInfo = kycInfo;
-            console.log(kycInfo);
+            // console.log(kycInfo);
         }
 
         function mapMuiltiSelectToKycInfo() {
@@ -221,24 +229,6 @@
 
         function submitForm() {
             mapMuiltiSelectToKycInfo();
-            var isBreak = false;
-            var hasFinishAll = false;
-            // console.log(isBreak);
-            // console.log(kycInfo);
-            angular.forEach($scope.questions, function (item, index) {
-                if (isBreak) {
-                    return;
-                }
-                // console.log(item.id);
-                if (!kycInfo[item.id]) {
-                    $scope.tip.questions.show = true;
-                    $scope.tip.questions.msg = $scope.lang.text("tigerWitID.tip.tip12_1") + (Number(index) + 1) + $scope.lang.text("tigerWitID.tip.tip12_2") + item.title
-                    isBreak = true;
-                } else {
-                    $scope.tip.questions.show = false;
-                    $scope.tip.questions.msg = undefined;
-                }
-            });
 
             if ($scope.tip.questions.msg) {
                 return;
@@ -246,14 +236,14 @@
 
             $scope.clickable = false;
 
-            if ($location.search().isAgent) {
+            if ($scope.pageType !== 0) {
                 angular.extend(kycInfo, {
-                    type: 2
-                })
+                    type: $scope.pageType
+                });
             }
 
             account.setKyc(kycInfo).then(function (data) {
-                console.info(data);
+                // console.info(data);
                 $scope.clickable = true;
                 if (data.is_succ) {
                     $scope.tip.system.show = true;
@@ -270,11 +260,7 @@
                 }
             });
         }
-        if ($location.search().isAgent) {
-            getKyc({ type: 2 });
-        } else {
-            getKyc({ type: 0 });
-        }
+
         function getKyc(params) {
             account.getKyc(params).then(function (data) {
                 $scope.$broadcast("hideLoadingImg");
@@ -294,7 +280,7 @@
                     }
                     $scope.questions.push(json);
                 });
-                console.log('questions', $scope.questions)
+                // console.log('questions', $scope.questions)
                 $scope.industry = {} // 默认职业所属行业
                 // console.log($scope.industry)
                 angular.forEach($scope.questions, function (question) {
@@ -1340,9 +1326,5 @@
                 $scope.frontErr[name].show = false;
             }
         }
-    }
-    //fundInfo
-    function AuthenFundInfoController($scope, account) {
-
     }
 })();
