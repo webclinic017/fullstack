@@ -1,7 +1,7 @@
 <div class="authen_content ctn center">
     <div class="authen_content__title">
-        <h2>{{lang.text('tigerWitID.settings.completeInformation')}}</h2>
-        <p class="authen_content__tip">{{lang.text('tigerWitID.settings.tip6')}}</p>
+        <h2>{{lang.text('tigerWitID.settings.openAccountNewTip2')}}</h2>
+        <p class="authen_content__tip">{{lang.text('tigerWitID.settings.openAccountNewTip3')}}</p>
     </div>
     <!--<div tw-loading-img></div>-->
     <div class="mg-tp-40 kyc">
@@ -34,7 +34,7 @@
             <div class="row">
                 <div class="col-xs-12">
                     <div class="form-control-wrapper">
-                        <input class="form-control" name="username" type="text" placeholder="First Name"
+                        <input class="form-control" name="firstname" type="text" placeholder="{{lang.text('tigerWitID.settings.openAccountNewTip6')}}"
                             required
                             ng-model="completeInfo.firstname">
                     </div>
@@ -43,7 +43,7 @@
             <div class="row">
                 <div class="col-xs-12">
                     <div class="form-control-wrapper">
-                        <input class="form-control" name="username" type="text" placeholder="Last Name"
+                        <input class="form-control" name="lastname" type="text" placeholder="{{lang.text('tigerWitID.settings.openAccountNewTip7')}}"
                             required
                             ng-model="completeInfo.lastname">
                     </div>

@@ -17,7 +17,7 @@
     AuthenController.$inject = ['$scope', '$cookies', '$location', 'account', '$state', '$stateParams', '$timeout', '$modal', '$layer'];
     AuthenInvestInfoController.$inject = ['$scope', '$state', '$timeout', 'account', '$location', '$modal'];
     AuthenRealnameController.$inject = ['$scope', 'validator', 'account', '$timeout', '$interval', '$location', '$modal', '$cookies'];
-    AuthenIdentityController.$inject = ['$scope', '$state', '$modal', 'validator', 'account', '$location', '$layer'];
+    AuthenIdentityController.$inject = ['$scope', '$state', '$modal', 'validator', 'account', '$location', '$layer', '$timeout'];
     AuthenAddressController.$inject = ['$scope', '$state', '$modal', 'validator', 'account', '$timeout'];
     AuthenIslamicController.$inject = ['$scope', '$state', '$modal', 'validator', 'account', '$timeout'];
     AuthenAgreementController.$inject = ['$scope', 'account'];
@@ -149,13 +149,16 @@
     }
 
     // kyc、fundInfo
-    function AuthenInvestInfoController($scope, $state, $timeout, account, $location) {
+    function AuthenInvestInfoController($scope, $state, $timeout, account, $location, $modal) {
         // window.onbeforeunload = function () {
         //     return '确认离开当前页面吗？未保存的数据将会丢失！'
         // }
         $scope.questions = [];
         $scope.isSetKyc = false;
         $scope.pageType = 0;    //0 kyc, 1 财务细节, 2 代理商
+        $scope.title = $scope.lang.text('tigerWitID.myAccount.questionnaire');
+        $scope.subTitle = $scope.lang.text('tigerWitID.settings.openAccountNewTip15');
+        var confirmTwo = true;   //二次确认
 
         $scope.tip = {
             questions: {
@@ -182,6 +185,8 @@
         } else {
             if ($state.params.subpage === 'fundInfo') {
                 $scope.pageType = 1;
+                $scope.title = $scope.lang.text('tigerWitID.settings.openAccountNewTip16');
+                $scope.subTitle = $scope.lang.text('tigerWitID.settings.openAccountNewTip17');
             } else {
                 $scope.pageType = 0;
             }
@@ -192,7 +197,7 @@
             // console.log('option', option);
             $scope.tip.questions.show = false;
             $scope.tip.questions.msg = undefined;
-
+            // console.log(question, option);
             // 多选
             if (question.data.type == 3) {
                 if (!muiltiSelect[question.id]) {
@@ -209,8 +214,40 @@
             else {
                 kycInfo[question.id] = option.key;
             }
+            if (question.id === 'investment_goals') {   //财务细节第6题需二次确认
+                if (option.key === 'capital_preservation') {
+                    confirmTwo = false;
+                    openConfrimTwoMdl();
+                } else {
+                    confirmTwo = true;
+                }
+            }
             $scope.kycInfo = kycInfo;
             // console.log(kycInfo);
+        }
+
+        function openConfrimTwoMdl (type) {
+            $modal.open({
+                templateUrl: '/views/authen/authen_modal.html',
+                size: 'sm',
+                backdrop: true,
+                controller: ['$scope', '$modalInstance', 'lang', function ($scope, $modalInstance, lang) {
+                    $scope.lang = lang;
+                    $scope.closeModal = closeModal;
+                    $scope.setConfirm = setConfirm;
+
+                    function setConfirm (status) {
+                        closeModal();
+                        confirmTwo = status;
+                        if (type && status) {
+                            confirmSubmitForm();
+                        }
+                    }
+                    function closeModal() {
+                        $modalInstance.dismiss();
+                    }
+                }]
+            });
         }
 
         function mapMuiltiSelectToKycInfo() {
@@ -234,14 +271,22 @@
                 return;
             }
 
-            $scope.clickable = false;
-
             if ($scope.pageType !== 0) {
                 angular.extend(kycInfo, {
                     type: $scope.pageType
                 });
             }
 
+            if (confirmTwo) {
+                confirmSubmitForm();
+            } else {
+                openConfrimTwoMdl(true);
+            }
+            
+        }
+
+        function confirmSubmitForm () {
+            $scope.clickable = false;
             account.setKyc(kycInfo).then(function (data) {
                 // console.info(data);
                 $scope.clickable = true;
@@ -595,7 +640,7 @@
     }
 
     // id_card
-    function AuthenIdentityController($scope, $state, $modal, validator, account) {
+    function AuthenIdentityController($scope, $state, $modal, validator, account, $location, $layer, $timeout) {
         $scope.is_live = $scope.personal.is_live
         $scope.verification = {
             id: {
@@ -606,29 +651,14 @@
         };
 
         $scope.realnameInfo = {
-            realname: '',
             id_type: {
                 key: undefined,
                 value: undefined
             },
-            id_num: '',
-            year18: '',
-            gender: {
-                key: '',
-                value: ''
-            },
-            birthday: ''
-        }
-        $scope.genders = [
-            {
-                key: $scope.lang.text("tigerWitID.female"),
-                value: '0'
-            },
-            {
-                key: $scope.lang.text("tigerWitID.male"),
-                value: '1'
-            }
-        ]
+            id_num: ''
+        };
+        $scope.identityImgFront = undefined;
+        $scope.identityImgBack = undefined;
         $scope.idType = [
             {
                 key: $scope.lang.text("tigerWitID.settings.mainlandResidentIdentityCard"),
@@ -669,28 +699,12 @@
         ]
         $scope.$watch('personal.updatePapers', function (newVal, oldVal) {
             if (JSON.stringify(newVal) != "{}" && newVal.hint == 1) {
-                $scope.realnameInfo.realname = newVal.real_name;
                 $scope.realnameInfo.id_type.key = $scope.idType[newVal.idcard_type].key;
                 $scope.realnameInfo.id_type.value = $scope.idType[newVal.idcard_type].value;
                 $scope.realnameInfo.id_num = newVal.id_no;
-                $scope.realnameInfo.gender.key = $scope.genders[newVal.gender].key;
-                $scope.realnameInfo.gender.value = $scope.genders[newVal.gender].value;
-                var date = newVal.birth;
-                $scope.realnameInfo.birthday = date.substr(0, 4) + '-' + date.substr(4, 2) + '-' + date.substr(6, 2);
             }
-        }, true)
+        }, true);
         $scope.frontErr = {
-            idFront: {
-                show: false
-            },
-            idBack: {
-                show: false
-            },
-            realname: {
-                show: false,
-                reg: validator.regType.realname.reg,
-                tip: validator.regType.realname.tip,
-            },
             id_num: {
                 show: false,
                 reg: validator.regType.idNumber.reg,
@@ -698,23 +712,13 @@
             },
             id_type: {
                 show: false
-            },
-            gender: {
-                show: false
-            },
-            birthday: {
-                show: false
             }
         };
 
         $scope.backErr = {
-            system: {
-                show: false,
-                status: 0
-            }
+            show: false,
+            msg: ''
         };
-
-
         $scope.exsit = {
             id_num: {
                 show: ''
@@ -734,59 +738,6 @@
             $scope.type = 'setting';
         }
 
-        $scope.$on('saveFile', function (event, data) {
-            $scope.$apply(function () {
-                $scope.verification.id[data.target.face + 'Status'] = 0;
-                hideErr('', 'idFront');
-                hideErr('', 'idBack');
-                /*去重*/
-                if (data.target.face == 'front') {
-                    $scope.readyToUpload.front = data.target
-                } else {
-                    $scope.readyToUpload.back = data.target
-                }
-                console.log($scope.readyToUpload);
-            });
-        });
-
-        $scope.$on('uploadIdCardStart', function (event, data) {
-            $scope.verification.id[data.face + 'Status'] = 1;
-        });
-
-        $scope.$on('uploadIdCardSuccess', function (event, data) {
-            $scope.uploadFinish[data.face] = true;
-            $scope.$apply(function () {
-                $scope.verification.id[data.face + 'Status'] = 2;
-            });
-            if ($scope.realnameInfo.id_type.value == '0' || $scope.realnameInfo.id_type.value == '5' || $scope.realnameInfo.id_type.value == '4') {
-                if ($scope.uploadFinish.hasOwnProperty('front') &&
-                    $scope.uploadFinish.hasOwnProperty('back') &&
-                    ($scope.backErr.system.status != 3)
-                ) {
-                    // 向authenController发送信息
-                    $scope.$emit('goState', data.data);
-                    // 神策数据统计
-                    sa.track('btn_verify');
-                }
-            } else {
-                if ($scope.uploadFinish.hasOwnProperty('front') &&
-                    ($scope.backErr.system.status != 3)
-                ) {
-                    // 向authenController发送信息
-                    $scope.$emit('goState', data.data);
-                    // 神策数据统计
-                    sa.track('btn_verify');
-                }
-            }
-        });
-
-        $scope.$on('uploadIdCardFail', function (event, data) {
-            $scope.$apply(function () {
-                $scope.clickable = true;
-                $scope.verification.id[data.face + 'Status'] = 3;
-            });
-        });
-
         function hideErr(controlName) {
             if ($scope.frontErr[controlName]) {
                 $scope.frontErr[controlName].show = false;
@@ -799,42 +750,33 @@
             }
         }
 
-        function submitForm(formName) {
-            showErr('realname');
+        function submitForm() {
             showErr('id_num');
             showErr('id_type');
-            showErr('gender');
-            showErr('birthday');
-
-
+            if ($scope.realnameForm.$invalid) {
+                return
+            }
             if (twoDecide()) {
-                if ($scope.realnameForm.$invalid) {
-                    return
-                }
-
-                if (!$scope.realnameInfo.year18 && $scope.realnameInfo.id_type.value == 0) {
-                    layer.msg($scope.lang.text("tigerWitID.settings.tip13"))
-                    return
-                }
                 $scope.clickable = false;
 
                 // 提交身份信息
-                account.updataId({
+                account.updataIdCard({
                     id_no: $scope.realnameInfo.id_num,
-                    idcard_type: $scope.realnameInfo.id_type.value,
-                    real_name: $scope.realnameInfo.realname,
-                    gender: $scope.realnameInfo.gender.value,
-                    birth: $scope.realnameInfo.birthday,
-                    is_live: $scope.personal.is_live
+                    cert_type: $scope.realnameInfo.id_type.value,
+                    front: $scope.identityImgFront,
+                    back: $scope.identityImgBack ? $scope.identityImgBack : undefined
                 }).then(function (data) {
-                    if (!data.is_succ || data.data.id_no_exists) {
-                        layer.msg(data.message || $scope.lang.text("tigerWitID.settings.idNumExists"))
-                        $scope.clickable = true;
+                    $scope.clickable = true;
+                    if (data.is_succ) {
+                        $scope.$emit('goState', data.data);
                     } else {
-                        sa.track('New_Realname');
-                        sa.track('New_uploadcard');
-                        /*上传图片*/
-                        paperUpdate();
+                        $scope.backErr.show = true;
+                        $scope.backErr.msg = data.message;
+
+                        $timeout(function () {
+                            $scope.backErr.show = false;
+                            $scope.backErr.msg = '';
+                        }, 2000);
                     }
                 })
             }
@@ -847,21 +789,62 @@
             }
         }
         function twoDecide() {
-            if (!$scope.readyToUpload.hasOwnProperty('front')) {
-                showErr('idFront');
+            if (!$scope.identityImgFront) {
+                $scope.backErr.show = true;
+                $scope.backErr.msg = $scope.lang.text('tigerWitID.myAccount.submitFrontSide');
+
+                $timeout(function () {
+                    $scope.backErr.show = false;
+                    $scope.backErr.msg = '';
+                }, 2000);
                 return false;
             }
 
-            if (($scope.realnameInfo.id_type.value == 0 || $scope.realnameInfo.id_type.value == 5 || $scope.realnameInfo.id_type.value == 4) && !$scope.readyToUpload.hasOwnProperty('back')) {
-                showErr('idBack');
+            if (($scope.realnameInfo.id_type.value == 0 || $scope.realnameInfo.id_type.value == 5 || $scope.realnameInfo.id_type.value == 4) && !$scope.identityImgBack) {
+                $scope.backErr.show = true;
+                $scope.backErr.msg = $scope.lang.text('tigerWitID.myAccount.uploadBackSide');
+
+                $timeout(function () {
+                    $scope.backErr.show = false;
+                    $scope.backErr.msg = '';
+                }, 2000);
                 return false;
             }
             return true;
         }
         function paperUpdate() {
-            angular.forEach($scope.readyToUpload, function (data, index, array) {
-                data.submit();
-            });
+            account.updataIdCardBase64('front', $scope.identityImgFront).then(function (data) {
+                if (data.is_succ) {
+                    if ($scope.identityImgBack) {
+                        account.updataIdCardBase64('back', $scope.identityImgBack).then(function (data) {
+                            $scope.clickable = false;
+                            if (data.is_succ) {
+                                $scope.$emit('goState', data.data);
+                            } else {
+                                $scope.backErr.show = true;
+                                $scope.backErr.msg = data.message;
+
+                                $timeout(function () {
+                                    $scope.backErr.show = false;
+                                    $scope.backErr.msg = '';
+                                }, 2000);
+                            }
+                        })
+                    } else {
+                        $scope.clickable = false;
+                        $scope.$emit('goState', data.data);
+                    }
+                } else {
+                    $scope.clickable = false;
+                    $scope.backErr.show = true;
+                    $scope.backErr.msg = data.message;
+
+                    $timeout(function () {
+                        $scope.backErr.show = false;
+                        $scope.backErr.msg = '';
+                    }, 2000);
+                }
+            })
         }
 
         $scope.checkExsit = function (type) {
@@ -881,56 +864,58 @@
                 }
             });
         }
-
-        $scope.checkBirthday = function () {
-            var strBirthday = "";
-            var identityCard = $scope.realnameInfo.id_num
-            if ($scope.realnameForm.id_num.$invalid) {
-                return
-            }
-            if (identityCard.length == 15) {
-                strBirthday = "19" + identityCard.substr(6, 2) + "/" + identityCard.substr(8, 2) + "/" + identityCard.substr(10, 2);
-            }
-            if (identityCard.length == 18) {
-                strBirthday = identityCard.substr(6, 4) + "/" + identityCard.substr(10, 2) + "/" + identityCard.substr(12, 2);
-            }
-            var birthDate = new Date(strBirthday);
-            var nowDateTime = new Date();
-            var age = nowDateTime.getFullYear() - birthDate.getFullYear();
-            if (nowDateTime.getMonth() < birthDate.getMonth() || (nowDateTime.getMonth() == birthDate.getMonth() && nowDateTime.getDate() < birthDate.getDate())) {
-                age--;
-            }
-            if (parseInt(age) < 18) {
-                $scope.realnameInfo.year18 = false
-                layer.msg($scope.lang.text("tigerWitID.settings.tip13"))
-            } else {
-                $scope.realnameInfo.year18 = true
-                if (parseInt(age) >= 75) {
-                    layer.msg($scope.lang.text("tigerWitID.myAccount.tip37"), {
-                        time: 0,
-                        btn: [$scope.lang.text("tigerWitID.ok")],
-                        yes: function (index) {
-                            layer.close(index)
-                        }
-                    })
-                }
-            }
-        }
     }
 
     // Address
     function AuthenAddressController($scope, $state, $modal, validator, account, $timeout) {
+        $scope.addressType = [
+            {
+                key: $scope.lang.text('tigerWitID.settings.openAccountNewTip20'),
+                value: 1
+            },
+            {
+                key: $scope.lang.text('tigerWitID.settings.openAccountNewTip21'),
+                value: 2
+            },
+            {
+                key: $scope.lang.text('tigerWitID.settings.openAccountNewTip22'),
+                value: 3
+            }
+        ]
+        $scope.frontErr = {
+            addressType: {
+                show: false
+            }
+        };
         $scope.backErr = {
             show: false,
             msg: ''
         }
         $scope.clickable = true;
-        $scope.addressImg = undefined;
+        $scope.addressInfo = {
+            type: {
+                key: undefined,
+                value: undefined
+            }
+        };
+        $scope.addressImgFront = undefined;
+        $scope.addressImgBack = undefined;
         $scope.uploadAddress = uploadAddress;
+        $scope.hideErr = hideErr;
+        $scope.showErr = showErr;
         function uploadAddress() {
-            if ($scope.addressImg) {
+            showErr('addressType');
+            if ($scope.addressForm.$invalid) {
+                return
+            }
+            if ($scope.addressImgFront) {
+                var oParams = {
+                    cert_type: $scope.addressInfo.type.value,
+                    front: $scope.addressImgFront
+                };
+                $scope.addressImgBack && (oParams.back = $scope.addressImgBack);
                 $scope.clickable = false;
-                account.setUploadAddressProve({ file: $scope.addressImg }).then(function (data) {
+                account.setUploadAddressProve(oParams).then(function (data) {
                     $scope.clickable = true;
                     if (!data) return;
                     if (data.is_succ) {
@@ -956,6 +941,17 @@
                 }, 2000);
             }
         }
+        function hideErr(controlName) {
+            if ($scope.frontErr[controlName]) {
+                $scope.frontErr[controlName].show = false;
+            }
+        }
+
+        function showErr(controlName) {
+            if ($scope.frontErr[controlName]) {
+                $scope.frontErr[controlName].show = true;
+            }
+        }
     }
 
     //islamic
@@ -970,12 +966,12 @@
         $scope.submitApplyIslamic = submitApplyIslamic;
 
         function submitApplyIslamic (status) {
-            console.log(status, $scope.applyIslamic);
+            // console.log(status, $scope.applyIslamic);
             if ($scope.waiting) return;
             if (status == 2 && !$scope.applyIslamic) return;
             $scope.waiting = true;
             account.setIslamicStatus(status).then(function (data) {
-                console.log(data);
+                // console.log(data);
                 $scope.waiting = false;
                 if (data.is_succ) {
                     $scope.$emit('goState', data.data);

@@ -14,7 +14,8 @@
             loginByMt4: loginByMt4,
             checkLogined: checkLogined,
             setToken: setToken,
-            updataId: updataId,
+            updataIdCard: updataIdCard,
+            updataIdCardBase64: updataIdCardBase64,
             setUsername: setUsername,
             checkExist: checkExist,
             updataUserInfo: updataUserInfo,
@@ -662,8 +663,14 @@
             });
         }
 
-        function updataId(params) {
-            return publicHttp.dealPublicRequest(o.updataId, 'PUT', params);
+        function updataIdCard(params) {
+            return publicHttp.dealPublicRequest(o.updataIdCard, 'POST', params);
+        }
+        function updataIdCardBase64 (face, file) {
+            return publicHttp.dealPublicRequest(o.uploadIdCardBase64, 'POST', {
+                face: face,
+                file: file
+            });
         }
 
         function setUsername(params){

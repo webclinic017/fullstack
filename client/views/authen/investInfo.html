@@ -1,7 +1,7 @@
 <div class="authen_content mg-tp-30 ctn center">
     <div class="authen_content__title" ng-class="{'en': lang.isEnglishArea()}">
-        <h2>{{lang.text('tigerWitID.myAccount.questionnaire')}}</h2>
-        <p class="authen_content__tip">{{lang.text('tigerWitID.myAccount.tip21')}}</p>
+        <h2>{{title}}</h2>
+        <p class="authen_content__tip">{{subTitle}}</p>
         <div tw-loading-img></div>
     </div>
     <div class="kyc mg-tp-40" ng-class="{'en': lang.isEnglishArea()}">
@@ -70,7 +70,7 @@
                     </div>
                 </div>
                 
-                <div class="mg-tp-30">
+                <div class="mg-tp-30 text-center">
                     <div ng-show="tip.questions.show">
                         <p class="alert-system">
                             {{ tip.questions.msg }}
@@ -87,15 +87,10 @@
                         {{lang.text('actLogin29')}}
                     </button>
 
-                    <!-- <a class="btn btn-sm btn-primary-gradient text-center mg-lf-20" ui-sref="space.center.index">
-                        跳过
-                    </a> -->
-
                     <button class="btn btn-sm btn-primary-gradient text-center" ng-if="!clickable">
                         <i class="loading_spinner fa fa-spinner"></i>
                         {{lang.text('tigerWitID.submitting')}}
                     </button>
-                    <!--<button class="btn btn-sm btn-info mg-lf-100" ng-if="type !== 'setting'" ng-click="goNextStep()">跳过</button>-->
                 </div>
             </form>
         </div>

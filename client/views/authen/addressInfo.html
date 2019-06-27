@@ -1,7 +1,7 @@
 <div class="authen_content ctn center">
     <div class="authen_content__title">
-        <h2>Your Address Details</h2>
-        <p class="authen_content__tip">Please start typing the first line of your address or post code and our system will auto-complete.</p>
+        <h2>{{lang.text('tigerWitID.settings.openAccountNewTip4')}}</h2>
+        <p class="authen_content__tip">{{lang.text('tigerWitID.settings.openAccountNewTip5')}}</p>
     </div>
     <div class="mg-tp-40 kyc">
         <form name="addressInfoForm" novalidate autocomplete="off">
@@ -87,14 +87,14 @@
                 <div class="col-xs-12">
                     <div class="form-control-wrapper">
                         <div class="select">
-                            <input class="select__input" name="province" type="text" placeholder="First line of address"
+                            <input class="select__input" name="province" type="text" placeholder="{{lang.text('tigerWitID.settings.openAccountNewTip8')}}"
                                 required ng-model="addressInfo.province.key" ng-class="{'form-control-error': frontErr.province.show && addressInfoForm.province.$invalid}"
                                 ng-blur="showErr('province')" ng-focus="hideErr('province')">
                         </div>
         
                         <div ng-show="frontErr.province.show">
                             <p class="alert alert-arrow_tp_lf" ng-show="addressInfoForm.province.$error.required">
-                                First line of address
+                                {{lang.text('tigerWitID.settings.openAccountNewTip8')}}
                             </p>
                         </div>
                     </div>
@@ -102,7 +102,7 @@
                 <div class="col-xs-12">
                     <div class="form-control-wrapper">
                         <div class="select">
-                            <input class="select__input" name="city" type="text" placeholder="Second line of address (optional)"
+                            <input class="select__input" name="city" type="text" placeholder="{{lang.text('tigerWitID.settings.openAccountNewTip9')}}"
                                 ng-model="addressInfo.city.key">
                         </div>
                     </div>
@@ -121,13 +121,13 @@
                 </div>
                 <div class="col-xs-12">
                     <div class="form-control-wrapper">
-                        <input class="form-control" name="address" type="text" placeholder="Town/City"
+                        <input class="form-control" name="address" type="text" placeholder="{{lang.text('tigerWitID.settings.openAccountNewTip10')}}"
                             required ng-class="{'form-control-error': (frontErr.address.show && addressInfoForm.address.$invalid)}"
                             ng-model="addressInfo.address" ng-focus="hideErr('address')" ng-blur="[showErr('address')]">
 
                         <div ng-show="frontErr.address.show">
                             <p class="alert-arrow_tp_lf" ng-show="addressInfoForm.address.$error.required">
-                                Town/City
+                                {{lang.text('tigerWitID.settings.openAccountNewTip10')}}
                             </p>
                         </div>
                     </div>
@@ -143,7 +143,7 @@
                             <input class="select__input"
                                 name="type"
                                 type="text"
-                                placeholder="您是否在你这个地址居住三个月以上？"
+                                placeholder="{{lang.text('tigerWitID.settings.openAccountNewTip11')}}"
                                 readonly
                                 ng-model="addressInfo.type.key">
                             
@@ -185,7 +185,7 @@
                     </div>
                 </div>
                 <div class="col-xs-12">
-                    <p>Is your nationality anywhere other than your country of residence?</p>
+                    <p>{{lang.text('tigerWitID.settings.openAccountNewTip12')}}</p>
                     <div class="row">
                         <div class="col-xs-7">
                             <div class="form-control-wrapper">
@@ -208,13 +208,13 @@
                             </div>
                         </div>
                         <div class="col-xs-5 authen_btn_wrapper text-right">
-                            <span class="authen_btn" ng-class="{active: addressInfo.isNationality}" ng-click="checkNationality(true)">{{lang.text("tigerWitID.no")}}</span>
-                            <span class="authen_btn" ng-class="{active: !addressInfo.isNationality}" ng-click="checkNationality(false)">{{lang.text("tigerWitID.yes")}}</span>
+                            <span class="authen_btn" ng-class="{active: !addressInfo.isNationality}" ng-click="checkNationality(false)">{{lang.text("tigerWitID.no")}}</span>
+                            <span class="authen_btn" ng-class="{active: addressInfo.isNationality}" ng-click="checkNationality(true)">{{lang.text("tigerWitID.yes")}}</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-xs-12">
-                    <p>Is your tax residency anywhere other than your country of residence?</p>
+                    <p>{{lang.text('tigerWitID.settings.openAccountNewTip13')}}</p>
                     <div class="row">
                         <div class="col-xs-7">
                             <div class="form-control-wrapper">
@@ -237,8 +237,8 @@
                             </div>
                         </div>
                         <div class="col-xs-5 authen_btn_wrapper text-right">
-                            <span class="authen_btn" ng-class="{active: addressInfo.isTaxResidency}" ng-click="checkTaxResidency(true)">{{lang.text("tigerWitID.no")}}</span>
-                            <span class="authen_btn" ng-class="{active: !addressInfo.isTaxResidency}" ng-click="checkTaxResidency(false)">{{lang.text("tigerWitID.yes")}}</span>
+                            <span class="authen_btn" ng-class="{active: !addressInfo.isTaxResidency}" ng-click="checkTaxResidency(false)">{{lang.text("tigerWitID.no")}}</span>
+                            <span class="authen_btn" ng-class="{active: addressInfo.isTaxResidency}" ng-click="checkTaxResidency(true)">{{lang.text("tigerWitID.yes")}}</span>
                         </div>
                     </div>
                 </div>
