@@ -296,7 +296,7 @@ module.exports = {
     },
     faqAccount2: {
         zh: "A：在TigerWit注册成功后，点击交易，系统会提醒您选择开立体验金账户或真实交易账户，按照流程完善资料后即可开立对应账户。",
-        en: "A: Register successfully at TigerWit, the system will remind you to choose to open an trail accountor Real Account before you transaction, after completing the relevant process can open an account.",
+        en: "A: Register successfully at TigerWit, the system will remind you to choose to open an Demo accountor Real Account before you transaction, after completing the relevant process can open an account.",
         vi: "^^-^^",
         "zh-Hant": "A：在TigerWit註冊成功後，點擊交易，系統會提醒您選擇開立體驗金賬戶或真實交易賬戶，按照流程完善資料後即可開立對應賬戶。",
         id: "__id__"
