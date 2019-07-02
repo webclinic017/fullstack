@@ -86,7 +86,7 @@
             en: {
                 ios: {
                     app_info: {
-                        version_name : "V4.3.3",
+                        version_name : "V4.4.0",
                         description: "This update: \n1. Updated opening live account process;\n2. Optimize the user experience;\n3. Fix known bugs",
                         updated_description: "70% users are using new version",
                         force_update : true
@@ -105,7 +105,7 @@
             cn: {
                 ios: {
                     app_info: {
-                        version_name : "V4.3.3",
+                        version_name : "V4.4.0",
                         description: "本次更新：\n1.更新了开户认证流程；\n2.优化用户体验；\n3.修复已知bug",
                         updated_description: "70%的用户正在使用新版本",
                         force_update : true
