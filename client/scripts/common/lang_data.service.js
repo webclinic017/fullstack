@@ -2146,7 +2146,7 @@
                         "zh-Hant": "姓",
                         "id": "Nama Depan",
                         "es": "Nombre real",
-                        "pt-BR": " "
+                        "pt-BR": "Nome real"
                     },
                     "firstName": {
                         "zh": "名",
@@ -2155,7 +2155,7 @@
                         "zh-Hant": "名",
                         "id": "Nama Belakang",
                         "es": "Nombre real",
-                        "pt-BR": " "
+                        "pt-BR": "Nome real"
                     },
                     "fillName": {
                         "zh": "请输入真实姓名",
@@ -10169,8 +10169,8 @@
                         "vi": "CFDs (Các chỉ số chứng khoán) là những sản phẩm phức tạp có nguy cơ mất tiền cao. Bạn chỉ nên tiến hành giao dịch nếu bạn biết cách áp dụng các biện pháp kiểm soát rủi ro, bao gồm cắt lỗ và chốt lời để giảm thiểu tổn thất.",
                         "zh-Hant": "差價合約是複雜的產品，存在高額虧損的風險。只有在您通過應用風險控制（包括止損和止盈訂單）來尋求最小化損失時，才應該繼續使用該產品。",
                         "id": "CFD adalah produk yang memiliki kompleksitas serta risiko yang tinggi dan dapat mengakibatkan anda kehilangan modal. Oleh karena itu anda selalu disarankan untuk meminimalisir kerugian anda dengan cara mengontrol risiko, termasuk penggunaan stop loss dan take profit.",
-                        "es": "",
-                        "pt-BR": ""
+                        "es": "Los CFDs son productos complejos que conllevan un alto riesgo de perder su dinero. Debe proseguir solamente si intentará minimizar las pérdidas mediante la aplicación de control de riesgos, incluyendo operaciones del tipo stop loss o take profit.",
+                        "pt-BR": "CFDs são produtos complexos que envolvem um alto risco de perder seu dinheiro. Você deve proceder somente se procurar minimizar as perdas aplicando controles de risco, incluindo stop loss e take profit orders."
                     },
                     "openAccountNewTip24": {
                         "zh": "如果您的承受风险能力较低，差价合约将不适合您。",
@@ -10178,8 +10178,8 @@
                         "vi": "CFDs sẽ không phù hợp với bạn nếu bạn không sẵn sàng chấp nhận bất kỳ rủi ro nào đối với tiền vốn.",
                         "zh-Hant": "如果您的承受風險能力較低，差價合約將不適合您。",
                         "id": "CFD tidak cocok untuk anda apabila anda tidak siap menerima risiko. ",
-                        "es": "",
-                        "pt-BR": ""
+                        "es": "Los CFDs no serán apropiados para usted si no está preparado para correr ningún riesgo con su capital.",
+                        "pt-BR": "Os CFDs não serão apropriados para você se você não estiver preparado para aceitar qualquer risco ao seu capital."
                     },
                     "openAccountNewTip25": {
                         "zh": "你想继续吗?",
@@ -10187,8 +10187,8 @@
                         "vi": "Bạn có muốn tiếp tục không?",
                         "zh-Hant": "你想繼續嗎?",
                         "id": "Apakah anda yakin untuk melanjutkan?",
-                        "es": "",
-                        "pt-BR": ""
+                        "es": "¿Le gustaría continuar?",
+                        "pt-BR": "Você gostaria de continuar?"
                     },
                     "provideService": {
                         "zh": "定制您的个性化服务",

@@ -4,27 +4,18 @@
             <ul class="m_third_navbar__progress clearfix">
                 <li class="circle active">
                     <span class=""></span>
-                    <div class="tit">
-                        <%=lang.text('third_navBar1')%>
-                    </div>
                 </li>
                 <li class="circle num1">
                     <span class=""></span>
-                    <div class="tit">
-                        <%=lang.text('third_navBar2')%>
-                    </div>
                 </li>
                 <li class="circle num2">
                     <span class=""></span>
-                    <div class="tit">
-                        <%=lang.text('third_navBar3')%>
-                    </div>
                 </li>
                 <li class="circle num3">
                     <span class=""></span>
-                    <div class="tit">
-                        <%=lang.text('third_navBar4')%>
-                    </div>
+                </li>
+                <li class="circle num4">
+                    <span class=""></span>
                 </li>
                 <li class="line num1">
                     <span class=""></span>
@@ -33,6 +24,9 @@
                     <span class=""></span>
                 </li>
                 <li class="line num3">
+                    <span class=""></span>
+                </li>
+                <li class="line num4">
                     <span class=""></span>
                 </li>
             </ul>
@@ -66,116 +60,220 @@
             <p class="tip"><%=lang.text('third_index6')%></p>
         </div>
     </div>
-    <div class="m_third_kyc">
-
-        <div class="m_third_kyc__template"></div>
-
-        <div class="m_third_kyc__btn">
-            <button class="btn btn-primary">
-                <%=lang.text('third_next')%>
-            </button>
+    <div class="m_third_realnameInfo">
+        <p><%=lang.text('third_username1')%></p>
+        <div class="m_third_realnameInfo__male">
+            <span class="male active" data-gender="1"><%=lang.text('third_username2')%></span>
+            <span class="female" data-gender="0"><%=lang.text('third_username3')%></span>
         </div>
-    </div>
-    <div class="m_third_userinfo">
-        <!-- <div class="m_third_userinfo__wrapper">
-            <input class="info realname"
-                   type="text"
-                   placeholder="<%=lang.text('third_placeholder1')%>">
+        <div class="m_third_realnameInfo__wrapper">
+            <input class="info lastname"
+                    type="text"
+                    placeholder="<%=lang.text('third_username20')%>">
         </div>
-        <div class="m_third_userinfo__wrapper">
-            <input class="info id_no"
-                   type="text"
-                   placeholder="<%=lang.text('third_placeholder2')%>">
-        </div> -->
-        <div class="m_third_userinfo__wrapper">
+        <div class="m_third_realnameInfo__wrapper">
+            <input class="info firstname"
+                    type="text"
+                    placeholder="<%=lang.text('third_username21')%>">
+        </div>
+        <div class="m_third_realnameInfo__wrapper">
             <input class="info email"
                 type="text"
                 placeholder="<%=lang.text('third_placeholder3')%>">
         </div>
-        <div class="m_third_userinfo__wrapper">
-            <input class="info country"
-                type="text"
-                placeholder="<%=lang.text('third_placeholder4')%>">
-            <select class="country_list"></select>
-        </div>
-        <div class="m_third_userinfo__wrapper state_cn">
-            <input class="info state"
-                   type="text"
-                   placeholder="<%=lang.text('third_username14')%>">
-            <select class="state_list"></select>
-        </div>
-        <div class="m_third_userinfo__wrapper state_global active">
-            <input class="info state"
-                   type="text"
-                   placeholder="<%=lang.text('third_username18')%>">
-        </div>
-        <div class="m_third_userinfo__wrapper city_cn">
-            <input class="info city"
-                   type="text"
-                   placeholder="<%=lang.text('third_username15')%>">
-            <select class="city_list"></select>
-        </div>
-        <div class="m_third_userinfo__wrapper city_global active">
-            <input class="info city"
-                   type="text"
-                   placeholder="<%=lang.text('third_username19')%>">
-        </div>
-        <div class="m_third_userinfo__wrapper">
-            <input class="info post_code"
-                   type="text"
-                   placeholder="<%=lang.text('third_username17')%>">
-        </div>
-        <div class="m_third_userinfo__wrapper">
-            <input class="info address"
-                type="text"
-                placeholder="<%=lang.text('third_username16')%>">
-        </div>
-        <input type="text" style="display: none;">
-        <div class="m_third_userinfo__btn">
-            <button class="btn btn-primary">
-                <%=lang.text('third_next')%>
-            </button>
-        </div>
-    </div>
-    <div class="m_third_username">
-        <p><%=lang.text('third_username1')%></p>
-        <div class="m_third_username__male">
-            <span class="male active" data-gender="1"><%=lang.text('third_username2')%></span>
-            <span class="female" data-gender="0"><%=lang.text('third_username3')%></span>
-        </div>
-        <div class="m_third_username__wrapper">
-            <input class="info realname"
-                   type="text"
-                   placeholder="<%=lang.text('third_username4')%>">
-        </div>
-        <div class="m_third_username__wrapper">
-            <input class="info card_type"
-                   type="text"
-                   placeholder="<%=lang.text('third_username5')%>">
-            <select class="card_type_list"></select>
-        </div>
-        <div class="m_third_username__wrapper">
-            <input class="info id_no"
-                    type="text"
-                    placeholder="<%=lang.text('third_username6')%>">
-        </div>
-        <div class="m_third_username__wrapper">
+        <div class="m_third_realnameInfo__wrapper">
             <input class="info birth"
                     id="birth"
                     type="text"
                     placeholder="<%=lang.text('third_username7')%>">
         </div>
         <input type="text" style="display: none;">
-        <div class="m_third_username__btn">
+        <div class="m_third_realnameInfo__btn">
             <button class="btn btn-primary">
                 <%=lang.text('third_next')%>
             </button>
         </div>
     </div>
-    <div class="m_third_card">
+    <div class="m_third_addressInfo">
+        <div class="m_third_addressInfo__wrapper">
+            <input class="info country"
+                type="text"
+                placeholder="<%=lang.text('third_placeholder4')%>">
+            <select id="country_list" class="country_list"></select>
+        </div>
+        <div class="m_third_addressInfo__wrapper state_cn">
+            <input class="info state"
+                    type="text"
+                    placeholder="<%=lang.text('third_username14')%>">
+            <select id="state_list" class="state_list"></select>
+        </div>
+        <div class="m_third_addressInfo__wrapper state_global">
+            <input class="info state"
+                    type="text"
+                    placeholder="<%=lang.text('third_username22')%>">
+        </div>
+        <div class="m_third_addressInfo__wrapper city_cn">
+            <input class="info city"
+                    type="text"
+                    placeholder="<%=lang.text('third_username15')%>">
+            <select id="city_list" class="city_list"></select>
+        </div>
+        <div class="m_third_addressInfo__wrapper city_global">
+            <input class="info city"
+                    type="text"
+                    placeholder="<%=lang.text('third_username23')%>">
+        </div>
+        <div class="m_third_addressInfo__wrapper">
+            <input class="info post_code"
+                    type="text"
+                    placeholder="<%=lang.text('third_username17')%>">
+        </div>
+        <div class="m_third_addressInfo__wrapper">
+            <input class="info address"
+                type="text"
+                placeholder="<%=lang.text('third_username16')%>">
+        </div>
+        <p class="pd-tp-10"><%=lang.text('third_username24')%></p>
+        <div class="m_third_addressInfo__wrapper clearfix">
+            <div class="radio_wrapper fr">
+                <span class="" data-type="0" data-key="addressMonth"><%=lang.text('thirdH5.no')%></span>
+                <span class="active" data-type="1" data-key="addressMonth"><%=lang.text('thirdH5.yes')%></span>
+            </div>
+        </div>
+        <p class="pd-tp-10"><%=lang.text('third_username25')%></p>
+        <div class="m_third_addressInfo__wrapper clearfix">
+            <span class="radio_current_wrapper" data-key="nationality"></span>
+            <div class="radio_select_wrapper fl relative active" data-key="nationality">
+                <input class="info nationality"
+                    type="text"
+                    placeholder="<%=lang.text('third_placeholder4')%>">
+                <select id="nationality_list" class="country_list"></select>
+            </div>
+            <div class="radio_wrapper fr">
+                <span class="" data-type="0" data-key="nationality"><%=lang.text('thirdH5.no')%></span>
+                <span class="active" data-type="1" data-key="nationality"><%=lang.text('thirdH5.yes')%></span>
+            </div>
+        </div>
+        <p class="pd-tp-10"><%=lang.text('third_username26')%></p>
+        <div class="m_third_addressInfo__wrapper clearfix">
+            <span class="radio_current_wrapper" data-key="taxResidency"></span>
+            <div class="radio_select_wrapper fl relative active" data-key="taxResidency">
+                <input class="info taxResidency"
+                    type="text"
+                    placeholder="<%=lang.text('third_placeholder4')%>">
+                <select id="taxResidency_list" class="country_list"></select>
+            </div>
+            <div class="radio_wrapper fr">
+                <span class="" data-type="0" data-key="taxResidency"><%=lang.text('thirdH5.no')%></span>
+                <span class="active" data-type="1" data-key="taxResidency"><%=lang.text('thirdH5.yes')%></span>
+            </div>
+        </div>
+        <input type="text" style="display: none;">
+        <div class="m_third_addressInfo__btn">
+            <button class="btn btn-primary">
+                <%=lang.text('third_next')%>
+            </button>
+        </div>
+    </div>
+    <div class="m_third_investInfo">
+        <div id="m_third_investInfo__template" class="m_third_investInfo__template"></div>
+
+        <div class="m_third_investInfo__btn">
+            <button class="btn btn-primary">
+                <%=lang.text('third_next')%>
+            </button>
+        </div>
+    </div>
+    <div class="m_third_fundInfo">
+        <div id="m_third_fundInfo__template" class="m_third_fundInfo__template"></div>
+
+        <div class="m_third_fundInfo__btn">
+            <button class="btn btn-primary">
+                <%=lang.text('third_next')%>
+            </button>
+        </div>
+    </div>
+    <div class="m_third_address">
         <div class="m_third_card__tip">
+            <%=lang.text('third_address_1')%>
+        </div>
+        <div class="m_third_card__wrapper">
+            <input class="info card_type"
+                   type="text"
+                   placeholder="<%=lang.text('third_username5')%>">
+            <select id="address_type_list"></select>
+        </div>
+        <div class="m_third_address__tip mg-tp-10">
+            <!-- <p><%=lang.text('third_address_2')%></p>
+            <p><%=lang.text('third_address_3')%></p>
+            <p><%=lang.text('third_address_4')%></p>
+            <p><%=lang.text('third_address_5')%></p> -->
+            <p><%=lang.text('third_address_6')%></p>
+        </div>
+        <div class="m_third_card__pic addressOne">
+            <div class="img addressOne">
+                
+            </div>
+            <form class="form">
+                <input type="file" data-page="addressOne" name="file" accept="image/*" />
+            </form>
+
+            <div class="plus"></div>
+            <div class="tip"></div>
+        </div>
+        <div class="m_third_card__pic addressTwo">
+            <div class="img addressTwo">
+                
+            </div>
+            <form class="form">
+                <input type="file" data-page="addressTwo" name="file" accept="image/*" />
+            </form>
+
+            <div class="plus"></div>
+            <div class="tip"></div>
+        </div>
+        <div class="m_third_card__eg">
+            <p class="tit"><%=lang.text('third_cardEgTitle')%></p>
+            <ul class="clearfix">
+                <li class="item fl text-center">
+                    <img src="/white_label/icons/authen-address-1.png" alt="">
+                    <p><%=lang.text('third_cardEgTip1')%></p>
+                </li>
+                <li class="item fl text-center">
+                    <img src="/white_label/icons/authen-address-2.png" alt="">
+                    <p><%=lang.text('third_cardEgTip2')%></p>
+                </li>
+                <li class="item fl text-center">
+                    <img src="/white_label/icons/authen-address-3.png" alt="">
+                    <p><%=lang.text('third_cardEgTip3')%></p>
+                </li>
+                <li class="item fl text-center">
+                    <img src="/white_label/icons/authen-address-4.png" alt="">
+                    <p><%=lang.text('third_cardEgTip4')%></p>
+                </li>
+            </ul>
+        </div>
+        <div class="m_third_address__btn">
+            <button class="btn btn-primary">
+                <%=lang.text('third_submit')%>
+            </button>
+        </div>
+    </div>
+    <div class="m_third_identity">
+        <div class="m_third_identity__tip">
             <%=lang.text('third_uploadCard')%>
             <span class=""></span>
+        </div>
+        <div class="m_third_card__wrapper">
+            <input class="info card_type"
+                   type="text"
+                   placeholder="<%=lang.text('third_username5')%>">
+            <select id="identity_type_list"></select>
+        </div>
+        <div class="m_third_card__wrapper">
+            <input class="info card_no"
+                   type="text"
+                   placeholder="<%=lang.text('third_username6')%>">
         </div>
         <div class="m_third_card__pic front">
             <div class="img front">
@@ -219,7 +317,7 @@
                 </li>
             </ul>
         </div>
-        <div class="m_third_card__btn">
+        <div class="m_third_identity__btn">
             <button class="btn btn-primary">
                 <%=lang.text('third_submit')%>
             </button>
@@ -238,79 +336,26 @@
             <p class="desc"><%=lang.text('third_verify6')%></p>
         </div>
     </div>
-    <div class="m_third_success">
-        <div class="m_third_success__tip">
-            请设置MT4账号密码，用于登陆MT4客户端
-        </div>
-        <div class="m_third_success__wrapper">
-            <input class="info"
-                   type="password"
-                   placeholder="设置MT4密码">
-        </div>
-        <div class="m_third_success__btn">
-            <button class="btn btn-primary">
-                完成
-            </button>
-        </div>
-    </div>
-    <div class="m_third_complete">
-        <div class="m_third_card__tip">
-            <%=lang.text('third_address_1')%>
-        </div>
-        <div class="m_third_complete__tip mg-tp-10">
-            <p><%=lang.text('third_address_2')%></p>
-            <p><%=lang.text('third_address_3')%></p>
-            <p><%=lang.text('third_address_4')%></p>
-            <p><%=lang.text('third_address_5')%></p>
-            <p><%=lang.text('third_address_6')%></p>
-        </div>
-        <div class="m_third_card__pic">
-            <div class="img address">
-                
-            </div>
-            <form class="form">
-                <input type="file" data-page="address" name="file" accept="image/*" />
-            </form>
 
-            <div class="plus"></div>
-            <div class="tip"></div>
-        </div>
-        <div class="m_third_card__eg">
-            <p class="tit"><%=lang.text('third_cardEgTitle')%></p>
-            <ul class="clearfix">
-                <li class="item fl text-center">
-                    <img src="/white_label/icons/authen-address-1.png" alt="">
-                    <p><%=lang.text('third_cardEgTip1')%></p>
-                </li>
-                <li class="item fl text-center">
-                    <img src="/white_label/icons/authen-address-2.png" alt="">
-                    <p><%=lang.text('third_cardEgTip2')%></p>
-                </li>
-                <li class="item fl text-center">
-                    <img src="/white_label/icons/authen-address-3.png" alt="">
-                    <p><%=lang.text('third_cardEgTip3')%></p>
-                </li>
-                <li class="item fl text-center">
-                    <img src="/white_label/icons/authen-address-4.png" alt="">
-                    <p><%=lang.text('third_cardEgTip4')%></p>
-                </li>
-            </ul>
-        </div>
-        <div class="m_third_complete__btn">
-            <button class="btn btn-primary">
-                <%=lang.text('third_submit')%>
-            </button>
+    <div class="m_third_layer_temp">
+        <div style="text-align: left; padding: 20px;">
+            <p style="padding-bottom: 20px;"><%=lang.text('third_username27')%></p>
+            <p style="padding-bottom: 20px;"><%=lang.text('third_username28')%></p>
+            <p><%=lang.text('third_username29')%></p>
         </div>
     </div>
 </div>
 
+
+
+
 <script id="template_kyc_info" type="text/html">
     <$for(var i=0;i<data.length;i++){$>
         <$if (data[i].type == 1) {$>
-            <div class="m_third_kyc__single">
+            <div class="m_third_kyc__single <$= data[i].active ? 'active' : ''$>" data-name="<$= data[i].name$>">
                 <p class="tit"><$= data[i].title$></p>
                 <div class="cont">
-                    <select data-name="<$= data[i].name$>">
+                    <select class="m_third_kyc__single-select" data-name="<$= data[i].name$>">
                         <option value="" disabled selected></option>
                         <$for(var j=0;j<data[i].list.length;j++){$>
                         <option value="<$= data[i].list[j].key$>"><$= data[i].list[j].value$></option>
@@ -320,7 +365,7 @@
             </div>
         <$}$>
         <$if (data[i].type == 2) {$>
-            <div class="m_third_kyc__single">
+            <div class="m_third_kyc__single <$= data[i].active ? 'active' : ''$>" data-name="<$= data[i].name$>">
                 <p class="tit"><$= data[i].title$></p>
                 <div class="cont">
                     <ul class="m_third_kyc__single-list radio clearfix">
@@ -337,14 +382,14 @@
             </div>
         <$}$>
         <$if (data[i].type == 3) {$>
-            <div class="m_third_kyc__single">
+            <div class="m_third_kyc__single <$= data[i].active ? 'active' : ''$>" data-name="<$= data[i].name$>">
                 <p class="tit"><$= data[i].title$></p>
                 <div class="cont">
                     <ul class="m_third_kyc__single-list checkbox clearfix">
                         <$for(var j=0;j<data[i].list.length;j++){$>
                         <li>
                             <label>
-                                <span class="inp" data-name="<$= data[i].name$>" data-value="<$= data[i].list[j].key$>"></span>
+                                <span class="inp muli" data-name="<$= data[i].name$>" data-value="<$= data[i].list[j].key$>"></span>
                                 <span><$= data[i].list[j].value$></span>
                             </label>
                         </li>
