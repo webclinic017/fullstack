@@ -450,7 +450,7 @@
                                                 $scope.loading.demo = false;
                                                 globalScope.personal.is_live = 1;
                                                 globalScope.personal.verify_status = data.data.status;
-                                                $state.go('authen.subpage')
+                                                $state.go('authen.subpage', {subpage: "realname"})
                                                 closeModal()
                                             }
                                         })
@@ -469,7 +469,7 @@
                         if ($scope.isIslamic) {
                             confirmIslamic(true);
                         } else {
-                            $state.go('authen.subpage');
+                            $state.go('authen.subpage', {subpage: "realname"})
                         }
                         // $timeout(function () {
                         //     var obj = {
@@ -520,13 +520,13 @@
                 if (isIslamic) {
                     confirmIsApply();
                 } else {
-                    $state.go('authen.subpage');
+                    $state.go('authen.subpage', {subpage: "realname"})
                 }
             }
         }
         function confirmIsApply () {
             if ($scope.personal.islamic_status) {
-                $state.go('authen.subpage');
+                $state.go('authen.subpage', {subpage: "realname"})
             } else {
                 $modal.open({
                     templateUrl: '/views/account/islamic_modal.html',
@@ -563,7 +563,7 @@
                                 });
                             } else {
                                 closeModal();
-                                $state.go('authen.subpage');
+                                $state.go('authen.subpage', {subpage: "realname"})
                             }
                         }
                         function closeModal() {
