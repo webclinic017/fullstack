@@ -23,7 +23,15 @@
                     return;
                 }
                 if (isCn) {
-                    window.location.href = nodeResponseInfo.android;
+                    publicRequest('getVersionCheck', 'GET', {
+                        type: 3,
+                        version: '1.0.0',
+                        lang: 'cn'
+                    }).then(function (data) {
+                        if (data.is_succ) {
+                            window.location.href = data.data.url;
+                        }
+                    });
                 } else {
                     window.location.href = nodeResponseInfo.androidGlobal;
                 }

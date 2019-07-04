@@ -1,9 +1,9 @@
-<div class="index_new">
+<div class="index_new" ng-controller="HomeIndexController" ng-cloak>
   <%if (lang.areaId != 1) {%>
   <div class="index_new__focus" style='background-image: url("<%= lang.image('homeFocusGlobal')%>")'>
-    <%} else {%>
-    <div class="index_new__focus" style='background-image: url("<%= lang.image('homeFocusCn')%>")'>
-      <%}%>
+  <%} else {%>
+  <div class="index_new__focus" style='background-image: url("<%= lang.image('homeFocusCn')%>")'>
+  <%}%>
     <div class="index_new__container">
       <h3 class="index_new__focus-title"><%= lang.text("newhome_1")%></h3>
       <h3 class="index_new__focus-title"><%= lang.text("newhome_1_1")%></h3>
@@ -54,7 +54,7 @@
             <a href="<%= lang.text('downloadGlobalAndroid') %>"><img src="<%= lang.image('homeAppAndroidGlobal')%>"
                 alt=""></a>
             <%} else {%>
-            <a href="<%= lang.text('androidApp') %>"><img src="<%= lang.image('homeAppAndroidCn')%>" alt=""></a>
+            <a ng-href="{{appVersionInfo.android}}"><img src="<%= lang.image('homeAppAndroidCn')%>" alt=""></a>
             <%}%>
           </div>
         </div>
@@ -94,7 +94,7 @@
         </div>
       </div>
     </div>
-    <div class="index_new__container" ng-controller="HomeIndexController" ng-cloak>
+    <div class="index_new__container">
       <div class="index_new__flexible">
         <h3 class="index_new__flexible-title"><%= lang.text("newhome_17")%></h3>
         <p class="index_new__flexible-sub_tit"><%= lang.text("newhome_17_1")%></p>
@@ -238,7 +238,7 @@
             ng-click="toTrackEvent('home page', 'global_home_click_googleplay')"><img
               src="<%= lang.image('homeAppAndroidGlobal')%>" alt=""></a>
           <%} else {%>
-          <a href="<%= lang.text('androidApp') %>"
+          <a ng-href="{{appVersionInfo.android}}"
             ng-click="toTrackEvent('home page', 'global_home_click_googleplay')"><img
               src="<%= lang.image('homeAppAndroidCn')%>" alt=""></a>
           <%}%>
