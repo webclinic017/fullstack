@@ -46,13 +46,13 @@
                     angular.forEach($scope.depositTypeLst, function (value, index) {
                         // console.log(value, index,'1')
                         if (value.default) {
-                            changeDepositType(index)
+                            changeDepositTypeBefore(index)
                             return
                         }
                     })
                     // 如果还等于钱包
                     if ($scope.deposit.type === 'wallet') {
-                        changeDepositType(Object.keys($scope.depositTypeLst)[0])
+                        changeDepositTypeBefore(Object.keys($scope.depositTypeLst)[0])
                     }
                 }
             } else {
@@ -94,7 +94,7 @@
                     if (value.default && !$scope.deposit.type) {
                         // $scope.deposit.type = value.key;
                         $timeout(function () {
-                            changeDepositType(value.key)
+                            changeDepositTypeBefore(value.key)
                         }, 50);
                         // console.log($scope.deposit.type)
                     }
@@ -261,10 +261,28 @@
             $scope.deposit.submitBtn = true;
         }
 
-        // 切换充值方式
-        function changeDepositType(type) {
+        // 切换充值方式前
+        function changeDepositTypeBefore(type) {
             // console.log($scope.depositTypeLst, type)
             if (!type) return;
+            if(type == 'quick_3' || type == 'Transfer'){
+                var obj = {
+                  title: $scope.lang.text('tigerWitID.prompt'),
+                  msg: $scope.lang.text('tigerWitID.depositWithdrawal.transferQuick3Tip1') + '\n\r'+ $scope.lang.text('tigerWitID.depositWithdrawal.transferQuick3Tip2') +'\n\r' + $scope.lang.text('tigerWitID.depositWithdrawal.transferQuick3Tip3'),
+                  msgClass: '',
+                  btns: {}
+                }
+                obj.btns[$scope.lang.text("tigerWitID.confirm")] = function(){
+                    changeDepositType(type)
+                }
+                $layer(obj);
+            }else{
+                changeDepositType(type)
+            }
+            
+        }
+         // 切换充值方式
+         function changeDepositType(type) {
             $scope.deposit.depositCard = undefined;
             $scope.deposit.type = type;
             $scope.deposit.isNeedBank = $scope.depositTypeLst[$scope.deposit.type].check_card;
@@ -277,6 +295,7 @@
             checkInputAmount();
             checkInvestBank();
         }
+
 
         // 切换充值方式弹窗
         function openChangeDepTypeMdl() {
@@ -321,7 +340,7 @@
 
                     function changeType() {
                         closeModal();
-                        changeDepositType($scope.deposit.type);
+                        changeDepositTypeBefore($scope.deposit.type);
                     }
 
                     function closeModal() {

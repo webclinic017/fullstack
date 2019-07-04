@@ -38,12 +38,12 @@
         }
 
         // 检查新消息
-        $scope.$on('refreshNoticeList', function() {
-            console.log('refreshNoticlist jihuo');
-            noticeId = $interval(function() {
-                getUnreadLength();
-            },30000);
-        });
+        // $scope.$on('refreshNoticeList', function() {
+        //     console.log('refreshNoticlist jihuo');
+        //     noticeId = $interval(function() {
+        //         getUnreadLength();
+        //     },30000);
+        // });
 
         // 获取未读红包数
         function getRedBagNum () {
