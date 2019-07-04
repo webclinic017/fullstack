@@ -11538,10 +11538,10 @@ module.exports = {
             "pt-BR": "Quais tipos de conta estão disponíveis?"
         },
         "real1A": {
-            "zh": "TigerWit offers an trail account on which to practice trading with virtual funds, and a Live account on which to trade with real funds.",
-            "en": "TigerWit offers an trail account on which to practice trading with virtual funds, and a Live account on which to trade with real funds.",
+            "zh": "TigerWit offers an Demo account on which to practice trading with virtual funds, and a Live account on which to trade with real funds.",
+            "en": "TigerWit offers an Demo account on which to practice trading with virtual funds, and a Live account on which to trade with real funds.",
             "vi": "TigerWit giới thiệu khách hàng mở một tài khoản trải nghiệm để có thể luyện tập giao dịch với các quỹ ảo và một tài khoản Thực để giao dịch với các quỹ thực tế.",
-            "zh-Hant": "TigerWit offers an trail account on which to practice trading with virtual funds, and a Live account on which to trade with real funds.",
+            "zh-Hant": "TigerWit offers an Demo account on which to practice trading with virtual funds, and a Live account on which to trade with real funds.",
             "id": "TigerWIt menyediakan Akun Pengalaman yang dapat digunakan untuk latihan trading dengan menggunakan uang virtual, dan Akun Live untuk trading menggunakan uang asli.",
             "es": "TigerWit ofrece una cuenta de Práctica con la cual probar sus estrategias de trading con fondos virtuales, y una cuenta Real en la cual operar fondos reales. ",
             "pt-BR": "TigerWit oferece uma conta de trilha na qual praticar trading com fundos virtuais, e uma conta Live na qual negociar com fundos reais."
@@ -11574,10 +11574,10 @@ module.exports = {
             "pt-BR": "Quanto tempo demora para abrir uma conta?"
         },
         "real3A": {
-            "zh": "Trail account are opened immediately. A Live account will normally be approved within minutes; however, we may request copies of ID to complete the process.",
-            "en": "Trail account are opened immediately. A Live account will normally be approved within minutes; however, we may request copies of ID to complete the process.",
+            "zh": "Demo account are opened immediately. A Live account will normally be approved within minutes; however, we may request copies of ID to complete the process.",
+            "en": "Demo account are opened immediately. A Live account will normally be approved within minutes; however, we may request copies of ID to complete the process.",
             "vi": "Những tài khoản kinh nghiệm sẽ được mở ngay lập tức. Tài khoản thực thường sẽ được chấp thuận trong một vài phút, tuy nhiên, chúng tôi có thể yêu cầu bản sao Chứng minh nhân dân hoặc Căn Cước Công Dân để hoàn tất quy trình.",
-            "zh-Hant": "Trail account are opened immediately. A Live account will normally be approved within minutes; however, we may request copies of ID to complete the process.",
+            "zh-Hant": "Demo account are opened immediately. A Live account will normally be approved within minutes; however, we may request copies of ID to complete the process.",
             "id": "Untuk membuka Akun Live anda harus terlebih dahulu melengkapi dokumen yang diperlukan, sedangkan Akun Pengalaman dapat dibuka secara langsung/instan",
             "es": "Las cuentas de Práctica se abren inmediatamente. Una cuenta Real será normalmente aprobada en minutos; sin embargo, pudiéramos solicitar copias de ID para completar el proceso.",
             "pt-BR": "Conta de trilha são abertas imediatamente. Uma conta Live normalmente será aprovada em poucos minutos; no entanto, podemos solicitar cópias do ID para concluir o processo."
@@ -12042,10 +12042,10 @@ module.exports = {
             "pt-BR": "Como eu faço login na minha plataforma de negociações MT4"
         },
         "protect2A_1": {
-            "zh": "When you open a TigerWit trail account or a TigerWit Live account we will email you TigerWit MT4 login details and a temporary password. To change your temporary password please visit the ",
-            "en": "When you open a TigerWit trail account or a TigerWit Live account we will email you TigerWit MT4 login details and a temporary password. To change your temporary password please visit the ",
+            "zh": "When you open a TigerWit Demo account or a TigerWit Live account we will email you TigerWit MT4 login details and a temporary password. To change your temporary password please visit the ",
+            "en": "When you open a TigerWit Demo account or a TigerWit Live account we will email you TigerWit MT4 login details and a temporary password. To change your temporary password please visit the ",
             "vi": "Khi bạn mở tài khoản Trải Nghiệm tại TigerWit hoặc tài khoản TigerWit Thực, chúng tôi sẽ gửi cho bạn chi tiết đăng nhập TigerWit MT4 và một mật khẩu tạm thời. Để thay đổi mật khẩu tạm thời của bạn, vui lòng truy cập ",
-            "zh-Hant": "When you open a TigerWit trail account or a TigerWit Live account we will email you TigerWit MT4 login details and a temporary password. To change your temporary password please visit the ",
+            "zh-Hant": "When you open a TigerWit Demo account or a TigerWit Live account we will email you TigerWit MT4 login details and a temporary password. To change your temporary password please visit the ",
             "id": "Ketika anda membuka akun Pengalaman atau Akun Live TigerWit, kami akan mengirimkan Informasi detail MT4 ke email anda. Untuk mengubah kata sandi, silahkan masuk ke bagian ",
             "es": "Al abrir un cuenta de Práctica TigerWit y/o una cuenta Real, le enviaremos por email sus claves de ingreso y una contraseña temporal. Para cambiar su contraseña temporal, por favor, visite ",
             "pt-BR": "Quando você abre uma conta de teste da TigerWit ou uma conta ativa da TigerWit, nós lhe enviaremos os detalhes de login do TigerWit MT4 e uma senha temporária. Para alterar sua senha temporária, visite o"
@@ -12087,10 +12087,10 @@ module.exports = {
             "pt-BR": "Onde posso encontrar meu TigerWit MT4 ID?"
         },
         "protect3A": {
-            "zh": "When you open a TigerWit trail account or a TigerWit Live account we will email you login details. You can also see your TigerWit MT4 ID by logging onto the 'Trading Account' section of your account on the website or app.",
-            "en": "When you open a TigerWit trail account or a TigerWit Live account we will email you login details. You can also see your TigerWit MT4 ID by logging onto the 'Trading Account' section of your account on the website or app.",
+            "zh": "When you open a TigerWit Demo account or a TigerWit Live account we will email you login details. You can also see your TigerWit MT4 ID by logging onto the 'Trading Account' section of your account on the website or app.",
+            "en": "When you open a TigerWit Demo account or a TigerWit Live account we will email you login details. You can also see your TigerWit MT4 ID by logging onto the 'Trading Account' section of your account on the website or app.",
             "vi": "Khi bạn mở tài khoản TigerWit Trải Nghiệm hoặc tài khoản TigerWit Thực, chúng tôi sẽ gửi email cho bạn chi tiết đăng nhập. Bạn cũng có thể xem ID MT4 của TigerWit bằng cách đăng nhập vào phần ‘Tài khoản giao dịch’ trong tài khoản của bạn trên trang web hoặc ứng dụng.",
-            "zh-Hant": "When you open a TigerWit trail account or a TigerWit Live account we will email you login details. You can also see your TigerWit MT4 ID by logging onto the 'Trading Account' section of your account on the website or app.",
+            "zh-Hant": "When you open a TigerWit Demo account or a TigerWit Live account we will email you login details. You can also see your TigerWit MT4 ID by logging onto the 'Trading Account' section of your account on the website or app.",
             "id": "Ketika anda membuka akun Pengalaman atau Akun Live TigerWit, kami akan mengirimkan Informasi detail MT4 ke email anda. Anda juga dapat melihat informasi MT4 TigerWit anda dengan masuk ke bagian “Akun Transaksi” melalui website atau aplikasi.",
             "es": "Al abrir una cuenta de Práctica TigerWit y/o una cuenta Real TigerWit, le enviaremos un email con sus claves de ingreso. Puede ver también su ID TigerWit MT4 ingresando en la sección ‘Cuenta Trading’ de su cuenta en la web, o en la app. ",
             "pt-BR": "Quando você abre uma conta de trilha TigerWit ou uma conta TigerWit Live, nós lhe enviaremos detalhes de login por e-mail. Você também pode ver o seu TigerWit MT4 ID acessando a seção \"Conta de negociação\" da sua conta no site ou aplicativo."
@@ -14118,7 +14118,7 @@ module.exports = {
     },
     "newhome_35_1": {
         "zh": "现在立刻下载APP，",
-        "en": "Download the app and open a USD10,000 trail account instantly.",
+        "en": "Download the app and open a USD10,000 Demo account instantly.",
         "vi": "Tải xuống ứng dụng và mở tài khoản Trải nghiệm USD10,000 ngay lập tức.",
         "zh-Hant": "現在立刻下載APP，",
         "id": "Unduh aplikasi dan buka akun Pengalaman untuk mendapatkan 10,000$ sekarang juga.",
@@ -14235,7 +14235,7 @@ module.exports = {
     },
     "newhome_44": {
         "zh": "使用一个10000美元的体验金账户，即可零风险参与市场实时交易。",
-        "en": "Open an trail account with USD10,000 of virtual funds and test your strategies with real-time prices in a risk-free environment.",
+        "en": "Open an Demo account with USD10,000 of virtual funds and test your strategies with real-time prices in a risk-free environment.",
         "vi": "Mở một tài khoản Trải nghiệm với 10.000 USD trong quỹ ảo và kiểm tra chiến lược của bạn với giá trong thời gian thực trong một môi trường không có rủi ro.",
         "zh-Hant": "使用壹個10000美元的體驗金賬戶，即可零風險參與市場實時交易。",
         "id": "Buka Akun Pengalaman dan dapatkan 10,000 $ uang virtual untuk mencoba strategi anda di pasar real tanpa takut akan resiko.",
@@ -15723,7 +15723,7 @@ module.exports = {
         },
         "experienceAccount": {
             "zh": "体验金账号",
-            "en": "Trail account",
+            "en": "Demo account",
             "vi": "Tài khoản trải nghiệm",
             "zh-Hant": "體驗金帳號",
             "id": "Akun Pengalaman",

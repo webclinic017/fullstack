@@ -1880,7 +1880,7 @@
                     },
                     "tip2": {
                         "zh": "恭喜您已开通TigerWit体验金账户",
-                        "en": "Congratulations on opening the TigerWit trail account",
+                        "en": "Congratulations on opening the TigerWit Demo account",
                         "vi": "Chúc mừng bạn đã mở thành công tài khoản trải nghiệm trên TigerWit",
                         "zh-Hant": "恭喜您已開通TigerWit體驗金賬戶",
                         "id": "Selamat, anda telah membuka Akun Pengalaman",
@@ -1889,7 +1889,7 @@
                     },
                     "tip3": {
                         "zh": "体验金账户体验期限为30天，过期后账户资金将被清除，建议尽快升级到真实账户。",
-                        "en": "Your trail account is valid for 30 days. Virtual funds will be cleared from this account 30 days after opening. You can upgrade to a live account at any time.",
+                        "en": "Your Demo account is valid for 30 days. Virtual funds will be cleared from this account 30 days after opening. You can upgrade to a live account at any time.",
                         "vi": "Tài khoản trải nghiệm của bạn sẽ có hiệu lực trong 30 ngày. Tiền ảo sẽ bị xóa khỏi tài khoản này 30 ngày sau khi mở. Bạn có thể nâng cấp lên tài khoản thực bất kỳ lúc nào.",
                         "zh-Hant": "體驗金賬戶體驗期限為30天，過期後賬戶資金將被清除，建議盡快升級到真實賬戶。",
                         "id": "Akun pengelaman anda akan berlaku selama 30 hari. Dana virtual akan dihapus secara otomatis setelah 30 hari. Anda dapat membuka Akun Live kapanpun anda inginkan.",
@@ -1898,7 +1898,7 @@
                     },
                     "tip4": {
                         "zh": "请注意：体验金账户资金及盈利不可提现。",
-                        "en": "Please note: trail account funds and profits are not available.",
+                        "en": "Please note: Demo account funds and profits are not available.",
                         "vi": "Vui lòng chú ý: Quỹ và lợi nhuận của tài khoản trải nghiệm sẽ không có thực.",
                         "zh-Hant": "請註意：體驗金賬戶資金及盈利不可提現。",
                         "id": "Catatan: Saldo di akun pengalaman tidak tersedia.",
@@ -2483,7 +2483,7 @@
                     },
                     "tip38": {
                         "zh": "开通真实账户后，将不再支持开通体验金账户",
-                        "en": "After opening live account, it will no longer be supported to open trail account",
+                        "en": "After opening live account, it will no longer be supported to open Demo account",
                         "vi": "Sau khi mở tài khoản thực, tài khoản sẽ không còn được hỗ trợ để mở tài khoản trải nghiệm",
                         "zh-Hant": "開通真實賬戶後，將不再支持開通體驗金賬戶",
                         "id": " Setelah membuka Akun Live, akun pengalaman anda tidak dapat lagi digunakan ",
@@ -2492,7 +2492,7 @@
                     },
                     "experienceAccount": {
                         "zh": "体验金账户",
-                        "en": "Trail account",
+                        "en": "Demo account",
                         "vi": "Tài khoản trải nghiệm",
                         "zh-Hant": "體驗金賬戶",
                         "id": "Akun Pengalaman",
@@ -3702,7 +3702,7 @@
                     },
                     "experienceAccount": {
                         "zh": "体验金账号",
-                        "en": "Trail account",
+                        "en": "Demo account",
                         "vi": "Tài khoản trải nghiệm",
                         "zh-Hant": "體驗金帳號",
                         "id": "Akun Pengalaman",
@@ -9823,7 +9823,7 @@
                     },
                     "openExperienceAccount": {
                         "zh": "开通体验金账户",
-                        "en": "Open an trail account",
+                        "en": "Open an Demo account",
                         "vi": "Mở tài khoản trải nghiệm",
                         "zh-Hant": "開通體驗金賬戶",
                         "id": "Buka Akun Pengalaman",
@@ -9832,7 +9832,7 @@
                     },
                     "openExperienceAccountTip1": {
                         "zh": "开户即送$10000交易体验金。",
-                        "en": "Open the trail account and receive a $10000 virtual balance.",
+                        "en": "Open the Demo account and receive a $10000 virtual balance.",
                         "vi": "Mở tài khoản trải nghiệm và nhận số dư ảo 10.000 đô la.",
                         "zh-Hant": "開戶即送$10000交易體驗金。",
                         "id": " Buka Akun pengalaman dan dapatkan dana virtual senilai 10,000$ ",
@@ -9940,7 +9940,7 @@
                     },
                     "openAcount9": {
                         "zh": " ",
-                        "en": "Trail account",
+                        "en": "Demo account",
                         "vi": "Tài khoản Trải Nghiệm",
                         "zh-Hant": " ",
                         "id": "Akun Pengalaman",
@@ -9949,7 +9949,7 @@
                     },
                     "openAcount10": {
                         "zh": " ",
-                        "en": "Open an trail account and practice trading in a risk-free environment with USD10,000of virtual funds.",
+                        "en": "Open an Demo account and practice trading in a risk-free environment with USD10,000of virtual funds.",
                         "vi": "Mở một tài khoản Trải nghiệm và thực hành giao dịch trong một môi trường phi rủi ro với 10,000 USD trong quỹ ảo.",
                         "zh-Hant": " ",
                         "id": "Buka akun Pengalaman dan berlatihlah transaksi tanpa risiko menggunakan dana virtual sebesar 10,000$",
@@ -9985,7 +9985,7 @@
                     },
                     "openAcount14": {
                         "zh": " ",
-                        "en": "Open an trail account",
+                        "en": "Open an Demo account",
                         "vi": "Mở một tài khoản Trải Nghiệm",
                         "zh-Hant": " ",
                         "id": "Buka akun Pengalaman",
