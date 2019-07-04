@@ -50,10 +50,12 @@
                         // },
                         'content@authen': {
                             templateUrl: function ($stateParams) {
-                                var subpage = $stateParams.subpage;
+                                var subpage;
                                 $stateParams.subpage = $stateParams.subpage || 'investInfo';
                                 if ($stateParams.subpage === 'fundInfo') {
                                     subpage = 'investInfo';
+                                } else {
+                                    subpage = $stateParams.subpage;
                                 }
                                 return '/views/authen/' + subpage + '.html';
                             },
