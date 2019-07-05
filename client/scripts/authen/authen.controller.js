@@ -287,8 +287,18 @@
         }
 
         function confirmSubmitForm () {
+            var msg = {};
+            angular.forEach(kycInfo, function (value, key) {
+                msg[key] = value;
+            })
+            if (msg.employment_status === "self_employed") {
+                msg.position = undefined;
+            } else if (msg.employment_status === "unemployed" || msg.employment_status === "retired") {
+                msg.industry = undefined;
+                msg.position = undefined;
+            }
             $scope.clickable = false;
-            account.setKyc(kycInfo).then(function (data) {
+            account.setKyc(msg).then(function (data) {
                 // console.info(data);
                 $scope.clickable = true;
                 if (data.is_succ) {
