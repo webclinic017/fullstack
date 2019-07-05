@@ -449,8 +449,9 @@
         $scope.selectRegion = selectRegion;
         $scope.address = {};
 
-        $scope.$watch('worldList', function (n, o) {
+        $scope.$watch('areaCodeList', function (n, o) {
             if (n.length > 0) {
+                // 区号
                 angular.forEach(n, function (item, index) {
                     $scope.areaCodes.push({
                         key: item.name,
@@ -480,6 +481,7 @@
                         }
                     });
                     // 检测注册国际是否是伊斯兰国家
+                    // 国家
                     angular.forEach($scope.worldList, function (value, index) {
                         if (value.code === data.region.world_code && value.type === 'islamic') {
                             // console.log(value);
@@ -508,8 +510,8 @@
         // 根据 region code 获取对应的 regions
         function getRegions(regionName, regionsName, upperRegionCode) {
             var tmp;
-
             switch (regionName) {
+                // 国家（无用）
                 case 'country':
                     tmp = account.getWorlds();
                     break;

@@ -436,11 +436,16 @@
         function getLocation() {
             return publicHttp.dealPublicRequest(o.getPersonalInfoApi, 'GET');
         }
-
-        function getWorlds(lang) {
-            return publicHttp.dealPublicRequest(o.getWorldsApi, 'GET', {
-                lang: lang
-            });
+        /**
+         * @name getWorlds
+         * @desc 获取国家列表
+         * @return {Object} {
+         *   lang
+         *   type: int      1 为获取区号列表
+         * }
+         */
+        function getWorlds(params) {
+            return publicHttp.dealPublicRequest(o.getWorldsApi, 'GET', params);
         }
 
         function getStates(countryCode, lang) {

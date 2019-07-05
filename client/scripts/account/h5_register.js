@@ -37,7 +37,7 @@
             world_code = $(this).find('option:selected').data('code');
             $('#areaCodeShow').html(e.target.value ? '+ '+ e.target.value : 'Area Code')
         })
-        publicRequest('getCountries', 'GET').then(function (data) {
+        publicRequest('getCountries', 'GET', {type: 1}).then(function (data) {
             var temp = "<option value=''>"+lang.text('register.areaCode')+"</option>"
             data.data.forEach(function(item){
                 var selected = item.phone_code == 86 ? 'selected' : ''

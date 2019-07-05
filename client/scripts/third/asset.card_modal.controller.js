@@ -67,7 +67,7 @@
         $scope.submitForm = submitForm;
         $scope.getCity = getCity;
 
-        getWorlds();
+        // getWorlds();
         getProvince();
 
         asset.getBanks({
@@ -98,13 +98,13 @@
             });
         }
 
-        function getWorlds () {
-            account.getWorlds().then(function (data) {
-                if (data.is_succ) {
-                    $scope.worlds = data.data;
-                }
-            });
-        }
+        // function getWorlds () {
+        //     account.getWorlds().then(function (data) {
+        //         if (data.is_succ) {
+        //             $scope.worlds = data.data;
+        //         }
+        //     });
+        // }
 
         function getProvince() {
             account.getStates('CN').then(function (data) {

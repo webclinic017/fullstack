@@ -22,7 +22,7 @@
         $scope.banks = [];
         $scope.clickable = true;
 
-        $scope.worlds = [];
+        // $scope.worlds = [];
         $scope.provinces = [];
         $scope.citys = [];
 
@@ -69,7 +69,7 @@
         $scope.submitForm = submitForm;
         $scope.getCity = getCity;
 
-        getWorlds();
+        // getWorlds();
         getProvince();
         getBanks();
         function getBanks(){
@@ -102,13 +102,13 @@
             });
         }
 
-        function getWorlds() {
-            account.getWorlds().then(function (data) {
-                if (data.is_succ) {
-                    $scope.worlds = data.data;
-                }
-            });
-        }
+        // function getWorlds() {
+        //     account.getWorlds().then(function (data) {
+        //         if (data.is_succ) {
+        //             $scope.worlds = data.data;
+        //         }
+        //     });
+        // }
 
         function getProvince() {
             account.getStates('CN').then(function (data) {
