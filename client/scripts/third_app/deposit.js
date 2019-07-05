@@ -34,7 +34,8 @@ var eleDeposit = {
   payDepositAmountWrapperMull: '#third_app_deposit_amount_wrapper_mull',
   paySelectBankInfo: '.third_app_deposit__select_bank_info',
   paySelectBankBtn: '#third_app_deposit_bank_select_btn',
-  paySelectBankName: '#third_app_deposit_bank_select_name'
+  paySelectBankName: '#third_app_deposit_bank_select_name',
+  changeDepositTypeBeforeBtn: '#third_app_change_deposit_type_before_btn',
 };
 var depositTypeDetail = {
   bank: {
@@ -93,7 +94,7 @@ $(document).on("tap", "#third_app_deposit_cse_btn .btn", function () {
 });
 $(document).on("tap", eleDeposit.payDepositSubmitBtn, function () {
   closeAllMdl();
-  if(depositType === 'bank'){
+  if (depositType === 'bank') {
     var depositTemplate = {
       data: {
         tip: lang.text("thirdH5.isHasAvodaAccount"),
@@ -101,11 +102,11 @@ $(document).on("tap", eleDeposit.payDepositSubmitBtn, function () {
         content2: lang.text("thirdH5.noAvodaAccount")
       }
     };
-    var html=bt('template_deposit_is_account',depositTemplate);
+    var html = bt('template_deposit_is_account', depositTemplate);
     $("#third_app_middle_template").html(html);
     openMiddleMdl();
-  }else{
-    if(depositType === 'payment_1'){
+  } else {
+    if (depositType === 'payment_1') {
       copyText(personalInfo.user_code)
     }
     openLoadingMdl();
@@ -116,16 +117,16 @@ $(document).on("tap", eleDeposit.payDepositSubmitBtn, function () {
 // 判断是否存在账号
 $(document).on("tap", "#third_app_deposit_is_account_btn .but", function () {
   var cAction = $(this).attr("data-action");
-  if(cAction === 'yes'){
+  if (cAction === 'yes') {
     closeAllMdl();
     openLoadingMdl();
     submitDeposit()
-  }else{
+  } else {
     window.location.href = selectKeyFromType('url');
   }
   return false;
 });
-function confirmDeposit () {
+function confirmDeposit() {
   if (depositType === 'transfer') {
     publicRequest('depositThirdTele', 'POST', {
       amount: Number($(eleDeposit.payDepositAmount).val()),
@@ -152,7 +153,7 @@ function confirmDeposit () {
         link: selectKeyFromType('url')
       }
     };
-    var html=bt('template_deposit_cse_wallet',depositTemplate);
+    var html = bt('template_deposit_cse_wallet', depositTemplate);
     $("#third_app_middle_template").html(html);
     openMiddleMdl();
   } else if (depositType === 'wallet') {
@@ -161,10 +162,10 @@ function confirmDeposit () {
     computeAmount();
   }
 }
-function computeAmount () {
+function computeAmount() {
   var amount = Number($(eleDeposit.payDepositAmount).val()).toFixed(2);
-  var amountCur = (amount*deoisitCurrency.rate_in).toFixed(2);
-  var amountFee = (amountCur*(selectKeyFromType('poundage').replace(/%/,'')*0.01)).toFixed(2);
+  var amountCur = (amount * deoisitCurrency.rate_in).toFixed(2);
+  var amountFee = (amountCur * (selectKeyFromType('poundage').replace(/%/, '') * 0.01)).toFixed(2);
   var desc = selectKeyFromType('poundage_desc') ? selectKeyFromType('poundage_desc').replace(/(^\s*)|(\s*$)/g, "") : "";
   var depositTemplate = {
     data: {
@@ -177,28 +178,28 @@ function computeAmount () {
       amountDollar: amount,
       amountCur: amountCur,
       amountFee: amountFee,
-      amountTotal: selectKeyFromType('poundage_status') ? Number(amountCur)+Number(amountFee) : amountCur,
+      amountTotal: selectKeyFromType('poundage_status') ? Number(amountCur) + Number(amountFee) : amountCur,
       depositType: depositType,
       userCode: personalInfo.user_code
     }
   }
-  var html=bt('template_asset_confirm',depositTemplate);
+  var html = bt('template_asset_confirm', depositTemplate);
   $("#third_app_bottom_template").html(html);
   openBottomMdl();
 }
-function submitDeposit () {
+function submitDeposit() {
   var token = $.cookie('token') || '';
   var lang = $.cookie('lang') || '';
   if (selectKeyFromType('channel_type') === 2) {
     var mt4 = depositAccount !== 'wallet' ? Number(depositAccount) : "";
     var params = [
-      'amount='+Number($(eleDeposit.payDepositAmount).val()),
-      'platform='+selectKeyFromType('platform'),
-      'mt4_id='+mt4,
-      'bank_card_id='+depositBankId,
-      'currency='+deoisitCurrency.currency,
-      'lang='+lang,
-      'token='+token
+      'amount=' + Number($(eleDeposit.payDepositAmount).val()),
+      'platform=' + selectKeyFromType('platform'),
+      'mt4_id=' + mt4,
+      'bank_card_id=' + depositBankId,
+      'currency=' + deoisitCurrency.currency,
+      'lang=' + lang,
+      'token=' + token
     ];
     window.location.href = setUrlParam(selectKeyFromType('url')) + params.join('&');
     return;
@@ -244,7 +245,7 @@ $(document).on("tap", "#third_app_bottom_template .deposit_type_item", function 
   $("#third_app_bottom_template .deposit_type_item").removeClass('active');
   $(this).addClass('active');
   closeAllMdl();
-  changeDepositType(cType);
+  changeDepositTypeBefore(cType);
   return false;
 });
 $(document).on("tap", "#third_app_deposit_evidence_btn .btn", function () {
@@ -255,7 +256,7 @@ $(document).on("tap", "#third_app_deposit_evidence_btn .btn", function () {
   }
   if (cAction === 'other') {
     openChangeDepositTypeMdl();
-  } 
+  }
   return false;
 });
 $(eleDeposit.payTypeDetail).on("tap", function () {
@@ -280,14 +281,14 @@ $(eleDeposit.payDepositAmountWrapperMull).on("tap", "span", function () {
   setDepositBtnStatus();
   return false;
 });
-$(eleDeposit.payTransferPic).find("input[name=file]").on('change', function(e) {
-    var file = e.target.files[0];
-    previewBase64(file, transferBase64);
-    setTimeout(function () {
-      // console.log(transferBase64);
-      $(eleDeposit.payTransferPic).find(".img").empty().append(transferBase64.data);
-      setDepositBtnStatus();
-    }, 30);
+$(eleDeposit.payTransferPic).find("input[name=file]").on('change', function (e) {
+  var file = e.target.files[0];
+  previewBase64(file, transferBase64);
+  setTimeout(function () {
+    // console.log(transferBase64);
+    $(eleDeposit.payTransferPic).find(".img").empty().append(transferBase64.data);
+    setDepositBtnStatus();
+  }, 30);
 });
 //监听amout&bank
 $(eleDeposit.payDepositAmount).on("input propertychange", function () {
@@ -313,7 +314,7 @@ $(eleDeposit.paySelectBankBtn).on("tap", function () {
  * 需要调用的地方
  *    输入金额时、切换充值账号时、切换支付方式时、上传电汇凭证后、填写银行卡号、快捷支付点击金额时、转账选择银行卡后
  */
-function setDepositBtnStatus () {
+function setDepositBtnStatus() {
   var amount = Number($(eleDeposit.payDepositAmount).val());
   // console.log(amount, "f");
   //0.判断支付方式和充值账号
@@ -353,7 +354,7 @@ function setDepositBtnStatus () {
     return;
   }
   //6.充值金额为100倍数
-  if (depositType === 'omipay' && amount%100 !== 0) {
+  if (depositType === 'omipay' && amount % 100 !== 0) {
     depositBtnStatus = false;
     $(eleDeposit.payDepositBtn).addClass('disabled');
     return;
@@ -370,7 +371,7 @@ function setDepositBtnStatus () {
 //获取充值方式列表
 function getDepositPlatform() {
   if (pageLoadStatus.deposit) return;
-  publicRequest('getThirdDepositPlatform', 'GET', {os: os}).then(function (data) {
+  publicRequest('getThirdDepositPlatform', 'GET', { os: os }).then(function (data) {
     // console.log(data);
     pageLoadStatus.deposit = true;
     if (!data) return;
@@ -378,7 +379,7 @@ function getDepositPlatform() {
       depositTypeLst = data.data;
       $.each(depositTypeLst, function (index, value) {
         if (value.default && !depositType) {
-          changeDepositType(value.key);
+          changeDepositTypeBefore(value.key);
         }
       });
     } else {
@@ -387,7 +388,7 @@ function getDepositPlatform() {
   });
 }
 //打开更改充值方式弹窗
-function openChangeDepositTypeMdl () {
+function openChangeDepositTypeMdl() {
   var depositTemplate = {
     data: {
       title: lang.text("thirdH5.depositOptionsJ"),
@@ -396,14 +397,35 @@ function openChangeDepositTypeMdl () {
       lst: depositTypeLst
     }
   }
-  var html=bt('template_deposit_type',depositTemplate);
+  var html = bt('template_deposit_type', depositTemplate);
   $("#third_app_bottom_template").html(html);
   openBottomMdl();
   $("input").blur();
   return false;
 }
+//更改充值方式前
+function changeDepositTypeBefore(cType) {
+  if (cType == 'quick_3' || cType == 'Transfer') {
+    var depositTemplate = {
+      data: {
+        type: cType,
+        content: lang.text("thirdH5.transferQuick3Tip1") + '\n'+ lang.text("thirdH5.transferQuick3Tip2") +'\n' + lang.text("thirdH5.transferQuick3Tip3")
+      }
+    };
+    var html = bt('template_change_deposit_type_before', depositTemplate);
+    $("#third_app_middle_template").html(html);
+    openMiddleMdl();
+  }else{
+    changeDepositType(cType)
+  }
+  
+}
+$(document).on("tap", eleDeposit.changeDepositTypeBeforeBtn, function (e) {
+  var cType = $(this).attr("data-type")
+  changeDepositType(cType)
+})
 //更改充值方式
-function changeDepositType (cType) {
+function changeDepositType(cType) {
   var desc = '', placeholder = '';
   depositType = cType;
   if (!cType) {
@@ -416,16 +438,16 @@ function changeDepositType (cType) {
   deoisitCurrency = selectKeyFromType('currency')[0];
   //设置入金金额范围
   if (selectKeyFromType('min') > 0 && selectKeyFromType('max') > 0) {
-    placeholder = selectKeyFromType('min')+"-"+selectKeyFromType('max')+"$";
+    placeholder = selectKeyFromType('min') + "-" + selectKeyFromType('max') + "$";
   } else if (selectKeyFromType('min') > 0) {
-    placeholder = lang.text("thirdH5.minimum")+selectKeyFromType('min')+"$";
+    placeholder = lang.text("thirdH5.minimum") + selectKeyFromType('min') + "$";
   } else if (selectKeyFromType('max') > 0) {
-    placeholder = lang.text("thirdH5.highest")+selectKeyFromType('max')+"$";
+    placeholder = lang.text("thirdH5.highest") + selectKeyFromType('max') + "$";
   }
   $(eleDeposit.payDepositAmount).attr("placeholder", placeholder);
   //支付方式name&tip
   if (depositType === 'wallet') {
-    desc = lang.text("thirdH5.walletBalanceM") + '$'+walletBalance;
+    desc = lang.text("thirdH5.walletBalanceM") + '$' + walletBalance;
   } else {
     desc = selectKeyFromType('describe');
   }
@@ -434,7 +456,7 @@ function changeDepositType (cType) {
   //支付方式details
   if (depositType === 'bank' || depositType === 'cse_wallet' || depositType === 'transfer') {
     $(eleDeposit.payTypeDetail).addClass('active');
-    $(eleDeposit.payTypeDetail).html(depositTypeDetail[depositType].text+' >');
+    $(eleDeposit.payTypeDetail).html(depositTypeDetail[depositType].text + ' >');
   } else {
     $(eleDeposit.payTypeDetail).removeClass('active');
   }
@@ -479,21 +501,21 @@ function changeDepositType (cType) {
         btnMsg: selectKeyFromType('evidence_status') === 1 ? lang.text("thirdH5.uploadVoucher") : lang.text("thirdH5.viewVoucher")
       }
     };
-    var html=bt('template_deposit_upload_evidence',depositTemplate);
+    var html = bt('template_deposit_upload_evidence', depositTemplate);
     $("#third_app_middle_template").html(html);
     openMiddleMdl();
   }
   //固定金额
   if (selectKeyFromType('amount_list').length) {
-    $(eleDeposit.payDepositAmountWrapper).css({display: 'none'});
+    $(eleDeposit.payDepositAmountWrapper).css({ display: 'none' });
     $(eleDeposit.payDepositAmountWrapperMull).addClass('active');
-    var html=bt('template_deposit_amount_list', {
+    var html = bt('template_deposit_amount_list', {
       data: selectKeyFromType('amount_list')
     });
     $(eleDeposit.payDepositAmountWrapperMull).html(html);
     $(eleDeposit.payDepositAmount).val('');
   } else {
-    $(eleDeposit.payDepositAmountWrapper).css({display: 'block'});
+    $(eleDeposit.payDepositAmountWrapper).css({ display: 'block' });
     $(eleDeposit.payDepositAmountWrapperMull).removeClass('active');
   }
   //转账
@@ -505,7 +527,7 @@ function changeDepositType (cType) {
   setDepositBtnStatus();
 }
 //根据当前充值方式找到对应字段
-function selectKeyFromType (name) {
+function selectKeyFromType(name) {
   var result = null;
   $.each(depositTypeLst, function (index, value) {
     if (value.key === depositType) {
@@ -515,12 +537,12 @@ function selectKeyFromType (name) {
   return result;
 }
 //show Err
-function showBackErr (msg) {
+function showBackErr(msg) {
   $(eleDeposit.payDepositBtnTip).html(msg);
   $(eleDeposit.payDepositBtnTip).addClass('active');
 }
 //hide Err
-function hideBackErr () {
+function hideBackErr() {
   $(eleDeposit.payDepositBtnTip).html('');
   $(eleDeposit.payDepositBtnTip).removeClass('active');
 }

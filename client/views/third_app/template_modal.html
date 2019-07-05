@@ -108,6 +108,18 @@
     </div>
   </div>
 </script>
+<script id="template_change_deposit_type_before" type="text/html">
+  <h3 class="title">
+    <span><$= data.title || '<%=lang.text('thirdH5.notice')%>'$></span>
+    <span class="cancel third_app_template_cancel">×</span>
+  </h3>
+  <div class="detail">
+    <p class="tip"><$= data.content || ''$></p>
+    <div class="btn_wrapper">
+      <button class="btn btn-primary-gradient" id="third_app_change_deposit_type_before_btn" data-type="<$= data.type$>"><%=lang.text('thirdH5.confirm')%></button>
+    </div>
+  </div>
+</script>
 <script id="template_asset_confirm" type="text/html">
   <h3 class="title text-center">
     <span><$= data.title || '<%=lang.text('thirdH5.notice')%>'$></span>

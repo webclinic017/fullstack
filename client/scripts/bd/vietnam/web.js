@@ -74,8 +74,8 @@
     return false;
   });
 
-  // 获取国家列表
-  publicRequest('getCountries', 'GET').then(function (data) {
+  // 获取区号列表
+  publicRequest('getCountries', 'GET', {type: 1}).then(function (data) {
     // console.log(data);
     if (data.is_succ) {
         var optionStr = ''

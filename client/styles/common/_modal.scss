@@ -217,6 +217,12 @@
             font-weight: 400;
         }
     }
+    @include e(tip) {
+        > span{
+            white-space: pre-line;
+        }
+        
+    }
     @include e(sub_title) {
         margin: 0;
         padding: 8px 0;

@@ -55,7 +55,7 @@ function selectAccount(cType, cAccount, cName, cTag, cAmount) {
     $(eleDeposit.payAccountTag).html(cTag);
     setDepositBtnStatus();
     //为钱包充值时，支付方式不能为钱包
-    if (cAccount === 'wallet' && depositType === 'wallet') changeDepositType();
+    if (cAccount === 'wallet' && depositType === 'wallet') changeDepositTypeBefore();
   }
   if (cType === 'withdraw') {
     withdrawAccount = cAccount;
