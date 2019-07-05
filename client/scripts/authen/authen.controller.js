@@ -180,13 +180,14 @@
         if ($state.current.name === 'space.setting.subpage') {
             $scope.type = 'setting';
         }
-        if ($location.search().isAgent) {
-            $scope.pageType = 2;
+
+        if ($state.params.subpage === 'fundInfo') {
+            $scope.pageType = 1;
+            $scope.title = $scope.lang.text('tigerWitID.settings.openAccountNewTip16');
+            $scope.subTitle = $scope.lang.text('tigerWitID.settings.openAccountNewTip17');
         } else {
-            if ($state.params.subpage === 'fundInfo') {
-                $scope.pageType = 1;
-                $scope.title = $scope.lang.text('tigerWitID.settings.openAccountNewTip16');
-                $scope.subTitle = $scope.lang.text('tigerWitID.settings.openAccountNewTip17');
+            if ($location.search().isAgent) {
+                $scope.pageType = 2;
             } else {
                 $scope.pageType = 0;
             }
