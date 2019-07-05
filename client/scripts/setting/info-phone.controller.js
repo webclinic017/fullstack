@@ -148,8 +148,9 @@
 
 
         }
+        // 获取区号
         function getWorlds() {
-            account.getWorlds().then(function (data) {
+            account.getWorlds({type: 1}).then(function (data) {
                 if (!data) return;
                 // console.log(data);
                 if (!data.is_succ) {

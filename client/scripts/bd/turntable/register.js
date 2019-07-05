@@ -24,7 +24,7 @@
     var areaCodes = [];
     getCountries();
     function getCountries(){
-        publicRequest('getCountries', 'GET').then(function (data) {
+        publicRequest('getCountries', 'GET', {type: 1}).then(function (data) {
             if(data.is_succ){
                 areaCodes = data.data;
                 if($('.registerLayer .areaCode')[0]){

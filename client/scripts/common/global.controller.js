@@ -28,6 +28,7 @@
         $scope.personal.is_live = '1';
         $scope.personal.updatePapers = {};
         $scope.process = {};
+        $scope.areaCodeList = [];  // 区号列表
         $scope.worldList = [];  //  ----|
         // $scope.currentWorld = {}; ---| -- 选择国家
         // $scope.entryWorld = '';  ----|
@@ -45,15 +46,17 @@
         }, 30000);
         getEmailPhone();
         // 获取国家列表
-        getWorlds();
-        function getWorlds() {
-            account.getWorlds().then(function (data) {
+        getWorlds('worldList');
+        // 获取区号列表
+        getWorlds('areaCodeList', {type: 1});
+        function getWorlds(list, obj) {
+            account.getWorlds(obj).then(function (data) {
                 if (!data) return;
                 // console.log(data);
                 if (!data.is_succ) {
                     return;
                 }
-                $scope.worldList = data.data;
+                $scope[list] = data.data;
             });
         }
         // $scope.setWorld = function(world){
