@@ -123,6 +123,21 @@
             });
         }
 
+        //获取android下载包地址
+        $scope.appVersionInfo = {};
+        getVersionCheck();
+        function getVersionCheck() {
+            account.getVersionCheck({
+                type: 3,
+                version: '1.0.0',
+                lang: 'cn'
+            }).then(function (data) {
+                if (data.is_succ) {
+                    $scope.appVersionInfo.android = data.data.url;
+                }
+            });
+        }
+
         // 报价服务
         $scope.quoteSymbols = [];
         $scope.spreadInfo = {};     // 点差
