@@ -2086,13 +2086,13 @@
                         "pt-BR": "Parabéns por abrir sua conta de transações reais TigerWit"
                     },
                     "questionnaire": {
-                        "zh": "调查问卷",
-                        "en": "Questionnaire",
-                        "vi": "Bảng câu hỏi",
-                        "zh-Hant": "調查問卷",
-                        "id": "Daftar Pertanyaan",
-                        "es": "Cuestionario",
-                        "pt-BR": "Questionário"
+                        "zh": "财务和就业状况",
+                        "en": "Financial and Employment Status",
+                        "vi": "Tình trạng Tài chính và Việc làm",
+                        "zh-Hant": "財務和就業狀況",
+                        "id": "Status pekerjaan dan keuangan",
+                        "es": "Estado financiero y de empleo",
+                        "pt-BR": "Estatuto Financeiro e Emprego"
                     },
                     "tip21": {
                         "zh": "由于受最高监管的约束，需要您提供相关信息，我们只询问与开户相关的问题。您的资料始终保密，绝不公开。",

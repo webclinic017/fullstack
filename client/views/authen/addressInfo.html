@@ -201,7 +201,7 @@
                                                 ng-model="placeholderCountry"><i class="fa fa-search"></i></li>
                                         <li ng-repeat="world in worldList | filter : placeholderCountry" ng-class="{'selected': world.code == addressInfo.nationality.value}">
                                             <span data-value="{{world.code}}" data-disabled='{"disabled": {{world.disabled}}, "msg": "{{lang.text("tigerWitID.myAccount.unableCountry")}}"}'
-                                                ng-click="[world.disabled || selectRegion('country', world.code, world.type)]" ng-class="{'font-light': world.disabled}">{{world.name}}</span>
+                                                ng-click="[world.disabled || selectRegion('nationality', world.code, world.type)]" ng-class="{'font-light': world.disabled}">{{world.name}}</span>
                                         </li>
                                     </ul>
                                 </div>
@@ -230,7 +230,7 @@
                                                 ng-model="placeholderCountry"><i class="fa fa-search"></i></li>
                                         <li ng-repeat="world in worldList | filter : placeholderCountry" ng-class="{'selected': world.code == addressInfo.tax_residency.value}">
                                             <span data-value="{{world.code}}" data-disabled='{"disabled": {{world.disabled}}, "msg": "{{lang.text("tigerWitID.myAccount.unableCountry")}}"}'
-                                                ng-click="[world.disabled || selectRegion('country', world.code, world.type)]" ng-class="{'font-light': world.disabled}">{{world.name}}</span>
+                                                ng-click="[world.disabled || selectRegion('tax_residency', world.code, world.type)]" ng-class="{'font-light': world.disabled}">{{world.name}}</span>
                                         </li>
                                     </ul>
                                 </div>

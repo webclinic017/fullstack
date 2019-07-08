@@ -157,7 +157,7 @@
         $scope.isSetKyc = false;
         $scope.pageType = 0;    //0 kyc, 1 财务细节, 2 代理商
         $scope.title = $scope.lang.text('tigerWitID.myAccount.questionnaire');
-        $scope.subTitle = $scope.lang.text('tigerWitID.settings.openAccountNewTip15');
+        $scope.subTitle = $scope.lang.text('tigerWitID.settings.openAccountNewTip17');
         var confirmTwo = true;   //二次确认
 
         $scope.tip = {
@@ -183,8 +183,8 @@
 
         if ($state.params.subpage === 'fundInfo') {
             $scope.pageType = 1;
-            $scope.title = $scope.lang.text('tigerWitID.settings.openAccountNewTip16');
-            $scope.subTitle = $scope.lang.text('tigerWitID.settings.openAccountNewTip17');
+            $scope.title = $scope.lang.text('tigerWitID.settings.openAccountNewTip14');
+            $scope.subTitle = $scope.lang.text('tigerWitID.settings.openAccountNewTip15');
         } else {
             if ($location.search().isAgent) {
                 $scope.pageType = 2;
@@ -531,6 +531,7 @@
             $scope.showErr('birthday');
 
             if ($scope.completeForm.$invalid) {
+                console.log($scope.completeForm);
                 return
             }
 
@@ -1189,17 +1190,27 @@
                     $scope.isIslamic = regionIslamic === 'islamic' ? true : false;
                     $scope.address.cities = [];
                     $scope.address.provinces = [];
+                    $scope.addressInfo.province = {
+                        key: undefined,
+                        value: undefined
+                    };
+                    $scope.addressInfo.city = {
+                        key: undefined,
+                        value: undefined
+                    };
                     if(regionCode == 'CN'){
                         getRegions('province', 'provinces', regionCode);
-                        $scope.addressInfo.province = {
-                            key: undefined,
-                            value: undefined
-                        };
-                        $scope.addressInfo.city = {
-                            key: undefined,
-                            value: undefined
-                        };
                     }
+                    $timeout(function () {
+                        if (!$scope.addressInfo.isTaxResidency) {
+                            $scope.addressInfo.tax_residency.key = $scope.addressInfo.country.key;
+                            $scope.addressInfo.tax_residency.value = $scope.addressInfo.country.value;
+                        }
+                        if (!$scope.addressInfo.isNationality) {
+                            $scope.addressInfo.nationality.key = $scope.addressInfo.country.key;
+                            $scope.addressInfo.nationality.value = $scope.addressInfo.country.value;
+                        }
+                    }, 30);
                     break;
                 case 'province':
                     $scope.addressInfo.city = {

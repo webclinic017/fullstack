@@ -191,12 +191,12 @@
                             ng-model="completeInfo.birthday"
                             data-bind-model="completeInfo.birthday"
                             data-formatter="yyyymmdd"
-                            ng-class="{'form-control-error': frontErr.birthday.show && realnameForm.birthday.$invalid}"
+                            ng-class="{'form-control-error': frontErr.birthday.show && completeForm.birthday.$invalid}"
                             ng-blur="showErr('birthday')"
                             ng-focus="hideErr('birthday')"
                         >
                         <div ng-show="frontErr.birthday.show">
-                            <p class="alert alert-arrow_tp_lf" ng-show="realnameForm.birthday.$error.required">
+                            <p class="alert alert-arrow_tp_lf" ng-show="completeForm.birthday.$error.required">
                                 {{lang.text('tigerWitID.myAccount.enterBirthday')}}
                             </p>
                         </div>
@@ -215,7 +215,7 @@
                                 readonly
                                 no-active="{{personal.updatePapers.hint == 1}}"
                                 ng-model="completeInfo.gender.key"
-                                ng-class="{'form-control-error': frontErr.gender.show && realnameForm.gender.$invalid}"
+                                ng-class="{'form-control-error': frontErr.gender.show && completeForm.gender.$invalid}"
                                 ng-blur="showErr('gender')"
                                 ng-focus="hideErr('gender')">
                             
@@ -230,7 +230,7 @@
                         </div>
                         
                         <div ng-show="frontErr.gender.show">
-                            <p class="alert alert-arrow_tp_lf" ng-show="realnameForm.gender.$error.required">
+                            <p class="alert alert-arrow_tp_lf" ng-show="completeForm.gender.$error.required">
                                 {{lang.text('tigerWitID.myAccount.enterGender')}}
                             </p>
                         </div>

@@ -11,7 +11,7 @@
                     <input class="select__input"
                         name="addressType"
                         type="text"
-                        placeholder="Select Document Type"
+                        placeholder="{{lang.text('tigerWitID.settings.openAccountNewTip19')}}"
                         required
                         readonly
                         ng-model="addressInfo.type.key"
@@ -27,6 +27,12 @@
                             <span data-value="{{type.value}}">{{ type.key }}</span>
                         </li>
                     </ul>
+
+                    <div ng-show="frontErr.addressType.show">
+                        <p class="alert alert-arrow_tp_lf" ng-show="addressForm.addressType.$error.required">
+                            {{lang.text('tigerWitID.settings.openAccountNewTip19')}}
+                        </p>
+                    </div>
                 </div>
             </div>
         </form>
@@ -50,9 +56,9 @@
                 </div>
             </div>
         </div>
-        <p class="mg-tp-15 font-dark">
+        <!-- <p class="mg-tp-15 font-dark">
             {{lang.text('tigerWitID.myAccount.tip26')}}
-        </p>
+        </p> -->
 
         <div class="authen_card_eg">
             <p class="tit">{{lang.text('tigerWitID.myAccount.cardEgTitle')}}</p>
@@ -83,7 +89,7 @@
             </div>
             <div class="btn_wrapper text-center">
                 <button class="btn btn-sm tw-btn-capsule-gradient" ng-if="clickable" ng-click="uploadAddress()">
-                    {{lang.text('tigerWitID.submit')}}
+                    {{lang.text('actLogin29')}}
                 </button>
 
                 <a class="btn btn-sm tw-btn-capsule-gradient" ng-if="!clickable">

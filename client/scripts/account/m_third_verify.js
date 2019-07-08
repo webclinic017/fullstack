@@ -523,10 +523,12 @@ $(document).ready(function () {
     //第四步 --- kyc
     $(ele.investInfoBtn).on("tap", function (e) {
         e.preventDefault();
+        var msg = {};
         var json = kycInfo["0"].message;
         var next = true;
         // console.log(json);
         for (var name in json) {
+            msg[name] = json[name];
             if (json.employment_status === 'self_employed') {
                 if (name === 'position') continue;
             } else if (json.employment_status !== 'employed') {
@@ -536,10 +538,15 @@ $(document).ready(function () {
                 next = false;
             }
         }
+        if (msg.employment_status === "self_employed") {
+            msg.position = undefined;
+        } else if (msg.employment_status === "unemployed" || msg.employment_status === "retired") {
+            msg.industry = undefined;
+            msg.position = undefined;
+        }
         if (next) {
             layer.open({type: 2, shadeClose: false});
-
-            publicRequest('thirdSetKyc', 'POST', json).then(function (data) {
+            publicRequest('thirdSetKyc', 'POST', msg).then(function (data) {
                 // console.log(data);
                 layer.closeAll();
                 if (!data) return;
@@ -610,7 +617,7 @@ $(document).ready(function () {
     function openFundInfoLayerMdl(force) {
         layer.open({
             content: $(".m_third_layer_temp").html()
-            ,btn: ['YES', 'NO']
+            ,btn: [lang.text('third.yes'), lang.text('third.no')]
             ,yes: function(index){
                 if (force) {
                     layer.close(index);
@@ -752,10 +759,17 @@ $(document).ready(function () {
     //第六步 --- 上传地址证明
     $(ele.addressBtn).on("tap", function (e) {
         e.preventDefault();
-        if (cardBaseFile.addressOne) {
+        var cardType = $(ele.addressCardType).attr("data-type");
+        if (!cardType) {
+            layer.open({
+                content: lang.text('third.fillInfoTip'),
+                skin: 'msg',
+                time: 2
+            });
+        } else if (cardBaseFile.addressOne) {
             layer.open({type: 2, shadeClose: false});
             publicRequest('thirdUploadAddress', 'POST', {
-                cert_type: $(ele.addressCardType).attr("data-type"),
+                cert_type: cardType,
                 front: cardBaseFile.addressOne.src.split(',')[1],
                 back: cardBaseFile.addressTwo ? cardBaseFile.addressTwo.src.split(',')[1] : undefined
             }).then(function (data) {
@@ -795,7 +809,13 @@ $(document).ready(function () {
             needTwo = false;
         }
 
-        if (cardType && cardNo && cardBaseFile.front && (!needTwo || cardBaseFile.back)) {
+        if (!cardType || !cardNo) {
+            layer.open({
+                content: lang.text('third.fillInfoTip'),
+                skin: 'msg',
+                time: 2
+            });
+        } else if (cardBaseFile.front && (!needTwo || cardBaseFile.back)) {
             layer.open({type: 2, shadeClose: false});
             publicRequest('thirdUploadIdCard', 'POST', {
                 cert_type: cardType,
