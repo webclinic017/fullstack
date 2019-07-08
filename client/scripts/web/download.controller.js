@@ -9,10 +9,9 @@
     WebDownloadController.$inject = ['$scope', '$location'];
 
     function WebDownloadController ($scope, $location) {
-        console.log($location.host());
-        $scope.androidImg = "/images/web/download_m_blank_cn_20190226.png";
+        $scope.androidLiveImg = true;
         if ($location.host() === 'globaldemo.tigerwit.com' || $location.host() === 'w.dev.tigerwit.com') {
-            $scope.androidImg = "/images/web/download_m_blank_cn_demo.png";
+            $scope.androidLiveImg = false;
         }
         // $(".img_box").qrcode({
         //     text: "http://192.168.1.61/m/blank",

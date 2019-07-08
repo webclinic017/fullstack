@@ -49,7 +49,8 @@
                                             <span><%= lang.text('mRegister11')%></span>
                                         </div>
                                         <div class="img_box">
-                                            <img class="mg-bt-10" ng-src="{{androidImg}}" draggable=false>
+                                            <img class="mg-bt-10" ng-show="androidLiveImg" src="/images/web/download_m_blank_cn_20190226.png" draggable=false>
+                                            <img class="mg-bt-10" ng-show="!androidLiveImg" src="/images/web/download_m_blank_cn_demo.png" draggable=false>
                                             <span><%= lang.text('mRegister12')%></span>
                                         </div>
                                         <p><%= lang.text('downloadApp.tip5')%></p>
