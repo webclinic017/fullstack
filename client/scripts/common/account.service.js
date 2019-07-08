@@ -71,7 +71,8 @@
             setIslamicStatus: setIslamicStatus,
             transferIslamic: transferIslamic,
             uploadAgentProtocol: uploadAgentProtocol,
-            agentProtocol: agentProtocol
+            agentProtocol: agentProtocol,
+            getVersionCheck: getVersionCheck
         };
         var resolveValue;
         return service;
@@ -707,6 +708,9 @@
         function agentProtocol() {
             return publicHttp.dealPublicRequest(o.agentProtocolApi, 'GET');
         }
-
+        // APP版本更新信息
+        function getVersionCheck (params) {
+            return publicHttp.dealPublicRequest(o.getVersionCheckApi, 'GET', params);
+        }
     }
 })();

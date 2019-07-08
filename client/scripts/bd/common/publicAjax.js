@@ -39,6 +39,7 @@
         postLcpagPay: origin + '/lcpag/pay', //post
         getLcpagOrderInfoApp: origin_app + '/wallet/order_info', //get
         postLcpagPayApp: origin_app + '/lcpag/pay', //post
+        getVersionCheck: origin + '/system/version_check', //get
 
         //交易品种
         getSymbols: origin_app + '/symbol/list', //get

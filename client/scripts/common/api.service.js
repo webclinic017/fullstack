@@ -74,7 +74,8 @@
             getIdcardApi: urlOrigin2 + '/user/idcard',
             getEmailPhone: urlOrigin2 + '/sys/messages',
             setIslamicStatusApi: urlOrigin2 + '/user/set_islamic_status',
-            transferIslamicApi: urlOrigin2 + '/user/transfer_islamic'
+            transferIslamicApi: urlOrigin2 + '/user/transfer_islamic',
+            getVersionCheckApi: urlOrigin2 + '/system/version_check'
         };
         var asset = {
             withdrawApi: urlOrigin2 + '/payment/withdraw',
