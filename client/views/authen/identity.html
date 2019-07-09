@@ -18,7 +18,6 @@
                                 placeholder="{{lang.text('tigerWitID.myAccount.selectCertificateType')}}"
                                 required
                                 readonly
-                                no-active="{{personal.updatePapers.hint == 1}}"
                                 ng-model="realnameInfo.id_type.key"
                                 ng-class="{'form-control-error': frontErr.id_type.show && realnameForm.id_type.$invalid}"
                                 ng-blur="showErr('id_type')"
@@ -51,7 +50,6 @@
                             type="text"
                             placeholder="{{lang.text('tigerWitID.myAccount.fillCertificateNumber')}}"
                             required
-                            ng-disabled="personal.updatePapers.hint == 1"
                             ng-class="{'form-control-error': frontErr.id_num.show && realnameForm.id_num.$invalid}"
                             ng-model="realnameInfo.id_num"
                             ng-pattern="frontErr.id_num.reg"
@@ -65,7 +63,6 @@
                             type="text"
                             placeholder="{{lang.text('tigerWitID.myAccount.fillCertificateNumber')}}"
                             required
-                            ng-disabled="personal.updatePapers.hint == 1"
                             ng-class="{'form-control-error': frontErr.id_num.show && realnameForm.id_num.$invalid}"
                             ng-model="realnameInfo.id_num"
                             ng-blur="[showErr('id_num'),checkExsit(4)]"
@@ -142,10 +139,10 @@
                 {{ backErr.msg }}
             </div>
             <div class="btn_wrapper text-center">
-                <button class="btn btn-sm tw-btn-capsule-gradient" ng-if="toState.name.indexOf('space.update') != -1 && clickable" ng-click="updatePaper()">
+                <!-- <button class="btn btn-sm tw-btn-capsule-gradient" ng-if="toState.name.indexOf('space.update') != -1 && clickable" ng-click="updatePaper()">
                     {{lang.text('tigerWitID.submit')}}
-                </button>
-                <button class="btn btn-sm tw-btn-capsule-gradient" ng-if="toState.name.indexOf('space.update') == -1 && clickable" ng-click="submitForm()">
+                </button> -->
+                <button class="btn btn-sm tw-btn-capsule-gradient" ng-if="clickable" ng-click="submitForm()">
                     {{lang.text('tigerWitID.submit')}}
                 </button>
 
