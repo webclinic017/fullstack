@@ -1,14 +1,41 @@
 
 <div class="authen_content ctn center" ng-class="{'update': toState.name.indexOf('space.update') != -1}">
     <div class="authen_content__title">
-        <h2 ng-show="toState.name.indexOf('space.update') == -1">{{lang.text('tigerWitID.authen.proofAddress')}}</h2>
+        <h2 ng-show="toState.name.indexOf('space.update') == -1">{{lang.text('tigerWitID.settings.openAccountNewTip18')}}</h2>
+        <p class="authen_content__tip">{{lang.text('tigerWitID.authen.noCan')}}</p>
     </div>
     <div class="kyc" ng-class="{'mg-tp-40': toState.name.indexOf('space.update') == -1, 'update': toState.name.indexOf('space.update') != -1}">
-        <p class="authen_content__tip">{{lang.text('tigerWitID.authen.acceptFollow')}}</p>
-        <p class="authen_content__tip">{{lang.text('tigerWitID.authen.utilityBill')}}</p>
-        <p class="authen_content__tip">{{lang.text('tigerWitID.authen.landlineTel')}}</p>
-        <p class="authen_content__tip">{{lang.text('tigerWitID.authen.bankStatement')}}</p><br>
-        <p class="authen_content__tip">{{lang.text('tigerWitID.authen.noCan')}}</p>
+        <form name="addressForm" novalidate autocomplete="off">
+            <div class="form-control-wrapper">
+                <div class="select">
+                    <input class="select__input"
+                        name="addressType"
+                        type="text"
+                        placeholder="{{lang.text('tigerWitID.settings.openAccountNewTip19')}}"
+                        required
+                        readonly
+                        ng-model="addressInfo.type.key"
+                        ng-class="{'form-control-error': frontErr.addressType.show && addressForm.addressType.$invalid}"
+                        ng-blur="showErr('addressType')"
+                        ng-focus="hideErr('addressType')">
+                    
+                    <i class="select__icon fa fa-angle-down"></i>
+
+                    <ul class="select__dropdown" twform-select data-bind-model="addressInfo.type">
+                        
+                        <li ng-repeat="type in addressType" ng-class="{'selected': type.value === addressInfo.type.value}">
+                            <span data-value="{{type.value}}">{{ type.key }}</span>
+                        </li>
+                    </ul>
+
+                    <div ng-show="frontErr.addressType.show">
+                        <p class="alert alert-arrow_tp_lf" ng-show="addressForm.addressType.$error.required">
+                            {{lang.text('tigerWitID.settings.openAccountNewTip19')}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </form>
         <div class="row pd-tp-50">
             <div class="col-xs-6">
                 <div class="upload_id_card">
@@ -16,11 +43,22 @@
                     <h2 class="upload_id_card__title">
                         {{lang.text('tigerWitID.authen.uploadAddress')}}
                     </h2>
-                    <div tw-upload-file-base64 data-file-name="addressImg"></div>
+                    <div tw-upload-file-base64 data-file-name="addressImgFront"></div>
                 </div>
             </div>
-            
+            <div class="col-xs-6">
+                <div class="upload_id_card">
+                    <i class="upload_id_card__icon fa fa-camera"></i>
+                    <h2 class="upload_id_card__title">
+                        {{lang.text('tigerWitID.authen.uploadAddress')}}
+                    </h2>
+                    <div tw-upload-file-base64 data-file-name="addressImgBack"></div>
+                </div>
+            </div>
         </div>
+        <!-- <p class="mg-tp-15 font-dark">
+            {{lang.text('tigerWitID.myAccount.tip26')}}
+        </p> -->
 
         <div class="authen_card_eg">
             <p class="tit">{{lang.text('tigerWitID.myAccount.cardEgTitle')}}</p>
@@ -43,18 +81,15 @@
                 </li>
             </ul>
         </div>
-        <p class="text-left mg-tp-15 font-dark">
-            {{lang.text('tigerWitID.myAccount.tip26')}}
-        </p>
         <div class="text-center mg-tp-50">
             <div ng-show="backErr.show">
                 <p class="alert-system">
                     {{ backErr.msg }}
                 </p>
             </div>
-            <div class="btn_wrapper text-left">
-                <button class="btn btn-sm tw-btn-capsule-gradient" ng-if="clickable" ng-click="[uploadAddress(), toTrackEvent('Open live account', 'upload_por')]">
-                    {{lang.text('tigerWitID.submit')}}
+            <div class="btn_wrapper text-center">
+                <button class="btn btn-sm tw-btn-capsule-gradient" ng-if="clickable" ng-click="uploadAddress()">
+                    {{lang.text('actLogin29')}}
                 </button>
 
                 <a class="btn btn-sm tw-btn-capsule-gradient" ng-if="!clickable">

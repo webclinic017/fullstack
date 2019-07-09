@@ -304,7 +304,7 @@
          * 2019.02.18
          */
         $scope.toTrackEvent = function (category, action) {
-            console.log(category, action);
+            // console.log(category, action);
             _czc.push(["_trackEvent", category, action]);
         };
 
@@ -372,7 +372,7 @@
         function openDredgeMdl(position) {
             $modal.open({
                 templateUrl: '/views/account/dredge_modal.html',
-                size: 'sm',
+                size: 'md',
                 backdrop: 'static',
                 resolve: {
                     passedScope: function () {
@@ -392,7 +392,7 @@
                     $scope.closeModal = closeModal;
                     $scope.position = passedScope.position;
                     $scope.lang = lang;
-                    $scope.deleteDemo = globalScope.personal.verify_status == 5;
+                    $scope.deleteDemo = globalScope.personal.verify_status == 10;
                     
                     $scope.loading = {
                         demo: false
@@ -452,7 +452,7 @@
                                             if (data.is_succ) {
                                                 $scope.loading.demo = false;
                                                 globalScope.personal.is_live = 1;
-                                                globalScope.personal.verify_status = data.data.status;
+                                                globalScope.personal.verify_status = 11;
                                                 $state.go('authen.subpage')
                                                 closeModal()
                                             }
@@ -472,7 +472,7 @@
                         if ($scope.isIslamic) {
                             confirmIslamic(true);
                         } else {
-                            $state.go('authen.subpage');
+                            $state.go('authen.subpage', {subpage: "realname"})
                         }
                         // $timeout(function () {
                         //     var obj = {
@@ -523,13 +523,13 @@
                 if (isIslamic) {
                     confirmIsApply();
                 } else {
-                    $state.go('authen.subpage');
+                    $state.go('authen.subpage', {subpage: "realname"})
                 }
             }
         }
         function confirmIsApply () {
             if ($scope.personal.islamic_status) {
-                $state.go('authen.subpage');
+                $state.go('authen.subpage', {subpage: "realname"})
             } else {
                 $modal.open({
                     templateUrl: '/views/account/islamic_modal.html',
@@ -566,7 +566,7 @@
                                 });
                             } else {
                                 closeModal();
-                                $state.go('authen.subpage');
+                                $state.go('authen.subpage', {subpage: "realname"})
                             }
                         }
                         function closeModal() {
@@ -613,10 +613,16 @@
             });
         }
 
-        // 获取认证状态
+        // 获取认证状态 (v3废弃)
         // status 1:没填kyc,2:没填写昵称邮箱,3:未上传过身份证,4:审核拒绝,5:待审核,6:审核通过,7:上传真实地址, 10:开户完成, 8:伊斯兰账户协议
         // account_status 0:没开通,1:真实,2:模拟
         // status=10只有在添加认证信息结束的时候我会返回10，app主动请求获取用户认证状态的最终状态是6(审核通过)不会有10
+        /**
+         * 获取认证状态 v4 2019.06.21
+         * status         开户状态, 1:未操作伊斯兰协议(同意或拒绝)；2:完善资料; 3:完善地址; 4:投资信息确认; 5:财务细节调查;
+         *                         6:上传地址证明; 7:上传身份证明;10:待审核；11:审核通过
+           account_status 交易账号开通状态, 0: 未开通 1: 已开通真实账号; 2: 已开通体验账号;
+         */
         function getAuthStatus(para) {
             para = para || {};
             return account.getAuthStatus({
@@ -635,7 +641,7 @@
                         '2': 'demo',
                     }
                     // 是否通过认证
-                    var passedAuthen = verify_status == 6
+                    var passedAuthen = verify_status == 11
                     var params = {
                         verify_status: verify_status,
                         // 开通类型
@@ -689,7 +695,7 @@
                         position: ctrlName
                     });
                 } else {
-                    if (verify_status == 5) {
+                    if (verify_status == 10) {
                         var obj = {
                             // title: '系统提示',
                             // msgClass: 'font-danger',

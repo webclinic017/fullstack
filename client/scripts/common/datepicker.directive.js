@@ -17,8 +17,7 @@
             link: function (scope, element, attrs) {
                 // 保证定位准确
                 jQuery(document.body).css('position', 'relative')
-
-                $.fn.datepicker.dates['zh-CN'] = {
+                jQuery.fn.datepicker.dates['zh-CN'] = {
                     days: ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"],
                     daysShort: ["周日", "周一", "周二", "周三", "周四", "周五", "周六"],
                     daysMin:  ["日", "一", "二", "三", "四", "五", "六"],
@@ -62,7 +61,7 @@
                 }
 
                 // 生成日期选择器
-                $(element).datepicker(options)
+                jQuery(element).datepicker(options)
                 .on('changeDate', function (e) {
                     // console.info(e);
                     var date = e.format(attrs.formatter || dateFormatter[attrs.type]);

@@ -50,14 +50,20 @@
                         // },
                         'content@authen': {
                             templateUrl: function ($stateParams) {
+                                var subpage;
                                 $stateParams.subpage = $stateParams.subpage || 'investInfo';
-                                return '/views/authen/' + $stateParams.subpage + '.html';
+                                if ($stateParams.subpage === 'fundInfo') {
+                                    subpage = 'investInfo';
+                                } else {
+                                    subpage = $stateParams.subpage;
+                                }
+                                return '/views/authen/' + subpage + '.html';
                             },
                             controllerProvider: function ($stateParams) {
                                 $stateParams.subpage = $stateParams.subpage || 'investInfo';
                                 var ctrlPrefix = 'Authen';
                                 var ctrlSuffix = 'Controller';
-                                var ctrlRoot = modCtrlName($stateParams.subpage);
+                                var ctrlRoot = $stateParams.subpage === 'fundInfo' ? 'InvestInfo' : modCtrlName($stateParams.subpage);
                                 return ctrlPrefix + ctrlRoot + ctrlSuffix;
                             }
                         }

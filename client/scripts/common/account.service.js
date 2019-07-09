@@ -14,7 +14,8 @@
             loginByMt4: loginByMt4,
             checkLogined: checkLogined,
             setToken: setToken,
-            updataId: updataId,
+            updataIdCard: updataIdCard,
+            updataIdCardBase64: updataIdCardBase64,
             setUsername: setUsername,
             checkExist: checkExist,
             updataUserInfo: updataUserInfo,
@@ -52,7 +53,8 @@
             getSpreadInfo: getSpreadInfo,
             getUserGroup: getUserGroup,
             hasChecked: false,
-            getAuthStatus: getAuthStatus, //获取认证状态    
+            getAuthStatus: getAuthStatus, //获取认证状态
+            setAuthenAddress: setAuthenAddress, 
             getAdvertiseRecords: getAdvertiseRecords,
             // sendEmailCode: sendEmailCode,
             // getRCaptcha: getRCaptcha,
@@ -577,6 +579,11 @@
         function getAuthStatus(params) {
             return publicHttp.dealPublicRequest(o.getAuthStatus, 'GET', params)
         }
+        
+        //完善认证地址
+        function setAuthenAddress(params) {
+            return publicHttp.dealPublicRequest(o.setAuthenAddressApi, 'PUT', params);
+        }
 
         /**
          * @name setKyc
@@ -662,8 +669,14 @@
             });
         }
 
-        function updataId(params) {
-            return publicHttp.dealPublicRequest(o.updataId, 'PUT', params);
+        function updataIdCard(params) {
+            return publicHttp.dealPublicRequest(o.updataIdCard, 'POST', params);
+        }
+        function updataIdCardBase64 (face, file) {
+            return publicHttp.dealPublicRequest(o.uploadIdCardBase64, 'POST', {
+                face: face,
+                file: file
+            });
         }
 
         function setUsername(params){

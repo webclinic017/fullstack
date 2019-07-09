@@ -322,12 +322,12 @@
 //== radio
 .radio {
     cursor: pointer;
-    > .fa-circle-o,
-    &.checked > .fa-dot-circle-o {
+    > .fa-circle-o, > .fa-square-o,
+    &.checked > .fa-dot-circle-o, &.checked > .fa-check-square {
         display: inline-block;
     }
-    > .fa-dot-circle-o,
-    &.checked > .fa-circle-o {
+    > .fa-dot-circle-o, > .fa-check-square,
+    &.checked > .fa-circle-o, &.checked > .fa-square-o {
         display: none;
     }
     > input[type="radio"] {

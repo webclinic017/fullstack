@@ -25,10 +25,8 @@
           $scope.$emit('global.openDredgeMdl', {
             position: 'sidebar'
           });
-        } else if ($scope.personal.verify_status == 5) {  // 待审核
+        } else if ($scope.personal.verify_status == 10) {  // 待审核
           $scope.authenAssetStatus = 3;
-        } else if ($scope.personal.verify_status == 4) { // 审核拒绝
-          $scope.authenAssetStatus = 4;
         } else if ($scope.personal.dredged_type === 'demo') { // 模拟
           $scope.authenAssetStatus = 2;
         } else {
