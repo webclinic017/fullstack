@@ -1,0 +1,263 @@
+<div class="authen_content ctn center">
+    <div class="authen_content__title">
+        <h2>{{lang.text('tigerWitID.settings.openAccountNewTip4')}}</h2>
+        <p class="authen_content__tip">{{lang.text('tigerWitID.settings.openAccountNewTip5')}}</p>
+    </div>
+    <div class="mg-tp-40 kyc">
+        <form name="addressInfoForm" novalidate autocomplete="off">
+            <div class="row" ng-if="addressInfo.country.value == 'CN'">
+                <div class="col-xs-12">
+                    <div class="form-control-wrapper">
+                        <div class="select">
+                            <input class="select__input" name="province" type="text" placeholder="{{lang.text('tigerWitID.settings.stateRegion')}}"
+                                required readonly ng-model="addressInfo.province.key" ng-class="{'form-control-error': frontErr.province.show && addressInfoForm.province.$invalid}"
+                                ng-blur="showErr('province')" ng-focus="hideErr('province')">
+        
+                            <i class="select__icon fa fa-angle-down"></i>
+        
+                            <ul class="select__dropdown" twform-select data-bind-model="addressInfo.province">
+        
+                                <li ng-repeat="province in address.provinces" ng-class="{'selected': province.code === addressInfo.province.value}">
+                                    <span data-value="{{province.code}}" ng-click="selectRegion('province', province.code)">{{
+                                        province.name }}</span>
+                                </li>
+                            </ul>
+                        </div>
+        
+                        <div ng-show="frontErr.province.show">
+                            <p class="alert alert-arrow_tp_lf" ng-show="addressInfoForm.province.$error.required">
+                                {{lang.text('tigerWitID.settings.selectProvincesCities')}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="form-control-wrapper">
+                        <div class="select">
+                            <input class="select__input" name="city" type="text" placeholder="{{lang.text('tigerWitID.settings.regionCities')}}"
+                                required readonly ng-model="addressInfo.city.key" ng-class="{'form-control-error': frontErr.city.show && addressInfoForm.city.$invalid}"
+                                ng-blur="showErr('city')" ng-focus="hideErr('city')">
+        
+                            <i class="select__icon fa fa-angle-down"></i>
+        
+                            <ul class="select__dropdown" twform-select data-bind-model="addressInfo.city">
+        
+                                <li ng-repeat="city in address.cities" ng-class="{'selected': city.code === addressInfo.city.value}">
+                                    <span data-value="{{city.code}}" ng-click="selectRegion('city', city.code)">{{
+                                        city.name }}</span>
+                                </li>
+                            </ul>
+                        </div>
+        
+                        <div ng-show="frontErr.city.show">
+                            <p class="alert alert-arrow_tp_lf" ng-show="addressInfoForm.city.$error.required">
+                                {{lang.text('tigerWitID.settings.selectCityDistrict')}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="form-control-wrapper">
+                        <input class="form-control" name="address" type="text" placeholder="{{lang.text('tigerWitID.settings.detailedAddress')}}"
+                            required ng-class="{'form-control-error': (frontErr.address.show && addressInfoForm.address.$invalid)}"
+                            ng-model="addressInfo.address" ng-focus="hideErr('address')" ng-blur="[showErr('address')]">
+
+                        <div ng-show="frontErr.address.show">
+                            <p class="alert-arrow_tp_lf" ng-show="addressInfoForm.address.$error.required">
+                                {{lang.text('tigerWitID.settings.detailedAddress')}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="form-control-wrapper">
+                        <input class="form-control" name="postCode" type="text" placeholder="{{lang.text('tigerWitID.settings.zIPCode')}}" required ng-class="{'form-control-error': (frontErr.postCode.show && addressInfoForm.postCode.$invalid)}"
+                            ng-model="addressInfo.postCode" ng-focus="hideErr('postCode')" ng-blur="[showErr('postCode')]">
+
+                        <div ng-show="frontErr.postCode.show">
+                            <p class="alert-arrow_tp_lf" ng-show="addressInfoForm.postCode.$error.required">
+                                {{lang.text('tigerWitID.settings.enterZIPCode')}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="row" ng-if="addressInfo.country.value && addressInfo.country.value != 'CN'">
+                <div class="col-xs-12">
+                    <div class="form-control-wrapper">
+                        <div class="select">
+                            <input class="select__input" name="province" type="text" placeholder="{{lang.text('tigerWitID.settings.openAccountNewTip8')}}"
+                                required ng-model="addressInfo.province.key" ng-class="{'form-control-error': frontErr.province.show && addressInfoForm.province.$invalid}"
+                                ng-blur="showErr('province')" ng-focus="hideErr('province')">
+                        </div>
+        
+                        <div ng-show="frontErr.province.show">
+                            <p class="alert alert-arrow_tp_lf" ng-show="addressInfoForm.province.$error.required">
+                                {{lang.text('tigerWitID.settings.openAccountNewTip8')}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="form-control-wrapper">
+                        <div class="select">
+                            <input class="select__input" name="city" type="text" placeholder="{{lang.text('tigerWitID.settings.openAccountNewTip9')}}"
+                                ng-model="addressInfo.city.key">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="form-control-wrapper">
+                        <input class="form-control" name="postCode" type="text" placeholder="{{lang.text('tigerWitID.settings.zIPCode')}}" required ng-class="{'form-control-error': (frontErr.postCode.show && addressInfoForm.postCode.$invalid)}"
+                            ng-model="addressInfo.postCode" ng-focus="hideErr('postCode')" ng-blur="[showErr('postCode')]">
+
+                        <div ng-show="frontErr.postCode.show">
+                            <p class="alert-arrow_tp_lf" ng-show="addressInfoForm.postCode.$error.required">
+                                {{lang.text('tigerWitID.settings.enterZIPCode')}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="form-control-wrapper">
+                        <input class="form-control" name="address" type="text" placeholder="{{lang.text('tigerWitID.settings.openAccountNewTip10')}}"
+                            required ng-class="{'form-control-error': (frontErr.address.show && addressInfoForm.address.$invalid)}"
+                            ng-model="addressInfo.address" ng-focus="hideErr('address')" ng-blur="[showErr('address')]">
+
+                        <div ng-show="frontErr.address.show">
+                            <p class="alert-arrow_tp_lf" ng-show="addressInfoForm.address.$error.required">
+                                {{lang.text('tigerWitID.settings.openAccountNewTip10')}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="row mg-tp-40">
+                <div class="col-xs-12">
+                    <div class="form-control-wrapper">
+                        <div class="select">
+                            <input class="select__input"
+                                name="type"
+                                type="text"
+                                placeholder="{{lang.text('tigerWitID.settings.openAccountNewTip11')}}"
+                                readonly
+                                ng-model="addressInfo.type.key">
+                            
+                            <i class="select__icon fa fa-angle-down"></i>
+
+                            <ul class="select__dropdown" twform-select data-bind-model="addressInfo.type">
+                                
+                                <li ng-repeat="type in types" ng-class="{'selected': type.value === addressInfo.type.value}">
+                                    <span data-value="{{type.value}}">{{ type.key }}</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="form-control-wrapper">
+                        <div class="select">
+                            <input class="select__input" readonly name="country" type="text" placeholder="{{lang.text('tigerWitID.login.countryRegion')}}"
+                                required ng-model="addressInfo.country.key">
+    
+                            <i class="select__icon fa fa-angle-down"></i>
+    
+                            <ul class="select__dropdown" twform-select data-bind-model="addressInfo.country">
+    
+                                <li class="first_li"><input type="text" placeholder="{{lang.text('tigerWitID.login.countryCode')}}"
+                                        ng-model="placeholderCountry"><i class="fa fa-search"></i></li>
+                                <li ng-repeat="world in worldList | filter : placeholderCountry" ng-class="{'selected': world.code == addressInfo.country.value}">
+                                    <span data-value="{{world.code}}" data-disabled='{"disabled": {{world.disabled}}, "msg": "{{lang.text("tigerWitID.myAccount.unableCountry")}}"}'
+                                        ng-click="[world.disabled || selectRegion('country', world.code, world.type)]" ng-class="{'font-light': world.disabled}">{{world.name}}</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+    
+                    <div ng-show="frontErr.country.show">
+                        <p class="alert alert-arrow_tp_lf" ng-show="addressInfoForm.country.$error.required">
+                            {{lang.text('tigerWitID.login.selectCountry')}}
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <p>{{lang.text('tigerWitID.settings.openAccountNewTip12')}}</p>
+                    <div class="row">
+                        <div class="col-xs-7">
+                            <div class="form-control-wrapper">
+                                <div class="select">
+                                    <input class="select__input" readonly name="nationality" type="text" placeholder=""
+                                         ng-model="addressInfo.nationality.key">
+            
+                                    <i class="select__icon fa fa-angle-down" ng-if="addressInfo.isNationality"></i>
+            
+                                    <ul class="select__dropdown" twform-select data-bind-model="addressInfo.nationality" ng-if="addressInfo.isNationality">
+            
+                                        <li class="first_li"><input type="text" placeholder="{{lang.text('tigerWitID.login.countryCode')}}"
+                                                ng-model="placeholderCountry"><i class="fa fa-search"></i></li>
+                                        <li ng-repeat="world in worldList | filter : placeholderCountry" ng-class="{'selected': world.code == addressInfo.nationality.value}">
+                                            <span data-value="{{world.code}}" data-disabled='{"disabled": {{world.disabled}}, "msg": "{{lang.text("tigerWitID.myAccount.unableCountry")}}"}'
+                                                ng-click="[world.disabled || selectRegion('nationality', world.code, world.type)]" ng-class="{'font-light': world.disabled}">{{world.name}}</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-5 authen_btn_wrapper text-right">
+                            <span class="authen_btn" ng-class="{active: !addressInfo.isNationality}" ng-click="checkNationality(false)">{{lang.text("tigerWitID.no")}}</span>
+                            <span class="authen_btn" ng-class="{active: addressInfo.isNationality}" ng-click="checkNationality(true)">{{lang.text("tigerWitID.yes")}}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <p>{{lang.text('tigerWitID.settings.openAccountNewTip13')}}</p>
+                    <div class="row">
+                        <div class="col-xs-7">
+                            <div class="form-control-wrapper">
+                                <div class="select">
+                                    <input class="select__input" readonly name="tax_residency" type="text" placeholder=""
+                                         ng-model="addressInfo.tax_residency.key">
+            
+                                    <i class="select__icon fa fa-angle-down" ng-if="addressInfo.isTaxResidency"></i>
+            
+                                    <ul class="select__dropdown" twform-select data-bind-model="addressInfo.tax_residency" ng-if="addressInfo.isTaxResidency">
+            
+                                        <li class="first_li"><input type="text" placeholder="{{lang.text('tigerWitID.login.countryCode')}}"
+                                                ng-model="placeholderCountry"><i class="fa fa-search"></i></li>
+                                        <li ng-repeat="world in worldList | filter : placeholderCountry" ng-class="{'selected': world.code == addressInfo.tax_residency.value}">
+                                            <span data-value="{{world.code}}" data-disabled='{"disabled": {{world.disabled}}, "msg": "{{lang.text("tigerWitID.myAccount.unableCountry")}}"}'
+                                                ng-click="[world.disabled || selectRegion('tax_residency', world.code, world.type)]" ng-class="{'font-light': world.disabled}">{{world.name}}</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-5 authen_btn_wrapper text-right">
+                            <span class="authen_btn" ng-class="{active: !addressInfo.isTaxResidency}" ng-click="checkTaxResidency(false)">{{lang.text("tigerWitID.no")}}</span>
+                            <span class="authen_btn" ng-class="{active: addressInfo.isTaxResidency}" ng-click="checkTaxResidency(true)">{{lang.text("tigerWitID.yes")}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center font-danger mg-tp-40" ng-if="backErr.show">
+                <p>{{ backErr.msg }}</p>
+            </div>
+
+            <div class="text-center mg-tp-50 mg-bt-30">
+                <button class="btn btn-primary-gradient btn-sm" ng-if="addressInfo.clickable" ng-click="submitAddressInfoForm()">
+                    {{lang.text('actLogin29')}}
+                </button>
+
+                <button class="btn btn-primary-gradient btn-sm" disabled ng-if="!addressInfo.clickable">
+                    <i class="loading_spinner fa fa-spinner"></i>
+                    {{lang.text('tigerWitID.submitting')}}
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

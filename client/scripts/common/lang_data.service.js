@@ -2086,13 +2086,13 @@
                         "pt-BR": "Parabéns por abrir sua conta de transações reais TigerWit"
                     },
                     "questionnaire": {
-                        "zh": "投资信息确认",
-                        "en": "Questionnaire",
-                        "vi": "Bảng câu hỏi",
-                        "zh-Hant": "投資信息確認",
-                        "id": "Daftar Pertanyaan",
-                        "es": "Cuestionario",
-                        "pt-BR": "Questionário"
+                        "zh": "财务和就业状况",
+                        "en": "Financial and Employment Status",
+                        "vi": "Tình trạng Tài chính và Việc làm",
+                        "zh-Hant": "財務和就業狀況",
+                        "id": "Status pekerjaan dan keuangan",
+                        "es": "Estado financiero y de empleo",
+                        "pt-BR": "Estatuto Financeiro e Emprego"
                     },
                     "tip21": {
                         "zh": "由于受最高监管的约束，需要您提供相关信息，我们只询问与开户相关的问题。您的资料始终保密，绝不公开。",
@@ -2146,7 +2146,7 @@
                         "zh-Hant": "姓",
                         "id": "Nama Depan",
                         "es": "Nombre real",
-                        "pt-BR": " "
+                        "pt-BR": "Nome real"
                     },
                     "firstName": {
                         "zh": "名",
@@ -2155,7 +2155,7 @@
                         "zh-Hant": "名",
                         "id": "Nama Belakang",
                         "es": "Nombre real",
-                        "pt-BR": " "
+                        "pt-BR": "Nome real"
                     },
                     "fillName": {
                         "zh": "请输入真实姓名",
@@ -9991,6 +9991,231 @@
                         "id": "Buka akun Pengalaman",
                         "es": "Abrir una cuenta de Práctica",
                         "pt-BR": "Abra uma conta teste"
+                    },
+                    "openAccountNewTip1": {
+                        "zh": "请选择帐户类型",
+                        "en": "Please select an account type",
+                        "vi": "Hãy chọn kiểu tài khoản",
+                        "zh-Hant": "請選擇帳戶類型",
+                        "id": "Silakan pilih jenis akun",
+                        "es": "Por favor, seleccione un tipo de cuenta",
+                        "pt-BR": "Seleccione por favor um Tipo de conta"
+                    },
+                    "openAccountNewTip2": {
+                        "zh": "身份信息",
+                        "en": "Your Details",
+                        "vi": "Thông tin của bạn",
+                        "zh-Hant": "身份信息",
+                        "id": "Data Anda",
+                        "es": "Tus datos",
+                        "pt-BR": "Seus dados"
+                    },
+                    "openAccountNewTip3": {
+                        "zh": "请在下面填写您的个人信息以注册TigerWit真实账户。 开户将花费不到五分钟，并且您需要提供一些您的身份证明和地址证明的文档。",
+                        "en": "Please anter your personal information below to register for a TigerWit live account. Regestion will take less then five minutes and you will meed some supporting documentation to provide your identity and your address.",
+                        "vi": "Vui lòng điền thông tin cá nhân của bạn để đăng kí mở tài khoản thực với TigerWit. Việc đăng kí sẽ mất khoảng vài phút, bạn cần cung cấp tài liệu để nhận diện và xác minh địa chỉ",
+                        "zh-Hant": "請在下面填寫您的個人信息以註冊TigerWit真實賬戶。開戶將花費不到五分鐘，並且您需要提供一些您的身份證明和地址證明的文檔。",
+                        "id": "Silahkan masukkan data diri anda untuk melakukan pendaftaran di TigerWit. Pendaftarakan akan memakan waktu kurang dari 5 menit dan mohon siapkan data identitas anda beserta bukti alamatnya",
+                        "es": "Por favor, ingresa tu información personal a continuación para registrarse para cuenta real en TigerWit. Registrarte tomará menos de cinco minutos y necesitarás documentación de respaldo al proporcionarnos tu identidad y tu dirección.",
+                        "pt-BR": "Por favor, digite suas informações pessoais abaixo para se registrar para uma conta real na TigerWit. O registro levará menos de cinco minutos e você precisará de documentação de apoio que nos comprove sua identidade e seu endereço."
+                    },
+                    "openAccountNewTip4": {
+                        "zh": "地址细节",
+                        "en": "Your Address Details",
+                        "vi": "Địa chỉ của bạn",
+                        "zh-Hant": "地址細節",
+                        "id": "Data Alamat",
+                        "es": "Datos de dirección",
+                        "pt-BR": "Dados do Endereço"
+                    },
+                    "openAccountNewTip5": {
+                        "zh": "请开始输入住址或邮编，我们的系统将自动获取您的地址",
+                        "en": "Please start typing the first line of your address or post code and our system will auto-complete.",
+                        "vi": "Vui lòng điền thông tin địa chỉ của bạn hoặc mã bưu điện, hệ thống của chúng tôi sẽ tự động hoàn tất đăng kí.",
+                        "zh-Hant": "請開始輸入住址或郵編，我們的系統將自動獲取您的地址",
+                        "id": "Silahkan masukkan alamat anda beserta kode pos dan sistem kami akan melakukan verifikasi secara otomatis",
+                        "es": "Por favor, comienza a digitar la primera línea de tu dirección o código postal y nuestro sistema lo completará automáticamente",
+                        "pt-BR": "Por favor, comece a digitar a primeira linha do seu endereço ou código postal e nosso sistema o completará automaticamente."
+                    },
+                    "openAccountNewTip6": {
+                        "zh": "名",
+                        "en": "First Name",
+                        "vi": "Tên",
+                        "zh-Hant": "名",
+                        "id": "Nama depan",
+                        "es": "Nombre",
+                        "pt-BR": "Primeiro nome"
+                    },
+                    "openAccountNewTip7": {
+                        "zh": "姓",
+                        "en": "Last Name",
+                        "vi": "Tên lót  Họ",
+                        "zh-Hant": "姓",
+                        "id": "Nama belakang",
+                        "es": "Apellido",
+                        "pt-BR": "Sobrenome"
+                    },
+                    "openAccountNewTip8": {
+                        "zh": "第一行地址",
+                        "en": "First line of address",
+                        "vi": "Dòng thứ 1 của địa chỉ",
+                        "zh-Hant": "第一行地址",
+                        "id": "Alamat lengkap 1",
+                        "es": "Primera línea de dirección",
+                        "pt-BR": "Primeira linha de endereço"
+                    },
+                    "openAccountNewTip9": {
+                        "zh": "第二行地址（可选）",
+                        "en": "Second line of address（optional）",
+                        "vi": "Dòng thứ 2 của địa chỉ (tùy chọn)",
+                        "zh-Hant": "第二行地址（可選）",
+                        "id": "Alamat lengkap 2 (opsional)",
+                        "es": "Segunda línea de dirección （opcional）",
+                        "pt-BR": "Segunda linha de endereço(opcional)"
+                    },
+                    "openAccountNewTip10": {
+                        "zh": "城镇/城市",
+                        "en": "Town/City",
+                        "vi": "Thị trấn/Thành phố",
+                        "zh-Hant": "城鎮/城市",
+                        "id": "Kota",
+                        "es": "Pueblo / ciudad",
+                        "pt-BR": "Cidade"
+                    },
+                    "openAccountNewTip11": {
+                        "zh": "您是否在你这个地址居住三个月以上？",
+                        "en": "Have you lived here for more than three months?",
+                        "vi": "Bạn đã sống ở đây hơn ba tháng?",
+                        "zh-Hant": "您是否在你這個地址居住三個月以上？",
+                        "id": "Sudahkah Anda tinggal di sini selama lebih dari tiga bulan?",
+                        "es": "¿Has vivido aquí por más de tres meses?",
+                        "pt-BR": "Você já morou neste endereço por mais de três meses?"
+                    },
+                    "openAccountNewTip12": {
+                        "zh": "您的国籍是否在您居住的国家以外的地方？",
+                        "en": "Is your nationality anywhere other than your country of residence?",
+                        "vi": "Bạn có quốc tịch nào khác ngoài quốc gia hiện đang cư trú không?",
+                        "zh-Hant": "您的國籍是否在您居住的國家以外的地方？",
+                        "id": "Apakah anda bertempat tinggal di daerah yang bukan asal Negara anda?",
+                        "es": "Tu nacionalidad es diferente a la del país em que resides?",
+                        "pt-BR": "A sua nacionalidade é diferente do seu país de residência?"
+                    },
+                    "openAccountNewTip13": {
+                        "zh": "您的纳税地是否在您居住的国家以外的地方？",
+                        "en": "Is your tax residency anywhere other than your country of residence?",
+                        "vi": "Bạn có đóng thuế cư trú tại nơi nào khác ngoài quốc gia nơi bạn cư trú",
+                        "zh-Hant": "您的納稅地是否在您居住的國家以外的地方？",
+                        "id": "Apakah Pajak kewarganegaraan anda merupakan negara tempat asal anda?",
+                        "es": "Es tu residencia fiscal (pagamento de tributos) en otro país diferente al que vives?",
+                        "pt-BR": "É sua residência fiscal (pagamento de tributos) em outro país diferente ao que você mora?"
+                    },
+                    "openAccountNewTip14": {
+                        "zh": "交易经验",
+                        "en": "Trading experience and understanding",
+                        "vi": "Kinh nghiệm và kiến thức giao dịch",
+                        "zh-Hant": "交易經驗",
+                        "id": "Pengalaman dan pemahaman trading",
+                        "es": "Experiencia en trading y comprensión",
+                        "pt-BR": "Experiência em trading e entendimento"
+                    },
+                    "openAccountNewTip15": {
+                        "zh": "我们需要询问有关您的交易经验和您对我们产品的理解的一些问题。",
+                        "en": "We need to ask some questions about your trading experience and your Understanding of our products.",
+                        "vi": "Chúng tôi cần hỏi bạn một số câu hỏi về kinh nghiệm giao dịch và hiểu biết của bạn về các sản phẩm của chúng tôi.",
+                        "zh-Hant": "我們需要詢問有關您的交易經驗和您對我們產品的理解的一些問題。",
+                        "id": "Kami perlu mengetahui tentang pengalaman trading dan pemahaman produk-produk kami",
+                        "es": "Necesitamos hacerte algunas preguntas sobre tu experiencia con trading y tu comprensión de nuestros productos.",
+                        "pt-BR": "Precisamos fazer algumas perguntas sobre sua experiência com trading e seu entendimento de nossos produtos."
+                    },
+                    "openAccountNewTip16": {
+                        "zh": "财务细节",
+                        "en": "Fund details",
+                        "vi": "Chi tiết quỹ",
+                        "zh-Hant": "財務細節",
+                        "id": "Data Pendanaan",
+                        "es": "Datos de los fondos",
+                        "pt-BR": "Dados dos fundos"
+                    },
+                    "openAccountNewTip17": {
+                        "zh": "我们需要询问一些关于您财务方面的问题",
+                        "en": "We need to ask some questions about your fund details of our products.",
+                        "vi": "Chúng tôi cần hỏi bạn một số câu hỏi về quỹ giao dịch của bạn đối với các sản phẩm của chúng tôi",
+                        "zh-Hant": "我們需要詢問一些關於您財務方面的問題",
+                        "id": "Pertanyaan mengenai data pendanaan anda untuk produk-produk kami",
+                        "es": "Precisamos hacerte algunas preguntas sobre detalles de los fondos aplicados en nuestros productos.",
+                        "pt-BR": "Precisamos de fazer algumas perguntas sobre detalhes dos seus fundos aplicados em nossos produtos."
+                    },
+                    "openAccountNewTip18": {
+                        "zh": "上传地址证明",
+                        "en": "Upload Proof of Address",
+                        "vi": "Tải lên xác minh địa chỉ",
+                        "zh-Hant": "上傳地址證明",
+                        "id": "Unggah bukti alamat",
+                        "es": "Cargar Comprobante de Dirección",
+                        "pt-BR": "Carregar Comprovante de Residência"
+                    },
+                    "openAccountNewTip19": {
+                        "zh": "选择文档类型",
+                        "en": "Select Document Type",
+                        "vi": "Chọn loại tài liệu",
+                        "zh-Hant": "選擇文檔類型",
+                        "id": "Pilih Jenis Dokumen",
+                        "es": "Seleccione el tipo de documento",
+                        "pt-BR": "Selecione o tipo de documento"
+                    },
+                    "openAccountNewTip20": {
+                        "zh": "电费单（水，煤气，电）",
+                        "en": "Utility Bill(Water,Gas,Electriity)",
+                        "vi": "Hóa đơn tiện ích (Nước, gas, điện,…)",
+                        "zh-Hant": "電費單（水，煤氣，電）",
+                        "id": "Tagihan Utilitas (Air, Listrik, Gas)",
+                        "es": "Cuenta de servicios ( Agua, gas, electricidad)",
+                        "pt-BR": "Conta de serviços (Água, gás, eletricidade)"
+                    },
+                    "openAccountNewTip21": {
+                        "zh": "固定电话费",
+                        "en": "Landline Telephone Bill",
+                        "vi": "Hóa đơn điện thoại bàn",
+                        "zh-Hant": "固定電話費",
+                        "id": "Tagihan telepon kabel",
+                        "es": "Cuenta de teléfono fijo",
+                        "pt-BR": "Conta de telefone fixo"
+                    },
+                    "openAccountNewTip22": {
+                        "zh": "银行对帐单",
+                        "en": "Bank Statement",
+                        "vi": "Bản sao kê ngân hàng",
+                        "zh-Hant": "銀行對帳單",
+                        "id": "Tagihan Bank",
+                        "es": "Extracto bancario",
+                        "pt-BR": "Extrato bancário"
+                    },
+                    "openAccountNewTip23": {
+                        "zh": "差价合约是复杂的产品，存在高额亏损的风险。 只有在您通过应用风险控制（包括止损和止盈订单）来寻求最小化损失时，才应该继续使用该产品。",
+                        "en": "CFDs are complex products which involve a high risk of losing your money. You should proceed only if you will seek to minimize losses by applying risk controls, including stop loss and take profit orders.",
+                        "vi": "CFDs (Các chỉ số chứng khoán) là những sản phẩm phức tạp có nguy cơ mất tiền cao. Bạn chỉ nên tiến hành giao dịch nếu bạn biết cách áp dụng các biện pháp kiểm soát rủi ro, bao gồm cắt lỗ và chốt lời để giảm thiểu tổn thất.",
+                        "zh-Hant": "差價合約是複雜的產品，存在高額虧損的風險。只有在您通過應用風險控制（包括止損和止盈訂單）來尋求最小化損失時，才應該繼續使用該產品。",
+                        "id": "CFD adalah produk yang memiliki kompleksitas serta risiko yang tinggi dan dapat mengakibatkan anda kehilangan modal. Oleh karena itu anda selalu disarankan untuk meminimalisir kerugian anda dengan cara mengontrol risiko, termasuk penggunaan stop loss dan take profit.",
+                        "es": "Los CFDs son productos complejos que conllevan un alto riesgo de perder su dinero. Debe proseguir solamente si intentará minimizar las pérdidas mediante la aplicación de control de riesgos, incluyendo operaciones del tipo stop loss o take profit.",
+                        "pt-BR": "CFDs são produtos complexos que envolvem um alto risco de perder seu dinheiro. Você deve proceder somente se procurar minimizar as perdas aplicando controles de risco, incluindo stop loss e take profit orders."
+                    },
+                    "openAccountNewTip24": {
+                        "zh": "如果您的承受风险能力较低，差价合约将不适合您。",
+                        "en": "CFDs will not be appropriate for you if you are not prepared to accept any risk to your capital.",
+                        "vi": "CFDs sẽ không phù hợp với bạn nếu bạn không sẵn sàng chấp nhận bất kỳ rủi ro nào đối với tiền vốn.",
+                        "zh-Hant": "如果您的承受風險能力較低，差價合約將不適合您。",
+                        "id": "CFD tidak cocok untuk anda apabila anda tidak siap menerima risiko. ",
+                        "es": "Los CFDs no serán apropiados para usted si no está preparado para correr ningún riesgo con su capital.",
+                        "pt-BR": "Os CFDs não serão apropriados para você se você não estiver preparado para aceitar qualquer risco ao seu capital."
+                    },
+                    "openAccountNewTip25": {
+                        "zh": "你想继续吗?",
+                        "en": "Would you like to continue?",
+                        "vi": "Bạn có muốn tiếp tục không?",
+                        "zh-Hant": "你想繼續嗎?",
+                        "id": "Apakah anda yakin untuk melanjutkan?",
+                        "es": "¿Le gustaría continuar?",
+                        "pt-BR": "Você gostaria de continuar?"
                     },
                     "provideService": {
                         "zh": "定制您的个性化服务",

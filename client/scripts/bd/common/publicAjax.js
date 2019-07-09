@@ -4,6 +4,7 @@
     var origin = ($.cookie && $.cookie("access_origin2")) ? $.cookie("access_origin2") : '/api';
     var origin_app = '/api/app/v3';
     var origin_third = '/api/third/v3';
+    var origin_third2 = '/api/third/v4';
     origin = origin + '/v3';
     // console.log(origin);
     var apiUrl = {
@@ -57,20 +58,22 @@
         drawPrize: origin_app + '/lucky_draw', // post
 
         // 三方接口
-        thirdGetStatus: origin_third + '/user/auth_status', // get
+        thirdGetStatus: origin_third2 + '/user/auth_status', // get
         thirdRegister: origin_third + '/auth/register', //post
-        thirdGetKycList: origin_third + '/user/kyc_map', // get
-        thirdSetKyc: origin_third + '/user/kyc', //post
-        thirdSetUserInfo: origin_third + '/user/auth_info', //put
+        thirdGetKycList: origin_third2 + '/user/kyc_map', // get
+        thirdSetKyc: origin_third2 + '/user/kyc', //post
+        thirdSetUserInfo: origin_third2 + '/user/auth_info', //put
         thirdSetIdNo: origin_third + '/user/update_idno', //put
-        thirdUploadIdCard: origin_third + '/user/upload_base64_id_card', //put
+        // thirdUploadIdCard: origin_third + '/user/upload_base64_id_card', //put
         thirdSetPassword: origin_third + '/user/account', //post
         thirdChangePassword: origin_third + '/user/passwd', //put
         thirdCountries: origin_third + '/region/countries', // get
         thirdStateList: origin_third + '/region/provinces', // get
         thirdCitiesList: origin_third + '/region/cities', // get
         thirdGetCacheInfo: origin_third + '/user/auth_info', // get
-        thirdUploadAddress: origin_third + '/user/upload_address_prove', //post
+        thirdUploadAddress: origin_third2 + '/user/upload_address_prove', //post
+        thirdSetUserAddressInfo: origin_third2 + '/user/address', //put
+        thirdUploadIdCard: origin_third2 + '/user/upload_id_card', //put
 
         // 获取交易月报
         getMonReport: origin_app + '/user/monthly_report',     // get
