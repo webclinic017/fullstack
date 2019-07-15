@@ -631,10 +631,10 @@ module.exports = {
         id: "__id__"
     },
     faqTrade23: {
-        zh: "A：当普通账户保证金比率（保证金比例 = 净值 / 已用预付款 * 100%）低于100%，高手账户的保证金比率（保证金比例 = 净值 / 已用预付款 * 100%）低于100%，系统将会启动强平机制，从您损失最大的订单开始平仓。",
-        en: "A: When the margin ration (Margin Level=Equit / Margin *100%) is below 100% on common accounts and the margin ratio is below 100% on masters’accounts, the company will effect forced liquidation starting from your deal with the highest loss.",
+        zh: "A：当普通账户保证金比率（保证金比例 = 净值 / 已用预付款 * 100%）低于50%，高手账户的保证金比率（保证金比例 = 净值 / 已用预付款 * 100%）低于50%，系统将会启动强平机制，从您损失最大的订单开始平仓。",
+        en: "A: When the margin ration (Margin Level=Equit / Margin *100%) is below 50% on common accounts and the margin ratio is below 50% on masters’accounts, the company will effect forced liquidation starting from your deal with the highest loss.",
         vi: "^^-^^",
-        "zh-Hant": "A：當普通賬戶保證金比率（保證金比例 = 凈值 / 已用預付款 * 100%）低於100%，高手賬戶的保證金比率（保證金比例 = 凈值 / 已用預付款 * 100%）低於100%，系統將會啟動強平機制，從您損失最大的訂單開始平倉。",
+        "zh-Hant": "A：當普通賬戶保證金比率（保證金比例 = 凈值 / 已用預付款 * 100%）低於50%，高手賬戶的保證金比率（保證金比例 = 凈值 / 已用預付款 * 100%）低於50%，系統將會啟動強平機制，從您損失最大的訂單開始平倉。",
         id: "__id__"
     },
     faqTrade24: {
