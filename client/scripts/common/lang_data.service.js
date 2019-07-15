@@ -1042,9 +1042,9 @@
                         "en": "By clicking 'Register' you confirm that you have read and agree with ",
                         "vi": "Bằng cách nhấn nút ‘Đăng Ký’ bạn xác nhận rằng bạn đa đọc và đồng ý với ",
                         "zh-Hant": "提交註冊代表您已閱讀並同意",
-                        "id": "Dengan menekan tombol “Daftar”, anda mengakui bahwa anda telah membaca dan setuju dengan",
+                        "id": "Dengan menekan tombol “Daftar”, anda mengakui bahwa anda telah membaca dan setuju dengan ",
                         "es": "Al hacer click ”Aceptar” confirma que ha leído y aceptado ",
-                        "pt-BR": "Ao clicar em \"Registrar\" você confirma que leu e concorda com os"
+                        "pt-BR": "Ao clicar em \"Registrar\" você confirma que leu e concorda com os "
                     },
                     "tip1_2": {
                         "zh": "客户协议",
@@ -1069,18 +1069,18 @@
                         "en": "Privacy Policy ",
                         "vi": "Chính Sách Cá Nhân ",
                         "zh-Hant": "隱私政策",
-                        "id": "Kebijakan Privasi",
+                        "id": "Kebijakan Privasi ",
                         "es": "Política de Privacidad ",
-                        "pt-BR": "Política de Privacidade"
+                        "pt-BR": "Política de Privacidade "
                     },
                     "tip1_5": {
                         "zh": "及其他",
                         "en": "and any other ",
                         "vi": "Và nhũng cái khác ",
                         "zh-Hant": "及其他",
-                        "id": "dan yang lain",
+                        "id": "dan yang lain ",
                         "es": "y cualquier otra ",
-                        "pt-BR": "e quaisquer outros"
+                        "pt-BR": "e quaisquer outros "
                     },
                     "tip1_6": {
                         "zh": "法律声明",

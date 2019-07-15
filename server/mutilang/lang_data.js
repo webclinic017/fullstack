@@ -11104,7 +11104,7 @@ module.exports = {
             "zh-Hant": "成為高手",
             "id": "Menjadi Master",
             "es": "Solicitud Máster",
-            "pt-BR": "Tornar-se um Master Trader"
+            "pt-BR": "Torne-se um Master Trader"
         },
         "eliteTeam": {
             "zh": "精英团队",
@@ -13853,7 +13853,7 @@ module.exports = {
         "zh-Hant": "妳需要的交易市場",
         "id": "Trading dipasar manapun",
         "es": "Opere los mercados que busca",
-        "pt-BR": "Negocie nos mercados que você"
+        "pt-BR": "Negocie nos mercados que você quiser"
     },
     "newhome_1_1": {
         "zh": "你需要的交易方式",
@@ -13961,7 +13961,7 @@ module.exports = {
         "zh-Hant": "復制跟單",
         "id": "Transaksi sendiri atau ikuti Master",
         "es": "Descargar en la App Store",
-        "pt-BR": "Auto-dirigido e cópia de negociação"
+        "pt-BR": "Copie um Master Trader"
     },
     "newhome_11": {
         "zh": "一键点击跟随TigerWit高手，立享高手同步交易策略。你仅需付给高手20%的佣金。",
@@ -13970,7 +13970,7 @@ module.exports = {
         "zh-Hant": "壹鍵點擊跟隨TigerWit高手，立享高手同步交易策略。妳僅需付給高手20%的傭金。",
         "id": "Ikuti Master di TigerWit hanya dengan sekali klik, dan tiru strategi trading mereka. Bayar komisi sebesar 20% saja ke Master anda.",
         "es": "Siga a un TigerWit Master con un único click y opere empleando sus estrategias. Pague sólo un 20% de comisión a su Master.",
-        "pt-BR": "Seguir um Mestre da TigerWit com um simples clique e negocie usando suas estratégias. Pague apenas 20% de comissão ao seu Mestre."
+        "pt-BR": "Siga um Master Trader da TigerWit um simples clique e negocie usando suas estratégias. Pague apenas 20% de comissão ao seu Mestre."
     },
     "newhome_12": {
         "zh": "在高手榜单中选择一位高手。",
@@ -14024,7 +14024,7 @@ module.exports = {
         "zh-Hant": "妳需要的交易市場",
         "id": "Pasar yang anda inginkan",
         "es": "Los mercados que busca",
-        "pt-BR": "Os mercados desejados"
+        "pt-BR": "Os mercados mais desejados"
     },
     "newhome_17_1": {
         "zh": "TigerWit提供外汇、贵金属、原油、股指等产品。",
@@ -14186,7 +14186,7 @@ module.exports = {
         "zh-Hant": "壹個流暢、智能、便捷的交易APP",
         "id": "Melalui aplikasi yang pintar, cerdas dan lebih intuitif.",
         "es": "En una smart App vanguardista y altamente intuitiva.",
-        "pt-BR": "Em um aplicativo mais elegante, mais inteligente e intuitivo."
+        "pt-BR": "Em um aplicativo mais elegante mais inteligente e intuitivo."
     },
     "newhome_34": {
         "zh": "操作灵活，功能丰富",
@@ -14195,7 +14195,7 @@ module.exports = {
         "zh-Hant": "操作靈活，功能豐富",
         "id": "Canggih dan lincah namun mudah digunakan.",
         "es": "Robusta y sofisticada pero fácil de usar. ",
-        "pt-BR": "Ágil, sofisticado, mas fácil de usar."
+        "pt-BR": "Ágil, sofisticado, mais fácil de usar."
     },
     "newhome_35": {
         "zh": "为交易者量身设计。",
