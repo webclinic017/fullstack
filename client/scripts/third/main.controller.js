@@ -115,7 +115,7 @@
                 account.getAuthStatus().then(function (data) {
                     if (data.is_succ) {
                         main.accountStatus = data.data.account_status;
-                        if (data.data.status == 6) {
+                        if (data.data.status == 11) {
                             main.verifyInfo = {
                                 status: true,
                                 msg: ''

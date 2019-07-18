@@ -950,6 +950,7 @@ module.exports = function (app) {
                 }
             });
         }
+        // APP更新版本信息已配置到CRM中，无需再从这里获取，此接口不再提供更新，只保留兼容老版本APP
         if (action == "version_check") {
             console.log(req.query);
             console.log('-----array-----', Array.isArray(req.query.lang));

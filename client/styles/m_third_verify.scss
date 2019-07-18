@@ -24,10 +24,13 @@
             }
         }
     }
+    .m_third_layer_temp {
+        display: none;
+    }
 }
 @include b(m_third_navbar) {
     @include e(box) {
-        padding: px2rem(30) px2rem(60) px2rem(100);
+        padding: px2rem(30) px2rem(60) px2rem(48);
     }
     @include e(progress) {
         position: relative;
@@ -37,11 +40,11 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: px2rem(32);
-            height: px2rem(32);
-            border-radius: px2rem(16);
+            width: 14px;
+            height: 14px;
+            border-radius: 8px;
             background-color: #d8d8d8;
-            margin-left: px2rem(-16);
+            margin-left: -7px;
 
             .tit {
                 width: px2rem(182);
@@ -52,14 +55,14 @@
             }
 
             span {
-                width: px2rem(20);
-                height: px2rem(20);
-                border-radius: px2rem(10);
+                width: 14px;
+                height: 14px;
+                border-radius: 8px;
                 background-color: #ffd000;
                 display: none;
                 position: absolute;
-                top: px2rem(6);
-                left: px2rem(6);
+                top: 0px;
+                left: 0px;
                 z-index: 1000;
             }
 
@@ -70,29 +73,32 @@
             }
 
             &.num1 {
-                left: 33.33%;
+                left: 25%;
             }
             &.num2 {
-                left: 66.66%;
+                left: 50%;
             }
             &.num3 {
+                left: 75%;
+            }
+            &.num4 {
                 left: 100%;
             }
         }
         .line {
             float: left;
-            width: 33.33%;
-            height: px2rem(12);
+            width: 25%;
+            height: 4px;
             background-color: #d8d8d8;
-            margin-top: px2rem(10);
+            margin-top: 5px;
             position: relative;
             z-index: 100;
 
             span {
                 display: none;
                 width: 100%;
-                height: px2rem(4);
-                margin-top: px2rem(4);
+                height: 4px;
+                margin-top: 0px;
                 background-color: #ffd000;
             }
 
@@ -155,91 +161,9 @@
         display: block;
     }
 }
-@include b(m_third_kyc) {
+@include b(m_third_realnameInfo) {
     display: none;
 
-    @include e(single) {
-        padding-top: px2rem(30);
-        
-        .tit {
-            font-size: px2rem(32);
-            padding-bottom: px2rem(10);
-        }
-        .cont {
-            color: #909090;
-        }
-
-        @include m(list) {
-            li {
-                padding: px2rem(10) 0;
-                float: left;
-                width: 50%;
-
-                label {
-                    display: block;
-
-                    .inp {
-                        display: inline-block;
-                        width: 12px;
-                        height: 12px;
-                        border: 1px solid #909090;
-                        border-radius: 50%;
-                        position: relative;
-
-                        &.active {
-                            &:before {
-                                display: block;
-                                content: '';
-                                width: 6px;
-                                height: 6px;
-                                background-color: #ffd000;
-                                border-radius: 50%;
-                                position: absolute;
-                                top: 2px;
-                                left: 2px;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        @include m(select) {
-            width: 100%;
-            border: 1px solid #979797 !important;
-            box-shadow: inherit !important;
-            border-radius: 4px;
-            padding: 6px 10px;
-            font-weight: 400;
-            background-color: transparent;
-
-            &:before {
-                display: none;
-            }
-            &:after {
-                top: 50%;
-                margin-top: -3px;
-            }
-        }
-    }
-    @include e(btn) {
-        margin-top: px2rem(100);
-        padding-bottom: px2rem(32);
-
-        .btn {
-            width: 100%;
-            margin-bottom: 0;
-
-        }
-    }
-
-    &.active {
-        display: block;
-    }
-}
-@include b(m_third_userinfo) {
-    display: none;
-    
     @include e(wrapper) {
         padding: px2rem(14) 0;
         position: relative;
@@ -257,51 +181,15 @@
         :-ms-input-placeholder { /* Internet Explorer 10+ */  
             font-size: px2rem(28);
         }
-
-        select {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-        }
-
         .info {
             display: block;
             width: 100%;
             height: px2rem(96);
-            padding: 0 px2rem(40);
-            padding-right: px2rem(10);
+            padding: 0 px2rem(10);
             border: 1px solid #ccc;
             border-radius: 4px;
         }
-        &.state_cn, &.state_global, &.city_cn, &.city_global {
-            display: none;
-            &.active {
-                display: block;
-            }
-        }
     }
-    @include e(btn) {
-        padding-top: px2rem(32);
-
-        .btn {
-            width: 100%;
-        }
-    }
-
-    &.active {
-        display: block;
-    }
-}
-@include b(m_third_username) {
-    display: none;
-
-    @include e(wrapper) {
-        @extend .m_third_userinfo__wrapper;
-    }
-    
     @include e(male) {
         margin: 20px 0px;
         span {
@@ -332,13 +220,188 @@
         display: block;
     }
 }
-@include b(m_third_card) {
+@include b(m_third_addressInfo) {
     display: none;
+    
+    @include e(wrapper) {
+        @extend .m_third_realnameInfo__wrapper;
 
+        select {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+        }
+        &.state_cn, &.state_global, &.city_cn, &.city_global {
+            display: none;
+            &.active {
+                display: block;
+            }
+        }
+        .radio_wrapper {
+            span {
+                display: inline-block;
+                padding: 0px 22px;
+                border: 1px solid #ccc;
+                border-radius: 20px;
+                height: 24px;
+                line-height: 24px;
+                margin-left: 5px;
+                &.active {
+                    background-color: #fad802;
+                    border-color: #fad802;
+                }
+            }
+        }
+        .radio_select_wrapper {
+            width: 50%;
+            display: none;
+            &.active {
+                display: block;
+            }
+
+            .info {
+                height: 32px;
+            }
+        }
+        .radio_current_wrapper {
+            display: none;
+            &.active {
+                display: inline-block;
+            }
+        }
+
+    }
+    @include e(btn) {
+        padding-top: px2rem(32);
+
+        .btn {
+            width: 100%;
+        }
+    }
+
+    &.active {
+        display: block;
+    }
+}
+@include b(m_third_investInfo) {
+    display: none;
+    &.active {
+        display: block;
+    }
+    @include e(btn) {
+        margin-top: px2rem(32);
+        padding-bottom: px2rem(32);
+
+        .btn {
+            width: 100%;
+            margin-bottom: 0;
+        }
+    }
+}
+@include b(m_third_fundInfo) {
+    display: none;
+    &.active {
+        display: block;
+    }
+    @include e(btn) {
+        margin-top: px2rem(32);
+        padding-bottom: px2rem(32);
+
+        .btn {
+            width: 100%;
+            margin-bottom: 0;
+        }
+    }
+}
+@include b(m_third_kyc) {
+    @include e(single) {
+        display: none;
+        padding-top: px2rem(30);
+        
+        .tit {
+            font-size: px2rem(32);
+            padding-bottom: px2rem(10);
+        }
+        .cont {
+            color: #909090;
+        }
+        &.active {
+            display: block;
+        }
+
+        @include m(list) {
+            li {
+                padding: px2rem(10);
+                float: left;
+                width: 50%;
+
+                label {
+                    display: block;
+
+                    .inp {
+                        display: inline-block;
+                        width: 12px;
+                        height: 12px;
+                        border: 1px solid #909090;
+                        border-radius: 50%;
+                        position: relative;
+
+                        &.active {
+                            &:before {
+                                display: block;
+                                content: '';
+                                width: 8px;
+                                height: 8px;
+                                background-color: #ffd000;
+                                border-radius: 50%;
+                                position: absolute;
+                                top: 1px;
+                                left: 1px;
+                            }
+                        }
+                        &.muli {
+                            border-radius: 2px;
+                            &.active {
+                                &:before {
+                                    border-radius: 0px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @include m(select) {
+            width: 100%;
+            border: 1px solid #979797 !important;
+            box-shadow: inherit !important;
+            border-radius: 4px;
+            padding: 6px 10px;
+            font-weight: 400;
+            background-color: transparent;
+
+            &:before {
+                display: none;
+            }
+            &:after {
+                top: 50%;
+                margin-top: -3px;
+            }
+        }
+    }
+}
+@include b(m_third_card) {
     @include e(tip) {
         color: #4a4a4a;
         font-size: px2rem(30);
         padding-top: px2rem(28);
+    }
+    @include e(wrapper) {
+        @extend .m_third_addressInfo__wrapper;
     }
     @include e(pic) {
         height: px2rem(500);
@@ -415,19 +478,6 @@
             }
         }
     }
-    @include e(btn) {
-        margin-top: px2rem(40);
-        padding-bottom: px2rem(32);
-
-        .btn {
-            width: 100%;
-            margin: 0;
-        }
-    }
-
-    &.active {
-        display: block;
-    }
     @include e(eg) {
         margin-top: px2rem(40);
         .tit {
@@ -442,6 +492,46 @@
                 font-size: px2rem(28);
             }
         }
+    }
+}
+@include b(m_third_address) {
+    display: none;
+
+    @include e(tip) {
+        
+    }
+    @include e(btn) {
+        margin-top: px2rem(40);
+        padding-bottom: px2rem(32);
+
+        .btn {
+            width: 100%;
+            margin: 0;
+        }
+    }
+
+    &.active {
+        display: block;
+    }
+}
+@include b(m_third_identity) {
+    display: none;
+
+    @include e(tip) {
+        
+    }
+    @include e(btn) {
+        margin-top: px2rem(40);
+        padding-bottom: px2rem(32);
+
+        .btn {
+            width: 100%;
+            margin: 0;
+        }
+    }
+
+    &.active {
+        display: block;
     }
 }
 @include b(m_third_verify) {
@@ -488,8 +578,7 @@
             display: block;
             width: 100%;
             height: px2rem(96);
-            padding: px2rem(34) px2rem(40);
-            padding-right: px2rem(10);
+            padding: px2rem(34) px2rem(10);
             border: 1px solid #ccc;
             border-radius: 4px;
         }
@@ -506,27 +595,6 @@
         display: block;
     }
 }
-@include b(m_third_complete) {
-    display: none;
-
-    @include e(tip) {
-        
-    }
-    @include e(btn) {
-        margin-top: px2rem(40);
-        padding-bottom: px2rem(32);
-
-        .btn {
-            width: 100%;
-            margin: 0;
-        }
-    }
-
-    &.active {
-        display: block;
-    }
-}
-
 @include b(m_third_password) {
     padding: px2rem(40) px2rem(40) 0;
     min-height: 100%;
@@ -547,8 +615,7 @@
                 display: block;
                 width: 100%;
                 height: px2rem(96);
-                padding: px2rem(34) px2rem(40);
-                padding-right: px2rem(10);
+                padding: px2rem(34) px2rem(10);
                 border: 1px solid #ccc;
                 border-radius: 4px;
             }

@@ -1,4 +1,4 @@
-<div class="redbag_pool" ng-cloak ng-if="personal.verify_status >= 3">
+<div class="redbag_pool" ng-cloak ng-if="personal.verify_status >= 7">
     <!-- <div tw-loading-img></div> -->
     <div class="clearfix">
         <div class="redbag_single_wrapper" ng-repeat="pool in pools" ng-class="{noPadding: $index%3 === 2}">
@@ -56,4 +56,4 @@
         <div tw-pagination></div>
     </div>
 </div>
-<div class="redbag_pool font-danger text-center mg-tp-30" ng-if="personal.verify_status < 3">{{lang.text('tigerWitID.settings.openAccount')}}</div>
+<div class="redbag_pool font-danger text-center mg-tp-30" ng-if="personal.verify_status < 7">{{lang.text('tigerWitID.settings.openAccount')}}</div>
