@@ -10940,6 +10940,15 @@
                 },
                 "partner": {
                     "title": {
+                        "zh": "代理商",
+                        "en": "Agent",
+                        "vi": "Đại lý",
+                        "zh-Hant": "代理商",
+                        "id": "Agen",
+                        "es": "Agente",
+                        "pt-BR": "Agente"
+                    },
+                    "title2": {
                         "zh": "代理商佣金总计",
                         "en": "Total agent commission",
                         "vi": "Ủy ban quản lý",
