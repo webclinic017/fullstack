@@ -84,6 +84,7 @@
             if (data.is_succ) {
                 // 因为使用此接口之前已经定义好了各支付方式的key，所以这里沿用以前的key，做一下替换
                 $scope.depositTypeLstArray = data.data;
+                var acquiesce = '';   // 避免充值类型赋值后再次赋值
                 angular.forEach($scope.depositTypeLstArray, function (value, index) {
                     if (value.key === 'bank') value.key = 'invest';
                     if (value.key === 'transfer') value.key = 'tele';
@@ -91,17 +92,21 @@
                     //因为后台设置时线上设置的key设置成大写了，要做一下兼容，（＊）
                     if (value.key === 'Omipay') value.key = 'omipay';
 
-                    if (value.default && !$scope.deposit.type) {
-                        // $scope.deposit.type = value.key;
-                        $timeout(function () {
-                            changeDepositTypeBefore(value.key)
-                        }, 50);
+                    if (value.default && !acquiesce) {
+                        // $scope.deposit.type = ;
+                        acquiesce = value.key;
+                        // $timeout(function () {
+                            // changeDepositTypeBefore(value.key)
+                        // }, 50);
                         // console.log($scope.deposit.type)
                     }
 
                     $scope.depositTypeLst[value.key] = value;
                     // console.log($scope.depositTypeLst)
                 });
+                if(acquiesce){
+                    changeDepositTypeBefore(acquiesce)
+                }
 
                 // 设置初始币种
                 if ($scope.deposit.type) {

@@ -380,6 +380,7 @@ function getDepositPlatform() {
       $.each(depositTypeLst, function (index, value) {
         if (value.default && !depositType) {
           changeDepositTypeBefore(value.key);
+          return false;
         }
       });
     } else {
@@ -422,7 +423,8 @@ function changeDepositTypeBefore(cType) {
 }
 $(document).on("tap", eleDeposit.changeDepositTypeBeforeBtn, function (e) {
   var cType = $(this).attr("data-type")
-  changeDepositType(cType)
+  changeDepositType(cType);
+  closeAllMdl()
 })
 //更改充值方式
 function changeDepositType(cType) {

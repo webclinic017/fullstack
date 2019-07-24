@@ -26,6 +26,10 @@
         <p class="name" data-name="account"><%=lang.text('thirdH5.fillAccount')%></p>
         <input type="text" class="cont" name="account" placeholder="<%=lang.text('thirdH5.fillAccount')%>">
       </div>
+      <div class="font-danger pd-tp-10" id="third_app_platform_tip">
+        
+      </div>
+      
     </form>
     <div class="btn-wrapper third_app_bank__btn_wrapper">
       <button class="btn btn-primary-gradient" id="third_app_bank_btn"><%=lang.text('thirdH5.submit')%></button>
@@ -35,7 +39,7 @@
 <script id="template_add_bank_lst" type="text/html">
   <option value=""></option>
 <$ for(var i=0;i<data.lst.length;i++) {$>
-  <option value="<$= data.lst[i][data.value]$>"><$= data.lst[i][data.key]$></option>
+  <option value="<$= data.lst[i][data.value]$>" data-tip="<$= data.lst[i].tip$>"><$= data.lst[i][data.key]$></option>
 <$}$>
 </script>
 <% include /common/vendor/h5.js.html %>

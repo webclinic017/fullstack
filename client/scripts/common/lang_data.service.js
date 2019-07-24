@@ -199,10 +199,10 @@
                 "pt-BR": "Se a posição permanecer aberta após 10 dias, uma taxa de administração diária será aplicada pela TigerWit até que a posição seja fechada. A taxa de administração será aplicada integralmente para cada dia ou parte do mesmo que uma posição permanecer aberta. Por favor, veja nossa taxa abaixo:"
             },
             "islamic_message21": {
-                "zh": "外汇、贵金属、能源、加密货币：每自然日每标准手收取$25；",
+                "zh": "外汇、贵金属、加密货币：每自然日每标准手收取$25；",
                 "en": "Fx, Metals & Crypto’s: $25 per lot, per day.",
                 "vi": "Fx, Kim loại & Tiền điện tử: 25USD/lot mỗi ngày.",
-                "zh-Hant": "外匯、貴金屬、能源、加密貨幣：每自然日每標準手收取$25；",
+                "zh-Hant": "外匯、貴金屬、加密貨幣：每自然日每標準手收取$25；",
                 "id": "FX, Logam Mulia & Crypto: $ 25 per lot, per hari.",
                 "es": " ",
                 "pt-BR": "Fx, Metals & Crypto’s: $ 25 por lote, por dia."
@@ -6583,22 +6583,22 @@
                         "pt-BR": "Por favor, cancele a seguinte relação, se você quiser toda a retirada."
                     },
                     "cardNumber": {
-                        "zh": "卡号",
-                        "en": "Card Number",
+                        "zh": "银行账号",
+                        "en": "Bank account number",
                         "vi": "Số tài khoản ngân hàng",
-                        "zh-Hant": "卡號",
-                        "id": "Nomor rekening",
-                        "es": "Número Tarjeta",
-                        "pt-BR": "Número do cartão"
+                        "zh-Hant": "銀行賬號",
+                        "id": "Nomor rekening bank",
+                        "es": "Número de cuenta bancaria",
+                        "pt-BR": "Número da conta bancária"
                     },
                     "cardNumberM": {
-                        "zh": "卡号：",
-                        "en": "Card Number: ",
+                        "zh": "银行账号：",
+                        "en": "Bank account number: ",
                         "vi": "Số tài khoản ngân hàng: ",
-                        "zh-Hant": "卡號：",
-                        "id": "Nomor rekening",
-                        "es": "Número Tarjeta: ",
-                        "pt-BR": "Número do cartão:"
+                        "zh-Hant": "銀行賬號：",
+                        "id": "Nomor rekening bank: ",
+                        "es": "Número de cuenta bancaria: ",
+                        "pt-BR": "Número da conta bancária: "
                     },
                     "bank": {
                         "zh": "开户行",
@@ -10947,6 +10947,15 @@
                         "id": "Agen",
                         "es": "Agente",
                         "pt-BR": "Agente"
+                    },
+                    "title2": {
+                        "zh": "代理商佣金总计",
+                        "en": "Total agent commission",
+                        "vi": "Ủy ban quản lý",
+                        "zh-Hant": "代理商傭金總計",
+                        "id": "Total komisi agensi",
+                        "es": "Comisión del agente principal",
+                        "pt-BR": "Comissão total DOS agentes"
                     },
                     "completeInformation": {
                         "zh": "完善资料",

@@ -10865,89 +10865,89 @@ module.exports = {
     "amtIslamic3": {
         "zh": "伊斯兰账户的附加条款和条件",
         "en": "Additional Terms and Conditions for Islamic Accounts",
-        "vi": "Additional Terms and Conditions for Islamic Accounts",
-        "zh-Hant": "Additional Terms and Conditions for Islamic Accounts",
-        "id": "Additional Terms and Conditions for Islamic Accounts",
-        "es": "Additional Terms and Conditions for Islamic Accounts",
-        "pt-BR": "Additional Terms and Conditions for Islamic Accounts"
+        "vi": "Các Điều Khoản và Điều Kiện bổ sung cho Tài khoản Islamic",
+        "zh-Hant": "伊斯蘭賬戶的附加條款和條件",
+        "id": "Tambahan Syarat dan Ketentuan untuk Akun Islami",
+        "es": "Términos y condiciones adicionales para cuentas islámicas",
+        "pt-BR": "Termos e condições adicionais para contas islâmicas"
     },
     "amtIslamic4": {
-        "zh": "除TigerWit条款和条款（包括适用于您的TigerWit交易账户的商业条款和条件）外，以下条件适用：",
-        "en": "In addition to the TigerWit Conditions and Clauses, including the Terms and Conditions of Business, which apply to your TigerWit trading account the following conditions will apply: ",
-        "vi": "In addition to the TigerWit Conditions and Clauses, including the Terms and Conditions of Business, which apply to your TigerWit trading account the following conditions will apply: ",
-        "zh-Hant": "In addition to the TigerWit Conditions and Clauses, including the Terms and Conditions of Business, which apply to your TigerWit trading account the following conditions will apply: ",
-        "id": "In addition to the TigerWit Conditions and Clauses, including the Terms and Conditions of Business, which apply to your TigerWit trading account the following conditions will apply: ",
-        "es": "In addition to the TigerWit Conditions and Clauses, including the Terms and Conditions of Business, which apply to your TigerWit trading account the following conditions will apply: ",
-        "pt-BR": "In addition to the TigerWit Conditions and Clauses, including the Terms and Conditions of Business, which apply to your TigerWit trading account the following conditions will apply: "
+        "zh": "除了TigerWit条件和条款（包括商业条件和条款）适用于您的TigerWit交易账户外，还有以下条件适用：",
+        "en": "In addition to the TigerWit Conditions and Clauses, including the Terms and Conditions of Business, which apply to your TigerWit trading account the following conditions will apply:",
+        "vi": "Ngoài các Điều khoản và Điều kiện của TigerWit, bao gồm các Điều khoản và Điều kiện kinh doanh, áp dụng cho tài khoản giao dịch TigerWit của bạn, các điều kiện sau cũng sẽ được áp dụng:",
+        "zh-Hant": "除了TigerWit條件和條款（包括商業條件和條款）適用於您的TigerWit交易賬戶外，還有以下條件適用：",
+        "id": "Syarat dan Ketentuan ini merupakan tambahan kebijakan dari dokumen ketentuan dan klausul TigerWit, serta pada syarat dan ketentuan bisnis. Syarat dan ketentuan berlaku untuk akun transaksi TigerWit yaitu :",
+        "es": "Además de las Condiciones y cláusulas de TigerWit, incluidos los Términos y Condiciones de Negocio, que se aplican a su cuenta de operaciones TigerWit, se aplicarán las siguientes condiciones:",
+        "pt-BR": "Além das Condições e Cláusulas TigerWit, incluindo os Termos e Condições de Negócios, que se aplicam à sua conta de negociação TigerWit, as seguintes condições serão aplicadas:"
     },
     "amtIslamic5": {
         "zh": "开仓后前十日无需支付隔夜息，展期费和佣金；",
-        "en": "No swap charges, rollover fees or commissions will be applied to each new position for the first 10 days that the position is open. ",
-        "vi": "No swap charges, rollover fees or commissions will be applied to each new position for the first 10 days that the position is open. ",
-        "zh-Hant": "No swap charges, rollover fees or commissions will be applied to each new position for the first 10 days that the position is open. ",
-        "id": "No swap charges, rollover fees or commissions will be applied to each new position for the first 10 days that the position is open. ",
-        "es": "No swap charges, rollover fees or commissions will be applied to each new position for the first 10 days that the position is open. ",
-        "pt-BR": "No swap charges, rollover fees or commissions will be applied to each new position for the first 10 days that the position is open. "
+        "en": "No swap charges, rollover fees or commissions will be applied to each new position for the first 10 days that the position is open.",
+        "vi": "Không mất phí qua đêm, phí gia hạn lệnh hoặc hoa hồng. Chính sách này sẽ được áp dụng cho từng lệnh mới trong 10 ngày đầu tiên kể từ khi lệnh này được mở.",
+        "zh-Hant": "開倉後前十日無需支付隔夜息，展期費和佣金；",
+        "id": "Setiap posisi baru selama 10 hari sejak posisi dibuka tidak akan dikenakan biaya swap, biaya menginap ataupun komisi.",
+        "es": "No se aplicarán cargos de swap, cargos por transferencia o cargos diarios a cada nueva posición durante los primeros 10 días que la posición esté abierta.",
+        "pt-BR": "Não serão aplicadas taxas de swap, taxas de rollover ou comissões a cada nova posição nos primeiros 10 dias em que a posição estiver aberta."
     },
     "amtIslamic6": {
         "zh": "若十日之后继续持仓，TigerWit将会就持仓单收取账户管理费直到平仓。对于每笔订单，如果您是全部持仓，将收取每笔订单的全额每日管理费；如果是部分持仓，将收取部分开仓的管理费。请参阅费用标准：",
-        "en": "If the position remains open after 10 days, a daily administration fee will be applied by TigerWit until the position is closed. The administration fee will apply in full for each day or part thereof that a position remains open. Please see our fee’s below:  ",
-        "vi": "If the position remains open after 10 days, a daily administration fee will be applied by TigerWit until the position is closed. The administration fee will apply in full for each day or part thereof that a position remains open. Please see our fee’s below:  ",
-        "zh-Hant": "If the position remains open after 10 days, a daily administration fee will be applied by TigerWit until the position is closed. The administration fee will apply in full for each day or part thereof that a position remains open. Please see our fee’s below:  ",
-        "id": "If the position remains open after 10 days, a daily administration fee will be applied by TigerWit until the position is closed. The administration fee will apply in full for each day or part thereof that a position remains open. Please see our fee’s below:  ",
-        "es": "If the position remains open after 10 days, a daily administration fee will be applied by TigerWit until the position is closed. The administration fee will apply in full for each day or part thereof that a position remains open. Please see our fee’s below:  ",
-        "pt-BR": "If the position remains open after 10 days, a daily administration fee will be applied by TigerWit until the position is closed. The administration fee will apply in full for each day or part thereof that a position remains open. Please see our fee’s below:  "
+        "en": "If the position remains open after 10 days, a daily administration fee will be applied by TigerWit until the position is closed. The administration fee will apply in full for each day or part thereof that a position remains open. Please see our fee’s below:",
+        "vi": "Nếu lệnh vẫn mở sau 10 ngày, phí quản lí hàng ngày sẽ được TigerWit áp dụng cho đến khi lệnh này bị đóng. Phí này sẽ được áp dụng mỗi ngày hoặc trong thời gian mà lệnh vẫn mở. Xin vui lòng xem mức phí của chúng tôi dưới đây: ",
+        "zh-Hant": "若十日之後繼續持倉，TigerWit將會就持倉單收取賬戶管理費直到平倉。對於每筆訂單，如果您是全部持倉，將收取每筆訂單的全額每日管理費；如果是部分持倉，將收取部分開倉的管理費。請參閱費用標準：",
+        "id": "Apabila posisi terbuka telah melewati jangka waktu 10 hari, maka akan dikenakan biaya administrasi harian oleh TigerWit hingga posisi ditutup. Biaya administrasi akan berlaku setiap ataupun setengah hari. Berikut adalah biaya yang akan dibebankan setelah sepuluh hari :",
+        "es": "Si la posición permanece abierta después de 10 días, TigerWit aplicará una tarifa de administración diaria de $ 25 por lote hasta que se cierre la posición. La tarifa de administración se aplicará en su totalidad por cada día o parte del mismo que una posición permanezca abierta.",
+        "pt-BR": "Se a posição permanecer aberta após 10 dias, uma taxa de administração diária será aplicada pela TigerWit até que a posição seja fechada. A taxa de administração será aplicada integralmente para cada dia ou parte do mesmo que uma posição permanecer aberta. Por favor, veja nossa taxa abaixo:"
     },
     "amtIslamic7": {
-        "zh": "外汇、贵金属、能源、加密货币：每自然日每标准手收取$25；",
+        "zh": "外汇、贵金属、加密货币：每自然日每标准手收取$25；",
         "en": "Fx, Metals & Crypto’s: $25 per lot, per day.",
-        "vi": "Fx, Metals & Crypto’s: $25 per lot, per day.",
-        "zh-Hant": "Fx, Metals & Crypto’s: $25 per lot, per day.",
-        "id": "Fx, Metals & Crypto’s: $25 per lot, per day.",
-        "es": "Fx, Metals & Crypto’s: $25 per lot, per day.",
-        "pt-BR": "Fx, Metals & Crypto’s: $25 per lot, per day."
+        "vi": "Fx, Kim loại & Tiền điện tử: 25USD/lot mỗi ngày.",
+        "zh-Hant": "外匯、貴金屬、加密貨幣：每自然日每標準手收取$25；",
+        "id": "FX, Logam Mulia & Crypto: $ 25 per lot, per hari.",
+        "es": " ",
+        "pt-BR": "Fx, Metals & Crypto’s: $ 25 por lote, por dia."
     },
     "amtIslamic8": {
         "zh": "差价合约：每自然日每标准手$5。",
-        "en": "Indices: $5 per lot, per day.",
-        "vi": "Indices: $5 per lot, per day.",
-        "zh-Hant": "Indices: $5 per lot, per day.",
-        "id": "Indices: $5 per lot, per day.",
-        "es": "Indices: $5 per lot, per day.",
-        "pt-BR": "Indices: $5 per lot, per day."
+        "en": "Indices: $5 per lot, per day. ",
+        "vi": "Chỉ số: 5USD/lot mỗi ngày.",
+        "zh-Hant": "差價合約：每自然日每標準手$5。",
+        "id": "Indeks Saham: $ 5 per lot, per hari.",
+        "es": " ",
+        "pt-BR": "Índices: US $ 5 por lote, por dia."
     },
     "amtIslamic9": {
         "zh": "任何现有TigerWit账户都可以切换为伊斯兰账户，若要转换账户类型，需达到以下条件：",
-        "en": "Any existing TigerWit accounts will be converted to an Islamic account at the time that the new TigerWit Islamic account is open.",
-        "vi": "Any existing TigerWit accounts will be converted to an Islamic account at the time that the new TigerWit Islamic account is open.",
-        "zh-Hant": "Any existing TigerWit accounts will be converted to an Islamic account at the time that the new TigerWit Islamic account is open.",
-        "id": "Any existing TigerWit accounts will be converted to an Islamic account at the time that the new TigerWit Islamic account is open.",
-        "es": "Any existing TigerWit accounts will be converted to an Islamic account at the time that the new TigerWit Islamic account is open.",
-        "pt-BR": "Any existing TigerWit accounts will be converted to an Islamic account at the time that the new TigerWit Islamic account is open."
+        "en": "Any existing TigerWit accounts will be converted to an Islamic account at the time that the new TigerWit Islamic account is open. As part of the conversion, all positions will be closed at the next available price for the relevant instrument(s), all funds will be moved to the Wallet and all existing copy trading arrangements will cease.",
+        "vi": "Mọi tài khoản TigerWit hiện tại sẽ được chuyển đổi thành tài khoản Islamic ngay khi tài khoản Islamic TigerWit được mở. Vì là một phần của chuyển đổi, tất cả các lệnh sẽ được đóng ở mức giá khả dụng tiếp theo cho (các) sản phẩm có liên quan, tất cả tiền sẽ được chuyển sang Ví và tất cả các lệnh giao dịch sao chép hiện tại sẽ chấm dứt. ",
+        "zh-Hant": "任何現有TigerWit賬戶都可以切換為伊斯蘭賬戶，若要轉換賬戶類型，需達到以下條件：",
+        "id": "Setiap akun TigerWit yang ada akan dikonversikan ke dalam bentuk Akun Islami pada saat akun Islami TigerWit dibuka. Akibatnya, semua posisi akan ditutup pada harga instrumen masing-masing, semua dana akan dipindahkan ke Wallet dan semua transaksi copy yang ada akan dihentikan.",
+        "es": "Todas las cuentas de TigerWit existentes se convertirán en una cuenta islámica en el momento en que la nueva cuenta de TigerWit Islamica esté abierta. No será posible revertir ninguna de estas cuentas a un formato de cuenta no islámico. Como parte de la conversión, todas las posiciones se cerrarán al siguiente precio disponible para el (los) instrumento (s) correspondiente (s), todos los fondos se transferirán a la Cartera y todos los acuerdos existentes de comercio tímido cesarán. ",
+        "pt-BR": "Quaisquer contas TigerWit existentes serão convertidas em uma conta islâmica no momento em que a nova conta islâmica TigerWit for aberta. Como parte da conversão, todas as posições serão fechadas no próximo preço disponível para o (s) instrumento (s) relevante (s), todos os fundos serão movidos para a Wallet e todos os copy tradings existentes cessarão. "
     },
     "amtIslamic10": {
         "zh": "所有持仓单必须全部平仓；",
-        "en": "As part of the conversion, all positions will be closed at the next available price for the relevant instrument(s),",
-        "vi": "As part of the conversion, all positions will be closed at the next available price for the relevant instrument(s),",
-        "zh-Hant": "As part of the conversion, all positions will be closed at the next available price for the relevant instrument(s),",
-        "id": "As part of the conversion, all positions will be closed at the next available price for the relevant instrument(s),",
-        "es": "As part of the conversion, all positions will be closed at the next available price for the relevant instrument(s),",
-        "pt-BR": "As part of the conversion, all positions will be closed at the next available price for the relevant instrument(s),"
+        "en": " ",
+        "vi": " ",
+        "zh-Hant": "所有持倉單必須全部平倉；",
+        "id": " ",
+        "es": " ",
+        "pt-BR": " "
     },
     "amtIslamic11": {
         "zh": "所有跟随关系必须全部取消；",
-        "en": "all funds will be moved to the Wallet and all existing copy trading arrangements will cease.",
-        "vi": "all funds will be moved to the Wallet and all existing copy trading arrangements will cease.",
-        "zh-Hant": "all funds will be moved to the Wallet and all existing copy trading arrangements will cease.",
-        "id": "all funds will be moved to the Wallet and all existing copy trading arrangements will cease.",
-        "es": "all funds will be moved to the Wallet and all existing copy trading arrangements will cease.",
-        "pt-BR": "all funds will be moved to the Wallet and all existing copy trading arrangements will cease."
+        "en": " ",
+        "vi": " ",
+        "zh-Hant": "所有跟隨關係必須全部取消；",
+        "id": " ",
+        "es": " ",
+        "pt-BR": " "
     },
     "amtIslamic12": {
         "zh": "所有子账户资金必须转移到钱包中",
         "en": " ",
         "vi": " ",
-        "zh-Hant": " ",
+        "zh-Hant": "所有子賬戶資金必須轉移到錢包中",
         "id": " ",
         "es": " ",
         "pt-BR": " "
@@ -10955,11 +10955,11 @@ module.exports = {
     "amtIslamic13": {
         "zh": "关于跟单交易，伊斯兰账户只可以跟随伊斯兰账户高手。",
         "en": "In relation to copy trading, an Islamic account holder may only follow a Master account which also operates under the TigerWit Islamic account structure.",
-        "vi": "In relation to copy trading, an Islamic account holder may only follow a Master account which also operates under the TigerWit Islamic account structure.",
-        "zh-Hant": "In relation to copy trading, an Islamic account holder may only follow a Master account which also operates under the TigerWit Islamic account structure.",
-        "id": "In relation to copy trading, an Islamic account holder may only follow a Master account which also operates under the TigerWit Islamic account structure.",
-        "es": "In relation to copy trading, an Islamic account holder may only follow a Master account which also operates under the TigerWit Islamic account structure.",
-        "pt-BR": "In relation to copy trading, an Islamic account holder may only follow a Master account which also operates under the TigerWit Islamic account structure."
+        "vi": "Về giao dịch sao chép, chủ tài khoản Islamic chỉ có thể theo tài khoản của các Bậc thầy hoạt động theo cùng cấu trúc tài khoản Islamic TigerWit.",
+        "zh-Hant": "關於跟單交易，伊斯蘭賬戶只可以跟隨伊斯蘭賬戶高手。",
+        "id": "Sehubungan dengan copy trading, pemegang akun Islami hanya dapat mengikuti akun Master yang menggunakan akun Islami TigerWit.",
+        "es": "En relación con el copy trading, el titular de una cuenta islámica solo puede seguir una cuenta maestra que también opera bajo la estructura de cuenta TigerWit Islamic. ",
+        "pt-BR": "Em relação ao copy trading, um titular de conta islâmica só pode seguir uma conta principal que também opera sob a estrutura de conta islâmica do TigerWit. "
     },
     "downloadApp": {
         "title": {
@@ -11248,13 +11248,13 @@ module.exports = {
             "pt-BR": "Excelente plano de apoio à agência"
         },
         "supportPlan_1": {
-            "zh": "薪资支持、客户服务支持、激励支持、返佣支持、培训支持、公关支持等丰富的扶持成长体系，帮您快速成为专业代理人，实现人生小目标！",
-            "en": "Rich support and growth systems, such as salary support, customer service support, incentive support, commission return support, training support, and public relations support, help you quickly become a professional agent to achieve your life goals!",
-            "vi": "Các hệ thống hỗ trợ và tăng trưởng phong phú, như hỗ trợ tiền lương, hỗ trợ dịch vụ khách hàng, hỗ trợ khuyến mãi, hỗ trợ lợi nhuận hoa hồng, hỗ trợ đào tạo và quan hệ công chúng, giúp bạn nhanh chóng trở thành một đối tác chuyên nghiệp để đạt được mục tiêu của mình!",
-            "zh-Hant": "薪資支持、客戶服務支持、激勵支持、返傭支持、培訓支持、公關支持等豐富的扶持成長體系，幫您快速成為專業代理人，實現人生小目標！",
-            "id": "Dengan memberikan dukungan dan sistem yang mumpuni, seperti fasilitas gaji, layanan pelanggan, insentif, komisi, rebate, pelatihan, dan lain sebagainya. Semua fasilitas tersebut diberikan agar anda dapat menjadi seorang agen yang profesional.",
-            "es": "Soporte personalizado y sistemas para desarrollo mercados, soporte para salarios, atención al cliente, incentivos por resultados, formación permanente y presencia en los medios conforman una oferta que le permitirá alcanzar sus objetivos. ",
-            "pt-BR": "Sistemas avançados de suporte e crescimento, como suporte salarial, suporte ao atendimento ao cliente, suporte a incentivo, suporte a devolução de comissões, suporte a treinamento e suporte de relações públicas, ajudam você a se tornar rapidamente um agente profissional para atingir suas metas de vida!"
+            "zh": "客户服务支持、激励支持、返佣支持、培训支持、公关支持等丰富的扶持成长体系，帮您快速成为专业代理人，实现人生小目标！",
+            "en": "Rich support and growth systems, such as customer service support, incentive support, commission return support, training support, and public relations support, help you quickly become a professional agent to achieve your life goals!",
+            "vi": "Các hệ thống hỗ trợ và tăng trưởng phong phú, như hỗ trợ dịch vụ khách hàng, hỗ trợ khuyến mãi, hỗ trợ lợi nhuận hoa hồng, hỗ trợ đào tạo và quan hệ công chúng, giúp bạn nhanh chóng trở thành một đối tác chuyên nghiệp để đạt được mục tiêu của mình!",
+            "zh-Hant": "客戶服務支持、激勵支持、返傭支持、培訓支持、公關支持等豐富的扶持成長體系，幫您快速成為專業代理人，實現人生小目標！",
+            "id": "Dengan memberikan dukungan dan sistem yang mumpuni, seperti layanan pelanggan, insentif, komisi, rebate, pelatihan, dan lain sebagainya. Semua fasilitas tersebut diberikan agar anda dapat menjadi seorang agen yang profesional.",
+            "es": "Soporte personalizado y sistemas para desarrollo mercados, atención al cliente, incentivos por resultados, formación permanente y presencia en los medios conforman una oferta que le permitirá alcanzar sus objetivos. ",
+            "pt-BR": "Sistemas avançados de suporte e crescimento, como suporte ao atendimento ao cliente, suporte a incentivo, suporte a devolução de comissões, suporte a treinamento e suporte de relações públicas, ajudam você a se tornar rapidamente um agente profissional para atingir suas metas de vida!"
         },
         "customerPromotionSystem": {
             "zh": "客户推广系统",
@@ -16706,76 +16706,76 @@ module.exports = {
             "es": "",
             "pt-BR": ""
         },
-    }, 
-    "mInvite05":{
-        zh:"你投资,我出钱!",
-        en:"你投资,我出钱!",
-        vi:"你投资,我出钱!",
-        "zh-Hant":"妳投資,我出錢!",
-        id:"你投资,我出钱!",
+    },
+    "mInvite05": {
+        zh: "你投资,我出钱!",
+        en: "你投资,我出钱!",
+        vi: "你投资,我出钱!",
+        "zh-Hant": "妳投資,我出錢!",
+        id: "你投资,我出钱!",
         "es": "你投资,我出钱!",
         "pt-BR": "你投资,我出钱!"
     },
-    "mInvite06":{
-        zh:"注册就送",
-        en:"Register to receive a ",
-        vi:"Register to receive a ",
-        "zh-Hant":"註冊就送",
-        id:"Register to receive a ",
+    "mInvite06": {
+        zh: "注册就送",
+        en: "Register to receive a ",
+        vi: "Register to receive a ",
+        "zh-Hant": "註冊就送",
+        id: "Register to receive a ",
         "es": "Register to receive a ",
         "pt-BR": "Register to receive a "
     },
-    "mInvite07":{
-        zh:"$10000体验金",
-        en:"$10000 coupons",
-        vi:"$10000 coupons",
-        "zh-Hant":"$10000體驗金",
-        id:"$10000 coupons",
+    "mInvite07": {
+        zh: "$10000体验金",
+        en: "$10000 coupons",
+        vi: "$10000 coupons",
+        "zh-Hant": "$10000體驗金",
+        id: "$10000 coupons",
         "es": "$10000 coupons",
         "pt-BR": "$10000 coupons"
     },
-    "mInvite08":{
-        zh:"在TigerWit, 已经有86253 人选择外汇跟单交易",
-        en:"In TigerWit, there have been 86,253 people who choose to follow the masters trading.",
-        vi:"In TigerWit, there have been 86,253 people who choose to follow the masters trading.",
-        "zh-Hant":"在老虎外匯, 已經有86253 人選擇外匯跟單交易",
-        id:"In TigerWit, there have been 86,253 people who choose to follow the masters trading.",
+    "mInvite08": {
+        zh: "在TigerWit, 已经有86253 人选择外汇跟单交易",
+        en: "In TigerWit, there have been 86,253 people who choose to follow the masters trading.",
+        vi: "In TigerWit, there have been 86,253 people who choose to follow the masters trading.",
+        "zh-Hant": "在老虎外匯, 已經有86253 人選擇外匯跟單交易",
+        id: "In TigerWit, there have been 86,253 people who choose to follow the masters trading.",
         "es": "In TigerWit, there have been 86,253 people who choose to follow the masters trading.",
         "pt-BR": "In TigerWit, there have been 86,253 people who choose to follow the masters trading."
     },
-    "mInvite09":{
-        zh:"我刚刚在老虎外汇领取了$10000体验金,好东西",
-        en:"I just received $10000 Coupons from TigerWit. ",
-        vi:"I just received $10000 Coupons from TigerWit.",
-        "zh-Hant":"我剛剛在老虎外匯領取了$10000體驗金,好東西",
-        id:"I just received $10000 Coupons from TigerWit.",
+    "mInvite09": {
+        zh: "我刚刚在老虎外汇领取了$10000体验金,好东西",
+        en: "I just received $10000 Coupons from TigerWit. ",
+        vi: "I just received $10000 Coupons from TigerWit.",
+        "zh-Hant": "我剛剛在老虎外匯領取了$10000體驗金,好東西",
+        id: "I just received $10000 Coupons from TigerWit.",
         "es": "I just received $10000 Coupons from TigerWit.",
         "pt-BR": "I just received $10000 Coupons from TigerWit."
     },
-    "mInvite10":{
-        "zh":"必须分享,你也快来看看",
-        "en":"Come and see!",
-        "vi":"Come and see!",
-        "zh-Hant":"必須分享,妳也快來看看",
-        "id":"Come and see!",
+    "mInvite10": {
+        "zh": "必须分享,你也快来看看",
+        "en": "Come and see!",
+        "vi": "Come and see!",
+        "zh-Hant": "必須分享,妳也快來看看",
+        "id": "Come and see!",
         "es": "Come and see!",
         "pt-BR": "Come and see!"
     },
-    "mInvite11":{
-        "zh":"输入手机号",
-        "en":"Enter Phone No.",
-        "vi":"nter Phone No.",
-        "zh-Hant":"輸入手機號",
-        "id":"nter Phone No.",
+    "mInvite11": {
+        "zh": "输入手机号",
+        "en": "Enter Phone No.",
+        "vi": "nter Phone No.",
+        "zh-Hant": "輸入手機號",
+        "id": "nter Phone No.",
         "es": "nter Phone No.",
         "pt-BR": "nter Phone No."
     },
-    "mInvite12":{
-        "zh":"领取奖励",
-        "en":"Receive the award",
-        "vi":"Receive the award",
-        "zh-Hant":"領取獎勵",
-        "id":"Receive the award",
+    "mInvite12": {
+        "zh": "领取奖励",
+        "en": "Receive the award",
+        "vi": "Receive the award",
+        "zh-Hant": "領取獎勵",
+        "id": "Receive the award",
         "es": "Receive the award",
         "pt-BR": "Receive the award"
     }
