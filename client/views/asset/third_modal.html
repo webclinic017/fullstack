@@ -14,14 +14,10 @@
 
                     <div class="col-xs-9">
                         <div class="form-control-wrapper">
-                            <select class="form-control"
-                                    name="platform"
-                                    required
-                                    ng-class="{'form-control-error': frontErr.platform.show && thirdForm.platform.$invalid}"
-                                    ng-model="third.platform"
-                                    ng-options="platform.name for platform in thirdPlatforms"
-                                    ng-focus="hideErr('platform')"
-                                    ng-blur="showErr('platform')">
+                            <select class="form-control" name="platform" required
+                                ng-class="{'form-control-error': frontErr.platform.show && thirdForm.platform.$invalid}"
+                                ng-model="third.platform" ng-options="platform.name for platform in thirdPlatforms"
+                                ng-focus="hideErr('platform')" ng-blur="showErr('platform')">
                                 <option value="">{{lang.text('tigerWitID.pleaseSelect')}}</option>
                             </select>
 
@@ -41,21 +37,25 @@
 
                     <div class="col-xs-9">
                         <div class="form-control-wrapper">
-                            <input class="form-control"
-                                    name="account"
-                                    type="text"
-                                    required
-                                    placeholder="{{lang.text('tigerWitID.wallet.fillAccount')}}"
-                                    ng-class="{'form-control-error': frontErr.account.show && thirdForm.account.$invalid}"
-                                    ng-model="third.account"
-                                    ng-focus="hideErr('account')"
-                                    ng-blur="showErr('account')">
+                            <input class="form-control" name="account" type="text" required
+                                placeholder="{{lang.text('tigerWitID.wallet.fillAccount')}}"
+                                ng-class="{'form-control-error': frontErr.account.show && thirdForm.account.$invalid}"
+                                ng-model="third.account" ng-focus="hideErr('account')" ng-blur="showErr('account')">
                             <div ng-show="frontErr.account.show">
                                 <p class="alert alert-arrow_tp_lf" ng-show="thirdForm.account.$error.required">
                                     {{lang.text('tigerWitID.wallet.fillAccount')}}
                                 </p>
                             </div>
                         </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-3 text-left mg-tp-10">
+                    </div>
+
+                    <div class="col-xs-9 font-danger">
+                        {{third.platform.tip}}
                     </div>
                 </div>
 

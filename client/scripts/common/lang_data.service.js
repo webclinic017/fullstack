@@ -182,12 +182,12 @@
             },
             "islamic_message19": {
                 "zh": "开仓后前十日无需支付隔夜息，展期费和佣金；",
-                "en": "No swap charges, rollover fees or commissions will be applied to each new position for the first 10 days that the position is open.",
-                "vi": "Không mất phí qua đêm, phí gia hạn lệnh hoặc hoa hồng. Chính sách này sẽ được áp dụng cho từng lệnh mới trong 10 ngày đầu tiên kể từ khi lệnh này được mở.",
-                "zh-Hant": "開倉後前十日無需支付隔夜息，展期費和佣金；",
-                "id": "Setiap posisi baru selama 10 hari sejak posisi dibuka tidak akan dikenakan biaya swap, biaya menginap ataupun komisi.",
-                "es": "No se aplicarán cargos de swap, cargos por transferencia o cargos diarios a cada nueva posición durante los primeros 10 días que la posición esté abierta.",
-                "pt-BR": "Não serão aplicadas taxas de swap, taxas de rollover ou comissões a cada nova posição nos primeiros 10 dias em que a posição estiver aberta."
+                "en": "No swap charges, rollover fees or commissions will be applied to each new position for the first 10 days that the position is open. ",
+                "vi": "No swap charges, rollover fees or commissions will be applied to each new position for the first 10 days that the position is open. ",
+                "zh-Hant": "No swap charges, rollover fees or commissions will be applied to each new position for the first 10 days that the position is open. ",
+                "id": "No swap charges, rollover fees or commissions will be applied to each new position for the first 10 days that the position is open. ",
+                "es": "No swap charges, rollover fees or commissions will be applied to each new position for the first 10 days that the position is open. ",
+                "pt-BR": "No swap charges, rollover fees or commissions will be applied to each new position for the first 10 days that the position is open. "
             },
             "islamic_message20": {
                 "zh": "若十日之后继续持仓，TigerWit将会就持仓单收取账户管理费直到平仓。对于每笔订单，如果您是全部持仓，将收取每笔订单的全额每日管理费；如果是部分持仓，将收取部分开仓的管理费。请参阅费用标准：",
@@ -199,10 +199,10 @@
                 "pt-BR": "Se a posição permanecer aberta após 10 dias, uma taxa de administração diária será aplicada pela TigerWit até que a posição seja fechada. A taxa de administração será aplicada integralmente para cada dia ou parte do mesmo que uma posição permanecer aberta. Por favor, veja nossa taxa abaixo:"
             },
             "islamic_message21": {
-                "zh": "外汇、贵金属、能源、加密货币：每自然日每标准手收取$25；",
+                "zh": "外汇、贵金属、加密货币：每自然日每标准手收取$25；",
                 "en": "Fx, Metals & Crypto’s: $25 per lot, per day.",
                 "vi": "Fx, Kim loại & Tiền điện tử: 25USD/lot mỗi ngày.",
-                "zh-Hant": "外匯、貴金屬、能源、加密貨幣：每自然日每標準手收取$25；",
+                "zh-Hant": "外匯、貴金屬、加密貨幣：每自然日每標準手收取$25；",
                 "id": "FX, Logam Mulia & Crypto: $ 25 per lot, per hari.",
                 "es": " ",
                 "pt-BR": "Fx, Metals & Crypto’s: $ 25 por lote, por dia."
@@ -6583,22 +6583,22 @@
                         "pt-BR": "Por favor, cancele a seguinte relação, se você quiser toda a retirada."
                     },
                     "cardNumber": {
-                        "zh": "卡号",
-                        "en": "Card Number",
+                        "zh": "银行账号",
+                        "en": "Bank account number",
                         "vi": "Số tài khoản ngân hàng",
-                        "zh-Hant": "卡號",
-                        "id": "Nomor rekening",
-                        "es": "Número Tarjeta",
-                        "pt-BR": "Número do cartão"
+                        "zh-Hant": "銀行賬號",
+                        "id": "Nomor rekening bank",
+                        "es": "Número de cuenta bancaria",
+                        "pt-BR": "Número da conta bancária"
                     },
                     "cardNumberM": {
-                        "zh": "卡号：",
-                        "en": "Card Number: ",
+                        "zh": "银行账号：",
+                        "en": "Bank account number: ",
                         "vi": "Số tài khoản ngân hàng: ",
-                        "zh-Hant": "卡號：",
-                        "id": "Nomor rekening",
-                        "es": "Número Tarjeta: ",
-                        "pt-BR": "Número do cartão:"
+                        "zh-Hant": "銀行賬號：",
+                        "id": "Nomor rekening bank: ",
+                        "es": "Número de cuenta bancaria: ",
+                        "pt-BR": "Número da conta bancária: "
                     },
                     "bank": {
                         "zh": "开户行",
@@ -10940,13 +10940,13 @@
                 },
                 "partner": {
                     "title": {
-                        "zh": "代理商",
-                        "en": "Agent",
-                        "vi": "Đại lý",
-                        "zh-Hant": "代理商",
-                        "id": "Agen",
-                        "es": "Agente",
-                        "pt-BR": "Agente"
+                        "zh": "代理商佣金总计",
+                        "en": "Total agent commission",
+                        "vi": "Ủy ban quản lý",
+                        "zh-Hant": "代理商傭金總計",
+                        "id": "Total komisi agensi",
+                        "es": "Comisión del agente principal",
+                        "pt-BR": "Comissão total DOS agentes"
                     },
                     "completeInformation": {
                         "zh": "完善资料",

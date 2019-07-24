@@ -3,24 +3,33 @@ $(".third_app_bank__item input").on("input propertychange", function () {
   var info = $(this).val();
   // console.log(info, $(this).attr("name"));
   if (info) {
-    $(".third_app_bank__item .name[data-name="+$(this).attr("name")+"]").addClass('active');
+    $(".third_app_bank__item .name[data-name=" + $(this).attr("name") + "]").addClass('active');
   } else {
-    $(".third_app_bank__item .name[data-name="+$(this).attr("name")+"]").removeClass('active');
+    $(".third_app_bank__item .name[data-name=" + $(this).attr("name") + "]").removeClass('active');
   }
 });
 $(".third_app_bank__item select").on("change", function () {
   // console.log($(this).find("option:selected").val());
-  $(".third_app_bank__item input[name="+$(this).attr("name")+"]").val($(this).find("option:selected").text());
+  $(".third_app_bank__item input[name=" + $(this).attr("name") + "]").val($(this).find("option:selected").text());
   if ($(this).val()) {
-    $(".third_app_bank__item .name[data-name="+$(this).attr("name")+"]").addClass('active');
+    $(".third_app_bank__item .name[data-name=" + $(this).attr("name") + "]").addClass('active');
   } else {
-    $(".third_app_bank__item .name[data-name="+$(this).attr("name")+"]").removeClass('active');
+    $(".third_app_bank__item .name[data-name=" + $(this).attr("name") + "]").removeClass('active');
+  }
+  // 第三方提示(私有功能)
+  if ($(this).prop('id') === 'third_app_platform') {
+    var tip = $(this).find("option:selected").data('tip');
+    if (tip) {
+      $('#third_app_platform_tip').text(tip)
+    } else {
+      $('#third_app_platform_tip').text('')
+    }
   }
 
 });
 
 $("#third_app_bank_cancel").on("tap", function () {
-  window.location.href="/m/third/asset";
+  window.location.href = "/m/third/asset";
   return false;
 });
 
@@ -50,7 +59,7 @@ $("#third_app_bank_btn").on("tap", function () {
         // openThirdNative({
         //   type: "backPrev"
         // });
-        window.location.href="/m/third/asset";
+        window.location.href = "/m/third/asset";
       }, 1000);
     } else {
       openMessageMdl(data.message);
@@ -63,7 +72,7 @@ setTimeout(function () {
   getThirdPlatforms();
 }, 10)
 
-function getThirdPlatforms () {
+function getThirdPlatforms() {
   publicRequest('getThirdPlatforms', 'GET').then(function (data) {
     if (!data) return;
     if (data.is_succ) {
