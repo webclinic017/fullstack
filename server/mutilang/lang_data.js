@@ -10882,12 +10882,12 @@ module.exports = {
     },
     "amtIslamic5": {
         "zh": "开仓后前十日无需支付隔夜息，展期费和佣金；",
-        "en": "No swap charges, rollover fees or commissions will be applied to each new position for the first 10 days that the position is open. ",
-        "vi": "No swap charges, rollover fees or commissions will be applied to each new position for the first 10 days that the position is open. ",
-        "zh-Hant": "No swap charges, rollover fees or commissions will be applied to each new position for the first 10 days that the position is open. ",
-        "id": "No swap charges, rollover fees or commissions will be applied to each new position for the first 10 days that the position is open. ",
-        "es": "No swap charges, rollover fees or commissions will be applied to each new position for the first 10 days that the position is open. ",
-        "pt-BR": "No swap charges, rollover fees or commissions will be applied to each new position for the first 10 days that the position is open. "
+        "en": "No swap charges, rollover fees or commissions will be applied to each new position for the first 10 days that the position is open.",
+        "vi": "Không mất phí qua đêm, phí gia hạn lệnh hoặc hoa hồng. Chính sách này sẽ được áp dụng cho từng lệnh mới trong 10 ngày đầu tiên kể từ khi lệnh này được mở.",
+        "zh-Hant": "開倉後前十日無需支付隔夜息，展期費和佣金；",
+        "id": "Setiap posisi baru selama 10 hari sejak posisi dibuka tidak akan dikenakan biaya swap, biaya menginap ataupun komisi.",
+        "es": "No se aplicarán cargos de swap, cargos por transferencia o cargos diarios a cada nueva posición durante los primeros 10 días que la posición esté abierta.",
+        "pt-BR": "Não serão aplicadas taxas de swap, taxas de rollover ou comissões a cada nova posição nos primeiros 10 dias em que a posição estiver aberta."
     },
     "amtIslamic6": {
         "zh": "若十日之后继续持仓，TigerWit将会就持仓单收取账户管理费直到平仓。对于每笔订单，如果您是全部持仓，将收取每笔订单的全额每日管理费；如果是部分持仓，将收取部分开仓的管理费。请参阅费用标准：",
