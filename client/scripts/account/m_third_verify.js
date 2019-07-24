@@ -23,6 +23,8 @@ $(document).ready(function () {
         addressInfoPostCode: ".m_third .m_third_addressInfo .post_code",
         addressInfoCountry: ".m_third .m_third_addressInfo .country",
         addressInfoAddress: ".m_third .m_third_addressInfo .address",
+        addressInfoState: ".m_third .m_third_addressInfo .state_global .state",
+        addressInfoCity: ".m_third .m_third_addressInfo .city_global .city",
         addressInfoSelect: ".m_third .m_third_addressInfo select",
         addressInfoRadioBtn: ".m_third .m_third_addressInfo .radio_wrapper span",
         addressInfoBtn: ".m_third .m_third_addressInfo .m_third_addressInfo__btn .btn",
@@ -45,7 +47,7 @@ $(document).ready(function () {
         identityBtn: ".m_third .m_third_identity .m_third_identity__btn .btn",
         //待审核/审核通过
         submit: ".m_third .m_third_verify"
-        
+
     };
     var eleIndex = {
         "0": "index",       //未开户
@@ -56,8 +58,8 @@ $(document).ready(function () {
         '5': "fundInfo",    //财务细节调查
         '6': "address",     //上传地址证明
         '7': "identity",    //上传身份证明
-        '10':"submit",      //待审核
-        '11':"submit"       //审核通过
+        '10': "submit",      //待审核
+        '11': "submit"       //审核通过
     };
     var step = 0;
     var cardCountry;
@@ -78,7 +80,7 @@ $(document).ready(function () {
         nationality: "1",  //国籍
         taxResidency: "1" //税务地
     };
-    var bt=baidu.template;
+    var bt = baidu.template;
     var userCacheInfo = {};   //用户缓存信息
     var countryList = {
         data: null
@@ -145,8 +147,8 @@ $(document).ready(function () {
     };
     // 请求当前用户认证到哪一步
     setUserCookie();
-    
-    function goStepPage () {
+
+    function goStepPage() {
         // console.log(step);
         $.each(eleIndex, function (index, value) {
             $(ele[eleIndex[index]]).removeClass("active");
@@ -177,8 +179,8 @@ $(document).ready(function () {
         if (step == 6 || step == 7) {
             var userAgent = navigator.userAgent.toLowerCase();
             var index = userAgent.indexOf("android");
-            if(index >= 0){  
-                var androidVersion = userAgent.slice(index+8, index+11); 
+            if (index >= 0) {
+                var androidVersion = userAgent.slice(index + 8, index + 11);
                 if (androidVersion <= 4.4) {
                     alert(lang.text('third.systemTip'));
                 }
@@ -186,7 +188,7 @@ $(document).ready(function () {
         }
     }
     //设置用户信息
-    function setUserCookie () {
+    function setUserCookie() {
         var user_id = getUrlParam("user_id") || '';
         var phone = getUrlParam("phone") || '';
         var private_key = getUrlParam("private_key") || '';
@@ -195,16 +197,16 @@ $(document).ready(function () {
 
         var expiresDate = new Date();
         expiresDate.setTime(expiresDate.getTime() + (30 * 60 * 1000));  // 30分钟过期
-        
-        $.cookie("third_user_id", user_id , { path: '/', domain: getDomain(), expires: expiresDate });
-        $.cookie("third_phone", phone , { path: '/', domain: getDomain(), expires: expiresDate });
-        $.cookie("private_key", private_key , { path: '/', domain: getDomain(), expires: expiresDate });
-        $.cookie("action", action , { path: '/', domain: getDomain(), expires: expiresDate });
-        $.cookie("sign", sign , { path: '/', domain: getDomain(), expires: expiresDate });
+
+        $.cookie("third_user_id", user_id, { path: '/', domain: getDomain(), expires: expiresDate });
+        $.cookie("third_phone", phone, { path: '/', domain: getDomain(), expires: expiresDate });
+        $.cookie("private_key", private_key, { path: '/', domain: getDomain(), expires: expiresDate });
+        $.cookie("action", action, { path: '/', domain: getDomain(), expires: expiresDate });
+        $.cookie("sign", sign, { path: '/', domain: getDomain(), expires: expiresDate });
 
         // 需要去掉200体验金的三方：tubiaojia、juyoulicai
         if (private_key === 'tubiaojia' || private_key === 'juyoulicai') {
-            $(ele.indexDollar200).css({display: 'none'});
+            $(ele.indexDollar200).css({ display: 'none' });
         }
 
         setTimeout(function () {
@@ -213,7 +215,7 @@ $(document).ready(function () {
     }
     //获取当前认证状态
     function getUserStatus() {
-        layer.open({type: 2, shadeClose: false});
+        layer.open({ type: 2, shadeClose: false });
         publicRequest('thirdGetStatus', 'GET').then(function (data) {
             // console.log(data);
             layer.closeAll();
@@ -237,7 +239,7 @@ $(document).ready(function () {
         });
     }
     //获取缓存信息
-    function getUserCacheInfo () {
+    function getUserCacheInfo() {
         publicRequest('thirdGetCacheInfo', 'GET').then(function (data) {
             if (!data) return;
             if (data.is_succ) {
@@ -248,12 +250,12 @@ $(document).ready(function () {
                 laydate.render({
                     elem: '#birth',
                     lang: lang.curLang() !== 'cn' ? 'en' : 'cn',
-                    value: userCacheInfo.birth ? userCacheInfo.birth.substring(0,4)+'-'+userCacheInfo.birth.substring(4,6)+'-'+userCacheInfo.birth.substring(6,8) : ''
+                    value: userCacheInfo.birth ? userCacheInfo.birth.substring(0, 4) + '-' + userCacheInfo.birth.substring(4, 6) + '-' + userCacheInfo.birth.substring(6, 8) : ''
                 });
                 if (userCacheInfo.gender !== '') {
                     gender = userCacheInfo.gender;
                     $(ele.realnameInfoGender).removeClass("active");
-                    $(ele.realnameInfoGender+"[data-gender="+userCacheInfo.gender+"]").addClass("active");
+                    $(ele.realnameInfoGender + "[data-gender=" + userCacheInfo.gender + "]").addClass("active");
                 }
                 var identityType = userCacheInfo.world_code === 'CN' ? 'cn' : 'en';
                 //请求相关列表
@@ -268,9 +270,9 @@ $(document).ready(function () {
     }
     //第一步 --- 开户
     $(ele.indexBtn).on("tap", function () {
-        openH5AgmentModal(100402, function(resolve, e){
+        openH5AgmentModal(100402, function (resolve, e) {
             layer.close(resolve.layIndex);
-            layer.open({type: 2, shadeClose: false});
+            layer.open({ type: 2, shadeClose: false });
 
             publicRequest('thirdRegister', 'POST').then(function (data) {
                 console.log(data);
@@ -295,7 +297,7 @@ $(document).ready(function () {
         if ($(ele.realnameInfoFirstname).val()
             && $(ele.realnameInfoBirth).val()
             && $(ele.realnameInfoEmail).val()) {
-            layer.open({type: 2, shadeClose: false});
+            layer.open({ type: 2, shadeClose: false });
             publicRequest('thirdSetUserInfo', 'PUT', {
                 first_name: $(ele.realnameInfoFirstname).val(),
                 last_name: $(ele.realnameInfoLastname).val(),
@@ -351,8 +353,8 @@ $(document).ready(function () {
                 ready = true;
             }
         } else {
-            info.first_line_address = $(".m_third_addressInfo .state_global .state").val();
-            info.second_line_address = $(".m_third_addressInfo .city_global .city").val();
+            info.first_line_address = $(ele.addressInfoState).val();
+            info.second_line_address = $(ele.addressInfoCity).val();
             info.town = $(ele.addressInfoAddress).val();
             if (info.world_code && info.first_line_address && info.post_code && info.town) {
                 ready = true;
@@ -360,7 +362,7 @@ $(document).ready(function () {
         }
         // console.log(info);
         if (ready) {
-            layer.open({type: 2, shadeClose: false});
+            layer.open({ type: 2, shadeClose: false });
             publicRequest('thirdSetUserAddressInfo', 'PUT', info).then(function (data) {
                 // console.log(data);
                 layer.closeAll();
@@ -412,7 +414,7 @@ $(document).ready(function () {
         }
     });
     // 获取国家、地区列表
-    function getCountries () {
+    function getCountries() {
         publicRequest('thirdCountries', 'GET').then(function (data) {
             // console.log(data);
             if (data.is_succ) {
@@ -420,7 +422,7 @@ $(document).ready(function () {
                     data: data.data
                 };
                 //使用template模版
-                var html=bt('template_country_info',countryList);
+                var html = bt('template_country_info', countryList);
                 //渲染
                 $("#country_list").html(html);
                 $("#nationality_list").html(html);
@@ -433,7 +435,7 @@ $(document).ready(function () {
                             $(ele.addressInfoCountry).val(value.name);
                             cardCountry = userCacheInfo.world_code;
                             $(ele.addressInfoCountry).attr("data-type", cardCountry);
-                            $("#country_list").find("option[value="+cardCountry+"]").first().attr("selected", true);
+                            $("#country_list").find("option[value=" + cardCountry + "]").first().attr("selected", true);
                         }
                     });
                     if (cardCountry === 'CN') {
@@ -450,7 +452,7 @@ $(document).ready(function () {
         });
     }
     // 初始化省/区
-    function initStateInfo () {
+    function initStateInfo() {
         publicRequest('thirdStateList', 'GET', {
             country_code: 'CN'
         }).then(function (data) {
@@ -460,14 +462,14 @@ $(document).ready(function () {
                     data: data.data
                 };
                 //使用template模版
-                var html=bt('template_country_info',stateList);
+                var html = bt('template_country_info', stateList);
                 //渲染
                 $("#state_list").html(html);
             }
         });
     }
     // 初始化城市
-    function initCityInfo (parentCode) {
+    function initCityInfo(parentCode) {
         publicRequest('thirdCitiesList', 'GET', {
             parent_code: parentCode
         }).then(function (data) {
@@ -477,48 +479,184 @@ $(document).ready(function () {
                     data: data.data
                 };
                 //使用template模版
-                var html=bt('template_country_info',cityList);
+                var html = bt('template_country_info', cityList);
                 //渲染
                 $("#city_list").html(html);
             }
         });
     }
-    function setCNCountry (simp) {
+
+    var fuzzySearch = {
+        isFuzzySearch: true,   // 判断是填写还是查找
+        show: true,   // 根据地址或邮编查找是否显示
+        fuzzySearchList: [],   // 模糊搜索列表
+        fuzzySearchCon: '',   // 模糊搜索内容
+        layerIndex: ''
+    }
+    function setCNCountry(simp) {
         $(".m_third_addressInfo .state_cn").addClass('active');
         $(".m_third_addressInfo .city_cn").addClass('active');
         $(".m_third_addressInfo .state_global").removeClass('active');
         $(".m_third_addressInfo .city_global").removeClass('active');
+        $(".m_third_addressInfo .switch_fuzzy_search").removeClass('active');
+        $(".m_third_addressInfo .switch_fuzzy_search_input").removeClass('active');
+        $(".m_third_addressInfo .switch_fuzzy_search_related").addClass('active');
+
         if (simp) return;
         $("#country_list").find("option[value=CN]").first().attr("selected", true);
-        $(ele.userinfoCountry).val('中国');
-        $(ele.userinfoCountry).attr("data-type", "CN");
+        $(ele.addressInfoCountry).val('中国');
+        $(ele.addressInfoCountry).attr("data-type", "CN");
     }
-    function setGlobalCountry () {
+    function setGlobalCountry() {
         $(".m_third_addressInfo .state_cn").removeClass('active');
         $(".m_third_addressInfo .city_cn").removeClass('active');
-        $(".m_third_addressInfo .state_global").addClass('active');
-        $(".m_third_addressInfo .city_global").addClass('active');
+        switchFuzzySearchAfter()
     }
+    function switchFuzzySearchAfter() {
+        if (fuzzySearch.show) {
+            $(".m_third_addressInfo .switch_fuzzy_search").addClass('active');
+            if (fuzzySearch.isFuzzySearch) {
+                $(".m_third_addressInfo .state_global").removeClass('active');
+                $(".m_third_addressInfo .city_global").removeClass('active');
+                $(".m_third_addressInfo .switch_fuzzy_search_related").removeClass('active');
+                $(".m_third_addressInfo .switch_fuzzy_search_input").addClass('active');
+                $('#switchFuzzySearch').text(lang.text('third.enterAddressManually'))  // 手动输入地址
+            } else {
+                $(".m_third_addressInfo .state_global").addClass('active');
+                $(".m_third_addressInfo .city_global").addClass('active');
+                $(".m_third_addressInfo .switch_fuzzy_search_related").addClass('active');
+                $(".m_third_addressInfo .switch_fuzzy_search_input").removeClass('active');
+
+                $('#switchFuzzySearch').text(lang.text('third.autoAddressLookup'))
+            }
+        } else {
+            $(".m_third_addressInfo .state_global").addClass('active');
+            $(".m_third_addressInfo .city_global").addClass('active');
+            $(".m_third_addressInfo .switch_fuzzy_search_related").addClass('active');
+            $(".m_third_addressInfo .switch_fuzzy_search_input").removeClass('active');
+            $(".m_third_addressInfo .switch_fuzzy_search").removeClass('active');
+
+        }
+    }
+    var getAddressUrlTimer;
+    $('#fuzzySearchAfter').on("tap", function (e) {
+        e.preventDefault();
+        fuzzySearch.layerIndex = layer.open({
+            type: 1,
+            skin: 'fuzzy_search',
+            title: '',
+            closeBtn: 0,
+            shade: 0,
+            content: '<div><div class="m_third_addressInfo__wrapper"><input class="info" type="text" placeholder="' + lang.text('third.addressOrPostalCode') + '" id="fuzzySearch"></div><ul id="fuzzySearchList" class="list"></ul></div>'
+        });
+        $("#fuzzySearchAfter").focus()
+        $("#fuzzySearchList").hide()
+    })
+    $('body').on("input", "#fuzzySearch", function () {
+        fuzzySearch.fuzzySearchCon = $(this).val()
+        clearTimeout(getAddressUrlTimer)
+        var params = {
+            Key: 'GE86-EG48-RA51-EZ99',
+            Text: fuzzySearch.fuzzySearchCon,
+            Limit: 20,
+            Language: lang.curLang(),
+            Countries: $(ele.addressInfoCountry).attr("data-type")
+        }
+        getAddressUrlTimer = setTimeout(function () {
+            fuzzySearchListTpl(params);
+        }, 250)
+    })
+    $("#switchFuzzySearch").on('tap', function (e) {
+        e.preventDefault();
+        fuzzySearch.isFuzzySearch = !(fuzzySearch.isFuzzySearch);
+        switchFuzzySearchAfter()
+    })
+    function fuzzySearchListTpl(params) {
+        publicRequest('getAddressUrl', 'GET', params).then(function (data) {
+            fuzzySearch.fuzzySearchList = data.Items;
+            if (fuzzySearch.fuzzySearchList.length > 0) {
+                var tpl = '';
+                for (var i = 0; i < data.Items.length; i++) {
+                    var ele = data.Items[i];
+                    tpl += "<li data-index=" + i + ">" + ele.Text + "</li>"
+                }
+                $("#fuzzySearchList").empty().append(tpl)
+                $("#fuzzySearchList").show()
+            } else {
+                $("#fuzzySearchList").empty();
+                $("#fuzzySearchList").hide()
+
+            }
+
+        })
+    }
+    $("body").on('tap', '#fuzzySearchList li', function (e) {
+        e.preventDefault();
+
+        var item = fuzzySearch.fuzzySearchList[($(this).data('index'))]
+        if (item.Type === 'Address') {
+            if(item.Text){
+                var textArr = item.Text.split(',')
+                if (textArr.length == 1) {
+                    $(ele.addressInfoState).val(textArr[0]);
+                }
+                else if (textArr.length > 1) {
+                    $(ele.addressInfoState).val(textArr[0]);
+                    $(ele.addressInfoCity).val(textArr[1]);
+                }
+            }
+            if(item.Description){
+                var descriptionArr = item.Description.split(',')
+                if (descriptionArr.length == 1) {
+                    $(ele.addressInfoAddress).val(descriptionArr[0]);
+                }
+                else if (descriptionArr.length == 2) {
+                    $(ele.addressInfoAddress).val(descriptionArr[0]);
+                    $(ele.addressInfoPostCode).val(descriptionArr[1]);
+                }
+                else if (descriptionArr.length > 2) {
+                    $(ele.addressInfoAddress).val(descriptionArr[1]);
+                    $(ele.addressInfoPostCode).val(descriptionArr[2]);
+                }
+            }
+            fuzzySearch.show = false;
+            switchFuzzySearchAfter();
+            layer.close(fuzzySearch.layerIndex)
+        } else {
+            var params = {
+                Text: fuzzySearch.fuzzySearchCon,
+                Limit: 20,
+                Language: lang.curLang(),
+                Container: item.Id,
+                Key: 'GE86-EG48-RA51-EZ99',
+                Countries: $(ele.addressInfoCountry).attr("data-type")
+            }
+            fuzzySearchListTpl(params)
+        }
+    })
+
+
     // select radio_wrapper
     $(ele.addressInfoRadioBtn).on("tap", function (e) {
+        e.preventDefault();
         var key = $(this).attr("data-key");
         var type = $(this).attr("data-type")
         addressInfoRadio[key] = $(this).attr("data-type");
-        $(ele.addressInfoRadioBtn+"[data-key="+key+"]").removeClass("active");
+        $(ele.addressInfoRadioBtn + "[data-key=" + key + "]").removeClass("active");
         $(this).addClass("active");
         if (key !== 'addressMonth') {
             if (type == '0') {
-                $(".radio_select_wrapper[data-key="+key+"]").removeClass("active");
-                $(".radio_current_wrapper[data-key="+key+"]").addClass("active");
+                $(".radio_select_wrapper[data-key=" + key + "]").removeClass("active");
+                $(".radio_current_wrapper[data-key=" + key + "]").addClass("active");
                 sameCurrentCountry(key);
             } else {
-                $(".radio_current_wrapper[data-key="+key+"]").removeClass("active");
-                $(".radio_select_wrapper[data-key="+key+"]").addClass("active");
+                $(".radio_current_wrapper[data-key=" + key + "]").removeClass("active");
+                $(".radio_select_wrapper[data-key=" + key + "]").addClass("active");
             }
         }
     });
-    function sameCurrentCountry (type) {
-        $(".radio_current_wrapper[data-key="+type+"]").html($("input.country").val());
+    function sameCurrentCountry(type) {
+        $(".radio_current_wrapper[data-key=" + type + "]").html($("input.country").val());
     }
     //第四步 --- kyc
     $(ele.investInfoBtn).on("tap", function (e) {
@@ -545,7 +683,7 @@ $(document).ready(function () {
             msg.position = undefined;
         }
         if (next) {
-            layer.open({type: 2, shadeClose: false});
+            layer.open({ type: 2, shadeClose: false });
             publicRequest('thirdSetKyc', 'POST', msg).then(function (data) {
                 // console.log(data);
                 layer.closeAll();
@@ -587,7 +725,7 @@ $(document).ready(function () {
             } else {
                 openFundInfoLayerMdl(json);
             }
-            
+
         } else {
             layer.open({
                 content: lang.text('third.fillInfoTip'),
@@ -597,7 +735,7 @@ $(document).ready(function () {
         }
     });
     function submitFundInfo(json) {
-        layer.open({type: 2, shadeClose: false});
+        layer.open({ type: 2, shadeClose: false });
         publicRequest('thirdSetKyc', 'POST', json).then(function (data) {
             // console.log(data);
             layer.closeAll();
@@ -617,8 +755,8 @@ $(document).ready(function () {
     function openFundInfoLayerMdl(force) {
         layer.open({
             content: $(".m_third_layer_temp").html()
-            ,btn: [lang.text('third.yes'), lang.text('third.no')]
-            ,yes: function(index){
+            , btn: [lang.text('third.yes'), lang.text('third.no')]
+            , yes: function (index) {
                 if (force) {
                     layer.close(index);
                     submitFundInfo(force);
@@ -630,8 +768,8 @@ $(document).ready(function () {
         });
     }
     //获取KYC列表
-    function getKycList (type) {
-        publicRequest('thirdGetKycList', 'GET', {type: type}).then(function (data) {
+    function getKycList(type) {
+        publicRequest('thirdGetKycList', 'GET', { type: type }).then(function (data) {
             // console.log(data);
             if (!data) return;
             if (data.is_succ) {
@@ -650,12 +788,12 @@ $(document).ready(function () {
                     } else {
                         value.active = true;
                     }
-                    value.title = order+'.'+value.title;
+                    value.title = order + '.' + value.title;
                     order++;
                 });
                 // console.log(kycList);
                 //使用template模版
-                var html=bt('template_kyc_info',kycList);
+                var html = bt('template_kyc_info', kycList);
                 //渲染
                 if (type == '0') {
                     $("#m_third_investInfo__template").html(html);
@@ -708,7 +846,7 @@ $(document).ready(function () {
                             } else {
                                 investmentGoals = true;
                             }
-                            
+
                         }
                     });
                     //多选
@@ -720,7 +858,7 @@ $(document).ready(function () {
             }
         });
     }
-    function selectKyc (self, kycType, type) {
+    function selectKyc(self, kycType, type) {
         if (kycType == '0') {
             var parent = "#m_third_investInfo__template";
         }
@@ -729,7 +867,7 @@ $(document).ready(function () {
         }
         if (type === 'radio') {
             var name = self.attr("data-name");
-            $(parent).find(".inp[data-name="+name+"]").removeClass("active");
+            $(parent).find(".inp[data-name=" + name + "]").removeClass("active");
             self.find(".inp").addClass("active");
             kycInfo[kycType]["message"][name] = self.find(".inp").attr("data-value");
         }
@@ -767,7 +905,7 @@ $(document).ready(function () {
                 time: 2
             });
         } else if (cardBaseFile.addressOne) {
-            layer.open({type: 2, shadeClose: false});
+            layer.open({ type: 2, shadeClose: false });
             publicRequest('thirdUploadAddress', 'POST', {
                 cert_type: cardType,
                 front: cardBaseFile.addressOne.src.split(',')[1],
@@ -816,7 +954,7 @@ $(document).ready(function () {
                 time: 2
             });
         } else if (cardBaseFile.front && (!needTwo || cardBaseFile.back)) {
-            layer.open({type: 2, shadeClose: false});
+            layer.open({ type: 2, shadeClose: false });
             publicRequest('thirdUploadIdCard', 'POST', {
                 cert_type: cardType,
                 id_no: cardNo,
@@ -849,7 +987,7 @@ $(document).ready(function () {
             });
         }
     });
-    
+
     //选择地址类型
     $(ele.cardSelect).on('change', function (e) {
         var op = $(this).find('option:selected');
@@ -862,15 +1000,15 @@ $(document).ready(function () {
         }
     });
     //选择地址文件
-    $(ele.cardFile).on('change', function(e) {
+    $(ele.cardFile).on('change', function (e) {
         // console.log(e.target.files[0]);
         var file = e.target.files[0];
-        var pageClass = "."+$(e.target).attr("data-page");
+        var pageClass = "." + $(e.target).attr("data-page");
         preview(file, pageClass);
         previewBase64(file, $(e.target).attr("data-page"));
     });
 
-    function updateFilesType (type) {
+    function updateFilesType(type) {
         if (type === 'address') {
             var list = addressTypeList;
             var id = 'address_type_list';
@@ -881,18 +1019,18 @@ $(document).ready(function () {
             var id = 'identity_type_list';
         }
         //使用template模版
-        var html=bt('template_card_info', list);
+        var html = bt('template_card_info', list);
         //渲染
-        $("#"+id).html(html);
+        $("#" + id).html(html);
     }
 
     function preview(file, pageClass) {
         var img = new Image(), url = img.src = URL.createObjectURL(file);
         var $img = $(img);
         var $imgWrapper = $('.m_third_card__pic').find(pageClass);
-        img.onload = function() {
+        img.onload = function () {
             URL.revokeObjectURL(url);
-            
+
             if (img.width < img.height) {
                 // $img.rotate(90);
                 // $img.css("transform","rotate(90deg)");
@@ -901,7 +1039,7 @@ $(document).ready(function () {
                 var x = $imgWrapper.width() / $img.height();
                 var y = $imgWrapper.height() / $img.width();
                 // console.log(x, y);
-                $img.css("transform", "rotate(90deg) scale("+y+","+x+")");
+                $img.css("transform", "rotate(90deg) scale(" + y + "," + x + ")");
             }
             $imgWrapper.empty().append($img);
         };
@@ -909,26 +1047,26 @@ $(document).ready(function () {
     function previewBase64(file, face) {
         // console.log(file.size);
         var quality = 1;
-        if (file.size > 5*1024*1024) {  //大于 5M 压缩
+        if (file.size > 5 * 1024 * 1024) {  //大于 5M 压缩
             quality = 0.5
         }
         var reader = new FileReader();
 
-        reader.onload = function(e) {
+        reader.onload = function (e) {
             var img = new Image();
             img.src = e.target.result;
 
             $(img).on('load', function (e) {
-                cardBaseFile[face]=new Image();
+                cardBaseFile[face] = new Image();
                 renderImage(cardBaseFile[face], img, { maxWidth: 960, maxHeight: 960, quality: quality });
-            
+
             });
-            
+
         };
         reader.readAsDataURL(file);
     }
 
-    function renderImage (target, img, options) {
+    function renderImage(target, img, options) {
         options = options || {};
         var imgWidth = img.naturalWidth, imgHeight = img.naturalHeight,
             width = options.width, height = options.height,
@@ -942,7 +1080,7 @@ $(document).ready(function () {
             width = imgWidth;
             height = imgHeight;
         }
-        
+
         if (maxWidth && width > maxWidth) {
             width = maxWidth;
             height = (imgHeight * width / imgWidth) << 0;
@@ -951,14 +1089,14 @@ $(document).ready(function () {
             height = maxHeight;
             width = (imgWidth * height / imgHeight) << 0;
         }
-        var opt = { width : width, height : height };
+        var opt = { width: width, height: height };
         for (var k in options) opt[k] = options[k];
 
         target.src = renderImageToDataURL(img, opt);
     }
-    function renderImageToDataURL (img, options) {
+    function renderImageToDataURL(img, options) {
         var width = options.width, height = options.height;
-        var canvas = document.createElement("canvas"); 
+        var canvas = document.createElement("canvas");
         var iw = img.naturalWidth, ih = img.naturalHeight;
         var ctx = canvas.getContext('2d');
         ctx.save();
@@ -973,7 +1111,7 @@ $(document).ready(function () {
         var dh = Math.ceil(d * height / ih);
         var sy = 0;
         var dy = 0;
-        
+
         while (sy < ih) {
             var sx = 0;
             var dx = 0;

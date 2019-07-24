@@ -1121,7 +1121,18 @@
             fuzzySearchList: [],
             listShow: false
         }
-        $scope.switchfFuzzySearch = function () {
+        // 地址预测需要传递语言
+        // function langFilter(lang){
+        //     switch (lang) {
+        //         case value:
+
+        //             break;
+
+        //         default:
+        //             break;
+        //     }
+        // }
+        $scope.switchFuzzySearch = function () {
             $scope.fuzzySearch.fillOrSearch = !$scope.fuzzySearch.fillOrSearch
         }
         var getAddressUrlTimer;
@@ -1131,7 +1142,8 @@
                 Key: 'GE86-EG48-RA51-EZ99',
                 Text: $scope.fuzzySearch.addressValue,
                 Limit: 20,
-                Language: 'en'
+                Language: $scope.lang.currentLanguage(),
+                Countries: $scope.addressInfo.country.value
             }
             getAddressUrlTimer = $timeout(function () {
                 account.getAddressUrl(params).then(function (data) {
@@ -1141,51 +1153,47 @@
 
         }
         $scope.confirmAddress = function (item) {
-            $scope.fuzzySearch.show = false;
             // $scope.addressInfo.city.key = undefined;
             // $scope.addressInfo.address = '';
             // $scope.addressInfo.postCode = '';
             // $scope.addressInfo.province.key = undefined;
 
             if (item.Type === 'Address') {
-                if (item.Description) {
-                    var strArr = item.Description.split(',')
-                    if (strArr.length === 3) {
-                        $scope.addressInfo.city.key = strArr[0]
-                        $scope.addressInfo.address = strArr[1]
-                        $scope.addressInfo.postCode = strArr[2]
-                    } else if (strArr.length === 2) {
-                        $scope.addressInfo.postCode = strArr[1]
-                        $scope.addressInfo.address = strArr[0]
-                    } else if (strArr.length === 1) {
-                        $scope.addressInfo.postCode = strArr[0]
+                if(item.Text){
+                    var textArr = item.Text.split(',')
+                    if (textArr.length == 1) {
+                        $scope.addressInfo.province.key = textArr[0];
                     }
-                    $scope.addressInfo.province.key = $scope.fuzzySearch.addressValue
-                    $scope.fuzzySearch.listShow = false
-                    $scope.fuzzySearch.fillOrSearch = false
-
-                } else {
-                    var strArr = item.Text.split(',')
-                    if (strArr.length === 3) {
-                        $scope.addressInfo.province.key = strArr[0]
-                        $scope.addressInfo.city.key = strArr[1]
-                        $scope.addressInfo.address = strArr[2]
-                    } else if (strArr.length === 2) {
-                        $scope.addressInfo.province.key = strArr[0]
-                        $scope.addressInfo.address = strArr[1]
-                    } else if (strArr.length === 1) {
-                        $scope.addressInfo.province.key = strArr[0]
+                    else if (textArr.length > 1) {
+                        $scope.addressInfo.province.key = textArr[0];
+                        $scope.addressInfo.city.key = textArr[1];
                     }
-                    $scope.fuzzySearch.listShow = false
-                    $scope.fuzzySearch.fillOrSearch = false
                 }
+                if(item.Description){
+                    var descriptionArr = item.Description.split(',')
+                    if (descriptionArr.length == 1) {
+                        $scope.addressInfo.address = descriptionArr[0];
+                    }
+                    else if (descriptionArr.length == 2) {
+                        $scope.addressInfo.address = descriptionArr[0];
+                        $scope.addressInfo.postCode = descriptionArr[1];
+                    }
+                    else if (descriptionArr.length > 2) {
+                        $scope.addressInfo.address = descriptionArr[1];
+                        $scope.addressInfo.postCode = descriptionArr[2];
+                    }
+                }
+                $scope.fuzzySearch.show = false;
+                $scope.fuzzySearch.listShow = false
+                $scope.fuzzySearch.fillOrSearch = false
             } else {
                 var params = {
                     Text: $scope.fuzzySearch.addressValue,
                     Limit: 20,
-                    Language: 'en',
+                    Language: $scope.lang.currentLanguage(),
                     Container: item.Id,
-                    Key: 'GE86-EG48-RA51-EZ99'
+                    Key: 'GE86-EG48-RA51-EZ99',
+                    Countries: $scope.addressInfo.country.value
                 }
                 account.getAddressUrl(params).then(function (data) {
                     $scope.fuzzySearch.fuzzySearchList = data.Items
