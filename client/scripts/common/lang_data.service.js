@@ -10967,13 +10967,13 @@
                     },
                     "selectAddress": {
                         "zh": "请选择搜索的地址",
-                        "en": "",
-                        "vi": "",
-                        "zh-Hant": "",
-                        "id": "",
-                        "es": "",
-                        "pt-BR": ""
-                    },
+                        "en": "Please select the search address",
+                        "vi": "Hãy chọn địa chỉ tìm kiếm",
+                        "zh-Hant": "請選擇蒐索的地址",
+                        "id": "Silakan pilih pencarian alamat",
+                        "es": "Seleccione la dirección de búsqueda",
+                        "pt-BR": "Selecione por favor o endereço de pesquisa"
+                    }
                 },
                 "partner": {
                     "title": {
