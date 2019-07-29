@@ -66,14 +66,14 @@
                     </thead>
                     <tbody>
                         <tr v-for="item in forex" v-cloak>
-                            <td>{{ item.name_en }}</td>
-                            <td>{{ item.name_zh }}</td>
-                            <td>{{ item.dot }}</td>
-                            <td>{{ item.lever }}</td>
-                            <td>{{ item.fixed }}</td>
-                            <td>{{ item.min_volum }}</td>
-                            <td>{{ item.standard_volum }}</td>
-                            <td>{{ item.trade_time }}</td>
+                            <td>{{ item.symbol }}</td>
+                            <td>{{ item.symbol_cn }}</td>
+                            <td>{{ item.spread_tiger }}</td>
+                            <td>{{ item.leverage.join(' ') }}</td>
+                            <td>{{ item.digits }}</td>
+                            <td>{{ item.lot_min }}</td>
+                            <td>{{ item.contract_size }}</td>
+                            <td>{{ item.info_trade_session }}</td>
                         </tr>
                         <tr>
                             <td colspan="{{ forex.length }}" class="note">
@@ -161,11 +161,11 @@
                         </thead>
                         <tbody>
                             <tr v-for="item in oil" v-cloak>
-                                <td>{{ item.name_en }}</td>
-                                <td>{{ item.name_zh }}</td>
-                                <td>{{ item.volum }}</td>
-                                <td>{{ item.unit }}</td>
-                                <td>{{ item.min_volum }}</td>
+                                <td>{{ item.symbol }}</td>
+                                <td>{{ item.symbol_cn }}</td>
+                                <td>{{ item.contract_size }}</td>
+                                <td>{{ item.lot_step }}</td>
+                                <td>{{ item.lot_min }}</td>
                             </tr>
                         </tbody>
                     </table>
@@ -190,11 +190,11 @@
                         </thead>
                         <tbody>
                             <tr v-for="item in oil" v-cloak>
-                                <td>{{ item.max_volum }}</td>
-                                <td>{{ item.charge }}</td>
-                                <td>{{ item.trade_time }}</td>
-                                <td>{{ item.quote_time }}</td>
-                                <td>{{ item.desp }}</td>
+                                <td>{{ item.lot_max }}</td>
+                                <td>{{ item.comm_base }}</td>
+                                <td>{{ item.info_trade_session }}</td>
+                                <td>{{ item.info_quote_session }}</td>
+                                <td>{{ item.desc }}</td>
                             </tr>
                         </tbody>
                     </table>
@@ -377,10 +377,10 @@
                     </thead>
                     <tbody>
                         <tr v-for="item in cfd" v-cloak>
-                            <td>{{ item.name_en }}</td>
-                            <td>{{ item.name_zh }}</td>
-                            <td>{{ item.volum }}</td>
-                            <td>{{ item.min_volum }}</td>
+                            <td>{{ item.symbol }}</td>
+                            <td>{{ item.symbol_cn }}</td>
+                            <td>{{ item.contract_size }}</td>
+                            <td>{{ item.lot_min }}</td>
                         </tr>
                     </tbody>
                 </table>
@@ -403,10 +403,10 @@
                     </thead>
                     <tbody>
                         <tr v-for="item in cfd" v-cloak>
-                            <td>{{ item.max_volum }}</td>
-                            <td>{{ item.trade_time }}</td>
-                            <td>{{ item.quote_time }}</td>
-                            <td>{{ item.desp }}</td>
+                            <td>{{ item.lot_max }}</td>
+                            <td>{{ item.info_trade_session }}</td>
+                            <td>{{ item.info_quote_session }}</td>
+                            <td>{{ item.desc }}</td>
                         </tr>
                     </tbody>
                 </table>

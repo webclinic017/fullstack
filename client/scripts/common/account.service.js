@@ -54,7 +54,7 @@
             getUserGroup: getUserGroup,
             hasChecked: false,
             getAuthStatus: getAuthStatus, //获取认证状态
-            setAuthenAddress: setAuthenAddress, 
+            setAuthenAddress: setAuthenAddress,
             getAdvertiseRecords: getAdvertiseRecords,
             // sendEmailCode: sendEmailCode,
             // getRCaptcha: getRCaptcha,
@@ -74,7 +74,8 @@
             transferIslamic: transferIslamic,
             uploadAgentProtocol: uploadAgentProtocol,
             agentProtocol: agentProtocol,
-            getVersionCheck: getVersionCheck
+            getVersionCheck: getVersionCheck,
+            getAddressUrl: getAddressUrl
         };
         var resolveValue;
         return service;
@@ -110,7 +111,7 @@
          */
         function login(params) {
 
-            return publicHttp.dealPublicRequest(o.loginApi, 'POST', angular.extend({action: 'login'},params));
+            return publicHttp.dealPublicRequest(o.loginApi, 'POST', angular.extend({ action: 'login' }, params));
         }
         // 通过MT4登录
         function loginByMt4(params) {
@@ -214,7 +215,7 @@
          */
         function register(params) {
 
-            return publicHttp.dealPublicRequest(o.registerApi, 'POST', angular.extend({action: 'register'},params));
+            return publicHttp.dealPublicRequest(o.registerApi, 'POST', angular.extend({ action: 'register' }, params));
         }
 
         /**
@@ -255,7 +256,7 @@
             return publicHttp.dealPublicRequest(o.checkCodeApi, 'POST', {
                 account: account,
                 code: code,
-                account_type : account_type || 0,
+                account_type: account_type || 0,
                 phone_code: phone_code,
             });
         }
@@ -487,7 +488,7 @@
                 username: username,
             });
         }
-        
+
         /**
          * @name setBasicInfoName
          * @desc setting 模块设置基本信息中文昵称
@@ -528,7 +529,7 @@
             return publicHttp.dealPublicRequest(o.uploadAvatarForm, 'POST', {
                 file: file
             });
-        } 
+        }
 
         /**
          * @name setPhone
@@ -579,7 +580,7 @@
         function getAuthStatus(params) {
             return publicHttp.dealPublicRequest(o.getAuthStatus, 'GET', params)
         }
-        
+
         //完善认证地址
         function setAuthenAddress(params) {
             return publicHttp.dealPublicRequest(o.setAuthenAddressApi, 'PUT', params);
@@ -602,7 +603,7 @@
                 ib_pid: ib_pid
             });
         }
-        
+
         /**
          * 发送验证码合并接口
          * @param {String} account 手机号
@@ -672,22 +673,22 @@
         function updataIdCard(params) {
             return publicHttp.dealPublicRequest(o.updataIdCard, 'POST', params);
         }
-        function updataIdCardBase64 (face, file) {
+        function updataIdCardBase64(face, file) {
             return publicHttp.dealPublicRequest(o.uploadIdCardBase64, 'POST', {
                 face: face,
                 file: file
             });
         }
 
-        function setUsername(params){
+        function setUsername(params) {
             return publicHttp.dealPublicRequest(o.setUsername, 'PUT', params);
         }
         //判断是否是代理商
-        function checkAgent(){
+        function checkAgent() {
             return publicHttp.dealPublicRequest(o.checkAgentApi, 'GET');
         }
         //真实账户请求获取身份认证信息（更新证件接口）
-        function getIdcard(){
+        function getIdcard() {
             return publicHttp.dealPublicRequest(o.getIdcardApi, 'GET');
         }
         // 上传地址证明
@@ -695,7 +696,7 @@
             return publicHttp.dealPublicRequest(o.setUploadAddressProveApi, 'post', params);
         }
         //获取邮箱电话等信息
-        function getEmailPhone (params) {
+        function getEmailPhone(params) {
             return publicHttp.dealPublicRequest(o.getEmailPhone, 'GET', params);
         }
         // 开通体验金账户
@@ -703,12 +704,12 @@
             return publicHttp.dealPublicRequest(o.openTrialAccountApi, 'POST', params);
         }
         //伊斯兰账号
-        function setIslamicStatus (islamicStatus) {
+        function setIslamicStatus(islamicStatus) {
             return publicHttp.dealPublicRequest(o.setIslamicStatusApi, 'PUT', {
                 islamic_status: islamicStatus
             });
         }
-        function transferIslamic () {
+        function transferIslamic() {
             return publicHttp.dealPublicRequest(o.transferIslamicApi, 'PUT');
         }
 
@@ -722,8 +723,18 @@
             return publicHttp.dealPublicRequest(o.agentProtocolApi, 'GET');
         }
         // APP版本更新信息
-        function getVersionCheck (params) {
+        function getVersionCheck(params) {
             return publicHttp.dealPublicRequest(o.getVersionCheckApi, 'GET', params);
+        }
+        // 地址模糊搜索(跨域)
+        function getAddressUrl(params) {
+            // return new Promise(function(resolve, reject){
+            //     $.getJSON(o.getAddressUrlApi, params, function (data) {
+            //         resolve(data)
+            //     })
+            // })
+            
+            return publicHttp.dealPublicRequest(o.getAddressUrlApi, 'GET', params)
         }
     }
 })();

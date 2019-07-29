@@ -9,7 +9,8 @@
  */
 
 ;(function (w) {
-    var rootUrl = $.cookie("access_origin2");
+    var rootUrl = $.cookie("access_origin2") || '/api';
+    var urlOrigin2 = rootUrl + '/v3';
     // var rootUrl = '';
     var apiUrl = {
         // changePwdApi: rootUrl + '/action/public/v4/change_password',    //post
@@ -42,7 +43,8 @@
         // checkCodeApi: rootUrl + '/action/public/v4/verifycode', //post
         // setNewPasswordApi: rootUrl + '/action/public/v4/change_password', //post
         setNewPasswordApi: rootUrl + '/forget_passwd', //put
-        getWebProductInfoApi: '/napi?action=get_product', //get
+        // getWebProductInfoApi: '/napi?action=get_product', //get
+        getWebSymbolListApi: urlOrigin2 + '/symbol/all'   // get
     };
     w.dealApiUrlResource = dealApiUrlResource;
     w.getVueApi = getVueApi;

@@ -11,8 +11,9 @@
     var service = {
       getCommentList: getCommentList,
       getCommentDetails: getCommentDetails,
-      getProductInfo: getProductInfo,
-      getTradeFeeInfo: getTradeFeeInfo,
+      // getProductInfo: getProductInfo,
+      // getTradeFeeInfo: getTradeFeeInfo,
+      getWebSymbolList: getWebSymbolList,
       getSymbolList: getSymbolList
     };
     return service;
@@ -46,14 +47,20 @@
 
     }
 
-    function getProductInfo(oParams) {
-      return $http.get(o.getWebProductInfoApi, {
-        params: oParams
-      });
-    }
+    // function getProductInfo(oParams) {
+    //   return $http.get(o.getWebProductInfoApi, {
+    //     params: oParams
+    //   });
+    // }
 
-    function getTradeFeeInfo(oParams) {
-      return $http.get(o.getWebTradeFeeInfoApi, {
+    // function getTradeFeeInfo(oParams) {
+    //   return $http.get(o.getWebTradeFeeInfoApi, {
+    //     params: oParams
+    //   });
+    // }
+
+    function getWebSymbolList(oParams) {
+      return $http.get(o.getWebSymbolListApi, {
         params: oParams
       });
     }

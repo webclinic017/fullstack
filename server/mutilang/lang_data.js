@@ -801,13 +801,13 @@ module.exports = {
         "pt-BR": "Influência"
     },
     "forex26": {
-        "en": "Quoted price",
-        "zh": "报价位",
-        "vi": "Báo giá",
-        "zh-Hant": "報價位",
-        "id": "Harga Penawaran",
-        "es": "Precio Cotizado",
-        "pt-BR": "Preço cotado"
+        "en": "Digits",
+        "zh": "小数位",
+        "vi": "Chữ số",
+        "zh-Hant": "小數位",
+        "id": "Angka",
+        "es": "Dígitos",
+        "pt-BR": "Dígitos"
     },
     "forex27": {
         "en": "Minimum trading volume",
@@ -1404,13 +1404,13 @@ module.exports = {
         "pt-BR": "Influência"
     },
     "metal23": {
-        "en": "Quoted price",
-        "zh": "报价位",
-        "vi": "Báo giá",
-        "zh-Hant": "報價位",
-        "id": "Harga Penawaran",
-        "es": "Precio cotizado",
-        "pt-BR": "Preço cotado"
+        "en": "Digits",
+        "zh": "小数位",
+        "vi": "Chữ số",
+        "zh-Hant": "小數位",
+        "id": "Angka",
+        "es": "Dígitos",
+        "pt-BR": "Dígitos"
     },
     "metal24": {
         "en": "Minimum trading lots",
@@ -13404,6 +13404,33 @@ module.exports = {
         "id": "Apakah anda yakin untuk melanjutkan?",
         "es": "¿Le gustaría continuar?",
         "pt-BR": "Você gostaria de continuar?"
+    },
+    "enterAddressManually": {
+        "zh": "手动输入地址",
+        "en": "Lookup doesn't work? Enter address manually",
+        "vi": "Tra cứu không thành công? Nhập địa chỉ thủ công",
+        "zh-Hant": "手動輸入地址",
+        "id": "Tidak ketemu alamatnya? masukkan alamat secara manual",
+        "es": "¿La búsqueda no funciona? Introduzca la dirección manualmente",
+        "pt-BR": "A pesquisa não funciona? Insira o endereço manualmente"
+    },
+    "autoAddressLookup": {
+        "zh": "自动输入地址",
+        "en": "Auto address lookup",
+        "vi": "Tra cứu địa chỉ tự động",
+        "zh-Hant": "自動輸入地址",
+        "id": "Cari alamat otomatis",
+        "es": "Búsqueda automática de dirección",
+        "pt-BR": "Pesquisa de endereço automática"
+    },
+    "addressOrPostalCode": {
+        "zh": "请输入第一行地址或邮编",
+        "en": "Start typing the first line of your address or postal code ",
+        "vi": "Bắt đầu nhập hàng đầu tiên địa chỉ của bạn hoặc mã bưu điện",
+        "zh-Hant": "請輸入第一行地址或郵編",
+        "id": "Masukkan alamat dan kode pos anda",
+        "es": "Comience ingresando la primera línea de su dirección o código postal",
+        "pt-BR": "Comece digitando a primeira linha do seu endereço ou código postal"
     },
     "third_uploadCard": {
         "zh": "证件类型：",

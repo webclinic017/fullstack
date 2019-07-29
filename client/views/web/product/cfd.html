@@ -8,11 +8,11 @@
             <h4 class="mg-200__two-title mg-tp-40 pd-bt-20">
                 <%= lang.text("cfd5")%>
             </h4>
-             <ul class="mg-200__list-bg none clearfix pd-tp-30" tw-highest-match>
+            <ul class="mg-200__list-bg none clearfix pd-tp-30" tw-highest-match>
                 <li class="mg-200__list-bg-item col-xs-4">
                     <div>
                         <h5 class="title">
-                            
+
                             <%= lang.text("cfd6")%>
                         </h5>
                         <p class="content">
@@ -23,7 +23,7 @@
                 <li class="mg-200__list-bg-item col-xs-4">
                     <div>
                         <h5 class="title">
-                
+
                             <%= lang.text("cfd8")%>
                         </h5>
                         <p class="content">
@@ -34,7 +34,7 @@
                 <li class="mg-200__list-bg-item col-xs-4">
                     <div>
                         <h5 class="title">
-                
+
                             <%= lang.text("cfd10")%>
                         </h5>
                         <p class="content">
@@ -45,7 +45,7 @@
                 <li class="mg-200__list-bg-item col-xs-4">
                     <div>
                         <h5 class="title">
-                
+
                             <%= lang.text("cfd12")%>
                         </h5>
                         <p class="content">
@@ -56,7 +56,7 @@
                 <li class="mg-200__list-bg-item col-xs-4">
                     <div>
                         <h5 class="title">
-                
+
                             <%= lang.text("cfd14")%>
                         </h5>
                         <p class="content">
@@ -106,17 +106,31 @@
                 </thead>
                 <tbody>
                     <tr ng-if="cfd" ng-repeat="item in cfd" ng-cloak>
-                        <td>{{ item.name_en }}</td>
-                        <td class="pro-public__no-padding" ng-if="!lang.isEnglishArea()">{{ item.name_zh }}</td>
-                        <td>{{ item.volum }}</td>
-                        <td>{{ item.min_volum }}</td>
-                        <td>{{ item.max_volum }}</td>
-                        <td class="pro-public__no-padding">{{ item.trade_time }}</td>
-                        <td class="pro-public__no-padding">{{ item.quote_time }}</td>
-                        <td class="pro-public__no-padding">{{ item.desp }}</td>
+                        <td>{{ item.symbol }}</td>
+                        <td class="pro-public__no-padding" ng-if="!lang.isEnglishArea()">{{ item.symbol_cn }}</td>
+                        <td>{{ item.contract_size }}</td>
+                        <td>{{ item.lot_min }}</td>
+                        <td>{{ item.lot_max }}</td>
+                        <td class="pro-public__no-padding">{{ item.info_trade_session }}</td>
+                        <td class="pro-public__no-padding">{{ item.info_quote_session }}</td>
+                        <td class="pro-public__no-padding">{{ lang.text('productInfo.cfd.' + item.symbol) === ('productInfo.cfd.' +  item.symbol) ? '' : lang.text('productInfo.cfd.' + item.symbol) }}</td>
                     </tr>
                 </tbody>
             </table>
+            <div ng-show="showFolder">
+                <div ng-show="cfd.length >= 6 && !unfold" class="text-center" ng-cloak>
+                    <a class="btn btn-text font-size-14" ng-click="unfoldFun()">
+                        <%=lang.text('more')%>
+                        <i class="fa fa-angle-down"></i>
+                    </a>
+                </div>
+                <div ng-show="cfd.length >= 6 && unfold" class="text-center">
+                    <a class="btn btn-text font-size-14" ng-click="foldFun()" ng-cloak>
+                        <%=lang.text('fold')%>
+                        <i class="fa fa-angle-up"></i>
+                    </a>
+                </div>
+            </div>
             <div class="font-tip mg-tp-20">
                 <%= lang.text("platformTimeNote")%>
             </div>

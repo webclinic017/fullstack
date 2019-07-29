@@ -9,6 +9,102 @@
     function langData() {
 
         var lang_data = {
+            "productInfo": {
+                "cfd": {
+                    "EUSTX50": {
+                        "en": "Also known as European blue chip index in Euro zone",
+                        "zh": "也称欧洲绩优指数，欧元区蓝筹股股价指数",
+                        "zh-Hant": "也稱歐洲績優指數，歐元區藍籌股股價指數",
+                        "vi": "Còn được gọi là chỉ số chứng khoán blue chip châu Âu trong khu vực đồng Euro",
+                        "id": "Also known as European blue chip index in Euro zone",
+                        "es": "Also known as European blue chip index in Euro zone",
+                        "pt-BR": "Also known as European blue chip index in Euro zone"
+                    },
+                    "GER30": {
+                        "en": "Index of earnings obtained from 30 kinds of listed blue chip stock indexes in German.",
+                        "zh": "德国30种法兰克福上市蓝筹股票指数经过算法后得出收益的指数",
+                        "zh-Hant": "德國30種法蘭克福上市藍籌股票指數經過算法後得出收益的指數",
+                        "vi": "Chỉ số lợi nhuận thu được từ 30 loại chỉ số chứng khoán blue chip niêm yết bằng tiếng Đức.",
+                        "id": "Index of earnings obtained from 30 kinds of listed blue chip stock indexes in German.",
+                        "es": "Index of earnings obtained from 30 kinds of listed blue chip stock indexes in German.",
+                        "pt-BR": "Index of earnings obtained from 30 kinds of listed blue chip stock indexes in German."
+                    },
+                    "JPN225": {
+                        "en": "Index of 225 stocks listed in Tokyo Stock Exchange",
+                        "zh": "日经225只东京交易所上市股票指数",
+                        "zh-Hant": "日經225只東京交易所上市股票指數",
+                        "vi": "Chỉ số của 225 cổ phiếu niêm yết trên sàn giao dịch chứng khoán Tokyo",
+                        "id": "Index of 225 stocks listed in Tokyo Stock Exchange",
+                        "es": "Index of 225 stocks listed in Tokyo Stock Exchange",
+                        "pt-BR": "Index of 225 stocks listed in Tokyo Stock Exchange"
+                    },
+                    "NAS100": {
+                        "en": "Index based on tech stock",
+                        "zh": "基于高科技股票的指数",
+                        "zh-Hant": "基於高科技股票的指數",
+                        "vi": "Chỉ số dựa trên cổ phiếu công nghệ",
+                        "id": "Index based on tech stock",
+                        "es": "Index based on tech stock",
+                        "pt-BR": "Index based on tech stock"
+                    },
+                    "US30": {
+                        "en": "Stock index of 30 major industrial enterprises of USA",
+                        "zh": "美国30家主要工业公司构成的股票指数",
+                        "zh-Hant": "美國30家主要工業公司構成的股票指數",
+                        "vi": "Chỉ số chứng khoán của 30 doanh nghiệp công nghiệp lớn của Mỹ",
+                        "id": "Stock index of 30 major industrial enterprises of USA",
+                        "es": "Stock index of 30 major industrial enterprises of USA",
+                        "pt-BR": "Stock index of 30 major industrial enterprises of USA"
+                    },
+                    "USA500": {
+                        "en": "Stock index of 500 leading enterprises in USA",
+                        "zh": "美国500家领军企业构成的股票指数",
+                        "zh-Hant": "美國500家領軍企業構成的股票指數",
+                        "vi": "Chỉ số chứng khoán của 500 doanh nghiệp hàng đầu tại Mỹ",
+                        "id": "Stock index of 500 leading enterprises in USA",
+                        "es": "Stock index of 500 leading enterprises in USA",
+                        "pt-BR": "Stock index of 500 leading enterprises in USA"
+                    },
+                    "HK50": {
+                        "en": "Hang Seng Midcap 50 Index (HK50) is acquired from the weighted average of the market value of 50 largest enterprises listed in Hong Kong Stock Exchange. The index includes 60% market value and involves well-known enterprises, such as HSBC Group, China Construction Bank and China Mobile",
+                        "zh": "香港恒生 50 指数（HK50）由香港股票交易所上市的 50 家最大的上市公司的市值加权而得。该指数囊括 60% 的市值并包含了赫赫有名的公司，诸如汇丰集团、中国建设银行和中国移动",
+                        "zh-Hant": "香港恒生 50 指數（HK50）由香港股票交易所上市的 50 家最大的上市公司的市值加權而得。該指數囊括 60% 的市值並包含了赫赫有名的公司，諸如匯豐集團、中國建設銀行和中國移動",
+                        "vi": "Chỉ số Hang Seng Midcap 50 (HK50) được lấy từ mức trung bình số của giá trị thị trường của 50 doanh nghiệp lớn nhất được niêm yết trên Sở Giao dịch Chứng khoán Hồng Kông. Chỉ số này bao gồm 60% giá trị thị trường và bao gồm các doanh nghiệp nổi tiếng như Tập đoàn HSBC, Ngân hàng Xây dựng Trung Quốc và China Mobile",
+                        "id": "Hang Seng Midcap 50 Index (HK50) is acquired from the weighted average of the market value of 50 largest enterprises listed in Hong Kong Stock Exchange. The index includes 60% market value and involves well-known enterprises, such as HSBC Group, China Construction Bank and China Mobile",
+                        "es": "Hang Seng Midcap 50 Index (HK50) is acquired from the weighted average of the market value of 50 largest enterprises listed in Hong Kong Stock Exchange. The index includes 60% market value and involves well-known enterprises, such as HSBC Group, China Construction Bank and China Mobile",
+                        "pt-BR": "Hang Seng Midcap 50 Index (HK50) is acquired from the weighted average of the market value of 50 largest enterprises listed in Hong Kong Stock Exchange. The index includes 60% market value and involves well-known enterprises, such as HSBC Group, China Construction Bank and China Mobile"
+                    }
+                },
+                "oil": {
+                    "XNGUSD": {
+                        "en": "Natural gas is a fuel representing an alternative energy source to oil and other traditional resources such as coal. As oil in particular becomes more expensive to access, natural gas is becoming an established source of ‘cleaner’ energy, currently providing around one third of the UK’s energy supply.",
+                        "zh": "天然气是代表石油和其他传统资源（如煤炭）的替代能源的燃料。 由于石油特别昂贵，天然气正成为“清洁”能源的既定来源，目前提供约三分之一的英国能源供应。",
+                        "zh-Hant": "天然氣是代表石油和其他傳統資源（如煤炭）的替代能源的燃料。 由於石油特別昂貴，天然氣正成為“清潔”能源的既定來源，目前提供約三分之壹的英國能源供應。",
+                        "vi": "Khí tự nhiên là một loại nhiên liệu đại diên cho một nguồn năng lượng thay thế cho dầu mỏ và các nguồn tài nguyên truyền thống khác như than đá. Khi dầu đặc biệt trở nên đắt hơn để tiếp cận, khí tự nhiên đang trở thành nguồn năng lượng sạch hơn, hiện đang cung cấp khoảng 1/3 năng lượng của Vương Quốc Anh.",
+                        "id": "Natural gas is a fuel representing an alternative energy source to oil and other traditional resources such as coal. As oil in particular becomes more expensive to access, natural gas is becoming an established source of ‘cleaner’ energy, currently providing around one third of the UK’s energy supply.",
+                        "es": "Natural gas is a fuel representing an alternative energy source to oil and other traditional resources such as coal. As oil in particular becomes more expensive to access, natural gas is becoming an established source of ‘cleaner’ energy, currently providing around one third of the UK’s energy supply.",
+                        "pt-BR": "Natural gas is a fuel representing an alternative energy source to oil and other traditional resources such as coal. As oil in particular becomes more expensive to access, natural gas is becoming an established source of ‘cleaner’ energy, currently providing around one third of the UK’s energy supply."
+                    },
+                    "XTIUSD": {
+                        "en": "US Oil, or Texas Light Sweet, is one of the two most important benchmarks used globally by investors to determine the value of a barrel of a particular grade of oil. US oil is considered ‘sweet’ crude as it has a lower concentration of sulphur than its North Sea equivalent. Our Oil CFD’s allow our clients to speculate on real time price movements determined by the effects of global supply and demand.",
+                        "zh": "美国石油公司（Texas Light）或Texas Light Sweet公司是投资者在全球范围内用于确定特定等级石油价值的两个最重要的基准之一。 美国石油被认为是“甜”原油，因为它的硫浓度低于北海当量。 我们的石油差价合约允许我们的客户推测由全球供需影响决定的实时价格变动。",
+                        "zh-Hant": "美國石油公司（Texas Light）或Texas Light Sweet公司是投資者在全球範圍內用於確定特定等級石油價值的兩個最重要的基準之壹。 美國石油被認為是“甜”原油，因為它的硫濃度低於北海當量。 我們的石油差價合約允許我們的客戶推測由全球供需影響決定的實時價格變動。",
+                        "vi": "US Oil, hay Texas Light Sweer, là một trong hai tiêu chí quan trọng nhất được các nhà đầu tư sử dụng trên toàn cầu để xác định giá trị của một thùng dầu cấp đặc biệt. Dầu của Mỹ được coi là dầu thô “ngọt” vì nó có chứa hàm lượng lưu huỳnh thấp hơn so với tương đương với Biển Bắc. Dầu CFD của chúng tôi cho phép khách hàng của chúng tôi suy đoán về các biến động giá theo thời gian thực được xác định bởi ảnh hưởng của cung và cầu toàn cầu.",
+                        "id": "US Oil, or Texas Light Sweet, is one of the two most important benchmarks used globally by investors to determine the value of a barrel of a particular grade of oil. US oil is considered ‘sweet’ crude as it has a lower concentration of sulphur than its North Sea equivalent. Our Oil CFD’s allow our clients to speculate on real time price movements determined by the effects of global supply and demand.",
+                        "es": "US Oil, or Texas Light Sweet, is one of the two most important benchmarks used globally by investors to determine the value of a barrel of a particular grade of oil. US oil is considered ‘sweet’ crude as it has a lower concentration of sulphur than its North Sea equivalent. Our Oil CFD’s allow our clients to speculate on real time price movements determined by the effects of global supply and demand.",
+                        "pt-BR": "US Oil, or Texas Light Sweet, is one of the two most important benchmarks used globally by investors to determine the value of a barrel of a particular grade of oil. US oil is considered ‘sweet’ crude as it has a lower concentration of sulphur than its North Sea equivalent. Our Oil CFD’s allow our clients to speculate on real time price movements determined by the effects of global supply and demand."
+                    },
+                    "XBRUSD": {
+                        "en": "North Sea Oil is the second important global benchmark for oil prices. This type of oil is mainly used to refine into diesel fuel and gasoline. Our CFD allows our clients to speculate on the price of this alternative benchmark to US Oil.",
+                        "zh": "北海石油是全球第二个重要的油价基准。 这种类型的油主要用于精炼成柴油和汽油。 我们的差价合约允许我们的客户推测美国石油的替代基准价格。",
+                        "zh-Hant": "北海石油是全球第二個重要的油價基準。 這種類型的油主要用於精煉成柴油和汽油。 我們的差價合約允許我們的客戶推測美國石油的替代基準價格。",
+                        "vi": "Dầu biển Bắc là tiêu chuẩn quan trọng thứ hai toàn cầu về giá dầu. Loại dầu này chủ yếu được sử dụng để tinh chế thành nhiên liệu diesel và xăng. CFD của chúng tôi cho phép khách hàng của chúng tôi suy đoán về mức giá của tiêu chuẩn thay thế này đối với US Oil.",
+                        "id": "North Sea Oil is the second important global benchmark for oil prices. This type of oil is mainly used to refine into diesel fuel and gasoline. Our CFD allows our clients to speculate on the price of this alternative benchmark to US Oil.",
+                        "es": "North Sea Oil is the second important global benchmark for oil prices. This type of oil is mainly used to refine into diesel fuel and gasoline. Our CFD allows our clients to speculate on the price of this alternative benchmark to US Oil.",
+                        "pt-BR": "North Sea Oil is the second important global benchmark for oil prices. This type of oil is mainly used to refine into diesel fuel and gasoline. Our CFD allows our clients to speculate on the price of this alternative benchmark to US Oil."
+                    }
+                }
+            },
             "islamic_confirm": {
                 "zh": "确认",
                 "en": "Submit",
@@ -10936,6 +11032,43 @@
                         "id": "Kode Pos",
                         "es": "Código ZIP",
                         "pt-BR": "CEP"
+                    },
+                    // todo
+                    "enterAddressManually": {
+                        "zh": "手动输入地址",
+                        "en": "Lookup doesn't work? Enter address manually",
+                        "vi": "Tra cứu không thành công? Nhập địa chỉ thủ công",
+                        "zh-Hant": "手動輸入地址",
+                        "id": "Tidak ketemu alamatnya? masukkan alamat secara manual",
+                        "es": "¿La búsqueda no funciona? Introduzca la dirección manualmente",
+                        "pt-BR": "A pesquisa não funciona? Insira o endereço manualmente"
+                    },
+                    "autoAddressLookup": {
+                        "zh": "自动输入地址",
+                        "en": "Auto address lookup",
+                        "vi": "Tra cứu địa chỉ tự động",
+                        "zh-Hant": "自動輸入地址",
+                        "id": "Cari alamat otomatis",
+                        "es": "Búsqueda automática de dirección",
+                        "pt-BR": "Pesquisa de endereço automática"
+                    },
+                    "addressOrPostalCode": {
+                        "zh": "请输入第一行地址或邮编",
+                        "en": "Start typing the first line of your address or postal code ",
+                        "vi": "Bắt đầu nhập hàng đầu tiên địa chỉ của bạn hoặc mã bưu điện",
+                        "zh-Hant": "請輸入第一行地址或郵編",
+                        "id": "Masukkan alamat dan kode pos anda",
+                        "es": "Comience ingresando la primera línea de su dirección o código postal",
+                        "pt-BR": "Comece digitando a primeira linha do seu endereço ou código postal"
+                    },
+                    "selectAddress": {
+                        "zh": "请选择搜索的地址",
+                        "en": "Please select the search address",
+                        "vi": "Hãy chọn địa chỉ tìm kiếm",
+                        "zh-Hant": "請選擇蒐索的地址",
+                        "id": "Silakan pilih pencarian alamat",
+                        "es": "Seleccione la dirección de búsqueda",
+                        "pt-BR": "Selecione por favor o endereço de pesquisa"
                     }
                 },
                 "partner": {

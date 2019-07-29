@@ -74,6 +74,7 @@
         thirdUploadAddress: origin_third2 + '/user/upload_address_prove', //post
         thirdSetUserAddressInfo: origin_third2 + '/user/address', //put
         thirdUploadIdCard: origin_third2 + '/user/upload_id_card', //put
+        getAddressUrl: 'https://services.postcodeanywhere.co.uk/Capture/Interactive/Find/v1.00/json3ex.ws', // 模糊搜索
 
         // 获取交易月报
         getMonReport: origin_app + '/user/monthly_report',     // get
