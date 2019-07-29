@@ -801,13 +801,13 @@ module.exports = {
         "pt-BR": "Influência"
     },
     "forex26": {
-        "en": "Quoted price",
-        "zh": "报价位",
-        "vi": "Báo giá",
-        "zh-Hant": "報價位",
-        "id": "Harga Penawaran",
-        "es": "Precio Cotizado",
-        "pt-BR": "Preço cotado"
+        "en": "Digits",
+        "zh": "小数位",
+        "vi": "Chữ số",
+        "zh-Hant": "小數位",
+        "id": "Angka",
+        "es": "Dígitos",
+        "pt-BR": "Dígitos"
     },
     "forex27": {
         "en": "Minimum trading volume",
@@ -1404,13 +1404,13 @@ module.exports = {
         "pt-BR": "Influência"
     },
     "metal23": {
-        "en": "Quoted price",
-        "zh": "报价位",
-        "vi": "Báo giá",
-        "zh-Hant": "報價位",
-        "id": "Harga Penawaran",
-        "es": "Precio cotizado",
-        "pt-BR": "Preço cotado"
+        "en": "Digits",
+        "zh": "小数位",
+        "vi": "Chữ số",
+        "zh-Hant": "小數位",
+        "id": "Angka",
+        "es": "Dígitos",
+        "pt-BR": "Dígitos"
     },
     "metal24": {
         "en": "Minimum trading lots",

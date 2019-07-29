@@ -141,9 +141,10 @@
         var product = {
             getCommentListApi: urlOrigin2 + '/daily_comment/list',   // get
             getCommentDetailsApi: urlOrigin2 + '/daily_comment/detail',   // get
-            getWebProductInfoApi: '/napi?action=get_product',
-            getWebTradeFeeInfoApi: '/napi?action=get_trade_fee',
-            getSymbolListApi: urlOrigin2 + '/symbol/list'
+            // getWebProductInfoApi: '/napi?action=get_product',
+            // getWebTradeFeeInfoApi: '/napi?action=get_trade_fee',
+            getSymbolListApi: urlOrigin2 + '/symbol/list',
+            getWebSymbolListApi: urlOrigin2 + '/symbol/all'
         };
         var ranklist = {
             getMastersListApi: urlOrigin2 + '/master/list',

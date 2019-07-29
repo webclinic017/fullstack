@@ -16,8 +16,8 @@
             <div class="blog_statement__navi">
                 <span class="navi-item btn-text" ng-class="{'active': currentChecked.point == 'forex'}" ng-click="changeType('point', 'forex')"><%=lang.text('waihui')%></span> |
                 <span class="navi-item btn-text" ng-class="{'active': currentChecked.point == 'metal'}" ng-click="changeType('point', 'metal')"><%=lang.text('guijinshu')%></span> |
-                <span class="navi-item btn-text" ng-class="{'active': currentChecked.point == 'nergy'}" ng-click="changeType('point', 'nergy')"><%=lang.text('nengyuan')%></span> |
-                <span class="navi-item btn-text" ng-class="{'active': currentChecked.point == 'contrast'}" ng-click="changeType('point', 'contrast')"><%=lang.text('CFD')%></span>
+                <span class="navi-item btn-text" ng-class="{'active': currentChecked.point == 'energy'}" ng-click="changeType('point', 'energy')"><%=lang.text('nengyuan')%></span> |
+                <span class="navi-item btn-text" ng-class="{'active': currentChecked.point == 'cfd'}" ng-click="changeType('point', 'cfd')"><%=lang.text('CFD')%></span>
             </div>
             <br>
             <table class="table table-personal table-hover table-bordered">
@@ -30,16 +30,16 @@
                 <thead>
                     <tr>
                         <th><%=lang.text('tradeFee27')%></th>
-                        <th><%=lang.text('tradeFee28')%></th>
+                        <!-- <th><%=lang.text('tradeFee28')%></th> -->
                         <th><%=lang.text('tradeFee29')%></th>
                         <!-- <th><%= lang.text('companyEnName')%>收取点差</th> -->
                     </tr>
                 </thead>
                 <tbody>
                     <tr ng-if="currentData.point.length > 0" ng-repeat="point in currentData.point" ng-cloak>
-                        <td>{{ point.name }}</td>
-                        <td>{{ point.min }}</td>
-                        <td>{{ point.average }}</td>
+                        <td>{{ point.symbol }}</td>
+                        <!-- <td>{{ point.min }}</td> -->
+                        <td>{{ point.spread_tiger }}</td>
                         <!-- <td>{{ point.tiger }}</td> -->
                     </tr>
                     <tr ng-if="currentData.point.length <= 0" class="text-center">
@@ -74,8 +74,8 @@
             <div class="blog_statement__navi">
                 <span class="navi-item btn-text" ng-class="{'active': currentChecked.swap == 'forex'}" ng-click="changeType('swap', 'forex')"><%=lang.text('waihui')%></span> |
                 <span class="navi-item btn-text" ng-class="{'active': currentChecked.swap == 'metal'}" ng-click="changeType('swap', 'metal')"><%=lang.text('guijinshu')%></span> |
-                <span class="navi-item btn-text" ng-class="{'active': currentChecked.swap == 'nergy'}" ng-click="changeType('swap', 'nergy')"><%=lang.text('nengyuan')%></span> |
-                <span class="navi-item btn-text" ng-class="{'active': currentChecked.swap == 'contrast'}" ng-click="changeType('swap', 'contrast')"><%=lang.text('CFD')%></span>
+                <span class="navi-item btn-text" ng-class="{'active': currentChecked.swap == 'energy'}" ng-click="changeType('swap', 'energy')"><%=lang.text('nengyuan')%></span> |
+                <span class="navi-item btn-text" ng-class="{'active': currentChecked.swap == 'cfd'}" ng-click="changeType('swap', 'cfd')"><%=lang.text('CFD')%></span>
             </div>
             <br>
             <table class="table table-personal table-hover table-bordered">
@@ -95,8 +95,8 @@
                 </thead>
                 <tbody>
                     <tr ng-if="currentData.swap.length > 0" ng-repeat="swap in currentData.swap" ng-cloak>
-                        <td>{{ swap.name }}</td>
-                        <td>{{ swap.min }}</td>
+                        <td>{{ swap.symbol }}</td>
+                        <td>{{ swap.swap_type_name }}</td>
                         <td>{{ swap.swap_long }}</td>
                         <td>{{ swap.swap_short }}</td>
                     </tr>
@@ -140,17 +140,17 @@
                 <thead>
                     <tr>
                         <th><%=lang.text('tradeFee27')%></th>
-                        <th><%=lang.text('tradeFee28')%></th>
+                        <!-- <th><%=lang.text('tradeFee28')%></th> -->
                         <!-- <th><%= lang.text('companyEnName')%> 收取点差</th> -->
                         <th><%=lang.text('tradeFee33')%></th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr ng-if="currentData.fee.length > 0" ng-repeat="fee in currentData.fee" ng-cloak>
-                        <td>{{ fee.name }}</td>
-                        <td>{{ fee.spread }}</td>
+                        <td>{{ fee.symbol }}</td>
+                        <!-- <td>{{ fee.spread }}</td> -->
                         <!-- <td>{{ fee.addedSpread }}</td> -->
-                        <td>{{ fee.commission }}</td>
+                        <td>{{ fee.comm_base }}</td>
                     </tr>
                     <tr ng-if="currentData.fee.length <= 0" class="text-center">
                         <td colspan="20"><%=lang.text('nodata')%></td>
