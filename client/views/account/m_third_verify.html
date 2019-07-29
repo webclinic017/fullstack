@@ -67,25 +67,16 @@
             <span class="female" data-gender="0"><%=lang.text('third_username3')%></span>
         </div>
         <div class="m_third_realnameInfo__wrapper">
-            <input class="info lastname"
-                    type="text"
-                    placeholder="<%=lang.text('third_username20')%>">
+            <input class="info lastname" type="text" placeholder="<%=lang.text('third_username20')%>">
         </div>
         <div class="m_third_realnameInfo__wrapper">
-            <input class="info firstname"
-                    type="text"
-                    placeholder="<%=lang.text('third_username21')%>">
+            <input class="info firstname" type="text" placeholder="<%=lang.text('third_username21')%>">
         </div>
         <div class="m_third_realnameInfo__wrapper">
-            <input class="info email"
-                type="text"
-                placeholder="<%=lang.text('third_placeholder3')%>">
+            <input class="info email" type="text" placeholder="<%=lang.text('third_placeholder3')%>">
         </div>
         <div class="m_third_realnameInfo__wrapper">
-            <input class="info birth"
-                    id="birth"
-                    type="text"
-                    placeholder="<%=lang.text('third_username7')%>">
+            <input class="info birth" id="birth" type="text" placeholder="<%=lang.text('third_username7')%>">
         </div>
         <input type="text" style="display: none;">
         <div class="m_third_realnameInfo__btn">
@@ -96,42 +87,36 @@
     </div>
     <div class="m_third_addressInfo">
         <div class="m_third_addressInfo__wrapper">
-            <input class="info country"
-                type="text"
-                placeholder="<%=lang.text('third_placeholder4')%>">
+            <input class="info country" type="text" placeholder="<%=lang.text('third_placeholder4')%>">
             <select id="country_list" class="country_list"></select>
         </div>
+        <div class="m_third_addressInfo__wrapper switch_fuzzy_search_input">
+            <input class="info fuzzy_search" id="fuzzySearchAfter" type="text" placeholder="<%=lang.text('addressOrPostalCode')%>">
+        </div>
         <div class="m_third_addressInfo__wrapper state_cn">
-            <input class="info state"
-                    type="text"
-                    placeholder="<%=lang.text('third_username14')%>">
+            <input class="info state" type="text" placeholder="<%=lang.text('third_username14')%>">
             <select id="state_list" class="state_list"></select>
         </div>
         <div class="m_third_addressInfo__wrapper state_global">
-            <input class="info state"
-                    type="text"
-                    placeholder="<%=lang.text('third_username22')%>">
+            <input class="info state" type="text" placeholder="<%=lang.text('third_username22')%>">
         </div>
         <div class="m_third_addressInfo__wrapper city_cn">
-            <input class="info city"
-                    type="text"
-                    placeholder="<%=lang.text('third_username15')%>">
+            <input class="info city" type="text" placeholder="<%=lang.text('third_username15')%>">
             <select id="city_list" class="city_list"></select>
         </div>
         <div class="m_third_addressInfo__wrapper city_global">
-            <input class="info city"
-                    type="text"
-                    placeholder="<%=lang.text('third_username23')%>">
+            <input class="info city" type="text" placeholder="<%=lang.text('third_username23')%>">
         </div>
-        <div class="m_third_addressInfo__wrapper">
-            <input class="info post_code"
-                    type="text"
-                    placeholder="<%=lang.text('third_username17')%>">
+        <div class="m_third_addressInfo__wrapper switch_fuzzy_search_related">
+            <input class="info post_code" type="text" placeholder="<%=lang.text('third_username17')%>">
         </div>
-        <div class="m_third_addressInfo__wrapper">
-            <input class="info address"
-                type="text"
-                placeholder="<%=lang.text('third_username16')%>">
+        <div class="m_third_addressInfo__wrapper switch_fuzzy_search_related">
+            <input class="info address" type="text" placeholder="<%=lang.text('third_username16')%>">
+        </div>
+
+        <div class="m_third_addressInfo__wrapper switch_fuzzy_search">
+            <div class="font-info text-center cursor_pointer" id="switchFuzzySearch">
+                <%=lang.text('autoAddressLookup')%></div>
         </div>
         <p class="pd-tp-10"><%=lang.text('third_username24')%></p>
         <div class="m_third_addressInfo__wrapper clearfix">
@@ -144,9 +129,7 @@
         <div class="m_third_addressInfo__wrapper clearfix">
             <span class="radio_current_wrapper" data-key="nationality"></span>
             <div class="radio_select_wrapper fl relative active" data-key="nationality">
-                <input class="info nationality"
-                    type="text"
-                    placeholder="<%=lang.text('third_placeholder4')%>">
+                <input class="info nationality" type="text" placeholder="<%=lang.text('third_placeholder4')%>">
                 <select id="nationality_list" class="country_list"></select>
             </div>
             <div class="radio_wrapper fr">
@@ -158,9 +141,7 @@
         <div class="m_third_addressInfo__wrapper clearfix">
             <span class="radio_current_wrapper" data-key="taxResidency"></span>
             <div class="radio_select_wrapper fl relative active" data-key="taxResidency">
-                <input class="info taxResidency"
-                    type="text"
-                    placeholder="<%=lang.text('third_placeholder4')%>">
+                <input class="info taxResidency" type="text" placeholder="<%=lang.text('third_placeholder4')%>">
                 <select id="taxResidency_list" class="country_list"></select>
             </div>
             <div class="radio_wrapper fr">
@@ -198,9 +179,7 @@
             <%=lang.text('third_address_1')%>
         </div>
         <div class="m_third_card__wrapper">
-            <input class="info card_type"
-                   type="text"
-                   placeholder="<%=lang.text('third_username5')%>">
+            <input class="info card_type" type="text" placeholder="<%=lang.text('third_username5')%>">
             <select id="address_type_list"></select>
         </div>
         <div class="m_third_address__tip mg-tp-10">
@@ -212,7 +191,7 @@
         </div>
         <div class="m_third_card__pic addressOne">
             <div class="img addressOne">
-                
+
             </div>
             <form class="form">
                 <input type="file" data-page="addressOne" name="file" accept="image/*" />
@@ -223,7 +202,7 @@
         </div>
         <div class="m_third_card__pic addressTwo">
             <div class="img addressTwo">
-                
+
             </div>
             <form class="form">
                 <input type="file" data-page="addressTwo" name="file" accept="image/*" />
@@ -265,19 +244,15 @@
             <span class=""></span>
         </div>
         <div class="m_third_card__wrapper">
-            <input class="info card_type"
-                   type="text"
-                   placeholder="<%=lang.text('third_username5')%>">
+            <input class="info card_type" type="text" placeholder="<%=lang.text('third_username5')%>">
             <select id="identity_type_list"></select>
         </div>
         <div class="m_third_card__wrapper">
-            <input class="info card_no"
-                   type="text"
-                   placeholder="<%=lang.text('third_username6')%>">
+            <input class="info card_no" type="text" placeholder="<%=lang.text('third_username6')%>">
         </div>
         <div class="m_third_card__pic front">
             <div class="img front">
-                
+
             </div>
             <form class="form">
                 <input type="file" data-page="front" name="file" accept="image/*" />
@@ -288,7 +263,7 @@
         </div>
         <div class="m_third_card__pic back">
             <div class="img back">
-                
+
             </div>
             <form class="form">
                 <input type="file" data-page="back" name="file" accept="image/*" />

@@ -76,7 +76,8 @@
             getEmailPhone: urlOrigin2 + '/sys/messages',
             setIslamicStatusApi: urlOrigin3 + '/user/set_islamic_status',
             transferIslamicApi: urlOrigin2 + '/user/transfer_islamic',
-            getVersionCheckApi: urlOrigin2 + '/system/version_check'
+            getVersionCheckApi: urlOrigin2 + '/system/version_check',
+            getAddressUrlApi: 'https://services.postcodeanywhere.co.uk/Capture/Interactive/Find/v1.00/json3ex.ws'
         };
         var asset = {
             withdrawApi: urlOrigin2 + '/payment/withdraw',

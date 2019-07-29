@@ -17,7 +17,7 @@
            // $httpProvider.defaults.headers.common['Cache-Control'] = 'no-cache';
             
             // 跨域请求资源携带cookie
-            $httpProvider.defaults.withCredentials = true;
+            // $httpProvider.defaults.withCredentials = true;
 
             $httpProvider.interceptors.push(['$q', 'config', function ($q, config) {
                 return {

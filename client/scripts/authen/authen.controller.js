@@ -21,7 +21,7 @@
     AuthenAddressController.$inject = ['$scope', '$state', '$modal', 'validator', 'account', '$timeout'];
     AuthenIslamicController.$inject = ['$scope', '$state', '$modal', 'validator', 'account', '$timeout'];
     AuthenAgreementController.$inject = ['$scope', 'account'];
-    AuthenAddressInfoController.$inject = ['$scope', 'account', '$modal', '$timeout'];
+    AuthenAddressInfoController.$inject = ['$scope', 'account', '$modal', '$timeout', '$document'];
 
     // 主控制器
     function AuthenController($scope, $cookies, $location, account, $state, $stateParams, $timeout, $modal, $layer) {
@@ -227,7 +227,7 @@
             // console.log(kycInfo);
         }
 
-        function openConfrimTwoMdl (type) {
+        function openConfrimTwoMdl(type) {
             $modal.open({
                 templateUrl: '/views/authen/authen_modal.html',
                 size: 'sm',
@@ -237,7 +237,7 @@
                     $scope.closeModal = closeModal;
                     $scope.setConfirm = setConfirm;
 
-                    function setConfirm (status) {
+                    function setConfirm(status) {
                         closeModal();
                         confirmTwo = status;
                         if (type && status) {
@@ -283,10 +283,10 @@
             } else {
                 openConfrimTwoMdl(true);
             }
-            
+
         }
 
-        function confirmSubmitForm () {
+        function confirmSubmitForm() {
             var msg = {};
             angular.forEach(kycInfo, function (value, key) {
                 msg[key] = value;
@@ -579,8 +579,8 @@
                     params.phone_code = $scope.completeInfo.areaCode.value.replace(/\+/gi, '') || null
                 }
                 updataUserInfo();
-                
-                function updataUserInfo () {
+
+                function updataUserInfo() {
                     $scope.completeInfo.clickable = false;
                     account.updataUserInfo(params).then(function (data) {
                         $scope.completeInfo.clickable = true;
@@ -590,7 +590,7 @@
                         } else {
                             $scope.backErr.show = true;
                             $scope.backErr.msg = data.message;
-    
+
                             $timeout(function () {
                                 $scope.backErr.show = false;
                                 $scope.backErr.msg = '';
@@ -978,7 +978,7 @@
 
         $scope.submitApplyIslamic = submitApplyIslamic;
 
-        function submitApplyIslamic (status) {
+        function submitApplyIslamic(status) {
             // console.log(status, $scope.applyIslamic);
             if ($scope.waiting) return;
             if (status == 2 && !$scope.applyIslamic) return;
@@ -1007,45 +1007,45 @@
         $scope.agreementImg = [];
         $scope.uploadAgreement = uploadAgreement;
         $scope.agentProtocol = agentProtocol;
-        function uploadAgreement(){
-            if(!$scope.agreementImg[0] || !$scope.agreementImg[2]){
+        function uploadAgreement() {
+            if (!$scope.agreementImg[0] || !$scope.agreementImg[2]) {
                 layer.msg($scope.lang.text("tigerWitID.myAccount.completelyUpload"))
                 return
             }
             $scope.clickable = false;
-            account.uploadAgentProtocol({file: $scope.agreementImg}).then(function(data){
-                if(data.is_succ){
+            account.uploadAgentProtocol({ file: $scope.agreementImg }).then(function (data) {
+                if (data.is_succ) {
                     $scope.$emit('goState');
-                }else{
+                } else {
                     $scope.clickable = true;
                     layer.msg(data.message)
                 }
             })
         }
-        function agentProtocol(){
-            if(!$scope.flagClick){
+        function agentProtocol() {
+            if (!$scope.flagClick) {
                 return
             }
             $scope.flagClick = false;
-            account.agentProtocol().then(function(data){
+            account.agentProtocol().then(function (data) {
                 $scope.flagClick = true;
-                if(data.is_succ){
+                if (data.is_succ) {
                     var url;
-                    if($scope.lang.isDemo()){
+                    if ($scope.lang.isDemo()) {
                         url = 'https://demoimg.tigerwit.com'
-                    }else{
+                    } else {
                         url = 'https://img.tigerwit.com'
                     }
                     var flag = window.open(url + data.data.imgUrl)
-                    if(flag == null) {
-                        alert("Enable popup filtering in your browser!\n\n Please turn off this function temporarily!") ;  
+                    if (flag == null) {
+                        alert("Enable popup filtering in your browser!\n\n Please turn off this function temporarily!");
                     }
                 }
             })
         }
     }
     // addressInfo
-    function AuthenAddressInfoController($scope, account, $modal, $timeout) {
+    function AuthenAddressInfoController($scope, account, $modal, $timeout, $document) {
         $scope.addressInfo = {
             country: {
                 key: undefined,
@@ -1075,7 +1075,7 @@
             },
             isNationality: true,
             isTaxResidency: true,
-            clickable: true
+            clickable: true,
         };
         $scope.frontErr = {
             province: {
@@ -1091,6 +1091,9 @@
                 show: false
             },
             type: {
+                show: false
+            },
+            fuzzySearch: {
                 show: false
             }
         };
@@ -1110,7 +1113,93 @@
                 value: 0
             }
         ];
+        // 模糊搜索
+        $scope.fuzzySearch = {
+            fillOrSearch: true,  // 填写或者查找
+            show: true,  // 是否根据地址或邮编查找
+            addressValue: '', // 模糊搜索内容
+            fuzzySearchList: [],
+            listShow: false
+        }
+        // 地址预测需要传递语言
+        // function langFilter(lang){
+        //     switch (lang) {
+        //         case value:
 
+        //             break;
+
+        //         default:
+        //             break;
+        //     }
+        // }
+        $scope.switchFuzzySearch = function () {
+            $scope.fuzzySearch.fillOrSearch = !$scope.fuzzySearch.fillOrSearch
+        }
+        var getAddressUrlTimer;
+        $scope.getAddressUrl = function () {
+            $timeout.cancel(getAddressUrlTimer);
+            var params = {
+                Key: 'GE86-EG48-RA51-EZ99',
+                Text: $scope.fuzzySearch.addressValue,
+                Limit: 20,
+                Language: $scope.lang.currentLanguage(),
+                Countries: $scope.addressInfo.country.value
+            }
+            getAddressUrlTimer = $timeout(function () {
+                account.getAddressUrl(params).then(function (data) {
+                    $scope.fuzzySearch.fuzzySearchList = data.Items
+                })
+            }, 250)
+
+        }
+        $scope.confirmAddress = function (item) {
+            // $scope.addressInfo.city.key = undefined;
+            // $scope.addressInfo.address = '';
+            // $scope.addressInfo.postCode = '';
+            // $scope.addressInfo.province.key = undefined;
+
+            if (item.Type === 'Address') {
+                if(item.Text){
+                    var textArr = item.Text.split(',')
+                    if (textArr.length == 1) {
+                        $scope.addressInfo.province.key = textArr[0];
+                    }
+                    else if (textArr.length > 1) {
+                        $scope.addressInfo.province.key = textArr[0];
+                        $scope.addressInfo.city.key = textArr[1];
+                    }
+                }
+                if(item.Description){
+                    var descriptionArr = item.Description.split(',')
+                    if (descriptionArr.length == 1) {
+                        $scope.addressInfo.address = descriptionArr[0];
+                    }
+                    else if (descriptionArr.length == 2) {
+                        $scope.addressInfo.address = descriptionArr[0];
+                        $scope.addressInfo.postCode = descriptionArr[1];
+                    }
+                    else if (descriptionArr.length > 2) {
+                        $scope.addressInfo.address = descriptionArr[1];
+                        $scope.addressInfo.postCode = descriptionArr[2];
+                    }
+                }
+                $scope.fuzzySearch.show = false;
+                $scope.fuzzySearch.listShow = false
+                $scope.fuzzySearch.fillOrSearch = false
+            } else {
+                var params = {
+                    Text: $scope.fuzzySearch.addressValue,
+                    Limit: 20,
+                    Language: $scope.lang.currentLanguage(),
+                    Container: item.Id,
+                    Key: 'GE86-EG48-RA51-EZ99',
+                    Countries: $scope.addressInfo.country.value
+                }
+                account.getAddressUrl(params).then(function (data) {
+                    $scope.fuzzySearch.fuzzySearchList = data.Items
+                })
+            }
+        }
         // 地址相关操作
         initLocation();
         $scope.selectRegion = selectRegion;
@@ -1124,14 +1213,14 @@
                             key: data.region.world_name,
                             value: data.region.world_code,
                         },
-                        province: {
-                            key: data.region.state_name,
-                            value: data.region.state_code
-                        },
-                        city: {
-                            key: data.region.city_name,
-                            value: data.region.city_code
-                        }
+                        // province: {
+                        //     key: data.region.state_name,
+                        //     value: data.region.state_code
+                        // },
+                        // city: {
+                        //     key: data.region.city_name,
+                        //     value: data.region.city_code
+                        // }
                     });
                     // 检测注册国际是否是伊斯兰国家
                     angular.forEach($scope.worldList, function (value, index) {
@@ -1199,7 +1288,7 @@
                         key: undefined,
                         value: undefined
                     };
-                    if(regionCode == 'CN'){
+                    if (regionCode == 'CN') {
                         getRegions('province', 'provinces', regionCode);
                     }
                     $timeout(function () {
@@ -1226,6 +1315,10 @@
         }
 
         $scope.submitAddressInfoForm = function () {
+            if ($scope.fuzzySearch.fillOrSearch && $scope.fuzzySearch.show) {
+                $scope.showErr('fuzzySearch')
+                return
+            }
             $scope.showErr('province');
             $scope.showErr('postCode');
             $scope.showErr('address');
@@ -1272,11 +1365,11 @@
                             $scope.lang = lang;
                             $scope.loading = 0;
                             $scope.modalType = 1;
-    
+
                             $scope.closeModal = closeModal;
                             $scope.submitConfrim = submitConfrim;
-    
-                            function submitConfrim (type) {
+
+                            function submitConfrim(type) {
                                 $scope.loading = 1;
                                 updataUserInfo(type);
                                 closeModal();
@@ -1290,7 +1383,7 @@
                     updataUserInfo();
                 }
 
-                function updataUserInfo (type) {
+                function updataUserInfo(type) {
                     $scope.addressInfo.clickable = false;
                     if (type === 'yes') params.islamic_status = 2;
                     if (type === 'no') params.islamic_status = 1;
@@ -1302,7 +1395,7 @@
                         } else {
                             $scope.backErr.show = true;
                             $scope.backErr.msg = data.message;
-    
+
                             $timeout(function () {
                                 $scope.backErr.show = false;
                                 $scope.backErr.msg = '';
