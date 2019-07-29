@@ -57,17 +57,18 @@ if ($(".m_vue").attr("data-type") === "helpNavi") {
             })
 
             function getProductInfo() {
-                var url = window.getVueApi()['getWebProductInfoApi'];
+                var url = window.getVueApi()['getWebSymbolListApi'];
                 var products = 'forex_oil_cfd'.split('_');
                 $.each(products, function (index, item) {
                     (function (item) {
+                        var type = item === 'oil' ? 'energy' : item;
                         $.ajax({
-                            url: url + '&product_type=' + item,
+                            url: url + '?type=' + type + '&detail=1',
                             type: 'get'
                         }).then(function (res) {
                             if (res.is_succ) {
-                                VM.$data[item] = res.data['zh'];
-                                console.log(item, res.data['zh'])
+                                VM.$data[item] = res.data[type];
+                                console.log(item, res.data[type])
                             }
                         });
                     }(item))

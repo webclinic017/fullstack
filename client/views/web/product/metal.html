@@ -112,17 +112,31 @@
                 </thead>
                 <tbody>
                     <tr ng-if="metal" ng-repeat="item in metal" ng-cloak>
-                        <td>{{ item.name_en }}</td>
-                        <td class="pro-public__no-padding" ng-if="!lang.isEnglishArea()">{{ item.name_zh }}</td>
-                        <td>{{ item.dot }}</td>
-                        <td>{{ item.lever }}</td>
-                        <td>{{ item.fixed }}</td>
-                        <td>{{ item.min_volum }}</td>
-                        <td>{{ item.standard_volum }}</td>
-                        <td>{{ item.trade_time }}</td>
+                        <td>{{ item.symbol }}</td>
+                        <td class="pro-public__no-padding" ng-if="!lang.isEnglishArea()">{{ item.symbol_cn }}</td>
+                        <td>{{ item.spread_tiger }}</td>
+                        <td>{{ item.leverage.join(' ') }}</td>
+                        <td>{{ item.digits }}</td>
+                        <td>{{ item.lot_min }}</td>
+                        <td>{{ item.contract_size }}</td>
+                        <td>{{ item.info_trade_session }}</td>
                     </tr>
                 </tbody>
             </table>
+            <div ng-show="showFolder">
+                <div ng-show="metal.length >= 6 && !unfold" class="text-center" ng-cloak>
+                    <a class="btn btn-text font-size-14" ng-click="unfoldFun()">
+                        <%=lang.text('more')%>
+                        <i class="fa fa-angle-down"></i>
+                    </a>
+                </div>
+                <div ng-show="metal.length >= 6 && unfold" class="text-center">
+                    <a class="btn btn-text font-size-14" ng-click="foldFun()" ng-cloak>
+                        <%=lang.text('fold')%>
+                        <i class="fa fa-angle-up"></i>
+                    </a>
+                </div>
+            </div>
             <div class="font-tip mg-tp-20">
                 <%= lang.text("platformTimeNote")%>
             </div>
