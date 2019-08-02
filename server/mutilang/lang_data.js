@@ -5580,10 +5580,10 @@ module.exports = {
         "pt-BR": "Escolha/Opt-out"
     },
     "amtCookie17": {
-        "zh": "若您不想继续从本公司接收任何通讯，您可以根据 TigerWit 发送的每份通讯中的相关指示选择退出。纵然事实上你已经选择推出，但是TigerWit 保留在 TigerWit 认为必要时与您联系的权利。",
+        "zh": "若您不想继续从本公司接收任何通讯，您可以根据 TigerWit 发送的每份通讯中的相关指示选择退出。纵然事实上你已经选择退出，但是TigerWit 保留在 TigerWit 认为必要时与您联系的权利。",
         "en": "If you no longer wish to receive any communication from the Firm, you may opt-out of by following the relevant instructions included in each communication sent by TigerWit. TigerWit reserves the right to contact you, albeit the fact that you have opted out, in cases where TigerWit deems such contact as necessary.",
         "vi": "Nếu bạn không còn muốn nhận bất kỳ thông tin liên lạc nào từ Công ty, bạn có thể chọn không tham gia bằng cách làm theo các hướng dẫn có liên quan được bao gồm trong mỗi thông báo được gửi bởi TigerWit. TigerWit có quyền liên lạc với bạn, mặc dù thực tế là bạn đã chọn không tham gia, trong trường hợp TigerWit coi như liên hệ đó là cần thiết.",
-        "zh-Hant": "若您不想繼續從本公司接收任何通訊，您可以根據 TigerWit 發送的每份通訊中的相關指示選擇退出。縱然事實上妳已經選擇推出，但是TigerWit 保留在 TigerWit 認為必要時與您聯系的權利。",
+        "zh-Hant": "若您不想繼續從本公司接收任何通訊，您可以根據 TigerWit 發送的每份通訊中的相關指示選擇退出。縱然事實上妳已經選擇退出，但是TigerWit 保留在 TigerWit 認為必要時與您聯系的權利。",
         "id": "If you no longer wish to receive any communication from the Firm, you may opt-out of by following the relevant instructions included in each communication sent by TigerWit. TigerWit reserves the right to contact you, albeit the fact that you have opted out, in cases where TigerWit deems such contact as necessary.",
         "es": "Si ya no desea recibir ninguna comunicación de la Firma, puede optar por no seguirla siguiendo las instrucciones relevantes incluidas en cada comunicación enviada por TigerWit. TigerWit se reserva el derecho de contactarlo, aunque haya optado por no participar, en los casos en que TigerWit considere que dicho contacto es necesario.",
         "pt-BR": "Se você não deseja mais receber nenhuma comunicação da Empresa, você pode optar por não seguir as instruções relevantes incluídas em cada comunicação enviada pela TigerWit. A TigerWit reserva-se o direito de entrar em contato com você, ainda que tenha optado por não participar, nos casos em que a TigerWit considere tal contato como necessário."
