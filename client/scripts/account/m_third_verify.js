@@ -485,10 +485,10 @@ $(document).ready(function () {
             }
         });
     }
-
+    // 地址预测暂时隐藏
     var fuzzySearch = {
-        isFuzzySearch: true,   // 判断是填写还是查找
-        show: true,   // 根据地址或邮编查找是否显示
+        isFuzzySearch: false,   // 判断是填写还是查找
+        show: false,   // 根据地址或邮编查找是否显示
         fuzzySearchList: [],   // 模糊搜索列表
         fuzzySearchCon: '',   // 模糊搜索内容
         layerIndex: ''
@@ -595,7 +595,7 @@ $(document).ready(function () {
 
         var item = fuzzySearch.fuzzySearchList[($(this).data('index'))]
         if (item.Type === 'Address') {
-            if(item.Text){
+            if (item.Text) {
                 var textArr = item.Text.split(',')
                 if (textArr.length == 1) {
                     $(ele.addressInfoState).val(textArr[0]);
@@ -605,7 +605,7 @@ $(document).ready(function () {
                     $(ele.addressInfoCity).val(textArr[1]);
                 }
             }
-            if(item.Description){
+            if (item.Description) {
                 var descriptionArr = item.Description.split(',')
                 if (descriptionArr.length == 1) {
                     $(ele.addressInfoAddress).val(descriptionArr[0]);

@@ -16272,24 +16272,24 @@ module.exports = {
             "es": "Registro",
             "pt-BR": "Confirme agora!"
         },
-        "gainRebateUs": {
-            "zh": "You can gain rebate US ",
-            "en": "You can gain rebate US ",
-            "vi": "Bạn có thể nhận được chiết khấu bằng USD",
-            "zh-Hant": "You can gain rebate US ",
-            "id": "Anda dapat mendapatkan rebate USD",
-            "es": "Puede obtener rebates con NOSOTROS",
-            "pt-BR": "Você pode ganhar desconto de US$"
-        },
-        "onceRegistered": {
-            "zh": " once registered",
-            "en": " once registered",
-            "vi": "khi đã đăng kí",
-            "zh-Hant": " once registered",
-            "id": "Sudah terdaftar",
-            "es": " una vez registrado",
-            "pt-BR": "uma vez registrado"
-        },
+        // "gainRebateUs": {
+        //     "zh": "You can gain rebate US ",
+        //     "en": "You can gain rebate US ",
+        //     "vi": "Bạn có thể nhận được chiết khấu bằng USD",
+        //     "zh-Hant": "You can gain rebate US ",
+        //     "id": "Anda dapat mendapatkan rebate USD",
+        //     "es": "Puede obtener rebates con NOSOTROS",
+        //     "pt-BR": "Você pode ganhar desconto de US$"
+        // },
+        // "onceRegistered": {
+        //     "zh": " once registered",
+        //     "en": " once registered",
+        //     "vi": "khi đã đăng kí",
+        //     "zh-Hant": " once registered",
+        //     "id": "Sudah terdaftar",
+        //     "es": " una vez registrado",
+        //     "pt-BR": "uma vez registrado"
+        // },
         "us": {
             "zh": "US",
             "en": "US",
