@@ -66,12 +66,12 @@
             <span class="male active" data-gender="1"><%=lang.text('third_username2')%></span>
             <span class="female" data-gender="0"><%=lang.text('third_username3')%></span>
         </div>
-        <div class="m_third_realnameInfo__wrapper">
+        <!-- <div class="m_third_realnameInfo__wrapper">
             <input class="info lastname" type="text" placeholder="<%=lang.text('third_username20')%>">
         </div>
         <div class="m_third_realnameInfo__wrapper">
             <input class="info firstname" type="text" placeholder="<%=lang.text('third_username21')%>">
-        </div>
+        </div> -->
         <div class="m_third_realnameInfo__wrapper">
             <input class="info email" type="text" placeholder="<%=lang.text('third_placeholder3')%>">
         </div>
@@ -91,7 +91,8 @@
             <select id="country_list" class="country_list"></select>
         </div>
         <div class="m_third_addressInfo__wrapper switch_fuzzy_search_input">
-            <input class="info fuzzy_search" id="fuzzySearchAfter" type="text" placeholder="<%=lang.text('addressOrPostalCode')%>">
+            <input class="info fuzzy_search" id="fuzzySearchAfter" type="text"
+                placeholder="<%=lang.text('addressOrPostalCode')%>">
         </div>
         <div class="m_third_addressInfo__wrapper state_cn">
             <input class="info state" type="text" placeholder="<%=lang.text('third_username14')%>">
@@ -242,6 +243,17 @@
         <div class="m_third_identity__tip">
             <%=lang.text('third_uploadCard')%>
             <span class=""></span>
+        </div>
+        <!-- global -->
+        <div class="m_third_identity__wrapper global">
+            <input class="info lastname" type="text" placeholder="<%=lang.text('third_username20')%>">
+        </div>
+        <div class="m_third_identity__wrapper global">
+            <input class="info firstname" type="text" placeholder="<%=lang.text('third_username21')%>">
+        </div>
+        <!-- cn -->
+        <div class="m_third_identity__wrapper cn">
+            <input class="info realname" type="text" placeholder="<%=lang.text('third_placeholder1')%>">
         </div>
         <div class="m_third_card__wrapper">
             <input class="info card_type" type="text" placeholder="<%=lang.text('third_username5')%>">

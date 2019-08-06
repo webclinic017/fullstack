@@ -351,8 +351,6 @@
         // console.log('$scope.personal', $scope.personal)
         $scope.completeInfo = {
             username: '',
-            firstname: '',
-            lastname: '',
             gender: {
                 key: '',
                 value: ''
@@ -566,8 +564,6 @@
 
                 var params = {
                     username: $scope.completeInfo.username,
-                    first_name: $scope.completeInfo.firstname,
-                    last_name: $scope.completeInfo.lastname,
                     gender: $scope.completeInfo.gender.value,
                     birth: $scope.completeInfo.birthday
                 }
@@ -655,21 +651,28 @@
     // id_card
     function AuthenIdentityController($scope, $state, $modal, validator, account, $location, $layer, $timeout) {
         $scope.is_live = $scope.personal.is_live
-        $scope.verification = {
-            id: {
-                number: undefined,
-                frontStatus: 0,
-                backStatus: 0
-            }
-        };
+        // $scope.verification = {
+        //     id: {
+        //         number: undefined,
+        //         frontStatus: 0,
+        //         backStatus: 0
+        //     }
+        // };
 
         $scope.realnameInfo = {
+            firstname: '',
+            lastname: '',
             id_type: {
                 key: undefined,
                 value: undefined
             },
             id_num: ''
         };
+        // 为了记录初始值，，设置页面的disabled
+        $scope.nameDisabled = {
+            first: '',
+            last: ''
+        }
         $scope.identityImgFront = undefined;
         $scope.identityImgBack = undefined;
         $scope.idType = [
@@ -712,12 +715,24 @@
         ]
         $scope.$watch('personal.updatePapers', function (newVal, oldVal) {
             if (JSON.stringify(newVal) != "{}" && newVal.hint == 1) {
+                if(personal.region.world_code !== 'CN'){
+                    $scope.realnameInfo.firstname = newVal.first_name;
+                    $scope.realnameInfo.lastname = newVal.last_name;
+                    $scope.nameDisabled.first = newVal.first_name;
+                    $scope.nameDisabled.last = newVal.last_name;
+                }else{
+                    $scope.realnameInfo.firstname = newVal.real_name;
+                    $scope.nameDisabled.first = newVal.real_name;
+                }
                 $scope.realnameInfo.id_type.key = $scope.idType[newVal.idcard_type].key;
                 $scope.realnameInfo.id_type.value = $scope.idType[newVal.idcard_type].value;
                 $scope.realnameInfo.id_num = newVal.id_no;
             }
         }, true);
         $scope.frontErr = {
+            firstname: {
+                show: false
+            },
             id_num: {
                 show: false,
                 reg: validator.regType.idNumber.reg,
@@ -741,7 +756,7 @@
         $scope.showErr = showErr;
         $scope.hideErr = hideErr;
         $scope.submitForm = submitForm;
-        $scope.updatePaper = updatePaper;
+        // $scope.updatePaper = updatePaper;
         $scope.readyToUpload = {};
         $scope.uploadFinish = {};
         $scope.clickable = true;
@@ -764,6 +779,7 @@
         }
 
         function submitForm() {
+            showErr('firstname');
             showErr('id_num');
             showErr('id_type');
             if ($scope.realnameForm.$invalid) {
@@ -774,6 +790,8 @@
 
                 // 提交身份信息
                 account.updataIdCard({
+                    first_name: $scope.realnameInfo.firstname,
+                    last_name: $scope.realnameInfo.lastname,
                     id_no: $scope.realnameInfo.id_num,
                     cert_type: $scope.realnameInfo.id_type.value,
                     front: $scope.identityImgFront,
@@ -795,12 +813,12 @@
             }
         }
         // 更新证件
-        function updatePaper() {
-            if (twoDecide()) {
-                $scope.clickable = false;
-                paperUpdate();
-            }
-        }
+        // function updatePaper() {
+        //     if (twoDecide()) {
+        //         $scope.clickable = false;
+        //         paperUpdate();
+        //     }
+        // }
         function twoDecide() {
             if (!$scope.identityImgFront) {
                 $scope.backErr.show = true;
@@ -825,40 +843,40 @@
             }
             return true;
         }
-        function paperUpdate() {
-            account.updataIdCardBase64('front', $scope.identityImgFront).then(function (data) {
-                if (data.is_succ) {
-                    if ($scope.identityImgBack) {
-                        account.updataIdCardBase64('back', $scope.identityImgBack).then(function (data) {
-                            $scope.clickable = false;
-                            if (data.is_succ) {
-                                $scope.$emit('goState', data.data);
-                            } else {
-                                $scope.backErr.show = true;
-                                $scope.backErr.msg = data.message;
+        // function paperUpdate() {
+        //     account.updataIdCardBase64('front', $scope.identityImgFront).then(function (data) {
+        //         if (data.is_succ) {
+        //             if ($scope.identityImgBack) {
+        //                 account.updataIdCardBase64('back', $scope.identityImgBack).then(function (data) {
+        //                     $scope.clickable = false;
+        //                     if (data.is_succ) {
+        //                         $scope.$emit('goState', data.data);
+        //                     } else {
+        //                         $scope.backErr.show = true;
+        //                         $scope.backErr.msg = data.message;
 
-                                $timeout(function () {
-                                    $scope.backErr.show = false;
-                                    $scope.backErr.msg = '';
-                                }, 2000);
-                            }
-                        })
-                    } else {
-                        $scope.clickable = false;
-                        $scope.$emit('goState', data.data);
-                    }
-                } else {
-                    $scope.clickable = false;
-                    $scope.backErr.show = true;
-                    $scope.backErr.msg = data.message;
+        //                         $timeout(function () {
+        //                             $scope.backErr.show = false;
+        //                             $scope.backErr.msg = '';
+        //                         }, 2000);
+        //                     }
+        //                 })
+        //             } else {
+        //                 $scope.clickable = false;
+        //                 $scope.$emit('goState', data.data);
+        //             }
+        //         } else {
+        //             $scope.clickable = false;
+        //             $scope.backErr.show = true;
+        //             $scope.backErr.msg = data.message;
 
-                    $timeout(function () {
-                        $scope.backErr.show = false;
-                        $scope.backErr.msg = '';
-                    }, 2000);
-                }
-            })
-        }
+        //             $timeout(function () {
+        //                 $scope.backErr.show = false;
+        //                 $scope.backErr.msg = '';
+        //             }, 2000);
+        //         }
+        //     })
+        // }
 
         $scope.checkExsit = function (type) {
             var checkInfo = $scope.realnameInfo.id_num;
