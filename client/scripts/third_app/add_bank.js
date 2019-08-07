@@ -151,13 +151,18 @@ $("#third_app_bank_btn").on("tap", function () {
 });
 
 function getBankNames() {
-  publicRequest('getThirdBankNames', 'GET', {
+  var platform = getUrlParam('platform');
+  var params = {
     type: 1
-  }).then(function (data) {
+  }
+  if(platform){
+    params.platform = platform;
+  }
+  publicRequest('getThirdBankNames', 'GET', params).then(function (data) {
     if (!data) return;
     if (data.is_succ) {
       bankNameList = data.data;
-      if(getUrlParam('platform')){
+      if(platform){
         if(data.data.length > 0){
           $(".third_app_bank__item.is_bank_select").css("display", "block");
           $(".third_app_bank__item.is_bank_input").css("display", "none");

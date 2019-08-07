@@ -73,9 +73,13 @@
         getProvince();
         getBanks();
         function getBanks(){
-            asset.getBanks({
-                type: 1,
-            }).then(function (data) {
+            var params = {
+                type: 1
+            }
+            if($scope.platform){
+                params.platform = $scope.platform
+            }
+            asset.getBanks(params).then(function (data) {
                 // console.log(data);
                 if (data.is_succ) {
                     $scope.banks = data.data;
