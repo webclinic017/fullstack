@@ -1315,7 +1315,8 @@
         }
 
         $scope.submitAddressInfoForm = function () {
-            if ($scope.fuzzySearch.fillOrSearch && $scope.fuzzySearch.show) {
+            // console.log($scope.addressInfo.country.value, $scope.fuzzySearch.fillOrSearch, $scope.fuzzySearch.show)
+            if ($scope.addressInfo.country.value !== 'CN' && $scope.fuzzySearch.fillOrSearch && $scope.fuzzySearch.show) {
                 $scope.showErr('fuzzySearch')
                 return
             }
