@@ -1062,8 +1062,8 @@
             address: '',
             postCode: '',
             type: {
-                key: undefined,
-                value: undefined
+                key: $scope.lang.text("tigerWitID.no"),
+                value: 0
             },
             nationality: {
                 key: undefined,
@@ -1073,8 +1073,8 @@
                 key: undefined,
                 value: undefined
             },
-            isNationality: true,
-            isTaxResidency: true,
+            isNationality: false,
+            isTaxResidency: false,
             clickable: true,
         };
         $scope.frontErr = {
@@ -1103,6 +1103,7 @@
         };
         $scope.isIslamic = false;
         $scope.address = {};
+        // 居住三个月默认否
         $scope.types = [
             {
                 key: $scope.lang.text("tigerWitID.yes"),
@@ -1222,6 +1223,9 @@
                         //     value: data.region.city_code
                         // }
                     });
+                    // 默认国籍，纳税地
+                    $scope.checkTaxResidency($scope.addressInfo.isTaxResidency)
+                    $scope.checkNationality($scope.addressInfo.isNationality)
                     // 检测注册国际是否是伊斯兰国家
                     angular.forEach($scope.worldList, function (value, index) {
                         if (value.code === data.region.world_code && value.type === 'islamic') {
@@ -1292,14 +1296,16 @@
                         getRegions('province', 'provinces', regionCode);
                     }
                     $timeout(function () {
-                        if (!$scope.addressInfo.isTaxResidency) {
-                            $scope.addressInfo.tax_residency.key = $scope.addressInfo.country.key;
-                            $scope.addressInfo.tax_residency.value = $scope.addressInfo.country.value;
-                        }
-                        if (!$scope.addressInfo.isNationality) {
-                            $scope.addressInfo.nationality.key = $scope.addressInfo.country.key;
-                            $scope.addressInfo.nationality.value = $scope.addressInfo.country.value;
-                        }
+                        $scope.checkTaxResidency($scope.addressInfo.isTaxResidency)
+                        // if (!$scope.addressInfo.isTaxResidency) {
+                        //     $scope.addressInfo.tax_residency.key = $scope.addressInfo.country.key;
+                        //     $scope.addressInfo.tax_residency.value = $scope.addressInfo.country.value;
+                        // }
+                        $scope.checkNationality($scope.addressInfo.isNationality)
+                        // if (!$scope.addressInfo.isNationality) {
+                        //     $scope.addressInfo.nationality.key = $scope.addressInfo.country.key;
+                        //     $scope.addressInfo.nationality.value = $scope.addressInfo.country.value;
+                        // }
                     }, 30);
                     break;
                 case 'province':
