@@ -74,10 +74,11 @@
         getBanks();
         function getBanks(){
             var params = {
-                type: 1
+                type: 1,
+                world_code: $scope.card.world.world_code
             }
             if($scope.platform){
-                params.platform = $scope.platform
+                params.platform = $scope.platform;
             }
             asset.getBanks(params).then(function (data) {
                 // console.log(data);

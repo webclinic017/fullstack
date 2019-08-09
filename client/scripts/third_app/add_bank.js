@@ -153,7 +153,8 @@ $("#third_app_bank_btn").on("tap", function () {
 function getBankNames() {
   var platform = getUrlParam('platform');
   var params = {
-    type: 1
+    type: 1,
+    world_code: getUrlParam('world_code')
   }
   if(platform){
     params.platform = platform;
