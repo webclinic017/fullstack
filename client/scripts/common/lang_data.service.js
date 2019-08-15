@@ -16,63 +16,70 @@
                         "zh": "也称欧洲绩优指数，欧元区蓝筹股股价指数",
                         "zh-Hant": "也稱歐洲績優指數，歐元區藍籌股股價指數",
                         "vi": "Còn được gọi là chỉ số chứng khoán blue chip châu Âu trong khu vực đồng Euro",
-                        "id": "Also known as European blue chip index in Euro zone",
-                        "es": "Also known as European blue chip index in Euro zone",
-                        "pt-BR": "Also known as European blue chip index in Euro zone"
+                        "id": "Juga dikenal dengan sebutan indeks blue chip Eropa di Zona Eropa",
+                        "es": "También conocido como índice europeo blue chip en la zona euro",
+                        "pt-BR": "Também conhecido como índice blue chip europeu na zona do euro",
+                        "ar": "يعرف ايضا باسم مؤشر الاسهم الاوروبية بلو شيب في منطقة اليورو"
                     },
                     "GER30": {
                         "en": "Index of earnings obtained from 30 kinds of listed blue chip stock indexes in German.",
                         "zh": "德国30种法兰克福上市蓝筹股票指数经过算法后得出收益的指数",
                         "zh-Hant": "德國30種法蘭克福上市藍籌股票指數經過算法後得出收益的指數",
                         "vi": "Chỉ số lợi nhuận thu được từ 30 loại chỉ số chứng khoán blue chip niêm yết bằng tiếng Đức.",
-                        "id": "Index of earnings obtained from 30 kinds of listed blue chip stock indexes in German.",
-                        "es": "Index of earnings obtained from 30 kinds of listed blue chip stock indexes in German.",
-                        "pt-BR": "Index of earnings obtained from 30 kinds of listed blue chip stock indexes in German."
+                        "id": "Indeks pendapatan yang didapatkan dari 30 jenis indeks saham blue chip yang terdaftar di Jerman",
+                        "es": "Índice de ganancias obtenidas de uma lista de 30 tipos de índices de acciones blue chip en Alemania",
+                        "pt-BR": "Índice de lucros obtidos de uma lista de 30 tipos de índices de ações blue chip em Alemanha.",
+                        "ar": "مؤشر الأرباح التي تم الحصول عليها من 30 نوعا من فهارس الأوراق المالية المدرجة في البورصة الألمانية"
                     },
                     "JPN225": {
                         "en": "Index of 225 stocks listed in Tokyo Stock Exchange",
                         "zh": "日经225只东京交易所上市股票指数",
                         "zh-Hant": "日經225只東京交易所上市股票指數",
                         "vi": "Chỉ số của 225 cổ phiếu niêm yết trên sàn giao dịch chứng khoán Tokyo",
-                        "id": "Index of 225 stocks listed in Tokyo Stock Exchange",
-                        "es": "Index of 225 stocks listed in Tokyo Stock Exchange",
-                        "pt-BR": "Index of 225 stocks listed in Tokyo Stock Exchange"
+                        "id": "Indeks dari 225 saham yang terdaftar di Bursa Saham Tokyo",
+                        "es": "Índice de 225 acciones cotizadas en la Bolsa de Tokio",
+                        "pt-BR": "Índice de 225 ações listadas na Bolsa de Valores de Tóquio",
+                        "ar": "مؤشر 225 من الأسهم المدرجة في بورصة طوكيو"
                     },
                     "NAS100": {
                         "en": "Index based on tech stock",
                         "zh": "基于高科技股票的指数",
                         "zh-Hant": "基於高科技股票的指數",
                         "vi": "Chỉ số dựa trên cổ phiếu công nghệ",
-                        "id": "Index based on tech stock",
-                        "es": "Index based on tech stock",
-                        "pt-BR": "Index based on tech stock"
+                        "id": "Indeks berdasarkan harga saham di bidang teknologi",
+                        "es": "Índice basado en acciones tecnológicas",
+                        "pt-BR": "Índice baseado em ações tecnológicas",
+                        "ar": "مؤشر يعتمد على اسهم التكنولوجيا"
                     },
                     "US30": {
                         "en": "Stock index of 30 major industrial enterprises of USA",
                         "zh": "美国30家主要工业公司构成的股票指数",
                         "zh-Hant": "美國30家主要工業公司構成的股票指數",
                         "vi": "Chỉ số chứng khoán của 30 doanh nghiệp công nghiệp lớn của Mỹ",
-                        "id": "Stock index of 30 major industrial enterprises of USA",
-                        "es": "Stock index of 30 major industrial enterprises of USA",
-                        "pt-BR": "Stock index of 30 major industrial enterprises of USA"
+                        "id": "Indeks saham dari 30 jenis perusahaan industri terbesar di Amerika Serikat",
+                        "es": "Índice de acciones de las 30 mayores empresas industriales de los Estados Unidos",
+                        "pt-BR": "Índice de ações das 30 maiores empresas industriais dos EUA",
+                        "ar": "مؤشر البورصة من 30 شركة صناعية كبرى في الولايات المتحدة الأمريكية"
                     },
                     "USA500": {
                         "en": "Stock index of 500 leading enterprises in USA",
                         "zh": "美国500家领军企业构成的股票指数",
                         "zh-Hant": "美國500家領軍企業構成的股票指數",
                         "vi": "Chỉ số chứng khoán của 500 doanh nghiệp hàng đầu tại Mỹ",
-                        "id": "Stock index of 500 leading enterprises in USA",
-                        "es": "Stock index of 500 leading enterprises in USA",
-                        "pt-BR": "Stock index of 500 leading enterprises in USA"
+                        "id": "Indeks saham dari 500 perusahaan terbaik di Amerika Serikat",
+                        "es": "Índice de acciones de las 500 empresas líderes en Estados Unidos.",
+                        "pt-BR": "Índice de ações das 500 empresas líderes nos EUA",
+                        "ar": "مؤشر البورصة من 500 شركة رائدة في الولايات المتحدة الأمريكية"
                     },
                     "HK50": {
                         "en": "Hang Seng Midcap 50 Index (HK50) is acquired from the weighted average of the market value of 50 largest enterprises listed in Hong Kong Stock Exchange. The index includes 60% market value and involves well-known enterprises, such as HSBC Group, China Construction Bank and China Mobile",
                         "zh": "香港恒生 50 指数（HK50）由香港股票交易所上市的 50 家最大的上市公司的市值加权而得。该指数囊括 60% 的市值并包含了赫赫有名的公司，诸如汇丰集团、中国建设银行和中国移动",
                         "zh-Hant": "香港恒生 50 指數（HK50）由香港股票交易所上市的 50 家最大的上市公司的市值加權而得。該指數囊括 60% 的市值並包含了赫赫有名的公司，諸如匯豐集團、中國建設銀行和中國移動",
                         "vi": "Chỉ số Hang Seng Midcap 50 (HK50) được lấy từ mức trung bình số của giá trị thị trường của 50 doanh nghiệp lớn nhất được niêm yết trên Sở Giao dịch Chứng khoán Hồng Kông. Chỉ số này bao gồm 60% giá trị thị trường và bao gồm các doanh nghiệp nổi tiếng như Tập đoàn HSBC, Ngân hàng Xây dựng Trung Quốc và China Mobile",
-                        "id": "Hang Seng Midcap 50 Index (HK50) is acquired from the weighted average of the market value of 50 largest enterprises listed in Hong Kong Stock Exchange. The index includes 60% market value and involves well-known enterprises, such as HSBC Group, China Construction Bank and China Mobile",
-                        "es": "Hang Seng Midcap 50 Index (HK50) is acquired from the weighted average of the market value of 50 largest enterprises listed in Hong Kong Stock Exchange. The index includes 60% market value and involves well-known enterprises, such as HSBC Group, China Construction Bank and China Mobile",
-                        "pt-BR": "Hang Seng Midcap 50 Index (HK50) is acquired from the weighted average of the market value of 50 largest enterprises listed in Hong Kong Stock Exchange. The index includes 60% market value and involves well-known enterprises, such as HSBC Group, China Construction Bank and China Mobile"
+                        "id": "Indeks Midcap Hang Seng 50 (HK50) didapatkan dari nilai pasar rata-rata dari 50 jenis perusahaan terbesar yang terdaftar di Bursa Saham Hong Kong. Indeks tersebut menguasai 60% nilai pasar termasuk juga perusahaan-perusahaan besar yang terkenal seperti Grup HSBC, China Construction Bank dan China Mobile",
+                        "es": "El índice Hang Seng Midcap 50 (HK50) se adquiere del promedio ponderado del valor de mercado de las 50 mayores empresas que cotizan en la Bolsa de Hong Kong. El índice incluye un valor de mercado del 60% e involucra a empresas conocidas, como el grupo HSBC, el Banco de Construcción de China y China Mobile ",
+                        "pt-BR": "O índice Hang Seng Midcap 50 (HK50) é adquirido a partir da média ponderada do valor de mercado das 50 maiores empresas listadas na Bolsa de Valores de Hong Kong. O índice inclui 60% do valor de mercado e envolve empresas conhecidas, como o Grupo HSBC, o Banco de Construção da China e China Mobile ",
+                        "ar": "يتم الحصول على مؤشر Hang Seng Midcap (HK50) من خلال  المتوسط ​​المرجح للقيمة السوقية لأكبر 50 شركة مدرجة في بورصة هونغ كونغ. ويشمل المؤشر 60٪ من القيمة السوقية ويشمل شركات معروفة ، مثل مجموعة HSBC,بنك الصين الاعمار و الصين للاتصالات"
                     }
                 },
                 "oil": {
@@ -81,27 +88,30 @@
                         "zh": "天然气是代表石油和其他传统资源（如煤炭）的替代能源的燃料。 由于石油特别昂贵，天然气正成为“清洁”能源的既定来源，目前提供约三分之一的英国能源供应。",
                         "zh-Hant": "天然氣是代表石油和其他傳統資源（如煤炭）的替代能源的燃料。 由於石油特別昂貴，天然氣正成為“清潔”能源的既定來源，目前提供約三分之壹的英國能源供應。",
                         "vi": "Khí tự nhiên là một loại nhiên liệu đại diên cho một nguồn năng lượng thay thế cho dầu mỏ và các nguồn tài nguyên truyền thống khác như than đá. Khi dầu đặc biệt trở nên đắt hơn để tiếp cận, khí tự nhiên đang trở thành nguồn năng lượng sạch hơn, hiện đang cung cấp khoảng 1/3 năng lượng của Vương Quốc Anh.",
-                        "id": "Natural gas is a fuel representing an alternative energy source to oil and other traditional resources such as coal. As oil in particular becomes more expensive to access, natural gas is becoming an established source of ‘cleaner’ energy, currently providing around one third of the UK’s energy supply.",
-                        "es": "Natural gas is a fuel representing an alternative energy source to oil and other traditional resources such as coal. As oil in particular becomes more expensive to access, natural gas is becoming an established source of ‘cleaner’ energy, currently providing around one third of the UK’s energy supply.",
-                        "pt-BR": "Natural gas is a fuel representing an alternative energy source to oil and other traditional resources such as coal. As oil in particular becomes more expensive to access, natural gas is becoming an established source of ‘cleaner’ energy, currently providing around one third of the UK’s energy supply."
+                        "id": "Gas alam merupakan bahan bakar yang menjadi sumber energi alternatif selain minyak dan batu bara. Dimana minyak semakin lama semakin mahal untuk dijangkau, Gas alam menjadi pilihan yang tepat untuk membangun sumber energi yang lebih “bersih”. Gas alam menguasai 1/3 dari cadangan energi di Inggris",
+                        "es": "El gas natural es un combustible que representa una fuente de energía alternativa al petróleo y otros recursos tradicionales como el carbón. A medida que el petróleo en particular se vuelve más caro de acceder, el gas natural se convierte en una fuente establecida de energía “más limpia”, que actualmente proporciona alrededor de un tercio de el suministro de energía del Reino Unido ",
+                        "pt-BR": "O gás natural é um combustível que representa uma fonte alternativa de energia para o petróleo e outros recursos tradicionais, como o carvão. Como o petróleo se torna mais caro, o gás natural  se torna uma fonte estabelecida de energia “mais limpa”, fornecendo atualmente cerca de um terço da matriz energética do Reino Unido. ",
+                        "ar": "الغاز الطبيعي هو الوقود الذي يمثل مصدرًا بديلاً للطاقة للنفط والموارد التقليدية الأخرى مثل الفحم. نظرًا لأن النفط على وجه الخصوص يصبح أكثر تكلفة للوصول اليه ، أصبح الغاز الطبيعي مصدرًا ثابتًا للطاقة النظيفة ، التي توفر حاليًا حوالي ثلث إمدادات الطاقة في المملكة المتحدة"
                     },
                     "XTIUSD": {
                         "en": "US Oil, or Texas Light Sweet, is one of the two most important benchmarks used globally by investors to determine the value of a barrel of a particular grade of oil. US oil is considered ‘sweet’ crude as it has a lower concentration of sulphur than its North Sea equivalent. Our Oil CFD’s allow our clients to speculate on real time price movements determined by the effects of global supply and demand.",
                         "zh": "美国石油公司（Texas Light）或Texas Light Sweet公司是投资者在全球范围内用于确定特定等级石油价值的两个最重要的基准之一。 美国石油被认为是“甜”原油，因为它的硫浓度低于北海当量。 我们的石油差价合约允许我们的客户推测由全球供需影响决定的实时价格变动。",
                         "zh-Hant": "美國石油公司（Texas Light）或Texas Light Sweet公司是投資者在全球範圍內用於確定特定等級石油價值的兩個最重要的基準之壹。 美國石油被認為是“甜”原油，因為它的硫濃度低於北海當量。 我們的石油差價合約允許我們的客戶推測由全球供需影響決定的實時價格變動。",
                         "vi": "US Oil, hay Texas Light Sweer, là một trong hai tiêu chí quan trọng nhất được các nhà đầu tư sử dụng trên toàn cầu để xác định giá trị của một thùng dầu cấp đặc biệt. Dầu của Mỹ được coi là dầu thô “ngọt” vì nó có chứa hàm lượng lưu huỳnh thấp hơn so với tương đương với Biển Bắc. Dầu CFD của chúng tôi cho phép khách hàng của chúng tôi suy đoán về các biến động giá theo thời gian thực được xác định bởi ảnh hưởng của cung và cầu toàn cầu.",
-                        "id": "US Oil, or Texas Light Sweet, is one of the two most important benchmarks used globally by investors to determine the value of a barrel of a particular grade of oil. US oil is considered ‘sweet’ crude as it has a lower concentration of sulphur than its North Sea equivalent. Our Oil CFD’s allow our clients to speculate on real time price movements determined by the effects of global supply and demand.",
-                        "es": "US Oil, or Texas Light Sweet, is one of the two most important benchmarks used globally by investors to determine the value of a barrel of a particular grade of oil. US oil is considered ‘sweet’ crude as it has a lower concentration of sulphur than its North Sea equivalent. Our Oil CFD’s allow our clients to speculate on real time price movements determined by the effects of global supply and demand.",
-                        "pt-BR": "US Oil, or Texas Light Sweet, is one of the two most important benchmarks used globally by investors to determine the value of a barrel of a particular grade of oil. US oil is considered ‘sweet’ crude as it has a lower concentration of sulphur than its North Sea equivalent. Our Oil CFD’s allow our clients to speculate on real time price movements determined by the effects of global supply and demand."
+                        "id": "Minyak AS, atau Texas Light Sweet, merupakan salah satu dari minyak dunia yang sangat penting dan para investor dunia menggunakannya sebagai pembanding harga dan kualitas minyak. Minyak AS ini disebut sebagai minyak mentah yang “manis” karena memiliki konsentrasi belerang yang lebih rendah dibandingkan dengan minyak North Sea (Laut Utara). Klien dapat melakukan transaksi, dimana pergerakan harga akan berjalan secara real-time pada produk CFD minyak kami. Pergerakan harga tersebut didasarkan pada efek penawaran dan permintaan dunia",
+                        "es": "El petróleo estadounidense, o Texas Light Sweet, es uno de los dos puntos de referencia más importantes utilizados a nivel mundial por los inversores para determinar el valor de un barril de un tipo particular de petróleo. El petróleo estadounidense se considera crudo “dulce”, ya que tiene una menor concentración de azufre que su equivalente en el Mar del Norte. Nuestros CFD de petróleo permiten a nuestros clientes especular sobre los movimientos de precios en tiempo real determinados por los efectos de la oferta y la demanda global ",
+                        "pt-BR": "O petróleo americano, ou o Texas Light Sweet, é um dos dois marcos mais importantes usados ​​mundialmente pelos investidores para determinar o valor de um barril de um tipo específico de petróleo. O petróleo dos EUA é considerado um petróleo cru “doce”, já que tem uma menor concentração de enxofre do que seu equivalente no Mar do Norte. Nossos CFDs de petróleo permitem que nossos clientes especulem sobre os movimentos de preços em tempo real determinados pelos efeitos da oferta e da demanda globais. ",
+                        "ar": "النفط الأمريكي ، أو تكساس لايت سويت ، هو واحد من أهم معيارين يستخدمهما المستثمرون على مستوى العالم لتحديد قيمة برميل من فئة معينة من النفط. يعتبر النفط الأمريكي خامًا\" حلوًا \"حيث أن تركيزه أقل من الكبريت تفوق معادلته في بحر الشمال. تسمح العقود مقابل الفروقات النفطية الخاصة بنا لعملائنا بالمضاربة على تحركات الأسعار في الوقت الفعلي والتي تحددها تأثيرات العرض والطلب العالمي. "
                     },
                     "XBRUSD": {
                         "en": "North Sea Oil is the second important global benchmark for oil prices. This type of oil is mainly used to refine into diesel fuel and gasoline. Our CFD allows our clients to speculate on the price of this alternative benchmark to US Oil.",
                         "zh": "北海石油是全球第二个重要的油价基准。 这种类型的油主要用于精炼成柴油和汽油。 我们的差价合约允许我们的客户推测美国石油的替代基准价格。",
                         "zh-Hant": "北海石油是全球第二個重要的油價基準。 這種類型的油主要用於精煉成柴油和汽油。 我們的差價合約允許我們的客戶推測美國石油的替代基準價格。",
                         "vi": "Dầu biển Bắc là tiêu chuẩn quan trọng thứ hai toàn cầu về giá dầu. Loại dầu này chủ yếu được sử dụng để tinh chế thành nhiên liệu diesel và xăng. CFD của chúng tôi cho phép khách hàng của chúng tôi suy đoán về mức giá của tiêu chuẩn thay thế này đối với US Oil.",
-                        "id": "North Sea Oil is the second important global benchmark for oil prices. This type of oil is mainly used to refine into diesel fuel and gasoline. Our CFD allows our clients to speculate on the price of this alternative benchmark to US Oil.",
-                        "es": "North Sea Oil is the second important global benchmark for oil prices. This type of oil is mainly used to refine into diesel fuel and gasoline. Our CFD allows our clients to speculate on the price of this alternative benchmark to US Oil.",
-                        "pt-BR": "North Sea Oil is the second important global benchmark for oil prices. This type of oil is mainly used to refine into diesel fuel and gasoline. Our CFD allows our clients to speculate on the price of this alternative benchmark to US Oil."
+                        "id": "Minyak North Sea (Laut Utara) adalah komoditas kedua terpenting di dunia, terutama dijadikan sebagai pembandingan harga minyak dunia. Tipe minyak ini banyak digunakan sebagai bahan bakar diesel atau bensin. Klien dapat melakukan transaksi pada produk CFD minyak kami sebagai alfternatif dari Minyak AS",
+                        "es": "El petróleo del Mar del Norte es el segundo punto de referencia mundial importante para los precios del petróleo. Este tipo de petróleo se utiliza principalmente para refinarse en combustible diesel y gasolina. Nuestro CFD permite a nuestros clientes especular sobre el precio de este punto de referencia alternativo al petróleo de Estados Unidos",
+                        "pt-BR": "O petróleo do Mar do Norte é a segunda maior referência mundial para os preços do petróleo. Esse tipo de óleo é usado principalmente para refinar-se em diesel ou em gasolina. Nosso CFD permite que nossos clientes especulem sobre o preço deste ponto de referência alternativo ao petróleo dos EUA ",
+                        "ar": "يعتبر نفط بحر الشمال  ثاني مؤشر عالمي مهم لأسعار النفط. يستخدم هذا النوع من النفط بشكل أساسي للتكرير إلى وقود الديزل والبنزين. تسمح العقود مقابل الفروقات لعملائنا بالمضاربة على سعر هذا المؤشر البديل للنفط "
                     }
                 }
             },
@@ -7062,7 +7072,8 @@
                         "zh-Hant": "1.頁面所提供的轉賬信息將不定期更換，切勿重複使用。",
                         "id": "1. Informasi transfer yang disediakan pada halaman akan berubah dari waktu ke waktu dan tidak boleh digunakan kembali.",
                         "es": "1. La información de transferencia provista en la página se cambiará de vez en cuando y no se debe reutilizar.",
-                        "pt-BR": "1. As informações de transferência fornecidas na página serão alteradas de tempos em tempos e não devem ser reutilizadas."
+                        "pt-BR": "1. As informações de transferência fornecidas na página serão alteradas de tempos em tempos e não devem ser reutilizadas.",
+                        "ar": ""
                     },
                     "transferQuick3Tip2": {
                         "zh": "2.转账时”转账备注”是验证资金来源的重要信息，请务必填写。",
@@ -7071,7 +7082,8 @@
                         "zh-Hant": "2.轉賬時”轉賬備註”是驗證資金來源的重要信息，請務必填寫。",
                         "id": "2. \"Keterangan Transfer\" dari transfer adalah informasi penting untuk memverifikasi sumber dana, pastikan untuk mengisi.",
                         "es": "2. Los \"Comentarios de transferencia\" de la transferencia son información importante para verificar la fuente de los fondos, asegúrese de completarlos.",
-                        "pt-BR": "2. \"Transferir observações\" de transferência é uma informação importante para verificar a origem dos fundos, por favor, não se esqueça de preencher."
+                        "pt-BR": "2. \"Transferir observações\" de transferência é uma informação importante para verificar a origem dos fundos, por favor, não se esqueça de preencher.",
+                        "ar": ""
                     },
                     "transferQuick3Tip3": {
                         "zh": "3.实际转账金额必须与订单一直，否则资金无法到账。",
@@ -7080,7 +7092,8 @@
                         "zh-Hant": "3.實際轉賬金額必須與訂單一直，否則資金無法到賬。",
                         "id": "3. Jumlah transfer aktual harus sama dengan pesanan, jika tidak dana tidak dapat diterima.",
                         "es": "3. El monto real de la transferencia debe ser el mismo que el pedido, de lo contrario no se pueden recibir los fondos.",
-                        "pt-BR": "3. O valor de transferência real deve ser o mesmo que o pedido, caso contrário, os fundos não poderão ser recebidos."
+                        "pt-BR": "3. O valor de transferência real deve ser o mesmo que o pedido, caso contrário, os fundos não poderão ser recebidos.",
+                        "ar": ""
                     },
                     "bankCardTransferTip": {
                         "zh": "注意：必须使用所选择的银行卡进行转账",
