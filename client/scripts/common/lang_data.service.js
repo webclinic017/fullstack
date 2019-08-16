@@ -91,7 +91,7 @@
                         "id": "Gas alam merupakan bahan bakar yang menjadi sumber energi alternatif selain minyak dan batu bara. Dimana minyak semakin lama semakin mahal untuk dijangkau, Gas alam menjadi pilihan yang tepat untuk membangun sumber energi yang lebih “bersih”. Gas alam menguasai 1/3 dari cadangan energi di Inggris",
                         "es": "El gas natural es un combustible que representa una fuente de energía alternativa al petróleo y otros recursos tradicionales como el carbón. A medida que el petróleo en particular se vuelve más caro de acceder, el gas natural se convierte en una fuente establecida de energía “más limpia”, que actualmente proporciona alrededor de un tercio de el suministro de energía del Reino Unido ",
                         "pt-BR": "O gás natural é um combustível que representa uma fonte alternativa de energia para o petróleo e outros recursos tradicionais, como o carvão. Como o petróleo se torna mais caro, o gás natural  se torna uma fonte estabelecida de energia “mais limpa”, fornecendo atualmente cerca de um terço da matriz energética do Reino Unido. ",
-                        "ar": "الغاز الطبيعي هو الوقود الذي يمثل مصدرًا بديلاً للطاقة للنفط والموارد التقليدية الأخرى مثل الفحم. نظرًا لأن النفط على وجه الخصوص يصبح أكثر تكلفة للوصول اليه ، أصبح الغاز الطبيعي مصدرًا ثابتًا للطاقة النظيفة ، التي توفر حاليًا حوالي ثلث إمدادات الطاقة في المملكة المتحدة"
+                        "ar": "الغاز الطبيعي هو الوقود الذي يمثل مصدرًا بديلاً للطاقة للنفط والموارد التقليدية الأخرى مثل الفحم. نظرًا لأن النفط على وجه الخصوص يصبح أكثر تكلفة للوصول اليه ، أصبح الغاز الطبيعي مصدرًا ثابتًا للطاقة\" النظيفة \"، التي توفر حاليًا حوالي ثلث إمدادات الطاقة في المملكة المتحدة"
                     },
                     "XTIUSD": {
                         "en": "US Oil, or Texas Light Sweet, is one of the two most important benchmarks used globally by investors to determine the value of a barrel of a particular grade of oil. US oil is considered ‘sweet’ crude as it has a lower concentration of sulphur than its North Sea equivalent. Our Oil CFD’s allow our clients to speculate on real time price movements determined by the effects of global supply and demand.",
@@ -481,9 +481,9 @@
                 "vi": "Tiếng Việt",
                 "zh-Hant": "繁體中文",
                 "id": "Indonesia",
-                "es": "English",
+                "es": "Español",
                 "pt-BR": "Português",
-                "ar": "اللغة الإنجليزية"
+                "ar": "العربية"
             },
             "fuzhirenshu": {
                 "en": "Copiers",
@@ -2499,7 +2499,7 @@
                         "id": "Nama Belakang",
                         "es": "Nombre real",
                         "pt-BR": "Primeiro nome",
-                        "ar": "الاسم الأول"
+                        "ar": "الاسم "
                     },
                     "fillName": {
                         "zh": "请输入真实姓名",
@@ -7073,7 +7073,7 @@
                         "id": "1. Informasi transfer yang disediakan pada halaman akan berubah dari waktu ke waktu dan tidak boleh digunakan kembali.",
                         "es": "1. La información de transferencia provista en la página se cambiará de vez en cuando y no se debe reutilizar.",
                         "pt-BR": "1. As informações de transferência fornecidas na página serão alteradas de tempos em tempos e não devem ser reutilizadas.",
-                        "ar": ""
+                        "ar": ". سيتم تغيير معلومات النقل المقدمة على الصفحة من وقت لآخر ويجب عدم إعادة استخدامها."
                     },
                     "transferQuick3Tip2": {
                         "zh": "2.转账时”转账备注”是验证资金来源的重要信息，请务必填写。",
@@ -7083,7 +7083,7 @@
                         "id": "2. \"Keterangan Transfer\" dari transfer adalah informasi penting untuk memverifikasi sumber dana, pastikan untuk mengisi.",
                         "es": "2. Los \"Comentarios de transferencia\" de la transferencia son información importante para verificar la fuente de los fondos, asegúrese de completarlos.",
                         "pt-BR": "2. \"Transferir observações\" de transferência é uma informação importante para verificar a origem dos fundos, por favor, não se esqueça de preencher.",
-                        "ar": ""
+                        "ar": "ملاحظات نقل \ نقل معلومات مهمة للتحقق من مصدر الأموال ، يرجى التأكد من ملء. ،"
                     },
                     "transferQuick3Tip3": {
                         "zh": "3.实际转账金额必须与订单一直，否则资金无法到账。",
@@ -7093,7 +7093,7 @@
                         "id": "3. Jumlah transfer aktual harus sama dengan pesanan, jika tidak dana tidak dapat diterima.",
                         "es": "3. El monto real de la transferencia debe ser el mismo que el pedido, de lo contrario no se pueden recibir los fondos.",
                         "pt-BR": "3. O valor de transferência real deve ser o mesmo que o pedido, caso contrário, os fundos não poderão ser recebidos.",
-                        "ar": ""
+                        "ar": "يجب أن يكون مبلغ التحويل الفعلي هو نفسه في امر التحويل ، وإلا لا يمكن استلام الأموال. "
                     },
                     "bankCardTransferTip": {
                         "zh": "注意：必须使用所选择的银行卡进行转账",
@@ -11210,7 +11210,8 @@
                         "zh-Hant": "請選擇帳戶類型",
                         "id": "Silakan pilih jenis akun",
                         "es": "Por favor, seleccione un tipo de cuenta",
-                        "pt-BR": "Seleccione por favor um Tipo de conta"
+                        "pt-BR": "Seleccione por favor um Tipo de conta",
+                        "ar": "يرجى اختيار نوع الحساب"
                     },
                     "openAccountNewTip2": {
                         "zh": "身份信息",
@@ -11219,7 +11220,8 @@
                         "zh-Hant": "身份信息",
                         "id": "Data Anda",
                         "es": "Tus datos",
-                        "pt-BR": "Seus dados"
+                        "pt-BR": "Seus dados",
+                        "ar": "يور ديتايل"
                     },
                     "openAccountNewTip3": {
                         "zh": "请在下面填写您的个人信息以注册TigerWit真实账户。 开户将花费不到五分钟，并且您需要提供一些您的身份证明和地址证明的文档。",
@@ -11228,7 +11230,8 @@
                         "zh-Hant": "請在下面填寫您的個人信息以註冊TigerWit真實賬戶。開戶將花費不到五分鐘，並且您需要提供一些您的身份證明和地址證明的文檔。",
                         "id": "Silahkan masukkan data diri anda untuk melakukan pendaftaran di TigerWit. Pendaftarakan akan memakan waktu kurang dari 5 menit dan mohon siapkan data identitas anda beserta bukti alamatnya",
                         "es": "Por favor, ingresa tu información personal a continuación para registrarse para cuenta real en TigerWit. Registrarte tomará menos de cinco minutos y necesitarás documentación de respaldo al proporcionarnos tu identidad y tu dirección.",
-                        "pt-BR": "Por favor, digite suas informações pessoais abaixo para se registrar para uma conta real na TigerWit. O registro levará menos de cinco minutos e você precisará de documentação de apoio que nos comprove sua identidade e seu endereço."
+                        "pt-BR": "Por favor, digite suas informações pessoais abaixo para se registrar para uma conta real na TigerWit. O registro levará menos de cinco minutos e você precisará de documentação de apoio que nos comprove sua identidade e seu endereço.",
+                        "ar": "يرجى إرسال معلوماتك الشخصية أدناه للتسجيل في حساب TigerWit حقيقي. سيستغرق التسجيل أقل من خمس دقائق وستقوم بتوثيق بعض المستندات الداعمة لإثبات هويتك وعنوانك"
                     },
                     "openAccountNewTip4": {
                         "zh": "地址细节",
@@ -11237,7 +11240,8 @@
                         "zh-Hant": "地址細節",
                         "id": "Data Alamat",
                         "es": "Datos de dirección",
-                        "pt-BR": "Dados do Endereço"
+                        "pt-BR": "Dados do Endereço",
+                        "ar": "تفاصيل عنوانك"
                     },
                     "openAccountNewTip5": {
                         "zh": "请开始输入住址或邮编，我们的系统将自动获取您的地址",
@@ -11246,7 +11250,8 @@
                         "zh-Hant": "請開始輸入住址或郵編，我們的系統將自動獲取您的地址",
                         "id": "Silahkan masukkan alamat anda beserta kode pos dan sistem kami akan melakukan verifikasi secara otomatis",
                         "es": "Por favor, comienza a digitar la primera línea de tu dirección o código postal y nuestro sistema lo completará automáticamente",
-                        "pt-BR": "Por favor, comece a digitar a primeira linha do seu endereço ou código postal e nosso sistema o completará automaticamente."
+                        "pt-BR": "Por favor, comece a digitar a primeira linha do seu endereço ou código postal e nosso sistema o completará automaticamente.",
+                        "ar": "يرجى البدء في كتابة السطر الأول من عنوانك أو الرمز البريدي وسوف يكمل نظامنا الهعلومات تلقائيًا"
                     },
                     "openAccountNewTip6": {
                         "zh": "名",
@@ -11255,7 +11260,8 @@
                         "zh-Hant": "名",
                         "id": "Nama depan",
                         "es": "Nombre",
-                        "pt-BR": "Primeiro nome"
+                        "pt-BR": "Primeiro nome",
+                        "ar": "الاسم "
                     },
                     "openAccountNewTip7": {
                         "zh": "姓",
@@ -11274,7 +11280,8 @@
                         "zh-Hant": "第一行地址",
                         "id": "Alamat lengkap 1",
                         "es": "Primera línea de dirección",
-                        "pt-BR": "Primeira linha de endereço"
+                        "pt-BR": "Primeira linha de endereço",
+                        "ar": "السطر الأول من عنوانك"
                     },
                     "openAccountNewTip9": {
                         "zh": "第二行地址（可选）",
@@ -11283,7 +11290,8 @@
                         "zh-Hant": "第二行地址（可選）",
                         "id": "Alamat lengkap 2 (opsional)",
                         "es": "Segunda línea de dirección （opcional）",
-                        "pt-BR": "Segunda linha de endereço(opcional)"
+                        "pt-BR": "Segunda linha de endereço(opcional)",
+                        "ar": "السطر الثاني من عنوانك (اختياري)"
                     },
                     "openAccountNewTip10": {
                         "zh": "城镇/城市",
@@ -11292,7 +11300,8 @@
                         "zh-Hant": "城鎮/城市",
                         "id": "Kota",
                         "es": "Pueblo / ciudad",
-                        "pt-BR": "Cidade"
+                        "pt-BR": "Cidade",
+                        "ar": "القرية / المدينة"
                     },
                     "openAccountNewTip11": {
                         "zh": "您是否在你这个地址居住三个月以上？",
@@ -11301,7 +11310,8 @@
                         "zh-Hant": "您是否在你這個地址居住三個月以上？",
                         "id": "Sudahkah Anda tinggal di sini selama lebih dari tiga bulan?",
                         "es": "¿Has vivido aquí por más de tres meses?",
-                        "pt-BR": "Você já morou neste endereço por mais de três meses?"
+                        "pt-BR": "Você já morou neste endereço por mais de três meses?",
+                        "ar": "هل عشت هنا لأكثر من ثلاثة أشهر؟"
                     },
                     "openAccountNewTip12": {
                         "zh": "您的国籍是否在您居住的国家以外的地方？",
@@ -11310,7 +11320,8 @@
                         "zh-Hant": "您的國籍是否在您居住的國家以外的地方？",
                         "id": "Apakah anda bertempat tinggal di daerah yang bukan asal Negara anda?",
                         "es": "Tu nacionalidad es diferente a la del país em que resides?",
-                        "pt-BR": "A sua nacionalidade é diferente do seu país de residência?"
+                        "pt-BR": "A sua nacionalidade é diferente do seu país de residência?",
+                        "ar": "هل جنسيتك في أي مكان آخر غير بلد إقامتك؟"
                     },
                     "openAccountNewTip13": {
                         "zh": "您的纳税地是否在您居住的国家以外的地方？",
@@ -11319,7 +11330,8 @@
                         "zh-Hant": "您的納稅地是否在您居住的國家以外的地方？",
                         "id": "Apakah Pajak kewarganegaraan anda merupakan negara tempat asal anda?",
                         "es": "Es tu residencia fiscal (pagamento de tributos) en otro país diferente al que vives?",
-                        "pt-BR": "É sua residência fiscal (pagamento de tributos) em outro país diferente ao que você mora?"
+                        "pt-BR": "É sua residência fiscal (pagamento de tributos) em outro país diferente ao que você mora?",
+                        "ar": "هل إقامتك الضريبية في أي مكان آخر غير بلد إقامتك؟"
                     },
                     "openAccountNewTip14": {
                         "zh": "交易经验",
@@ -11328,7 +11340,8 @@
                         "zh-Hant": "交易經驗",
                         "id": "Pengalaman dan pemahaman trading",
                         "es": "Experiencia en trading y comprensión",
-                        "pt-BR": "Experiência em trading e entendimento"
+                        "pt-BR": "Experiência em trading e entendimento",
+                        "ar": "خبرة وفهم التداول "
                     },
                     "openAccountNewTip15": {
                         "zh": "我们需要询问有关您的交易经验和您对我们产品的理解的一些问题。",
@@ -11337,7 +11350,8 @@
                         "zh-Hant": "我們需要詢問有關您的交易經驗和您對我們產品的理解的一些問題。",
                         "id": "Kami perlu mengetahui tentang pengalaman trading dan pemahaman produk-produk kami",
                         "es": "Necesitamos hacerte algunas preguntas sobre tu experiencia con trading y tu comprensión de nuestros productos.",
-                        "pt-BR": "Precisamos fazer algumas perguntas sobre sua experiência com trading e seu entendimento de nossos produtos."
+                        "pt-BR": "Precisamos fazer algumas perguntas sobre sua experiência com trading e seu entendimento de nossos produtos.",
+                        "ar": "نحتاج إلى طرح بعض الأسئلة حول تجربتك في التداول وفهمك لمنتجاتنا"
                     },
                     "openAccountNewTip16": {
                         "zh": "财务细节",
@@ -11346,7 +11360,8 @@
                         "zh-Hant": "財務細節",
                         "id": "Data Pendanaan",
                         "es": "Datos de los fondos",
-                        "pt-BR": "Dados dos fundos"
+                        "pt-BR": "Dados dos fundos",
+                        "ar": "تفاصيل الاموال"
                     },
                     "openAccountNewTip17": {
                         "zh": "我们需要询问一些关于您财务方面的问题",
@@ -11355,7 +11370,8 @@
                         "zh-Hant": "我們需要詢問一些關於您財務方面的問題",
                         "id": "Pertanyaan mengenai data pendanaan anda untuk produk-produk kami",
                         "es": "Precisamos hacerte algunas preguntas sobre detalles de los fondos aplicados en nuestros productos.",
-                        "pt-BR": "Precisamos de fazer algumas perguntas sobre detalhes dos seus fundos aplicados em nossos produtos."
+                        "pt-BR": "Precisamos de fazer algumas perguntas sobre detalhes dos seus fundos aplicados em nossos produtos.",
+                        "ar": "نحتاج إلى طرح بعض الأسئلة حول تفاصيل أموالك لمنتجاتنا."
                     },
                     "openAccountNewTip18": {
                         "zh": "上传地址证明",
@@ -11364,7 +11380,8 @@
                         "zh-Hant": "上傳地址證明",
                         "id": "Unggah bukti alamat",
                         "es": "Cargar Comprobante de Dirección",
-                        "pt-BR": "Carregar Comprovante de Residência"
+                        "pt-BR": "Carregar Comprovante de Residência",
+                        "ar": "تحميل إثبات العنوان"
                     },
                     "openAccountNewTip19": {
                         "zh": "选择文档类型",
@@ -11373,7 +11390,8 @@
                         "zh-Hant": "選擇文檔類型",
                         "id": "Pilih Jenis Dokumen",
                         "es": "Seleccione el tipo de documento",
-                        "pt-BR": "Selecione o tipo de documento"
+                        "pt-BR": "Selecione o tipo de documento",
+                        "ar": "حدد نوع المستند"
                     },
                     "openAccountNewTip20": {
                         "zh": "电费单（水，煤气，电）",
@@ -11412,7 +11430,8 @@
                         "zh-Hant": "差價合約是複雜的產品，存在高額虧損的風險。只有在您通過應用風險控制（包括止損和止盈訂單）來尋求最小化損失時，才應該繼續使用該產品。",
                         "id": "CFD adalah produk yang memiliki kompleksitas serta risiko yang tinggi dan dapat mengakibatkan anda kehilangan modal. Oleh karena itu anda selalu disarankan untuk meminimalisir kerugian anda dengan cara mengontrol risiko, termasuk penggunaan stop loss dan take profit.",
                         "es": "Los CFDs son productos complejos que conllevan un alto riesgo de perder su dinero. Debe proseguir solamente si intentará minimizar las pérdidas mediante la aplicación de control de riesgos, incluyendo operaciones del tipo stop loss o take profit.",
-                        "pt-BR": "CFDs são produtos complexos que envolvem um alto risco de perder seu dinheiro. Você deve proceder somente se procurar minimizar as perdas aplicando controles de risco, incluindo stop loss e take profit orders."
+                        "pt-BR": "CFDs são produtos complexos que envolvem um alto risco de perder seu dinheiro. Você deve proceder somente se procurar minimizar as perdas aplicando controles de risco, incluindo stop loss e take profit orders.",
+                        "ar": "العقود مقابل الفروقات هي منتجات معقدة تنطوي على مخاطر عالية لفقد أموالك. يجب عليك المتابعة فقط إذا كنت ستسعى لتقليل الخسائر إلى الحد الأدنى عن طريق تطبيق ضوابط المخاطر ، بما في ذلك وقف الخسارة وأوامر الربح."
                     },
                     "openAccountNewTip24": {
                         "zh": "如果您的承受风险能力较低，差价合约将不适合您。",
@@ -11421,7 +11440,8 @@
                         "zh-Hant": "如果您的承受風險能力較低，差價合約將不適合您。",
                         "id": "CFD tidak cocok untuk anda apabila anda tidak siap menerima risiko. ",
                         "es": "Los CFDs no serán apropiados para usted si no está preparado para correr ningún riesgo con su capital.",
-                        "pt-BR": "Os CFDs não serão apropriados para você se você não estiver preparado para aceitar qualquer risco ao seu capital."
+                        "pt-BR": "Os CFDs não serão apropriados para você se você não estiver preparado para aceitar qualquer risco ao seu capital.",
+                        "ar": "لن تكون العقود مقابل الفروقات مناسبة لك إذا لم تكن مستعدًا لقبول أي مخاطرة برأسمالك"
                     },
                     "openAccountNewTip25": {
                         "zh": "你想继续吗?",
@@ -11430,7 +11450,8 @@
                         "zh-Hant": "你想繼續嗎?",
                         "id": "Apakah anda yakin untuk melanjutkan?",
                         "es": "¿Le gustaría continuar?",
-                        "pt-BR": "Você gostaria de continuar?"
+                        "pt-BR": "Você gostaria de continuar?",
+                        "ar": "هل ترغب في الاستمرار؟"
                     },
                     "provideService": {
                         "zh": "定制您的个性化服务",
@@ -12239,7 +12260,8 @@
                         "zh-Hant": "手動輸入地址",
                         "id": "Tidak ketemu alamatnya? masukkan alamat secara manual",
                         "es": "¿La búsqueda no funciona? Introduzca la dirección manualmente",
-                        "pt-BR": "A pesquisa não funciona? Insira o endereço manualmente"
+                        "pt-BR": "A pesquisa não funciona? Insira o endereço manualmente",
+                        "ar": "البحث لا يعمل؟ أدخل العنوان يدويا"
                     },
                     "autoAddressLookup": {
                         "zh": "自动输入地址",
@@ -12248,7 +12270,8 @@
                         "zh-Hant": "自動輸入地址",
                         "id": "Cari alamat otomatis",
                         "es": "Búsqueda automática de dirección",
-                        "pt-BR": "Pesquisa de endereço automática"
+                        "pt-BR": "Pesquisa de endereço automática",
+                        "ar": "البحث التلقائي عن العنوان "
                     },
                     "addressOrPostalCode": {
                         "zh": "请输入第一行地址或邮编",
@@ -12257,7 +12280,8 @@
                         "zh-Hant": "請輸入第一行地址或郵編",
                         "id": "Masukkan alamat dan kode pos anda",
                         "es": "Comience ingresando la primera línea de su dirección o código postal",
-                        "pt-BR": "Comece digitando a primeira linha do seu endereço ou código postal"
+                        "pt-BR": "Comece digitando a primeira linha do seu endereço ou código postal",
+                        "ar": "ابدأ في كتابة السطر الأول من عنوانك أو الرمز البريدي"
                     },
                     "selectAddress": {
                         "zh": "请选择搜索的地址",
@@ -12266,7 +12290,8 @@
                         "zh-Hant": "請選擇蒐索的地址",
                         "id": "Silakan pilih pencarian alamat",
                         "es": "Seleccione la dirección de búsqueda",
-                        "pt-BR": "Selecione por favor o endereço de pesquisa"
+                        "pt-BR": "Selecione por favor o endereço de pesquisa",
+                        "ar": "يرجى تحديد عنوان البحث"
                     }
                 },
                 "partner": {
@@ -12287,7 +12312,8 @@
                         "zh-Hant": "代理商傭金總計",
                         "id": "Total komisi agensi",
                         "es": "Comisión del agente principal",
-                        "pt-BR": "Comissão total DOS agentes"
+                        "pt-BR": "Comissão total DOS agentes",
+                        "ar": "إجمالي عمولة الوكيل"
                     },
                     "completeInformation": {
                         "zh": "完善资料",

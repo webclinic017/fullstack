@@ -534,10 +534,10 @@ module.exports = {
         "zh": "简体中文",
         "vi": "Tiếng Việt",
         "zh-Hant": "繁體中文",
-        "id": "Bahasa Indonesia",
+        "id": "Indonesia",
         "es": "Español",
         "pt-BR": "Português",
-        "ar": "اللغة الإنجليزية"
+        "ar": "العربية"
     },
     "foot_38": {
         "zh": "风险警告：",
@@ -897,7 +897,7 @@ module.exports = {
         "id": "Angka",
         "es": "Dígitos",
         "pt-BR": "Dígitos",
-        "ar": "السعر المحسوب"
+        "ar": "اعداد"
     },
     "forex27": {
         "en": "Minimum trading volume",
@@ -1567,7 +1567,7 @@ module.exports = {
         "id": "Angka",
         "es": "Dígitos",
         "pt-BR": "Dígitos",
-        "ar": "السعر المحسوب"
+        "ar": "اعداد"
     },
     "metal24": {
         "en": "Minimum trading lots",
@@ -14810,7 +14810,8 @@ module.exports = {
         "zh-Hant": "名",
         "id": "Nama Belakang",
         "es": "Nombre real",
-        "pt-BR": "Nome real"
+        "pt-BR": "Nome real",
+        "ar": "الاسم "
     },
     "third_username22": {
         "zh": "第一行地址",
@@ -14819,7 +14820,8 @@ module.exports = {
         "zh-Hant": "第一行地址",
         "id": "Alamat lengkap 1",
         "es": "Primera línea de dirección",
-        "pt-BR": "Primeira linha de endereço"
+        "pt-BR": "Primeira linha de endereço",
+        "ar": "السطر الأول من عنوانك"
     },
     "third_username23": {
         "zh": "第二行地址（可选）",
@@ -14828,7 +14830,8 @@ module.exports = {
         "zh-Hant": "第二行地址（可選）",
         "id": "Alamat lengkap 2 (opsional)",
         "es": "Segunda línea de dirección （opcional）",
-        "pt-BR": "Segunda linha de endereço(opcional)"
+        "pt-BR": "Segunda linha de endereço(opcional)",
+        "ar": "السطر الثاني من عنوانك (اختياري)"
     },
     "third_username24": {
         "zh": "您是否在你这个地址居住三个月以上？",
@@ -14837,7 +14840,8 @@ module.exports = {
         "zh-Hant": "您是否在你這個地址居住三個月以上？",
         "id": "Sudahkah Anda tinggal di sini selama lebih dari tiga bulan?",
         "es": "¿Has vivido aquí por más de tres meses?",
-        "pt-BR": "Você já morou neste endereço por mais de três meses?"
+        "pt-BR": "Você já morou neste endereço por mais de três meses?",
+        "ar": "هل عشت هنا لأكثر من ثلاثة أشهر؟"
     },
     "third_username25": {
         "zh": "您的国籍是否在您居住的国家以外的地方？",
@@ -14846,7 +14850,8 @@ module.exports = {
         "zh-Hant": "您的國籍是否在您居住的國家以外的地方？",
         "id": "Apakah anda bertempat tinggal di daerah yang bukan asal Negara anda?",
         "es": "Tu nacionalidad es diferente a la del país em que resides?",
-        "pt-BR": "A sua nacionalidade é diferente do seu país de residência?"
+        "pt-BR": "A sua nacionalidade é diferente do seu país de residência?",
+        "ar": "هل جنسيتك في أي مكان آخر غير بلد إقامتك؟"
     },
     "third_username26": {
         "zh": "您的纳税地是否在您居住的国家以外的地方？",
@@ -14855,7 +14860,8 @@ module.exports = {
         "zh-Hant": "您的納稅地是否在您居住的國家以外的地方？",
         "id": "Apakah Pajak kewarganegaraan anda merupakan negara tempat asal anda?",
         "es": "Es tu residencia fiscal (pagamento de tributos) en otro país diferente al que vives?",
-        "pt-BR": "É sua residência fiscal (pagamento de tributos) em outro país diferente ao que você mora?"
+        "pt-BR": "É sua residência fiscal (pagamento de tributos) em outro país diferente ao que você mora?",
+        "ar": "هل إقامتك الضريبية في أي مكان آخر غير بلد إقامتك؟"
     },
     "third_username27": {
         "zh": "差价合约是复杂的产品，存在高额亏损的风险。 只有在您通过应用风险控制（包括止损和止盈订单）来寻求最小化损失时，才应该继续使用该产品。",
@@ -14864,7 +14870,8 @@ module.exports = {
         "zh-Hant": "差價合約是複雜的產品，存在高額虧損的風險。只有在您通過應用風險控制（包括止損和止盈訂單）來尋求最小化損失時，才應該繼續使用該產品。",
         "id": "CFD adalah produk yang memiliki kompleksitas serta risiko yang tinggi dan dapat mengakibatkan anda kehilangan modal. Oleh karena itu anda selalu disarankan untuk meminimalisir kerugian anda dengan cara mengontrol risiko, termasuk penggunaan stop loss dan take profit.",
         "es": "Los CFDs son productos complejos que conllevan un alto riesgo de perder su dinero. Debe proseguir solamente si intentará minimizar las pérdidas mediante la aplicación de control de riesgos, incluyendo operaciones del tipo stop loss o take profit.",
-        "pt-BR": "CFDs são produtos complexos que envolvem um alto risco de perder seu dinheiro. Você deve proceder somente se procurar minimizar as perdas aplicando controles de risco, incluindo stop loss e take profit orders."
+        "pt-BR": "CFDs são produtos complexos que envolvem um alto risco de perder seu dinheiro. Você deve proceder somente se procurar minimizar as perdas aplicando controles de risco, incluindo stop loss e take profit orders.",
+        "ar": "العقود مقابل الفروقات هي منتجات معقدة تنطوي على مخاطر عالية لفقد أموالك. يجب عليك المتابعة فقط إذا كنت ستسعى لتقليل الخسائر إلى الحد الأدنى عن طريق تطبيق ضوابط المخاطر ، بما في ذلك وقف الخسارة وأوامر الربح."
     },
     "third_username28": {
         "zh": "如果您的承受风险能力较低，差价合约将不适合您。",
@@ -14873,7 +14880,8 @@ module.exports = {
         "zh-Hant": "如果您的承受風險能力較低，差價合約將不適合您。",
         "id": "CFD tidak cocok untuk anda apabila anda tidak siap menerima risiko. ",
         "es": "Los CFDs no serán apropiados para usted si no está preparado para correr ningún riesgo con su capital.",
-        "pt-BR": "Os CFDs não serão apropriados para você se você não estiver preparado para aceitar qualquer risco ao seu capital."
+        "pt-BR": "Os CFDs não serão apropriados para você se você não estiver preparado para aceitar qualquer risco ao seu capital.",
+        "ar": "لن تكون العقود مقابل الفروقات مناسبة لك إذا لم تكن مستعدًا لقبول أي مخاطرة برأسمالك"
     },
     "third_username29": {
         "zh": "你想继续吗?",
@@ -14882,7 +14890,8 @@ module.exports = {
         "zh-Hant": "你想繼續嗎?",
         "id": "Apakah anda yakin untuk melanjutkan?",
         "es": "¿Le gustaría continuar?",
-        "pt-BR": "Você gostaria de continuar?"
+        "pt-BR": "Você gostaria de continuar?",
+        "ar": "هل ترغب في الاستمرار؟"
     },
     "enterAddressManually": {
         "zh": "手动输入地址",
@@ -14891,7 +14900,8 @@ module.exports = {
         "zh-Hant": "手動輸入地址",
         "id": "Tidak ketemu alamatnya? masukkan alamat secara manual",
         "es": "¿La búsqueda no funciona? Introduzca la dirección manualmente",
-        "pt-BR": "A pesquisa não funciona? Insira o endereço manualmente"
+        "pt-BR": "A pesquisa não funciona? Insira o endereço manualmente",
+        "ar": "البحث لا يعمل؟ أدخل العنوان يدويا"
     },
     "autoAddressLookup": {
         "zh": "自动输入地址",
@@ -14900,7 +14910,8 @@ module.exports = {
         "zh-Hant": "自動輸入地址",
         "id": "Cari alamat otomatis",
         "es": "Búsqueda automática de dirección",
-        "pt-BR": "Pesquisa de endereço automática"
+        "pt-BR": "Pesquisa de endereço automática",
+        "ar": "البحث التلقائي عن العنوان "
     },
     "addressOrPostalCode": {
         "zh": "请输入第一行地址或邮编",
@@ -14909,7 +14920,8 @@ module.exports = {
         "zh-Hant": "請輸入第一行地址或郵編",
         "id": "Masukkan alamat dan kode pos anda",
         "es": "Comience ingresando la primera línea de su dirección o código postal",
-        "pt-BR": "Comece digitando a primeira linha do seu endereço ou código postal"
+        "pt-BR": "Comece digitando a primeira linha do seu endereço ou código postal",
+        "ar": "ابدأ في كتابة السطر الأول من عنوانك أو الرمز البريدي"
     },
     "third_uploadCard": {
         "zh": "证件类型：",
@@ -18560,83 +18572,83 @@ module.exports = {
         }
     },
     "mInvite05": {
-        "zh": "你投资,我出钱!",
-        "en": "你投资,我出钱!",
-        "vi": "你投资,我出钱!",
+        zh: "你投资,我出钱!",
+        en: "你投资,我出钱!",
+        vi: "你投资,我出钱!",
         "zh-Hant": "妳投資,我出錢!",
-        "id": "你投资,我出钱!",
+        id: "你投资,我出钱!",
         "es": "你投资,我出钱!",
         "pt-BR": "你投资,我出钱!",
         "ar": "你投资,我出钱!"
     },
     "mInvite06": {
-        "zh": "注册就送",
-        "en": "Register to receive a ",
-        "vi": "Register to receive a ",
+        zh: "注册就送",
+        en: "Register to receive a ",
+        vi: "Đăng kí để nhận được một ",
         "zh-Hant": "註冊就送",
-        "id": "Register to receive a ",
-        "es": "Register to receive a ",
-        "pt-BR": "Register to receive a ",
-        "ar": "Register to receive a "
+        id: "Daftar untuk mendapatkan ",
+        "es": "Regístrese para recibir un ",
+        "pt-BR": "Registre-se para receber um ",
+        "ar": "سجل لتلقي"
     },
     "mInvite07": {
-        "zh": "$10000体验金",
-        "en": "$10000 coupons",
-        "vi": "$10000 coupons",
+        zh: "$10000体验金",
+        en: "$10000 coupons",
+        vi: "coupon trị giá 10000 USD",
         "zh-Hant": "$10000體驗金",
-        "id": "$10000 coupons",
-        "es": "$10000 coupons",
-        "pt-BR": "$10000 coupons",
-        "ar": "$10000 coupons"
+        id: "Kupon senilai $10,000",
+        "es": "$ 10.000 cupones",
+        "pt-BR": "$ 10.000 cupons",
+        "ar": "10000$ قسيمة"
     },
     "mInvite08": {
-        "zh": "在TigerWit, 已经有86253 人选择外汇跟单交易",
-        "en": "In TigerWit, there have been 86,253 people who choose to follow the masters trading.",
-        "vi": "In TigerWit, there have been 86,253 people who choose to follow the masters trading.",
+        zh: "在TigerWit, 已经有86253 人选择外汇跟单交易",
+        en: "In TigerWit, there have been 86,253 people who choose to follow the masters trading.",
+        vi: "Sàn TigerWit có 86253 người chọn theo dõi các bậc thầy giao dịch.",
         "zh-Hant": "在老虎外匯, 已經有86253 人選擇外匯跟單交易",
-        "id": "In TigerWit, there have been 86,253 people who choose to follow the masters trading.",
-        "es": "In TigerWit, there have been 86,253 people who choose to follow the masters trading.",
-        "pt-BR": "In TigerWit, there have been 86,253 people who choose to follow the masters trading.",
-        "ar": "In TigerWit, there have been 86,253 people who choose to follow the masters trading."
+        id: "Sudah ada 86,253 orang yang mengikuti trading para Master di TigerWit.",
+        "es": "En TigerWit, hay 86.253 personas que han elegido seguir operaciones de Masters",
+        "pt-BR": "Em TigerWit, houve 86.253 pessoas que optaram por seguir operações de Masters.",
+        "ar": "، كان هناك 86253 شخصًا يختارون متابعة تداول المحترف  TigerWit في ."
     },
     "mInvite09": {
-        "zh": "我刚刚在老虎外汇领取了$10000体验金,好东西",
-        "en": "I just received $10000 Coupons from TigerWit. ",
-        "vi": "I just received $10000 Coupons from TigerWit.",
+        zh: "我刚刚在老虎外汇领取了$10000体验金,好东西",
+        en: "I just received $10000 Coupons from TigerWit. ",
+        vi: "Tôi vừa nhận được coupon 10000 USD từ TigerWit",
         "zh-Hant": "我剛剛在老虎外匯領取了$10000體驗金,好東西",
-        "id": "I just received $10000 Coupons from TigerWit.",
-        "es": "I just received $10000 Coupons from TigerWit.",
-        "pt-BR": "I just received $10000 Coupons from TigerWit.",
-        "ar": "I just received $10000 Coupons from TigerWit."
+        id: "Saya baru saja mendapatkan kupon senilai $10,000 dari TigerWit",
+        "es": "Acabo de recibir $10.000 cupones de TigerWit",
+        "pt-BR": "Acabo de receber $10.000 cupons da TigerWit.",
+        "ar": "لقد تلقيت للتو 10000 قسيمة من tigerwit"
     },
     "mInvite10": {
         "zh": "必须分享,你也快来看看",
         "en": "Come and see!",
-        "vi": "Come and see!",
+        "vi": "Đến với chúng tôi và bạn sẽ thấy!",
         "zh-Hant": "必須分享,妳也快來看看",
-        "id": "Come and see!",
-        "es": "Come and see!",
-        "pt-BR": "Come and see!",
-        "ar": "Come and see!"
+        "id": "Datang dan Lihatlah !",
+        "es": "¡Venga y vea!",
+        "pt-BR": "Venha e veja!",
+        "ar": "تعال وشاهد"
     },
     "mInvite11": {
         "zh": "输入手机号",
         "en": "Enter Phone No.",
-        "vi": "nter Phone No.",
+        "vi": "Nhập số điện thoại",
         "zh-Hant": "輸入手機號",
-        "id": "nter Phone No.",
-        "es": "nter Phone No.",
-        "pt-BR": "nter Phone No.",
-        "ar": "nter Phone No."
+        "id": "Masukkan nomor telepon",
+        "es": "Ingrese el número de teléfono",
+        "pt-BR": "Digite o número do telefone",
+        "ar": "أدخل رقم الهاتف"
     },
     "mInvite12": {
         "zh": "领取奖励",
         "en": "Receive the award",
-        "vi": "Receive the award",
+        "vi": "Nhận giải thưởng",
         "zh-Hant": "領取獎勵",
-        "id": "Receive the award",
-        "es": "Receive the award",
-        "pt-BR": "Receive the award",
-        "ar": "Receive the award"
+        "id": "Dapatkan hadiah",
+        "es": "Recibir el premio",
+        "pt-BR": "Receber o prêmio",
+        "ar": "الحصول على الجائزة"
     }
 };

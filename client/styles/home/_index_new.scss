@@ -271,7 +271,7 @@
   }
   @include e(float_box) {
     position: relative;
-    margin-bottom: 50px;
+    padding-bottom: 50px;
     &:before {
       display: block;
       content: '';
@@ -315,6 +315,8 @@
   @include e(camber){
     overflow: hidden;
     margin-top: -200px;
+    width: 100%;
+    will-change: scroll-position;
     &::after{
       content:'';
       height: 200px;
@@ -324,7 +326,6 @@
       margin: 0 -100px 0;
       display: block;
     }
-
   }
 }
 
