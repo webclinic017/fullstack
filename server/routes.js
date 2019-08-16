@@ -549,7 +549,7 @@ module.exports = function (app) {
     })
 
     // 关于老虎金融
-    app.route('/web/aboutus/:subpage(stp|team|report|control|companyinformation|partner|liverpool|medianewsandcontact|abouttigerwit)').get(function (req, res) {
+    app.route('/web/aboutus/:subpage(stp|team|report|control|companyinformation|partner|liverpool|medianewsandcontact|abouttigerwit|sitemap)').get(function (req, res) {
         var subpage = req.params.subpage || 'forex';
         var pageInfo = {
             id: subpage
