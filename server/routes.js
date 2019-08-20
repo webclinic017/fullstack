@@ -83,6 +83,11 @@ module.exports = function (app) {
         res.set('Content-Type', 'text/plain');
         res.send('User-agent: *\nDisallow:\nAllow:/');
     });
+    //google爬虫配置
+    app.route('/sitemap.xml').get(function (req, res) {
+        res.set('Content-Type', 'text/xml');
+        res.render('../../client/sitemap.xml');
+    });
     // All undefined asset or api routes should return a 404
     // app.route('/:url(api|auth|components|app|bower_components|assets)/*').get(errors[404]);
 
