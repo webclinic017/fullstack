@@ -71,23 +71,23 @@ module.exports = function (app) {
     app.use('/api', require('./api'));
 
     //添加百度验证  --徐萌
-    app.route('/baidu_verify_qTHsV5cQAY.html').get(function (req, res) {
-        res.render('../../client/baidu_verify_qTHsV5cQAY.html');
-    });
-    //添加微信验证
-    app.route('/MP_verify_lcsRW9jGPf32n5Ka.txt').get(function (req, res) {
-        res.render('../../client/MP_verify_lcsRW9jGPf32n5Ka.html');
-    });
+    // app.route('/baidu_verify_qTHsV5cQAY.html').get(function (req, res) {
+    //     res.render('crawler/baidu_verify_FTypqEgrcU.html');
+    // });
+    //添加微信验证(没有)
+    // app.route('/MP_verify_lcsRW9jGPf32n5Ka.txt').get(function (req, res) {
+    //     res.render('../../client/MP_verify_lcsRW9jGPf32n5Ka.html');
+    // });
     //爬虫配置
     app.route('/robots.txt').get(function (req, res) {
         res.set('Content-Type', 'text/plain');
         res.send('User-agent: *\nDisallow:\nAllow:/');
     });
     //google爬虫配置
-    app.route('/sitemap.xml').get(function (req, res) {
-        res.set('Content-Type', 'text/xml');
-        res.render('../../client/sitemap.xml');
-    });
+    // app.route('/sitemap.xml').get(function (req, res) {
+    //     res.set('Content-Type', 'text/xml');
+    //     res.render('crawler/sitemap.xml');
+    // });
     // All undefined asset or api routes should return a 404
     // app.route('/:url(api|auth|components|app|bower_components|assets)/*').get(errors[404]);
 
