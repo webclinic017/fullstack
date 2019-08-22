@@ -1327,6 +1327,9 @@
                 return
             }
             $scope.showErr('province');
+            if($scope.addressInfo.country.value === 'CN'){
+                $scope.showErr('city');
+            }
             $scope.showErr('postCode');
             $scope.showErr('address');
             // $scope.showErr('type');
