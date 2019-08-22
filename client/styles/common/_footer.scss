@@ -22,6 +22,20 @@
             font-weight:500;
         }
     }
+    .link-nav{
+        > li{
+            margin: 0 2px;
+            color: $white-50;
+            a{
+                color: $white-50;
+                font-size: 14px;
+
+                &:hover {
+                    color: $brand-primary;
+                }
+            }
+        }
+    }
     .link-list {
         float: left;
         overflow: hidden;
