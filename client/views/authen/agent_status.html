@@ -25,28 +25,28 @@
                     <i class="not_complete" ng-if="personal.agentAuthStatus.kyc.status != 1"><span>{{lang.text('tigerWitID.noMetNeed')}}</span></i>
                 </div>
             </li>
-            <!-- idcard->status	int	实名认证：0:未完成,1:完成
-            idcard->auth_status	int	实名认证审核状态：0:未认证,1:已拒绝,2:需要审核,3:已通过,4:身份证过期
-            idcard->reason	string	实名认证审核决绝原因 -->
-            <li class="fl pd-bt-30" ng-class="{'complete': personal.agentAuthStatus.idcard.status == 1}">
-                <strong class="num">3</strong>
-                <div class="content ">
-                    <h5 class="pd-tp-30 pd-bt-10">{{lang.text('tigerWitID.partner.iDVerification')}}</h5>
-                    <p><img src="/white_label/authen/{{ personal.agentAuthStatus.idcard.status == 1 ? 'activate3' : 'activate3-no'}}.png" alt=""></p>
-                    <p class="mg-tp-10">{{(personal.agentAuthStatus.idcard.reason || '') + idcardAuthStatus[personal.agentAuthStatus.idcard.auth_status]}}</p>
-                    <i class="not_complete" ng-if="personal.agentAuthStatus.idcard.status != 1"><span>{{lang.text('tigerWitID.noMetNeed')}}</span></i>
-                </div>
-            </li>
             <!-- addr->status	int	地址证明：0:未完成,1:完成,2:不需要认证
             addr->auth_status	int	实名认证审核状态：0:未认证,1:已拒绝,2:需要审核,3:已通过,4:身份证过期
             addr->reason	string	实名认证审核决绝原因 -->
             <li class="fl pd-bt-30" ng-class="{'complete': personal.agentAuthStatus.addr.status == 1}" ng-if="personal.agentAuthStatus.addr.status != 2">
-                <strong class="num">4</strong>
+                <strong class="num">3</strong>
                 <div class="content ">
                     <h5 class="pd-tp-30 pd-bt-10">{{lang.text('tigerWitID.authen.address')}}</h5>
                     <p><img src="/white_label/authen/{{ personal.agentAuthStatus.addr.status == 1 ? 'activate5' : 'activate5-no'}}.png" alt=""></p>
                     <p class="mg-tp-10">{{(personal.agentAuthStatus.addr.reason || '') + idcardAuthStatus[personal.agentAuthStatus.addr.auth_status]}}</p>
                     <i class="not_complete" ng-if="personal.agentAuthStatus.addr.status == 0"><span>{{lang.text('tigerWitID.noMetNeed')}}</span></i>
+                </div>
+            </li>
+            <!-- idcard->status	int	实名认证：0:未完成,1:完成
+            idcard->auth_status	int	实名认证审核状态：0:未认证,1:已拒绝,2:需要审核,3:已通过,4:身份证过期
+            idcard->reason	string	实名认证审核决绝原因 -->
+            <li class="fl pd-bt-30" ng-class="{'complete': personal.agentAuthStatus.idcard.status == 1}">
+                <strong class="num">4</strong>
+                <div class="content ">
+                    <h5 class="pd-tp-30 pd-bt-10">{{lang.text('tigerWitID.partner.iDVerification')}}</h5>
+                    <p><img src="/white_label/authen/{{ personal.agentAuthStatus.idcard.status == 1 ? 'activate3' : 'activate3-no'}}.png" alt=""></p>
+                    <p class="mg-tp-10">{{(personal.agentAuthStatus.idcard.reason || '') + idcardAuthStatus[personal.agentAuthStatus.idcard.auth_status]}}</p>
+                    <i class="not_complete" ng-if="personal.agentAuthStatus.idcard.status != 1"><span>{{lang.text('tigerWitID.noMetNeed')}}</span></i>
                 </div>
             </li>
             <!-- protocol->status	int	认证协议：0:未完成,1:完成,2:不需要认证
