@@ -219,6 +219,7 @@
                     </li>
                 </ul>
             </li>
+            <% if(lang.isEnglishArea()) { %> 
             <li class="dropdown" tw-dropdown>
                 <h2>
                     <a data-navbar-trigger data-navbar-level="2" href="/web/aboutus/abouttigerwit" ng-click="toTrackEvent('navigation', 'global_navigation_about')"><%= lang.text("navbar10")%></a>
@@ -228,19 +229,23 @@
                     <li>
                         <h2><a data-navbar-trigger href="/web/aboutus/abouttigerwit" ng-click="toTrackEvent('navigation', 'global_navigation_about')"><%= lang.text("navbar11")%></a></h2>
                     </li>
-                    <% if(lang.isEnglishArea()) { %> 
                     <li>
                         <h2><a data-navbar-trigger href="/web/aboutus/liverpool" ng-click="toTrackEvent('navigation', 'global_navigation_livepoll')"><%= lang.text("liverpool.nav")%></a></h2>
                     </li>
                     <li>
                         <h2><a data-navbar-trigger href="/web/aboutus/medianewsandcontact" ng-click="toTrackEvent('navigation', 'global_navigation_media')"><%= lang.text("medianewsandcontact.nav")%></a></h2>
                     </li>
-                    <% } %>
-                    <li>
-                        <h2><a data-navbar-trigger href="/web/aboutus/sitemap" ng-click="toTrackEvent('navigation', 'global_navigation_sitemap')">Sitemap</a></h2>
-                    </li>
                 </ul>
             </li>
+            <%} else {%>
+            <li>
+                <h2>
+                    <a data-navbar-trigger href="/web/aboutus/abouttigerwit" ng-click="toTrackEvent('navigation', 'global_navigation_about')">
+                        <%= lang.text("navbar10")%>
+                    </a>
+                </h2>
+            </li>
+            <% } %>
             <li>
                 <h2>
                     <a data-navbar-trigger href="/download" ng-click="toTrackEvent('navigation', 'global_navigation_app')">
