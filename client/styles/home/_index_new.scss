@@ -1,9 +1,9 @@
 
-@include responsive(wide-screens){
-  .index_new__container, .index_new__reliable-lst {
-    width: 1100px!important;
-  }
-}
+// @include responsive(wide-screens){
+//   .index_new__container, .index_new__reliable-lst {
+//     width: 1100px!important;
+//   }
+// }
 
 @include b(index_new) {
   @include e (container) {
@@ -14,22 +14,23 @@
   }
   @include e(focus) {
     height: 1099px !important;
+    background-image: url("/white_label/home/home-focus-bg.png");
     background-position: center center;
     background-size: auto 100%;
     color: #fff;
-    padding-top: 270px;
-    &.cnCn {
-      background-image: url("/white_label/home/focus-cnCn.png");
-    }
-    &.cnEn {
-      background-image: url("/white_label/home/focus-cnEn.png");
-    }
-    &.globalCn {
-      background-image: url("/white_label/home/focus-globalCn.png");
-    }
-    &.globalEn {
-      background-image: url("/white_label/home/focus-globalEn.png");
-    }
+    padding-top: 150px;
+    // &.cnCn {
+    //   background-image: url("/white_label/home/focus-cnCn.png");
+    // }
+    // &.cnEn {
+    //   background-image: url("/white_label/home/focus-cnEn.png");
+    // }
+    // &.globalCn {
+    //   background-image: url("/white_label/home/focus-globalCn.png");
+    // }
+    // &.globalEn {
+    //   background-image: url("/white_label/home/focus-globalEn.png");
+    // }
     @include m(title) {
       margin: 0;
       font-size: 45px;

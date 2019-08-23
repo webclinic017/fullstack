@@ -44,24 +44,24 @@
 
         
         homeFocusCn: {
-            en: indexBasePath + "/home/focus-cnEn-1.0.png",
-            id: indexBasePath + "/home/focus-cnId.png",
-            zh: indexBasePath + "/home/focus-cnCn-1.0.png",
-            vi: indexBasePath + "/home/focus-cnVi.png",
-            "zh-Hant": indexBasePath + "/home/focus-cnZhHant.png",
-            es: indexBasePath + "/home/focus-cnEs.png",
-            'pt-BR': indexBasePath + "/home/focus-cnPtBR.png",
-            ar: indexBasePath + "/home/focus-cnEn-1.0.png"
+            en: indexBasePath + "/home/focus-cnEn.png",
+            id: indexBasePath + "/home/focus-cnId-1.0.png",
+            zh: indexBasePath + "/home/focus-cnCn.png",
+            vi: indexBasePath + "/home/focus-cnVi-1.0.png",
+            "zh-Hant": indexBasePath + "/home/focus-cnZhHant-1.0.png",
+            es: indexBasePath + "/home/focus-cnEs-1.0.png",
+            'pt-BR': indexBasePath + "/home/focus-cnPtBR-1.0.png",
+            'ar': indexBasePath + "/home/focus-cnAr.png",
         }, //
         homeFocusGlobal: {
-            en: indexBasePath + "/home/focus-globalEn-1.0.png",
-            id: indexBasePath + "/home/focus-globalId.png",
-            zh: indexBasePath + "/home/focus-globalCn-1.0.png",
-            vi: indexBasePath + "/home/focus-globalVi-1.0.png",
-            "zh-Hant": indexBasePath + "/home/focus-globalZhHant-1.0.png",
-            es: indexBasePath + "/home/focus-globalEs.png",
-            'pt-BR': indexBasePath + "/home/focus-globalPtBR.png",
-            ar: indexBasePath + "/home/focus-globalEn-1.0.png"
+            en: indexBasePath + "/home/focus-globalEn.png",
+            id: indexBasePath + "/home/focus-globalId-1.0.png",
+            zh: indexBasePath + "/home/focus-globalCn.png",
+            vi: indexBasePath + "/home/focus-globalVi.png",
+            "zh-Hant": indexBasePath + "/home/focus-globalZhHant.png",
+            es: indexBasePath + "/home/focus-globalEs-1.0.png",
+            'pt-BR': indexBasePath + "/home/focus-globalPtBR-1.0.png",
+            'ar': indexBasePath + "/home/focus-globalAr.png"
         }, //
         homeAppIos: {
             en: indexBasePath + "/home/focus-icon-ios-en.png",
