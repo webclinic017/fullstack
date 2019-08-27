@@ -1,17 +1,17 @@
 <%if (lang.areaId != 1) {%>
 <!--增加 cookie 提示-->
-<div class="clearfix navbar-fixed-top" style="position: fixed; background: #eee;width: 100%;height: 110px;z-index: 1060;padding: 20px 0px; display: none; left: 0;transition: all .4s;" ng-style="{display: allowUseCookie ? 'block' : 'none'}" ng-init="getAllowCookie()">
-    <div class="header-container">
-        <div class="fl" style="width: 70%">
-            <h3 style="margin: 0px;"><%= lang.text("navbar_setCookie1")%></h3>
-            <p style="padding-top: 10px;">
+<div class="navbar-fixed-top-cookies" ng-style="{display: allowUseCookie ? 'block' : 'none'}" ng-init="getAllowCookie()">
+    <div class="header-container space-between-center">
+        <div class="" style="width: 70%">
+            <h3><%= lang.text("navbar_setCookie1")%></h3>
+            <p class="pd-tp-10">
                 <%= lang.text("navbar_setCookie2")%><a href="/agreement/cookie"><%= lang.text("navbar_setCookie3")%></a><%= lang.text("navbar_setCookie4")%>
             </p>
         </div>
-        <div class="fr" style="width: 25%">
+        <div class="item-center" style="width: 25%">
             <button class="tw-btn-capsule-gradient" style="border-radius: 7px;cursor: pointer;padding: 10px 20px;" ng-click="setAllowCookie()"><%= lang.text("navbar_setCookie5")%></button>
-            <div class="lang">
-                <div class="lang-toggle" style="color: #333;border-left-color: #333;">
+            <div class="navbar-lang item-center">
+                <div class="lang-toggle">
                     <%= lang.text("footlang")%>
                     <i class="fa fa-sort-down"></i>
                 </div>
@@ -47,79 +47,14 @@
 </div>
 <%}%>
 <div class="<%= typeof navClass == 'undefined' ? 'navbar' : 'navbar-2' %> navbar-fixed-top" tw-navbar>
-    <div class="header-container">
+    <div class="header-container space-between-center">
         <h1 class="navbar-header">
             <a href="/">
                 <img class="logo" src="<%= lang.image('logo')%>">
             </a>
         </h1>
-    
-        <div class="lang navbar-right">
-            <div class="lang-toggle">
-                <%= lang.text("footlang")%>
-                <i class="fa fa-sort-down"></i>
-            </div>
-            <ul class="lang-menu">
-                <li>
-                    <a href="" ng-click="lang.reloadLanguage('en')">English</a>
-                </li>
-                <li>
-                    <a href="" ng-click="lang.reloadLanguage('cn')">简体中文</a>
-                </li>
-                <li>
-                    <a href="" ng-click="lang.reloadLanguage('vi')">Tiếng Việt</a>
-                </li>
-                <li>
-                    <a href="" ng-click="lang.reloadLanguage('zh-Hant')">繁體中文</a>
-                </li>
-                <li>
-                    <a href="" ng-click="lang.reloadLanguage('id')">Indonesia</a>
-                </li>
-                <li>
-                    <a href="" ng-click="lang.reloadLanguage('es')">Español</a>
-                </li>
-                <li>
-                    <a href="" ng-click="lang.reloadLanguage('pt-BR')">Português</a>
-                </li>
-                <li>
-                    <a href="" ng-click="lang.reloadLanguage('ar')">العربية</a>
-                </li>
-            </ul>
-        </div>
-        <!-- 未登录时 -->
-        <ul class="nav navbar-login navbar-right" ng-cloak ng-if="!personalCookiesInfo.userCode">
-            <li class="mg-rg-10">
-                <a class="signup2" ng-click="toTrackEvent('navigation', 'global_navigation_login')" href="/space/#/account/login"><%= lang.text("login")%></a>
-            </li> 
-            <li>
-                <a class="signup" ng-click="toTrackEvent('navigation', 'global_navigation_open_account')" href="/space/#/account/register"><%= lang.text("register")%></a>
-            </li>
-        </ul>
 
-        <!-- 登录后 -->
-        <div class="navbar_info" ng-cloak ng-if="personalCookiesInfo.userCode">
-            <!-- <a class="navbar_info__msg" href="/space/#/space/notice/">
-                有新消息时显示
-                <span class="navbar_info__number" ng-if="personal.unreadMsg.total > 0">
-                    {{ personal.unreadMsg.total }}
-                </span>
-            </a> -->
-
-            <div class="navbar_info__psl">
-                <a href="/space/#/center">
-                    <!-- SettingInfoAvatarController -->
-                    <img class="navbar_info__avatar" ng-show="!personal.addAvatarImg" ng-src="{{personalCookiesInfo.userAvatar}}">
-                    <img class="navbar_info__avatar" ng-show="!!personal.addAvatarImg" ng-src="{{personal.addAvatarImg}}">
-                    <h2 class="navbar_info__username">{{(lang.isEnglishArea() && personalCookiesInfo.userNameEn) ? personalCookiesInfo.userNameEn : (personalCookiesInfo.userName || '**')}}</h2>
-                </a>               
-            </div> 
-            <div class="navbar_info__logout" ng-click="logout()">
-                <!-- <i class="fa fa-sign-out"></i> -->
-                <%= lang.text("signout")%>
-            </div>
-        </div>
-
-        <ul class="nav navbar-nav">
+        <ul class="nav navbar-nav item-center">
             <li>
                 <h2>
                     <a data-navbar-trigger href="/">
@@ -260,5 +195,70 @@
                 </h2>
             </li>
         </ul>
+        <!-- 未登录时 -->
+        <ul class="nav navbar-login item-center flex1" ng-cloak ng-if="!personalCookiesInfo.userCode">
+            <li class="mg-rg-10 mg-lf-10">
+                <a class="signup2" ng-click="toTrackEvent('navigation', 'global_navigation_login')" href="/space/#/account/login"><%= lang.text("login")%></a>
+            </li> 
+            <li>
+                <a class="signup" ng-click="toTrackEvent('navigation', 'global_navigation_open_account')" href="/space/#/account/register"><%= lang.text("register")%></a>
+            </li>
+        </ul>
+
+        <!-- 登录后 -->
+        <div class="navbar_info item-center flex1" ng-cloak ng-if="personalCookiesInfo.userCode">
+            <!-- <a class="navbar_info__msg" href="/space/#/space/notice/">
+                有新消息时显示
+                <span class="navbar_info__number" ng-if="personal.unreadMsg.total > 0">
+                    {{ personal.unreadMsg.total }}
+                </span>
+            </a> -->
+
+            <div class="navbar_info__psl">
+                <a href="/space/#/center">
+                    <!-- SettingInfoAvatarController -->
+                    <img class="navbar_info__avatar" ng-show="!personal.addAvatarImg" ng-src="{{personalCookiesInfo.userAvatar}}">
+                    <img class="navbar_info__avatar" ng-show="!!personal.addAvatarImg" ng-src="{{personal.addAvatarImg}}">
+                    <h2 class="navbar_info__username">{{(lang.isEnglishArea() && personalCookiesInfo.userNameEn) ? personalCookiesInfo.userNameEn : (personalCookiesInfo.userName || '**')}}</h2>
+                </a>               
+            </div> 
+            <div class="navbar_info__logout" ng-click="logout()">
+                <!-- <i class="fa fa-sign-out"></i> -->
+                <%= lang.text("signout")%>
+            </div>
+        </div>
+    
+        <div class="navbar-lang item-center">
+            <div class="lang-toggle">
+                <%= lang.text("footlang")%>
+                <i class="fa fa-sort-down"></i>
+            </div>
+            <ul class="lang-menu">
+                <li>
+                    <a href="" ng-click="lang.reloadLanguage('en')">English</a>
+                </li>
+                <li>
+                    <a href="" ng-click="lang.reloadLanguage('cn')">简体中文</a>
+                </li>
+                <li>
+                    <a href="" ng-click="lang.reloadLanguage('vi')">Tiếng Việt</a>
+                </li>
+                <li>
+                    <a href="" ng-click="lang.reloadLanguage('zh-Hant')">繁體中文</a>
+                </li>
+                <li>
+                    <a href="" ng-click="lang.reloadLanguage('id')">Indonesia</a>
+                </li>
+                <li>
+                    <a href="" ng-click="lang.reloadLanguage('es')">Español</a>
+                </li>
+                <li>
+                    <a href="" ng-click="lang.reloadLanguage('pt-BR')">Português</a>
+                </li>
+                <li>
+                    <a href="" ng-click="lang.reloadLanguage('ar')">العربية</a>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>

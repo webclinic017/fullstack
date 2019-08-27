@@ -32,7 +32,6 @@
 }
 
 .navbar {
-    @extend .clearfix;
     position: relative;
     // min-height: $navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
     height: $navbar-height;
@@ -41,7 +40,6 @@
 
 }
 .navbar-2 {
-    @extend .clearfix;
     position: relative;
     // min-height: $navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
     height: $navbar-height;
@@ -49,7 +47,80 @@
     @include img-normal($image-path-base + "navbar-bg.png");
 
 }
+.navbar-lang {
+    position: relative;
+    height: $navbar-height;
+    margin: 0 9px;
+    &:before{
+       content: '|';
+       color: #fff;
+    }
+    &:hover {
+        .lang-menu {
+            display: block;
+        }
+    }
 
+    .lang-toggle {
+        color: #fff;
+        cursor: pointer;
+        padding: 4px 7px 4px 7px;
+
+        .fa {
+            vertical-align: top;
+        }
+    }
+
+    .lang-menu {
+        position: absolute;
+        display: none;
+        top: 100%;
+        left: 0;
+        z-index: 1;
+        min-width: 100%;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        overflow: hidden;
+    
+        li {
+            background-color: rgb(36, 42, 54);
+            padding: 8px 10px;
+
+            &:hover {
+                background-color: $main-color;
+
+                a {
+                    color: $gray-base;
+                }
+            }
+
+            a {
+                color: $white-100;
+            }
+        }
+    }
+}
+
+// [ng-cloak]{display:none !important;}
+.navbar-fixed-top-cookies{
+    position: fixed; 
+    background: #eee;
+    width: 100%;
+    height: 110px;
+    z-index: 1060;
+    padding: 20px 0px; 
+    display: none; 
+    left: 0;
+    transition: all .4s;
+    .navbar-lang {
+        &:before{
+            color: #333;
+        }
+        .lang-toggle{
+            color: #333;
+        }
+    }
+}
 // Fix the top/bottom navbars when screen real estate supports it
 .navbar-fixed-top {
     position: fixed;
@@ -57,72 +128,9 @@
     right: 0;
     left: 0;
     z-index: $zindex-navbar;
-
-    .lang {
-        position: relative;
-        display: inline-block;
-        height: $navbar-height;
-        margin-left: 9px;
-
-        &:hover {
-            .lang-menu {
-                display: block;
-            }
-        }
-
-        .lang-toggle {
-            color: #fff;
-            cursor: pointer;
-            margin-top: 25px;
-            padding: 4px 17px 4px 7px;
-            border-left: 1px solid #fff;
-
-            .fa {
-                vertical-align: top;
-            }
-        }
-
-        .lang-menu {
-            position: absolute;
-            display: none;
-            top: 100%;
-            left: 0;
-            z-index: 1;
-            min-width: 100%;
-            border-bottom-left-radius: 4px;
-            border-bottom-right-radius: 4px;
-            overflow: hidden;
-        
-            li {
-                background-color: rgb(36, 42, 54);
-                padding: 8px 10px;
-
-                &:hover {
-                    background-color: $main-color;
-
-                    a {
-                        color: $gray-base;
-                    }
-                }
-
-                a {
-                    color: $white-100;
-                }
-            }
-        }
-    }
 }
 
-.navbar-left {
-    float: left !important;
-}
 
-.navbar-right {
-    float: right !important;
-    > li > a:hover {
-        border-bottom-color: transparent;
-    }
-}
 .select-country{
     float: right;
     position: relative;
@@ -240,8 +248,6 @@
 
 // Navbar heading
 .navbar-header {
-    @extend .clearfix;
-    float: left;
 
     .logo {
         margin: 15px 0 0 0;
@@ -306,12 +312,11 @@
 
 
 .navbar-nav {
-    float: right;
     margin: 0;
     padding-right: 70px;
+    padding-left: 70px;
 
     > li {
-        float: left;
 
         > h2 > a {
             margin: 0 16px;
@@ -444,16 +449,10 @@
 
 //== 未登录时候 显示 注册登录 块
 .navbar-login {
-    float: left;
     margin: 0px;
-
-    &.navbar-right:last-child {
-        margin-right: -$navbar-padding-horizontal;
-    }
+    @include justifyContent(flex-end);
 
     > li {
-        float: left;
-
         .login {
             margin: 0 $navbar-margin-horizontal;
             padding: 28px 0 27px;
@@ -465,7 +464,6 @@
 
         .signup {
             padding: 7px 12px;
-            margin-top: 24px;
             // width: 120px;
             line-height: 14px;
             background: #F8E71C;
@@ -477,7 +475,6 @@
         }
         .signup2{
             padding: 7px 12px;
-            margin-top: 24px;
             // width: 120px;
             line-height: 14px;
             color: $white-100;
@@ -492,15 +489,10 @@
 //== 导航条个人信息
 @include b(navbar_info) {
     $navbar_info_height: 32px;
-
-    @extend .clearfix;
-    float: right;
-    margin-top: 15px;
+    @include justifyContent(flex-end);
 
     @include e(psl) {
-        float: left;
         text-overflow:ellipsis;
-        padding-top: 6px;
     }
 
     @include e(avatar) {
@@ -508,6 +500,7 @@
         width: $navbar_info_height;
         height: $navbar_info_height;
         margin-right: 12px;
+        margin-left: 12px;
         border: 2px solid $brand-primary;
         border-radius: 50%;
     }
@@ -523,8 +516,8 @@
 
     @include e(logout) {
         float: left;
-        padding-top: 13px;
         padding-left: 18px;
+        padding-right: 18px;
         color: $white-100;
         cursor: pointer;
     }

@@ -6,7 +6,7 @@
 // }
 
 @include b(index_new) {
-  @include e (container) {
+  @include e(container) {
     width: 1310px;
     margin: 0 auto;
     font-size: 16px;
@@ -19,18 +19,6 @@
     background-size: auto 100%;
     color: #fff;
     padding-top: 150px;
-    // &.cnCn {
-    //   background-image: url("/white_label/home/focus-cnCn.png");
-    // }
-    // &.cnEn {
-    //   background-image: url("/white_label/home/focus-cnEn.png");
-    // }
-    // &.globalCn {
-    //   background-image: url("/white_label/home/focus-globalCn.png");
-    // }
-    // &.globalEn {
-    //   background-image: url("/white_label/home/focus-globalEn.png");
-    // }
     @include m(title) {
       margin: 0;
       font-size: 45px;
@@ -41,20 +29,18 @@
       margin-bottom: 50px;
     }
     @include m(icon_box) {
+      @include displayFlex();
       margin-bottom: 34px;
       li {
-        float: left;
         text-align: center;
         padding: 0 22px;
         img {
           height: 58px;
         }
-        &:first-child{
-          padding-left: 0;
-        }
       }
     }
     @include m(btn_box) {
+      @include displayFlex();
       font-size: 20px;
       .focus_btn {
         width: 310px;
@@ -118,12 +104,10 @@
     }
   }
   @include e(flexible) {
-    margin-top: 100px;
-    .curcle-1 {
-      position: absolute;
-      top: -620px;
-      left: -636px;
-    }
+    padding-top: 100px;
+    background-image: url('/white_label/home/curcle-1.png');
+    background-repeat: no-repeat;
+    background-position: -580px -318px;
     @include m(title) {
       font-size: 56px;
       text-align: center;
@@ -199,7 +183,6 @@
     }
     @include m(content) {
       width: 1100px;
-      height: 500px;
       text-align: center;
       margin: 50px auto;
     }
@@ -273,6 +256,7 @@
   @include e(float_box) {
     position: relative;
     padding-bottom: 50px;
+    margin-top: 70px;
     &:before {
       display: block;
       content: '';
@@ -286,23 +270,12 @@
     }
   }
   @include e(float) {
-    margin-top: 70px;
     position: relative;
     border-radius: 30px;
     padding: 40px 70px;
     box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.06);
     z-index: 100;
     background: #fff;
-    .f {
-      width: 74%;
-    }
-    .b {
-      width: 26%;
-      position: absolute;
-      top: 50%;
-      right: 70px;
-      margin-top: -23px;
-    }
     h3 {
       font-size: 40px;
       margin: 0;
@@ -310,7 +283,6 @@
     p {
       font-size: 20px;
       color: $main-char-color-50;
-      padding-right: 100px;
     }
   }
   @include e(camber){
@@ -333,7 +305,6 @@
 // 报价
 @include b(index_new_qupte) {
   @include e(title) {
-      float: left;
       width: 48%;
       padding-bottom: 20px;
       color: #393939;
@@ -342,7 +313,6 @@
       }
 
       li {
-          float: left;
           text-align: center;
 
           &.pro {
@@ -362,14 +332,12 @@
       color: $main-char-color-50;
   }
   @include e(content) {
-      float: left;
       width: 48%;
       padding: 17px 0;
       color: #393939;
 
       &.h_border {
           width: 52%;
-          border-right: 1px solid #ccc;
       }
 
       li {

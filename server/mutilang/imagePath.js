@@ -101,7 +101,7 @@
             "zh-Hant": indexBasePath + "/home/tools-bg-cnZhHant.png",
             es: indexBasePath + "/home/tools-bg-cnEs.png",
             'pt-BR': indexBasePath + "/home/tools-bg-cnPtBR.png",
-            ar: indexBasePath + "/home/tools-bg-cnEn.png"
+            ar: indexBasePath + "/home/tools-bg-ar.png"
         }, //
         homeToolsBgGlobal: {
             en: indexBasePath + "/home/tools-bg-globalEn.png",
@@ -111,7 +111,7 @@
             "zh-Hant": indexBasePath + "/home/tools-bg-globalZhHant.png",
             es: indexBasePath + "/home/tools-bg-globalEs.png",
             'pt-BR': indexBasePath + "/home/tools-bg-globalPtBR.png",
-            ar: indexBasePath + "/home/tools-bg-globalEn.png"
+            ar: indexBasePath + "/home/tools-bg-ar.png"
         }, //
         homeMap: {
             en: indexBasePath + "/home/client-map-en-en.png",
