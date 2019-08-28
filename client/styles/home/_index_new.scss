@@ -70,9 +70,10 @@
       font-size: 18px;
     }
     @include m(lst) {
+      width: 1100px;
       @include displayFlex();
       @include justifyContent(space-between);
-      margin: 70px 0px 88px;
+      margin: 70px auto 88px;
       li {
         width: 242px;
         height: 270px;
