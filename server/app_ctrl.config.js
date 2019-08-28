@@ -156,11 +156,11 @@
                 },
                 android: {
                     app_info: {
-                        version_name : "V2.3.1",
-                        description: "Fixed some bugs.",
-                        updated_description: "Optimize the user experience of the blockchain function module.",
-                        url : "https://static.tigerwitfx.com/downloads/apk/tigerwit_uk_v2.3.1.apk",
-                        force_update : false
+                        version_name : "V2.4.0",
+                        description: "Fixed bug.",
+                        updated_description: "Updated client account opening process",
+                        url : "https://static.tigerwitfx.com/downloads/apk/tigerwit_uk_v2.4.0.apk",
+                        force_update : true
                     }
                 }
             },
@@ -175,11 +175,11 @@
                 },
                 android: {
                     app_info: {
-                        version_name : "V2.3.1",
-                        description: "Fixed some bugs.",
-                        updated_description: "Optimize the user experience of the blockchain function module.",
-                        url : "https://static.tigerwitfx.com/downloads/apk/tigerwit_uk_v2.3.1.apk",
-                        force_update : false
+                        version_name : "V2.4.0",
+                        description: "Fixed bug.",
+                        updated_description: "Updated client account opening process",
+                        url : "https://static.tigerwitfx.com/downloads/apk/tigerwit_uk_v2.4.0.apk",
+                        force_update : true
                     }
                 } 
             }
