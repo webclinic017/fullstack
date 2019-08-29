@@ -3,9 +3,9 @@
     <div class="index_new__container space-between">
       <div class="">
         <%if (lang.areaId != 1) {%>
-        <img src="<%= lang.image('homeFocusGlobal')%>" alt="">
+        <img ng-src="<%= lang.image('homeFocusGlobal')%>" alt="">
         <%} else {%>
-        <img src="<%= lang.image('homeFocusCn')%>" alt="">
+        <img ng-src="<%= lang.image('homeFocusCn')%>" alt="">
         <%}%>
       </div> 
       <div class="pd-tp-110 justify-center flex1">
@@ -16,23 +16,23 @@
         <p class="index_new__focus-sub_tit"><%= lang.text("newhome_2")%></p>
         <ul class="index_new__focus-icon_box">
           <li>
-            <img src="/white_label/home/focus-icon-1.png" alt="">
+            <img ng-src="/white_label/home/focus-icon-1.png" alt="">
             <p><%= lang.text("newhome_4")%></p>
           </li>
           <li>
-            <img src="/white_label/home/focus-icon-2.png" alt="">
+            <img ng-src="/white_label/home/focus-icon-2.png" alt="">
             <p><%= lang.text("newhome_5")%></p>
           </li>
           <li>
-            <img src="/white_label/home/focus-icon-3.png" alt="">
+            <img ng-src="/white_label/home/focus-icon-3.png" alt="">
             <p><%= lang.text("newhome_6")%></p>
           </li>
           <li>
-            <img src="/white_label/home/focus-icon-4.png" alt="">
+            <img ng-src="/white_label/home/focus-icon-4.png" alt="">
             <p><%= lang.text("newhome_7")%></p>
           </li>
           <li>
-            <img src="/white_label/home/focus-icon-5.png" alt="">
+            <img ng-src="/white_label/home/focus-icon-5.png" alt="">
             <p><%= lang.text("newhome_8")%></p>
           </li>
         </ul>
@@ -44,7 +44,7 @@
           <%if (lang.currentLanguage() === 'zh' || lang.areaId == 1) {%>
           <div class="market-h5">
             <div class="mg-bt-20"><%= lang.text("scanCodeOpenAccount")%></div>
-            <img src="/white_label/home/market-h5.png" alt=""></a>
+            <img ng-src="/white_label/home/market-h5.png" alt=""></a>
           </div>
           <div class="mg-rg-80"></div>
           <%}%>
@@ -55,16 +55,16 @@
         <div>
           <div class="mg-bt-15">
             <a class="inline-block" href="<%= lang.text('downloadGlobalIos') %>"><img
-                src="<%= lang.image('homeAppIos')%>" alt=""></a>
+              ng-src="<%= lang.image('homeAppIos')%>" alt=""></a>
           </div>
           <%if (lang.areaId != 1) {%>
           <div>
             <a class="inline-block" href="<%= lang.text('downloadGlobalAndroid') %>"><img
-                src="<%= lang.image('homeAppAndroidGlobal')%>" alt=""></a>
+              ng-src="<%= lang.image('homeAppAndroidGlobal')%>" alt=""></a>
           </div>
           <%} else {%>
           <div>
-            <a class="inline-block" ng-href="{{appVersionInfo.android}}"><img src="<%= lang.image('homeAppAndroidCn')%>"
+            <a class="inline-block" ng-href="{{appVersionInfo.android}}"><img ng-src="<%= lang.image('homeAppAndroidCn')%>"
                 alt=""></a>
           </div>
           <%}%>
@@ -81,22 +81,22 @@
           <p class="index_new__copy-sub_tit"><%= lang.text("newhome_11")%></p>
           <ul class="index_new__copy-lst">
             <li>
-              <img src="/white_label/home/copy-icon-1.png" alt="">
+              <img ng-src="/white_label/home/copy-icon-1.png" alt="">
               <p class="num">1</p>
               <p class="tip"><%= lang.text("newhome_12")%></p>
             </li>
             <li>
-              <img src="/white_label/home/copy-icon-2.png" alt="">
+              <img ng-src="/white_label/home/copy-icon-2.png" alt="">
               <p class="num">2</p>
               <p class="tip"><%= lang.text("newhome_13")%></p>
             </li>
             <li>
-              <img src="/white_label/home/copy-icon-3.png" alt="">
+              <img ng-src="/white_label/home/copy-icon-3.png" alt="">
               <p class="num">3</p>
               <p class="tip"><%= lang.text("newhome_14")%></p>
             </li>
             <li>
-              <img src="/white_label/home/copy-icon-4.png" alt="">
+              <img ng-src="/white_label/home/copy-icon-4.png" alt="">
               <p class="num">4</p>
               <p class="tip"><%= lang.text("newhome_15")%></p>
             </li>
@@ -183,23 +183,23 @@
           </div>
           <ul class="index_new__flexible-lst">
             <li>
-              <img src="/white_label/home/flex-icon-1.png" alt="">
+              <img ng-src="/white_label/home/flex-icon-1.png" alt="">
               <h5><%= lang.text("newhome_18")%></h5>
               <p><%= lang.text("newhome_20")%></p>
             </li>
             <li>
-              <img src="/white_label/home/flex-icon-2.png" alt="">
+              <img ng-src="/white_label/home/flex-icon-2.png" alt="">
               <h5><%= lang.text("newhome_21")%></h5>
               <p><%= lang.text("newhome_22")%></p>
               <p><%= lang.text("newhome_23")%></p>
             </li>
             <li>
-              <img src="/white_label/home/flex-icon-3.png" alt="">
+              <img ng-src="/white_label/home/flex-icon-3.png" alt="">
               <h5><%= lang.text("newhome_27")%></h5>
               <p><%= lang.text("newhome_24")%></p>
             </li>
             <li>
-              <img src="/white_label/home/flex-icon-4.png" alt="">
+              <img ng-src="/white_label/home/flex-icon-4.png" alt="">
               <h5><%= lang.text("newhome_28")%></h5>
               <p><%= lang.text("newhome_25")%></p>
               <p><%= lang.text("newhome_26")%></p>
@@ -246,15 +246,15 @@
           <div class="index_new__tools-download">
             <a class="inline-block" href="<%= lang.text('downloadGlobalIos') %>"
               ng-click="toTrackEvent('home page', 'global_home_click_appstore')"><img
-                src="<%= lang.image('homeAppIos')%>" alt=""></a>
+              ng-src="<%= lang.image('homeAppIos')%>" alt=""></a>
             <%if (lang.areaId != 1) {%>
             <a class="inline-block" href="<%= lang.text('downloadGlobalAndroid') %>"
               ng-click="toTrackEvent('home page', 'global_home_click_googleplay')"><img
-                src="<%= lang.image('homeAppAndroidGlobal')%>" alt=""></a>
+              ng-src="<%= lang.image('homeAppAndroidGlobal')%>" alt=""></a>
             <%} else {%>
             <a class="inline-block" ng-href="{{appVersionInfo.android}}"
               ng-click="toTrackEvent('home page', 'global_home_click_googleplay')"><img
-                src="<%= lang.image('homeAppAndroidCn')%>" alt=""></a>
+              ng-src="<%= lang.image('homeAppAndroidCn')%>" alt=""></a>
             <%}%>
       </div>
     </div>
@@ -286,7 +286,7 @@
           <div class="index_new__client">
             <h3 class="index_new__client-title"><%= lang.text("newhome_42")%></h3>
             <p class="index_new__client-sub_tit"><%= lang.text("newhome_42_1")%></p>
-            <img src="<%= lang.image('homeMap')%>" alt="">
+            <img ng-src="<%= lang.image('homeMap')%>" alt="">
           </div>
         </div>
         <div class="index_new__container">

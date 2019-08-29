@@ -680,7 +680,7 @@ module.exports = {
         "ar": "الأسعار هي للاسترشاد بها فقط. لا يتم تحديث الأسعار في أيام السبت والأحد."
     },
     "forex1": {
-        "en": "The Foreign Exchange Market is one of the world's largest single markets. In 2013, trading volumes reached $5.3 trillion dollars. Foreign exchange rate is mainly affected by international trade, national economy and the policy and influence of investment flows. As a result, the foreign exchange market information is more transparent, liquidity is better and there are more fair prices. Buy or sell transactions can be completed for 24 hours on weekdays. All the above advantages make Foreign Exchange Transaction deeply affected by large investment institutions and investors.",
+        "en": "The Foreign Exchange Market is one of the world’s largest single markets. In 2018, trading volumes reached $2.04 trillion dollars. It is mostly affected by international trade, national economy, and the policy and influence of investment flows. As a result of this, information for this market is more transparent, prices are fairer, and liquidity is better.",
         "zh": "外汇市场是全球最大的单一市场之一。2013年交易量达5.3万亿美元。由于外汇汇率主要受国际间贸易、各国经济和政策以及投资流向的影响，所以外汇市场的信息更透明、流通性更好、价格更公平。其具有在工作日的所有24小时内双向交易的特点，深受大型投资机构和投资者的喜爱。",
         "vi": "Thị trường ngoại hối là một trong những thị trường đơn lẻ lớn nhất thế giới. Trong năm 2013, khối lượng giao dịch đạt 5,3 nghìn tỷ đô la. Tỷ giá hối đoái chủ yếu bị ảnh hưởng bởi tình hình thương mại quốc tế, nền kinh tế quốc dân và chính sách và ảnh hưởng của dòng vốn đầu tư. Kết quả là, thông tin thị trường ngoại hối minh bạch hơn, thanh khoản tốt hơn và có giá hợp lý hơn. Thực hiện mua hoặc bán các giao dịch có thể được hoàn thành trong 24 giờ vào các ngày trong tuần. Tất cả những lợi thế trên làm cho giao dịch ngoại hối bị ảnh hưởng sâu sắc bởi các tổ chức đầu tư lớn và các nhà đầu tư.",
         "zh-Hant": "外匯市場是全球最大的單壹市場之壹。2013年交易量達5.3萬億美元。由於外匯匯率主要受國際間貿易、各國經濟和政策以及投資流向的影響，所以外匯市場的信息更透明、流通性更好、價格更公平。其具有在工作日的所有24小時內雙向交易的特點，深受大型投資機構和投資者的喜愛。",
@@ -690,7 +690,7 @@ module.exports = {
         "ar": "سوق العملات الأجنبية هي أضخم سوق مالية في العالم.  ففي عام 2013، وصل حجم التداول إلى 5.3 تريليون دولار أمريكي.  ويتأثر سعر صرف العملات الأجنبية إلى حد كبير بالتجارة الدولية وبالاقتصاد الوطني وبالسياسة وباتجاه تأثير تدفقات الاستثمار.  وبناء على ذلك، تكون المعلومات في سوق العملات الأجنبية أكثر شفافية وأفضل سيولة وهناك قدر أكبر من الأسعار العادلة.  ويمكن إتمام معاملات الشراء أو البيع على مدار 24 ساعة في كل يوم من أيام العمل في الأسبوع.   وجميع هذه المزايا سالفة الذكر تجعل سوق العملات يتأثر تأثرًا شديدًا بكبار مؤسسات الاستثمار والمستثمرين."
     },
     "forex3": {
-        "en": "Why trade foreign exchange in TigerWit?",
+        "en": "Why trade Foreign Exchange in TigerWit?",
         "zh": "为什么选择TigerWit？",
         "vi": "Tại sao giao dịch ngoại hối trong TigerWit?",
         "zh-Hant": "為什麽選擇TigerWit？",
@@ -700,7 +700,7 @@ module.exports = {
         "ar": "لماذا يجب أن تتداول العملات الأجنبية مع TigerWit؟"
     },
     "forex4": {
-        "en": "TigerWit with simple, quick, efficient and safe cash depositing and withdrawal mode, TigerWit renders services of all major currency pairs and cross currency pairs. With the provision of more flexible, transparent and competitive foreign exchange agreement, TigerWit also provides a creative order following mode and serves as a bond to link investment masters and common investors.",
+        "en": "TigerWit’s methods of depositing and withdrawing all major currency pairs are processed through simple, quick and safe cash modes. Our Foreign Exchange agreement is flexible, transparent and competitive. We provide a creative order following mode, serving as a bond to link investment master and common investors.",
         "zh": "出入金模式简单、快捷、效力高、保险，涵盖所有主流货币对及交叉货币对。我们提供更灵活、更透明、更具竞争力的外汇合约，同时您还可以享受到TigerWit所提供的创新性的跟单交易模式，是连接高手和普通投资者的纽带。",
         "vi": "TigerWit với chế độ rút tiền và kí quỹ đơn giản, nhanh chóng, hiệu quả và an toàn, TigerWit hiển thị các dịch vụ của tất cả các cặp tiền tệ chính và cặp tiền tệ chéo. Với việc cung cấp thỏa thuận ngoại hối linh hoạt, minh bạch và cạnh tranh hơn, TigerWit cũng mang đến bước đột phá khi đặt lệnh một cách sáng tạo theo trạng thái và đóng vai trò như một sợi dây để kết nối các bậc thầy và các nhà đầu tư phổ biến.",
         "zh-Hant": "出入金模式簡單、快捷、效力高、保險，涵蓋所有主流貨幣對及交叉貨幣對。我們提供更靈活、更透明、更具競爭力的外匯合約，同時您還可以享受到TigerWit所提供的創新性的跟單交易模式，是連接高手和普通投資者的紐帶。",

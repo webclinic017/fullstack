@@ -11225,7 +11225,7 @@
                     },
                     "openAccountNewTip3": {
                         "zh": "请在下面填写您的个人信息以注册TigerWit真实账户。 开户将花费不到五分钟，并且您需要提供一些您的身份证明和地址证明的文档。",
-                        "en": "Please anter your personal information below to register for a TigerWit live account. Regestion will take less then five minutes and you will meed some supporting documentation to provide your identity and your address.",
+                        "en": "Please enter your personal information below to register for a TigerWit Live account. Registration will take only a few minutes, and you will need some supporting documentation in order to provide your identity and address.",
                         "vi": "Vui lòng điền thông tin cá nhân của bạn để đăng kí mở tài khoản thực với TigerWit. Việc đăng kí sẽ mất khoảng vài phút, bạn cần cung cấp tài liệu để nhận diện và xác minh địa chỉ",
                         "zh-Hant": "請在下面填寫您的個人信息以註冊TigerWit真實賬戶。開戶將花費不到五分鐘，並且您需要提供一些您的身份證明和地址證明的文檔。",
                         "id": "Silahkan masukkan data diri anda untuk melakukan pendaftaran di TigerWit. Pendaftarakan akan memakan waktu kurang dari 5 menit dan mohon siapkan data identitas anda beserta bukti alamatnya",

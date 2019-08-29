@@ -1,9 +1,9 @@
 //
 // Navs
 // --------------------------------------------------
-.has_navBar{
-    padding-top: $navbar-height;
-}
+// .has_navBar{
+//     padding-top: $navbar-height;
+// }
 
 .nav {
     @extend .clearfix;
@@ -34,7 +34,6 @@
 .navbar {
     position: relative;
     // min-height: $navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
-    height: $navbar-height;
     border-radius: 0;
     background-color: #141414;
 
@@ -42,7 +41,6 @@
 .navbar-2 {
     position: relative;
     // min-height: $navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
-    height: $navbar-height;
     border-radius: 0;
     @include img-normal($image-path-base + "navbar-bg.png");
 
@@ -101,16 +99,15 @@
     }
 }
 
-// [ng-cloak]{display:none !important;}
 .navbar-fixed-top-cookies{
     position: fixed; 
     background: #eee;
     width: 100%;
-    height: 110px;
     z-index: 1060;
     padding: 20px 0px; 
     display: none; 
     left: 0;
+    top: 0;
     transition: all .4s;
     .navbar-lang {
         &:before{
@@ -128,110 +125,114 @@
     right: 0;
     left: 0;
     z-index: $zindex-navbar;
+    // .navbar-risk-warning{
+    //     width: 100%;
+    //     background: #eee;
+    //     padding: 10px 0;
+    // }
 }
 
-
-.select-country{
-    float: right;
-    position: relative;
-    height: $navbar-height;
-    margin-left: 15px;
-    @include e(title){
-        color: #fff;
-        margin-top: 24px;
-        padding: 4px 15px;
-        cursor: pointer;
-    }
-    @include e(con){
-        position: absolute;
-        display: none;
-        top: 100%;
-        right: 10px;
-        z-index: 1;
-        width: 200px;
-        border-radius: 14px;
-        overflow: hidden;
-        background-color: #fff;
-        > div{
-            position: relative;
-            &::after{
-                content: '';
-                position: absolute;
-                top: -14px;
-                left: 78%;
-                width: 0;
-                height: 0;
-                border-left: 8px solid transparent;
-                border-right: 8px solid transparent;
-                border-bottom: 16px solid #fff;
+// .select-country{
+//     float: right;
+//     position: relative;
+//     height: $navbar-height;
+//     margin-left: 15px;
+//     @include e(title){
+//         color: #fff;
+//         margin-top: 24px;
+//         padding: 4px 15px;
+//         cursor: pointer;
+//     }
+//     @include e(con){
+//         position: absolute;
+//         display: none;
+//         top: 100%;
+//         right: 10px;
+//         z-index: 1;
+//         width: 200px;
+//         border-radius: 14px;
+//         overflow: hidden;
+//         background-color: #fff;
+//         > div{
+//             position: relative;
+//             &::after{
+//                 content: '';
+//                 position: absolute;
+//                 top: -14px;
+//                 left: 78%;
+//                 width: 0;
+//                 height: 0;
+//                 border-left: 8px solid transparent;
+//                 border-right: 8px solid transparent;
+//                 border-bottom: 16px solid #fff;
                 
-            }
-        }
-        @include m(entry){
-            height: 44px;
-            line-height: 44px;
-            padding: 0 14px;
-            position: relative;
-            color: rgba(31, 40, 51, 0.5);                
-            input{
-                height: 20px;
-                width: 100%;
-                padding: 0 10px 0 30px;
-                border-radius:15px;
-                border:1px solid rgba(74,74,74,0.3);
+//             }
+//         }
+//         @include m(entry){
+//             height: 44px;
+//             line-height: 44px;
+//             padding: 0 14px;
+//             position: relative;
+//             color: rgba(31, 40, 51, 0.5);                
+//             input{
+//                 height: 20px;
+//                 width: 100%;
+//                 padding: 0 10px 0 30px;
+//                 border-radius:15px;
+//                 border:1px solid rgba(74,74,74,0.3);
                 
-            }
-            .search{
-                position: absolute;
-                top: 15px;
-                left: 24px;
-            }
-        }
+//             }
+//             .search{
+//                 position: absolute;
+//                 top: 15px;
+//                 left: 24px;
+//             }
+//         }
 
 
-        @include m(list){
-            max-height: 320px;
-            width: 220px;
-            overflow-y: scroll;
-            > li{
-                padding: 0 14px;
-                width: 200px;
-                cursor: pointer;
-                height: 44px;
-                @include displayFlex();
-                @include justifyContent(space-between);
-                @include alignItems(center);
-                border-top: 1px solid rgba(235,235,235,0.5);
-                > a{
+//         @include m(list){
+//             max-height: 320px;
+//             width: 220px;
+//             overflow-y: scroll;
+//             > li{
+//                 padding: 0 14px;
+//                 width: 200px;
+//                 cursor: pointer;
+//                 height: 44px;
+//                 @include displayFlex();
+//                 @include justifyContent(space-between);
+//                 @include alignItems(center);
+//                 border-top: 1px solid rgba(235,235,235,0.5);
+//                 > a{
                     
-                }
-                > span{
-                    width: 14px;
-                    height: 14px;
-                    border: 3px solid rgba(74,74,74,0.3);
-                    border-radius: 50%;
-                    &.select{
-                        border: none;
-                        background-color: #fedd0a;
-                        line-height: 14px;
-                        text-align: center;
-                        &::before{
-                            content: '✓';
-                            color: #fff;
-                        }
-                    }
-                }
-            }
-        }
-    }
+//                 }
+//                 > span{
+//                     width: 14px;
+//                     height: 14px;
+//                     border: 3px solid rgba(74,74,74,0.3);
+//                     border-radius: 50%;
+//                     &.select{
+//                         border: none;
+//                         background-color: #fedd0a;
+//                         line-height: 14px;
+//                         text-align: center;
+//                         &::before{
+//                             content: '✓';
+//                             color: #fff;
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
 
-    &:hover{
-        .select-country__con{
-            display: block;
-        }
-    }
+//     &:hover{
+//         .select-country__con{
+//             display: block;
+//         }
+//     }
 
-}
+// }
 
 .header-container {
     margin-right: auto;

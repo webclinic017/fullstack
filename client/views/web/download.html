@@ -12,7 +12,7 @@
     <% include /common/statistic/main.html %>
 </head>
 
-<body ng-app="fullstackApp" class="<%= lang_class%>">
+<body ng-app="fullstackApp" class="<%= lang_class%> <%= lang.isAr('ar-lang')%>">
     <div ng-controller="GlobalController">
         <div class="header">
             <%- include('/common/nav/web.header.html',{
@@ -33,25 +33,28 @@
                                     <ul class="plat">
                                         <li class="phone">
                                             <a href="<%= lang.text('downloadGlobalApp')%>">
-                                                <img class="btn_big" src="<%= lang.image('downloadAppGlobal')%>" alt="">
+                                                <img class="btn_big" ng-src="<%= lang.image('downloadAppGlobal')%>" alt="">
                                             </a>
                                         </li>
                                         <li class="phone">
                                             <a href="<%= lang.text('downloadCnApp')%>">
-                                                <img class="btn_big" src="<%= lang.image('downloadAppCn')%>" alt="">
+                                                <img class="btn_big" ng-src="<%= lang.image('downloadAppCn')%>" alt="">
                                             </a>
                                         </li>
                                     </ul>
-                                    <div class="code global">
-                                        <div class="img_box">
-                                            <img class="mg-bt-10" src="/images/web/download_m_blank_global_20190226.png"
-                                                alt="code" draggable=false>
-                                            <span><%= lang.text('mRegister11')%></span>
-                                        </div>
-                                        <div class="img_box">
-                                            <img class="mg-bt-10" ng-show="androidLiveImg" src="/images/web/download_m_blank_cn_20190226.png" draggable=false>
-                                            <img class="mg-bt-10" ng-show="!androidLiveImg" src="/images/web/download_m_blank_cn_demo.png" draggable=false>
-                                            <span><%= lang.text('mRegister12')%></span>
+                                    <p class="mg-lf-20"> </p>
+                                    <div class="text-center">
+                                        <div class="code global">
+                                            <div class="img_box">
+                                                <img class="mg-bt-10" ng-src="/images/web/download_m_blank_global_20190226.png"
+                                                    alt="" draggable=false>
+                                                <span><%= lang.text('mRegister11')%></span>
+                                            </div>
+                                            <div class="img_box">
+                                                <img class="mg-bt-10" ng-show="androidLiveImg" ng-src="/images/web/download_m_blank_cn_20190226.png" draggable=false>
+                                                <img class="mg-bt-10" ng-show="!androidLiveImg" ng-src="/images/web/download_m_blank_cn_demo.png" draggable=false>
+                                                <span><%= lang.text('mRegister12')%></span>
+                                            </div>
                                         </div>
                                         <p><%= lang.text('downloadApp.tip5')%></p>
                                         <p><%= lang.text('downloadApp.tip6')%></p>

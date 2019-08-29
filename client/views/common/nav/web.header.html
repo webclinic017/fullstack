@@ -1,6 +1,6 @@
 <%if (lang.areaId != 1) {%>
 <!--增加 cookie 提示-->
-<div class="navbar-fixed-top-cookies" ng-style="{display: allowUseCookie ? 'block' : 'none'}" ng-init="getAllowCookie()">
+<div class="navbar-fixed-top-cookies <%= lang.isAr('ar-lang')%>" ng-style="{display: allowUseCookie ? 'block' : 'none'}" ng-init="getAllowCookie()">
     <div class="header-container space-between-center">
         <div class="" style="width: 70%">
             <h3><%= lang.text("navbar_setCookie1")%></h3>
@@ -8,7 +8,7 @@
                 <%= lang.text("navbar_setCookie2")%><a href="/agreement/cookie"><%= lang.text("navbar_setCookie3")%></a><%= lang.text("navbar_setCookie4")%>
             </p>
         </div>
-        <div class="item-center" style="width: 25%">
+        <div class="item-center">
             <button class="tw-btn-capsule-gradient" style="border-radius: 7px;cursor: pointer;padding: 10px 20px;" ng-click="setAllowCookie()"><%= lang.text("navbar_setCookie5")%></button>
             <div class="navbar-lang item-center">
                 <div class="lang-toggle">
@@ -46,7 +46,16 @@
     </div>
 </div>
 <%}%>
-<div class="<%= typeof navClass == 'undefined' ? 'navbar' : 'navbar-2' %> navbar-fixed-top" tw-navbar>
+<div class="<%= typeof navClass == 'undefined' ? 'navbar' : 'navbar-2' %> navbar-fixed-top <%= lang.isAr('ar-lang')%>" tw-navbar>
+    <!-- 风险警告，若删除请注意css变量$navbar-hearder-height $navbar-height 首页类名index_new__focus-->
+    <!-- <div class="navbar-risk-warning">
+        <div class="header-container">
+            <strong><%= lang.text("foot_38")%></strong>
+            <span><%= lang.text("foot_39_1")%></span>
+            <a href="https://uk.tigerwit.com">https://uk.tigerwit.com</a>
+            <span><%= lang.text("foot_39_2")%></span>
+        </div>
+    </div> -->
     <div class="header-container space-between-center">
         <h1 class="navbar-header">
             <a href="/">
