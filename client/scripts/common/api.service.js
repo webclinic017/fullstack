@@ -133,7 +133,8 @@
         };
         var invite = {
             getInviteFriendsInfoApi: urlOrigin2 + '/user/invites',
-            setInviteFriendsLinkApi: urlOrigin2 + '/invite_code'
+            setInviteFriendsLinkApi: urlOrigin2 + '/invite_code',
+            setUserSourceApi: urlOrigin2 + '/user/source', //post
         };
         var market = {
             getVideoListApi: o + '/data/video_list.json',
