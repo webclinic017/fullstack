@@ -145,7 +145,10 @@
             // getWebProductInfoApi: '/napi?action=get_product',
             // getWebTradeFeeInfoApi: '/napi?action=get_trade_fee',
             getSymbolListApi: urlOrigin2 + '/symbol/list',
-            getWebSymbolListApi: urlOrigin2 + '/symbol/all'
+            getWebSymbolListApi: urlOrigin2 + '/symbol/all',
+            getBlogListApi: urlOrigin2 + '/blog/list',
+            getBlogDetailsApi: urlOrigin2 + '/blog/info',
+            opBlogNumsApi: urlOrigin2 + '/blog/nums'
         };
         var ranklist = {
             getMastersListApi: urlOrigin2 + '/master/list',
