@@ -29,18 +29,19 @@
         font-size:32px;
         color:$main-char-color-100;
         line-height:43px;
-        position: relative;
-        padding-left: 50px;
+        @include displayFlex();
+        @include alignItems(center);
         &::before{
             content: '';
-            position: absolute;
-            top: 7px;
-            left: 0;
             width:30px;
             height:30px;
             border:6px solid $primary-darker;
             border-radius: 50px;
             display: inline-block;
+        }
+        > span{
+            margin: 0 20px;
+            @include flex(1);
         }
     }
     @include e(two-title) {

@@ -71,6 +71,9 @@
 .text-right {
     text-align: right;
 }
+.text-initial {
+    text-align: initial;
+}
 
 //== font
 .font-slim{
@@ -290,7 +293,7 @@
     margin-right: 10px;
 }
 .mg-rg-15 {
-    margin-right: 15px;
+    margin-right: 15px !important;
 }
 
 .mg-rg-20 {
@@ -420,6 +423,9 @@
 
 .pd-rg-35 {
     padding-right: 35px;
+}
+.pd-rg-50 {
+    padding-right: 50px;
 }
 
 .pd-rg-40 {
@@ -570,6 +576,11 @@
 .space-between{
     @include displayFlex();
     @include justifyContent(space-between);
+}
+// 水平右对齐
+.justify-flex-end{
+    @include displayFlex();
+    @include justifyContent(flex-end);
 }
 .space-between-i{
     @include displayFlex(!important);

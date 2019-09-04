@@ -1,6 +1,6 @@
 <div class="about-public mg-200__bg" ng-controller="WebReportController" ng-cloak>
     <div class="report about-public__con">
-        <h3 class="mg-200__circle-title pd-bt-20"><%= lang.text("downloadApp.mediaReports")%></h3>
+        <h3 class="mg-200__circle-title pd-bt-20"><span><%= lang.text("downloadApp.mediaReports")%></span></h3>
         <table class="table table-header">
             <colgroup>
                 <col width="80%">
@@ -26,7 +26,7 @@
             </tbody>
         </table>
 
-        <div class="text-right" ng-if="reports.length > 0">
+        <div class="justify-flex-end" ng-if="reports.length > 0">
             <div tw-pagination></div>
         </div>
     </div>
