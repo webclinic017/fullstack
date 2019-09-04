@@ -1,7 +1,3 @@
-//== 避免页面闪烁 flicker
-[ng-cloak] {
-    display: none !important;
-}
 .body {
     min-height: 69px;
 }
@@ -74,6 +70,9 @@
 
 .text-right {
     text-align: right;
+}
+.text-initial {
+    text-align: initial;
 }
 
 //== font
@@ -294,7 +293,7 @@
     margin-right: 10px;
 }
 .mg-rg-15 {
-    margin-right: 15px;
+    margin-right: 15px !important;
 }
 
 .mg-rg-20 {
@@ -424,6 +423,9 @@
 
 .pd-rg-35 {
     padding-right: 35px;
+}
+.pd-rg-50 {
+    padding-right: 50px;
 }
 
 .pd-rg-40 {
@@ -558,28 +560,39 @@
 
 // css3垂直居中
 .item-center {
-    display: -webkit-box !important;  /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
-    display: -moz-box !important;     /* 老版本语法: Firefox (buggy) */
-    display: -ms-flexbox !important;  /* 混合版本语法: IE 10 */
-    display: -webkit-flex !important; /* 新版本语法: Chrome 21+ */
-    display: flex !important;         /* 新版本语法: Opera 12.1, Firefox 22+ */
+    @include displayFlex();
     @include alignItems(center);
+}
+.item-center-i {
+    @include displayFlex(!important);
+    @include alignItems(center);
+}
+// css3水平居中
+.justify-center {
+    @include displayFlex();
+    @include justifyContent(center);
 }
 // 水平两侧对齐
 .space-between{
-    display: -webkit-box !important;  /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
-    display: -moz-box !important;     /* 老版本语法: Firefox (buggy) */
-    display: -ms-flexbox !important;  /* 混合版本语法: IE 10 */
-    display: -webkit-flex !important; /* 新版本语法: Chrome 21+ */
-    display: flex !important;         /* 新版本语法: Opera 12.1, Firefox 22+ */
+    @include displayFlex();
+    @include justifyContent(space-between);
+}
+// 水平右对齐
+.justify-flex-end{
+    @include displayFlex();
+    @include justifyContent(flex-end);
+}
+.space-between-i{
+    @include displayFlex(!important);
     @include justifyContent(space-between);
 }
 .space-between-center{
-    display: -webkit-box !important;  /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
-    display: -moz-box !important;     /* 老版本语法: Firefox (buggy) */
-    display: -ms-flexbox !important;  /* 混合版本语法: IE 10 */
-    display: -webkit-flex !important; /* 新版本语法: Chrome 21+ */
-    display: flex !important;         /* 新版本语法: Opera 12.1, Firefox 22+ */
+    @include displayFlex();
+    @include alignItems(center);
+    @include justifyContent(space-between);
+}
+.space-between-center-i{
+    @include displayFlex(!important);
     @include alignItems(center);
     @include justifyContent(space-between);
 }
@@ -589,6 +602,13 @@
 .flex0 {
     @include flex(0);
 }
+.flex-wrap {
+    @include flexWrap(wrap);
+}
 .cursor_pointer {
     cursor: pointer;
+}
+//== 避免页面闪烁 flicker
+[ng-cloak] {
+    display: none !important;
 }

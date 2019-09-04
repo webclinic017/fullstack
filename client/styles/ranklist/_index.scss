@@ -22,7 +22,9 @@
             img {
                 height: 28px;
                 padding: 0px 10px;
-                vertical-align: top;
+                &.ar{
+                    transform: rotate(180deg);
+                }
             }
         }
     }
@@ -54,6 +56,9 @@
             }
         }
         @include m(con){
+            @include displayFlex();
+            @include justifyContent(space-between);
+            @include flexWrap(wrap);
             > li{
                 .head-img{
                     img{
@@ -64,6 +69,7 @@
                     }
                 }
                 .content{
+                    margin: 0 20px;
                     .name{
                         h6{
                             font-size:26px;
@@ -123,7 +129,6 @@
 
         @include m(lst) {
             > li {
-                float: left;
                 width: 33.33%;
                 text-align: center;
                 height: 55px;
@@ -140,93 +145,94 @@
         }
     }
 
-    @include e(search) {
-        height: 62px;
-        border-bottom: 1px solid #e6e7e8;
+    // @include e(search) {
+    //     height: 62px;
+    //     border-bottom: 1px solid #e6e7e8;
 
-        @include m(item) {
-            float: left;
-            padding: 15px 25px;
-            margin-top: 5px;
-            font-weight: 600;
-            position: relative;
-            margin-left: 30px;
-            cursor: pointer;
+    //     @include m(item) {
+    //         float: left;
+    //         padding: 15px 25px;
+    //         margin-top: 5px;
+    //         font-weight: 600;
+    //         position: relative;
+    //         margin-left: 30px;
+    //         cursor: pointer;
 
-            > i {
-                color: #999;
-            }
+    //         > i {
+    //             color: #999;
+    //         }
 
-            > .search-list {
-                position: absolute;
-                top: 0;
-                left: 0;
-                border: 1px solid #e6e7e8;
-                box-shadow: 0 0 3px #e6e7e8;
-                min-width: 150px;
-                background-color: #fff;
-                z-index: 100;
+    //         > .search-list {
+    //             position: absolute;
+    //             top: 0;
+    //             left: 0;
+    //             border: 1px solid #e6e7e8;
+    //             box-shadow: 0 0 3px #e6e7e8;
+    //             min-width: 150px;
+    //             background-color: #fff;
+    //             z-index: 100;
 
-                > .tit {
-                    padding: 14px 14px;
-                    margin: 0 10px;
-                    border-bottom: 1px solid #e6e7e8;
+    //             > .tit {
+    //                 padding: 14px 14px;
+    //                 margin: 0 10px;
+    //                 border-bottom: 1px solid #e6e7e8;
 
-                    > i {
-                        float: right;
-                        line-height: 20px;
-                        color: #999;
-                    }
-                }
-                > .lst {
+    //                 > i {
+    //                     float: right;
+    //                     line-height: 20px;
+    //                     color: #999;
+    //                 }
+    //             }
+    //             > .lst {
                     
-                    > li {
-                        padding: 10px 20px;
-                        color: #626364;
-                        font-weight: 400;
-                        cursor: pointer;
+    //                 > li {
+    //                     padding: 10px 20px;
+    //                     color: #626364;
+    //                     font-weight: 400;
+    //                     cursor: pointer;
 
-                        &:hover {
-                            background-color: #eff0f1;
-                        }
-                    }
-                }
-            }
-        }
+    //                     &:hover {
+    //                         background-color: #eff0f1;
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //     }
 
-        @include m(box) {
-            float: right;
-            width: 186px;
-            position: relative;
-            margin-top: 14px;
-            margin-right: 45px;
+    //     @include m(box) {
+    //         float: right;
+    //         width: 186px;
+    //         position: relative;
+    //         margin-top: 14px;
+    //         margin-right: 45px;
 
-            > i {
-                position: absolute;
-                right: 9px;
-                top: 9px;
-                color: #999;
-            }
-        }
+    //         > i {
+    //             position: absolute;
+    //             right: 9px;
+    //             top: 9px;
+    //             color: #999;
+    //         }
+    //     }
         
-        @include m(input) {
-            width: 100%;
-            height: 34px;
-            line-height: 34px;
-            padding: 0px 28px 0 10px;
-            border: 1px solid #ccc;
-            border-radius: 2px;
-            color: #666;
-            background-color: transparent;
-        }
-    }
+    //     @include m(input) {
+    //         width: 100%;
+    //         height: 34px;
+    //         line-height: 34px;
+    //         padding: 0px 28px 0 10px;
+    //         border: 1px solid #ccc;
+    //         border-radius: 2px;
+    //         color: #666;
+    //         background-color: transparent;
+    //     }
+    // }
 }
 @include b(ranklist_cont) {
     position: relative;
     margin-top: 25px;
+    @include displayFlex();
+    @include flexWrap(wrap);
 
     @include e(master) {
-        float: left;
         margin: 0 16px 40px;
         width: 320px;
         border: 1px solid #e6e7e8;
@@ -254,22 +260,18 @@
             border-bottom: 1px solid #e6e7e8;
 
             > .avatar {
-                float: left;
                 height: 58px;
 
                 > img {
                     height: 100%;
-                    vertical-align: top;
                 }
             }
             > .user {
-                float: left;
                 margin-left: 10px;
-                line-height: 58px;
+                margin-right: 10px;
 
                 > .name {
                     font-size: 18px;
-                    display: block;
                     color: #222;
                     font-weight: 600;
                     width: 200px;
@@ -289,7 +291,6 @@
             @include displayFlex();
             > .profit {
                 @include flex(1);
-                border-right: 1px solid #e6e7e8;
                 max-width: 180px;
 
                 > .num {
@@ -305,30 +306,33 @@
                     color: #626364;
                 }
             }
-            > .dropdown {
+            > .dividing{
+                min-height: 100%;
+                border-right: 1px solid #e6e7e8;
                 padding-left: 20px;
+                margin-right: 20px;
+            }
+            > .dropdown {
                 color: #626364;
 
                 > .num {
                     font-weight: 600;
                     padding-top: 12px;
+                    padding-bottom: 10px;
                     font-size: 16px;
                 }
                 > .tip {
-                    padding-top: 10px;
                 }
             }
         }
 
         @include m(copy) {
-            padding-top: 26px;
+            padding-top: 13px;
 
             > .info {
-                float: left;
                 color: #626364;
 
                 > .copiers {
-                    padding-bottom: 14px;
 
                     > .num {
                         font-size: 16px;
@@ -346,11 +350,9 @@
                 }
             }
             > .copy_btn_wrapper {
-                float: right;
 
                 > .copy_btn {
                     color: #000;
-                    margin-bottom: 0;
                     border: 1px solid #e6e7e8;
                     text-align: center;
                     white-space: nowrap;
@@ -360,7 +362,7 @@
                     padding: 14px 26px;
                     font-size: 16px;
                     border-radius: 4px;
-                    
+                    display: inline-block;
                     // &:hover {
                     //     background-color: #ffed7b;
                     //     border-color: #ffed7b;

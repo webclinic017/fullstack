@@ -3,64 +3,71 @@
     <div class="index_new__container space-between">
       <div class="">
         <%if (lang.areaId != 1) {%>
-        <img src="<%= lang.image('homeFocusGlobal')%>" alt="">
+        <img ng-src="<%= lang.image('homeFocusGlobal')%>" alt="">
         <%} else {%>
-        <img src="<%= lang.image('homeFocusCn')%>" alt="">
+        <img ng-src="<%= lang.image('homeFocusCn')%>" alt="">
         <%}%>
       </div> 
-      <div class="pd-tp-110 text-center flex1">
-        <div class="inline-block text-left">
+      <div class="pd-tp-110 justify-center flex1">
+        <div>
           <h3 class="index_new__focus-title pd-tp-30"><%= lang.text("newhome_1")%></h3>
-          <h3 class="index_new__focus-title"><%= lang.text("newhome_1_1")%></h3>
-          <h3 class="index_new__focus-title"><%= lang.text("newhome_1_2")%></h3>
-          <p class="index_new__focus-sub_tit"><%= lang.text("newhome_2")%></p>
-          <ul class="index_new__focus-icon_box clearfix">
-            <li>
-              <img src="/white_label/home/focus-icon-1.png" alt="">
-              <p><%= lang.text("newhome_4")%></p>
-            </li>
-            <li>
-              <img src="/white_label/home/focus-icon-2.png" alt="">
-              <p><%= lang.text("newhome_5")%></p>
-            </li>
-            <li>
-              <img src="/white_label/home/focus-icon-3.png" alt="">
-              <p><%= lang.text("newhome_6")%></p>
-            </li>
-            <li>
-              <img src="/white_label/home/focus-icon-4.png" alt="">
-              <p><%= lang.text("newhome_7")%></p>
-            </li>
-            <li>
-              <img src="/white_label/home/focus-icon-5.png" alt="">
-              <p><%= lang.text("newhome_8")%></p>
-            </li>
-          </ul>
-          <div class="index_new__focus-btn_box">
-            <a href="/space/#/account/register" class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient focus_btn"
-              ng-click="toTrackEvent('home page', 'global_home_first_open_account')"><%= lang.text("link_register")%></a>
+        <h3 class="index_new__focus-title"><%= lang.text("newhome_1_1")%></h3>
+        <h3 class="index_new__focus-title"><%= lang.text("newhome_1_2")%></h3>
+        <p class="index_new__focus-sub_tit"><%= lang.text("newhome_2")%></p>
+        <ul class="index_new__focus-icon_box">
+          <li>
+            <img ng-src="/white_label/home/focus-icon-1.png" alt="">
+            <p><%= lang.text("newhome_4")%></p>
+          </li>
+          <li>
+            <img ng-src="/white_label/home/focus-icon-2.png" alt="">
+            <p><%= lang.text("newhome_5")%></p>
+          </li>
+          <li>
+            <img ng-src="/white_label/home/focus-icon-3.png" alt="">
+            <p><%= lang.text("newhome_6")%></p>
+          </li>
+          <li>
+            <img ng-src="/white_label/home/focus-icon-4.png" alt="">
+            <p><%= lang.text("newhome_7")%></p>
+          </li>
+          <li>
+            <img ng-src="/white_label/home/focus-icon-5.png" alt="">
+            <p><%= lang.text("newhome_8")%></p>
+          </li>
+        </ul>
+        <div class="index_new__focus-btn_box">
+          <a href="/space/#/account/register" class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient focus_btn"
+            ng-click="toTrackEvent('home page', 'global_home_first_open_account')"><%= lang.text("link_register")%></a>
+        </div>
+        <div class="index_new__focus-btn_box pd-tp-50">
+          <%if (lang.currentLanguage() === 'zh' || lang.areaId == 1) {%>
+          <div class="market-h5">
+            <div class="mg-bt-20"><%= lang.text("scanCodeOpenAccount")%></div>
+            <img ng-src="/white_label/home/market-h5.png" alt=""></a>
           </div>
-          <div class="index_new__focus-btn_box pd-tp-50 clearfix">
-            <%if (lang.currentLanguage() === 'zh' || lang.areaId == 1) {%>
-            <div class="market-h5 fl mg-rg-80">
-              <div class="mg-bt-20"><%= lang.text("scanCodeOpenAccount")%></div>
-              <img src="/white_label/home/market-h5.png" alt=""></a>
-            </div>
-            <%}%>
-          <div class="download-btn fl">
+          <div class="mg-rg-80"></div>
+          <%}%>
+          <div class="download-btn">
             <div class="mg-bt-30">
               <%= lang.text("newhome_9_1")%>
+        </div>
+        <div>
+          <div class="mg-bt-15">
+            <a class="inline-block" href="<%= lang.text('downloadGlobalIos') %>"><img
+              ng-src="<%= lang.image('homeAppIos')%>" alt=""></a>
           </div>
+          <%if (lang.areaId != 1) {%>
           <div>
-            <div class="mg-bt-15">
-              <a href="<%= lang.text('downloadGlobalIos') %>"><img src="<%= lang.image('homeAppIos')%>" alt=""></a>
-            </div>
-            <%if (lang.areaId != 1) {%>
-            <a href="<%= lang.text('downloadGlobalAndroid') %>"><img src="<%= lang.image('homeAppAndroidGlobal')%>"
+            <a class="inline-block" href="<%= lang.text('downloadGlobalAndroid') %>"><img
+              ng-src="<%= lang.image('homeAppAndroidGlobal')%>" alt=""></a>
+          </div>
+          <%} else {%>
+          <div>
+            <a class="inline-block" ng-href="{{appVersionInfo.android}}"><img ng-src="<%= lang.image('homeAppAndroidCn')%>"
                 alt=""></a>
-            <%} else {%>
-            <a ng-href="{{appVersionInfo.android}}"><img src="<%= lang.image('homeAppAndroidCn')%>" alt=""></a>
-            <%}%>
+          </div>
+          <%}%>
             </div>
           </div>
         </div>
@@ -72,24 +79,24 @@
     <div class="index_new__copy">
       <h3 class="index_new__copy-title"><%= lang.text("newhome_10")%></h3>
           <p class="index_new__copy-sub_tit"><%= lang.text("newhome_11")%></p>
-          <ul class="index_new__copy-lst clearfix">
+          <ul class="index_new__copy-lst">
             <li>
-              <img src="/white_label/home/copy-icon-1.png" alt="">
+              <img ng-src="/white_label/home/copy-icon-1.png" alt="">
               <p class="num">1</p>
               <p class="tip"><%= lang.text("newhome_12")%></p>
             </li>
             <li>
-              <img src="/white_label/home/copy-icon-2.png" alt="">
+              <img ng-src="/white_label/home/copy-icon-2.png" alt="">
               <p class="num">2</p>
               <p class="tip"><%= lang.text("newhome_13")%></p>
             </li>
             <li>
-              <img src="/white_label/home/copy-icon-3.png" alt="">
+              <img ng-src="/white_label/home/copy-icon-3.png" alt="">
               <p class="num">3</p>
               <p class="tip"><%= lang.text("newhome_14")%></p>
             </li>
             <li>
-              <img src="/white_label/home/copy-icon-4.png" alt="">
+              <img ng-src="/white_label/home/copy-icon-4.png" alt="">
               <p class="num">4</p>
               <p class="tip"><%= lang.text("newhome_15")%></p>
             </li>
@@ -101,17 +108,16 @@
           </div>
         </div>
       </div>
-      <div class="index_new__container">
-        <div class="index_new__flexible">
+      <div class="index_new__flexible">
+        <div class="index_new__container">
           <h3 class="index_new__flexible-title"><%= lang.text("newhome_17")%></h3>
           <p class="index_new__flexible-sub_tit"><%= lang.text("newhome_17_1")%></p>
           <p class="index_new__flexible-sub_tit"><%= lang.text("newhome_17_2")%></p>
-          <div class="relative">
-            <div class="curcle-1"><img src="/white_label/home/curcle-1.png" alt=""></div>
+          <div class="">
             <div class="index_new__flexible-box">
               <div class="content">
-                <div class="clearfix">
-                  <ul class="index_new_qupte__title clearfix h_border">
+                <div class="item-center">
+                  <ul class="index_new_qupte__title item-center h_border">
                     <li class="pro">
                       <%= lang.text("home64")%>
                     </li>
@@ -122,7 +128,7 @@
                       <%= lang.text("home66")%>
                     </li>
                   </ul>
-                  <ul class="index_new_qupte__title clearfix">
+                  <ul class="index_new_qupte__title item-center">
                     <li class="pro">
                       <%= lang.text("home64")%>
                     </li>
@@ -134,8 +140,8 @@
                     </li>
                   </ul>
                 </div>
-                <div class="clearfix">
-                  <ul ng-repeat="quoteSymbol in quoteSymbols" class="index_new_qupte__content "
+                <div class="item-center flex-wrap">
+                  <ul ng-repeat="quoteSymbol in quoteSymbols" class="index_new_qupte__content"
                     ng-class="{h_border: $index%2 === 0}">
                     <li class="pro">
                       <%if (!lang.isEnglishArea()){%>
@@ -177,23 +183,23 @@
           </div>
           <ul class="index_new__flexible-lst">
             <li>
-              <img src="/white_label/home/flex-icon-1.png" alt="">
+              <img ng-src="/white_label/home/flex-icon-1.png" alt="">
               <h5><%= lang.text("newhome_18")%></h5>
               <p><%= lang.text("newhome_20")%></p>
             </li>
             <li>
-              <img src="/white_label/home/flex-icon-2.png" alt="">
+              <img ng-src="/white_label/home/flex-icon-2.png" alt="">
               <h5><%= lang.text("newhome_21")%></h5>
               <p><%= lang.text("newhome_22")%></p>
               <p><%= lang.text("newhome_23")%></p>
             </li>
             <li>
-              <img src="/white_label/home/flex-icon-3.png" alt="">
+              <img ng-src="/white_label/home/flex-icon-3.png" alt="">
               <h5><%= lang.text("newhome_27")%></h5>
               <p><%= lang.text("newhome_24")%></p>
             </li>
             <li>
-              <img src="/white_label/home/flex-icon-4.png" alt="">
+              <img ng-src="/white_label/home/flex-icon-4.png" alt="">
               <h5><%= lang.text("newhome_28")%></h5>
               <p><%= lang.text("newhome_25")%></p>
               <p><%= lang.text("newhome_26")%></p>
@@ -238,17 +244,17 @@
           <p class="index_new__tools-sub_tit"><%= lang.text("newhome_35_1")%></p>
           <p class="index_new__tools-sub_tit"><%= lang.text("newhome_35_2")%></p>
           <div class="index_new__tools-download">
-            <a href="<%= lang.text('downloadGlobalIos') %>"
+            <a class="inline-block" href="<%= lang.text('downloadGlobalIos') %>"
               ng-click="toTrackEvent('home page', 'global_home_click_appstore')"><img
-                src="<%= lang.image('homeAppIos')%>" alt=""></a>
+              ng-src="<%= lang.image('homeAppIos')%>" alt=""></a>
             <%if (lang.areaId != 1) {%>
-            <a href="<%= lang.text('downloadGlobalAndroid') %>"
+            <a class="inline-block" href="<%= lang.text('downloadGlobalAndroid') %>"
               ng-click="toTrackEvent('home page', 'global_home_click_googleplay')"><img
-                src="<%= lang.image('homeAppAndroidGlobal')%>" alt=""></a>
+              ng-src="<%= lang.image('homeAppAndroidGlobal')%>" alt=""></a>
             <%} else {%>
-            <a ng-href="{{appVersionInfo.android}}"
+            <a class="inline-block" ng-href="{{appVersionInfo.android}}"
               ng-click="toTrackEvent('home page', 'global_home_click_googleplay')"><img
-                src="<%= lang.image('homeAppAndroidCn')%>" alt=""></a>
+              ng-src="<%= lang.image('homeAppAndroidCn')%>" alt=""></a>
             <%}%>
       </div>
     </div>
@@ -280,18 +286,18 @@
           <div class="index_new__client">
             <h3 class="index_new__client-title"><%= lang.text("newhome_42")%></h3>
             <p class="index_new__client-sub_tit"><%= lang.text("newhome_42_1")%></p>
-            <img src="<%= lang.image('homeMap')%>" alt="">
+            <img ng-src="<%= lang.image('homeMap')%>" alt="">
           </div>
         </div>
         <div class="index_new__container">
           <div class="index_new__float_box">
-            <div class="index_new__float clearfix">
-              <div class="fl f">
+            <div class="index_new__float space-between-center">
+              <div class="">
                 <h3><%= lang.text("newhome_43")%></h3>
                 <p><%= lang.text("newhome_44")%></p>
                 <p><%= lang.text("newhome_45")%></p>
               </div>
-              <div class="b text-center">
+              <div class="flex1 text-center pd-lf-35 pd-rg-35">
                 <a href="/space/#/account/register" class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient"
                   ng-click="toTrackEvent('home page', 'global_home_last_open_account')"><%= lang.text("newhome_46")%></a>
               </div>

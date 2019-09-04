@@ -19,6 +19,7 @@
             },
             /*X轴设置*/
             xAxis: {
+                reversed: lang.isAr(),
                 categories: [lang.text('tigerWitID.january'), lang.text('tigerWitID.february'), lang.text('tigerWitID.march'), lang.text('tigerWitID.april'), lang.text('tigerWitID.may'), lang.text('tigerWitID.june'), lang.text('tigerWitID.july'), lang.text('tigerWitID.august'), lang.text('tigerWitID.september'), lang.text('tigerWitID.october'), lang.text('tigerWitID.november'), lang.text('tigerWitID.december')],
                 lineColor: '#eee',
                 tickColor: '#eee',
@@ -99,6 +100,7 @@
                 title: {
                     text: ''
                 },
+                opposite: lang.isAr(),
                 gridLineWidth: 0,
                 gridLineColor: '#fff',
                 labels: {
@@ -147,12 +149,15 @@
                 name: ''
             },
             tooltip: {
+                useHTML:true,
                 name: lang.text('tigerWitID.dataStatistics.monthlyReturns'),
+                animation: true,
                 formatter: function () {
-                    return '<b style="color:#009dff;font-size:14px">' + this.y + '%<br>'+ lang.text('tigerWitID.dataStatistics.monthlyReturns') +'</b><br>' + this.x;
+                    return '<span style="font-size:14px;"><b style="color:#009dff;">' + this.y + '%</b><br>'+ lang.text('tigerWitID.dataStatistics.monthlyReturns') +'<br>' + this.x + '</span>';
                 },
+				reversed: lang.isAr(),
                 style: {
-                    padding: 15
+                    padding: '15px'
                 }
             },
             series: [{
@@ -171,7 +176,7 @@
         return {
             restrict: 'EA',
             replace: true,
-            template: '<div class="column_chart"><img src="/ngsrc/loading.gif"></div>',
+            template: '<div class="column_chart direction-ltr"><img src="/ngsrc/loading.gif"></div>',
             link: function (scope, element, attrs) {
                 var type = attrs.type;
 
