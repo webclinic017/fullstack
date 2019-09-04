@@ -28,14 +28,14 @@
                 <h5>{{masterTrialList.pop_title}}</h5>
                 <p>{{masterTrialList.pop_desc}}</p>
             </div>
-            <ul class="ranklist_banner__sup-con clearfix pd-bt-50">
-                <li class="clearfix" ng-repeat="trial in masterTrialList.list track by $index" ng-class="{'fl': $index % 2 === 0, 'fr': $index % 2 === 1}">
-                    <div class="head-img fl mg-rg-20">
+            <ul class="ranklist_banner__sup-con pd-bt-50">
+                <li class="item-center mg-bt-15" ng-repeat="trial in masterTrialList.list track by $index">
+                    <div class="head-img">
                         <img ng-src="/avatar/{{ trial.user_code }}_150.jpg" alt="avatar">
                     </div>
-                    <div class="content fl">
-                        <div class="clearfix">
-                            <div class="win fl">
+                    <div class="content">
+                        <div class="space-between-center">
+                            <div class="win">
                                 <div class="rate" ng-class="{'font-danger': (trial.thirty_profit_rate + '').indexOf('-') < 0, 'font-success': (trial.thirty_profit_rate + '').indexOf('-') != -1}" ng-if="lang.hostIsCn()">
                                     {{trial.thirty_profit_rate || 0}}%
                                 </div>
@@ -46,7 +46,8 @@
                                 <p>{{ lang.text("tigerWitID.master.returnLast30D") }}</p>
                                 <p>{{ lang.text("tigerWitID.master.followers") }}<span class="mg-lf-15">{{trial.history_copy_count}}</span></p>
                             </div>
-                            <div class="win fl mg-lf-50">
+                            <div class="mg-lf-50"></div>
+                            <div class="win">
                                 <div class="rate" ng-class="{'font-danger': (trial.thirty_win_rate + '').indexOf('-') < 0, 'font-success': (trial.thirty_win_rate + '').indexOf('-') != -1}" ng-if="lang.hostIsCn()">
                                     {{trial.thirty_win_rate || 0}}%
                                 </div>
@@ -58,9 +59,9 @@
                             </div>
                         </div>
 
-                        <div class="name clearfix mg-tp-20">
-                            <h6 class="fl">{{trial.username}}</h6>
-                            <a ng-href="/trader/{{trial.user_code}}/#/trader/summary" class="tw-btn tw-btn-sm tw-btn-capsule-gradient fl mg-lf-15" target="_blank">{{ lang.text("tigerWitID.copy") }}</a>
+                        <div class="name mg-tp-20 item-center">
+                            <h6 class="">{{trial.username}}</h6>
+                            <a ng-href="/trader/{{trial.user_code}}/#/trader/summary" class="tw-btn tw-btn-sm tw-btn-capsule-gradient mg-lf-15 mg-rg-15" target="_blank">{{ lang.text("tigerWitID.copy") }}</a>
                         </div>
                     </div>
                 </li>
@@ -69,15 +70,15 @@
     </div>
     <div class="mg-200__bg" ng-class="{'mg-tp-40': masterTrialList.list && masterTrialList.list.length > 0}">
         <div class="ranklist_banner__tip">
-            <h3 class="mg-200__circle-title pd-bt-20">{{ lang.text("tigerWitID.master.copyTrading") }}</h3>
-            <p class="step pd-lf-50">
+            <h3 class="mg-200__circle-title pd-bt-20"><span>{{ lang.text("tigerWitID.master.copyTrading") }}</span></h3>
+            <p class="step item-center pd-lf-50 pd-rg-50">
                 <span>{{ lang.text("tigerWitID.master.chooseMaster") }}</span>
-                <img src="/white_label/ranklist/arrow.png" alt="">
+                <img class="{{lang.currentLanguage()}}" src="/white_label/ranklist/arrow.png" alt="">
                 <span>{{ lang.text("tigerWitID.master.clickCopy") }}</span>
-                <img src="/white_label/ranklist/arrow.png" alt="">
+                <img class="{{lang.currentLanguage()}}" src="/white_label/ranklist/arrow.png" alt="">
                 <span>{{ lang.text("tigerWitID.master.takeProfit") }}</span>
             </p>
-            <div class=" pd-lf-50 pd-bt-20">
+            <div class="pd-rg-50 pd-lf-50 pd-bt-20">
                 <h4 class="mg-200__two-title mg-tp-50 pd-bt-20">{{ lang.text("tigerWitID.master.selectMaster") }}</h4>
                 <p class="">{{ lang.text("tigerWitID.master.selectMaster_1") }}</p>
                 <p class="">{{ lang.text("tigerWitID.master.selectMaster_2") }}</p>
@@ -93,7 +94,7 @@
     <div class="ranklist_parent">
         <div class="ranklist list_width">
             <div class="ranklist__navbar">
-                <ul class="ranklist__navbar-lst clearfix">
+                <ul class="ranklist__navbar-lst item-center">
                     <li ng-class="{active: rankOrder == 'thirty_profit_rate'}" ng-click="[changeRankOrder('thirty_profit_rate'), toTrackEvent('master page', 'global_master_profitability')]">
                         {{ lang.text("tigerWitID.master.highIncome") }}
                         <i class="fa fa-caret-down"></i>
@@ -108,10 +109,10 @@
                     </li>
                 </ul>
             </div>
-            <div class="ranklist_cont clearfix">
+            <div class="ranklist_cont">
                 <div tw-loading-img></div>
                 <div class="ranklist_cont__master" ng-repeat="rank in ranklist track by $index">
-                    <div class="ranklist_cont__master-info clearfix">
+                    <div class="ranklist_cont__master-info item-center">
                         <a class="avatar" ng-href="/trader/{{rank.user_code}}/#/trader/summary" ng-click="toQuickPageviewSensorsdata(rank.username)" target="_blank">
                             <img ng-src="/avatar/{{ rank.user_code }}_150.jpg" alt="avatar">
                         </a>
@@ -133,6 +134,7 @@
                                 {{ lang.text("tigerWitID.master.returnLast30D") }}
                             </div>
                         </div>
+                        <div class="dividing"></div>
                         <div class="dropdown">
                             <div class="num" ng-class="{'font-danger': (rank.thirty_win_rate + '').indexOf('-') < 0, 'font-success': (rank.thirty_win_rate + '').indexOf('-') != -1}" ng-if="lang.hostIsCn()">
                                 {{ rank.thirty_win_rate }}%
@@ -145,7 +147,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="ranklist_cont__master-copy clearfix">
+                    <div class="ranklist_cont__master-copy space-between-center">
                         <div class="info">
                             <div class="copiers">
                                 <span class="num">
@@ -160,7 +162,7 @@
                     </div>
                 </div>
             </div>
-            <div class="text-right">
+            <div class="justify-flex-end">
                 <div tw-pagination></div>
             </div>
         </div>

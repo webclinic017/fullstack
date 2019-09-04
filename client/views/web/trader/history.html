@@ -15,27 +15,29 @@
             </thead>
             <tbody>
                 <tr ng-repeat="order in orders" ng-if="orders.length > 0">
-                    <td class=""> 
-                        <div class="history-operation-td text-left">
-                        <span class="icon-histroy icon-forex-{{ order.symbol_origin.toLowerCase() }}"></span>
-                        <div class="history-operation-box">
-                            <p class="text-left">
-                                <span ng-class="order.cmd?'font-down':'font-up'">
-                                    {{ order.cmd_name }}
-                                </span>
-                                <span class="" ng-show="!lang.isEnglishArea()">
-                                    {{ order.symbol_cn + ' ('+ order.symbol +')' }}
-                                </span>
-                                <span class="" ng-show="lang.isEnglishArea()">
-                                    {{ order.symbol }}
-                                </span>
-                            </p>
-                            <p class="text-left font-size-12">
-                                <span class="history-operation-way">{{order.close_type_name}}</span>
-                                <span>{{order.passed_time | duration}}{{ lang.text("TradingHistory10") }}</span>
-                            </p>
-                        <div>
-                        <div>
+                    <td class="">
+                        <div class="history-operation-td text-initial">
+                            <div>
+                                <span class="icon-histroy icon-forex-{{ order.symbol_origin.toLowerCase() }}"></span>
+                            </div>
+                            <div class="history-operation-box">
+                                <p class="">
+                                    <span ng-class="order.cmd?'font-down':'font-up'">
+                                        {{ order.cmd_name }}
+                                    </span>
+                                    <span class="" ng-show="!lang.isEnglishArea()">
+                                        {{ order.symbol_cn + '（'+ order.symbol +'）' }}
+                                    </span>
+                                    <span class="" ng-show="lang.isEnglishArea()">
+                                        {{ order.symbol }}
+                                    </span>
+                                </p>
+                                <p class=" font-size-12">
+                                    <span class="history-operation-way">{{order.close_type_name}}</span>
+                                    <span>{{order.passed_time | duration}}{{ lang.text("TradingHistory10") }}</span>
+                                </p>
+                            </div>
+                        </div>
                     </td>
                     <td>
                         {{ order.open_price }}
@@ -46,16 +48,20 @@
                     <td>
                         {{ order.position_time | duration }}
                     </td>
-                    <td ng-class="{'font-danger': order.profit.indexOf('-') < 0, 'font-success': order.profit.indexOf('-') != -1}" ng-if="lang.hostIsCn()">
+                    <td ng-class="{'font-danger': order.profit.indexOf('-') < 0, 'font-success': order.profit.indexOf('-') != -1}"
+                        ng-if="lang.hostIsCn()">
                         {{ order.points }}
                     </td>
-                    <td ng-class="{'font-success': order.profit.indexOf('-') < 0, 'font-danger': order.profit.indexOf('-') != -1}" ng-if="!lang.hostIsCn()">
+                    <td ng-class="{'font-success': order.profit.indexOf('-') < 0, 'font-danger': order.profit.indexOf('-') != -1}"
+                        ng-if="!lang.hostIsCn()">
                         {{ order.points }}
                     </td>
-                    <td ng-class="{'font-danger': order.gross_profit.indexOf('-') < 0, 'font-success': order.gross_profit.indexOf('-') != -1}" ng-if="lang.hostIsCn()">
+                    <td ng-class="{'font-danger': order.gross_profit.indexOf('-') < 0, 'font-success': order.gross_profit.indexOf('-') != -1}"
+                        ng-if="lang.hostIsCn()">
                         <i class="fa fa-dollar"></i>{{ order.gross_profit }}
                     </td>
-                    <td ng-class="{'font-success': order.gross_profit.indexOf('-') < 0, 'font-danger': order.gross_profit.indexOf('-') != -1}" ng-if="!lang.hostIsCn()">
+                    <td ng-class="{'font-success': order.gross_profit.indexOf('-') < 0, 'font-danger': order.gross_profit.indexOf('-') != -1}"
+                        ng-if="!lang.hostIsCn()">
                         <i class="fa fa-dollar"></i>{{ order.gross_profit }}
                     </td>
                 </tr>
@@ -67,7 +73,7 @@
             </tbody>
         </table>
 
-        <div class="text-right" ng-if="orders.length > 0">
+        <div class="justify-flex-end" ng-if="orders.length > 0">
             <div tw-pagination></div>
         </div>
     </div>

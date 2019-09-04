@@ -1,7 +1,7 @@
 var withdrawLimit = true;  //出金限制 false 不限制, true 限制
 var withdrawTypeLst = {};  //提现到列表
 var withdrawAccount; //当前选择提现账号 交易账户为mt4 ID，零钱包设置为wallet
-var withdrawType;   //当前选择提现到帐号
+var withdrawType;   //当前选择提现到账号
 var withdrawBankList;   //当前选择提现到银行卡列表
 var withdrawBankId;   //当前选择提现到银行卡ID
 var withdrawBtnStatus = false; //提现按钮状态
@@ -254,9 +254,9 @@ $(document).on('tap', '#bind_bank_phone_btn', function () {
 /*
  * 设置提现按钮状态
  * 需要调用的地方
- *    输入金额时、选择提现到帐号后、删除当前选择银行卡后
+ *    输入金额时、选择提现到账号后、删除当前选择银行卡后
  *
- * 由于切换提现帐号后，提现到帐号要清空，所以切换提现帐号时不用设置，在渲染列表后需要调用一次
+ * 由于切换提现账号后，提现到账号要清空，所以切换提现账号时不用设置，在渲染列表后需要调用一次
  */
 function setWithdrawBtnStatus () {
   var amount = Number($(eleWithdraw.payWithdrawAmount).val());
@@ -266,7 +266,7 @@ function setWithdrawBtnStatus () {
     $(eleWithdraw.payWithdrawBtn).addClass('disabled');
     return;
   }
-  //0.判断提现帐号和提现到帐号
+  //0.判断提现账号和提现到账号
   if (!withdrawType || !withdrawAccount) {
     withdrawBtnStatus = false;
     $(eleWithdraw.payWithdrawBtn).addClass('disabled');
@@ -316,7 +316,7 @@ function addWithdrawAccount () {
   }
   var html=bt('template_withdraw_account_type',withdrawTemplate);
   $(eleWithdraw.payAccountLst).html(html);
-  //重新渲染提现到列表时，已选择的提现到帐号一律清空重置
+  //重新渲染提现到列表时，已选择的提现到账号一律清空重置
   withdrawType = undefined;
   withdrawBankId = undefined;
   thirdThirdType = '';

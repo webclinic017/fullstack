@@ -36,6 +36,22 @@
                 }
                 return isEngArea;
             },
+            isAr: function (con) {
+                /**
+                 * date: 2019.8.26
+                 * con 返回的内容，不传返回true
+                 * 判断阿拉伯种类语言 ar。
+                 *  */
+                var bol = false;
+                if(langData["language"] === 'ar'){
+                    if(con){
+                        bol = con;
+                    }else{
+                        bol = true;
+                    }
+                }
+                return bol;
+            },
             currentLanguage: function () {  //此方法只用来调整单个语言的特殊性，一般情况优先使用 isEnglishArea 方法
                 return langData["language"];
             },

@@ -142,7 +142,7 @@ function changePageIndex (page) {
       break;
   }
 }
-//打开更改充值/提现帐号弹窗
+//打开更改充值/提现账号弹窗
 function openChangeAccountMdl (msg) {
   // console.log(msg);
   var depositTemplate = {

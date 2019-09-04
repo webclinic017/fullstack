@@ -72,7 +72,7 @@
   //   background: url($image-path-web + 'download_banner1.png') no-repeat top center;
   // }
   @include b(download_banner) {
-    border-top: 69px solid $brand-button-color;
+    padding-top: $navbar-height;
     color: $gray;
     width: 100%;
     height: 751px;
@@ -88,10 +88,9 @@
         width: 1030px;
         margin: 0 auto;
         padding-top: 135px;
-        text-align: right;
+        @include displayFlex();
+        @include justifyContent(flex-end);
         .content{
-          display: inline-block;
-          text-align: left;
           max-width: 660px;
           .title {
             margin-bottom: 55px;
@@ -106,9 +105,8 @@
             }
           }
           .download{
-            overflow: hidden;
+            @include displayFlex();
             .plat {
-              float: left;
               li {
                 margin-bottom: 27px;
                 a {
@@ -126,31 +124,18 @@
               }
             }
             .code {
-              float: left;
-              margin-left: 20px;
+              @include displayFlex();
               .img_box {
-                overflow: hidden;
-                margin-bottom: 10px;
+                margin-bottom: 20px;
+                margin-right: 5px;
+                margin-left: 5px;
                 img {
                   display: block;
-                  margin: 0 auto;
                   width: 150px;
-                  
                 }
               }
-              p {
-                text-align: center;
-                font-size: 13px;
-              }
               &.global {
-                margin-left: 30px;
                 .img_box {
-                  float: left;
-                  width: inherit;
-                  text-align: center;
-                  margin-bottom: 20px;
-                  margin-right: 10px;
-                  overflow: inherit;
                 }
               }
             }

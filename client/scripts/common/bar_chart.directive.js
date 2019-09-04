@@ -21,12 +21,14 @@
 			legend: {
 				align: 'center',
 				itemWidth: 100,
-				reversed:true,
+				reversed: lang.isAr(),
+				rtl: lang.isAr(),
 				itemHoverStyle:{
 					color:'#ffdd80'
 				}
 			},
 			xAxis: {
+                reversed: lang.isAr(),
 				categories: [lang.text('tigerWitID.symbolPage.productsM')],
 				labels: {
 					style: {
@@ -47,6 +49,7 @@
 				title: {
 					text: ''
 				},
+                opposite: lang.isAr(),
 				labels: {
 					style: {
 						color: '#101010'
@@ -58,14 +61,14 @@
 			tooltip: {
 				pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b> ({point.percentage:.0f}%)<br/>',
 				shared: false,
-				reversed:true,
+				reversed: lang.isAr(),
 				hideDelay: 50
 			},
 			credits: {
 				enabled: false
 			},
 			plotOptions: {
-				reversed: true,
+				reversed:  lang.isAr(),
 				bar: {
 					pointPadding: 0.2,
 					borderWidth: 0,
@@ -78,7 +81,7 @@
 		return {
 			restrict: 'EA',
 			replace: true,
-			template: '<div class="column_chart"><img src="/ngsrc/loading.gif"></div>',
+			template: '<div class="column_chart direction-ltr"><img src="/ngsrc/loading.gif"></div>',
 			link: function (scope, element, attrs) {
 				var type = attrs.type;
 
@@ -95,9 +98,11 @@
 							enabled: false
 						},
 						legend: {
+							rtl: lang.isAr()
 
 						},
 						xAxis: {
+							reversed: lang.isAr(),
 							categories: ['trade types'],
 							labels: {
 								style: {
@@ -118,6 +123,7 @@
 							title: {
 								text: ''
 							},
+							opposite: lang.isAr(),
 							labels: {
 								style: {
 									color: '#101010'
@@ -134,7 +140,7 @@
 							enabled: false
 						},
 						plotOptions: {
-							reversed: true,
+							reversed:  lang.isAr(),
 							bar: {
 								pointPadding: 0.2,
 								borderWidth: 0,

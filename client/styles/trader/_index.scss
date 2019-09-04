@@ -66,14 +66,8 @@ $font-trader-gray-color: $gray-dark;
     }
 }
 @include b(trader_info) {
-    float: left;
     padding-left: 20px;
-}
-@include b(trader_user) {
-    display: inline-block;
-    vertical-align: top;
-    line-height: 44px;
-    height: 44px;
+    padding-right: 20px;
 }
 @include b(trader_tags) {
     padding-top: 22px;
@@ -84,10 +78,10 @@ $font-trader-gray-color: $gray-dark;
 
     span {
         padding-left: 5px;
+        padding-right: 5px;
     }
 }
 @include b(trader_avatar) {
-    float: left;
     
     @include e(wrapper) {
         display: inline-block;
@@ -127,6 +121,10 @@ $font-trader-gray-color: $gray-dark;
 }
 
 @include b(trader_user) {
+    display: inline-block;
+    vertical-align: top;
+    line-height: 44px;
+    height: 44px;
     @include e(username) {
         display: inline-block;
         vertical-align: middle;
@@ -158,23 +156,14 @@ $font-trader-gray-color: $gray-dark;
     padding-top: 20px;
     border-top: 1px solid #ebebeb;
     margin-top: 30px;
+    > li:nth-child(even){
+        border-left: 1px solid $gray;
+    }
 }
 
 @include b(trader_profit) {
-    float: left;
     width: 20%;
     text-align: center;
-    border-left: 1px solid $gray;
-
-    &:first-child {
-        border: none;
-        width: 40%;
-        padding-left: 20%;
-    }
-    &:last-child {
-        width: 40%;
-        padding-right: 20%;
-    }
 
     @include e(item) {
         padding-bottom: 2px;
@@ -191,18 +180,15 @@ $font-trader-gray-color: $gray-dark;
 
 @include b(trader_btn) {
     margin: 0px;
-    width: 150px;
-    float: right;
-    margin-right: 40px;
-    @include e(profit) {
-        width: 150px;
-        white-space: nowrap;
-        padding-top: 5px;
+    // @include e(profit) {
+    //     width: 150px;
+    //     white-space: nowrap;
+    //     padding-top: 5px;
 
-        > span {
-            color: $brand-info;
-        }
-    }
+    //     > span {
+    //         color: $brand-info;
+    //     }
+    // }
 }
 
 
@@ -235,10 +221,10 @@ $font-trader-gray-color: $gray-dark;
     .table {
         margin-top: 50px;
     }
-    .trader_current_note{
-        text-align:right;
-        margin : 20px 0 20px 0;
-    }
+    // .trader_current_note{
+    //     text-align:right;
+    //     margin : 20px 0 20px 0;
+    // }
 }
 
 @include b(trader_modal) {
@@ -267,11 +253,10 @@ $font-trader-gray-color: $gray-dark;
     }
 }
 .history-operation-box{
-    display:inline-block;
+    // display:inline-block;
 }
 .icon-histroy{
     vertical-align: sub;
-    display: block;
 }
 .history-operation-way{
     background : #ccc;
@@ -280,7 +265,7 @@ $font-trader-gray-color: $gray-dark;
     display:inline-block;
 }
 .history-operation-td{
-    width:180px;
+    width:200px;
     display:inline-block;
 }
 
@@ -297,10 +282,8 @@ $font-trader-gray-color: $gray-dark;
         display: block;
         margin: 0 auto;
         text-align: center;
-        padding-left: 215px;
         li{
             display: inline-block;
-            float: left;
             width: 202px;
             height: 50px;
             margin-bottom: -1.5px;

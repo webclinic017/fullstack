@@ -19,10 +19,10 @@
                             
                         </span>
                         <span ng-class="order.cmd?'font-down':'font-up'">
-                            &nbsp;&nbsp;{{ order.cmd_name }}
+                            {{ order.cmd_name }}
                         </span>
                         <span class="" ng-show="!lang.isEnglishArea()">
-                            {{ order.symbol_cn + ' ('+ order.symbol +')' }}
+                            {{ order.symbol_cn + '（'+ order.symbol +'）' }}
                         </span>
                         <span class="" ng-show="lang.isEnglishArea()">
                             {{ order.symbol }}
@@ -57,7 +57,7 @@
                 </tr>
             </tbody>
         </table>
-        <div class="text-right" ng-if="orders.length > 0">
+        <div class="justify-flex-end" ng-if="orders.length > 0">
             <div tw-pagination></div>
         </div>
         <!-- <p class="trader_current_note">{{ lang.text("HoldingTrades10") }} </p> -->
