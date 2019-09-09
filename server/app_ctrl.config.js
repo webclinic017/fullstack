@@ -126,7 +126,7 @@
             en: {
                 ios: {
                     app_info: {
-                        version_name : "V1.4.2",
+                        version_name : "V1.0.0",
                         description: "This update: \n1. Add Islamic accounts function;\n2. Add new trading products;\n3. Add Portuguese language;\n4. Updated opening live account process;\n5. Optimize interactive experience;\n6. Fix known bugs",
                         updated_description: "70% users are using new version",
                         force_update : true
@@ -136,7 +136,7 @@
             cn: {
                 ios: {
                     app_info: {
-                        version_name : "V1.4.2",
+                        version_name : "V1.0.0",
                         description: "本次更新：\n1.新增伊斯兰账户功能;\n2.添加新的交易品种;\n3.新增葡萄牙语;\n4.更新开通真实账户流程;\n5.优化交互体验;\n6.修复已知的bug",
                         updated_description: "70%的用户正在使用新版本",
                         force_update : true
