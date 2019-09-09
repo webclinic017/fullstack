@@ -12,7 +12,7 @@
     // 箭头在提示框左上角
     @include m(arrow_tp_lf) {
         @extend .alert;
-        left: 0;
+        left: auto;
 
         &:before {
             position: absolute;

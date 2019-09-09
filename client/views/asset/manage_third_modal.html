@@ -1,5 +1,5 @@
 <div class="sys_modal_v2 mid_case">
-    <button class="close" ng-click="closeModal()">&times;</button>
+    <button class="close" ng-class="{'ar': lang.isAr()}" ng-click="closeModal()">&times;</button>
 
     <!-- 选择第三方/管理第三方 -->
     <div class="sys_modal_v2__content" ng-if="manageType == 'switch' || manageType == 'manage'">

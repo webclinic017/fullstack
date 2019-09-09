@@ -1,5 +1,5 @@
 <div class="sys_modal_v2 slim_case">
-    <button class="close" ng-click="closeModal()">&times;</button>
+    <button class="close" ng-class="{'ar': lang.isAr()}" ng-click="closeModal()">&times;</button>
 
     <h5 class="sys_modal_v2__title">
         {{ lang.text("tigerWitID.master.masterLevelInstructions") }}
@@ -26,7 +26,7 @@
                 ● {{ lang.text("tigerWitID.master.tip4") }}
             </li>
         </ul>
-        <div class="btn_wrapper mg-tp-30 clearfix">
+        <div class="btn_wrapper mg-tp-30">
             <button class="btn btn-primary-gradient btn-sm" ng-click="closeModal()">
                 {{ lang.text("tigerWitID.confirm2") }}
             </button>

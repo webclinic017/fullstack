@@ -1,5 +1,5 @@
 <div class="sys_modal_v2 slim_case">
-    <button class="close" ng-click="closeModal()" ng-if="type !== 'HotMessage'">&times;</button>
+    <button class="close" ng-class="{'ar': lang.isAr()}" ng-click="closeModal()" ng-if="type !== 'HotMessage'">&times;</button>
 
     <h5 class="sys_modal_v2__title">
         {{msgInfo.msgTitle || lang.text('tigerWitID.depositWithdrawal.notice')}}

@@ -88,8 +88,6 @@
         line-height: 40px;
     }
     .close {
-        margin-top: 4px;
-        margin-right: 10px;
         font-size: 22px;
     }
     @include e(title) {
@@ -204,6 +202,9 @@
         top: 10px;
         font-size: 22px;
         @extend .font-base;
+        &.ar{
+            left: 15px;
+        }
     }
     @include e(title) {
         padding: 8px 0;

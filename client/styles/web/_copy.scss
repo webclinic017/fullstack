@@ -25,9 +25,9 @@
         font-weight: bold;
     }
 
-    @include e(star) {
-        @extend .become_master__star;
-    }
+    // @include e(star) {
+    //     @extend .become_master__star;
+    // }
 
     @include e(tip) {
         padding-left: 6px;
@@ -36,6 +36,7 @@
         @include m(detail) {
             color: $gray-darker;
             padding-left: 20px;
+            padding-right: 20px;
             line-height: 20px;
             font-weight: normal;
         }
@@ -69,7 +70,6 @@
         margin: 30px 0;
     }
     @include e(star) {
-        float: left;
         width: 15px;
         height: 15px;
         background-size: 100%;
@@ -77,9 +77,9 @@
     }
 
     @include e(tip) {
-        float: left;
         width: 98%;
         padding-left: 6px;
+        padding-right: 6px;
         font-weight: bold;
 
         > i {
@@ -89,14 +89,13 @@
     }
 
     @include e(step) {
-        @extend .clearfix;
+        @include displayFlex();
         text-align: center;
         border-bottom: 1px solid $gray;
         padding-bottom: 30px;
         margin-top: 50px;
         
         @include m(info) {
-            float: left;
             width: percentage(1 / 5);
 
             .img {
@@ -123,15 +122,24 @@
         }
 
         @include m(arrow) {
-            float: left;
+            @include displayFlex();
+            @include alignItems(center);
             width: percentage(1 / 15);
             margin-top: 20px;
 
             .arrow {
                 height: 32px;
+                width: 100%;
                 @include img-normal($image-path-web + "become-arrow.png");
                 background-repeat-x: no-repeat;
                 background-position-x: center;
+            }
+        }
+        &.ar{
+            .copy_select__step-arrow {
+                .arrow {
+                    transform: rotate(180deg);
+                }
             }
         }
     }
@@ -140,25 +148,25 @@
 // 成为高手
 @include b(become_master) {
 
-    @include e(banner) {
-        height: 320px;
-        width: 100%;
-        background-size: 100%;
-        background-position: center top;
-        text-align: center;
-        img {
-            height: 320px;
-        }
-        > h2 {
-            font-size: 50px;
-            margin-top: 100px;
-            color: $brand-primary-dark;
-        }
-        > p {
-            color: #fff;
-            font-size: 29px;
-        }
-    }
+    // @include e(banner) {
+    //     height: 320px;
+    //     width: 100%;
+    //     background-size: 100%;
+    //     background-position: center top;
+    //     text-align: center;
+    //     img {
+    //         height: 320px;
+    //     }
+    //     > h2 {
+    //         font-size: 50px;
+    //         margin-top: 100px;
+    //         color: $brand-primary-dark;
+    //     }
+    //     > p {
+    //         color: #fff;
+    //         font-size: 29px;
+    //     }
+    // }
 
     @include e(content) {
         border-bottom: 1px solid $gray;
@@ -169,97 +177,97 @@
         }
     }
 
-    @include e(star) {
-        display: inline-block;
-        width: 15px;
-        height: 15px;
-        background-size: 100%;
-        @include img-normal($image-path-web + "star.png");
-    }
+    // @include e(star) {
+    //     display: inline-block;
+    //     width: 15px;
+    //     height: 15px;
+    //     background-size: 100%;
+    //     @include img-normal($image-path-web + "star.png");
+    // }
 
-    @include e(tip) {
-        padding-left: 6px;
-        font-weight: bold;
+    // @include e(tip) {
+    //     padding-left: 6px;
+    //     font-weight: bold;
 
-        @include m(detail) {
-            font-weight: normal;
-            padding-left: 26px;
-        }
-    }
+    //     @include m(detail) {
+    //         font-weight: normal;
+    //         padding-left: 26px;
+    //     }
+    // }
     
-    @include e(step) {
-        @extend .clearfix;
-        text-align: center;
-        margin-top: 50px;
+    // @include e(step) {
+    //     @extend .clearfix;
+    //     text-align: center;
+    //     margin-top: 50px;
         
-        @include m(info) {
-            float: left;
-            width: percentage(1 / 5);
+    //     @include m(info) {
+    //         float: left;
+    //         width: percentage(1 / 5);
 
-            .img {
-                height: 75px;
-                background-repeat: no-repeat;
-                background-position:center center;
+    //         .img {
+    //             height: 75px;
+    //             background-repeat: no-repeat;
+    //             background-position:center center;
 
-                &.step1 {
-                    @include img-normal($image-path-web + "become-step1.png");
-                }
+    //             &.step1 {
+    //                 @include img-normal($image-path-web + "become-step1.png");
+    //             }
 
-                &.step2 {
-                    @include img-normal($image-path-web + "become-step2.png");
-                }
+    //             &.step2 {
+    //                 @include img-normal($image-path-web + "become-step2.png");
+    //             }
 
-                &.step3 {
-                    @include img-normal($image-path-web + "become-step3.png");
-                }
+    //             &.step3 {
+    //                 @include img-normal($image-path-web + "become-step3.png");
+    //             }
 
-                &.step4 {
-                    @include img-normal($image-path-web + "become-step4.png");
-                }
-            }
-        }
+    //             &.step4 {
+    //                 @include img-normal($image-path-web + "become-step4.png");
+    //             }
+    //         }
+    //     }
 
-        @include m(arrow) {
-            float: left;
-            width: percentage(1 / 15);
-            margin-top: 20px;
+    //     @include m(arrow) {
+    //         float: left;
+    //         width: percentage(1 / 15);
+    //         margin-top: 20px;
 
-            .arrow {
-                height: 32px;
-                @include img-normal($image-path-web + "become-arrow.png");
-                background-repeat-x: no-repeat;
-                background-position-x: center;
-            }
-        }
-    }
+    //         .arrow {
+    //             height: 32px;
+    //             @include img-normal($image-path-web + "become-arrow.png");
+    //             background-repeat-x: no-repeat;
+    //             background-position-x: center;
+    //         }
+    //     }
+    // }
 
-    @include e(factor) {
-        margin-top: 30px;
-        margin-bottom: 0px;
-    }
+    // @include e(factor) {
+    //     margin-top: 30px;
+    //     margin-bottom: 0px;
+    // }
 
-    @include e(title) {
-        font-size: 36px;
-        text-align: center;
-        margin: 30px 0;
-    }
+    // @include e(title) {
+    //     font-size: 36px;
+    //     text-align: center;
+    //     margin: 30px 0;
+    // }
 
-    @include e(form) {
-        width: 570px;
-        margin: 0 auto 100px;
-    }
+    // @include e(form) {
+    //     width: 570px;
+    //     margin: 0 auto 100px;
+    // }
 
-    @include e(checkbox) {
-        text-align: center;
-    }
+    // @include e(checkbox) {
+    //     text-align: center;
+    // }
 
-    @include e(btn) {
-        margin-top: 10px;
+    // @include e(btn) {
+    //     margin-top: 10px;
 
-        .btn {
-            width: 100%;
-        }
-    }
+    //     .btn {
+    //         width: 100%;
+    //     }
+    // }
 
     @include e(modal) {
         .system_modal__content_wrapper {
@@ -347,7 +355,6 @@
             
             h4 {
                 margin: 0;
-                float: left;
                 font-size: 20px;
                 font-weight: 500;
                 color: #4a4a4a;
@@ -355,8 +362,8 @@
             }
 
             span {
-                float: left;
                 margin-left: 11px;
+                margin-right: 11px;
                 font-size: 12px;
                 color: #fff;
                 font-weight: 400;

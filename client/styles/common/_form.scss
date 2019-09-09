@@ -27,15 +27,14 @@
     &.icon {
         padding-left: $input-padding-left;
     }
-    &.bd-bt {
-        padding-left: $input-padding-left-normal;
-    }
     &:focus {
         & + .form-control-icon {
             color: $gray-dark;
         }
     }
     &.bd-bt{
+        padding-left: $input-padding-left-normal;
+        padding-right: $input-padding-left-normal;
         border-radius: 0;
         border: none;
         border-bottom: 1px solid $input-border;
@@ -121,7 +120,7 @@
     color: $gray-base;
     &.bd-bt{
         top: 12px;
-        left: 5px;
+        left: auto;
     }
 }
 

@@ -1,11 +1,12 @@
 <div class="system_modal">
-    <button class="close" ng-click="closeModal()">&times;</button>
 
-    <h5 ng-if="personal.disable" class="system_modal__title">
+    <h5 ng-if="personal.disable" class="system_modal__title space-between-center">
         {{lang.text('tigerWitID.historyTransactions.details')}}
+        <button class="close" ng-click="closeModal()">&times;</button>
     </h5>
-    <h5 ng-if="! personal.disable" class="system_modal__title">
-        {{lang.text('tigerWitID.copy')}} {{ username }} {{lang.text('tigerWitID.details.title')}}
+    <h5 ng-if="! personal.disable" class="system_modal__title space-between-center">
+        <span>{{lang.text('tigerWitID.copy')}} {{ username }} {{lang.text('tigerWitID.details.title')}}</span>
+        <button class="close" ng-click="closeModal()">&times;</button>
     </h5>
 
     <div class="space_bonus__modal-content">

@@ -58,17 +58,18 @@
         border-bottom: 1px solid #ebebeb;
     }
     @include e(list-bg) {
+        @include displayFlex();
+        @include justifyContent(space-between);
+        @include flexWrap(wrap);
         &.none {
             visibility: hidden;
         }
         @include m(item) {
+            width: 31%;
             padding: 0;
-            &:nth-child(3n+3) > div {
-                margin-right: 0;
-            }
             > div {
                 @include img-normal($white_label_image + "semicircle.png");
-                margin: 0 30px 30px 0;
+                margin-bottom: 30px;
                 background-position: 0 0;
                 background-repeat: no-repeat;
                 background-color:$primary-darker;
@@ -91,13 +92,12 @@
         }
     }
     @include e(circle) {
-        padding-left: 22px;
-        position: relative;
+        @include displayFlex();
         &::before{
           content: '●';
-          position: absolute;
-          left: 0;
+          margin: 0 10px;
           font-size: 18px;
+          display: inline-block;
         }
       }
     
