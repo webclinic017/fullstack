@@ -6,9 +6,9 @@
         .module('fullstackApp')
         .controller('AccountRegisterController', AccountRegisterController);
 
-    AccountRegisterController.$inject = ['$scope', '$interval', '$timeout', '$window', '$state', 'account', 'validator', '$cookies', 'lang', '$modal', '$layer'];
+    AccountRegisterController.$inject = ['$scope', '$interval', '$timeout', '$window', '$state', 'account', 'validator', '$cookies', 'lang', 'invite', '$layer'];
 
-    function AccountRegisterController($scope, $interval, $timeout, $window, $state, account, validator, $cookies, lang, $modal, $layer) {
+    function AccountRegisterController($scope, $interval, $timeout, $window, $state, account, validator, $cookies, lang, invite, $layer) {
         $scope.registerStep1 = 1;      // 验证码注册进行到哪一步
         $scope.registerStep3 = 1;      // 2邮箱验证码注册1手机验证码注册
         $scope.step1PasswordStatus = true;  // 验证码登录密码显示or隐藏
@@ -34,6 +34,10 @@
         //     layer.close(resolve.layIndex)
         // })
 
+        var source = $scope.checkUserSource();
+        invite.setUserSource({
+            source: JSON.stringify(source)
+        });
 
         $scope.account = {
             country: {

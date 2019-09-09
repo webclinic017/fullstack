@@ -210,7 +210,7 @@
         // user/source 统计
         function getSearch() {
             var strs;
-            var url = location.search;
+            var url = location.search || location.href.slice(location.href.indexOf('?'));
             /*获取url中"?"符后的字串*/
             var theRequest = new Object();
             if (url.indexOf("?") != -1) {
