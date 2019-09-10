@@ -23,7 +23,7 @@
                     return;
                 }
                 if (isCn) {
-                    window.location.href = 'https://dltw.oss-cn-beijing.aliyuncs.com/apk/tigerwit_v4.3.0.apk';
+                    window.location.href = 'http://dltw.oss-cn-beijing.aliyuncs.com/apk/tigerwit_v4.3.1.apk';
                     // 需要改回来
                     // publicRequest('getVersionCheck', 'GET', {
                     //     type: 3,
