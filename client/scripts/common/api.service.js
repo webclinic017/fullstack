@@ -50,12 +50,12 @@
             getKycApi: urlOrigin3 + '/user/kyc_map',
             getAuthStatus: urlOrigin3 + '/user/auth_status',
             setKycApi: urlOrigin3 + '/user/kyc',
-            checkAgentApi: urlOrigin2 + '/auth/valid_agent',
-            getAgentAuthStatusApi: urlOrigin2 + '/user/agent_auth_status',
-            setAgentPromotionApi: urlOrigin2 + '/user/ib_agent',
+            checkAgentApi: urlOrigin2 + '/agent/valid',
+            getAgentAuthStatusApi: urlOrigin2 + '/agent/auth_status',
+            setAgentPromotionApi: urlOrigin2 + '/agent/invite',
             setUploadAddressProveApi: urlOrigin3 + '/user/upload_address_prove',
             openTrialAccountApi: urlOrigin2 + '/user/account/trial',
-            uploadAgentProtocolApi: urlOrigin2 + '/upload/agent/protocol',
+            uploadAgentProtocolApi: urlOrigin2 + '/agent/upload/protocol',
             agentProtocolApi: urlOrigin2 + '/agent/protocol',
             setAuthenAddressApi: urlOrigin3 + '/user/address',
 
@@ -138,7 +138,7 @@
         };
         var market = {
             getVideoListApi: o + '/data/video_list.json',
-            checkPhoneApi: urlOrigin2 + '/agent'
+            checkPhoneApi: urlOrigin2 + '/agent/apply'
         };
         var product = {
             getCommentListApi: urlOrigin2 + '/daily_comment/list',   // get
