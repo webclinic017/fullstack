@@ -22,7 +22,6 @@
     padding-bottom: 40px;
 
     @include e(title) {
-        text-align: center;
         color: #000;
         
         .tit {
@@ -134,20 +133,21 @@
             line-height: 32px;
         }    
         .tip {
-            text-align: right;
             height: 32px;
             line-height: 46px;
         }    
     }
+    @include e(content) {
+        > li{
+            > div:nth-child(2){
+                margin-left: 90px;
+                margin-right: 90px;
+            }
+        }
+    }
     @include e(item) {
         min-height: 100px;
-        padding-right: 90px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-
-        &:nth-child(3) {
-            padding-right: 15px;
-        }
+        padding: 10px;
 
         .tit {
             margin: 0;

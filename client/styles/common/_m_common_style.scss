@@ -141,15 +141,13 @@ button[class*="btn"] {
     background-color: #222;
     padding: 0.3rem px2rem(18);
     img {
-        display: inline-block;
-        float: left;
         height: 2rem;
+        vertical-align: middle;
     }
     span {
         font-size: px2rem(36);
         height: 2rem;
         line-height: 2rem;
-        float: right;
         color: $brand-primary;
     }
 }

@@ -109,24 +109,24 @@
 
         }
 
-        function openSystemMdl(type, message) {
-            $modal.open({
-                templateUrl: '/views/web/agent/modal.html',
-                size: 'sm',
-                backdrop: true,
-                controller: function ($scope, $modalInstance) {
-                    $scope.modal = {
-                        type: type,
-                        message: message || ''
-                    };
-                    $scope.closeModal = closeModal;
+        // function openSystemMdl(type, message) {
+        //     $modal.open({
+        //         templateUrl: '/views/web/agent/modal.html',
+        //         size: 'sm',
+        //         backdrop: true,
+        //         controller: function ($scope, $modalInstance) {
+        //             $scope.modal = {
+        //                 type: type,
+        //                 message: message || ''
+        //             };
+        //             $scope.closeModal = closeModal;
 
-                    function closeModal() {
-                        $modalInstance.dismiss();
-                    }
-                }
-            });
-        }
+        //             function closeModal() {
+        //                 $modalInstance.dismiss();
+        //             }
+        //         }
+        //     });
+        // }
 
         function getQueryString(name){
              var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");

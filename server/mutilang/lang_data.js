@@ -3445,7 +3445,7 @@ module.exports = {
         "vi": "Sự Chối Bỏ Trách Nhiệm Bảo Đảm Và Giới Hạn Trách Nhiệm Pháp Lý",
         "zh-Hant": "擔保免責聲明和責任限制",
         "id": "Disclaimer of Warranty and Limitation of Liability",
-        "es": "Descargo de Responsabilidades y Limitación de Responsabilidad ",
+        "es": "Descargo de Responsabilidades y Limitación de Responsabilidad",
         "pt-BR": "Isenção de Garantia e Limitação de Responsabilidade",
         "ar": "إخلاء المسؤولية عن الضمان وحدود المسؤولية"
     },
@@ -3565,7 +3565,7 @@ module.exports = {
         "vi": "Sự riêng tư",
         "zh-Hant": "隱私",
         "id": "Privacy",
-        "es": "Privacidad ",
+        "es": "Privacidad",
         "pt-BR": "Privacidade",
         "ar": "الخصوصية"
     },
@@ -3995,7 +3995,7 @@ module.exports = {
         "vi": "Điều khoản Cung Cấp Dịch vụ",
         "zh-Hant": "服務的提供",
         "id": "Provision of Services",
-        "es": "Provisión de Servicios ",
+        "es": "Provisión de Servicios",
         "pt-BR": "Fornecimento de serviços",
         "ar": "تقديم الخدمات"
     },
@@ -5992,7 +5992,7 @@ module.exports = {
     "amtRisk37": {
         "zh": "2.TigerWit 不提供与投资或交易 CFD 有关的投资、财务、法律、税务、监管或其他建议。通过我们的网站、交易平台、营销、培训活动或其他方式提供给您的任何材料或信息或其他功能都是一般性的，不应将其视为适合您或根据您个人情况考虑得出的建议。在与我们进行CFD 交易之前，如果有必要，您应该向合格的顾问寻求独立的专业意见。",
         "en": "2.TigerWit does not provide investment, financial, legal, tax, regulatory or other advice relating to investments or trading CFDs. Any material or information or other features, which may be provided to you through our Website, trading platforms, marketing or training events or otherwise, is generic and shall not be treated as advice appropriate for you or based on a consideration of your personal circumstances. You should seek independent professional advice from a suitably qualified advisor, if necessary, prior to engaging in trading CFD with us.",
-        "vi": "2.TigerWit không cung cấp tư vấn đầu tư, tài chính, pháp lý, thuế, quy định hoặc tư vấn khác liên quan đến đầu tư hoặc giao dịch CFD. Bất kỳ tài liệu hoặc thông tin hoặc các tính năng khác, có thể được cung cấp cho bạn thông qua trang web, nền tảng giao dịch, sự kiện tiếp thị hoặc đào tạo hoặc nói cách khác là chung chung và sẽ không được coi là lời khuyên phù hợp với bạn hoặc dựa trên việc xem xét hoàn cảnh cá nhân của bạn. Bạn nên tìm kiếm lời khuyên chuyên nghiệp độc lập từ",
+        "vi": "2.TigerWit không cung cấp tư vấn đầu tư, tài chính, pháp lý, thuế, quy định hoặc tư vấn khác liên quan đến đầu tư hoặc giao dịch CFD. Bất kỳ tài liệu hoặc thông tin hoặc các tính năng khác, có thể được cung cấp cho bạn thông qua trang web, nền tảng giao dịch, sự kiện tiếp thị hoặc đào tạo hoặc nói cách khác là chung chung và sẽ không được coi là lời khuyên phù hợp với bạn hoặc dựa trên việc xem xét hoàn cảnh cá nhân của bạn. Bạn nên tìm kiếm lời khuyên chuyên nghiệp độc lập từ cố vấn có trình độ phù hợp, nếu cần, trước khi tham gia giao dịch CFD với chúng tôi.",
         "zh-Hant": "2.TigerWit 不提供與投資或交易 CFD 有關的投資、財務、法律、稅務、監管或其他建議。通過我們的網站、交易平臺、營銷、培訓活動或其他方式提供給您的任何材料或信息或其他功能都是壹般性的，不應將其視為適合您或根據您個人情況考慮得出的建議。在與我們進行CFD 交易之前，如果有必要，您應該向合格的顧問尋求獨立的專業意見。",
         "id": "2.TigerWit does not provide investment, financial, legal, tax, regulatory or other advice relating to investments or trading CFDs. Any material or information or other features, which may be provided to you through our Website, trading platforms, marketing or training events or otherwise, is generic and shall not be treated as advice appropriate for you or based on a consideration of your personal circumstances. You should seek independent professional advice from a suitably qualified advisor, if necessary, prior to engaging in trading CFD with us.",
         "es": "2.TigerWit no proporciona asesoramiento sobre inversión, financiero, legal, fiscal, regulatorio o de otro tipo relacionado con inversiones o con el trading de CFDs. Cualquier material o información u otras características, que puedan serle proporcionadas a través de nuestro sitio web, plataformas de trading, eventos de marketing o formativos o de otra manera, son genéricos y no deben ser tratados como consejos apropiados para usted o basados ​​en una consideración de sus circunstancias personales. Debe buscar asesoramiento profesional independiente de un asesor debidamente calificado, si fuera necesario, antes de iniciarse en el trading de CFDs con nosotros.",
@@ -6002,7 +6002,7 @@ module.exports = {
     "amtRisk38": {
         "zh": "过往业绩",
         "en": "Past Performance",
-        "vi": "cố vấn có trình độ phù hợp, nếu cần, trước khi tham gia giao dịch CFD với chúng tôi.Past Performance",
+        "vi": "Past Performance",
         "zh-Hant": "過往業績",
         "id": "Past Performance",
         "es": "Rendimientos Pasados",
@@ -7175,7 +7175,7 @@ module.exports = {
         "vi": "Động thái của công ty",
         "zh-Hant": "公司行為",
         "id": "Corporate Actions",
-        "es": "Acciones Corporativas ",
+        "es": "Acciones Corporativas",
         "pt-BR": "Ações corporativas",
         "ar": "إجراءات الشركات"
     },
@@ -7565,7 +7565,7 @@ module.exports = {
         "vi": "Lưu ý giao dịch có trách nhiệm - Hiểu các rủi ro liên quan",
         "zh-Hant": "負責任地交易——理解涉及的風險",
         "id": "Trade Responsibly – Understanding the risks involved",
-        "es": "\nOpere Responsablemente – Comprendiendo los riesgos englobados\n",
+        "es": "Opere Responsablemente – Comprendiendo los riesgos englobados",
         "pt-BR": "Comércio Responsável - Entendimento os riscos envolvidos",
         "ar": "التداول بمسؤولية - فهم المخاطر المرتبطة بالتداول"
     },
@@ -8025,7 +8025,7 @@ module.exports = {
         "vi": "Giao dịch trực tuyến",
         "zh-Hant": "網絡交易",
         "id": "Online trading",
-        "es": "Trading Online ",
+        "es": "Trading Online",
         "pt-BR": "Comércio on-line",
         "ar": "التداول عبر الإنترنت"
     },
@@ -8175,7 +8175,7 @@ module.exports = {
         "vi": "Địa Chỉ Liên Hệ Bổ Sung",
         "zh-Hant": "其他聯系人",
         "id": "Additional Contacts",
-        "es": "Contactos Adicionales ",
+        "es": "Contactos Adicionales",
         "pt-BR": "Contatos Adicionais",
         "ar": "بيانات اتصال إضافية"
     },
@@ -10885,7 +10885,7 @@ module.exports = {
         "vi": "Địa điểm Thực Thi Lệnh",
         "zh-Hant": "執行場所",
         "id": "Execution Venues",
-        "es": "Venues Ejecución ",
+        "es": "Venues Ejecución",
         "pt-BR": "Locais de Execução",
         "ar": "أماكن التنفيذ"
     },
@@ -11835,7 +11835,7 @@ module.exports = {
         "vi": "PHẠM VI THỦ TỤC XỬ LÝ KHIẾU NẠI",
         "zh-Hant": "投訴處理程序的範圍",
         "id": "SCOPE OF THE COMPLAINTS HANDLING PROCEDURE",
-        "es": "ALCANCE PROCEDIMIENTO RESOLUCIÓN RECLAMACIONES ",
+        "es": "ALCANCE PROCEDIMIENTO RESOLUCIÓN RECLAMACIONES",
         "pt-BR": "ÂMBITO DO PROCEDIMENTO DE MANIPULAÇÃO DE RECLAMAÇÕES",
         "ar": "نطاق إجراءات التعامل مع الشكاوي"
     },

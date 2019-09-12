@@ -52,9 +52,6 @@
     @include img-normal($image-path-web + "report-banner.jpg");
   }
 
-  .team-name {
-    margin: 0px;
-  }
 }
 
 // stp
@@ -137,12 +134,12 @@
 
 // team
 @include b(team) {
-  @include e(photo-y) {
-    width: 161px;
-    height: 231px;
-    background-size: 100%;
-    @include img-normal($image-path-web + "team-yang.jpg");
-  }
+  // @include e(photo-y) {
+  //   width: 161px;
+  //   height: 231px;
+  //   background-size: 100%;
+  //   @include img-normal($image-path-web + "team-yang.jpg");
+  // }
 
   @include e(photo-li) {
     width: 161px;
@@ -151,20 +148,20 @@
     @include img-normal($image-path-web + "team-lipeng.jpg");
   }
 
-  @include e(line) {
-    border-bottom: 1px solid $gray;
-  }
+  // @include e(line) {
+  //   border-bottom: 1px solid $gray;
+  // }
 
-  .col-xs-8 {
+  @include e(con) {
+    .team-name {
+      margin: 0px;
+    }
     p {
       line-height: 20px;
       letter-spacing: 1px;
     }
   }
 
-  .mg-lf-_40 {
-    margin-left: -40px;
-  }
 }
 
 // tigerwit
@@ -241,18 +238,20 @@
       border-radius: 10px 10px 0 0;
       position: relative;
       .compare_conter {
+        @include displayFlex();
         width: 880px;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+
         .compare_tigerwit,
         .compare_liverpool {
-          float: left;
           width: 420px;
           height: 520px;
           border-radius: 10px;
-          margin-left: 20px;
+          margin-left: 10px;
+          margin-right: 10px;
           padding: 0 20px;
           p {
             font-size: 18px;
@@ -280,7 +279,8 @@
             p {
               font-size: 20px;
               font-weight: 800;
-              text-align: right;
+              @include displayFlex();
+              @include justifyContent(flex-end);
             }
           }
         }
@@ -313,15 +313,16 @@
     text-align: center;
     @include img-normal($image-path-web + "liverpool-xiaotu.png");
     @include m(btn) {
-      width: 240px;
-      line-height: 52px;
-      margin: 20px auto 0;
-      font-size: 24px;
-      background: #ffd521;
-      border-radius: 8px;
+      margin-top: 20px;
       a {
-        color: #000000;
-        display: block;
+        border-radius: 8px;
+        font-size: 24px;
+        background: #ffd521;
+        line-height: 52px;
+        min-width: 240px;
+        color: #000;
+        display: inline-block;
+        padding: 0 15px;
       }
     }
   }
@@ -358,28 +359,17 @@
     padding-bottom: 20px;
   }
   @include e(content_list) {
-    & > div {
-      div {
-        float: left;
-        margin-right: 38px;
-        border-radius: 20px;
-
-        ul {
-          padding-top: 20px;
-          li {
-            font-size: 18px;
-            margin-bottom: 25px;
-            a {
-              color: #009ee2;
-            }
-            a:hover {
-              text-decoration: underline;
-            }
-          }
+    ul {
+      padding-top: 20px;
+      li {
+        font-size: 18px;
+        margin-bottom: 25px;
+        a {
+          color: #009ee2;
         }
-      }
-      div:last-child {
-        margin-right: 0px;
+        a:hover {
+          text-decoration: underline;
+        }
       }
     }
   }
@@ -390,7 +380,6 @@
   .abouts_conter {
     .center {
       width: 100%;
-      margin: 0 auto;
       h3 {
         font-size: 34px;
         color: #ffffff;
@@ -638,12 +627,12 @@
       border-radius: 15px;
     }
     @include m(lst) {
-      overflow: hidden;
+      @include displayFlex();
+      @include flexWrap(wrap);
       > li {
         padding: 5px 10px;
         border-radius: 5px;
         cursor: pointer;
-        float: left;
         &:hover {
           background-color: rgb(249, 217, 89);
         }

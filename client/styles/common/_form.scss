@@ -110,6 +110,17 @@
         }
     }
 }
+.ar-lang{
+    .form-control-wrapper {
+        .verify_code_btn_wrapper {
+            right: auto;
+            left: 0;
+            border-left: 0;
+            border-right: 1px solid $main-char-color-30;
+
+        }
+    }
+}
 
 .form-control-title {
     line-height: 40px;
@@ -214,7 +225,6 @@
     height: 14px;
     line-height: 14px;
     top: -11px;
-    left: 0;
     padding: 0;
     background-color: #fff;
     color: $main-char-color-30;
@@ -276,8 +286,7 @@
     display: block;
     width: 100%;
     height: 46px;
-    padding: 0px;
-    padding-left: 18px;
+    padding: 0 18px;
     border: 1px solid $input-border;
     border-radius: 14px;
     line-height: 46px;
@@ -297,6 +306,12 @@
     background-color: #fff;
     color: $main-char-color-30;
     z-index: 100;
+}
+.ar-lang{
+    .account-form-control-tip{
+        left: auto;
+        right: 22px;
+    }
 }
 
 //== checkbox

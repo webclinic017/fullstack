@@ -249,13 +249,10 @@
         }
         @include m(list){
             @include displayFlex();
+            @include justifyContent(space-between);
             margin-bottom: 25px;
             > li{
-                @include flex(1);
-                margin-right: 25px;
-                &:last-child{
-                    margin-right: 0; 
-                }
+                width: 31%;
                 color: #fff;
                 background-color: #bc3430;
                 padding: 0 13px 35px;

@@ -646,7 +646,7 @@ module.exports = function (app) {
         setEnvCf(req, res);
         res.render('web/mt4.html', extendPublic({}, req));
     });
-
+    // 弃用
     app.route('/study/:subpage(introduction|term|fundamental|skill|video)').get(function (req, res) {
         var subpage = req.params.subpage || 'skill';
         var pageInfo = {
@@ -707,7 +707,7 @@ module.exports = function (app) {
         }
     });
 
-    // t33 作为固定推广链接，要更新最新的落地页到这个地址
+    // t33 作为固定推广链接，要更新最新的落地页到这个地址(cn)
     app.route('/bd/t33').get(function (req, res) {
         // checkGlobalOrCN(req, res, 'global');
         setEnvCf(req, res);
@@ -718,7 +718,7 @@ module.exports = function (app) {
         }
     });
     
-    // 11月份活动
+    // 11月份活动(cn)
     app.route('/bd/t35').get(function (req, res) {
         // checkGlobalOrCN(req, res, 'global');
         setEnvCf(req, res);
