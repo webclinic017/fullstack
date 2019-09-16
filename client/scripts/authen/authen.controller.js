@@ -65,6 +65,9 @@
         function goState(data) {
             // console.log(data)
             // console.log($scope.personal)
+            if(data.verify_status == 10 || data.status == 10){
+                $scope.toGtagEvent('review_live_account_web');
+            }
             $scope.dredgingType = data.dredged_type || data.account_status
             $timeout(function () {
                 $state.go($state.current.name, {

@@ -28,7 +28,7 @@
       <ul class="dredge_box_btn_list clearfix">
         <li ng-class="{deleteDemo: deleteDemo}">
           <div class="btn_wrapper">
-            <a class="btn btn-primary-gradient btn-sm" ng-click="confirmLive()">
+            <a class="btn btn-primary-gradient btn-sm" ng-click="[confirmLive(), toGtagEvent('click_open_live_account_web')]">
               {{lang.text('tigerWitID.settings.freeOpening')}}
             </a>
           </div>
@@ -73,7 +73,7 @@
       <ul class="dredge_box_btn_list clearfix">
         <li ng-class="{deleteDemo: deleteDemo}">
           <div class="btn_wrapper">
-            <a class="btn btn-primary-gradient btn-sm" ng-click="confirmLive()">
+            <a class="btn btn-primary-gradient btn-sm" ng-click="[confirmLive(), toGtagEvent('click_open_live_account_web')]">
               {{lang.text('tigerWitID.settings.freeOpening')}}
             </a>
           </div>

@@ -38,7 +38,7 @@
         </ul>
         <div class="index_new__focus-btn_box">
           <a href="/space/#/account/register" class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient focus_btn"
-            ng-click="toTrackEvent('home page', 'global_home_first_open_account')"><%= lang.text("link_register")%></a>
+            ng-click="[toTrackEvent('home page', 'global_home_first_open_account'), toGtagEvent('click_register_button_web')]"><%= lang.text("link_register")%></a>
         </div>
         <div class="index_new__focus-btn_box pd-tp-50">
           <%if (lang.currentLanguage() === 'zh' || lang.areaId == 1) {%>
@@ -54,12 +54,12 @@
         </div>
         <div>
           <div class="mg-bt-15">
-            <a class="inline-block" href="<%= lang.text('downloadGlobalIos') %>"><img
+            <a class="inline-block" href="<%= lang.text('downloadGlobalIos') %>" ng-click="[toTrackEvent('home page', 'global_home_click_appstore'), toGtagEvent('click_ios_download_web')]"><img
               ng-src="<%= lang.image('homeAppIos')%>" alt=""></a>
           </div>
           <%if (lang.areaId != 1) {%>
           <div>
-            <a class="inline-block" href="<%= lang.text('downloadGlobalAndroid') %>"><img
+            <a class="inline-block" href="<%= lang.text('downloadGlobalAndroid') %>" ng-click="[toTrackEvent('home page', 'global_home_click_googleplay'), toGtagEvent('click_android_download_web')]"><img
               ng-src="<%= lang.image('homeAppAndroidGlobal')%>" alt=""></a>
           </div>
           <%} else {%>
@@ -245,11 +245,11 @@
           <p class="index_new__tools-sub_tit"><%= lang.text("newhome_35_2")%></p>
           <div class="index_new__tools-download">
             <a class="inline-block" href="<%= lang.text('downloadGlobalIos') %>"
-              ng-click="toTrackEvent('home page', 'global_home_click_appstore')"><img
+              ng-click="[toTrackEvent('home page', 'global_home_click_appstore'), toGtagEvent('click_ios_download_web')]"><img
               ng-src="<%= lang.image('homeAppIos')%>" alt=""></a>
             <%if (lang.areaId != 1) {%>
             <a class="inline-block" href="<%= lang.text('downloadGlobalAndroid') %>"
-              ng-click="toTrackEvent('home page', 'global_home_click_googleplay')"><img
+              ng-click="[toTrackEvent('home page', 'global_home_click_googleplay'), toGtagEvent('click_android_download_web')]"><img
               ng-src="<%= lang.image('homeAppAndroidGlobal')%>" alt=""></a>
             <%} else {%>
             <a class="inline-block" ng-href="{{appVersionInfo.android}}"
@@ -299,7 +299,7 @@
               </div>
               <div class="flex1 text-center pd-lf-35 pd-rg-35">
                 <a href="/space/#/account/register" class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient"
-                  ng-click="toTrackEvent('home page', 'global_home_last_open_account')"><%= lang.text("newhome_46")%></a>
+                  ng-click="[toTrackEvent('home page', 'global_home_last_open_account'), toGtagEvent('click_register_bottom_web')]"><%= lang.text("newhome_46")%></a>
               </div>
             </div>
           </div>
