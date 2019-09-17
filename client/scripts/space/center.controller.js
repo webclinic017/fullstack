@@ -13,7 +13,10 @@
      */
     function CenterHomeController($rootScope,$scope, $location, $interval, $state, account, invite, $timeout, config, redbag, trader, $modal, $cookies) {
         var summaryId;
-        $scope.ibPid = $cookies['ib_pid'];
+        $scope.cookiesParams = {
+            ib_pid: $cookies['ib_pid'],
+            invite_status: $cookies['invite_status']
+        }
         $scope.$on('$destroy',function(){  
             $interval.cancel(summaryId);  
         }) 

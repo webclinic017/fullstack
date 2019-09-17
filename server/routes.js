@@ -535,6 +535,15 @@ module.exports = function (app) {
             pageInfo: pageInfo
         }, req));
     });
+    // Blog
+    app.route('/blog').get(function (req, res) {
+        setEnvCf(req, res);
+        res.render('blog/list.html', extendPublic({}, req));
+    });
+    app.route('/blog/:subpage(*)').get(function (req, res) {
+        setEnvCf(req, res);
+        res.render('blog/details.html', extendPublic({}, req));
+    });
 
     // 交易品种
     app.route('/web/product/:subpage(forex|metal|oil|cfd)').get(function (req, res) {

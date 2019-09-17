@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+    <head>
+        <% include /common/meta/web.html %>
+        <!-- build:css(.tmp) /styles/web.css -->
+        <link rel="stylesheet" href="/styles/web.css">
+        <!-- endbuild -->
+
+        <% include /common/statistic/main.html %>
+    </head>
+    <body ng-app="fullstackApp" class="<%= lang_class%>">
+        <div ng-controller="GlobalController">
+            <div class="header">
+                <% include /common/nav/web.header.html %>
+            </div>
+            
+            <div class="body">
+              <div class="real_blog_details" ng-controller="BlogDetailsController" ng-cloak>
+                <h3 class="real_blog_details__title">{{details.title}}</h3>
+                <div class="real_blog_details__desc clearfix">
+                  <div class="fl">
+                    <span class="label_name" ng-style="{'background-color': details.label_color}">{{details.label_name}}</span>
+                    <span>{{details.publisher}}</span>
+                  </div>
+                  <div class="fr">
+                    <span class="mg-rg-10 praise" ng-class="{active: praise}" ng-click="praiseBlog()"><i class="fa fa-thumbs-up"></i> {{details.praise}}</span>
+                    <span><i class="fa fa-eye"></i> {{details.browsing}}</span>
+                  </div>
+                </div>
+                <div class="real_blog_details__pic">
+                    <img ng-src="https://demoimg.tigerwit.com{{details.photo_url}}" alt="">
+                </div>
+                <div ng-bind-html="details.content | bindhtml"></div>
+              </div>
+            </div>
+
+        <% include /common/vendor/web.js.html %>
+
+        <!-- build:js(client) /scripts/blog.js -->
+        <script src="/scripts/common/config.service.js"></script>
+        <script src="/scripts/common/account.service.js"></script>
+        <script src="/scripts/common/authorization.service.js"></script>
+        
+        <script src="/scripts/common/validator.service.js"></script>
+        <script src="/scripts/common/lang.service.js"></script>
+        <script src="/scripts/common/lang_data.service.js"></script>
+        <script src="/scripts/common/redbag.service.js"></script>
+        
+        <script src="/scripts/common/navbar.directive.js"></script>
+        <script src="/scripts/common/dropdown.directive.js"></script>
+        <script src="/scripts/common/form_select.directive.js"></script>
+        <script src="/scripts/common/upload_history_file.directive.js"></script>
+        <script src="/scripts/common/utils.service.js"></script>
+        <script src="/scripts/common/product.service.js"></script>
+        <script src="/scripts/common/bind_html.filter.js"></script>
+        <script src="/scripts/common/dropdown_knowledge.directive.js"></script>
+        <script src="/scripts/common/global.controller.js"></script>
+        <script src="/scripts/web/blog.controller.js"></script>
+        <!-- endbuild -->
+
+            <div class="footer">
+                <% include /common/nav/web.footer.html %>
+            </div>
+        </div>
+    </body>
+</html>

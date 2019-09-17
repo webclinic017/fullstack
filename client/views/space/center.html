@@ -58,8 +58,8 @@
                 </span>
             <!-- </a> -->
         </li>
-        <!-- agent_user_status代理商激活状态,1:未激活-无归属,2:已激活,3:未激活有归属,与cookie中ib_pid共同判断 -->
-        <li class="space_center_summary__list-item" ng-class="{'not-active': assetInfo.agent_user_status !== 2}" ng-if="assetInfo.agent_user_status !== 0 && (ibPid || assetInfo.agent_user_status !== 3)">
+        <!-- agent_user_status代理商激活状态,0:不显示,1:无归属-显示,2:已激活-显示,3:有归属-有代理商推广参数时显示与cookie中ib_pid,invite_status共同判断 -->
+        <li class="space_center_summary__list-item" ng-class="{'not-active': assetInfo.agent_user_status !== 2}" ng-if="assetInfo.agent_user_status !== 0 && ((cookiesParams.ib_pid && cookiesParams.invite_status == 0) || assetInfo.agent_user_status !== 3)">
             <!-- <a ui-sref="space.agent"> -->
                 <p class="summary_name">{{assetInfo.agent_user_status === 2 ? lang.text('tigerWitID.partner.title2') : lang.text('tigerWitID.partner.title')}}</p>
                 <p class="summary_btn" ng-if="assetInfo.agent_user_status !== 2"><a ui-sref="space.agent">{{lang.text('tigerWitID.myAccount.unactivated')}}</a></p>

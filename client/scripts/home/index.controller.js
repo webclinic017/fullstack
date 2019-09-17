@@ -125,7 +125,8 @@
 
         //获取android下载包地址
         $scope.appVersionInfo = {};
-        getVersionCheck();
+        $scope.appVersionInfo.android = 'http://dltw.oss-cn-beijing.aliyuncs.com/apk/tigerwit_v4.3.1.apk';
+        // getVersionCheck();
         function getVersionCheck() {
             account.getVersionCheck({
                 type: 3,
