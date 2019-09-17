@@ -14,7 +14,7 @@
             localStorage["deposit_czc"] = $cookies["d&w_czc"];
         }
         
-        $scope.toGtagEvent('入金页面');
+        $scope.toGtagEvent('open_deposit_web');
         // 缓存当前父scope 给弹窗控制器使用
         $scope.parentScope = $scope;
         var parentScope = $scope;

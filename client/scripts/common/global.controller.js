@@ -339,7 +339,8 @@
          * google Analytics统计
          * 2019.09.12
          */
-        $scope.toGtagEvent = function (action) {
+        $scope.toGtagEvent = toGtagEvent;
+        function toGtagEvent(action) {
             try{
                 gtag('event', action, {
                     'event_category': 'action',
@@ -513,6 +514,7 @@
 
                     }
                     $scope.confirmLive = function () {
+                        toGtagEvent('click_open_live_account_web');
                         $modalInstance.dismiss();
                         if ($scope.isIslamic) {
                             confirmIslamic(true);

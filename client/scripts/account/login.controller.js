@@ -9,7 +9,7 @@
     AccountLoginController.$inject = ['$scope', '$interval', '$timeout', '$rootScope', '$state', 'account', 'validator', '$cookies', 'lang', '$modal', '$layer'];
 
     function AccountLoginController($scope, $interval, $timeout, $rootScope, $state, account, validator, $cookies, lang, $modal, $layer) {
-        $scope.toGtagEvent('打开登录页面');
+        $scope.toGtagEvent('open_login_web');
         $scope.loginType = 'pass';  // 登录方式 code ->验证码登录，pass ->密码登录
         $scope.loginStep2 = 1;      // 密码登录进行到哪一步
         $scope.loginStep3 = 2;      // 1邮箱登录2手机登录
