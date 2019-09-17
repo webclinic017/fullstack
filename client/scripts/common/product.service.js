@@ -14,7 +14,10 @@
       // getProductInfo: getProductInfo,
       // getTradeFeeInfo: getTradeFeeInfo,
       getWebSymbolList: getWebSymbolList,
-      getSymbolList: getSymbolList
+      getSymbolList: getSymbolList,
+      getBlogList: getBlogList,
+      getBlogDetails: getBlogDetails,
+      opBlogNums: opBlogNums
     };
     return service;
 
@@ -71,6 +74,22 @@
           detail: 1
         }
       });
+    }
+
+    function getBlogList (lang) {
+      return $http.get(o.getBlogListApi, {
+        params: {
+          lang: lang,
+          limit: 100
+        }
+      });
+    }
+    function getBlogDetails (key) {
+      return $http.get(o.getBlogDetailsApi+key);
+    }
+
+    function opBlogNums (params) {
+      return $http.put(o.opBlogNumsApi, params);
     }
   }
 })();
