@@ -224,7 +224,7 @@ $font-space-gray-color: $gray-dark;
     @include displayFlex();
     @include alignItems(flex-end);
     &.align-items-center {
-        align-items: center;
+        @include alignItems(center);
     }
     @include e(title) {
         margin-right: 80px;
