@@ -335,6 +335,25 @@
             _czc.push(["_trackEvent", category, action]);
         };
 
+        /**
+         * google Analytics统计
+         * 2019.09.12
+         */
+        $scope.toGtagEvent = toGtagEvent;
+        function toGtagEvent(action) {
+            try{
+                gtag('event', action, {
+                    'event_category': 'action',
+                    'event_label': 'catalogory'
+                });
+                // goog_report_conversion(action)
+            }
+            catch(err){
+                console.log('国内不需要google Analytics统计')
+            }
+                
+        };
+
         /*
          * 神策数据 统计
          * 2018.01.03 update
@@ -495,6 +514,7 @@
 
                     }
                     $scope.confirmLive = function () {
+                        toGtagEvent('click_open_live_account_web');
                         $modalInstance.dismiss();
                         if ($scope.isIslamic) {
                             confirmIslamic(true);
