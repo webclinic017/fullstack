@@ -198,6 +198,13 @@
             <% } %>
             <li>
                 <h2>
+                    <a data-navbar-trigger href="/blog" ng-click="toTrackEvent('navigation', 'global_navigation_app')">
+                        Blog
+                    </a>
+                </h2>
+            </li>
+            <li>
+                <h2>
                     <a data-navbar-trigger href="/download" ng-click="toTrackEvent('navigation', 'global_navigation_app')">
                         <%= lang.text("navbar16")%>
                     </a>

@@ -168,5 +168,141 @@
     }
 }
 
+@include b(real_blog) {
+    min-height: 910px;
+    padding-bottom: 100px;
+    background-size: 100%;
+    background-image: url("/white_label/blog/blog-bg.jpg");
+    padding-top: 120px;
+
+    @include e(title) {
+        text-align: center;
+        span {
+            background-color: #212934;
+            font-size: 34px;
+            color: #fff;
+            padding: 2px 10px;
+        }
+    }
+    @include e(content_wrapper) {
+        width: 1070px;
+        margin: 0 auto;
+        background: #fff;
+        border-radius: 16px;
+        padding: 20px;
+
+        li {
+            float: left;
+            width: 33.33%;
+            height: 320px;
+            padding: 10px 0px;
+            cursor: pointer;
+
+            .infobox {
+                margin: 0px 8px;
+                position: relative;
+                height: 100%;
+            }
+
+            &:nth-child(-n+3) {
+                height: 220px;
+                .cont-wrapper {
+                    width: 100%;
+                    position: absolute;
+                    bottom: 0px;
+                    left: 0px;
+                    padding: 6px;
+                    background: linear-gradient(transparent,rgba(0,0,0,.7));
+                    color: #fff;
+                }
+                .pic-wrapper {
+                    height: 100%;
+                }
+                .label-wrapper .time, .desc-wrapper {
+                    color: #fff;
+                }
+            }
+            &:first-child {
+                width: 66.66%;
+                height: 440px;
+            }
+
+            .pic-wrapper {
+                height: 66%;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                }
+            }
+            .label-wrapper {
+                margin-top: 15px;
+                .label-name {
+                    width: 80px;
+                    text-align: center;
+                    color: #fff;
+                }
+                .time {
+                    font-size: 12px;
+                    line-height: 20px;
+                    color: #333;
+                }
+            }
+            .tit-wrapper {
+                font-size: 14px;
+                font-weight: 600;
+                margin: 5px 0;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+            .desc-wrapper {
+                height: 30px;
+                font-size: 12px;
+                line-height: 15px;
+                text-overflow: -o-ellipsis-lastline;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                color: #555;
+            }
+        }
+    }
+}
+@include b(real_blog_details) {
+    padding-top: 120px;
+    padding-bottom: 80px;
+    width: 1070px;
+    margin: 0 auto;
+
+    @include e(title) {
+        font-size: 28px;
+    }
+    @include e(desc) {
+        margin-bottom: 20px;
+        .label_name {
+            color: #fff;
+            padding: 1px 20px;
+            margin-right: 10px;
+        }
+        .praise {
+            cursor: pointer;
+            &.active {
+                color: rgb(255, 210, 2);
+            }
+        }
+        i {
+            font-size: 16px;
+        }
+    }
+    @include e(pic) {
+        margin-bottom: 20px;
+        img {
+            width: 100%;
+        }
+    }
+}
+
 
 

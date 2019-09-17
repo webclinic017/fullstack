@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+    <head>
+        <% include /common/meta/web.html %>
+        <!-- build:css(.tmp) /styles/web.css -->
+        <link rel="stylesheet" href="/styles/web.css">
+        <!-- endbuild -->
+
+        <% include /common/statistic/main.html %>
+    </head>
+    <body ng-app="fullstackApp" class="<%= lang_class%>">
+        <div ng-controller="GlobalController">
+            <div class="header">
+                <% include /common/nav/web.header.html %>
+            </div>
+            
+            <div class="body">
+              <div class="real_blog" ng-controller="BlogController" ng-cloak>
+                <h3 class="real_blog__title"><span>Blog</span></h3>
+                <div class="real_blog__content_wrapper" ng-if="blogList.length">
+                    <ul class="clearfix">
+                        <li ng-repeat="item in blogList" ng-click="goDetails(item.key)">
+                            <div class="infobox">
+                                <div class="pic-wrapper">
+                                    <img ng-src="https://demoimg.tigerwit.com{{item.photo_url}}" alt="">
+                                </div>
+                                <div class="cont-wrapper">
+                                    <div class="label-wrapper clearfix">
+                                        <span class="label-name fl" ng-style="{'background-color': item.label_color}">{{item.label_name}}</span>
+                                        <span class="time fr">{{item.release_time}}</span>
+                                    </div>
+                                    <h4 class="tit-wrapper">
+                                        {{item.title}}
+                                    </h4>
+                                    <p class="desc-wrapper">
+                                        {{item.abstract}}
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+
+        <% include /common/vendor/web.js.html %>
+
+        <!-- build:js(client) /scripts/blog.js -->
+        <script src="/scripts/common/config.service.js"></script>
+        <script src="/scripts/common/account.service.js"></script>
+        <script src="/scripts/common/authorization.service.js"></script>
+        
+        <script src="/scripts/common/validator.service.js"></script>
+        <script src="/scripts/common/lang.service.js"></script>
+        <script src="/scripts/common/lang_data.service.js"></script>
+        <script src="/scripts/common/redbag.service.js"></script>
+        
+        <script src="/scripts/common/navbar.directive.js"></script>
+        <script src="/scripts/common/dropdown.directive.js"></script>
+        <script src="/scripts/common/form_select.directive.js"></script>
+        <script src="/scripts/common/upload_history_file.directive.js"></script>
+        <script src="/scripts/common/utils.service.js"></script>
+        <script src="/scripts/common/product.service.js"></script>
+        <script src="/scripts/common/bind_html.filter.js"></script>
+        <script src="/scripts/common/dropdown_knowledge.directive.js"></script>
+        <script src="/scripts/common/global.controller.js"></script>
+        <script src="/scripts/web/blog.controller.js"></script>
+        <!-- endbuild -->
+
+            <div class="footer">
+                <% include /common/nav/web.footer.html %>
+            </div>
+        </div>
+    </body>
+</html>
