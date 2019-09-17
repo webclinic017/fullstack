@@ -40,10 +40,10 @@ $font-space-gray-color: $gray-dark;
 @include b(space_center_summary){
     margin-bottom: 50px;
     @include e(list){
+        @include displayFlex();
+        @include flexWrap(wrap);
+        @include justifyContent(space-between);
         @include m(item){
-            display: inline-block;
-            box-sizing: border-box;
-            float: left;
             width: 300px;
             height: 160px;
             border-radius: 23px;
@@ -61,7 +61,6 @@ $font-space-gray-color: $gray-dark;
             }
             &:nth-child(2) {
                 background-image: url('/images/space/space-wallet.png');
-                margin: 0 20px;
             }
             &:nth-child(3) {
                 background-image: url('/images/space/space-total.png');
@@ -126,22 +125,16 @@ $font-space-gray-color: $gray-dark;
                 }
                 span {
                     font-size: 14px;
-                    padding-right: 20px;
-                    margin-right: 20px;
-                    position: relative;
-                    &.en{
-                        padding-right: 6px;
-                        margin-right: 6px;
-                    }
-                    &.line:before {
-                        content: '';
-                        display: block;
-                        position: absolute;
-                        top: 3px;
-                        right: 0;
-                        width: 1px;
+                    &.line{
+                        padding-right: 20px;
+                        margin-right: 20px;
+                        display: inline-block;
                         height: 14px;
-                        background-color: #fff;
+                        border-left: 1px solid #fff;
+                        &.en{
+                            padding-right: 6px;
+                            margin-right: 6px;
+                        }
                     }
                 }
             }
@@ -227,7 +220,6 @@ $font-space-gray-color: $gray-dark;
         @include alignItems(center);
     }
     @include e(title) {
-        margin-right: 80px;
         min-width: 110px;
         @include m(item) {
             &:nth-child(1) {
@@ -241,9 +233,10 @@ $font-space-gray-color: $gray-dark;
         }
     }
     @include e(list) {
+        @include flex(1);
+        padding: 0 80px;
         @include displayFlex();
         @include alignItems(flex-end);
-        @include flex(1);
         @include m(item) {
             line-height: 22px;
             &:nth-child(odd) {
