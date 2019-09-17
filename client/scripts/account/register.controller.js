@@ -9,6 +9,7 @@
     AccountRegisterController.$inject = ['$scope', '$interval', '$timeout', '$window', '$state', 'account', 'validator', '$cookies', 'lang', 'invite', '$layer'];
 
     function AccountRegisterController($scope, $interval, $timeout, $window, $state, account, validator, $cookies, lang, invite, $layer) {
+        $scope.toGtagEvent('open_register_page_web');
         $scope.registerStep1 = 1;      // 验证码注册进行到哪一步
         $scope.registerStep3 = 1;      // 2邮箱验证码注册1手机验证码注册
         $scope.step1PasswordStatus = true;  // 验证码登录密码显示or隐藏
@@ -69,6 +70,7 @@
         }
         // 选择国家
         $scope.selectWorld = function (target) {
+            $scope.toGtagEvent('click_country_register_web');
             if(target.code === 'CN'){
                 $scope.registerStep3 = 1;
             }
@@ -217,6 +219,11 @@
                     $scope.$emit('relogin_info', 'is_register');
                     // 神策统计 - 注册
                     $timeout(function () {
+                        if($scope.registerStep3 == '1'){
+                            $scope.toGtagEvent('phone_register_success_web');
+                        }else if($scope.registerStep3 == '2'){
+                            $scope.toGtagEvent('email_register_success_web');
+                        }
                         $scope.getEmailPhone(true);
                     }, 100);
                     $timeout(function () {
