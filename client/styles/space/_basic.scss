@@ -9,7 +9,8 @@ $font-space-gray-color: $gray-dark;
 
 .block_btn_group {
     .tw-btn {
-        margin-left: 24px;
+        margin-left: 12px;
+        margin-right: 12px;
     }
 }
 .space_block {
@@ -17,7 +18,7 @@ $font-space-gray-color: $gray-dark;
     border-radius: 10px;
     box-shadow: 0 0 15px $gray;
     padding: 23px;
-    width: 940px;
+    // width: 940px;
     &.gapped {
         margin-top: 50px;
     }
@@ -42,7 +43,6 @@ $font-space-gray-color: $gray-dark;
     @include e(list){
         @include displayFlex();
         @include flexWrap(wrap);
-        @include justifyContent(space-between);
         @include m(item){
             width: 300px;
             height: 160px;
@@ -52,6 +52,7 @@ $font-space-gray-color: $gray-dark;
             background-repeat: no-repeat;
             background-size: cover;
             padding: 25px 24px 18px;
+            margin-bottom: 10px;
             cursor: pointer;
             &:hover {
                 box-shadow: 0 10px 60px $gray-dark;
@@ -64,6 +65,10 @@ $font-space-gray-color: $gray-dark;
             }
             &:nth-child(3) {
                 background-image: url('/images/space/space-total.png');
+            }
+            &:nth-child(3n-1) {
+                margin-right: 18px;
+                margin-left: 18px;
             }
             span {
                 display: inline-block;
@@ -127,13 +132,14 @@ $font-space-gray-color: $gray-dark;
                     font-size: 14px;
                     &.line{
                         padding-right: 20px;
-                        margin-right: 20px;
+                        margin-left: 20px;
                         display: inline-block;
                         height: 14px;
                         border-left: 1px solid #fff;
+                        vertical-align: middle;                    
                         &.en{
                             padding-right: 6px;
-                            margin-right: 6px;
+                            margin-left: 6px;
                         }
                     }
                 }
@@ -162,14 +168,20 @@ $font-space-gray-color: $gray-dark;
     @include b(trading_details) {
         margin-top: 65px;
         margin-bottom: 25px;
+        @include displayFlex();
+        @include flexWrap(wrap);
         li {
-            float: left;
+            @include displayFlex();
+            @include alignItems(center);
+            @include justifyContent(space-between);
             width: 25%;
             text-align: center;
             margin-top: 20px;
             color: #494949;
             position: relative;
-            
+            > div{
+                width: 100%;
+            }
             .num {
                 line-height: 22px;
                 font-size: 18px;
@@ -180,15 +192,11 @@ $font-space-gray-color: $gray-dark;
                 line-height: 22px;
             }
 
-            &:not(.noLine):before {
+            &:not(.noLine):after {
                 content: '';
                 display: block;
-                position: absolute;
-                top: 3px;
-                right: 0;
-                width: 1px;
                 height: 30px;
-                background-color: #d2d2d2;
+                border-left: 1px solid #d2d2d2;
             }
 
             .space_center_hint{

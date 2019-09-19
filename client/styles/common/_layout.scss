@@ -161,10 +161,10 @@
     @include e(side) {
         width: 320px;
         z-index: 2;
-        background-color: #fff;
         border-bottom: 1px solid $gray;
         @include m(view) {
-            height: 100%;
+            // height: 100%;
+            background-color: #fff;
         }
     }
     @include e(con) {
@@ -181,6 +181,7 @@
             .content-view {
                 margin-bottom: 80px;
                 height: 100%;
+                width: 940px;
             }
         }
     }

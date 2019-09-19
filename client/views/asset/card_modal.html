@@ -11,9 +11,9 @@
         </h5>
         <div class="sys_modal_v2__content" ng-show="!card.binding">
             <form name="cardForm" novalidate autocomplete="off">
-                <div class="row">
-                    <div class="col-xs-3 text-left">
-                        <label>{{lang.text('tigerWitID.wallet.nameM')}}</label>
+                <div class="item-center">
+                    <div class="col-xs-3">
+                        <label class="form-control-wrapper">{{lang.text('tigerWitID.wallet.nameM')}}</label>
                     </div>
 
                     <div class="col-xs-9">
@@ -42,9 +42,9 @@
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-xs-3 text-left">
-                        <label>{{lang.text('tigerWitID.wallet.bankCountryM')}}</label>
+                <div class="item-center">
+                    <div class="col-xs-3">
+                        <label class="form-control-wrapper">{{lang.text('tigerWitID.wallet.bankCountryM')}}</label>
                     </div>
 
                     <div class="col-xs-9">
@@ -77,9 +77,9 @@
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-xs-3 text-left">
-                        <label>{{lang.text('tigerWitID.depositWithdrawal.cardNumberM')}}</label>
+                <div class="item-center">
+                    <div class="col-xs-3">
+                        <label class="form-control-wrapper">{{lang.text('tigerWitID.depositWithdrawal.cardNumberM')}}</label>
                     </div>
 
                     <div class="col-xs-9">
@@ -106,9 +106,9 @@
                     </div>
                 </div>
                 <!-- 判断不是第三方platform -->
-                <div class="row" ng-if="!platform && card.world && card.world.world_code === 'CN'">
-                    <div class="col-xs-3 text-left">
-                        <label>{{lang.text('tigerWitID.wallet.selectBankM')}}</label>
+                <div class="item-center" ng-if="!platform && card.world && card.world.world_code === 'CN'">
+                    <div class="col-xs-3">
+                        <label class="form-control-wrapper">{{lang.text('tigerWitID.wallet.selectBankM')}}</label>
                     </div>
 
                     <div class="col-xs-9">
@@ -132,9 +132,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="row" ng-if="!platform && card.world && card.world.world_code !== 'CN'">
-                    <div class="col-xs-3 text-left">
-                        <label>{{lang.text('tigerWitID.wallet.fillBankM')}}</label>
+                <div class="item-center" ng-if="!platform && card.world && card.world.world_code !== 'CN'">
+                    <div class="col-xs-3">
+                        <label class="form-control-wrapper">{{lang.text('tigerWitID.wallet.fillBankM')}}</label>
                     </div>
 
                     <div class="col-xs-9">
@@ -159,9 +159,9 @@
                 </div>
 
                 <!-- 判断是第三方platform -->
-                <div class="row" ng-if="platform && banks.length > 0">
-                    <div class="col-xs-3 text-left">
-                        <label>{{lang.text('tigerWitID.wallet.selectBankM')}}</label>
+                <div class="item-center" ng-if="platform && banks.length > 0">
+                    <div class="col-xs-3">
+                        <label class="form-control-wrapper">{{lang.text('tigerWitID.wallet.selectBankM')}}</label>
                     </div>
 
                     <div class="col-xs-9">
@@ -185,9 +185,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="row" ng-if="platform && !banks.length">
-                    <div class="col-xs-3 text-left">
-                        <label>{{lang.text('tigerWitID.wallet.fillBankM')}}</label>
+                <div class="item-center" ng-if="platform && !banks.length">
+                    <div class="col-xs-3">
+                        <label class="form-control-wrapper">{{lang.text('tigerWitID.wallet.fillBankM')}}</label>
                     </div>
 
                     <div class="col-xs-9">
@@ -211,9 +211,9 @@
                     </div>
                 </div>
 
-                <div class="row" ng-if="card.world && (card.world.world_code !== 'CN' && card.world.world_code !== 'VN')">
-                    <div class="col-xs-3 text-left">
-                        <label>{{lang.text('tigerWitID.wallet.bankIdentificationCodeM')}}</label>
+                <div class="item-center" ng-if="card.world && (card.world.world_code !== 'CN' && card.world.world_code !== 'VN')">
+                    <div class="col-xs-3">
+                        <label class="form-control-wrapper">{{lang.text('tigerWitID.wallet.bankIdentificationCodeM')}}</label>
                     </div>
 
                     <div class="col-xs-9">
@@ -238,9 +238,9 @@
                 </div>
 
 
-                <div class="row" ng-if="card.world && card.world.world_code === 'CN'">
-                    <div class="col-xs-3 text-left">
-                        <label>{{lang.text('tigerWitID.depositWithdrawal.provinceM')}}</label>
+                <div class="item-center" ng-if="card.world && card.world.world_code === 'CN'">
+                    <div class="col-xs-3">
+                        <label class="form-control-wrapper">{{lang.text('tigerWitID.depositWithdrawal.provinceM')}}</label>
                     </div>
 
                     <div class="col-xs-9">
@@ -266,9 +266,9 @@
                     </div>
                 </div>
 
-                <div class="row" ng-if="card.world && card.world.world_code === 'CN'">
-                    <div class="col-xs-3 text-left">
-                        <label>{{lang.text('tigerWitID.depositWithdrawal.cityM')}}</label>
+                <div class="item-center" ng-if="card.world && card.world.world_code === 'CN'">
+                    <div class="col-xs-3">
+                        <label class="form-control-wrapper">{{lang.text('tigerWitID.depositWithdrawal.cityM')}}</label>
                     </div>
 
                     <div class="col-xs-9">
@@ -293,10 +293,10 @@
                     </div>
                 </div>
 
-                <div class="row" ng-if="card.world">
-                    <div class="col-xs-3 text-left">
-                        <label ng-if="card.world && card.world.world_code === 'CN'">{{lang.text('tigerWitID.depositWithdrawal.branchM')}}</label>
-                        <label ng-if="card.world && card.world.world_code !== 'CN'">{{lang.text('tigerWitID.wallet.bankAddressM')}}</label>
+                <div class="item-center" ng-if="card.world">
+                    <div class="col-xs-3">
+                        <label class="form-control-wrapper" ng-if="card.world && card.world.world_code === 'CN'">{{lang.text('tigerWitID.depositWithdrawal.branchM')}}</label>
+                        <label class="form-control-wrapper" ng-if="card.world && card.world.world_code !== 'CN'">{{lang.text('tigerWitID.wallet.bankAddressM')}}</label>
                     </div>
 
                     <div class="col-xs-9">
@@ -320,9 +320,9 @@
                     </div>
                 </div>
 
-                <div class="row" ng-if="card.world && card.world.world_code === 'CN'">
-                    <div class="col-xs-3 text-left">
-                        <label>{{lang.text('tigerWitID.wallet.reservedPhoneNumberM')}}</label>
+                <div class="item-center" ng-if="card.world && card.world.world_code === 'CN'">
+                    <div class="col-xs-3">
+                        <label class="form-control-wrapper">{{lang.text('tigerWitID.wallet.reservedPhoneNumberM')}}</label>
                     </div>
 
                     <div class="col-xs-9">
