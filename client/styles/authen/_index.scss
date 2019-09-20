@@ -202,13 +202,15 @@
     }
     @include e(flow) {
         display: inline-block;
+        text-align: initial;
         > li {
+            text-align: center;
+            display: inline-block;
             margin: 0 5px;
             position: relative;
             > .num {
-                position: absolute;
-                top: -18px;
-                margin-left: -18px;
+                position: relative;
+                top: 16px;
                 display: inline-block;
                 width: 36px;
                 height: 36px;

@@ -1,7 +1,7 @@
 <!-- 我的分成 -->
 <div class="space_bonus">
-    <div class="space_bonus__total_box clearfix" ng-class="{'en': lang.isEnglishArea()}">
-        <div class="space_bonus__total mid">
+    <div class="space_bonus__total_box space-between" ng-class="{'en': lang.isEnglishArea()}">
+        <div class="space_bonus__total">
             <div class="item-num">
                 <span ng-if="investSelect.type == 3"><i class="fa fa-dollar"></i>{{ masterSummary.last_sum_pay }}</span>
                 <span ng-if="investSelect.type == 2"><i class="fa fa-dollar"></i>{{ copierSummary.last_sum_pay }}</span>
@@ -41,7 +41,7 @@
             </div>
         </div>
     </div>
-    <div class="space_bonus__title_box clearfix">
+    <div class="space_bonus__title_box space-between-center">
         <!-- <h4 class="tit">我的复制情况</h4> -->
         <!-- <div ng-if="investSelect.type == 3" class="remark">
             <span class="font-info">注:</span> 每月10号结算上一月分成
@@ -50,7 +50,7 @@
             {{lang.text('tigerWitID.commission.tp1')}}
         </div>
        
-        <div ng-if="investSelect.type == 3" class="form-control-wrapper item-center-i"> 
+        <div ng-if="investSelect.type == 3" class="form-control-wrapper"> 
             <div class="">
                 {{lang.text('tigerWitID.dateM')}}
             </div>
@@ -60,9 +60,9 @@
                 <i class="fa fa-calendar"></i>
             </div>
 
-            <button class="btn tw-btn-capsule-bordered mg-lf-20" ng-click="getMasterBonusList()">{{lang.text('tigerWitID.query')}}</button>
+            <button class="btn tw-btn-capsule-bordered" ng-click="getMasterBonusList()">{{lang.text('tigerWitID.query')}}</button>
         </div>
-        <div ng-if="investSelect.type == 2" class="form-control-wrapper item-center-i">
+        <div ng-if="investSelect.type == 2" class="form-control-wrapper">
             <div class="">
                 {{lang.text('tigerWitID.dateM')}} 
             </div>
@@ -70,7 +70,7 @@
                 <input class="form-control" name="date" type="text" required ng-model="datepickerCopier.date" tw-datetimepicker
                 datetimepicker-options="{{datepickerCopier.options}}">
             </div>
-            <button class="btn tw-btn-capsule-bordered mg-lf-20" ng-click="getCopierBonusList()">{{lang.text('tigerWitID.query')}}</button>
+            <button class="btn tw-btn-capsule-bordered" ng-click="getCopierBonusList()">{{lang.text('tigerWitID.query')}}</button>
         </div>
     </div>
     <div ng-if="investSelect.type == 3">

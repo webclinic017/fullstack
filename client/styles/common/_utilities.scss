@@ -557,6 +557,17 @@
         font-style: normal;
     }
 }
+.ar-lang{
+    .not_complete {
+        transform:rotate(-45deg);
+        -ms-transform:rotate(-45deg); /* Internet Explorer */
+        -moz-transform:rotate(-45deg); /* Firefox */
+        -webkit-transform:rotate(-45deg); /* Safari 和 Chrome */
+        -o-transform:rotate(-45deg); /* Opera */
+        right: auto;
+        left: -55px;
+    }
+}
 
 
 .display-flex {

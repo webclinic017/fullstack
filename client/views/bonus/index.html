@@ -1,6 +1,6 @@
 <!-- 我的分成 -->
 <div class="space_bonus space_block">
-    <div class="space_bonus__total_box clearfix">
+    <div class="space_bonus__total_box space-between">
         <div class="space_bonus__total">
             <div class="item-num">
                 <span ng-if="personal && personal.has_master">{{ masterSummary.copy_count }}</span>
@@ -51,7 +51,7 @@
             </div>
         </div>
     </div>
-    <div class="space_bonus__title_box clearfix">
+    <div class="space_bonus__title_box space-between-center">
         <h4 class="tit">我的复制情况</h4>
         <div ng-if="personal && personal.has_master" class="form-control-wrapper">
             <input class="form-control" name="date" type="text" required ng-model="datepickerMaster.date" tw-datetimepicker get-bonus-list="getMasterBonusList()"
