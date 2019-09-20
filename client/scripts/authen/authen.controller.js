@@ -65,7 +65,7 @@
         function goState(data) {
             // console.log(data)
             // console.log($scope.personal)
-            if(data.verify_status == 10 || data.status == 10){
+            if (data.verify_status == 10 || data.status == 10) {
                 $scope.toGtagEvent('review_live_account_web');
             }
             $scope.dredgingType = data.dredged_type || data.account_status
@@ -717,15 +717,21 @@
             }
         ]
         $scope.$watch('personal.updatePapers', function (newVal, oldVal) {
-            if (JSON.stringify(newVal) != "{}" && newVal.hint == 1) {
-                if(personal.region.world_code !== 'CN'){
+            if (JSON.stringify(newVal) != "{}") {
+                if ($scope.personal.region.world_code !== 'CN') {
                     $scope.realnameInfo.firstname = newVal.first_name;
                     $scope.realnameInfo.lastname = newVal.last_name;
-                    $scope.nameDisabled.first = newVal.first_name;
-                    $scope.nameDisabled.last = newVal.last_name;
-                }else{
+                } else {
                     $scope.realnameInfo.firstname = newVal.real_name;
-                    $scope.nameDisabled.first = newVal.real_name;
+                }
+                // 更新证件姓名不能填
+                if (newVal.hint == 1 || newVal.profile_check === 4) {
+                    if ($scope.personal.region.world_code !== 'CN') {
+                        $scope.nameDisabled.first = newVal.first_name;
+                        $scope.nameDisabled.last = newVal.last_name;
+                    } else {
+                        $scope.nameDisabled.first = newVal.real_name;
+                    }
                 }
                 $scope.realnameInfo.id_type.key = $scope.idType[newVal.idcard_type].key;
                 $scope.realnameInfo.id_type.value = $scope.idType[newVal.idcard_type].value;
@@ -1181,7 +1187,7 @@
             // $scope.addressInfo.province.key = undefined;
 
             if (item.Type === 'Address') {
-                if(item.Text){
+                if (item.Text) {
                     var textArr = item.Text.split(',')
                     if (textArr.length == 1) {
                         $scope.addressInfo.province.key = textArr[0];
@@ -1191,7 +1197,7 @@
                         $scope.addressInfo.city.key = textArr[1];
                     }
                 }
-                if(item.Description){
+                if (item.Description) {
                     var descriptionArr = item.Description.split(',')
                     if (descriptionArr.length == 1) {
                         $scope.addressInfo.address = descriptionArr[0];
@@ -1348,7 +1354,7 @@
                 return
             }
             $scope.showErr('province');
-            if($scope.addressInfo.country.value === 'CN'){
+            if ($scope.addressInfo.country.value === 'CN') {
                 $scope.showErr('city');
             }
             $scope.showErr('postCode');
