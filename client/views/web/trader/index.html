@@ -39,7 +39,7 @@
                         </h3>
                     </div>
                 </div>
-                <ul class="trader_profit_box clearfix">
+                <ul class="trader_profit_box justify-center">
                     <li class="trader_profit">
                         <div class="trader_profit__item">
                             <span class="big-num-font">{{ master.history_copy_count || '0' }}</span>
@@ -47,6 +47,7 @@
                         <h4 class="trader_gray_color">{{ lang.text("tigerWitID.historyTransactions.historyFollower") }}
                         </h4>
                     </li>
+                    <li></li>
                     <li class="trader_profit">
                         <div class="trader_profit__item"
                             ng-class="{'font-success': (master.total_profit_rate + '').indexOf('-') >= 0, 'font-danger': (master.total_profit_rate + '').indexOf('-') < 0}"
@@ -60,6 +61,7 @@
                         </div>
                         <h4 class="trader_gray_color">{{ lang.text("tigerWitID.dataStatistics.totalProfitRate") }}</h4>
                     </li>
+                    <li></li>
                     <li class="trader_profit">
                         <div class="trader_profit__item"
                             ng-class="{'font-success': master.max_retract_percent.indexOf('-') >= 0, 'font-danger': master.max_retract_percent.indexOf('-') < 0}"
@@ -78,7 +80,7 @@
         </div>
     </div>
     <div ng-cloak class="nav_tabs">
-        <ul>
+        <ul class="">
             <li ui-sref-active="active" ui-sref="trader.subpage({subpage: 'summary'})">
                 <i class="fa fa-bar-chart" aria-hidden="true"></i>
                 <a><%= lang.text("traderIndex17")%></a>

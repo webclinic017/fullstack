@@ -1,7 +1,7 @@
-<div class="footer-wrap">
-    <div class="container footer-container">
-        <div class="row mg-tp-50">
-            <div class="link-list">
+<div class="footer-wrap <%= lang.isAr('ar-lang')%>">
+    <div class="footer-container">
+        <div class="pd-tp-50">
+            <div class="link-list <%= lang.currentLanguage()%>">
                 <div class="link-list__item">
                     <h2>
                         <p class="mg-bt-20">
@@ -25,7 +25,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="link-list__item <%= lang.currentLanguage()%>">
+                <div class="link-list__item">
                     <h2>
                         <p class="mg-bt-20">
                             <span><%= lang.text("foot4")%></span>
@@ -50,7 +50,7 @@
                         <%}%>
                     </ul>
                 </div>
-                <div class="link-list__item <%= lang.currentLanguage()%>">
+                <div class="link-list__item">
                     <h2>
                         <p class="mg-bt-20">
                             <span><%= lang.text("foot7")%></span>
@@ -73,7 +73,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="link-list__item <%= lang.currentLanguage()%>">
+                <div class="link-list__item">
                     <h2>
                         <p class="mg-bt-20">
                             <span><%= lang.text("foot11")%></span>
@@ -111,7 +111,7 @@
                                 </a>
                             </p>
                         </div>
-                        <ul class="pd-tp-20 clearfix">
+                        <ul class="pd-tp-20 item-center">
                             <li class="footer-weibo">
                                 <a href="http://weibo.com/TigerWit?refer_flag=1001030102_&is_hot=1" target="_blank">
                                     <img class="img-20" src="/white_label/footer/footer-icon-weibo.png">
@@ -124,7 +124,7 @@
                                 </span>
                             </li>
                         </ul>
-                        <!-- <ul class="pd-tp-20 clearfix">
+                        <!-- <ul class="pd-tp-20 item-center">
                             <li class="footer-weibo">
                                 <a href="" target="_blank">
                                     <img class="img-20" src="/white_label/footer/footer-icon-face-book.png">
@@ -149,8 +149,15 @@
             </div>
             
         </div>
-        <div class="footer_con mg-tp-100">
-            <p class="mg-bt-80">
+        <ul class="link-nav pd-tp-50">
+            <li><a href="/web/aboutus/abouttigerwit"><%= lang.text("navbar10")%></a></li>
+            <li>|</li>
+            <li><a href=<%= lang.isEnglishArea() ? "/web/agent/partner" : "/web/agent/proxy" %>><%= lang.text("downloadApp.partners")%></a></li>
+            <li>|</li>
+            <li><a href="/web/aboutus/sitemap">Sitemap</a></li>
+        </ul>
+        <div class="footer_con pd-tp-50 pd-bt-50">
+            <p>
                 <strong><%= lang.text("foot_38")%></strong>
                 <span><%= lang.text("foot_39_1")%></span>
                 <a href="https://uk.tigerwit.com">https://uk.tigerwit.com</a>

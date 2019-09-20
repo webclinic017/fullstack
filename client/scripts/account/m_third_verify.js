@@ -77,9 +77,9 @@ $(document).ready(function () {
     var investmentGoals = false; //财务细节最后问题弹窗控制
     var gender = "1";   //性别
     var addressInfoRadio = {
-        addressMonth: "1", //居住地满三个月
-        nationality: "1",  //国籍
-        taxResidency: "1" //税务地
+        addressMonth: "0", //居住地满三个月
+        nationality: "0",  //国籍
+        taxResidency: "0" //税务地
     };
     var bt = baidu.template;
     var userCacheInfo = {};   //用户缓存信息
@@ -453,6 +453,9 @@ $(document).ready(function () {
                 } else {
                     setGlobalCountry();
                 }
+
+                sameCurrentCountry("nationality");
+                sameCurrentCountry("taxResidency");
             }
         });
     }

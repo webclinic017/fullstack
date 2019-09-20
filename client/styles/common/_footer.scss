@@ -3,6 +3,9 @@
     color: $gray-light;
     .footer-container {
         width: 1200px;
+        margin-right: auto;
+        margin-left: auto;
+        overflow: hidden;
     }
     h2, h3 {
         margin: 0px;
@@ -22,12 +25,29 @@
             font-weight:500;
         }
     }
+    .link-nav{
+        @include displayFlex();
+        > li{
+            margin: 0 2px;
+            color: $white-50;
+            a{
+                color: $white-50;
+                font-size: 14px;
+
+                &:hover {
+                    color: $brand-primary;
+                }
+            }
+        }
+    }
     .link-list {
-        float: left;
-        overflow: hidden;
+        $margin: 60px;
+        @include displayFlex();
+        margin-left: -$margin;
+        margin-right: -$margin;
         .link-list__item {
-            float: left;
-            margin: 0 60px;
+            margin-left: $margin;
+            margin-right: $margin;
             h2 {
                 p {
                     font-size:20px;
@@ -45,16 +65,15 @@
                     }
                 }
             }
-           &:first-child {
-               margin-left: 0;
-           }
-           &:last-child {
-               margin-right: 0;
-           }
-           &.vi, &.pt-BR{
-               margin-left: 0;
-           }
-
+        }
+        &.vi, &.pt-BR{
+            $margin: 30px;
+            margin-left: -$margin;
+            margin-right: -$margin;
+            .link-list__item {
+                margin-left: $margin;
+                margin-right: $margin;
+            }
         }
     }
     .footer_con {
@@ -64,11 +83,12 @@
         }
     }
     .scb-fca{
-        overflow: hidden;
         padding-bottom: 80px;
         > div{
             float: right;
             p {
+                @include displayFlex();
+                @include justifyContent(flex-end);
                 font-size:12px;
                 line-height:17px;
             }
@@ -81,12 +101,11 @@
 }
 .footer-weibo {
     position: relative;
-    float: left;
-    padding-right: 11px;
 
 }
 .footer-weixin {
-    float: left;
+    padding-right: 11px;
+    padding-left: 11px;
     position: relative;
     span {
         display: none;

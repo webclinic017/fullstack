@@ -207,6 +207,33 @@
             }
         }
 
+        // user/source 统计
+        function getSearch() {
+            var strs;
+            var url = location.search || location.href.slice(location.href.indexOf('?'));
+            /*获取url中"?"符后的字串*/
+            var theRequest = new Object();
+            if (url.indexOf("?") != -1) {
+                var str = url.substr(1);
+                strs = str.split("&");
+                for (var i = 0; i < strs.length; i++) {
+                    theRequest[strs[i].split("=")[0]] = (strs[i].split("=")[1]);
+                }
+            }
+            return theRequest;
+        }
+        $scope.checkUserSource = function () {
+            var sourceReg = /^DW_|D_|R_/i;
+            var search_arr = getSearch();
+            var search_source = {};
+            $.each(search_arr, function (index, value) {
+                if (sourceReg.test(index)) {
+                    search_source[index] = value;
+                }
+            });
+            return search_source;
+        }
+
         // 退出
         function logout() {
             account.logout().then(function (data) {
@@ -306,6 +333,25 @@
         $scope.toTrackEvent = function (category, action) {
             // console.log(category, action);
             _czc.push(["_trackEvent", category, action]);
+        };
+
+        /**
+         * google Analytics统计
+         * 2019.09.12
+         */
+        $scope.toGtagEvent = toGtagEvent;
+        function toGtagEvent(action) {
+            try{
+                gtag('event', action, {
+                    'event_category': 'action',
+                    'event_label': 'catalogory'
+                });
+                // goog_report_conversion(action)
+            }
+            catch(err){
+                console.log('国内不需要google Analytics统计')
+            }
+                
         };
 
         /*
@@ -468,6 +514,7 @@
 
                     }
                     $scope.confirmLive = function () {
+                        toGtagEvent('click_open_live_account_web');
                         $modalInstance.dismiss();
                         if ($scope.isIslamic) {
                             confirmIslamic(true);

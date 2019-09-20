@@ -126,8 +126,8 @@
             en: {
                 ios: {
                     app_info: {
-                        version_name : "V1.3.1",
-                        description: "This update: \n1. Updated the margin mode to the larger leg margin mode;\n2. Updated the margin calculation formula;\n3. Updated the position withdrawal limit;\n4. Updated the leverage of energy products.",
+                        version_name : "V1.0.0",
+                        description: "This update: \n1. Add Islamic accounts function;\n2. Add new trading products;\n3. Add Portuguese language;\n4. Updated opening live account process;\n5. Optimize interactive experience;\n6. Fix known bugs",
                         updated_description: "70% users are using new version",
                         force_update : true
                     }
@@ -136,8 +136,8 @@
             cn: {
                 ios: {
                     app_info: {
-                        version_name : "V1.3.1",
-                        description: "本次更新：\n1.更新了保证金模式为单边保证金模式；\n2.更新了保证金计算公式；\n3.更新了持仓提现限额；\n4.更新了能源产品的杠杆。",
+                        version_name : "V1.0.0",
+                        description: "本次更新：\n1.新增伊斯兰账户功能;\n2.添加新的交易品种;\n3.新增葡萄牙语;\n4.更新开通真实账户流程;\n5.优化交互体验;\n6.修复已知的bug",
                         updated_description: "70%的用户正在使用新版本",
                         force_update : true
                     }
@@ -156,11 +156,11 @@
                 },
                 android: {
                     app_info: {
-                        version_name : "V2.3.1",
-                        description: "Fixed some bugs.",
-                        updated_description: "Optimize the user experience of the blockchain function module.",
-                        url : "https://static.tigerwitfx.com/downloads/apk/tigerwit_uk_v2.3.1.apk",
-                        force_update : false
+                        version_name : "V2.4.0",
+                        description: "Fixed bug.",
+                        updated_description: "Updated client account opening process",
+                        url : "https://static.tigerwitfx.com/downloads/apk/tigerwit_uk_v2.4.0.apk",
+                        force_update : true
                     }
                 }
             },
@@ -175,11 +175,11 @@
                 },
                 android: {
                     app_info: {
-                        version_name : "V2.3.1",
-                        description: "Fixed some bugs.",
-                        updated_description: "Optimize the user experience of the blockchain function module.",
-                        url : "https://static.tigerwitfx.com/downloads/apk/tigerwit_uk_v2.3.1.apk",
-                        force_update : false
+                        version_name : "V2.4.0",
+                        description: "Fixed bug.",
+                        updated_description: "Updated client account opening process",
+                        url : "https://static.tigerwitfx.com/downloads/apk/tigerwit_uk_v2.4.0.apk",
+                        force_update : true
                     }
                 } 
             }

@@ -10,7 +10,8 @@
         var o = api.invite;
         var service = {
             getInviteFriendsInfo: getInviteFriendsInfo,
-            setInviteFriendsLink: setInviteFriendsLink
+            setInviteFriendsLink: setInviteFriendsLink,
+            setUserSource: setUserSource
         };
         return service;
 
@@ -36,6 +37,10 @@
             return publicHttp.dealPublicRequest(o.setInviteFriendsLinkApi, 'POST', {
                 user_code: usercode
             });
+        }
+
+        function setUserSource (params) {
+            return publicHttp.dealPublicRequest(o.setUserSourceApi, 'POST', params);
         }
 
     }

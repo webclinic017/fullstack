@@ -1,0 +1,78 @@
+<div class="about-public mg-200__bg">
+    <div class="sitemap">
+        <h3 class="mg-200__circle-title pd-bt-20">
+            <span>Sitemap</span>
+        </h3>
+        <ul class="sitemap__nav">
+            <li>
+                <h4 class="font-darkest font-normal font-size-22">
+                    <%= lang.text("navbar10")%>
+                </h4>
+
+                <ul class="sitemap__nav-lst">
+                    <% if(lang.isEnglishArea()) { %>
+                    <li><a href="/web/aboutus/abouttigerwit"><%= lang.text("navbar11")%></a></li>
+                    <li><a href="/web/aboutus/liverpool"><%= lang.text("liverpool.nav")%></a></li>
+                    <li><a href="/web/aboutus/medianewsandcontact"><%= lang.text("medianewsandcontact.nav")%></a></li>
+                    <% } else { %>
+                    <li><a href="/web/aboutus/abouttigerwit"><%= lang.text("navbar10")%></a></li>
+                    <% } %>
+                </ul>
+            </li>
+            <li>
+                <h4 class="font-darkest font-normal font-size-22">
+                    <%= lang.text("sidebar8")%>
+                </h4>
+                <ul class="sitemap__nav-lst">
+                    <li><a href="/web/product/forex"><%= lang.text("navbar6")%></a></li>
+                    <li><a href="/web/product/oil"><%= lang.text("navbar7")%></a></li>
+                    <li><a href="/web/product/metal"><%= lang.text("navbar8")%></a></li>
+                    <li><a href="/web/product/cfd"><%= lang.text("navbar9")%></a></li>
+                </ul>
+            </li>
+            <li>
+                <h4 class="font-darkest font-normal font-size-22">
+                    <%= lang.text("navbar5")%>
+                </h4>
+                <ul class="sitemap__nav-lst">
+                    <li><a href="/ranklist/#/ranklist/masters"><%= lang.text("navbar2")%></a></li>
+                    <li><a href="/web/agent/partner"><%= lang.text("downloadApp.partners")%></a></li>
+                    <li><a href="/web/agent/become"><%= lang.text("downloadApp.becomeMaster")%></a></li>
+                </ul>
+            </li>
+            <li>
+                <h4 class="font-darkest font-normal font-size-22">
+                    <%= lang.text("foot1")%>
+                </h4>
+                <ul class="sitemap__nav-lst">
+                    <li><a href="/web/mt4"><%= lang.text("foot2")%></a></li>
+                    <li><a href="/web/product/trade"><%= lang.text("foot3")%></a></li>
+                    <li><a href="/download"><%= lang.text("navbar16")%></a></li>
+                </ul>
+            </li>
+            <li>
+                <h4 class="font-darkest font-normal font-size-22">
+                    <%= lang.text("header.education")%>
+                </h4>
+                <ul class="sitemap__nav-lst">
+                    <li><a href="/web/faq/real"><%= lang.text("faq")%></a></li>
+                    <li><a href="/web/copy/rules"><%= lang.text("downloadApp.copyRegulations")%></a></li>
+                    <% if(!lang.isEnglishArea()) { %> 
+                    <li><a href="/web/copy/select"><%= lang.text("downloadApp.howChooseMaster")%></a></li>
+                    <li><a href="/web/copy/comment"><%= lang.text("downloadApp.analysis")%></a></li>
+                    <% } %>
+                </ul>
+            </li>
+            <li>
+                <h4 class="font-darkest font-normal font-size-22">
+                    <%= lang.text("amtExecution142")%>
+                </h4>
+                <ul class="sitemap__nav-lst">
+                    <li><a href="/web/blog/trade_fee"><%= lang.text("foot15")%></a></li>
+                    <li><a href="/web/blog/agreement"><%= lang.text("foot7")%></a></li>
+                </ul>
+            </li>
+        </ul>
+
+    </div>
+</div>

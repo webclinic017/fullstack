@@ -45,6 +45,22 @@ module.exports = function () {
             }
             return isEngArea;
         },
+        isAr: function (con) {
+            /**
+             * date: 2019.8.26
+             * con 返回的内容，不传返回true
+             * 判断阿拉伯种类语言 ar。
+             *  */
+            var bol = false;
+            if(this.language === 'ar'){
+                if(con){
+                    bol = con;
+                }else{
+                    bol = true;
+                }
+            }
+            return bol;
+        },
         isZhTDK: function () {  //是否读取中文TDK
             /**
              * date: 2019.03.08

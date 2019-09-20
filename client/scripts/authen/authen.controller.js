@@ -65,6 +65,9 @@
         function goState(data) {
             // console.log(data)
             // console.log($scope.personal)
+            if(data.verify_status == 10 || data.status == 10){
+                $scope.toGtagEvent('review_live_account_web');
+            }
             $scope.dredgingType = data.dredged_type || data.account_status
             $timeout(function () {
                 $state.go($state.current.name, {
@@ -1080,8 +1083,8 @@
             address: '',
             postCode: '',
             type: {
-                key: undefined,
-                value: undefined
+                key: $scope.lang.text("tigerWitID.no"),
+                value: 0
             },
             nationality: {
                 key: undefined,
@@ -1091,8 +1094,8 @@
                 key: undefined,
                 value: undefined
             },
-            isNationality: true,
-            isTaxResidency: true,
+            isNationality: false,
+            isTaxResidency: false,
             clickable: true,
         };
         $scope.frontErr = {
@@ -1121,6 +1124,7 @@
         };
         $scope.isIslamic = false;
         $scope.address = {};
+        // 居住三个月默认否
         $scope.types = [
             {
                 key: $scope.lang.text("tigerWitID.yes"),
@@ -1240,6 +1244,9 @@
                         //     value: data.region.city_code
                         // }
                     });
+                    // 默认国籍，纳税地
+                    $scope.checkTaxResidency($scope.addressInfo.isTaxResidency)
+                    $scope.checkNationality($scope.addressInfo.isNationality)
                     // 检测注册国际是否是伊斯兰国家
                     angular.forEach($scope.worldList, function (value, index) {
                         if (value.code === data.region.world_code && value.type === 'islamic') {
@@ -1310,14 +1317,16 @@
                         getRegions('province', 'provinces', regionCode);
                     }
                     $timeout(function () {
-                        if (!$scope.addressInfo.isTaxResidency) {
-                            $scope.addressInfo.tax_residency.key = $scope.addressInfo.country.key;
-                            $scope.addressInfo.tax_residency.value = $scope.addressInfo.country.value;
-                        }
-                        if (!$scope.addressInfo.isNationality) {
-                            $scope.addressInfo.nationality.key = $scope.addressInfo.country.key;
-                            $scope.addressInfo.nationality.value = $scope.addressInfo.country.value;
-                        }
+                        $scope.checkTaxResidency($scope.addressInfo.isTaxResidency)
+                        // if (!$scope.addressInfo.isTaxResidency) {
+                        //     $scope.addressInfo.tax_residency.key = $scope.addressInfo.country.key;
+                        //     $scope.addressInfo.tax_residency.value = $scope.addressInfo.country.value;
+                        // }
+                        $scope.checkNationality($scope.addressInfo.isNationality)
+                        // if (!$scope.addressInfo.isNationality) {
+                        //     $scope.addressInfo.nationality.key = $scope.addressInfo.country.key;
+                        //     $scope.addressInfo.nationality.value = $scope.addressInfo.country.value;
+                        // }
                     }, 30);
                     break;
                 case 'province':
@@ -1333,11 +1342,15 @@
         }
 
         $scope.submitAddressInfoForm = function () {
-            if ($scope.fuzzySearch.fillOrSearch && $scope.fuzzySearch.show) {
+            // console.log($scope.addressInfo.country.value, $scope.fuzzySearch.fillOrSearch, $scope.fuzzySearch.show)
+            if ($scope.addressInfo.country.value !== 'CN' && $scope.fuzzySearch.fillOrSearch && $scope.fuzzySearch.show) {
                 $scope.showErr('fuzzySearch')
                 return
             }
             $scope.showErr('province');
+            if($scope.addressInfo.country.value === 'CN'){
+                $scope.showErr('city');
+            }
             $scope.showErr('postCode');
             $scope.showErr('address');
             // $scope.showErr('type');

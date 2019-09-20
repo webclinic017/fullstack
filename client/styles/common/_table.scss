@@ -43,31 +43,45 @@ table {
             border-top-right-radius: $border-radius-base;
         }
     }  
+    &.ar{
+        > thead > tr > th {
+            &:first-child {
+                border-top-left-radius: 0;
+                border-top-right-radius: $border-radius-base;
+            }
+    
+            &:last-child {
+                border-top-left-radius: $border-radius-base;
+                border-top-right-radius: 0;
+            }
+        }
+    }
 }
 
 .table-bordered {
 
     > tbody {
         border-left: 1px solid $table-border-color;
+        border-right: 1px solid $table-border-color;
         border-bottom: 1px solid $table-border-color;
     }
 
     > tbody > tr > td:last-child {
-        position: relative;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        max-width: 90px;
+    //     position: relative;
+    //     text-overflow: ellipsis;
+    //     overflow: hidden;
+    //     max-width: 90px;
 
-        &:after {
-            content: '';
-            display: block;
-            position: absolute;
-            top: 0px;
-            right: 0px;
-            width: 1px;
-            height: 100%;
-            background-color: $table-border-color;
-        }
+    //     &:after {
+    //         content: '';
+    //         display: block;
+    //         position: absolute;
+    //         top: 0px;
+    //         right: 0px;
+    //         width: 1px;
+    //         height: 100%;
+    //         background-color: $table-border-color;
+    //     }
     }
 }
 

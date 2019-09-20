@@ -11,7 +11,7 @@
         border-top-left-radius: 8px;
         border-top-right-radius: 8px;
         padding: 14px 24px;
-        justify-content: space-between;
+        @include justifyContent(space-between);
         &.menu-hide{
             border-bottom-left-radius: 8px;
             border-bottom-right-radius: 8px;
