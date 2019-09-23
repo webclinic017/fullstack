@@ -45,6 +45,25 @@
         }
 
         /**
+         * google Analytics统计
+         * 2019.09.12
+         */
+        $scope.toGtagEvent = toGtagEvent;
+        function toGtagEvent(action) {
+            try{
+                gtag('event', action, {
+                    'event_category': 'action',
+                    'event_label': 'catalogory'
+                });
+                // goog_report_conversion(action)
+            }
+            catch(err){
+                console.log('国内不需要google Analytics统计')
+            }
+                
+        };
+
+        /**
          * 友盟统计
          * 2019.02.18
          */
