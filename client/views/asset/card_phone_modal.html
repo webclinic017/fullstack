@@ -1,5 +1,5 @@
 <div class="sys_modal_v2 slim_case card_modal">
-    <button class="close" ng-class="{'ar': lang.isAr()}" ng-click="closeModal()">&times;</button>
+    <button class="close" ng-click="closeModal()">&times;</button>
     <h5 class="sys_modal_v2__title">
         {{lang.text('tigerWitID.systemPrompt')}}
     </h5>
@@ -23,13 +23,13 @@
         <br>
         <div class="sys_modal_v2__content" >
             <form name="cardForm" novalidate>
-                <div class="row">
-                    <div class="col-xs-9 font-bold-light text-left">
+                <div class="item-center">
+                    <div class="col-xs-9 font-bold-light">
                         {{lang.text('tigerWitID.wallet.reservedPhoneNumberM')}}
                     </div>
                 </div>
                 <br>
-                <div class="row">
+                <div class="item-center">
                     <div class="col-xs-9">
                         <div class="form-control-wrapper">
                             <input class="form-control form-control-shape-capsule form-control-size-md"

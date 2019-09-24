@@ -1,6 +1,6 @@
 <div>
   <div class="asset_evidence">
-    <ul class="asset_evidence__nav clearfix">
+    <ul class="asset_evidence__nav">
       <li class="asset_evidence__nav-item" ng-class="{active: status === 1}" ng-click="changeEvidenceStatus(1)">
         {{lang.text('tigerWitID.depositWithdrawal.toUpload')}}
       </li>
@@ -39,17 +39,17 @@
         </div>        
         <ul class="asset_evidence__content-lst">
           <li class="item" ng-repeat="evidence in evidenceList">
-            <div class="tit clearfix">
-              <span class="fl"><span ng-show="status === 1 && evidence.must" class="font-danger">＊</span>{{lang.text('tigerWitID.fundRecords.rechargeSuccess')}}</span>
-              <span class="fr">${{evidence.amount}}</span>
+            <div class="tit space-between">
+              <span class=""><span ng-show="status === 1 && evidence.must" class="font-danger">＊</span>{{lang.text('tigerWitID.fundRecords.rechargeSuccess')}}</span>
+              <span class="">${{evidence.amount}}</span>
             </div>
-            <div class="date clearfix">
-              <span class="fl">{{evidence.created_at | dealTimestamp}}</span>
-              <span ng-if="status !== 1" class="fr">{{lang.text('tigerWitID.depositWithdrawal.transactionSuccessful')}}</span>
-              <span ng-if="status === 1" class="fr">{{evidence.reason}}</span>
+            <div class="date space-between">
+              <span class="">{{evidence.created_at | dealTimestamp}}</span>
+              <span ng-if="status !== 1" class="">{{lang.text('tigerWitID.depositWithdrawal.transactionSuccessful')}}</span>
+              <span ng-if="status === 1" class="">{{evidence.reason}}</span>
             </div>
-            <div class="info clearfix" ng-if="status === 1">
-              <div class="fl pic-box clearfix">
+            <div class="info space-between-center" ng-if="status === 1">
+              <div class="pic-box display-flex">
                 <div class="pic" ng-repeat="file in evidence.files" ng-click="checkImage($event, srcHead+file)">
                   <img ng-src="{{srcHead}}{{file}}" alt="">
                 </div>
@@ -60,7 +60,7 @@
                     <div tw-upload-file-base64 data-file-name="evidence.files[2]"></div>
                 </div>
               </div>
-              <div class="fr">
+              <div class="">
                   <button ng-if="!evidence.files.length" class="tw-btn tw-btn-sm130 tw-btn-capsule-gradient relative">
                       {{lang.text('tigerWitID.depositWithdrawal.uploadVoucher')}}
                     <div tw-upload-file-base64 data-file-name="evidence.files[0]"></div>
@@ -70,13 +70,13 @@
                   </button>
               </div>
             </div>
-            <div class="info clearfix" ng-if="(status === 0) || (status === 2)">
-                <div class="fl pic-box clearfix">
+            <div class="info space-between-center" ng-if="(status === 0) || (status === 2)">
+                <div class="pic-box display-flex">
                   <div class="pic" ng-repeat="file in evidence.pic_thumb" ng-click="checkImage($event, evidence.pic[$index])">
                     <img ng-src="{{file}}" alt="">
                   </div>
                 </div>
-                <div class="fr">
+                <div class="">
                     <button ng-if="status === 2" class="tw-btn tw-btn-capsule-bordered" ng-click="cancelEvidence(evidence, $index)">
                       {{lang.text('tigerWitID.revocation')}}
                     </button>

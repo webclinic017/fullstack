@@ -1,8 +1,8 @@
 <!-- <div tw-guide data-src-list="src" data-guide-type="deposit"></div> -->
 <div class="deposit">
     <div ng-show="!walletDepositSucc && !teleDepositSucc">
-        <div class="row">
-            <div class="col-xs-2 text-right deposit__title-money">{{lang.text('tigerWitID.depositWithdrawal.depositAmountJ')}}</div>
+        <div class="display-flex">
+            <div class="col-xs-2 justify-flex-end deposit__title-money">{{lang.text('tigerWitID.depositWithdrawal.depositAmountJ')}}</div>
             <div class="col-xs-7 deposit__input" ng-show="!depositTypeLst[deposit.type].amount_list.length">
                 <form name="depositForm" novalidate autocomplete="off">
                     <div class="form-control-wrapper">
@@ -27,33 +27,35 @@
             </ul>
         </div>
 
-        <div class="row" ng-if="depositTypeLst[deposit.type].key === 'omipay'">
-            <ul class="col-xs-7 col-xs-offset-2 deposit__list">
-                <li class="deposit__list-item mg-rg-30" ng-click="selectMoney(100)">$100</li>
-                <li class="deposit__list-item mg-rg-30" ng-click="selectMoney(200)">$200</li>
-                <li class="deposit__list-item mg-rg-30" ng-click="selectMoney(500)">$500</li>
+        <div class="display-flex" ng-if="depositTypeLst[deposit.type].key === 'omipay'">
+            <div class="col-xs-2"></div>
+            <ul class="col-xs-7 deposit__list">
+                <li class="deposit__list-item" ng-click="selectMoney(100)">$100</li>
+                <li class="deposit__list-item" ng-click="selectMoney(200)">$200</li>
+                <li class="deposit__list-item" ng-click="selectMoney(500)">$500</li>
                 <li class="deposit__list-item" ng-click="selectMoney(1000)">$1000</li>
             </ul>
         </div>
-        <div class="row" ng-if="deposit.currency">
-            <div class="col-xs-7 col-xs-offset-2 deposit__rate">
+        <div class="display-flex" ng-if="deposit.currency">
+            <div class="col-xs-2"></div>
+            <div class="col-xs-7 deposit__rate">
                 <p ng-show="deposit.currency.currency !== 'USD'">
                     <span class="font-danger">＊</span>{{lang.text('tigerWitID.depositWithdrawal.rate1d')}}
                     <span>{{deposit.currency.rate_in}}</span> {{deposit.currency.currency_name}}
                 </p>
             </div>
         </div>
-        <div class="row mg-tp-30 deposit__pay_method">
-            <div class="col-xs-2 text-right deposit__title-money">{{lang.text('tigerWitID.depositWithdrawal.depositOptionsJ')}}</div>
+        <div class="display-flex mg-tp-30 deposit__pay_method">
+            <div class="col-xs-2 justify-flex-end deposit__title-money">{{lang.text('tigerWitID.depositWithdrawal.depositOptionsJ')}}</div>
             <div class="col-xs-7">
                 <div class="deposit__way" ng-click="openChangeDepTypeMdl()">
-                    {{ deposit.type ? depositTypeLst[deposit.type].name : lang.text('tigerWitID.pleaseSelect') }}
+                    <label>{{ deposit.type ? depositTypeLst[deposit.type].name : lang.text('tigerWitID.pleaseSelect') }}</label>
                     <span>{{ deposit.type ? depositTypeLst[deposit.type].hint : '' }}</span>
                 </div>
-                <p class="deposit__way-tip" ng-class="{active: deposit.type !== 'wallet'}">{{depositTypeLst[deposit.type].describe}}</p>
-                <p class="deposit__way-tip" ng-class="{active: deposit.type === 'wallet'}">{{lang.text('tigerWitID.depositWithdrawal.walletBalanceM')}}${{ walletAble || '0.00' }}</p>
-                <!-- <p class="deposit__way-tip" ng-class="{active: deposit.type !== 'wallet' && deposit.type !== 'tele'}">{{lang.text('tigerWitID.depositWithdrawal.confirmAccount')}}</p> -->
-                <a class="deposit__way-tip font-danger mg-tp-10 cursor_pointer" ng-class="{active: deposit.type === 'cseWallet'}" href="/third_usage" target="_blank">
+                <p class="deposit__way-tip" ng-show="deposit.type !== 'wallet'">{{depositTypeLst[deposit.type].describe}}</p>
+                <p class="deposit__way-tip" ng-show="deposit.type === 'wallet'">{{lang.text('tigerWitID.depositWithdrawal.walletBalanceM')}}${{ walletAble || '0.00' }}</p>
+                <!-- <p class="deposit__way-tip" ng-show="deposit.type !== 'wallet' && deposit.type !== 'tele'">{{lang.text('tigerWitID.depositWithdrawal.confirmAccount')}}</p> -->
+                <a class="deposit__way-tip font-danger mg-tp-10 cursor_pointer" ng-show="deposit.type === 'cseWallet'" href="/third_usage" target="_blank">
                     {{lang.text('tigerWitID.depositWithdrawal.thirdParty')}}
                 </a>
                 <p class="deposit__way-desc" ng-class="{active: deposit.type === 'invest'}">
@@ -61,10 +63,10 @@
                 </p>
             </div>
         </div>
-        <div class="row mg-tp-30 deposit__pay_method" ng-if="deposit.type && depositTypeLst[deposit.type].currency.length > 1">
-            <div class="col-xs-2 text-right deposit__title-money">{{lang.text('tigerWitID.depositWithdrawal.paymentCurrency')}}</div>
+        <div class="display-flex mg-tp-30 deposit__pay_method" ng-if="deposit.type && depositTypeLst[deposit.type].currency.length > 1">
+            <div class="col-xs-2 justify-flex-end deposit__title-money">{{lang.text('tigerWitID.depositWithdrawal.paymentCurrency')}}</div>
             <div class="col-xs-2 relative">
-                <div class="deposit__currency-tit" ng-click="openCurrency($event)">{{deposit.currency.currency_name}}</div>
+                <div class="deposit__currency-tit" ng-click="openCurrency($event)"><span>{{deposit.currency.currency_name}}</span></div>
                 <ul class="deposit__currency-lst" ng-show="currencyStatus">
                     <li ng-repeat="item in depositTypeLst[deposit.type].currency" ng-click="selcetCurrency(item)">
                         {{item.currency_name}}
@@ -73,8 +75,8 @@
             </div>
         </div>
 
-        <div class="row mg-tp-30" ng-if="deposit.type && depositTypeLst[deposit.type].channel_type === 2" ng-controller="ManageCardController">
-            <div class="col-xs-2 text-right deposit__title-money">
+        <div class="display-flex mg-tp-30" ng-if="deposit.type && depositTypeLst[deposit.type].channel_type === 2" ng-controller="ManageCardController">
+            <div class="col-xs-2 justify-flex-end deposit__title-money">
                 {{lang.text('tigerWitID.depositWithdrawal.bankCard')}}
             </div>
     
@@ -96,46 +98,46 @@
                 <span class="tw-btn tw-btn-md tw-btn-capsule-bordered card_manage" ng-click="openManageCardMdl({type: 'manage', page: 'deposit', parentScope: parentScope, getCard: getCard})" ng-style="{width: lang.isEnglishArea() ? '170px' : ''}">{{lang.text('tigerWitID.wallet.manageBankCards')}}</span>
             </div>
         </div>
-        <div class="row" ng-if="deposit.type && depositTypeLst[deposit.type].channel_type === 2">
-            <div class="col-xs-7 col-xs-offset-2 deposit__rate mg-tp-15">
+        <div class="display-flex" ng-if="deposit.type && depositTypeLst[deposit.type].channel_type === 2">
+            <div class="col-xs-2"></div>
+            <div class="col-xs-7 deposit__rate mg-tp-15">
                 <span class="font-danger">＊{{lang.text('tigerWitID.depositWithdrawal.bankCardTransferTip')}}</span>
             </div>
         </div>
 
         <div ng-if="deposit.isNeedBank && deposit.depositCard" class="mg-tp-30">
-            <div class="row" style="padding-left: 65px;">
+            <div class="display-flex" style="padding-left: 65px;padding-right: 65px;">
                 <div class="deposit__title-money">{{lang.text('tigerWitID.depositWithdrawal.useBankPay')}}</div>
             </div>
-            <div class="row mg-bt-10">
-                <div style="padding-left: 65px;" class="col-xs-2">{{lang.text('tigerWitID.wallet.name')}}</div>
+            <div class="display-flex mg-bt-10">
+                <div class="col-xs-2 justify-flex-end">{{lang.text('tigerWitID.wallet.name')}}</div>
                 <div class="col-xs-7">
                     {{lang.isThird() ? main.realname : personal.realname}}
                 </div>
             </div>
-            <div class="row">
-                <div style="padding-left: 65px;" class="col-xs-2">{{lang.text('tigerWitID.depositWithdrawal.bankCardNumber')}}</div>
+            <div class="display-flex">
+                <div class="col-xs-2 justify-flex-end">{{lang.text('tigerWitID.depositWithdrawal.bankCardNumber')}}</div>
                 <div class="col-xs-7">
                     {{deposit.depositCard}}&nbsp;&nbsp;&nbsp;&nbsp;
                     <span ng-click="openDepositMdl('bindBankCard', null, {
                         cardName: lang.isThird() ? main.realname : personal.realname,
                         cardNum: deposit.depositCard,
                         msgTitle: lang.text('tigerWitID.depositWithdrawal.fillPayCardInfo')
-                    });" style="color: #4a90e2;cursor: pointer;">{{lang.text('tigerWitID.depositWithdrawal.replace')}}</span>
+                    });" class="font-info cursor_pointer">{{lang.text('tigerWitID.depositWithdrawal.replace')}}</span>
                 </div>
             </div>
         </div>
         <div class="mg-tp-50" ng-if="deposit.type === 'tele'">
-            <div class="row">
-                <div class="col-xs-2 text-right deposit__title-money">{{lang.text('tigerWitID.depositWithdrawal.uploadCredentialsJ')}}</div>
+            <div class="display-flex">
+                <div class="col-xs-2 justify-flex-end deposit__title-money">{{lang.text('tigerWitID.depositWithdrawal.uploadCredentialsJ')}}</div>
                 <div class="col-xs-6 deposit__tele_file mg-lf-15 mg-rg-15 mg-tp-0">
                     {{lang.text('tigerWitID.depositWithdrawal.clickUpload')}}
                     <div tw-upload-file-base64 data-file-name="deposit.teleFile"></div>
                 </div>
             </div>
         </div>
-        <div class="row mg-tp-50">
-            <div class="col-xs-2"></div>
-            <div class="col-xs-7 text-center">
+        <div class="mg-tp-50">
+            <div class="text-center">
                 <div ng-if="!isLoading" class="deposit__btn_wrapper">
                     <button ng-if="deposit.submitBtn" class="tw-btn tw-btn-capsule-gradient tw-btn-full" ng-click="[toDeposit(), toTrackEvent('Deposit/withdrawal', 'pp'), toGtagEvent('click_deposit_web')]">
                         <span ng-show="depositTypeLst[deposit.type].channel_type !== 2 && deposit.type !== 'tele'">{{lang.text('tigerWitID.depositWithdrawal.deposit')}}</span>
@@ -164,7 +166,7 @@
                     <div tw-upload-file-base64 data-file-name="deposit.teleFile"></div>
                 </div>
             </div> -->
-            <div class="row">
+            <div class="">
                 <p class="deposit__tele-tip">
                     {{lang.text('tigerWitID.depositWithdrawal.telegraphicTransferTip1')}}
                 </p>
@@ -226,13 +228,11 @@
         {{lang.text('tigerWitID.depositWithdrawal.tip33')}}
     </div>
     <div class="deposit__tele_succ mg-tp-50 mg-bt-50" ng-show="teleDepositSucc">
-        <div class="clearfix">
-            <div class="pic">
-                <img src="/images/icon-succ2.png">
-            </div>
-            <div class="tip">
-                {{lang.text('tigerWitID.depositWithdrawal.tip35')}}<br>{{lang.text('tigerWitID.depositWithdrawal.tip34')}}
-            </div>
+        <div class="pic">
+            <img src="/images/icon-succ2.png">
+        </div>
+        <div class="tip">
+            {{lang.text('tigerWitID.depositWithdrawal.tip35')}}<br>{{lang.text('tigerWitID.depositWithdrawal.tip34')}}
         </div>
         
     </div>

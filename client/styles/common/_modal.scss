@@ -202,9 +202,6 @@
         top: 10px;
         font-size: 22px;
         @extend .font-base;
-        &.ar{
-            left: 15px;
-        }
     }
     @include e(title) {
         padding: 8px 0;
@@ -268,6 +265,14 @@
             &.deleteDemo {
                 width: 100%;
             }
+        }
+    }
+}
+.ar-lang{
+    .sys_modal_v2{
+        .close{
+            left: 15px;
+            right: auto;
         }
     }
 }

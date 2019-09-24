@@ -31,7 +31,11 @@
 @import "common/layer";
 
 // Module CSS
-@import "third/asset";
+// @import "third/asset";
+// 出金入金凭证合并
+@import "asset/index";
+@import "web/evidence";
+
 
 @import "third/sidebar";
 @import "third/nav";

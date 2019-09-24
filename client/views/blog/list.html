@@ -8,7 +8,7 @@
 
         <% include /common/statistic/main.html %>
     </head>
-    <body ng-app="fullstackApp" class="<%= lang_class%>">
+    <body ng-app="fullstackApp" class="<%= lang_class%> <%= lang.isAr('ar-lang')%>">
         <div ng-controller="GlobalController">
             <div class="header">
                 <% include /common/nav/web.header.html %>
@@ -25,9 +25,9 @@
                                     <img ng-src="https://demoimg.tigerwit.com{{item.photo_url}}" alt="">
                                 </div>
                                 <div class="cont-wrapper">
-                                    <div class="label-wrapper clearfix">
-                                        <span class="label-name fl" ng-style="{'background-color': item.label_color}">{{item.label_name}}</span>
-                                        <span class="time fr">{{item.release_time}}</span>
+                                    <div class="label-wrapper space-between-center">
+                                        <span class="label-name" ng-style="{'background-color': item.label_color}">{{item.label_name}}</span>
+                                        <span class="time">{{item.release_time}}</span>
                                     </div>
                                     <h4 class="tit-wrapper">
                                         {{item.title}}

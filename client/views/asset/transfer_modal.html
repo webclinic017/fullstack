@@ -1,5 +1,5 @@
 <div class="sys_modal_v2 slim_case card_modal">
-    <button class="close" ng-class="{'ar': lang.isAr()}" ng-click="closeModal()">&times;</button>
+    <button class="close" ng-click="closeModal()">&times;</button>
 
     <div>
         <h5 class="sys_modal_v2__title">
@@ -10,9 +10,9 @@
         <div class="sys_modal_v2__content" ng-show="!card.binding">
             <form name="cardForm" novalidate autocomplete="off">
 
-                <div class="row">
-                    <div class="col-xs-3 text-left">
-                        <label>{{lang.text('tigerWitID.settings.countryM')}}</label>
+                <div class="item-center">
+                    <div class="col-xs-3">
+                        <label class="form-control-wrapper">{{lang.text('tigerWitID.settings.countryM')}}</label>
                     </div>
 
                     <div class="col-xs-9">
@@ -45,9 +45,9 @@
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-xs-3 text-left">
-                        <label>{{lang.text('tigerWitID.depositWithdrawal.nameM')}}</label>
+                <div class="item-center">
+                    <div class="col-xs-3">
+                        <label class="form-control-wrapper">{{lang.text('tigerWitID.depositWithdrawal.nameM')}}</label>
                     </div>
 
                     <div class="col-xs-9">
@@ -75,9 +75,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-xs-3 text-left">
-                        <label>{{lang.text('tigerWitID.transfer.cardNumberM')}}</label>
+                <div class="item-center">
+                    <div class="col-xs-3">
+                        <label class="form-control-wrapper">{{lang.text('tigerWitID.transfer.cardNumberM')}}</label>
                     </div>
 
                     <div class="col-xs-9">
@@ -100,9 +100,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="row" >
-                    <div class="col-xs-3 text-left">
-                        <label>{{lang.text('tigerWitID.depositWithdrawal.bankName')}}</label>
+                <div class="item-center" >
+                    <div class="col-xs-3">
+                        <label class="form-control-wrapper">{{lang.text('tigerWitID.depositWithdrawal.bankName')}}</label>
                     </div>
 
                     <div class="col-xs-9">
@@ -126,9 +126,9 @@
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-xs-3 text-left">
-                        <label>{{lang.text('tigerWitID.transfer.bicSwiftCodeM')}}</label>
+                <div class="item-center">
+                    <div class="col-xs-3">
+                        <label class="form-control-wrapper">{{lang.text('tigerWitID.transfer.bicSwiftCodeM')}}</label>
                     </div>
 
                     <div class="col-xs-9">

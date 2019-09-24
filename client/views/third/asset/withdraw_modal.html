@@ -1,5 +1,5 @@
 <div class="sys_modal_v2 slim_case">
-    <button class="close" ng-class="{'ar': lang.isAr()}" ng-click="closeModal()">&times;</button>
+    <button class="close" ng-click="closeModal()">&times;</button>
 
     <h5 class="sys_modal_v2__title">
         提示
@@ -48,19 +48,19 @@
 
     <div class="sys_modal_v2__content" ng-if="params.type === 'withdrawReady'">
         <div class="sys_modal_v2__info">
-            <p class="deposit_modal__tit mg-bt-0" style="font-family: initial;">{{params.currency.currency_symbol}} {{params.amountRMB}}</p>
+            <p class="deposit_modal__tit mg-bt-0" style="font-family: initial;"><span>{{params.currency.currency_symbol}}</span> <span>{{params.amountRMB}}</span></p>
             <p class="text-center font-dark mg-bt-15">
                 <span>1 美元 =</span>
-                <span>{{params.currency.rate_out}}</span> {{params.currency.currency_name}}
+                <span>{{params.currency.rate_out}} {{params.currency.currency_name}}</span>
             </p>
             <ul class="deposit_modal__lst">
-                <li class="clearfix">
-                    <span class="fl">提现金额：</span>
-                    <span class="fr" style="font-family: initial;">$ {{params.amountDollar}}</span>
+                <li class="space-between">
+                    <span class="">提现金额：</span>
+                    <span class="" style="font-family: initial;">$ {{params.amountDollar}}</span>
                 </li>
-                <li class="clearfix" ng-if="params.currency.currency !== 'USD'">
-                    <span class="fl">折合{{params.currency.currency_name}}约：</span>
-                    <span class="fr" style="font-family: initial;">{{params.currency.currency_symbol}} {{params.amountRMB}}</span>
+                <li class="space-between" ng-if="params.currency.currency !== 'USD'">
+                    <span class="">折合{{params.currency.currency_name}}约：</span>
+                    <span class="" style="font-family: initial;">{{params.currency.currency_symbol}} {{params.amountRMB}}</span>
                 </li>
             </ul>
             <p class="deposit_modal__tip" style="font-family: initial;">

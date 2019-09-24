@@ -1,10 +1,10 @@
 <div class="sys_modal_v2 mid_case">
-    <button class="close" ng-class="{'ar': lang.isAr()}" ng-click="closeModal()">&times;</button>
+    <button class="close" ng-click="closeModal()">&times;</button>
 
     <!-- 选择电汇列表/管理电汇列表 -->
     <div class="sys_modal_v2__content" ng-if="manageType == 'switch' || manageType == 'manage'">
-        <h3 class="sys_modal_v2__title text-left" ng-if="manageType == 'switch'">{{lang.text('tigerWitID.transfer.switchTransferAccount')}}</h3>
-        <h3 class="sys_modal_v2__title text-left" ng-if="manageType == 'manage'">{{lang.text('tigerWitID.transfer.manageWireTransfer')}}</h3>
+        <h3 class="sys_modal_v2__title" ng-if="manageType == 'switch'">{{lang.text('tigerWitID.transfer.switchTransferAccount')}}</h3>
+        <h3 class="sys_modal_v2__title" ng-if="manageType == 'manage'">{{lang.text('tigerWitID.transfer.manageWireTransfer')}}</h3>
         <div tw-loading-img></div>
         <table class="manage_card_list">
             <colgroup>
@@ -34,18 +34,18 @@
                 </tr>
             </tbody>
         </table>
-        <div class="mg-tp-10 text-left" ng-if="manageType == 'manage'">
+        <div class="mg-tp-10" ng-if="manageType == 'manage'">
             <a class="btn-text" ng-click="openAddTransferModal()">{{lang.text('tigerWitID.transfer.clickAddWireTransfer')}}</a>
         </div>
     </div>
 
     <!-- 删除电汇列表 -->
     <div class="sys_modal_v2__content" ng-if="manageType == 'delete'">
-        <h3 class="sys_modal_v2__title text-left">{{lang.text('tigerWitID.transfer.deleteWireTransfer')}}</h3>
+        <h3 class="sys_modal_v2__title">{{lang.text('tigerWitID.transfer.deleteWireTransfer')}}</h3>
         <p class="sys_modal_v2__desp mg-tp-20">{{lang.text('tigerWitID.transfer.deleteThisAccount')}}</p>
-        <div class="btn_wrapper text-right clearfix">
-            <a class="btn-text fr mg-lf-20" ng-click="closeModal()">{{lang.text('tigerWitID.cancel')}}</a>
-            <a class="btn-text fr" ng-click="deleteTransfer()">{{lang.text('tigerWitID.delete')}}</a>
+        <div class="mg-tp-30 justify-flex-end">
+            <a class="btn-text" ng-click="deleteTransfer()">{{lang.text('tigerWitID.delete')}}</a>
+            <a class="btn-text mg-lf-20 mg-rg-20" ng-click="closeModal()">{{lang.text('tigerWitID.cancel')}}</a>
         </div>
     </div>
 </div>

@@ -110,17 +110,6 @@
         }
     }
 }
-.ar-lang{
-    .form-control-wrapper {
-        .verify_code_btn_wrapper {
-            right: auto;
-            left: 0;
-            border-left: 0;
-            border-right: 1px solid $main-char-color-30;
-
-        }
-    }
-}
 
 .form-control-title {
     line-height: 40px;
@@ -183,7 +172,6 @@
         position: absolute;
         width: 56px;
         top: 0;
-        left: 0;
         .select__input{
             padding: 0 10px 0 0;
             height: 22px;
@@ -232,7 +220,6 @@
 }
 
 
-
 //== 登录input样式
 .account-form-control-wrapper {
     position: relative;
@@ -262,7 +249,6 @@
         position: absolute;
         width: 80px;
         top: 0;
-        left: 0;
         .select__input{
             padding-top: 0;
             padding-bottom: 0;
@@ -306,12 +292,6 @@
     background-color: #fff;
     color: $main-char-color-30;
     z-index: 100;
-}
-.ar-lang{
-    .account-form-control-tip{
-        left: auto;
-        right: 22px;
-    }
 }
 
 //== checkbox
@@ -456,5 +436,43 @@
                 font-size: 23px;
             }
         }
+    }
+}
+
+.ar-lang{
+    .account-form-control-tip{
+        left: auto;
+        right: 22px;
+    }
+
+    .account-form-control-wrapper-new {
+        .select-left{
+            .select__input{
+                padding: 0 0 0 10px;
+            }
+    
+        }
+        .select-right{
+            padding-left: 0;
+            padding-right: 58px;
+        }
+    }
+
+    .form-control-wrapper {
+        .verify_code_btn_wrapper {
+            right: auto;
+            left: 0;
+            border-left: 0;
+            border-right: 1px solid $main-char-color-30;
+
+        }
+    }
+    .select__input{
+        padding-left: 30px;
+        padding-right: 0;
+    }
+    .select__icon{
+        left: 10px;
+        right: auto;
     }
 }

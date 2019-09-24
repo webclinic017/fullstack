@@ -1,5 +1,5 @@
 <div class="sys_modal_v2 slim_case">
-        <button class="close" ng-class="{'ar': lang.isAr()}" ng-click="closeModal()">&times;</button>
+        <button class="close" ng-click="closeModal()">&times;</button>
     
         <h5 class="sys_modal_v2__title">
             {{msgInfo.msgTitle || '提示'}}
@@ -24,21 +24,21 @@
             <div class="sys_modal_v2__info mg-bt-15">
                 <p class="deposit_modal__tit" style="font-family: initial;">{{msgInfo.currency.currency_symbol}} {{msgInfo.amountTotal}}</p>
                 <ul class="deposit_modal__lst">
-                    <li class="clearfix">
-                        <span class="fl">充值金额：</span>
-                        <span class="fr" style="font-family: initial;">$ {{msgInfo.amountDollar}}</span>
+                    <li class="space-between">
+                        <span class="">充值金额：</span>
+                        <span class="" style="font-family: initial;">$ {{msgInfo.amountDollar}}</span>
                     </li>
-                    <li class="clearfix" ng-if="msgInfo.currency.currency !== 'USD'">
-                        <span class="fl">折合{{msgInfo.currency.currency_name}}约：</span>
-                        <span class="fr" style="font-family: initial;">{{msgInfo.currency.currency_symbol}} {{msgInfo.amountRMB}}</span>
+                    <li class="space-between" ng-if="msgInfo.currency.currency !== 'USD'">
+                        <span class="">折合{{msgInfo.currency.currency_name}}约：</span>
+                        <span class="" style="font-family: initial;">{{msgInfo.currency.currency_symbol}} {{msgInfo.amountRMB}}</span>
                     </li>
-                    <li class="clearfix">
-                        <span class="fl">手续费：</span>
-                        <span class="fr" style="font-family: initial;">{{msgInfo.currency.currency_symbol}} {{msgInfo.isFree ? msgInfo.amountFee : '0.00'}}</span>
+                    <li class="space-between">
+                        <span class="">手续费：</span>
+                        <span class="" style="font-family: initial;">{{msgInfo.currency.currency_symbol}} {{msgInfo.isFree ? msgInfo.amountFee : '0.00'}}</span>
                     </li>
-                    <li class="clearfix" ng-if="!msgInfo.isFree">
-                        <span class="fl"></span>
-                        <span class="fr" style="font-family: initial; text-decoration: line-through; color: #f23244;">{{msgInfo.currency.currency_symbol}} {{msgInfo.amountFee}}</span>
+                    <li class="space-between" ng-if="!msgInfo.isFree">
+                        <span class=""></span>
+                        <span class="" style="font-family: initial; text-decoration: line-through; color: #f23244;">{{msgInfo.currency.currency_symbol}} {{msgInfo.amountFee}}</span>
                     </li>
                 </ul>
                 <p class="deposit_modal__tip">

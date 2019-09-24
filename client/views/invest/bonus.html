@@ -49,7 +49,7 @@
         <div ng-if="investSelect.type == 2" class="remark">
             {{lang.text('tigerWitID.commission.tp1')}}
         </div>
-       
+        <div></div>
         <div ng-if="investSelect.type == 3" class="form-control-wrapper"> 
             <div class="">
                 {{lang.text('tigerWitID.dateM')}}
@@ -69,6 +69,7 @@
             <div class="input-date">
                 <input class="form-control" name="date" type="text" required ng-model="datepickerCopier.date" tw-datetimepicker
                 datetimepicker-options="{{datepickerCopier.options}}">
+                <i class="fa fa-calendar"></i>
             </div>
             <button class="btn tw-btn-capsule-bordered" ng-click="getCopierBonusList()">{{lang.text('tigerWitID.query')}}</button>
         </div>
