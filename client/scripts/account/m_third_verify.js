@@ -13,8 +13,9 @@ $(document).ready(function () {
         //完善资料
         realnameInfo: ".m_third .m_third_realnameInfo",
         realnameInfoGender: ".m_third .m_third_realnameInfo .m_third_realnameInfo__male span",
-        realnameInfoFirstname: ".m_third .m_third_realnameInfo .firstname",
-        realnameInfoLastname: ".m_third .m_third_realnameInfo .lastname",
+        identityFirstname: ".m_third .m_third_identity .firstname",
+        identityLastname: ".m_third .m_third_identity .lastname",
+        identityRealname: ".m_third .m_third_identity .realname",
         realnameInfoEmail: ".m_third .m_third_realnameInfo .email",
         realnameInfoBirth: ".m_third .m_third_realnameInfo .birth",
         realnameInfoBtn: ".m_third .m_third_realnameInfo .m_third_realnameInfo__btn .btn",
@@ -247,6 +248,9 @@ $(document).ready(function () {
                 // console.log(userCacheInfo);
                 //设置缓存信息
                 $(ele.realnameInfoEmail).val(userCacheInfo.email);
+                $(ele.identityFirstname).val(userCacheInfo.first_name);
+                $(ele.identityLastname).val(userCacheInfo.last_name);
+                $(ele.identityRealname).val(userCacheInfo.real_name);
                 laydate.render({
                     elem: '#birth',
                     lang: lang.curLang() !== 'cn' ? 'en' : 'cn',
@@ -294,13 +298,14 @@ $(document).ready(function () {
     //第二步 --- 完善资料
     $(ele.realnameInfoBtn).on("tap", function (e) {
         e.preventDefault();
-        if ($(ele.realnameInfoFirstname).val()
-            && $(ele.realnameInfoBirth).val()
+        if (
+            // $(ele.realnameInfoFirstname).val() && 
+            $(ele.realnameInfoBirth).val()
             && $(ele.realnameInfoEmail).val()) {
             layer.open({ type: 2, shadeClose: false });
             publicRequest('thirdSetUserInfo', 'PUT', {
-                first_name: $(ele.realnameInfoFirstname).val(),
-                last_name: $(ele.realnameInfoLastname).val(),
+                // first_name: $(ele.realnameInfoFirstname).val(),
+                // last_name: $(ele.realnameInfoLastname).val(),
                 gender: gender,
                 birth: $(ele.realnameInfoBirth).val().replace(/-/g, ''),
                 email: $(ele.realnameInfoEmail).val()
@@ -949,8 +954,14 @@ $(document).ready(function () {
         if (cardType != '0' && cardType != '4' && cardType != '5') {  //只需传一张
             needTwo = false;
         }
-
-        if (!cardType || !cardNo) {
+        var firstName, lastName;
+        if(cardCountry == 'CN'){
+            firstName = $(ele.identityRealname).val()
+        }else{
+            firstName = $(ele.identityFirstname).val()
+            lastName = $(ele.identityLastname).val()
+        }
+        if (!cardType || !cardNo || !firstName) {
             layer.open({
                 content: lang.text('third.fillInfoTip'),
                 skin: 'msg',
@@ -959,6 +970,8 @@ $(document).ready(function () {
         } else if (cardBaseFile.front && (!needTwo || cardBaseFile.back)) {
             layer.open({ type: 2, shadeClose: false });
             publicRequest('thirdUploadIdCard', 'POST', {
+                first_name: firstName,
+                last_name: lastName,
                 cert_type: cardType,
                 id_no: cardNo,
                 front: cardBaseFile.front.src.split(',')[1],
@@ -1020,11 +1033,22 @@ $(document).ready(function () {
                 data: cardTypeList[type]
             };
             var id = 'identity_type_list';
+            realnameSwitch(type)
         }
         //使用template模版
         var html = bt('template_card_info', list);
         //渲染
         $("#" + id).html(html);
+    }
+    // 国家切换时cn填写真实姓名，global显示姓 + 名
+    function realnameSwitch(type){
+        if(type == 'cn'){
+            $(ele.identity + ' .global').removeClass('active');
+            $(ele.identity + ' .cn').addClass('active');
+        }else{
+            $(ele.identity + ' .global').addClass('active');
+            $(ele.identity + ' .cn').removeClass('active');
+        }
     }
 
     function preview(file, pageClass) {
