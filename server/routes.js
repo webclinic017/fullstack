@@ -758,6 +758,12 @@ module.exports = function (app) {
         res.render('bd/indonesia/bonus.html', extendPublic({}, req));
     });
 
+    // livepool比赛 2019.9.25
+    app.route('/bd/livepool').get(function (req, res) {
+        setEnvCf(req, res);
+        res.render('bd/livepool/web.html', extendPublic({}, req));
+    });
+
     //转盘抽奖页 2019.06.3
     app.route('/bd/turntable').get(function (req, res) {
         setEnvCf(req, res);
