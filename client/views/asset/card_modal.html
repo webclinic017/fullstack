@@ -105,7 +105,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- 判断不是第三方platform -->
+                <!-- 判断不是第三方platform    TODO（后台有判断）所以银行name也可根据后台返回的列表长度判断，有值选择，没有值填写-->
                 <div class="row" ng-if="!platform && card.world && card.world.world_code === 'CN'">
                     <div class="col-xs-3 text-left">
                         <label>{{lang.text('tigerWitID.wallet.selectBankM')}}</label>
