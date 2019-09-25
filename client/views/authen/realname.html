@@ -31,22 +31,6 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="form-control-wrapper">
-                        <input class="form-control" name="firstname" type="text" placeholder="{{lang.text('tigerWitID.settings.openAccountNewTip6')}}"
-                            ng-model="completeInfo.firstname">
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="form-control-wrapper">
-                        <input class="form-control" name="lastname" type="text" placeholder="{{lang.text('tigerWitID.settings.openAccountNewTip7')}}"
-                            ng-model="completeInfo.lastname">
-                    </div>
-                </div>
-            </div>
 
             <div class="row">
                 <div class="col-xs-12">
@@ -187,7 +171,6 @@
                             placeholder="{{lang.text('tigerWitID.myAccount.birthday')}}"
                             data-type="day"
                             required
-                            ng-disabled="personal.updatePapers.hint == 1"
                             ng-model="completeInfo.birthday"
                             data-bind-model="completeInfo.birthday"
                             data-formatter="yyyymmdd"
@@ -213,7 +196,6 @@
                                 placeholder="{{lang.text('tigerWitID.gender')}}"
                                 required
                                 readonly
-                                no-active="{{personal.updatePapers.hint == 1}}"
                                 ng-model="completeInfo.gender.key"
                                 ng-class="{'form-control-error': frontErr.gender.show && completeForm.gender.$invalid}"
                                 ng-blur="showErr('gender')"

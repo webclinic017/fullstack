@@ -790,6 +790,13 @@ module.exports = function (app) {
             res.render('bd/g36/web.html', extendPublic({}, req));
         }
     });
+    // E-shot宣传页 2019.09.24
+    app.route('/bd/eshot/:subpage(*)').get(function (req, res) {
+        setEnvCf(req, res);
+        res.render('bd/eshot/h5.html', extendPublic({
+            page: req.params.subpage
+        }, req));
+    });
 
     
     // 市场部 - 月报生成 无用
