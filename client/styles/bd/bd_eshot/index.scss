@@ -1,0 +1,139 @@
+.bd_eshot {
+  max-width: px2rem(1200);
+  margin: 0 auto;
+  position: relative;
+  .btn_wrapper {
+    display: inline-block;
+    background: url("/white_label/bd_eshot/bg_btn.png") no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    height: px2rem(68);
+    line-height: px2rem(68);
+    width: px2rem(304);
+    margin: 0 px2rem(6);
+    color: #ffd637;
+  }
+  .bd_eshot_top {
+    background: url("/white_label/bd_eshot/bg_top.png") no-repeat;
+    background-position: center top;
+    background-size: auto 100%;
+    position: relative;
+    height: px2rem(1170);
+    padding: px2rem(44) px2rem(40) 0;
+    text-align: center;
+    z-index: 10;
+    .logo {
+      margin: 0rem;
+      text-align: center;
+      img {
+        width: px2rem(340);
+        vertical-align: top;
+      }
+    }
+    .title {
+      font-size: px2rem(48);
+      font-weight: 600;
+      text-align: center;
+      max-width: px2rem(800);
+      margin: px2rem(60) auto px2rem(48);
+    }
+    .players {
+      img {
+        height: px2rem(534);
+        vertical-align: top;
+      }
+      margin: px2rem(10) px2rem(-40) 0;
+      text-align: center;
+      overflow: hidden;
+    }
+    .bd_eshot_phone {
+      width: 100%;
+      position: absolute;
+      bottom: px2rem(-350);
+      left: 0;
+      text-align: center;
+      img {
+        width: px2rem(700);
+        height: px2rem(700);
+        vertical-align: top;
+      }
+    }
+  }
+  .bd_eshot_bott {
+    background: url("/white_label/bd_eshot/bg_bott.png") no-repeat;
+    background-position: center top;
+    background-size: auto 100%;
+    position: relative;
+    height: px2rem(1532);
+    padding: px2rem(380) px2rem(40) 0;
+    text-align: center;
+    .content {
+      font-size: px2rem(24);
+      font-weight: 300;
+      margin: 0 auto;
+      margin-bottom: px2rem(88);
+      text-align: center;
+      max-width: px2rem(800);
+    }
+    .list {
+      margin-top: px2rem(64);
+      .list_item {
+        display: inline-flex;
+        width: 46%;
+        min-height: px2rem(132);
+        padding-right: px2rem(32);
+        padding-bottom: px2rem(32);
+        align-items: center;
+        .icon {
+          padding: 0 px2rem(10);
+        }
+        .info {
+          font-size: px2rem(24);
+          text-align: left;
+          padding: 0 px2rem(10);
+          &.indonesia {
+            font-size: px2rem(20);
+          }
+          &.vietnam {
+            font-size: px2rem(20);
+          }
+          &.latam {
+            font-size: px2rem(20);
+          }
+          &.brazil {
+            font-size: px2rem(20);
+          }
+          &.mena {
+            text-align: right;
+          }
+        }
+      }
+    }
+    .download_title {
+      margin-top: px2rem(16);
+    }
+    .starts {
+      margin: px2rem(16) 0;
+      img {
+        width: px2rem(224);
+        vertical-align: top;
+      }
+    }
+    .download_btn_wrapper {
+      a {
+        margin: 0 px2rem(10);
+      }
+      img {
+        width: px2rem(196);
+        vertical-align: top;
+      }
+    }
+    .footer {
+      margin-top: px2rem(100);
+      font-size: px2rem(24);
+      &.indonesia {
+        margin-top: px2rem(64);
+      }
+    }
+  }
+}
