@@ -49,8 +49,10 @@
                 // $scope.$watch('selectDataList', function(value) {
                 //     console.log($scope.selectDataList)
                 // });
-                $scope.$watch('defaultSelect.id', function(value) {
-                    $scope.clickChange();
+                $scope.$watch('defaultSelect.id', function(n) {
+                    if(n){
+                        $scope.clickChange();
+                    }
                 });
                 // $scope.$watch( function() {
                 //     return $scope.$eval($attrs.setNgAnimate, $scope);
