@@ -6,32 +6,58 @@
         <h2>{{lang.text('tigerWitID.wallet.uploadIdentification')}}</h2>
         <p class="authen_content__tip">{{lang.text('tigerWitID.myAccount.tip24')}}</p>
     </div>
-    <div class="kyc" ng-class="{'mg-tp-40': toState.name.indexOf('space.update') == -1, 'update': toState.name.indexOf('space.update') != -1}">
+    <div class="kyc"
+        ng-class="{'mg-tp-40': toState.name.indexOf('space.update') == -1, 'update': toState.name.indexOf('space.update') != -1}">
         <form name="realnameForm" novalidate autocomplete="off">
-            <div class="row">        
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-control-wrapper">
+                        <input class="form-control" name="firstname" type="text" required
+                            placeholder="{{ personal.region.world_code !== 'CN' ? lang.text('tigerWitID.myAccount.firstName') : lang.text('tigerWitID.myAccount.realName')}}"
+                            ng-model="realnameInfo.firstname"
+                            ng-disabled="nameDisabled.first"
+                            ng-class="{'disabled': nameDisabled.first, 'form-control-error': frontErr.firstname.show && realnameForm.firstname.$invalid}"
+                            ng-blur="showErr('firstname')" ng-focus="hideErr('firstname')">
+                        <div ng-show="frontErr.firstname.show">
+                            <p class="alert alert-arrow_tp_lf" ng-show="realnameForm.firstname.$error.required">
+                                {{lang.text('tigerWitID.myAccount.fillName')}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" ng-if="personal.region.world_code !== 'CN'">
+                <div class="col-xs-12">
+                    <div class="form-control-wrapper">
+                        <input class="form-control" name="lastname" type="text"
+                            placeholder="{{lang.text('tigerWitID.myAccount.lastName')}}"
+                            ng-model="realnameInfo.lastname"
+                            ng-disabled="nameDisabled.last"
+                            ng-class="{'disabled': nameDisabled.last}">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
                 <div class="col-xs-12">
                     <div class="form-control-wrapper">
                         <div class="select">
-                            <input class="select__input"
-                                name="id_type"
-                                type="text"
-                                placeholder="{{lang.text('tigerWitID.myAccount.selectCertificateType')}}"
-                                required
-                                readonly
-                                ng-model="realnameInfo.id_type.key"
+                            <input class="select__input" name="id_type" type="text"
+                                placeholder="{{lang.text('tigerWitID.myAccount.selectCertificateType')}}" required
+                                readonly ng-model="realnameInfo.id_type.key"
                                 ng-class="{'form-control-error': frontErr.id_type.show && realnameForm.id_type.$invalid}"
-                                ng-blur="showErr('id_type')"
-                                ng-focus="hideErr('id_type')">
-                            
+                                ng-blur="showErr('id_type')" ng-focus="hideErr('id_type')">
+
                             <i class="select__icon fa fa-angle-down"></i>
 
                             <ul class="select__dropdown" twform-select data-bind-model="realnameInfo.id_type">
-                                <li ng-repeat="id_type in idType" ng-class="{'selected': id_type.value === realnameInfo.id_type.value}" ng-if="(personal.region.world_code === 'CN' && id_type.isCN) || (personal.region.world_code !== 'CN' && id_type.isGlobal)">
+                                <li ng-repeat="id_type in idType"
+                                    ng-class="{'selected': id_type.value === realnameInfo.id_type.value}"
+                                    ng-if="(personal.region.world_code === 'CN' && id_type.isCN) || (personal.region.world_code !== 'CN' && id_type.isGlobal)">
                                     <span data-value="{{id_type.value}}">{{ id_type.key }}</span>
                                 </li>
                             </ul>
                         </div>
-                    
+
                         <div ng-show="frontErr.id_type.show">
                             <p class="alert alert-arrow_tp_lf" ng-show="realnameForm.id_type.$error.required">
                                 {{lang.text('tigerWitID.myAccount.selectCertificateType')}}
@@ -40,34 +66,23 @@
                     </div>
                 </div>
             </div>
-            
-            <div class="row">   
+
+            <div class="row">
                 <div class="col-xs-12">
                     <div class="form-control-wrapper">
-                        <input class="form-control"
-                            ng-if="realnameInfo.id_type.value == 0"
-                            name="id_num"
-                            type="text"
-                            placeholder="{{lang.text('tigerWitID.myAccount.fillCertificateNumber')}}"
-                            required
+                        <input class="form-control" ng-if="realnameInfo.id_type.value == 0" name="id_num" type="text"
+                            placeholder="{{lang.text('tigerWitID.myAccount.fillCertificateNumber')}}" required
                             ng-class="{'form-control-error': frontErr.id_num.show && realnameForm.id_num.$invalid}"
-                            ng-model="realnameInfo.id_num"
-                            ng-pattern="frontErr.id_num.reg"
-                            ng-blur="[showErr('id_num'),checkExsit(4)]"
-                            ng-focus="hideErr('id_num')">
+                            ng-model="realnameInfo.id_num" ng-pattern="frontErr.id_num.reg"
+                            ng-blur="[showErr('id_num'),checkExsit(4)]" ng-focus="hideErr('id_num')">
 
                         <!-- 港澳台移除 ng-parttern -->
-                        <input class="form-control"
-                            ng-if="realnameInfo.id_type.value != 0"
-                            name="id_num"
-                            type="text"
-                            placeholder="{{lang.text('tigerWitID.myAccount.fillCertificateNumber')}}"
-                            required
+                        <input class="form-control" ng-if="realnameInfo.id_type.value != 0" name="id_num" type="text"
+                            placeholder="{{lang.text('tigerWitID.myAccount.fillCertificateNumber')}}" required
                             ng-class="{'form-control-error': frontErr.id_num.show && realnameForm.id_num.$invalid}"
-                            ng-model="realnameInfo.id_num"
-                            ng-blur="[showErr('id_num'),checkExsit(4)]"
+                            ng-model="realnameInfo.id_num" ng-blur="[showErr('id_num'),checkExsit(4)]"
                             ng-focus="hideErr('id_num')">
-        
+
                         <div ng-show="frontErr.id_num.show">
                             <p class="alert-arrow_tp_lf" ng-show="realnameForm.id_num.$error.required">
                                 {{lang.text('tigerWitID.myAccount.fillCertificateNumber')}}
@@ -76,7 +91,7 @@
                                 {{ frontErr.id_num.tip }}
                             </p>
                         </div>
-        
+
                         <div ng-show="exsit.id_num.show">
                             <p class="alert-arrow_tp_lf">
                                 {{lang.text('tigerWitID.myAccount.certificateNumberExists')}}
@@ -106,7 +121,7 @@
                 </div>
             </div>
         </div>
-    
+
         <!-- <p class="text-left mg-tp-15 font-dark">
             {{lang.text('tigerWitID.myAccount.tip26')}}
         </p> -->
@@ -132,9 +147,9 @@
                 </li>
             </ul>
         </div>
-    
+
         <div class="text-center mg-tp-50">
-    
+
             <div class="alert-system" ng-show="backErr.show">
                 {{ backErr.msg }}
             </div>
@@ -151,10 +166,11 @@
                     {{lang.text('tigerWitID.submitting')}}
                 </a>
 
-                <a ng-if="dredgingType == 'live' && toState.name.indexOf('space.update') == -1" ui-sref="space.center.index" class="btn btn-sm tw-btn-capsule-gradient mg-lf-20">
+                <a ng-if="dredgingType == 'live' && toState.name.indexOf('space.update') == -1"
+                    ui-sref="space.center.index" class="btn btn-sm tw-btn-capsule-gradient mg-lf-20">
                     {{lang.text('actLogin34')}}
                 </a>
-            </div>    
+            </div>
         </div>
     </div>
 </div>

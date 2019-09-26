@@ -131,6 +131,10 @@
                         'content@space': {
                             templateUrl: '/views/invest/index.html',
                             controller: 'InvestIndexController'
+                        },
+                        'basic@space.center.invest': {
+                            templateUrl: '/views/invest/single_account.html',
+                            controller: 'SingleAccountController'
                         }
                     }
                 })
@@ -147,10 +151,6 @@
                     authenticated: true,
                     url: '/center/invest/:subpage',
                     views: {
-                        'basic@space.center.invest': {
-                            templateUrl: '/views/invest/single_account.html',
-                            controller: 'SingleAccountController'
-                        },
                         'detail@space.center.invest': {
                             templateUrl: function ($stateParams) {
                                 $stateParams.subpage = $stateParams.subpage || 'current';
