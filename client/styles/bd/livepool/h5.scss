@@ -1,0 +1,331 @@
+@include b(livepool-event) {
+  color: #000;
+  .pc-have {
+    display: block;
+  }
+  .phone-have {
+    display: none;
+  }
+  .btn {
+    width: auto;
+    border-radius: 25px;
+    margin: 0;
+    display: inline-block;
+    line-height: normal;
+  }
+  @include e(logo) {
+    > div {
+      display: inline-block;
+      background-color: #fff;
+    }
+  }
+  @include e(width) {
+    width: 1200px;
+    margin: 0 auto;
+  }
+  @include e(bg1) {
+    background: url("/white_label/bd/livepool/bg-pc.png") no-repeat;
+    background-position: 60%;
+    background-size: cover;
+  }
+  @include e(bg2) {
+    background: url("/white_label/bd/livepool/bg-charts.png") repeat;
+    padding-bottom: 60px;
+  }
+  @include e(tit) {
+    text-align: center;
+    margin: 55px 0 38px;
+    > .tit {
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 32px;
+      display: inline-block;
+      position: relative;
+      margin-bottom: 10px;
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -8px;
+        border-radius: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -10;
+        width: 280px;
+        height: 20px;
+        background-color: #ffd521;
+      }
+    }
+  }
+  @include e(con) {
+    width: 95%;
+    margin: 0 auto;
+    box-shadow: 0 0 15px #ebebeb;
+    padding: 35px 65px;
+    border-radius: 20px;
+    @include m(lst) {
+      font-size: 22px;
+      font-weight: 500;
+      > li {
+        margin-bottom: 20px;
+      }
+    }
+    @include m(table) {
+      font-weight: 500;
+      > li {
+        text-align: center;
+        @include displayFlex();
+        > div {
+          padding: 18px 0;
+          &:nth-child(1) {
+            width: 20%;
+          }
+          &:nth-child(2) {
+            width: 50%;
+          }
+          &:nth-child(3) {
+            width: 30%;
+          }
+        }
+        &:nth-child(1) {
+          color: #b2b2b2;
+          border-bottom: 2px solid #b2b2b2;
+        }
+        &:nth-child(n + 2) {
+          border-bottom: 1px solid #e5e5e5;
+        }
+        &:nth-child(2) {
+          > div {
+            &:nth-child(1) {
+              color: #d0be73;
+            }
+          }
+        }
+        &:nth-child(3) {
+          > div {
+            &:nth-child(1) {
+              color: #acacac;
+            }
+          }
+        }
+        &:nth-child(4) {
+          > div {
+            &:nth-child(1) {
+              color: #a7925e;
+            }
+          }
+        }
+        &.active {
+          background-color: #ffd521;
+        }
+      }
+    }
+  }
+  @include e(p) {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: initial;
+  }
+  @include e(banner) {
+    @include displayFlex();
+    @include alignItems(center);
+    @include justifyContent(space-between);
+    @include m(lf) {
+      @include flex(1);
+      .title {
+        font-size: 50px;
+        font-weight: 500;
+        line-height: 50px;
+      }
+      .time {
+        margin-top: 60px;
+        margin-bottom: 15px;
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 32px;
+      }
+      .con {
+        font-size: 16px;
+        line-height: 20px;
+      }
+      .rules {
+        margin-top: 50px;
+        color: #1e39c6;
+        display: inline-block;
+      }
+      .btn-row {
+        @include displayFlex();
+      }
+    }
+    @include m(rg) {
+      width: 650px;
+      > img {
+        width: 100%;
+      }
+    }
+  }
+  @include e(prizes) {
+  }
+  @include e(league) {
+  }
+  @include e(lay) {
+    padding: 30px 50px;
+    @include m(tit) {
+      @include displayFlex();
+      @include justifyContent(space-between);
+      > h5 {
+        font-size: 30px;
+        line-height: 32px;
+        font-weight: 500;
+        margin: 0;
+      }
+      > i {
+        font-size: 30px;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+    }
+    @include m(con) {
+      font-size: 15px;
+      > h6 {
+        margin-top: 20px;
+        padding: 3px 0;
+      }
+      > ul {
+        > li {
+          line-height: 18px;
+          padding: 3px 0;
+        }
+      }
+    }
+  }
+
+  @include responsive(small-screens) {
+    .phone-have {
+      display: block;
+    }
+    .pc-have {
+      display: none;
+    }
+    .btn {
+      min-width: px2rem(280);
+      margin: px2rem(15) 0;
+    }
+    @include e(logo) {
+      text-align: center;
+    }
+    @include e(width) {
+      width: px2rem(700);
+    }
+    @include e(bg1) {
+      background: url("/white_label/bd/livepool/bg.png") no-repeat;
+      background-position: top center;
+      background-size: auto 75%;
+    }
+    @include e(bg2) {
+      padding-bottom: px2rem(60);
+    }
+    @include e(tit) {
+      margin: px2rem(55) 0 px2rem(38);
+      > .tit {
+        font-size: px2rem(50);
+        font-weight: 500;
+        line-height: px2rem(50);
+        margin-bottom: px2rem(15);
+        &::before {
+          bottom: px2rem(-8);
+          border-radius: px2rem(10);
+          width: px2rem(280);
+          height: px2rem(20);
+        }
+      }
+    }
+    @include e(con) {
+      padding: px2rem(35) px2rem(34);
+      @include m(lst) {
+        font-size: px2rem(28);
+        > li {
+          margin-bottom: px2rem(20);
+        }
+      }
+      @include m(table) {
+        font-size: px2rem(22);
+        > li {
+          > div {
+            padding: px2rem(18) 0;
+          }
+        }
+      }
+    }
+    @include e(p) {
+      font-size: px2rem(22);
+      line-height: px2rem(25);
+    }
+    @include e(banner) {
+      @include flexWrap(wrap);
+      @include justifyContent(center);
+      @include m(lf) {
+        text-align: center;
+        .title {
+          font-size: px2rem(63);
+          line-height: px2rem(63);
+        }
+        .time {
+          margin-top: px2rem(70);
+          margin-bottom: px2rem(15);
+          font-size: px2rem(42);
+          line-height: px2rem(42);
+        }
+        .con {
+          font-size: px2rem(32);
+          line-height: px2rem(35);
+        }
+        .rules {
+          margin-top: px2rem(50);
+        }
+        .btn-row {
+          @include flexWrap(wrap);
+          @include justifyContent(center);
+        }
+      }
+      @include m(rg) {
+        width: px2rem(650);
+      }
+    }
+    @include e(lay) {
+        width: 90%;
+        height: px2rem(500);
+      padding: px2rem(30) px2rem(50);
+      @include m(tit) {
+        > h5 {
+          font-size: px2rem(30);
+          line-height: px2rem(32);
+          margin: 0;
+        }
+        > i {
+          font-size: px2rem(30);
+          margin-left: px2rem(10);
+          margin-right: px2rem(10);
+        }
+      }
+      @include m(con) {
+        font-size: px2rem(15);
+        > h6 {
+          margin-top: px2rem(20);
+          padding: px2rem(3) 0;
+        }
+        > ul {
+          > li {
+            line-height: px2rem(18);
+            padding: px2rem(3) 0;
+          }
+        }
+      }
+    }
+  }
+}
+.layui-m-layer-livepool{
+    border-radius: 15px;
+    width: 80%;
+    height: 80%;
+    overflow: auto;
+}

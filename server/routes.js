@@ -761,7 +761,7 @@ module.exports = function (app) {
     // livepool比赛 2019.9.25
     app.route('/bd/livepool').get(function (req, res) {
         setEnvCf(req, res);
-        res.render('bd/livepool/web.html', extendPublic({}, req));
+        res.render('bd/livepool/h5.html', extendPublic({}, req));
     });
 
     //转盘抽奖页 2019.06.3
