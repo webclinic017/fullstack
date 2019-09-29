@@ -168,8 +168,9 @@
   @include e(league) {
   }
   @include e(lay) {
-    padding: 30px 50px;
+    padding: 30px 0;
     @include m(tit) {
+      padding: 0 50px 20px;
       @include displayFlex();
       @include justifyContent(space-between);
       > h5 {
@@ -185,10 +186,12 @@
       }
     }
     @include m(con) {
+      padding: 0 50px;
+      height: 450px;
+      overflow: auto;
       font-size: 15px;
       > h6 {
         margin-top: 20px;
-        padding: 3px 0;
       }
       > ul {
         > li {
@@ -292,10 +295,9 @@
       }
     }
     @include e(lay) {
-        width: 90%;
-        height: px2rem(500);
-      padding: px2rem(30) px2rem(50);
+      padding: px2rem(30) 0;
       @include m(tit) {
+        padding: 0 px2rem(50) px2rem(20);
         > h5 {
           font-size: px2rem(30);
           line-height: px2rem(32);
@@ -308,14 +310,15 @@
         }
       }
       @include m(con) {
-        font-size: px2rem(15);
+        padding: 0 px2rem(50);
+        height: px2rem(450);
+        font-size: px2rem(20);
         > h6 {
           margin-top: px2rem(20);
-          padding: px2rem(3) 0;
         }
         > ul {
           > li {
-            line-height: px2rem(18);
+            line-height: px2rem(24);
             padding: px2rem(3) 0;
           }
         }
@@ -323,9 +326,9 @@
     }
   }
 }
-.layui-m-layer-livepool{
+.layui-m-layer1 {
+  .layui-m-layer-livepool {
     border-radius: 15px;
     width: 80%;
-    height: 80%;
-    overflow: auto;
+  }
 }
