@@ -262,6 +262,16 @@
                         }
                     }
                 })
+                // liverpool比赛账号注册
+                .state('space.livepool', {
+                    url: '/space/livepool',
+                    views: {
+                        'content@space': {
+                            templateUrl: '/views/invest/livepool.html',
+                            controller: 'InvestLivepoolController'
+                        }
+                    }
+                })
                 // 点击邀请链接对应的路由
                 .state('space.come', {
                     url: '/space/invite/come?usercode',

@@ -12,13 +12,14 @@
      * @desc
      */
     function CenterHomeController($rootScope,$scope, $location, $interval, $state, account, invite, $timeout, config, redbag, trader, $modal, $cookies) {
-        var summaryId;
+        var summaryId, competitionListId;
         $scope.cookiesParams = {
             ib_pid: $cookies['ib_pid'],
             invite_status: $cookies['invite_status']
         }
         $scope.$on('$destroy',function(){  
             $interval.cancel(summaryId);  
+            $interval.cancel(competitionListId);  
         }) 
         $scope.assetInfo = null;
         $scope.notActiveModal = notActiveModal;
@@ -27,8 +28,10 @@
             "/white_label/passport/02.png",
             "/white_label/passport/03.png"
         ];
+        $scope.competitionList = [];
         //定时提取用户资产信息
         getAssetInfo();
+        getCompetitionList();
         $scope.$watch('personal.profile_check', function (n) {
             loopAsset();
         })
@@ -52,6 +55,20 @@
                     $scope.assetInfo = data.data;
                 } 
             });
+        }
+        function getCompetitionList(){
+            function time(){
+                account.competitionList().then(function(data){
+                    if (!data) return;
+                    if (data.is_succ) {
+                        $scope.competitionList = data.data;
+                    } 
+                })
+            }
+            time();
+            competitionListId = $interval(function(){
+                time();
+            }, 5000)
         }
 
         // 钱包未激活弹窗

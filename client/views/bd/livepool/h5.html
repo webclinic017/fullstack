@@ -39,29 +39,26 @@
         </div>
         <div class="livepool-event__banner">
           <div class="livepool-event__banner-lf">
-            <h4 class="title">Do you have what it takes
-              to be top of The TigerWit
-              Global Traders League?</h4>
-            <h6 class="time">2019/09/22-2019/10/22</h6>
-            <p class="con">Test your trading skills with $10,000USD of
-              virtual funds on our Demo account.</p>
+            <h4 class="title"><%= lang.text('livepool.bannerTit')%></h4>
+            <h6 class="time" id="gameTime">2019/09/22-2019/10/22</h6>
+            <p class="con"><%= lang.text('livepool.bannerCon')%></p>
             </br>
             </br>
             <div class="btn-row">
 
-              <button class="btn">
-                Enter the league
+              <button class="btn notParticipating">
+                <%= lang.text('livepool.enterLeague')%>
               </button>
               <div class="mg-lf-10"></div>
 
               <div class="phone-have">
                 <button class="btn rulesBtn">
-                  Rules
+                  <%= lang.text('livepool.rules')%>
                 </button>
               </div>
             </div>
             <div class="pc-have">
-              <div class="rules cursor_pointer rulesBtn">The Global Traders League Rules ></div>
+              <div class="rules cursor_pointer rulesBtn"><%= lang.text('livepool.rulesD')%> ></div>
             </div>
 
           </div>
@@ -77,67 +74,36 @@
       <div class="livepool-event__width">
         <div class="livepool-event__prizes">
           <h4 class="livepool-event__tit">
-            <div class="tit">Win amazing prizes!</div>
+            <div class="tit"><%= lang.text('livepool.winAmazingPrizes')%></div>
           </h4>
           <div class="livepool-event__con">
-            <p class="livepool-event__p">Traders from across the world will be channelling the thrill and excitement of
-              the football pitch as they compete like the elite and battle it out to become the winner of TigerWit’s
-              first ever annual contest – The TigerWit Global Traders League.</p></br>
-            <p class="livepool-event__p">Our innovative, easy to use app will ensure a fair competition of skill and
-              ambition, all in the name of good sport. With exclusive prizes, up for grabs, TigerWit’s playing field is
-              wide open for one superstar trader to seize the opportunity to step out into the floodlights and declare
-              themselves worthy of claiming victory. </p></br>
+            <p class="livepool-event__p"><%= lang.text('livepool.winAmazingPrizesCon1')%></p></br>
+            <p class="livepool-event__p"><%= lang.text('livepool.winAmazingPrizesCon2')%></p></br>
             <ul class="livepool-event__con-lst">
-              <li>1st Place: TV LCD Screen</li>
-              <li>1st Place: TV LCD Screen</li>
-              <li>1st Place: TV LCD Screen</li>
+              <li><%= lang.text('livepool.winAmazingPrizesList1')%></li>
+              <li><%= lang.text('livepool.winAmazingPrizesList2')%></li>
+              <li><%= lang.text('livepool.winAmazingPrizesList3')%></li>
             </ul>
-            <p class="livepool-event__p">1st and 2nd winners will also get Liverpool signed merchandise</p>
+            <p class="livepool-event__p"><%= lang.text('livepool.winAmazingPrizesCon3')%></p>
           </div>
         </div>
         <div class="livepool-event__league">
           <h4 class="livepool-event__tit">
-            <div class="tit">League Table</div>
-            <p class="livepool-event__p">(table below is for illustration purpose only)</p>
+            <div class="tit"><%= lang.text('livepool.leagueTable')%></div>
+            <p class="livepool-event__p"><%= lang.text('livepool.leagueTableCon')%></p>
           </h4>
           <div class="livepool-event__con">
-            <ul class="livepool-event__con-table">
+            <ul class="livepool-event__con-table" id="competitionList">
               <li class="">
-                <div>PLACE</div>
-                <div>ACCOUNT NUMBER</div>
-                <div>PROFITABILITY</div>
-              </li>
-
-              <li>
-                <div>#1</div>
-                <div>45836382</div>
-                <div>745.41%</div>
-              </li>
-              <li>
-                <div>#2</div>
-                <div>45836382</div>
-                <div>745.41%</div>
-              </li>
-              <li>
-                <div>#3</div>
-                <div>45836382</div>
-                <div>745.41%</div>
-              </li>
-              <li>
-                <div>#4</div>
-                <div>45836382</div>
-                <div>745.41%</div>
-              </li>
-              <li class="active">
-                <div>#5</div>
-                <div>45836382</div>
-                <div>745.41%</div>
+                <div><%= lang.text('livepool.leagueTableTableA')%></div>
+                <div><%= lang.text('livepool.leagueTableTableB')%></div>
+                <div><%= lang.text('livepool.leagueTableTableC')%></div>
               </li>
             </ul>
             <br>
             <br>
             <div class="text-center">
-              <button class="btn">Enter the league</button>
+              <button class="btn notParticipating"><%= lang.text('livepool.enterLeague')%></button>
             </div>
 
           </div>
@@ -149,42 +115,40 @@
   <div id="rulesCon" class="hidden">
     <div class="livepool-event__lay">
       <div class="livepool-event__lay-tit">
-        <h5>The Global Traders League Rules</h5>
+        <h5><%= lang.text('livepool.rulesTit')%></h5>
         <i class="fa fa-times closed"></i>
       </div>
       <div class="livepool-event__lay-con">
-        <h6 class="mg-tp-0">How to enter:</h6>
-        <h6 class="mg-tp-0">New Clients:</h6>
+        <h6 class="mg-tp-0"><%= lang.text('livepool.rulesTit1')%></h6>
+        <h6 class="mg-tp-0"><%= lang.text('livepool.rulesTit2')%>New Clients:</h6>
         <ul>
-          <li>1. Register and activate the League account.
+          <li><%= lang.text('livepool.rulesTit2Con1')%>
           </li>
-          <li>2. Virtual funds will then become available to the trader.
+          <li><%= lang.text('livepool.rulesTit2Con2')%>
           </li>
-          <li>3. Traders can monitor their positions on the league table 5 days after the competition’s launch.
+          <li><%= lang.text('livepool.rulesTit2Con3')%>
           </li>
         </ul>
-        <h6>Existing clients:
+        <h6><%= lang.text('livepool.rulesTit3')%>
         </h6>
         <ul>
-          <li>1. All traders need to open a league account. </li>
-          <li>2. Traders must open some trades on their league account</li>
-          <li>3. Traders can monitor their positions on the league table 5 days after the competition’s launch. </li>
+          <li><%= lang.text('livepool.rulesTit3Con1')%></li>
+          <li><%= lang.text('livepool.rulesTit3Con2')%></li>
+          <li><%= lang.text('livepool.rulesTit3Con3')%></li>
         </ul>
-        <h6>The Global Traders League rules: </h6>
+        <h6><%= lang.text('livepool.rulesTit4')%></h6>
         <ul>
-          <li>1. The client must open a League account in order to participate. </li>
-          <li>2. The client must open a position on the League account in order to be eligible. </li>
-          <li>3. Participants can monitor their rankings in real-time, on a separate landing page. </li>
-          <li>4. The top-ranked, most profitable trader based on the highest net worth will receive the winning prize.
+          <li><%= lang.text('livepool.rulesTit4Con1')%></li>
+          <li><%= lang.text('livepool.rulesTit4Con2')%></li>
+          <li><%= lang.text('livepool.rulesTit4Con3')%></li>
+          <li><%= lang.text('livepool.rulesTit4Con4')%>
           </li>
-          <li>5. Two runners-up will receive runner-up prizes at TigerWit’s discretion. </li>
+          <li><%= lang.text('livepool.rulesTit4Con5')%></li>
         </ul>
-        <h6>Trading and Ranking Rules:</h6>
+        <h6><%= lang.text('livepool.rulesTit5')%></h6>
         <ul>
-          <li>The system will start to record the results from 0:00 (GMT+4 )1st of October to 12:00PM (GMT+4) 31st of
-            October.</li>
-          <li>All trades must be closed before the competition ends. The final profit result will not include any open
-            positions.</li>
+          <li><%= lang.text('livepool.rulesTit5Con1')%></li>
+          <li><%= lang.text('livepool.rulesTit5Con2')%></li>
 
         </ul>
       </div>

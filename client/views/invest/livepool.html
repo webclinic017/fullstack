@@ -1,0 +1,51 @@
+<div class="space_block space_center_livepool">
+    <h3>{{competition.names}}</h3>
+    <form name="livepoolRegisterForm" class="account_login__form" novalidate>
+
+        <div class="account-form-control-wrapper">
+            <input class="account-form-control" name="username" type="text"
+                placeholder="{{lang.text('username')}}" required
+                ng-click=""
+                ng-model="livepool.username">
+        </div>
+        <div class="account-form-control-wrapper">
+            <div class="select-left">
+                <input class="select__input" name="phoneArea" readonly autocomplete="off" type="text"
+                    placeholder="{{lang.text('tigerWitID.areaCode')}}" required ng-model="livepool.phoneArea.key">
+
+                <ul class="select__dropdown" twform-select data-bind-model="livepool.phoneArea2">
+
+                    <li class="first_li"><input type="text" placeholder="{{lang.text('tigerWitID.login.countryCode')}}"
+                            ng-model="placeholderArea"><i class="fa fa-search"></i></li>
+                    <li ng-repeat="world in areaCodeList | filter : placeholderArea"
+                        ng-class="{'selected': world.phone_code == livepool.phoneArea.value}">
+                        <span data-value="{{world.code}}"
+                            data-disabled='{"disabled": {{world.disabled}}, "msg": "{{lang.text("tigerWitID.myAccount.unableCountry")}}"}'
+                            ng-click="world.disabled || selectArea(world)"
+                            ng-class="{'font-light': world.disabled}">+{{world.phone_code}}({{world.name}})</span>
+                    </li>
+                </ul>
+            </div>
+            <input class="account-form-control select-right" autocomplete="off" name="phone" type="text"
+                placeholder="{{lang.text('tigerWitID.login.enterPhoneNumber')}}"
+                on-enter="getCaptcha('livepoolRegisterForm', 'phone')" required
+                ng-click="" ng-model="livepool.phone">
+        </div>
+        <div class="account-form-control-wrapper">
+            <input class="account-form-control" autocomplete="off" name="code" type="text"
+                placeholder="{{ lang.text('actLogin4') }}" on-enter="livepoolRegister('livepoolRegisterForm')" required
+                ng-model="livepool.code">
+            <span class="account_login__code_btn" ng-show="!codeBtnStatus.phone.count"
+                ng-click="[getCaptcha('livepoolRegisterForm', 'phone')]">
+                {{lang.text('tigerWitID.login.sendSMS')}}
+            </span>
+            <span class="account_login__code_btn notAllowed" ng-show="codeBtnStatus.phone.count">
+                {{lang.text('tigerWitID.myAccount.tip39_1')}}{{ codeBtnStatus.phone.msg }}{{lang.text('tigerWitID.myAccount.tip39_2')}}
+            </span>
+        </div>
+    </form>
+    <div class="account_login__btn_wrapper pd-tp-15">
+        <button class="tw-btn-md tw-btn-capsule-gradient"
+            ng-click="livepoolRegister('livepoolRegisterForm')">{{lang.text('tigerWitID.livepool.enterLeague')}}</button>
+    </div>
+</div>

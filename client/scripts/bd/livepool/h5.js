@@ -6,7 +6,85 @@
             content: $('#rulesCon').html()
         });
     })
-    $("body").on('click', '.closed', function(){
+    $("body").on('click', '.closed', function () {
         layer.closeAll()
     })
+    var urlParams = getSearch();
+    var gameInfo, only_key;
+    only_key = urlParams.only_key;
+    if (only_key) {
+        getCompetitionList();
+    }
+    function getCompetitionList() {
+        publicRequest('competitionList', 'GET', {
+            only_key: only_key
+        }).then(function (data) {
+            // console.log(data.data);
+            if (data.is_succ) {
+                data = data.data;
+                // 传了标识就不需要循环
+                // for (var i = 0; i < data.length; i++) {
+                //     var obj = data[i];
+                //     if(obj.only_key === ''){
+                //         gameInfo = obj;
+                //         return;
+                //     }
+                // }
+                gameInfo = data[0];
+                if (gameInfo) {
+                    // 用户是否参加比赛
+                    if (gameInfo.isInCompetition) {
+                        $('.notParticipating').hide();
+                    }
+                    $('#gameTime').html(gameInfo.trade_end.substr(0, 10) + ' / ' + gameInfo.trade_start.substr(0, 10))
+
+                }
+            } else {
+                layer.open({
+                    content: data.message,
+                    skin: 'msg',
+                    time: 2
+                });
+            }
+            competitionRanking()
+        });
+    }
+    function competitionRanking() {
+        publicRequest('competitionRanking', 'GET', {
+            limit: 10,
+            only_key: only_key
+        }).then(function (data) {
+            // console.log(data.data);
+            if (data.is_succ) {
+                var ranking = data.data.ranking;
+                var personalRanking = data.data.personal_ranking[0];
+                var html = '';
+                $('#competitionList').html($('#competitionList li:first-child'));
+                for (var i = 0; i < ranking.length; i++) {
+                    var obj = ranking[i];
+                    html += '<li>' +
+                        '<div>#' + obj.ranking + '</div>' +
+                        '<div>' + obj.trade_account_memo + '</div>' +
+                        '<div>' + obj.profit_rate + '</div>' +
+                        '</li>'
+                }
+                if (personalRanking) {
+                    html += '<li class="active">' +
+                        '<div>#' + personalRanking.ranking + '</div>' +
+                        '<div>' + personalRanking.trade_account_memo + '</div>' +
+                        '<div>' + personalRanking.profit_rate + '</div>' +
+                        '</li>'
+                }
+
+                $('#competitionList').append(html);
+
+            } else {
+                layer.open({
+                    content: data.message,
+                    skin: 'msg',
+                    time: 2
+                });
+            }
+        });
+    }
 })();

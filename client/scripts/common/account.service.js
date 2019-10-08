@@ -75,7 +75,9 @@
             uploadAgentProtocol: uploadAgentProtocol,
             agentProtocol: agentProtocol,
             getVersionCheck: getVersionCheck,
-            getAddressUrl: getAddressUrl
+            getAddressUrl: getAddressUrl,
+            competitionList: competitionList,
+            competitionOpenAccount: competitionOpenAccount
         };
         var resolveValue;
         return service;
@@ -467,7 +469,7 @@
         }
 
         /**
-         * @name setBasicInfo
+         * @name setBasicInfo(弃)
          * @desc setting 模块设置基本信息
          */
         function setBasicInfo(username, world, state, city) {
@@ -735,6 +737,16 @@
             // })
             
             return publicHttp.dealPublicRequest(o.getAddressUrlApi, 'GET', params)
+        }
+        // livepool比赛列表
+        function competitionList(params) {
+            
+            return publicHttp.dealPublicRequest(o.competitionListApi, 'GET', params)
+        }
+        // livepool开通比赛账号
+        function competitionOpenAccount(params) {
+            
+            return publicHttp.dealPublicRequest(o.competitionOpenAccountApi, 'POST', params)
         }
     }
 })();

@@ -42,6 +42,10 @@
         postLcpagPayApp: origin_app + '/lcpag/pay', //post
         getVersionCheck: origin + '/system/version_check', //get
 
+        // livepool比赛
+        competitionList: origin + '/competition/list',
+        competitionRanking: origin + '/competition/ranking',
+
         //交易品种
         getSymbols: origin_app + '/symbol/list', //get
         // 荣耀王者活动

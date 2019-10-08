@@ -12476,6 +12476,58 @@
                         "ar": "(انتهت صلاحية الشهادة)"
                     }
                 },
+                "livepool":{
+                    "floatingRate": {
+                        "zh": "",
+                        "en": "Floating rate of return",
+                        "vi": "",
+                        "zh-Hant": "",
+                        "id": "",
+                        "es": "",
+                        "pt-BR": "",
+                        "ar": ""
+                    },
+                    "winAmazingPrizes": {
+                        "zh": "",
+                        "en": "Win amazing prizes!",
+                        "vi": "",
+                        "zh-Hant": "",
+                        "id": "",
+                        "es": "",
+                        "pt-BR": "",
+                        "ar": ""
+                    },
+                    "checkRanking": {
+                        "zh": "",
+                        "en": "Check my ranking",
+                        "vi": "",
+                        "zh-Hant": "",
+                        "id": "",
+                        "es": "",
+                        "pt-BR": "",
+                        "ar": ""
+                    },
+                    "enterLeague": {
+                        "zh": "",
+                        "en": "Enter the league",
+                        "vi": "",
+                        "zh-Hant": "",
+                        "id": "",
+                        "es": "",
+                        "pt-BR": "",
+                        "ar": ""
+                    },
+                    "": {
+                        "zh": "",
+                        "en": "",
+                        "vi": "",
+                        "zh-Hant": "",
+                        "id": "",
+                        "es": "",
+                        "pt-BR": "",
+                        "ar": ""
+                    }
+                },
                 "noMetNeed": {
                     "zh": "未达成",
                     "en": "unfinished",

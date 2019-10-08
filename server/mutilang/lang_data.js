@@ -18650,5 +18650,367 @@ module.exports = {
         "es": "Recibir el premio",
         "pt-BR": "Receber o prêmio",
         "ar": "الحصول على الجائزة"
+    },
+    "livepool":{
+        "bannerTit": {
+            "zh": "",
+            "en": "Do you have what it takes to be top of The TigerWit Global Traders League?",
+            "vi": "",
+            "zh-Hant": "",
+            "id": "",
+            "es": "",
+            "pt-BR": "",
+            "ar": ""
+        },
+        "bannerCon": {
+            "zh": "",
+            "en": "Test your trading skills with $10,000USD of virtual funds on our Demo account.",
+            "vi": "",
+            "zh-Hant": "",
+            "id": "",
+            "es": "",
+            "pt-BR": "",
+            "ar": ""
+        },
+        "enterLeague": {
+            "zh": "",
+            "en": "Enter the league",
+            "vi": "",
+            "zh-Hant": "",
+            "id": "",
+            "es": "",
+            "pt-BR": "",
+            "ar": ""
+        },
+        "rulesD": {
+            "zh": "",
+            "en": "The Global Traders League Rules",
+            "vi": "",
+            "zh-Hant": "",
+            "id": "",
+            "es": "",
+            "pt-BR": "",
+            "ar": ""
+        },
+        "rules": {
+            "zh": "",
+            "en": "Rules",
+            "vi": "",
+            "zh-Hant": "",
+            "id": "",
+            "es": "",
+            "pt-BR": "",
+            "ar": ""
+        },
+        "winAmazingPrizes": {
+            "zh": "",
+            "en": "Win amazing prizes!",
+            "vi": "",
+            "zh-Hant": "",
+            "id": "",
+            "es": "",
+            "pt-BR": "",
+            "ar": ""
+        },
+        "winAmazingPrizesCon1": {
+            "zh": "",
+            "en": "Traders from across the world will be channelling the thrill and excitement of the football pitch as they compete like the elite and battle it out to become the winner of TigerWit’s first ever annual contest – The TigerWit Global Traders League.",
+            "vi": "",
+            "zh-Hant": "",
+            "id": "",
+            "es": "",
+            "pt-BR": "",
+            "ar": ""
+        },
+        "winAmazingPrizesCon2": {
+            "zh": "",
+            "en": "Our innovative, easy to use app will ensure a fair competition of skill and ambition, all in the name of good sport. With exclusive prizes, up for grabs, TigerWit’s playing field is wide open for one superstar trader to seize the opportunity to step out into the floodlights and declare themselves worthy of claiming victory. ",
+            "vi": "",
+            "zh-Hant": "",
+            "id": "",
+            "es": "",
+            "pt-BR": "",
+            "ar": ""
+        },
+        "winAmazingPrizesList1": {
+            "zh": "",
+            "en": "1st Place: TV LCD Screen",
+            "vi": "",
+            "zh-Hant": "",
+            "id": "",
+            "es": "",
+            "pt-BR": "",
+            "ar": ""
+        },
+        "winAmazingPrizesList2": {
+            "zh": "",
+            "en": "2nd Place: Mobile phone",
+            "vi": "",
+            "zh-Hant": "",
+            "id": "",
+            "es": "",
+            "pt-BR": "",
+            "ar": ""
+        },
+        "winAmazingPrizesList3": {
+            "zh": "",
+            "en": "3rd Place: Sound Technology",
+            "vi": "",
+            "zh-Hant": "",
+            "id": "",
+            "es": "",
+            "pt-BR": "",
+            "ar": ""
+        },
+        "winAmazingPrizesCon3": {
+            "zh": "",
+            "en": "1st and 2nd winners will also get Liverpool signed merchandise",
+            "vi": "",
+            "zh-Hant": "",
+            "id": "",
+            "es": "",
+            "pt-BR": "",
+            "ar": ""
+        },
+        "leagueTable": {
+            "zh": "",
+            "en": "League Table",
+            "vi": "",
+            "zh-Hant": "",
+            "id": "",
+            "es": "",
+            "pt-BR": "",
+            "ar": ""
+        },
+        "leagueTableCon": {
+            "zh": "",
+            "en": "(table below is for illustration purpose only)",
+            "vi": "",
+            "zh-Hant": "",
+            "id": "",
+            "es": "",
+            "pt-BR": "",
+            "ar": ""
+        },
+        "leagueTableTableA": {
+            "zh": "",
+            "en": "PLACE",
+            "vi": "",
+            "zh-Hant": "",
+            "id": "",
+            "es": "",
+            "pt-BR": "",
+            "ar": ""
+        },
+        "leagueTableTableB": {
+            "zh": "",
+            "en": "ACCOUNT NUMBER",
+            "vi": "",
+            "zh-Hant": "",
+            "id": "",
+            "es": "",
+            "pt-BR": "",
+            "ar": ""
+        },
+        "leagueTableTableC": {
+            "zh": "",
+            "en": "PROFITABILITY",
+            "vi": "",
+            "zh-Hant": "",
+            "id": "",
+            "es": "",
+            "pt-BR": "",
+            "ar": ""
+        },
+        "rulesTit": {
+            "zh": "",
+            "en": "The Global Traders League Rules",
+            "vi": "",
+            "zh-Hant": "",
+            "id": "",
+            "es": "",
+            "pt-BR": "",
+            "ar": ""
+        },
+        "rulesTit1": {
+            "zh": "",
+            "en": "How to enter:",
+            "vi": "",
+            "zh-Hant": "",
+            "id": "",
+            "es": "",
+            "pt-BR": "",
+            "ar": ""
+        },
+        "rulesTit2": {
+            "zh": "",
+            "en": "New Clients:",
+            "vi": "",
+            "zh-Hant": "",
+            "id": "",
+            "es": "",
+            "pt-BR": "",
+            "ar": ""
+        },
+        "rulesTit2Con1": {
+            "zh": "",
+            "en": "1. Register and activate the League account.",
+            "vi": "",
+            "zh-Hant": "",
+            "id": "",
+            "es": "",
+            "pt-BR": "",
+            "ar": ""
+        },
+        "rulesTit2Con2": {
+            "zh": "",
+            "en": "2. Virtual funds will then become available to the trader.",
+            "vi": "",
+            "zh-Hant": "",
+            "id": "",
+            "es": "",
+            "pt-BR": "",
+            "ar": ""
+        },
+        "rulesTit2Con3": {
+            "zh": "",
+            "en": "3. Traders can monitor their positions on the league table 5 days after the competition’s launch.",
+            "vi": "",
+            "zh-Hant": "",
+            "id": "",
+            "es": "",
+            "pt-BR": "",
+            "ar": ""
+        },
+        "rulesTit3": {
+            "zh": "",
+            "en": "Existing clients:",
+            "vi": "",
+            "zh-Hant": "",
+            "id": "",
+            "es": "",
+            "pt-BR": "",
+            "ar": ""
+        },
+        "rulesTit3Con1": {
+            "zh": "",
+            "en": "1. All traders need to open a league account.",
+            "vi": "",
+            "zh-Hant": "",
+            "id": "",
+            "es": "",
+            "pt-BR": "",
+            "ar": ""
+        },
+        "rulesTit3Con2": {
+            "zh": "",
+            "en": "2. Traders must open some trades on their league account",
+            "vi": "",
+            "zh-Hant": "",
+            "id": "",
+            "es": "",
+            "pt-BR": "",
+            "ar": ""
+        },
+        "rulesTit3Con3": {
+            "zh": "",
+            "en": "3. Traders can monitor their positions on the league table 5 days after the competition’s launch.",
+            "vi": "",
+            "zh-Hant": "",
+            "id": "",
+            "es": "",
+            "pt-BR": "",
+            "ar": ""
+        },
+        "rulesTit4": {
+            "zh": "",
+            "en": "The Global Traders League rules:",
+            "vi": "",
+            "zh-Hant": "",
+            "id": "",
+            "es": "",
+            "pt-BR": "",
+            "ar": ""
+        },
+        "rulesTit4Con1": {
+            "zh": "",
+            "en": "1. The client must open a League account in order to participate.",
+            "vi": "",
+            "zh-Hant": "",
+            "id": "",
+            "es": "",
+            "pt-BR": "",
+            "ar": ""
+        },
+        "rulesTit4Con2": {
+            "zh": "",
+            "en": "2. The client must open a position on the League account in order to be eligible.",
+            "vi": "",
+            "zh-Hant": "",
+            "id": "",
+            "es": "",
+            "pt-BR": "",
+            "ar": ""
+        },
+        "rulesTit4Con3": {
+            "zh": "",
+            "en": "3. Participants can monitor their rankings in real-time, on a separate landing page.",
+            "vi": "",
+            "zh-Hant": "",
+            "id": "",
+            "es": "",
+            "pt-BR": "",
+            "ar": ""
+        },
+        "rulesTit4Con4": {
+            "zh": "",
+            "en": "4. The top-ranked, most profitable trader based on the highest net worth will receive the winning prize.",
+            "vi": "",
+            "zh-Hant": "",
+            "id": "",
+            "es": "",
+            "pt-BR": "",
+            "ar": ""
+        },
+        "rulesTit4Con5": {
+            "zh": "",
+            "en": "5. Two runners-up will receive runner-up prizes at TigerWit’s discretion.",
+            "vi": "",
+            "zh-Hant": "",
+            "id": "",
+            "es": "",
+            "pt-BR": "",
+            "ar": ""
+        },
+        "rulesTit5": {
+            "zh": "",
+            "en": "Trading and Ranking Rules:",
+            "vi": "",
+            "zh-Hant": "",
+            "id": "",
+            "es": "",
+            "pt-BR": "",
+            "ar": ""
+        },
+        "rulesTit5Con1": {
+            "zh": "",
+            "en": "The system will start to record the results from 0:00 (GMT+4 )1st of October to 12:00PM (GMT+4) 31st of October.",
+            "vi": "",
+            "zh-Hant": "",
+            "id": "",
+            "es": "",
+            "pt-BR": "",
+            "ar": ""
+        },
+        "rulesTit5Con2": {
+            "zh": "",
+            "en": "All trades must be closed before the competition ends. The final profit result will not include any open positions.",
+            "vi": "",
+            "zh-Hant": "",
+            "id": "",
+            "es": "",
+            "pt-BR": "",
+            "ar": ""
+        }
     }
 };
