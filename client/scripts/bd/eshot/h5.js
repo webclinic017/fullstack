@@ -2,11 +2,11 @@
   var page = $(".bd_eshot").attr("data-page");
 
   var pageInfo = {
-    mena: {
+    africa: {
       title: "Trade on a sleeker, smarter and highly-intuitive app",
       btnLive: "Open a live account",
       btnDemo: "Demo Account",
-      btnHref: "/download?D_InvestingMENAeshot=012",
+      btnHref: "/download?D_InvestingAFeshot=013",
       cont: "We have combined cutting-edge technology with convenience to ensure users can access global markets on a simple, sophisticated app that’s tailored for all traders. Our copy-trading options, and competitive Master trader commissions are accessible, transparent and simple.",
       icon1: "Trade FX globally",
       icon2: "Your choice of markets, the way you want to trade",
@@ -77,11 +77,11 @@
       download: "Baixe aplicativo agora",
       footer: "A negociação de CFDs envolve riscos e pode resultar na perda de seu capital"
     },
-    africa: {
+    mena: {
       title: "تداول على تطبيق أكثر تميزاً",
       btnLive: "حساب تجريبي",
       btnDemo: "افتح حساب حقيقي",
-      btnHref: "/download?D_InvestingAFeshot=013",
+      btnHref: "/download?D_InvestingMENAeshot=012",
       cont: "لقد جمعنا بين أحدث التقنيات والراحة لضمان وصول المستخدمين إلى الأسواق العالمية من خلال تطبيق بسيط ومتطور مصمم خصيصًا لجميع المتداولين. خيارات النسخ بالتداول لدينا ، ولجان المتداولين الرئيسيين التنافسيين يمكن الوصول إليها وشفافة وبسيطة",
       icon1: "اختيارك للأسواق ، بالطريقة التي تريد التداول بها",
       icon2: "تداول الفوركس على مستوى العالم",

@@ -22,7 +22,6 @@
         //        content: $('#home-layer-model')
         //    });
         // }
-
         if (!userCode && company && company === 'tigerwit') {
             account.getAdvertiseRecords('popup').then(function (data) {
                 // console.log(data);
@@ -52,11 +51,6 @@
         //     $scope.indexMasters[2] = data.data.win[0];
         // });
         
-        function getDomain() {
-            var domain = location.hostname.match(/\.\w+\.com/) ? location.hostname.match(/\.\w+\.com/)[0] : '.tigerwit.com';
-            // console.log(url.match(/\.\w+\.com/)[0]);
-            return domain;
-        }
         function getUserParam() {
             var href = window.location.href;
             var originUrl = window.location.origin;
@@ -69,7 +63,7 @@
             var expTime = ';expires=' + oDate.toUTCString();
             var overdueExpTime = ';expires=' + overdueDate.toUTCString();
 
-            document.cookie = 'lp=' + lp + ';path=/;domain=' + getDomain() + expTime;
+            document.cookie = 'lp=' + lp + ';path=/;domain=' + $scope.getDomain() + expTime;
 
             if (href.indexOf('?') != -1) {
                 var aQuery = href.split('?')[1];
@@ -86,18 +80,18 @@
 
                 if (pid != '') {
                     // 清空重写
-                    document.cookie = 'ib_pid=' + null + ';path=/;domain=' + getDomain() + overdueExpTime;
-                    document.cookie = 'unit=' + null + ';path=/;domain=' + getDomain() + overdueExpTime;
-                    document.cookie = 'key=' + null + ';path=/;domain=' + getDomain() + overdueExpTime;
+                    document.cookie = 'ib_pid=' + null + ';path=/;domain=' + $scope.getDomain() + overdueExpTime;
+                    document.cookie = 'unit=' + null + ';path=/;domain=' + $scope.getDomain() + overdueExpTime;
+                    document.cookie = 'key=' + null + ';path=/;domain=' + $scope.getDomain() + overdueExpTime;
 
-                    document.cookie = 'pid=' + pid + ';path=/;domain=' + getDomain() + expTime;
-                    document.cookie = 'invite_status=3;path=/;domain=' + getDomain() + expTime;
+                    document.cookie = 'pid=' + pid + ';path=/;domain=' + $scope.getDomain() + expTime;
+                    document.cookie = 'invite_status=3;path=/;domain=' + $scope.getDomain() + expTime;
 
                     if (unit) {
-                        document.cookie = 'unit=' + unit + ';path=/;domain=' + getDomain() + expTime;
+                        document.cookie = 'unit=' + unit + ';path=/;domain=' + $scope.getDomain() + expTime;
                     }
                     if (key) {
-                        document.cookie = 'key=' + key + ';path=/;domain=' + getDomain() + expTime;
+                        document.cookie = 'key=' + key + ';path=/;domain=' + $scope.getDomain() + expTime;
                     }
                 }
             }
@@ -185,7 +179,7 @@
             requestSymbols.push(key);
         });
         var socketPara = {
-            websocketTigerUrl: (location.hostname === 'cndemo.tigerwit.com' || location.hostname === 'globaldemo.tigerwit.com') ? 'wss://demo.tigerwit.com:4567' : 'wss://quotephp.tigerwit.com:4567',
+            websocketTigerUrl: $scope.lang.isDemo() ? ('wss://demo'+ $scope.getDomain() +':4567') : 'wss://quotephp'+ $scope.getDomain() +':4567',
             request_symbols: requestSymbols,
             request_symbols_zh: isCloned ? forCloneSymbolZh : forNormalSymbolZh,
             user_name: "tiger",

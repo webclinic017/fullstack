@@ -1059,10 +1059,11 @@
                 if (data.is_succ) {
                     var url;
                     if ($scope.lang.isDemo()) {
-                        url = 'https://demoimg.tigerwit.com'
+                        url = 'https://demoimg'
                     } else {
-                        url = 'https://img.tigerwit.com'
+                        url = 'https://img'
                     }
+                    url += $scope.getDomain();
                     var flag = window.open(url + data.data.imgUrl)
                     if (flag == null) {
                         alert("Enable popup filtering in your browser!\n\n Please turn off this function temporarily!");
