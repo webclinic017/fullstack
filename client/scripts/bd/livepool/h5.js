@@ -14,6 +14,7 @@
     only_key = urlParams.only_key;
     if (only_key) {
         getCompetitionList();
+        competitionRanking();
     }
     function getCompetitionList() {
         publicRequest('competitionList', 'GET', {
@@ -46,7 +47,6 @@
                     time: 2
                 });
             }
-            competitionRanking()
         });
     }
     function competitionRanking() {

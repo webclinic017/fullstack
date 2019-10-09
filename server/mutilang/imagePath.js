@@ -326,7 +326,18 @@
             es: indexBasePath + "/bd/turntable/h5_rotate-vi.png",
             "pt-BR": indexBasePath + "/bd/turntable/h5_rotate-pt-br.png",
             ar: indexBasePath + "/bd/turntable/h5_rotate-vi.png"
+        }, //
+        prize: {
+            en: indexBasePath + "/bd/livepool/prize-en.png",
+            id: indexBasePath + "/bd/livepool/prize-en.png",
+            zh: indexBasePath + "/bd/livepool/prize-en.png",
+            vi: indexBasePath + "/bd/livepool/prize-en.png",
+            "zh-Hant": indexBasePath + "/bd/livepool/prize-en.png",
+            es: indexBasePath + "/bd/livepool/prize-en.png",
+            "pt-BR": indexBasePath + "/bd/livepool/prize-en.png",
+            ar: indexBasePath + "/bd/livepool/prize-ar.png"
         } //
+
         // : {
         //     en: indexBasePath + "",
         //     id: indexBasePath + "",
