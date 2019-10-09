@@ -34,7 +34,6 @@
                 <li class="mg-200__list-bg-item">
                     <div>
                         <h5 class="title">
-
                             <%= lang.text("cfd10")%>
                         </h5>
                         <p class="content">
@@ -114,7 +113,9 @@
                         <td>{{ item.lot_max }}</td>
                         <td class="pro-public__no-padding">{{ item.info_trade_session }}</td>
                         <td class="pro-public__no-padding">{{ item.info_quote_session }}</td>
-                        <td class="pro-public__no-padding">{{ lang.text('productInfo.cfd.' + item.symbol) === ('productInfo.cfd.' +  item.symbol) ? '' : lang.text('productInfo.cfd.' + item.symbol) }}</td>
+                        <td class="pro-public__no-padding">
+                            {{ lang.text('productInfo.cfd.' + item.symbol) === ('productInfo.cfd.' +  item.symbol) ? '' : lang.text('productInfo.cfd.' + item.symbol) }}
+                        </td>
                     </tr>
                 </tbody>
             </table>

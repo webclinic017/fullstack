@@ -113,16 +113,16 @@
             'pt-BR': indexBasePath + "/home/tools-bg-globalPtBR.png",
             ar: indexBasePath + "/home/tools-bg-ar.png"
         }, //
-        homeMap: {
-            en: indexBasePath + "/home/client-map-en-en.png",
-            id: indexBasePath + "/home/client-map-id-id.png",
-            zh: indexBasePath + "/home/client-map-cn-cn.png",
-            vi: indexBasePath + "/home/client-map-vi-vi.png",
-            "zh-Hant": indexBasePath + "/home/client-map-cn-ht.png",
-            es: indexBasePath + "/home/client-map-es-es.png",
-            'pt-BR': indexBasePath + "/home/client-map-pt-BR.png",
-            ar: indexBasePath + "/home/client-map-en-en.png"
-        }, //
+        // homeMap: {
+        //     en: indexBasePath + "/home/client-map-en-en.png",
+        //     id: indexBasePath + "/home/client-map-id-id.png",
+        //     zh: indexBasePath + "/home/client-map-cn-cn.png",
+        //     vi: indexBasePath + "/home/client-map-vi-vi.png",
+        //     "zh-Hant": indexBasePath + "/home/client-map-cn-ht.png",
+        //     es: indexBasePath + "/home/client-map-es-es.png",
+        //     'pt-BR': indexBasePath + "/home/client-map-pt-BR.png",
+        //     ar: indexBasePath + "/home/client-map-en-en.png"
+        // }, //
         downloadAppCn: {
             en: indexBasePath + "/download/focus-icon-cn-en.png",
             id: indexBasePath + "/download/focus-icon-cn-id-a.png",

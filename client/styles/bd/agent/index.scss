@@ -57,9 +57,23 @@
             .why-select {
                 > li {
                     padding-bottom: px2rem(16);
-                    img {
-                        height: px2rem(188);
+                    .text-shade{
+                        margin-bottom: px2rem(16);
+                        position: relative;
+                        @include displayFlex();
+                        img {
+                            width: 100%;
+                        }
+                        .tit1{
+                            padding: px2rem(5) px2rem(10);
+                            background-color: rgba(0, 0, 0, 0.3);
+                            color: #fff;
+                            position: absolute;
+                            bottom: 0;
+                            width: 100%;
+                        }
                     }
+                    
                 }
             }
             .offer {
@@ -97,7 +111,6 @@
                 font-weight:500;
                 color:rgba(33,44,63,1);
                 line-height:px2rem(33);
-                margin: px2rem(8) 0 px2rem(24);
             }
             .font1 {
                 font-size:px2rem(18);
