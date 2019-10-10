@@ -18651,36 +18651,36 @@ module.exports = {
         "pt-BR": "Receber o prêmio",
         "ar": "الحصول على الجائزة"
     },
-    "livepool":{
+    "liverpool":{
         "bannerTit": {
-            "zh": "",
+            "zh": "Do you have what it takes to be top of The TigerWit Global Traders League?",
             "en": "Do you have what it takes to be top of The TigerWit Global Traders League?",
-            "vi": "",
-            "zh-Hant": "",
-            "id": "",
-            "es": "",
-            "pt-BR": "",
-            "ar": ""
+            "vi": "Do you have what it takes to be top of The TigerWit Global Traders League?",
+            "zh-Hant": "Do you have what it takes to be top of The TigerWit Global Traders League?",
+            "id": "Do you have what it takes to be top of The TigerWit Global Traders League?",
+            "es": "Do you have what it takes to be top of The TigerWit Global Traders League?",
+            "pt-BR": "Do you have what it takes to be top of The TigerWit Global Traders League?",
+            "ar": "Do you have what it takes to be top of The TigerWit Global Traders League?"
         },
         "bannerCon": {
-            "zh": "",
+            "zh": "Test your trading skills with $10,000USD of virtual funds on our Demo account.",
             "en": "Test your trading skills with $10,000USD of virtual funds on our Demo account.",
-            "vi": "",
-            "zh-Hant": "",
-            "id": "",
-            "es": "",
-            "pt-BR": "",
-            "ar": ""
+            "vi": "Test your trading skills with $10,000USD of virtual funds on our Demo account.",
+            "zh-Hant": "Test your trading skills with $10,000USD of virtual funds on our Demo account.",
+            "id": "Test your trading skills with $10,000USD of virtual funds on our Demo account.",
+            "es": "Test your trading skills with $10,000USD of virtual funds on our Demo account.",
+            "pt-BR": "Test your trading skills with $10,000USD of virtual funds on our Demo account.",
+            "ar": "Test your trading skills with $10,000USD of virtual funds on our Demo account."
         },
         "enterLeague": {
-            "zh": "",
+            "zh": "Enter the league",
             "en": "Enter the league",
-            "vi": "",
-            "zh-Hant": "",
-            "id": "",
-            "es": "",
-            "pt-BR": "",
-            "ar": ""
+            "vi": "Enter the league",
+            "zh-Hant": "Enter the league",
+            "id": "Enter the league",
+            "es": "Enter the league",
+            "pt-BR": "Enter the league",
+            "ar": "Enter the league"
         },
         "rulesD": {
             "zh": "全球贸易商联盟规则",
@@ -18688,139 +18688,139 @@ module.exports = {
             "vi": "Thể Lệ Giải Đấu Nhà Giao Dịch Toàn Cầu",
             "zh-Hant": "全球貿易商聯盟規則",
             "id": "Peraturan Liga Trader Dunia",
-            "es": "",
-            "pt-BR": "",
-            "ar": ""
+            "es": "The Global Traders League Rules",
+            "pt-BR": "The Global Traders League Rules",
+            "ar": "The Global Traders League Rules"
         },
         "rules": {
-            "zh": "",
+            "zh": "Rules",
             "en": "Rules",
-            "vi": "",
-            "zh-Hant": "",
-            "id": "",
-            "es": "",
-            "pt-BR": "",
-            "ar": ""
+            "vi": "Rules",
+            "zh-Hant": "Rules",
+            "id": "Rules",
+            "es": "Rules",
+            "pt-BR": "Rules",
+            "ar": "Rules"
         },
         "winAmazingPrizes": {
-            "zh": "",
+            "zh": "Win amazing prizes!",
             "en": "Win amazing prizes!",
-            "vi": "",
-            "zh-Hant": "",
-            "id": "",
-            "es": "",
-            "pt-BR": "",
-            "ar": ""
+            "vi": "Win amazing prizes!",
+            "zh-Hant": "Win amazing prizes!",
+            "id": "Win amazing prizes!",
+            "es": "Win amazing prizes!",
+            "pt-BR": "Win amazing prizes!",
+            "ar": "Win amazing prizes!"
         },
         "winAmazingPrizesCon1": {
-            "zh": "",
+            "zh": "Traders from across the world will be channelling the thrill and excitement of the football pitch as they compete like the elite and battle it out to become the winner of TigerWit’s first ever annual contest – The TigerWit Global Traders League.",
             "en": "Traders from across the world will be channelling the thrill and excitement of the football pitch as they compete like the elite and battle it out to become the winner of TigerWit’s first ever annual contest – The TigerWit Global Traders League.",
-            "vi": "",
-            "zh-Hant": "",
-            "id": "",
-            "es": "",
-            "pt-BR": "",
-            "ar": ""
+            "vi": "Traders from across the world will be channelling the thrill and excitement of the football pitch as they compete like the elite and battle it out to become the winner of TigerWit’s first ever annual contest – The TigerWit Global Traders League.",
+            "zh-Hant": "Traders from across the world will be channelling the thrill and excitement of the football pitch as they compete like the elite and battle it out to become the winner of TigerWit’s first ever annual contest – The TigerWit Global Traders League.",
+            "id": "Traders from across the world will be channelling the thrill and excitement of the football pitch as they compete like the elite and battle it out to become the winner of TigerWit’s first ever annual contest – The TigerWit Global Traders League.",
+            "es": "Traders from across the world will be channelling the thrill and excitement of the football pitch as they compete like the elite and battle it out to become the winner of TigerWit’s first ever annual contest – The TigerWit Global Traders League.",
+            "pt-BR": "Traders from across the world will be channelling the thrill and excitement of the football pitch as they compete like the elite and battle it out to become the winner of TigerWit’s first ever annual contest – The TigerWit Global Traders League.",
+            "ar": "Traders from across the world will be channelling the thrill and excitement of the football pitch as they compete like the elite and battle it out to become the winner of TigerWit’s first ever annual contest – The TigerWit Global Traders League."
         },
         "winAmazingPrizesCon2": {
-            "zh": "",
+            "zh": "Our innovative, easy to use app will ensure a fair competition of skill and ambition, all in the name of good sport. With exclusive prizes, up for grabs, TigerWit’s playing field is wide open for one superstar trader to seize the opportunity to step out into the floodlights and declare themselves worthy of claiming victory. ",
             "en": "Our innovative, easy to use app will ensure a fair competition of skill and ambition, all in the name of good sport. With exclusive prizes, up for grabs, TigerWit’s playing field is wide open for one superstar trader to seize the opportunity to step out into the floodlights and declare themselves worthy of claiming victory. ",
-            "vi": "",
-            "zh-Hant": "",
-            "id": "",
-            "es": "",
-            "pt-BR": "",
-            "ar": ""
+            "vi": "Our innovative, easy to use app will ensure a fair competition of skill and ambition, all in the name of good sport. With exclusive prizes, up for grabs, TigerWit’s playing field is wide open for one superstar trader to seize the opportunity to step out into the floodlights and declare themselves worthy of claiming victory. ",
+            "zh-Hant": "Our innovative, easy to use app will ensure a fair competition of skill and ambition, all in the name of good sport. With exclusive prizes, up for grabs, TigerWit’s playing field is wide open for one superstar trader to seize the opportunity to step out into the floodlights and declare themselves worthy of claiming victory. ",
+            "id": "Our innovative, easy to use app will ensure a fair competition of skill and ambition, all in the name of good sport. With exclusive prizes, up for grabs, TigerWit’s playing field is wide open for one superstar trader to seize the opportunity to step out into the floodlights and declare themselves worthy of claiming victory. ",
+            "es": "Our innovative, easy to use app will ensure a fair competition of skill and ambition, all in the name of good sport. With exclusive prizes, up for grabs, TigerWit’s playing field is wide open for one superstar trader to seize the opportunity to step out into the floodlights and declare themselves worthy of claiming victory. ",
+            "pt-BR": "Our innovative, easy to use app will ensure a fair competition of skill and ambition, all in the name of good sport. With exclusive prizes, up for grabs, TigerWit’s playing field is wide open for one superstar trader to seize the opportunity to step out into the floodlights and declare themselves worthy of claiming victory. ",
+            "ar": "Our innovative, easy to use app will ensure a fair competition of skill and ambition, all in the name of good sport. With exclusive prizes, up for grabs, TigerWit’s playing field is wide open for one superstar trader to seize the opportunity to step out into the floodlights and declare themselves worthy of claiming victory. "
         },
         "winAmazingPrizesList1": {
-            "zh": "",
+            "zh": "1st Place: TV LCD Screen",
             "en": "1st Place: TV LCD Screen",
-            "vi": "",
-            "zh-Hant": "",
-            "id": "",
-            "es": "",
-            "pt-BR": "",
-            "ar": ""
+            "vi": "1st Place: TV LCD Screen",
+            "zh-Hant": "1st Place: TV LCD Screen",
+            "id": "1st Place: TV LCD Screen",
+            "es": "1st Place: TV LCD Screen",
+            "pt-BR": "1st Place: TV LCD Screen",
+            "ar": "1st Place: TV LCD Screen"
         },
         "winAmazingPrizesList2": {
-            "zh": "",
+            "zh": "2nd Place: Mobile phone",
             "en": "2nd Place: Mobile phone",
-            "vi": "",
-            "zh-Hant": "",
-            "id": "",
-            "es": "",
-            "pt-BR": "",
-            "ar": ""
+            "vi": "2nd Place: Mobile phone",
+            "zh-Hant": "2nd Place: Mobile phone",
+            "id": "2nd Place: Mobile phone",
+            "es": "2nd Place: Mobile phone",
+            "pt-BR": "2nd Place: Mobile phone",
+            "ar": "2nd Place: Mobile phone"
         },
         "winAmazingPrizesList3": {
-            "zh": "",
+            "zh": "3rd Place: Sound Technology",
             "en": "3rd Place: Sound Technology",
-            "vi": "",
-            "zh-Hant": "",
-            "id": "",
-            "es": "",
-            "pt-BR": "",
-            "ar": ""
+            "vi": "3rd Place: Sound Technology",
+            "zh-Hant": "3rd Place: Sound Technology",
+            "id": "3rd Place: Sound Technology",
+            "es": "3rd Place: Sound Technology",
+            "pt-BR": "3rd Place: Sound Technology",
+            "ar": "3rd Place: Sound Technology"
         },
         "winAmazingPrizesCon3": {
-            "zh": "",
+            "zh": "1st and 2nd winners will also get Liverpool signed merchandise",
             "en": "1st and 2nd winners will also get Liverpool signed merchandise",
-            "vi": "",
-            "zh-Hant": "",
-            "id": "",
-            "es": "",
-            "pt-BR": "",
-            "ar": ""
+            "vi": "1st and 2nd winners will also get Liverpool signed merchandise",
+            "zh-Hant": "1st and 2nd winners will also get Liverpool signed merchandise",
+            "id": "1st and 2nd winners will also get Liverpool signed merchandise",
+            "es": "1st and 2nd winners will also get Liverpool signed merchandise",
+            "pt-BR": "1st and 2nd winners will also get Liverpool signed merchandise",
+            "ar": "1st and 2nd winners will also get Liverpool signed merchandise"
         },
         "leagueTable": {
-            "zh": "",
+            "zh": "League Table",
             "en": "League Table",
-            "vi": "",
-            "zh-Hant": "",
-            "id": "",
-            "es": "",
-            "pt-BR": "",
-            "ar": ""
+            "vi": "League Table",
+            "zh-Hant": "League Table",
+            "id": "League Table",
+            "es": "League Table",
+            "pt-BR": "League Table",
+            "ar": "League Table"
         },
         "leagueTableCon": {
-            "zh": "",
+            "zh": "(table below is for illustration purpose only)",
             "en": "(table below is for illustration purpose only)",
-            "vi": "",
-            "zh-Hant": "",
-            "id": "",
-            "es": "",
-            "pt-BR": "",
-            "ar": ""
+            "vi": "(table below is for illustration purpose only)",
+            "zh-Hant": "(table below is for illustration purpose only)",
+            "id": "(table below is for illustration purpose only)",
+            "es": "(table below is for illustration purpose only)",
+            "pt-BR": "(table below is for illustration purpose only)",
+            "ar": "(table below is for illustration purpose only)"
         },
         "leagueTableTableA": {
-            "zh": "",
+            "zh": "PLACE",
             "en": "PLACE",
-            "vi": "",
-            "zh-Hant": "",
-            "id": "",
-            "es": "",
-            "pt-BR": "",
-            "ar": ""
+            "vi": "PLACE",
+            "zh-Hant": "PLACE",
+            "id": "PLACE",
+            "es": "PLACE",
+            "pt-BR": "PLACE",
+            "ar": "PLACE"
         },
         "leagueTableTableB": {
-            "zh": "",
+            "zh": "ACCOUNT NUMBER",
             "en": "ACCOUNT NUMBER",
-            "vi": "",
-            "zh-Hant": "",
-            "id": "",
-            "es": "",
-            "pt-BR": "",
-            "ar": ""
+            "vi": "ACCOUNT NUMBER",
+            "zh-Hant": "ACCOUNT NUMBER",
+            "id": "ACCOUNT NUMBER",
+            "es": "ACCOUNT NUMBER",
+            "pt-BR": "ACCOUNT NUMBER",
+            "ar": "ACCOUNT NUMBER"
         },
         "leagueTableTableC": {
-            "zh": "",
+            "zh": "PROFITABILITY",
             "en": "PROFITABILITY",
-            "vi": "",
-            "zh-Hant": "",
-            "id": "",
-            "es": "",
-            "pt-BR": "",
-            "ar": ""
+            "vi": "PROFITABILITY",
+            "zh-Hant": "PROFITABILITY",
+            "id": "PROFITABILITY",
+            "es": "PROFITABILITY",
+            "pt-BR": "PROFITABILITY",
+            "ar": "PROFITABILITY"
         },
         "rulesTit": {
             "zh": "全球贸易商联盟规则",
@@ -18828,9 +18828,9 @@ module.exports = {
             "vi": "Thể Lệ Giải Đấu Nhà Giao Dịch Toàn Cầu",
             "zh-Hant": "全球貿易商聯盟規則",
             "id": "Peraturan Liga Trader Dunia",
-            "es": "",
-            "pt-BR": "",
-            "ar": ""
+            "es": "The Global Traders League Rules",
+            "pt-BR": "The Global Traders League Rules",
+            "ar": "The Global Traders League Rules"
         },
         "rulesTit1": {
             "zh": "如何输入：",
@@ -18838,9 +18838,9 @@ module.exports = {
             "vi": "Để gia nhập:",
             "zh-Hant": "如何輸入：",
             "id": "Cara untuk Ikut:",
-            "es": "",
-            "pt-BR": "",
-            "ar": ""
+            "es": "How to enter:",
+            "pt-BR": "How to enter:",
+            "ar": "How to enter:"
         },
         "rulesTit2": {
             "zh": "新客户：",
@@ -18848,9 +18848,9 @@ module.exports = {
             "vi": "Đối với khách hàng mới:",
             "zh-Hant": "新客戶：",
             "id": "Klien Baru :",
-            "es": "",
-            "pt-BR": "",
-            "ar": ""
+            "es": "New Clients:",
+            "pt-BR": "New Clients:",
+            "ar": "New Clients:"
         },
         "rulesTit2Con1": {
             "zh": "1.注册并激活联盟账户。",
@@ -18858,9 +18858,9 @@ module.exports = {
             "vi": "1. Đăng ký và kích hoạt tài khoản Đấu Giải.",
             "zh-Hant": "1.註冊並激活聯盟賬戶。",
             "id": "1. Daftar dan aktifkan akun Liga anda",
-            "es": "",
-            "pt-BR": "",
-            "ar": ""
+            "es": "1. Register and activate the League account.",
+            "pt-BR": "1. Register and activate the League account.",
+            "ar": "1. Register and activate the League account."
         },
         "rulesTit2Con2": {
             "zh": "2.虚拟资金将可供交易者使用。",
@@ -18868,9 +18868,9 @@ module.exports = {
             "vi": "2. Quỹ ảo sẽ có sẵn cho nhà giao dịch sau khi đăng ký.",
             "zh-Hant": "2.虛擬資金將可供交易者使用。",
             "id": "2. Dana virtual akan masuk ke akun anda secara otomatis",
-            "es": "",
-            "pt-BR": "",
-            "ar": ""
+            "es": "2. Virtual funds will then become available to the trader.",
+            "pt-BR": "2. Virtual funds will then become available to the trader.",
+            "ar": "2. Virtual funds will then become available to the trader."
         },
         "rulesTit2Con3": {
             "zh": "3.交易者可以在比赛开始后5天监控他们在联赛的排名。",
@@ -18878,9 +18878,9 @@ module.exports = {
             "vi": "3. Nhà giao dịch có thể theo dõi vị trí của họ trên bảng xếp hạng sau 5 ngày kể từ khi cuộc thi bắt đầu.",
             "zh-Hant": "3.交易者可以在比賽開始後5天監控他們在聯賽的排名。",
             "id": "3. Para trader dapat melihat posisi mereka di tabel Liga, 5 hari setelah kompetisi berjalan",
-            "es": "",
-            "pt-BR": "",
-            "ar": ""
+            "es": "3. Traders can monitor their positions on the league table 5 days after the competition’s launch.",
+            "pt-BR": "3. Traders can monitor their positions on the league table 5 days after the competition’s launch.",
+            "ar": "3. Traders can monitor their positions on the league table 5 days after the competition’s launch."
         },
         "rulesTit3": {
             "zh": "现有客户：",
@@ -18888,9 +18888,9 @@ module.exports = {
             "vi": "Đối với khách hàng hiện tại:",
             "zh-Hant": "現有客戶：",
             "id": "Klien lama:",
-            "es": "",
-            "pt-BR": "",
-            "ar": ""
+            "es": "Existing clients:",
+            "pt-BR": "Existing clients:",
+            "ar": "Existing clients:"
         },
         "rulesTit3Con1": {
             "zh": "1.所有交易者都需要开设联盟账户。",
@@ -18898,19 +18898,19 @@ module.exports = {
             "vi": "1. Tất cả các nhà giao dịch tham gia cần phải mở một tài khoản Đấu Giải.",
             "zh-Hant": "1.所有交易者都需要開設聯盟賬戶。",
             "id": "1. Semua trader harus membuka akun Liga",
-            "es": "",
-            "pt-BR": "",
-            "ar": ""
+            "es": "1. All traders need to open a league account.",
+            "pt-BR": "1. All traders need to open a league account.",
+            "ar": "1. All traders need to open a league account."
         },
         "rulesTit3Con2": {
             "zh": "2.交易者必须在他们的联盟账户上开立头寸。",
-            "en": "2. Traders must open some trades on their league account",
+            "en": "2. Traders must open some trades on their league account.",
             "vi": "2. Nhà giao dịch phải mở một số lệnh giao dịch trên tài khoản Đấu Giải của mình.",
             "zh-Hant": "2.交易者必須在他們的聯盟賬戶上開立頭寸。",
-            "id": "2. Para trader harus melakukan transaksi di akun Liga tersebut",
-            "es": "",
-            "pt-BR": "",
-            "ar": ""
+            "id": "2. Para trader harus melakukan transaksi di akun Liga tersebut.",
+            "es": "2. Traders must open some trades on their league account.",
+            "pt-BR": "2. Traders must open some trades on their league account.",
+            "ar": "2. Traders must open some trades on their league account."
         },
         "rulesTit3Con3": {
             "zh": "3.交易者可以在比赛开始后5天监控他们在联赛的排名。",
@@ -18918,9 +18918,9 @@ module.exports = {
             "vi": "3. Nhà giao dịch có thể theo dõi vị trí của họ trên bảng xếp hạng sau 5 ngày kể từ khi cuộc thi bắt đầu.",
             "zh-Hant": "3.交易者可以在比賽開始後5天監控他們在聯賽的排名。",
             "id": "3. Para trader dapat melihat posisi mereka di tabel Liga, 5 hari setelah kompetisi berjalan",
-            "es": "",
-            "pt-BR": "",
-            "ar": ""
+            "es": "3. Traders can monitor their positions on the league table 5 days after the competition’s launch.",
+            "pt-BR": "3. Traders can monitor their positions on the league table 5 days after the competition’s launch.",
+            "ar": "3. Traders can monitor their positions on the league table 5 days after the competition’s launch."
         },
         "rulesTit4": {
             "zh": "全球贸易商联盟规则：",
@@ -18928,9 +18928,9 @@ module.exports = {
             "vi": "Thể lệ giải đấu Nhà Giao Dịch Toàn Cầu:",
             "zh-Hant": "全球貿易商聯盟規則：",
             "id": "Peraturan Liga Trader Dunia",
-            "es": "",
-            "pt-BR": "",
-            "ar": ""
+            "es": "The Global Traders League rules:",
+            "pt-BR": "The Global Traders League rules:",
+            "ar": "The Global Traders League rules:"
         },
         "rulesTit4Con1": {
             "zh": "1.客户必须开设联盟账户才能参加。",
@@ -18938,9 +18938,9 @@ module.exports = {
             "vi": "1. Khách hàng phải mở tài khoản Đấu Giải để tham gia cuộc thi.",
             "zh-Hant": "1.客戶必須開設聯盟賬戶才能參加。",
             "id": "1. Klien harus membuat akun Liga untuk berpartisipasi",
-            "es": "",
-            "pt-BR": "",
-            "ar": ""
+            "es": "1. The client must open a League account in order to participate.",
+            "pt-BR": "1. The client must open a League account in order to participate.",
+            "ar": "1. The client must open a League account in order to participate."
         },
         "rulesTit4Con2": {
             "zh": "2.客户必须在联盟账户上开立头寸才有资格。",
@@ -18948,9 +18948,9 @@ module.exports = {
             "vi": "2. Khách hàng phải mở một lệnh trên tài khoản Đấu Giải để đủ điều kiện tham gia cuộc thi.",
             "zh-Hant": "2.客戶必須在聯盟賬戶上開立頭寸才有資格。",
             "id": "2. Para klien harus membuka dan menutup posisi di Liga trader",
-            "es": "",
-            "pt-BR": "",
-            "ar": ""
+            "es": "2. The client must open a position on the League account in order to be eligible.",
+            "pt-BR": "2. The client must open a position on the League account in order to be eligible.",
+            "ar": "2. The client must open a position on the League account in order to be eligible."
         },
         "rulesTit4Con3": {
             "zh": "3.参与者可以在单独的联赛页面上实时监控他们的排名。",
@@ -18958,9 +18958,9 @@ module.exports = {
             "vi": "3. Người tham gia có thể theo dõi thứ hạng của họ trong thời gian thực trên một trang riêng.",
             "zh-Hant": "3.參與者可以在單獨的聯賽頁面上實時監控他們的排名。",
             "id": "3. Para peserta dapat memonitor posisi ranking masing-masing secara live pada situs yang tersedia",
-            "es": "",
-            "pt-BR": "",
-            "ar": ""
+            "es": "3. Participants can monitor their rankings in real-time, on a separate landing page.",
+            "pt-BR": "3. Participants can monitor their rankings in real-time, on a separate landing page.",
+            "ar": "3. Participants can monitor their rankings in real-time, on a separate landing page."
         },
         "rulesTit4Con4": {
             "zh": "4.基于最高净值的排名靠前，盈利能力最高的交易者将获得中奖。",
@@ -18968,9 +18968,9 @@ module.exports = {
             "vi": "4. Nhà giao dịch được xếp hạng cao nhất, đạt lợi nhuận cao nhất dựa trên giá trị ròng cao nhất sẽ nhận được giải thưởng Người Chiến Thắng.",
             "zh-Hant": "4.基於最高淨值的排名靠前，盈利能力最高的交易者將獲得中獎。",
             "id": "4. Trader di peringkat teratas dihitung berdasarkan keuntungan tertinggi yang diperoleh, dan dapat memenangkan",
-            "es": "",
-            "pt-BR": "",
-            "ar": ""
+            "es": "4. The top-ranked, most profitable trader based on the highest net worth will receive the winning prize.",
+            "pt-BR": "4. The top-ranked, most profitable trader based on the highest net worth will receive the winning prize.",
+            "ar": "4. The top-ranked, most profitable trader based on the highest net worth will receive the winning prize."
         },
         "rulesTit4Con5": {
             "zh": "5.两名亚军将获得TigerWit酌情决定的亚军奖金。",
@@ -18978,9 +18978,9 @@ module.exports = {
             "vi": "5. Hai á quân sẽ nhận được giải Á Quân theo quyết định của TigerWit.",
             "zh-Hant": "5.兩名亞軍將獲得TigerWit酌情決定的亞軍獎金。",
             "id": "5. Dua runner up lainnya juga dapat memenangkan hadiah runner-up sesuai dengan kebijakan dari TigerWit",
-            "es": "",
-            "pt-BR": "",
-            "ar": ""
+            "es": "5. Two runners-up will receive runner-up prizes at TigerWit’s discretion.",
+            "pt-BR": "5. Two runners-up will receive runner-up prizes at TigerWit’s discretion.",
+            "ar": "5. Two runners-up will receive runner-up prizes at TigerWit’s discretion."
         },
         "rulesTit5": {
             "zh": "交易和排名规则：",
@@ -18988,9 +18988,9 @@ module.exports = {
             "vi": "Quy tắc Giao Dịch và Xếp Hạng:",
             "zh-Hant": "交易和排名規則：",
             "id": "Peraturan Trading dan Peraturan Ranking :",
-            "es": "",
-            "pt-BR": "",
-            "ar": ""
+            "es": "Trading and Ranking Rules:",
+            "pt-BR": "Trading and Ranking Rules:",
+            "ar": "Trading and Ranking Rules:"
         },
         "rulesTit5Con1": {
             "zh": "系统将从10月1日0:00（GMT + 4）到10月31日12:00（GMT + 4）开始记录结果。",
@@ -18998,9 +18998,9 @@ module.exports = {
             "vi": "Hệ thống sẽ bắt đầu ghi lại kết quả từ 0:00 sáng (GMT + 4) từ ngày 1 tháng 10 đến 12:00 đêm (GMT + 4) ngày 31 tháng 10.",
             "zh-Hant": "系統將從10月1日0:00（GMT + 4）到10月31日12:00（GMT + 4）開始記錄結果。",
             "id": "Sistem akan mulai menghitung hasil sejak pukul 0:00 (GMT+4) pada 1 Oktober 2019 hingga pukul 12:00 (GMT+4) pada 31 oktober 2019.",
-            "es": "",
-            "pt-BR": "",
-            "ar": ""
+            "es": "The system will start to record the results from 0:00 (GMT+4 )1st of October to 12:00PM (GMT+4) 31st of October.",
+            "pt-BR": "The system will start to record the results from 0:00 (GMT+4 )1st of October to 12:00PM (GMT+4) 31st of October.",
+            "ar": "The system will start to record the results from 0:00 (GMT+4 )1st of October to 12:00PM (GMT+4) 31st of October."
         },
         "rulesTit5Con2": {
             "zh": "所有交易必须在比赛结束前结束。最终的利润结果将不包括任何未平仓头寸。",
@@ -19008,9 +19008,70 @@ module.exports = {
             "vi": "Tất cả các giao dịch phải được đóng lại trước khi cuộc thi kết thúc. Kết quả lợi nhuận cuối cùng sẽ không bao gồm giá trị của các lệnh đang mở.",
             "zh-Hant": "所有交易必須在比賽結束前結束。最終的利潤結果將不包括任何未平倉頭寸。",
             "id": "Semua trader harus menutup posisinya sebelum kompetisi berakhir. Perhitungan hasil final akan dihitung berdasarkan posisi yang sudah tertutup maupun yang masih terbuka.",
-            "es": "",
-            "pt-BR": "",
-            "ar": ""
-        }
+            "es": "All trades must be closed before the competition ends. The final profit result will not include any open positions.",
+            "pt-BR": "All trades must be closed before the competition ends. The final profit result will not include any open positions.",
+            "ar": "All trades must be closed before the competition ends. The final profit result will not include any open positions."
+        },
+        "lfcTit": {
+            "zh": "Do you have what it takes to top The TigerWit Global Traders League?",
+            "en": "Do you have what it takes to top The TigerWit Global Traders League?",
+            "vi": "Bạn cần những gì để đoạt cup vô địch Nhà Giao Dịch Toàn Cầu của TigerWit?",
+            "zh-Hant": "Do you have what it takes to top The TigerWit Global Traders League?",
+            "id": "Apakah anda mampu menjadi juara di Liga Trader Dunia TigerWit?",
+            "es": "Do you have what it takes to top The TigerWit Global Traders League?",
+            "pt-BR": "Do you have what it takes to top The TigerWit Global Traders League?",
+            "ar": "هل لديك ما يلزم لتكون في صدارة دورة 'تيغرويت' العالمية للتداول ؟"
+        },
+        "lfcTit2": {
+            "zh": "Test your trading skills with $10,000USD of virtual funds on our Demo account.",
+            "en": "Test your trading skills with $10,000USD of virtual funds on our Demo account.",
+            "vi": "Kiểm tra kỹ năng giao dịch của bạn với 10000$ quỹ ảo trên tài khoản demo của chúng tôi",
+            "zh-Hant": "Test your trading skills with $10,000USD of virtual funds on our Demo account.",
+            "id": "Tes kemampuan trading anda dengan menggunakan akun virtual senilai $10,000 melalui akun Demo anda",
+            "es": "Test your trading skills with $10,000USD of virtual funds on our Demo account.",
+            "pt-BR": "Test your trading skills with $10,000USD of virtual funds on our Demo account.",
+            "ar": "اختبر مهاراتك في التداول بأموال افتراضية بقيمة 10000 دولار على حسابنا التجريبي"
+        },
+        "lfcTit3": {
+            "zh": "Trading CFDs involves risk and can result in loss of your capital.",
+            "en": "Trading CFDs involves risk and can result in loss of your capital.",
+            "vi": "Giao dịch CFDs có thể rủi ro đến nguồn vốn của bạn",
+            "zh-Hant": "Trading CFDs involves risk and can result in loss of your capital.",
+            "id": "Trading CFD memiliki risiko dan dapat menghilangkan modal anda",
+            "es": "Trading CFDs involves risk and can result in loss of your capital.",
+            "pt-BR": "Trading CFDs involves risk and can result in loss of your capital.",
+            "ar": "ينطوي تداول عقود الفروقات على مخاطر ويمكن أن يؤدي إلى خسارة أموالك"
+        },
+        "lfcCon1": {
+            "zh": "Aspiring traders from across the world will be channelling all the thrill and excitement of the football pitch for the chance to win top prizes in a fun and competitive trading environment - The Global Traders League.",
+            "en": "Aspiring traders from across the world will be channelling all the thrill and excitement of the football pitch for the chance to win top prizes in a fun and competitive trading environment - The Global Traders League.",
+            "vi": "Những nhà giao dịch từ khắp nơi trên thế giới sẽ tham gia trận tranh tài đầy hồi hộp và phấn khích để có cơ hội vô địch giải thưởng Nhà Giao Dịch Toàn Cầu với không khí cạnh tranh vui vẻ.",
+            "zh-Hant": "Aspiring traders from across the world will be channelling all the thrill and excitement of the football pitch for the chance to win top prizes in a fun and competitive trading environment - The Global Traders League.",
+            "id": "Trader dari seluruh dunia dapat menyalurkan ekspresi mereka seperti berada di lapangan sepakbola dan merasakan sensasi bersaing sekaligus bertanding dengan para trader terutama ketika mereka menjadi Juara di Liga Trader Dunia TigerWit",
+            "es": "Aspiring traders from across the world will be channelling all the thrill and excitement of the football pitch for the chance to win top prizes in a fun and competitive trading environment - The Global Traders League.",
+            "pt-BR": "Aspiring traders from across the world will be channelling all the thrill and excitement of the football pitch for the chance to win top prizes in a fun and competitive trading environment - The Global Traders League.",
+            "ar": "سيقوم المتداولون من جميع أنحاء العالم بنقل الحماس و التشويق من ملاعب كرة القدم إلى دوري التداول العالمي المليئ بالمرح و المتعة بهدف الفوز بجائزة قيمة"
+        },
+        "lfcCon2": {
+            "zh": "TigerWit’s playing field is wide open for all traders to seize the opportunity to step out into the floodlights and declare themselves worthy of claiming victory.",
+            "en": "TigerWit’s playing field is wide open for all traders to seize the opportunity to step out into the floodlights and declare themselves worthy of claiming victory.",
+            "vi": "Sân chơi Tigerwit đã sẵn sàng cho các nhà giao dịch đỉnh cao nắm bắt cơ hội để bước vào hào quang và chứng tỏ năng lực bản thân với chiến thắng đó.",
+            "zh-Hant": "TigerWit’s playing field is wide open for all traders to seize the opportunity to step out into the floodlights and declare themselves worthy of claiming victory.",
+            "id": "Liga pertandingan TigerWit terbuka untuk seluruh trader untuk memperebutkan kesempatan untuk menjadi bintang trader dunia dan membuktikan bahwa anda layak menjadi seorang Juara!",
+            "es": "TigerWit’s playing field is wide open for all traders to seize the opportunity to step out into the floodlights and declare themselves worthy of claiming victory.",
+            "pt-BR": "TigerWit’s playing field is wide open for all traders to seize the opportunity to step out into the floodlights and declare themselves worthy of claiming victory.",
+            "ar": "ن ملعب 'تيغرويت' مفتوح لجميع المتداولين لاغتنام الفرصة للخروج إلى الأضواء ويعلنون أنفسهم جديرين بالنص"
+        },
+        "lfcBtn": {
+            "zh": "Enter the league",
+            "en": "Enter the league",
+            "vi": "Tham gia giải đấu",
+            "zh-Hant": "Enter the league",
+            "id": "Masuk ke dalam Liga",
+            "es": "Enter the league",
+            "pt-BR": "Enter the league",
+            "ar": " ادخل المسابقة "
+        },
+
     }
 };

@@ -12476,46 +12476,46 @@
                         "ar": "(انتهت صلاحية الشهادة)"
                     }
                 },
-                "livepool":{
+                "liverpool":{
                     "floatingRate": {
-                        "zh": "",
+                        "zh": "Floating rate of return",
                         "en": "Floating rate of return",
-                        "vi": "",
-                        "zh-Hant": "",
-                        "id": "",
-                        "es": "",
-                        "pt-BR": "",
-                        "ar": ""
+                        "vi": "Floating rate of return",
+                        "zh-Hant": "Floating rate of return",
+                        "id": "Floating rate of return",
+                        "es": "Floating rate of return",
+                        "pt-BR": "Floating rate of return",
+                        "ar": "Floating rate of return"
                     },
                     "winAmazingPrizes": {
-                        "zh": "",
+                        "zh": "Win amazing prizes!",
                         "en": "Win amazing prizes!",
-                        "vi": "",
-                        "zh-Hant": "",
-                        "id": "",
-                        "es": "",
-                        "pt-BR": "",
-                        "ar": ""
+                        "vi": "Win amazing prizes!",
+                        "zh-Hant": "Win amazing prizes!",
+                        "id": "Win amazing prizes!",
+                        "es": "Win amazing prizes!",
+                        "pt-BR": "Win amazing prizes!",
+                        "ar": "Win amazing prizes!"
                     },
                     "checkRanking": {
-                        "zh": "",
+                        "zh": "Check my ranking",
                         "en": "Check my ranking",
-                        "vi": "",
-                        "zh-Hant": "",
-                        "id": "",
-                        "es": "",
-                        "pt-BR": "",
-                        "ar": ""
+                        "vi": "Check my ranking",
+                        "zh-Hant": "Check my ranking",
+                        "id": "Check my ranking",
+                        "es": "Check my ranking",
+                        "pt-BR": "Check my ranking",
+                        "ar": "Check my ranking"
                     },
                     "enterLeague": {
-                        "zh": "",
+                        "zh": "Enter the league",
                         "en": "Enter the league",
-                        "vi": "",
-                        "zh-Hant": "",
-                        "id": "",
-                        "es": "",
-                        "pt-BR": "",
-                        "ar": ""
+                        "vi": "Enter the league",
+                        "zh-Hant": "Enter the league",
+                        "id": "Enter the league",
+                        "es": "Enter the league",
+                        "pt-BR": "Enter the league",
+                        "ar": "Enter the league"
                     },
                     "": {
                         "zh": "",

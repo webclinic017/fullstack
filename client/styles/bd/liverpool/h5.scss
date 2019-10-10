@@ -1,4 +1,4 @@
-@include b(livepool-event) {
+@include b(liverpool-event) {
   color: #000;
   .pc-have {
     display: block;
@@ -24,12 +24,12 @@
     margin: 0 auto;
   }
   @include e(bg1) {
-    background: url("/white_label/bd/livepool/bg-pc.png") no-repeat;
+    background: url("/white_label/bd/liverpool/bg-pc.png") no-repeat;
     background-position: 60%;
     background-size: cover;
   }
   @include e(bg2) {
-    background: url("/white_label/bd/livepool/bg-charts.png") repeat;
+    background: url("/white_label/bd/liverpool/bg-charts.png") repeat;
     padding-bottom: 60px;
   }
   @include e(tit) {
@@ -220,7 +220,7 @@
       width: px2rem(700);
     }
     @include e(bg1) {
-      background: url("/white_label/bd/livepool/bg.png") no-repeat;
+      background: url("/white_label/bd/liverpool/bg.png") no-repeat;
       background-position: top center;
       background-size: auto 75%;
     }
@@ -327,7 +327,7 @@
   }
 }
 .layui-m-layer1 {
-  .layui-m-layer-livepool {
+  .layui-m-layer-liverpool {
     border-radius: 15px;
     width: 80%;
   }

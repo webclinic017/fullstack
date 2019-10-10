@@ -42,7 +42,7 @@
         postLcpagPayApp: origin_app + '/lcpag/pay', //post
         getVersionCheck: origin + '/system/version_check', //get
 
-        // livepool比赛
+        // liverpool比赛
         competitionList: origin + '/competition/list',
         competitionRanking: origin + '/competition/ranking',
 

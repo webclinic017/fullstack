@@ -738,12 +738,12 @@
             
             return publicHttp.dealPublicRequest(o.getAddressUrlApi, 'GET', params)
         }
-        // livepool比赛列表
+        // liverpool比赛列表
         function competitionList(params) {
             
             return publicHttp.dealPublicRequest(o.competitionListApi, 'GET', params)
         }
-        // livepool开通比赛账号
+        // liverpool开通比赛账号
         function competitionOpenAccount(params) {
             
             return publicHttp.dealPublicRequest(o.competitionOpenAccountApi, 'POST', params)

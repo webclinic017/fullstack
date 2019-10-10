@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="keywords"
+        content="TigerWit, Foreign Exchange Investment and Financing, Gold and Silver Trading Platform, Forex Trading Platform, Forex Trading Master, Forex Inducing Broker,Electronic Finance.">
+    <meta name="description"
+        content="With a strong technological core, TigerWit offers its clients exceptional capabilities to trade in the markets. Forex margin trading system.Forex analysis software,Forex demo trading platform,Forex strategy, Forex financing,forex trading master.">
+    <meta name="apple-mobile-web-app-title" content="<%= lang.text('companyZhName')%>">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <!--禁用缓存-->
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title><%= lang.text('companyZhName')%></title>
+</head>
+<!-- 引入H5 CSS -->
+<!-- build:css(.tmp) /styles/h5_common.css -->
+<link rel="stylesheet" href="/styles/h5_common.css">
+<!-- endbuild -->
+
+<% include /common/vendor/h5.utiljs.html %>
+<% include /common/statistic/main.html %>
+
+<body>
+    <div class="livepool_lfc">
+        <div class="livepool_lfc__width">
+            <div class="livepool_lfc__logo">
+                <img src="/white_label/bd/liverpool/lfc-logo.png" alt="">
+            </div>
+            <h3 class="livepool_lfc__tit"><%= lang.text('liverpool.lfcTit')%></h3>
+            <div class="livepool_lfc__img">
+                <img src="<%= lang.image('lfcCash')%>" alt="">
+            </div>
+            <h5 class="livepool_lfc__tit2"><%= lang.text('liverpool.lfcTit2')%></h5>
+            <p class="livepool_lfc__con">
+                <%= lang.text('liverpool.lfcCon1')%>
+
+            </p>
+            <p class="livepool_lfc__con">
+                <%= lang.text('liverpool.lfcCon2')%>
+            </p>
+            <h5 class="livepool_lfc__tit2">
+                <%= lang.text('liverpool.lfcTit3')%>
+            </h5>
+            <div class="pd-tp-20 pd-bt-20">
+                <div class="livepool_lfc__btn">
+                    <a href="/global_traders_league?only_key=liverpoolleague"><button><%= lang.text('liverpool.lfcBtn')%></button></a>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+<% include /common/vendor/h5.js.html %>
+
+<!-- build:js(client) /scripts/bd_liverpool_lfc.js -->
+<script src="/scripts/bd/liverpool/lfc.js"></script>
+<!-- endbuild -->
+
+</html>

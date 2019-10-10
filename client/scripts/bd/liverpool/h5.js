@@ -2,12 +2,25 @@
     $(".rulesBtn").on('click', function () {
         layer.open({
             type: 1,
-            skin: "livepool",
+            skin: "liverpool",
             content: $('#rulesCon').html()
         });
     })
     $("body").on('click', '.closed', function () {
         layer.closeAll()
+    })
+    $(".notParticipating").on('click', function(){
+        if(isInTiger()){
+            try {
+                callNative({
+                    type: "back_prev_page"
+                });
+            } catch (e) {}
+        }else if(isIOS() || isAndriod()){
+            location.href = "/";
+        }else{
+            location.href = "/space/#/space/liverpool";
+        }
     })
     var urlParams = getSearch();
     var gameInfo, only_key;
@@ -57,7 +70,6 @@
             // console.log(data.data);
             if (data.is_succ) {
                 var ranking = data.data.ranking;
-                var personalRanking = data.data.personal_ranking[0];
                 var html = '';
                 $('#competitionList').html($('#competitionList li:first-child'));
                 for (var i = 0; i < ranking.length; i++) {
@@ -68,11 +80,12 @@
                         '<div>' + obj.profit_rate + '</div>' +
                         '</li>'
                 }
-                if (personalRanking) {
+                var personalRanking = data.data.personal_ranking;
+                if (personalRanking && personalRanking[0]) {
                     html += '<li class="active">' +
-                        '<div>#' + personalRanking.ranking + '</div>' +
-                        '<div>' + personalRanking.trade_account_memo + '</div>' +
-                        '<div>' + personalRanking.profit_rate + '</div>' +
+                        '<div>#' + personalRanking[0].ranking + '</div>' +
+                        '<div>' + personalRanking[0].trade_account_memo + '</div>' +
+                        '<div>' + personalRanking[0].profit_rate + '</div>' +
                         '</li>'
                 }
 

@@ -3,17 +3,17 @@
     'use strict';
 
     angular.module('fullstackApp')
-        .controller('InvestLivepoolController', InvestLivepoolController);
+        .controller('InvestLiverpoolController', InvestLiverpoolController);
 
-    InvestLivepoolController.$inject = ['$scope', 'lang', '$interval', '$timeout', '$state'];
+    InvestLiverpoolController.$inject = ['$scope', 'lang', '$interval', '$timeout', '$state', 'account', '$cookies'];
 
     /**
-     * @name InvestLivepoolController
+     * @name InvestLiverpoolController
      * @desc
      */
-    function InvestLivepoolController($scope, lang, $interval, $timeout, $state) {
+    function InvestLiverpoolController($scope, lang, $interval, $timeout, $state, account, $cookies) {
         $scope.competition = {}; //当前活动信息
-        $scope.livepool = {
+        $scope.liverpool = {
             competition_key: 'liverpoolleague',  // 应该从上个路径传递
             username: '',
             phone: '',
@@ -40,7 +40,7 @@
 
         getCompetitionList();
         function getCompetitionList(){
-            account.competitionList({only_key: $scope.livepool.competition_key}).then(function(data){
+            account.competitionList({only_key: $scope.liverpool.competition_key}).then(function(data){
                 if (!data) return;
                 if (data.is_succ) {
                     $scope.competition = data.data[0];
@@ -48,16 +48,24 @@
             })
         }
         function selectArea(target) {
-            $scope.livepool.phoneArea = {
+            $scope.liverpool.phoneArea = {
                 key: '+' + target.phone_code,
                 value: target.phone_code
             }
             localStorage['phone_code'] = target.phone_code;
         }
-        // 使用缓存的phone_code
-        if (localStorage['phone_code']) {
+        if (localStorage['phone_code']) {// 使用缓存的phone_code
             selectArea({ phone_code: localStorage['phone_code'] })
         }
+        $scope.$watch('personal.phone', function(n){
+            if(n){
+                $scope.liverpool.phone = $scope.personal.phone;
+                if($scope.personal.phone_code){
+                    selectArea({ phone_code: $scope.personal.phone_code })
+                }
+            }
+            
+        })
 
         // 获取验证码
         $scope.getCaptcha = function (formName, name) {
@@ -65,12 +73,12 @@
             var phone_code, account_num, msg, account_type; // 区号， 账号， msg
 
             if (!showPhoneVel()) { return };
-            phone_code = $scope.livepool.phoneArea.value;
-            account_num = $scope.livepool.phone;
+            phone_code = $scope.liverpool.phoneArea.value;
+            account_num = $scope.liverpool.phone;
             account_type = 1;
             msg = lang.text('tigerWitID.login.tip6_21')
 
-            token = $cookies['code_token'];
+            var token = $cookies['code_token'];
             type = 1;
 
             account.sendCode(account_num, token, type, phone_code, account_type).then(function (data) {
@@ -92,22 +100,26 @@
                 }
             });
         };
-        $scope.livepoolRegister = function (formName) {
+        $scope.liverpoolRegister = function (formName) {
             if (!$scope.loginBtnStatus) return;
             // 手机
             if (!showPhoneVel()) { return };
-            if (!($scope.livepool.code)) {
+            if (!$scope.personal.phone && !($scope.liverpool.code)) {
                 layer.msg(lang.text('tigerWitID.login.verificationCode'));     //请填写验证码
                 return;
             }
 
             var para = {
-                competition_key: $scope.livepool.competition_key,
-                username: $scope.livepool.username,
-                phone: $scope.livepool.phone,
-                phone_code: $scope.livepool.phoneArea.value,
-                code: $scope.livepool.code
+                competition_key: $scope.liverpool.competition_key,
+                username: $scope.liverpool.username
             };
+            if(!$scope.personal.phone){
+                para = angular.extend({
+                    phone: $scope.liverpool.phone,
+                    phone_code: $scope.liverpool.phoneArea.value,
+                    code: $scope.liverpool.code
+                }, para)
+            }
             layer.load();
             $scope.loginBtnStatus = false;
 
@@ -115,7 +127,7 @@
                 layer.closeAll();
                 $scope.loginBtnStatus = true;
                 if (data.is_succ) {
-                    layer.msg('Livepool比赛账号开通成功')
+                    layer.msg('liverpool比赛账号开通成功')
                     $timeout(function(){
                         $state.go('space.center.index');
                     }, 2000)
@@ -125,15 +137,15 @@
         }
         // 验证昵称，手机号与区号
         function showPhoneVel() {
-            if (!($scope.livepool.username)) {
+            if (!($scope.liverpool.username)) {
                 layer.msg(lang.text("tigerWitID.settings.pleaseSetNickname"));     //请填写账号名称
                 return false;
             }
-            if (!($scope.livepool.phoneArea.value)) {
+            if (!($scope.liverpool.phoneArea.value)) {
                 layer.msg(lang.text("tigerWitID.login.selectAreaCode")) // 请选择区号
                 return false;
             }
-            if (!($scope.livepool.phone)) {
+            if (!($scope.liverpool.phone)) {
                 layer.msg(lang.text("register8"));     //请填写手机号
                 return false;
             }

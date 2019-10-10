@@ -1,0 +1,66 @@
+@include b(livepool_lfc) {
+  margin: 0 auto;
+  max-width: px2rem(900);
+  @include e(width) {
+    // width: 1200px;
+    margin: 0 auto;
+  }
+
+//   @include responsive(small-screens) {
+    background-image: url($image-white+"bd/liverpool/lfc-bg.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    text-align: center;
+    @include e(width) {
+      width: px2rem(600);
+    }
+    @include e(logo) {
+      padding-top: px2rem(15);
+      img {
+        width: px2rem(260);
+      }
+    }
+    @include e(tit) {
+      margin: px2rem(17);
+      font-size: px2rem(40);
+      line-height: px2rem(43);
+      font-weight: 500;
+      color: #000;
+    }
+    @include e(img) {
+      img {
+        width: 80%;
+      }
+    }
+    @include e(tit2) {
+      width: 80%;
+      margin: 0 auto;
+      font-size: px2rem(28);
+      line-height: px2rem(32);
+      font-weight: 500;
+      color: #000;
+      padding: px2rem(20) 0;
+    }
+    @include e(con) {
+      font-size: px2rem(24);
+      line-height: px2rem(26);
+      color: #423b20;
+      padding: px2rem(20) 0;
+    }
+    @include e(btn) {
+      background-color: #000;
+      border: 3px solid #000;
+      display: inline-block;
+      border-radius: px2rem(30);
+      button {
+        min-width: px2rem(358);
+        font-size: px2rem(31);
+        padding: px2rem(12) px2rem(25);
+        border: 3px solid #ffd521;
+        border-radius: px2rem(28);
+        background-color: #000;
+        color: #ffd521;
+      }
+    }
+//   }
+}

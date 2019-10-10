@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="keywords"
+    content="TigerWit, Foreign Exchange Investment and Financing, Gold and Silver Trading Platform, Forex Trading Platform, Forex Trading Master, Forex Inducing Broker,Electronic Finance.">
+  <meta name="description"
+    content="With a strong technological core, TigerWit offers its clients exceptional capabilities to trade in the markets. Forex margin trading system.Forex analysis software,Forex demo trading platform,Forex strategy, Forex financing,forex trading master.">
+  <meta name="apple-mobile-web-app-title" content="<%= lang.text('companyZhName')%>">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <!--禁用缓存-->
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <title><%= lang.text('companyZhName')%></title>
+</head>
+<!-- 引入H5 CSS -->
+<!-- build:css(.tmp) /styles/h5_common.css -->
+<link rel="stylesheet" href="/styles/h5_common.css">
+<!-- endbuild -->
+
+<% include /common/vendor/h5.utiljs.html %>
+<% include /common/statistic/main.html %>
+
+<body>
+  <div class="liverpool-event">
+    <div class="liverpool-event__bg1">
+      <div class="liverpool-event__width ">
+        <div class="liverpool-event__logo">
+          <div>
+            <img src="/white_label/bd/liverpool/tgl-logo.png" alt="">
+          </div>
+
+        </div>
+        <div class="liverpool-event__banner">
+          <div class="liverpool-event__banner-lf">
+            <h4 class="title"><%= lang.text('liverpool.bannerTit')%></h4>
+            <h6 class="time" id="gameTime">2019/09/22-2019/10/22</h6>
+            <p class="con"><%= lang.text('liverpool.bannerCon')%></p>
+            </br>
+            </br>
+            <div class="btn-row">
+
+              <button class="btn notParticipating">
+                <%= lang.text('liverpool.enterLeague')%>
+              </button>
+              <div class="mg-lf-10"></div>
+
+              <div class="phone-have">
+                <button class="btn rulesBtn">
+                  <%= lang.text('liverpool.rules')%>
+                </button>
+              </div>
+            </div>
+            <div class="pc-have">
+              <div class="rules cursor_pointer rulesBtn"><%= lang.text('liverpool.rulesD')%> ></div>
+            </div>
+
+          </div>
+          <div class="liverpool-event__banner-rg">
+            <img src="<%= lang.image('prize')%>" alt="">
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="liverpool-event__bg2">
+      <div class="liverpool-event__width">
+        <div class="liverpool-event__prizes">
+          <h4 class="liverpool-event__tit">
+            <div class="tit"><%= lang.text('liverpool.winAmazingPrizes')%></div>
+          </h4>
+          <div class="liverpool-event__con">
+            <p class="liverpool-event__p"><%= lang.text('liverpool.winAmazingPrizesCon1')%></p></br>
+            <p class="liverpool-event__p"><%= lang.text('liverpool.winAmazingPrizesCon2')%></p></br>
+            <ul class="liverpool-event__con-lst">
+              <li><%= lang.text('liverpool.winAmazingPrizesList1')%></li>
+              <li><%= lang.text('liverpool.winAmazingPrizesList2')%></li>
+              <li><%= lang.text('liverpool.winAmazingPrizesList3')%></li>
+            </ul>
+            <p class="liverpool-event__p"><%= lang.text('liverpool.winAmazingPrizesCon3')%></p>
+          </div>
+        </div>
+        <div class="liverpool-event__league">
+          <h4 class="liverpool-event__tit">
+            <div class="tit"><%= lang.text('liverpool.leagueTable')%></div>
+            <p class="liverpool-event__p"><%= lang.text('liverpool.leagueTableCon')%></p>
+          </h4>
+          <div class="liverpool-event__con">
+            <ul class="liverpool-event__con-table" id="competitionList">
+              <li class="">
+                <div><%= lang.text('liverpool.leagueTableTableA')%></div>
+                <div><%= lang.text('liverpool.leagueTableTableB')%></div>
+                <div><%= lang.text('liverpool.leagueTableTableC')%></div>
+              </li>
+            </ul>
+            <br>
+            <br>
+            <div class="text-center">
+              <button class="btn notParticipating"><%= lang.text('liverpool.enterLeague')%></button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div id="rulesCon" class="hidden">
+    <div class="liverpool-event__lay">
+      <div class="liverpool-event__lay-tit">
+        <h5><%= lang.text('liverpool.rulesTit')%></h5>
+        <i class="fa fa-times closed"></i>
+      </div>
+      <div class="liverpool-event__lay-con">
+        <h6 class="mg-tp-0"><%= lang.text('liverpool.rulesTit1')%></h6>
+        <h6 class="mg-tp-0"><%= lang.text('liverpool.rulesTit2')%>New Clients:</h6>
+        <ul>
+          <li><%= lang.text('liverpool.rulesTit2Con1')%>
+          </li>
+          <li><%= lang.text('liverpool.rulesTit2Con2')%>
+          </li>
+          <li><%= lang.text('liverpool.rulesTit2Con3')%>
+          </li>
+        </ul>
+        <h6><%= lang.text('liverpool.rulesTit3')%>
+        </h6>
+        <ul>
+          <li><%= lang.text('liverpool.rulesTit3Con1')%></li>
+          <li><%= lang.text('liverpool.rulesTit3Con2')%></li>
+          <li><%= lang.text('liverpool.rulesTit3Con3')%></li>
+        </ul>
+        <h6><%= lang.text('liverpool.rulesTit4')%></h6>
+        <ul>
+          <li><%= lang.text('liverpool.rulesTit4Con1')%></li>
+          <li><%= lang.text('liverpool.rulesTit4Con2')%></li>
+          <li><%= lang.text('liverpool.rulesTit4Con3')%></li>
+          <li><%= lang.text('liverpool.rulesTit4Con4')%>
+          </li>
+          <li><%= lang.text('liverpool.rulesTit4Con5')%></li>
+        </ul>
+        <h6><%= lang.text('liverpool.rulesTit5')%></h6>
+        <ul>
+          <li><%= lang.text('liverpool.rulesTit5Con1')%></li>
+          <li><%= lang.text('liverpool.rulesTit5Con2')%></li>
+
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+<% include /common/vendor/h5.js.html %>
+
+<!-- build:js(client) /scripts/bd_liverpool.js -->
+<script src="/scripts/bd/liverpool/h5.js"></script>
+<!-- endbuild -->
+
+</html>

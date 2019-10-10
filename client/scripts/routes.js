@@ -263,12 +263,12 @@
                     }
                 })
                 // liverpool比赛账号注册
-                .state('space.livepool', {
-                    url: '/space/livepool',
+                .state('space.liverpool', {
+                    url: '/space/liverpool',
                     views: {
                         'content@space': {
-                            templateUrl: '/views/invest/livepool.html',
-                            controller: 'InvestLivepoolController'
+                            templateUrl: '/views/invest/liverpool.html',
+                            controller: 'InvestLiverpoolController'
                         }
                     }
                 })
