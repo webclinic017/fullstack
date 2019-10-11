@@ -9,6 +9,9 @@
     $("body").on('click', '.closed', function () {
         layer.closeAll()
     })
+    var urlParams = getSearch();
+    var gameInfo, only_key;
+    only_key = urlParams.only_key;
     $(".notParticipating").on('click', function(){
         if(isInTiger()){
             try {
@@ -19,12 +22,9 @@
         }else if(isIOS() || isAndriod()){
             location.href = "/";
         }else{
-            location.href = "/space/#/space/liverpool";
+            location.href = "/space/#/space/liverpool?only_key=" + only_key;
         }
     })
-    var urlParams = getSearch();
-    var gameInfo, only_key;
-    only_key = urlParams.only_key;
     if (only_key) {
         getCompetitionList();
         competitionRanking();

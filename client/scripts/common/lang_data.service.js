@@ -12517,6 +12517,16 @@
                         "pt-BR": "Enter the league",
                         "ar": "Enter the league"
                     },
+                    "contestAccount": {
+                        "zh": "比赛账号",
+                        "en": "Contest account",
+                        "vi": "Contest account",
+                        "zh-Hant": "比赛账号",
+                        "id": "Contest account",
+                        "es": "Contest account",
+                        "pt-BR": "Contest account",
+                        "ar": "Contest account"
+                    },
                     "": {
                         "zh": "",
                         "en": "",

@@ -5,16 +5,16 @@
     angular.module('fullstackApp')
         .controller('InvestLiverpoolController', InvestLiverpoolController);
 
-    InvestLiverpoolController.$inject = ['$scope', 'lang', '$interval', '$timeout', '$state', 'account', '$cookies'];
+    InvestLiverpoolController.$inject = ['$scope', 'lang', '$interval', '$timeout', '$state', 'account', '$cookies', '$location'];
 
     /**
      * @name InvestLiverpoolController
      * @desc
      */
-    function InvestLiverpoolController($scope, lang, $interval, $timeout, $state, account, $cookies) {
+    function InvestLiverpoolController($scope, lang, $interval, $timeout, $state, account, $cookies, $location) {
         $scope.competition = {}; //当前活动信息
         $scope.liverpool = {
-            competition_key: 'liverpoolleague',  // 应该从上个路径传递
+            competition_key: $location.search().only_key || 'liverpoolleague',  // 应该从上个路径传递
             username: '',
             phone: '',
             phoneArea: {

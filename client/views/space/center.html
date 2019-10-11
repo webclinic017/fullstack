@@ -107,8 +107,10 @@
                     </div>
                 </div>
                 <div class="summary_btn">
+                    <a ng-href="/space/#/space/liverpool?only_key={{competition.only_key}}"
+                    ng-if="!competition.isInCompetition" class="btn-a tw-btn tw-btn-capsule-gradient">{{lang.text('tigerWitID.liverpool.enterLeague')}}</a>
                     <a ng-href="/global_traders_league?only_key={{competition.only_key}}"
-                        class="btn-a tw-btn tw-btn-capsule-gradient">{{competition.isInCompetition ? lang.text('tigerWitID.liverpool.checkRanking') : lang.text('tigerWitID.liverpool.enterLeague')}}</a>
+                     class="btn-a tw-btn tw-btn-capsule-gradient">{{competition.isInCompetition ? lang.text('tigerWitID.liverpool.checkRanking') : lang.text('tigerWitID.details.title')}}</a>
                 </div>
             </div>
 

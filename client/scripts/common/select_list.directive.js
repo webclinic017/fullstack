@@ -24,12 +24,14 @@
                             "<div class=\"item-center-i\"><span class=\"name\">{{ data[defaultSelectKey.text] || lang.text('tigerWitID.default') }}</span>" +
                             "   <span class=\"z-symbol z-documentary\" ng-if=\"data[defaultSelectKey.type] == 2\">"+ lang.text('tigerWitID.tradingAccount.copyAccount') +"</span>" +
                             "   <span class=\"z-symbol z-superior\" ng-if=\"data[defaultSelectKey.type] == 3\">"+ lang.text('tigerWitID.tradingAccount.masterAccount') +"</span>" + 
+                            "   <span class=\"z-symbol z-superior\" ng-if=\"data[defaultSelectKey.type] == 4\">"+ lang.text('tigerWitID.liverpool.contestAccount') +"</span>" + 
                             "</div><i class=\"fa fa-angle-down arrow\"></i></div>" + 
                             "<ul ng-show=\"showMe\" class=\"zero_Spinner__list\">" + 
                             "    <li ng-repeat=\"data in selectDataList\" ng-click=\"clickLi(data[defaultSelectKey.value])\" class=\"zero_Spinner__list-item item-center\" ng-class=\"{'active': data[defaultSelect.value] == defaultSelect.id}\">" + 
                             "        <span class=\"name\">{{ data[defaultSelectKey.text] || lang.text('tigerWitID.default') }}</span>" + 
                             "        <span class=\"z-symbol z-documentary\" ng-if=\"data[defaultSelectKey.type] == 2\">"+ lang.text('tigerWitID.tradingAccount.copyAccount') +"</span>" + 
                             "        <span class=\"z-symbol z-superior\" ng-if=\"data[defaultSelectKey.type] == 3\">"+ lang.text('tigerWitID.tradingAccount.masterAccount') +"</span>" + 
+                            "        <span class=\"z-symbol z-superior\" ng-if=\"data[defaultSelectKey.type] == 4\">"+ lang.text('tigerWitID.liverpool.contestAccount') +"</span>" + 
                             "    </li>" + 
                             "</ul>" + 
                             "</div>",

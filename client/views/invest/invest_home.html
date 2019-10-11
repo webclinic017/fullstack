@@ -48,6 +48,7 @@
                                     <span class="edit" ng-if="info.clickEdit" ng-click="editAccountName(dealAccount)"></span>
                                     <span class="edit" ng-if="!info.clickEdit"></span>
                                     <span class="z-symbol z-superior" ng-if="dealAccount.account_type === 3">{{lang.text('tigerWitID.tradingAccount.masterAccount')}}</span>
+                                    <span class="z-symbol z-superior" ng-if="dealAccount.account_type === 4">{{lang.text('tigerWitID.liverpool.contestAccount')}}</span>
                                     <span class="z-symbol z-documentary" ng-if="dealAccount.account_type === 2">{{lang.text('tigerWitID.tradingAccount.copyAccount')}}</span>
                                 </span>
                                 <span class="edit-name" ng-class="{'submit-error': editAccountNameAwake.result.error, 'submit-success': editAccountNameAwake.result.success}" ng-if="dealAccount.editName">
