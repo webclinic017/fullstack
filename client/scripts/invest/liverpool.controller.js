@@ -126,8 +126,8 @@
             account.competitionOpenAccount(para).then(function (data) {
                 layer.closeAll();
                 $scope.loginBtnStatus = true;
+                layer.msg(data.message);
                 if (data.is_succ) {
-                    layer.msg('liverpool比赛账号开通成功')
                     $timeout(function(){
                         $state.go('space.center.index');
                     }, 2000)

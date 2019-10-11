@@ -12508,14 +12508,14 @@
                         "ar": "Check my ranking"
                     },
                     "enterLeague": {
-                        "zh": "Enter the league",
+                        "zh": "进入联赛",
                         "en": "Enter the league",
-                        "vi": "Enter the league",
-                        "zh-Hant": "Enter the league",
-                        "id": "Enter the league",
+                        "vi": "Tham gia giải đấu",
+                        "zh-Hant": "進入聯賽",
+                        "id": "Masuk ke dalam Liga",
                         "es": "Enter the league",
                         "pt-BR": "Enter the league",
-                        "ar": "Enter the league"
+                        "ar": "شارك في المسابقة"
                     },
                     "contestAccount": {
                         "zh": "比赛账号",

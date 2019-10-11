@@ -16,7 +16,7 @@
         if(isInTiger()){
             try {
                 callNative({
-                    type: "back_prev_page"
+                    type: "open_liverpool_game"
                 });
             } catch (e) {}
         }else if(isIOS() || isAndriod()){

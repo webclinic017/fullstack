@@ -215,6 +215,12 @@
     }
     @include e(logo) {
       text-align: center;
+      > div{
+        width: px2rem(226);
+        >img{
+          width: 100%;
+        }
+      }
     }
     @include e(width) {
       width: px2rem(700);
