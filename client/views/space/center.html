@@ -92,23 +92,25 @@
         </li>
 
         <li class="space_center_summary__list-item liverpool" ng-repeat="competition in competitionList"
-            ng-class="{'not-active': assetInfo.agent_user_status !== 2}" ng-if="competition.only_key=='liverpoolleague'">
-                <div class="summary_name">{{competition.names}}
-                    <p class="con">{{competition.trade_end.substr(0, 10) + ' / ' + competition.trade_start.substr(0, 10)}}</p>
-                </div>
-                <div class="direction-column flex1">
-                    <div class="summary_amount">
-                        <div ng-if="competition.isInCompetition">
-                            {{competition.profitRate}} <p class="con">{{lang.text('tigerWitID.liverpool.floatingRate')}}</p>
-                        </div>
-                        <div ng-if="!competition.isInCompetition">
-                            <p class="con">{{lang.text('tigerWitID.liverpool.winAmazingPrizes')}}</p>
-                        </div>
+            ng-if="competition.only_key=='liverpoolleague'">
+            <div class="summary_name">{{competition.names}}
+                <p class="con">{{competition.trade_end.substr(0, 10) + ' / ' + competition.trade_start.substr(0, 10)}}
+                </p>
+            </div>
+            <div class="direction-column flex1">
+                <div class="summary_amount">
+                    <div ng-if="competition.isInCompetition">
+                        {{competition.profitRate}} <p class="con">{{lang.text('tigerWitID.liverpool.floatingRate')}}</p>
                     </div>
-                    <div class="summary_btn">
-                        <a ng-href="/global_traders_league?only_key={{competition.only_key}}" class="btn-a tw-btn tw-btn-capsule-gradient">{{competition.isInCompetition ? lang.text('tigerWitID.liverpool.checkRanking') : lang.text('tigerWitID.liverpool.enterLeague')}}</a>
+                    <div ng-if="!competition.isInCompetition">
+                        <p class="con">{{lang.text('tigerWitID.liverpool.winAmazingPrizes')}}</p>
                     </div>
                 </div>
+                <div class="summary_btn">
+                    <a ng-href="/global_traders_league?only_key={{competition.only_key}}"
+                        class="btn-a tw-btn tw-btn-capsule-gradient">{{competition.isInCompetition ? lang.text('tigerWitID.liverpool.checkRanking') : lang.text('tigerWitID.liverpool.enterLeague')}}</a>
+                </div>
+            </div>
 
         </li>
     </ul>
