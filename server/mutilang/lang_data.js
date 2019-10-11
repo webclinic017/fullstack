@@ -18653,34 +18653,34 @@ module.exports = {
     },
     "liverpool":{
         "bannerTit": {
-            "zh": "Do you have what it takes to be top of The TigerWit Global Traders League?",
+            "zh": "您是否有能力成为TigerWit全球商人联盟的佼佼者？",
             "en": "Do you have what it takes to be top of The TigerWit Global Traders League?",
-            "vi": "Do you have what it takes to be top of The TigerWit Global Traders League?",
-            "zh-Hant": "Do you have what it takes to be top of The TigerWit Global Traders League?",
-            "id": "Do you have what it takes to be top of The TigerWit Global Traders League?",
+            "vi": "Bạn đã có những yếu tố để trở thành người dẫn đầu trong Giải đấu Các Nhà Giao Dịch TigerWit thế giới?",
+            "zh-Hant": "您是否有能力成為TigerWit全球商人聯盟的佼佼者？",
+            "id": "Apakah anda memiliki kemampuan untuk menjadi juara di Liga Trader Dunia TigerWit?",
             "es": "Do you have what it takes to be top of The TigerWit Global Traders League?",
             "pt-BR": "Do you have what it takes to be top of The TigerWit Global Traders League?",
-            "ar": "Do you have what it takes to be top of The TigerWit Global Traders League?"
+            "ar": "هل لديك ما يلزم لتكون في صدارة دورة “تيغرويت” العالمية للتداول ؟"
         },
         "bannerCon": {
-            "zh": "Test your trading skills with $10,000USD of virtual funds on our Demo account.",
+            "zh": "使用我们的模拟账户上的$ 10,000USD虚拟资金测试您的交易技巧。",
             "en": "Test your trading skills with $10,000USD of virtual funds on our Demo account.",
-            "vi": "Test your trading skills with $10,000USD of virtual funds on our Demo account.",
-            "zh-Hant": "Test your trading skills with $10,000USD of virtual funds on our Demo account.",
-            "id": "Test your trading skills with $10,000USD of virtual funds on our Demo account.",
+            "vi": "Hãy kiểm tra các kĩ năng giao dịch của bạn với 10,000 $ USD trong quỹ ảo trên tài khoản Demo",
+            "zh-Hant": "使用我們的模擬賬戶上的$ 10,000USD虛擬資金測試您的交易技巧。",
+            "id": "Tes kemampuan trading anda dengan menggunakan akun virtual senilai $10,000 melalui akun Demo anda",
             "es": "Test your trading skills with $10,000USD of virtual funds on our Demo account.",
             "pt-BR": "Test your trading skills with $10,000USD of virtual funds on our Demo account.",
-            "ar": "Test your trading skills with $10,000USD of virtual funds on our Demo account."
+            "ar": "اختبر مهاراتك في التداول بأموال افتراضية بقيمة 10000 دولار على حسابنا التجريبي"
         },
         "enterLeague": {
-            "zh": "Enter the league",
+            "zh": "进入联赛",
             "en": "Enter the league",
-            "vi": "Enter the league",
-            "zh-Hant": "Enter the league",
-            "id": "Enter the league",
+            "vi": "Tham gia giải đấu",
+            "zh-Hant": "進入聯賽",
+            "id": "Masuk ke dalam Liga",
             "es": "Enter the league",
             "pt-BR": "Enter the league",
-            "ar": "Enter the league"
+            "ar": "شارك في المسابقة"
         },
         "rulesD": {
             "zh": "全球贸易商联盟规则",
@@ -18690,7 +18690,7 @@ module.exports = {
             "id": "Peraturan Liga Trader Dunia",
             "es": "The Global Traders League Rules",
             "pt-BR": "The Global Traders League Rules",
-            "ar": "The Global Traders League Rules"
+            "ar": "قواعد دورة التداول العالمية"
         },
         "rules": {
             "zh": "Rules",
@@ -18703,124 +18703,124 @@ module.exports = {
             "ar": "Rules"
         },
         "winAmazingPrizes": {
-            "zh": "Win amazing prizes!",
+            "zh": "赢取惊人的奖品！",
             "en": "Win amazing prizes!",
-            "vi": "Win amazing prizes!",
-            "zh-Hant": "Win amazing prizes!",
-            "id": "Win amazing prizes!",
+            "vi": "Chiến thắng các giải thưởng tuyệt vời!",
+            "zh-Hant": "贏取驚人的獎品！",
+            "id": "Menangkan Hadiah yang spesial !",
             "es": "Win amazing prizes!",
             "pt-BR": "Win amazing prizes!",
-            "ar": "Win amazing prizes!"
+            "ar": "اربح جوائز مذهلة!"
         },
         "winAmazingPrizesCon1": {
-            "zh": "Traders from across the world will be channelling the thrill and excitement of the football pitch as they compete like the elite and battle it out to become the winner of TigerWit’s first ever annual contest – The TigerWit Global Traders League.",
+            "zh": "来自世界各地的交易员将像精英一样竞争并争夺成为TigerWit有史以来首场年度比赛的冠军– TigerWit全球交易员联盟的冠军，以此来激发足球场的激动和兴奋。",
             "en": "Traders from across the world will be channelling the thrill and excitement of the football pitch as they compete like the elite and battle it out to become the winner of TigerWit’s first ever annual contest – The TigerWit Global Traders League.",
-            "vi": "Traders from across the world will be channelling the thrill and excitement of the football pitch as they compete like the elite and battle it out to become the winner of TigerWit’s first ever annual contest – The TigerWit Global Traders League.",
-            "zh-Hant": "Traders from across the world will be channelling the thrill and excitement of the football pitch as they compete like the elite and battle it out to become the winner of TigerWit’s first ever annual contest – The TigerWit Global Traders League.",
-            "id": "Traders from across the world will be channelling the thrill and excitement of the football pitch as they compete like the elite and battle it out to become the winner of TigerWit’s first ever annual contest – The TigerWit Global Traders League.",
+            "vi": "Các nhà giao dịch từ khắp nơi trên thế giới sẽ được tận hưởng không khí tuyệt vời của các trận bóng đá bởi vì họ đang cạnh tranh giống như những người chơi chuyên nghiệp và vượt qua mọi đối thủ để trở thành người chiến thắng đầu tiên của Cuộc thi Hằng năm từ TigeWit-Giải Vô địch các Nhà Giao Dịch Toàn Thế Giới.",
+            "zh-Hant": "來自世界各地的交易員將像精英一樣競爭並爭奪成為TigerWit有史以來首場年度比賽的冠軍– TigerWit全球交易員聯盟的冠軍，以此來激發足球場的激動和興奮。",
+            "id": "Trader dari seluruh dunia dapat menyalurkan ekspresi mereka seperti berada di lapangan sepakbola dan merasakan sensasi bersaing sekaligus bertanding dengan para trader terutama ketika mereka menjadi Juara di Liga Trader Dunia TigerWit.",
             "es": "Traders from across the world will be channelling the thrill and excitement of the football pitch as they compete like the elite and battle it out to become the winner of TigerWit’s first ever annual contest – The TigerWit Global Traders League.",
             "pt-BR": "Traders from across the world will be channelling the thrill and excitement of the football pitch as they compete like the elite and battle it out to become the winner of TigerWit’s first ever annual contest – The TigerWit Global Traders League.",
-            "ar": "Traders from across the world will be channelling the thrill and excitement of the football pitch as they compete like the elite and battle it out to become the winner of TigerWit’s first ever annual contest – The TigerWit Global Traders League."
+            "ar": "سيقوم المتداولون من جميع أنحاء العالم بنقل الحماس و التشويق من ملاعب كرة القدم إلى دوري التداول العالمي المليئ بالمرح و المتعة بهدف الفوز بأول مسابقة سنوية على الإطلاق من “تيغرويت” - دورة “تيغرويت” العالمية للتداول"
         },
         "winAmazingPrizesCon2": {
-            "zh": "Our innovative, easy to use app will ensure a fair competition of skill and ambition, all in the name of good sport. With exclusive prizes, up for grabs, TigerWit’s playing field is wide open for one superstar trader to seize the opportunity to step out into the floodlights and declare themselves worthy of claiming victory. ",
+            "zh": "我们的创新，易于使用的应用程序将确保以良好的运动的名义进行技能和雄心的公平竞争。凭借独家奖品，还有待争夺，TigerWit的竞争环境向一位超级巨星交易者敞开了大门，以抓住机会踏出第一步 进入泛光灯，并宣称自己值得赢得胜利。 ",
             "en": "Our innovative, easy to use app will ensure a fair competition of skill and ambition, all in the name of good sport. With exclusive prizes, up for grabs, TigerWit’s playing field is wide open for one superstar trader to seize the opportunity to step out into the floodlights and declare themselves worthy of claiming victory. ",
-            "vi": "Our innovative, easy to use app will ensure a fair competition of skill and ambition, all in the name of good sport. With exclusive prizes, up for grabs, TigerWit’s playing field is wide open for one superstar trader to seize the opportunity to step out into the floodlights and declare themselves worthy of claiming victory. ",
-            "zh-Hant": "Our innovative, easy to use app will ensure a fair competition of skill and ambition, all in the name of good sport. With exclusive prizes, up for grabs, TigerWit’s playing field is wide open for one superstar trader to seize the opportunity to step out into the floodlights and declare themselves worthy of claiming victory. ",
-            "id": "Our innovative, easy to use app will ensure a fair competition of skill and ambition, all in the name of good sport. With exclusive prizes, up for grabs, TigerWit’s playing field is wide open for one superstar trader to seize the opportunity to step out into the floodlights and declare themselves worthy of claiming victory. ",
+            "vi": "Ứng dụng trực quan, dễ dàng sử dụng của chúng tôi sẽ đảm bảo một cuộc thi công bằng nơi chỉ có kĩ năng và khát vọng, tất cả sẽ diễn ra như một trận đấu bóng đá. Với các giải thưởng độc đáo, cho những người chiến thắng, sân chơi của TigerWit đang mở rộng chờ đón chỉ một nhà giao dịch xuất sắc nhất để bước đỉnh hào quang và chứng minh bản thân xứng đáng với chiến thắng này. ",
+            "zh-Hant": "我們的創新，易於使用的應用程序將確保以良好的運動的名義進行技能和雄心的公平競爭。憑藉獨家獎品，還有待爭奪，TigerWit的競爭環境為一位超級巨星交易員敞開了大門，以抓住機會踏出第一步 進入泛光燈，並宣稱自己值得贏得勝利。",
+            "id": "Atas nama pertandingan olahraga yang jujur, aplikasi kami akan memastikan kompetisi yang adil untuk setiap kemampuan dan ambisi para trader. Kami juga memberikan hadiah yang ekslusif, siap untuk diperebutkan oleh para trader dunia. Menangkan peluang menjadi bintang trader dunia dan buktikan bahwa anda layak menjadi Juara!",
             "es": "Our innovative, easy to use app will ensure a fair competition of skill and ambition, all in the name of good sport. With exclusive prizes, up for grabs, TigerWit’s playing field is wide open for one superstar trader to seize the opportunity to step out into the floodlights and declare themselves worthy of claiming victory. ",
             "pt-BR": "Our innovative, easy to use app will ensure a fair competition of skill and ambition, all in the name of good sport. With exclusive prizes, up for grabs, TigerWit’s playing field is wide open for one superstar trader to seize the opportunity to step out into the floodlights and declare themselves worthy of claiming victory. ",
-            "ar": "Our innovative, easy to use app will ensure a fair competition of skill and ambition, all in the name of good sport. With exclusive prizes, up for grabs, TigerWit’s playing field is wide open for one superstar trader to seize the opportunity to step out into the floodlights and declare themselves worthy of claiming victory. "
+            "ar": "سيضمن تطبيقنا المبتكر سهل الاستخدام منافسة عادلة من المهارة والطموح ، كل ذلك باسم الرياضة الجيدة. بفضل الجوائز الحصرية ،إن ملعب “تيغرويت” مفتوح لجميع المتداولين لاغتنام الفرصة للخروج إلى الأضواء ويعلنون أنفسهم جديرين بالنصر"
         },
         "winAmazingPrizesList1": {
-            "zh": "1st Place: TV LCD Screen",
+            "zh": "第一名：电视液晶显示屏",
             "en": "1st Place: TV LCD Screen",
-            "vi": "1st Place: TV LCD Screen",
-            "zh-Hant": "1st Place: TV LCD Screen",
-            "id": "1st Place: TV LCD Screen",
+            "vi": "Giải nhất: Màn hình TV LCD",
+            "zh-Hant": "第一名：電視液晶顯示屏",
+            "id": "Juara 1 : TV LCD Screen",
             "es": "1st Place: TV LCD Screen",
             "pt-BR": "1st Place: TV LCD Screen",
-            "ar": "1st Place: TV LCD Screen"
+            "ar": "المركز الأول: شاشة تلفزيون LCD"
         },
         "winAmazingPrizesList2": {
-            "zh": "2nd Place: Mobile phone",
+            "zh": "第二名：手机",
             "en": "2nd Place: Mobile phone",
-            "vi": "2nd Place: Mobile phone",
-            "zh-Hant": "2nd Place: Mobile phone",
-            "id": "2nd Place: Mobile phone",
+            "vi": "Giải nhì: Điện thoại Di động",
+            "zh-Hant": "第二名：手機",
+            "id": "Juara 2 : Smartphone",
             "es": "2nd Place: Mobile phone",
             "pt-BR": "2nd Place: Mobile phone",
-            "ar": "2nd Place: Mobile phone"
+            "ar": "المركز الثاني: الهاتف المحمول"
         },
         "winAmazingPrizesList3": {
-            "zh": "3rd Place: Sound Technology",
+            "zh": "第三名：音响技术",
             "en": "3rd Place: Sound Technology",
-            "vi": "3rd Place: Sound Technology",
-            "zh-Hant": "3rd Place: Sound Technology",
-            "id": "3rd Place: Sound Technology",
+            "vi": "Giải ba: Dàn máy âm thanh",
+            "zh-Hant": "第三名：音響技術",
+            "id": "Juara 3 : Teknologi Suara",
             "es": "3rd Place: Sound Technology",
             "pt-BR": "3rd Place: Sound Technology",
-            "ar": "3rd Place: Sound Technology"
+            "ar": "المركز الثالث: تقنية الصوت"
         },
         "winAmazingPrizesCon3": {
-            "zh": "1st and 2nd winners will also get Liverpool signed merchandise",
+            "zh": "第一名和第二名得主还将得到利物浦的签约商品",
             "en": "1st and 2nd winners will also get Liverpool signed merchandise",
-            "vi": "1st and 2nd winners will also get Liverpool signed merchandise",
-            "zh-Hant": "1st and 2nd winners will also get Liverpool signed merchandise",
-            "id": "1st and 2nd winners will also get Liverpool signed merchandise",
+            "vi": "Người chiến thắng các giải nhất và nhì sẽ nhận được một hiện vật có chữ kí của Liverpool",
+            "zh-Hant": "第一名和第二名得主還將得到利物浦的簽約商品",
+            "id": "Juara 1 dan Juara 2 juga mendapatkan merchandise Liverpool yang telah ditanda tangani",
             "es": "1st and 2nd winners will also get Liverpool signed merchandise",
             "pt-BR": "1st and 2nd winners will also get Liverpool signed merchandise",
-            "ar": "1st and 2nd winners will also get Liverpool signed merchandise"
+            "ar": "الفائزون الأول والثاني سيحصلون على سلع موقعة من ليفربول"
         },
         "leagueTable": {
-            "zh": "League Table",
+            "zh": "联赛表",
             "en": "League Table",
-            "vi": "League Table",
-            "zh-Hant": "League Table",
-            "id": "League Table",
+            "vi": "Bảng Đấu",
+            "zh-Hant": "聯賽表",
+            "id": "Tabel Liga",
             "es": "League Table",
             "pt-BR": "League Table",
-            "ar": "League Table"
+            "ar": "جدول الدوري"
         },
         "leagueTableCon": {
-            "zh": "(table below is for illustration purpose only)",
+            "zh": "（下表仅供参考）",
             "en": "(table below is for illustration purpose only)",
-            "vi": "(table below is for illustration purpose only)",
-            "zh-Hant": "(table below is for illustration purpose only)",
-            "id": "(table below is for illustration purpose only)",
+            "vi": "(bảng bên dưới chỉ nhằm mục đích minh họa)",
+            "zh-Hant": "（下表僅供參考）",
+            "id": "(Tabel dibawah ini hanya merupakan illustrasi)",
             "es": "(table below is for illustration purpose only)",
             "pt-BR": "(table below is for illustration purpose only)",
-            "ar": "(table below is for illustration purpose only)"
+            "ar": "(الجدول أدناه هو لغرض التوضيح فقط)"
         },
         "leagueTableTableA": {
-            "zh": "PLACE",
+            "zh": "排名",
             "en": "PLACE",
-            "vi": "PLACE",
-            "zh-Hant": "PLACE",
-            "id": "PLACE",
+            "vi": "VỊ TRÍ",
+            "zh-Hant": "排名",
+            "id": "URUTAN",
             "es": "PLACE",
             "pt-BR": "PLACE",
-            "ar": "PLACE"
+            "ar": "مكان"
         },
         "leagueTableTableB": {
-            "zh": "ACCOUNT NUMBER",
+            "zh": "账号",
             "en": "ACCOUNT NUMBER",
-            "vi": "ACCOUNT NUMBER",
-            "zh-Hant": "ACCOUNT NUMBER",
-            "id": "ACCOUNT NUMBER",
+            "vi": "SỐ TÀI KHOẢN",
+            "zh-Hant": "帳號",
+            "id": "NOMOR AKUN",
             "es": "ACCOUNT NUMBER",
             "pt-BR": "ACCOUNT NUMBER",
-            "ar": "ACCOUNT NUMBER"
+            "ar": "رقم الحساب"
         },
         "leagueTableTableC": {
-            "zh": "PROFITABILITY",
+            "zh": "盈利",
             "en": "PROFITABILITY",
-            "vi": "PROFITABILITY",
-            "zh-Hant": "PROFITABILITY",
-            "id": "PROFITABILITY",
+            "vi": "TỶ SUẤT LỢI NHUẬN",
+            "zh-Hant": "盈利",
+            "id": "PROFITABIITAS",
             "es": "PROFITABILITY",
             "pt-BR": "PROFITABILITY",
-            "ar": "PROFITABILITY"
+            "ar": "الربحية"
         },
         "rulesTit": {
             "zh": "全球贸易商联盟规则",
@@ -18830,7 +18830,7 @@ module.exports = {
             "id": "Peraturan Liga Trader Dunia",
             "es": "The Global Traders League Rules",
             "pt-BR": "The Global Traders League Rules",
-            "ar": "The Global Traders League Rules"
+            "ar": "قواعد دورة التداول العالمية"
         },
         "rulesTit1": {
             "zh": "如何输入：",
@@ -19063,10 +19063,10 @@ module.exports = {
             "ar": "ن ملعب 'تيغرويت' مفتوح لجميع المتداولين لاغتنام الفرصة للخروج إلى الأضواء ويعلنون أنفسهم جديرين بالنص"
         },
         "lfcBtn": {
-            "zh": "Enter the league",
+            "zh": "进入联赛",
             "en": "Enter the league",
             "vi": "Tham gia giải đấu",
-            "zh-Hant": "Enter the league",
+            "zh-Hant": "進入聯賽",
             "id": "Masuk ke dalam Liga",
             "es": "Enter the league",
             "pt-BR": "Enter the league",

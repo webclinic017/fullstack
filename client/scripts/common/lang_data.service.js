@@ -12488,14 +12488,14 @@
                         "ar": "Floating rate of return"
                     },
                     "winAmazingPrizes": {
-                        "zh": "Win amazing prizes!",
+                        "zh": "赢取惊人的奖品！",
                         "en": "Win amazing prizes!",
-                        "vi": "Win amazing prizes!",
-                        "zh-Hant": "Win amazing prizes!",
-                        "id": "Win amazing prizes!",
+                        "vi": "Chiến thắng các giải thưởng tuyệt vời!",
+                        "zh-Hant": "贏取驚人的獎品！",
+                        "id": "Menangkan Hadiah yang spesial !",
                         "es": "Win amazing prizes!",
                         "pt-BR": "Win amazing prizes!",
-                        "ar": "Win amazing prizes!"
+                        "ar": "اربح جوائز مذهلة!"
                     },
                     "checkRanking": {
                         "zh": "Check my ranking",
