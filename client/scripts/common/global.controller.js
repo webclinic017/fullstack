@@ -338,6 +338,8 @@
         /**
          * google Analytics统计
          * 2019.09.12
+         * facebook统计
+         * 2019.10.14
          */
         $scope.toGtagEvent = toGtagEvent;
         function toGtagEvent(action) {
@@ -349,9 +351,16 @@
                 // goog_report_conversion(action)
             }
             catch(err){
-                console.log('国内不需要google Analytics统计')
+                console.log('国内不需要google Analytics统计', err)
             }
-                
+            try{
+                // Add this to a button's onclick handler
+                FB.AppEvents.logEvent(action);
+            }
+            catch(err){
+                console.log('国内不需要facebook统计', err)
+            }
+
         };
 
         /*
