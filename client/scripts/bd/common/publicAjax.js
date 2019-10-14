@@ -43,8 +43,11 @@
         getVersionCheck: origin + '/system/version_check', //get
 
         // liverpool比赛
-        competitionList: (isInTiger() ? origin_app : origin) + '/competition/list',
-        competitionRanking: (isInTiger() ? origin_app : origin) + '/competition/ranking',
+        competitionList: origin + '/competition/list',
+        competitionRanking: origin + '/competition/ranking',
+        // app
+        competitionListApp: origin_app + '/competition/list',
+        competitionRankingApp: origin_app + '/competition/ranking',
 
         //交易品种
         getSymbols: origin_app + '/symbol/list', //get

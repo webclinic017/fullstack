@@ -94,23 +94,27 @@
         <li class="space_center_summary__list-item liverpool" ng-repeat="competition in competitionList"
             ng-if="competition.only_key=='liverpoolleague'">
             <div class="summary_name">{{competition.names}}
-                <p class="con">{{competition.trade_end.substr(0, 10) + ' / ' + competition.trade_start.substr(0, 10)}}
+                <p class="con">
+                    {{(competition.trade_end | date:'yyyy-MM-dd') + ' / ' + (competition.trade_start | date:'yyyy-MM-dd')}}
                 </p>
             </div>
             <div class="direction-column flex1">
                 <div class="summary_amount">
-                    <div ng-if="competition.isInCompetition">
-                        {{competition.profitRate}} <p class="con">{{lang.text('tigerWitID.liverpool.floatingRate')}}</p>
+                    <div ng-if="competition.is_in_competition">
+                        {{competition.profit_rate}} <p class="con">{{lang.text('tigerWitID.liverpool.floatingRate')}}
+                        </p>
                     </div>
-                    <div ng-if="!competition.isInCompetition">
-                        <p class="con">{{lang.text('tigerWitID.liverpool.winAmazingPrizes')}}</p>
+                    <div ng-if="!competition.is_in_competition">
+                        <p class="con">{{ competition.describe }}</p>
                     </div>
                 </div>
                 <div class="summary_btn">
                     <a ng-href="/space/#/space/liverpool?only_key={{competition.only_key}}"
-                    ng-if="!competition.isInCompetition" class="btn-a tw-btn tw-btn-capsule-gradient">{{lang.text('tigerWitID.liverpool.enterLeague')}}</a>
+                        ng-if="competition.is_effective_date && !competition.is_in_competition"
+                        class="btn-a tw-btn tw-btn-capsule-gradient">{{lang.text('tigerWitID.liverpool.enterLeague')}}</a>
+                    <!-- competition.link  需要后台去掉token前端自己拼接token -->
                     <a ng-href="/global_traders_league?only_key={{competition.only_key}}"
-                     class="btn-a tw-btn tw-btn-capsule-gradient">{{competition.isInCompetition ? lang.text('tigerWitID.liverpool.checkRanking') : lang.text('tigerWitID.details.title')}}</a>
+                        class="btn-a tw-btn tw-btn-capsule-gradient">{{competition.is_in_competition ? lang.text('tigerWitID.liverpool.checkRanking') : lang.text('tigerWitID.details.title')}}</a>
                 </div>
             </div>
 

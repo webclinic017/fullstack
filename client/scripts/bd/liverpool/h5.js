@@ -30,7 +30,8 @@
         competitionRanking();
     }
     function getCompetitionList() {
-        publicRequest('competitionList', 'GET', {
+        var api = isInTiger() ? 'competitionListApp' : 'competitionList';
+        publicRequest(api, 'GET', {
             only_key: only_key
         }).then(function (data) {
             // console.log(data.data);
@@ -47,7 +48,7 @@
                 gameInfo = data[0];
                 if (gameInfo) {
                     // 用户是否参加比赛
-                    if (gameInfo.isInCompetition) {
+                    if (!gameInfo.is_effective_date || gameInfo.is_in_competition) {
                         $('.notParticipating').hide();
                     }
                     // $('#gameTime').html(gameInfo.trade_end.substr(0, 10) + ' / ' + gameInfo.trade_start.substr(0, 10))
@@ -63,7 +64,8 @@
         });
     }
     function competitionRanking() {
-        publicRequest('competitionRanking', 'GET', {
+        var api = isInTiger() ? 'competitionRankingApp' : 'competitionRanking';
+        publicRequest(api, 'GET', {
             limit: 10,
             only_key: only_key
         }).then(function (data) {
