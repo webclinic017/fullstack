@@ -13,12 +13,12 @@
     display: inline-block;
     line-height: normal;
   }
-  @include e(logo) {
-    > div {
-      display: inline-block;
-      background-color: #fff;
-    }
-  }
+  // @include e(logo) {
+  //   > div {
+  //     display: inline-block;
+  //     background-color: #fff;
+  //   }
+  // }
   @include e(width) {
     width: 1200px;
     margin: 0 auto;
@@ -121,47 +121,72 @@
     }
   }
   @include e(p) {
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 20px;
+    line-height: 22px;
     font-weight: initial;
   }
   @include e(banner) {
-    @include displayFlex();
-    @include alignItems(center);
-    @include justifyContent(space-between);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 650px;
+    padding: 120px 0 30px;
     @include m(lf) {
-      @include flex(1);
       .title {
-        font-size: 50px;
+        font-size: 62px;
         font-weight: 500;
-        line-height: 50px;
+        line-height: 62px;
+        width: 720px;
       }
-      .time {
-        margin-top: 60px;
-        margin-bottom: 15px;
-        font-size: 32px;
+      .title2 {
+        font-size: 42px;
         font-weight: 500;
-        line-height: 32px;
+        line-height: 45px;
+        margin: 35px 0 50px;
       }
       .con {
-        font-size: 16px;
-        line-height: 20px;
+        font-size: 20px;
+        line-height: 22px;
+        width: 590px;
+        margin-top: 35px;
+      }
+      .title3 {
+        font-weight: 500;
+        font-size: 21px;
+        line-height: 23px;
+        width: 770px;
+        padding-top: 30px;
       }
       .rules {
-        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-top: 25px;
         color: #1e39c6;
         display: inline-block;
       }
       .btn-row {
         @include displayFlex();
+        .special-btn {
+          background-color: #000;
+          border: 3px solid #000;
+          display: inline-block;
+          border-radius: 26px;
+          min-width: 240px;
+          font-size: 21px;
+          button {
+            width: 100%;
+            padding: 8px 25px;
+            border: 3px solid #ffd521;
+            border-radius: 24px;
+            background-color: #000;
+            color: #ffd521;
+          }
+        }
       }
     }
-    @include m(rg) {
-      width: 650px;
-      > img {
-        width: 100%;
-      }
-    }
+    // @include m(rg) {
+    //   > img {
+    //     width: 100%;
+    //   }
+    // }
   }
   @include e(prizes) {
   }
@@ -216,6 +241,7 @@
     @include e(logo) {
       text-align: center;
       > div{
+        display: inline-block;
         width: px2rem(226);
         >img{
           width: 100%;
@@ -237,7 +263,6 @@
       margin: px2rem(55) 0 px2rem(38);
       > .tit {
         font-size: px2rem(50);
-        font-weight: 500;
         line-height: px2rem(50);
         margin-bottom: px2rem(15);
         &::before {
@@ -270,23 +295,33 @@
       line-height: px2rem(25);
     }
     @include e(banner) {
-      @include flexWrap(wrap);
-      @include justifyContent(center);
+      background-image: none !important;
+      padding: px2rem(10) 0 px2rem(96);
       @include m(lf) {
         text-align: center;
         .title {
-          font-size: px2rem(63);
-          line-height: px2rem(63);
+          font-size: px2rem(50);
+          line-height: px2rem(53);
+          width: auto;
         }
-        .time {
-          margin-top: px2rem(70);
-          margin-bottom: px2rem(15);
-          font-size: px2rem(42);
-          line-height: px2rem(42);
+        .title2 {
+          margin-top: px2rem(30);
+          margin-bottom: px2rem(40);
+          font-size: px2rem(47);
+          line-height: px2rem(49);
         }
         .con {
+          font-size: px2rem(22);
+          line-height: px2rem(24);
+          margin-top: px2rem(30);
+          width: auto;
+        }
+        .title3 {
+          font-weight: 500;
           font-size: px2rem(32);
-          line-height: px2rem(35);
+          line-height: px2rem(34);
+          width: auto;
+          padding-top: px2rem(25);
         }
         .rules {
           margin-top: px2rem(50);
@@ -294,10 +329,24 @@
         .btn-row {
           @include flexWrap(wrap);
           @include justifyContent(center);
+          .special-btn {
+            border-radius: px2rem(26);
+            min-width: px2rem(240);
+            font-size: px2rem(22);
+            button {
+              padding: px2rem(8) px2rem(25);
+              border-radius: px2rem(24);
+            }
+          }
         }
       }
       @include m(rg) {
         width: px2rem(650);
+        margin: 0 auto;
+        padding: px2rem(95) 0 0;
+        > img {
+          width: 100%;
+        }
       }
     }
     @include e(lay) {
@@ -336,5 +385,10 @@
   .layui-m-layer-liverpool {
     border-radius: 15px;
     width: 80%;
+  }
+}
+.ar-lang {
+  .liverpool-event__banner {
+    background-position: left;
   }
 }

@@ -18693,7 +18693,7 @@ module.exports = {
             "ar": "قواعد دورة التداول العالمية"
         },
         "rules": {
-            "zh": "Rules",
+            "zh": "规则",
             "en": "Rules",
             "vi": "Rules",
             "zh-Hant": "Rules",

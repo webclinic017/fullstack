@@ -50,7 +50,7 @@
                     if (gameInfo.isInCompetition) {
                         $('.notParticipating').hide();
                     }
-                    $('#gameTime').html(gameInfo.trade_end.substr(0, 10) + ' / ' + gameInfo.trade_start.substr(0, 10))
+                    // $('#gameTime').html(gameInfo.trade_end.substr(0, 10) + ' / ' + gameInfo.trade_start.substr(0, 10))
 
                 }
             } else {

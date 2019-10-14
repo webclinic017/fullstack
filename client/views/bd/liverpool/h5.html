@@ -27,34 +27,44 @@
 <% include /common/vendor/h5.utiljs.html %>
 <% include /common/statistic/main.html %>
 
-<body>
+<body class="<%= lang.isAr('ar-lang')%>">
   <div class="liverpool-event">
     <div class="liverpool-event__bg1">
       <div class="liverpool-event__width ">
-        <div class="liverpool-event__logo">
+        <div class="liverpool-event__logo phone-have">
           <div>
             <img src="/white_label/bd/liverpool/tgl-logo.png" alt="">
           </div>
 
         </div>
-        <div class="liverpool-event__banner">
+        <div class="liverpool-event__banner " style="background-image: url('<%= lang.image('prize')%>')">
           <div class="liverpool-event__banner-lf">
             <h4 class="title"><%= lang.text('liverpool.bannerTit')%></h4>
-            <h6 class="time" id="gameTime">2019/09/22-2019/10/22</h6>
-            <p class="con"><%= lang.text('liverpool.bannerCon')%></p>
-            </br>
-            </br>
-            <div class="btn-row">
+            <!-- <h6 class="time" id="gameTime">2019/09/22-2019/10/22</h6> -->
+            <p class="title3"><%= lang.text('liverpool.bannerCon')%></p>
+            <p class="con"><%= lang.text('liverpool.winAmazingPrizesCon1')%></p>
+            <p class="con"><%= lang.text('liverpool.winAmazingPrizesCon2')%></p>
 
-              <button class="btn notParticipating">
-                <%= lang.text('liverpool.enterLeague')%>
-              </button>
+            <h4 class="title2">
+                <%= lang.text('liverpool.winAmazingPrizes')%>
+            </h4>
+
+            <div class="btn-row">
+              <div class="special-btn">
+                <button class="notParticipating">
+                  <%= lang.text('liverpool.enterLeague')%>
+                </button>
+              </div>
+              
               <div class="mg-lf-10"></div>
 
               <div class="phone-have">
-                <button class="btn rulesBtn">
+                <div class="special-btn">
+                  <button class="rulesBtn">
                   <%= lang.text('liverpool.rules')%>
                 </button>
+                </div>
+                
               </div>
             </div>
             <div class="pc-have">
@@ -62,7 +72,7 @@
             </div>
 
           </div>
-          <div class="liverpool-event__banner-rg">
+          <div class="liverpool-event__banner-rg phone-have">
             <img src="<%= lang.image('prize')%>" alt="">
           </div>
         </div>
@@ -73,12 +83,7 @@
     <div class="liverpool-event__bg2">
       <div class="liverpool-event__width">
         <div class="liverpool-event__prizes">
-          <h4 class="liverpool-event__tit">
-            <div class="tit"><%= lang.text('liverpool.winAmazingPrizes')%></div>
-          </h4>
           <div class="liverpool-event__con">
-            <p class="liverpool-event__p"><%= lang.text('liverpool.winAmazingPrizesCon1')%></p></br>
-            <p class="liverpool-event__p"><%= lang.text('liverpool.winAmazingPrizesCon2')%></p></br>
             <ul class="liverpool-event__con-lst">
               <li><%= lang.text('liverpool.winAmazingPrizesList1')%></li>
               <li><%= lang.text('liverpool.winAmazingPrizesList2')%></li>
