@@ -48,8 +48,8 @@
                 gameInfo = data[0];
                 if (gameInfo) {
                     // 用户是否参加比赛
-                    if (!gameInfo.is_effective_date || gameInfo.is_in_competition) {
-                        $('.notParticipating').hide();
+                    if (gameInfo.is_effective_date && !gameInfo.is_in_competition) {
+                        $('.notParticipating').show();
                     }
                     // $('#gameTime').html(gameInfo.trade_end.substr(0, 10) + ' / ' + gameInfo.trade_start.substr(0, 10))
 

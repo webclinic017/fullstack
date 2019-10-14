@@ -6,6 +6,9 @@
   .phone-have {
     display: none;
   }
+  .notParticipating{
+    display: none;
+  }
   .btn {
     width: auto;
     border-radius: 25px;
@@ -167,7 +170,6 @@
         .special-btn {
           background-color: #000;
           border: 3px solid #000;
-          display: inline-block;
           border-radius: 26px;
           min-width: 240px;
           font-size: 21px;
