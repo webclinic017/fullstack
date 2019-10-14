@@ -1,0 +1,464 @@
+.bd_forextrading {
+  .bd_forextrading_flex {
+    display: flex;
+  }
+  .bd_forextrading_container {
+    width: 1310px;
+    padding: 0px 20px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .bd_forextrading_navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.1);
+    padding: 15px 0px;
+    z-index: 1000;
+    .bd_open_account {
+      color: #ffd521;
+      padding: 2px 6px;
+      background-color: #000;
+    }
+    ul {
+      border-right: 1px solid #fff;
+      margin-right: 26px;
+      li {
+        float: left;
+        padding: 0 26px;
+        a {
+          color: #fff;
+        }
+      }
+    }
+  }
+  .btn_wrapper {
+    display: inline-block;
+    background: url("/white_label/bd_forextrading/bg_btn.png") no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    height: 46px;
+    line-height: 46px;
+    width: 230px;
+    color: #ffd521;
+    text-align: center;
+    font-size: 18px;
+  }
+  .bd_forextrading_footer {
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 58px 0px;
+    background-color: #d0d2d4;
+  }
+}
+.bd_forextrading_home {
+  .home_focus1 {
+    background: url("/white_label/bd_forextrading/home-focus1.png") no-repeat;
+    background-position: center top;
+    background-size: auto 100%;
+    position: relative;
+    height: 1173px;
+    padding-top: 88px;
+    &.mena {
+      background: url("/white_label/bd_forextrading/home-focus1-mena.png") no-repeat;
+      background-position: center top;
+      background-size: auto 100%;
+      position: relative;
+      height: 1173px;
+      padding-top: 88px;
+    }
+    h2 {
+      font-size: 44px;
+      line-height: 44px;
+      margin: 0;
+      padding: 16px 0px;
+      font-weight: 800;
+    }
+    .home_focus1_content {
+      width: 580px;
+      .bd_home_cont1 {
+        font-size: 26px;
+        line-height: 36px;
+        font-weight: 600;
+        margin-top: 46px;
+      }
+      .bd_home_cont2 {
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 300;
+        margin-top: 50px;
+      }
+      .bd_home_cont3 {
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 300;
+        margin-top: 30px;
+      }
+      .home_focus1_wrapper {
+        margin-top: 70px;
+      }
+      .home_focus1_details {
+        font-size: 16px;
+        font-weight: 600;
+        margin-top: 100px;
+        &.vietnam {
+          margin-top: 70px;
+        }
+        &.indonesia {
+          margin-top: 20px;
+        }
+        &.portuguese {
+          margin-top: 50px;
+        }
+        &.spanish {
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+  .home_focus2 {
+    background: url("/white_label/bd_forextrading/home-focus2.png") no-repeat;
+    background-position: center top;
+    background-size: auto 100%;
+    position: relative;
+    height: 1178px;
+    color: #fff;
+    padding-top: 278px;
+    .home_focus2_pic {
+      margin-left: 120px;
+    }
+    .home_focus2_content {
+      margin-left: 70px;
+      width: 580px;
+      h3 {
+        font-size: 46px;
+        margin-bottom: 46px;
+        font-weight: 800;
+        .bd_home_title4 {
+          color: #ffd521;
+        }
+      }
+      p {
+        font-size: 28px;
+        line-height: 34px;
+        font-weight: 300;
+      }
+      .bd_home_cont7 {
+        font-weight: 500;
+      }
+    }
+  }
+  .home_focus3 {
+    background: url("/white_label/bd_forextrading/home-focus3.png") no-repeat;
+    background-position: center top;
+    background-size: auto 100%;
+    position: relative;
+    height: 1173px;
+    padding-top: 258px;
+    .home_focus2_pic {
+      margin-left: 146px;
+    }
+    .home_focus2_content {
+      margin-left: 120px;
+      width: 500px;
+      h3 {
+        font-size: 46px;
+        margin-top: 180px;
+        margin-bottom: 46px;
+        font-weight: 800;
+        .bd_home_title6 {
+          color: #fff;
+        }
+      }
+      p {
+        font-size: 28px;
+        line-height: 34px;
+        font-weight: 300;
+      }
+      .bd_home_cont11 {
+        font-weight: 500;
+      }
+    }
+  }
+  .home_focus4 {
+    text-align: center;
+    margin-top: 135px;
+    margin-bottom: 118px;
+    .bd_home_title8 {
+      font-size: 30px;
+      font-weight: 800;
+      margin: 100px 0px 70px;
+    }
+    p img {
+      height: 30px;
+      margin-bottom: 72px;
+    }
+  }
+}
+.bd_forextrading_traders {
+  text-align: center;
+  .traders_focus1 {
+    background: url("/white_label/bd_forextrading/traders-focus1.png") no-repeat;
+    background-position: center top;
+    background-size: auto 100%;
+    position: relative;
+    height: 570px;
+    padding-top: 220px;
+    h2 {
+      font-size: 50px;
+      line-height: 50px;
+      margin: 0;
+      padding: 15px 0px;
+      font-weight: 800;
+      color: #fff;
+    }
+  }
+  .traders_focus2 {
+    background: url("/white_label/bd_forextrading/traders-focus2.png") no-repeat;
+    background-position: center top;
+    background-size: auto 100%;
+    position: relative;
+    height: 600px;
+    padding-top: 115px;
+    h3 {
+      font-size: 22px;
+      line-height: 22px;
+      margin: 0;
+      padding: 7px 0px;
+      font-weight: 600;
+    }
+    .traders_focus2_wrapper {
+      margin-top: 120px;
+    }
+  }
+  .traders_focus3 {
+    background: url("/white_label/bd_forextrading/traders-focus3.png") no-repeat;
+    background-position: center top;
+    background-size: auto 100%;
+    position: relative;
+    height: 1760px;
+    padding-top: 70px;
+    .traders_focus3_list {
+      width: 1030px;
+      margin: 135px auto 0;
+      .list_item {
+        display: inline-flex;
+        width: 46%;
+        padding-bottom: 65px;
+        align-items: center;
+        .icon {
+          padding: 0 14px;
+          img {
+            width: 60px;
+          }
+        }
+        .info {
+          font-size: 26px;
+          text-align: left;
+          padding: 0 14px;
+        }
+      }
+    }
+    .bd_home_title8 {
+      font-size: 30px;
+      font-weight: 800;
+      margin: 60px 0px 40px;
+    }
+    .traders_focus3_stars img {
+      height: 30px;
+      margin-bottom: 44px;
+    }
+  }
+}
+.bd_forextrading_partners {
+  .partners_focus1 {
+    background: url("/white_label/bd_forextrading/partners-focus1.png") no-repeat;
+    background-position: center top;
+    background-size: auto 100%;
+    position: relative;
+    height: 1173px;
+    padding-top: 113px;
+    &.mena {
+      background: url("/white_label/bd_forextrading/partners-focus1-mena.png") no-repeat;
+      background-position: center top;
+      background-size: auto 100%;
+      position: relative;
+      height: 1173px;
+      padding-top: 113px;
+    }
+    h2 {
+      font-size: 36px;
+      line-height: 36px;
+      margin: 0;
+      padding: 11px 0px;
+      font-weight: 800;
+    }
+    .partners_focus1_content {
+      width: 580px;
+      p {
+        font-size: 26px;
+        line-height: 32px;
+      }
+      .bd_partners_cont1 {
+        margin-top: 90px;
+      }
+      .bd_partners_cont2 {
+        margin-top: 45px;
+      }
+      .partners_focus1_wrapper {
+        margin-top: 95px;
+      }
+    }
+  }
+  .partners_focus2 {
+    background: url("/white_label/bd_forextrading/partners-focus2.png") no-repeat;
+    background-position: center top;
+    background-size: auto 100%;
+    position: relative;
+    height: 581px;
+    .bd_forextrading_container {
+      padding-top: 170px;
+      padding-left: 712px;
+      height: 100%;
+    }
+    p {
+      font-size: 52px;
+      line-height: 62px;
+    }
+    .bd_partners_block1_4 {
+      font-weight: 800;
+    }
+    img {
+      position: absolute;
+      bottom: -120px;
+      left: 264px;
+      z-index: 100;
+    }
+  }
+  .partners_focus3 {
+    background: url("/white_label/bd_forextrading/partners-focus3.png") no-repeat;
+    background-position: center top;
+    background-size: auto 100%;
+    position: relative;
+    height: 644px;
+    .bd_forextrading_container {
+      padding-top: 220px;
+      padding-left: 278px;
+      height: 100%;
+      &.mena {
+        padding-right: 520px;
+      }
+    }
+    p {
+      font-size: 42px;
+      line-height: 54px;
+      color: #fff;
+    }
+    img {
+      position: absolute;
+      bottom: -218px;
+      left: 870px;
+      z-index: 100;
+    }
+  }
+  .partners_focus4 {
+    background: url("/white_label/bd_forextrading/partners-focus4.png") no-repeat;
+    background-position: center top;
+    background-size: auto 100%;
+    position: relative;
+    height: 643px;
+    .bd_forextrading_container {
+      padding-top: 175px;
+      padding-left: 720px;
+      height: 100%;
+      &.mena {
+        padding-right: 300px;
+        padding-left: 0px;
+      }
+    }
+    p {
+      font-size: 40px;
+      line-height: 52px;
+      font-weight: 800;
+    }
+    img {
+      position: absolute;
+      top: -120px;
+      left: 264px;
+      z-index: 100;
+    }
+  }
+  .partners_focus5 {
+    background: url("/white_label/bd_forextrading/partners-focus5.png") no-repeat;
+    background-position: center top;
+    background-size: auto 100%;
+    position: relative;
+    height: 643px;
+    &.mena {
+      background: url("/white_label/bd_forextrading/partners-focus5-mena.png") no-repeat;
+      background-position: center top;
+      background-size: auto 100%;
+      position: relative;
+      height: 644px;
+      .bd_forextrading_container {
+        padding-right: 278px;
+      }
+    }
+    .bd_forextrading_container {
+      padding-top: 130px;
+      padding-left: 278px;
+      height: 100%;
+    }
+    p {
+      font-size: 42px;
+      line-height: 57px;
+      font-weight: 800;
+      color: #fff;
+    }
+    .bd_partners_block4_3 {
+      margin-top: 65px;
+    }
+  }
+  .partners_focus6 {
+    background: url("/white_label/bd_forextrading/partners-focus6.png") no-repeat;
+    background-position: center top;
+    background-size: auto 100%;
+    position: relative;
+    height: 643px;
+    .bd_forextrading_container {
+      padding-top: 240px;
+      padding-left: 720px;
+      height: 100%;
+      &.mena {
+        padding-right: 300px;
+        padding-left: 0px;
+      }
+    }
+    p {
+      font-size: 42px;
+      line-height: 52px;
+      font-weight: 800;
+    }
+    img {
+      position: absolute;
+      top: -120px;
+      left: 264px;
+      z-index: 100;
+    }
+  }
+  .partners_focus7 {
+    padding-bottom: 144px;
+    text-align: center;
+    .bd_home_title8 {
+      font-size: 30px;
+      font-weight: 800;
+      margin: 137px 0px 65px;
+    }
+    .partners_focus7_stars img {
+      height: 30px;
+      margin-bottom: 68px;
+    }
+  }
+}
