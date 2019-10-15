@@ -43,7 +43,7 @@
         }
         // 转到当前页面底部
         $scope.goInto = function () {
-            window.scrollTo(0, 2000)
+            window.scrollTo(0, (angular.element('#positionDom').offset().top-69))
         }
 
     }
