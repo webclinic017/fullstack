@@ -64,7 +64,8 @@
             }
             try{
                 // Add this to a button's onclick handler
-                FB.AppEvents.logEvent(action);
+                // FB.AppEvents.logEvent(action);
+                fbq('trackCustom', action)
             }
             catch(err){
                 console.log('国内不需要facebook统计', err)
