@@ -96,14 +96,15 @@ module.exports = function () {
             'ar': 'http://android.myapp.com/myapp/detail.htm?apkName=com.tigerwit.forex'
         },
         downloadGlobalIos:{
-            zh:"http://20805457p.rfihub.com/ca.gif?rb=36314&ca=20805457&_o=36314&_t=20805457&rd=http://hyperurl.co/4roggv?utm_source=website&utm_medium=appstorebutton",
-            en:"http://20805457p.rfihub.com/ca.gif?rb=36314&ca=20805457&_o=36314&_t=20805457&rd=http://hyperurl.co/4roggv?utm_source=website&utm_medium=appstorebutton",
-            vi:"http://20805457p.rfihub.com/ca.gif?rb=36314&ca=20805457&_o=36314&_t=20805457&rd=http://hyperurl.co/4roggv?utm_source=website&utm_medium=appstorebutton",
-            "zh-Hant":"http://20805457p.rfihub.com/ca.gif?rb=36314&ca=20805457&_o=36314&_t=20805457&rd=http://hyperurl.co/4roggv?utm_source=website&utm_medium=appstorebutton",
-            id:"http://20805457p.rfihub.com/ca.gif?rb=36314&ca=20805457&_o=36314&_t=20805457&rd=http://hyperurl.co/4roggv?utm_source=website&utm_medium=appstorebutton",
-            es:"http://20805457p.rfihub.com/ca.gif?rb=36314&ca=20805457&_o=36314&_t=20805457&rd=http://hyperurl.co/4roggv?utm_source=website&utm_medium=appstorebutton",
-            'pt-BR': 'http://20805457p.rfihub.com/ca.gif?rb=36314&ca=20805457&_o=36314&_t=20805457&rd=http://hyperurl.co/4roggv?utm_source=website&utm_medium=appstorebutton',
-            'ar': 'http://20805457p.rfihub.com/ca.gif?rb=36314&ca=20805457&_o=36314&_t=20805457&rd=http://hyperurl.co/4roggv?utm_source=website&utm_medium=appstorebutton'
+            //http://20805457p.rfihub.com/ca.gif?rb=36314&ca=20805457&_o=36314&_t=20805457&rd=http://hyperurl.co/4roggv?utm_source=website&utm_medium=appstorebutton
+            zh:"https://apps.apple.com/us/app/tigerwit/id1448002193?l=zh&ls=1",
+            en:"https://apps.apple.com/us/app/tigerwit/id1448002193?l=zh&ls=1",
+            vi:"https://apps.apple.com/us/app/tigerwit/id1448002193?l=zh&ls=1",
+            "zh-Hant":"https://apps.apple.com/us/app/tigerwit/id1448002193?l=zh&ls=1",
+            id:"https://apps.apple.com/us/app/tigerwit/id1448002193?l=zh&ls=1",
+            es:"https://apps.apple.com/us/app/tigerwit/id1448002193?l=zh&ls=1",
+            'pt-BR': 'https://apps.apple.com/us/app/tigerwit/id1448002193?l=zh&ls=1',
+            'ar': 'https://apps.apple.com/us/app/tigerwit/id1448002193?l=zh&ls=1'
         },
         downloadCnIos:{
             zh:"https://itunes.apple.com/cn/app/id1091437876",
@@ -116,14 +117,15 @@ module.exports = function () {
             'ar': 'https://itunes.apple.com/cn/app/id1091437876'
         },
         downloadGlobalAndroid:{
-            zh:"http://20805458p.rfihub.com/ca.gif?rb=36314&ca=20805458&_o=36314&_t=20805458&rd=https://play.google.com/store/apps/details?id=com.tigerwit.forex",
-            en:"http://20805458p.rfihub.com/ca.gif?rb=36314&ca=20805458&_o=36314&_t=20805458&rd=https://play.google.com/store/apps/details?id=com.tigerwit.forex",
-            vi:"http://20805458p.rfihub.com/ca.gif?rb=36314&ca=20805458&_o=36314&_t=20805458&rd=https://play.google.com/store/apps/details?id=com.tigerwit.forex",
-            "zh-Hant":"http://20805458p.rfihub.com/ca.gif?rb=36314&ca=20805458&_o=36314&_t=20805458&rd=https://play.google.com/store/apps/details?id=com.tigerwit.forex",
-            id:"http://20805458p.rfihub.com/ca.gif?rb=36314&ca=20805458&_o=36314&_t=20805458&rd=https://play.google.com/store/apps/details?id=com.tigerwit.forex",
-            es:"http://20805458p.rfihub.com/ca.gif?rb=36314&ca=20805458&_o=36314&_t=20805458&rd=https://play.google.com/store/apps/details?id=com.tigerwit.forex",
-            'pt-BR': 'http://20805458p.rfihub.com/ca.gif?rb=36314&ca=20805458&_o=36314&_t=20805458&rd=https://play.google.com/store/apps/details?id=com.tigerwit.forex',
-            'ar': 'http://20805458p.rfihub.com/ca.gif?rb=36314&ca=20805458&_o=36314&_t=20805458&rd=https://play.google.com/store/apps/details?id=com.tigerwit.forex'
+            //http://20805458p.rfihub.com/ca.gif?rb=36314&ca=20805458&_o=36314&_t=20805458&rd=https://play.google.com/store/apps/details?id=com.tigerwit.forex
+            zh:"https://play.google.com/store/apps/details?id=com.tigerwit.forex",
+            en:"https://play.google.com/store/apps/details?id=com.tigerwit.forex",
+            vi:"https://play.google.com/store/apps/details?id=com.tigerwit.forex",
+            "zh-Hant":"https://play.google.com/store/apps/details?id=com.tigerwit.forex",
+            id:"https://play.google.com/store/apps/details?id=com.tigerwit.forex",
+            es:"https://play.google.com/store/apps/details?id=com.tigerwit.forex",
+            'pt-BR': 'https://play.google.com/store/apps/details?id=com.tigerwit.forex',
+            'ar': 'https://play.google.com/store/apps/details?id=com.tigerwit.forex'
         },
         downloadGlobalApp:{
             zh: "/m/blank?system=global",
