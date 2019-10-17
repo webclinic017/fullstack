@@ -302,7 +302,11 @@
     }
   }
 }
-
+.ar-lang{
+  .index_new__focus{
+    background-image: url("/white_label/home/home-focus-bg.png");
+  }
+}
 // 报价
 @include b(index_new_qupte) {
   @include e(title) {
