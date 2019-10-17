@@ -52,7 +52,7 @@
 }
 
 .inline-block {
-    display: inline-block;
+    display: inline-block !important;
 }
 
 .block {
@@ -557,7 +557,22 @@
         font-style: normal;
     }
 }
+.ar-lang{
+    .not_complete {
+        transform:rotate(-45deg);
+        -ms-transform:rotate(-45deg); /* Internet Explorer */
+        -moz-transform:rotate(-45deg); /* Firefox */
+        -webkit-transform:rotate(-45deg); /* Safari 和 Chrome */
+        -o-transform:rotate(-45deg); /* Opera */
+        right: auto;
+        left: -55px;
+    }
+}
 
+
+.display-flex {
+    @include displayFlex();
+}
 // css3垂直居中
 .item-center {
     @include displayFlex();

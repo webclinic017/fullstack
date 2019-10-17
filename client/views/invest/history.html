@@ -32,7 +32,7 @@
             <!-- 自主交易历史订单概况 -->
             <thead>
                 <tr class="invest_orders" ng-if="orders.length > 0" ng-click="showOrders()">
-                    <th class="text-left invest_orders__user">
+                    <th class="invest_orders__user">
                         <a href="" class="invest_orders__user-avatar">
                             <img ng-src="/avatar/{{ personal.usercode }}_80.jpg" alt="personal {{lang.text('tigerWitID.settings.photo')}}">
                         </a>
@@ -76,7 +76,7 @@
                 <!-- 自主交易历史订单详情 -->
                 <tbody>
                     <tr class="" ng-repeat="order in orders">
-                        <td class="text-left invest_orders__detail">
+                        <td class="invest_orders__detail">
                             <span class="invest_orders__trunk"></span>
                             <span class="invest_orders__branch"></span>
 
@@ -91,7 +91,7 @@
                                         {{lang.isEnglishArea() ? order.symbol : order.symbol_cn + ' (' + order.symbol + ')' }}
                                     </a>        
                                 </p>
-                                <p class="text-left font-size-12">
+                                <p class="font-size-12">
                                     <span class="history-operation-way">{{order.close_type_name}}</span>
                                     <span>{{ lang.text('tigerWitID.before') }} {{order.passed_time | duration}}</span>
                                 </p>   
@@ -130,7 +130,7 @@
                 <!-- 复制交易历史订单概况 -->
                 <thead>
                     <tr class="invest_orders" ng-click="showDetails(trader)">
-                        <th class="text-left invest_orders__user">
+                        <th class="invest_orders__user">
                             <a href="" class="invest_orders__user-avatar">
                                 <img ng-src="/avatar/{{ trader.user_code }}_80.jpg" alt="trader {{lang.text('tigerWitID.settings.photo')}}">
                             </a>
@@ -176,7 +176,7 @@
                     <!-- 复制交易历史订单详情 -->
                     <tbody>
                         <tr class="" ng-repeat="order in trader.orders">
-                            <td class="text-left invest_orders__detail">
+                            <td class="invest_orders__detail">
                                 <span class="invest_orders__trunk"></span>
                                 <span class="invest_orders__branch"></span>
 
@@ -191,7 +191,7 @@
                                             {{lang.isEnglishArea() ? order.symbol : order.symbol_cn + ' (' + order.symbol + ')' }}
                                         </a>        
                                     </p>
-                                    <p class="text-left font-size-12">
+                                    <p class="font-size-12">
                                         <span class="history-operation-way">{{order.close_type_name}}</span>
                                         <span>{{ lang.text('tigerWitID.before') }} {{order.passed_time | duration}}</span>
                                     </p>                                    

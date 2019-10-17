@@ -43,7 +43,7 @@
     <% include /common/vendor/h5.utiljs.html %>
     <% include /common/statistic/main.html %>
     <body style="height: 100%;" ng-app="fullstackApp">
-        <div ng-controller="GlobalController">
+        <div ng-controller="GlobalController" class="<%= lang.isAr('ar-lang')%>">
             <div class="body">
                 <% if (pageInfo.id == 'proxy') {%>
                     <%- include('./global_proxy.html') %>

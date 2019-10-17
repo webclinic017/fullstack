@@ -1,13 +1,13 @@
 <div class="space_content">
     <div ng-if="authenAsset" class="space_block">
-        <div class="row mg-tp-40" ng-if="stateParamsSubpage === 'deposit' || stateParamsSubpage === 'withdraw'">
-            <div class="col-xs-2 text-right deposit__title-money" ng-if="stateParamsSubpage === 'withdraw'">
+        <div class="display-flex mg-tp-40" ng-if="stateParamsSubpage === 'deposit' || stateParamsSubpage === 'withdraw'">
+            <div class="col-xs-2 justify-flex-end deposit__title-money" ng-if="stateParamsSubpage === 'withdraw'">
                 {{lang.text('tigerWitID.depositWithdrawal.withdrawAccountJ')}}
             </div>
-            <div class="col-xs-2 text-right deposit__title-money" ng-if="stateParamsSubpage === 'deposit'">
+            <div class="col-xs-2 justify-flex-end deposit__title-money" ng-if="stateParamsSubpage === 'deposit'">
                 {{lang.text('tigerWitID.depositWithdrawal.depositAccountJ')}}
             </div>
-            <div class="col-xs-8 withdraw__list clearfix">
+            <div class="flex1 withdraw__list display-flex">
                 <div class="withdraw__list-item" ng-class="{'not-active': selectWay.type != 'invest'}" ng-click="changeWithdrawType('invest')">
                     <p class="summary_name">{{lang.text('tigerWitID.depositWithdrawal.tradingAccount')}}</p>
                     <p class="summary_amount">{{ accountItem.account_name || lang.text('tigerWitID.depositWithdrawal.tradingAccount') }}</p>

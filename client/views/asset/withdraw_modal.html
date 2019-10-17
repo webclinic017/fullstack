@@ -84,19 +84,19 @@
 
     <div class="sys_modal_v2__content" ng-if="params.type === 'withdrawReady'">
         <div class="sys_modal_v2__info">
-            <p class="deposit_modal__tit mg-bt-0" style="font-family: initial;">{{params.currency.currency_symbol}} {{params.amountRMB}}</p>
+            <p class="deposit_modal__tit mg-bt-0" style="font-family: initial;"><span>{{params.currency.currency_symbol}}</span> <span>{{params.amountRMB}}</span></p>
             <p class="text-center font-dark mg-bt-15">
                 <span>{{lang.text('tigerWitID.depositWithdrawal.r1d')}}</span>
-                <span>{{params.currency.rate_out}}</span> {{params.currency.currency_name}}
+                <span>{{params.currency.rate_out}} {{params.currency.currency_name}}</span>
             </p>
             <ul class="deposit_modal__lst">
-                <li class="clearfix">
-                    <span class="fl">{{lang.text('tigerWitID.depositWithdrawal.withdrawalAmountM')}}</span>
-                    <span class="fr" style="font-family: initial;">$ {{params.amountDollar}}</span>
+                <li class="space-between">
+                    <span class="">{{lang.text('tigerWitID.depositWithdrawal.withdrawalAmountM')}}</span>
+                    <span class="" style="font-family: initial;">$ {{params.amountDollar}}</span>
                 </li>
-                <li class="clearfix" ng-if="params.currency.currency !== 'USD'">
-                    <span class="fl">{{lang.text('tigerWitID.depositWithdrawal.tip59_1')}}{{params.currency.currency_name}}{{lang.text('tigerWitID.depositWithdrawal.tip59_2')}}</span>
-                    <span class="fr" style="font-family: initial;">{{params.currency.currency_symbol}} {{params.amountRMB}}</span>
+                <li class="space-between" ng-if="params.currency.currency !== 'USD'">
+                    <span class="">{{lang.text('tigerWitID.depositWithdrawal.tip59_1')}}{{params.currency.currency_name}}{{lang.text('tigerWitID.depositWithdrawal.tip59_2')}}</span>
+                    <span class="" style="font-family: initial;">{{params.currency.currency_symbol}} {{params.amountRMB}}</span>
                 </li>
             </ul>
             <pre class="deposit_modal__tip" style="font-family: initial;" ng-bind="delSpace(params.desc)"></pre>

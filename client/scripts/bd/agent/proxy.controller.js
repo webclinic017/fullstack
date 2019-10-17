@@ -37,9 +37,9 @@
             window.location.href = link;
         }
         // 转到当前页面底部
-        $scope.goInto = function() {
-            window.scrollTo(0, 2000)
-        }
+        // $scope.goInto = function() {
+        //     window.scrollTo(0, 2000)
+        // }
     }
 
 })();

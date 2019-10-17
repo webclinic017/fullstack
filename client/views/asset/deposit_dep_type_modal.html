@@ -7,9 +7,9 @@
 
     <div class="sys_modal_v2__content">
         <ul class="deposit_modal__type">
-            <li class="row" ng-repeat="item in deposit.depositTypeLst" ng-class="{unable_select: item.status === 2}" ng-click="selectType(item.key, item.status)" ng-if="isWallet(item.key)">
-                <div class="col-xs-3 deposit_modal__type-icon">
-                    <span class="btn-select fr" ng-class="{active: deposit.type === item.key}"></span>
+            <li class="display-flex" ng-repeat="item in deposit.depositTypeLst" ng-class="{unable_select: item.status === 2}" ng-click="selectType(item.key, item.status)" ng-if="isWallet(item.key)">
+                <div class="col-xs-3 justify-flex-end deposit_modal__type-icon">
+                    <span class="btn-select" ng-class="{active: deposit.type === item.key}"></span>
                 </div>
                 <div class="col-xs-9 deposit_modal__type-cont">
                     <p class="tit">{{item.name}}<span>{{item.hint}}</span></p>

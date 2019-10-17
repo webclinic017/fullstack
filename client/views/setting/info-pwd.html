@@ -5,7 +5,7 @@
         </span>
     </p>
     <div class="row setting_info_zero__list-input">
-        <form name="pwdForm" novalidate ng-show="personal.password == 1" autocomplete="off">
+        <form name="pwdForm" novalidate ng-show="personal.password == 1" autocomplete="off" class="display-flex">
             <div class="col-xs-3">
                 <div class="form-control-wrapper">
                     <input class="form-control" 
@@ -80,7 +80,7 @@
                 </div>
             </div>
 
-            <div class="col-xs-3 text-right">
+            <div class="flex1 justify-flex-end">
                 <button class="tw-btn tw-btn-md tw-btn-capsule-gradient" type="submit" ng-if="clickable" ng-click="submitForm('pwdForm')">
                     {{lang.text('tigerWitID.submit')}}
                 </button>
@@ -118,9 +118,9 @@
                 </div>
             </div>
 
-            <div class="col-xs-5"></div>
+            <!-- <div class="col-xs-5"></div> -->
 
-            <div class="col-xs-3 text-right">
+            <div class="flex1 justify-flex-end">
                 <button class="tw-btn tw-btn-md tw-btn-capsule-gradient" type="submit" ng-if="clickable" ng-click="submitFormNew('pwdFormNew')">
                     {{lang.text('tigerWitID.submit')}}
                 </button>

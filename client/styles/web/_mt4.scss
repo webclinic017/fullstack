@@ -17,13 +17,14 @@
 
     @include e(info) {
         position: relative;
-        display: block;
-        margin: 50px 40px;
-        padding-bottom: 10px;
+        @include displayFlex();
+        @include justifyContent(center);
+        @include alignItems(center);
         height: 65px;
         border: 1px solid #222;
         font-size: 22px;
         color: #222;
+        padding: 0 10px;
 
         &:hover, &:active {
             color: #222;
@@ -36,13 +37,11 @@
 
         > img {
             position: relative;
-            top: 10px;
         }
         > .qr_code {
             display: none;
             position: absolute;
             bottom: 110%;
-            left: 22px;
             width: 200px;
             height: 200px;
             padding: 5px;

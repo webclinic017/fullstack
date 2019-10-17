@@ -1,5 +1,6 @@
+<!-- 已改布局 -->
 <div class="sys_modal">
-    <p class="clearfix">
+    <p class="justify-flex-end">
         <button class="close" ng-click="closeModal()">&times;</button>
     </p>
 
@@ -18,8 +19,8 @@
 
     <div class="sys_modal__content" ng-show="step == 1">
         <form class="mg-tp-30" name="copyForm" novalidate>
-            <div class="row">
-                <div class="col-xs-4">
+            <div class="">
+                <div class="">
                     <label>{{lang.text('tigerWitID.details.copyAmount')}}</label>
                 </div>
             </div>
@@ -53,11 +54,11 @@
                 </div>
             </div>
             <br>
-            <div class="row">
-                <div class="col-xs-4">
+            <div class="space-between">
+                <div class="flex1">
                     <label>{{lang.text('tigerWitID.tradingAccount.availableCopyAmountM')}}</label>
                 </div>
-                <div class="col-xs-8 text-right">
+                <div class="">
                     <label class="copy_modal__label">
                         <i class="fa fa-dollar font-base"></i>
                         {{ copyTrade.avaCopyAmount || '0.00' }}
@@ -65,11 +66,11 @@
                 </div>
             </div>
 
-            <div class="row" ng-if="hasCanceled">
-                <div class="col-xs-4">
+            <div class="space-between" ng-if="hasCanceled">
+                <div class="flex1">
                     <label>{{lang.text('tigerWitID.dataStatistics.currentCopyAmountM')}}</label>
                 </div>
-                <div class="col-xs-8 text-right">
+                <div class="">
                     <label class="copy_modal__label">
                         <i class="fa fa-dollar font-base"></i>
                         {{ copyTrade.amount || '0.00' }}
@@ -77,11 +78,11 @@
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-xs-4">
+            <div class="space-between">
+                <div class="flex1">
                     <label>{{lang.text('tigerWitID.tradingAccount.recommendedM')}}</label>
                 </div>
-                <div class="col-xs-8 text-right">
+                <div class="">
                     <label class="copy_modal__label">
                         <i class="fa fa-dollar font-base"></i>
                         {{ copyTrade.advice || '0.00' }}
@@ -89,11 +90,11 @@
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-xs-6">
+            <div class="space-between">
+                <div class="flex1">
                     <label>{{lang.text('tigerWitID.tradingAccount.remainingCopiableFundsM')}}</label>
                 </div>
-                <div class="col-xs-6 text-right">
+                <div class="">
                     <label class="copy_modal__label">
                         <i class="fa fa-dollar font-base"></i>
                         {{ copyTrade.surplusAmount || '0.00' }}
@@ -101,10 +102,10 @@
                 </div>
             </div>
         </form>
-        <div class="text-left copy_modal__tip mg-tp-20 font-dark">
+        <div class="copy_modal__tip mg-tp-20 font-dark">
             {{lang.text('tigerWitID.tradingAccount.tip9')}}
         </div>
-        <div class="text-left copy_modal__tip mg-tp-15 font-dark">
+        <div class="copy_modal__tip mg-tp-15 font-dark">
             {{lang.text('tigerWitID.tradingAccount.tip10')}}
         </div>
 
@@ -112,7 +113,7 @@
             <p ng-if="frontErr.insufficient.show">{{lang.text('tigerWitID.tradingAccount.tip11')}}</p>
         </div>
 
-        <div class="sys_modal__btn_wrapper clearfix">
+        <div class="sys_modal__btn_wrapper ">
             <div ng-if="backErr.system.show">
                 <p class="alert-system">
                     {{ backErr.system.msg }}
@@ -124,7 +125,7 @@
             </button>
 
             <!--正常提交按钮-->
-            <div class="clearfix" ng-if="!hasCanceled">
+            <div class="" ng-if="!hasCanceled">
                 <button ng-if="!frontErr.insufficient.show && clickable.copy && copyTrade.title == 'copy'" 
                     class="btn btn-lt btn-dark" 
                     ng-class="{ 'btn-disabled' : copyTrade.amount < 200, 'btn-primary' : copyTrade.amount >= 200 }"
@@ -146,7 +147,7 @@
             </div>
 
             <!--返回修改按钮-->
-            <div class="clearfix" ng-if="hasCanceled">
+            <div class="" ng-if="hasCanceled">
                 <button ng-if="!frontErr.insufficient.show && clickable.copy" 
                     class="btn btn-lt btn-dark" 
                     ng-class="{ 'btn-disabled' : copyTrade.amount < 200, 'btn-primary' : copyTrade.amount >= 200 }"
@@ -167,11 +168,11 @@
             {{lang.text('tigerWitID.tradingAccount.tip12')}}
         </div>
         <br>
-        <div class="row">
-            <div class="col-xs-4">
+        <div class="space-between">
+            <div class="flex1">
                 <label>{{lang.text('tigerWitID.details.copyAmountM')}}</label>
             </div>
-            <div class="col-xs-8 text-right">
+            <div class="">
                 <label class="copy_modal__label font-danger">
                     <i class="fa fa-dollar"></i>
                     {{ copyTrade.amount || '0.00' }}
@@ -179,11 +180,11 @@
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-xs-4">
+        <div class="space-between">
+            <div class="flex1">
                 <label>{{lang.text('tigerWitID.tradingAccount.suggestedAmountM')}}</label>
             </div>
-            <div class="col-xs-8 text-right">
+            <div class="">
                 <label class="copy_modal__label">
                     <i class="fa fa-dollar font-base"></i>
                     {{ copyTrade.advice || '0.00' }}
@@ -192,7 +193,7 @@
         </div>
 
         <!--强制继续按钮组-->
-        <div class="sys_modal__btn_wrapper clearfix">
+        <div class="sys_modal__btn_wrapper">
             <button class="btn btn-primary btn-lt" ng-click="submitForm()" ng-if="clickable.copy">
                 {{lang.text('tigerWitID.continue')}}
             </button>
@@ -222,7 +223,7 @@
                 {{lang.text('tigerWitID.tradingAccount.copySuccess')}}
             </p>
         </div>
-        <div class="sys_modal__btn_wrapper mg-tp-30 clearfix">
+        <div class="sys_modal__btn_wrapper mg-tp-30">
             <button class="btn btn-primary btn-lt" ng-click="closeModal()">
                 {{lang.text('tigerWitID.finish')}}
             </button>
@@ -235,7 +236,7 @@
                 {{copyTrade.evidenceMsg}}
             </p>
         </div>
-        <div class="sys_modal__btn_wrapper mg-tp-20 clearfix">
+        <div class="sys_modal__btn_wrapper mg-tp-20">
             <a class="btn btn-primary btn-lt" href="/space/#/space/asset/evidence">
                 {{lang.text('tigerWitID.depositWithdrawal.uploadVoucher')}}
             </a>

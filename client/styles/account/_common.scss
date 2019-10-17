@@ -179,7 +179,7 @@
             padding-bottom: 42px;
             border-bottom:1px solid rgba(187,196,215,0.3);
             > span {
-                text-align: left;
+                text-align: initial;
                 display: inline-block;
             }
         }
@@ -197,7 +197,20 @@
     
   
 }
-
+.ar-lang{
+    .account_login__close{
+        right: auto;
+        left: 15px;
+    }
+    .account_login__pass-tip{
+        left: 3px;
+        right: auto;
+    }
+    .account_login__code_btn{
+        left: 0px;
+        right: auto;
+    }
+}
 
 //== 注册register_copy 已弃用
 @include b(account_register) {

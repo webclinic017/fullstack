@@ -13,36 +13,36 @@
   <% include /common/vendor/web.js.html %>
 </head>
 
-<body ng-app="fullstackApp" class="tw_en">
+<body ng-app="fullstackApp" class="tw_en <%= lang.isAr('ar-lang')%>">
   <div ng-controller="GlobalController">
     <% include /common/nav/web.header.html %>
     <div class="global_t35">
       <div class="container relative">
-        <div class="global_t35__register_box">
-          <div class="form-control-wrapper">
-            <select class="form-control" name="country" id="country">
-              <option value=""><%= lang.text('third_placeholder4')%></option>
-            </select>
-          </div>
-          <div class="form-control-wrapper">
-            <input type="text" class="form-control" name="email" id="email"
-              placeholder="<%= lang.text('partner.email')%>">
-          </div>
-          <div class="form-control-wrapper">
-            <input type="number" class="form-control" name="code" id="verify_code"
-              placeholder="<%= lang.text('mRegister03')%>" style="padding-right: 168px;">
-            <p class="verify_code_btn_wrapper">
-              <span class="verify_code_btn" id="verify_code_btn"><%= lang.text('mRegister05')%></span>
-            </p>
-          </div>
-
-          <div class="global_t35__btn_wrapper">
-            <button id="submit_form" class="global_t35__btn"><%= lang.text('bonusBd.confirmNow')%></button>
-          </div>
-        </div>
-        <div class="">
-          <div class="global_t35__focus">
+        <div class="global_t35__focus space-between">
+          <div class="img-parent">
             <img src="<%= lang.image('freesignTitle')%>" alt="">
+          </div>
+          <div class="global_t35__register_box">
+            <div class="form-control-wrapper">
+              <select class="form-control" name="country" id="country">
+                <option value=""><%= lang.text('third_placeholder4')%></option>
+              </select>
+            </div>
+            <div class="form-control-wrapper">
+              <input type="text" class="form-control" name="email" id="email"
+                placeholder="<%= lang.text('partner.email')%>">
+            </div>
+            <div class="form-control-wrapper <%= lang.isAr('ar')%>">
+              <input type="number" class="form-control verify-code" name="code" id="verify_code"
+                placeholder="<%= lang.text('mRegister03')%>">
+              <p class="verify_code_btn_wrapper">
+                <span class="verify_code_btn" id="verify_code_btn"><%= lang.text('mRegister05')%></span>
+              </p>
+            </div>
+
+            <div class="global_t35__btn_wrapper">
+              <button id="submit_form" class="global_t35__btn"><%= lang.text('bonusBd.confirmNow')%></button>
+            </div>
           </div>
           <!-- <div class="global_t35__focus_tip">
             <%= lang.text('bonusBd.gainRebateUs')%><span> $200 </span><%= lang.text('bonusBd.onceRegistered')%>
@@ -53,8 +53,8 @@
           <img src="<%= lang.image('rebateplanTitle')%>" alt="">
           <img class="bar" src="/images/bd_g35/web_bar.png" alt="">
         </div>
-        <ul class="global_t35__plan clearfix">
-          <li class="clearfix l1">
+        <ul class="global_t35__plan">
+          <li class="l1">
             <div class="l">
               <p>
                 <!-- <%= lang.text('bonusBd.us')%><br> -->
@@ -66,7 +66,7 @@
                 <%= lang.text('bonusBd.within')%>14<%= lang.text('bonusBd.days')%></p>
             </div>
           </li>
-          <li class="clearfix l2">
+          <li class="l2">
             <div class="l">
               <p>
                 <!-- <%= lang.text('bonusBd.us')%><br> -->
@@ -74,59 +74,59 @@
               </p>
             </div>
             <div class="r">
-              <p>3 <%= lang.text('bonusBd.lot')%></p>
-              <p><%= lang.text('bonusBd.within')%>30<%= lang.text('bonusBd.days')%></p>
+              <p>3 <%= lang.text('bonusBd.lot')%></br>
+              <%= lang.text('bonusBd.within')%>30<%= lang.text('bonusBd.days')%></p>
             </div>
           </li>
-          <li class="clearfix l3">
+          <li class="l3">
             <div class="l">
               <p>
                 <!-- <%= lang.text('bonusBd.us')%><br> -->
                 <span>$18.00</span></p>
             </div>
             <div class="r">
-              <p>8 <%= lang.text('bonusBd.lot')%></p>
-              <p><%= lang.text('bonusBd.within')%>60<%= lang.text('bonusBd.days')%></p>
+              <p>8 <%= lang.text('bonusBd.lot')%></br>
+              <%= lang.text('bonusBd.within')%>60<%= lang.text('bonusBd.days')%></p>
             </div>
           </li>
-          <li class="clearfix l4">
+          <li class="l4">
             <div class="l">
               <p>
                 <!-- <%= lang.text('bonusBd.us')%><br> -->
                 <span>$25.00</span></p>
             </div>
             <div class="r">
-              <p>15 <%= lang.text('bonusBd.lot')%></p>
-              <p><%= lang.text('bonusBd.within')%>90<%= lang.text('bonusBd.days')%></p>
+              <p>15 <%= lang.text('bonusBd.lot')%></br>
+              <%= lang.text('bonusBd.within')%>90<%= lang.text('bonusBd.days')%></p>
             </div>
           </li>
-          <li class="clearfix l5">
+          <li class="l5">
             <div class="l">
               <p>
                 <!-- <%= lang.text('bonusBd.us')%><br> -->
                 <span>$50.00</span></p>
             </div>
             <div class="r">
-              <p>30 <%= lang.text('bonusBd.lot')%></p>
-              <p><%= lang.text('bonusBd.within')%>90<%= lang.text('bonusBd.days')%></p>
+              <p>30 <%= lang.text('bonusBd.lot')%></br>
+              <%= lang.text('bonusBd.within')%>90<%= lang.text('bonusBd.days')%></p>
             </div>
           </li>
-          <li class="clearfix l6">
+          <li class="l6">
             <div class="l">
               <p>
                 <!-- <%= lang.text('bonusBd.us')%><br> -->
                 <span>$99.00</span></p>
             </div>
             <div class="r">
-              <p>50 <%= lang.text('bonusBd.lot')%></p>
-              <p><%= lang.text('bonusBd.within')%>90<%= lang.text('bonusBd.days')%></p>
+              <p>50 <%= lang.text('bonusBd.lot')%></br>
+              <%= lang.text('bonusBd.within')%>90<%= lang.text('bonusBd.days')%></p>
             </div>
           </li>
         </ul>
         <div class="global_t35__title t2">
           <img src="<%= lang.image('whyChooseTitle')%>" alt="">
         </div>
-        <ul class="global_t35__cont clearfix">
+        <ul class="global_t35__cont display-flex">
           <li>
             <p><img src="/images/bd_g35/comm_icon1.png" alt=""></p>
             <p><%= lang.text('bonusBd.whyChoose1')%></p>
@@ -144,7 +144,7 @@
             <p><%= lang.text('bonusBd.whyChoose4')%></p>
           </li>
         </ul>
-        <ul class="global_t35__download clearfix">
+        <ul class="global_t35__download justify-center">
           <li>
             <a href="<%= lang.text('downloadGlobalApp')%>">
               <img src="<%= lang.image('downloadAppGlobal')%>" alt="">

@@ -1,12 +1,12 @@
 @include b(space_nav){
-    padding-left: 60px;
+    padding-left: 42px;
+    padding-right: 42px;
     @include e(box) {
-        @extend .clearfix;
-        display: block;
+        @include displayFlex();
         padding-top: 40px;
         @include m(item){
-            float: left;
-            margin-right: 36px;
+            margin-right: 18px;
+            margin-left: 18px;
             position: relative;
             a {
                 font-size: 20px;

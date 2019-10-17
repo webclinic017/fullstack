@@ -23,6 +23,7 @@
             },
 
             xAxis: {
+                reversed: lang.isAr(),
                 lineColor: '#777',
                 tickColor: '#777',
                 labels: {
@@ -46,6 +47,7 @@
                         color: '#999'
                     }
                 },
+                opposite: lang.isAr(),
                 gridLineColor: '#777',
                 labels: {
                     style: {
@@ -105,6 +107,7 @@
                         },
 
                         xAxis: {
+                            reversed: lang.isAr(),
                             labels: {
                                 enabled: false
                             },
@@ -116,6 +119,7 @@
                             title: {
                                 enabled: false
                             },
+                            opposite: lang.isAr(),
                             labels: {
                                 enabled: false
                             },
@@ -124,6 +128,7 @@
 
                         tooltip: {
                             useHTML: true,
+                            reversed: lang.isAr(),
                             backgroundColor: 'rgba(255, 255, 255, 0.8)',
                             formatter: function () {
                                 var date = new Date(this.x);
@@ -132,7 +137,7 @@
                                         (date.getDate());
 
                                 return '<p style="color:' + this.series.color +
-                                        ';">'+ lang.text('tigerWitID.dataStatistics.profitRateM') +'</br>' +  this.y + '%</p>';
+                                        ';"><span>'+ lang.text('tigerWitID.dataStatistics.profitRateM') +'</span></br><span>' +  this.y + '%</span></p>';
                             }
                         },
 
@@ -177,6 +182,7 @@
                             text: ''
                         },
                         xAxis: {
+                            reversed: lang.isAr(),
                             lineColor: '#f0f0f0',
                             tickColor: '#f0f0f0',
                             labels: {
@@ -197,6 +203,7 @@
                             title: {
                                 text: lang.text('tigerWitID.dataStatistics.profitRate') + '（%）'
                             },
+                            opposite: lang.isAr(),
                             gridLineColor: '#f0f0f0',
                             labels: {
                                 style: {
@@ -207,6 +214,7 @@
 
                         tooltip: {
                             useHTML: true,
+                            reversed: lang.isAr(),
                             backgroundColor: 'rgba(0, 0, 0, 0)',
                             formatter: function () {
                                 var date = new Date(this.x);
@@ -215,8 +223,8 @@
                                         (date.getDate());
 
                                 return '<p style="color:' + this.series.color + ';">' +
-                                    dateStr + '</p><p style="color:' + this.series.color + ';">' + lang.text('tigerWitID.dataStatistics.profitRateM') + 
-                                    this.y + '%</p>';
+                                    dateStr + '</p><p style="color:' + this.series.color + ';"><span>' + lang.text('tigerWitID.dataStatistics.profitRateM') + 
+                                    '</span><span>' + this.y + '%</span></p>';
                             }
                         },
 
@@ -263,6 +271,7 @@
                             text: ''
                         },
                         xAxis: {
+                            reversed: lang.isAr(),
                             lineColor: '#f0f0f0',
                             tickColor: '#f0f0f0',
                             labels: {
@@ -283,6 +292,7 @@
                             title: {
                                 text: lang.text('tigerWitID.dataStatistics.profitRate') + '（%）'
                             },
+                            opposite: lang.isAr(),
                             gridLineColor: '#f0f0f0',
                             labels: {
                                 style: {
@@ -293,6 +303,7 @@
 
                         tooltip: {
                             useHTML: true,
+                            reversed: lang.isAr(),
                             backgroundColor: 'rgba(0, 0, 0, 0)',
                             formatter: function () {
                                 var date = new Date(this.x);
@@ -301,8 +312,8 @@
                                         (date.getDate());
 
                                 return '<p style="color:' + this.series.color + ';">' +
-                                    dateStr + '</p><p style="color:' + this.series.color + ';">' + lang.text('tigerWitID.dataStatistics.profitRateM') + 
-                                    this.y + '%</p>';
+                                    dateStr + '</p><p style="color:' + this.series.color + ';"><span>' + lang.text('tigerWitID.dataStatistics.profitRateM') + 
+                                    '</span><span>' + this.y + '%</span></p>';
                             }
                         },
 
