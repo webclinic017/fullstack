@@ -288,8 +288,9 @@ $font-space-gray-color: $gray-dark;
 }
 
 @include b(space_center_liverpool) {
-  background: url("/white_label/bd/liverpool/liverpool-lg.png") no-repeat;
-  background-position: top center;
+  background-image: url("/white_label/bd/liverpool/liverpool-lg.png");
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
   padding-left: 40px;
   padding-right: 40px;
@@ -301,5 +302,16 @@ $font-space-gray-color: $gray-dark;
     .account_login__code_btn {
       margin: 0 20px;
     }
+  }
+}
+
+.ar-lang{
+  .space_center_summary__list-item{
+    &.liverpool{
+      background-image: url("/white_label/bd/liverpool/liverpool-sm-ar.png");
+    }
+  }
+  .space_center_liverpool{
+    background-image: url("/white_label/bd/liverpool/liverpool-lg-ar.png");
   }
 }

@@ -12478,14 +12478,14 @@
                 },
                 "liverpool":{
                     "floatingRate": {
-                        "zh": "Floating rate of return",
+                        "zh": "浮动收益率",
                         "en": "Floating rate of return",
-                        "vi": "Floating rate of return",
-                        "zh-Hant": "Floating rate of return",
-                        "id": "Floating rate of return",
-                        "es": "Floating rate of return",
-                        "pt-BR": "Floating rate of return",
-                        "ar": "Floating rate of return"
+                        "vi": "Tỉ lệ thả nổi lợi nhuận",
+                        "zh-Hant": "浮動收益率",
+                        "id": "Keuntungan rata-rata",
+                        "es": "Tasa de rendimiento flotante",
+                        "pt-BR": "Taxa de retorno flutuante",
+                        "ar": "معدل العائد العائم"
                     },
                     "winAmazingPrizes": {
                         "zh": "赢取惊人的奖品！",

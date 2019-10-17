@@ -327,15 +327,25 @@
             "pt-BR": indexBasePath + "/bd/turntable/h5_rotate-pt-br.png",
             ar: indexBasePath + "/bd/turntable/h5_rotate-vi.png"
         }, //
-        prize: {
-            en: indexBasePath + "/bd/liverpool/prize-en.png",
-            id: indexBasePath + "/bd/liverpool/prize-en.png",
-            zh: indexBasePath + "/bd/liverpool/prize-en.png",
-            vi: indexBasePath + "/bd/liverpool/prize-en.png",
-            "zh-Hant": indexBasePath + "/bd/liverpool/prize-en.png",
-            es: indexBasePath + "/bd/liverpool/prize-en.png",
-            "pt-BR": indexBasePath + "/bd/liverpool/prize-en.png",
-            ar: indexBasePath + "/bd/liverpool/prize-ar.png"
+        prizeWeb: {
+            en: indexBasePath + "/bd/liverpool/prize-web-en.png",
+            id: indexBasePath + "/bd/liverpool/prize-web-en.png",
+            zh: indexBasePath + "/bd/liverpool/prize-web-en.png",
+            vi: indexBasePath + "/bd/liverpool/prize-web-vi.png",
+            "zh-Hant": indexBasePath + "/bd/liverpool/prize-web-en.png",
+            es: indexBasePath + "/bd/liverpool/prize-web-en.png",
+            "pt-BR": indexBasePath + "/bd/liverpool/prize-web-en.png",
+            ar: indexBasePath + "/bd/liverpool/prize-web-ar.png"
+        }, //
+        prizeH5: {
+            en: indexBasePath + "/bd/liverpool/prize-h5-en.png",
+            id: indexBasePath + "/bd/liverpool/prize-h5-en.png",
+            zh: indexBasePath + "/bd/liverpool/prize-h5-en.png",
+            vi: indexBasePath + "/bd/liverpool/prize-h5-vi.png",
+            "zh-Hant": indexBasePath + "/bd/liverpool/prize-h5-en.png",
+            es: indexBasePath + "/bd/liverpool/prize-h5-en.png",
+            "pt-BR": indexBasePath + "/bd/liverpool/prize-h5-en.png",
+            ar: indexBasePath + "/bd/liverpool/prize-h5-ar.png"
         }, //
         lfcCash: {
             en: indexBasePath + "/bd/liverpool/lfc-cash-en.png",

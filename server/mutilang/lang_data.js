@@ -18688,8 +18688,8 @@ module.exports = {
             "vi": "Thể Lệ Giải Đấu Nhà Giao Dịch Toàn Cầu",
             "zh-Hant": "全球貿易商聯盟規則",
             "id": "Peraturan Liga Trader Dunia",
-            "es": "The Global Traders League Rules",
-            "pt-BR": "The Global Traders League Rules",
+            "es": "Las Reglas de la Global Traders League",
+            "pt-BR": "Liga de Regiões da Global Traders",
             "ar": "قواعد دورة التداول العالمية"
         },
         "rules": {
@@ -18733,43 +18733,43 @@ module.exports = {
             "ar": "سيضمن تطبيقنا المبتكر سهل الاستخدام منافسة عادلة من المهارة والطموح ، كل ذلك باسم الرياضة الجيدة. بفضل الجوائز الحصرية ،إن ملعب “تيغرويت” مفتوح لجميع المتداولين لاغتنام الفرصة للخروج إلى الأضواء ويعلنون أنفسهم جديرين بالنصر"
         },
         "winAmazingPrizesList1": {
-            "zh": "第一名：电视液晶显示屏",
-            "en": "1st Place: TV LCD Screen",
-            "vi": "Giải nhất: Màn hình TV LCD",
-            "zh-Hant": "第一名：電視液晶顯示屏",
-            "id": "Juara 1 : TV LCD Screen",
-            "es": "1st Place: TV LCD Screen",
-            "pt-BR": "1st Place: TV LCD Screen",
-            "ar": "المركز الأول: شاشة تلفزيون LCD"
+            "zh": "第一名:RU7250智能4K超高清",
+            "en": "1st place: RU7250 SMART 4K ULTRA HD",
+            "vi": "Giải nhất: Tivi RU7250 SMART 4K ULTRA HD",
+            "zh-Hant": "第一名:RU7250智能4K超高清",
+            "id": "Juara 1 : RU7250 SMART 4K ULTRA HD",
+            "es": "1er. Puesto: RU7250 Smart 4K ULTRA HD",
+            "pt-BR": "1º posição: RU7250 Smart 4K ULTRA HD",
+            "ar": "المركز الأول: RU7250 SMART 4K ULTRA HD"
         },
         "winAmazingPrizesList2": {
-            "zh": "第二名：手机",
-            "en": "2nd Place: Mobile phone",
-            "vi": "Giải nhì: Điện thoại Di động",
-            "zh-Hant": "第二名：手機",
-            "id": "Juara 2 : Smartphone",
-            "es": "2nd Place: Mobile phone",
-            "pt-BR": "2nd Place: Mobile phone",
-            "ar": "المركز الثاني: الهاتف المحمول"
+            "zh": "第二名:三星Galaxy S10或苹果iPhone x",
+            "en": "2nd place: Samsung Galaxy S10 or Apple iPhone x",
+            "vi": "Giải nhì: Điện thoại Samsung Galaxy S10 hoặc Apple iPhone x",
+            "zh-Hant": "第二名:三星Galaxy S10或蘋果iPhone x",
+            "id": "Juara 2 : Samsung Galaxy S10 atau iPhone X",
+            "es": "2.do Puesto: Samsung Galaxy S10 o Apple Iphone X",
+            "pt-BR": "2º posição: Samsung Galaxy S10 ou Apple iPhone X",
+            "ar": "المركز الثاني: Samsung Galaxy S10 أو Apple iPhone x"
         },
         "winAmazingPrizesList3": {
-            "zh": "第三名：音响技术",
-            "en": "3rd Place: Sound Technology",
-            "vi": "Giải ba: Dàn máy âm thanh",
-            "zh-Hant": "第三名：音響技術",
-            "id": "Juara 3 : Teknologi Suara",
-            "es": "3rd Place: Sound Technology",
-            "pt-BR": "3rd Place: Sound Technology",
-            "ar": "المركز الثالث: تقنية الصوت"
+            "zh": "第三名:Bose soundsport无线耳机",
+            "en": "3rd place: Bose soundsport wireless head phones",
+            "vi": "Giải ba: Tai nghe không dây soundsport Bose",
+            "zh-Hant": "第三名:Bose soundsport無線耳機",
+            "id": "Juara 3 : Headphone Wireless Bose Soundsposrt",
+            "es": "3er. Puesto: Auriculares inalámbricos BOSE",
+            "pt-BR": "3º posição: Fones de ouvido semm fio Bose Soundsport",
+            "ar": "المركز الثالث: بوز ساوندسبورت سماعات لاسلكية"
         },
         "winAmazingPrizesCon3": {
             "zh": "第一名和第二名得主还将得到利物浦的签约商品",
             "en": "1st and 2nd winners will also get Liverpool signed merchandise",
-            "vi": "Người chiến thắng các giải nhất và nhì sẽ nhận được một hiện vật có chữ kí của Liverpool",
+            "vi": "Người đạt giải nhất và giải nhì cũng sẽ nhận được sản phẩm có chữ ký của Liverpool.",
             "zh-Hant": "第一名和第二名得主還將得到利物浦的簽約商品",
-            "id": "Juara 1 dan Juara 2 juga mendapatkan merchandise Liverpool yang telah ditanda tangani",
-            "es": "1st and 2nd winners will also get Liverpool signed merchandise",
-            "pt-BR": "1st and 2nd winners will also get Liverpool signed merchandise",
+            "id": "Juara 1 dan Juara 2 juga akan mendapatkan hadiah berupa merchandise yang telah ditanda tangani oleh pemain Liverpool.",
+            "es": "Los ganadores del primer y segundo puesto también recibirán merchandise firmada por Liverpool FC.",
+            "pt-BR": "Os 1º e 2º colocados também receberão produtos assinadas pelo Liverpool",
             "ar": "الفائزون الأول والثاني سيحصلون على سلع موقعة من ليفربول"
         },
         "leagueTable": {
@@ -18828,8 +18828,8 @@ module.exports = {
             "vi": "Thể Lệ Giải Đấu Nhà Giao Dịch Toàn Cầu",
             "zh-Hant": "全球貿易商聯盟規則",
             "id": "Peraturan Liga Trader Dunia",
-            "es": "The Global Traders League Rules",
-            "pt-BR": "The Global Traders League Rules",
+            "es": "Las Reglas de la Global Traders League",
+            "pt-BR": "Liga de Regiões da Global Traders",
             "ar": "قواعد دورة التداول العالمية"
         },
         "rulesTit1": {
@@ -18838,8 +18838,8 @@ module.exports = {
             "vi": "Để gia nhập:",
             "zh-Hant": "如何輸入：",
             "id": "Cara untuk Ikut:",
-            "es": "How to enter:",
-            "pt-BR": "How to enter:",
+            "es": "Cómo entrar:",
+            "pt-BR": "Como entrar:",
             "ar": "How to enter:"
         },
         "rulesTit2": {
@@ -18848,8 +18848,8 @@ module.exports = {
             "vi": "Đối với khách hàng mới:",
             "zh-Hant": "新客戶：",
             "id": "Klien Baru :",
-            "es": "New Clients:",
-            "pt-BR": "New Clients:",
+            "es": "Nuevos clientes:",
+            "pt-BR": "Nuevos clientes:",
             "ar": "New Clients:"
         },
         "rulesTit2Con1": {
@@ -18858,8 +18858,8 @@ module.exports = {
             "vi": "1. Đăng ký và kích hoạt tài khoản Đấu Giải.",
             "zh-Hant": "1.註冊並激活聯盟賬戶。",
             "id": "1. Daftar dan aktifkan akun Liga anda",
-            "es": "1. Register and activate the League account.",
-            "pt-BR": "1. Register and activate the League account.",
+            "es": "1. Regístrese y active la cuenta League.",
+            "pt-BR": "1. Registre e ative a Liga Cuenta.",
             "ar": "1. Register and activate the League account."
         },
         "rulesTit2Con2": {
@@ -18868,8 +18868,8 @@ module.exports = {
             "vi": "2. Quỹ ảo sẽ có sẵn cho nhà giao dịch sau khi đăng ký.",
             "zh-Hant": "2.虛擬資金將可供交易者使用。",
             "id": "2. Dana virtual akan masuk ke akun anda secara otomatis",
-            "es": "2. Virtual funds will then become available to the trader.",
-            "pt-BR": "2. Virtual funds will then become available to the trader.",
+            "es": "2. Los fondos virtuales estarán disponibles para el trader.",
+            "pt-BR": "2. Os fundos virtuais estão disponíveis para o trader.",
             "ar": "2. Virtual funds will then become available to the trader."
         },
         "rulesTit2Con3": {
@@ -18878,8 +18878,8 @@ module.exports = {
             "vi": "3. Nhà giao dịch có thể theo dõi vị trí của họ trên bảng xếp hạng sau 5 ngày kể từ khi cuộc thi bắt đầu.",
             "zh-Hant": "3.交易者可以在比賽開始後5天監控他們在聯賽的排名。",
             "id": "3. Para trader dapat melihat posisi mereka di tabel Liga, 5 hari setelah kompetisi berjalan",
-            "es": "3. Traders can monitor their positions on the league table 5 days after the competition’s launch.",
-            "pt-BR": "3. Traders can monitor their positions on the league table 5 days after the competition’s launch.",
+            "es": "3. Los traders pueden controlar sus posiciones en la tabla de la liga, 5 días después del lanzamiento de la competencia.",
+            "pt-BR": "3. Os traders controlam seus posicionamentos na tabela da liga 5 dias depois do lançamento da competência.",
             "ar": "3. Traders can monitor their positions on the league table 5 days after the competition’s launch."
         },
         "rulesTit3": {
@@ -18888,8 +18888,8 @@ module.exports = {
             "vi": "Đối với khách hàng hiện tại:",
             "zh-Hant": "現有客戶：",
             "id": "Klien lama:",
-            "es": "Existing clients:",
-            "pt-BR": "Existing clients:",
+            "es": "Clientes existentes:",
+            "pt-BR": "Clientes existentes:",
             "ar": "Existing clients:"
         },
         "rulesTit3Con1": {
@@ -18898,8 +18898,8 @@ module.exports = {
             "vi": "1. Tất cả các nhà giao dịch tham gia cần phải mở một tài khoản Đấu Giải.",
             "zh-Hant": "1.所有交易者都需要開設聯盟賬戶。",
             "id": "1. Semua trader harus membuka akun Liga",
-            "es": "1. All traders need to open a league account.",
-            "pt-BR": "1. All traders need to open a league account.",
+            "es": "1. Todos los traders deben abrir una cuenta de liga.",
+            "pt-BR": "1. Todos os traders devem abrir uma cuenta de liga.",
             "ar": "1. All traders need to open a league account."
         },
         "rulesTit3Con2": {
@@ -18908,8 +18908,8 @@ module.exports = {
             "vi": "2. Nhà giao dịch phải mở một số lệnh giao dịch trên tài khoản Đấu Giải của mình.",
             "zh-Hant": "2.交易者必須在他們的聯盟賬戶上開立頭寸。",
             "id": "2. Para trader harus melakukan transaksi di akun Liga tersebut.",
-            "es": "2. Traders must open some trades on their league account.",
-            "pt-BR": "2. Traders must open some trades on their league account.",
+            "es": "2. Los traders deben abrir algunas operaciones en su cuenta de liga.",
+            "pt-BR": "2. Os traders devem abrir algumas negociações na conta da liga.",
             "ar": "2. Traders must open some trades on their league account."
         },
         "rulesTit3Con3": {
@@ -18918,8 +18918,8 @@ module.exports = {
             "vi": "3. Nhà giao dịch có thể theo dõi vị trí của họ trên bảng xếp hạng sau 5 ngày kể từ khi cuộc thi bắt đầu.",
             "zh-Hant": "3.交易者可以在比賽開始後5天監控他們在聯賽的排名。",
             "id": "3. Para trader dapat melihat posisi mereka di tabel Liga, 5 hari setelah kompetisi berjalan",
-            "es": "3. Traders can monitor their positions on the league table 5 days after the competition’s launch.",
-            "pt-BR": "3. Traders can monitor their positions on the league table 5 days after the competition’s launch.",
+            "es": "3. Los traders pueden controlar sus posiciones en la tabla de la liga, 5 días después del lanzamiento de la competencia.",
+            "pt-BR": "3. Os traders controlam seus posicionamentos na tabela da liga 5 dias depois do lançamento da competência.",
             "ar": "3. Traders can monitor their positions on the league table 5 days after the competition’s launch."
         },
         "rulesTit4": {
@@ -18927,10 +18927,10 @@ module.exports = {
             "en": "The Global Traders League rules:",
             "vi": "Thể lệ giải đấu Nhà Giao Dịch Toàn Cầu:",
             "zh-Hant": "全球貿易商聯盟規則：",
-            "id": "Peraturan Liga Trader Dunia",
-            "es": "The Global Traders League rules:",
-            "pt-BR": "The Global Traders League rules:",
-            "ar": "The Global Traders League rules:"
+            "id": "Peraturan Liga Trader Dunia:",
+            "es": "Las reglas de la Global Traders League:",
+            "pt-BR": "As regras da Global Traders League:",
+            "ar": "قواعد دورة التداول العالمية"
         },
         "rulesTit4Con1": {
             "zh": "1.客户必须开设联盟账户才能参加。",
@@ -18938,8 +18938,8 @@ module.exports = {
             "vi": "1. Khách hàng phải mở tài khoản Đấu Giải để tham gia cuộc thi.",
             "zh-Hant": "1.客戶必須開設聯盟賬戶才能參加。",
             "id": "1. Klien harus membuat akun Liga untuk berpartisipasi",
-            "es": "1. The client must open a League account in order to participate.",
-            "pt-BR": "1. The client must open a League account in order to participate.",
+            "es": "1. El cliente debe abrir una cuenta de League para poder participar.",
+            "pt-BR": "1. O cliente abrirá uma cuenta de League para poder participar.",
             "ar": "1. The client must open a League account in order to participate."
         },
         "rulesTit4Con2": {
@@ -18948,8 +18948,8 @@ module.exports = {
             "vi": "2. Khách hàng phải mở một lệnh trên tài khoản Đấu Giải để đủ điều kiện tham gia cuộc thi.",
             "zh-Hant": "2.客戶必須在聯盟賬戶上開立頭寸才有資格。",
             "id": "2. Para klien harus membuka dan menutup posisi di Liga trader",
-            "es": "2. The client must open a position on the League account in order to be eligible.",
-            "pt-BR": "2. The client must open a position on the League account in order to be eligible.",
+            "es": "2. El cliente debe abrir una posición en la cuenta de la Liga para ser elegible.",
+            "pt-BR": "2. O cliente abre uma posição na cuenta da Liga para ser elegível.",
             "ar": "2. The client must open a position on the League account in order to be eligible."
         },
         "rulesTit4Con3": {
@@ -18958,8 +18958,8 @@ module.exports = {
             "vi": "3. Người tham gia có thể theo dõi thứ hạng của họ trong thời gian thực trên một trang riêng.",
             "zh-Hant": "3.參與者可以在單獨的聯賽頁面上實時監控他們的排名。",
             "id": "3. Para peserta dapat memonitor posisi ranking masing-masing secara live pada situs yang tersedia",
-            "es": "3. Participants can monitor their rankings in real-time, on a separate landing page.",
-            "pt-BR": "3. Participants can monitor their rankings in real-time, on a separate landing page.",
+            "es": "3. Los participantes pueden monitorear sus clasificaciones en tiempo real, en una página de destino separada.",
+            "pt-BR": "3. Os participantes monitoram suas classificações em tempo real, em uma página de destino selecionado.",
             "ar": "3. Participants can monitor their rankings in real-time, on a separate landing page."
         },
         "rulesTit4Con4": {
@@ -18968,8 +18968,8 @@ module.exports = {
             "vi": "4. Nhà giao dịch được xếp hạng cao nhất, đạt lợi nhuận cao nhất dựa trên giá trị ròng cao nhất sẽ nhận được giải thưởng Người Chiến Thắng.",
             "zh-Hant": "4.基於最高淨值的排名靠前，盈利能力最高的交易者將獲得中獎。",
             "id": "4. Trader di peringkat teratas dihitung berdasarkan keuntungan tertinggi yang diperoleh, dan dapat memenangkan",
-            "es": "4. The top-ranked, most profitable trader based on the highest net worth will receive the winning prize.",
-            "pt-BR": "4. The top-ranked, most profitable trader based on the highest net worth will receive the winning prize.",
+            "es": "4. El trader mejor calificado y más rentable basado en el valor neto más alto recibirá el premio ganador.",
+            "pt-BR": "4. O trader mais rentável com base no valor mais alto recebe o prêmio mais alto.",
             "ar": "4. The top-ranked, most profitable trader based on the highest net worth will receive the winning prize."
         },
         "rulesTit4Con5": {
@@ -18978,8 +18978,8 @@ module.exports = {
             "vi": "5. Hai á quân sẽ nhận được giải Á Quân theo quyết định của TigerWit.",
             "zh-Hant": "5.兩名亞軍將獲得TigerWit酌情決定的亞軍獎金。",
             "id": "5. Dua runner up lainnya juga dapat memenangkan hadiah runner-up sesuai dengan kebijakan dari TigerWit",
-            "es": "5. Two runners-up will receive runner-up prizes at TigerWit’s discretion.",
-            "pt-BR": "5. Two runners-up will receive runner-up prizes at TigerWit’s discretion.",
+            "es": "5. Dos finalistas recibirán premios de segundo lugar a discreción de TigerWit.",
+            "pt-BR": "5. Os finalistas recebem prêmios de segundo lugar com a descrição do TigerWit.",
             "ar": "5. Two runners-up will receive runner-up prizes at TigerWit’s discretion."
         },
         "rulesTit5": {
@@ -18988,8 +18988,8 @@ module.exports = {
             "vi": "Quy tắc Giao Dịch và Xếp Hạng:",
             "zh-Hant": "交易和排名規則：",
             "id": "Peraturan Trading dan Peraturan Ranking :",
-            "es": "Trading and Ranking Rules:",
-            "pt-BR": "Trading and Ranking Rules:",
+            "es": "Reglas de negociación y clasificación:",
+            "pt-BR": "Regra de trading e classificação:",
             "ar": "Trading and Ranking Rules:"
         },
         "rulesTit5Con1": {
@@ -18998,8 +18998,8 @@ module.exports = {
             "vi": "Hệ thống sẽ bắt đầu ghi lại kết quả từ 0:00 sáng (GMT + 4) từ ngày 1 tháng 10 đến 12:00 đêm (GMT + 4) ngày 31 tháng 10.",
             "zh-Hant": "系統將從10月1日0:00（GMT + 4）到10月31日12:00（GMT + 4）開始記錄結果。",
             "id": "Sistem akan mulai menghitung hasil sejak pukul 0:00 (GMT+4) pada 1 Oktober 2019 hingga pukul 12:00 (GMT+4) pada 31 oktober 2019.",
-            "es": "The system will start to record the results from 0:00 (GMT+4 )1st of October to 12:00PM (GMT+4) 31st of October.",
-            "pt-BR": "The system will start to record the results from 0:00 (GMT+4 )1st of October to 12:00PM (GMT+4) 31st of October.",
+            "es": "El sistema comenzará a registrar los resultados desde las 0:00 (GMT + 4) del 1 de octubre a las 12:00 PM (GMT + 4) el 31 de octubre.",
+            "pt-BR": "O sistema permite registrar os resultados a partir das 0:00 (GMT + 4) de 1 de outubro às 12:00 PM (GMT + 4) a 31 de outubro.",
             "ar": "The system will start to record the results from 0:00 (GMT+4 )1st of October to 12:00PM (GMT+4) 31st of October."
         },
         "rulesTit5Con2": {
@@ -19008,8 +19008,8 @@ module.exports = {
             "vi": "Tất cả các giao dịch phải được đóng lại trước khi cuộc thi kết thúc. Kết quả lợi nhuận cuối cùng sẽ không bao gồm giá trị của các lệnh đang mở.",
             "zh-Hant": "所有交易必須在比賽結束前結束。最終的利潤結果將不包括任何未平倉頭寸。",
             "id": "Semua trader harus menutup posisinya sebelum kompetisi berakhir. Perhitungan hasil final akan dihitung berdasarkan posisi yang sudah tertutup maupun yang masih terbuka.",
-            "es": "All trades must be closed before the competition ends. The final profit result will not include any open positions.",
-            "pt-BR": "All trades must be closed before the competition ends. The final profit result will not include any open positions.",
+            "es": "Todos los movimientos deben cerrarse antes de que finalice la competencia. El resultado final del beneficio no incluirá ninguna posición abierta.",
+            "pt-BR": "Todos os movimentos debem cerrarse antes de finalizar a competência. O resultado final do benefício não inclui a posição aberta.",
             "ar": "All trades must be closed before the competition ends. The final profit result will not include any open positions."
         },
         "lfcTit": {

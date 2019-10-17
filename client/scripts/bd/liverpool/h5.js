@@ -1,4 +1,5 @@
 ; (function () {
+    // 查看规则
     $(".rulesBtn").on('click', function () {
         layer.open({
             type: 1,
@@ -12,6 +13,7 @@
     var urlParams = getSearch();
     var gameInfo, only_key;
     only_key = urlParams.only_key;
+    // 参加比赛逻辑
     $(".notParticipating").on('click', function(){
         if(isInTiger()){
             try {

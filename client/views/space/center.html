@@ -91,8 +91,8 @@
             <!-- </a> -->
         </li>
 
-        <li class="space_center_summary__list-item liverpool" ng-repeat="competition in competitionList"
-            ng-if="competition.only_key=='liverpoolleague'">
+        <li class="space_center_summary__list-item liverpool" ng-repeat="competition in competitionList">
+            <!-- ng-if="competition.only_key=='liverpoolleague'" -->
             <div class="summary_name">{{competition.names}}
                 <p class="con">
                     {{(competition.trade_end | date:'yyyy-MM-dd') + ' / ' + (competition.trade_start | date:'yyyy-MM-dd')}}
@@ -112,8 +112,7 @@
                     <a ng-href="/space/#/space/liverpool?only_key={{competition.only_key}}"
                         ng-if="competition.is_effective_date && !competition.is_in_competition"
                         class="btn-a tw-btn tw-btn-capsule-gradient">{{lang.text('tigerWitID.liverpool.enterLeague')}}</a>
-                    <!-- competition.link  需要后台去掉token前端自己拼接token -->
-                    <a ng-href="/global_traders_league?only_key={{competition.only_key}}"
+                    <a ng-href="{{competition.link}}"
                         class="btn-a tw-btn tw-btn-capsule-gradient">{{competition.is_in_competition ? lang.text('tigerWitID.liverpool.checkRanking') : lang.text('tigerWitID.details.title')}}</a>
                 </div>
             </div>
