@@ -41,7 +41,7 @@
     > .tit {
       font-size: 32px;
       font-weight: 500;
-      line-height: 32px;
+      line-height: 35px;
       display: inline-block;
       position: relative;
       margin-bottom: 10px;
@@ -125,7 +125,7 @@
   }
   @include e(p) {
     font-size: 20px;
-    line-height: 22px;
+    line-height: 24px;
     font-weight: initial;
   }
   @include e(banner) {
@@ -137,25 +137,25 @@
       .title {
         font-size: 62px;
         font-weight: 500;
-        line-height: 65px;
+        line-height: 66px;
         width: 720px;
       }
       .title2 {
         font-size: 42px;
         font-weight: 500;
-        line-height: 45px;
+        line-height: 46px;
         margin: 35px 0 50px;
       }
       .con {
         font-size: 20px;
-        line-height: 22px;
+        line-height: 25px;
         width: 590px;
         margin-top: 35px;
       }
       .title3 {
         font-weight: 500;
         font-size: 21px;
-        line-height: 23px;
+        line-height: 25px;
         width: 770px;
         padding-top: 30px;
       }
@@ -216,13 +216,15 @@
       padding: 0 50px;
       height: 450px;
       overflow: auto;
-      font-size: 15px;
       > h6 {
+        font-size: 22px;
+        line-height: 26px;
         margin-top: 20px;
       }
       > ul {
         > li {
-          line-height: 18px;
+          font-size: 18px;
+          line-height: 22px;
           padding: 3px 0;
         }
       }
@@ -251,7 +253,7 @@
       }
     }
     @include e(width) {
-      width: px2rem(700);
+      width: 90%;
     }
     @include e(bg1) {
       background: url("/white_label/bd/liverpool/bg.png") no-repeat;
@@ -265,7 +267,7 @@
       margin: px2rem(55) 0 px2rem(38);
       > .tit {
         font-size: px2rem(50);
-        line-height: px2rem(52);
+        line-height: px2rem(54);
         margin-bottom: px2rem(15);
         &::before {
           bottom: px2rem(-8);
@@ -284,7 +286,7 @@
         }
       }
       @include m(table) {
-        font-size: px2rem(22);
+        font-size: px2rem(24);
         > li {
           > div {
             padding: px2rem(18) 0;
@@ -293,8 +295,8 @@
       }
     }
     @include e(p) {
-      font-size: px2rem(22);
-      line-height: px2rem(25);
+      font-size: px2rem(26);
+      line-height: px2rem(30);
     }
     @include e(banner) {
       background-image: none !important;
@@ -303,25 +305,25 @@
         text-align: center;
         .title {
           font-size: px2rem(50);
-          line-height: px2rem(53);
+          line-height: px2rem(55);
           width: auto;
         }
         .title2 {
           margin-top: px2rem(30);
           margin-bottom: px2rem(40);
           font-size: px2rem(47);
-          line-height: px2rem(49);
+          line-height: px2rem(52);
         }
         .con {
-          font-size: px2rem(22);
-          line-height: px2rem(24);
+          font-size: px2rem(26);
+          line-height: px2rem(30);
           margin-top: px2rem(30);
           width: auto;
         }
         .title3 {
           font-weight: 500;
           font-size: px2rem(32);
-          line-height: px2rem(34);
+          line-height: px2rem(36);
           width: auto;
           padding-top: px2rem(25);
         }
@@ -334,7 +336,7 @@
           .special-btn {
             border-radius: px2rem(26);
             min-width: px2rem(240);
-            font-size: px2rem(22);
+            font-size: px2rem(24);
             button {
               padding: px2rem(8) px2rem(25);
               border-radius: px2rem(24);
@@ -356,8 +358,8 @@
       @include m(tit) {
         padding: 0 px2rem(50) px2rem(20);
         > h5 {
-          font-size: px2rem(30);
-          line-height: px2rem(32);
+          font-size: px2rem(35);
+          line-height: px2rem(38);
           margin: 0;
         }
         > i {
@@ -368,14 +370,16 @@
       }
       @include m(con) {
         padding: 0 px2rem(50);
-        height: px2rem(450);
-        font-size: px2rem(20);
+        height: px2rem(650);
         > h6 {
+          font-size: px2rem(28);
+          line-height: px2rem(33);
           margin-top: px2rem(20);
         }
         > ul {
           > li {
-            line-height: px2rem(24);
+            font-size: px2rem(26);
+            line-height: px2rem(30);
             padding: px2rem(3) 0;
           }
         }

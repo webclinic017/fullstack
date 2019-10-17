@@ -7,9 +7,6 @@
             content: $('#rulesCon').html()
         });
     })
-    $("body").on('click', '.closed', function () {
-        layer.closeAll()
-    })
     var urlParams = getSearch();
     var gameInfo, only_key;
     only_key = urlParams.only_key;
