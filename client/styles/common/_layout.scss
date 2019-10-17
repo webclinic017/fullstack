@@ -79,7 +79,12 @@
                     font-size:18px;
                     font-weight:600;
                     color:rgba(33,44,63,1);
-                    line-height:33px;
+                    line-height:22px;
+                    height: 44px;
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 2;
                 }
                 .content {
                     font-size:16px;

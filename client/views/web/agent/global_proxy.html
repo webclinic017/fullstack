@@ -12,19 +12,25 @@
             <div>
                 <h4 class="tit text-center pd-tp-10 pd-bt-30"><%=lang.text('partner.whyPartner')%></h4>
                 <ul class="space-between">
-                    <li class="pd-lf-20 pd-rg-20">
-                        <img src="/white_label/agent/proxy/select1.png" alt="">
-                        <p class="tit1 text-center mg-tp-10"><%=lang.text('partner.supportPlan')%></p>
+                    <li class="pd-lf-20 pd-rg-20 flex1">
+                        <div class="text-shade">
+                            <img src="/white_label/agent/proxy/select1.png" alt="">
+                            <p class="tit1"><%=lang.text('partner.supportPlan')%></p>
+                        </div>
                         <p class="font1 mg-tp-30"><%=lang.text('partner.supportPlan_1')%></p>
                     </li>
-                    <li class="pd-lf-20 pd-rg-20">
-                        <img src="/white_label/agent/proxy/select2.png" alt="">
-                        <p class="tit1 text-center mg-tp-10"><%=lang.text('partner.customerPromotionSystem')%></p>
+                    <li class="pd-lf-20 pd-rg-20 flex1">
+                        <div class="text-shade">
+                            <img src="/white_label/agent/proxy/select2.png" alt="">
+                            <p class="tit1"><%=lang.text('partner.customerPromotionSystem')%></p>
+                        </div>
                         <p class="font1 mg-tp-30"><%=lang.text('partner.customerPromotionSystem_1')%></p>
                     </li>
-                    <li class="pd-lf-20 pd-rg-20">
-                        <img src="/white_label/agent/proxy/select3.png" alt="">
-                        <p class="tit1 text-center mg-tp-10"><%=lang.text('partner.safeReliable')%></p>
+                    <li class="pd-lf-20 pd-rg-20 flex1">
+                        <div class="text-shade">
+                            <img src="/white_label/agent/proxy/select3.png" alt="">
+                            <p class="tit1"><%=lang.text('partner.safeReliable')%></p>
+                        </div>
                         <p class="font1 mg-tp-30"><%=lang.text('partner.safeReliable_1')%></p>
                     </li>
                 </ul>
@@ -75,7 +81,7 @@
                 <a class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient"
                     ng-click="agentPromotion()"><%=lang.text('partner.sendAgent')%></a>
             </div>
-            <div ng-if="!spread">
+            <div ng-if="!spread" id="positionDom">
                 <div class="text-center pd-tp-40 pd-bt-30">
                     <h4 class="tit"><%=lang.text('partner.becomePartnerFlow')%></h4>
                     <ul class="agent__proxy-flow justify-center flex-wrap pd-tp-15">

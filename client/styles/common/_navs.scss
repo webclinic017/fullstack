@@ -315,8 +315,10 @@
 
 .navbar-nav {
     margin: 0;
-    padding-right: 70px;
-    padding-left: 70px;
+    @include displayFlex();
+    @include alignItems(center);
+    @include justifyContent(center);
+    @include flex(1);
 
     > li {
 
