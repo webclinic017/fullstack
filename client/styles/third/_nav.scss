@@ -5,7 +5,6 @@
         display: inline-block;
         margin: 0 auto;
         @extend .clearfix;
-        display: inline-block;
         @include m(item){
             float: left;
             margin-right: 36px;

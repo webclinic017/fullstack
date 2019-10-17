@@ -17,8 +17,8 @@
     </div>
     <div class="redbag_own">
         <!-- <div tw-loading-img></div> -->
-        <div class="clearfix">
-            <div class="redbag_single_wrapper" ng-repeat="bag in bags" ng-class="{noPadding: $index%3 === 2}">
+        <div class="display-flex flex-wrap">
+            <div class="redbag_single_wrapper" ng-repeat="bag in bags">
                 <div class="redbag_single" ng-class="{light: (bag.status == 1 || bag.status == 2), dark: (bag.status == 3 || bag.status == 4 || bag.status == 5)}">
                     <div class="redbag_single__circle"></div>
                     <div class="redbag_single__top">
@@ -69,10 +69,10 @@
                     </div>
                 </div>
             </div>
-            <div class="redbag_nobag" ng-if="success && bags.length <= 0">
-                <img src="/images/no_red_envelope.png" alt="" class="mg-bt-40">
-                <p>{{lang.text('tigerWitID.coupon.noCoupon')}}</p> 
-            </div>
+        </div>
+        <div class="redbag_nobag" ng-if="success && bags.length <= 0">
+            <img src="/images/no_red_envelope.png" alt="" class="mg-bt-40">
+            <p>{{lang.text('tigerWitID.coupon.noCoupon')}}</p> 
         </div>
         <div class="justify-flex-end">
             <div tw-pagination></div>

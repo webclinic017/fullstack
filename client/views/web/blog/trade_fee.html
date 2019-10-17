@@ -1,6 +1,6 @@
 <div class="blog_statement" ng-controller="TradeFeeController">
     <br>
-    <h3 class="blog_statement__title text-left">
+    <h3 class="blog_statement__title">
         <%=lang.text("tradeFee0")%>
     </h3>
     <br>
@@ -8,16 +8,16 @@
     <br>
     <div class="blog_statement__content">
         <div class="point">
-            <h4 class="blog_statement__title tit text-left"><%=lang.text('tradeFee2')%></h4>
+            <h4 class="blog_statement__title tit"><%=lang.text('tradeFee2')%></h4>
             <p><%=lang.text('tradeFee3')%></p>
             <p><%=lang.text('tradeFee4')%></p>
             <p><span class="font-danger">* </span> <%=lang.text('tradeFee5')%></p>
             <br>
             <div class="blog_statement__navi">
-                <span class="navi-item btn-text" ng-class="{'active': currentChecked.point == 'forex'}" ng-click="changeType('point', 'forex')"><%=lang.text('waihui')%></span> |
-                <span class="navi-item btn-text" ng-class="{'active': currentChecked.point == 'metal'}" ng-click="changeType('point', 'metal')"><%=lang.text('guijinshu')%></span> |
-                <span class="navi-item btn-text" ng-class="{'active': currentChecked.point == 'energy'}" ng-click="changeType('point', 'energy')"><%=lang.text('nengyuan')%></span> |
-                <span class="navi-item btn-text" ng-class="{'active': currentChecked.point == 'cfd'}" ng-click="changeType('point', 'cfd')"><%=lang.text('CFD')%></span>
+                <span class="navi-item" ng-class="{'active': currentChecked.point == 'forex'}" ng-click="changeType('point', 'forex')"><%=lang.text('waihui')%></span> |
+                <span class="navi-item" ng-class="{'active': currentChecked.point == 'metal'}" ng-click="changeType('point', 'metal')"><%=lang.text('guijinshu')%></span> |
+                <span class="navi-item" ng-class="{'active': currentChecked.point == 'energy'}" ng-click="changeType('point', 'energy')"><%=lang.text('nengyuan')%></span> |
+                <span class="navi-item" ng-class="{'active': currentChecked.point == 'cfd'}" ng-click="changeType('point', 'cfd')"><%=lang.text('CFD')%></span>
             </div>
             <br>
             <table class="table table-personal table-hover table-bordered">
@@ -65,17 +65,17 @@
         </div>
         <br>
         <div class="swap">
-            <h4 class="blog_statement__title text-left"><%=lang.text('tradeFee6')%></h4>
+            <h4 class="blog_statement__title"><%=lang.text('tradeFee6')%></h4>
             <p><%=lang.text('tradeFee7')%></p>
             <p><%=lang.text('tradeFee8')%></p>
             <p><%=lang.text('tradeFee9')%></p>
             <p><%=lang.text('tradeFee10')%></p>
             <br>
             <div class="blog_statement__navi">
-                <span class="navi-item btn-text" ng-class="{'active': currentChecked.swap == 'forex'}" ng-click="changeType('swap', 'forex')"><%=lang.text('waihui')%></span> |
-                <span class="navi-item btn-text" ng-class="{'active': currentChecked.swap == 'metal'}" ng-click="changeType('swap', 'metal')"><%=lang.text('guijinshu')%></span> |
-                <span class="navi-item btn-text" ng-class="{'active': currentChecked.swap == 'energy'}" ng-click="changeType('swap', 'energy')"><%=lang.text('nengyuan')%></span> |
-                <span class="navi-item btn-text" ng-class="{'active': currentChecked.swap == 'cfd'}" ng-click="changeType('swap', 'cfd')"><%=lang.text('CFD')%></span>
+                <span class="navi-item" ng-class="{'active': currentChecked.swap == 'forex'}" ng-click="changeType('swap', 'forex')"><%=lang.text('waihui')%></span> |
+                <span class="navi-item" ng-class="{'active': currentChecked.swap == 'metal'}" ng-click="changeType('swap', 'metal')"><%=lang.text('guijinshu')%></span> |
+                <span class="navi-item" ng-class="{'active': currentChecked.swap == 'energy'}" ng-click="changeType('swap', 'energy')"><%=lang.text('nengyuan')%></span> |
+                <span class="navi-item" ng-class="{'active': currentChecked.swap == 'cfd'}" ng-click="changeType('swap', 'cfd')"><%=lang.text('CFD')%></span>
             </div>
             <br>
             <table class="table table-personal table-hover table-bordered">
@@ -127,7 +127,7 @@
         </div>
         <br>
         <div class="fee">
-            <h4 class="blog_statement__title text-left"><%=lang.text('tradeFee14')%></h4>
+            <h4 class="blog_statement__title"><%=lang.text('tradeFee14')%></h4>
             <p><%=lang.text('tradeFee15')%></p>
             <br>
             <table class="table table-personal table-hover table-bordered">
@@ -174,7 +174,7 @@
         </div>
         <br>
         <div class="cmmission">
-            <h4 class="blog_statement__title text-left"><%=lang.text('tradeFee16')%></h4>
+            <h4 class="blog_statement__title"><%=lang.text('tradeFee16')%></h4>
             <p><%=lang.text('tradeFee17')%></p>
             <p><%=lang.text('tradeFee18')%></p>
             <p><%=lang.text('tradeFee19')%></p>
@@ -183,14 +183,14 @@
         </div>
         <br>
         <div class="deposit_fee">
-            <h4 class="blog_statement__title text-left"><%=lang.text('tradeFee22')%></h4>
+            <h4 class="blog_statement__title"><%=lang.text('tradeFee22')%></h4>
             <p><%=lang.text('tradeFee23')%></p>
             <p><%=lang.text('tradeFee24')%></p>
             <p><%=lang.text('tradeFee34')%></p>
         </div>
         <br>
         <div class="withdraw_fee">
-            <h4 class="blog_statement__title text-left"><%=lang.text('tradeFee25')%></h4>
+            <h4 class="blog_statement__title"><%=lang.text('tradeFee25')%></h4>
             <p><%=lang.text('tradeFee26')%></p>
         </div>
         <br>

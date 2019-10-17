@@ -1,9 +1,14 @@
 @include b(faq-public) {
     @include e(url_list){
-        overflow: hidden;
+        @include displayFlex();
+        @include flexWrap(wrap);
         padding: 40px 22px 80px;
         > li {
             margin: 10px 10px;
+            min-width:164px;
+            background: $main-char-color-8;
+            border-radius:26px;
+            padding: 9px 30px;
             h2 {
                 margin: 0;
                 text-align: center;
@@ -16,11 +21,6 @@
             &.active {
                 background-color: $primary-darker;
             }
-            float: left;
-            min-width:164px;
-            background: $main-char-color-8;
-            border-radius:26px;
-            padding: 9px 30px;
         }
     }
 

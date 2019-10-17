@@ -8,7 +8,7 @@
 
     <% include /common/statistic/main.html %>
 </head>
-<body ng-app="fullstackApp" class="<%= lang_class%>">
+<body ng-app="fullstackApp" class="<%= lang_class%> <%= lang.isAr('ar-lang')%>">
     <div ng-controller="GlobalController">
         <div class="header">
             <% include /common/nav/web.header.html %>
@@ -21,35 +21,35 @@
                     <p class="mt4__con1 mg-tp-30">
                         <%= lang.text("mt4-3")%>
                     </p>
-                    <div class="row text-center mg-tp-100">
-                        <div class="col-xs-4">
+                    <div class="space-between mg-tp-100">
+                        <div class="">
                             <img src="/images/web/mt4-ios.png">
-                            <h5 class="font-normal">
+                            <div class="font-normal pd-tp-50 pd-bt-50">
                                 <a class="mt4__info" href="https://itunes.apple.com/cn/app/metatrader-4/id496212596?l=en&mt=8" target="_blank">
                                     <img src="/images/web/mt4-ios-s.png">
                                     <span><%= lang.text("mt4-4")%></span>
                                     <span class="qr_code"><img src="/images/web/ios.png"></span>
                                 </a>
-                            </h5>
+                            </div>
                         </div>
-                        <div class="col-xs-4">
+                        <div class="">
                             <img src="/images/web/mt4-and.png">
-                            <h5 class="font-normal">
+                            <div class="font-normal pd-tp-50 pd-bt-50">
                                 <a class="mt4__info" href="https://download.mql5.com/cdn/web/metaquotes.software.corp/mt4/metatrader4.apk?utm_campaign=www.metatrader4.com" target="_blank">
                                     <img src="/images/web/mt4-and-s.png">
                                     <span><%= lang.text("mt4-5")%></span>
                                     <span class="qr_code"><img src="/images/web/android-20191014-live.png"></span>
                                 </a>
-                            </h5>
+                            </div>
                         </div>
-                        <div class="col-xs-4">
+                        <div class="">
                             <img class="mt4__img-com" src="/images/web/mt4-com.png">
-                            <h5 class="font-normal">
+                            <div class="font-normal pd-tp-50 pd-bt-50">
                                 <a class="mt4__info" href="<%= lang.text('webMt4Download')%>" target="_blank">
                                     <img src="/images/web/mt4-com-s.png">
                                      <span><%= lang.text("mt4-6")%></span>
                                 </a>
-                            </h5>
+                            </div>
                         </div>
                     </div>
                 </div>

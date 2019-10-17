@@ -63,6 +63,7 @@
         color: #fff;
         cursor: pointer;
         padding: 4px 7px 4px 7px;
+        white-space: nowrap;
 
         .fa {
             vertical-align: top;
@@ -314,8 +315,10 @@
 
 .navbar-nav {
     margin: 0;
-    padding-right: 70px;
-    padding-left: 70px;
+    @include displayFlex();
+    @include alignItems(center);
+    @include justifyContent(center);
+    @include flex(1);
 
     > li {
 
@@ -374,15 +377,11 @@
     // background-color: #fff;
 }
 @include b(nav-tabs) {
-    @extend .clearfix;
     // border: 1px solid $gray;
-    display: inline-block;
-    vertical-align: middle;
     // padding-left: 30px;
-
+    @include displayFlex();
     > li {
         position: relative;
-        float: left;
         // margin-right: -1px;
 
         &:first-child {
@@ -454,6 +453,7 @@
     @include justifyContent(flex-end);
 
     > li {
+        white-space: nowrap;
         .login {
             margin: 0 $navbar-margin-horizontal;
             padding: 28px 0 27px;
@@ -494,6 +494,7 @@
 
     @include e(psl) {
         text-overflow:ellipsis;
+        text-align: center;
     }
 
     @include e(avatar) {
@@ -516,11 +517,11 @@
     }
 
     @include e(logout) {
-        float: left;
         padding-left: 18px;
         padding-right: 18px;
         color: $white-100;
         cursor: pointer;
+        white-space: nowrap;
     }
 
     @include e(msg) {
@@ -614,7 +615,7 @@
     @include e(title) {
         font-weight: normal;
         margin: 0;
-        padding: 15px 0 15px 30px;
+        padding: 15px 30px;
         border-bottom: 1px solid $gray;
         background-color: $gray-lightest;
     }

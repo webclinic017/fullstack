@@ -63,7 +63,7 @@
             </a>
         </h1>
 
-        <ul class="nav navbar-nav item-center">
+        <ul class="nav navbar-nav">
             <li>
                 <h2>
                     <a data-navbar-trigger href="/">
@@ -212,7 +212,7 @@
             </li>
         </ul>
         <!-- 未登录时 -->
-        <ul class="nav navbar-login item-center flex1" ng-cloak ng-if="!personalCookiesInfo.userCode">
+        <ul class="nav navbar-login item-center" ng-cloak ng-if="!personalCookiesInfo.userCode">
             <li class="mg-rg-10 mg-lf-10">
                 <a class="signup2" ng-click="[toTrackEvent('navigation', 'global_navigation_login'), toGtagEvent('click_login_web')]" href="/space/#/account/login"><%= lang.text("login")%></a>
             </li> 
@@ -222,7 +222,7 @@
         </ul>
 
         <!-- 登录后 -->
-        <div class="navbar_info item-center flex1" ng-cloak ng-if="personalCookiesInfo.userCode">
+        <div class="navbar_info item-center" ng-cloak ng-if="personalCookiesInfo.userCode">
             <!-- <a class="navbar_info__msg" href="/space/#/space/notice/">
                 有新消息时显示
                 <span class="navbar_info__number" ng-if="personal.unreadMsg.total > 0">

@@ -4,3 +4,12 @@
 .direction-ltr{
     direction: ltr;
 }
+
+
+// justify-content: space-between三列时补位
+.three-col-fill{
+    &::after{
+        content: ' ';
+        width: 30%;
+    } 
+}

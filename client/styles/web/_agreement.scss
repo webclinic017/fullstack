@@ -5,7 +5,6 @@
         padding-bottom: 20px;
 
         .tit {
-            float: left;
             font-size: 24px;
             font-weight: 500;
             margin: 0px;
@@ -30,8 +29,8 @@
 
         a {
             color: #3683ce;
-            padding-left: 30px;
-            padding-right: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
             cursor: pointer;
 
             i {
@@ -41,12 +40,11 @@
     }
     @include e(catalog) {
         position: fixed;
-        text-align: right;
         top: 100px;
         width: 1030px;
-
+        @include displayFlex();
+        @include justifyContent(flex-end);
         &.active {
-
             .sign {
                 border-radius: 5px;
                 background: rgba(255, 255, 255, 0.8);
@@ -67,7 +65,9 @@
             }
 
             .lst {
-                width: 200px;
+                width: 300px;
+                max-height: 500px;
+                overflow: auto;
                 position: absolute;
                 top: 37px;
                 right: -13px;
@@ -92,9 +92,8 @@
 
                 li {
                     font-size: 14px;
-                    line-height: 18px;
-                    padding: 5px 0px;
-                    text-align: left;
+                    line-height: 16px;
+                    padding: 6px 0px;
 
                     a {
                         color: #333;
@@ -109,13 +108,13 @@
     }
     @include e(to_top) {
         position: fixed;
-        text-align: right;
         bottom: 30px;
         width: 1030px;
         display: none;
 
         &.active {
-            display: block;
+            @include displayFlex();
+            @include justifyContent(flex-end);
         }
 
         span {

@@ -16,8 +16,10 @@
     };
 </script>
 <body>
-<%- include('./agreement/m_common.html') %>
-<%- include('./agreement/m_' + pageInfo.id + '.html') %>
+    <div class="<%= lang.isAr('ar-lang')%>">
+        <%- include('./agreement/m_common.html') %>
+        <%- include('./agreement/m_' + pageInfo.id + '.html') %>
+    </div>
 </body>
 <% include /common/vendor/h5.js.html %>
 <!-- build:js(client) /scripts/h5_agreement.js -->

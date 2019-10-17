@@ -10,7 +10,7 @@
     </div>
     <div ng-show="step === 1" class="setting_info_zero__list-input">
         <div class="row">
-            <form name="oldEmailForm" novalidate autocomplete="off">
+            <form name="oldEmailForm" novalidate autocomplete="off" class="display-flex">
                 <div class="col-xs-3 text-center">
                     <div class="relative">
                         <div class="captcha_btn"  
@@ -41,7 +41,7 @@
                     </div>
                 </div>
 
-                <div class="col-xs-6 text-right">
+                <div class="flex1 justify-flex-end">
                     <button class="tw-btn tw-btn-md tw-btn-capsule-gradient" type="submit" ng-if="clickable.oldSubmit" ng-click="checkEmailCode()">
                         {{lang.text('tigerWitID.submit')}}
                     </button>
@@ -56,7 +56,7 @@
     </div>
     <div ng-show="step === 2" class="setting_info_zero__list-input">
         <div class="row">
-            <form name="newEmailForm" novalidate>
+            <form name="newEmailForm" novalidate class="display-flex">
                 <div class="col-xs-3">
                     <div class="form-control-wrapper">
                         <input class="form-control"
@@ -111,7 +111,7 @@
                     </div>
                 </div>
 
-                <div class="col-xs-3 text-right">
+                <div class="flex1 justify-flex-end">
                     <button class="tw-btn tw-btn-md tw-btn-capsule-gradient" type="submit" ng-if="clickable.newSubmit" ng-click="setBindEmail()">
                         {{lang.text('tigerWitID.submit')}}
                     </button>

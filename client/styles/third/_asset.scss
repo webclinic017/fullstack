@@ -1,658 +1,651 @@
 
-// asset
-@include b (asset-public) {
-    min-height: 500px;
-    padding: 30px 32px;
-    color: $gray-base;
-    .btn-primary {
-        margin-top: -3px;
-    }
-    .form-control-wrapper {
-        margin-bottom: 10px;
-    }
-    .form-control {
-        padding-left: 30px;
-    }
-    .asset__input-icon {
-        position: absolute;
-        top: 10px;
-        left: 15px;
-        color: #333;
-        font-weight: 500;
-    }
-}
+// // asset
+// @include b (asset-public) {
+//     min-height: 500px;
+//     padding: 30px 32px;
+//     color: $gray-base;
+//     .btn-primary {
+//         margin-top: -3px;
+//     }
+//     .form-control-wrapper {
+//         margin-bottom: 10px;
+//     }
+//     .form-control {
+//         padding-left: 30px;
+//     }
+//     .asset__input-icon {
+//         position: absolute;
+//         top: 10px;
+//         left: 15px;
+//         color: #333;
+//         font-weight: 500;
+//     }
+// }
 
-.warn_tip_area {
-    font-size: 14px;
-    line-height: 22px;
-    color: $gray-darker;
-    background-color: rgb(255, 255, 234);
-    @include displayFlex();
-    flex-flow: row nowrap;
-    @include justifyContent(flex-start);
-    padding: 22px 24px;
-    border-radius: 10px;
-    .warn_icon {
-        font-size: 24px;
-        width: 50px;
-        text-align: left;
-    }
-}
+// .warn_tip_area {
+//     font-size: 14px;
+//     line-height: 22px;
+//     color: $gray-darker;
+//     background-color: rgb(255, 255, 234);
+//     @include displayFlex();
+//     flex-flow: row nowrap;
+//     @include justifyContent(flex-start);
+//     padding: 22px 24px;
+//     border-radius: 10px;
+//     .warn_icon {
+//         font-size: 24px;
+//         width: 50px;
+//     }
+// }
 
-.widthdraw__card_font {
-    font-size:24px;
-    font-weight:600;
-    color:rgba(36,42,54,1);
-    line-height:22px;
-    padding: 0 15px;
-    width: 140px;
-}
-.widthdraw__card_bg {
-    display: inline-flex;
-    height: 50px;
-    background: url('/images/asset/bank_card_bg.jpg') no-repeat;
-    background-size: 100% 100%;
-    border-radius: 5px;
-    overflow: hidden;
-    text-align: left;
-    padding: 0 15px;
-    flex-flow: row nowrap;
-    @include justifyContent(flex-start);
-    @include alignItems(center);
-    span {
-        font-weight: 500;
-        font-size: 12px;
-        color: #fff;
-    }
-    img {
-        height: 60%;
-        vertical-align: middle;
-        margin-right: 6px;
-    }
-}
+// .widthdraw__card_font {
+//     font-size:24px;
+//     font-weight:600;
+//     color:rgba(36,42,54,1);
+//     line-height:22px;
+//     padding: 0 15px;
+//     width: 140px;
+// }
+// .widthdraw__card_bg {
+//     display: inline-flex;
+//     height: 50px;
+//     background: url('/images/asset/bank_card_bg.jpg') no-repeat;
+//     background-size: 100% 100%;
+//     border-radius: 5px;
+//     overflow: hidden;
+//     text-align: left;
+//     padding: 0 15px;
+//     flex-flow: row nowrap;
+//     @include justifyContent(flex-start);
+//     @include alignItems(center);
+//     span {
+//         font-weight: 500;
+//         font-size: 12px;
+//         color: #fff;
+//     }
+//     img {
+//         height: 60%;
+//         vertical-align: middle;
+//         margin-right: 6px;
+//     }
+// }
 
-.deposit_separator {
-    width: 100%;
-    border-top: 1px dashed $gray;
-    margin: 0 auto;
-    margin-top: 50px;
-}
+// .deposit_separator {
+//     width: 100%;
+//     border-top: 1px dashed $gray;
+//     margin: 0 auto;
+//     margin-top: 50px;
+// }
 
-// deposit
-@include b(deposit) {
-    ul>li {
-        margin: 5px 0;
-    }
-    @include e(list){
-        @include displayFlex();
-        margin-bottom: 10px;
-        @include m(item){
-            border: 1px solid #eee;
-            border-radius: 25px;
-            padding: 3px 10px;
-            min-width: 70px;
-            text-align: center;
-            cursor: pointer;
-            &:hover{
-                background: #eee;
-            }
-        }
-    }
-    @include e(list2) {
-        margin-bottom: 10px;
-        @include m(item){
-            margin: 12px 20px 12px 0 !important;
-            float: left;
-            border: 1px solid #eee;
-            border-radius: 25px;
-            padding: 3px 10px;
-            min-width: 70px;
-            text-align: center;
-            cursor: pointer;
-            &:hover{
-                background: #eee;
-            }
-            &.active {
-                background-color: $brand-primary;
-            }
-        }
-    }
-    @include e(rate) {
-        color: #999;
-        font-size: 14px;
-    }
-    @include e(circle) {
-        display: inline-block;
-        width: 10px;
-        height: 10px;
-        border: 2px solid $brand-primary;
-        border-radius: 50%;
-    }
-    @include e (input) {
-        // margin-top: 2px;
-    }
-    @include e (title-money) {
-        font-size: $font-size-h3;
-        font-weight: 500;
-        line-height: 50px;
-    }
-    @include e (pointer) {
-        cursor: pointer;
-    }
-    @include e(way) {
-        width: 100%;
-        height: 35px;
-        color: #4a90e2;
-        font-size: 24px;
-        font-weight: 500;
-        cursor: pointer;
-        position: relative;
-        &:after {
-            content: '';
-            display: inline-block;
-            border: 9px solid transparent;
-            border-top-color: #4a90e2;
-            padding-top: 3px;
-            margin-left: 20px;
-            vertical-align: bottom;            
-        }
-        @include m(tip) {
-            color: #999;
-            font-size: 14px;
-            line-height: 16px;
-            display: none;
-            margin-top: 10px;
-            &.active {
-                display: block;
-            }
-        }
-        @include m(desc) {
-            color: #4a90e2;
-            padding-top: 10px;
-            display: none;
-            &.active {
-                display: block;
-            }
-            span {
-                cursor: pointer;
-            }
-        }
-        span {
-            font-size: 16px;
-            padding-left: 5px;
-            color: #f5524f;
-        }
-    }
-    @include e(wallet_succ) {
-        color: #494949;
-        font-size: 18px;
-        font-weight: 500;
-        padding-left: 10px;
-        line-height: 28px;
-    }
-    @include e(btn_wrapper) {
-        margin-top: 30px;
-        text-align: center;
-        width: 160px;
-        display: inline-block;
-    }
-    @include e(tele) {
-        padding: 30px 40px;
-        @include m(tip) {
-            color: #999;
-            padding-bottom: 10px;
-            .des {
-                color: rgb(245, 82, 79);
-            }
-        }
-        @include m(tit) {
-            color: #333;
-            font-weight: 500;
-            padding-bottom: 10px;
-        }
-        @include m(msg) {
-            color: #666;
-            padding-bottom: 10px;
-            .des {
-                color: rgb(73, 144, 226);
-                cursor: pointer;
-            }
-        }
-    }
-    @include e(tele_file) {
-        border: 1px dashed #999;
-        border-radius: 10px;
-        height: 260px;
-        line-height: 260px;
-        margin-top: 60px;
-        text-align: center;
-        cursor: pointer;
-        overflow: hidden;
-        background-color: $gray-lighter;
-        font-size: 18px;
-        font-weight: 500;
-        color: $gray-dark;
-        &.bank_file {
-            margin-top: 20px;
-            position: relative;
-            &:nth-child(1) {
-                margin-top: 50px;
-            }
-            &.add_file {
-                &:before {
-                    display: block;
-                    content: '';
-                    width: 36px;
-                    height: 4px;
-                    border-radius: 2px;
-                    position: absolute;
-                    left: 50%;
-                    top: 50%;
-                    margin-left: -18px;
-                    margin-top: -2px;
-                    background-color: #d3d3d3;
-                }
-                &:after {
-                    display: block;
-                    content: '';
-                    width: 4px;
-                    height: 36px;
-                    border-radius: 2px;
-                    position: absolute;
-                    left: 50%;
-                    top: 50%;
-                    margin-left: -2px;
-                    margin-top: -18px;
-                    background-color: #d3d3d3;
-                }
-            }
-        }
-    }
-    @include e(tele_succ) {
-        .pic {
-            float: left;
-            width: 30%;
-            height: 60px;
-            text-align: right;
-            img {
-                height: 100%;
-            }
-        }
-        .tip {
-            width: 70%;
-            float: left;
-            color: #494949;
-            font-size: 16px;
-            font-weight: 500;
-            padding-left: 10px;
-            line-height: 25px;
-        }
-    }
-    @include e(bank_file) {
-        margin-top: 45px;
-        padding-left: 55px;
-        @include m(tit) {
-            font-size: 18px;
-            font-weight: 500;
-            color: #222;
-            padding-bottom: 10px;
-        }
-        @include m(tip) {
-            padding-bottom: 20px;
-            color: $gray-darker;
-        }
-        @include m(sub_tit) {
-            font-size: 14px;
-            font-weight: 500;
-            color: #222;
-            padding-bottom: 10px;
-        }
-        @include m(eg) {
-            display: table;
-            width: 100%;
-            padding-top: 10px;
-            .pic {
-                height: 116px;
-                display: table-cell;
-                width: 220px;
-                text-align: center;
-                border: 1px solid #ccc;
-                border-radius: 15px;
-                overflow: hidden;
-                cursor: pointer;
-                position: relative;
-                span {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 116px;
-                    line-height: 116px;
-                    background: rgba(0, 0, 0, 0.6);
-                    text-align: center;
-                    color: #fafafa;
-                    font-size: 12px;
-                    display: none;
-                }
-                &:hover {
-                    span {
-                        display: block;
-                    }
-                }
-                img {
-                    height: 100%;
-                    vertical-align: top;
-                    max-width: 100%;
-                }
-            }
-            .blank {
-                display: table-cell;
-                width: 20px;
-            }
-        }
-        @include m(upload) {
-            width: 464px;
-            margin: 0 auto;
-        }
-        @include m(upload_tip) {
-            width: 360px;
-            margin: 10px auto 30px;
-            font-size: 14px;
-            color: $gray-dark;
-        }
-        @include m(upload_btn) {
-            text-align: center;
-            padding-bottom: 30px;
-        }
-    }
-    @include e(currency) {
-        @include m(tit) {
-            line-height: 50px;
-            font-size: 16px;
-            cursor: pointer;
-            &:before {
-                content: '';
-                display: block;
-                position: absolute;
-                top: 50%;
-                right: 0;
-                border: 6px solid transparent;
-                border-top-color: #666;
-                margin-top: -3px;
-            }
-        }
-        @include m(lst) {
-            position: absolute;
-            top: 100%;
-            left: 0px;
-            width: 100%;
-            background: #f5f5f5;
-            z-index: 100;
+// // deposit
+// @include b(deposit) {
+//     ul>li {
+//        margin-left: 5px;
+//        margin-right: 5px;
+//     }
+//     @include e(list){
+//         @include displayFlex();
+//         margin-bottom: 10px;
+//         @include m(item){
+//             border: 1px solid #eee;
+//             border-radius: 25px;
+//             padding: 3px 10px;
+//             min-width: 70px;
+//             text-align: center;
+//             cursor: pointer;
+//             margin-left: 15px;
+//             margin-right: 15px;
+//             &:hover{
+//                 background: #eee;
+//             }
+//         }
+//     }
+//     @include e(list2) {
+//         margin-bottom: 10px;
+//         @include m(item){
+//             margin: 12px 20px 12px 0 !important;
+//             float: left;
+//             border: 1px solid #eee;
+//             border-radius: 25px;
+//             padding: 3px 10px;
+//             min-width: 70px;
+//             text-align: center;
+//             cursor: pointer;
+//             &:hover{
+//                 background: #eee;
+//             }
+//             &.active {
+//                 background-color: $brand-primary;
+//             }
+//         }
+//     }
+//     @include e(rate) {
+//         color: #999;
+//         font-size: 14px;
+//     }
+//     @include e(circle) {
+//         display: inline-block;
+//         width: 10px;
+//         height: 10px;
+//         border: 2px solid $brand-primary;
+//         border-radius: 50%;
+//     }
+//     @include e (input) {
+//         // margin-top: 2px;
+//     }
+//     @include e (title-money) {
+//         font-size: $font-size-h3;
+//         font-weight: 500;
+//         line-height: 50px;
+//     }
+//     @include e (pointer) {
+//         cursor: pointer;
+//     }
+//     @include e(way) {
+//         width: 100%;
+//         height: 35px;
+//         color: #4a90e2;
+//         font-size: 24px;
+//         font-weight: 500;
+//         cursor: pointer;
+//         position: relative;
+//         &:after {
+//             content: '';
+//             display: inline-block;
+//             border: 9px solid transparent;
+//             border-top-color: #4a90e2;
+//             padding-top: 3px;
+//             margin-left: 20px;
+//             vertical-align: bottom;            
+//         }
+//         @include m(tip) {
+//             color: #999;
+//             font-size: 14px;
+//             line-height: 16px;
+//             margin-top: 10px;
+//         }
+//         @include m(desc) {
+//             color: #4a90e2;
+//             padding-top: 10px;
+//             display: none;
+//             &.active {
+//                 display: block;
+//             }
+//             span {
+//                 cursor: pointer;
+//             }
+//         }
+//         span {
+//             font-size: 16px;
+//             padding-right: 5px;
+//             padding-left: 5px;
+//             color: #f5524f;
+//         }
+//     }
+//     @include e(wallet_succ) {
+//         color: #494949;
+//         font-size: 18px;
+//         font-weight: 500;
+//         padding-left: 10px;
+//         line-height: 28px;
+//     }
+//     @include e(btn_wrapper) {
+//         margin-top: 30px;
+//         text-align: center;
+//         width: 160px;
+//         display: inline-block;
+//     }
+//     @include e(tele) {
+//         padding: 30px 40px;
+//         @include m(tip) {
+//             color: #999;
+//             padding-bottom: 10px;
+//             .des {
+//                 color: rgb(245, 82, 79);
+//             }
+//         }
+//         @include m(tit) {
+//             color: #333;
+//             font-weight: 500;
+//             padding-bottom: 10px;
+//         }
+//         @include m(msg) {
+//             color: #666;
+//             padding-bottom: 10px;
+//             .des {
+//                 color: rgb(73, 144, 226);
+//                 cursor: pointer;
+//             }
+//         }
+//     }
+//     @include e(tele_file) {
+//         border: 1px dashed #999;
+//         border-radius: 10px;
+//         height: 260px;
+//         line-height: 260px;
+//         margin-top: 60px;
+//         text-align: center;
+//         cursor: pointer;
+//         overflow: hidden;
+//         background-color: $gray-lighter;
+//         font-size: 18px;
+//         font-weight: 500;
+//         color: $gray-dark;
+//         &.bank_file {
+//             margin-top: 20px;
+//             position: relative;
+//             &:nth-child(1) {
+//                 margin-top: 50px;
+//             }
+//             &.add_file {
+//                 &:before {
+//                     display: block;
+//                     content: '';
+//                     width: 36px;
+//                     height: 4px;
+//                     border-radius: 2px;
+//                     position: absolute;
+//                     left: 50%;
+//                     top: 50%;
+//                     margin-left: -18px;
+//                     margin-top: -2px;
+//                     background-color: #d3d3d3;
+//                 }
+//                 &:after {
+//                     display: block;
+//                     content: '';
+//                     width: 4px;
+//                     height: 36px;
+//                     border-radius: 2px;
+//                     position: absolute;
+//                     left: 50%;
+//                     top: 50%;
+//                     margin-left: -2px;
+//                     margin-top: -18px;
+//                     background-color: #d3d3d3;
+//                 }
+//             }
+//         }
+//     }
+//     @include e(tele_succ) {
+//         .pic {
+//             float: left;
+//             width: 30%;
+//             height: 60px;
+//             text-align: right;
+//             img {
+//                 height: 100%;
+//             }
+//         }
+//         .tip {
+//             width: 70%;
+//             float: left;
+//             color: #494949;
+//             font-size: 16px;
+//             font-weight: 500;
+//             padding-left: 10px;
+//             line-height: 25px;
+//         }
+//     }
+//     @include e(bank_file) {
+//         margin-top: 45px;
+//         padding-left: 55px;
+//         @include m(tit) {
+//             font-size: 18px;
+//             font-weight: 500;
+//             color: #222;
+//             padding-bottom: 10px;
+//         }
+//         @include m(tip) {
+//             padding-bottom: 20px;
+//             color: $gray-darker;
+//         }
+//         @include m(sub_tit) {
+//             font-size: 14px;
+//             font-weight: 500;
+//             color: #222;
+//             padding-bottom: 10px;
+//         }
+//         @include m(eg) {
+//             display: table;
+//             width: 100%;
+//             padding-top: 10px;
+//             .pic {
+//                 height: 116px;
+//                 display: table-cell;
+//                 width: 220px;
+//                 text-align: center;
+//                 border: 1px solid #ccc;
+//                 border-radius: 15px;
+//                 overflow: hidden;
+//                 cursor: pointer;
+//                 position: relative;
+//                 span {
+//                     position: absolute;
+//                     top: 0;
+//                     left: 0;
+//                     width: 100%;
+//                     height: 116px;
+//                     line-height: 116px;
+//                     background: rgba(0, 0, 0, 0.6);
+//                     text-align: center;
+//                     color: #fafafa;
+//                     font-size: 12px;
+//                     display: none;
+//                 }
+//                 &:hover {
+//                     span {
+//                         display: block;
+//                     }
+//                 }
+//                 img {
+//                     height: 100%;
+//                     vertical-align: top;
+//                     max-width: 100%;
+//                 }
+//             }
+//             .blank {
+//                 display: table-cell;
+//                 width: 20px;
+//             }
+//         }
+//         @include m(upload) {
+//             width: 464px;
+//             margin: 0 auto;
+//         }
+//         @include m(upload_tip) {
+//             width: 360px;
+//             margin: 10px auto 30px;
+//             font-size: 14px;
+//             color: $gray-dark;
+//         }
+//         @include m(upload_btn) {
+//             text-align: center;
+//             padding-bottom: 30px;
+//         }
+//     }
+//     @include e(currency) {
+//         @include m(tit) {
+//             @include displayFlex();
+//             @include alignItems(center);
+//             @include justifyContent(space-between);
+//             height: 100%;
+//             font-size: 16px;
+//             cursor: pointer;
+//             &:after {
+//                 content: '';
+//                 display: block;
+//                 border: 6px solid transparent;
+//                 border-top-color: #666;
+//                 margin-top: 6px;
+//             }
+//         }
+//         @include m(lst) {
+//             position: absolute;
+//             top: 100%;
+//             left: 0px;
+//             width: 100%;
+//             background: #f5f5f5;
+//             z-index: 100;
 
-            li {
-                margin: 5px 0;
-                padding: 5px 0px;
-                padding-left: 15px;
-                cursor: pointer;
+//             li {
+//                 margin: 5px 0;
+//                 padding: 5px 0px;
+//                 padding-left: 15px;
+//                 cursor: pointer;
 
-                &:hover {
-                    background: #ccc;
-                }
-            }
-        }
-    }
-}
+//                 &:hover {
+//                     background: #ccc;
+//                 }
+//             }
+//         }
+//     }
+// }
 
-@include b(deposit_modal) {
-    @include e(type) {
-        margin-top: 30px;
-        li {
-            margin-bottom: 15px;
-            cursor: pointer;
-            &.unable_select {
-                opacity: 0.5;
-                cursor: not-allowed;
-            }
-        }
-        @include m(icon) {
-            padding-right: 0px;
-        }
-        @include m(cont) {
-            .tit {
-                font-size: 18px;
-                font-weight: 500;
-                line-height: 18px;
-                color: #333;
-                padding-bottom: 8px;
-                span {
-                    font-size: 14px;
-                    padding-left: 5px;
-                    color: rgb(245, 82, 79);
-                }
-            }
-            .tip {
-                color: #999;
-            }
-        }
-    }
-    @include e(tit) {
-        font-size: 30px;
-        text-align: center;
-        margin-bottom: 15px;
-    }
-    @include e(lst) {
-        li {
-            padding: 5px 0px;
-            color: #666;
-        }
-    }
-    @include e(tip) {
-        white-space: pre-wrap;
-        word-wrap: break-word;
-        margin-top: 25px;
-        color: #999;
-    }
-    @include e(bank_card) {
-        .tit {
-            width: 70px;
-            display: inline-block;
-        }
-        .name {
-            color: #666;
-        }
-        .tip {
-            color: #999;
+// @include b(deposit_modal) {
+//     @include e(type) {
+//         margin-top: 30px;
+//         li {
+//             margin-bottom: 15px;
+//             cursor: pointer;
+//             &.unable_select {
+//                 opacity: 0.5;
+//                 cursor: not-allowed;
+//             }
+//         }
+//         @include m(icon) {
+//         }
+//         @include m(cont) {
+//             .tit {
+//                 font-size: 18px;
+//                 font-weight: 500;
+//                 line-height: 18px;
+//                 color: #333;
+//                 padding-bottom: 8px;
+//                 span {
+//                     font-size: 14px;
+//                     padding-left: 5px;
+//                     padding-right: 5px;
+//                     color: rgb(245, 82, 79);
+//                 }
+//             }
+//             .tip {
+//                 color: #999;
+//             }
+//         }
+//     }
+//     @include e(tit) {
+//         font-size: 30px;
+//         text-align: center;
+//         margin-bottom: 15px;
+//     }
+//     @include e(lst) {
+//         li {
+//             padding: 5px 0px;
+//             color: #666;
+//         }
+//     }
+//     @include e(tip) {
+//         white-space: pre-wrap;
+//         word-wrap: break-word;
+//         margin-top: 25px;
+//         color: #999;
+//     }
+//     @include e(bank_card) {
+//         .tit {
+//             width: 70px;
+//             display: inline-block;
+//         }
+//         .name {
+//             color: #666;
+//         }
+//         .tip {
+//             color: #999;
 
-            span {
-                display: block;
-            }
-        }
-        .back_err {
-            color: rgb( 245,82,79);
-        }
-        input {
-            border-color: transparent;
-            border-bottom-color: #ccc;
-            font-weight: 500;
-            color: #222;
-            font-size: 16px;
+//             span {
+//                 display: block;
+//             }
+//         }
+//         .back_err {
+//             color: rgb( 245,82,79);
+//         }
+//         input {
+//             border-color: transparent;
+//             border-bottom-color: #ccc;
+//             font-weight: 500;
+//             color: #222;
+//             font-size: 16px;
 
-            &:focus {
-                box-shadow: inherit;
-                border-color: transparent;
-                border-bottom-color: #ccc;
-            }
-        }
-    }
-}
+//             &:focus {
+//                 box-shadow: inherit;
+//                 border-color: transparent;
+//                 border-bottom-color: #ccc;
+//             }
+//         }
+//     }
+// }
 
-@include b(withdraw) {
-    min-height: 700px;
-    @include e(sys_tip) {
-        margin-left: 92px;
-    }
-    .sys_tip1 {
-        font-size: 14px;
-        color: $gray-dark;
-    }
-    @include e(way) {
-        width: 300px;
-        height: 160px;
-        padding: 24px;
-        text-align: left;
-        float: left;
-        border-radius: 10px;
-        overflow: hidden;
-        cursor: pointer;
-        background-size: 100% 100%;
-        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5);
-        transition: all 0.22s linear;
-        -webkit-transition: all 0.22s linear;
-        color: #fff;
-        .amount {
-            font-size: 36px;
-            font-weight: 500;
-            margin-top: 20px;
-        }
-        span {
-            display: block;
-            font-size: 16px;
-        }
-        &.account {
-            margin-right: 20px;
-            background-image: url('/images/asset/trading_bg.png');
-        }
-        &.wallet {
-            background-image: url('/images/asset/wallet_bg.png');
-        }
-        &.active {
-            box-shadow: 0 10px 60px $gray-dark;
-            &.account {
-                background-image: url('/images/asset/trading_bg_active.png');
-            }
-            &.wallet {
-                background-image: url('/images/asset/wallet_bg_active.png');
-            }
-        }
-    }
-    @include e(list){
-        @include m(item){
-            display: inline-block;
-            box-sizing: border-box;
-            float: left;
-            width: 210px;
-            height: 112px;
-            border-radius: 14px;
-            transition: all 0.22s linear;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            padding: 13px 24px 12px;
-            cursor: pointer;
-            &:hover {
-                box-shadow: 0 10px 60px $gray-dark;
-            }
-            &:nth-child(1) {
-                background-image: url('/images/space/space-trading.png');
-            }
-            &:nth-child(2) {
-                background-image: url('/images/space/space-wallet.png');
-                margin: 0 20px;
-            }
-            span {
-                display: inline-block;
-            }
-            p {
-                color: #fff;
-            }
-            &.not-active {
-                background-image: url('/images/space/not-active.png');
-            }
-            .summary_name {
-                font-size: 14px;
-            }
-            .summary_amount {
-                overflow: hidden;
-                text-overflow:ellipsis;
-                white-space: nowrap;
-                font-size: 20px;
-                font-weight: 500;
-                margin-top: 12px;
-            }
-            .summary_btn {
-                margin-top: 11px;
-                a {
-                    color: #fff;
-                    &:hover {
-                        text-decoration: underline;
-                    }
-                }
-                span {
-                    font-size: 12px;
-                    padding-right: 20px;
-                    margin-right: 20px;
-                    position: relative;
-                    &.line:before {
-                        content: '';
-                        display: block;
-                        position: absolute;
-                        top: 3px;
-                        right: 0;
-                        width: 1px;
-                        height: 14px;
-                        background-color: #fff;
-                    }
-                }
-            }
-        }
-    }
-    @include e(card_handler) {
-        @include displayFlex();
-        flex-flow: row nowrap;
-        @include justifyContent(flex-start);
-        @include alignItems(center);
-        .card_number {
-            font-weight: 500;
-            font-size: 22px;
-            margin-left: 20px;
-            @include displayFlex();
-            @include alignItems(center);
-        }
-        .card_switch {
-            font-size: 14px;
-            margin-left: 16px;
-        }
-        .card_manage {
-            margin-left: 40px;
-        }
-    }
-}
+// @include b(withdraw) {
+//     min-height: 700px;
+//     @include e(sys_tip) {
+//         margin-left: 92px;
+//     }
+//     .sys_tip1 {
+//         font-size: 14px;
+//         color: $gray-dark;
+//     }
+//     @include e(way) {
+//         width: 300px;
+//         height: 160px;
+//         padding: 24px;
+//         text-align: left;
+//         float: left;
+//         border-radius: 10px;
+//         overflow: hidden;
+//         cursor: pointer;
+//         background-size: 100% 100%;
+//         box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5);
+//         transition: all 0.22s linear;
+//         -webkit-transition: all 0.22s linear;
+//         color: #fff;
+//         .amount {
+//             font-size: 36px;
+//             font-weight: 500;
+//             margin-top: 20px;
+//         }
+//         span {
+//             display: block;
+//             font-size: 16px;
+//         }
+//         &.account {
+//             margin-right: 20px;
+//             background-image: url('/images/asset/trading_bg.png');
+//         }
+//         &.wallet {
+//             background-image: url('/images/asset/wallet_bg.png');
+//         }
+//         &.active {
+//             box-shadow: 0 10px 60px $gray-dark;
+//             &.account {
+//                 background-image: url('/images/asset/trading_bg_active.png');
+//             }
+//             &.wallet {
+//                 background-image: url('/images/asset/wallet_bg_active.png');
+//             }
+//         }
+//     }
+//     @include e(list){
+//         padding-left: 10px;
+//         padding-right: 10px;
+//         @include m(item){
+//             width: 210px;
+//             height: 112px;
+//             border-radius: 14px;
+//             transition: all 0.22s linear;
+//             background-position: center;
+//             background-repeat: no-repeat;
+//             background-size: cover;
+//             padding: 13px 24px 12px;
+//             margin: 0 10px;
+//             cursor: pointer;
+//             &:hover {
+//                 box-shadow: 0 10px 60px $gray-dark;
+//             }
+//             &:nth-child(1) {
+//                 background-image: url('/images/space/space-trading.png');
+//             }
+//             &:nth-child(2) {
+//                 background-image: url('/images/space/space-wallet.png');
+//             }
+//             span {
+//                 display: inline-block;
+//             }
+//             p {
+//                 color: #fff;
+//             }
+//             &.not-active {
+//                 background-image: url('/images/space/not-active.png');
+//             }
+//             .summary_name {
+//                 font-size: 14px;
+//             }
+//             .summary_amount {
+//                 overflow: hidden;
+//                 text-overflow:ellipsis;
+//                 white-space: nowrap;
+//                 font-size: 20px;
+//                 font-weight: 500;
+//                 margin-top: 12px;
+//             }
+//             .summary_btn {
+//                 margin-top: 11px;
+//                 a {
+//                     color: #fff;
+//                     &:hover {
+//                         text-decoration: underline;
+//                     }
+//                 }
+//                 span {
+//                     font-size: 12px;
+//                     &.line{
+//                         padding-right: 20px;
+//                         margin-left: 20px;
+//                         display: inline-block;
+//                         height: 14px;
+//                         border-left: 1px solid #fff;
+//                         vertical-align: middle;   
+//                     }
+//                 }
+//             }
+//         }
+//     }
+//     @include e(card_handler) {
+//         @include displayFlex();
+//         flex-flow: row nowrap;
+//         @include justifyContent(flex-start);
+//         @include alignItems(center);
+//         .card_number {
+//             font-weight: 500;
+//             font-size: 22px;
+//             margin-left: 20px;
+//             @include displayFlex();
+//             @include alignItems(center);
+//         }
+//         .card_switch {
+//             font-size: 14px;
+//             margin-left: 16px;
+//         }
+//         .card_manage {
+//             margin-left: 40px;
+//         }
+//     }
+// }
 
-@include b(history) {
-    @include e (lt40) {
-        margin-left: -40px;
-    }
-}
+// @include b(history) {
+//     @include e (lt40) {
+//         margin-left: -40px;
+//     }
+// }
 
-// 银行卡管理modal
-@include b(manage_card_list) {
-    width: 100%;
-    @include e(item) {
-        td {
-            height: 65px;
-            padding-top: 8px;
-            padding-bottom: 8px;
-            .card_icon {
-                transform: scale(1.25);
-                -webkit-transform: scale(1.25);
-            }
-            .card_number,
-            .card_btn {
-                font-size: 16px;
-            }
-        }
-    }
-}
+// // 银行卡管理modal
+// @include b(manage_card_list) {
+//     width: 100%;
+//     @include e(item) {
+//         td {
+//             height: 65px;
+//             padding-top: 8px;
+//             padding-bottom: 8px;
+//             .card_icon {
+//                 transform: scale(1.25);
+//                 -webkit-transform: scale(1.25);
+//             }
+//             .card_number,
+//             .card_btn {
+//                 font-size: 16px;
+//             }
+//         }
+//     }
+// }
 
 // evidence
 @include b(asset_evidence) {
@@ -661,142 +654,143 @@
     box-shadow: 0 0 15px #ebebeb;
     padding: 25px;
 
-    @include e(nav) {
-        @include m(item) {
-            float: left;
-            color: #999;
-            font-size: 16px;
-            padding: 0px 10px;
-            cursor: pointer;
+    // @include e(nav) {
+    //     @include displayFlex();
+    //     @include m(item) {
+    //         color: #999;
+    //         font-size: 16px;
+    //         padding: 0px 10px;
+    //         cursor: pointer;
 
-            &.active, &:hover {
-                color: #333;
-                font-weight: 500;
-            }
-        }
-    }
-    @include e(content) {
-        padding: 20px 10px;
+    //         &.active, &:hover {
+    //             color: #333;
+    //             font-weight: 500;
+    //         }
+    //     }
+    // }
+    // @include e(content) {
+    //     padding: 20px 10px;
 
-        .title, .tip {
-            color: #666;
-            line-height: 22px;
-        }
-        .desc {
-            padding: 20px 0px;
+    //     .title, .tip {
+    //         color: #666;
+    //         line-height: 22px;
+    //     }
+    //     .desc {
+    //         padding: 20px 0px;
 
-            a {
-                color: #4a90e2;
-            }
-        }
-        @include m(lst) {
-            margin: 0px 15px;
-            .item {
-                border-bottom: 1px solid #eee;
-                padding: 15px 0px;
-                .tit {
-                    font-weight: 500;
-                    font-size: 16px;
-                }
-                .date {
-                    color: #999;
-                    margin: 2px 0px 10px;
-                }
-                .info {
-                    height: 55px;
-                    .pic {
-                        border: 1px solid #eee;
-                        border-radius: 6px;
-                        overflow: hidden;
-                        cursor: pointer;
-                        position: relative;
-                        float: left;
-                        width: 55px;
-                        height: 55px;
-                        margin-right: 10px;
+    //         a {
+    //             color: #4a90e2;
+    //         }
+    //     }
+    //     @include m(lst) {
+    //         margin: 0px 15px;
+    //         .item {
+    //             border-bottom: 1px solid #eee;
+    //             padding: 15px 0px;
+    //             .tit {
+    //                 font-weight: 500;
+    //                 font-size: 16px;
+    //             }
+    //             .date {
+    //                 color: #999;
+    //                 margin: 2px 0px 10px;
+    //             }
+    //             .info {
+    //                 height: 55px;
+    //                 .pic {
+    //                     border: 1px solid #eee;
+    //                     border-radius: 6px;
+    //                     overflow: hidden;
+    //                     cursor: pointer;
+    //                     position: relative;
+    //                     float: left;
+    //                     width: 55px;
+    //                     height: 55px;
+    //                     margin-right: 5px;
+    //                     margin-left: 5px;
 
-                        img {
-                            width: 100%;
-                            height: 100%;
-                            vertical-align: top;
-                        }
+    //                     img {
+    //                         width: 100%;
+    //                         height: 100%;
+    //                         vertical-align: top;
+    //                     }
 
-                        &.add_file {
-                            &:before {
-                                display: block;
-                                content: '';
-                                width: 36px;
-                                height: 3px;
-                                border-radius: 2px;
-                                position: absolute;
-                                left: 50%;
-                                top: 50%;
-                                margin-left: -18px;
-                                margin-top: -2px;
-                                background-color: #eee;
-                            }
-                            &:after {
-                                display: block;
-                                content: '';
-                                width: 3px;
-                                height: 36px;
-                                border-radius: 2px;
-                                position: absolute;
-                                left: 50%;
-                                top: 50%;
-                                margin-left: -2px;
-                                margin-top: -18px;
-                                background-color: #eee;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
+    //                     &.add_file {
+    //                         &:before {
+    //                             display: block;
+    //                             content: '';
+    //                             width: 36px;
+    //                             height: 3px;
+    //                             border-radius: 2px;
+    //                             position: absolute;
+    //                             left: 50%;
+    //                             top: 50%;
+    //                             margin-left: -18px;
+    //                             margin-top: -2px;
+    //                             background-color: #eee;
+    //                         }
+    //                         &:after {
+    //                             display: block;
+    //                             content: '';
+    //                             width: 3px;
+    //                             height: 36px;
+    //                             border-radius: 2px;
+    //                             position: absolute;
+    //                             left: 50%;
+    //                             top: 50%;
+    //                             margin-left: -2px;
+    //                             margin-top: -18px;
+    //                             background-color: #eee;
+    //                         }
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
 }
 
 // evidence list
-@include b(web_evidence) {
-    min-height: 400px;
-    box-shadow: 0 0 15px #ebebeb;
-    margin: 50px 0px 100px;
-    border-radius: 10px;
-    padding: 30px 80px;
+// @include b(web_evidence) {
+//     min-height: 400px;
+//     box-shadow: 0 0 15px #ebebeb;
+//     margin: 50px 0px 100px;
+//     border-radius: 10px;
+//     padding: 30px 80px;
 
-    @include e(box) {
-        padding-top: 30px;
-    }
-    @include e(item) {
-        padding-bottom: 20px;
-        .title {
-            font-size: 18px;
-            line-height: 18px;
-            margin-bottom: 10px;
-            cursor: pointer;
-            span {
-                float: left;
-            }
-            i {
-                float: right;
-            }
-        }
-        .sub-title {
-            margin: 10px 0px 5px;
-        }
-        .info {
-            color: #999;
-            p {
-                line-height: 20px;
-            }
-        }
-        .pic {
-            text-align: center;
-            img {
-                width: 60%;
-                vertical-align: top;
-                margin-top: 10px;
-            }
-        }
-    }
-}
+//     @include e(box) {
+//         padding-top: 30px;
+//     }
+//     @include e(item) {
+//         padding-bottom: 20px;
+//         .title {
+//             font-size: 18px;
+//             line-height: 18px;
+//             margin-bottom: 10px;
+//             cursor: pointer;
+//             span {
+//                 float: left;
+//             }
+//             i {
+//                 float: right;
+//             }
+//         }
+//         .sub-title {
+//             margin: 10px 0px 5px;
+//         }
+//         .info {
+//             color: #999;
+//             p {
+//                 line-height: 20px;
+//             }
+//         }
+//         .pic {
+//             text-align: center;
+//             img {
+//                 width: 60%;
+//                 vertical-align: top;
+//                 margin-top: 10px;
+//             }
+//         }
+//     }
+// }

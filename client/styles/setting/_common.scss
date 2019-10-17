@@ -81,16 +81,16 @@
         }
         @include m(item) {
             font-size: 16px;
-            text-align: left;
+            text-align: initial;
             .name-input {
                 min-width: 60px;
                 margin-bottom: 20px;
                 margin-right: 3px;
+                margin-left: 3px;
             }
             .value-input {
-                min-width: 60px;
+                min-width: 160px;
                 .select {
-                    font-weight: 500px;
                 }
                 input {
                     border-radius: 29px;
@@ -148,15 +148,22 @@
             margin-bottom: 20px;
         }
         @include m(title){
+            @include displayFlex();
+            @include alignItems(center);
             > span:nth-child(1) {
-                display: inline-block;
                 font-size: 18px;
-                padding-right: 30px;
                 font-weight: 500;
                 color: rgb(36, 42, 54);
-                margin-right: 26px;
                 &.line {
-                    border-right: 1px solid rgb(214, 214, 214);
+                    @include displayFlex();
+                    @include alignItems(center);
+                    &::after{
+                        content: ' ';
+                        padding-right: 30px;
+                        margin-right: 30px;
+                        border-right: 1px solid rgb(214, 214, 214);
+                        height: 18px;
+                    }
                 }
             }
         }
@@ -167,6 +174,16 @@
             }
             .captcha_btn{
                 border-radius: 29px;
+            }
+        }
+    }
+}
+.ar-lang{
+    .setting_info_zero__name{
+        .stress{
+            &::before {
+                right: -6px;
+                left: auto;
             }
         }
     }

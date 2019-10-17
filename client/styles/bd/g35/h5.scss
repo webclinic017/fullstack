@@ -152,7 +152,6 @@
   @include e(cont-1) {
     margin-top: 20px;
     .cont-left {
-      float: left;
       height: 375px;
 
       img {
@@ -160,46 +159,44 @@
       }
     }
     .cont-right {
-      float: left;
       padding-left: 10px;
+      padding-right: 10px;
 
       li {
         padding: 5px 0px;
         margin-bottom: 15px;
+        @include displayFlex();
         .l {
-          float: left;
-          width: 70px;
-          text-align: center;
+          padding: 0 6px;
           font-size: 16px;
           line-height: 20px;
         }
         .r {
-          float: left;
+          padding: 2px 6px 0;
           line-height: 18px;
-          padding-top: 2px;
         }
         &.l1 {
-          width: 195px;
+          width: 70%;
           background: rgba(5,8,39,.4);
         }
         &.l2 {
-          width: 215px;
+          width: 76%;
           background: rgba(220,220,220,.4);
         }
         &.l3 {
-          width: 235px;
+          width: 82%;
           background: rgba(5,8,39,.4);
         }
         &.l4 {
-          width: 255px;
+          width: 87%;
           background: rgba(220,220,220,.4);
         }
         &.l5 {
-          width: 275px;
+          width: 93%;
           background: rgba(5,8,39,.4);
         }
         &.l6 {
-          width: 295px;
+          width: 100%;
           background: rgba(220,220,220,.4);
           margin-bottom: 0px;
         }
@@ -210,7 +207,6 @@
     margin-top: 20px;
 
     li {
-      float: left;
       width: 50%;
       text-align: center;
       padding: 0 12px;
@@ -225,29 +221,30 @@
     margin-top: 30px;
 
     li {
-      float: left;
       width: 50%;
       text-align: center;
+      a{
+        display: inline-block;
+      }
       img {
         width: 80%;
       }
     }
   }
   @include e(cont-3) {
-    position: relative;
-
+    @include displayFlex();
+    padding-bottom: 10px;
     span {
       width: 8px;
       height: 8px;
-      position: absolute;
-      top: 5px;
-      left: 4px;
+      margin-top: 6px;
       background-color: #fff;
       border-radius: 8px;
     }
     p {
+      @include flex(1);
       padding-left: 20px;
-      padding-bottom: 10px;
+      padding-right: 20px;
     }
   }
   @include e(register_box) {
@@ -260,15 +257,15 @@
     .form-control-wrapper {
       margin-bottom: 15px;
       position: relative;
+      .verify-code{
+        padding-right: 110px;
+      }
       .verify_code_btn_wrapper {
-        position: absolute;
         top: 10px;
-        right: 0;
         width: 100px;
         height: 20px;
         text-align: center;
         line-height: 20px;
-        border-left: 1px solid #ccc;
         color: #333;
 
         .verify_code_btn {
@@ -280,10 +277,15 @@
       }
 
       .form-control {
-        padding: 8px 10px;
         border-radius: 4px;
-        width: 100%;
         color: #333;
+      }
+
+      &.ar{
+        .verify-code{
+          padding-right: 10px;
+          padding-left: 110px;
+        }
       }
     }
   }

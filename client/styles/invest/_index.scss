@@ -36,9 +36,10 @@
     border-bottom: 1px solid $gray;
 
     @include e(user) {
-        // text-align: left;
+        text-align: initial;
 
         @include m(avatar) {
+            display: inline-block;
             padding-right: 10px;
 
             img {
@@ -154,6 +155,7 @@
     }
 
     @include e(detail) {
+        text-align: initial;
         padding-left: 50px !important; 
         position: relative;
     }
@@ -187,6 +189,20 @@
 
     @include e(symbol) {
         color: $gray-darker;
+    }
+}
+.ar-lang{
+    .invest_orders__detail{
+        padding-left: 10px !important;
+        padding-right: 50px !important;
+    }
+    .invest_orders__trunk{
+        left: auto;
+        right: 30px;
+    }
+    .invest_orders__branch{
+        left: auto;
+        right: 30px;
     }
 }
 
@@ -225,9 +241,6 @@
 }
 .icon-history{
     vertical-align:sub;
-}
-.margin-top60 {
-    margin-top: 60px;
 }
 // 交易账户home页
 @include b(space_sub_account) {
@@ -281,6 +294,7 @@
                             background: url('/images/space/edit.png') center center no-repeat;
                             color: rgb(255, 197, 0);
                             margin-left: 7px;
+                            margin-right: 7px;
                         }
                         .mt4id {
                             font-size: 14px;
@@ -344,9 +358,8 @@
                         }
                     }
                     &:nth-child(2) {
-                        margin-top: 32px;
+                        margin-top: 22px;
                         margin-bottom: 5px;
-                        padding-right: 19px;
                         .progress {
                             display: block;
                             .bar-bg {
@@ -384,6 +397,7 @@
                                     line-height: 20px;
                                     color: #fff;
                                     margin-left: 7px;
+                                    margin-right: 7px;
                                 }
                             }
                             .details {
@@ -397,13 +411,10 @@
         }
         &:nth-child(2) {
             @include flex(1);
-            padding: 0 25px 0 0;
+            padding: 0 25px;
             > ul {
-                overflow: hidden;
+                @include displayFlex();
                 > li {
-                    padding-left: 28px;
-                    width: 33.3%;
-                    float: left;
                     position: relative;
                     p {
                         line-height: 22px;
@@ -417,15 +428,14 @@
                             color: rgba(36,42,54,0.6);
                         }
                     }
-                    &:not(.noLine):before {
-                        content: '';
-                        display: block;
-                        position: absolute;
-                        top: 3px;
-                        right: 0;
-                        width: 1px;
+                    &:nth-child(odd){
+                        @include flex(1);
+                    }
+                    &:nth-child(even){
+                        margin-left: 28px;
+                        padding-right: 28px;
                         height: 47px;
-                        background-color: #d2d2d2;
+                        border-left: 1px solid #d2d2d2;
                     }
                 }
             }

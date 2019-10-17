@@ -9,7 +9,7 @@
         <span>你暂没有绑定手机号</span>
     </p>
     <div class="row setting_info_zero__list-input" ng-show="step === 1">
-            <form name="oldPhoneForm" novalidate autocomplete="off">
+            <form name="oldPhoneForm" novalidate autocomplete="off" class="display-flex">
 
                 <div class="col-xs-3 text-center">
                     <div class="relative">
@@ -57,12 +57,12 @@
                     </div>
                 </div>
     
-                <div class="col-xs-6 text-right pd-lf-0">
-                    <button class="tw-btn tw-btn-md tw-btn-capsule-gradient mg-lf-0" type="submit" ng-if="clickable.oldSubmit" ng-click="checkPhoneCode('oldPhoneForm')">
+                <div class="flex1 justify-flex-end">
+                    <button class="tw-btn tw-btn-md tw-btn-capsule-gradient" type="submit" ng-if="clickable.oldSubmit" ng-click="checkPhoneCode('oldPhoneForm')">
                         {{lang.text('tigerWitID.submit')}}
                     </button>
     
-                    <button class="tw-btn tw-btn-md tw-btn-capsule-gradient mg-lf-0" ng-if="!clickable.oldSubmit">
+                    <button class="tw-btn tw-btn-md tw-btn-capsule-gradient" ng-if="!clickable.oldSubmit">
                         <i class="loading_spinner fa fa-spinner"></i>
                         {{lang.text('tigerWitID.submitting')}}
                     </button>
@@ -71,7 +71,7 @@
         </div>
 
     <div class="row setting_info_zero__list-input" ng-show="step === 2">
-        <form name="phoneForm" novalidate autocomplete="off">
+        <form name="phoneForm" novalidate autocomplete="off" class="display-flex">
             <div class="col-xs-2">
                 <div class="form-control-wrapper">
                     <div class="select">
@@ -172,12 +172,12 @@
                 </div>
             </div>
 
-            <div class="col-xs-2 text-right pd-lf-0">
-                <button class="tw-btn tw-btn-md tw-btn-capsule-gradient mg-lf-0" type="submit" ng-if="clickable.submit" ng-click="submitForm('phoneForm')">
+            <div class="flex1 justify-flex-end">
+                <button class="tw-btn tw-btn-md tw-btn-capsule-gradient" type="submit" ng-if="clickable.submit" ng-click="submitForm('phoneForm')">
                     {{lang.text('tigerWitID.submit')}}
                 </button>
 
-                <button class="tw-btn tw-btn-md tw-btn-capsule-gradient mg-lf-0" ng-if="!clickable.submit">
+                <button class="tw-btn tw-btn-md tw-btn-capsule-gradient" ng-if="!clickable.submit">
                     <i class="loading_spinner fa fa-spinner"></i>
                     {{lang.text('tigerWitID.submitting')}}
                 </button>

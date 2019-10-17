@@ -38,7 +38,7 @@
 <!--引入公用头部-->
 <% include /common/vendor/h5.utiljs.html %>
 <% include /common/statistic/main.html %>
-<body style="height: 100%;">
+<body style="height: 100%;" class="<%= lang.isAr('ar-lang')%>">
   <div id="m_global_t35" class="m_global_t35 active">
     <div class="m_global_t35_layout">
       <div class="m_global_t35__logo">
@@ -56,13 +56,13 @@
       <div class="m_global_t35__title t1">
         <img src="<%= lang.image('rebateplanTitle')%>" alt="">
       </div>
-      <div class="m_global_t35__cont-1 clearfix">
+      <div class="m_global_t35__cont-1 item-center">
         <div class="cont-left">
           <img src="/images/bd_g35/h5_bar.png" alt="">
         </div>
-        <div class="cont-right">
+        <div class="cont-right flex1">
           <ul>
-            <li class="clearfix l1">
+            <li class="l1">
               <div class="l">
                 <!-- <p><%= lang.text('bonusBd.us')%></p> -->
                 <p>$2.00</p>
@@ -72,7 +72,7 @@
                 <p><%= lang.text('bonusBd.within')%>14 days</p>
               </div>
             </li>
-            <li class="clearfix l2">
+            <li class="l2">
               <div class="l">
                 <!-- <p><%= lang.text('bonusBd.us')%></p> -->
                 <p>$6.00</p>
@@ -82,7 +82,7 @@
                 <p><%= lang.text('bonusBd.within')%>30 days</p>
               </div>
             </li>
-            <li class="clearfix l3">
+            <li class="l3">
               <div class="l">
                 <!-- <p><%= lang.text('bonusBd.us')%></p> -->
                 <p>$18.00</p>
@@ -92,7 +92,7 @@
                 <p><%= lang.text('bonusBd.within')%>60 days</p>
               </div>
             </li>
-            <li class="clearfix l4">
+            <li class="l4">
               <div class="l">
                 <!-- <p><%= lang.text('bonusBd.us')%></p> -->
                 <p>$25.00</p>
@@ -102,7 +102,7 @@
                 <p><%= lang.text('bonusBd.within')%>90 days</p>
               </div>
             </li>
-            <li class="clearfix l5">
+            <li class="l5">
               <div class="l">
                 <!-- <p><%= lang.text('bonusBd.us')%></p> -->
                 <p>$50.00</p>
@@ -112,7 +112,7 @@
                 <p><%= lang.text('bonusBd.within')%>90 days</p>
               </div>
             </li>
-            <li class="clearfix l6">
+            <li class="l6">
               <div class="l">
                 <!-- <p><%= lang.text('bonusBd.us')%></p> -->
                 <p>$99.00</p>
@@ -128,7 +128,7 @@
       <div class="m_global_t35__title t2">
         <img src="<%= lang.image('whyChooseTitle')%>" alt="">
       </div>
-      <ul class="m_global_t35__cont-2 clearfix">
+      <ul class="m_global_t35__cont-2 display-flex">
         <li>
           <p><img src="/images/bd_g35/comm_icon1.png" alt=""></p>
           <p><%= lang.text('bonusBd.whyChoose1')%></p>
@@ -138,7 +138,7 @@
           <p><%= lang.text('bonusBd.whyChoose2')%></p>
         </li>
       </ul>
-      <ul class="m_global_t35__cont-2 clearfix">
+      <ul class="m_global_t35__cont-2 display-flex">
         <li>
           <p><img src="/images/bd_g35/comm_icon3.png" alt=""></p>
           <p><%= lang.text('bonusBd.whyChoose3')%></p>
@@ -148,7 +148,7 @@
           <p><%= lang.text('bonusBd.whyChoose4')%></p>
         </li>
       </ul>
-      <ul class="m_global_t35__download clearfix">
+      <ul class="m_global_t35__download display-flex">
         <li>
           <a href="<%= lang.text('downloadGlobalApp')%>">
             <img src="<%= lang.image('downloadAppGlobal')%>" alt="">
@@ -208,8 +208,8 @@
         <div class="form-control-wrapper">
           <input type="text" class="form-control" name="email" id="email" placeholder="<%= lang.text('partner.email')%>">
         </div>
-        <div class="form-control-wrapper">
-          <input type="number" class="form-control" name="code" id="verify_code" placeholder="<%= lang.text('mRegister03')%>" style="padding-right: 110px;">
+        <div class="form-control-wrapper <%= lang.isAr('ar')%>">
+          <input type="number" class="form-control verify-code" name="code" id="verify_code" placeholder="<%= lang.text('mRegister03')%>">
           <p class="verify_code_btn_wrapper">
               <span class="verify_code_btn" id="verify_code_btn"><%= lang.text('mRegister05')%></span>
           </p>

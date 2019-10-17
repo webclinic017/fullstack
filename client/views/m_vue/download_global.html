@@ -18,7 +18,7 @@
 <% include /common/vendor/h5.utiljs.html %>
 <% include /common/vendor/h5.js.html %>
 <% include /common/statistic/main.html %>
-<body class="m_download">
+<body class="m_download <%= lang.isAr('ar-lang')%>">
 <!-- 引入H5导航条 -->
 <div class="m_download_layout">
     <!--<div class="m_download_layout__loading_mask">-->
@@ -30,7 +30,7 @@
 
         <div class="section section1" style="background-image: url('<%= lang.image("downloadGlobalH5Section1")%>')">
             <!-- <%- include('/common/component/h5.navbar.html') %> 不能再公用-->
-            <div class="h5_nav clearfix">
+            <div class="h5_nav space-between-center">
                 <a href="/"><img class="h5_nav_logo" src="<%= lang.image('logo')%>" alt="logo"></a>
                 <select name="" id="switchLang" class="switch_lang">
                     <option value="en">English</option>
