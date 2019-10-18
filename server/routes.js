@@ -809,11 +809,11 @@ module.exports = function (app) {
     app.route('/grupo/creex').get(function (req, res) {
         setEnvCf(req, res);
         if (isMobile(req)) {
-            res.redirect('/download');
+            var page = 'mobile';
         } else {
-            res.render('bd/creex/index.html', extendPublic({}, req));
+            var page = 'web';
         }
-        
+        res.render('bd/creex/index.html', extendPublic({page:page}, req));
     });
     
     // 市场部 - 月报生成 无用
