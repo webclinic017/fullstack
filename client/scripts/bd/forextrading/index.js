@@ -371,6 +371,11 @@
       partners_block5_2: "SCB và FCA"
     }
   };
+  if ($(".bd_forextrading").attr("data-mobile") === '1') {
+    $(".bd_open_account").attr("href", "/download");
+    $(".bd_live_account").attr("href", "/download");
+    $(".bd_demo_account").attr("href", "/download");
+  }
   console.log(page);
   page = pageInfo[page] ? page : "english";
   for (var i in pageInfo[page]) {

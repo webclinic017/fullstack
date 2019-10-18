@@ -796,14 +796,15 @@ module.exports = function (app) {
     app.route('/forextrading/:page(home|partners|traders)/:subpage(*)').get(function (req, res) {
         setEnvCf(req, res);
         if (isMobile(req)) {
-            res.redirect('/download');
+            var mobile = '1';
         } else {
-            res.render('bd/forextrading/index.html', extendPublic({
-                page: req.params.page,
-                subpage:req.params.subpage
-            }, req));
+            var mobile = '0';
         }
-        
+        res.render('bd/forextrading/index.html', extendPublic({
+            page: req.params.page,
+            subpage:req.params.subpage,
+            mobile: mobile
+        }, req));
     });
     
     // 市场部 - 月报生成 无用
