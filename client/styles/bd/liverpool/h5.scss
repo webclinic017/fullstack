@@ -6,7 +6,7 @@
   .phone-have {
     display: none;
   }
-  .notParticipating{
+  .notParticipating {
     display: none;
   }
   .btn {
@@ -73,20 +73,37 @@
       }
     }
     @include m(table) {
+      font-size: 14px;
       font-weight: 500;
       > li {
-        text-align: center;
         @include displayFlex();
         > div {
+          @include displayFlex();
+          @include alignItems(center);
+          @include justifyContent(center);
+          word-break: break-word;
           padding: 18px 0;
           &:nth-child(1) {
             width: 20%;
           }
           &:nth-child(2) {
-            width: 50%;
+            width: 20%;
+            > span {
+              height: 30px;
+              display: inline-block;
+              margin: 0 10px;
+              background-color: #fff;
+              border-radius: 50%;
+              > img {
+                height: 100%;
+              }
+            }
           }
           &:nth-child(3) {
-            width: 30%;
+            width: 35%;
+          }
+          &:nth-child(4) {
+            width: 25%;
           }
         }
         &:nth-child(1) {
@@ -244,10 +261,10 @@
     }
     @include e(logo) {
       text-align: center;
-      > div{
+      > div {
         display: inline-block;
         width: px2rem(226);
-        >img{
+        > img {
           width: 100%;
         }
       }
@@ -290,6 +307,11 @@
         > li {
           > div {
             padding: px2rem(18) 0;
+            &:nth-child(2) {
+              > span {
+                margin: 0 px2rem(10);
+              }
+            }
           }
         }
       }

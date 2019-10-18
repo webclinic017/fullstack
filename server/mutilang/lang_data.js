@@ -19071,7 +19071,7 @@ module.exports = {
             "es": "Enter the league",
             "pt-BR": "Enter the league",
             "ar": " ادخل المسابقة "
-        },
+        }
 
     }
 };

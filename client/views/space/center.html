@@ -101,7 +101,7 @@
             <div class="direction-column flex1">
                 <div class="summary_amount">
                     <div ng-if="competition.is_in_competition">
-                        {{competition.profit_rate}} <p class="con">{{lang.text('tigerWitID.liverpool.floatingRate')}}
+                        {{(competition.profit_rate * 100).toFixed(2)}}% <p class="con">{{lang.text('tigerWitID.liverpool.floatingRate')}}
                         </p>
                     </div>
                     <div ng-if="!competition.is_in_competition">
