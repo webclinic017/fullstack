@@ -18804,13 +18804,13 @@ module.exports = {
         },
         "leagueTableTableB": {
             "zh": "账号",
-            "en": "ACCOUNT NUMBER",
-            "vi": "SỐ TÀI KHOẢN",
+            "en": "ACCOUNT",
+            "vi": "Tài khoản",
             "zh-Hant": "帳號",
             "id": "NOMOR AKUN",
-            "es": "ACCOUNT NUMBER",
-            "pt-BR": "ACCOUNT NUMBER",
-            "ar": "رقم الحساب"
+            "es": "ACCOUNT",
+            "pt-BR": "ACCOUNT",
+            "ar": "حساب"
         },
         "leagueTableTableC": {
             "zh": "盈利",
@@ -19071,6 +19071,16 @@ module.exports = {
             "es": "Enter the league",
             "pt-BR": "Enter the league",
             "ar": " ادخل المسابقة "
+        },
+        "countryRegion": {
+            "zh": "国家/地区",
+            "en": "Country/Region",
+            "vi": "Quốc gia/ khu vực",
+            "zh-Hant": "國家/地區",
+            "id": "Negara/Daerah",
+            "es": "País/Región",
+            "pt-BR": "País/Região",
+            "ar": "البلد/المنطقة"
         }
 
     }

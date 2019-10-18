@@ -4,8 +4,24 @@
         layer.open({
             type: 1,
             skin: "liverpool",
+            shadeClose: false,
             content: $('#rulesCon').html()
         });
+        try {
+            callNative({
+                type: "pull_down_refresh",
+                show: false
+            });
+        } catch (e) {}
+    })
+    $('body').on('click', '.closed', function(){
+        layer.closeAll();
+        try {
+            callNative({
+                type: "pull_down_refresh",
+                show: true
+            });
+        } catch (e) {}
     })
     var urlParams = getSearch();
     var gameInfo, only_key;
