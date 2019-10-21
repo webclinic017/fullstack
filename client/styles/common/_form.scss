@@ -444,7 +444,12 @@
         left: auto;
         right: 22px;
     }
-
+    .account-form-control-wrapper{
+        .select-right{
+            padding-left: 0;
+            padding-right: 80px;
+        }
+    }
     .account-form-control-wrapper-new {
         .select-left{
             .select__input{
@@ -469,7 +474,7 @@
     }
     .select__input{
         padding-left: 30px;
-        padding-right: 0;
+        padding-right: 10px;
     }
     .select__icon{
         left: 10px;

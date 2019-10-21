@@ -57,7 +57,7 @@
         getAccountList();
         // 获取用户交易账户列表 
         function getAccountList(){
-            account.getDealAccountList(0).then(function (data) {
+            account.getDealAccountList(0, 0, 'trade').then(function (data) {
                 if (!data) return;
                 if (data.is_succ) {
                     $scope.accountInfo.accountList = data.data; 

@@ -11,8 +11,10 @@
         </li>
         <li class="space_center_statistics__list-item"></li>
         <li class="space_center_statistics__list-item">
-            <div ng-class="{'font-danger': assetInfo.total_profit.indexOf('-') < 0, 'font-success': assetInfo.total_profit.indexOf('-') >= 0}" ng-if="lang.hostIsCn()">${{ assetInfo.total_profit || '0.00' }}</div>
-            <div ng-class="{'font-success': assetInfo.total_profit.indexOf('-') < 0, 'font-danger': assetInfo.total_profit.indexOf('-') >= 0}" ng-if="!lang.hostIsCn()">${{ assetInfo.total_profit || '0.00' }}</div>
+            <div ng-class="{'font-danger': assetInfo.total_profit.indexOf('-') < 0, 'font-success': assetInfo.total_profit.indexOf('-') >= 0}"
+                ng-if="lang.hostIsCn()">${{ assetInfo.total_profit || '0.00' }}</div>
+            <div ng-class="{'font-success': assetInfo.total_profit.indexOf('-') < 0, 'font-danger': assetInfo.total_profit.indexOf('-') >= 0}"
+                ng-if="!lang.hostIsCn()">${{ assetInfo.total_profit || '0.00' }}</div>
             <div>{{lang.text('tigerWitID.myAccount.totalEarnings')}}</div>
         </li>
         <!-- <li class="space_center_statistics__list-item" ></li>
@@ -27,50 +29,95 @@
     <ul class="space_center_summary__list">
         <li class="space_center_summary__list-item" ng-class="{'not-active': assetInfo.trade_user_status === 0}">
             <!-- <a ui-sref="space.center.invest.home"> -->
-                <p class="summary_name">{{lang.text('tigerWitID.myAccount.tradingAccount')}}</p>
-                <p class="summary_btn" ng-if="assetInfo.trade_user_status === 0"><a ng-click="openDredgeMdl({position: 'sidebar'})"><i class="add-o" ng-style="{marginRight: lang.isEnglishArea() ? '5px' : ''}"></i>{{lang.text('tigerWitID.myAccount.quickOpenAccount')}}</a></p>
-                <span ng-if="assetInfo.trade_user_status !== 0">
-                    <p class="summary_amount">${{ assetInfo.trade_balance || '--' }}</p>
-                    <p class="summary_btn" ng-if="assetInfo.trade_user_status === 2"><span><a ng-click="confirmIslamic()">{{lang.text('tigerWitID.myAccount.upgradeToLiveAccount')}} &gt;</a></span></p>
-                    <p class="summary_btn" ng-if="assetInfo.trade_user_status === 1">
-                        <span><a ui-sref="space.asset.subpage({ subpage: 'deposit' })">{{lang.text('tigerWitID.depositWithdrawal.deposit')}}</a></span>
-                        <span class="line" ng-class="{'en': lang.isEnglishArea()}"></span>
-                        <span><a ui-sref="space.asset.subpage({ subpage: 'withdraw' })">{{lang.text('tigerWitID.depositWithdrawal.withdrawal')}}</a></span>
-                        <span class="line" ng-class="{'en': lang.isEnglishArea()}"></span>
-                        <span><a ui-sref="space.center.invest.home">{{lang.text('tigerWitID.details.title')}}</a></span>
-                    </p>
-                </span>
+            <div class="summary_name">{{lang.text('tigerWitID.myAccount.tradingAccount')}}</div>
+            <div class="summary_btn flex1" ng-if="assetInfo.trade_user_status === 0"><a
+                    ng-click="openDredgeMdl({position: 'sidebar'})"><i class="add-o"
+                        ng-style="{marginRight: lang.isEnglishArea() ? '5px' : ''}"></i>{{lang.text('tigerWitID.myAccount.quickOpenAccount')}}</a>
+            </div>
+            <div class="direction-column flex1" ng-if="assetInfo.trade_user_status !== 0">
+                <div class="summary_amount">${{ assetInfo.trade_balance || '--' }}</div>
+                <div class="summary_btn" ng-if="assetInfo.trade_user_status === 2"><span><a
+                            ng-click="confirmIslamic()">{{lang.text('tigerWitID.myAccount.upgradeToLiveAccount')}}
+                            &gt;</a></span></div>
+                <div class="summary_btn" ng-if="assetInfo.trade_user_status === 1">
+                    <span><a
+                            ui-sref="space.asset.subpage({ subpage: 'deposit' })">{{lang.text('tigerWitID.depositWithdrawal.deposit')}}</a></span>
+                    <span class="line" ng-class="{'en': lang.isEnglishArea()}"></span>
+                    <span><a
+                            ui-sref="space.asset.subpage({ subpage: 'withdraw' })">{{lang.text('tigerWitID.depositWithdrawal.withdrawal')}}</a></span>
+                    <span class="line" ng-class="{'en': lang.isEnglishArea()}"></span>
+                    <span><a ui-sref="space.center.invest.home">{{lang.text('tigerWitID.details.title')}}</a></span>
+                </div>
+            </div>
             <!-- </a> -->
         </li>
         <li class="space_center_summary__list-item" ng-class="{'not-active': assetInfo.wallet_user_status === 0}">
             <!-- <a ui-sref="space.center.wallet.subpage({ subpage: 'summary'})"> -->
-                <p class="summary_name">{{lang.text('tigerWitID.myAccount.wallet')}}</p>
-                <p class="summary_btn" ng-if="assetInfo.wallet_user_status === 0"><a ng-click="notActiveModal()">{{lang.text('tigerWitID.myAccount.unactivated')}}</a></p>
-                <span ng-if="assetInfo.wallet_user_status === 1">
-                    <p class="summary_amount">${{ assetInfo.wallet_balance || '--' }}</p>
-                    <p class="summary_btn" >
-                        <span><a ui-sref="space.asset.subpage({ subpage: 'deposit', account: 'wallet'})">{{lang.text('tigerWitID.depositWithdrawal.deposit')}}</a></span>
-                        <span class="line" ng-class="{'en': lang.isEnglishArea()}"></span>
-                        <span><a ui-sref="space.asset.subpage({ subpage: 'withdraw', account: 'wallet'})">{{lang.text('tigerWitID.depositWithdrawal.withdrawal')}}</a></span>
-                        <span class="line" ng-class="{'en': lang.isEnglishArea()}"></span>
-                        <span><a ui-sref="space.center.wallet.subpage({ subpage: 'summary'})">{{lang.text('tigerWitID.details.title')}}</a></span>
-                    </p>
-                </span>
+            <div class="summary_name">{{lang.text('tigerWitID.myAccount.wallet')}}</div>
+            <div class="summary_btn flex1" ng-if="assetInfo.wallet_user_status === 0"><a
+                    ng-click="notActiveModal()">{{lang.text('tigerWitID.myAccount.unactivated')}}</a></div>
+            <div class="direction-column flex1" ng-if="assetInfo.wallet_user_status === 1">
+                <div class="summary_amount">${{ assetInfo.wallet_balance || '--' }}</div>
+                <div class="summary_btn">
+                    <span><a
+                            ui-sref="space.asset.subpage({ subpage: 'deposit', account: 'wallet'})">{{lang.text('tigerWitID.depositWithdrawal.deposit')}}</a></span>
+                    <span class="line" ng-class="{'en': lang.isEnglishArea()}"></span>
+                    <span><a
+                            ui-sref="space.asset.subpage({ subpage: 'withdraw', account: 'wallet'})">{{lang.text('tigerWitID.depositWithdrawal.withdrawal')}}</a></span>
+                    <span class="line" ng-class="{'en': lang.isEnglishArea()}"></span>
+                    <span><a
+                            ui-sref="space.center.wallet.subpage({ subpage: 'summary'})">{{lang.text('tigerWitID.details.title')}}</a></span>
+                </div>
+            </div>
             <!-- </a> -->
         </li>
         <!-- agent_user_status代理商激活状态,0:不显示,1:无归属-显示,2:已激活-显示,3:有归属-有代理商推广参数时显示与cookie中ib_pid,invite_status共同判断 -->
-        <li class="space_center_summary__list-item" ng-class="{'not-active': assetInfo.agent_user_status !== 2}" ng-if="assetInfo.agent_user_status !== 0 && ((cookiesParams.ib_pid && cookiesParams.invite_status == 0) || assetInfo.agent_user_status !== 3)">
+        <li class="space_center_summary__list-item" ng-class="{'not-active': assetInfo.agent_user_status !== 2}"
+            ng-if="assetInfo.agent_user_status !== 0 && ((cookiesParams.ib_pid && cookiesParams.invite_status == 0) || assetInfo.agent_user_status !== 3)">
             <!-- <a ui-sref="space.agent"> -->
-                <p class="summary_name">{{assetInfo.agent_user_status === 2 ? lang.text('tigerWitID.partner.title2') : lang.text('tigerWitID.partner.title')}}</p>
-                <p class="summary_btn" ng-if="assetInfo.agent_user_status !== 2"><a ui-sref="space.agent">{{lang.text('tigerWitID.myAccount.unactivated')}}</a></p>
-                <span ng-if="assetInfo.agent_user_status === 2">
-                    <p class="summary_amount">${{ assetInfo.agent_balance || '--' }}</p>
-                    <p class="summary_btn" >
-                        <!-- <span><a ui-sref="space.asset.subpage({ subpage: 'withdraw'})">{{lang.text('tigerWitID.depositWithdrawal.withdrawal')}}</a></span> -->
-                        <span><a ng-href="{{lang.isDemo()?'https://ibdev'+getDomain():'https://ib'+getDomain()}}" target="_blank">{{lang.text('tigerWitID.details.title')}}</a></span>
-                    </p>
-                </span>
+            <div class="summary_name">
+                {{assetInfo.agent_user_status === 2 ? lang.text('tigerWitID.partner.title2') : lang.text('tigerWitID.partner.title')}}
+            </div>
+            <div class="summary_btn flex1" ng-if="assetInfo.agent_user_status !== 2"><a
+                    ui-sref="space.agent">{{lang.text('tigerWitID.myAccount.unactivated')}}</a></div>
+            <div class="direction-column flex1" ng-if="assetInfo.agent_user_status === 2">
+                <div class="summary_amount">${{ assetInfo.agent_balance || '--' }}</div>
+                <div class="summary_btn">
+                    <!-- <span><a ui-sref="space.asset.subpage({ subpage: 'withdraw'})">{{lang.text('tigerWitID.depositWithdrawal.withdrawal')}}</a></span> -->
+                    <span><a ng-href="{{lang.isDemo()?'https://ibdev'+getDomain():'https://ib'+getDomain()}}"
+                            target="_blank">{{lang.text('tigerWitID.details.title')}}</a></span>
+                </div>
+            </div>
             <!-- </a> -->
+        </li>
+
+        <li class="space_center_summary__list-item liverpool" ng-repeat="competition in competitionList">
+            <!-- ng-if="competition.only_key=='liverpoolleague'" -->
+            <div class="summary_name">{{competition.names}}
+                <p class="con">
+                    {{(competition.trade_start | date:'yyyy-MM-dd') + ' / ' + (competition.trade_end | date:'yyyy-MM-dd')}}
+                </p>
+            </div>
+            <div class="direction-column flex1">
+                <div class="summary_amount">
+                    <div ng-if="competition.is_in_competition">
+                        {{(competition.profit_rate * 100).toFixed(2)}}% <p class="con">
+                            {{lang.text('tigerWitID.liverpool.floatingRate')}}
+                        </p>
+                    </div>
+                    <div ng-if="!competition.is_in_competition">
+                        <p class="con">{{ competition.describe }}</p>
+                    </div>
+                </div>
+                <div class="summary_btn">
+                    <a ng-href="/space/#/space/liverpool?only_key={{competition.only_key}}"
+                        ng-if="competition.is_effective_date && !competition.is_in_competition"
+                        class="btn-a tw-btn tw-btn-capsule-gradient">{{lang.text('tigerWitID.liverpool.enterLeague')}}</a>
+                    <a ng-href="{{competition.link}}"
+                        class="btn-a tw-btn tw-btn-capsule-gradient">{{competition.is_in_competition ? lang.text('tigerWitID.liverpool.checkRanking') : lang.text('tigerWitID.details.title')}}</a>
+                </div>
+            </div>
+
         </li>
     </ul>
 </div>

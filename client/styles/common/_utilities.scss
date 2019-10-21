@@ -573,6 +573,10 @@
 .display-flex {
     @include displayFlex();
 }
+.direction-column{
+    @include displayFlex();
+    @include flexDirection(column);
+}
 // css3垂直居中
 .item-center {
     @include displayFlex();

@@ -1,0 +1,51 @@
+<div class="space_block space_center_liverpool mg-tp-50">
+    <h3>{{competition.names}}</h3>
+    <form name="liverpoolRegisterForm" class="account_login__form" novalidate>
+
+        <div class="account-form-control-wrapper">
+            <input class="account-form-control" name="username" type="text"
+                placeholder="{{lang.text('username')}}" required
+                ng-click=""
+                ng-model="liverpool.username">
+        </div>
+        <div class="account-form-control-wrapper">
+            <div class="select-left">
+                <input class="select__input" name="phoneArea" readonly autocomplete="off" type="text"
+                    placeholder="{{lang.text('tigerWitID.areaCode')}}" required ng-model="liverpool.phoneArea.key">
+
+                <ul class="select__dropdown" twform-select data-bind-model="liverpool.phoneArea2" ng-show="!personal.phone">
+
+                    <li class="first_li"><input type="text" placeholder="{{lang.text('tigerWitID.login.countryCode')}}"
+                            ng-model="placeholderArea"><i class="fa fa-search"></i></li>
+                    <li ng-repeat="world in areaCodeList | filter : placeholderArea"
+                        ng-class="{'selected': world.phone_code == liverpool.phoneArea.value}">
+                        <span data-value="{{world.code}}"
+                            data-disabled='{"disabled": {{world.disabled}}, "msg": "{{lang.text("tigerWitID.myAccount.unableCountry")}}"}'
+                            ng-click="world.disabled || selectArea(world)"
+                            ng-class="{'font-light': world.disabled}">+{{world.phone_code}}({{world.name}})</span>
+                    </li>
+                </ul>
+            </div>
+            <input class="account-form-control select-right" ng-disabled="personal.phone" autocomplete="off" name="phone" type="text"
+                placeholder="{{lang.text('tigerWitID.login.enterPhoneNumber')}}"
+                on-enter="getCaptcha('liverpoolRegisterForm', 'phone')" required
+                ng-model="liverpool.phone">
+        </div>
+        <div class="account-form-control-wrapper" ng-show="!personal.phone">
+            <input class="account-form-control" autocomplete="off" name="code" type="text"
+                placeholder="{{ lang.text('actLogin4') }}" on-enter="liverpoolRegister('liverpoolRegisterForm')" required
+                ng-model="liverpool.code">
+            <span class="account_login__code_btn" ng-show="!codeBtnStatus.phone.count"
+                ng-click="[getCaptcha('liverpoolRegisterForm', 'phone')]">
+                {{lang.text('tigerWitID.login.sendSMS')}}
+            </span>
+            <span class="account_login__code_btn notAllowed" ng-show="codeBtnStatus.phone.count">
+                {{lang.text('tigerWitID.myAccount.tip39_1')}}{{ codeBtnStatus.phone.msg }}{{lang.text('tigerWitID.myAccount.tip39_2')}}
+            </span>
+        </div>
+    </form>
+    <div class="account_login__btn_wrapper pd-tp-15">
+        <button class="tw-btn-md tw-btn-capsule-gradient"
+            ng-click="liverpoolRegister('liverpoolRegisterForm')">{{lang.text('tigerWitID.liverpool.enterLeague')}}</button>
+    </div>
+</div>
