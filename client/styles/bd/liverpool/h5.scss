@@ -92,8 +92,9 @@
               height: 30px;
               display: inline-block;
               margin: 0 10px;
-              background-color: #fff;
               border-radius: 50%;
+              @include box-shadow(0 5px 15px rgba(0, 0, 0, 0.2));
+
               > img {
                 height: 100%;
               }
@@ -156,6 +157,10 @@
         font-weight: 500;
         line-height: 66px;
         width: 720px;
+      }
+      .time {
+        font-size: 40px;
+        line-height: 45px;
       }
       .title2 {
         font-size: 42px;
@@ -329,6 +334,10 @@
           font-size: px2rem(50);
           line-height: px2rem(55);
           width: auto;
+        }
+        .time {
+          font-size: px2rem(40);
+          line-height: px2rem(45);
         }
         .title2 {
           margin-top: px2rem(30);

@@ -49,6 +49,29 @@
         }
 
     }
+    // 格式化时间
+    function formatDate(date, fmt) {
+        function padLeftZero(str) {
+            return ('00' + str).substr(str.length)
+        }
+        if (/(y+)/.test(fmt)) {
+            fmt = fmt.replace(RegExp.$1, (date.getFullYear() + '').substr(4 - RegExp.$1.length))
+        }
+        var o = {
+            'M+': date.getMonth() + 1,
+            'd+': date.getDate(),
+            'h+': date.getHours(),
+            'm+': date.getMinutes(),
+            's+': date.getSeconds()
+        }
+        for (var k in o) {
+            if (new RegExp('(' + k + ')').test(fmt)) {
+                let str = o[k] + ''
+                fmt = fmt.replace(RegExp.$1, RegExp.$1.length === 1 ? str : padLeftZero(str))
+            }
+        }
+        return fmt
+    }
 
     // 复制text到剪切板
     function copyText(text) {
@@ -1571,7 +1594,7 @@
                 "ar": ""
             }
         },
-        "liverpool":{
+        "liverpool": {
             "noRankingYet": {
                 "zh": "暂无排名",
                 "en": "No ranking yet",

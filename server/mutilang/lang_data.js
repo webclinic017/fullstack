@@ -18823,24 +18823,14 @@ module.exports = {
             "ar": "الربحية"
         },
         "rulesTit": {
-            "zh": "全球贸易商联盟规则",
+            "zh": "全球交易者联赛规则",
             "en": "The Global Traders League Rules",
-            "vi": "Thể Lệ Giải Đấu Nhà Giao Dịch Toàn Cầu",
-            "zh-Hant": "全球貿易商聯盟規則",
+            "vi": "Thể Lệ Cuộc Thi Nhà Giao Dịch Toàn Cầu",
+            "zh-Hant": "全球交易者聯賽規則",
             "id": "Peraturan Liga Trader Dunia",
             "es": "Las Reglas de la Global Traders League",
             "pt-BR": "Liga de Regiões da Global Traders",
-            "ar": "قواعد دورة التداول العالمية"
-        },
-        "rulesTit1": {
-            "zh": "如何输入：",
-            "en": "How to enter:",
-            "vi": "Để gia nhập:",
-            "zh-Hant": "如何輸入：",
-            "id": "Cara untuk Ikut:",
-            "es": "Cómo entrar:",
-            "pt-BR": "Como entrar:",
-            "ar": "How to enter:"
+            "ar": "قواعد دوري العالمي للمتداولين "
         },
         "rulesTit2": {
             "zh": "新客户：",
@@ -18850,167 +18840,147 @@ module.exports = {
             "id": "Klien Baru :",
             "es": "Nuevos clientes:",
             "pt-BR": "Nuevos clientes:",
-            "ar": "New Clients:"
+            "ar": "عملاء جدد:"
         },
         "rulesTit2Con1": {
-            "zh": "1.注册并激活联盟账户。",
+            "zh": "1.注册TigerWit并激活联赛账户。",
             "en": "1. Register and activate the League account.",
-            "vi": "1. Đăng ký và kích hoạt tài khoản Đấu Giải.",
-            "zh-Hant": "1.註冊並激活聯盟賬戶。",
-            "id": "1. Daftar dan aktifkan akun Liga anda",
+            "vi": "1. Đăng ký và kích hoạt tài khoản Dự Thi.",
+            "zh-Hant": "1.註冊TigerWit並激活聯賽賬戶。",
+            "id": "1. Daftar dan aktifkan akun Liga anda.",
             "es": "1. Regístrese y active la cuenta League.",
             "pt-BR": "1. Registre e ative a Liga Cuenta.",
-            "ar": "1. Register and activate the League account."
+            "ar": " تسجيل وتفعيل حساب الدوري"
         },
         "rulesTit2Con2": {
             "zh": "2.虚拟资金将可供交易者使用。",
             "en": "2. Virtual funds will then become available to the trader.",
             "vi": "2. Quỹ ảo sẽ có sẵn cho nhà giao dịch sau khi đăng ký.",
             "zh-Hant": "2.虛擬資金將可供交易者使用。",
-            "id": "2. Dana virtual akan masuk ke akun anda secara otomatis",
+            "id": "2. Saldo virtual akan otomatis masuk ke dalam akun.",
             "es": "2. Los fondos virtuales estarán disponibles para el trader.",
             "pt-BR": "2. Os fundos virtuais estão disponíveis para o trader.",
-            "ar": "2. Virtual funds will then become available to the trader."
-        },
-        "rulesTit2Con3": {
-            "zh": "3.交易者可以在比赛开始后5天监控他们在联赛的排名。",
-            "en": "3. Traders can monitor their positions on the league table 5 days after the competition’s launch.",
-            "vi": "3. Nhà giao dịch có thể theo dõi vị trí của họ trên bảng xếp hạng sau 5 ngày kể từ khi cuộc thi bắt đầu.",
-            "zh-Hant": "3.交易者可以在比賽開始後5天監控他們在聯賽的排名。",
-            "id": "3. Para trader dapat melihat posisi mereka di tabel Liga, 5 hari setelah kompetisi berjalan",
-            "es": "3. Los traders pueden controlar sus posiciones en la tabla de la liga, 5 días después del lanzamiento de la competencia.",
-            "pt-BR": "3. Os traders controlam seus posicionamentos na tabela da liga 5 dias depois do lançamento da competência.",
-            "ar": "3. Traders can monitor their positions on the league table 5 days after the competition’s launch."
+            "ar": " ستصبح الأموال الافتراضية متاحة للمتداول"
         },
         "rulesTit3": {
             "zh": "现有客户：",
             "en": "Existing clients:",
             "vi": "Đối với khách hàng hiện tại:",
             "zh-Hant": "現有客戶：",
-            "id": "Klien lama:",
+            "id": "Klien Lama :",
             "es": "Clientes existentes:",
             "pt-BR": "Clientes existentes:",
-            "ar": "Existing clients:"
+            "ar": "العملاء الحاليين:"
         },
         "rulesTit3Con1": {
-            "zh": "1.所有交易者都需要开设联盟账户。",
+            "zh": "1.所有交易者都需要开设联赛账户。",
             "en": "1. All traders need to open a league account.",
-            "vi": "1. Tất cả các nhà giao dịch tham gia cần phải mở một tài khoản Đấu Giải.",
-            "zh-Hant": "1.所有交易者都需要開設聯盟賬戶。",
-            "id": "1. Semua trader harus membuka akun Liga",
+            "vi": "1. Tất cả các nhà giao dịch tham gia cần phải mở một tài khoản Dự Thi.",
+            "zh-Hant": "1.所有交易者都需要開設聯賽賬戶。",
+            "id": "1. Semua trader wajib membuka akun liga.",
             "es": "1. Todos los traders deben abrir una cuenta de liga.",
             "pt-BR": "1. Todos os traders devem abrir uma cuenta de liga.",
-            "ar": "1. All traders need to open a league account."
+            "ar": "يجب على جميع المتداولين فتح حساب للدوري "
         },
         "rulesTit3Con2": {
-            "zh": "2.交易者必须在他们的联盟账户上开立头寸。",
+            "zh": "2.交易者必须在他们的联赛账户上开立头寸。",
             "en": "2. Traders must open some trades on their league account.",
-            "vi": "2. Nhà giao dịch phải mở một số lệnh giao dịch trên tài khoản Đấu Giải của mình.",
-            "zh-Hant": "2.交易者必須在他們的聯盟賬戶上開立頭寸。",
-            "id": "2. Para trader harus melakukan transaksi di akun Liga tersebut.",
+            "vi": "2. Nhà giao dịch phải mở một số lệnh trên tài khoản dự thi của mình.",
+            "zh-Hant": "2.交易者必須在他們的聯賽賬戶上開立頭寸。",
+            "id": "2. Semua trader wajib melakukan transaksi pada akun liga masing-masing.",
             "es": "2. Los traders deben abrir algunas operaciones en su cuenta de liga.",
             "pt-BR": "2. Os traders devem abrir algumas negociações na conta da liga.",
-            "ar": "2. Traders must open some trades on their league account."
-        },
-        "rulesTit3Con3": {
-            "zh": "3.交易者可以在比赛开始后5天监控他们在联赛的排名。",
-            "en": "3. Traders can monitor their positions on the league table 5 days after the competition’s launch.",
-            "vi": "3. Nhà giao dịch có thể theo dõi vị trí của họ trên bảng xếp hạng sau 5 ngày kể từ khi cuộc thi bắt đầu.",
-            "zh-Hant": "3.交易者可以在比賽開始後5天監控他們在聯賽的排名。",
-            "id": "3. Para trader dapat melihat posisi mereka di tabel Liga, 5 hari setelah kompetisi berjalan",
-            "es": "3. Los traders pueden controlar sus posiciones en la tabla de la liga, 5 días después del lanzamiento de la competencia.",
-            "pt-BR": "3. Os traders controlam seus posicionamentos na tabela da liga 5 dias depois do lançamento da competência.",
-            "ar": "3. Traders can monitor their positions on the league table 5 days after the competition’s launch."
+            "ar": "يجب على المتداولين فتح بعض الصفقات على حساب الدوري الخاص بهم"
         },
         "rulesTit4": {
-            "zh": "全球贸易商联盟规则：",
+            "zh": "全球交易者联赛规则：",
             "en": "The Global Traders League rules:",
-            "vi": "Thể lệ giải đấu Nhà Giao Dịch Toàn Cầu:",
-            "zh-Hant": "全球貿易商聯盟規則：",
-            "id": "Peraturan Liga Trader Dunia:",
+            "vi": "Thể Lệ Cuộc Thi Nhà Giao Dịch Toàn Cầu:",
+            "zh-Hant": "全球交易者聯賽規則：",
+            "id": "Peraturan Liga Trader Dunia: ",
             "es": "Las reglas de la Global Traders League:",
             "pt-BR": "As regras da Global Traders League:",
-            "ar": "قواعد دورة التداول العالمية"
+            "ar": "قواعد دوري العالمي للمتداولين "
         },
         "rulesTit4Con1": {
-            "zh": "1.客户必须开设联盟账户才能参加。",
+            "zh": "1.客户必须开设联赛账户才能参加。",
             "en": "1. The client must open a League account in order to participate.",
-            "vi": "1. Khách hàng phải mở tài khoản Đấu Giải để tham gia cuộc thi.",
-            "zh-Hant": "1.客戶必須開設聯盟賬戶才能參加。",
-            "id": "1. Klien harus membuat akun Liga untuk berpartisipasi",
+            "vi": "1. Khách hàng phải mở tài khoản Dự Thi để tham gia cuộc thi.",
+            "zh-Hant": "1.客戶必須開設聯賽賬戶才能參加。",
+            "id": "1. Klien harus membuka akun liga untuk dapat berpartisipasi.",
             "es": "1. El cliente debe abrir una cuenta de League para poder participar.",
             "pt-BR": "1. O cliente abrirá uma cuenta de League para poder participar.",
-            "ar": "1. The client must open a League account in order to participate."
+            "ar": " يجب على العميل فتح حساب للدوري للمشاركة"
         },
         "rulesTit4Con2": {
-            "zh": "2.客户必须在联盟账户上开立头寸才有资格。",
+            "zh": "2.客户必须在联赛账户上开立头寸才有资格。",
             "en": "2. The client must open a position on the League account in order to be eligible.",
-            "vi": "2. Khách hàng phải mở một lệnh trên tài khoản Đấu Giải để đủ điều kiện tham gia cuộc thi.",
-            "zh-Hant": "2.客戶必須在聯盟賬戶上開立頭寸才有資格。",
-            "id": "2. Para klien harus membuka dan menutup posisi di Liga trader",
+            "vi": "2. Khách hàng phải mở một lệnh trên tài khoản dự thi để đủ điều kiện tham gia cuộc thi.",
+            "zh-Hant": "2.客戶必須在聯賽賬戶上開立頭寸才有資格。",
+            "id": "2. Klien harus membuka minimal sebuah posisi pada akun liga agar dapat dihitung.",
             "es": "2. El cliente debe abrir una posición en la cuenta de la Liga para ser elegible.",
             "pt-BR": "2. O cliente abre uma posição na cuenta da Liga para ser elegível.",
-            "ar": "2. The client must open a position on the League account in order to be eligible."
+            "ar": " يجب على العميل فتح مركز في حساب الدوري حتى يكون مؤهلاً"
         },
         "rulesTit4Con3": {
             "zh": "3.参与者可以在单独的联赛页面上实时监控他们的排名。",
             "en": "3. Participants can monitor their rankings in real-time, on a separate landing page.",
-            "vi": "3. Người tham gia có thể theo dõi thứ hạng của họ trong thời gian thực trên một trang riêng.",
+            "vi": "3. Người tham gia cuộc thi có thể theo dõi thứ hạng của mình trong thời gian thực trên trang đích.",
             "zh-Hant": "3.參與者可以在單獨的聯賽頁面上實時監控他們的排名。",
-            "id": "3. Para peserta dapat memonitor posisi ranking masing-masing secara live pada situs yang tersedia",
+            "id": "3. Para peserta dapat memantau peringkat mereka secara real-time pada halaman situs.",
             "es": "3. Los participantes pueden monitorear sus clasificaciones en tiempo real, en una página de destino separada.",
             "pt-BR": "3. Os participantes monitoram suas classificações em tempo real, em uma página de destino selecionado.",
-            "ar": "3. Participants can monitor their rankings in real-time, on a separate landing page."
+            "ar": " يمكن للمشاركين مراقبة تصنيفاتهم في الوقت الفعلي ، على صفحة مقصودة منفصلة"
         },
         "rulesTit4Con4": {
-            "zh": "4.基于最高净值的排名靠前，盈利能力最高的交易者将获得中奖。",
-            "en": "4. The top-ranked, most profitable trader based on the highest net worth will receive the winning prize.",
-            "vi": "4. Nhà giao dịch được xếp hạng cao nhất, đạt lợi nhuận cao nhất dựa trên giá trị ròng cao nhất sẽ nhận được giải thưởng Người Chiến Thắng.",
-            "zh-Hant": "4.基於最高淨值的排名靠前，盈利能力最高的交易者將獲得中獎。",
-            "id": "4. Trader di peringkat teratas dihitung berdasarkan keuntungan tertinggi yang diperoleh, dan dapat memenangkan",
+            "zh": "4.基于净值收益率进行排名。若净值收益率相同，将继续依次基于胜率、交易天数进行排名，盈利能力最高的交易者将获得中奖。",
+            "en": "4. Ranking based on net rate of return. If the net rate of return is the same, it will continue to rank based on the winning rate and the number of trading days in turn, and the trader with the highest profitability will win the prize.",
+            "vi": "4. Xếp hạng dựa trên mức lợi nhuận thực tế. Nếu người chơi có cùng mức lợi nhuận thực tế, xếp hạng sẽ lần lượt dựa trên các tiêu chí khác như tỉ lệ lệnh thắng và số ngày giao dịch. Người nào có tỉ lệ lợi nhuận cao nhất sẽ là người chiến thắng.",
+            "zh-Hant": "4.基於淨值收益率進行排名。若淨值收益率相同，將繼續依次基於勝率、交易天數進行排名，盈利能力最高的交易者將獲得中獎。",
+            "id": "4. Peringkat akan disusun berdasarkan tingkat keuntungan. Apabila tingkat keuntungannya memiliki kesamaan maka pemenang akan dihitung berdasarkan tingkat kemenangan dan berapa lama nya transaksi serta berapa banyak profitabilitas dari trader tersebut.",
             "es": "4. El trader mejor calificado y más rentable basado en el valor neto más alto recibirá el premio ganador.",
             "pt-BR": "4. O trader mais rentável com base no valor mais alto recebe o prêmio mais alto.",
-            "ar": "4. The top-ranked, most profitable trader based on the highest net worth will receive the winning prize."
+            "ar": "الترتيب على أساس معدل العائد الصافي. إذا كان معدل العائد الصافي هو نفسه ، فستستمر في التصنيف على أساس معدل الربح وعدد أيام التداول بدورها ، وسيحقق المتداول صاحب أعلى الربحية الجائزة."
         },
         "rulesTit4Con5": {
-            "zh": "5.两名亚军将获得TigerWit酌情决定的亚军奖金。",
-            "en": "5. Two runners-up will receive runner-up prizes at TigerWit’s discretion.",
-            "vi": "5. Hai á quân sẽ nhận được giải Á Quân theo quyết định của TigerWit.",
-            "zh-Hant": "5.兩名亞軍將獲得TigerWit酌情決定的亞軍獎金。",
-            "id": "5. Dua runner up lainnya juga dapat memenangkan hadiah runner-up sesuai dengan kebijakan dari TigerWit",
+            "zh": "5.活动截止日期前3天将不支持参与该活动",
+            "en": "5. Participation in the league will not be supported 3 days before the league deadline.",
+            "vi": "5. Trong vòng 3 ngày trước khi kết thúc cuộc thi, người chơi mới sẽ không được tham gia.",
+            "zh-Hant": "5.活動截止日期前3天將不支持參與該活動",
+            "id": "5. Pendaftaran akan ditutup 3 hari sebelum liga berakhir. Setelah itu peserta tidak dapat lagi mendaftar.",
             "es": "5. Dos finalistas recibirán premios de segundo lugar a discreción de TigerWit.",
             "pt-BR": "5. Os finalistas recebem prêmios de segundo lugar com a descrição do TigerWit.",
-            "ar": "5. Two runners-up will receive runner-up prizes at TigerWit’s discretion."
+            "ar": "لن يتم دعم المشاركة في الحدث قبل 3 أيام من الموعد النهائي للدوري"
         },
         "rulesTit5": {
             "zh": "交易和排名规则：",
-            "en": "Trading and Ranking Rules:",
+            "en": "Trading and ranking rules:",
             "vi": "Quy tắc Giao Dịch và Xếp Hạng:",
             "zh-Hant": "交易和排名規則：",
-            "id": "Peraturan Trading dan Peraturan Ranking :",
+            "id": "Peraturan trading dan peringkat :",
             "es": "Reglas de negociación y clasificación:",
             "pt-BR": "Regra de trading e classificação:",
-            "ar": "Trading and Ranking Rules:"
+            "ar": "قواعد التداول والتصنيف:"
         },
         "rulesTit5Con1": {
-            "zh": "系统将从10月1日0:00（GMT + 4）到10月31日12:00（GMT + 4）开始记录结果。",
-            "en": "The system will start to record the results from 0:00 (GMT+4 )1st of October to 12:00PM (GMT+4) 31st of October.",
-            "vi": "Hệ thống sẽ bắt đầu ghi lại kết quả từ 0:00 sáng (GMT + 4) từ ngày 1 tháng 10 đến 12:00 đêm (GMT + 4) ngày 31 tháng 10.",
-            "zh-Hant": "系統將從10月1日0:00（GMT + 4）到10月31日12:00（GMT + 4）開始記錄結果。",
-            "id": "Sistem akan mulai menghitung hasil sejak pukul 0:00 (GMT+4) pada 1 Oktober 2019 hingga pukul 12:00 (GMT+4) pada 31 oktober 2019.",
+            "zh": "系统将从10月25日0:00（GMT+3）到11月25日24:00（GMT+3）期间记录结果。",
+            "en": "The system will record the results from 0:00 (GMT+3) on October 25 to 24:00 (GMT+3) on November 25.",
+            "vi": "Hệ thống sẽ ghi nhận kết quả từ 0:00 (GMT+3) ngày 25 tháng 10 đến 24:00 (GMT+3) ngày 25 tháng 11.",
+            "zh-Hant": "系統將從10月25日0:00（GMT+3）到11月25日24:00（GMT+3）期間記錄結果。",
+            "id": "Sistem akan mencatat hasil mulai dari pukul 00:04 (GMT+7) pada tanggal 25 Oktober.",
             "es": "El sistema comenzará a registrar los resultados desde las 0:00 (GMT + 4) del 1 de octubre a las 12:00 PM (GMT + 4) el 31 de octubre.",
             "pt-BR": "O sistema permite registrar os resultados a partir das 0:00 (GMT + 4) de 1 de outubro às 12:00 PM (GMT + 4) a 31 de outubro.",
-            "ar": "The system will start to record the results from 0:00 (GMT+4 )1st of October to 12:00PM (GMT+4) 31st of October."
+            "ar": "سيقوم النظام بتسجيل النتائج من 0:00 (GMT + 3) في 25 أكتوبر إلى 24:00 (GMT + 3) في 25 نوفمبر."
         },
         "rulesTit5Con2": {
-            "zh": "所有交易必须在比赛结束前结束。最终的利润结果将不包括任何未平仓头寸。",
-            "en": "All trades must be closed before the competition ends. The final profit result will not include any open positions.",
-            "vi": "Tất cả các giao dịch phải được đóng lại trước khi cuộc thi kết thúc. Kết quả lợi nhuận cuối cùng sẽ không bao gồm giá trị của các lệnh đang mở.",
-            "zh-Hant": "所有交易必須在比賽結束前結束。最終的利潤結果將不包括任何未平倉頭寸。",
-            "id": "Semua trader harus menutup posisinya sebelum kompetisi berakhir. Perhitungan hasil final akan dihitung berdasarkan posisi yang sudah tertutup maupun yang masih terbuka.",
+            "zh": "所有交易必须在活动结束前结束。",
+            "en": "All transactions must be completed before the end of the league.",
+            "vi": "Tất cả các giao dịch phải hoàn thành trước khi kết thúc cuộc thi.",
+            "zh-Hant": "所有交易必須在活動結束前結束。",
+            "id": "2019 hingga pukul 04:00 (GMT+4) pada tanggal 26 November 2019",
             "es": "Todos los movimientos deben cerrarse antes de que finalice la competencia. El resultado final del beneficio no incluirá ninguna posición abierta.",
             "pt-BR": "Todos os movimentos debem cerrarse antes de finalizar a competência. O resultado final do benefício não inclui a posição aberta.",
-            "ar": "All trades must be closed before the competition ends. The final profit result will not include any open positions."
+            "ar": "يجب إتمام جميع المعاملات قبل نهاية الدوري."
         },
         "lfcTit": {
             "zh": "Do you have what it takes to top The TigerWit Global Traders League?",

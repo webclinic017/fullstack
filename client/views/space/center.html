@@ -95,13 +95,14 @@
             <!-- ng-if="competition.only_key=='liverpoolleague'" -->
             <div class="summary_name">{{competition.names}}
                 <p class="con">
-                    {{(competition.trade_end | date:'yyyy-MM-dd') + ' / ' + (competition.trade_start | date:'yyyy-MM-dd')}}
+                    {{(competition.trade_start | date:'yyyy-MM-dd') + ' / ' + (competition.trade_end | date:'yyyy-MM-dd')}}
                 </p>
             </div>
             <div class="direction-column flex1">
                 <div class="summary_amount">
                     <div ng-if="competition.is_in_competition">
-                        {{(competition.profit_rate * 100).toFixed(2)}}% <p class="con">{{lang.text('tigerWitID.liverpool.floatingRate')}}
+                        {{(competition.profit_rate * 100).toFixed(2)}}% <p class="con">
+                            {{lang.text('tigerWitID.liverpool.floatingRate')}}
                         </p>
                     </div>
                     <div ng-if="!competition.is_in_competition">

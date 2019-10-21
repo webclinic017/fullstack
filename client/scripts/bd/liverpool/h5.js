@@ -67,7 +67,7 @@
                     if (gameInfo.is_effective_date && !gameInfo.is_in_competition) {
                         $('.notParticipating').show();
                     }
-                    // $('#gameTime').html(gameInfo.trade_end.substr(0, 10) + ' / ' + gameInfo.trade_start.substr(0, 10))
+                    $('#gameTime').html(formatDate(new Date(gameInfo.trade_start), 'yyyy-MM-dd') + ' / ' + formatDate(new Date(gameInfo.trade_end), 'yyyy-MM-dd'))
 
                 }
             } else {
@@ -94,8 +94,8 @@
                     var obj = ranking[i];
                     html += '<li>' +
                         '<div>#' + (obj.ranking ? obj.ranking : lang.text('liverpool.noRankingYet')) + '</div>' +
-                        // '<div><span><img src="/images/icons-forex-new/xauusd@2x.png"></span></div>' +
-                        '<div>'+ obj.world_code +'</div>' +
+                        '<div><span><img src="/white_label/jack_icon/'+ obj.world_code +'.png"></span></div>' +
+                        // '<div>'+ obj.world_code +'</div>' +
                         '<div>' + obj.trade_account_memo + '</div>' +
                         '<div>' + (obj.profit_rate * 100).toFixed(2) + '%</div>' +
                         '</li>'
@@ -104,8 +104,8 @@
                 if (personalRanking && personalRanking[0]) {
                     html += '<li class="active">' +
                         '<div>#' + personalRanking[0].ranking + '</div>' +
-                        // '<div><span><img src="/images/icons-forex-new/xauusd@2x.png"></span></div>' +
-                        '<div>'+ personalRanking[0].world_code +'</div>' +
+                        '<div><span><img src="/white_label/jack_icon/'+ personalRanking[0].world_code +'.png"></span></div>' +
+                        // '<div>'+ personalRanking[0].world_code +'</div>' +
                         '<div>' + personalRanking[0].trade_account_memo + '</div>' +
                         '<div>' + (personalRanking[0].profit_rate * 100).toFixed(2) + '%</div>' +
                         '</li>'
