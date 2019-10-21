@@ -75,7 +75,9 @@
             uploadAgentProtocol: uploadAgentProtocol,
             agentProtocol: agentProtocol,
             getVersionCheck: getVersionCheck,
-            getAddressUrl: getAddressUrl
+            getAddressUrl: getAddressUrl,
+            competitionList: competitionList,
+            competitionOpenAccount: competitionOpenAccount
         };
         var resolveValue;
         return service;
@@ -339,15 +341,18 @@
         /**
          * Account Service 获取交易账户列表
          * 交易账户类型、交易账户名称，交易账户MT4Id、浮动收益
+         * index	string	no	trade,account,deposit,withdraw
+         * 备注：index，目前只有值为trade、account的时候会返回比赛账号
          * show_asset 是否显示净值、浮动收益、保证金比例字段；0:不显示，1:显示；默认值:1
          * show_master_level 是否显示高手等级数据；0:不显示，1:显示；默认值:0
          *
          * @method getDealAccountList
          */
-        function getDealAccountList(show_asset, show_master_level) {
+        function getDealAccountList(show_asset, show_master_level, index) {
             return publicHttp.dealPublicRequest(o.getDealAccountListApi, 'GET', {
                 show_asset: show_asset,
-                show_master_level: show_master_level
+                show_master_level: show_master_level,
+                index: index
             });
         }
 
@@ -467,7 +472,7 @@
         }
 
         /**
-         * @name setBasicInfo
+         * @name setBasicInfo(弃)
          * @desc setting 模块设置基本信息
          */
         function setBasicInfo(username, world, state, city) {
@@ -735,6 +740,16 @@
             // })
             
             return publicHttp.dealPublicRequest(o.getAddressUrlApi, 'GET', params)
+        }
+        // liverpool比赛列表
+        function competitionList(params) {
+            
+            return publicHttp.dealPublicRequest(o.competitionListApi, 'GET', params)
+        }
+        // liverpool开通比赛账号
+        function competitionOpenAccount(params) {
+            
+            return publicHttp.dealPublicRequest(o.competitionOpenAccountApi, 'POST', params)
         }
     }
 })();

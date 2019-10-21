@@ -759,6 +759,16 @@ module.exports = function (app) {
         res.render('bd/indonesia/bonus.html', extendPublic({}, req));
     });
 
+    // liverpool比赛 2019.9.25
+    app.route('/global_traders_league').get(function (req, res) {
+        setEnvCf(req, res);
+        res.render('bd/liverpool/h5.html', extendPublic({}, req));
+    });
+    app.route('/bd/lfceshot').get(function (req, res) {
+        setEnvCf(req, res);
+        res.render('bd/liverpool/lfc.html', extendPublic({}, req));
+    });
+
     //转盘抽奖页 2019.06.3
     app.route('/bd/turntable').get(function (req, res) {
         setEnvCf(req, res);

@@ -12476,6 +12476,68 @@
                         "ar": "(انتهت صلاحية الشهادة)"
                     }
                 },
+                "liverpool":{
+                    "floatingRate": {
+                        "zh": "浮动收益率",
+                        "en": "Floating rate of return",
+                        "vi": "Tỉ lệ thả nổi lợi nhuận",
+                        "zh-Hant": "浮動收益率",
+                        "id": "Keuntungan rata-rata",
+                        "es": "Tasa de rendimiento flotante",
+                        "pt-BR": "Taxa de retorno flutuante",
+                        "ar": "معدل العائد العائم"
+                    },
+                    "winAmazingPrizes": {
+                        "zh": "赢取惊人的奖品！",
+                        "en": "Win amazing prizes!",
+                        "vi": "Chiến thắng các giải thưởng tuyệt vời!",
+                        "zh-Hant": "贏取驚人的獎品！",
+                        "id": "Menangkan Hadiah yang spesial !",
+                        "es": "Win amazing prizes!",
+                        "pt-BR": "Win amazing prizes!",
+                        "ar": "اربح جوائز مذهلة!"
+                    },
+                    "checkRanking": {
+                        "zh": "Check my ranking",
+                        "en": "Check my ranking",
+                        "vi": "Check my ranking",
+                        "zh-Hant": "Check my ranking",
+                        "id": "Check my ranking",
+                        "es": "Check my ranking",
+                        "pt-BR": "Check my ranking",
+                        "ar": "Check my ranking"
+                    },
+                    "enterLeague": {
+                        "zh": "进入联赛",
+                        "en": "Enter the league",
+                        "vi": "Tham gia giải đấu",
+                        "zh-Hant": "進入聯賽",
+                        "id": "Masuk ke dalam Liga",
+                        "es": "Enter the league",
+                        "pt-BR": "Enter the league",
+                        "ar": "شارك في المسابقة"
+                    },
+                    "contestAccount": {
+                        "zh": "比赛账号",
+                        "en": "Contest account",
+                        "vi": "Contest account",
+                        "zh-Hant": "比赛账号",
+                        "id": "Contest account",
+                        "es": "Contest account",
+                        "pt-BR": "Contest account",
+                        "ar": "Contest account"
+                    },
+                    "": {
+                        "zh": "",
+                        "en": "",
+                        "vi": "",
+                        "zh-Hant": "",
+                        "id": "",
+                        "es": "",
+                        "pt-BR": "",
+                        "ar": ""
+                    }
+                },
                 "noMetNeed": {
                     "zh": "未达成",
                     "en": "unfinished",
