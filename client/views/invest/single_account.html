@@ -1,57 +1,90 @@
-<div class="space_center_trading" >
-    <div class="space-between-center-i">
-        <div class="item-center-i">
+<div class="space_center_trading">
+    <div class="space-between-center">
+        <div class="item-center">
             <div class="block_title">{{lang.text('tigerWitID.tradingAccount.title')}}</div>
-            <tw-select-list default-select-key="defaultSelectKey" default-select="investSelect" disabled="true" select-data-list="accountInfo.accountList" click-change="changeSelect()"></tw-select-list>
+            <tw-select-list default-select-key="defaultSelectKey" default-select="investSelect" disabled="true"
+                select-data-list="accountInfo.accountList" click-change="changeSelect()"></tw-select-list>
         </div>
-        <div class=""  ng-if="!personal.has_master">
-            <div class="block_btn_group text-right">
-                <a ui-sref="space.master.subpage({ subpage: 'apply'})" class="tw-btn tw-btn-capsule-gradient tw-btn-md">{{lang.text('tigerWitID.tradingAccount.becomeMaster')}}</a>
+        <div class="" ng-if="!personal.has_master">
+            <div class="block_btn_group">
+                <a ui-sref="space.master.subpage({ subpage: 'apply'})"
+                    class="tw-btn tw-btn-capsule-gradient tw-btn-md">{{lang.text('tigerWitID.tradingAccount.becomeMaster')}}</a>
             </div>
         </div>
     </div>
 
-    <div class="row">
-        <ul class="trading_details clearfix">
+    <div class="">
+        <ul class="trading_details ">
             <li>
-                <p class="num">${{ singleAccountInfo.equity || '0.00' }}</p>
-                <p class="tip">{{lang.text('tigerWitID.details.netAssetValue')}}</p>
+                <div>
+                    <p class="num">${{ singleAccountInfo.equity || '0.00' }}</p>
+                    <p class="tip">{{lang.text('tigerWitID.details.netAssetValue')}}</p>
+                </div>
             </li>
             <li>
-                <p class="num">${{ singleAccountInfo.margin_free || '0.00' }}</p>
-                <p class="tip">{{lang.text('tigerWitID.details.freeMargin')}}</p>
+                <div>
+                    <p class="num">${{ singleAccountInfo.margin_free || '0.00' }}</p>
+                    <p class="tip">{{lang.text('tigerWitID.details.freeMargin')}}</p>
+                </div>
             </li>
             <li>
-                <p class="num">{{ singleAccountInfo.margin_level || '0.00' }}%</p>
-                <p class="tip">{{lang.text('tigerWitID.details.marginLevel')}}</p>
+                <div>
+                    <p class="num">{{ singleAccountInfo.margin_level || '0.00' }}%</p>
+                    <p class="tip">{{lang.text('tigerWitID.details.marginLevel')}}</p>
+                </div>
             </li>
             <li class="noLine">
-                <p class="num">{{ singleAccountInfo.volume || '0.00' }}</p>
-                <p class="tip">{{lang.text('tigerWitID.details.totalLots')}}</p>
+                <div>
+                    <p class="num">{{ singleAccountInfo.volume || '0.00' }}</p>
+                    <p class="tip">{{lang.text('tigerWitID.details.totalLots')}}</p>
+                </div>
             </li>
             <li ng-if="investSelect.type === 2">
-                <p class="num">{{ singleAccountInfo.copy_num || '0' }}</p>
-                <p class="tip">{{lang.text('fuzhirenshu')}}</p>
+                <div>
+                    <p class="num">{{ singleAccountInfo.copy_num || '0' }}</p>
+                    <p class="tip">{{lang.text('fuzhirenshu')}}</p>
+                </div>
             </li>
             <li ng-if="investSelect.type === 3">
-                <p class="num">{{ singleAccountInfo.copy_num || '0' }}</p>
-                <p class="tip">{{lang.text('tigerWitID.tradingAccount.followerAmount')}}</p>
+                <div>
+                    <p class="num">{{ singleAccountInfo.copy_num || '0' }}</p>
+                    <p class="tip">{{lang.text('tigerWitID.tradingAccount.followerAmount')}}</p>
+                </div>
             </li>
-            <li ng-mouseenter="show_close_profit=true" ng-mouseleave="show_close_profit=false" ng-class="{'active':show_close_profit}">
-                <p class="num" ng-class="{'font-danger': singleAccountInfo.profit.indexOf('-') < 0, 'font-success': singleAccountInfo.profit.indexOf('-') >= 0}" ng-if="lang.hostIsCn()">${{ singleAccountInfo.profit || '0.00' }}</p>
-                <p class="num" ng-class="{'font-success': singleAccountInfo.profit.indexOf('-') < 0, 'font-danger': singleAccountInfo.profit.indexOf('-') >= 0}" ng-if="!lang.hostIsCn()">${{ singleAccountInfo.profit || '0.00' }}</p>
-                <p class="tip">{{lang.text('tigerWitID.details.historicalTotalEarning')}}</p>
-                <p class="space_center_hint">{{lang.text('tigerWitID.tradingAccount.tip21')}}</p>
+            <li ng-mouseenter="show_close_profit=true" ng-mouseleave="show_close_profit=false"
+                ng-class="{'active':show_close_profit}">
+                <div>
+                    <p class="num"
+                        ng-class="{'font-danger': singleAccountInfo.profit.indexOf('-') < 0, 'font-success': singleAccountInfo.profit.indexOf('-') >= 0}"
+                        ng-if="lang.hostIsCn()">${{ singleAccountInfo.profit || '0.00' }}</p>
+                    <p class="num"
+                        ng-class="{'font-success': singleAccountInfo.profit.indexOf('-') < 0, 'font-danger': singleAccountInfo.profit.indexOf('-') >= 0}"
+                        ng-if="!lang.hostIsCn()">${{ singleAccountInfo.profit || '0.00' }}</p>
+                    <p class="tip">{{lang.text('tigerWitID.details.historicalTotalEarning')}}</p>
+                    <p class="space_center_hint">{{lang.text('tigerWitID.tradingAccount.tip21')}}</p>
+                </div>
             </li>
             <li>
-                <p class="num" ng-class="{'font-danger': singleAccountInfo.floating_profit.indexOf('-') < 0, 'font-success': singleAccountInfo.floating_profit.indexOf('-') >= 0}" ng-if="lang.hostIsCn()">${{ singleAccountInfo.floating_profit || '0.00' }}</p>
-                <p class="num" ng-class="{'font-success': singleAccountInfo.floating_profit.indexOf('-') < 0, 'font-danger': singleAccountInfo.floating_profit.indexOf('-') >= 0}" ng-if="!lang.hostIsCn()">${{ singleAccountInfo.floating_profit || '0.00' }}</p>
-                <p class="tip">{{lang.text('tigerWitID.details.floatingPL')}}</p>
+                <div>
+                    <p class="num"
+                        ng-class="{'font-danger': singleAccountInfo.floating_profit.indexOf('-') < 0, 'font-success': singleAccountInfo.floating_profit.indexOf('-') >= 0}"
+                        ng-if="lang.hostIsCn()">${{ singleAccountInfo.floating_profit || '0.00' }}</p>
+                    <p class="num"
+                        ng-class="{'font-success': singleAccountInfo.floating_profit.indexOf('-') < 0, 'font-danger': singleAccountInfo.floating_profit.indexOf('-') >= 0}"
+                        ng-if="!lang.hostIsCn()">${{ singleAccountInfo.floating_profit || '0.00' }}</p>
+                    <p class="tip">{{lang.text('tigerWitID.details.floatingPL')}}</p>
+                </div>
             </li>
             <li class="noLine">
-                <p class="num" ng-class="{'font-danger': singleAccountInfo.profit_rate.indexOf('-') < 0, 'font-success': singleAccountInfo.profit_rate.indexOf('-') >= 0}" ng-if="lang.hostIsCn()">{{ singleAccountInfo.profit_rate || '0.00' }}%</p>
-                <p class="num" ng-class="{'font-success': singleAccountInfo.profit_rate.indexOf('-') < 0, 'font-danger': singleAccountInfo.profit_rate.indexOf('-') >= 0}" ng-if="!lang.hostIsCn()">{{ singleAccountInfo.profit_rate || '0.00' }}%</p>
-                <p class="tip">{{lang.text('tigerWitID.details.totalProfitRate')}}</p>
+                <div>
+                    <p class="num"
+                        ng-class="{'font-danger': singleAccountInfo.profit_rate.indexOf('-') < 0, 'font-success': singleAccountInfo.profit_rate.indexOf('-') >= 0}"
+                        ng-if="lang.hostIsCn()">{{ singleAccountInfo.profit_rate || '0.00' }}%</p>
+                    <p class="num"
+                        ng-class="{'font-success': singleAccountInfo.profit_rate.indexOf('-') < 0, 'font-danger': singleAccountInfo.profit_rate.indexOf('-') >= 0}"
+                        ng-if="!lang.hostIsCn()">{{ singleAccountInfo.profit_rate || '0.00' }}%</p>
+                    <p class="tip">{{lang.text('tigerWitID.details.totalProfitRate')}}</p>
+                </div>
             </li>
         </ul>
     </div>

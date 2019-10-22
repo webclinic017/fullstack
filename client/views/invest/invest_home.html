@@ -25,12 +25,12 @@
 
 
 <div class="space_center_trading">
-    <div class="row">
-        <div class="col-xs-5">
+    <div class="space-between">
+        <div class="">
             <div class="block_title">{{lang.text('tigerWitID.tradingAccount.tradingSubAccounts')}}</div>
         </div>
-        <div class="col-xs-7">
-            <div class="block_btn_group text-right">
+        <div class="">
+            <div class="block_btn_group">
                 <a class="tw-btn tw-btn-capsule-bordered tw-btn-md" ng-click="newSubAccount()">{{lang.text('tigerWitID.tradingAccount.createAccount')}}</a>
                 <a ui-sref="space.master.subpage({subpage: 'apply'})" ng-if="!personal.has_master" class="tw-btn tw-btn-capsule-bordered tw-btn-md">{{lang.text('tigerWitID.tradingAccount.becomeMaster')}}</a>
             </div>
@@ -48,6 +48,7 @@
                                     <span class="edit" ng-if="info.clickEdit" ng-click="editAccountName(dealAccount)"></span>
                                     <span class="edit" ng-if="!info.clickEdit"></span>
                                     <span class="z-symbol z-superior" ng-if="dealAccount.account_type === 3">{{lang.text('tigerWitID.tradingAccount.masterAccount')}}</span>
+                                    <span class="z-symbol z-superior" ng-if="dealAccount.account_type === 4">{{lang.text('tigerWitID.liverpool.contestAccount')}}</span>
                                     <span class="z-symbol z-documentary" ng-if="dealAccount.account_type === 2">{{lang.text('tigerWitID.tradingAccount.copyAccount')}}</span>
                                 </span>
                                 <span class="edit-name" ng-class="{'submit-error': editAccountNameAwake.result.error, 'submit-success': editAccountNameAwake.result.success}" ng-if="dealAccount.editName">
@@ -94,11 +95,11 @@
                             </a>
                             <div class="master_category">
                                 <span class="grade">{{lang.text('tigerWitID.master.masterLevels')}}<span>{{ dealAccount.master_info.level || 'B' }}</span></span>
-                                <a ui-sref="space.master.subpage({subpage: 'grade', account_code: dealAccount.account_code})" class="details">{{lang.text('tigerWitID.tradingAccount.details')}} &gt;</a>
+                                <a ui-sref="space.master.subpage({subpage: 'grade', account_code: dealAccount.account_code})" class="details">{{lang.text('tigerWitID.tradingAccount.details')}} &gt; </a>
                             </div>
                         </li>
                         <li class="mg-tp-15" ng-if="!dealAccount.is_active">
-                            <a class="mg-lf-0 tw-btn tw-btn-sm130 tw-btn-capsule-gradient" ui-sref="space.asset.subpage({subpage: 'deposit', account: dealAccount.mt4_id})">{{lang.text('tigerWitID.tradingAccount.depositToActivate')}}</a>
+                            <a class="tw-btn tw-btn-sm130 tw-btn-capsule-gradient" ui-sref="space.asset.subpage({subpage: 'deposit', account: dealAccount.mt4_id})">{{lang.text('tigerWitID.tradingAccount.depositToActivate')}}</a>
                         </li>
                     </ul>
                 </li>
@@ -108,11 +109,13 @@
                             <p>{{ dealAccount.equity }}</p>
                             <p>{{lang.text('tigerWitID.tradingAccount.netAssetValue')}}</p>
                         </li>
+                        <li></li>
                         <li>
                             <p>{{ dealAccount.floating_profit }}</p>
                             <p>{{lang.text('tigerWitID.tradingAccount.floatingPL')}}</p>
                         </li>
-                        <li class="noLine">
+                        <li></li>
+                        <li>
                             <p>{{ dealAccount.margin_level }}%</p>
                             <p>{{lang.text('tigerWitID.tradingAccount.marginLevel')}}</p>
                         </li>

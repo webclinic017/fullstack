@@ -76,13 +76,13 @@
                                 <i class="fa fa-eye-slash" aria-hidden="true"></i>
                             </span>
                         </div> -->
-                        <div class="account_login__remenber clearfix">
-                            <span class="account_login__remenber-btn fl" ng-click="changeRememberLogin()">
+                        <div class="account_login__remenber space-between-center">
+                            <span class="account_login__remenber-btn" ng-click="changeRememberLogin()">
                                 <i class="fa fa-square-o" ng-show="!rememberLoginStatus"></i>
                                 <i class="fa fa-check-square" ng-show="rememberLoginStatus"></i>
                                 {{ lang.text('tigerWitID.login.keepMeLogin') }}
                             </span>
-                            <p class="account_login__remenber-switch fr">
+                            <p class="account_login__remenber-switch">
                                 <span ng-click="toggleLoginMethod(1)" ng-if="loginStep3 == 2">{{lang.text('tigerWitID.login.loginWithEmail')}}</span>
                             </p>
                         </div>
@@ -139,13 +139,13 @@
                                 <i class="fa fa-eye-slash" aria-hidden="true"></i>
                             </span>
                         </div> -->
-                        <div class="account_login__remenber clearfix">
-                            <span class="account_login__remenber-btn fl" ng-click="changeRememberLogin()">
+                        <div class="account_login__remenber space-between-center">
+                            <span class="account_login__remenber-btn" ng-click="changeRememberLogin()">
                                 <i class="fa fa-square-o" ng-show="!rememberLoginStatus"></i>
                                 <i class="fa fa-check-square" ng-show="rememberLoginStatus"></i>
                                 {{ lang.text('tigerWitID.login.keepMeLogin') }}
                             </span>
-                            <p class="account_login__remenber-switch fr">
+                            <p class="account_login__remenber-switch">
                                 <span ng-click="toggleLoginMethod(2)" ng-if="loginStep3 == 1">{{lang.text('tigerWitID.login.loginWithMobile')}}</span>
                             </p>
                         </div>
@@ -203,8 +203,8 @@
                         </div>
                     </form>
                     <div class="account_login__btn_wrapper pd-tp-15">
-                        <button class="tw-btn-md tw-btn-capsule-gradient mg-rg-30" ng-click="backPassword()">{{ lang.text('actLogin29_1') }}</button>
-                        <button class="tw-btn-md tw-btn-capsule-gradient" ng-click="goForgetPassword2('loginFormforgetPhonePw', 'phonePhone', 'forgetPhoneCode')">{{ lang.text('actLogin29') }}</button>
+                        <button class="tw-btn-md tw-btn-capsule-gradient mg-rg-15 mg-lf-15" ng-click="backPassword()">{{ lang.text('actLogin29_1') }}</button>
+                        <button class="tw-btn-md tw-btn-capsule-gradient mg-rg-15 mg-lf-15" ng-click="goForgetPassword2('loginFormforgetPhonePw', 'phonePhone', 'forgetPhoneCode')">{{ lang.text('actLogin29') }}</button>
                     </div>
                 </div>
                 <div ng-show="loginStep2 == 2 && loginStep3 == 1">
@@ -244,8 +244,8 @@
                         </div>
                     </form>
                     <div class="account_login__btn_wrapper pd-tp-15">
-                        <button class="tw-btn-md tw-btn-capsule-gradient mg-rg-30" ng-click="backPassword()">{{ lang.text('actLogin29_1') }}</button>
-                        <button class="tw-btn-md tw-btn-capsule-gradient" ng-click="goForgetPassword2('loginFormforgetEmailPw', 'emailEmali', 'forgetEmailCode')">{{ lang.text('actLogin29') }}</button>
+                        <button class="tw-btn-md tw-btn-capsule-gradient mg-rg-15 mg-lf-15" ng-click="backPassword()">{{ lang.text('actLogin29_1') }}</button>
+                        <button class="tw-btn-md tw-btn-capsule-gradient mg-rg-15 mg-lf-15" ng-click="goForgetPassword2('loginFormforgetEmailPw', 'emailEmali', 'forgetEmailCode')">{{ lang.text('actLogin29') }}</button>
                     </div>
                 </div>
                 <!-- 忘记密码 设置密码 -->
@@ -299,8 +299,8 @@
                         <!-- <p class="account_login__pass-tip2">{{ lang.text('actLogin23') }}</p> -->
                     </form>
                     <div class="account_login__btn_wrapper pd-tp-15">
-                        <button class="tw-btn-md tw-btn-capsule-gradient mg-rg-30" ng-click="goForgetPassword()">{{ lang.text('actLogin29_1') }}</button>
-                        <button class="tw-btn-md tw-btn-capsule-gradient" ng-click="setForgetPassword('loginFormSetPw')">{{ lang.text('actLogin30') }}</button>
+                        <button class="tw-btn-md tw-btn-capsule-gradient mg-rg-15 mg-lf-15" ng-click="goForgetPassword()">{{ lang.text('actLogin29_1') }}</button>
+                        <button class="tw-btn-md tw-btn-capsule-gradient mg-rg-15 mg-lf-15" ng-click="setForgetPassword('loginFormSetPw')">{{ lang.text('actLogin30') }}</button>
                     </div>
                 </div>
                 <!-- 设置密码成功 -->
@@ -373,13 +373,13 @@
                                 {{lang.text('tigerWitID.myAccount.tip39_1')}}{{ codeBtnStatus.phoneVePhone.msg }}{{lang.text('tigerWitID.myAccount.tip39_2')}}
                             </span>
                         </div>
-                        <div class="account_login__remenber clearfix">
-                            <span class="account_login__remenber-btn fl" ng-click="changeRememberLogin()">
+                        <div class="account_login__remenber space-between-center">
+                            <span class="account_login__remenber-btn" ng-click="changeRememberLogin()">
                                 <i class="fa fa-square-o" ng-show="!rememberLoginStatus"></i>
                                 <i class="fa fa-check-square" ng-show="rememberLoginStatus"></i>
                                 {{ lang.text('tigerWitID.login.keepMeLogin') }}
                             </span>
-                            <p class="account_login__remenber-switch fr">
+                            <p class="account_login__remenber-switch">
                                 <span ng-click="toggleLoginMethod(1)" ng-if="loginStep3 == 2">{{lang.text('tigerWitID.login.loginWithEmail')}}</span>
                             </p>
                         </div>
@@ -424,13 +424,13 @@
                                 {{lang.text('tigerWitID.myAccount.tip39_1')}}{{ codeBtnStatus.emailVeEmail.msg }}{{lang.text('tigerWitID.myAccount.tip39_2')}}
                             </span>
                         </div>
-                        <div class="account_login__remenber clearfix">
-                            <span class="account_login__remenber-btn fl" ng-click="changeRememberLogin()">
+                        <div class="account_login__remenber space-between-center">
+                            <span class="account_login__remenber-btn" ng-click="changeRememberLogin()">
                                 <i class="fa fa-square-o" ng-show="!rememberLoginStatus"></i>
                                 <i class="fa fa-check-square" ng-show="rememberLoginStatus"></i>
                                 {{ lang.text('tigerWitID.login.keepMeLogin') }}
                             </span>
-                            <p class="account_login__remenber-switch fr">
+                            <p class="account_login__remenber-switch">
                                 <span ng-click="toggleLoginMethod(2)" ng-if="loginStep3 == 1">{{lang.text('tigerWitID.login.loginWithMobile')}}</span>
                             </p>
                         </div>

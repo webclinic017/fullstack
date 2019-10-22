@@ -28,23 +28,23 @@
             <p class="deposit_modal__tit" style="font-family: initial;">{{msgInfo.currency.currency_symbol}}
                 {{msgInfo.amountTotal}}</p>
             <ul class="deposit_modal__lst">
-                <li class="clearfix">
-                    <span class="fl">{{lang.text('tigerWitID.depositWithdrawal.depositAmountM')}}</span>
-                    <span class="fr" style="font-family: initial;">$ {{msgInfo.amountDollar}}</span>
+                <li class="space-between">
+                    <span class="">{{lang.text('tigerWitID.depositWithdrawal.depositAmountM')}}</span>
+                    <span class="" style="font-family: initial;">$ {{msgInfo.amountDollar}}</span>
                 </li>
-                <li class="clearfix" ng-if="msgInfo.currency.currency !== 'USD'">
-                    <span class="fl">{{lang.text('tigerWitID.depositWithdrawal.tip59_1')}}{{msgInfo.currency.currency_name}}{{lang.text('tigerWitID.depositWithdrawal.tip59_2')}}</span>
-                    <span class="fr" style="font-family: initial;">{{msgInfo.currency.currency_symbol}}
+                <li class="space-between" ng-if="msgInfo.currency.currency !== 'USD'">
+                    <span class="">{{lang.text('tigerWitID.depositWithdrawal.tip59_1')}}{{msgInfo.currency.currency_name}}{{lang.text('tigerWitID.depositWithdrawal.tip59_2')}}</span>
+                    <span class="" style="font-family: initial;">{{msgInfo.currency.currency_symbol}}
                         {{msgInfo.amountRMB}}</span>
                 </li>
-                <li class="clearfix">
-                    <span class="fl">{{lang.text('tigerWitID.details.commission')}}：</span>
-                    <span class="fr" style="font-family: initial;">{{msgInfo.currency.currency_symbol}}
+                <li class="space-between">
+                    <span class="">{{lang.text('tigerWitID.details.commission')}}：</span>
+                    <span class="" style="font-family: initial;">{{msgInfo.currency.currency_symbol}}
                         {{msgInfo.isFree ? msgInfo.amountFee : '0.00'}}</span>
                 </li>
-                <li class="clearfix" ng-if="!msgInfo.isFree">
-                    <span class="fl"></span>
-                    <span class="fr" style="font-family: initial; text-decoration: line-through; color: #f23244;">{{msgInfo.currency.currency_symbol}}
+                <li class="space-between" ng-if="!msgInfo.isFree">
+                    <span class=""></span>
+                    <span class="" style="font-family: initial; text-decoration: line-through; color: #f23244;">{{msgInfo.currency.currency_symbol}}
                         {{msgInfo.amountFee}}</span>
                 </li>
             </ul>

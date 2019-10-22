@@ -111,9 +111,9 @@
   @include b(help_content) {
     // index
     @include e(products) {
-      display: inline-block;
+      @include displayFlex();
+      @include justifyContent(center);
       @include m(item) {
-        float: left;
         width: 165px;
         height: 165px;
         border: 8px solid;
@@ -171,23 +171,23 @@
       border-radius:20px;
       position: relative;
       border:1px solid rgba(187,196,215,0.5);
-      padding: 63px 37px 28px;
       overflow: hidden;
       > div{
+        padding: 63px 37px 28px;
         p {
           font-size: 16px;
           line-height:28px;
           color: $main-char-color-50;
         }
       }
+      // 添加多语言需要改布局，改阿拉伯语时需要单独设置
       &::before {
         content: '提示';
         position: absolute;
         top: 0;
-        left: 0;
         padding: 8px 25px;
         background: $primary-darker;
-        border-radius: 0 0px 20px 0px;
+        border-radius: 0 0px 19px 0px;
         font-size:18px;
         font-weight:600;
         color:rgba(36,42,54,1);
@@ -212,6 +212,7 @@
             background-color: $brand-primary-dark;
             display: inline-block;
             margin-right: 12px;
+            margin-left: 12px;
           }
         }
       }

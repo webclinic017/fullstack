@@ -47,7 +47,7 @@
 
         function getDealAccount() {
             // 获取用户交易账户信息
-            account.getDealAccountList(1, 1).then(function (data) {
+            account.getDealAccountList(1, 1, 'account').then(function (data) {
                 if (!data) return;
                 console.info(data);
                 if (data.is_succ) {

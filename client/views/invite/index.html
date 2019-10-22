@@ -3,25 +3,27 @@
     <div class="invite-con__title">
         {{lang.text('tigerWitID.inviteFriends.inviteFriend')}}
     </div>
-    <div class="row invite-con__link">
-        <div class="col-xs-8">
-            <input class="form-control form-control-md"
-                   name="link"
-                   type="text"
-                   readonly
-                   ng-model="invitation.link"
-                   ng-click="selectTxt()">
-            <br>
-            <p>
-                <!--<span class="font-danger">*</span>
-                把你的邀请链接发送给好友，即可获得
-                <span class="font-danger">$20</span> 的奖励-->
-            </p>
+    <div class="invite-con__link item-center">
+        <div class="item-center flex1">
+            <div class="flex1">
+                <input class="form-control form-control-md"
+                    name="link"
+                    type="text"
+                    readonly
+                    ng-model="invitation.link"
+                    ng-click="selectTxt()">
+                <!-- <br>
+                <p>
+                    <span class="font-danger">*</span>
+                    把你的邀请链接发送给好友，即可获得
+                    <span class="font-danger">$20</span> 的奖励
+                </p> -->
+            </div>
+            <div class="invite_btn">
+                <a class="btn btn-primary btn-sm" ng-click="selectTxt()">{{lang.text('tigerWitID.copy')}}</a>
+            </div>
         </div>
-        <div class="col-xs-2 invite_btn">
-            <a class="btn btn-primary btn-sm" ng-click="selectTxt()">{{lang.text('tigerWitID.copy')}}</a>
-        </div>
-        <div class="col-xs-2">
+        <div class="">
             <p class="num">{{ friendsNum }}</p>
             <p class="tip">{{lang.text('tigerWitID.inviteFriends.invitedFriends')}}</p>
         </div>

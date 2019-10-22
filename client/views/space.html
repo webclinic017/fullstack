@@ -10,7 +10,7 @@
 
         <% include /common/statistic/main.html %>
     </head>
-    <body ng-app="fullstackApp" class="<%= lang_class%>">
+    <body ng-app="fullstackApp" class="<%= lang_class%> <%= lang.isAr('ar-lang')%>">
         <div ng-controller="GlobalController">
             <div class="header">
                 <% include /common/nav/web.header.html %>
@@ -90,6 +90,7 @@
         <script src="/scripts/invest/record.controller.js"></script>
         <script src="/scripts/invest/bonus.controller.js"></script>
         <script src="/scripts/invest/add_account.controller.js"></script>
+        <script src="/scripts/invest/liverpool.controller.js"></script>
 
         <script src="/scripts/wallet/toolbar.controller.js"></script>
         <script src="/scripts/wallet/summary.controller.js"></script>

@@ -7,9 +7,9 @@
 
     <div class="sys_modal_v2__content">
         <ul class="deposit_modal__type">
-            <li class="row" ng-repeat="(key, value) in account.dealAccountList" ng-click="selectType(value)">
-                <div class="col-xs-3 deposit_modal__type-icon">
-                    <span class="btn-select fr" ng-class="{active: account.accountItem.mt4_id === value.mt4_id}"></span>
+            <li class="display-flex" ng-repeat="(key, value) in account.dealAccountList" ng-click="selectType(value)">
+                <div class="col-xs-3 justify-flex-end deposit_modal__type-icon">
+                    <span class="btn-select" ng-class="{active: account.accountItem.mt4_id === value.mt4_id}"></span>
                 </div>
                 <div class="col-xs-9 deposit_modal__type-cont">
                     <p class="tit">{{value.account_name || lang.text('tigerWitID.tradingAccount.tradingAccountg')}}</p>

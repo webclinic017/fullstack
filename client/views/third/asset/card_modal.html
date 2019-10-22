@@ -11,9 +11,9 @@
             </h5>
             <div class="sys_modal_v2__content" ng-show="!card.binding">
                 <form name="cardForm" novalidate>
-                    <div class="row">
-                        <div class="col-xs-3 text-left">
-                            <label>持卡人：</label>
+                    <div class="item-center">
+                        <div class="col-xs-3">
+                            <label class="form-control-wrapper">持卡人：</label>
                         </div>
     
                         <div class="col-xs-9">
@@ -42,9 +42,9 @@
                         </div>
                     </div>
     
-                    <div class="row">
-                        <div class="col-xs-3 text-left">
-                            <label>银行国家：</label>
+                    <div class="item-center">
+                        <div class="col-xs-3">
+                            <label class="form-control-wrapper">银行国家：</label>
                         </div>
     
                         <div class="col-xs-9">
@@ -77,9 +77,9 @@
                         </div>
                     </div>
     
-                    <div class="row">
-                        <div class="col-xs-3 text-left">
-                            <label>卡号：</label>
+                    <div class="item-center">
+                        <div class="col-xs-3">
+                            <label class="form-control-wrapper">卡号：</label>
                         </div>
     
                         <div class="col-xs-9">
@@ -107,9 +107,9 @@
                         </div>
                     </div>
     
-                    <div class="row" ng-if="card.world && card.world.world_code === 'CN'">
-                        <div class="col-xs-3 text-left">
-                            <label>选择开户行：</label>
+                    <div class="item-center" ng-if="card.world && card.world.world_code === 'CN'">
+                        <div class="col-xs-3">
+                            <label class="form-control-wrapper">选择开户行：</label>
                         </div>
     
                         <div class="col-xs-9">
@@ -133,9 +133,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row" ng-if="card.world && card.world.world_code !== 'CN'">
-                        <div class="col-xs-3 text-left">
-                            <label>填写开户行：</label>
+                    <div class="item-center" ng-if="card.world && card.world.world_code !== 'CN'">
+                        <div class="col-xs-3">
+                            <label class="form-control-wrapper">填写开户行：</label>
                         </div>
     
                         <div class="col-xs-9">
@@ -159,9 +159,9 @@
                         </div>
                     </div>
     
-                    <div class="row" ng-if="card.world && card.world.world_code !== 'CN'">
-                        <div class="col-xs-3 text-left">
-                            <label>银行机构鉴定代码：</label>
+                    <div class="item-center" ng-if="card.world && card.world.world_code !== 'CN'">
+                        <div class="col-xs-3">
+                            <label class="form-control-wrapper">银行机构鉴定代码：</label>
                         </div>
     
                         <div class="col-xs-9">
@@ -185,9 +185,9 @@
                         </div>
                     </div>
     
-                    <div class="row" ng-if="card.world && card.world.world_code === 'CN'">
-                        <div class="col-xs-3 text-left">
-                            <label>开户省：</label>
+                    <div class="item-center" ng-if="card.world && card.world.world_code === 'CN'">
+                        <div class="col-xs-3">
+                            <label class="form-control-wrapper">开户省：</label>
                         </div>
     
                         <div class="col-xs-9">
@@ -213,9 +213,9 @@
                         </div>
                     </div>
     
-                    <div class="row" ng-if="card.world && card.world.world_code === 'CN'">
-                        <div class="col-xs-3 text-left">
-                            <label>开户市：</label>
+                    <div class="item-center" ng-if="card.world && card.world.world_code === 'CN'">
+                        <div class="col-xs-3">
+                            <label class="form-control-wrapper">开户市：</label>
                         </div>
     
                         <div class="col-xs-9">
@@ -240,10 +240,10 @@
                         </div>
                     </div>
     
-                    <div class="row" ng-if="card.world">
-                        <div class="col-xs-3 text-left">
-                            <label ng-if="card.world && card.world.world_code === 'CN'">支行名称：</label>
-                            <label ng-if="card.world && card.world.world_code !== 'CN'">开户地址：</label>
+                    <div class="item-center" ng-if="card.world">
+                        <div class="col-xs-3">
+                            <label class="form-control-wrapper" ng-if="card.world && card.world.world_code === 'CN'">支行名称：</label>
+                            <label class="form-control-wrapper" ng-if="card.world && card.world.world_code !== 'CN'">开户地址：</label>
                         </div>
     
                         <div class="col-xs-9">
@@ -267,9 +267,9 @@
                         </div>
                     </div>
     
-                    <div class="row" ng-if="card.world && card.world.world_code === 'CN'">
-                        <div class="col-xs-3 text-left">
-                            <label>预留手机号：</label>
+                    <div class="item-center" ng-if="card.world && card.world.world_code === 'CN'">
+                        <div class="col-xs-3">
+                            <label class="form-control-wrapper">预留手机号：</label>
                         </div>
     
                         <div class="col-xs-9">

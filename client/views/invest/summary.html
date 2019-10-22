@@ -3,8 +3,8 @@
         <h5 class="navbar_summary__title">{{lang.text('tigerWitID.dataStatistics.transactionsProfile')}}</h5>
         <div class="navbar_summary__content">
             <div class="invest_main">
-                <div class="row">
-                    <div class="col-xs-6">
+                <div class="item-center">
+                    <div class="flex1 relative">
                         <div tw-pie-chart data-pie-type="space"></div>
                         <div class="invest_main__order">
                             <span class="invest_order_profit">{{lang.text('tigerWitID.dataStatistics.profitOrders')}}</span>
@@ -16,7 +16,7 @@
                             <span class="space_gray_color">{{lang.text('tigerWitID.dataStatistics.closedOrders')}}</span>
                         </div>
                     </div>
-                    <div class="col-xs-6">
+                    <div class="flex1">
                         <div class="row">
                             <div class="col-xs-6 no_padding">
                                 <div class="invest_main__rt">
@@ -67,7 +67,7 @@
             <div tw-loading-img></div>
 
             <ul class="invest_type" ng-if="bars.length > 0">
-                <li ng-repeat="bar in bars" class="invest_type__item row">
+                <li ng-repeat="bar in bars" class="invest_type__item space-between-center">
                     <div class="col-xs-5">
                         <span class="invest_type__icon icon-forex-{{ bar.symbol_mod.toLowerCase() }}"></span>
                         <span class="invest_type__tit">{{lang.isEnglishArea() ? (bar.symbol_mod) : ((bar.symbol_mod | symbolMod:'zh') + '(' + bar.symbol_mod + ')')}}</span>

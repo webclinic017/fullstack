@@ -1,9 +1,6 @@
 @include b(invest_main) {
     padding: 60px 0;
 
-    > .row > .col-xs-6 {
-        position: relative;
-    }
 
     .col-xs-6.no_padding {
         padding-left: 0px;
@@ -27,21 +24,21 @@
     }
 
     @include e(order) {
-        padding-left: 122px;
+        text-align: center;
+        @include displayFlex();
+        @include justifyContent(center);
 
         >span {
-            position: relative;
-            display: inline-block;
-            padding-left: 20px;
+            margin: 0 5px;
 
             &:before {
                 content: '';
                 width: 12px;
                 height: 12px;
                 border-radius: 50%;
-                position: absolute;
-                top: 2px;
-                left: 0;
+                margin: 0 8px;
+                display: inline-block;
+                vertical-align: middle;
             }
             &.invest_order_loss {
                 margin-left: 15px;
@@ -122,6 +119,20 @@
             height: 100%;
             background-color: $brand-primary;
             transition: width 1s ease-out;
+        }
+    }
+}
+.ar-lang{
+    .invest_type{
+        .scale_bar{
+            .scale_bar__info{
+                right: auto;
+                left: 10px;
+            }
+            .scale_bar__item {
+                left: auto;
+                right: 0;
+            }
         }
     }
 }

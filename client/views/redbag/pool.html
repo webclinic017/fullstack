@@ -1,7 +1,7 @@
 <div class="redbag_pool" ng-cloak ng-if="personal.verify_status >= 7">
     <!-- <div tw-loading-img></div> -->
-    <div class="clearfix">
-        <div class="redbag_single_wrapper" ng-repeat="pool in pools" ng-class="{noPadding: $index%3 === 2}">
+    <div class="display-flex flex-wrap">
+        <div class="redbag_single_wrapper" ng-repeat="pool in pools">
             <div class="redbag_single light">
                 <div class="redbag_single__circle"></div>
                 <div class="redbag_single__top">
@@ -47,10 +47,10 @@
                 </div>
             </div>
         </div>
-        <div class="redbag_nobag" ng-if="success && pools.length <= 0">
-            <img src="/images/no_red_envelope.png" alt="" class="mg-bt-40">
-            <p>{{lang.text('tigerWitID.coupon.noCoupon')}}</p> 
-        </div>
+    </div>
+    <div class="redbag_nobag" ng-if="success && pools.length <= 0">
+        <img src="/images/no_red_envelope.png" alt="" class="mg-bt-40">
+        <p>{{lang.text('tigerWitID.coupon.noCoupon')}}</p> 
     </div>
     <div class="justify-flex-end">
         <div tw-pagination></div>

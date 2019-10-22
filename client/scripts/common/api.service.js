@@ -58,6 +58,9 @@
             uploadAgentProtocolApi: urlOrigin2 + '/agent/upload/protocol',
             agentProtocolApi: urlOrigin2 + '/agent/protocol',
             setAuthenAddressApi: urlOrigin3 + '/user/address',
+            // liverpool比赛
+            competitionListApi: urlOrigin2 + '/competition/list',
+            competitionOpenAccountApi: urlOrigin2 + '/competition/open_account',
 
             // getRCaptchaApi: urlOrigin2 + '/validation/send_phone_code',
             // sendEmailCodeApi: urlOrigin2 + '/validation/send_email_code',

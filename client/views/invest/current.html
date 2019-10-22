@@ -37,7 +37,7 @@
             <!-- 自主交易持仓订单概况 -->
             <thead>
                 <tr class="invest_orders" ng-if="orders.length > 0" ng-click="showOrders()">
-                    <th class="text-left invest_orders__user">
+                    <th class="invest_orders__user">
                         <a href="" class="invest_orders__user-avatar">
                             <img ng-src="/avatar/{{ personal.usercode }}_50.jpg" alt="personal {{lang.text('tigerWitID.settings.photo')}}">
                         </a>
@@ -80,7 +80,7 @@
                 <!-- 自主交易持仓订单详情 -->
                 <tbody>
                     <tr class="" ng-repeat="order in orders">
-                        <td class="text-left invest_orders__detail">
+                        <td class="invest_orders__detail">
                             <span class="invest_orders__trunk"></span>
                             <span class="invest_orders__branch"></span>
 
@@ -129,7 +129,7 @@
                 <!-- 复制交易持仓订单概况 -->
                 <thead>
                     <tr class="invest_orders" ng-click="showDetails(trader)">
-                        <th class="text-left invest_orders__user">
+                        <th class="invest_orders__user">
                             <a href="" class="invest_orders__user-avatar">
                                 <img ng-src="/avatar/{{ trader.account_code }}_50.jpg" alt="trader {{lang.text('tigerWitID.settings.photo')}}">
                             </a>
@@ -176,7 +176,7 @@
                     <!-- 复制交易持仓订单详情 -->
                     <tbody>
                         <tr class="" ng-repeat="order in trader.orders">
-                            <td class="text-left invest_orders__detail">
+                            <td class="invest_orders__detail">
                                 <span class="invest_orders__trunk"></span>
                                 <span class="invest_orders__branch"></span>
 
@@ -232,7 +232,7 @@
                 <!-- 复制交易持仓订单概况 -->
                 <thead>
                     <tr class="invest_orders" ng-click="showDetails(data)">
-                        <th class="text-left invest_orders__user">
+                        <th class="invest_orders__user">
                             <a href="" class="invest_orders__user-avatar">
                                 <img ng-src="/avatar/{{ data.account_code }}_50.jpg" alt="personal {{lang.text('tigerWitID.settings.photo')}}">
                             </a>
@@ -279,7 +279,7 @@
                     <!-- 复制交易持仓订单详情 -->
                     <tbody>
                         <tr class="" ng-repeat="order in data.orders">
-                            <td class="text-left invest_orders__detail">
+                            <td class="invest_orders__detail">
                                 <span class="invest_orders__trunk"></span>
                                 <span class="invest_orders__branch"></span>
 
