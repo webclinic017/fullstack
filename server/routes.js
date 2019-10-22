@@ -806,6 +806,16 @@ module.exports = function (app) {
             mobile: mobile
         }, req));
     });
+    //
+    app.route('/grupo/creex').get(function (req, res) {
+        setEnvCf(req, res);
+        if (isMobile(req)) {
+            var page = 'mobile';
+        } else {
+            var page = 'web';
+        }
+        res.render('bd/creex/index.html', extendPublic({page:page}, req));
+    });
     
     // 市场部 - 月报生成 无用
     app.route('/bd/mon_report').get(function (req, res) {
