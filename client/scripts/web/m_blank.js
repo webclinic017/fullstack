@@ -23,17 +23,16 @@
                     return;
                 }
                 if (isCn) {
-                    window.location.href = 'http://dltw.oss-cn-beijing.aliyuncs.com/apk/tigerwit_v4.3.1.apk';
-                    // 需要改回来
-                    // publicRequest('getVersionCheck', 'GET', {
-                    //     type: 3,
-                    //     version: '1.0.0',
-                    //     lang: 'cn'
-                    // }).then(function (data) {
-                    //     if (data.is_succ) {
-                    //         window.location.href = data.data.url;
-                    //     }
-                    // });
+                    // window.location.href = 'http://dltw.oss-cn-beijing.aliyuncs.com/apk/tigerwit_v4.3.1.apk';
+                    publicRequest('getVersionCheck', 'GET', {
+                        type: 3,
+                        version: '1.0.0',
+                        lang: 'cn'
+                    }).then(function (data) {
+                        if (data.is_succ) {
+                            window.location.href = data.data.url;
+                        }
+                    });
                 } else {
                     window.location.href = nodeResponseInfo.androidGlobal;
                 }
