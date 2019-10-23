@@ -802,7 +802,30 @@ module.exports = function (app) {
             page: req.params.subpage
         }, req));
     });
-
+    // 谷歌活动推广页 2019.10.10
+    app.route('/forextrading/:page(home|partners|traders)/:subpage(*)').get(function (req, res) {
+        setEnvCf(req, res);
+        if (isMobile(req)) {
+            var mobile = '1';
+        } else {
+            var mobile = '0';
+        }
+        res.render('bd/forextrading/index.html', extendPublic({
+            page: req.params.page,
+            subpage:req.params.subpage,
+            mobile: mobile
+        }, req));
+    });
+    //
+    app.route('/grupo/creex').get(function (req, res) {
+        setEnvCf(req, res);
+        if (isMobile(req)) {
+            var page = 'mobile';
+        } else {
+            var page = 'web';
+        }
+        res.render('bd/creex/index.html', extendPublic({page:page}, req));
+    });
     
     // 市场部 - 月报生成 无用
     app.route('/bd/mon_report').get(function (req, res) {
