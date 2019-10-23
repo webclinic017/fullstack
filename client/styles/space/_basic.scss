@@ -69,7 +69,6 @@ $font-space-gray-color: $gray-dark;
         background-image: url("/images/space/space-total.png");
       }
       &.liverpool {
-        background-image: url("/white_label/bd/liverpool/liverpool-sm.png");
         color: #000;
         padding-top: 18px;
         .con {
@@ -306,11 +305,6 @@ $font-space-gray-color: $gray-dark;
 }
 
 .ar-lang{
-  .space_center_summary__list-item{
-    &.liverpool{
-      background-image: url("/white_label/bd/liverpool/liverpool-sm-ar.png");
-    }
-  }
   .space_center_liverpool{
     background-image: url("/white_label/bd/liverpool/liverpool-lg-ar.png");
   }

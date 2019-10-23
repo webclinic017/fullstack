@@ -91,7 +91,9 @@
             <!-- </a> -->
         </li>
 
-        <li class="space_center_summary__list-item liverpool" ng-repeat="competition in competitionList">
+        <li class="space_center_summary__list-item liverpool"
+            ng-style="{'backgroundImage': 'url({{ competition.status == 2 ? lang.text('imgPath.liverpoolSmOver') : lang.text('imgPath.liverpoolSm') }})'}"
+            ng-repeat="competition in competitionList">
             <!-- ng-if="competition.only_key=='liverpoolleague'" -->
             <div class="summary_name">{{competition.names}}
                 <p class="con">

@@ -66,8 +66,8 @@
                 return text;
             },
             image: function (name) {
-                //暂时未用到，不做处理，若后期有涉及到angular目录中图片语言问题，此方法请参照node中修改 2018.11.20
-                return langData["language"] == 'zh' ? name : name + '-en';
+                //涉及到angular目录中图片语言问题，此方法请参照node中修改 2019.10.22
+                // 使用text方法
             },
             background: function () {
                 //暂时未用到，若后期有涉及到angular目录中背景图语言问题，请参照node中使用image方法 2018.11.20

@@ -13350,6 +13350,7 @@
                 }
             },
         };
+        var indexBasePath = "/white_label";
         var data = Object.assign({
             "company": "tigerwit",
             "language": '',
@@ -13394,6 +13395,28 @@
                 "pt-BR": "www.tigerwit.com",
                 "ar": "www.tigerwit.com"
             },
+            "imgPath": {
+                "liverpoolSmOver": {
+                    "en": indexBasePath + "/bd/liverpool/liverpool-sm-over-en.png",
+                    "id": indexBasePath + "/bd/liverpool/liverpool-sm-over-id.png",
+                    "zh": indexBasePath + "/bd/liverpool/liverpool-sm-over-zh.png",
+                    "vi": indexBasePath + "/bd/liverpool/liverpool-sm-over-vi.png",
+                    "zh-Hant": indexBasePath + "/bd/liverpool/liverpool-sm-over-zh-Hant.png",
+                    "es": indexBasePath + "/bd/liverpool/liverpool-sm-over-es.png",
+                    "pt-BR": indexBasePath + "/bd/liverpool/liverpool-sm-over-pt-BR.png",
+                    "ar": indexBasePath + "/bd/liverpool/liverpool-sm-over-ar.png"
+                },
+                "liverpoolSm": {
+                    "en": indexBasePath + "/bd/liverpool/liverpool-sm.png",
+                    "id": indexBasePath + "/bd/liverpool/liverpool-sm.png",
+                    "zh": indexBasePath + "/bd/liverpool/liverpool-sm.png",
+                    "vi": indexBasePath + "/bd/liverpool/liverpool-sm.png",
+                    "zh-Hant": indexBasePath + "/bd/liverpool/liverpool-sm.png",
+                    "es": indexBasePath + "/bd/liverpool/liverpool-sm.png",
+                    "pt-BR": indexBasePath + "/bd/liverpool/liverpool-sm.png",
+                    "ar": indexBasePath + "/bd/liverpool/liverpool-sm-ar.png"
+                } 
+            }
         }, lang_data);
 
         return data;
