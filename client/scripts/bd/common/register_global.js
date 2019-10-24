@@ -74,9 +74,12 @@ $(document).ready(function () {
       return false;
     }
   }
-
+  if (oReg.search_arr.pid) {
+    $.cookie('pid', oReg.search_arr.pid, {path: '/', domain: getDomain(), expires: 7});
+  }
   // 客户推广
   if(oReg.search_arr.ib_pid) {
+    oReg.search_arr.pid = undefined;
     $.cookie("pid", "", {path: '/', domain: getDomain(), expires: -1});
     $.cookie('ib_pid', oReg.search_arr.ib_pid, {expires: 1, path: '/', domain: getDomain()});
     $.cookie('invite_status', 1, {expires: 1, path: '/', domain: getDomain()});
@@ -118,7 +121,7 @@ $(document).ready(function () {
       world_code: $("#country").val(),
       password: $("#verify_code").val(),
       login_type: 2,
-      pid: $.cookie('pid') || null,
+      pid: oReg.search_arr.pid || null,
       unit: oReg.search_arr.unit || null,
       lp: oReg.search_arr.lp || null,
       key: oReg.search_arr.key || null,
