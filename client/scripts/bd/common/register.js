@@ -87,7 +87,7 @@
             var telephone = $("#telephone");
             var rPhone = telephone.val() ? telephone.val() : "";
             var isMobile = /^1\d{10}$/;
-            if ((telephone.val() == "") || !isMobile.test(telephone.val())) {
+            if ((telephone.val() == "") || !isMobile.test(telephone.val().trim())) {
                 /*提示*/
                 layer.msg('请输入有效的手机号');
                 return false;
@@ -102,7 +102,7 @@
 
             if (
                 (password.val() == "") ||
-                (!/^(?![\d]+$)(?![a-zA-Z]+$)(?![^\da-zA-Z]+$).{6,15}$/.test(password.val()))
+                (!/^(?![\d]+$)(?![a-zA-Z]+$)(?![^\da-zA-Z]+$).{6,15}$/.test(password.val().trim()))
             ) {
                 /*提示*/
                 layer.msg('密码为6-15位字母、数字或符号组合');

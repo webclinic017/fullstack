@@ -58,7 +58,7 @@ $(document).ready(function () {
   
   //check email
   function checkEmail () {
-    if (oReg.email.test($("#email").val())) {
+    if (oReg.email.test($("#email").val().trim())) {
       return true;
     } else {
       openLayer(lang.text('registerJs.emailFormatError'));
