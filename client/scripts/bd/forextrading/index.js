@@ -306,7 +306,7 @@
     vietnam: {
       open_account: "Mở Tài Khoản",
       live_account: "Mở tài khoản thật",
-      demo_account: "Tài khoản trải nghiệm",
+      demo_account: "Tài khoản demo",
       navbar_home: "Trang Chủ",
       navbar_traders: "Nhà Giao Dịch",
       navbar_partners: "Đối Tác",

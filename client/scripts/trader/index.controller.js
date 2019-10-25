@@ -108,6 +108,7 @@
                             $scope.master.min_copy_amount = data.data.min_copy_amount;
                             AvaCopyInfo = data.data;
                         } else {
+                            // 如果是false的话需要弹出提示且不能复制TODO
                             avaCopyAmount = 0;
                         }
                     });
