@@ -13621,7 +13621,7 @@ module.exports = {
             "ar": "هل لديك ما يلزم لتكون في صدارة دورة 'تيغرويت' العالمية للتداول؟"
         },
         "bannerCon": {
-            "zh": "使用我们的模拟账户上的$ 10,000USD虚拟资金测试您的交易技巧。",
+            "zh": "使用我们的模拟账户上的10,000USD虚拟资金测试您的交易技巧。",
             "en": "Test your trading skills with $10,000USD of virtual funds on our Demo account.",
             "vi": "Hãy kiểm tra các kĩ năng giao dịch của bạn với 10,000 $ USD trong quỹ ảo trên tài khoản Demo",
             "zh-Hant": "使用我們的模擬賬戶上的$ 10,000USD虛擬資金測試您的交易技巧。",
@@ -13681,7 +13681,7 @@ module.exports = {
             "ar": "سيقوم المتداولون من جميع أنحاء العالم بنقل الحماس و التشويق من ملاعب كرة القدم إلى دوري التداول العالمي المليئ بالمرح و المتعة بهدف الفوز بأول مسابقة سنوية على الإطلاق من “تيغرويت” - دورة “تيغرويت” العالمية للتداول"
         },
         "winAmazingPrizesCon2": {
-            "zh": "我们的创新，易于使用的应用程序将确保以良好的运动的名义进行技能和雄心的公平竞争。凭借独家奖品，还有待争夺，TigerWit的竞争环境向一位超级巨星交易者敞开了大门，以抓住机会踏出第一步 进入泛光灯，并宣称自己值得赢得胜利。 ",
+            "zh": "我们的创新，易于使用的应用程序将确保以良好的运动的名义进行技能和雄心的公平竞争。凭借独家奖品，还有待争夺，TigerWit的竞争环境向一位超级巨星交易者敞开了大门，以抓住机会踏出第一步进入泛光灯，并宣称自己值得赢得胜利。 ",
             "en": "Our innovative, easy to use app will ensure a fair competition of skill and ambition, all in the name of good sport. With exclusive prizes, up for grabs, TigerWit’s playing field is wide open for one superstar trader to seize the opportunity to step out into the floodlights and declare themselves worthy of claiming victory. ",
             "vi": "Ứng dụng trực quan, dễ dàng sử dụng của chúng tôi sẽ đảm bảo một cuộc thi công bằng nơi chỉ có kĩ năng và khát vọng, tất cả sẽ diễn ra như một trận đấu bóng đá. Với các giải thưởng độc đáo, cho những người chiến thắng, sân chơi của TigerWit đang mở rộng chờ đón chỉ một nhà giao dịch xuất sắc nhất để bước đỉnh hào quang và chứng minh bản thân xứng đáng với chiến thắng này. ",
             "zh-Hant": "我們的創新，易於使用的應用程序將確保以良好的運動的名義進行技能和雄心的公平競爭。憑藉獨家獎品，還有待爭奪，TigerWit的競爭環境為一位超級巨星交易員敞開了大門，以抓住機會踏出第一步 進入泛光燈，並宣稱自己值得贏得勝利。",
@@ -14051,7 +14051,7 @@ module.exports = {
             "ar": "هل لديك ما يلزم لتكون في صدارة دورة 'تيغرويت' العالمية للتداول ؟"
         },
         "lfcTit2": {
-            "zh": "使用我们的模拟账户上的$ 10,000USD虚拟资金测试您的交易技巧。",
+            "zh": "使用我们的模拟账户上的10,000USD虚拟资金测试您的交易技巧。",
             "en": "Test your trading skills with $10,000USD of virtual funds on our Demo account.",
             "vi": "Kiểm tra kỹ năng giao dịch của bạn với 10000$ quỹ ảo trên tài khoản demo của chúng tôi",
             "zh-Hant": "使用我們的模擬賬戶上的$ 10,000USD虛擬資金測試您的交易技巧。",
