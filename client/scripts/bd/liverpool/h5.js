@@ -64,10 +64,10 @@
                 gameInfo = data[0];
                 if (gameInfo) {
                     // 用户是否参加比赛
-                    if (gameInfo.is_effective_date && !gameInfo.is_in_competition) {
+                    if (gameInfo.is_effective_date == 1 && gameInfo.is_open_account && !gameInfo.is_in_competition) {
                         $('.notParticipating').show();
                     }
-                    $('#gameTime').html(formatDate(new Date(gameInfo.trade_start), 'yyyy-MM-dd') + ' / ' + formatDate(new Date(gameInfo.trade_end), 'yyyy-MM-dd'))
+                    // $('#gameTime').html(formatDate(new Date(gameInfo.trade_start), 'yyyy-MM-dd') + ' / ' + formatDate(new Date(gameInfo.trade_end), 'yyyy-MM-dd'))
 
                 }
             } else {
@@ -93,7 +93,7 @@
                 for (var i = 0; i < ranking.length; i++) {
                     var obj = ranking[i];
                     html += '<li>' +
-                        '<div>#' + (obj.ranking ? obj.ranking : lang.text('liverpool.noRankingYet')) + '</div>' +
+                        '<div>#' + obj.ranking + '</div>' +
                         '<div><span><img src="/white_label/jack_icon/'+ obj.world_code +'.png"></span></div>' +
                         // '<div>'+ obj.world_code +'</div>' +
                         '<div>' + obj.trade_account_memo + '</div>' +

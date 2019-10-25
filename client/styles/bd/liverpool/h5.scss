@@ -27,12 +27,14 @@
     margin: 0 auto;
   }
   @include e(bg1) {
-    background: url("/white_label/bd/liverpool/bg-pc.png") no-repeat;
+    background-image: url("/white_label/bd/liverpool/bg-pc.png");
+    background-repeat: no-repeat;
     background-position: 60%;
     background-size: cover;
   }
   @include e(bg2) {
-    background: url("/white_label/bd/liverpool/bg-charts.png") repeat;
+    background-image: url("/white_label/bd/liverpool/bg-charts.png");
+    background-repeat: repeat;
     padding-bottom: 60px;
   }
   @include e(tit) {
@@ -45,18 +47,18 @@
       display: inline-block;
       position: relative;
       margin-bottom: 10px;
-      &::before {
-        content: "";
-        position: absolute;
-        bottom: -8px;
-        border-radius: 10px;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: -10;
-        width: 280px;
-        height: 20px;
-        background-color: #ffd521;
-      }
+      // &::before {
+      //   content: "";
+      //   position: absolute;
+      //   bottom: -8px;
+      //   border-radius: 10px;
+      //   left: 50%;
+      //   transform: translateX(-50%);
+      //   z-index: -10;
+      //   width: 280px;
+      //   height: 20px;
+      //   background-color: #ffd521;
+      // }
     }
   }
   @include e(con) {
@@ -68,8 +70,8 @@
     @include m(lst) {
       font-size: 22px;
       font-weight: 500;
+      margin-bottom: 20px;
       > li {
-        margin-bottom: 20px;
       }
     }
     @include m(table) {
@@ -87,7 +89,7 @@
             width: 20%;
           }
           &:nth-child(2) {
-            width: 20%;
+            width: 15%;
             > span {
               height: 30px;
               display: inline-block;
@@ -104,7 +106,7 @@
             width: 35%;
           }
           &:nth-child(4) {
-            width: 25%;
+            width: 30%;
           }
         }
         &:nth-child(1) {
@@ -145,12 +147,13 @@
     font-size: 20px;
     line-height: 24px;
     font-weight: initial;
+    margin-bottom: 20px;
   }
   @include e(banner) {
     background-repeat: no-repeat;
     background-position: right;
     background-size: 650px;
-    padding: 120px 0 30px;
+    padding: 20px 0 30px;
     @include m(lf) {
       .title {
         font-size: 62px;
@@ -158,7 +161,7 @@
         line-height: 66px;
         width: 720px;
       }
-      .time {
+      .title4 {
         font-size: 40px;
         line-height: 45px;
       }
@@ -166,7 +169,7 @@
         font-size: 42px;
         font-weight: 500;
         line-height: 46px;
-        margin: 35px 0 50px;
+        margin: 35px 0 30px;
       }
       .con {
         font-size: 20px;
@@ -176,7 +179,7 @@
       }
       .title3 {
         font-weight: 500;
-        font-size: 21px;
+        font-size: 20px;
         line-height: 25px;
         width: 770px;
         padding-top: 30px;
@@ -188,6 +191,7 @@
         display: inline-block;
       }
       .btn-row {
+        margin-top: 20px;
         @include displayFlex();
         .special-btn {
           background-color: #000;
@@ -278,9 +282,9 @@
       width: 90%;
     }
     @include e(bg1) {
-      background: url("/white_label/bd/liverpool/bg.png") no-repeat;
-      background-position: top center;
-      background-size: auto 75%;
+      background-image: url("/white_label/bd/liverpool/bg-h5.png") !important;
+      background-position: top center !important;
+      background-size: auto 100%;
     }
     @include e(bg2) {
       padding-bottom: px2rem(60);
@@ -303,8 +307,8 @@
       padding: px2rem(35) px2rem(34);
       @include m(lst) {
         font-size: px2rem(28);
+        margin-bottom: px2rem(20);
         > li {
-          margin-bottom: px2rem(20);
         }
       }
       @include m(table) {
@@ -324,10 +328,11 @@
     @include e(p) {
       font-size: px2rem(26);
       line-height: px2rem(30);
+      margin-bottom: px2rem(20);
     }
     @include e(banner) {
       background-image: none !important;
-      padding: px2rem(10) 0 px2rem(96);
+      padding: px2rem(10) 0 px2rem(20);
       @include m(lf) {
         text-align: center;
         .title {
@@ -335,13 +340,12 @@
           line-height: px2rem(55);
           width: auto;
         }
-        .time {
+        .title4 {
           font-size: px2rem(40);
           line-height: px2rem(45);
         }
         .title2 {
           margin-top: px2rem(30);
-          margin-bottom: px2rem(40);
           font-size: px2rem(47);
           line-height: px2rem(52);
         }
@@ -362,6 +366,7 @@
           margin-top: px2rem(50);
         }
         .btn-row {
+          margin-top: px2rem(30);
           @include flexWrap(wrap);
           @include justifyContent(center);
           .special-btn {
@@ -378,7 +383,7 @@
       @include m(rg) {
         width: px2rem(650);
         margin: 0 auto;
-        padding: px2rem(95) 0 0;
+        padding: px2rem(60) 0 0;
         > img {
           width: 100%;
         }
@@ -425,6 +430,10 @@
   }
 }
 .ar-lang {
+  .liverpool-event__bg1 {
+    background-image: url("/white_label/bd/liverpool/bg-pc-ar.png");
+    background-position: 40%;
+  }
   .liverpool-event__banner {
     background-position: left;
   }

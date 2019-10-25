@@ -356,8 +356,7 @@
             es: indexBasePath + "/bd/liverpool/lfc-cash-en.png",
             "pt-BR": indexBasePath + "/bd/liverpool/lfc-cash-en.png",
             ar: indexBasePath + "/bd/liverpool/lfc-cash-ar.png"
-        } //
-
+        }, //
         // : {
         //     en: indexBasePath + "",
         //     id: indexBasePath + "",
