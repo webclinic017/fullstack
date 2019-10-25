@@ -20,7 +20,7 @@
     vietnam: {
       title: "Giao dịch trên một ứng dụng đẹp hơn, thông minh hơn, trực quan hơn",
       btnLive: "Mở tài khoản thật",
-      btnDemo: "Tài khoản Trải nghiệm",
+      btnDemo: "Tài khoản demo",
       btnHref: "/download?D_InvestingVNeshot=008",
       cont: "Chúng tôi đã kết hợp sự tiến bộ công nghệ và sự tiện ích để đảm bảo cho người dùng có thể truy cập và điều chỉnh ứng dụng giao dịch thị trường tài chính toàn cầu một cách đơn giản và tinh vi nhất. Việc tùy chọn sao chép giao dịch của chúng tôi cũng như hoa hồng cạnh tranh của các chuyên gia giao dịch sẽ được truy cập, đơn giản và minh bạch.",
       icon1: "Giao dịch ngoại hối toàn cầu",

@@ -40,40 +40,45 @@
         <div class="liverpool-event__banner " style="background-image: url('<%= lang.image('prizeWeb')%>')">
           <div class="liverpool-event__banner-lf">
             <h4 class="title"><%= lang.text('liverpool.bannerTit')%></h4>
-            <h6 class="time" id="gameTime"></h6>
+            <h4 class="title4"><%= lang.text('liverpool.bannerTit2')%></h4>
+            <!-- <h6 class="time" id="gameTime"></h6> -->
             <p class="title3"><%= lang.text('liverpool.bannerCon')%></p>
-            <p class="con"><%= lang.text('liverpool.winAmazingPrizesCon1')%></p>
-            <p class="con"><%= lang.text('liverpool.winAmazingPrizesCon2')%></p>
-
-            <h4 class="title2">
+            <div class="pc-have">
+              <p class="con"><%= lang.text('liverpool.winAmazingPrizesCon1')%></p>
+              <p class="con"><%= lang.text('liverpool.winAmazingPrizesCon2')%></p>
+              <h4 class="title2">
                 <%= lang.text('liverpool.winAmazingPrizes')%>
-            </h4>
-
+              </h4>
+            </div>
             <div class="btn-row">
               <div class="special-btn notParticipating">
                 <button class="">
                   <%= lang.text('liverpool.enterLeague')%>
                 </button>
               </div>
-              
+
               <div class="mg-lf-10"></div>
 
               <div class="phone-have">
                 <div class="special-btn">
                   <button class="rulesBtn">
-                  <%= lang.text('liverpool.rules')%>
-                </button>
+                    <%= lang.text('liverpool.rules')%>
+                  </button>
                 </div>
-                
+
               </div>
             </div>
             <div class="pc-have">
               <div class="rules cursor_pointer rulesBtn"><%= lang.text('liverpool.rulesD')%> ></div>
             </div>
 
-          </div>
-          <div class="liverpool-event__banner-rg phone-have">
-            <img src="<%= lang.image('prizeH5')%>" alt="">
+            <div class="liverpool-event__banner-rg phone-have">
+              <img src="<%= lang.image('prizeH5')%>" alt="">
+              <h4 class="title2">
+                <%= lang.text('liverpool.winAmazingPrizes')%>
+              </h4>
+            </div>
+
           </div>
         </div>
 
@@ -84,18 +89,23 @@
       <div class="liverpool-event__width">
         <div class="liverpool-event__prizes">
           <div class="liverpool-event__con">
+            <div class="phone-have">
+              <p class="liverpool-event__p"><%= lang.text('liverpool.winAmazingPrizesCon1')%></p>
+              <p class="liverpool-event__p"><%= lang.text('liverpool.winAmazingPrizesCon2')%></p>
+            </div>
             <ul class="liverpool-event__con-lst">
               <li><%= lang.text('liverpool.winAmazingPrizesList1')%></li>
               <li><%= lang.text('liverpool.winAmazingPrizesList2')%></li>
               <li><%= lang.text('liverpool.winAmazingPrizesList3')%></li>
             </ul>
             <p class="liverpool-event__p"><%= lang.text('liverpool.winAmazingPrizesCon3')%></p>
+            <p class="liverpool-event__p mg-bt-0"><%= lang.text('liverpool.winAmazingPrizesCon4')%></p>
           </div>
         </div>
         <div class="liverpool-event__league">
           <h4 class="liverpool-event__tit">
             <div class="tit"><%= lang.text('liverpool.leagueTable')%></div>
-            <p class="liverpool-event__p"><%= lang.text('liverpool.leagueTableCon')%></p>
+            <!-- <p class="liverpool-event__p"><%= lang.text('liverpool.leagueTableCon')%></p> -->
           </h4>
           <div class="liverpool-event__con">
             <ul class="liverpool-event__con-table" id="competitionList">
@@ -127,9 +137,21 @@
       <div class="liverpool-event__lay-con">
         <h6 class="mg-tp-0"><%= lang.text('liverpool.rulesTit2')%></h6>
         <ul>
+          <li><%= lang.text('liverpool.rulesTit2Con0')%>
+            </li>
           <li><%= lang.text('liverpool.rulesTit2Con1')%>
           </li>
           <li><%= lang.text('liverpool.rulesTit2Con2')%>
+          </li>
+          <li><%= lang.text('liverpool.rulesTit2Con3')%>
+          </li>
+          <li><%= lang.text('liverpool.rulesTit2Con4')%>
+          </li>
+          <li><%= lang.text('liverpool.rulesTit2Con5')%>
+          </li>
+          <li class="mg-tp-10"><%= lang.text('liverpool.rulesTit2Con6')%>
+          </li>
+          <li><%= lang.text('liverpool.rulesTit2Con7')%>
           </li>
         </ul>
         <h6><%= lang.text('liverpool.rulesTit3')%>
@@ -137,6 +159,8 @@
         <ul>
           <li><%= lang.text('liverpool.rulesTit3Con1')%></li>
           <li><%= lang.text('liverpool.rulesTit3Con2')%></li>
+          <li><%= lang.text('liverpool.rulesTit3Con3')%></li>
+          <li><%= lang.text('liverpool.rulesTit3Con4')%></li>
         </ul>
         <h6><%= lang.text('liverpool.rulesTit4')%></h6>
         <ul>
@@ -146,6 +170,7 @@
           <li><%= lang.text('liverpool.rulesTit4Con4')%>
           </li>
           <li><%= lang.text('liverpool.rulesTit4Con5')%></li>
+          <li><%= lang.text('liverpool.rulesTit4Con6')%></li>
         </ul>
         <h6><%= lang.text('liverpool.rulesTit5')%></h6>
         <ul>

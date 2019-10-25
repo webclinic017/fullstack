@@ -92,7 +92,7 @@
         </li>
 
         <li class="space_center_summary__list-item liverpool"
-            ng-style="{'backgroundImage': 'url({{ competition.status == 2 ? lang.text('imgPath.liverpoolSmOver') : lang.text('imgPath.liverpoolSm') }})'}"
+            ng-style="{'backgroundImage': 'url({{ competition.is_effective_date == 2 ? lang.text('imgPath.liverpoolSmOver') : lang.text('imgPath.liverpoolSm') }})'}"
             ng-repeat="competition in competitionList">
             <!-- ng-if="competition.only_key=='liverpoolleague'" -->
             <div class="summary_name">{{competition.names}}
@@ -113,7 +113,7 @@
                 </div>
                 <div class="summary_btn">
                     <a ng-href="/space/#/space/liverpool?only_key={{competition.only_key}}"
-                        ng-if="competition.is_effective_date && !competition.is_in_competition"
+                        ng-if="competition.is_effective_date == 1 && competition.is_open_account && !competition.is_in_competition"
                         class="btn-a tw-btn tw-btn-capsule-gradient">{{lang.text('tigerWitID.liverpool.enterLeague')}}</a>
                     <a ng-href="{{competition.link}}"
                         class="btn-a tw-btn tw-btn-capsule-gradient">{{competition.is_in_competition ? lang.text('tigerWitID.liverpool.checkRanking') : lang.text('tigerWitID.details.title')}}</a>

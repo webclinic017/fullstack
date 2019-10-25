@@ -2874,7 +2874,7 @@
                     "experienceAccount": {
                         "zh": "体验金账户",
                         "en": "Demo account",
-                        "vi": "Tài khoản trải nghiệm",
+                        "vi": "Tài khoản demo",
                         "zh-Hant": "體驗金賬戶",
                         "id": "Akun Pengalaman",
                         "es": "Cuenta de práctica",
@@ -4218,7 +4218,7 @@
                     "experienceAccount": {
                         "zh": "体验金账号",
                         "en": "Demo account",
-                        "vi": "Tài khoản trải nghiệm",
+                        "vi": "Tài khoản demo",
                         "zh-Hant": "體驗金帳號",
                         "id": "Akun Pengalaman",
                         "es": "Cuenta de práctica",
@@ -11146,7 +11146,7 @@
                     "openAcount9": {
                         "zh": " ",
                         "en": "Demo account",
-                        "vi": "Tài khoản Trải Nghiệm",
+                        "vi": "Tài khoản demo",
                         "zh-Hant": " ",
                         "id": "Akun Pengalaman",
                         "es": "Cuenta Práctica",
@@ -12487,25 +12487,15 @@
                         "pt-BR": "Taxa de retorno flutuante",
                         "ar": "معدل العائد العائم"
                     },
-                    "winAmazingPrizes": {
-                        "zh": "赢取惊人的奖品！",
-                        "en": "Win amazing prizes!",
-                        "vi": "Chiến thắng các giải thưởng tuyệt vời!",
-                        "zh-Hant": "贏取驚人的獎品！",
-                        "id": "Menangkan Hadiah yang spesial !",
-                        "es": "Win amazing prizes!",
-                        "pt-BR": "Win amazing prizes!",
-                        "ar": "اربح جوائز مذهلة!"
-                    },
                     "checkRanking": {
-                        "zh": "Check my ranking",
-                        "en": "Check my ranking",
-                        "vi": "Check my ranking",
-                        "zh-Hant": "Check my ranking",
-                        "id": "Check my ranking",
-                        "es": "Check my ranking",
-                        "pt-BR": "Check my ranking",
-                        "ar": "Check my ranking"
+                        "zh": "查看排名",
+                        "en": "Read More",
+                        "vi": "Đọc thêm",
+                        "zh-Hant": "查看排名",
+                        "id": "Lebih lanjut",
+                        "es": "Lee mas",
+                        "pt-BR": "Mais informação",
+                        "ar": "اقرأ المزيد"
                     },
                     "enterLeague": {
                         "zh": "进入联赛",
@@ -12513,19 +12503,19 @@
                         "vi": "Tham gia giải đấu",
                         "zh-Hant": "進入聯賽",
                         "id": "Masuk ke dalam Liga",
-                        "es": "Enter the league",
-                        "pt-BR": "Enter the league",
+                        "es": "Entra en la liga",
+                        "pt-BR": "Entre na liga",
                         "ar": "شارك في المسابقة"
                     },
                     "contestAccount": {
                         "zh": "比赛账号",
                         "en": "Contest account",
-                        "vi": "Contest account",
-                        "zh-Hant": "比赛账号",
-                        "id": "Contest account",
-                        "es": "Contest account",
-                        "pt-BR": "Contest account",
-                        "ar": "Contest account"
+                        "vi": "Tài khoản cuộc thi",
+                        "zh-Hant": "比賽賬號",
+                        "id": "Akun Kontes",
+                        "es": "Cuenta del concurso",
+                        "pt-BR": "Conta do concurso",
+                        "ar": "حساب المسابقة"
                     },
                     "": {
                         "zh": "",
