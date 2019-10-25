@@ -97,7 +97,7 @@
             <!-- ng-if="competition.only_key=='liverpoolleague'" -->
             <div class="summary_name">{{competition.names}}
                 <p class="con">
-                    {{(competition.trade_start | date:'yyyy-MM-dd') + ' / ' + (competition.trade_end | date:'yyyy-MM-dd')}}
+                    {{(competition.trade_start * 1000 | date:'yyyy-MM-dd') + ' / ' + (competition.trade_end * 1000 | date:'yyyy-MM-dd')}}
                 </p>
             </div>
             <div class="direction-column flex1">
