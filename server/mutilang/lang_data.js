@@ -13806,7 +13806,7 @@ module.exports = {
             "vi": "Để tham gia: ",
             "zh-Hant": "如何參與：",
             "id": "Cara untuk ikut :",
-            "es": "How to enter: ",
+            "es": "Cómo ingresar:",
             "pt-BR": "Como entrar:",
             "ar": "كيفية الدخول:"
         },
@@ -13816,7 +13816,7 @@ module.exports = {
             "vi": "Thời gian đăng ký 25/10 00:00 (GMT+3)đến 11/11 00:00 (GMT+3)",
             "zh-Hant": "報名時間：10月25日 00:00 （GMT+3）– 11月11日 00:00（GMT+3）",
             "id": "Period pendaftaran : 25 Oktober 04:00 WIB - 11 November 04:00 WIB",
-            "es": "Registration period: October 25th 00:00 (GMT+3) – November 11th 00:00 (GMT+3)",
+            "es": "Período de inscripción: 25 de octubre a las 00:00 (GMT +3) - 11 de noviembre a las 00:00 (GMT +3)",
             "pt-BR": "Período de inscrição: 25 de outubro às 00:00 (GMT +3) - 11 de novembro às 00:00 (GMT +3)",
             "ar": "فترة التسجيل: 25 أكتوبر - 11 نوفمبر"
         },
@@ -13826,7 +13826,7 @@ module.exports = {
             "vi": "Đối với khách hàng mới:",
             "zh-Hant": "新客戶：",
             "id": "Klien Baru : ",
-            "es": "Nuevos clientes:",
+            "es": "Clientes nuevos:",
             "pt-BR": "Novos Clientes:",
             "ar": "عملاء جدد:"
         },
@@ -13836,7 +13836,7 @@ module.exports = {
             "vi": "1.	Khách hàng có thể đăng ký và xác nhận qua số điện thoại và kích hoạt tài khoản dự thi.",
             "zh-Hant": "1.客戶註冊TigerWit通行證並激活聯賽帳戶",
             "id": "1.  Klien harus mendaftar di TigerWit dan aktivasi akun",
-            "es": "1. The client need to registers TigerWit and activates the league account.",
+            "es": "1. El cliente debe registrarse con TigerWit y activar la cuenta de la liga.",
             "pt-BR": "1. O cliente precisa registrar na TigerWit e ativar a conta da liga.",
             "ar": "1. يحتاج العميل إلى تسجيل وتفعيل حساب الدوري."
         },
@@ -13846,7 +13846,7 @@ module.exports = {
             "vi": "2.	Khách hàng có thể trực tiếp sử dụng quỹ ảo trong tài khoản dự thi để giao dịch.",
             "zh-Hant": "2.交易者可直接使用聯賽賬戶裡的體驗金進行交易",
             "id": "2. Trader dapat menggunakan dana virtual tersebut untuk bertransaksi",
-            "es": "2. Traders can directly use the experience funds in the league account to trade.",
+            "es": "2. Los operadores pueden usar directamente fondos de experiencia en la cuenta de la liga para comerciar.",
             "pt-BR": "2. Os comerciantes podem usar diretamente os fundos de experiência na conta da liga para negociar.",
             "ar": "2. يمكن للمتداولين استخدام أموال الخبرة في حساب الدوري مباشرة للتداول."
         },
@@ -13856,7 +13856,7 @@ module.exports = {
             "vi": "3.	Người chơi có thể theo dõi các lệnh giao dịch của mình trên bảng xếp hạng trên một trang đích riêng.",
             "zh-Hant": "3.交易者可以在單獨的頁面上的聯賽表格中監視他們的交易頭寸",
             "id": "3.  Trader dapat memonitor posisi trading mereka pada tabel peringkat liga yang ada di situs kami",
-            "es": "3. Traders can monitor their trading positions in the league table on a separate landing page.",
+            "es": "3. Los operadores pueden monitorear sus posiciones de clasificación en la tabla de clasificación en una página de destino separada.",
             "pt-BR": "3. Os comerciantes podem monitorar suas posições na competição na tabela de classificação em uma página de destino separada.",
             "ar": "3. يمكن للمتداولين مراقبة تصنيفات التداول الخاصة بهم في جدول الدوري على صفحة مقصودة منفصلة"
         },
@@ -13866,7 +13866,7 @@ module.exports = {
             "vi": "4.	Mỗi tuần phải có ít nhất một giao dịch để duy trì thi đấu.",
             "zh-Hant": "4.每週必須至少開設一次交易以保持競爭",
             "id": "4. Peserta wajib melakukan transaksi minimum 1 kali setiap minggunya agar tetap dapat ikut berpartisipasi",
-            "es": "4. A minimum of one trade a week must be opened in the account to remain in the competition.",
+            "es": "4. Se debe abrir un mínimo de una operación por semana en la cuenta para permanecer en la competencia.",
             "pt-BR": "4. Um mínimo de uma operação por semana deve ser aberto na conta para permanecer na competição.",
             "ar": "4. يجب التداول مرة واحدة على الأقل في الأسبوع للبقاء في المنافسة"
         },
@@ -13876,7 +13876,7 @@ module.exports = {
             "vi": "Đối với khách hàng hiện tại:",
             "zh-Hant": "現有客戶：",
             "id": "Klien Lama :",
-            "es": "Existing clients:",
+            "es": "Clientes existentes:",
             "pt-BR": "Clientes existentes:",
             "ar": "العملاء الحاليين:"
         },
@@ -13886,7 +13886,7 @@ module.exports = {
             "vi": "1.	Tất cả người chơi có thể mở một tài khoản Dự Thi.",
             "zh-Hant": "1.所有交易者都可以創建一個聯賽賬戶。",
             "id": "1. Semua peserta wajib membuka Akun Liga",
-            "es": "1. All traders can create a league account.",
+            "es": "1. Todos los comerciantes pueden crear una cuenta en la liga.",
             "pt-BR": "1. Todos os comerciantes podem criar uma conta na liga.",
             "ar": "1. يمكن لجميع المتداولين إنشاء حساب دوري."
         },
@@ -13896,7 +13896,7 @@ module.exports = {
             "vi": "2.	Người chơi phải mở một số lệnh trên tài khoản dự thi của mình.",
             "zh-Hant": "2.交易者必須在其聯賽賬戶上開設一些交易。",
             "id": "2. Trader harus melakukan transaksi pada akun Liga mereka",
-            "es": "2. Traders must open some trades on their League account.",
+            "es": "2. Los operadores deben abrir algunas operaciones en la cuenta de la liga.",
             "pt-BR": "2. Os comerciantes devem abrir algumas operações na conta da Liga.",
             "ar": "2. يجب على المتداولين فتح بعض الصفقات على حساب الدوري الخاص بهم "
         },
@@ -13906,7 +13906,7 @@ module.exports = {
             "vi": "3.	Người chơi có thể theo dõi các lệnh giao dịch của mình trên bảng xếp hạng ở trang đích",
             "zh-Hant": "3.交易者可以在單獨的頁面上的聯賽表格中監視他們的交易頭寸。",
             "id": "3. Trader dapat memonitor posisi trading mereka pada tabel peringkat liga yang ada di situs kami",
-            "es": "3. Traders can monitor their trading positions in the league table on a separate landing page.",
+            "es": "3. Los operadores pueden monitorear sus posiciones de negociación en la tabla de clasificación en una página de destino separada.",
             "pt-BR": "3. Os comerciantes podem monitorar suas posições de negociação na tabela de classificação em uma página de destino separada.",
             "ar": "3. يمكن للمتداولين مراقبة تصنيفات تداولهم في جدول الدوري على صفحة مقصودة منفصلة"
         },
@@ -13916,7 +13916,7 @@ module.exports = {
             "vi": "4.	Mỗi tuần phải có ít nhất một giao dịch để duy trì thi đấu.",
             "zh-Hant": "4.每週必須至少開設一次交易以保持競爭。",
             "id": "4. Peserta wajib melakukan transaksi minimum 1 kali setiap minggunya agar tetap dapat ikut berpartisipasi",
-            "es": "4. A minimum of one trade a week must be opened in the account to remain in the competition.",
+            "es": "4. Debe negociar al menos una operación por semana para mantenerse en competencia.",
             "pt-BR": "4. Deve ser operar pelo menos uma negociação por semana para permanecer na competição.",
             "ar": "4. يجب التداول مرة واحدة على الأقل في الأسبوع للبقاء في المنافسة"
         },
@@ -13926,7 +13926,7 @@ module.exports = {
             "vi": "Thể Lệ Cuộc Thi Nhà Giao Dịch Toàn Cầu:",
             "zh-Hant": "全球交易者聯賽規則：",
             "id": "Peraturan - peraturan untuk Liga Trader Dunia",
-            "es": "Las reglas de la Global Traders League:",
+            "es": "La Global Traders League determina:",
             "pt-BR": "A Global Traders League determina:",
             "ar": "قواعد دوري العالمي للمتداولين "
         },
@@ -13936,7 +13936,7 @@ module.exports = {
             "vi": "1.	Khách hàng phải mở tài khoản Dự Thi để tham gia cuộc thi.",
             "zh-Hant": "1.客戶必須創建聯賽帳戶才能參與。",
             "id": "1. Klien harus membuka akun Liga untuk dapat berpartisipasi",
-            "es": "1. The client must create a league account to participate.",
+            "es": "1. El cliente debe crear una cuenta de liga para participar.",
             "pt-BR": "1. O cliente deve criar uma conta da liga para participar.",
             "ar": "1. يجب على العميل إنشاء حساب دوري للمشاركة."
         },
@@ -13946,7 +13946,7 @@ module.exports = {
             "vi": "2.	Khách hàng không được tham gia cuộc thi sau 00:00 (GMT+3) ngày 11 tháng 11.",
             "zh-Hant": "2.11月11日 00:00（GMT+3）後將不再接受新報名",
             "id": "2.  Klien tidak boleh melakukan transaksi apapun di akun Liga sebelum tanggal 11 November pukul 04:00 WIB",
-            "es": "2. No new entries will be taken after the November 11th 00:00 (GMT+3).",
+            "es": "2. No se realizarán nuevas inscripciones después de las 11:00 del 11 de noviembre (GMT +3).",
             "pt-BR": "2. Nenhum novo registro será realizada após as 11:00h do dia 11 de novembro (GMT +3).",
             "ar": "2. لن يتم إدخال أي مشاركات جديدة بعد 11 نوفمبر 00:00 (GMT + 3)."
         },
@@ -13956,7 +13956,7 @@ module.exports = {
             "vi": "3.	Mỗi khách hàng phải mở một lệnh trên tài khoản Dự thi để đủ điện tham gia cuộc thi.",
             "zh-Hant": "3.客戶必須在聯賽帳戶中開設頭寸才能獲得資格。",
             "id": "3. Klien harus membuka posisi pada akun Liga agar terpenuhi syaratnya",
-            "es": "3. The client must open a position on the League account in order to be eligible.",
+            "es": "3. El cliente debe abrir una posición en la cuenta de la Liga para calificar.",
             "pt-BR": "3. O cliente deve abrir uma posição na conta da Liga para se qualificar.",
             "ar": "3. يجب على العميل فتح مركز في حساب الدوري حتى يكون مؤهلاً."
         },
@@ -13966,7 +13966,7 @@ module.exports = {
             "vi": "4.	Mỗi tuần phải mở một giao dịch để duy trì trong cuộc thi.",
             "zh-Hant": "4.必須至少每週進行一次新交易以保持競爭。",
             "id": "4. Klien harus memiliki transaksi baru setiap minggunya (minimal satu kali) agar tetap bertahan di kompetisi",
-            "es": "4. A new trade must be placed every week (as a minimum) to stay in the competition",
+            "es": "4. Se debe abrir una nueva posición cada semana (mínimo) para permanecer en la competencia.",
             "pt-BR": "4. Uma nova posição deve ser aberta toda semana (no mínimo) para permanecer na competição",
             "ar": "4. يجب التداول مرة واحدة كل أسبوع (كحد أدنى) للبقاء في المنافسة."
         },
@@ -13976,7 +13976,7 @@ module.exports = {
             "vi": "5.	Người chơi có thể theo dõi thứ hạng của mình trong thời gian thực tế trên bảng xếp hạng ở trang đích ",
             "zh-Hant": "5.參與者可以在單獨的頁面上實時監視其排名。",
             "id": "5.Para peserta dapat memantau posisi mereka pada tabel peringkat melalui situs kami",
-            "es": "5. Participants can monitor their rankings in real-time, on a separate landing page.",
+            "es": "5. Los participantes pueden monitorear sus calificaciones en tiempo real en una página de destino separada.",
             "pt-BR": "5. Os participantes podem monitorar suas classificações em tempo real, em uma página de destino separada.",
             "ar": "5. يمكن للمشاركين مراقبة تصنيفاتهم في الوقت الفعلي ، على صفحة مقصودة منفصلة."
         },
@@ -13986,7 +13986,7 @@ module.exports = {
             "vi": "6.	Người có thứ hạng cao nhất và có tỷ lệ lợi nhuận cao nhất sẽ giành chiến thắng",
             "zh-Hant": "6.排名最高、收益最好的交易者將獲得最高淨值的獎金。",
             "id": "6. Untuk pemenang akan dihitung berdasarkan berapa keuntungan (net) yang didapatkan",
-            "es": "6. The top-ranked, most profitable trader based on the highest net worth will receive the winning prize.",
+            "es": "6. El comerciante mejor calificado y más rentable, basado en el patrimonio neto más alto, recibirá el premio ganador.",
             "pt-BR": "6. O comerciante mais bem classificado e mais lucrativo, com base no maior patrimônio líquido, receberá o prêmio vencedor.",
             "ar": "6. سوف يحصل المتداول الأعلى مرتبة والأكثر ربحية  على أعلى قيمة للجوائز."
         },
@@ -13996,7 +13996,7 @@ module.exports = {
             "vi": "7.	2 á quân sẽ nhận được giải á quân.",
             "zh-Hant": "兩名亞軍將獲得亞軍獎。",
             "id": "7. 2 Runner up  akan mendapatkan hadiah spesial",
-            "es": "7. Two runners-up will receive runner-up prizes.",
+            "es": "7. Dos subcampeones recibirán premios de subcampeón",
             "pt-BR": "7. Dois vice-campeões receberão prêmios de vice-campeão",
             "ar": "7. سيحصل اثنان من المتسابقين على جوائز الوصيف"
         },
@@ -14016,7 +14016,7 @@ module.exports = {
             "vi": "1.	Các giao dịch được mở từ 00:00:00 (GMT +3) ngày 25 tháng 10 đến 23:59:59 (GMT+3) ngày 11 tháng 12 là hợp lệ.",
             "zh-Hant": "10月25日0:00（GMT+3）到12月11日24:00（GMT+3）期間開設的訂單為有效訂單；",
             "id": "1. Transaksi yang valid adalah transaksi yang dilakukan antara tanggal 25 Oktober pukul 04:00:00 WIB hingga 12 Desember pukul 03:59:59 WIB",
-            "es": "1.Orders opened between 00:00:00 (GMT+3) on October 25 and 23:59:59 (GMT+3) on December 11 are valid;",
+            "es": "1. Los pedidos abiertos entre las 00:00:00 (GMT +3) del 25 de octubre y las 23:59:59 (GMT +3) del 11 de diciembre son válidos;",
             "pt-BR": "1. Os pedidos abertos entre 00:00:00 (GMT +3) em 25 de outubro e 23:59:59 (GMT +3) em 11 de dezembro são válidos;",
             "ar": "1. يتم فتح أوامر الشراء بين الساعة 00:00:00 (بتوقيت غرينتش + 3) في 25 أكتوبر و 23:59:59 (بتوقيت غرينتش + 3) في 11 ديسمبر."
         },
@@ -14026,7 +14026,7 @@ module.exports = {
             "vi": "2.	Hệ thống sẽ tính toàn bảng xếp hạng dựa trên giá trị ròng vào lúc 23: 59:59 (GMT+3) ngày 11 tháng 12",
             "zh-Hant": "系統將以12月11日24:00(GMT+3)的淨值計算排名。",
             "id": "2. Sistem akan mulai mencatat perhitungan mulai dari pukul 03:59:59 WIB pada tanggal 12 Desember 2019",
-            "es": "2.The system will calculate the ranking based on the net value at 23:59:59(GMT+3) on December 11.",
+            "es": "2. El sistema calculará la calificación en función del patrimonio neto a las 23:59:59 (GMT +3) del 11 de diciembre.",
             "pt-BR": "2. O sistema calculará a classificação com base no valor líquido às 23:59:59 (GMT +3) em 11 de dezembro.",
             "ar": "2. سيقوم النظام بحساب الترتيب بناءً على القيمة الصافية في الساعة 23:59:59 (بتوقيت غرينتش + 3) في 11 ديسمبر."
         },
