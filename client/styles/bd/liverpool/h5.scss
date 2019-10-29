@@ -383,7 +383,7 @@
         }
       }
       @include m(rg) {
-        width: px2rem(650);
+        width: 100%;
         margin: 0 auto;
         padding: px2rem(60) 0 0;
         > img {

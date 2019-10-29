@@ -20,7 +20,7 @@
         doc.addEventListener('DOMContentLoaded', recalc, false);
     })(document, window);
 
-    // 防止当用户放大主题后样式变形
+    // 防止当用户放大主题后样式变形（待测，安卓浏览器不生效）
     window.onload = function () {
         (function () {
             var $dom = document.createElement('div');
