@@ -70,7 +70,7 @@
         }
         // 选择国家
         $scope.selectWorld = function (target) {
-            $scope.toGtagEvent('click_country_register_web');
+            // $scope.toGtagEvent('click_country_register_web');
             if(target.code === 'CN'){
                 $scope.registerStep3 = 1;
             }
