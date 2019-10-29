@@ -116,27 +116,27 @@
         &:nth-child(n + 2) {
           border-bottom: 1px solid #e5e5e5;
         }
-        &:nth-child(2) {
-          > div {
-            &:nth-child(1) {
-              color: #d0be73;
-            }
-          }
-        }
-        &:nth-child(3) {
-          > div {
-            &:nth-child(1) {
-              color: #acacac;
-            }
-          }
-        }
-        &:nth-child(4) {
-          > div {
-            &:nth-child(1) {
-              color: #a7925e;
-            }
-          }
-        }
+        // &:nth-child(2) {
+        //   > div {
+        //     &:nth-child(1) {
+        //       color: #d0be73;
+        //     }
+        //   }
+        // }
+        // &:nth-child(3) {
+        //   > div {
+        //     &:nth-child(1) {
+        //       color: #acacac;
+        //     }
+        //   }
+        // }
+        // &:nth-child(4) {
+        //   > div {
+        //     &:nth-child(1) {
+        //       color: #a7925e;
+        //     }
+        //   }
+        // }
         &.active {
           background-color: #ffd521;
         }
@@ -159,11 +159,14 @@
         font-size: 62px;
         font-weight: 500;
         line-height: 66px;
+        margin-bottom: 0;
         width: 720px;
       }
       .title4 {
-        font-size: 40px;
-        line-height: 45px;
+        font-size: 33px;
+        line-height: 38px;
+        margin-top: 0px;
+        width: 780px;
       }
       .title2 {
         font-size: 42px;
@@ -178,7 +181,6 @@
         margin-top: 35px;
       }
       .title3 {
-        font-weight: 500;
         font-size: 20px;
         line-height: 25px;
         width: 770px;
@@ -343,6 +345,7 @@
         .title4 {
           font-size: px2rem(40);
           line-height: px2rem(45);
+          width: auto;
         }
         .title2 {
           margin-top: px2rem(30);
@@ -356,7 +359,6 @@
           width: auto;
         }
         .title3 {
-          font-weight: 500;
           font-size: px2rem(32);
           line-height: px2rem(36);
           width: auto;
@@ -381,7 +383,7 @@
         }
       }
       @include m(rg) {
-        width: px2rem(650);
+        width: 100%;
         margin: 0 auto;
         padding: px2rem(60) 0 0;
         > img {
