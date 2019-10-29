@@ -43,6 +43,7 @@
             trader.getAvaCopyAmount(usercode).then(function (data) {
                 $scope.copyTrade.avaCopyAmount = data.data.usable;
                 $scope.copyTrade.advice = data.data.advice;
+                $scope.copyTrade.minCopyAmount = data.data.min_copy_amount;
                 // $scope.copyTrade.amount = avaCopyInfo.advice;
                 $scope.calAmount();
                 getDefaultAmount();
@@ -63,7 +64,7 @@
         function getDefaultAmount(){
             var ava = Number($scope.copyTrade.avaCopyAmount);
             var adv = Number($scope.copyTrade.advice);
-            var min = Number(200);
+            var min = Number($scope.copyTrade.minCopyAmount);
             console.log(ava,adv,min);
             if((min < ava && ava < adv) || ava < min){
                 $scope.copyTrade.amount = ava;
@@ -113,7 +114,7 @@
         $scope.calAmount = function () {
             var usableAmount = Number($scope.copyTrade.avaCopyAmount);
             var amount = Number($scope.copyTrade.amount);
-            if ($scope.copyTrade.amount > usableAmount || usableAmount < 200) {
+            if (amount > usableAmount || usableAmount < Number($scope.copyTrade.minCopyAmount)) {
                 $scope.frontErr.insufficient.show = true;
             } else {
                 $scope.frontErr.insufficient.show = false;

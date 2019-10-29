@@ -9,6 +9,10 @@
 
     function TraderIndexController($scope, $location, $state, trader, $timeout, $modal, $rootScope) {
         $scope.master = {};
+        $scope.noCopy = {
+            bol: true,
+            tip: ''
+        };
         $scope.masterGradeInfo = {};
         $scope.toCopy = toCopy;
         var usercode,
@@ -49,50 +53,50 @@
         }
 
         // 关注关系
-        function getFollowRelation(usercode) {
-            $scope.$watch('userstatus.logined', function (newVal, oldVal) {
-                if (newVal === true) {
-                    trader.getFollowRelation(usercode).then(function (data) {
-                        // console.info(data);
-                        $scope.master.follow = data.follow;
-                    });
-                }
-            });
-        }
+        // function getFollowRelation(usercode) {
+        //     $scope.$watch('userstatus.logined', function (newVal, oldVal) {
+        //         if (newVal === true) {
+        //             trader.getFollowRelation(usercode).then(function (data) {
+        //                 // console.info(data);
+        //                 $scope.master.follow = data.follow;
+        //             });
+        //         }
+        //     });
+        // }
 
-        function toFollow(action) {
-            // 判断是否登陆
-            if ($scope.userstatus.logined) {
-                trader.follow(usercode, action).then(function (data) {
-                    if (data.is_succ) {
-                        getFollowRelation(usercode);
-                    }
-                });
-            } else {
-                openSystemMdl('login', '关注');
-            }
-        }
+        // function toFollow(action) {
+        //     // 判断是否登陆
+        //     if ($scope.userstatus.logined) {
+        //         trader.follow(usercode, action).then(function (data) {
+        //             if (data.is_succ) {
+        //                 getFollowRelation(usercode);
+        //             }
+        //         });
+        //     } else {
+        //         openSystemMdl('login', '关注');
+        //     }
+        // }
 
-        function cancelFollow() {
-            $scope.master.follow_text = '取消关注';
-        }
+        // function cancelFollow() {
+        //     $scope.master.follow_text = '取消关注';
+        // }
 
-        function isFollow() {
-            $scope.master.follow_text = '已关注';
-        }
+        // function isFollow() {
+        //     $scope.master.follow_text = '已关注';
+        // }
 
         // 复制关系
-        function getCopyRelation(usercode) {
-            $scope.$watch('userstatus.logined', function (newVal, oldVal) {
-                if (newVal === true) {
-                    trader.getCopyRelation(usercode).then(function (data) {
-                        // 本人是否复制高手，值为 null（未复制）或者数字（复制金额）
-                        $scope.master.copied = data.data.copy_real;
-                    });
-                }
-            });
+        // function getCopyRelation(usercode) {
+        //     $scope.$watch('userstatus.logined', function (newVal, oldVal) {
+        //         if (newVal === true) {
+        //             trader.getCopyRelation(usercode).then(function (data) {
+        //                 // 本人是否复制高手，值为 null（未复制）或者数字（复制金额）
+        //                 $scope.master.copied = data.data.copy_real;
+        //             });
+        //         }
+        //     });
 
-        }
+        // }
 
         // 获取可用复制金额 复制关系
         function getAvaCopyAmount(usercode) {
@@ -102,14 +106,23 @@
                     trader.getAvaCopyAmount(usercode).then(function (data) {
                         // console.info(data);
                         if (data.is_succ) {
+                            $scope.noCopy = {
+                                bol: false,
+                                tip: ''
+                            };;
                             $scope.master.copied = data.data.is_copy;
                             avaCopyAmount = data.data.usable;
                             $scope.master.avaCopyAmount = data.data.usable;
                             $scope.master.min_copy_amount = data.data.min_copy_amount;
                             AvaCopyInfo = data.data;
                         } else {
-                            // 如果是false的话需要弹出提示且不能复制TODO
+                            // 如果是false的话需要弹出提示且不能复制
+                            $scope.noCopy = {
+                                bol: true,
+                                tip: data.message
+                            };;
                             avaCopyAmount = 0;
+                            
                         }
                     });
                 }
@@ -125,9 +138,12 @@
                 }
             });
         }
-
         // console.info($scope.personal.isumam);
         function toCopy() {
+            if($scope.noCopy.bol){
+                openSystemMdl('tip', $scope.noCopy.tip);
+                return;
+            }
             // 判断是否登录
             if ($scope.userstatus.logined) {
                 // 判断资金是否处于封闭期
