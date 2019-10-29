@@ -13621,12 +13621,12 @@ module.exports = {
             "ar": "هل لديك ما يلزم لتكون في صدارة دورة 'تيغرويت' العالمية للتداول؟"
         },
         "bannerCon": {
-            "zh": "使用我们的模拟账户上的10,000USD虚拟资金测试您的交易技巧。",
-            "en": "Test your trading skills with $10,000USD of virtual funds on our Demo account.",
-            "vi": "Hãy kiểm tra các kĩ năng giao dịch của bạn với 10,000 $ USD trong quỹ ảo trên tài khoản Demo",
-            "zh-Hant": "使用我們的模擬賬戶上的$ 10,000USD虛擬資金測試您的交易技巧。",
+            "zh": "使用我们的模拟账户上的 $10,000虚拟资金测试您的交易技巧。",
+            "en": "Test your trading skills with $10,000 of virtual funds on our Demo account.",
+            "vi": "Hãy kiểm tra các kĩ năng giao dịch của bạn với 10,000 $ trong quỹ ảo trên tài khoản Demo",
+            "zh-Hant": "使用我們的模擬賬戶上的$ 10,000虛擬資金測試您的交易技巧。",
             "id": "Tes kemampuan trading anda dengan menggunakan akun virtual senilai $10,000 melalui akun Demo anda",
-            "es": "Pon a prueba tus habilidades con $ 10,000USD de fondos virtuales en nuestra cuenta demo.",
+            "es": "Pon a prueba tus habilidades con $ 10,000 de fondos virtuales en nuestra cuenta demo.",
             "pt-BR": "Teste suas habilidades de negociação com US $ 10.000 em fundos virtuais em nossa conta demo.",
             "ar": "اختبر مهاراتك في التداول بأموال افتراضية بقيمة 10000 دولار على حسابنا التجريبي"
         },
@@ -14041,12 +14041,12 @@ module.exports = {
             "ar": "هل لديك ما يلزم لتكون في صدارة دورة 'تيغرويت' العالمية للتداول ؟"
         },
         "lfcTit2": {
-            "zh": "使用我们的模拟账户上的10,000USD虚拟资金测试您的交易技巧。",
-            "en": "Test your trading skills with 10,000USD of virtual funds on our Demo account.",
+            "zh": "使用我们的模拟账户上的 $10,000虚拟资金测试您的交易技巧。",
+            "en": "Test your trading skills with $10,000 of virtual funds on our Demo account.",
             "vi": "Kiểm tra kỹ năng giao dịch của bạn với 10000 quỹ ảo trên tài khoản demo của chúng tôi",
-            "zh-Hant": "使用我們的模擬賬戶上的10,000USD虛擬資金測試您的交易技巧。",
+            "zh-Hant": "使用我們的模擬賬戶上的 $10,000虛擬資金測試您的交易技巧。",
             "id": "Tes kemampuan trading anda dengan menggunakan akun virtual senilai 10,000 melalui akun Demo anda",
-            "es": "Pon a prueba tus habilidades con 10,000USD de fondos virtuales en nuestra cuenta demo.",
+            "es": "Pon a prueba tus habilidades con 10,000 de fondos virtuales en nuestra cuenta demo.",
             "pt-BR": "Teste suas habilidades de negociação com US 10.000 em fundos virtuais em nossa conta demo.",
             "ar": "اختبر مهاراتك في التداول بأموال افتراضية بقيمة 10000 دولار على حسابنا التجريبي"
         },

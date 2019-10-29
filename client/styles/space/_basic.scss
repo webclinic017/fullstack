@@ -72,10 +72,13 @@ $font-space-gray-color: $gray-dark;
         color: #000;
         padding-top: 18px;
         .con {
-          font-size: 14px;
+          font-size: 12px;
           line-height: 14px;
           padding: 3px 0;
           color: rgba(50, 50, 50, 1);
+          &.con_width{
+            width: 135px;
+          }
         }
       }
       &:nth-child(3n-1) {
