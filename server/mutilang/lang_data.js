@@ -14000,6 +14000,16 @@ module.exports = {
             "pt-BR": "7. Dois vice-campeões receberão prêmios de vice-campeão",
             "ar": "7. سيحصل اثنان من المتسابقين على جوائز الوصيف"
         },
+        "rulesTit4Con8": {
+            "zh": "声明：本活动与苹果公司（Apple Inc）无关",
+            "en": "Disclaimer: this event is not related to Apple Inc",
+            "vi": "Tuyên bố miễn trừ trách nhiệm: sự kiện này không liên quan đến Apple Inc",
+            "zh-Hant": "免責聲明：此事件與Apple Inc.無關",
+            "id": "Penafian: acara ini tidak terkait dengan Apple Inc",
+            "es": "Descargo de responsabilidad: este evento no está relacionado con Apple Inc",
+            "pt-BR": "Isenção de responsabilidade: este evento não está relacionado à Apple Inc",
+            "ar": "إخلاء المسئولية: هذا الحدث لا يرتبط بـ Apple Inc"
+        },
         "rulesTit5": {
             "zh": "交易和排名规则：",
             "en": "Trading and Ranking Rules:",
