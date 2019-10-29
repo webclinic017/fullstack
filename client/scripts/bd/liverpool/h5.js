@@ -82,7 +82,7 @@
     function competitionRanking() {
         var api = isInTiger() ? 'competitionRankingApp' : 'competitionRanking';
         publicRequest(api, 'GET', {
-            limit: 10,
+            limit: 50,
             only_key: only_key
         }).then(function (data) {
             // console.log(data.data);

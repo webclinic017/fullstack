@@ -13621,12 +13621,12 @@ module.exports = {
             "ar": "هل لديك ما يلزم لتكون في صدارة دورة 'تيغرويت' العالمية للتداول؟"
         },
         "bannerCon": {
-            "zh": "使用我们的模拟账户上的10,000USD虚拟资金测试您的交易技巧。",
-            "en": "Test your trading skills with $10,000USD of virtual funds on our Demo account.",
-            "vi": "Hãy kiểm tra các kĩ năng giao dịch của bạn với 10,000 $ USD trong quỹ ảo trên tài khoản Demo",
-            "zh-Hant": "使用我們的模擬賬戶上的$ 10,000USD虛擬資金測試您的交易技巧。",
+            "zh": "使用我们的模拟账户上的 $10,000虚拟资金测试您的交易技巧。",
+            "en": "Test your trading skills with $10,000 of virtual funds on our Demo account.",
+            "vi": "Hãy kiểm tra các kĩ năng giao dịch của bạn với 10,000 $ trong quỹ ảo trên tài khoản Demo",
+            "zh-Hant": "使用我們的模擬賬戶上的$ 10,000虛擬資金測試您的交易技巧。",
             "id": "Tes kemampuan trading anda dengan menggunakan akun virtual senilai $10,000 melalui akun Demo anda",
-            "es": "Pon a prueba tus habilidades con $ 10,000USD de fondos virtuales en nuestra cuenta demo.",
+            "es": "Pon a prueba tus habilidades con $ 10,000 de fondos virtuales en nuestra cuenta demo.",
             "pt-BR": "Teste suas habilidades de negociação com US $ 10.000 em fundos virtuais em nossa conta demo.",
             "ar": "اختبر مهاراتك في التداول بأموال افتراضية بقيمة 10000 دولار على حسابنا التجريبي"
         },
@@ -14000,6 +14000,16 @@ module.exports = {
             "pt-BR": "7. Dois vice-campeões receberão prêmios de vice-campeão",
             "ar": "7. سيحصل اثنان من المتسابقين على جوائز الوصيف"
         },
+        "rulesTit4Con8": {
+            "zh": "声明：本活动与苹果公司（Apple Inc）无关",
+            "en": "Disclaimer: this event is not related to Apple Inc",
+            "vi": "Tuyên bố miễn trừ trách nhiệm: sự kiện này không liên quan đến Apple Inc",
+            "zh-Hant": "免責聲明：此事件與Apple Inc.無關",
+            "id": "Penafian: acara ini tidak terkait dengan Apple Inc",
+            "es": "Descargo de responsabilidad: este evento no está relacionado con Apple Inc",
+            "pt-BR": "Isenção de responsabilidade: este evento não está relacionado à Apple Inc",
+            "ar": "إخلاء المسئولية: هذا الحدث لا يرتبط بـ Apple Inc"
+        },
         "rulesTit5": {
             "zh": "交易和排名规则：",
             "en": "Trading and Ranking Rules:",
@@ -14041,12 +14051,12 @@ module.exports = {
             "ar": "هل لديك ما يلزم لتكون في صدارة دورة 'تيغرويت' العالمية للتداول ؟"
         },
         "lfcTit2": {
-            "zh": "使用我们的模拟账户上的10,000USD虚拟资金测试您的交易技巧。",
-            "en": "Test your trading skills with 10,000USD of virtual funds on our Demo account.",
+            "zh": "使用我们的模拟账户上的 $10,000虚拟资金测试您的交易技巧。",
+            "en": "Test your trading skills with $10,000 of virtual funds on our Demo account.",
             "vi": "Kiểm tra kỹ năng giao dịch của bạn với 10000 quỹ ảo trên tài khoản demo của chúng tôi",
-            "zh-Hant": "使用我們的模擬賬戶上的10,000USD虛擬資金測試您的交易技巧。",
+            "zh-Hant": "使用我們的模擬賬戶上的 $10,000虛擬資金測試您的交易技巧。",
             "id": "Tes kemampuan trading anda dengan menggunakan akun virtual senilai 10,000 melalui akun Demo anda",
-            "es": "Pon a prueba tus habilidades con 10,000USD de fondos virtuales en nuestra cuenta demo.",
+            "es": "Pon a prueba tus habilidades con 10,000 de fondos virtuales en nuestra cuenta demo.",
             "pt-BR": "Teste suas habilidades de negociação com US 10.000 em fundos virtuais em nossa conta demo.",
             "ar": "اختبر مهاراتك في التداول بأموال افتراضية بقيمة 10000 دولار على حسابنا التجريبي"
         },
