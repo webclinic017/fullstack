@@ -83,4 +83,19 @@
             </a>
         </p>
     </div>
+
+    <div class="system_modal__content" ng-if="modal.type === 'tip'">
+        <p class="system_modal__info">
+            {{lang.text('tigerWitID.commission.cannotCopy')}}
+        </p>
+        <p class="system_modal__tip">
+            {{ modal.info }}
+        </p>
+
+        <p class="system_modal__btn_wrapper">
+            <a class="btn btn-primary btn-sm" ng-click="closeModal()" href="">
+                {{lang.text('tigerWitID.confirm')}}
+            </a>
+        </p>
+    </div>
 </div>
