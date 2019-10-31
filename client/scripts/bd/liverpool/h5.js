@@ -82,7 +82,7 @@
     function competitionRanking() {
         var api = isInTiger() ? 'competitionRankingApp' : 'competitionRanking';
         publicRequest(api, 'GET', {
-            limit: 50,
+            // limit: 50,
             only_key: only_key
         }).then(function (data) {
             // console.log(data.data);
@@ -94,7 +94,7 @@
                     var obj = ranking[i];
                     html += '<li>' +
                         '<div>#' + obj.ranking + '</div>' +
-                        '<div><span><img src="/white_label/jack_icon/'+ obj.world_code +'.png"></span></div>' +
+                        '<div><span><img src="/white_label/jack_icon/'+ obj.world_code +'.png"></span><p>'+ obj.world_name +'</p></div>' +
                         // '<div>'+ obj.world_code +'</div>' +
                         '<div>' + obj.trade_account_memo + '</div>' +
                         '<div>' + (obj.profit_rate * 100).toFixed(2) + '%</div>' +
@@ -104,7 +104,7 @@
                 if (personalRanking && personalRanking[0]) {
                     html += '<li class="active">' +
                         '<div>#' + personalRanking[0].ranking + '</div>' +
-                        '<div><span><img src="/white_label/jack_icon/'+ personalRanking[0].world_code +'.png"></span></div>' +
+                        '<div><span><img src="/white_label/jack_icon/'+ personalRanking[0].world_code +'.png"></span><p>'+ personalRanking[0].world_name +'</p></div>' +
                         // '<div>'+ personalRanking[0].world_code +'</div>' +
                         '<div>' + personalRanking[0].trade_account_memo + '</div>' +
                         '<div>' + (personalRanking[0].profit_rate * 100).toFixed(2) + '%</div>' +
