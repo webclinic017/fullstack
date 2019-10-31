@@ -13341,7 +13341,7 @@
             },
         };
         var indexBasePath = "/white_label";
-        var data = Object.assign({
+        var data = angular.extend({
             "company": "tigerwit",
             "language": '',
 
