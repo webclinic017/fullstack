@@ -19,7 +19,7 @@
             username: copiedTrader.username,          // 高手 username
             // avatar: copiedTrader.lgAvatar,         // 高手头像
             amount: copiedTrader.copied || undefined, // 需填写的复制金额，若已经复制则为本人复制高手的复制金额
-            minCopyAmount: copiedTrader.minCopyAmount || '', 
+            minCopyAmount: Number(copiedTrader.minCopyAmount) || '', 
             surplusAmount: passedScope.surplusAmount || undefined
         };
 
@@ -43,6 +43,7 @@
             trader.getAvaCopyAmount(usercode).then(function (data) {
                 $scope.copyTrade.avaCopyAmount = data.data.usable;
                 $scope.copyTrade.advice = data.data.advice;
+                $scope.copyTrade.minCopyAmount = Number(data.data.min_copy_amount);
                 // $scope.copyTrade.amount = avaCopyInfo.advice;
                 $scope.calAmount();
                 getDefaultAmount();
@@ -63,7 +64,7 @@
         function getDefaultAmount(){
             var ava = Number($scope.copyTrade.avaCopyAmount);
             var adv = Number($scope.copyTrade.advice);
-            var min = Number(200);
+            var min = $scope.copyTrade.minCopyAmount;
             console.log(ava,adv,min);
             if((min < ava && ava < adv) || ava < min){
                 $scope.copyTrade.amount = ava;
@@ -106,14 +107,14 @@
         $scope.closeModal = closeModal;
 
         if ($scope.copyTrade.amount &&
-            parseInt($scope.copyTrade.amount) < parseInt($scope.copyTrade.minCopyAmount)) {
+            parseInt($scope.copyTrade.amount) < $scope.copyTrade.minCopyAmount) {
             $scope.copyTrade.amount = 1000;
         }
 
         $scope.calAmount = function () {
             var usableAmount = Number($scope.copyTrade.avaCopyAmount);
             var amount = Number($scope.copyTrade.amount);
-            if ($scope.copyTrade.amount > usableAmount || usableAmount < 200) {
+            if (amount > usableAmount || usableAmount < $scope.copyTrade.minCopyAmount) {
                 $scope.frontErr.insufficient.show = true;
             } else {
                 $scope.frontErr.insufficient.show = false;
