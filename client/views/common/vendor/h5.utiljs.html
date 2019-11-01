@@ -133,15 +133,18 @@
     // console.log(getDomain());
 
     //设置邮箱
-    function getEmailPhone(ele, emailOrPhone) {
+    function getEmailPhone(ele, emailOrPhone, callback) {
         console.log(getDomain());
         //emailOrPhone 默认邮箱
         if (sessionStorage["sysMessage"]) {
-            if (emailOrPhone && emailOrPhone == 'phone') {
-                $(ele).html(JSON.parse(sessionStorage["sysMessage"]).phone_list[0].phone);
-            } else {
-                $(ele).html(JSON.parse(sessionStorage["sysMessage"]).email_list[0].email);
+            if (ele) {
+                if (emailOrPhone && emailOrPhone == 'phone') {
+                    $(ele).html(JSON.parse(sessionStorage["sysMessage"]).phone_list[0].phone);
+                } else {
+                    $(ele).html(JSON.parse(sessionStorage["sysMessage"]).email_list[0].email);
+                }
             }
+            callback && callback();
         } else {
             var d = new Date();
             d.setTime(d.getTime() + (1 * 24 * 60 * 60 * 1000));
@@ -149,12 +152,15 @@
                 // console.log(data);
                 if (!data) return;
                 if (data.is_succ) {
-                    if (emailOrPhone && emailOrPhone == 'phone') {
-                        $(ele).html(data.data.phone_list[0].phone);
-                    } else {
-                        $(ele).html(data.data.email_list[0].email);
+                    if (ele) {
+                        if (emailOrPhone && emailOrPhone == 'phone') {
+                            $(ele).html(data.data.phone_list[0].phone);
+                        } else {
+                            $(ele).html(data.data.email_list[0].email);
+                        }
                     }
                     sessionStorage["sysMessage"] = JSON.stringify(data.data);
+                    callback && callback();
                 }
             });
         }
