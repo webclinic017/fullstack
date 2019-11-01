@@ -6,9 +6,9 @@
         .module('fullstackApp')
         .controller('WebAgentController', WebAgentController);
 
-    WebAgentController.$inject = ['$scope', 'validator', '$modal', 'market', 'account', 'lang'];
+    WebAgentController.$inject = ['$scope', 'validator', '$modal', 'market', 'account', 'lang', 'invite'];
 
-    function WebAgentController ($scope, validator, $modal, market, account, lang) {
+    function WebAgentController ($scope, validator, $modal, market, account, lang, invite) {
 
         $scope.becomeAgent = {
             phone: undefined,
@@ -44,6 +44,12 @@
         //     $scope.becomeAgent.country.code = 'CN';
         //     $scope.becomeAgent.country.name_cn = '中国';
         // }
+
+        var source = $scope.checkUserSource();
+
+        invite.setUserSource({
+            source: JSON.stringify(source)
+        });
 
         function submitForm () {
             $scope.error = {
