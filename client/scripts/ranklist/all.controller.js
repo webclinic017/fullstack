@@ -11,6 +11,11 @@
 
         var pagesize = 9;
         $scope.rankOrder = 'thirty_profit_rate';
+        $scope.rankOrderList = {
+            'thirty_profit_rate': $scope.lang.text("tigerWitID.master.highIncome"),
+            'thirty_max_retract': $scope.lang.text("tigerWitID.dataStatistics.steadyg"),
+            'thirty_win_rate': $scope.lang.text("tigerWitID.master.exact")
+        };
         $scope.search = {};
         $scope.ranklist = [];
         $scope.masterTrialList = {};
@@ -44,7 +49,7 @@
             // $scope.ranklist = [];
             $scope.$broadcast('showLoadingImg');
 
-            ranklist.getMastersList($scope.rankOrder, offset, 9).then(function (data) {
+            ranklist.getMastersNewList($scope.rankOrder, offset, 9).then(function (data) {
                 // console.info(data);
                 if (data.is_succ) {
                     data = data.data;

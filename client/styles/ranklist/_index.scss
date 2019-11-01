@@ -107,7 +107,7 @@
   width: 1211px;
   margin: 0 auto;
   padding: 0;
-  background: #fafafa;
+  background: #fff;
   .list_width {
     margin: 0 auto;
     width: 1060px;
@@ -120,105 +120,126 @@
   padding-top: 20px;
 
   @include e(navbar) {
-    @include m(lst) {
-      > li {
-        width: 33.33%;
-        text-align: center;
-        height: 55px;
-        line-height: 55px;
-        color: #222426;
-        border-bottom: 1px solid #eff0f1;
-        font-weight: 600;
-        cursor: pointer;
-
-        &.active {
-          color: $brand-info;
+    @include m(toggle) {
+      position: relative;
+      margin: 0 9px;
+      &:hover {
+        .ranklist__navbar-lst {
+          display: block;
         }
       }
     }
+    @include m(tit) {
+    }
+    @include m(lst) {
+      position: absolute;
+      display: none;
+      top: 102%;
+      left: 0;
+      z-index: 1;
+      min-width: 100%;
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
+      overflow: hidden;
+      background-color: #242a36;
+      color: #fff;
+      > li {
+        padding: 8px 10px;
+        &:hover {
+          background-color: $main-color;
+          span {
+            color: $gray-base;
+          }
+        }
+        // &.active {
+        //   color: $brand-info;
+        // }
+      }
+    }
   }
-
-  // @include e(search) {
-  //     height: 62px;
-  //     border-bottom: 1px solid #e6e7e8;
-
-  //     @include m(item) {
-  //         float: left;
-  //         padding: 15px 25px;
-  //         margin-top: 5px;
-  //         font-weight: 600;
-  //         position: relative;
-  //         margin-left: 30px;
-  //         cursor: pointer;
-
-  //         > i {
-  //             color: #999;
-  //         }
-
-  //         > .search-list {
-  //             position: absolute;
-  //             top: 0;
-  //             left: 0;
-  //             border: 1px solid #e6e7e8;
-  //             box-shadow: 0 0 3px #e6e7e8;
-  //             min-width: 150px;
-  //             background-color: #fff;
-  //             z-index: 100;
-
-  //             > .tit {
-  //                 padding: 14px 14px;
-  //                 margin: 0 10px;
-  //                 border-bottom: 1px solid #e6e7e8;
-
-  //                 > i {
-  //                     float: right;
-  //                     line-height: 20px;
-  //                     color: #999;
-  //                 }
-  //             }
-  //             > .lst {
-
-  //                 > li {
-  //                     padding: 10px 20px;
-  //                     color: #626364;
-  //                     font-weight: 400;
-  //                     cursor: pointer;
-
-  //                     &:hover {
-  //                         background-color: #eff0f1;
-  //                     }
-  //                 }
-  //             }
-  //         }
-  //     }
-
-  //     @include m(box) {
-  //         float: right;
-  //         width: 186px;
-  //         position: relative;
-  //         margin-top: 14px;
-  //         margin-right: 45px;
-
-  //         > i {
-  //             position: absolute;
-  //             right: 9px;
-  //             top: 9px;
-  //             color: #999;
-  //         }
-  //     }
-
-  //     @include m(input) {
-  //         width: 100%;
-  //         height: 34px;
-  //         line-height: 34px;
-  //         padding: 0px 28px 0 10px;
-  //         border: 1px solid #ccc;
-  //         border-radius: 2px;
-  //         color: #666;
-  //         background-color: transparent;
-  //     }
-  // }
 }
+
+// @include e(search) {
+//     height: 62px;
+//     border-bottom: 1px solid #e6e7e8;
+
+//     @include m(item) {
+//         float: left;
+//         padding: 15px 25px;
+//         margin-top: 5px;
+//         font-weight: 600;
+//         position: relative;
+//         margin-left: 30px;
+//         cursor: pointer;
+
+//         > i {
+//             color: #999;
+//         }
+
+//         > .search-list {
+//             position: absolute;
+//             top: 0;
+//             left: 0;
+//             border: 1px solid #e6e7e8;
+//             box-shadow: 0 0 3px #e6e7e8;
+//             min-width: 150px;
+//             background-color: #fff;
+//             z-index: 100;
+
+//             > .tit {
+//                 padding: 14px 14px;
+//                 margin: 0 10px;
+//                 border-bottom: 1px solid #e6e7e8;
+
+//                 > i {
+//                     float: right;
+//                     line-height: 20px;
+//                     color: #999;
+//                 }
+//             }
+//             > .lst {
+
+//                 > li {
+//                     padding: 10px 20px;
+//                     color: #626364;
+//                     font-weight: 400;
+//                     cursor: pointer;
+
+//                     &:hover {
+//                         background-color: #eff0f1;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+
+//     @include m(box) {
+//         float: right;
+//         width: 186px;
+//         position: relative;
+//         margin-top: 14px;
+//         margin-right: 45px;
+
+//         > i {
+//             position: absolute;
+//             right: 9px;
+//             top: 9px;
+//             color: #999;
+//         }
+//     }
+
+//     @include m(input) {
+//         width: 100%;
+//         height: 34px;
+//         line-height: 34px;
+//         padding: 0px 28px 0 10px;
+//         border: 1px solid #ccc;
+//         border-radius: 2px;
+//         color: #666;
+//         background-color: transparent;
+//     }
+// }
+// }
 // @include b(ranklist_cont) {
 //     position: relative;
 //     margin-top: 25px;
@@ -366,21 +387,29 @@
   margin-top: 32px;
 
   @include e(master) {
+    color: rgba(30, 32, 36, 0.5);
     margin-bottom: 14px;
-    padding: 12px 32px;
+    padding: 12px;
     border-radius: 26px;
     background-color: #fff;
-    box-shadow: 0px 4px 3px #ccc;
+    box-shadow: 0px 0px 10px 0px #ccc;
 
     &:hover {
-      background-color: #fafafa;
+      //   background-color: #fafafa;
     }
-
+    .dividing {
+      height: 120px;
+      width: 1px;
+      border-right: 1px dashed rgba(30, 32, 36, 0.2);
+    }
     @include m(info) {
+      width: 40%;
       padding: 8px 0;
 
       > .avatar {
-        height: 58px;
+        height: 80px;
+        border-radius: 100%;
+        overflow: hidden;
 
         > img {
           height: 100%;
@@ -391,30 +420,37 @@
         margin-right: 10px;
 
         > .name {
-          font-size: 18px;
-          color: #222;
           font-weight: 600;
+          font-size: 20px;
+          color: rgba(30, 32, 36, 1);
+          line-height: 28px;
         }
       }
     }
     @include m(tip) {
+      @include flex(1);
       margin: 0 30px;
-      font-size: 14px;
       color: rgba(30, 32, 36, 1);
+      font-size: 14px;
       line-height: 17px;
     }
     @include m(trade) {
-      padding: 17px 0;
+      text-align: center;
+      padding-top: 17px;
+      @include flex(1);
+      &.bd-tp {
+        border-top: 1px dashed rgba(30, 32, 36, 0.2);
+      }
       > .dropdown {
-        color: #626364;
+        padding: 0 70px;
 
         > .num {
+          color: rgba(30, 32, 36, 1);
           font-weight: 600;
           font-size: 26px;
           line-height: 37px;
         }
         > .tip {
-          margin-top: 7px;
           font-size: 14px;
           line-height: 20px;
         }
@@ -444,7 +480,7 @@
       // }
       > .copy_btn_wrapper {
         > .copy_btn {
-          margin: 10px;
+          margin: 7px 10px;
           // color: #000;
           // border: 1px solid #e6e7e8;
           // text-align: center;

@@ -624,6 +624,10 @@
 .flex-wrap {
     @include flexWrap(wrap);
 }
+.flex-dir-row {
+    @include flexDirection(row);
+}
+
 .cursor_pointer {
     cursor: pointer;
 }
