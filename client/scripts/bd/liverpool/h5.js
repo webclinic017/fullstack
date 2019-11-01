@@ -12,38 +12,48 @@
                 type: "pull_down_refresh",
                 show: false
             });
-        } catch (e) {}
+        } catch (e) { }
     })
-    $('body').on('click', '.closed', function(){
+    $('body').on('click', '.closed', function () {
         layer.closeAll();
         try {
             callNative({
                 type: "pull_down_refresh",
                 show: true
             });
-        } catch (e) {}
+        } catch (e) { }
     })
     var urlParams = getSearch();
     var gameInfo, only_key;
     only_key = urlParams.only_key;
     // 参加比赛逻辑
-    $(".notParticipating").on('click', function(){
-        if(isInTiger()){
+    $(".notParticipating").on('click', function () {
+        if (isInTiger()) {
             try {
                 callNative({
                     type: "open_liverpool_game",
                     only_key: only_key
                 });
-            } catch (e) {}
-        }else if(isIOS() || isAndriod()){
+            } catch (e) { }
+        } else if (isIOS() || isAndriod()) {
             location.href = "/";
-        }else{
+        } else {
             location.href = "/space/#/space/liverpool?only_key=" + only_key;
         }
     })
     if (only_key) {
         getCompetitionList();
-        competitionRanking();
+        getIpHandle();
+    }
+    var isCn;
+    function getIpHandle() {
+        getEmailPhone('', '', function () {
+            isCn = JSON.parse(sessionStorage["sysMessage"]).ip_country_code === 'CN';
+            if (isCn) {
+                $('#competitionList li  div:nth-child(2)').remove();
+            }
+            competitionRanking();
+        })
     }
     function getCompetitionList() {
         var api = isInTiger() ? 'competitionListApp' : 'competitionList';
@@ -93,20 +103,25 @@
                 for (var i = 0; i < ranking.length; i++) {
                     var obj = ranking[i];
                     html += '<li>' +
-                        '<div>#' + obj.ranking + '</div>' +
-                        '<div><span><img src="/white_label/jack_icon/'+ obj.world_code +'.png"></span><p>'+ obj.world_name +'</p></div>' +
-                        // '<div>'+ obj.world_code +'</div>' +
-                        '<div>' + obj.trade_account_memo + '</div>' +
+                        '<div>#' + obj.ranking + '</div>';
+                    if (!isCn) {
+                        html += '<div><span><img src="/white_label/jack_icon/' + obj.world_code + '.png"></span><p>' + obj.world_name + '</p></div>'
+                    }
+
+                    // '<div>'+ obj.world_code +'</div>' +
+                    html += '<div>' + obj.trade_account_memo + '</div>' +
                         '<div>' + (obj.profit_rate * 100).toFixed(2) + '%</div>' +
                         '</li>'
                 }
                 var personalRanking = data.data.personal_ranking;
                 if (personalRanking && personalRanking[0]) {
                     html += '<li class="active">' +
-                        '<div>#' + personalRanking[0].ranking + '</div>' +
-                        '<div><span><img src="/white_label/jack_icon/'+ personalRanking[0].world_code +'.png"></span><p>'+ personalRanking[0].world_name +'</p></div>' +
-                        // '<div>'+ personalRanking[0].world_code +'</div>' +
-                        '<div>' + personalRanking[0].trade_account_memo + '</div>' +
+                        '<div>#' + personalRanking[0].ranking + '</div>'
+                    if (!isCn) {
+                        html += '<div><span><img src="/white_label/jack_icon/' + personalRanking[0].world_code + '.png"></span><p>' + personalRanking[0].world_name + '</p></div>'
+                    }
+                    // '<div>'+ personalRanking[0].world_code +'</div>' +
+                    html += '<div>' + personalRanking[0].trade_account_memo + '</div>' +
                         '<div>' + (personalRanking[0].profit_rate * 100).toFixed(2) + '%</div>' +
                         '</li>'
                 }
