@@ -1,4 +1,9 @@
 ; (function () {
+    var search_source = checkUserSource();
+    /* 客户推广参数写入 */
+    publicRequest('setUserSource', 'POST', {
+        source: JSON.stringify(search_source)
+    });
     // 查看规则
     $(".rulesBtn").on('click', function () {
         layer.open({
