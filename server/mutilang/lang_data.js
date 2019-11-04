@@ -13812,7 +13812,7 @@ module.exports = {
         },
         "rulesTit1Con1": {
             "zh": "报名时间：10月25日 00:00 （GMT+3）– 11月11日 00:00（GMT+3）",
-            "en": "Registration period: October 25th 00:00 (GMT+3) – November 11th 00:00 (GMT+3)",
+            "en": "Registration period: October 25th 00:00 (GMT+3) – November 11th 00:00 (GMT+3).",
             "vi": "Thời gian đăng ký 25/10 00:00 (GMT+3)đến 11/11 00:00 (GMT+3)",
             "zh-Hant": "報名時間：10月25日 00:00 （GMT+3）– 11月11日 00:00（GMT+3）",
             "id": "Period pendaftaran : 25 Oktober 04:00 WIB - 11 November 04:00 WIB",
@@ -13832,7 +13832,7 @@ module.exports = {
         },
         "rulesTit2Con1": {
             "zh": "1.客户注册TigerWit通行证并激活联赛帐户",
-            "en": "1. The client need to registers TigerWit and activates the league account.",
+            "en": "1. To enter the League, clients MUST register and activate their League accounts.",
             "vi": "1.	Khách hàng có thể đăng ký và xác nhận qua số điện thoại và kích hoạt tài khoản dự thi.",
             "zh-Hant": "1.客戶註冊TigerWit通行證並激活聯賽帳戶",
             "id": "1.  Klien harus mendaftar di TigerWit dan aktivasi akun",
@@ -13842,7 +13842,7 @@ module.exports = {
         },
         "rulesTit2Con2": {
             "zh": "2.交易者可直接使用联赛账户里的体验金进行交易",
-            "en": "2. Traders can directly use the experience funds in the league account to trade.",
+            "en": "2. Virtual funds will then become available to the trader.",
             "vi": "2.	Khách hàng có thể trực tiếp sử dụng quỹ ảo trong tài khoản dự thi để giao dịch.",
             "zh-Hant": "2.交易者可直接使用聯賽賬戶裡的體驗金進行交易",
             "id": "2. Trader dapat menggunakan dana virtual tersebut untuk bertransaksi",
@@ -13872,7 +13872,7 @@ module.exports = {
         },
         "rulesTit3": {
             "zh": "现有客户：",
-            "en": "Existing clients:",
+            "en": "Existing Clients:",
             "vi": "Đối với khách hàng hiện tại:",
             "zh-Hant": "現有客戶：",
             "id": "Klien Lama :",
@@ -13882,7 +13882,7 @@ module.exports = {
         },
         "rulesTit3Con1": {
             "zh": "1.所有交易者都可以创建一个联赛账户。",
-            "en": "1. All traders can create a league account.",
+            "en": "1. All traders can open a league account.",
             "vi": "1.	Tất cả người chơi có thể mở một tài khoản Dự Thi.",
             "zh-Hant": "1.所有交易者都可以創建一個聯賽賬戶。",
             "id": "1. Semua peserta wajib membuka Akun Liga",
@@ -13922,7 +13922,7 @@ module.exports = {
         },
         "rulesTit4": {
             "zh": "全球交易者联赛规则：",
-            "en": "The Global Traders League rules: ",
+            "en": "The Global Traders League Rules:",
             "vi": "Thể Lệ Cuộc Thi Nhà Giao Dịch Toàn Cầu:",
             "zh-Hant": "全球交易者聯賽規則：",
             "id": "Peraturan - peraturan untuk Liga Trader Dunia",
@@ -13932,7 +13932,7 @@ module.exports = {
         },
         "rulesTit4Con1": {
             "zh": "1.客户必须创建联赛帐户才能参与。",
-            "en": "1. The client must create a league account to participate.",
+            "en": "1. The client must open a League account in order to participate.",
             "vi": "1.	Khách hàng phải mở tài khoản Dự Thi để tham gia cuộc thi.",
             "zh-Hant": "1.客戶必須創建聯賽帳戶才能參與。",
             "id": "1. Klien harus membuka akun Liga untuk dapat berpartisipasi",
@@ -13962,7 +13962,7 @@ module.exports = {
         },
         "rulesTit4Con4": {
             "zh": "4. 必须至少每周进行一次新交易以保持竞争。",
-            "en": "4. A new trade must be placed every week (as a minimum) to stay in the competition",
+            "en": "4. A new trade must be placed every week (as a minimum) to stay in the competition.",
             "vi": "4.	Mỗi tuần phải mở một giao dịch để duy trì trong cuộc thi.",
             "zh-Hant": "4.必須至少每週進行一次新交易以保持競爭。",
             "id": "4. Klien harus memiliki transaksi baru setiap minggunya (minimal satu kali) agar tetap bertahan di kompetisi",
@@ -13992,7 +13992,7 @@ module.exports = {
         },
         "rulesTit4Con7": {
             "zh": "7. 两名亚军将获得亚军奖。",
-            "en": "7. Two runners-up will receive runner-up prizes.",
+            "en": "7. Traders finishing in 2nd and 3rd position will receive runner up prizes.",
             "vi": "7.	2 á quân sẽ nhận được giải á quân.",
             "zh-Hant": "兩名亞軍將獲得亞軍獎。",
             "id": "7. 2 Runner up  akan mendapatkan hadiah spesial",
@@ -14022,7 +14022,7 @@ module.exports = {
         },
         "rulesTit5Con1": {
             "zh": "10月25日0:00（GMT+3）到12月11日24:00（GMT+3）期间开设的订单为有效订单；",
-            "en": "1.Orders opened between 00:00:00 (GMT+3) on October 25 and 23:59:59 (GMT+3) on December 11 are valid;",
+            "en": "1. Orders opened between 00:00:00 (GMT+3) on October 25 and 23:59:59 (GMT+3) on December 11 are valid.",
             "vi": "1.	Các giao dịch được mở từ 00:00:00 (GMT +3) ngày 25 tháng 10 đến 23:59:59 (GMT+3) ngày 11 tháng 12 là hợp lệ.",
             "zh-Hant": "10月25日0:00（GMT+3）到12月11日24:00（GMT+3）期間開設的訂單為有效訂單；",
             "id": "1. Transaksi yang valid adalah transaksi yang dilakukan antara tanggal 25 Oktober pukul 04:00:00 WIB hingga 12 Desember pukul 03:59:59 WIB",
@@ -14032,7 +14032,7 @@ module.exports = {
         },
         "rulesTit5Con2": {
             "zh": "系统将以12月11日24:00(GMT+3)的净值计算排名。",
-            "en": "2.The system will calculate the ranking based on the net value at 23:59:59(GMT+3) on December 11.",
+            "en": "2. The system will calculate the ranking based on the net value at 23:59:59(GMT+3) on December 11.",
             "vi": "2.	Hệ thống sẽ tính toàn bảng xếp hạng dựa trên giá trị ròng vào lúc 23: 59:59 (GMT+3) ngày 11 tháng 12",
             "zh-Hant": "系統將以12月11日24:00(GMT+3)的淨值計算排名。",
             "id": "2. Sistem akan mulai mencatat perhitungan mulai dari pukul 03:59:59 WIB pada tanggal 12 Desember 2019",
