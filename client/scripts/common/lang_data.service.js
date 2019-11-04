@@ -9857,6 +9857,46 @@
                         "pt-BR": "Com a tecnologia para copiar as negociações totalmente automatizada da TigerWit, qualquer um pode ser o mestre de suas próprias negociações",
                         "ar": "مع تكنولوجيا التداول بنسخ الصفقات الآلية بالكامل والتي توفرها شركة  TigerWit، يمكن لأي شخص ربح الأموال."
                     },
+                    "newhome_12": {
+                        "zh": "在高手榜单中选择一位高手。",
+                        "en": "Select a Master from the ranking table.",
+                        "vi": "Chọn một Bậc thầy từ bảng xếp hạng.",
+                        "zh-Hant": "在高手榜單中選擇壹位高手。",
+                        "id": "Bebas memilih Master dari daftar peringkat",
+                        "es": "Seleccione un Master del ranking",
+                        "pt-BR": "Selecionar um Mestre pelo ranking.",
+                        "ar": "اختر الأستاذ الذي يعجبك من قائمة التصنيف"
+                    },
+                    "newhome_13": {
+                        "zh": "选择你想跟随的高手进行交易。",
+                        "en": "Select the Master’s trade you want to follow.",
+                        "vi": "Tiến hành sao chép giao dịch từ Bậc Thầy.",
+                        "zh-Hant": "選擇妳想跟隨的高手進行交易。",
+                        "id": "Pilih Master yang ingin anda ikuti.",
+                        "es": "Seleccione el trade del Master que quiere seguir.",
+                        "pt-BR": "Selecionar a negociação do Mestre que você quer seguir.",
+                        "ar": "اختر صفقة الأستاذ التي تريد أن تتبعها"
+                    },
+                    "newhome_14": {
+                        "zh": "设置订单值。",
+                        "en": "Set your order value.",
+                        "vi": "Cài đặt giá trị lệnh của bạn.",
+                        "zh-Hant": "設置訂單值。",
+                        "id": "Pilih nilai transaksi anda.",
+                        "es": "Fije el valor de sus órdenes.",
+                        "pt-BR": "Configurar seu valor de ordem.",
+                        "ar": "حدد قيمة الأمر الخاص بك"
+                    },
+                    "newhome_15": {
+                        "zh": "成为TigerWit高手，你将获得跟随者盈利的20%。",
+                        "en": "Become a TigerWit Master and earn 20% commission on your followers’ profits.",
+                        "vi": "Trở thành Bậc thầy TigerWit và nhận 20% hoa hồng lợi nhuận từ người sao chép.",
+                        "zh-Hant": "成為TigerWit高手，妳將獲得跟隨者盈利的20%。",
+                        "id": "Ayo jadi Master di TigerWit dan hasilkan komisi hingga 20% dari total keuntungan pengikut anda.",
+                        "es": "Sea un TigerWit Máster y gane un 20% comisión sobre beneficio seguidores.",
+                        "pt-BR": "Tornar-se um Mestre da TigerWit e ganhe 20% de comissão sobre os lucros de seus seguidores.",
+                        "ar": "كن أحد أساتذة TigerWit واربح عمولة 20% على أرباح المتابعين لك"
+                    },
                     "chooseMaster": {
                         "zh": "选择高手",
                         "en": "Choose a Master",

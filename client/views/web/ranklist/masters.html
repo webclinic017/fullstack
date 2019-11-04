@@ -21,7 +21,7 @@
         
     </div>
 </div> -->
-<div class="new_body pd-bt-50">
+<div class="fff_body pd-bt-50">
     <div class="ranklist_banner" ng-class="{'relative': masterTrialList.list && masterTrialList.list.length > 0}">
         <div class="ranklist_banner__sup" ng-if="masterTrialList.list && masterTrialList.list.length > 0">
             <div class="ranklist_banner__sup-tit">
@@ -82,7 +82,7 @@
     <div class="mg-200__bg" ng-class="{'mg-tp-40': masterTrialList.list && masterTrialList.list.length > 0}">
         <div class="ranklist_banner__tip">
             <h3 class="mg-200__circle-title pd-bt-20"><span>{{ lang.text("tigerWitID.master.copyTrading") }}</span></h3>
-            <p class="step item-center pd-lf-50 pd-rg-50">
+            <!-- <p class="step item-center pd-lf-50 pd-rg-50">
                 <span>{{ lang.text("tigerWitID.master.chooseMaster") }}</span>
                 <img class="{{lang.currentLanguage()}}" src="/white_label/ranklist/arrow.png" alt="">
                 <span>{{ lang.text("tigerWitID.master.clickCopy") }}</span>
@@ -98,17 +98,42 @@
                 <p class="">• {{ lang.text("tigerWitID.master.qualifyMaster_1") }}</p>
                 <p class="">• {{ lang.text("tigerWitID.master.qualifyMaster_2") }}</p>
                 <p class="">• {{ lang.text("tigerWitID.master.qualifyMaster_3") }}</p>
-            </div>
+            </div> -->
+            <ul class="ranklist_banner__tip-lst">
+                <li>
+                    <img ng-src="/white_label/home/copy-icon-1.png" alt="">
+                    <p class="num">1</p>
+                    <p class="tip">{{ lang.text("tigerWitID.master.newhome_12") }}</p>
+                </li>
+                <li>
+                    <img ng-src="/white_label/home/copy-icon-2.png" alt="">
+                    <p class="num">2</p>
+                    <p class="tip">{{ lang.text("tigerWitID.master.newhome_13") }}</p>
+                </li>
+                <li>
+                    <img ng-src="/white_label/home/copy-icon-3.png" alt="">
+                    <p class="num">3</p>
+                    <p class="tip">{{ lang.text("tigerWitID.master.newhome_14") }}</p>
+                </li>
+                <li>
+                    <img ng-src="/white_label/home/copy-icon-4.png" alt="">
+                    <p class="num">4</p>
+                    <p class="tip">{{ lang.text("tigerWitID.master.newhome_15") }}</p>
+                </li>
+            </ul>
 
+            <div class="text-center">
+                <a href="/ranklist/#/ranklist/masters" class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient">{{ lang.text("tigerWitID.tradingAccount.becomeMaster") }}</a>
+            </div>
         </div>
     </div>
     <div class="ranklist_parent">
-        <div class="ranklist list_width">
+        <div class="ranklist">
             <div class="ranklist__navbar justify-flex-end">
                 <div class="ranklist__navbar-toggle">
                     <div class="ranklist__navbar-tit tw-btn tw-btn-sm tw-btn-capsule-gradient">
                         {{rankOrderList[rankOrder]}}
-                            <i class="fa fa-caret-down"></i>
+                        <i class="fa fa-caret-down"></i>
                     </div>
                     <ul class="ranklist__navbar-lst">
                         <li ng-class="{active: rankOrder == 'thirty_profit_rate'}"

@@ -3,10 +3,10 @@
     @include e(bg) {
         min-height: 100px;
         background-color: #fff;
-        border-radius: 6px;
-        box-shadow: 0px 0px 3px 3px #fff;
+        border-radius: 50px;
+        box-shadow: 0px 0px 10px 0px #ccc;
         width: 1201px;
-        margin: -200px auto 0px;
+        margin: -200px auto 15px;
         padding: 46px 58px;
         p {
             color: $main-char-color-50;
