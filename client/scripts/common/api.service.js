@@ -155,7 +155,7 @@
             opBlogNumsApi: urlOrigin2 + '/blog/nums'
         };
         var ranklist = {
-            getMastersListApi: urlOrigin2 + '/master/list',
+            getMastersListApi: urlOrigin2 + '/master/list',  // 弃
             getMastersNewListApi: urlOrigin2 + '/master_new/list',
             getMastersTrialListApi: urlOrigin2 + '/master/trial_list', // 获取体验高手列表
             getIndexMastersApi: urlOrigin2 + '/master/index',
@@ -168,7 +168,10 @@
             cancelCopyApi: urlOrigin2 + '/copy/uncopy',
             getAvaCopyAmountApi: urlOrigin2 + '/copy/valid_copy',
             getHistoricalRateApi: urlOrigin2 + '/master/monthly_profit_rates',
-            getMasterInfoApi: urlOrigin2 + '/master/trading_profile',
+            getMasterInfoApi: urlOrigin2 + '/master/trading_profile',  //弃
+            getMasterTradProfileApi: urlOrigin2 + '/master_new/trading_profile',
+            getMasterNewInfoApi: urlOrigin2 + '/master_new/info',
+            getmasterDayProfitRatesApi: urlOrigin2 + '/master_new/day_profit_rates',
             getMonthlySymbolsApi: urlOrigin2 + '/master/trading_symbols',
             getMasterGradeApi: urlOrigin2 + '/master/level',
             getMasterConditionApi: urlOrigin2 + '/master/condition',

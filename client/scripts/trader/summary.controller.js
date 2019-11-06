@@ -5,9 +5,9 @@
     angular.module('fullstackApp')
         .controller('TraderSummaryController', TraderSummaryController);
 
-    TraderSummaryController.$inject = ['$scope', '$location', '$state', 'trader', '$timeout'];
+    TraderSummaryController.$inject = ['$scope', '$location', '$state', 'trader', '$timeout', 'utils'];
 
-    function TraderSummaryController($scope, $location, $state, trader, $timeout) {
+    function TraderSummaryController($scope, $location, $state, trader, $timeout, utils) {
         $scope.summary = {};
         $scope.bars = [];
         $scope.isFirstLoad = true;
@@ -16,73 +16,111 @@
         var regUsercode = /trader\/(\d+)(\/)?[#?]/;
 
         usercode = absUrl.match(regUsercode)[1];
+        // 获取高手交易信息
+        $scope.masterTradProfile = null;
+        getMasterTradProfile(usercode)
+        /*----------------------------获取折线图数据图-----------------------------*/
 
-        // getMasterBarChart(usercode);
-//--------------------------高手主页4.0重构--begin----------------------------------------
-        /*----------------------------柱状图图-----------------------------*/
+        // 分页每日收益率
+        $scope.rawSummaryReturn = [];
+        $scope.summaryReturn = [];
         rendColumnChart(usercode);
 
+        $scope.pagebar = {
+            config: {
+                // total: , 总页数
+                page: 1
+            },
+            pages: [],
+            pagesBtn: [],
+            // isShow: false,
+            // selectPage: , bind to pagination.selectPage
+            getList: getSummaryReturn
+        };
+        var pagesize = 5; // 单页显示数
+
+        function getSummaryReturn(page) {
+            // $scope.$emit('showLoadingImg');
+            var offset = page ? (page - 1) * pagesize : 0;
+            $scope.summaryReturn = $scope.rawSummaryReturn.slice(offset, offset + pagesize);
+
+            angular.extend($scope.pagebar.config, {
+                total: utils.getTotal($scope.rawSummaryReturn.length, pagesize),
+                page: page
+            });
+        }
         function rendColumnChart(usercode) {
             /*调接口获取数据*/
-            trader.getHistoricalRate(usercode).then(function (return_data) {
+            trader.getmasterDayProfitRates(usercode).then(function (return_data) {
                 // console.log(return_data);
-                if (return_data.code == 0 && return_data.data.length > 0) {
-                    //console.log(return_data);
+                if (return_data.code == 0 && (return_data.data.average.length > 0 || return_data.data.personal.length > 0)) {
+                    //     //console.log(return_data);
                     var data = return_data.data;
-                    /*解析数据*/
-                    $scope.columnData = parseData("column", data);
-                    // console.log($scope.columnData);
-                    /*让下拉框默认选中数据最后一项*/
-                    $scope.selected = $scope.columnData[$scope.columnData.length - 1];
-                    //渲染到图表
-                    $scope.$broadcast('rendColumnData', $scope.columnData[$scope.columnData.length - 1].data);
-                    //change事件
-                    $scope.changeYear = function (year) {
-                        //console.log(year);
-                        $scope.selected = year;
-                        $scope.$broadcast('rendColumnData', year.data);
-                    };
+                    $scope.rawSummaryReturn = data.personal;
+                    //     /*解析数据*/
+                    //     $scope.columnData = parseData("column", data);
+                    //     // console.log($scope.columnData);
+                    //     /*让下拉框默认选中数据最后一项*/
+                    //     // $scope.selected = $scope.columnData[$scope.columnData.length - 1];
+                    //     //渲染到图表
+                    //     $scope.$broadcast('rendColumnData', $scope.columnData[$scope.columnData.length - 1].data);
+                    //     //change事件
+                    //     $scope.changeYear = function (year) {
+                    //         //console.log(year);
+                    //         $scope.selected = year;
+                    //         $scope.$broadcast('rendColumnData', year.data);
+                    $scope.$broadcast('paintLineChart', data);
+                    getSummaryReturn(1);
+                    // };
                 } else {
-                    $scope.$broadcast('hideColumnData');
+                    // $scope.$broadcast('hideColumnData');
+                }
+            });
+        }
+        function getMasterTradProfile(usercode) {
+            trader.getMasterTradProfile(usercode).then(function (data) {
+                if(data && data.is_succ){
+                    $scope.masterTradProfile = data.data;
                 }
             });
         }
 
         /*数据解析函数*/
-        function parseData(type, data) {
-            var targetArr = [];
-            if (type == "column") {
-                var count = 0;
-                // var pin = data[0].t.split("-")[0];
-                var pin = 2000; // 随便写的，确保先进入if
-                data.forEach(function (item, index) {
-                    if (item.t.indexOf(pin) < 0) {
-                        pin = item.t.split("-")[0];
-                        /*往数组中新增一项*/
-                        targetArr[count] = {
-                            year: pin,
-                            data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-                        };
-                        for (var ii = 0; ii < data.length; ii++) {
-                            if (data[ii].t.indexOf(targetArr[count].year) >= 0) {
-                                targetArr[count].data[parseInt(data[ii].t.split("-")[1]) - 1] = data[ii].v;
-                            }
-                        }
+        // function parseData(type, data) {
+        //     var targetArr = [];
+        //     if (type == "column") {
+        //         var count = 0;
+        //         // var pin = data[0].t.split("-")[0];
+        //         var pin = 2000; // 随便写的，确保先进入if
+        //         data.forEach(function (item, index) {
+        //             if (item.t.indexOf(pin) < 0) {
+        //                 pin = item.t.split("-")[0];
+        //                 /*往数组中新增一项*/
+        //                 targetArr[count] = {
+        //                     year: pin,
+        //                     data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        //                 };
+        //                 for (var ii = 0; ii < data.length; ii++) {
+        //                     if (data[ii].t.indexOf(targetArr[count].year) >= 0) {
+        //                         targetArr[count].data[parseInt(data[ii].t.split("-")[1]) - 1] = data[ii].v;
+        //                     }
+        //                 }
 
-                        count++;
-                    } else {
-                        // 重复年份
-                    }
-                });
-            } else if (type == "area") {
-                for (var i = 0; i < data.length; i++) {
-                    targetArr.push(parseFloat(data[i].v))
-                }
-            } else if (type == "") {
+        //                 count++;
+        //             } else {
+        //                 // 重复年份
+        //             }
+        //         });
+        //     } else if (type == "area") {
+        //         for (var i = 0; i < data.length; i++) {
+        //             targetArr.push(parseFloat(data[i].v))
+        //         }
+        //     } else if (type == "") {
 
-            }
-            return targetArr;
-        }
+        //     }
+        //     console.log(targetArr)
+        //     return targetArr;
+        // }
 
         /*-----------------------BarChart------------------*/
         $scope.changeYearType = function () {
@@ -91,7 +129,7 @@
             // console.log($scope.bars);
         };
 
-//---------------------------------end------------------------------------------
+        //---------------------------------end------------------------------------------
 
         //getMonthlySymbols(usercode);
 
@@ -119,8 +157,8 @@
                     return false;
                 }
                 data = data.data;
-                data.now_date = data.current_date.split(' ')[0].slice(0,7);
-                data.time = data.start_date.split(' ')[0].slice(0,7);
+                data.now_date = data.current_date.split(' ')[0].slice(0, 7);
+                data.time = data.start_date.split(' ')[0].slice(0, 7);
 
                 /*如果是首次加载,解析所有交易年份*/
                 if ($scope.isFirstLoad) {
@@ -141,17 +179,17 @@
                         if (staYear == endYear) {
                             while (staMon <= endMon) {
                                 staMon = staMon < 10 ? '0' + staMon : staMon;
-                                result.push({month: staYear + '-' + staMon});
+                                result.push({ month: staYear + '-' + staMon });
                                 staMon++;
                             }
-                            staYear ++;
+                            staYear++;
                         } else {
                             if (staMon > 12) {
                                 staMon = 1;
                                 staYear++;
                             }
                             staMon = staMon < 10 ? '0' + staMon : staMon;
-                            result.push({month: staYear + '-' + staMon});
+                            result.push({ month: staYear + '-' + staMon });
                             staMon++;
                         }
                     }

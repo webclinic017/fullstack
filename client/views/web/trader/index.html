@@ -1,95 +1,98 @@
-<div class="col-fff">
-    <div ng-cloak class="container">
-        <div ng-cloak class="trader">
+
+    <div ng-cloak class="trader mg-tp-100">
+        <div ng-cloak class="currency-width currency-width-border">
             <div class="trader__basic">
                 <div class="space-between-center">
-                    <div class="item-center">
+                    <div class="item-center flex1">
                         <div class="trader_avatar">
                             <div class="trader_avatar__wrapper" ng-click="openMasterGradeMdl()">
-                                <img ng-src="/avatar/<%= master.user_code%>_150.jpg" alt="avatar">
+                                <img ng-src="/avatar/{{master.user_code}}_150.jpg" alt="avatar">
                                 <span class="icon-grade" ng-if="masterGradeInfo.name">{{ masterGradeInfo.name }}</span>
                             </div>
                         </div>
                         <div class="trader_info">
                             <div class="trader_user">
-                                <h3 class="trader_user__username"><%= master.username%></h3>
+                                <h3 class="trader_user__username">{{master.username}}</h3>
                             </div>
-                            <%if (master.tags) {%>
-                            <h4 class="trader_tags">
-                                #
-                                <%for(var t=0; t<master.tags.length; t++){%>
-                                <span><%= master.tags[t]%></span>
-                                <%}%>
+                            <h4 class="trader_tags" ng-if="master.tags">
+                                <span ng-repeat="tag in master.tags track by $index">
+                                        #{{tag}}
+                                    </span>
                             </h4>
-                            <%}%>
                         </div>
                     </div>
                     <div class="">
                         <h3 class="trader_btn">
-                            <button class="btn btn-primary" ng-if="!master.copied" ng-click="toCopy()">
-                                <%=
-                                lang.text("traderIndex1")%>
+                            <button class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient" ng-if="!master.copied" ng-click="toCopy()">
+                                <%= lang.text("traderIndex1")%>
                             </button>
-                            <button class="btn btn-primary" disabled
+                            <button class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient" disabled
                                 ng-if="master.copied"><%= lang.text("traderIndex2")%>
                             </button>
                         </h3>
                     </div>
                 </div>
+                <div class="trader__describe" ng-if="master.describe">
+                    {{master.describe}}
+                </div>
                 <ul class="trader_profit_box justify-center">
                     <li class="trader_profit">
-                        <div class="trader_profit__item">
-                            <span class="big-num-font">{{ master.history_copy_count || '0' }}</span>
+                        <div class="trader_profit__item" ng-class="{'font-success': (master.thirty_win_rate + '').indexOf('-') >= 0, 'font-danger': (master.thirty_win_rate + '').indexOf('-') < 0}"
+                            ng-if="lang.hostIsCn()">
+                            <span class="big-num-font">{{ (master.thirty_win_rate || '0.00') + '%' }}</span>
                         </div>
-                        <h4 class="trader_gray_color">{{ lang.text("tigerWitID.historyTransactions.historyFollower") }}
+                        <div class="trader_profit__item" ng-class="{'font-danger': (master.thirty_win_rate + '').indexOf('-') >= 0, 'font-success': (master.thirty_win_rate + '').indexOf('-') < 0}"
+                            ng-if="!lang.hostIsCn()">
+                            <span class="big-num-font">{{ (master.thirty_win_rate || '0.00') + '%' }}</span>
+                        </div>
+                        <h4 class="trader_gray_color">Win rate
                         </h4>
                     </li>
-                    <li></li>
+                    <!-- <li></li> -->
                     <li class="trader_profit">
                         <div class="trader_profit__item"
-                            ng-class="{'font-success': (master.total_profit_rate + '').indexOf('-') >= 0, 'font-danger': (master.total_profit_rate + '').indexOf('-') < 0}"
+                            ng-class="{'font-success': (master.thirty_profit_rate + '').indexOf('-') >= 0, 'font-danger': (master.thirty_profit_rate + '').indexOf('-') < 0}"
                             ng-if="lang.hostIsCn()">
-                            <span class="big-num-font ">{{ (master.total_profit_rate || '0.00') + '%' }}</span>
+                            <span class="big-num-font ">{{ (master.thirty_profit_rate || '0.00') + '%' }}</span>
                         </div>
                         <div class="trader_profit__item"
-                            ng-class="{'font-danger': (master.total_profit_rate + '').indexOf('-') >= 0, 'font-success': (master.total_profit_rate + '').indexOf('-') < 0}"
+                            ng-class="{'font-danger': (master.thirty_profit_rate + '').indexOf('-') >= 0, 'font-success': (master.thirty_profit_rate + '').indexOf('-') < 0}"
                             ng-if="!lang.hostIsCn()">
-                            <span class="big-num-font ">{{ (master.total_profit_rate || '0.00') + '%' }}</span>
+                            <span class="big-num-font ">{{ (master.thirty_profit_rate || '0.00') + '%' }}</span>
                         </div>
-                        <h4 class="trader_gray_color">{{ lang.text("tigerWitID.dataStatistics.totalProfitRate") }}</h4>
+                        <h4 class="trader_gray_color">Last 30d return</h4>
                     </li>
-                    <li></li>
+                    <!-- <li></li> -->
                     <li class="trader_profit">
                         <div class="trader_profit__item"
-                            ng-class="{'font-success': master.max_retract_percent.indexOf('-') >= 0, 'font-danger': master.max_retract_percent.indexOf('-') < 0}"
+                            ng-class="{'font-success': (master.thirty_follow_profit + '').indexOf('-') >= 0, 'font-danger': (master.thirty_follow_profit + '').indexOf('-') < 0}"
                             ng-if="lang.hostIsCn()">
-                            <span class="big-num-font">{{ (master.max_retract_percent || '0.00') + '%' }}</span>
+                            <span class="big-num-font">{{ master.thirty_follow_profit || '0.00' }}</span>
                         </div>
                         <div class="trader_profit__item"
-                            ng-class="{'font-danger': master.max_retract_percent.indexOf('-') >= 0, 'font-success': master.max_retract_percent.indexOf('-') < 0}"
+                            ng-class="{'font-danger': (master.thirty_follow_profit + '').indexOf('-') >= 0, 'font-success': (master.thirty_follow_profit + '').indexOf('-') < 0}"
                             ng-if="!lang.hostIsCn()">
-                            <span class="big-num-font">{{ (master.max_retract_percent || '0.00') + '%' }}</span>
+                            <span class="big-num-font">{{ master.thirty_follow_profit || '0.00' }}</span>
                         </div>
-                        <h4 class="trader_gray_color">{{ lang.text("tigerWitID.dataStatistics.maximumDrawdown") }}</h4>
+                        <h4 class="trader_gray_color">30d Profit of followers</h4>
                     </li>
                 </ul>
             </div>
         </div>
     </div>
-    <div ng-cloak class="nav_tabs">
+    <div ng-cloak class="nav_tabs justify-center">
         <ul class="">
             <li ui-sref-active="active" ui-sref="trader.subpage({subpage: 'summary'})">
-                <i class="fa fa-bar-chart" aria-hidden="true"></i>
-                <a><%= lang.text("traderIndex17")%></a>
+                <!-- <i class="fa fa-bar-chart" aria-hidden="true"></i> -->
+                <a>Return</a>
             </li>
             <li ui-sref-active="active" ui-sref="trader.subpage({subpage: 'current'})">
-                <i class="fa fa-line-chart" aria-hidden="true"></i>
-                <a><%= lang.text("traderIndex18")%></a>
+                <!-- <i class="fa fa-line-chart" aria-hidden="true"></i> -->
+                <a>Orders</a>
             </li>
             <li ui-sref-active="active" ui-sref="trader.subpage({subpage: 'history'})">
-                <i class="fa fa-list" aria-hidden="true"></i>
-                <a><%= lang.text("traderIndex19")%></a>
+                <!-- <i class="fa fa-list" aria-hidden="true"></i> -->
+                <a>Analytics</a>
             </li>
         </ul>
     </div>
-</div>

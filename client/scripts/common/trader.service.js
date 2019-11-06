@@ -16,10 +16,13 @@
             getAvaCopyAmount: getAvaCopyAmount,
             getHistoricalRate: getHistoricalRate,
             getMasterInfo: getMasterInfo,
+            getMasterNewInfo: getMasterNewInfo,
             getMonthlySymbols: getMonthlySymbols,
             getMasterGrade: getMasterGrade,
             getMasterCondition: getMasterCondition,
-            applyMaster: applyMaster
+            applyMaster: applyMaster,
+            getmasterDayProfitRates: getmasterDayProfitRates,
+            getMasterTradProfile: getMasterTradProfile
         };
         return service;
 
@@ -118,6 +121,41 @@
                 return data;
             });
         }
+		/**
+         * trader 获取高手的基本信息
+         * @param user_code
+         * @returns {*}
+         */
+        function getMasterNewInfo(user_code) {
+            return publicHttp.dealPublicRequest(o.getMasterNewInfoApi, 'GET', {
+                user_code: user_code
+            }).then(function (data) {
+                //console.log(data);
+                data.data.usercode = data.data.user_code;
+                return data;
+            });
+        }
+		/**
+         * trader 获取高手交易信息
+         * @param user_code
+         * @returns {*}
+         */
+        function getMasterTradProfile(user_code) {
+            return publicHttp.dealPublicRequest(o.getMasterTradProfileApi, 'GET', {
+                user_code: user_code
+            })
+        }
+        /**
+         * trader 获取近三十天高手每日收益率列表
+         * @param user_code
+         * @returns {*}
+         */
+        function getmasterDayProfitRates(user_code) {
+            return publicHttp.dealPublicRequest(o.getmasterDayProfitRatesApi, 'GET', {
+                user_code: user_code
+            })
+        }
+
 
 		/**
          * trader 获取月交易品种

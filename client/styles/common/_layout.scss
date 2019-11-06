@@ -1,193 +1,205 @@
 // 通用样式
 @include b(mg-200) {
+  @include e(bg) {
+    min-height: 100px;
+    background-color: #fff;
+    border-radius: 50px;
+    @include box-shadow(0px 0px 10px 0px #ccc);
+    width: 1201px;
+    margin: -200px auto 15px;
+    padding: 46px 58px;
+    p {
+      color: $main-char-color-50;
+      font-size: 18px;
+      line-height: 30px;
+    }
+    .font-tip {
+      font-size: 14px;
+      color: rgba(36, 42, 54, 0.7);
+      line-height: 33px;
+    }
+  }
+  @include responsive(wide-screens) {
     @include e(bg) {
-        min-height: 100px;
-        background-color: #fff;
-        border-radius: 50px;
-        box-shadow: 0px 0px 10px 0px #ccc;
-        width: 1201px;
-        margin: -200px auto 15px;
-        padding: 46px 58px;
-        p {
-            color: $main-char-color-50;
-            font-size: 18px;
-            line-height: 30px;
-        }
-        .font-tip {
-            font-size:14px;
-            color:rgba(36,42,54,0.7);
-            line-height:33px;
-        }
+      width: 1100px;
     }
-    @include responsive(wide-screens) {
-        @include e(bg) {
-            width: 1100px;
-        }
+  }
+
+  @include e(circle-title) {
+    font-size: 32px;
+    color: $main-char-color-100;
+    line-height: 43px;
+    @include displayFlex();
+    @include alignItems(center);
+    &::before {
+      content: "";
+      width: 30px;
+      height: 30px;
+      border: 6px solid $primary-darker;
+      border-radius: 50px;
+      display: inline-block;
     }
-    
-    @include e(circle-title) {
-        font-size:32px;
-        color:$main-char-color-100;
-        line-height:43px;
-        @include displayFlex();
-        @include alignItems(center);
-        &::before{
-            content: '';
-            width:30px;
-            height:30px;
-            border:6px solid $primary-darker;
-            border-radius: 50px;
-            display: inline-block;
-        }
-        > span{
-            margin: 0 20px;
-            @include flex(1);
-        }
+    > span {
+      margin: 0 20px;
+      @include flex(1);
     }
-    @include e(two-title) {
-        font-size:24px;
-        font-weight:600;
-        color:rgba(33,44,63,1);
-        line-height:33px;
+  }
+  @include e(two-title) {
+    font-size: 24px;
+    font-weight: 600;
+    color: rgba(33, 44, 63, 1);
+    line-height: 33px;
+  }
+  @include e(three-title) {
+    font-size: 24px;
+    font-weight: 600;
+    color: rgba(33, 44, 63, 1);
+    line-height: 33px;
+    border-bottom: 1px solid #ebebeb;
+  }
+  @include e(list-bg) {
+    @include displayFlex();
+    @include justifyContent(space-between);
+    @include flexWrap(wrap);
+    &.none {
+      visibility: hidden;
     }
-    @include e(three-title) {
-        font-size:24px;
-        font-weight:600;
-        color:rgba(33,44,63,1);
-        line-height:33px;
-        border-bottom: 1px solid #ebebeb;
-    }
-    @include e(list-bg) {
-        @include displayFlex();
-        @include justifyContent(space-between);
-        @include flexWrap(wrap);
-        &.none {
-            visibility: hidden;
-        }
-        @include m(item) {
-            width: 31%;
-            padding: 0;
-            > div {
-                @include img-normal($white_label_image + "semicircle.png");
-                margin-bottom: 30px;
-                background-position: 0 0;
-                background-repeat: no-repeat;
-                background-color:$primary-darker;
-                border-radius:30px;
-                padding: 11px 29px 31px;
-                .title {
-                    font-size:18px;
-                    font-weight:600;
-                    color:rgba(33,44,63,1);
-                    line-height:22px;
-                    height: 44px;
-                    overflow: hidden;
-                    display: -webkit-box;
-                    -webkit-box-orient: vertical;
-                    -webkit-line-clamp: 2;
-                }
-                .content {
-                    font-size:16px;
-                    font-weight:400;
-                    color:rgba(33,44,63,0.7);
-                    line-height:21px;
-                    padding-top: 17px;
-                }
-            }
-        }
-    }
-    @include e(circle) {
-        @include displayFlex();
-        &::before{
-          content: '●';
-          margin: 0 10px;
+    @include m(item) {
+      width: 31%;
+      padding: 0;
+      > div {
+        @include img-normal($white_label_image + "semicircle.png");
+        margin-bottom: 30px;
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        background-color: $primary-darker;
+        border-radius: 30px;
+        padding: 11px 29px 31px;
+        .title {
           font-size: 18px;
-          display: inline-block;
+          font-weight: 600;
+          color: rgba(33, 44, 63, 1);
+          line-height: 22px;
+          height: 44px;
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+        }
+        .content {
+          font-size: 16px;
+          font-weight: 400;
+          color: rgba(33, 44, 63, 0.7);
+          line-height: 21px;
+          padding-top: 17px;
         }
       }
-    
+    }
+  }
+  @include e(circle) {
+    @include displayFlex();
+    &::before {
+      content: "●";
+      margin: 0 10px;
+      font-size: 18px;
+      display: inline-block;
+    }
+  }
+}
+// 通用宽
+.currency-width {
+  // 复制跟单列表
+  width: 1201px;
+  margin: 0 auto;
+  @include responsive(wide-screens) {
+    width: 1100px;
+  }
 }
 
+.currency-width-border {
+  border-radius: 26px;
+  @include box-shadow(0px 0px 10px 0px #ccc);
+}
 
 // 通用布局
 @include b(layout-1) {
-    margin-top: $navbar-height;
+  margin-top: $navbar-height;
 }
 
 @include b(layout-2) {
-    @extend .container;
-    margin-top: $navbar-height;
-    padding: 0;
-    @include e(side) {
-        @extend .col-xs-3;
+  @extend .container;
+  margin-top: $navbar-height;
+  padding: 0;
+  @include e(side) {
+    @extend .col-xs-3;
+  }
+  @include e(content) {
+    @extend .col-xs-9;
+    @include m(tip) {
+      display: block;
+      margin-top: 30px;
+      color: #fb4a67;
+      &.link,
+      .link {
+        color: #fb4a67;
+      }
+      &.link:hover,
+      .link:hover {
+        text-decoration: underline;
+      }
     }
-    @include e(content) {
-        @extend .col-xs-9;
-        @include m(tip) {
-            display: block;
-            margin-top: 30px;
-            color: #fb4a67;
-            &.link,
-            .link {
-                color: #fb4a67;
-            }
-            &.link:hover,
-            .link:hover {
-                text-decoration: underline;
-            }
-        }
+  }
+  @include e(404) {
+    height: 575px;
+    background: url("/images/404.png") no-repeat;
+    background-position: center center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    p {
+      text-align: center;
+      font-size: 24px;
+      padding-top: 360px;
+      padding-left: 154px;
+      color: #666;
+      a {
+        color: #fe5f5f;
+      }
     }
-    @include e(404) {
-        height: 575px;
-        background: url('/images/404.png') no-repeat;
-        background-position: center center;
-        margin-top: 50px;
-        margin-bottom: 50px;
-        p {
-            text-align: center;
-            font-size: 24px;
-            padding-top: 360px;
-            padding-left: 154px;
-            color: #666;
-            a {
-                color: #fe5f5f;
-            }
-        }
-    }
+  }
 }
 
 @include b(tw-space-layout) {
-    height: 100%;
-    margin: 0 auto;
-    margin-top: $navbar-height;
-    width: 1320px;
-    min-height: 800px;
-    @include displayFlex();
-    @include e(side) {
-        width: 320px;
-        z-index: 2;
-        border-bottom: 1px solid $gray;
-        @include m(view) {
-            // height: 100%;
-            background-color: #fff;
-        }
+  height: 100%;
+  margin: 0 auto;
+  margin-top: $navbar-height;
+  width: 1320px;
+  min-height: 800px;
+  @include displayFlex();
+  @include e(side) {
+    width: 320px;
+    z-index: 2;
+    border-bottom: 1px solid $gray;
+    @include m(view) {
+      // height: 100%;
+      background-color: #fff;
     }
-    @include e(con) {
-        @include flex(1);
-        @include m(nav) {
-            // .nav-view {
-            //     height: 60px;
-            // }
-        }
-        @include m(content) {
-            margin-top: 35px;
-            @include displayFlex();
-            @include justifyContent(flex-end);
-            .content-view {
-                margin-bottom: 80px;
-                height: 100%;
-                width: 940px;
-            }
-        }
+  }
+  @include e(con) {
+    @include flex(1);
+    @include m(nav) {
+      // .nav-view {
+      //     height: 60px;
+      // }
     }
+    @include m(content) {
+      margin-top: 35px;
+      @include displayFlex();
+      @include justifyContent(flex-end);
+      .content-view {
+        margin-bottom: 80px;
+        height: 100%;
+        width: 940px;
+      }
+    }
+  }
 }

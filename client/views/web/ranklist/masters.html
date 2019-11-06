@@ -123,30 +123,115 @@
             </ul>
 
             <div class="text-center">
-                <a href="/ranklist/#/ranklist/masters" class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient">{{ lang.text("tigerWitID.tradingAccount.becomeMaster") }}</a>
+                <a href="/ranklist/#/ranklist/masters"
+                    class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient">{{ lang.text("tigerWitID.tradingAccount.becomeMaster") }}</a>
             </div>
         </div>
     </div>
-    <div class="ranklist_parent">
+    <div class="currency-width">
+        <div class="ranklist" ng-if="masterStarList.records.length > 0">
+            <div class="ranklist__navbar space-between-center">
+                <h3 class="ranklist__navbar-tit flex1">Star Masters</h3>
+            </div>
+            <div class="ranklist_cont">
+                <div class="ranklist_cont__master space-between-center" ng-repeat="masterStar in masterStarList.records track by $index">
+                    <div class="space-between-center mg-lf-20 mg-rg-20 flex1">
+                        <div class="flex1">
+                            <div class="space-between-center">
+
+                                <div class="ranklist_cont__master-info item-center">
+                                    <a class="avatar" ng-href="/trader/{{masterStar.user_code}}/#/trader/summary"
+                                        ng-click="toQuickPageviewSensorsdata(masterStar.username)" target="_blank">
+                                        <img ng-src="/avatar/{{ masterStar.user_code }}_150.jpg" alt="avatar">
+                                    </a>
+                                    <div class="user flex1">
+                                        <a class="name" ng-href="/trader/{{masterStar.user_code}}/#/trader/summary"
+                                            ng-click="toQuickPageviewSensorsdata(masterStar.username)" target="_blank"
+                                            title="{{ masterStar.username || '-' }}">
+                                            {{ masterStar.username || '-' }}
+                                        </a>
+                                        <p>
+                                            <span ng-repeat="tag in masterStar.tags track by $index">
+                                                #{{tag}}
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="ranklist_cont__master-tip">
+                                    <p>{{masterStar.describe}}
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="ranklist_cont__master-trade space-between-center bd-tp">
+                                <div class="dropdown">
+                                    <div class="num"
+                                        ng-class="{'font-danger': (masterStar.thirty_profit_rate + '').indexOf('-') < 0, 'font-success': (masterStar.thirty_profit_rate + '').indexOf('-') != -1}"
+                                        ng-if="lang.hostIsCn()">
+                                        {{ masterStar.thirty_profit_rate }}<span>%</span>
+                                    </div>
+                                    <div class="num"
+                                        ng-class="{'font-success': (masterStar.thirty_profit_rate + '').indexOf('-') < 0, 'font-danger': (masterStar.thirty_profit_rate + '').indexOf('-') != -1}"
+                                        ng-if="!lang.hostIsCn()">
+                                        {{ masterStar.thirty_profit_rate }}<span>%</span>
+                                    </div>
+                                    <div class="tip">
+                                        {{ lang.text("tigerWitID.master.returnLast30D") }}
+                                    </div>
+                                </div>
+                                <!-- <div class="dividing"></div> -->
+                                <div class="dropdown">
+                                    <div class="num"
+                                        ng-class="{'font-danger': (masterStar.thirty_win_rate + '').indexOf('-') < 0, 'font-success': (masterStar.thirty_win_rate + '').indexOf('-') != -1}"
+                                        ng-if="lang.hostIsCn()">
+                                        {{ masterStar.thirty_win_rate }}%
+                                    </div>
+                                    <div class="num"
+                                        ng-class="{'font-success': (masterStar.thirty_win_rate + '').indexOf('-') < 0, 'font-danger': (masterStar.thirty_win_rate + '').indexOf('-') != -1}"
+                                        ng-if="!lang.hostIsCn()">
+                                        {{ masterStar.thirty_win_rate }}%
+                                    </div>
+                                    <div class="tip">
+                                        {{ lang.text("tigerWitID.master.accuracyLast30D") }}
+                                    </div>
+                                </div>
+                                <div class="dropdown">
+                                    <div class="num">
+                                        {{ masterStar.history_copy_count || '0' }}
+                                    </div>
+                                    <div class="tip">{{ lang.text("tigerWitID.master.followers") }}</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dividing">
+
+                        </div>
+                    </div>
+                    <div class="ranklist_cont__master-copy">
+                        <div class="copy_btn_wrapper">
+                            <a target="_blank"
+                                class="copy_btn tw-btn tw-btn-sm130 tw-btn-capsule-gradient">{{ lang.text("tigerWitID.copy") }}</a>
+                        </div>
+                        <div class="copy_btn_wrapper">
+                            <a target="_blank"
+                                class="copy_btn tw-btn tw-btn-sm130 tw-btn-capsule-bordered">{{ lang.text("tigerWitID.copy") }}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="ranklist">
-            <div class="ranklist__navbar justify-flex-end">
+            <div class="ranklist__navbar space-between-center">
+                <h3 class="ranklist__navbar-tit flex1">Star Masters</h3>
                 <div class="ranklist__navbar-toggle">
-                    <div class="ranklist__navbar-tit tw-btn tw-btn-sm tw-btn-capsule-gradient">
-                        {{rankOrderList[rankOrder]}}
+                    <div class="tw-btn tw-btn-sm tw-btn-capsule-gradient">
+                        {{rankOrderList[rankOrder].value}}
                         <i class="fa fa-caret-down"></i>
                     </div>
                     <ul class="ranklist__navbar-lst">
-                        <li ng-class="{active: rankOrder == 'thirty_profit_rate'}"
-                            ng-click="[changeRankOrder('thirty_profit_rate'), toTrackEvent('master page', 'global_master_profitability')]">
-                            <span>{{ lang.text("tigerWitID.master.highIncome") }}</span>
-                        </li>
-                        <li ng-class="{active: rankOrder == 'thirty_max_retract'}"
-                            ng-click="[changeRankOrder('thirty_max_retract'), toTrackEvent('master page', 'global_master_stability')]">
-                            <span>{{ lang.text("tigerWitID.dataStatistics.steadyg") }}</span>
-                        </li>
-                        <li ng-class="{active: rankOrder == 'thirty_win_rate'}"
-                            ng-click="[changeRankOrder('thirty_win_rate'), toTrackEvent('master page', 'global_master_consistency')]">
-                            <span>{{ lang.text("tigerWitID.master.exact") }}</span>
+                        <li ng-repeat="(orderKey,orderVal) in rankOrderList track by $index"
+                            ng-class="{active: rankOrder == orderKey}"
+                            ng-click="[changeRankOrder(orderKey), toTrackEvent('master page', orderVal.track)]">
+                            <span>{{ orderVal.value }}</span>
                         </li>
                     </ul>
                 </div>
@@ -227,53 +312,46 @@
                                         </p>
                                     </div>
                                 </div>
-                                <div class="ranklist_cont__master-tip">
-                                    <p>{{rank.describe}}
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="ranklist_cont__master-trade space-between-center bd-tp">
-                                <div class="dropdown">
-                                    <div class="num"
-                                        ng-class="{'font-danger': (rank.thirty_profit_rate + '').indexOf('-') < 0, 'font-success': (rank.thirty_profit_rate + '').indexOf('-') != -1}"
-                                        ng-if="lang.hostIsCn()">
-                                        {{ rank.thirty_profit_rate }}<span>%</span>
-                                    </div>
-                                    <div class="num"
-                                        ng-class="{'font-success': (rank.thirty_profit_rate + '').indexOf('-') < 0, 'font-danger': (rank.thirty_profit_rate + '').indexOf('-') != -1}"
-                                        ng-if="!lang.hostIsCn()">
-                                        {{ rank.thirty_profit_rate }}<span>%</span>
-                                    </div>
-                                    <div class="tip">
-                                        {{ lang.text("tigerWitID.master.returnLast30D") }}
-                                    </div>
-                                </div>
-                                <!-- <div class="dividing"></div> -->
-                                <div class="dropdown">
-                                    <div class="num"
-                                        ng-class="{'font-danger': (rank.thirty_win_rate + '').indexOf('-') < 0, 'font-success': (rank.thirty_win_rate + '').indexOf('-') != -1}"
-                                        ng-if="lang.hostIsCn()">
-                                        {{ rank.thirty_win_rate }}%
-                                    </div>
-                                    <div class="num"
-                                        ng-class="{'font-success': (rank.thirty_win_rate + '').indexOf('-') < 0, 'font-danger': (rank.thirty_win_rate + '').indexOf('-') != -1}"
-                                        ng-if="!lang.hostIsCn()">
-                                        {{ rank.thirty_win_rate }}%
-                                    </div>
-                                    <div class="tip">
-                                        {{ lang.text("tigerWitID.master.accuracyLast30D") }}
-                                    </div>
-                                </div>
-                                <div class="dropdown">
-                                    <div class="num">
-                                        {{ rank.history_copy_count || '0' }}
-                                    </div>
-                                    <div class="tip">{{ lang.text("tigerWitID.master.followers") }}</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="dividing">
 
+                                <div class="ranklist_cont__master-trade space-between-center">
+                                    <div class="dropdown">
+                                        <div class="num"
+                                            ng-class="{'font-danger': (rank.thirty_profit_rate + '').indexOf('-') < 0, 'font-success': (rank.thirty_profit_rate + '').indexOf('-') != -1}"
+                                            ng-if="lang.hostIsCn()">
+                                            {{ rank.thirty_profit_rate }}<span>%</span>
+                                        </div>
+                                        <div class="num"
+                                            ng-class="{'font-success': (rank.thirty_profit_rate + '').indexOf('-') < 0, 'font-danger': (rank.thirty_profit_rate + '').indexOf('-') != -1}"
+                                            ng-if="!lang.hostIsCn()">
+                                            {{ rank.thirty_profit_rate }}<span>%</span>
+                                        </div>
+                                        <div class="tip">
+                                            {{ lang.text("tigerWitID.master.returnLast30D") }}
+                                        </div>
+                                    </div>
+                                    <div class="dropdown">
+                                        <div class="num"
+                                            ng-class="{'font-danger': (rank.thirty_win_rate + '').indexOf('-') < 0, 'font-success': (rank.thirty_win_rate + '').indexOf('-') != -1}"
+                                            ng-if="lang.hostIsCn()">
+                                            {{ rank.thirty_win_rate }}%
+                                        </div>
+                                        <div class="num"
+                                            ng-class="{'font-success': (rank.thirty_win_rate + '').indexOf('-') < 0, 'font-danger': (rank.thirty_win_rate + '').indexOf('-') != -1}"
+                                            ng-if="!lang.hostIsCn()">
+                                            {{ rank.thirty_win_rate }}%
+                                        </div>
+                                        <div class="tip">
+                                            {{ lang.text("tigerWitID.master.accuracyLast30D") }}
+                                        </div>
+                                    </div>
+                                    <div class="dropdown">
+                                        <div class="num">
+                                            {{ rank.history_copy_count || '0' }}
+                                        </div>
+                                        <div class="tip">{{ lang.text("tigerWitID.master.followers") }}</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="ranklist_cont__master-copy">
@@ -283,7 +361,7 @@
                         </div>
                         <div class="copy_btn_wrapper">
                             <a target="_blank"
-                                class="copy_btn tw-btn tw-btn-sm130 tw-btn-capsule-gradient">{{ lang.text("tigerWitID.copy") }}</a>
+                                class="copy_btn tw-btn tw-btn-sm130 tw-btn-capsule-bordered">{{ lang.text("tigerWitID.copy") }}</a>
                         </div>
                     </div>
                 </div>

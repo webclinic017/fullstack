@@ -1,5 +1,4 @@
 @include b(trader_summary) {
-
 }
 
 @include b(trader_main) {
@@ -54,7 +53,7 @@
       padding-left: 20px;
 
       &:before {
-        content: '';
+        content: "";
         width: 12px;
         height: 12px;
         border-radius: 50%;
@@ -72,7 +71,6 @@
         background-color: $gray;
       }
     }
-
   }
 
   @include e(chart) {
@@ -133,21 +131,22 @@
       color: $gray-darker;
     }
 
-    .scale_bar__info_multi,.scale_bar__info_empty{
+    .scale_bar__info_multi,
+    .scale_bar__info_empty {
       position: relative;
       top: -32px;
       display: inline-block;
       width: 100px;
       height: 30px;
-      background-color: rgba(255,255,255,1);
+      background-color: rgba(255, 255, 255, 1);
       border: 1px solid $trader-gray;
       text-align: center;
       line-height: 30px;
       border-radius: 2px;
       opacity: 0.6;
       transition: all 1s ease;
-      > i{
-        background-color: rgba(255,255,255,.7);
+      > i {
+        background-color: rgba(255, 255, 255, 0.7);
         position: absolute;
         transform: rotateZ(-45deg);
         display: inline-block;
@@ -160,10 +159,10 @@
         transition: all 1s ease;
       }
     }
-    .scale_bar__info_multi{
+    .scale_bar__info_multi {
       left: -35px;
     }
-    .scale_bar__info_empty{
+    .scale_bar__info_empty {
       left: 400px;
     }
     .scale_bar__item {
@@ -181,11 +180,12 @@
     }
   }
 
-  .scale_bar:hover{
-    > .scale_bar__info_multi, >.scale_bar__info_empty{
+  .scale_bar:hover {
+    > .scale_bar__info_multi,
+    > .scale_bar__info_empty {
       opacity: 10;
       border: 1px solid #a0a0a0;
-      > i{
+      > i {
         border-left: 1px solid #a0a0a0;
         border-bottom: 1px solid #a0a0a0;
       }
@@ -201,7 +201,7 @@ $tiger-yellow: $brand-primary;
 }
 
 .big-num-font {
-  font-size: 28px;
+  font-size: 26px;
 }
 
 .big-text-font {
@@ -252,56 +252,43 @@ $tiger-yellow: $brand-primary;
     line-height: 22px;
   }
 }
+@include b(re_trader_title) {
+  margin: 0 0 30px 0;
+  padding: 0 36px;
+  // > span, > select {
+  //   height: 25px;
+  //   line-height: 25px;
+  // }
 
-.trade_container {
-  width: 100%;
-  background-color: $trader-white;
-  padding-top: 25px;
-  overflow: hidden;
-  font-size: 12px;
+  // > span {
+  //   padding-right: 10px;
+  //   padding-left: 10px;
+  // }
+
+  // > span.upData_tips {
+  //   // width: 350px !important;
+  // }
+
+  // > select {
+  //   width: 80px;
+  // }
+    font-size: 20px;
+    color: rgba(30, 32, 36, 1);
+    line-height: 28px;
 }
-
 @include b(re_trader_chart) {
-  background-color: #ffffff;
-  width: 1030px;
-  height: 580px;
-  margin: 0 auto;
-  padding-top: 50px;
-  padding-left: 10px;
-  padding-right: 10px;
-
-  .bridge {
-    margin-bottom: 50px;
-    > span, > select {
-      height: 25px;
-      line-height: 25px;
-    }
-
-    > span {
-      padding-right: 10px;
-      padding-left: 10px;
-    }
-
-    > span.upData_tips {
-      // width: 350px !important;
-    }
-
-    > select {
-      width: 80px;
-    }
-  }
+  padding: 22px 0;
 
   @include e(chart_tips) {
     text-align: center;
-    margin-top: 30px;
-    > div {
-      margin: 0 auto;
-    }
+    margin-top: 20px;
+    // > div {
+    //   margin: 0 auto;
+    // }
     span {
-      display: inline-block;
-      font-style: normal;
-      height: 25px;
-      line-height: 25px;
+      font-size: 14px;
+      color: rgba(30, 32, 36, 0.5);
+      line-height: 20px;
     }
   }
 }
@@ -312,28 +299,22 @@ $ratio: 1.165;
 }
 
 @include b(re_trader_detail) {
-  background-color: $trader-white;
-  width: ratio(1200);
-  margin: 0 auto;
   margin-top: 30px;
-  
+
   @include e(table) {
-    background-color: $trader-bgc;
-    width: 100%;
-    padding-bottom: ratio(45);
+    padding: 22px 0;
     @include m(square) {
       @include displayFlex();
       @include flexWrap(wrap);
-      width: 100%;
+      padding: 0 10px;
       > li {
         width: 25%;
-        height: ratio(50);
         border-left: 1px solid $trader-gray;
-        text-align: center;
-        margin-top: ratio(45);
+        margin: 10px 0;
+        padding: 0 24px;
         position: relative;
-        
-        &:nth-child(4n+1) {
+
+        &:nth-child(4n + 1) {
           border-width: 0;
         }
         > span {
@@ -352,10 +333,11 @@ $ratio: 1.165;
           }
         }
         > span:nth-child(1) {
-          font-size: ratio(22);
+          font-size:18px;
+          line-height:25px;
         }
         > span:nth-child(2) {
-
+          color: rgba(62, 74, 89, 0.5);
         }
         .alert {
           display: none;
@@ -366,9 +348,9 @@ $ratio: 1.165;
           }
         }
       }
-      &.ar{
-        > li{
-          &:nth-child(4n+1) {
+      &.ar {
+        > li {
+          &:nth-child(4n + 1) {
             border-width: 1px;
           }
           &:nth-child(4n) {
@@ -477,7 +459,7 @@ $ratio: 1.165;
   padding-top: ratio(30);
   padding-right: ratio(30);
   margin-bottom: 45px;
-  @include e(average_time){
+  @include e(average_time) {
     margin-top: 25px;
     font-size: 12px;
     font-weight: 200;
@@ -485,7 +467,8 @@ $ratio: 1.165;
   @include e(title) {
     width: 100%;
     margin-bottom: 25px;
-    > span, > select {
+    > span,
+    > select {
       height: 25px;
       line-height: 25px;
     }
@@ -510,5 +493,3 @@ $ratio: 1.165;
     }
   }
 }
-
-

@@ -4,9 +4,9 @@
 
     angular.module('fullstackApp').directive('twLineChart', twLineChart);
 
-    twLineChart.$inject = ['lang'];
+    twLineChart.$inject = ['lang', '$filter'];
 
-    function twLineChart(lang) {
+    function twLineChart(lang, $filter) {
         var options = {
             chart: {
                 type: 'line',
@@ -33,10 +33,13 @@
                 },
                 type: 'datetime',
                 dateTimeLabelFormats: {
-                    day: '%m/%d',
-                    month: '%y/%m/%d',
-                    year: '%y/%m',
-                    week: '%m/%d'
+                    second: '%H:%M:%S',
+                    minute: '%e. %b %H:%M',
+                    hour: '%b/%e %H:%M',
+                    day: '%Y-%m-%d',
+                    week: '%e. %b',
+                    month: '%Y-%m',
+                    year: '%Y'
                 }
             },
 
@@ -54,6 +57,10 @@
                         color: '#999'
                     }
                 }
+            },
+            tooltip: {
+                useHTML: true,
+                reversed: lang.isAr(),
             },
 
 
@@ -102,12 +109,21 @@
                 if (type === 'masterList') {
                     options.series[0].data = [];
                     angular.extend(options, {
-                        title: {
-                            text: ''
-                        },
 
                         xAxis: {
                             reversed: lang.isAr(),
+                            lineColor: '#777',
+                            tickColor: '#777',
+                            type: 'datetime',
+                            dateTimeLabelFormats: {
+                                second: '%H:%M:%S',
+                                minute: '%e. %b %H:%M',
+                                hour: '%b/%e %H:%M',
+                                day: '%Y-%m-%d',
+                                week: '%e. %b',
+                                month: '%Y-%m',
+                                year: '%Y'
+                            },
                             labels: {
                                 enabled: false
                             },
@@ -116,10 +132,11 @@
                         },
 
                         yAxis: {
+                            opposite: lang.isAr(),
+                            gridLineColor: '#777',
                             title: {
                                 enabled: false
                             },
-                            opposite: lang.isAr(),
                             labels: {
                                 enabled: false
                             },
@@ -131,36 +148,10 @@
                             reversed: lang.isAr(),
                             backgroundColor: 'rgba(255, 255, 255, 0.8)',
                             formatter: function () {
-                                var date = new Date(this.x);
-                                var dateStr = date.getFullYear() + '/' +
-                                        (date.getMonth() + 1) +'/' +
-                                        (date.getDate());
-
                                 return '<p style="color:' + this.series.color +
                                         ';"><span>'+ lang.text('tigerWitID.dataStatistics.profitRateM') +'</span></br><span>' +  this.y + '%</span></p>';
                             }
                         },
-
-                        plotOptions: {
-                            series: {
-                                lineWidth: 2,
-                                marker: {
-                                    lineColor: null,
-                                    radius: 0,
-                                    states: {
-                                        hover: {
-                                            radiusPlus: 0,
-                                            lineWidthPlus: 0
-                                        }
-                                    }
-                                },
-                                states: {
-                                    hover: {
-                                        lineWidthPlus: 0
-                                    }
-                                }
-                            }
-                        }
                     });
 
                     var line_chart = scope.rank.line_chart;
@@ -178,30 +169,33 @@
                 // 高手主页
                 if (type === 'masterDetail') {
                     angular.extend(options, {
-                        title: {
-                            text: ''
-                        },
                         xAxis: {
                             reversed: lang.isAr(),
+                            type: 'datetime',
+                            dateTimeLabelFormats: {
+                                second: '%H:%M:%S',
+                                minute: '%e. %b %H:%M',
+                                hour: '%b/%e %H:%M',
+                                day: '%Y-%m-%d',
+                                week: '%e. %b',
+                                month: '%Y-%m',
+                                year: '%Y'
+                            },
                             lineColor: '#f0f0f0',
                             tickColor: '#f0f0f0',
                             labels: {
                                 style: {
                                     color: '#ccc'
                                 }
-                            },
-                            type: 'datetime',
-                            dateTimeLabelFormats: {
-                                day: '%m/%d',
-                                month: '%y/%m/%d',
-                                year: '%y/%m',
-                                week: '%m/%d'
                             }
                         },
 
                         yAxis: {
                             title: {
-                                text: lang.text('tigerWitID.dataStatistics.profitRate') + '（%）'
+                                text: lang.text('tigerWitID.dataStatistics.profitRate') + '（%）',
+                                style: {
+                                    color: '#999'
+                                }
                             },
                             opposite: lang.isAr(),
                             gridLineColor: '#f0f0f0',
@@ -217,10 +211,7 @@
                             reversed: lang.isAr(),
                             backgroundColor: 'rgba(0, 0, 0, 0)',
                             formatter: function () {
-                                var date = new Date(this.x);
-                                var dateStr = date.getFullYear() + '/' +
-                                        (date.getMonth() + 1) +'/' +
-                                        (date.getDate());
+                                var dateStr = $filter('date')(this.x, 'yyyy-MM-dd')
 
                                 return '<p style="color:' + this.series.color + ';">' +
                                     dateStr + '</p><p style="color:' + this.series.color + ';"><span>' + lang.text('tigerWitID.dataStatistics.profitRateM') + 
@@ -267,30 +258,33 @@
                 // 个人中心
                 if (type === 'investDetail') {
                     angular.extend(options, {
-                        title: {
-                            text: ''
-                        },
                         xAxis: {
                             reversed: lang.isAr(),
+                            type: 'datetime',
+                            dateTimeLabelFormats: {
+                                second: '%H:%M:%S',
+                                minute: '%e. %b %H:%M',
+                                hour: '%b/%e %H:%M',
+                                day: '%Y-%m-%d',
+                                week: '%e. %b',
+                                month: '%Y-%m',
+                                year: '%Y'
+                            },
                             lineColor: '#f0f0f0',
                             tickColor: '#f0f0f0',
                             labels: {
                                 style: {
                                     color: '#ccc'
                                 }
-                            },
-                            type: 'datetime',
-                            dateTimeLabelFormats: {
-                                day: '%m/%d',
-                                month: '%y/%m/%d',
-                                year: '%y/%m',
-                                week: '%m/%d'
                             }
                         },
 
                         yAxis: {
                             title: {
-                                text: lang.text('tigerWitID.dataStatistics.profitRate') + '（%）'
+                                text: lang.text('tigerWitID.dataStatistics.profitRate') + '（%）',
+                                style: {
+                                    color: '#999'
+                                }
                             },
                             opposite: lang.isAr(),
                             gridLineColor: '#f0f0f0',
@@ -306,10 +300,7 @@
                             reversed: lang.isAr(),
                             backgroundColor: 'rgba(0, 0, 0, 0)',
                             formatter: function () {
-                                var date = new Date(this.x);
-                                var dateStr = date.getFullYear() + '/' +
-                                        (date.getMonth() + 1) +'/' +
-                                        (date.getDate());
+                                var dateStr = $filter('date')(this.x, 'yyyy-MM-dd')
 
                                 return '<p style="color:' + this.series.color + ';">' +
                                     dateStr + '</p><p style="color:' + this.series.color + ';"><span>' + lang.text('tigerWitID.dataStatistics.profitRateM') + 
@@ -349,6 +340,87 @@
                         });
 
                         options.series[0].data = data;
+                        element.highcharts(options);
+                    });
+                }
+                // 高手详情
+                if (type === 'masterSummaryDetail') {
+                    angular.extend(options, {
+                        legend: {
+                            enabled: true
+                        },
+                        xAxis: {
+                            lineColor: '#f0f0f0',
+                            tickColor: '#f0f0f0',
+                            labels: {
+                                style: {
+                                    color: '#ccc'
+                                }
+                            },
+                            reversed: lang.isAr(),
+                            type: 'datetime',
+                            dateTimeLabelFormats: {
+                                second: '%H:%M:%S',
+                                minute: '%e. %b %H:%M',
+                                hour: '%b/%e %H:%M',
+                                day: '%Y-%m-%d',
+                                week: '%e. %b',
+                                month: '%Y-%m',
+                                year: '%Y'
+                            }
+                        },
+
+                        yAxis: {
+                            title: {
+                                text: lang.text('tigerWitID.dataStatistics.profitRate') + '（%）',
+                                style: {
+                                    color: '#999'
+                                }
+                            },
+                            opposite: lang.isAr(),
+                            gridLineColor: '#f0f0f0',
+                            labels: {
+                                style: {
+                                    color: '#ccc'
+                                }
+                            }
+                        },
+
+                        tooltip: {
+                            useHTML: true,
+                            reversed: lang.isAr(),
+                            backgroundColor: 'rgba(0, 0, 0, 0)',
+                            formatter: function () {
+                                var dateStr = $filter('date')(this.x, 'yyyy-MM-dd')
+
+                                return '<p style="color:' + this.series.color + ';">' +
+                                dateStr + '</p><p style="color:' + this.series.color + ';"><span>' + this.series.name + 
+                                    '</span><span>' + this.y + '%</span></p>';
+                            }
+                        }
+                    });
+
+                    scope.$on('paintLineChart', function (event, data) {
+                        // console.log(data)
+                        var data1 = Highcharts.map(data.average, function (config) {
+                            return [config.record_date * 1000, config.profit_rate * 100];
+                        });
+                        var data2 = Highcharts.map(data.personal, function (config) {
+                            return [config.record_date * 1000, config.profit_rate * 100];
+                        });
+
+                        // console.log(data1,data2)
+                        options.series[0] = {
+                            color: 'rgba(255, 134, 5, 1)',
+                            name: '平均高手收益率',
+                            data: data1
+                        };
+                        options.series[1] = {
+                            color: 'rgba(80, 227, 194, 1)',
+                            name: '当前高手收益率',
+                            data: data2
+                        };
+                        // console.dir(options)
                         element.highcharts(options);
                     });
                 }

@@ -40,13 +40,8 @@
          * @method getMastersNewList
          * 
          */
-        function getMastersNewList(order, offset, limit) {
-            return publicHttp.dealPublicRequest(o.getMastersNewListApi, 'GET', {
-                order_by: 'desc',
-                sort_by: order,
-                offset: offset,
-                limit: limit
-            });
+        function getMastersNewList(params) {
+            return publicHttp.dealPublicRequest(o.getMastersNewListApi, 'GET', params);
         }
 
         /**
