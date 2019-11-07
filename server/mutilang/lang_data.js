@@ -13811,14 +13811,14 @@ module.exports = {
             "ar": "كيفية الدخول:"
         },
         "rulesTit1Con1": {
-            "zh": "报名时间：10月25日 00:00 （GMT+3）– 11月11日 00:00（GMT+3）",
-            "en": "Registration period: October 25th 00:00 (GMT+3) – November 11th 00:00 (GMT+3).",
-            "vi": "Thời gian đăng ký 25/10 00:00 (GMT+3)đến 11/11 00:00 (GMT+3)",
-            "zh-Hant": "報名時間：10月25日 00:00 （GMT+3）– 11月11日 00:00（GMT+3）",
-            "id": "Period pendaftaran : 25 Oktober 04:00 WIB - 11 November 04:00 WIB",
-            "es": "Período de inscripción: 25 de octubre a las 00:00 (GMT +3) - 11 de noviembre a las 00:00 (GMT +3)",
-            "pt-BR": "Período de inscrição: 25 de outubro às 00:00 (GMT +3) - 11 de novembro às 00:00 (GMT +3)",
-            "ar": "فترة التسجيل: 25 أكتوبر - 11 نوفمبر"
+            "zh": "报名时间：10月25日 00:00 （GMT+3）– 11月22日 00:00（GMT+3）",
+            "en": "Registration period: October 25th 00:00 (GMT+3) – November 22nd 00:00 (GMT+3).",
+            "vi": "Thời gian đăng ký 25/10 00:00 (GMT+3)đến 22/11 00:00 (GMT+3)",
+            "zh-Hant": "報名時間：10月25日 00:00 （GMT+3）– 11月22日 00:00（GMT+3）",
+            "id": "Period pendaftaran : 25 Oktober 04:00 WIB - 22 November 04:00 WIB",
+            "es": "Período de inscripción: 25 de octubre a las 00:00 (GMT +3) - 22 de noviembre a las 00:00 (GMT +3)",
+            "pt-BR": "Período de inscrição: 25 de outubro às 00:00 (GMT +3) - 22 de novembro às 00:00 (GMT +3)",
+            "ar": "فترة التسجيل: 25 أكتوبر - 22 نوفمبر"
         },
         "rulesTit2": {
             "zh": "新客户：",
@@ -13941,14 +13941,14 @@ module.exports = {
             "ar": "1. يجب على العميل إنشاء حساب دوري للمشاركة."
         },
         "rulesTit4Con2": {
-            "zh": "2.11月11日 00:00（GMT+3）后将不再接受新报名",
-            "en": "2. No new entries will be taken after the November 11th 00:00 (GMT+3).",
-            "vi": "2.	Khách hàng không được tham gia cuộc thi sau 00:00 (GMT+3) ngày 11 tháng 11.",
-            "zh-Hant": "2.11月11日 00:00（GMT+3）後將不再接受新報名",
-            "id": "2.  Klien tidak boleh melakukan transaksi apapun di akun Liga sebelum tanggal 11 November pukul 04:00 WIB",
-            "es": "2. No se realizarán nuevas inscripciones después de las 11:00 del 11 de noviembre (GMT +3).",
-            "pt-BR": "2. Nenhum novo registro será realizada após as 11:00h do dia 11 de novembro (GMT +3).",
-            "ar": "2. لن يتم إدخال أي مشاركات جديدة بعد 11 نوفمبر 00:00 (GMT + 3)."
+            "zh": "2.11月22日 00:00（GMT+3）后将不再接受新报名",
+            "en": "2. No new entries will be taken after the November 22nd 00:00 (GMT+3).",
+            "vi": "2.	Khách hàng không được tham gia cuộc thi sau 00:00 (GMT+3) ngày 22 tháng 11.",
+            "zh-Hant": "2.11月22日 00:00（GMT+3）後將不再接受新報名",
+            "id": "2.  Klien tidak boleh melakukan transaksi apapun di akun Liga sebelum tanggal 22 November pukul 04:00 WIB",
+            "es": "2. No se realizarán nuevas inscripciones después de las 11:00 del 22 de noviembre (GMT +3).",
+            "pt-BR": "2. Nenhum novo registro será realizada após as 11:00h do dia 22 de novembro (GMT +3).",
+            "ar": "2. لن يتم إدخال أي مشاركات جديدة بعد 22 نوفمبر 00:00 (GMT + 3)."
         },
         "rulesTit4Con3": {
             "zh": "3.客户必须在联赛帐户中开设头寸才能获得资格。",
