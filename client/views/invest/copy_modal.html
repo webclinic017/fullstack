@@ -54,6 +54,7 @@
                 </div>
             </div>
             <br>
+            <!-- 可用复制金额： -->
             <div class="space-between">
                 <div class="flex1">
                     <label>{{lang.text('tigerWitID.tradingAccount.availableCopyAmountM')}}</label>
@@ -65,7 +66,7 @@
                     </label>
                 </div>
             </div>
-
+            <!-- 当前复制金额： -->
             <div class="space-between" ng-if="hasCanceled">
                 <div class="flex1">
                     <label>{{lang.text('tigerWitID.dataStatistics.currentCopyAmountM')}}</label>
@@ -77,7 +78,7 @@
                     </label>
                 </div>
             </div>
-
+            <!-- 建议复制金额： -->
             <div class="space-between">
                 <div class="flex1">
                     <label>{{lang.text('tigerWitID.tradingAccount.recommendedM')}}</label>
@@ -89,7 +90,7 @@
                     </label>
                 </div>
             </div>
-
+            <!-- 高手剩余可复制金额： -->
             <div class="space-between">
                 <div class="flex1">
                     <label>{{lang.text('tigerWitID.tradingAccount.remainingCopiableFundsM')}}</label>
@@ -129,14 +130,14 @@
                 <button ng-if="!frontErr.insufficient.show && clickable.copy && copyTrade.title == 'copy'" 
                     class="btn btn-lt btn-dark" 
                     ng-class="{ 'btn-disabled' : copyTrade.amount < copyTrade.minCopyAmount, 'btn-primary' : copyTrade.amount >= copyTrade.minCopyAmount }"
-                    ng-click="submitStep1(false)">
+                    ng-click="submitStep1()">
                     {{lang.text('tigerWitID.details.copyTrade')}}
                 </button>
 
                 <button ng-if="!frontErr.insufficient.show && clickable.copy && copyTrade.title == 'modify'" 
                     class="btn btn-lt btn-dark" 
                     ng-class="{ 'btn-disabled' : copyTrade.amount < copyTrade.minCopyAmount, 'btn-primary' : copyTrade.amount >= copyTrade.minCopyAmount }"
-                    ng-click="submitStep1(false)">
+                    ng-click="submitStep1()">
                     {{lang.text('tigerWitID.edit')}}
                 </button>
 
@@ -151,7 +152,7 @@
                 <button ng-if="!frontErr.insufficient.show && clickable.copy" 
                     class="btn btn-lt btn-dark" 
                     ng-class="{ 'btn-disabled' : copyTrade.amount < copyTrade.minCopyAmount, 'btn-primary' : copyTrade.amount >= copyTrade.minCopyAmount }"
-                    ng-click="submitStep1(true)">
+                    ng-click="submitStep1()">
                     {{lang.text('tigerWitID.tradingAccount.confirm')}}
                 </button>
 

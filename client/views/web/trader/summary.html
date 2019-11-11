@@ -14,12 +14,12 @@
         <div tw-line-chart data-type="masterSummaryDetail" style="width: 100%; height: 350px;"></div>
         <div class="re_trader_chart__chart_tips">
             <!-- <div class=""> -->
-                <!-- <i class="info_box"><i class="fa fa-info" aria-hidden="true"></i></i> -->
-                <span>Past performance doesn’t represent futurepeformance. Data will updated daily at 00:00 GMT</span>
+            <!-- <i class="info_box"><i class="fa fa-info" aria-hidden="true"></i></i> -->
+            <span>Past performance doesn’t represent futurepeformance. Data will updated daily at 00:00 GMT</span>
             <!-- </div> -->
         </div>
         <div>
-        <table class="table table-hover table-personalF">
+            <table class="table table-hover table-personalF">
                 <colgroup>
                     <col width="10%">
                     <col width="40%">
@@ -27,36 +27,38 @@
                     <col width="10%">
                 </colgroup>
                 <thead>
-                <tr>
-                    <th></th>
-                    <th>{{lang.text('tigerWitID.date')}}</th>
-                    <th>Return</th>
-                    <th></th>
-                </tr>
+                    <tr>
+                        <th></th>
+                        <th>{{lang.text('tigerWitID.date')}}</th>
+                        <th>Return</th>
+                        <th></th>
+                    </tr>
                 </thead>
                 <tbody>
-                <tr ng-repeat="return in summaryReturn" ng-if="summaryReturn.length > 0">
-                    <td></td>
-                    <td>
-                        {{ return.record_date * 1000 | date:'yyyy-MM-dd' }}
-                    </td>
-                    <td ng-class="{'font-danger': return.profit_rate.indexOf('-') < 0, 'font-success': return.profit_rate.indexOf('-') >= 0}" ng-if="lang.hostIsCn()">
-                        ${{ return.profit_rate }}
-                    </td>
-                    <td ng-class="{'font-success': return.profit_rate.indexOf('-') < 0, 'font-danger': return.profit_rate.indexOf('-') >= 0}" ng-if="!lang.hostIsCn()">
-                        ${{ return.profit_rate }}
-                    </td>
-                    <td></td>
-                </tr>
+                    <tr ng-repeat="return in summaryReturn" ng-if="summaryReturn.length > 0">
+                        <td></td>
+                        <td>
+                            {{ return.record_date * 1000 | date:'yyyy-MM-dd' }}
+                        </td>
+                        <td ng-class="{'font-danger': return.profit_rate.indexOf('-') < 0, 'font-success': return.profit_rate.indexOf('-') >= 0}"
+                            ng-if="lang.hostIsCn()">
+                            ${{ return.profit_rate }}
+                        </td>
+                        <td ng-class="{'font-success': return.profit_rate.indexOf('-') < 0, 'font-danger': return.profit_rate.indexOf('-') >= 0}"
+                            ng-if="!lang.hostIsCn()">
+                            ${{ return.profit_rate }}
+                        </td>
+                        <td></td>
+                    </tr>
                 </tbody>
             </table>
-        
+
             <div class="text-center">
                 <p tw-pagination></p>
             </div>
             <div ng-if="summaryReturn.length <= 0" class="text-center mg-bt-20">
                 <img src="/images/no_data.png" alt="" class="mg-bt-40">
-                <p>{{ lang.text('tigerWitID.noData') }}</p> 
+                <p>{{ lang.text('tigerWitID.noData') }}</p>
             </div>
         </div>
     </div>
@@ -64,46 +66,52 @@
         <div class="re_trader_detail__table">
             <h3 class="re_trader_title">Data</h3>
             <ul class="re_trader_detail__table-square small-text-font" ng-class="{'ar': lang.isAr()}">
-                <li><span class="square_num trader_blue"><span ng-if="!masterTradProfile"><i class="fa fa-spinner" aria-hidden="true"></i></span>{{ masterTradProfile.max_retract }}%</span><span class="span square_des">{{ lang.text("tigerWitID.dataStatistics.maxDrawdown") }}</span></li>
-                <li><span class="square_num"><span ng-if="!masterTradProfile"><i class="fa fa-spinner" aria-hidden="true"></i></span>{{ masterTradProfile.last_profit_rate }}%</span><span class="square_des">{{ lang.text("tigerWitID.dataStatistics.lastTradingDay") }}<i class="fa fa-info" aria-hidden="true"></i></span><span class="alert">{{ lang.text("tigerWitID.dataStatistics.tip5") }}</span></li>
-                <li><span class="square_num"><span ng-if="!masterTradProfile"><i class="fa fa-spinner" aria-hidden="true"></i></span>{{ masterTradProfile.last_week_profit_rate }}%</span><span class="square_des"><span class="square_des">{{ lang.text("tigerWitID.dataStatistics.nearly7DaysRateReturn") }}<i class="fa fa-info" aria-hidden="true"></i></span><span class="alert">{{ lang.text("tigerWitID.dataStatistics.tip4") }}</span></span></li>
-                <li><span class="square_num"><span ng-if="!masterTradProfile"><i class="fa fa-spinner" aria-hidden="true"></i></span>{{ masterTradProfile.win_count }}</span><span class="square_des">{{ lang.text("tigerWitID.dataStatistics.profitOrders") }}</span></li>
-                <li><span class="square_num"><span ng-if="!masterTradProfile"><i class="fa fa-spinner" aria-hidden="true"></i></span>{{ masterTradProfile.lose_count }}</span><span class="square_des">{{ lang.text("tigerWitID.dataStatistics.lossOrders") }}</span></li>
-                <li><span class="square_num"><span ng-if="!masterTradProfile"><i class="fa fa-spinner" aria-hidden="true"></i></span>{{ masterTradProfile.avg_month_close }}</span><span class="square_des">{{ lang.text("tigerWitID.dataStatistics.numberMonthlyAverage") }}</span></li>
-                <li><span class="square_num"><span ng-if="!masterTradProfile"><i class="fa fa-spinner" aria-hidden="true"></i></span>{{ masterTradProfile.last_total_close }}{{ lang.text("tigerWitID.lot2") }}</span><span class="square_des">{{ lang.text("tigerWitID.dataStatistics.totalClosingOrders") }}</span></li>
-                <li><span class="square_num"><span ng-if="!masterTradProfile"><i class="fa fa-spinner" aria-hidden="true"></i></span>{{ masterTradProfile.win_buy_count }}</span><span class="square_des">{{ lang.text("tigerWitID.dataStatistics.longsWon") }}</span></li>
-                <li><span class="square_num"><span ng-if="!masterTradProfile"><i class="fa fa-spinner" aria-hidden="true"></i></span>{{ masterTradProfile.win_sell_count }}</span><span class="square_des">{{ lang.text("tigerWitID.dataStatistics.shortsWon") }}</span></li>
-                <li><span class="square_num"><span ng-if="!masterTradProfile"><i class="fa fa-spinner" aria-hidden="true"></i></span>{{ masterTradProfile.total_profit_rate }}</span><span class="square_des">Overall return</span></li>
-                <li><span class="square_num"><span ng-if="!masterTradProfile"><i class="fa fa-spinner" aria-hidden="true"></i></span>{{ masterTradProfile.last_max_volume }}{{ lang.text("tigerWitID.lot") }}</span><span class="square_des">{{ lang.text("tigerWitID.dataStatistics.maximumOpen") }}</span></li>
-                <li><span class="square_num"><span ng-if="!masterTradProfile"><i class="fa fa-spinner" aria-hidden="true"></i></span>{{ masterTradProfile.avg_position_time }}</span><span class="square_des">{{ lang.text("tigerWitID.dataStatistics.avgHoldingTime") }}</span></li>
+                <li><span class="square_num trader_blue"><span ng-if="!masterTradProfile"><i class="fa fa-spinner"
+                                aria-hidden="true"></i></span>{{ masterTradProfile.max_retract }}%</span><span
+                        class="span square_des">{{ lang.text("tigerWitID.dataStatistics.maxDrawdown") }}</span></li>
+                <li><span class="square_num"><span ng-if="!masterTradProfile"><i class="fa fa-spinner"
+                                aria-hidden="true"></i></span>{{ masterTradProfile.last_profit_rate }}%</span><span
+                        class="square_des">{{ lang.text("tigerWitID.dataStatistics.lastTradingDay") }}<i
+                            class="fa fa-info" aria-hidden="true"></i></span><span
+                        class="alert">{{ lang.text("tigerWitID.dataStatistics.tip5") }}</span></li>
+                <li><span class="square_num"><span ng-if="!masterTradProfile"><i class="fa fa-spinner"
+                                aria-hidden="true"></i></span>{{ masterTradProfile.last_week_profit_rate }}%</span><span
+                        class="square_des"><span
+                            class="square_des">{{ lang.text("tigerWitID.dataStatistics.nearly7DaysRateReturn") }}<i
+                                class="fa fa-info" aria-hidden="true"></i></span><span
+                            class="alert">{{ lang.text("tigerWitID.dataStatistics.tip4") }}</span></span></li>
+                <li><span class="square_num"><span ng-if="!masterTradProfile"><i class="fa fa-spinner"
+                                aria-hidden="true"></i></span>{{ masterTradProfile.win_count }}{{ lang.text("tigerWitID.lot2") }}</span><span
+                        class="square_des">{{ lang.text("tigerWitID.dataStatistics.profitOrders") }}</span></li>
+                <li><span class="square_num"><span ng-if="!masterTradProfile"><i class="fa fa-spinner"
+                                aria-hidden="true"></i></span>{{ masterTradProfile.lose_count }}{{ lang.text("tigerWitID.lot2") }}</span><span
+                        class="square_des">{{ lang.text("tigerWitID.dataStatistics.lossOrders") }}</span></li>
+                <li><span class="square_num"><span ng-if="!masterTradProfile"><i class="fa fa-spinner"
+                                aria-hidden="true"></i></span>{{ masterTradProfile.avg_month_close }}{{ lang.text("tigerWitID.lot2") }}</span><span
+                        class="square_des">{{ lang.text("tigerWitID.dataStatistics.numberMonthlyAverage") }}</span></li>
+                <li><span class="square_num"><span ng-if="!masterTradProfile"><i class="fa fa-spinner"
+                                aria-hidden="true"></i></span>{{ masterTradProfile.last_total_close }}{{ lang.text("tigerWitID.lot2") }}</span><span
+                        class="square_des">{{ lang.text("tigerWitID.dataStatistics.totalClosingOrders") }}</span></li>
+                <li><span class="square_num"><span ng-if="!masterTradProfile"><i class="fa fa-spinner"
+                                aria-hidden="true"></i></span>{{ masterTradProfile.win_buy_count }}{{ lang.text("tigerWitID.lot2") }}</span><span
+                        class="square_des">{{ lang.text("tigerWitID.dataStatistics.longsWon") }}</span></li>
+                <li><span class="square_num"><span ng-if="!masterTradProfile"><i class="fa fa-spinner"
+                                aria-hidden="true"></i></span>{{ masterTradProfile.win_sell_count }}{{ lang.text("tigerWitID.lot2") }}</span><span
+                        class="square_des">{{ lang.text("tigerWitID.dataStatistics.shortsWon") }}</span></li>
+                <li><span class="square_num"><span ng-if="!masterTradProfile"><i class="fa fa-spinner"
+                                aria-hidden="true"></i></span>{{ masterTradProfile.total_profit_rate }}%</span><span
+                        class="square_des">Overall return</span></li>
+                <li><span class="square_num"><span ng-if="!masterTradProfile"><i class="fa fa-spinner"
+                                aria-hidden="true"></i></span>{{ masterTradProfile.last_max_volume }}{{ lang.text("tigerWitID.lot") }}</span><span
+                        class="square_des">{{ lang.text("tigerWitID.dataStatistics.maximumOpen") }}</span></li>
+                <li><span class="square_num"><span ng-if="!masterTradProfile"><i class="fa fa-spinner"
+                                aria-hidden="true"></i></span>{{ masterTradProfile.avg_position_time }}</span><span
+                        class="square_des">{{ lang.text("tigerWitID.dataStatistics.avgHoldingTime") }}</span></li>
             </ul>
         </div>
-        <!-- <div class="re_trader_detail__areaChart trader_box">
-            <div class="re_trader_detail__areaChart-chart_box">
-                <div class="coopier_tip">
-                    <div>
-                        复制者变化
-                        <i class="info_box"><i class="fa fa-info" aria-hidden="true"></i></i>
-                    </div>
-                    <div>
-                        <span class="tip_box"></span>
-                        复制者图表:<br>
-                        资产管理:显示此交易者的总金额
-                    </div>
-                </div>
-                <div class="coppier_area_chart">
-                    <div tw-area-chart style="width:100%;height:100%"></div>
-                </div>
-                <div class="coopier_total_change">最近七天复制者变化:<span class="trader_blue">&nbsp;{{ areaDataInfo.Last_week_copy_rate || 0 }}%</span></div>
-            </div>
-            <div class="re_trader_detail__areaChart-tip">
-                <span>{{ areaDataInfo.last_max_balance }}</span>
-                <span>资产管理</span>
-            </div>
-        </div> -->
     </div>
-    <div class="re_trader_type trader_box">
-        <div class="re_trader_type__title item-center">
+    <div class="re_trader_type currency-width-border">
+        <!-- <div class="re_trader_type__title item-center">
             <span>{{ lang.text("tigerWitID.dataStatistics.mainTradingSymbols") }}</span>
             <select class="re_trader_chart__changeType"
                     name="changeYearType"
@@ -112,8 +120,37 @@
                     ng-change="changeMonSymbols(barsNowDate)"
             >
             </select>
+        </div> -->
+        <h3 class="re_trader_title">Portfolio</h3>
+        <div class="space-between-center pd-lf-20 pd-rg-20">
+            <div class="item-center flex1">
+                <div class="re_pie_chart">
+                    <h5 class="re_trader_type__title1"> </h5>
+                    <div tw-pie-chart data-pie-type="masterPortfolio" style="width:200px;height:200px"></div>
+
+                    <div class="re_pie_chart__order">
+                        <span class="tit1">{{masterTradProfile.last_total_close}}</span>
+                        <p class="tit2">{{ lang.text("tigerWitID.dataStatistics.totalClosingOrders") }}</p>
+                    </div>
+                </div>
+                <div class="re_pie_chart__legend">
+                    <h5 class="re_trader_type__title1">Proportion</h5>
+                    <p ng-repeat="masterPie in masterPieArr">
+                        <i ng-style="{'background-color': masterPie.color}"></i>
+                        <span>{{masterPie.name}}</span>
+                        <span class="font-bold">{{masterPie.y.toFixed(2)}}%</span>
+                    </p>
+
+                </div>
+            </div>
+            <div class="flex1 re_trader_type__bar">
+                <h5 class="clearfix re_trader_type__title1 mg-bt-0"><span class="fl">Profit</span><span class="fr">Loss</span></h5>
+                <div tw-bar-chart data-type='masterProfitBar' style="height:200px"></div>
+            </div>
+
         </div>
-        <div class="re_trader_type__stack ">
+
+        <!-- <div class="re_trader_type__stack ">
             <div tw-bar-chart data-type='bar' style="width:100%;height:140px"></div>
         </div>
         <div class="re_trader_type__types ">
@@ -125,7 +162,8 @@
                         <li ng-repeat="bar in bars" class="trader_type__item row">
                             <div class="col-xs-4">
                                 <span class="trader_type__icon icon-forex-{{ bar.symbol.toLowerCase() }}"></span>
-                                <span class="trader_type__tit">{{lang.isEnglishArea() ? bar.symbol : (bar.symbol | symbolMod:'zh') + ' (' + bar.symbol + ')' }}</span>
+                                <span
+                                    class="trader_type__tit">{{lang.isEnglishArea() ? bar.symbol : (bar.symbol | symbolMod:'zh') + ' (' + bar.symbol + ')' }}</span>
                             </div>
                             <div class="col-xs-8">
                                 <div tw-scale-bar data-type="masterDetail"></div>
@@ -137,6 +175,6 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 </div>

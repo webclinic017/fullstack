@@ -125,12 +125,12 @@
             $scope.step = step;
         }
 
-        $scope.cancleSubmit = function () {
-            $scope.step = 1;
-            $scope.hasCanceled = true;
-        }
+        // $scope.cancleSubmit = function () {
+        //     $scope.step = 1;
+        //     $scope.hasCanceled = true;
+        // }
 
-        $scope.submitStep1 = function (isForce) {
+        $scope.submitStep1 = function () {
             showErr('amount');
 
             if (typeof $scope.copyTrade.avaCopyAmount === 'undefined') {
@@ -145,9 +145,10 @@
             // 不是强制继续的时候检测建议交易金额
             // console.log((Number($scope.copyTrade.amount), Number($scope.copyTrade.advice.split('.')[0])), isForce);
             
-            if ((Number($scope.copyTrade.amount) < Number($scope.copyTrade.advice.split('.')[0])) && !isForce) {
-                goStep(2);
-            } else {
+            if ((Number($scope.copyTrade.amount) < Number($scope.copyTrade.advice.split('.')[0]))) { 
+                // && !isForce
+            //     goStep(2);
+            // } else {
                 // 如果通过直接提交表单
                 submitForm();
             }

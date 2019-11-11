@@ -5,9 +5,9 @@
     angular.module('fullstackApp')
         .controller('TraderSummaryController', TraderSummaryController);
 
-    TraderSummaryController.$inject = ['$scope', '$location', '$state', 'trader', '$timeout', 'utils'];
+    TraderSummaryController.$inject = ['$scope', '$location', 'whiteLabel', 'trader', '$timeout', 'utils', 'lang'];
 
-    function TraderSummaryController($scope, $location, $state, trader, $timeout, utils) {
+    function TraderSummaryController($scope, $location, whiteLabel, trader, $timeout, utils, lang) {
         $scope.summary = {};
         $scope.bars = [];
         $scope.isFirstLoad = true;
@@ -18,6 +18,8 @@
         usercode = absUrl.match(regUsercode)[1];
         // 获取高手交易信息
         $scope.masterTradProfile = null;
+        $scope.masterPieArr = null;
+        $scope.masterlineArr = null;
         getMasterTradProfile(usercode)
         /*----------------------------获取折线图数据图-----------------------------*/
 
@@ -79,8 +81,62 @@
         }
         function getMasterTradProfile(usercode) {
             trader.getMasterTradProfile(usercode).then(function (data) {
-                if(data && data.is_succ){
+                if (data && data.is_succ) {
                     $scope.masterTradProfile = data.data;
+
+                    var col_color = whiteLabel.pieChart;
+                    $scope.masterPieArr = [
+                        {
+                            name: 'FX',
+                            y: ($scope.masterTradProfile.forex_rate * 100),
+                            color: col_color.colors2[0]
+                        },
+                        {
+                            name: 'Crypto',
+                            y: ($scope.masterTradProfile.crypto_rate * 100),
+                            color: col_color.colors2[1]
+                        },
+                        {
+                            name: 'Indices',
+                            y: ($scope.masterTradProfile.cfd_rate * 100),
+                            color: col_color.colors2[2]
+                        },
+                        {
+                            name: 'Metals',
+                            y: ($scope.masterTradProfile.metal_rate * 100),
+                            color: col_color.colors2[3]
+                        },
+                        {
+                            name: 'Commodities',
+                            y: ($scope.masterTradProfile.energy_rate * 100),
+                            color: col_color.colors2[4]
+                        }
+                    ]
+                    $scope.masterlineArr = [{
+                        name: 'Loss',
+                        color: lang.hostIsCn() ? '#11c971': '#ff605b',
+                        data: [
+                            ($scope.masterTradProfile.forex_fail_rate * 100), 
+                            $scope.masterTradProfile.crypto_fail_rate * 100,
+                            $scope.masterTradProfile.cfd_fail_rate * 100,
+                            $scope.masterTradProfile.metal_fail_rate * 100,
+                            $scope.masterTradProfile.energy_fail_rate * 100
+                        ]
+                    },{
+                        name: 'Profit',
+                        color: lang.hostIsCn() ? '#ff605b': '#11c971',
+                        data: [
+                            ($scope.masterTradProfile.forex_win_rate * 100), 
+                            $scope.masterTradProfile.crypto_win_rate * 100,
+                            $scope.masterTradProfile.cfd_win_rate * 100,
+                            $scope.masterTradProfile.metal_win_rate * 100,
+                            $scope.masterTradProfile.energy_win_rate * 100
+                        ]
+                    }
+                    ]
+                    
+                    $scope.$broadcast('rendBarData', $scope.masterlineArr);
+                    $scope.$broadcast('paintPieChart', $scope.masterPieArr);
                 }
             });
         }
@@ -123,122 +179,120 @@
         // }
 
         /*-----------------------BarChart------------------*/
-        $scope.changeYearType = function () {
-            $scope.$broadcast('rendBarData', $scope.barData);
-            $scope.$broadcast('rendScaleBars', $scope.bars);
-            // console.log($scope.bars);
-        };
+        // $scope.changeYearType = function () {
+        //     $scope.$broadcast('rendBarData', $scope.barData);
+        //     $scope.$broadcast('rendScaleBars', $scope.bars);
+        //     // console.log($scope.bars);
+        // };
 
-        //---------------------------------end------------------------------------------
+        // //---------------------------------end------------------------------------------
 
-        //getMonthlySymbols(usercode);
+        // $scope.changeMonSymbols = function (mon) {
+        //     /*重置数据*/
+        //     $scope.bars = [];
+        //     $scope.barData = [];
+        //     /*loading*/
+        //     $scope.$broadcast('showLoadingImg');
+        //     /*数据处理*/
+        //     $scope.barsNowDate = mon;
+        //     var year = mon.month.split('-')[0];
+        //     var month = mon.month.split('-')[1].split('-')[0];
+        //     var date = year + '-' + month;
+        //     /*获取数据*/
+        //     getMonthlySymbols(usercode, date);
+        //     $scope.barsNowDate = mon;
+        // };
 
-        $scope.changeMonSymbols = function (mon) {
-            /*重置数据*/
-            $scope.bars = [];
-            $scope.barData = [];
-            /*loading*/
-            $scope.$broadcast('showLoadingImg');
-            /*数据处理*/
-            $scope.barsNowDate = mon;
-            var year = mon.month.split('-')[0];
-            var month = mon.month.split('-')[1].split('-')[0];
-            var date = year + '-' + month;
-            /*获取数据*/
-            getMonthlySymbols(usercode, date);
-            $scope.barsNowDate = mon;
-        };
+        // getMonthlySymbols(usercode);
+        // function getMonthlySymbols(usercode, date) {
+        //     trader.getMonthlySymbols(usercode, date).then(function (data) {
+        //         // console.log(data);
+        //         if (!data.is_succ) {
+        //             return false;
+        //         }
+        //         data = data.data;
+        //         data.now_date = data.current_date.split(' ')[0].slice(0, 7);
+        //         data.time = data.start_date.split(' ')[0].slice(0, 7);
 
-        getMonthlySymbols(usercode);
-        function getMonthlySymbols(usercode, date) {
-            trader.getMonthlySymbols(usercode, date).then(function (data) {
-                // console.log(data);
-                if (!data.is_succ) {
-                    return false;
-                }
-                data = data.data;
-                data.now_date = data.current_date.split(' ')[0].slice(0, 7);
-                data.time = data.start_date.split(' ')[0].slice(0, 7);
+        //         /*如果是首次加载,解析所有交易年份*/
+        //         if ($scope.isFirstLoad) {
+        //             $scope.monSymbols = parseMon(data.time, data.now_date);
+        //             $scope.barsNowDate = $scope.monSymbols[0];
+        //         }
 
-                /*如果是首次加载,解析所有交易年份*/
-                if ($scope.isFirstLoad) {
-                    $scope.monSymbols = parseMon(data.time, data.now_date);
-                    $scope.barsNowDate = $scope.monSymbols[0];
-                }
+        //         function parseMon(start, end) {
+        //             var result = [];
+        //             var starts = start.split('-');
+        //             var ends = end.split('-');
+        //             var staYear = parseInt(starts[0]);
+        //             var staMon = parseInt(starts[1]);
+        //             var endYear = parseInt(ends[0]);
+        //             var endMon = parseInt(ends[1]);
 
-                function parseMon(start, end) {
-                    var result = [];
-                    var starts = start.split('-');
-                    var ends = end.split('-');
-                    var staYear = parseInt(starts[0]);
-                    var staMon = parseInt(starts[1]);
-                    var endYear = parseInt(ends[0]);
-                    var endMon = parseInt(ends[1]);
+        //             while (staYear <= endYear) {
+        //                 if (staYear == endYear) {
+        //                     while (staMon <= endMon) {
+        //                         staMon = staMon < 10 ? '0' + staMon : staMon;
+        //                         result.push({ month: staYear + '-' + staMon });
+        //                         staMon++;
+        //                     }
+        //                     staYear++;
+        //                 } else {
+        //                     if (staMon > 12) {
+        //                         staMon = 1;
+        //                         staYear++;
+        //                     }
+        //                     staMon = staMon < 10 ? '0' + staMon : staMon;
+        //                     result.push({ month: staYear + '-' + staMon });
+        //                     staMon++;
+        //                 }
+        //             }
 
-                    while (staYear <= endYear) {
-                        if (staYear == endYear) {
-                            while (staMon <= endMon) {
-                                staMon = staMon < 10 ? '0' + staMon : staMon;
-                                result.push({ month: staYear + '-' + staMon });
-                                staMon++;
-                            }
-                            staYear++;
-                        } else {
-                            if (staMon > 12) {
-                                staMon = 1;
-                                staYear++;
-                            }
-                            staMon = staMon < 10 ? '0' + staMon : staMon;
-                            result.push({ month: staYear + '-' + staMon });
-                            staMon++;
-                        }
-                    }
+        //             result.reverse();
+        //             return result;
+        //         }
 
-                    result.reverse();
-                    return result;
-                }
+        //         function parseBar(data) {
+        //             var barData = [];
+        //             for (var i = 0; i < data.length; i++) {
+        //                 var obj = {
+        //                     name: '',
+        //                     data: []
+        //                 };
+        //                 (function (item) {
+        //                     obj.name = item.symbol;
+        //                     obj.data[0] = item.total_rate;
+        //                     // console.log(obj);
+        //                     barData.push(obj)
+        //                 }(data[i]))
+        //             }
+        //             // console.log(barData);
+        //             return barData;
+        //         }
 
-                function parseBar(data) {
-                    var barData = [];
-                    for (var i = 0; i < data.length; i++) {
-                        var obj = {
-                            name: '',
-                            data: []
-                        };
-                        (function (item) {
-                            obj.name = item.symbol;
-                            obj.data[0] = item.total_rate;
-                            // console.log(obj);
-                            barData.push(obj)
-                        }(data[i]))
-                    }
-                    // console.log(barData);
-                    return barData;
-                }
+        //         $scope.barData = parseBar(data.records);
+        //         if (data.records.length <= 0) {
+        //             $scope.$broadcast('hideBarData', $scope.barData);
+        //         } else {
+        //             $scope.$broadcast('rendBarData', $scope.barData);
+        //         }
+        //         angular.forEach(data.records, function (value, index) {
+        //             var scale = ((value.avg_long_time / (value.avg_long_time + value.avg_short_time)) * 100).toFixed(2);
+        //             value.scale = scale;
+        //         });
 
-                $scope.barData = parseBar(data.records);
-                if (data.records.length <= 0) {
-                    $scope.$broadcast('hideBarData', $scope.barData);
-                } else {
-                    $scope.$broadcast('rendBarData', $scope.barData);
-                }
-                angular.forEach(data.records, function (value, index) {
-                    var scale = ((value.avg_long_time / (value.avg_long_time + value.avg_short_time)) * 100).toFixed(2);
-                    value.scale = scale;
-                });
+        //         $scope.bars = data.records;
 
-                $scope.bars = data.records;
+        //         $scope.$broadcast('hideLoadingImg');
 
-                $scope.$broadcast('hideLoadingImg');
+        //         $timeout(function () {
+        //             $scope.$broadcast('rendScaleBars', $scope.bars);
+        //         });
 
-                $timeout(function () {
-                    $scope.$broadcast('rendScaleBars', $scope.bars);
-                });
-
-                /*修改首次加载状态*/
-                $scope.isFirstLoad = false;
-            });
-        }
+        //         /*修改首次加载状态*/
+        //         $scope.isFirstLoad = false;
+        //     });
+        // }
     }
 })();
 

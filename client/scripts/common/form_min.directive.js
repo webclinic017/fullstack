@@ -31,7 +31,8 @@
 
                     if (viewVal < min) {
                         ctrl.$setValidity('twformMin', false);
-                        return undefined;
+                        return viewVal;
+                        // return undefined;
                     } else {
                         ctrl.$setValidity('twformMin', true);
                         return viewVal;

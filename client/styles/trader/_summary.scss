@@ -230,11 +230,11 @@ $tiger-yellow: $brand-primary;
   color: $trader-green;
 }
 
-.trader_box {
-  box-shadow: 1px 1px 1px $trader-border;
-  border: 1px solid $trader-border;
-  border-top: none;
-}
+// .trader_box {
+//   box-shadow: 1px 1px 1px $trader-border;
+//   border: 1px solid $trader-border;
+//   border-top: none;
+// }
 
 .info_box {
   display: inline-block;
@@ -253,7 +253,7 @@ $tiger-yellow: $brand-primary;
   }
 }
 @include b(re_trader_title) {
-  margin: 0 0 30px 0;
+  margin: 0 0 20px 0;
   padding: 0 36px;
   // > span, > select {
   //   height: 25px;
@@ -272,9 +272,9 @@ $tiger-yellow: $brand-primary;
   // > select {
   //   width: 80px;
   // }
-    font-size: 20px;
-    color: rgba(30, 32, 36, 1);
-    line-height: 28px;
+  font-size: 20px;
+  color: rgba(30, 32, 36, 1);
+  line-height: 28px;
 }
 @include b(re_trader_chart) {
   padding: 22px 0;
@@ -333,8 +333,8 @@ $ratio: 1.165;
           }
         }
         > span:nth-child(1) {
-          font-size:18px;
-          line-height:25px;
+          font-size: 18px;
+          line-height: 25px;
         }
         > span:nth-child(2) {
           color: rgba(62, 74, 89, 0.5);
@@ -435,61 +435,108 @@ $ratio: 1.165;
   }
 }
 
-@include b(re_trader_trend) {
-  background-color: #ffffff;
-  width: ratio(1200);
-  height: ratio(410);
-  margin: 0 auto;
-  margin-top: 30px;
-  padding-left: ratio(25);
-  padding-top: ratio(35);
-  padding-right: ratio(40);
-  @include e(title) {
-    width: 100%;
-    height: ratio(30);
-  }
-}
+// @include b(re_trader_trend) {
+//   background-color: #ffffff;
+//   width: ratio(1200);
+//   height: ratio(410);
+//   margin: 0 auto;
+//   margin-top: 30px;
+//   padding-left: ratio(25);
+//   padding-top: ratio(35);
+//   padding-right: ratio(40);
+//   @include e(title) {
+//     width: 100%;
+//     height: ratio(30);
+//   }
+// }
 
 @include b(re_trader_type) {
-  background-color: #ffffff;
-  width: ratio(1200);
-  margin: 0 auto;
-  margin-top: 30px;
-  padding-left: ratio(25);
-  padding-top: ratio(30);
-  padding-right: ratio(30);
+  margin-top: 26px;
+  padding: 22px 0;
   margin-bottom: 45px;
   @include e(average_time) {
     margin-top: 25px;
     font-size: 12px;
     font-weight: 200;
   }
-  @include e(title) {
-    width: 100%;
-    margin-bottom: 25px;
-    > span,
-    > select {
-      height: 25px;
-      line-height: 25px;
-    }
+  // @include e(title) {
+  //   width: 100%;
+  //   margin-bottom: 25px;
+  //   > span,
+  //   > select {
+  //     height: 25px;
+  //     line-height: 25px;
+  //   }
 
-    > span {
-    }
+  //   > span {
+  //   }
 
-    > select {
-      margin-right: 30px;
-      margin-left: 30px;
-      width: 95px;
+  //   > select {
+  //     margin-right: 30px;
+  //     margin-left: 30px;
+  //     width: 95px;
+  //   }
+  // }
+
+  // @include e(stack) {
+  //   width: 100%;
+  // }
+  @include e(title1) {
+    font-size: 16px;
+    line-height: 22px;
+    margin: 10px;
+    min-height: 22px;
+  }
+  @include e(bar) {
+    padding: 0 20px;
+  }
+  // @include e(types) {
+  //   .navbar_summary {
+  //     border: none;
+  //   }
+  // }
+}
+@include b(re_pie_chart) {
+  display: inline-block;
+  position: relative;
+  @include e(order) {
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 10;
+    text-align: center;
+    transform: translate(-50%);
+    word-break: break-all;
+
+    > tit1 {
+      font-size: 20px;
+      color: rgba(33, 44, 63, 1);
+      line-height: 28px;
+    }
+    > tit2 {
+      font-size: 14px;
+      color: rgba(62, 74, 89, 0.5);
+      line-height: 15px;
     }
   }
-
-  @include e(stack) {
-    width: 100%;
-  }
-
-  @include e(types) {
-    .navbar_summary {
-      border: none;
+  @include e(legend) {
+    > p {
+      padding: 5px;
+      > i {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
+        margin: 0 7px;
+      }
+      > span {
+        display: inline-block;
+        font-size: 18px;
+        color: rgba(30, 32, 36, 1);
+        line-height: 25px;
+        margin: 0 7px;
+      }
     }
   }
 }
