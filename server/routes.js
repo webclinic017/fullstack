@@ -824,7 +824,22 @@ module.exports = function (app) {
         } else {
             var page = 'web';
         }
-        res.render('bd/creex/index.html', extendPublic({page:page}, req));
+        res.render('bd/creex/index.html', extendPublic({
+            pageType: 'creex',
+            page:page
+        }, req));
+    });
+    app.route('/enbolsa').get(function (req, res) {
+        setEnvCf(req, res);
+        if (isMobile(req)) {
+            var page = 'mobile';
+        } else {
+            var page = 'web';
+        }
+        res.render('bd/creex/index.html', extendPublic({
+            pageType: 'enbolsa',
+            page:page,
+        }, req));
     });
     
     // 市场部 - 月报生成 无用
