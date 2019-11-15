@@ -9187,6 +9187,76 @@
                     }
                 },
                 "master": {
+                    "starMasters": {
+                        "zh": "明星高手",
+                        "en": "Star Masters",
+                        "vi": "Bậc thầy nổi bật",
+                        "zh-Hant": "明星高手",
+                        "id": "Master Pilihan",
+                        "es": "Star Masters",
+                        "pt-BR": "Mestre estrela",
+                        "ar": ""
+                    },
+                    "profitCopiers": {
+                        "zh": "跟随者收益",
+                        "en": "Profit of copiers",
+                        "vi": "Lợi nhuận của người theo dõi",
+                        "zh-Hant": "跟隨者收益",
+                        "id": "Keuntungan pengikuti",
+                        "es": "Ganancias de Copiadores",
+                        "pt-BR": "Ganancia dos copiadores",
+                        "ar": ""
+                    },
+                    "copyGet1": {
+                        "zh": "复制赠$",
+                        "en": "Copy to get $",
+                        "vi": "Sao chép để nhận ",
+                        "zh-Hant": "複製贈$",
+                        "id": "Copy untuk mendapatkan $",
+                        "es": "Copy para obtener $",
+                        "pt-BR": "Copy para obtener $",
+                        "ar": ""
+                    },
+                    "copyGet2": {
+                        "zh": " ",
+                        "en": " ",
+                        "vi": "$",
+                        "zh-Hant": " ",
+                        "id": " ",
+                        "es": " ",
+                        "pt-BR": " ",
+                        "ar": ""
+                    },
+                    "recommendedMasters": {
+                        "zh": "推荐高手",
+                        "en": "Recommended Masters",
+                        "vi": "Bậc thầy được đề xuất",
+                        "zh-Hant": "推薦高手",
+                        "id": "Rekomendasi Master",
+                        "es": "Masters recomendados",
+                        "pt-BR": "Mestre recomendados",
+                        "ar": ""
+                    },
+                    "": {
+                        "zh": "",
+                        "en": "",
+                        "vi": "",
+                        "zh-Hant": "",
+                        "id": "",
+                        "es": "",
+                        "pt-BR": "",
+                        "ar": ""
+                    },
+                    "": {
+                        "zh": "",
+                        "en": "",
+                        "vi": "",
+                        "zh-Hant": "",
+                        "id": "",
+                        "es": "",
+                        "pt-BR": "",
+                        "ar": ""
+                    },
                     "precautions": {
                         "zh": "注意事项",
                         "en": "Precautions",
@@ -9499,12 +9569,12 @@
                     },
                     "last30AaysYield": {
                         "zh": "近30天收益率",
-                        "en": "Last 30 days yield",
-                        "vi": "Lợi nhuận trong 30 ngày qua",
+                        "en": "Last 30d return",
+                        "vi": "Lợi nhuận 30 ngày trước",
                         "zh-Hant": "近30天收益率",
-                        "id": "Hasil selama 30 hari terakhir",
-                        "es": "Retorno últimos 30 días",
-                        "pt-BR": "Últimos 30 dias de rendimento",
+                        "id": "Keuntungan 30 hari terakhir",
+                        "es": "Keuntungan 30 hari terakhir",
+                        "pt-BR": "Retorno nos últimos 30 dias",
                         "ar": "العائد في أخر 30 يومًا"
                     },
                     "days30MaximumDrawdown": {
@@ -9619,12 +9689,12 @@
                     },
                     "exact": {
                         "zh": "胜率",
-                        "en": "Consistency",
-                        "vi": "Tính nhất quán",
+                        "en": "Win rate",
+                        "vi": "Tỷ lệ thắng",
                         "zh-Hant": "勝率",
-                        "id": "Konsistensi",
-                        "es": "Consistencia",
-                        "pt-BR": "Consistência",
+                        "id": "Tingkat kemenangan",
+                        "es": "Ganar ratios",
+                        "pt-BR": "Taxa de acertos",
                         "ar": "الثبات"
                     },
                     "returnLast30D": {
@@ -12657,6 +12727,16 @@
                     "es": "Seguir",
                     "pt-BR": "Seguir",
                     "ar": "متابعة"
+                },
+                "copied": {
+                    "en": "COPIED",
+                    "zh": "已复制",
+                    "vi": "Sao chép",
+                    "zh-Hant": "已復制",
+                    "id": "Ikuti",
+                    "es": "COPIADO",
+                    "pt-BR": "COPIADO",
+                    "ar": "منسوخ"
                 },
                 "noData": {
                     "zh": "暂无数据！",

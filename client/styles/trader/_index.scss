@@ -87,13 +87,12 @@ $font-trader-gray-color: $gray-dark;
   @include e(wrapper) {
     height: 80px;
     position: relative;
-    overflow: hidden;
     cursor: pointer;
-    border-radius: 50%;
 
     > img {
       display: inline-block;
       height: 100%;
+      border-radius: 50%;
     }
 
     .icon-grade {
@@ -168,8 +167,8 @@ $font-trader-gray-color: $gray-dark;
   }
 }
 
-@include b(trader_btn) {
-  margin: 0px;
+// @include b(trader_btn) {
+//   margin: 0px;
   // @include e(profit) {
   //     width: 150px;
   //     white-space: nowrap;
@@ -179,7 +178,7 @@ $font-trader-gray-color: $gray-dark;
   //         color: $brand-info;
   //     }
   // }
-}
+// }
 
 @include b(trader_message) {
   padding: 2px 0;
@@ -262,9 +261,9 @@ $font-trader-gray-color: $gray-dark;
           }
         }
       }
-      &.no-data{
-          text-align: center;
-          border-bottom-width: 0;
+      &.no-data {
+        text-align: center;
+        border-bottom-width: 0;
       }
     }
   }

@@ -15,29 +15,33 @@
     function twformMin() {
         return {
             restrict: 'A',
-            require: '?ngModel',
+            require: 'ngModel',
             link: function (scope, element, attrs, ctrl) {
                 if (!ctrl) {
                     return;
                 }
-
                 var min = 0;
                 attrs.$observe('twformMin', function (value) {
+                    console.log(value)
                     var floatVal = parseFloat(value, 10);
                     min = isNaN(floatVal) ? 0 : floatVal;
                 });
 
                 ctrl.$parsers.push(function (viewVal) {
-
-                    if (viewVal < min) {
+                    return setData(viewVal, min)
+                });
+                ctrl.$formatters.push(function(viewVal){
+                    return setData(viewVal, min)
+                });
+                function setData(cur, min){
+                    if (cur < min) {
                         ctrl.$setValidity('twformMin', false);
-                        return viewVal;
-                        // return undefined;
+                        return undefined;
                     } else {
                         ctrl.$setValidity('twformMin', true);
-                        return viewVal;
+                        return cur;
                     }
-                });
+                }
 
             }
         }

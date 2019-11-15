@@ -19,66 +19,9 @@
             username: copiedTrader.username,          // 高手 username
             // avatar: copiedTrader.lgAvatar,         // 高手头像
             amount: copiedTrader.copied || undefined, // 需填写的复制金额，若已经复制则为本人复制高手的复制金额
-            minCopyAmount: Number(copiedTrader.minCopyAmount) || '', 
+            minCopyAmount: Number(copiedTrader.minCopyAmount) || '',
             surplusAmount: passedScope.surplusAmount || undefined
         };
-
-        if(avaCopyInfo){
-            angular.extend($scope.copyTrade, {
-                avaCopyAmount: avaCopyInfo.usable || undefined,
-                advice: avaCopyInfo.advice
-            });
-            getDefaultAmount();
-            // $scope.copyTrade.amount = avaCopyInfo.advice;
-        } else {
-            getAvaCopyAmount(copiedTrader.usercode);
-        }
-
-        if ($scope.copyTrade.title == 'modify') {
-            getMasterGrade(copiedTrader.usercode);
-        }
-
-        // 获取可用复制金额
-        function getAvaCopyAmount(usercode) {
-            trader.getAvaCopyAmount(usercode).then(function (data) {
-                $scope.copyTrade.avaCopyAmount = data.data.usable;
-                $scope.copyTrade.advice = data.data.advice;
-                $scope.copyTrade.minCopyAmount = Number(data.data.min_copy_amount);
-                // $scope.copyTrade.amount = avaCopyInfo.advice;
-                $scope.calAmount();
-                getDefaultAmount();
-            });
-        }
-
-        // 获取高手剩余可复制金额 
-        // 只有在修改时需要获取，复制高手时是通过 passedScope 传递获得
-        function getMasterGrade (usercode) {
-            trader.getMasterGrade(usercode).then(function (data) {
-                // console.log(data);
-                if (data.is_succ && data.code == 0) {
-                    $scope.copyTrade.surplusAmount = data.data.available_amount;
-                }
-            });
-        }
-
-        function getDefaultAmount(){
-            var ava = Number($scope.copyTrade.avaCopyAmount);
-            var adv = Number($scope.copyTrade.advice);
-            var min = $scope.copyTrade.minCopyAmount;
-            console.log(ava,adv,min);
-            if((min < ava && ava < adv) || ava < min){
-                $scope.copyTrade.amount = ava;
-            }
-            if(ava > adv){
-                $scope.copyTrade.amount = adv;
-            }
-        }
-
-        // 流程控制
-        $scope.step = 1;
-        // 是否重新填写
-        $scope.hasCanceled = undefined;
-
         $scope.frontErr = {
             amount: {
                 show: false,
@@ -101,17 +44,79 @@
         $scope.clickable = {
             copy: true
         };
+        if (avaCopyInfo) {
+            angular.extend($scope.copyTrade, {
+                avaCopyAmount: avaCopyInfo.usable || undefined,
+                advice: avaCopyInfo.advice
+            });
+            getDefaultAmount();
+            // $scope.copyTrade.amount = avaCopyInfo.advice;
+        } else {
+            getAvaCopyAmount(copiedTrader.usercode);
+        }
+
+        // if ($scope.copyTrade.title == 'modify') {
+        //     getMasterGrade(copiedTrader.usercode);
+        // }
+
+        if(!$scope.copyTrade.surplusAmount){
+            getMasterGrade(copiedTrader.usercode);
+        }
+
+        // 获取可用复制金额
+        function getAvaCopyAmount(usercode) {
+            trader.getAvaCopyAmount(usercode).then(function (data) {
+                $scope.copyTrade.avaCopyAmount = data.data.usable;
+                $scope.copyTrade.advice = data.data.advice || 0.00;
+                $scope.copyTrade.minCopyAmount = Number(data.data.min_copy_amount);
+                // $scope.copyTrade.amount = avaCopyInfo.advice;
+                // calAmount();
+                getDefaultAmount();
+            });
+        }
+
+        // 获取高手剩余可复制金额 
+        // 只有在修改时需要获取，复制高手时是通过 passedScope 传递获得
+        function getMasterGrade(usercode) {
+            trader.getMasterGrade(usercode).then(function (data) {
+                // console.log(data);
+                if (data.is_succ && data.code == 0) {
+                    $scope.copyTrade.surplusAmount = data.data.available_amount || 0.00;
+                }
+            });
+        }
+
+        function getDefaultAmount() {
+            var ava = Number($scope.copyTrade.avaCopyAmount);
+            var adv = Number($scope.copyTrade.advice);
+            var min = $scope.copyTrade.minCopyAmount;
+            console.log(ava, adv, min);
+            if ((min < ava && ava < adv) || ava < min) {
+                setAmount(ava)
+            }
+            if (ava > adv) {
+                setAmount(adv)
+            }
+        }
+
+        // 流程控制
+        $scope.step = 1;
+        // 是否重新填写
+        // $scope.hasCanceled = undefined;
+
         $scope.hideErr = hideErr;
         $scope.showErr = showErr;
         $scope.submitForm = submitForm;
         $scope.closeModal = closeModal;
+        $scope.setAmount = setAmount;
+        $scope.calAmount = calAmount;
 
         if ($scope.copyTrade.amount &&
             parseInt($scope.copyTrade.amount) < $scope.copyTrade.minCopyAmount) {
-            $scope.copyTrade.amount = 1000;
+            setAmount(1000)
         }
 
-        $scope.calAmount = function () {
+        function calAmount() {
             var usableAmount = Number($scope.copyTrade.avaCopyAmount);
             var amount = Number($scope.copyTrade.amount);
             if (amount > usableAmount || usableAmount < $scope.copyTrade.minCopyAmount) {
@@ -120,7 +125,11 @@
                 $scope.frontErr.insufficient.show = false;
             }
         }
-
+        function setAmount(amount) {
+            $scope.copyTrade.amount = Number(amount);
+            
+            calAmount()
+        }
         function goStep(step) {
             $scope.step = step;
         }
@@ -144,11 +153,11 @@
 
             // 不是强制继续的时候检测建议交易金额
             // console.log((Number($scope.copyTrade.amount), Number($scope.copyTrade.advice.split('.')[0])), isForce);
-            
-            if ((Number($scope.copyTrade.amount) < Number($scope.copyTrade.advice.split('.')[0]))) { 
+
+            if ((Number($scope.copyTrade.amount) < Number($scope.copyTrade.advice.split('.')[0]))) {
                 // && !isForce
-            //     goStep(2);
-            // } else {
+                //     goStep(2);
+                // } else {
                 // 如果通过直接提交表单
                 submitForm();
             }
@@ -164,8 +173,8 @@
 
                 if (data.is_succ) {
                     goStep(3);
-                    copiedTrader.copied = $scope.copyTrade.amount;
-
+                    // copiedTrader.copied = $scope.copyTrade.amount;
+                    passedScope.callBack && passedScope.callBack($scope.copyTrade.amount);
                     // 神策数据统计
                     sa.track('btn_click', {
                         btn_page: copiedTrader.usercode,
@@ -177,8 +186,8 @@
                     $scope.copyTrade.evidenceMsg = data.message;
                     goStep(4);
                 } else {
-                    goStep(1);
-                    $scope.hasCanceled = false;
+                    // goStep(1);
+                    // $scope.hasCanceled = false;
 
                     $scope.backErr.system.show = true;
                     $scope.backErr.system.msg = data.message;

@@ -5,9 +5,10 @@
     angular.module('fullstackApp')
         .controller('TraderIndexController', TraderIndexController);
 
-    TraderIndexController.$inject = ['$scope', '$location', '$state', 'trader', '$timeout', '$modal', '$rootScope', '$document'];
+    TraderIndexController.$inject = ['$scope', '$location', 'trader', '$timeout', '$modal', '$rootScope', '$document'];
 
-    function TraderIndexController($scope, $location, $state, trader, $timeout, $modal, $rootScope, $document) {
+    function TraderIndexController($scope, $location, trader, $timeout, $modal, $rootScope, $document) {
+        // console.log($scope.lang.text("tigerWitID.copy"))
         $scope.master = {};
         $scope.noCopy = {
             bol: true,
@@ -36,7 +37,6 @@
         //         $timeout.cancel(detailId);
         //     }
         // });
-
         function getMasterInfo(usercode) {
             trader.getMasterNewInfo(usercode).then(function (data) {
                 // console.log('getMasterInfo',data)
@@ -111,7 +111,7 @@
                                 bol: false,
                                 tip: ''
                             };;
-                            $scope.master.copied = data.data.is_copy;
+                            $scope.master.copied = data.data.copy_amount; // 复制过的金额
                             avaCopyAmount = data.data.usable;
                             $scope.master.avaCopyAmount = data.data.usable;
                             $scope.master.min_copy_amount = data.data.min_copy_amount;
@@ -179,7 +179,7 @@
                                     if (avaCopyAmount < minCopyAmount) {
                                         openSystemMdl('amount', minCopyAmount);
                                     } else {
-                                        openCopyMdl();
+                                        openCopyMdl('copy');
                                     }
                                 }else{
                                     copyProtocolMdl();
@@ -214,8 +214,8 @@
                 }
             });
         }
-
-        function openCopyMdl() {
+        $scope.openCopyMdl = openCopyMdl;
+        function openCopyMdl(type) {
             $modal.open({
                 templateUrl: '/views/invest/copy_modal.html',
                 controller: 'TraderCopyController',
@@ -230,7 +230,34 @@
                             copiedTrader: $scope.master,
                             AvaCopyInfo: AvaCopyInfo,
                             surplusAmount: $scope.masterGradeInfo.available_amount,
-                            title: 'copy'
+                            title: type,
+                            callBack: function(amount){
+                                $scope.master.is_copy = true;
+                                $scope.master.copied = amount;
+                            }
+                        }
+                    }
+                }
+            });
+        }
+        $scope.openCancelCopyMdl = openCancelCopyMdl;
+        function openCancelCopyMdl(trader, event) {
+            event.stopPropagation();
+            event.stopImmediatePropagation();
+            $modal.open({
+                templateUrl: '/views/invest/cancel_copy_modal.html',
+                controller: 'TraderCopyCancelController',
+                size: 'sm',
+                backdrop: true,
+                resolve: {
+                    passedScope: function () {
+                        return {
+                            account_code: trader.account_code,
+                            username: trader.username,
+                            callBack: function(){
+                                $scope.master.is_copy = false;
+                                $scope.master.copied = 0;
+                            }
                         }
                     }
                 }
