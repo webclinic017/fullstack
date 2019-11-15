@@ -2,6 +2,8 @@
   var page = $(".bd_forextrading").attr("data-lang-page");
   var pageInfo = {
     english: {
+      live_account_href: "/space/#/account/register?lang=en&R_FOREXLANDINGPAGELIVE=002",
+      demo_account_href: "/space/#/account/register?lang=en&R_FOREXLANDINGPAGEDEMO=001",
       open_account: "Open an account",
       live_account: "Open a live account",
       demo_account: "Demo account",
@@ -64,6 +66,8 @@
       partners_block5_2: "regulated"
     },
     indonesia: {
+      live_account_href: "/space/#/account/register?lang=id&R_FOREXLANDINGPAGELIVE=002",
+      demo_account_href: "/space/#/account/register?lang=id&R_FOREXLANDINGPAGEDEMO=001",
       open_account: "Buka Akun",
       live_account: "Buka Akun Live",
       demo_account: "Akun Demo",
@@ -129,6 +133,8 @@
       partners_block5_2: "SCB dan FCA"
     },
     mena: {
+      live_account_href: "/space/#/account/register?lang=ar&R_FOREXLANDINGPAGELIVE=002",
+      demo_account_href: "/space/#/account/register?lang=ar&R_FOREXLANDINGPAGEDEMO=001",
       open_account: "Open an account",
       live_account: "حساب تجريبي",
       demo_account: "افتح حساب حقيقي",
@@ -181,6 +187,8 @@
       partners_block5_2: "هيئة FCA و SCB  "
     },
     portuguese: {
+      live_account_href: "/space/#/account/register?lang=pt-BR&R_FOREXLANDINGPAGELIVE=002",
+      demo_account_href: "/space/#/account/register?lang=pt-BR&R_FOREXLANDINGPAGEDEMO=001",
       open_account: "Abrir uma conta",
       live_account: "Abra uma conta",
       demo_account: "Abra uma conta Demo",
@@ -244,6 +252,8 @@
       partners_block5_2: "regulado"
     },
     spanish: {
+      live_account_href: "/space/#/account/register?lang=es&R_FOREXLANDINGPAGELIVE=002",
+      demo_account_href: "/space/#/account/register?lang=es&R_FOREXLANDINGPAGEDEMO=001",
       open_account: "Abrir una cuenta",
       live_account: "Abrir una cuenta",
       demo_account: "Abrir una cuenta Demo",
@@ -304,6 +314,8 @@
       partners_block5_2: "regulado"
     },
     vietnam: {
+      live_account_href: "/space/#/account/register?lang=vi&R_FOREXLANDINGPAGELIVE=002",
+      demo_account_href: "/space/#/account/register?lang=vi&R_FOREXLANDINGPAGEDEMO=001",
       open_account: "Mở Tài Khoản",
       live_account: "Mở tài khoản thật",
       demo_account: "Tài khoản demo",
@@ -371,15 +383,23 @@
       partners_block5_2: "SCB và FCA"
     }
   };
+  console.log(page);
+  page = pageInfo[page] ? page : "english";
+  for (var i in pageInfo[page]) {
+    if (i === 'live_account_href') {
+      $(".bd_open_account").attr("href", pageInfo[page][i]);
+      $(".bd_live_account").attr("href", pageInfo[page][i]);
+    } else if (i === 'demo_account_href') {
+      $(".bd_demo_account").attr("href", pageInfo[page][i]);
+    } else {
+
+    }
+    $(".bd_"+i).html(pageInfo[page][i]);
+  }
   if ($(".bd_forextrading").attr("data-mobile") === '1') {
     $(".bd_open_account").attr("href", "/download");
     $(".bd_live_account").attr("href", "/download");
     $(".bd_demo_account").attr("href", "/download");
-  }
-  console.log(page);
-  page = pageInfo[page] ? page : "english";
-  for (var i in pageInfo[page]) {
-    $(".bd_"+i).html(pageInfo[page][i]);
   }
   if (page === 'mena') {
     $(".bd_forextrading").attr("dir", "rtl");
