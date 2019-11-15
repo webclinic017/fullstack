@@ -9187,24 +9187,14 @@
                         "pt-BR": "Mínimo",
                         "ar": ""
                     },
-                    "": {
-                        "zh": "",
-                        "en": "",
-                        "vi": "",
-                        "zh-Hant": "",
-                        "id": "",
-                        "es": "",
-                        "pt-BR": "",
-                        "ar": ""
-                    },
-                    "": {
-                        "zh": "",
-                        "en": "",
-                        "vi": "",
-                        "zh-Hant": "",
-                        "id": "",
-                        "es": "",
-                        "pt-BR": "",
+                    "available": {
+                        "zh": "可用",
+                        "en": "Available",
+                        "vi": "Khả dụng",
+                        "zh-Hant": "可用",
+                        "id": "Tersedia",
+                        "es": "Disponible",
+                        "pt-BR": "Disponível",
                         "ar": ""
                     },
                     "precautions": {
