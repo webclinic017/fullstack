@@ -51,12 +51,12 @@
             <ul class="copy_modal__btn item-center">
                 <li ng-click="setAmount(copyTrade.minCopyAmount)"
                     ng-class="{'active': copyTrade.minCopyAmount == copyTrade.amount}">
-                    <p>Minimum</p>
+                    <p>{{lang.text('tigerWitID.master.minimum')}}</p>
                     <p>{{ copyTrade.minCopyAmount }}</p>
                 </li>
 
                 <li ng-click="setAmount(copyTrade.advice)" ng-class="{'active': copyTrade.advice == copyTrade.amount}">
-                    <p>Best</p>
+                    <p>{{lang.text('tigerWitID.master.best')}}</p>
                     <p>{{ copyTrade.advice }}</p>
                 </li>
             </ul>

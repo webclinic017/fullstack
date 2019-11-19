@@ -4,9 +4,9 @@
 
     angular.module('fullstackApp').directive('twLineChart', twLineChart);
 
-    twLineChart.$inject = ['lang', '$filter'];
+    twLineChart.$inject = ['lang', '$filter', 'fun'];
 
-    function twLineChart(lang, $filter) {
+    function twLineChart(lang, $filter, fun) {
         var options = {
             chart: {
                 type: 'line',
@@ -157,7 +157,7 @@
                     var line_chart = scope.rank.line_chart;
                     var data = Highcharts.map(line_chart, function (config) {
                         return {
-                            x: config.timestamp * 1000,
+                            x: fun.accMul(config.timestamp, 1000),
                             y: config.value * 1
                         };
                     });
@@ -345,7 +345,27 @@
                 }
                 // 高手详情
                 if (type === 'masterSummaryDetail') {
+                    function cutTen(that){
+                        that.xAxis[0].setExtremes(
+                            that.options.series[0].data[that.options.series[0].data.length - 10][0],
+                            that.options.series[0].data[that.options.series[0].data.length - 1][0]
+                        );
+                    }
                     angular.extend(options, {
+                        chart: {
+                            type: 'line',
+                            // spacing: 10,
+                            backgroundColor: 'rgba(0,0,0,0)',
+                            zoomType: 'x',
+                            events: {
+                                selection: function (event) {
+                                    if(event.xAxis == undefined){
+                                        cutTen(this)
+                                        return false
+                                    }
+                                }
+                            }
+                        },
                         legend: {
                             enabled: true
                         },
@@ -355,7 +375,7 @@
                             labels: {
                                 style: {
                                     color: '#ccc'
-                                }
+                                },
                             },
                             reversed: lang.isAr(),
                             type: 'datetime',
@@ -367,7 +387,9 @@
                                 week: '%e. %b',
                                 month: '%Y-%m',
                                 year: '%Y'
-                            }
+                            },
+                            // minTickInterval: 1000*60*60*24,
+                            minRange: 1000*60*60*24*10
                         },
 
                         yAxis: {
@@ -397,31 +419,46 @@
                                 dateStr + '</p><p style="color:' + this.series.color + ';"><span>' + this.series.name + 
                                     '</span><span>' + this.y + '%</span></p>';
                             }
+                        },
+                        scrollbar: {
+                            enabled: true
+                     
                         }
                     });
 
                     scope.$on('paintLineChart', function (event, data) {
                         // console.log(data)
-                        var data1 = Highcharts.map(data.average, function (config) {
-                            return [config.record_date * 1000, config.profit_rate * 100];
-                        });
-                        var data2 = Highcharts.map(data.personal, function (config) {
-                            return [config.record_date * 1000, config.profit_rate * 100];
-                        });
-
+                        // var data1 = Highcharts.map(data.average, function (config) {
+                        //     return [fun.accMul(config.record_date, 1000), fun.accMul(config.profit_rate, 100)];
+                        // });
+                        // var data2 = Highcharts.map(data.personal, function (config) {
+                        //     return [fun.accMul(config.record_date, 1000), fun.accMul(config.profit_rate, 100)];
+                        // });
+                        var data1 = [], data2 = [];
+                        for(var i = 0; i < data.length; i++){
+                            data1.push([fun.accMul(data[i].record_date, 1000), fun.accMul(data[i].average, 100)])
+                            data2.push([fun.accMul(data[i].record_date, 1000), fun.accMul(data[i].personal, 100)])
+                        }
                         // console.log(data1,data2)
                         options.series[0] = {
                             color: 'rgba(255, 134, 5, 1)',
-                            name: '平均高手收益率',
+                            name: lang.text('tigerWitID.master.mastersAverageReturn'),
                             data: data1
                         };
                         options.series[1] = {
                             color: 'rgba(80, 227, 194, 1)',
-                            name: '当前高手收益率',
+                            name: lang.text('tigerWitID.master.currentMasterReturn'),
                             data: data2
                         };
+                        Highcharts.setOptions({
+                            lang: {
+                                resetZoom: lang.text('tigerWitID.reset') 
+                            },
+                        })
                         // console.dir(options)
-                        element.highcharts(options);
+                        element.highcharts(options, function(){
+                            cutTen(this)
+                        });
                     });
                 }
             }

@@ -23,7 +23,7 @@
                 </div>
                 <div class="" ng-if="!master.is_copy">
                     <button class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient" ng-click="toCopy()">
-                        {{ lang.text('tigerWitID.copy') }}
+                        {{ master.bonus_amount ? (lang.text("tigerWitID.master.copyGet1") + master.bonus_amount + lang.text("tigerWitID.master.copyGet2")) : lang.text('tigerWitID.copy') }}
                     </button>
                 </div>
                 <div class="item-center" ng-if="master.is_copy">
@@ -51,7 +51,7 @@
                         ng-if="!lang.hostIsCn()">
                         <span class="big-num-font">{{ (master.thirty_win_rate || '0.00') + '%' }}</span>
                     </div>
-                    <h4 class="trader_gray_color">Win rate
+                    <h4 class="trader_gray_color">{{ lang.text("tigerWitID.master.exact") }}
                     </h4>
                 </li>
                 <!-- <li></li> -->
@@ -66,23 +66,86 @@
                         ng-if="!lang.hostIsCn()">
                         <span class="big-num-font ">{{ (master.thirty_profit_rate || '0.00') + '%' }}</span>
                     </div>
-                    <h4 class="trader_gray_color">Last 30d return</h4>
+                    <h4 class="trader_gray_color">{{ lang.text("tigerWitID.master.last30AaysYield") }}</h4>
                 </li>
                 <!-- <li></li> -->
-                <li class="trader_profit">
-                    <div class="trader_profit__item"
-                        ng-class="{'font-success': (master.thirty_follow_profit + '').indexOf('-') >= 0, 'font-danger': (master.thirty_follow_profit + '').indexOf('-') < 0}"
-                        ng-if="lang.hostIsCn()">
-                        <span class="big-num-font">{{ master.thirty_follow_profit || '0.00' }}</span>
+                <li class="trader_profit" ng-if="master.master_type === 1">
+                    <div class="trader_profit__item">
+                        <span class="big-num-font">${{ master.follow_profit || '0' }}</span>
                     </div>
-                    <div class="trader_profit__item"
-                        ng-class="{'font-danger': (master.thirty_follow_profit + '').indexOf('-') >= 0, 'font-success': (master.thirty_follow_profit + '').indexOf('-') < 0}"
-                        ng-if="!lang.hostIsCn()">
-                        <span class="big-num-font">{{ master.thirty_follow_profit || '0.00' }}</span>
+                    <h4 class="trader_gray_color">{{ lang.text("tigerWitID.master.profitCopiers") }}</h4>
+                </li>
+                <li class="trader_profit" ng-if="master.master_type !== 1">
+                    <div class="trader_profit__item">
+                        <span class="big-num-font">{{ master.history_copy_count || '0' }}</span>
                     </div>
-                    <h4 class="trader_gray_color">30d Profit of followers</h4>
+                    <h4 class="trader_gray_color">{{ lang.text("tigerWitID.master.copiers") }}</h4>
                 </li>
             </ul>
+        </div>
+
+    <div class="re_trader_chart">
+            <div class="re_trader_title ">
+                <!-- <span id="whichYear" class="re_trader_chart__whichYear"><span ng-if="!selected">____</span>{{ lang.isEnglishArea() ? (lang.text("tigerWitID.master.performanceOf")) : (selected.year + lang.text("tigerWitID.master.performanceOf")) }}</span>
+                <select
+                        class="re_trader_chart__changeYear"
+                        name="changeYear" id="changeYear"
+                        ng-model="selected"
+                        ng-options="item.year for item in columnData track by item.year"
+                        ng-change="changeYear(selected)"
+                ></select> -->
+                {{ lang.text("tigerWitID.master.returnChart30") }}
+            </div>
+            <div tw-line-chart data-type="masterSummaryDetail" style="width: 100%; height: 350px;"></div>
+            <div class="re_trader_chart__chart_tips">
+                <!-- <div class=""> -->
+                <!-- <i class="info_box"><i class="fa fa-info" aria-hidden="true"></i></i> -->
+                <span>{{ lang.text("tigerWitID.master.tip30") }}</span>
+                <!-- </div> -->
+            </div>
+            <!-- <div>
+                <table class="table table-hover table-personalF">
+                    <colgroup>
+                        <col width="10%">
+                        <col width="40%">
+                        <col width="40%">
+                        <col width="10%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>{{lang.text('tigerWitID.date')}}</th>
+                            <th>Return</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="return in summaryReturn" ng-if="summaryReturn.length > 0">
+                            <td></td>
+                            <td>
+                                {{ return.record_date * 1000 | date:'yyyy-MM-dd' }}
+                            </td>
+                            <td ng-class="{'font-danger': return.profit_rate.indexOf('-') < 0, 'font-success': return.profit_rate.indexOf('-') >= 0}"
+                                ng-if="lang.hostIsCn()">
+                                ${{ return.profit_rate }}
+                            </td>
+                            <td ng-class="{'font-success': return.profit_rate.indexOf('-') < 0, 'font-danger': return.profit_rate.indexOf('-') >= 0}"
+                                ng-if="!lang.hostIsCn()">
+                                ${{ return.profit_rate }}
+                            </td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+    
+                <div class="text-center">
+                    <p tw-pagination></p>
+                </div>
+                <div ng-if="summaryReturn.length <= 0" class="text-center mg-bt-20">
+                    <img src="/images/no_data.png" alt="" class="mg-bt-40">
+                    <p>{{ lang.text('tigerWitID.noData') }}</p>
+                </div>
+            </div> -->
         </div>
     </div>
 </div>
@@ -90,15 +153,15 @@
     <ul class="">
         <li ui-sref-active="active" ui-sref="trader.subpage({subpage: 'summary'})">
             <!-- <i class="fa fa-bar-chart" aria-hidden="true"></i> -->
-            <a>Return</a>
+            <a>{{ lang.text("tigerWitID.master.analytics") }}</a>
         </li>
         <li ui-sref-active="active" ui-sref="trader.subpage({subpage: 'current'})">
             <!-- <i class="fa fa-line-chart" aria-hidden="true"></i> -->
-            <a>Positions</a>
+            <a>{{ lang.text("tigerWitID.master.positions") }}</a>
         </li>
         <li ui-sref-active="active" ui-sref="trader.subpage({subpage: 'history'})">
             <!-- <i class="fa fa-list" aria-hidden="true"></i> -->
-            <a>Closed</a>
+            <a>{{ lang.text("tigerWitID.master.closed") }}</a>
         </li>
     </ul>
 </div>

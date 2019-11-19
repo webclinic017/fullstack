@@ -5,12 +5,12 @@
     angular.module('fullstackApp')
         .controller('TraderSummaryController', TraderSummaryController);
 
-    TraderSummaryController.$inject = ['$scope', '$location', 'whiteLabel', 'trader', '$timeout', 'utils', 'lang'];
+    TraderSummaryController.$inject = ['$scope', '$location', 'whiteLabel', 'trader', '$timeout', 'fun', 'lang'];
 
-    function TraderSummaryController($scope, $location, whiteLabel, trader, $timeout, utils, lang) {
-        $scope.summary = {};
-        $scope.bars = [];
-        $scope.isFirstLoad = true;
+    function TraderSummaryController($scope, $location, whiteLabel, trader, $timeout, fun, lang) {
+        // $scope.summary = {};
+        // $scope.bars = [];
+        // $scope.isFirstLoad = true;
         var usercode;
         var absUrl = $location.absUrl();
         var regUsercode = /trader\/(\d+)(\/)?[#?]/;
@@ -21,64 +21,7 @@
         $scope.masterPieArr = null;
         $scope.masterlineArr = null;
         getMasterTradProfile(usercode)
-        /*----------------------------获取折线图数据图-----------------------------*/
 
-        // 分页每日收益率
-        $scope.rawSummaryReturn = [];
-        $scope.summaryReturn = [];
-        rendColumnChart(usercode);
-
-        $scope.pagebar = {
-            config: {
-                // total: , 总页数
-                page: 1
-            },
-            pages: [],
-            pagesBtn: [],
-            // isShow: false,
-            // selectPage: , bind to pagination.selectPage
-            getList: getSummaryReturn
-        };
-        var pagesize = 5; // 单页显示数
-
-        function getSummaryReturn(page) {
-            // $scope.$emit('showLoadingImg');
-            var offset = page ? (page - 1) * pagesize : 0;
-            $scope.summaryReturn = $scope.rawSummaryReturn.slice(offset, offset + pagesize);
-
-            angular.extend($scope.pagebar.config, {
-                total: utils.getTotal($scope.rawSummaryReturn.length, pagesize),
-                page: page
-            });
-        }
-        function rendColumnChart(usercode) {
-            /*调接口获取数据*/
-            trader.getmasterDayProfitRates(usercode).then(function (return_data) {
-                // console.log(return_data);
-                if (return_data.code == 0 && (return_data.data.average.length > 0 || return_data.data.personal.length > 0)) {
-                    //     //console.log(return_data);
-                    var data = return_data.data;
-                    $scope.rawSummaryReturn = data.personal;
-                    //     /*解析数据*/
-                    //     $scope.columnData = parseData("column", data);
-                    //     // console.log($scope.columnData);
-                    //     /*让下拉框默认选中数据最后一项*/
-                    //     // $scope.selected = $scope.columnData[$scope.columnData.length - 1];
-                    //     //渲染到图表
-                    //     $scope.$broadcast('rendColumnData', $scope.columnData[$scope.columnData.length - 1].data);
-                    //     //change事件
-                    //     $scope.changeYear = function (year) {
-                    //         //console.log(year);
-                    //         $scope.selected = year;
-                    //         $scope.$broadcast('rendColumnData', year.data);
-                    $scope.$broadcast('paintLineChart', data);
-                    getSummaryReturn(1);
-                    // };
-                } else {
-                    // $scope.$broadcast('hideColumnData');
-                }
-            });
-        }
         function getMasterTradProfile(usercode) {
             trader.getMasterTradProfile(usercode).then(function (data) {
                 if (data && data.is_succ) {
@@ -87,55 +30,64 @@
                     var col_color = whiteLabel.pieChart;
                     $scope.masterPieArr = [
                         {
-                            name: 'FX',
-                            y: ($scope.masterTradProfile.forex_rate * 100),
+                            name: lang.text("tigerWitID.symbolPage.forex"),
+                            y: fun.accMul($scope.masterTradProfile.forex_rate, 100),
                             color: col_color.colors2[0]
                         },
                         {
-                            name: 'Crypto',
-                            y: ($scope.masterTradProfile.crypto_rate * 100),
+                            name: lang.text("tigerWitID.symbolPage.crypto"),
+                            y: fun.accMul($scope.masterTradProfile.crypto_rate, 100),
                             color: col_color.colors2[1]
                         },
                         {
-                            name: 'Indices',
-                            y: ($scope.masterTradProfile.cfd_rate * 100),
+                            name: lang.text("tigerWitID.symbolPage.indices"),
+                            y: fun.accMul($scope.masterTradProfile.cfd_rate, 100),
                             color: col_color.colors2[2]
                         },
                         {
-                            name: 'Metals',
-                            y: ($scope.masterTradProfile.metal_rate * 100),
+                            name: lang.text("tigerWitID.symbolPage.metals"),
+                            y: fun.accMul($scope.masterTradProfile.metal_rate, 100),
                             color: col_color.colors2[3]
                         },
                         {
-                            name: 'Commodities',
-                            y: ($scope.masterTradProfile.energy_rate * 100),
+                            name: lang.text("tigerWitID.symbolPage.oilEngrgy"),
+                            y: fun.accMul($scope.masterTradProfile.energy_rate, 100),
                             color: col_color.colors2[4]
                         }
                     ]
                     $scope.masterlineArr = [{
-                        name: 'Loss',
-                        color: lang.hostIsCn() ? '#11c971': '#ff605b',
+                        name: lang.text("tigerWitID.master.loss"),
+                        color: lang.hostIsCn() ? '#11c971' : '#ff605b',
                         data: [
-                            ($scope.masterTradProfile.forex_fail_rate * 100), 
-                            $scope.masterTradProfile.crypto_fail_rate * 100,
-                            $scope.masterTradProfile.cfd_fail_rate * 100,
-                            $scope.masterTradProfile.metal_fail_rate * 100,
-                            $scope.masterTradProfile.energy_fail_rate * 100
+                            fun.accMul($scope.masterTradProfile.forex_fail_rate, 100),
+                            fun.accMul($scope.masterTradProfile.crypto_fail_rate, 100),
+                            fun.accMul($scope.masterTradProfile.cfd_fail_rate, 100),
+                            fun.accMul($scope.masterTradProfile.metal_fail_rate, 100),
+                            fun.accMul($scope.masterTradProfile.energy_fail_rate, 100)
                         ]
-                    },{
-                        name: 'Profit',
-                        color: lang.hostIsCn() ? '#ff605b': '#11c971',
+                    }, {
+                        name: lang.text("tigerWitID.master.profit"),
+                        color: lang.hostIsCn() ? '#ff605b' : '#11c971',
                         data: [
-                            ($scope.masterTradProfile.forex_win_rate * 100), 
-                            $scope.masterTradProfile.crypto_win_rate * 100,
-                            $scope.masterTradProfile.cfd_win_rate * 100,
-                            $scope.masterTradProfile.metal_win_rate * 100,
-                            $scope.masterTradProfile.energy_win_rate * 100
+                            fun.accMul($scope.masterTradProfile.forex_win_rate, 100),
+                            fun.accMul($scope.masterTradProfile.crypto_win_rate, 100),
+                            fun.accMul($scope.masterTradProfile.cfd_win_rate, 100),
+                            fun.accMul($scope.masterTradProfile.metal_win_rate, 100),
+                            fun.accMul($scope.masterTradProfile.energy_win_rate, 100)
                         ]
+                    }]
+                    // 空的不显示
+                    for(var i = 0; i < $scope.masterPieArr.length; i++){
+                        if($scope.masterPieArr[i].y == 0){
+                            $scope.masterPieArr.splice(i, 1);
+                            $scope.masterlineArr[0].data.splice(i,1);
+                            $scope.masterlineArr[1].data.splice(i,1);
+                        }
                     }
-                    ]
+                    $timeout(function(){
+                        $scope.$broadcast('rendBarData', $scope.masterlineArr);
+                    },100)
                     
-                    $scope.$broadcast('rendBarData', $scope.masterlineArr);
                     $scope.$broadcast('paintPieChart', $scope.masterPieArr);
                 }
             });

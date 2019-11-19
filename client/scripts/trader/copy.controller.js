@@ -154,7 +154,7 @@
             // 不是强制继续的时候检测建议交易金额
             // console.log((Number($scope.copyTrade.amount), Number($scope.copyTrade.advice.split('.')[0])), isForce);
 
-            if ((Number($scope.copyTrade.amount) < Number($scope.copyTrade.advice.split('.')[0]))) {
+            if ((Number($scope.copyTrade.amount) <= Number($scope.copyTrade.advice.split('.')[0]))) {
                 // && !isForce
                 //     goStep(2);
                 // } else {

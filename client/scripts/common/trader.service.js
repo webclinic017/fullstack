@@ -4,9 +4,9 @@
 
     angular.module('fullstackApp').factory('trader', trader);
 
-    trader.$inject = ['$http', 'api', 'publicHttp'];
+    trader.$inject = ['$http', 'api', 'publicHttp', 'fun'];
 
-    function trader($http, api, publicHttp) {
+    function trader($http, api, publicHttp, fun) {
         var o = api.trader;
         var service = {
             getMasterCurrent: getMasterCurrent,
@@ -93,6 +93,7 @@
         function getAvaCopyAmount(usercode) {
             return publicHttp.dealPublicRequest(o.getAvaCopyAmountApi, 'GET', {
                 user_code: usercode,
+
             });
         }
 
@@ -152,7 +153,9 @@
          */
         function getmasterDayProfitRates(user_code) {
             return publicHttp.dealPublicRequest(o.getmasterDayProfitRatesApi, 'GET', {
-                user_code: user_code
+                user_code: user_code,
+                start_time: fun.subtr(fun.accDiv(Date.parse(new Date()), 1000), 365*24*60*60), // 取一年
+                end_time: fun.accDiv(Date.parse(new Date()), 1000),
             })
         }
 

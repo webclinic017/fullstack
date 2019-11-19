@@ -4819,6 +4819,16 @@
                         "pt-BR": "Portfólio",
                         "ar": "المحفظة الاستثمارية"
                     },
+                    "proportion": {
+                        "zh": "占比",
+                        "en": "Proportion",
+                        "vi": "Cơ cấu lệnh",
+                        "zh-Hant": "佔比",
+                        "id": "Perbandingan",
+                        "es": "Proporción",
+                        "pt-BR": "Proporção",
+                        "ar": ""
+                    },
                     "trading": {
                         "zh": "自主交易",
                         "en": "Trading",
@@ -9027,6 +9037,46 @@
                     }
                 },
                 "master": {
+                    "positionTime": {
+                        "zh": "持仓",
+                        "en": "Position ",
+                        "vi": "Vị thế ",
+                        "zh-Hant": "持倉",
+                        "id": "Posisi ",
+                        "es": "Posición ",
+                        "pt-BR": "Posição ",
+                        "ar": ""
+                    },
+                    "profitLoss": {
+                        "zh": "止盈/止损",
+                        "en": "Profit/Loss",
+                        "vi": "Lời/Lỗ",
+                        "zh-Hant": "止盈/止損",
+                        "id": "untung/rugi",
+                        "es": "Ganancias/Pérdidas",
+                        "pt-BR": "Lucro/perda",
+                        "ar": ""
+                    },
+                    "profit": {
+                        "zh": "盈利",
+                        "en": "Profit",
+                        "vi": "Lợi nhuận",
+                        "zh-Hant": "盈利",
+                        "id": "Keuntungan",
+                        "es": "Ganancia",
+                        "pt-BR": "Lucro",
+                        "ar": ""
+                    },
+                    "loss": {
+                        "zh": "亏损",
+                        "en": "Loss",
+                        "vi": "Lỗ",
+                        "zh-Hant": "虧損",
+                        "id": "Kerugian",
+                        "es": "Pérdida",
+                        "pt-BR": "Perda",
+                        "ar": ""
+                    },
                     "starMasters": {
                         "zh": "明星高手",
                         "en": "Star Masters",
@@ -9065,6 +9115,16 @@
                         "id": " ",
                         "es": " ",
                         "pt-BR": " ",
+                        "ar": ""
+                    },
+                    "analytics": {
+                        "zh": "数据统计",
+                        "en": "Analytics",
+                        "vi": "Đánh giá",
+                        "zh-Hant": "數據統計",
+                        "id": "Analisis",
+                        "es": "Analítica",
+                        "pt-BR": "Analítica",
                         "ar": ""
                     },
                     "recommendedMasters": {
@@ -9108,19 +9168,19 @@
                         "ar": ""
                     },
                     "returnChart30": {
-                        "zh": "收益率对比图（近30天）",
-                        "en": "Return comparison chart (30d)",
-                        "vi": "",
-                        "zh-Hant": "收益率對比圖（近30天）",
-                        "id": "Kembali ke grafik perbandingan (30Hari)",
-                        "es": "Tabla de comparación de retornos (30d)",
-                        "pt-BR": "Tabela de comparação de retorno (30 dias)",
+                        "zh": "收益率对比图",
+                        "en": "Return comparison chart",
+                        "vi": "Biểu đồ so sánh lợi nhuận",
+                        "zh-Hant": "收益率對比圖",
+                        "id": "Kembali ke grafik perbandingan",
+                        "es": "Tabla de comparación de retornos",
+                        "pt-BR": "Tabela de comparação de retorno",
                         "ar": ""
                     },
                     "currentMasterReturn": {
                         "zh": "当前高手收益率",
                         "en": "Current Master's Return",
-                        "vi": "",
+                        "vi": "Lợi nhuận của bậc thầy hiện tại",
                         "zh-Hant": "當前高手收益率",
                         "id": "Keuntungan Master saat ini",
                         "es": "Retorno actual del Master",
@@ -9130,7 +9190,7 @@
                     "mastersAverageReturn": {
                         "zh": "所有高手平均收益率",
                         "en": "Masters' Average Return",
-                        "vi": "",
+                        "vi": "Lợi nhuận trung bình của các bậc thầy",
                         "zh-Hant": "所有高手平均收益率",
                         "id": "Rata-rata keuntungan Master",
                         "es": "Retorno promedio de los Masters",
@@ -13407,7 +13467,17 @@
                     "es": "Dec.",
                     "pt-BR": "Dez.",
                     "ar": "ديسمبر"
-                }
+                },
+                "reset": {
+                    "zh": "还原",
+                    "en": "Reset",
+                    "vi": "Cài đặt lại",
+                    "zh-Hant": "還原",
+                    "id": "Atur kembali",
+                    "es": "Reiniciar",
+                    "pt-BR": "Reiniciar",
+                    "ar": "إعادة تعيين"
+                },
             },
         };
         var indexBasePath = "/white_label";

@@ -141,6 +141,7 @@
 					scope.$on('rendBarData', function (event, data) {
 						options.series = data;
 						element.highcharts(options);
+						
 					});
 				 } else {
 					scope.$on('rendBarData', function (event, data) {

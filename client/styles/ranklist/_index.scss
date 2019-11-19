@@ -153,6 +153,13 @@
       margin: 0;
       text-align: center;
     }
+    @include m(titp) {
+      font-size: 26px;
+      font-weight: 400;
+      color: rgba(36, 42, 54, 0.8);
+      line-height: 37px;
+      text-align: center;
+    }
     @include m(lst) {
       position: absolute;
       display: none;
@@ -233,6 +240,8 @@
       color: rgba(30, 32, 36, 1);
       font-size: 14px;
       line-height: 17px;
+      max-height: 100px;
+      overflow: hidden;
     }
     @include m(trade) {
       text-align: center;

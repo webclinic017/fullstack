@@ -264,6 +264,7 @@ $font-trader-gray-color: $gray-dark;
       &.no-data {
         text-align: center;
         border-bottom-width: 0;
+        @include justifyContent(center);
       }
     }
   }

@@ -316,5 +316,64 @@
                 }
             });
         }
+
+        // Return comparison chart (30d)
+        /*----------------------------获取折线图数据图-----------------------------*/
+        // 分页每日收益率
+        // $scope.rawSummaryReturn = [];
+        // $scope.summaryReturn = [];
+        rendColumnChart(usercode);
+
+        // $scope.pagebar = {
+        //     config: {
+        //         // total: , 总页数
+        //         page: 1
+        //     },
+        //     pages: [],
+        //     pagesBtn: [],
+        //     // isShow: false,
+        //     // selectPage: , bind to pagination.selectPage
+        //     getList: getSummaryReturn
+        // };
+        // var pagesize = 5; // 单页显示数
+
+        // function getSummaryReturn(page) {
+        //     // $scope.$emit('showLoadingImg');
+        //     var offset = page ? (page - 1) * pagesize : 0;
+        //     $scope.summaryReturn = $scope.rawSummaryReturn.slice(offset, offset + pagesize);
+
+        //     angular.extend($scope.pagebar.config, {
+        //         total: utils.getTotal($scope.rawSummaryReturn.length, pagesize),
+        //         page: page
+        //     });
+        // }
+        function rendColumnChart(usercode) {
+            /*调接口获取数据*/
+            trader.getmasterDayProfitRates(usercode).then(function (return_data) {
+                // console.log(return_data);
+                if (return_data.code == 0 && return_data.data.length > 0) {
+                    //     //console.log(return_data);
+                    var data = return_data.data;
+                    // $scope.rawSummaryReturn = data.personal;
+                    //     /*解析数据*/
+                    //     $scope.columnData = parseData("column", data);
+                    //     // console.log($scope.columnData);
+                    //     /*让下拉框默认选中数据最后一项*/
+                    //     // $scope.selected = $scope.columnData[$scope.columnData.length - 1];
+                    //     //渲染到图表
+                    //     $scope.$broadcast('rendColumnData', $scope.columnData[$scope.columnData.length - 1].data);
+                    //     //change事件
+                    //     $scope.changeYear = function (year) {
+                    //         //console.log(year);
+                    //         $scope.selected = year;
+                    //         $scope.$broadcast('rendColumnData', year.data);
+                    $scope.$broadcast('paintLineChart', data);
+                    // getSummaryReturn(1);
+                    // };
+                } else {
+                    // $scope.$broadcast('hideColumnData');
+                }
+            });
+        }
     }
 })();

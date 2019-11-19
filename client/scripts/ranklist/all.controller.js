@@ -12,22 +12,22 @@
         var pagesize = 9;
         $scope.rankOrder = 'thirty_profit_rate';
         $scope.rankOrderList = {
-            'thirty_profit_rate': {
-                value: $scope.lang.text("tigerWitID.master.highIncome"),
-                track: 'global_master_profitability'
-            },
-            'thirty_max_retract': {
-                value: $scope.lang.text("tigerWitID.dataStatistics.steadyg"),
-                track: 'global_master_stability'
-            },
             'thirty_win_rate': {
                 value: $scope.lang.text("tigerWitID.master.exact"),
                 track: 'global_master_consistency'
+            },
+            'thirty_profit_rate': {
+                value: $scope.lang.text("tigerWitID.master.last30AaysYield"),
+                track: 'global_master_profitability'
+            },
+            'copy_history_sum': {
+                value: $scope.lang.text("tigerWitID.master.copiers"),
+                track: 'global_master_copynum'
             }
         };
         $scope.search = {};
         $scope.ranklist = [];
-        $scope.masterTrialList = {};   // 体验高手
+        // $scope.masterTrialList = {};   // 体验高手
         $scope.masterStarList = {};   // 明星高手
         $scope.pagebar = {
             config: {
@@ -104,20 +104,20 @@
         // }
 
         // 获取体验高手列表
-        getMastersTrialList()
-        function getMastersTrialList() {
-            account.checkLogined().then(function (logined) {
-                if (logined) {
-                    ranklist.getMastersTrialList(2).then(function (data) {
-                        if (!data) return;
-                        if (data.is_succ) {
-                            $scope.masterTrialList = data.data;
-                        }
-                    })
-                }
-            })
+        // getMastersTrialList()
+        // function getMastersTrialList() {
+        //     account.checkLogined().then(function (logined) {
+        //         if (logined) {
+        //             ranklist.getMastersTrialList(2).then(function (data) {
+        //                 if (!data) return;
+        //                 if (data.is_succ) {
+        //                     $scope.masterTrialList = data.data;
+        //                 }
+        //             })
+        //         }
+        //     })
 
-        }
+        // }
         // 获取明星高手列表
         getMastersStarList();
         function getMastersStarList() {

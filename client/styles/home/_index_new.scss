@@ -58,6 +58,8 @@
   @include e(copy) {
     position: relative;
     z-index: 10;
+    width: 1100px;
+    margin: 0 auto;
     @include m(title) {
       font-size: 56px;
       text-align: center;

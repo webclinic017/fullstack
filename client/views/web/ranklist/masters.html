@@ -22,8 +22,8 @@
     </div>
 </div> -->
 <div class="fff_body pd-bt-50">
-    <div class="ranklist_banner" ng-class="{'relative': masterTrialList.list && masterTrialList.list.length > 0}">
-        <div class="ranklist_banner__sup" ng-if="masterTrialList.list && masterTrialList.list.length > 0">
+    <div class="ranklist_banner">
+        <!-- <div class="ranklist_banner__sup" ng-if="masterTrialList.list && masterTrialList.list.length > 0">
             <div class="ranklist_banner__sup-tit">
                 <h5>{{masterTrialList.pop_title}}</h5>
                 <p>{{masterTrialList.pop_desc}}</p>
@@ -77,9 +77,9 @@
                     </div>
                 </li>
             </ul>
-        </div>
+        </div> -->
     </div>
-    <div class="mg-200__bg" ng-class="{'mg-tp-40': masterTrialList.list && masterTrialList.list.length > 0}">
+    <div class="mg-200__bg">
         <div class="ranklist_banner__tip">
             <h3 class="mg-200__circle-title pd-bt-20"><span>{{ lang.text("tigerWitID.master.copyTrading") }}</span></h3>
             <!-- <p class="step item-center pd-lf-50 pd-rg-50">
@@ -158,10 +158,12 @@
                                         </p>
                                     </div>
                                 </div>
-                                <div class="ranklist_cont__master-tip">
+                                <a class="ranklist_cont__master-tip"
+                                    ng-href="/trader/{{masterStar.user_code}}/#/trader/summary"
+                                    ng-click="toQuickPageviewSensorsdata(masterStar.username)" target="_blank">
                                     <p>{{masterStar.describe}}
                                     </p>
-                                </div>
+                                </a>
                             </div>
                             <div class="ranklist_cont__master-trade space-between-center bd-tp">
                                 <div class="dropdown">
@@ -212,7 +214,7 @@
                     <div class="ranklist_cont__master-copy">
                         <div class="copy_btn_wrapper" ng-if="!masterStar.is_copy">
                             <a target="_blank" ng-href="/trader/{{masterStar.user_code}}/#/trader/summary"
-                                class="copy_btn tw-btn tw-btn-sm130 tw-btn-capsule-gradient">{{ lang.text("tigerWitID.copy") }}</a>
+                                class="copy_btn tw-btn tw-btn-sm130 tw-btn-capsule-gradient">{{ masterStar.bonus_amount ? (lang.text("tigerWitID.master.copyGet1") + masterStar.bonus_amount + lang.text("tigerWitID.master.copyGet2")) : lang.text('tigerWitID.copy') }}</a>
                         </div>
                         <div class="copy_btn_wrapper" ng-if="masterStar.is_copy">
                             <a target="_blank"
@@ -222,11 +224,96 @@
                 </div>
             </div>
         </div>
-        <div class="ranklist">
+        <!-- <div class="ranklist" ng-if="masterTrialList.list.length > 0">
+            <div class="ranklist__navbar">
+                <h3 class="ranklist__navbar-tit">{{ masterTrialList.pop_title ||  '体验高手'}}</h3>
+                <p class="ranklist__navbar-titp">{{masterTrialList.pop_desc}}</p>
+            </div>
+            <div class="ranklist_cont">
+                <div class="ranklist_cont__master space-between-center"
+                    ng-repeat="trial in masterTrialList.list track by $index">
+                    <div class="space-between-center mg-lf-20 mg-rg-20 flex1">
+                        <div class="flex1">
+                            <div class="space-between-center">
+
+                                <div class="ranklist_cont__master-info item-center">
+                                    <a class="avatar" ng-href="/trader/{{trial.user_code}}/#/trader/summary"
+                                        ng-click="toQuickPageviewSensorsdata(trial.username)" target="_blank">
+                                        <img ng-src="/avatar/{{ trial.user_code }}_150.jpg" alt="avatar">
+                                    </a>
+                                    <div class="user flex1">
+                                        <a class="name" ng-href="/trader/{{trial.user_code}}/#/trader/summary"
+                                            ng-click="toQuickPageviewSensorsdata(trial.username)" target="_blank"
+                                            title="{{ trial.username || '-' }}">
+                                            {{ trial.username || '-' }}
+                                        </a>
+                                        <p>
+                                            <span ng-repeat="tag in trial.tags track by $index">
+                                                #{{tag}}
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="ranklist_cont__master-trade space-between-center">
+                                    <div class="dropdown">
+                                        <div class="num"
+                                            ng-class="{'font-danger': (trial.thirty_profit_rate + '').indexOf('-') < 0, 'font-success': (trial.thirty_profit_rate + '').indexOf('-') != -1}"
+                                            ng-if="lang.hostIsCn()">
+                                            {{ trial.thirty_profit_rate }}%
+                                        </div>
+                                        <div class="num"
+                                            ng-class="{'font-success': (trial.thirty_profit_rate + '').indexOf('-') < 0, 'font-danger': (trial.thirty_profit_rate + '').indexOf('-') != -1}"
+                                            ng-if="!lang.hostIsCn()">
+                                            {{ trial.thirty_profit_rate }}%
+                                        </div>
+                                        <div class="tip">
+                                            {{ lang.text("tigerWitID.master.last30AaysYield") }}
+                                        </div>
+                                    </div>
+                                    <div class="dropdown">
+                                        <div class="num"
+                                            ng-class="{'font-danger': (trial.thirty_win_rate + '').indexOf('-') < 0, 'font-success': (trial.thirty_win_rate + '').indexOf('-') != -1}"
+                                            ng-if="lang.hostIsCn()">
+                                            {{ trial.thirty_win_rate }}<span>%</span>
+                                        </div>
+                                        <div class="num"
+                                            ng-class="{'font-success': (trial.thirty_win_rate + '').indexOf('-') < 0, 'font-danger': (trial.thirty_win_rate + '').indexOf('-') != -1}"
+                                            ng-if="!lang.hostIsCn()">
+                                            {{ trial.thirty_win_rate }}<span>%</span>
+                                        </div>
+                                        <div class="tip">
+                                            {{ lang.text("tigerWitID.master.exact") }}
+                                        </div>
+                                    </div>
+                                    <div class="dropdown">
+                                        <div class="num">
+                                            {{ trial.history_copy_count || '0' }}
+                                        </div>
+                                        <div class="tip">{{ lang.text("tigerWitID.master.copiers") }}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ranklist_cont__master-copy">
+                        <div class="copy_btn_wrapper" ng-if="!trial.is_copy">
+                            <a target="_blank" ng-href="/trader/{{trial.user_code}}/#/trader/summary"
+                                class="copy_btn tw-btn tw-btn-sm130 tw-btn-capsule-gradient">{{ trial.bonus_amount ? (lang.text("tigerWitID.master.copyGet1") + trial.bonus_amount + lang.text("tigerWitID.master.copyGet2")) : lang.text('tigerWitID.copy') }}</a>
+                        </div>
+                        <div class="copy_btn_wrapper" ng-if="trial.is_copy">
+                            <a target="_blank"
+                                class="copy_btn tw-btn tw-btn-sm130 tw-btn-capsule-bordered">{{ lang.text("tigerWitID.copied") }}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <div class="ranklist" ng-show="ranklist.length > 0">
             <div class="ranklist__navbar space-between-center">
                 <h3 class="ranklist__navbar-tit flex1">{{ lang.text("tigerWitID.master.recommendedMasters") }}</h3>
                 <div class="ranklist__navbar-toggle">
-                    <div class="tw-btn tw-btn-sm tw-btn-capsule-gradient">
+                    <div class="tw-btn tw-btn-sm tw-btn-capsule-gradient tw-btn-adaptive">
                         {{rankOrderList[rankOrder].value}}
                         <i class="fa fa-caret-down"></i>
                     </div>
@@ -360,7 +447,7 @@
                     <div class="ranklist_cont__master-copy">
                         <div class="copy_btn_wrapper" ng-if="!rank.is_copy">
                             <a target="_blank" ng-href="/trader/{{rank.user_code}}/#/trader/summary"
-                                class="copy_btn tw-btn tw-btn-sm130 tw-btn-capsule-gradient">{{ lang.text("tigerWitID.copy") }}</a>
+                                class="copy_btn tw-btn tw-btn-sm130 tw-btn-capsule-gradient">{{ rank.bonus_amount ? (lang.text("tigerWitID.master.copyGet1") + rank.bonus_amount + lang.text("tigerWitID.master.copyGet2")) : lang.text('tigerWitID.copy') }}</a>
                         </div>
                         <div class="copy_btn_wrapper" ng-if="rank.is_copy">
                             <a target="_blank"
