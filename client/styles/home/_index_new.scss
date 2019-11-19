@@ -51,7 +51,19 @@
         }
       }
       .download-btn{
-
+        .title{
+          margin-bottom: 30px;
+        }
+        .praise{
+          @include displayFlex();
+          @include alignItems(center);
+          > li{
+            padding: 0 10px;
+          }
+        }
+        .praise-img{
+          height: 65px;
+        }
       }
     }
   }
