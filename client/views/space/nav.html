@@ -87,6 +87,10 @@
             <a ui-sref="space.notice.subpage({subpage: 'system'})">{{lang.text('tigerWitID.myAccount.system')}}</a>
         </li>
     </ul>
+    <div ng-show="toState.name == 'space.notice.subpage'">
+        <div>{{lang.text('tigerWitID.myAccount.6monthsTip')}}</div>
+
+    </div>
 
     <ul class="space_nav__box" ng-show="toState.name == 'space.setting.subpage'">
         <li class="space_nav__box-item active" ui-sref-active="active">

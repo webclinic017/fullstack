@@ -5,13 +5,13 @@
     angular.module('fullstackApp')
         .controller('GlobalController', GlobalController);
 
-    GlobalController.$inject = ['$rootScope', '$scope', '$state', '$window', 'config', 'account', 'authorization', 'lang', '$cookies', '$timeout', 'redbag', '$cookieStore', '$modal', '$layer'];
+    GlobalController.$inject = ['$rootScope', '$scope', '$state', '$window', 'config', 'account', 'authorization', 'lang', '$cookies', '$timeout', 'redbag', '$cookieStore', '$modal', '$layer', 'fun'];
 
     /**
      * @name GlobalController
      * @desc
      */
-    function GlobalController($rootScope, $scope, $state, $window, config, account, authorization, lang, $cookies, $timeout, redbag, $cookieStore, $modal, $layer) {
+    function GlobalController($rootScope, $scope, $state, $window, config, account, authorization, lang, $cookies, $timeout, redbag, $cookieStore, $modal, $layer, fun) {
         $rootScope.personalCookiesInfo = {
             userCode: $cookies["user_code"],
             userName: decodeURIComponent($cookies["username"] || ''),
@@ -206,25 +206,26 @@
                 });
             }
         }
+        $scope.message
 
         // user/source 统计
-        function getSearch() {
-            var strs;
-            var url = location.search || location.href.slice(location.href.indexOf('?'));
-            /*获取url中"?"符后的字串*/
-            var theRequest = new Object();
-            if (url.indexOf("?") != -1) {
-                var str = url.substr(1);
-                strs = str.split("&");
-                for (var i = 0; i < strs.length; i++) {
-                    theRequest[strs[i].split("=")[0]] = (strs[i].split("=")[1]);
-                }
-            }
-            return theRequest;
-        }
+        // function getSearch() {
+        //     var strs;
+        //     var url = location.search || location.href.slice(location.href.indexOf('?'));
+        //     /*获取url中"?"符后的字串*/
+        //     var theRequest = new Object();
+        //     if (url.indexOf("?") != -1) {
+        //         var str = url.substr(1);
+        //         strs = str.split("&");
+        //         for (var i = 0; i < strs.length; i++) {
+        //             theRequest[strs[i].split("=")[0]] = (strs[i].split("=")[1]);
+        //         }
+        //     }
+        //     return theRequest;
+        // }
         $scope.checkUserSource = function () {
             var sourceReg = /^DW_|D_|R_/i;
-            var search_arr = getSearch();
+            var search_arr = fun.getSearch();
             var search_source = {};
             $.each(search_arr, function (index, value) {
                 if (sourceReg.test(index)) {
