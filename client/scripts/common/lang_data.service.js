@@ -4827,7 +4827,7 @@
                         "id": "Perbandingan",
                         "es": "Proporción",
                         "pt-BR": "Proporção",
-                        "ar": ""
+                        "ar": "نسبة"
                     },
                     "trading": {
                         "zh": "自主交易",
@@ -5092,14 +5092,14 @@
                         "ar": "متوسط زمن الاحتفاظ:"
                     },
                     "maxDrawdown": {
-                        "zh": "最大回撤",
-                        "en": "Max Drawdown",
-                        "vi": "Max Drawdown",
-                        "zh-Hant": "最大回撤",
-                        "id": "Drawdown maksimum",
-                        "es": "Max Drawdown",
-                        "pt-BR": "Rebaixamento máximo",
-                        "ar": "الحد الأقصى للهبوط"
+                        "zh": "最大回撤率",
+                        "en": "Max. Drawdown",
+                        "vi": "Rủi ro cao nhất",
+                        "zh-Hant": "最大回撤率",
+                        "id": "Drawdown tertinggi",
+                        "es": "Max. Reducción",
+                        "pt-BR": "Máx. Rebaixamento",
+                        "ar": "الحد الأقصى للسحب "
                     },
                     "avgNumberTransactionsPerMonth": {
                         "zh": "月平均交易次数",
@@ -9045,7 +9045,7 @@
                         "id": "Posisi ",
                         "es": "Posición ",
                         "pt-BR": "Posição ",
-                        "ar": ""
+                        "ar": "المرتبة "
                     },
                     "profitLoss": {
                         "zh": "止盈/止损",
@@ -9055,7 +9055,7 @@
                         "id": "untung/rugi",
                         "es": "Ganancias/Pérdidas",
                         "pt-BR": "Lucro/perda",
-                        "ar": ""
+                        "ar": "إيقاف الخسارة/ جني الربح"
                     },
                     "profit": {
                         "zh": "盈利",
@@ -9065,7 +9065,7 @@
                         "id": "Keuntungan",
                         "es": "Ganancia",
                         "pt-BR": "Lucro",
-                        "ar": ""
+                        "ar": "ربح"
                     },
                     "loss": {
                         "zh": "亏损",
@@ -9075,7 +9075,7 @@
                         "id": "Kerugian",
                         "es": "Pérdida",
                         "pt-BR": "Perda",
-                        "ar": ""
+                        "ar": "خسارة"
                     },
                     "starMasters": {
                         "zh": "明星高手",
@@ -9085,7 +9085,7 @@
                         "id": "Master Pilihan",
                         "es": "Star Masters",
                         "pt-BR": "Mestre estrela",
-                        "ar": ""
+                        "ar": "نخبة المحترفين "
                     },
                     "profitCopiers": {
                         "zh": "跟随者收益",
@@ -9095,7 +9095,7 @@
                         "id": "Keuntungan pengikuti",
                         "es": "Ganancias de Copiadores",
                         "pt-BR": "Ganancia dos copiadores",
-                        "ar": ""
+                        "ar": "ربح الناسخين "
                     },
                     "copyGet1": {
                         "zh": "复制赠$",
@@ -9105,7 +9105,7 @@
                         "id": "Copy untuk mendapatkan $",
                         "es": "Copy para obtener $",
                         "pt-BR": "Copy para obtener $",
-                        "ar": ""
+                        "ar": "إنسخ للحصول على"
                     },
                     "copyGet2": {
                         "zh": " ",
@@ -9115,7 +9115,7 @@
                         "id": " ",
                         "es": " ",
                         "pt-BR": " ",
-                        "ar": ""
+                        "ar": " دولار"
                     },
                     "analytics": {
                         "zh": "数据统计",
@@ -9125,7 +9125,7 @@
                         "id": "Analisis",
                         "es": "Analítica",
                         "pt-BR": "Analítica",
-                        "ar": ""
+                        "ar": "تحليلات"
                     },
                     "recommendedMasters": {
                         "zh": "推荐高手",
@@ -9135,7 +9135,7 @@
                         "id": "Rekomendasi Master",
                         "es": "Masters recomendados",
                         "pt-BR": "Mestre recomendados",
-                        "ar": ""
+                        "ar": "المحترف (الأستاذ) الموصى به "
                     },
                     "copiers": {
                         "zh": "跟随者",
@@ -9145,7 +9145,7 @@
                         "id": "Pengikut",
                         "es": "Copiadores",
                         "pt-BR": "Copiador",
-                        "ar": ""
+                        "ar": "الناسخون "
                     },
                     "willReceive1": {
                         "zh": "您将得到$",
@@ -9155,7 +9155,7 @@
                         "id": "Anda akan menerima kupon senilai $",
                         "es": "Recibirá un cupón de $",
                         "pt-BR": "Você receberá un cupom de $",
-                        "ar": ""
+                        "ar": "سوف تتلقى قسيمة "
                     },
                     "willReceive2": {
                         "zh": "红包当您成功跟随该高手",
@@ -9165,7 +9165,7 @@
                         "id": " ketika mengikuti Master ini",
                         "es": " mientras copia a este Master",
                         "pt-BR": " enquanto copia este Mestre",
-                        "ar": ""
+                        "ar": " $ أثناء نسخ هذا المحترف "
                     },
                     "returnChart30": {
                         "zh": "收益率对比图",
@@ -9175,7 +9175,7 @@
                         "id": "Kembali ke grafik perbandingan",
                         "es": "Tabla de comparación de retornos",
                         "pt-BR": "Tabela de comparação de retorno",
-                        "ar": ""
+                        "ar": "جدول مقارنة العائدات (30 يوم)"
                     },
                     "currentMasterReturn": {
                         "zh": "当前高手收益率",
@@ -9185,7 +9185,7 @@
                         "id": "Keuntungan Master saat ini",
                         "es": "Retorno actual del Master",
                         "pt-BR": "Retorno atual do Mestre",
-                        "ar": ""
+                        "ar": "العائد الحالي للمحترف (الأستاذ)"
                     },
                     "mastersAverageReturn": {
                         "zh": "所有高手平均收益率",
@@ -9195,7 +9195,7 @@
                         "id": "Rata-rata keuntungan Master",
                         "es": "Retorno promedio de los Masters",
                         "pt-BR": "Retorno médio dos Mestres",
-                        "ar": ""
+                        "ar": "معدل العائدات للمحترف (الأستاذ)"
                     },
                     "positions": {
                         "zh": "持仓单",
@@ -9205,7 +9205,7 @@
                         "id": "Posisi",
                         "es": "Posiciones",
                         "pt-BR": "Posições",
-                        "ar": ""
+                        "ar": "مراتب  "
                     },
                     "closed": {
                         "zh": "历史单",
@@ -9215,7 +9215,7 @@
                         "id": "Sudah ditutup",
                         "es": "Cerrada",
                         "pt-BR": "Fechadas",
-                        "ar": ""
+                        "ar": "مغلق "
                     },
                     "data": {
                         "zh": "交易表现",
@@ -9225,7 +9225,7 @@
                         "id": "Data",
                         "es": "Datos",
                         "pt-BR": "Dados",
-                        "ar": ""
+                        "ar": "البيانات"
                     },
                     "best": {
                         "zh": "最佳",
@@ -9235,7 +9235,7 @@
                         "id": "Terbaik",
                         "es": "Mejor",
                         "pt-BR": "Melhor",
-                        "ar": ""
+                        "ar": "الأفضل"
                     },
                     "minimum": {
                         "zh": "最少",
@@ -9245,7 +9245,7 @@
                         "id": "Minimal",
                         "es": "Mínimo",
                         "pt-BR": "Mínimo",
-                        "ar": ""
+                        "ar": "الحد الأدنى"
                     },
                     "available": {
                         "zh": "可用",
@@ -9255,7 +9255,7 @@
                         "id": "Tersedia",
                         "es": "Disponible",
                         "pt-BR": "Disponível",
-                        "ar": ""
+                        "ar": "متاح"
                     },
                     "precautions": {
                         "zh": "注意事项",
@@ -9695,7 +9695,7 @@
                         "id": "Tingkat kemenangan",
                         "es": "Ganar ratios",
                         "pt-BR": "Taxa de acertos",
-                        "ar": "الثبات"
+                        "ar": "معدل الفوز"
                     },
                     "returnLast30D": {
                         "zh": "近30日收益率",
@@ -10329,7 +10329,7 @@
                         "id": "Kripto",
                         "es": "Crypto",
                         "pt-BR": "Crypto",
-                        "ar": ""
+                        "ar": "التشفير"
                     },
                     "metals": {
                         "zh": "贵金属",

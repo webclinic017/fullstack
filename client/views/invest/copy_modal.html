@@ -28,6 +28,7 @@
                 <input class="form-control bd-bt copy_modal__alls-left" name="amount" type="number"
                     ng-class="{'form-control-error': frontErr.amount.show && copyForm.amount.$invalid}"
                     ng-model="copyTrade.amount" required ng-pattern="frontErr.amount.reg"
+                    placeholder="{{lang.text('tigerWitID.master.available') + (copyTrade.avaCopyAmount || '0.00')}}"
                     twform-min="{{ copyTrade.minCopyAmount }}" ng-focus="hideErr('amount')" ng-change="calAmount()"
                     ng-blur="[showErr('amount')]">
 
