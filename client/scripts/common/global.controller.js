@@ -206,7 +206,17 @@
                 });
             }
         }
-        $scope.message
+        // $scope.noticeTip = 0;
+        // $scope.hideNoticeTip = hideNoticeTip;
+        // initNoticeTip();
+        // function initNoticeTip(){
+        //     var noticeTip = localStorage['notice_tip'];
+        //     $scope.noticeTip = (noticeTip ? 0 : 1)
+        // }
+        // function hideNoticeTip(){
+        //     $scope.noticeTip = 0;
+        //     localStorage['notice_tip'] = 1;
+        // }
 
         // user/source 统计
         // function getSearch() {
