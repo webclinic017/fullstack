@@ -30,7 +30,7 @@
                         <p class="text-center" ng-if="manageType == 'switch' && third.status == 0">
                             <a class="btn-text card_btn disabled">{{lang.text('tigerWitID.wallet.thirdAccNoSupport')}}</a>
                         </p>
-                        <p class="text-center" ng-if="manageType == 'manage'">
+                        <p class="text-center" ng-if="manageType == 'manage' && third.account">
                             <a class="btn-text card_btn" ng-click="confirmDeleteThird(third)">{{lang.text('tigerWitID.delete')}}</a>
                         </p>
                     </td>

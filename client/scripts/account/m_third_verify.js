@@ -560,11 +560,12 @@ $(document).ready(function () {
         $("#fuzzySearchAfter").focus()
         $("#fuzzySearchList").hide()
     })
+    var GETADDRESSURLKEY = 'FE41-PX26-HN28-WZ34';
     $('body').on("input", "#fuzzySearch", function () {
         fuzzySearch.fuzzySearchCon = $(this).val()
         clearTimeout(getAddressUrlTimer)
         var params = {
-            Key: 'GE86-EG48-RA51-EZ99',
+            Key: GETADDRESSURLKEY,
             Text: fuzzySearch.fuzzySearchCon,
             Limit: 20,
             Language: lang.curLang(),
@@ -636,7 +637,7 @@ $(document).ready(function () {
                 Limit: 20,
                 Language: lang.curLang(),
                 Container: item.Id,
-                Key: 'GE86-EG48-RA51-EZ99',
+                Key: GETADDRESSURLKEY,
                 Countries: $(ele.addressInfoCountry).attr("data-type")
             }
             fuzzySearchListTpl(params)

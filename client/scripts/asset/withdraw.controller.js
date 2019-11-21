@@ -273,13 +273,15 @@
                 if (!data) return;
                 // console.log(data);
                 if (data.is_succ && data.data) {
-                    $scope.withdraw.transfer.id = data.data.id;
-                    $scope.withdraw.transfer.country = data.data.country;
-                    $scope.withdraw.transfer.bank_name = data.data.bank_name;
-                    $scope.withdraw.transfer.cardholder_name = data.data.cardholder_name;
-                    $scope.withdraw.transfer.card_no = data.data.card_no;
-                    $scope.withdraw.transfer.bank_img = data.data.bank_img;
-                    $scope.withdraw.transfer.bank_code = data.data.bank_code;
+                    // $scope.withdraw.transfer.id = data.data.id;
+                    // $scope.withdraw.transfer.country = data.data.country;
+                    // $scope.withdraw.transfer.bank_name = data.data.bank_name;
+                    // $scope.withdraw.transfer.cardholder_name = data.data.cardholder_name;
+                    // $scope.withdraw.transfer.card_no = data.data.card_no;
+                    // $scope.withdraw.transfer.bank_img = data.data.bank_img;
+                    // $scope.withdraw.transfer.bank_code = data.data.bank_code;
+
+                    angular.extend($scope.withdraw.transfer, data.data)
                 }
             });
         }
@@ -291,13 +293,14 @@
                 if (!data) return;
                 // console.log(data);
                 if (data.is_succ && data.data) {
-                    $scope.withdraw.third.id = data.data.id;
-                    $scope.withdraw.third.account = data.data.account;
-                    $scope.withdraw.third.account_f = data.data.account_f;
-                    $scope.withdraw.third.third_type = data.data.third_type;
-                    $scope.withdraw.third.platform = data.data.platform;
-                    $scope.withdraw.third.status = data.data.status;
-                    $scope.withdraw.third.withdraw_type = data.data.withdraw_type;
+                    // $scope.withdraw.third.id = data.data.id;
+                    // $scope.withdraw.third.account = data.data.account;
+                    // $scope.withdraw.third.account_f = data.data.account_f;
+                    // $scope.withdraw.third.third_type = data.data.third_type;
+                    // $scope.withdraw.third.platform = data.data.platform;
+                    // $scope.withdraw.third.status = data.data.status;
+                    // $scope.withdraw.third.withdraw_type = data.data.withdraw_type;
+                    angular.extend($scope.withdraw.third, data.data)
                     if(data.data.withdraw_type == 1){
                         getCard();
                     }
@@ -450,13 +453,14 @@
                     })
 
                     $scope.chooseThird = function (third) {
-                        parentScope.withdraw.third.id = third.id;
-                        parentScope.withdraw.third.account = third.account;
-                        parentScope.withdraw.third.account_f = third.account_f;
-                        parentScope.withdraw.third.third_type = third.third_type;
-                        parentScope.withdraw.third.platform = third.platform;
-                        parentScope.withdraw.third.status = third.status;
-                        parentScope.withdraw.third.withdraw_type = third.withdraw_type;
+                        // parentScope.withdraw.third.id = third.id;
+                        // parentScope.withdraw.third.account = third.account;
+                        // parentScope.withdraw.third.account_f = third.account_f;
+                        // parentScope.withdraw.third.third_type = third.third_type;
+                        // parentScope.withdraw.third.platform = third.platform;
+                        // parentScope.withdraw.third.status = third.status;
+                        // parentScope.withdraw.third.withdraw_type = third.withdraw_type;
+                        angular.extend(parentScope.withdraw.third, third)
                         if(third.withdraw_type == 1){
                             getCard();
                         }
@@ -532,13 +536,15 @@
                     })
 
                     $scope.chooseTransfer = function (data) {
-                        parentScope.withdraw.transfer.id = data.id;
-                        parentScope.withdraw.transfer.country = data.country;
-                        parentScope.withdraw.transfer.bank_name = data.bank_name;
-                        parentScope.withdraw.transfer.cardholder_name = data.cardholder_name;
-                        parentScope.withdraw.transfer.card_no = data.card_no;
-                        parentScope.withdraw.transfer.bank_img = data.bank_img;
-                        parentScope.withdraw.transfer.bank_code = data.bank_code;
+                        // parentScope.withdraw.transfer.id = data.id;
+                        // parentScope.withdraw.transfer.country = data.country;
+                        // parentScope.withdraw.transfer.bank_name = data.bank_name;
+                        // parentScope.withdraw.transfer.cardholder_name = data.cardholder_name;
+                        // parentScope.withdraw.transfer.card_no = data.card_no;
+                        // parentScope.withdraw.transfer.bank_img = data.bank_img;
+                        // parentScope.withdraw.transfer.bank_code = data.bank_code;
+
+                        angular.extend(parentScope.withdraw.transfer, data)
                         closeModal()
                     }
 
