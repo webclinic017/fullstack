@@ -52,7 +52,7 @@
             <div class="title">
               <%= lang.text("newhome_9_1")%>
         </div>
-        <ul ng-class="{'praise': <%= lang.currentLanguage() === 'en'%>}">
+        <ul ng-class="{'praise': <%= lang.currentLanguage() === 'en' || lang.currentLanguage() === 'ar'%>}">
           <li class="mg-bt-15">
             <a class="inline-block" href="/m/blank?platform=ios"
               ng-click="[toTrackEvent('home page', 'global_home_click_appstore'), toGtagEvent('click_ios_download_web')]"><img
@@ -71,7 +71,7 @@
           </li>
           <%}%>
         </ul>
-        <%if (lang.currentLanguage() === 'en') {%>
+        <%if (lang.currentLanguage() === 'en' || lang.currentLanguage() === 'ar') {%>
             <ul class="praise">
               <li>
                 <img class="praise-img" src="/white_label/home/Best-Global-Forex-Trading-Innovation_WHITE.png" alt="">
