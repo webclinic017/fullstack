@@ -261,14 +261,13 @@ $(document).ready(function () {
                     $(ele.realnameInfoGender).removeClass("active");
                     $(ele.realnameInfoGender + "[data-gender=" + userCacheInfo.gender + "]").addClass("active");
                 }
-                var identityType = userCacheInfo.world_code === 'CN' ? 'cn' : 'en';
                 //请求相关列表
                 getCountries();
                 initStateInfo();
                 getKycList('0');
                 getKycList('1');
                 updateFilesType('address');
-                updateFilesType(identityType);
+                updateFilesType(userCacheInfo.world_code);
             }
         });
     }
@@ -374,8 +373,7 @@ $(document).ready(function () {
                 if (!data) return;
                 if (data.is_succ) {
                     step = data.data.status;
-                    var cardType = info.world_code === 'CN' ? 'cn' : 'en';
-                    updateFilesType(cardType);
+                    updateFilesType(info.world_code);
                     goStepPage();
                 } else {
                     layer.open({
@@ -956,7 +954,7 @@ $(document).ready(function () {
             needTwo = false;
         }
         var firstName, lastName;
-        if(cardCountry == 'CN'){
+        if(cardCountry === 'CN' || cardCountry === 'VN'){
             firstName = $(ele.identityRealname).val()
         }else{
             firstName = $(ele.identityFirstname).val()
@@ -1030,8 +1028,9 @@ $(document).ready(function () {
             var list = addressTypeList;
             var id = 'address_type_list';
         } else {
+            var identityType = type === 'CN' ? 'cn' : 'en';
             var list = {
-                data: cardTypeList[type]
+                data: cardTypeList[identityType]
             };
             var id = 'identity_type_list';
             realnameSwitch(type)
@@ -1043,7 +1042,7 @@ $(document).ready(function () {
     }
     // 国家切换时cn填写真实姓名，global显示姓 + 名
     function realnameSwitch(type){
-        if(type == 'cn'){
+        if(type === 'CN' || type === 'VN'){
             $(ele.identity + ' .global').removeClass('active');
             $(ele.identity + ' .cn').addClass('active');
         }else{
