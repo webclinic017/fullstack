@@ -221,9 +221,9 @@ module.exports = {
     },
     "more": {
         "en": "Click for More",
-        "zh": "点击查看更多信息",
+        "zh": "点击查看更多",
         "vi": "Nhấp để biết chi tiết",
-        "zh-Hant": "點擊查看更多信息",
+        "zh-Hant": "點擊查看更多",
         "id": "Klik untuk lebih lanjut",
         "es": "Click ver más",
         "pt-BR": "Click para mais",
