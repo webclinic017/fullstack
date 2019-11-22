@@ -168,6 +168,7 @@ function getBankLst (params) {
    *  listType      列表类型 bank_account、third_account
    *  pageType      页面类型  deposit、withdraw
    *  bankId        已选中的银行卡ID
+   *  third_type    已选中的第三方账号
    *  notInsertTemp 是否加载弹窗 true、false
    *  */
   var listType = params.listType || '';
@@ -198,7 +199,8 @@ function getBankLst (params) {
         data: {
           type: listType,
           pageType: params.pageType,
-          id: params.bankId,
+          id: params.bankId,  // id在第三方不能代表唯一
+          third_type: params.third_type,  // 第三方需要
           lst: data.data,
           source: params.source
         }
@@ -225,7 +227,15 @@ $(document).on("tap", "#third_app_bottom_template .bank_item", function () {
   var cSelectId = $(this).attr("data-select-id");
   var cPageType = $(this).attr("data-page");
   var cSource = $(this).attr("data-source");
-  if (cId == cSelectId) return;
+  var cThirdType = $(this).attr("data-third-type");
+  // 第三方id不唯一
+  if(cType === 'third_account'){
+    if(cId === cSelectId && cThirdType === thirdThirdType){
+      return
+    }
+  }else if (cId === cSelectId){
+      return 
+  }
   $("#third_app_bottom_template .bank_item").removeClass('active');
   $(this).addClass('active');
   closeAllMdl();
@@ -245,15 +255,17 @@ $(document).on("tap", "#third_app_bottom_template .bank_item", function () {
       withdrawType = cType;
       withdrawBankId = cId; 
       if(withdrawType == 'third_account') {
-        thirdThirdType = $(this).attr("data-third-type");
-        thirdThirdAccount = $(this).attr("data-third-account");
+        thirdThirdType = cThirdType;
+        thirdThirdAccount = cNo;
         thirdThirdWithdrawType = $(this).attr("data-withdraw-type");
         if(thirdThirdWithdrawType == 1){
           $(eleWithdraw.payAccountLstBankAdd).empty();
           $(eleWithdraw.payAccountLstBankAdd).append(lang.text("thirdH5.bankCardNameM") + " <span class='bank-account link-color' data-type='bank_account'>"+ lang.text("thirdH5.bindBankCard") +"</span>")
         }
       }
-      var tp = '<li class="s-select" data-select="bank_chosen" data-type="'+ cType +'"><p>'+cName+'('+cNo.substring(cNo.length-4)+')'+'</p></li>';
+      var tp = '<li class="s-select" data-select="bank_chosen" data-type="'+ cType +'"><p>'+cName+(
+        cNo ? '('+cNo.substring(cNo.length-4)+')' : ''
+      )+'</p></li>';
       $(eleWithdraw.payAccountLst).find("li[data-select=bank_chosen]").remove();
       $(eleWithdraw.payAccountLst).find("li").removeClass('active');
       $(eleWithdraw.payAccountLst).find("li[data-type="+ withdrawType +"]").addClass('active').after(tp);

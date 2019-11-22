@@ -1,77 +1,58 @@
-<div class="container">
-    <div class="trader_history">
+<div class="currency-width pd-bt-50">
+    <div class="trader_current currency-width-border">
         <div tw-loading-img></div>
-
-        <table class="table table-header table-striped table-hover table-bordered">
-            <thead>
-                <tr>
-                    <th>{{ lang.text("TradingHistory1") }}</th>
-                    <th>{{ lang.text("TradingHistory2") }}</th>
-                    <th>{{ lang.text("TradingHistory3") }}</th>
-                    <th>{{ lang.text("TradingHistory4") }}</th>
-                    <th>{{ lang.text("TradingHistory5") }}</th>
-                    <th>{{ lang.text("TradingHistory6") }}</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr ng-repeat="order in orders" ng-if="orders.length > 0">
-                    <td class="">
-                        <div class="history-operation-td text-initial">
-                            <div>
-                                <span class="icon-histroy icon-forex-{{ order.symbol_origin.toLowerCase() }}"></span>
-                            </div>
-                            <div class="history-operation-box">
-                                <p class="">
-                                    <span ng-class="order.cmd?'font-down':'font-up'">
-                                        {{ order.cmd_name }}
-                                    </span>
-                                    <span class="" ng-show="!lang.isEnglishArea()">
-                                        {{ order.symbol_cn + '（'+ order.symbol +'）' }}
-                                    </span>
-                                    <span class="" ng-show="lang.isEnglishArea()">
-                                        {{ order.symbol }}
-                                    </span>
-                                </p>
-                                <p class=" font-size-12">
-                                    <span class="history-operation-way">{{order.close_type_name}}</span>
-                                    <span>{{order.passed_time | duration}}{{ lang.text("TradingHistory10") }}</span>
-                                </p>
-                            </div>
+        <ul class="trader_current__list">
+            <li>
+                <h5>{{ lang.text("tigerWitID.master.closed") }}</h5>
+            </li>
+            <li ng-repeat="order in orders" ng-if="orders.length > 0">
+                <div>
+                    <p class="tip">{{order.close_desc}}</p>
+                    <div class="title-tip item-center">
+                        <span>{{order.symbol}}</span>
+                        <!-- <span>{{order.lever}}</span> -->
+                        <span ng-class="{'bg-danger': !order.cmd, 'bg-success': order.cmd}" ng-if="lang.hostIsCn()">
+                            {{ order.cmd_name }}
+                        </span>
+                        <span ng-class="{'bg-success': !order.cmd, 'bg-danger': order.cmd}" ng-if="!lang.hostIsCn()">
+                            {{ order.cmd_name }}
+                        </span>
+                    </div>
+                    <p class="tip">{{order.symbol_name}}</p>
+                    <div class="mg-tp-5 space-between-center">
+                        <div>
+                            <p class="lf-num">{{order.open_price}}</p>
+                            <p class="tip">{{ lang.text("tigerWitID.details.openPrice") }}</p>
                         </div>
-                    </td>
-                    <td>
-                        {{ order.open_price }}
-                    </td>
-                    <td>
-                        {{ order.close_price }}
-                    </td>
-                    <td>
-                        {{ order.position_time | duration }}
-                    </td>
-                    <td ng-class="{'font-danger': order.profit.indexOf('-') < 0, 'font-success': order.profit.indexOf('-') != -1}"
+                        <div class="mg-lf-50"></div>
+                        <div>
+                            <p class="lf-num">{{order.net_profit}}</p>
+                            <p class="tip">{{ lang.text("tigerWitID.details.currentPrice") }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <p class="tip">{{ lang.text("tigerWitID.master.positionTime") }}{{ order.position_time | duration }}</p>
+                    <p class="rg-num"
+                        ng-class="{'font-danger': order.profit.indexOf('-') < 0, 'font-success': order.profit.indexOf('-') >= 0}"
                         ng-if="lang.hostIsCn()">
-                        {{ order.points }}
-                    </td>
-                    <td ng-class="{'font-success': order.profit.indexOf('-') < 0, 'font-danger': order.profit.indexOf('-') != -1}"
+                        ${{ order.profit }}
+                    </p>
+                    <p class="rg-num"
+                        ng-class="{'font-success': order.profit.indexOf('-') < 0, 'font-danger': order.profit.indexOf('-') >= 0}"
                         ng-if="!lang.hostIsCn()">
-                        {{ order.points }}
-                    </td>
-                    <td ng-class="{'font-danger': order.gross_profit.indexOf('-') < 0, 'font-success': order.gross_profit.indexOf('-') != -1}"
-                        ng-if="lang.hostIsCn()">
-                        <i class="fa fa-dollar"></i>{{ order.gross_profit }}
-                    </td>
-                    <td ng-class="{'font-success': order.gross_profit.indexOf('-') < 0, 'font-danger': order.gross_profit.indexOf('-') != -1}"
-                        ng-if="!lang.hostIsCn()">
-                        <i class="fa fa-dollar"></i>{{ order.gross_profit }}
-                    </td>
-                </tr>
-                <tr ng-if="orders.length <= 0">
-                    <td colspan="6">
-                        {{ lang.text("TradingHistory9") }}
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+                        ${{ order.profit }}
+                    </p>
+                    <p class="tip">{{ lang.text("tigerWitID.master.profitLoss") }}</p>
+                </div>
+            </li>
+            <li class="no-data" ng-if="orders.length <= 0">
+                <div>
+                    <img src="/images/no_data.png" alt="" class="mg-bt-20">
+                    <p>{{ lang.text("HoldingTrades9") }}</p>
+                </div>
+            </li>
+        </ul>
 
         <div class="justify-flex-end" ng-if="orders.length > 0">
             <div tw-pagination></div>

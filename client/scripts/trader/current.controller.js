@@ -5,9 +5,9 @@
     angular.module('fullstackApp')
         .controller('TraderCurrentController', TraderCurrentController);
 
-    TraderCurrentController.$inject = ['$scope', '$location', 'trader', '$state', '$timeout'];
+    TraderCurrentController.$inject = ['$scope', '$location', 'trader', '$state', '$timeout', 'utils'];
 
-    function TraderCurrentController($scope, $location, trader, $state, $timeout) {
+    function TraderCurrentController($scope, $location, trader, $state, $timeout, utils) {
         $scope.orders = [];
         $scope.pagebar = {
             config: {
@@ -54,22 +54,10 @@
 
                 if ($scope.orders.length <= 0) return;
                 angular.extend($scope.pagebar.config, {
-                    total: getTotal(data.record_count, pagesize),
+                    total: utils.getTotal(data.record_count, pagesize),
                     page: page
                 }); 
             });
-        }
-        function getTotal(sum, pagesize) {
-            var total;
-            sum = parseInt(sum, 10); // list item 总个数
-            pagesize = parseInt(pagesize, 10); // 单页显示数
-
-            if (sum % pagesize > 0) {
-                total = parseInt(sum / pagesize) + 1;
-            } else {
-                total = parseInt(sum / pagesize);
-            }
-            return total;
         }
     }
 })();

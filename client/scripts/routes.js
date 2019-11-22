@@ -458,8 +458,8 @@
                 .state('trader', {
                     views: {
                         '@': {
-                            templateUrl: '/views/web/trader/list.html',
-                            controller: ''
+                            templateUrl: '/views/web/trader/index.html',
+                            controller: 'TraderIndexController'
                         }
                     }
                 })

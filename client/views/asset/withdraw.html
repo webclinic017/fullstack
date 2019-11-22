@@ -18,11 +18,11 @@
     <div class="display-flex mg-bt-30" ng-show="withdraw.accountType === 'third_account'">
         <div class="col-xs-2 justify-flex-end deposit__title-money"></div>
 
-        <div class="col-xs-10 pd-bt-10" ng-show="!withdraw.third.id">
+        <div class="col-xs-10 pd-bt-10" ng-show="!withdraw.third.platform">
             <span class="deposit__pointer font-info" ng-click="openThirdMdl()">{{lang.text('tigerWitID.wallet.addThirdAccount')}} ></span>
         </div>
 
-        <div class="col-xs-9 withdraw__card_handler" ng-show="withdraw.third.id">
+        <div class="col-xs-9 withdraw__card_handler" ng-show="withdraw.third.platform">
             <div class="widthdraw__card_font text-inline">
                 <!-- <img ng-show="withdraw.card.bank_img" ng-src="{{ withdraw.card.bank_img }}"> -->
                 <span class="">{{ withdraw.third.platform }}</span>

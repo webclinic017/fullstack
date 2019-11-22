@@ -222,6 +222,11 @@ $tw-btn-bg-black-end: #2b323e;
 .tw-btn-sl {
     @include button-size(0, 0, $tw-btn-fontsize-sl, auto, 0)
 }
+.tw-btn-adaptive{
+    min-width: 130px;
+    width: inherit;
+    padding: 0 5px;
+}
 
 // 按钮阴影
 .tw-btn-shadow-primary {

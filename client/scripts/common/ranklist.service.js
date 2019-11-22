@@ -12,7 +12,8 @@
             getMastersList: getMastersList,
             getOrderInfo: getOrderInfo,
             getIndexMasters: getIndexMasters,
-            getMastersTrialList: getMastersTrialList
+            getMastersTrialList: getMastersTrialList,
+            getMastersNewList: getMastersNewList
         };
         return service;
 
@@ -30,6 +31,17 @@
                 offset: offset,
                 limit: limit
             });
+        }
+
+        /**
+         * Ranklist Service 获取高手列表(新版)
+         * 排行榜 
+         *
+         * @method getMastersNewList
+         * 
+         */
+        function getMastersNewList(params) {
+            return publicHttp.dealPublicRequest(o.getMastersNewListApi, 'GET', params);
         }
 
         /**
