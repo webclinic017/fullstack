@@ -118,20 +118,20 @@
         }
 
         //获取android下载包地址
-        $scope.appVersionInfo = {};
+        // $scope.appVersionInfo = {};
         // $scope.appVersionInfo.android = 'http://dltw.oss-cn-beijing.aliyuncs.com/apk/tigerwit_v4.3.1.apk';
-        getVersionCheck();
-        function getVersionCheck() {
-            account.getVersionCheck({
-                type: 3,
-                version: '1.0.0',
-                lang: 'cn'
-            }).then(function (data) {
-                if (data.is_succ) {
-                    $scope.appVersionInfo.android = data.data.url;
-                }
-            });
-        }
+        // getVersionCheck();
+        // function getVersionCheck() {
+        //     account.getVersionCheck({
+        //         type: 3,
+        //         version: '1.0.0',
+        //         lang: 'cn'
+        //     }).then(function (data) {
+        //         if (data.is_succ) {
+        //             $scope.appVersionInfo.android = data.data.url;
+        //         }
+        //     });
+        // }
 
         // 报价服务
         $scope.quoteSymbols = [];

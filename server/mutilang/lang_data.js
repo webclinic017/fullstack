@@ -9,6 +9,16 @@ module.exports = {
         "pt-BR": "isto é comentários, nenhuma tradução exigida",
         "ar": "this is comments, No translation required"
     },
+    "downloadBtn": {
+        "zh": "点击下载",
+        "en": "Click download",
+        "vi": "Nhấp để tải",
+        "zh-Hant": "點擊下載",
+        "id": "Klik untuk unduh",
+        "es": "Click descarga",
+        "pt-BR": "Clique em download",
+        "ar": "انقر للتحميل"
+    },
     "fuzhirenshu": {
         "en": "Copiers",
         "zh": "复制人数",

@@ -199,7 +199,7 @@ module.exports = function (app) {
         }
     })
 
-    // TODO 可能需要改
+    // TODO
     app.route('/').get(function (req, res) {
         setEnvCf(req, res);
         if (isMobile(req)) {
@@ -224,7 +224,7 @@ module.exports = function (app) {
         setEnvCf(req, res);
         if (isMobile(req)) {
             if (COMPANY_NAME === 'tigerwit') {
-                res.redirect('https://cn.tigerwit.com/download');
+                res.redirect('/download');
                 return
             }
         } else {
@@ -270,7 +270,10 @@ module.exports = function (app) {
             res.render('web/download.html', extendPublic({}, req));
         }
     });
-
+    app.route('/cndownload').get(function (req, res) {
+        setEnvCf(req, res);
+        res.render('bd/download/index.html', extendPublic({}, req));
+    });
     // 支付宝临时入金页面
     app.route('/alipay/temp').get(function (req, res) {
         setEnvCf(req, res);

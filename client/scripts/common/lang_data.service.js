@@ -2741,6 +2741,16 @@
                         "pt-BR": "Transação",
                         "ar": "المعاملة"
                     },
+                    "6monthsTip": {
+                        "zh": "系统将默认保留并展示最近6个月信息。",
+                        "en": "The last 6 months of information will be retained and displayed by default.",
+                        "vi": "Thông tin trong vòng 6 tháng sẽ được lưu lại và hiển thị tự động.",
+                        "zh-Hant": "系統將默認保留並展示最近6個月信息。",
+                        "id": "Informasi untuk 6 bulan terakhir akan disimpan dan ditampilkan secara otomatis.",
+                        "es": "Los últimos 6 meses de información serán retenidos y mostrados.",
+                        "pt-BR": "Informações dos últimos 6 meses serão mantidos e exibidos.",
+                        "ar": ".سيتم الاحتفاظ بآخر 6 أشهر من المعلومات وعرضها افتراضيًا"
+                    },
                     "system": {
                         "zh": "系统提醒",
                         "en": "System",
