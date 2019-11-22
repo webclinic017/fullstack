@@ -21,7 +21,11 @@
   <div class="bd_creex">
     <div class="bd_creex_header">
       <div class="clearfix bd_creex_container">
+        <%if(pageType === 'creex') {%>
           <a class="bd_open_account fr" href="<%= page === 'web' ? '/space/#/account/register?R_GRUPOCREEX=001' : '/download?R_GRUPOCREEX=001'%>">Open an account</a>
+        <%} else if (pageType === 'enbolsa') {%>
+          <a class="bd_open_account fr" href="<%= page === 'web' ? '/space/#/account/register?R_BOLSA=001' : '/download?R_BOLSA=001'%>">Open an account</a>
+        <%}%>
           <ul class="fr">
             <li><a class="bd_navbar_home" href="">Home</a></li>
           </ul>
@@ -32,7 +36,12 @@
         <div class="fl bd_creex_focus_l">
           <p class="mg-bt-80"><img src="/white_label/bd_forextrading/logo.png" alt=""></p>
           <h2>Trade the markets you want, the way you want. </h2>
-          <a href="<%= page === 'web' ? '/space/#/account/register?R_GRUPOCREEX=001' : '/download?R_GRUPOCREEX=001'%>"><img src="/white_label/bd_creex/account-btn.png" alt=""></a>
+          <%if(pageType === 'creex') {%>
+            <a href="<%= page === 'web' ? '/space/#/account/register?R_GRUPOCREEX=001' : '/download?R_GRUPOCREEX=001'%>"><img src="/white_label/bd_creex/account-btn.png" alt=""></a>
+          <%} else if (pageType === 'enbolsa') {%>
+            <a href="<%= page === 'web' ? '/space/#/account/register?R_BOLSA=001' : '/download?R_BOLSA=001'%>"><img src="/white_label/bd_creex/account-btn.png" alt=""></a>
+          <%}%>
+          
           <p class="cont1">
               TigerWit provides access to global financial markets on a
               stylish, easy to use app that’s tailored for the convenient
@@ -43,8 +52,8 @@
           <div><img src="/white_label/bd_creex/b-icon.png" alt=""></div>
         </div>
         <div class="fr bd_creex_focus_r">
-          <div><img src="/white_label/bd_creex/logo-icon.png" alt=""></div>
-          <div><img src="/white_label/bd_creex/phone1.png" alt=""></div>
+          <div><img class="logo-icon" src="/white_label/bd_creex/logo-<%=pageType%>.png" alt=""></div>
+          <div style="margin-top: <%= pageType==='enbolsa'?'40px':'0px'%>"><img src="/white_label/bd_creex/phone1-<%=pageType%>.png" alt=""></div>
         </div>
       </div>
     </div>
@@ -60,7 +69,7 @@
             <span class="icon"><img src="/white_label/bd_creex/icon2.png" alt=""></span>
             <span class="info">Official Online Foreign
                 Exchange Trading Partner
-                for Liverpool FC</span>
+                of Liverpool FC</span>
           </div>
           <div class="list_item">
             <span class="icon"><img src="/white_label/bd_creex/icon3.png" alt=""></span>
@@ -83,18 +92,25 @@
           </div>
         </div>
         <div class="phone2">
-          <img src="/white_label/bd_creex/phone2.png" alt="">
+          <img src="/white_label/bd_creex/phone2-<%=pageType%>.png" alt="">
         </div>
-        <div class="creex_btn_wrapper">
-          <img src="/white_label/bd_creex/logo-icon.png" alt="">
-          <a href="/white_label/bd_creex/GRUPO CREEX CERTIFICATE.pdf" target="_blank">See Certificate of Partnership</a>
-        </div>
+        <%if(pageType === 'creex') {%>
+          <div class="creex_btn_wrapper">
+            <img src="/white_label/bd_creex/logo-creex.png" alt="">
+            <a href="/white_label/bd_creex/GRUPO CREEX CERTIFICATE.pdf" target="_blank">See Certificate of Partnership</a>
+          </div>
+        <%}%>
         <div class="creex_footer">
           <h4 class="">Download the app today </h4>
           <div class="download_stars"><img src="/white_label/bd_eshot/stars.png" alt=""></div>
           <div class="download_btn_wrapper">
-              <a href="https://go.onelink.me/RHp8/1d5c8aa2" style="margin-right: 25px;"><img src="/white_label/bd_forextrading/google_btn.png" alt=""></a>
-              <a href="https://go.onelink.me/RHp8/1d5c8aa2"><img src="/white_label/bd_forextrading/store_btn.png" alt=""></a>
+              <%if(pageType === 'creex') {%>
+                <a href="https://go.onelink.me/RHp8/1d5c8aa2" style="margin-right: 25px;"><img src="/white_label/bd_forextrading/google_btn.png" alt=""></a>
+                <a href="https://go.onelink.me/RHp8/1d5c8aa2"><img src="/white_label/bd_forextrading/store_btn.png" alt=""></a>
+              <%} else if (pageType === 'enbolsa') {%>
+                <a href="https://go.onelink.me/Lg5F/f744d9a1" style="margin-right: 25px;"><img src="/white_label/bd_forextrading/google_btn.png" alt=""></a>
+                <a href="https://go.onelink.me/Lg5F/f744d9a1"><img src="/white_label/bd_forextrading/store_btn.png" alt=""></a>
+              <%}%>
           </div>
           <p>Trading CFDs involves risk and can result in loss of your capital.</p>
         </div>
