@@ -21,11 +21,6 @@ $(document).ready(function () {
   //   }
   //   return theRequest;
   // }
-  function getDomain() {
-    var domain = location.hostname.match(/\.\w+\.com/) ? location.hostname.match(/\.\w+\.com/)[0] : '.tigerwit.com';
-    // console.log(url.match(/\.\w+\.com/)[0]);
-    return domain;
-  }
 
   oReg.search_arr = getSearch();
   oReg.search_source = checkUserSource();

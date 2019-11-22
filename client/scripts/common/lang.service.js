@@ -9,6 +9,7 @@
     function lang(langData, $location, $timeout, $cookies) {
 
         var language = 'zh';
+        var domain = '.' + location.hostname.split('.').slice(-2).join('.');
         var cookieLang = $cookies.lang; // cookieLang肯定会有值
         if (cookieLang) {
             language = cookieLang === 'cn' ? 'zh' : cookieLang;
@@ -19,7 +20,7 @@
             var d = new Date();
             d.setTime(d.getTime() + (-1 * 24 * 60 * 60 * 1000));
             document.cookie = 'lang=' + lang + '; path=/; expires=' + d.toUTCString();
-            document.cookie = 'lang=' + lang + '; path=/; domain=' + location.hostname.match(/\.\w+\.com/)[0];
+            document.cookie = 'lang=' + lang + '; path=/; domain=' + domain;
             location.reload();
         }
         var lang = {
@@ -103,8 +104,8 @@
             },
             isDemo: function () {
                 // console.log($location.host());
-                if (($location.host().indexOf('demo' + location.hostname.match(/\.\w+\.com/)[0]) != -1) ||
-                    ($location.host().indexOf('w.dev' + location.hostname.match(/\.\w+\.com/)[0]) != -1)) {
+                if (($location.host().indexOf('demo' + domain) != -1) ||
+                    ($location.host().indexOf('w.dev' + domain) != -1)) {
                     return true;
                 } else {
                     return false;

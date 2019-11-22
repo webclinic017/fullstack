@@ -13,7 +13,7 @@ var masterApi = require('./api/master');
 var report_sites = require('./report_site');
 var depositBankList = require('./deposit_bank_list');
 var depositEvidenceList = require('./deposit_evidence_list');
-var ACCESS_ORIGIN2 = require('./get_env_config').envConfig.access_origin2 || 'https://a.tigerwit.com';
+// var ACCESS_ORIGIN2 = require('./get_env_config').envConfig.access_origin2 || 'https://a.tigerwit.com';
 var setCompanyCookie,
     envConfig,
     URL_PATH,
@@ -108,12 +108,12 @@ module.exports = function (app) {
     });
 
     // 熊猫外汇页面路径
-    app.route('/panda').get(function (req, res) {
-        res.redirect('https://dp.tigerwit.com');
-    });
-    app.route('/panda/:subpage(login|asset)').get(function (req, res) {
-        res.redirect('https://dpdev.tigerwit.com');
-    });
+    // app.route('/panda').get(function (req, res) {
+    //     res.redirect('https://dp.tigerwit.com');
+    // });
+    // app.route('/panda/:subpage(login|asset)').get(function (req, res) {
+    //     res.redirect('https://dpdev.tigerwit.com');
+    // });
     /*
      * 三方相关页面 start
      */

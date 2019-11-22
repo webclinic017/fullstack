@@ -1,5 +1,6 @@
 ;
 (function () {
+    // （弃）
     twH5Loader('img_detect_container', 4, getMonData)
 
     var loca = window.location
