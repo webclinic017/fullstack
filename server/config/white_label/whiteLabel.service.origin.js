@@ -63,7 +63,7 @@
                 oWhiteLabel.pieChart = {
                     /*渐变色*/
                     colors: ['#fff000', '#ebebeb'],
-                    colors2: ['#ED1C24', '#F5A623', '#FCEE21', '#39B54A', '#29ABE2']
+                    colors2: ['#BC6FFF', '#44BCFF', '#C5EF9B', '#7DF4DA', '#FFC86F']
                 };
                 break;
             case 'pkds':

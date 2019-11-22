@@ -33,8 +33,8 @@
                     ng-blur="[showErr('amount')]">
 
                 <i class="fa fa-dollar form-control-icon bd-bt font-base"></i>
-                <span class="copy_modal__alls" ng-click="setAmount(copyTrade.surplusAmount)"
-                    ng-if="copyTrade.surplusAmount != copyTrade.amount">All</span>
+                <span class="copy_modal__alls" ng-click="setAmount(copyTrade.avaCopyAmount)"
+                    ng-if="copyTrade.avaCopyAmount != copyTrade.amount">All</span>
                 <div ng-show="frontErr.amount.show">
                     <p class="alert-arrow_tp_lf" ng-show="copyForm.amount.$error.required">
                         {{lang.text('tigerWitID.tradingAccount.enterCopyAmount')}}
