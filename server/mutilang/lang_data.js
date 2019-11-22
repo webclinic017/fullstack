@@ -9,6 +9,16 @@ module.exports = {
         "pt-BR": "isto é comentários, nenhuma tradução exigida",
         "ar": "this is comments, No translation required"
     },
+    "downloadBtn": {
+        "zh": "点击下载",
+        "en": "Click download",
+        "vi": "Nhấp để tải",
+        "zh-Hant": "點擊下載",
+        "id": "Klik untuk unduh",
+        "es": "Click descarga",
+        "pt-BR": "Clique em download",
+        "ar": "انقر للتحميل"
+    },
     "fuzhirenshu": {
         "en": "Copiers",
         "zh": "复制人数",
@@ -13851,14 +13861,14 @@ module.exports = {
             "ar": "2. يمكن للمتداولين استخدام أموال الخبرة في حساب الدوري مباشرة للتداول."
         },
         "rulesTit2Con3": {
-            "zh": "3.交易者可以在单独的页面上的联赛表格中监视他们的交易头寸",
-            "en": "3. Traders can monitor their trading positions in the league table on a separate landing page.",
-            "vi": "3.	Người chơi có thể theo dõi các lệnh giao dịch của mình trên bảng xếp hạng trên một trang đích riêng.",
-            "zh-Hant": "3.交易者可以在單獨的頁面上的聯賽表格中監視他們的交易頭寸",
-            "id": "3.  Trader dapat memonitor posisi trading mereka pada tabel peringkat liga yang ada di situs kami",
-            "es": "3. Los operadores pueden monitorear sus posiciones de clasificación en la tabla de clasificación en una página de destino separada.",
-            "pt-BR": "3. Os comerciantes podem monitorar suas posições na competição na tabela de classificação em uma página de destino separada.",
-            "ar": "3. يمكن للمتداولين مراقبة تصنيفات التداول الخاصة بهم في جدول الدوري على صفحة مقصودة منفصلة"
+            "zh": "3.排名前100位的交易员将能够看到他们在排行榜上的位置",
+            "en": "3. Traders who are ranked in the TOP 100 will be able to see their position on the League Table.",
+            "vi": "3.	Các nhà giao dịch được xếp hạng trong TOP 100 sẽ xem được thứ hạng của họ trên Bảng Thành Tích.",
+            "zh-Hant": "3.排名前100位的交易員將能夠看到他們在排行榜上的位置",
+            "id": "3.  Trader yang masuk peringkat 100 besar akan dapat melihat posisinya di Tabel Liga",
+            "es": "3. Los Traders que estén clasificados en el TOP 100 podrán ver su posición en la Tabla de la Liga.",
+            "pt-BR": "3. Os traders classificados no TOP 100 poderão ver sua posição na tabela da liga.",
+            "ar": "3. سيتمكن المتداولون الذين تم تصنيفهم في قائمة أفضل 100 من رؤية مركزهم على جدول الدوري"
         },
         "rulesTit2Con4": {
             "zh": "4.每周必须至少开设一次交易以保持竞争",
@@ -13901,14 +13911,14 @@ module.exports = {
             "ar": "2. يجب على المتداولين فتح بعض الصفقات على حساب الدوري الخاص بهم "
         },
         "rulesTit3Con3": {
-            "zh": "3.交易者可以在单独的页面上的联赛表格中监视他们的交易头寸。",
-            "en": "3. Traders can monitor their trading positions in the league table on a separate landing page.",
-            "vi": "3.	Người chơi có thể theo dõi các lệnh giao dịch của mình trên bảng xếp hạng ở trang đích",
-            "zh-Hant": "3.交易者可以在單獨的頁面上的聯賽表格中監視他們的交易頭寸。",
-            "id": "3. Trader dapat memonitor posisi trading mereka pada tabel peringkat liga yang ada di situs kami",
-            "es": "3. Los operadores pueden monitorear sus posiciones de negociación en la tabla de clasificación en una página de destino separada.",
-            "pt-BR": "3. Os comerciantes podem monitorar suas posições de negociação na tabela de classificação em uma página de destino separada.",
-            "ar": "3. يمكن للمتداولين مراقبة تصنيفات تداولهم في جدول الدوري على صفحة مقصودة منفصلة"
+            "zh": "3.排名前100位的交易员将能够看到他们在排行榜上的位置。",
+            "en": "3. Traders who are ranked in the TOP 100 will be able to see their position on the League Table.",
+            "vi": "3.	Các nhà giao dịch được xếp hạng trong TOP 100 sẽ xem được thứ hạng của họ trên Bảng Thành Tích",
+            "zh-Hant": "3.排名前100位的交易員將能夠看到他們在排行榜上的位置。",
+            "id": "3. Trader yang masuk peringkat 100 besar akan dapat melihat posisinya di Tabel Liga",
+            "es": "3. Los Traders que estén clasificados en el TOP 100 podrán ver su posición en la Tabla de la Liga.",
+            "pt-BR": "3. Os traders classificados no TOP 100 poderão ver sua posição na tabela da liga.",
+            "ar": "3. سيتمكن المتداولون الذين تم تصنيفهم في قائمة أفضل 100 من رؤية مركزهم على جدول الدوري"
         },
         "rulesTit3Con4": {
             "zh": "4.每周必须至少开设一次交易以保持竞争。",
@@ -13971,14 +13981,14 @@ module.exports = {
             "ar": "4. يجب التداول مرة واحدة كل أسبوع (كحد أدنى) للبقاء في المنافسة."
         },
         "rulesTit4Con5": {
-            "zh": "5. 参与者可以在单独的页面上实时监视其排名。",
-            "en": "5. Participants can monitor their rankings in real-time, on a separate landing page.",
-            "vi": "5.	Người chơi có thể theo dõi thứ hạng của mình trong thời gian thực tế trên bảng xếp hạng ở trang đích ",
-            "zh-Hant": "5.參與者可以在單獨的頁面上實時監視其排名。",
-            "id": "5.Para peserta dapat memantau posisi mereka pada tabel peringkat melalui situs kami",
-            "es": "5. Los participantes pueden monitorear sus calificaciones en tiempo real en una página de destino separada.",
-            "pt-BR": "5. Os participantes podem monitorar suas classificações em tempo real, em uma página de destino separada.",
-            "ar": "5. يمكن للمشاركين مراقبة تصنيفاتهم في الوقت الفعلي ، على صفحة مقصودة منفصلة."
+            "zh": "5. 排名前100位的交易员将能够看到他们在排行榜上的位置。",
+            "en": "5. Traders who are ranked in the TOP 100 will be able to see their position on the League Table.",
+            "vi": "5.	Các nhà giao dịch được xếp hạng trong TOP 100 sẽ xem được thứ hạng của họ trên Bảng Thành Tích",
+            "zh-Hant": "5.排名前100位的交易員將能夠看到他們在排行榜上的位置。",
+            "id": "5.Trader yang masuk peringkat 100 besar akan dapat melihat posisinya di Tabel Liga",
+            "es": "5. Los Traders que estén clasificados en el TOP 100 podrán ver su posición en la Tabla de la Liga.",
+            "pt-BR": "5. Os traders classificados no TOP 100 poderão ver sua posição na tabela da liga.",
+            "ar": "5. سيتمكن المتداولون الذين تم تصنيفهم في قائمة أفضل 100 من رؤية مركزهم على جدول الدوري."
         },
         "rulesTit4Con6": {
             "zh": "6. 排名最高、收益最好的交易者将获得最高净值的奖金。",
