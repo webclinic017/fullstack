@@ -802,8 +802,8 @@ module.exports = function (app) {
             page: req.params.subpage
         }, req));
     });
-    // 谷歌活动推广页 2019.10.10
-    app.route('/forextrading/:page(home|partners|traders)/:subpage(*)').get(function (req, res) {
+    // 谷歌活动推广页 2019.10.10 / forextradinginv 复制页面 2019.11.29
+    app.route('/:main(forextrading|forextradinginv)/:page(home|partners|traders)/:subpage(*)').get(function (req, res) {
         setEnvCf(req, res);
         if (isMobile(req)) {
             var mobile = '1';
@@ -811,6 +811,7 @@ module.exports = function (app) {
             var mobile = '0';
         }
         res.render('bd/forextrading/index.html', extendPublic({
+            main: req.params.main,
             page: req.params.page,
             subpage:req.params.subpage,
             mobile: mobile
