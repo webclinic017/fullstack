@@ -40,7 +40,8 @@
   }
 }
 @include b(global_t35) {
-  height: 2700px;
+  // height: 2700px;
+  padding-bottom: 150px;
   // 阿拉伯换图
   background-image: url('/images/bd_g35/web_bg_new.png');
   background-position: center top;
