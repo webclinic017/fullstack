@@ -316,7 +316,8 @@
         }
         //获取domain
         $scope.getDomain = function () {
-            var domain = location.hostname.match(/\.\w+\.com/) ? location.hostname.match(/\.\w+\.com/)[0] : '.tigerwit.com';
+            // var domain = location.hostname.match(/\.\w+\.com/) ? location.hostname.match(/\.\w+\.com/)[0] : '.tigerwit.com';
+            var domain = '.' + location.hostname.split('.').slice(-2).join('.');
             // console.log(url.match(/\.\w+\.com/)[0]);
             return domain;
         }

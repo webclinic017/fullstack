@@ -332,12 +332,12 @@
                 $.cookie('invite_status', 2, {expires: 1, path: '/', domain: getDomain()});
             }
 
-            if (window.location.hostname === 'lonfx.tigerwit.com') {
-                oReg.search_arr.pid = 'lonfx';
-            }
-            if (window.location.hostname === 'pandafx.tigerwit.com') {
-                oReg.search_arr.pid = 'pandafx';
-            }
+            // if (window.location.hostname === 'lonfx.tigerwit.com') {
+            //     oReg.search_arr.pid = 'lonfx';
+            // }
+            // if (window.location.hostname === 'pandafx.tigerwit.com') {
+            //     oReg.search_arr.pid = 'pandafx';
+            // }
 
             // console.log(oReg);
         }());

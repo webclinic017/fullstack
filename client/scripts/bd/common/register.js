@@ -4,21 +4,22 @@
 ;
 (function () {
     /*生成token*/
-    var token = null;
+    // var token = null;
 
-    function set_token() {
-        publicRequest('setToken', 'POST').then(function (data) {
-            if (!data) return;
-            if (data.is_succ) {
-                token = $.cookie("code_token");
-            }
-        });
-    }
+    // function set_token() {
+    //     publicRequest('setToken', 'POST').then(function (data) {
+    //         if (!data) return;
+    //         if (data.is_succ) {
+    //             token = $.cookie("code_token");
+    //         }
+    //     });
+    // }
     /*
         获取domain
     */
    function getDomain() {
-    var domain = location.hostname.match(/\.\w+\.com/) ? location.hostname.match(/\.\w+\.com/)[0] : '.tigerwit.com';
+    // var domain = location.hostname.match(/\.\w+\.com/) ? location.hostname.match(/\.\w+\.com/)[0] : '.tigerwit.com';
+    var domain = '.' + location.hostname.split('.').slice(-2).join('.');
     // console.log(url.match(/\.\w+\.com/)[0]);
     return domain;
    }
@@ -198,12 +199,12 @@
                 $.cookie('invite_status', 2, {expires: 1, path: '/', domain: getDomain()});
             }
 
-            if (window.location.hostname === 'lonfx.tigerwit.com') {
-                oReg.search_arr.pid = 'lonfx';
-            }
-            if (window.location.hostname === 'pandafx.tigerwit.com') {
-                oReg.search_arr.pid = 'pandafx';
-            }
+            // if (window.location.hostname === 'lonfx.tigerwit.com') {
+            //     oReg.search_arr.pid = 'lonfx';
+            // }
+            // if (window.location.hostname === 'pandafx.tigerwit.com') {
+            //     oReg.search_arr.pid = 'pandafx';
+            // }
 
             // console.log(oReg);
         }());

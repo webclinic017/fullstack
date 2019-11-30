@@ -1,7 +1,7 @@
 ;
 (function() {
     'use strict';
-
+    // (弃)
     angular
         .module('fullstackApp')
         .directive('twMedia', twMedia);

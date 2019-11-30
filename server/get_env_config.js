@@ -22,15 +22,15 @@
     function SetEnvConfig(req) {
         // console.log(req.hostname);
 
-        if (req.hostname === 'lonfx.tigerwit.com') {
-            envConfig.company_name = 'lonfx';
-            envConfig.url_path = 'https://lonfx.tigerwit.com';
-            envConfig.access_origin = '';
-        } else if (req.hostname === 'pandafx.tigerwit.com' || req.hostname === 'pandafxdemo.tigerwit.com') {
-            envConfig.company_name = 'pandafx';
-            envConfig.url_path = 'https://pandafx.tigerwit.com';
-            envConfig.access_origin = '';
-        } else {
+        // if (req.hostname === 'lonfx.tigerwit.com') {
+        //     envConfig.company_name = 'lonfx';
+        //     envConfig.url_path = 'https://lonfx.tigerwit.com';
+        //     envConfig.access_origin = '';
+        // } else if (req.hostname === 'pandafx.tigerwit.com' || req.hostname === 'pandafxdemo.tigerwit.com') {
+        //     envConfig.company_name = 'pandafx';
+        //     envConfig.url_path = 'https://pandafx.tigerwit.com';
+        //     envConfig.access_origin = '';
+        // } else {
             // envConfig.company_name = 'pandafx';
             envConfig.company_name = process.env.COMPANY_NAME;
             envConfig.url_path = process.env.URL_PATH;
@@ -38,7 +38,7 @@
             envConfig.access_origin2 = process.env.ACCESS_ORIGIN2;
             envConfig.isCloned = false;
             envConfig.cdn_url = process.env.CDN_URL;
-        }
+        // }
         // console.log(envConfig);
     }
 

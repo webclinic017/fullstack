@@ -1,5 +1,5 @@
 ;(function () {
-
+    // （弃）
     window.wxShareConfig = wxShareConfig;
     function wxShareConfig(config) {
         //console.log('wx_config:',config);
