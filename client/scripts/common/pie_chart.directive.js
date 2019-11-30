@@ -6,9 +6,9 @@
         .module('fullstackApp')
         .directive('twPieChart', twPieChart);
 
-    twPieChart.$inject = ['whiteLabel'];    
+    twPieChart.$inject = ['whiteLabel', 'lang'];
 
-    function twPieChart(whiteLabel) {
+    function twPieChart(whiteLabel, lang) {
         var col_color = whiteLabel.pieChart;
         var options = {
             chart: {
@@ -22,6 +22,7 @@
             },
 
             legend: {
+                rtl: lang.isAr(),
                 enabled: false
             },
 
@@ -68,10 +69,10 @@
                 var type = attrs.pieType;
 
                 if (type === 'master' || type === 'space') {
-                    
+
                     angular.extend(options, {
                         tooltip: {
-                            useHTML: true,
+                            // useHTML: true,
                             backgroundColor: 'rgba(255, 255, 255, 0.95)',
                             // pointFormat: '<b>{point.percentage:.2f}%</b>'
                             pointFormat: '<b>{point.y}</b>'
@@ -79,13 +80,8 @@
 
                         colors: col_color.colors,
 
-                        legend: {
-                            enabled: false
-                        },
-
                         plotOptions: {
                             pie: {
-                                allowPointSelect: false,
                                 shadow: false,
                                 center: ['50%', '50%'],
                                 borderWidth: 2,
@@ -113,7 +109,67 @@
                         $el.highcharts(options);
                     });
                 }
-            }    
+                if (type === 'masterPortfolio') {
+
+                    angular.extend(options, {
+                        // legend: {
+                        //     enabled: true,
+                        //     rtl: lang.isAr(),
+                        //     symbolWidth: 15,
+                        //     symbolHeight: 15,
+                        //     symbolRadius: 10,
+                        //     layout: 'vertical',
+                        //     align: 'right',
+                        //     itemMarginTop: 5,
+                        //     itemMarginBottom: 5,
+                        //     maxHeight: 300,
+                        //     verticalAlign: 'middle',
+                        //     // x: 0,
+                        //     // y: 20,
+                        //     labelFormatter: function () {
+                        //         return this.name + '  ' + this.y.toFixed(2) + '%';
+                        //     }
+                        // },
+                        tooltip: {
+                            // useHTML: true,
+                            backgroundColor: 'rgba(255, 255, 255, 0.95)',
+                            pointFormat: '<b>{point.y:.2f}%</b>'
+                        },
+
+                        // colors: col_color.colors2,
+
+                        plotOptions: {
+                            pie: {
+                                shadow: false,
+                                center: ['50%', '50%'],
+                                borderWidth: 2,
+                                states: {
+                                    hover: {
+                                        enabled: false
+                                    }
+                                },
+                                showInLegend: true,
+                                dataLabels: {
+                                    enabled: false
+                                }
+                            }
+                        },
+
+                        series: [{
+                            type: 'pie',
+                            innerSize: '80%',
+                            data: []
+                        }]
+                    });
+
+                    scope.$on('paintPieChart', function (event, data) {
+
+                        options.series[0].data = data;
+                        $el.highcharts(options);
+                    });
+
+                }
+            }
         }
     }
 })();

@@ -5,6 +5,10 @@
     min-height: 69px;
     background: $new-body;
 }
+.fff_body {
+    min-height: 69px;
+    background: $white-100;
+}
 //== 定位
 .relative {
     position: relative !important;
@@ -111,6 +115,9 @@
 .font-danger {
     color: $brand-danger !important;
 }
+.bg-danger{
+    background-color: $brand-danger !important;
+}
 
 .font-info {
     color: $brand-info !important;
@@ -118,6 +125,9 @@
 
 .font-success {
     color: $brand-success !important;
+}
+.bg-success {
+    background-color: $brand-success !important;
 }
 
 .font-warning {
@@ -624,6 +634,10 @@
 .flex-wrap {
     @include flexWrap(wrap);
 }
+.flex-dir-row {
+    @include flexDirection(row);
+}
+
 .cursor_pointer {
     cursor: pointer;
 }

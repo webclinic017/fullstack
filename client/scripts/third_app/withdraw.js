@@ -9,7 +9,7 @@ var canWithdrawAmount = 0; //可提现金额
 var withdrawNotice = ''; //提现提示语
 var thirdThirdType = '';  // 第三方平台ID-出金接口的third_type参数
 var thirdThirdAccount = '';  // 完整账号-出金接口的third_account参数
-var thirdThirdWithdrawType = '';  // 第三方出金时withdraw_type参数
+var thirdThirdWithdrawType = '';  // 第三方出金时withdraw_type参数 为1时需要银行卡
 var thirdThirdWithdrawBankId = '';  // 第三方出金时withdraw_type参数为1时银行卡ID
 var eleWithdraw = {
   payWithdraw: '#third_app_withdraw',
@@ -150,6 +150,7 @@ $(eleWithdraw.payAccountLst).on("tap", "li", function () {
       listType: cType,
       pageType: 'withdraw',
       bankId: withdrawBankId,
+      third_type: thirdThirdType,   // 第三方无账号平台需要
       notInsertTemp: false
     });
   }

@@ -52,7 +52,8 @@
                // Allow same origin resource loads.
                'self',
                // Allow loading from our assets domain.  Notice the difference between * and **.
-               'http://bd.tigerwit.com/**']);
+            //    'http://bd.tigerwit.com/**'
+            ]);
         }])
         // .config(['$locationProvider', function($locationProvider) {
         //     $locationProvider.html5Mode(true);

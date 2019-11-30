@@ -126,7 +126,8 @@
         获取domain
     */
     function getDomain() {
-        var domain = location.hostname.match(/\.\w+\.com/) ? location.hostname.match(/\.\w+\.com/)[0] : '.tigerwit.com';
+        // var domain = location.hostname.match(/\.\w+\.com/) ? location.hostname.match(/\.\w+\.com/)[0] : '.tigerwit.com';
+        var domain = '.' + location.hostname.split('.').slice(-2).join('.');
         // console.log(url.match(/\.\w+\.com/)[0]);
         return domain;
     }
@@ -134,7 +135,7 @@
 
     //设置邮箱
     function getEmailPhone(ele, emailOrPhone, callback) {
-        console.log(getDomain());
+        // console.log(getDomain());
         //emailOrPhone 默认邮箱
         if (sessionStorage["sysMessage"]) {
             if (ele) {
@@ -1681,7 +1682,7 @@
         var d = new Date();
         d.setTime(d.getTime() + (-1 * 24 * 60 * 60 * 1000));
         document.cookie = 'lang=' + lang + '; path=/; expires=' + d.toUTCString();
-        document.cookie = 'lang=' + lang + '; path=/; domain=' + location.hostname.match(/\.\w+\.com/)[0];
+        document.cookie = 'lang=' + lang + '; path=/; domain=' + getDomain();
         location.reload();
     };
     function languageFun() {

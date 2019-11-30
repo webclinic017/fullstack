@@ -13,7 +13,7 @@
                 <div class="col-xs-12">
                     <div class="form-control-wrapper">
                         <input class="form-control" name="firstname" type="text" required
-                            placeholder="{{ personal.region.world_code !== 'CN' ? lang.text('tigerWitID.myAccount.firstName') : lang.text('tigerWitID.myAccount.realName')}}"
+                            placeholder="{{ (personal.region.world_code !== 'CN' && personal.region.world_code !== 'VN') ? lang.text('tigerWitID.myAccount.firstName') : lang.text('tigerWitID.myAccount.realName')}}"
                             ng-model="realnameInfo.firstname"
                             ng-disabled="nameDisabled.first"
                             ng-class="{'disabled': nameDisabled.first, 'form-control-error': frontErr.firstname.show && realnameForm.firstname.$invalid}"
@@ -26,7 +26,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row" ng-if="personal.region.world_code !== 'CN'">
+            <div class="row" ng-if="personal.region.world_code !== 'CN' && personal.region.world_code !== 'VN'">
                 <div class="col-xs-12">
                     <div class="form-control-wrapper">
                         <input class="form-control" name="lastname" type="text"

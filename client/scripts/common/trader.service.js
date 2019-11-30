@@ -4,9 +4,9 @@
 
     angular.module('fullstackApp').factory('trader', trader);
 
-    trader.$inject = ['$http', 'api', 'publicHttp'];
+    trader.$inject = ['$http', 'api', 'publicHttp', 'fun'];
 
-    function trader($http, api, publicHttp) {
+    function trader($http, api, publicHttp, fun) {
         var o = api.trader;
         var service = {
             getMasterCurrent: getMasterCurrent,
@@ -16,10 +16,13 @@
             getAvaCopyAmount: getAvaCopyAmount,
             getHistoricalRate: getHistoricalRate,
             getMasterInfo: getMasterInfo,
+            getMasterNewInfo: getMasterNewInfo,
             getMonthlySymbols: getMonthlySymbols,
             getMasterGrade: getMasterGrade,
             getMasterCondition: getMasterCondition,
-            applyMaster: applyMaster
+            applyMaster: applyMaster,
+            getmasterDayProfitRates: getmasterDayProfitRates,
+            getMasterTradProfile: getMasterTradProfile
         };
         return service;
 
@@ -90,6 +93,7 @@
         function getAvaCopyAmount(usercode) {
             return publicHttp.dealPublicRequest(o.getAvaCopyAmountApi, 'GET', {
                 user_code: usercode,
+
             });
         }
 
@@ -118,6 +122,43 @@
                 return data;
             });
         }
+		/**
+         * trader 获取高手的基本信息
+         * @param user_code
+         * @returns {*}
+         */
+        function getMasterNewInfo(user_code) {
+            return publicHttp.dealPublicRequest(o.getMasterNewInfoApi, 'GET', {
+                user_code: user_code
+            }).then(function (data) {
+                //console.log(data);
+                data.data.usercode = data.data.user_code;
+                return data;
+            });
+        }
+		/**
+         * trader 获取高手交易信息
+         * @param user_code
+         * @returns {*}
+         */
+        function getMasterTradProfile(user_code) {
+            return publicHttp.dealPublicRequest(o.getMasterTradProfileApi, 'GET', {
+                user_code: user_code
+            })
+        }
+        /**
+         * trader 获取近三十天高手每日收益率列表
+         * @param user_code
+         * @returns {*}
+         */
+        function getmasterDayProfitRates(user_code) {
+            return publicHttp.dealPublicRequest(o.getmasterDayProfitRatesApi, 'GET', {
+                user_code: user_code,
+                start_time: fun.subtr(fun.accDiv(Date.parse(new Date()), 1000), 365*24*60*60), // 取一年
+                end_time: fun.accDiv(Date.parse(new Date()), 1000),
+            })
+        }
+
 
 		/**
          * trader 获取月交易品种

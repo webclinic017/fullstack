@@ -13,7 +13,7 @@ var masterApi = require('./api/master');
 var report_sites = require('./report_site');
 var depositBankList = require('./deposit_bank_list');
 var depositEvidenceList = require('./deposit_evidence_list');
-var ACCESS_ORIGIN2 = require('./get_env_config').envConfig.access_origin2 || 'https://a.tigerwit.com';
+// var ACCESS_ORIGIN2 = require('./get_env_config').envConfig.access_origin2 || 'https://a.tigerwit.com';
 var setCompanyCookie,
     envConfig,
     URL_PATH,
@@ -108,12 +108,12 @@ module.exports = function (app) {
     });
 
     // 熊猫外汇页面路径
-    app.route('/panda').get(function (req, res) {
-        res.redirect('https://dp.tigerwit.com');
-    });
-    app.route('/panda/:subpage(login|asset)').get(function (req, res) {
-        res.redirect('https://dpdev.tigerwit.com');
-    });
+    // app.route('/panda').get(function (req, res) {
+    //     res.redirect('https://dp.tigerwit.com');
+    // });
+    // app.route('/panda/:subpage(login|asset)').get(function (req, res) {
+    //     res.redirect('https://dpdev.tigerwit.com');
+    // });
     /*
      * 三方相关页面 start
      */
@@ -486,28 +486,28 @@ module.exports = function (app) {
     app.route('/trader/:usercode').get(function (req, res) {
         setEnvCf(req, res);
         // console.log('---------cookies---------', req.headers.cookie);
-        var usercode = req.params.usercode;
-        var masterApiPath = req.protocol+'://'+req.hostname + '/api/v3';
-        console.log('------masterApiPath', masterApiPath);
-        console.log(req.protocol)
+        // var usercode = req.params.usercode;
+        // var masterApiPath = req.protocol+'://'+req.hostname + '/api/v3';
+        // console.log('------masterApiPath', masterApiPath);
+        // console.log(req.protocol)
 
-        request({
-            url: masterApiPath + '/master/trading_profile?user_code=' + usercode,
-            headers: {
-                'cookie': req.headers.cookie
-            }
-        }, function (error, response, body) {
-            if (!error && response.statusCode == 200) {
-                setEnvCf(req, res); //再次设置避免tigerwit和pandafx混乱
-                body = JSON.parse(body);
-                // console.info('-------body.data', body.data);
-                res.render('web/trader.html', extendPublic({
-                    master: body.data,
-                    usercode: usercode
-                }, req));
-            }
-        })
-
+        // request({
+        //     url: masterApiPath + '/master/trading_profile?user_code=' + usercode,
+        //     headers: {
+        //         'cookie': req.headers.cookie
+        //     }
+        // }, function (error, response, body) {
+        //     if (!error && response.statusCode == 200) {
+        //         setEnvCf(req, res); //再次设置避免tigerwit和pandafx混乱
+        //         body = JSON.parse(body);
+        //         // console.info('-------body.data', body.data);
+        //         res.render('web/trader.html', extendPublic({
+        //             master: body.data,
+        //             usercode: usercode
+        //         }, req));
+        //     }
+        // })
+        res.render('web/trader.html', extendPublic({}, req));
 
         // request(masterApiPath + '/master/trading_profile?user_code=' + usercode, function (error, response, body) {
         //     if (!error && response.statusCode == 200) {

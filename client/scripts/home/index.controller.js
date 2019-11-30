@@ -333,5 +333,21 @@
             return guid;
         }
 
+
+        // 明星高手
+        // 获取明星高手列表
+        $scope.masterStarList = {};   // 明星高手
+        getMastersStarList();
+        function getMastersStarList() {
+            ranklist.getMastersNewList({
+                type: 1
+            }).then(function (data) {
+                if (!data) return;
+                if (data.is_succ) {
+                    $scope.masterStarList = data.data;
+                }
+            })
+
+        }
     }
 })();

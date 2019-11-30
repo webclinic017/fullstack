@@ -718,7 +718,8 @@
         ]
         $scope.$watch('personal.updatePapers', function (newVal, oldVal) {
             if (JSON.stringify(newVal) != "{}") {
-                if ($scope.personal.region.world_code !== 'CN') {
+                // 中国与越南姓与名是连在一起的
+                if ($scope.personal.region.world_code !== 'CN' && $scope.personal.region.world_code !== 'VN') {
                     $scope.realnameInfo.firstname = newVal.first_name;
                     $scope.realnameInfo.lastname = newVal.last_name;
                 } else {
@@ -726,7 +727,7 @@
                 }
                 // 更新证件姓名不能填
                 if (newVal.hint == 1 || newVal.profile_check === 4) {
-                    if ($scope.personal.region.world_code !== 'CN') {
+                    if ($scope.personal.region.world_code !== 'CN' && $scope.personal.region.world_code !== 'VN') {
                         $scope.nameDisabled.first = newVal.first_name;
                         $scope.nameDisabled.last = newVal.last_name;
                     } else {
@@ -1164,11 +1165,12 @@
         $scope.switchFuzzySearch = function () {
             $scope.fuzzySearch.fillOrSearch = !$scope.fuzzySearch.fillOrSearch
         }
+        var GETADDRESSURLKEY = 'FE41-PX26-HN28-WZ34';
         var getAddressUrlTimer;
         $scope.getAddressUrl = function () {
             $timeout.cancel(getAddressUrlTimer);
             var params = {
-                Key: 'GE86-EG48-RA51-EZ99',
+                Key: GETADDRESSURLKEY,
                 Text: $scope.fuzzySearch.addressValue,
                 Limit: 20,
                 Language: $scope.lang.currentLanguage(),
@@ -1221,7 +1223,7 @@
                     Limit: 20,
                     Language: $scope.lang.currentLanguage(),
                     Container: item.Id,
-                    Key: 'GE86-EG48-RA51-EZ99',
+                    Key: GETADDRESSURLKEY,
                     Countries: $scope.addressInfo.country.value
                 }
                 account.getAddressUrl(params).then(function (data) {

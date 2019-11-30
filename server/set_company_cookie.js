@@ -10,7 +10,8 @@
         var cdn_url = envConfig.cdn_url || '';
         var is_cloned = envConfig.isCloned || '';
         var lang = '';
-        var domain = req.host.match(/\.\w+\.com/) ? req.host.match(/\.\w+\.com/)[0] : '.tigerwit.com';
+        // var domain = req.host.match(/\.\w+\.com/) ? req.host.match(/\.\w+\.com/)[0] : '.tigerwit.com';
+        var domain = '.' + req.host.split('.').slice(-2).join('.');
         var cArr = [
             'company_name=' + company_name + '; path=/; domain='+domain,
             'access_origin=' + access_origin + '; path=/; domain='+domain,
