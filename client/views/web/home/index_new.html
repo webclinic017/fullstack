@@ -144,12 +144,20 @@
                                       {{ lang.text("tigerWitID.master.last30AaysYield") }}
                                   </div>
                               </div>
-                              <div class="dropdown">
+                              <div class="dropdown" ng-if="masterStar.follow_profit >= 1000">
                                   <div class="num">
-                                      ${{ masterStar.follow_profit || '0' }}
+                                      ${{ masterStar.follow_profit }}
                                   </div>
                                   <div class="tip">
                                       {{ lang.text("tigerWitID.master.profitCopiers") }}
+                                  </div>
+                              </div>
+                              <div class="dropdown" ng-if="masterStar.follow_profit < 1000">
+                                  <div class="num">
+                                      {{ masterStar.history_copy_count || '0' }}
+                                  </div>
+                                  <div class="tip">
+                                      {{ lang.text("tigerWitID.master.copiers") }}
                                   </div>
                               </div>
                           </div>

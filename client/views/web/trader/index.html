@@ -69,13 +69,13 @@
                     <h4 class="trader_gray_color">{{ lang.text("tigerWitID.master.last30AaysYield") }}</h4>
                 </li>
                 <!-- <li></li> -->
-                <li class="trader_profit" ng-if="master.master_type === 1">
+                <li class="trader_profit" ng-if="master.follow_profit >= 1000">
                     <div class="trader_profit__item">
-                        <span class="big-num-font">${{ master.follow_profit || '0' }}</span>
+                        <span class="big-num-font">${{ master.follow_profit }}</span>
                     </div>
                     <h4 class="trader_gray_color">{{ lang.text("tigerWitID.master.profitCopiers") }}</h4>
                 </li>
-                <li class="trader_profit" ng-if="master.master_type !== 1">
+                <li class="trader_profit" ng-if="(master.follow_profit < 1000)">
                     <div class="trader_profit__item">
                         <span class="big-num-font">{{ master.history_copy_count || '0' }}</span>
                     </div>

@@ -299,7 +299,7 @@ $ratio: 1.165;
 }
 
 @include b(re_trader_detail) {
-  margin-top: 30px;
+  margin-bottom: 30px;
 
   @include e(table) {
     padding: 22px 0;
@@ -451,7 +451,6 @@ $ratio: 1.165;
 // }
 
 @include b(re_trader_type) {
-  margin-top: 26px;
   padding: 22px 0;
   margin-bottom: 45px;
   @include e(average_time) {

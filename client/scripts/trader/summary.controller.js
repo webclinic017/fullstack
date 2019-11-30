@@ -77,7 +77,7 @@
                         ]
                     }]
                     // 空的不显示
-                    for(var i = 0; i < $scope.masterPieArr.length; i++){
+                    for(var i = ($scope.masterPieArr.length-1); i >= 0; i--){
                         if($scope.masterPieArr[i].y == 0){
                             $scope.masterPieArr.splice(i, 1);
                             $scope.masterlineArr[0].data.splice(i,1);
@@ -86,9 +86,9 @@
                     }
                     $timeout(function(){
                         $scope.$broadcast('rendBarData', $scope.masterlineArr);
+                        $scope.$broadcast('paintPieChart', $scope.masterPieArr);
                     },100)
                     
-                    $scope.$broadcast('paintPieChart', $scope.masterPieArr);
                 }
             });
         }

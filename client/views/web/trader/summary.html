@@ -47,7 +47,7 @@
             </ul>
         </div>
     </div>
-    <div class="re_trader_type currency-width-border">
+    <div class="re_trader_type currency-width-border" ng-if="masterPieArr.length > 0">
         <!-- <div class="re_trader_type__title item-center">
             <span>{{ lang.text("tigerWitID.dataStatistics.mainTradingSymbols") }}</span>
             <select class="re_trader_chart__changeType"
@@ -82,7 +82,7 @@
             </div>
             <div class="flex1 re_trader_type__bar">
                 <h5 class="clearfix re_trader_type__title1"><span class="fl">{{lang.text("tigerWitID.master.profit")}}</span><span class="fr">{{lang.text("tigerWitID.master.loss")}}</span></h5>
-                <div tw-bar-chart data-type='masterProfitBar' ng-if="masterPieArr.length > 0" ng-style="{'height': masterPieArr.length * 40 }"></div>
+                <div tw-bar-chart data-type='masterProfitBar' ng-style="{'height': masterPieArr.length * 40 }"></div>
             </div>
 
         </div>

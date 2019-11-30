@@ -436,8 +436,8 @@
                         // });
                         var data1 = [], data2 = [];
                         for(var i = 0; i < data.length; i++){
-                            data1.push([fun.accMul(data[i].record_date, 1000), fun.accMul(data[i].average, 100)])
-                            data2.push([fun.accMul(data[i].record_date, 1000), fun.accMul(data[i].personal, 100)])
+                            data1.push([fun.accMul(data[i].record_date, 1000), data[i].average])
+                            data2.push([fun.accMul(data[i].record_date, 1000), data[i].personal])
                         }
                         // console.log(data1,data2)
                         options.series[0] = {
