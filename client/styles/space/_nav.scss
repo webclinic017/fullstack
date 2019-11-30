@@ -32,7 +32,15 @@
             }
         }
     }
-
+    @include e(tip) {
+        padding-top: 20px;
+        margin-right: 18px;
+        margin-left: 18px;
+        color: $gray-darker;
+        > i{
+            cursor: pointer;
+        }
+    }
     @include e(prompt){
         color: red;
         a {

@@ -1,49 +1,57 @@
-;$(document).ready(function () {
+; $(document).ready(function () {
     var system = getQueryString('system');
+    var platform = getQueryString('platform');
     var userAgent = navigator.userAgent;
+    var isCn = system === 'cn' ? true : false;
+    if (/MicroMessenger/gi.test(userAgent)) {
+        // 微信浏览器中
+        $(".weixinTip").css("display", "block");
+        return;
+    }
     if (system === 'download_mt4') {
-        if(/MicroMessenger/gi.test(userAgent)) {
-            // 微信浏览器中
-            $(".weixinTip").css("display", "block");
-            return;
-        } else {
-            window.location.href = "https://download.mql5.com/cdn/web/metaquotes.software.corp/mt4/metatrader4.apk?utm_campaign=www.metatrader4.com";
-        }
+        window.location.href = "https://download.mql5.com/cdn/web/metaquotes.software.corp/mt4/metatrader4.apk?utm_campaign=www.metatrader4.com";
     } else {
-        var isCn = system === 'cn' ? true : false;
         var search_source = checkUserSource();
         // console.log(search_source);
         publicRequest('setUserSource', 'POST', {
             source: JSON.stringify(search_source)
         }).then(function () {
-            if (isAndriod() || isWindows()) {
-                if(/MicroMessenger/gi.test(userAgent)) {
-                    // 微信浏览器中
-                    $(".weixinTip").css("display", "block");
-                    return;
+            if (platform) {
+                if (platform == 'android') {
+                    downloadAndroid()
+                } else if (platform == 'ios') {
+                    downloadIos()
+                }else{
+                    alert('未知的平台')
                 }
-                if (isCn) {
-                    // window.location.href = 'http://dltw.oss-cn-beijing.aliyuncs.com/apk/tigerwit_v4.3.1.apk';
-                    publicRequest('getVersionCheck', 'GET', {
-                        type: 3,
-                        version: '1.0.0',
-                        lang: 'cn'
-                    }).then(function (data) {
-                        if (data.is_succ) {
-                            window.location.href = data.data.url;
-                        }
-                    });
-                } else {
-                    window.location.href = nodeResponseInfo.androidGlobal;
-                }
-                
+            } else if (isAndriod() || isWindows()) {
+                downloadAndroid()
             } else {
-                if (isCn) {
-                    window.location.href = nodeResponseInfo.iosCn;
-                } else {
-                    window.location.href = nodeResponseInfo.ios;
-                }
+                downloadIos()
             }
         });
+    }
+    function downloadAndroid() {
+        if (isCn) {
+            // window.location.href = 'http://dltw.oss-cn-beijing.aliyuncs.com/apk/tigerwit_v4.3.1.apk';
+            publicRequest('getVersionCheck', 'GET', {
+                type: 3,
+                version: '1.0.0',
+                lang: 'cn'
+            }).then(function (data) {
+                if (data.is_succ) {
+                    window.location.href = data.data.url;
+                }
+            });
+        } else {
+            window.location.href = nodeResponseInfo.androidGlobal;
+        }
+    }
+    function downloadIos() {
+        if (isCn) {
+            window.location.href = nodeResponseInfo.iosCn;
+        } else {
+            window.location.href = nodeResponseInfo.ios;
+        }
     }
 });

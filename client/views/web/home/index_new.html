@@ -49,26 +49,39 @@
           <div class="mg-rg-80"></div>
           <%}%>
           <div class="download-btn">
-            <div class="mg-bt-30">
+            <div class="title">
               <%= lang.text("newhome_9_1")%>
         </div>
-        <div>
-          <div class="mg-bt-15">
-            <a class="inline-block" href="<%= lang.text('downloadGlobalIos') %>" ng-click="[toTrackEvent('home page', 'global_home_click_appstore'), toGtagEvent('click_ios_download_web')]"><img
-              ng-src="<%= lang.image('homeAppIos')%>" alt=""></a>
-          </div>
+        <ul class="praise">
+          <li class="mg-bt-15">
+            <a class="inline-block" href="/m/blank?platform=ios"
+              ng-click="[toTrackEvent('home page', 'global_home_click_appstore'), toGtagEvent('click_ios_download_web')]"><img
+                ng-src="<%= lang.image('homeAppIos')%>" alt=""></a>
+          </li>
           <%if (lang.areaId != 1) {%>
-          <div>
-            <a class="inline-block" href="<%= lang.text('downloadGlobalAndroid') %>" ng-click="[toTrackEvent('home page', 'global_home_click_googleplay'), toGtagEvent('click_android_download_web')]"><img
-              ng-src="<%= lang.image('homeAppAndroidGlobal')%>" alt=""></a>
-          </div>
+          <li class="mg-bt-15">
+            <a class="inline-block" href="/m/blank?platform=android"
+              ng-click="[toTrackEvent('home page', 'global_home_click_googleplay'), toGtagEvent('click_android_download_web')]"><img
+                ng-src="<%= lang.image('homeAppAndroidGlobal')%>" alt=""></a>
+          </li>
           <%} else {%>
-          <div>
-            <a class="inline-block" ng-href="{{appVersionInfo.android}}"><img ng-src="<%= lang.image('homeAppAndroidCn')%>"
-                alt=""></a>
-          </div>
+          <li class="mg-bt-15">
+            <a class="inline-block" href="/m/blank?platform=android&system=cn"><img
+                ng-src="<%= lang.image('homeAppAndroidCn')%>" alt=""></a>
+          </li>
           <%}%>
-            </div>
+        </ul>
+            <ul class="praise">
+              <li>
+                <img class="praise-img" src="/white_label/home/Best-Global-Forex-Trading-Innovation_WHITE.png" alt="">
+              </li>
+              <li>
+                <img class="praise-img" src="/white_label/home/Best-Asian-Forex-Trading-App-WHITE.png" alt="">
+              </li>
+              <li>
+                <img class="praise-img" src="/white_label/home/Most-Transparent-Global-Forex-Broker_WHITE.png" alt="">
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -106,205 +119,204 @@
               style="width: 220px"
               ng-click="toTrackEvent('home page', 'global_home_click_select_master')"><%= lang.text("newhome_16")%></a>
           </div>
-        </div>
       </div>
-      <div class="index_new__flexible">
-        <div class="index_new__container">
-          <h3 class="index_new__flexible-title"><%= lang.text("newhome_17")%></h3>
-          <p class="index_new__flexible-sub_tit"><%= lang.text("newhome_17_1")%></p>
-          <p class="index_new__flexible-sub_tit"><%= lang.text("newhome_17_2")%></p>
-          <div class="">
-            <div class="index_new__flexible-box">
-              <div class="content">
-                <div class="item-center">
-                  <ul class="index_new_qupte__title item-center h_border">
-                    <li class="pro">
-                      <%= lang.text("home64")%>
-                    </li>
-                    <li class="sell">
-                      <%= lang.text("home65")%>
-                    </li>
-                    <li class="buy">
-                      <%= lang.text("home66")%>
-                    </li>
-                  </ul>
-                  <ul class="index_new_qupte__title item-center">
-                    <li class="pro">
-                      <%= lang.text("home64")%>
-                    </li>
-                    <li class="sell">
-                      <%= lang.text("home65")%>
-                    </li>
-                    <li class="buy">
-                      <%= lang.text("home66")%>
-                    </li>
-                  </ul>
-                </div>
-                <div class="item-center flex-wrap">
-                  <ul ng-repeat="quoteSymbol in quoteSymbols" class="index_new_qupte__content"
-                    ng-class="{h_border: $index%2 === 0}">
-                    <li class="pro">
-                      <%if (!lang.isEnglishArea()){%>
-                      {{ quoteSymbol.symbol_zh }}<br>({{ quoteSymbol.symbol }})
-                      <%}else {%>
-                      {{ quoteSymbol.symbol }}
-                      <%}%>
+    </div>
+    <div class="index_new__flexible">
+      <div class="index_new__container">
+        <h3 class="index_new__flexible-title"><%= lang.text("newhome_17")%></h3>
+        <p class="index_new__flexible-sub_tit"><%= lang.text("newhome_17_1")%></p>
+        <p class="index_new__flexible-sub_tit"><%= lang.text("newhome_17_2")%></p>
+        <div class="">
+          <div class="index_new__flexible-box">
+            <div class="content">
+              <div class="item-center">
+                <ul class="index_new_qupte__title item-center h_border">
+                  <li class="pro">
+                    <%= lang.text("home64")%>
+                  </li>
+                  <li class="sell">
+                    <%= lang.text("home65")%>
+                  </li>
+                  <li class="buy">
+                    <%= lang.text("home66")%>
+                  </li>
+                </ul>
+                <ul class="index_new_qupte__title item-center">
+                  <li class="pro">
+                    <%= lang.text("home64")%>
+                  </li>
+                  <li class="sell">
+                    <%= lang.text("home65")%>
+                  </li>
+                  <li class="buy">
+                    <%= lang.text("home66")%>
+                  </li>
+                </ul>
+              </div>
+              <div class="item-center flex-wrap">
+                <ul ng-repeat="quoteSymbol in quoteSymbols" class="index_new_qupte__content"
+                  ng-class="{h_border: $index%2 === 0}">
+                  <li class="pro">
+                    <%if (!lang.isEnglishArea()){%>
+                    {{ quoteSymbol.symbol_zh }}<br>({{ quoteSymbol.symbol }})
+                    <%}else {%>
+                    {{ quoteSymbol.symbol }}
+                    <%}%>
                     </li>
                     <%if (lang.areaId != 1) {%>
-                    <li class="sell" ng-class="{down: quoteSymbol.type === 'up', up: quoteSymbol.type === 'down'}">
-                      <span>
-                        {{ quoteSymbol.sell }}
-                      </span>
-                    </li>
-                    <li class="buy" ng-class="{down: quoteSymbol.type === 'up', up: quoteSymbol.type === 'down'}">
-                      <span>
-                        {{ quoteSymbol.buy }}
-                      </span>
-                    </li>
-                    <%} else {%>
-                    <li class="sell" ng-class="{up: quoteSymbol.type === 'up', down: quoteSymbol.type === 'down'}">
-                      <span>
-                        {{ quoteSymbol.sell }}
-                      </span>
-                    </li>
-                    <li class="buy" ng-class="{up: quoteSymbol.type === 'up', down: quoteSymbol.type === 'down'}">
-                      <span>
-                        {{ quoteSymbol.buy }}
-                      </span>
-                    </li>
-                    <%}%>
+                  <li class="sell" ng-class="{down: quoteSymbol.type === 'up', up: quoteSymbol.type === 'down'}">
+                    <span>
+                      {{ quoteSymbol.sell }}
+                    </span>
+                  </li>
+                  <li class="buy" ng-class="{down: quoteSymbol.type === 'up', up: quoteSymbol.type === 'down'}">
+                    <span>
+                      {{ quoteSymbol.buy }}
+                    </span>
+                  </li>
+                  <%} else {%>
+                  <li class="sell" ng-class="{up: quoteSymbol.type === 'up', down: quoteSymbol.type === 'down'}">
+                    <span>
+                      {{ quoteSymbol.sell }}
+                    </span>
+                  </li>
+                  <li class="buy" ng-class="{up: quoteSymbol.type === 'up', down: quoteSymbol.type === 'down'}">
+                    <span>
+                      {{ quoteSymbol.buy }}
+                    </span>
+                  </li>
+                  <%}%>
                 </ul>
             </div>
             <div class="index_new_qupte__tip">
                 *<%= lang.text("home67")%>
-                </div>
               </div>
             </div>
           </div>
-          <ul class="index_new__flexible-lst">
-            <li>
-              <img ng-src="/white_label/home/flex-icon-1.png" alt="">
-              <h5><%= lang.text("newhome_18")%></h5>
-              <p><%= lang.text("newhome_20")%></p>
-            </li>
-            <li>
-              <img ng-src="/white_label/home/flex-icon-2.png" alt="">
-              <h5><%= lang.text("newhome_21")%></h5>
-              <p><%= lang.text("newhome_22")%></p>
-              <p><%= lang.text("newhome_23")%></p>
-            </li>
-            <li>
-              <img ng-src="/white_label/home/flex-icon-3.png" alt="">
-              <h5><%= lang.text("newhome_27")%></h5>
-              <p><%= lang.text("newhome_24")%></p>
-            </li>
-            <li>
-              <img ng-src="/white_label/home/flex-icon-4.png" alt="">
-              <h5><%= lang.text("newhome_28")%></h5>
-              <p><%= lang.text("newhome_25")%></p>
-              <p><%= lang.text("newhome_26")%></p>
-            </li>
-          </ul>
-          <div class="index_new__flexible-btn_box">
-            <a href="/web/product/forex" class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient"
-              ng-click="toTrackEvent('home page', 'global_home_click_find_out_more')"><%= lang.text("newhome_29")%></a>
-          </div>
+        </div>
+        <ul class="index_new__flexible-lst">
+          <li>
+            <img ng-src="/white_label/home/flex-icon-1.png" alt="">
+            <h5><%= lang.text("newhome_18")%></h5>
+            <p><%= lang.text("newhome_20")%></p>
+          </li>
+          <li>
+            <img ng-src="/white_label/home/flex-icon-2.png" alt="">
+            <h5><%= lang.text("newhome_21")%></h5>
+            <p><%= lang.text("newhome_22")%></p>
+            <p><%= lang.text("newhome_23")%></p>
+          </li>
+          <li>
+            <img ng-src="/white_label/home/flex-icon-3.png" alt="">
+            <h5><%= lang.text("newhome_27")%></h5>
+            <p><%= lang.text("newhome_24")%></p>
+          </li>
+          <li>
+            <img ng-src="/white_label/home/flex-icon-4.png" alt="">
+            <h5><%= lang.text("newhome_28")%></h5>
+            <p><%= lang.text("newhome_25")%></p>
+            <p><%= lang.text("newhome_26")%></p>
+          </li>
+        </ul>
+        <div class="index_new__flexible-btn_box">
+          <a href="/web/product/forex" class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient"
+            ng-click="toTrackEvent('home page', 'global_home_click_find_out_more')"><%= lang.text("newhome_29")%></a>
         </div>
       </div>
-      <div class="index_new__container">
-        <div class="index_new__block">
-          <h3 class="index_new__block-title"><%= lang.text("newhome_30")%></h3>
-          <p class="index_new__block-sub_tit"><%= lang.text("newhome_31")%></p>
-          <div class="index_new__block-content">
-            <video height="500" controls autobuffer poster="/white_label/home/block-poster.png">
-              <source src="https://static.tigerwitfx.com/downloads/static/video/TigerWit_Final_v4.mp4"
-                type="video/mp4" />
-              <!-- <source src="my_video.ogv" type="video/ogg" />
+    </div>
+    <div class="index_new__container">
+      <div class="index_new__block">
+        <h3 class="index_new__block-title"><%= lang.text("newhome_30")%></h3>
+        <p class="index_new__block-sub_tit"><%= lang.text("newhome_31")%></p>
+        <div class="index_new__block-content">
+          <video height="500" controls autobuffer poster="/white_label/home/block-poster.png">
+            <source src="https://static.tigerwitfx.com/downloads/static/video/TigerWit_Final_v4.mp4" type="video/mp4" />
+            <!-- <source src="my_video.ogv" type="video/ogg" />
           <source src="my_video.webm" type="video/webm" /> -->
-              你浏览器不支持 video 功能，点击这里下载视频：<a
-                href="https://static.tigerwitfx.com/downloads/static/video/TigerWit_Final_v4.mp4">下载视频</a>
-            </video>
-          </div>
-          <div class="index_new__flexible-btn_box">
-            <a href="https://tech.tigerwit.com" class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient flexible_btn"
-              ng-click="toTrackEvent('home page', 'global_home_click_blockchain')"><%= lang.text("newhome_31_1")%></a>
-          </div>
+            你浏览器不支持 video 功能，点击这里下载视频：<a
+              href="https://static.tigerwitfx.com/downloads/static/video/TigerWit_Final_v4.mp4">下载视频</a>
+          </video>
+        </div>
+        <div class="index_new__flexible-btn_box">
+          <a href="https://tech.tigerwit.com" class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient flexible_btn"
+            ng-click="toTrackEvent('home page', 'global_home_click_blockchain')"><%= lang.text("newhome_31_1")%></a>
         </div>
       </div>
-      <%if (lang.areaId != 1) {%>
-      <div class="index_new__tools" style='background-image: url("<%= lang.image('homeToolsBgGlobal')%>")'>
-        <%} else {%>
-        <div class="index_new__tools" style='background-image: url("<%= lang.image('homeToolsBgCn')%>")'>
-          <%}%>
+    </div>
+    <%if (lang.areaId != 1) {%>
+    <div class="index_new__tools" style='background-image: url("<%= lang.image('homeToolsBgGlobal')%>")'>
+      <%} else {%>
+      <div class="index_new__tools" style='background-image: url("<%= lang.image('homeToolsBgCn')%>")'>
+        <%}%>
     <div class="index_new__container">
       <h3 class="index_new__tools-title"><%= lang.text("newhome_32")%></h3>
-          <p class="index_new__tools-sub_tit"><%= lang.text("newhome_33")%></p>
-          <p class="index_new__tools-sub_tit"><%= lang.text("newhome_34")%></p>
-          <p class="index_new__tools-sub_tit"><%= lang.text("newhome_35")%></p>
-          <p class="index_new__tools-sub_tit"><%= lang.text("newhome_35_1")%></p>
-          <p class="index_new__tools-sub_tit"><%= lang.text("newhome_35_2")%></p>
-          <div class="index_new__tools-download">
-            <a class="inline-block" href="<%= lang.text('downloadGlobalIos') %>"
-              ng-click="[toTrackEvent('home page', 'global_home_click_appstore'), toGtagEvent('click_ios_download_web')]"><img
+        <p class="index_new__tools-sub_tit"><%= lang.text("newhome_33")%></p>
+        <p class="index_new__tools-sub_tit"><%= lang.text("newhome_34")%></p>
+        <p class="index_new__tools-sub_tit"><%= lang.text("newhome_35")%></p>
+        <p class="index_new__tools-sub_tit"><%= lang.text("newhome_35_1")%></p>
+        <p class="index_new__tools-sub_tit"><%= lang.text("newhome_35_2")%></p>
+        <div class="index_new__tools-download">
+          <a class="inline-block" href="/m/blank?platform=ios"
+            ng-click="[toTrackEvent('home page', 'global_home_click_appstore'), toGtagEvent('click_ios_download_web')]"><img
               ng-src="<%= lang.image('homeAppIos')%>" alt=""></a>
-            <%if (lang.areaId != 1) {%>
-            <a class="inline-block" href="<%= lang.text('downloadGlobalAndroid') %>"
-              ng-click="[toTrackEvent('home page', 'global_home_click_googleplay'), toGtagEvent('click_android_download_web')]"><img
+          <%if (lang.areaId != 1) {%>
+          <a class="inline-block" href="/m/blank?platform=android"
+            ng-click="[toTrackEvent('home page', 'global_home_click_googleplay'), toGtagEvent('click_android_download_web')]"><img
               ng-src="<%= lang.image('homeAppAndroidGlobal')%>" alt=""></a>
-            <%} else {%>
-            <a class="inline-block" ng-href="{{appVersionInfo.android}}"
-              ng-click="toTrackEvent('home page', 'global_home_click_googleplay')"><img
+          <%} else {%>
+          <a class="inline-block" href="/m/blank?platform=android&system=cn"
+            ng-click="toTrackEvent('home page', 'global_home_click_googleplay')"><img
               ng-src="<%= lang.image('homeAppAndroidCn')%>" alt=""></a>
-            <%}%>
+          <%}%>
       </div>
     </div>
   </div>
   <div class="index_new__container">
     <div class="index_new__reliable">
       <h3 class="index_new__reliable-title"><%= lang.text("newhome_36")%></h3>
-            <ul class="index_new__reliable-lst">
-              <li>
-                <h5 class="f"><%= lang.text("newhome_37_1")%></h5>
-                <p><%= lang.text("newhome_37_2")%></p>
-              </li>
-              <li>
-                <h5 class="s"><%= lang.text("newhome_37")%></h5>
-                <p><%= lang.text("newhome_38")%></p>
-              </li>
-              <li>
-                <h5 class="t"><%= lang.text("newhome_39")%></h5>
-                <p><%= lang.text("newhome_40")%></p>
-                <p><%= lang.text("newhome_41")%></p>
-              </li>
-            </ul>
-            <!-- <div class="index_new__reliable-btn_box">
+          <ul class="index_new__reliable-lst">
+            <li>
+              <h5 class="f"><%= lang.text("newhome_37_1")%></h5>
+              <p><%= lang.text("newhome_37_2")%></p>
+            </li>
+            <li>
+              <h5 class="s"><%= lang.text("newhome_37")%></h5>
+              <p><%= lang.text("newhome_38")%></p>
+            </li>
+            <li>
+              <h5 class="t"><%= lang.text("newhome_39")%></h5>
+              <p><%= lang.text("newhome_40")%></p>
+              <p><%= lang.text("newhome_41")%></p>
+            </li>
+          </ul>
+          <!-- <div class="index_new__reliable-btn_box">
         <a href="/space/#/account/register" class="tw-btn tw-btn-lg200 tw-btn-capsule-bordered"><%= lang.text("newhome_29")%></a>
       </div> -->
-          </div>
         </div>
-        <!-- <div class="index_new__container">
+      </div>
+      <!-- <div class="index_new__container">
           <div class="index_new__client">
             <h3 class="index_new__client-title"><%= lang.text("newhome_42")%></h3>
             <p class="index_new__client-sub_tit"><%= lang.text("newhome_42_1")%></p>
             <img ng-src="<%= lang.image('homeMap')%>" alt="">
           </div>
         </div> -->
-        <div class="index_new__container">
-          <div class="index_new__float_box">
-            <div class="index_new__float space-between-center">
-              <div class="">
-                <h3><%= lang.text("newhome_43")%></h3>
-                <p><%= lang.text("newhome_44")%></p>
-                <p><%= lang.text("newhome_45")%></p>
-              </div>
-              <div class="flex1 text-center pd-lf-35 pd-rg-35">
-                <a href="/space/#/account/register" class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient"
-                  ng-click="[toTrackEvent('home page', 'global_home_last_open_account'), toGtagEvent('click_register_bottom_web')]"><%= lang.text("newhome_46")%></a>
-              </div>
+      <div class="index_new__container">
+        <div class="index_new__float_box">
+          <div class="index_new__float space-between-center">
+            <div class="">
+              <h3><%= lang.text("newhome_43")%></h3>
+              <p><%= lang.text("newhome_44")%></p>
+              <p><%= lang.text("newhome_45")%></p>
+            </div>
+            <div class="flex1 text-center pd-lf-35 pd-rg-35">
+              <a href="/space/#/account/register" class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient"
+                ng-click="[toTrackEvent('home page', 'global_home_last_open_account'), toGtagEvent('click_register_bottom_web')]"><%= lang.text("newhome_46")%></a>
             </div>
           </div>
         </div>
-        <div class="index_new__camber">
-
-        </div>
       </div>
+      <div class="index_new__camber">
+
+      </div>
+    </div>

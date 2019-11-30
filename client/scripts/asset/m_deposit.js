@@ -3,7 +3,7 @@ $(document).ready(function () {
     // var $payBtn = $("#m_deposit_test a");
     var order_no, real_id;
 
-    var search = location.search;
+    var search = location.search || location.href.slice(location.href.indexOf('?'));
     //使用baidu.template命名空间
     var bt=baidu.template;
     var banksInfoLst = {

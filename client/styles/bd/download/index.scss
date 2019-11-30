@@ -1,0 +1,67 @@
+@include b(download_app) {
+
+        @include displayFlex();
+        @include alignItems(center);
+        @include justifyContent(center);
+        padding: 0 130px;
+        height: 100%;
+        @include e(con) {
+            width: 100%;
+            max-width: 1100px;
+          }
+          @include e(icon) {
+            border-bottom: 1px dashed #eee;
+            padding: 137px 0;
+            text-align: center;
+            > img {
+              height: 150px;
+            }
+          }
+        
+          @include e(lst) {
+            padding: 100px 0;
+            text-align: center;
+            @include justifyContent(space-around);
+            > li {
+              > p {
+                margin: 10px 0 30px;
+                font-size: 20px;
+                color: rgba(30, 32, 36, 0.7);
+              }
+              .btn-main {
+                padding: 0 6px;
+                min-width: 150px;
+                width: auto;
+                border-radius: 25px;
+              }
+            }
+          }
+
+    @include responsive(phone-screens) {
+        padding: 0 px2rem(30);
+        @include e(icon) {
+          padding: px2rem(77) 0;
+          > img {
+            height: px2rem(220);
+          }
+        }
+      
+        @include e(lst) {
+          padding: px2rem(100) 0;
+          > li {
+              >img{
+                  height: px2rem(150);
+              }
+            > p {
+              margin: px2rem(10) 0 px2rem(30);
+              font-size: px2rem(20);
+            }
+            .btn-main {
+                font-size: px2rem(28);
+                min-width: px2rem(250);
+            }
+          }
+        }
+    }
+  
+}

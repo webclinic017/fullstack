@@ -4,14 +4,15 @@
     
     angular.module('fullstackApp').factory('fun', fun);
 
-    fun.$inject = [];
+    fun.$inject = ['$location'];
 
-    function fun () {
+    function fun ($location) {
 
         var fun = {
             /*获取Url查询字段 返回Object*/
             getSearch: function() {
-                var url = location.search;
+                // console.log($location.search())
+                var url = location.search || location.href.slice(location.href.indexOf('?'));
                 /*获取url中"?"符后的字串*/
                 var theRequest = new Object();
                 if (url.indexOf("?") != -1) {
