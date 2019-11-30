@@ -141,12 +141,13 @@
         }
         // console.info($scope.personal.isumam);
         function toCopy() {
-            if($scope.noCopy.bol){
-                openSystemMdl('tip', $scope.noCopy.tip);
-                return;
-            }
             // 判断是否登录
             if ($scope.userstatus.logined) {
+                // 判断复制关系
+                if($scope.noCopy.bol){
+                    openSystemMdl('tip', $scope.noCopy.tip);
+                    return;
+                }
                 // 判断资金是否处于封闭期
                 if ($scope.personal.isumam) {
                     openSystemMdl('isumam');
