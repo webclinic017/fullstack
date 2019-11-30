@@ -20,7 +20,7 @@
                 disabled: '@'       // 是否显示，支持表达式
             },
             template:    "<div class=\"zero_Spinner\" ng-show=\"selectDataList && selectDataList.length > 0\">" +
-                            "<div ng-repeat=\"data in selectDataList\" ng-if=\"data[defaultSelectKey.value] == defaultSelect.id\" class=\"zero_Spinner__title item-center\" ng-class=\"{'menu-hide': !showMe}\" ng-click=\"toggle()\">" +
+                            "<div ng-repeat=\"data in selectDataList\" ng-if=\"data[defaultSelectKey.value] == defaultSelect.id\" class=\"zero_Spinner__title space-between-center\" ng-class=\"{'menu-hide': !showMe}\" ng-click=\"toggle()\">" +
                             "<div class=\"item-center-i\"><span class=\"name\">{{ data[defaultSelectKey.text] || lang.text('tigerWitID.default') }}</span>" +
                             "   <span class=\"z-symbol z-documentary\" ng-if=\"data[defaultSelectKey.type] == 2\">"+ lang.text('tigerWitID.tradingAccount.copyAccount') +"</span>" +
                             "   <span class=\"z-symbol z-superior\" ng-if=\"data[defaultSelectKey.type] == 3\">"+ lang.text('tigerWitID.tradingAccount.masterAccount') +"</span>" + 

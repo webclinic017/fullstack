@@ -11,9 +11,24 @@
 
         var pagesize = 9;
         $scope.rankOrder = 'thirty_profit_rate';
+        $scope.rankOrderList = {
+            'thirty_win_rate': {
+                value: $scope.lang.text("tigerWitID.master.exact"),
+                track: 'global_master_consistency'
+            },
+            'thirty_profit_rate': {
+                value: $scope.lang.text("tigerWitID.master.last30AaysYield"),
+                track: 'global_master_profitability'
+            },
+            'copy_history_sum': {
+                value: $scope.lang.text("tigerWitID.master.copiers"),
+                track: 'global_master_copynum'
+            }
+        };
         $scope.search = {};
         $scope.ranklist = [];
-        $scope.masterTrialList = {};
+        // $scope.masterTrialList = {};   // 体验高手
+        $scope.masterStarList = {};   // 明星高手
         $scope.pagebar = {
             config: {
                 // total: , // 总页数
@@ -24,7 +39,7 @@
             // selectPage: , bind to pagination.selectPage
             getList: getMastersList
         };
-        $scope.showSearchList = showSearchList;
+        // $scope.showSearchList = showSearchList;
         $scope.getMastersList = getMastersList;
         $scope.changeRankOrder = changeRankOrder;
 
@@ -44,7 +59,11 @@
             // $scope.ranklist = [];
             $scope.$broadcast('showLoadingImg');
 
-            ranklist.getMastersList($scope.rankOrder, offset, 9).then(function (data) {
+            ranklist.getMastersNewList({
+                sort_by: $scope.rankOrder,
+                offset: offset,
+                limit: 9
+            }).then(function (data) {
                 // console.info(data);
                 if (data.is_succ) {
                     data = data.data;
@@ -52,9 +71,9 @@
                     $scope.$broadcast('hideLoadingImg');
 
                     // 最大跌幅＊100
-                    angular.forEach($scope.ranklist, function (value, index) {
-                        value.max_retract_percent = (value.max_retract * 100).toFixed(2);
-                    });
+                    // angular.forEach($scope.ranklist, function (value, index) {
+                    //     value.max_retract_percent = (value.max_retract * 100).toFixed(2);
+                    // });
 
                     if ($scope.ranklist.length <= 0) return;
                     angular.extend($scope.pagebar.config, {
@@ -78,23 +97,36 @@
             return total;
         }
 
-        function showSearchList(e, type) {
-            e.stopPropagation();
-            $scope.search = {};
-            $scope.search[type] = true;
-        }
+        // function showSearchList(e, type) {
+        //     e.stopPropagation();
+        //     $scope.search = {};
+        //     $scope.search[type] = true;
+        // }
 
         // 获取体验高手列表
-        getMastersTrialList()
-        function getMastersTrialList() {
-            account.checkLogined().then(function (logined) {
-                if (logined) {
-                    ranklist.getMastersTrialList(2).then(function (data) {
-                        if(!data) return;
-                        if (data.is_succ) {
-                            $scope.masterTrialList = data.data;
-                        }
-                    })
+        // getMastersTrialList()
+        // function getMastersTrialList() {
+        //     account.checkLogined().then(function (logined) {
+        //         if (logined) {
+        //             ranklist.getMastersTrialList(2).then(function (data) {
+        //                 if (!data) return;
+        //                 if (data.is_succ) {
+        //                     $scope.masterTrialList = data.data;
+        //                 }
+        //             })
+        //         }
+        //     })
+
+        // }
+        // 获取明星高手列表
+        getMastersStarList();
+        function getMastersStarList() {
+            ranklist.getMastersNewList({
+                type: 1
+            }).then(function (data) {
+                if (!data) return;
+                if (data.is_succ) {
+                    $scope.masterStarList = data.data;
                 }
             })
 

@@ -22,6 +22,9 @@
         // var avaCopyAmount;
         $scope.$watch('investSelect.id', function(n){
             if(!n) return;
+            typeGetList();
+        })
+        function typeGetList(){
             $scope.$broadcast('showLoadingImg');
             if($scope.investSelect.type == 2){
                 $scope.orderCurrent = {}; // 当前自主交易订单
@@ -32,8 +35,7 @@
                 $scope.traders = [];   // 复制交易持仓订单
                 getData();
             }
-        })
-
+        }
         // getAvaCopyAmount();
 
         // 获取自主交易持仓订单和订单概况
@@ -119,12 +121,15 @@
                 backdrop: true,
                 resolve: {
                     passedScope: function () {
-                        trader.copied = trader.copy_asset;
+                        // trader.copied = trader.copy_asset;
                         trader.minCopyAmount = trader.min_copy_amount;
-                        console.log(trader)
+                        // console.log(trader)
                         return {
                             copiedTrader: trader,
-                            title: 'modify'
+                            title: 'modify',
+                            callBack: function(amount){
+                                trader.copy_amount = amount;
+                            }
                         }
                     }
                 }
@@ -132,64 +137,23 @@
         }
 
         function openCancelCopyMdl(trader, event) {
-            // console.log(trader)
-            var account_code = trader.account_code;
-            var username = trader.username;
             event.stopPropagation();
             event.stopImmediatePropagation();
 
             $modal.open({
                 templateUrl: '/views/invest/cancel_copy_modal.html',
+                controller: 'TraderCopyCancelController',
                 size: 'sm',
                 backdrop: true,
-                controller: function ($scope, trader, $modalInstance, lang) {
-                    $scope.copyCancel = {
-                        username: username,
-                        success: false,     // 是否取消复制成功
-                        fail: false,
-                        failMsg: ''
-                    };
-                    $scope.clickable = true;
-                    $scope.lang = lang;
-                    $scope.cancelCopy = cancelCopy;
-                    $scope.closeModal = closeModal;
-
-                    function cancelCopy(auto_delete) {
-                        $scope.clickable = false;
-
-                        trader.cancelCopy(account_code, auto_delete).then(function (data) {
-                            // console.info(data);
-                            if (data.is_succ) {
-                                $scope.copyCancel.success = true;
-                                $scope.clickable = true;
-
-                                // $state.go('space.invest.subpage', {
-                                //     subpage: 'current'
-                                // }, { reload: true });
-                            } else {
-                                $scope.clickable = true;
-                                $scope.copyCancel.fail = true;
-                                $scope.copyCancel.failMsg = data.error_msg;
-
-                                $timeout(function () {
-                                    $scope.copyCancel.fail = false;
-                                    $scope.copyCancel.failMsg = '';
-                                }, 3000);
+                resolve: {
+                    passedScope: function () {
+                        return {
+                            account_code: trader.account_code,
+                            username: trader.username,
+                            callBack: function(){
+                                typeGetList()
                             }
-                        }, function (err) {
-                            $scope.clickable = true;
-                            $scope.copyCancel.fail = true;
-                            $scope.copyCancel.failMsg = '';
-                            console.info(err);
-
-                            $timeout(function () {
-                                $scope.copyCancel.fail = false;
-                            }, 3000);
-                        });
-                    }
-
-                    function closeModal() {
-                        $modalInstance.dismiss();
+                        }
                     }
                 }
             });

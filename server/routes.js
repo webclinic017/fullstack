@@ -486,28 +486,28 @@ module.exports = function (app) {
     app.route('/trader/:usercode').get(function (req, res) {
         setEnvCf(req, res);
         // console.log('---------cookies---------', req.headers.cookie);
-        var usercode = req.params.usercode;
-        var masterApiPath = req.protocol+'://'+req.hostname + '/api/v3';
-        console.log('------masterApiPath', masterApiPath);
-        console.log(req.protocol)
+        // var usercode = req.params.usercode;
+        // var masterApiPath = req.protocol+'://'+req.hostname + '/api/v3';
+        // console.log('------masterApiPath', masterApiPath);
+        // console.log(req.protocol)
 
-        request({
-            url: masterApiPath + '/master/trading_profile?user_code=' + usercode,
-            headers: {
-                'cookie': req.headers.cookie
-            }
-        }, function (error, response, body) {
-            if (!error && response.statusCode == 200) {
-                setEnvCf(req, res); //再次设置避免tigerwit和pandafx混乱
-                body = JSON.parse(body);
-                // console.info('-------body.data', body.data);
-                res.render('web/trader.html', extendPublic({
-                    master: body.data,
-                    usercode: usercode
-                }, req));
-            }
-        })
-
+        // request({
+        //     url: masterApiPath + '/master/trading_profile?user_code=' + usercode,
+        //     headers: {
+        //         'cookie': req.headers.cookie
+        //     }
+        // }, function (error, response, body) {
+        //     if (!error && response.statusCode == 200) {
+        //         setEnvCf(req, res); //再次设置避免tigerwit和pandafx混乱
+        //         body = JSON.parse(body);
+        //         // console.info('-------body.data', body.data);
+        //         res.render('web/trader.html', extendPublic({
+        //             master: body.data,
+        //             usercode: usercode
+        //         }, req));
+        //     }
+        // })
+        res.render('web/trader.html', extendPublic({}, req));
 
         // request(masterApiPath + '/master/trading_profile?user_code=' + usercode, function (error, response, body) {
         //     if (!error && response.statusCode == 200) {

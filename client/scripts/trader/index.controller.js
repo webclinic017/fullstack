@@ -5,9 +5,10 @@
     angular.module('fullstackApp')
         .controller('TraderIndexController', TraderIndexController);
 
-    TraderIndexController.$inject = ['$scope', '$location', '$state', 'trader', '$timeout', '$modal', '$rootScope'];
+    TraderIndexController.$inject = ['$scope', '$location', 'trader', '$timeout', '$modal', '$rootScope', '$document'];
 
-    function TraderIndexController($scope, $location, $state, trader, $timeout, $modal, $rootScope) {
+    function TraderIndexController($scope, $location, trader, $timeout, $modal, $rootScope, $document) {
+        // console.log($scope.lang.text("tigerWitID.copy"))
         $scope.master = {};
         $scope.noCopy = {
             bol: true,
@@ -36,14 +37,14 @@
         //         $timeout.cancel(detailId);
         //     }
         // });
-
         function getMasterInfo(usercode) {
-            trader.getMasterInfo(usercode).then(function (data) {
+            trader.getMasterNewInfo(usercode).then(function (data) {
                 // console.log('getMasterInfo',data)
                 if (data.is_succ) {
-                    $rootScope.master_info = data.data;
+                    // $rootScope.master_info = data.data;
                     angular.extend($scope.master, data.data);
-                    $scope.master.max_retract_percent = ($scope.master.max_retract * 100).toFixed(2);
+                    $document[0].title = $document[0].title + $scope.master.username;
+                    // $scope.master.max_retract_percent = ($scope.master.max_retract * 100).toFixed(2);
                 }
             });
 
@@ -110,7 +111,7 @@
                                 bol: false,
                                 tip: ''
                             };;
-                            $scope.master.copied = data.data.is_copy;
+                            $scope.master.copied = data.data.copy_amount; // 复制过的金额
                             avaCopyAmount = data.data.usable;
                             $scope.master.avaCopyAmount = data.data.usable;
                             $scope.master.min_copy_amount = data.data.min_copy_amount;
@@ -178,7 +179,7 @@
                                     if (avaCopyAmount < minCopyAmount) {
                                         openSystemMdl('amount', minCopyAmount);
                                     } else {
-                                        openCopyMdl();
+                                        openCopyMdl('copy');
                                     }
                                 }else{
                                     copyProtocolMdl();
@@ -213,8 +214,8 @@
                 }
             });
         }
-
-        function openCopyMdl() {
+        $scope.openCopyMdl = openCopyMdl;
+        function openCopyMdl(type) {
             $modal.open({
                 templateUrl: '/views/invest/copy_modal.html',
                 controller: 'TraderCopyController',
@@ -229,7 +230,34 @@
                             copiedTrader: $scope.master,
                             AvaCopyInfo: AvaCopyInfo,
                             surplusAmount: $scope.masterGradeInfo.available_amount,
-                            title: 'copy'
+                            title: type,
+                            callBack: function(amount){
+                                $scope.master.is_copy = true;
+                                $scope.master.copied = amount;
+                            }
+                        }
+                    }
+                }
+            });
+        }
+        $scope.openCancelCopyMdl = openCancelCopyMdl;
+        function openCancelCopyMdl(trader, event) {
+            event.stopPropagation();
+            event.stopImmediatePropagation();
+            $modal.open({
+                templateUrl: '/views/invest/cancel_copy_modal.html',
+                controller: 'TraderCopyCancelController',
+                size: 'sm',
+                backdrop: true,
+                resolve: {
+                    passedScope: function () {
+                        return {
+                            account_code: trader.account_code,
+                            username: trader.username,
+                            callBack: function(){
+                                $scope.master.is_copy = false;
+                                $scope.master.copied = 0;
+                            }
                         }
                     }
                 }
@@ -285,6 +313,65 @@
                         $timeout(function(){toCopy()}, 500)
                         
                     }
+                }
+            });
+        }
+
+        // Return comparison chart (30d)
+        /*----------------------------获取折线图数据图-----------------------------*/
+        // 分页每日收益率
+        // $scope.rawSummaryReturn = [];
+        // $scope.summaryReturn = [];
+        rendColumnChart(usercode);
+
+        // $scope.pagebar = {
+        //     config: {
+        //         // total: , 总页数
+        //         page: 1
+        //     },
+        //     pages: [],
+        //     pagesBtn: [],
+        //     // isShow: false,
+        //     // selectPage: , bind to pagination.selectPage
+        //     getList: getSummaryReturn
+        // };
+        // var pagesize = 5; // 单页显示数
+
+        // function getSummaryReturn(page) {
+        //     // $scope.$emit('showLoadingImg');
+        //     var offset = page ? (page - 1) * pagesize : 0;
+        //     $scope.summaryReturn = $scope.rawSummaryReturn.slice(offset, offset + pagesize);
+
+        //     angular.extend($scope.pagebar.config, {
+        //         total: utils.getTotal($scope.rawSummaryReturn.length, pagesize),
+        //         page: page
+        //     });
+        // }
+        function rendColumnChart(usercode) {
+            /*调接口获取数据*/
+            trader.getmasterDayProfitRates(usercode).then(function (return_data) {
+                // console.log(return_data);
+                if (return_data.code == 0 && return_data.data.length > 0) {
+                    //     //console.log(return_data);
+                    var data = return_data.data;
+                    // $scope.rawSummaryReturn = data.personal;
+                    //     /*解析数据*/
+                    //     $scope.columnData = parseData("column", data);
+                    //     // console.log($scope.columnData);
+                    //     /*让下拉框默认选中数据最后一项*/
+                    //     // $scope.selected = $scope.columnData[$scope.columnData.length - 1];
+                    //     //渲染到图表
+                    //     $scope.$broadcast('rendColumnData', $scope.columnData[$scope.columnData.length - 1].data);
+                    //     //change事件
+                    //     $scope.changeYear = function (year) {
+                    //         //console.log(year);
+                    //         $scope.selected = year;
+                    //         $scope.$broadcast('rendColumnData', year.data);
+                    $scope.$broadcast('paintLineChart', data);
+                    // getSummaryReturn(1);
+                    // };
+                } else {
+                    // $scope.$broadcast('hideColumnData');
                 }
             });
         }

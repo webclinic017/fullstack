@@ -1,475 +1,462 @@
 @include b(invest_content) {
-    min-height: 450px;
-    margin-top: 44px;
+  min-height: 450px;
+  margin-top: 44px;
 
-    @include e(tip) {
-        padding: 15px;
+  @include e(tip) {
+    padding: 15px;
 
-        > a {
-            color: $brand-info;
-        }
+    > a {
+      color: $brand-info;
     }
+  }
 }
 
 @include b(invest_table_wrapper) {
-    position: relative;
-    border-left: 1px solid $gray;
-    border-right: 1px solid $gray;
+  position: relative;
+  border-left: 1px solid $gray;
+  border-right: 1px solid $gray;
 
-    @include e(tbody) {
-        position: relative;
-        min-height: 100px;
-        border-bottom: 1px solid $gray;
-        overflow-y: auto;
-    }
+  @include e(tbody) {
+    position: relative;
+    min-height: 100px;
+    border-bottom: 1px solid $gray;
+    overflow-y: auto;
+  }
 }
 
 @include b(invest_table) {
-    > thead > tr > th {
-        padding: 15px 8px;
-    }
+  > thead > tr > th {
+    padding: 15px 8px;
+  }
 }
 
 @include b(invest_orders) {
+  background-color: #fff;
+  border-bottom: 1px solid $gray;
 
-    background-color: #fff;
-    border-bottom: 1px solid $gray;
+  @include e(user) {
+    text-align: initial;
 
-    @include e(user) {
-        text-align: initial;
+    @include m(avatar) {
+      display: inline-block;
+      padding-right: 10px;
 
-        @include m(avatar) {
-            display: inline-block;
-            padding-right: 10px;
-
-            img {
-                position:relative;
-                z-index: 1;
-                width: 50px;
-                height: 50px;
-                border-radius: 50%;
-                vertical-align: middle;
-            }
-        }
-
-        @include m(username) {
-            display: inline-block;
-            vertical-align: middle;
-            width: 70%;
-            overflow: hidden;
-            text-overflow: ellipsis;
-
-            > a {
-                color: $gray-base;
-            }
-        }
-    }
-
-    @include e(type) {
-        border: 1px solid transparent;
-        border-radius: $border-radius-base;
-        padding: 2px;
-        font-size: 12px;
-        display: inline-block;
-        margin-top: 4px;
-
-        &.own {
-            color: $brand-warning;
-            border-color: $brand-warning;
-        }
-
-        &.copy {
-            color: $brand-info;
-            border-color: $brand-info;
-        }
-    }
-
-    @include e(rate) {
-        
-        @include m(promise) {
-
-            > span {
-                color: #fff;
-                padding: 4px;
-                border-radius: $border-radius-base;
-
-                &.green {
-                    background-color: $brand-success;
-                }
-                &.orange {
-                    background-color: $brand-warning;
-                }
-                &.red {
-                    background-color: $brand-danger;
-                }
-            }
-        }
-
-        @include m(copy) {
-
-            > span.number {
-                color: $gray-darker;
-                padding: 4px;
-                display: inline-block;
-                margin-bottom: 8px;
-                cursor: pointer;
-                border: 1px solid $gray;
-                border-radius: $border-radius-base;
-            }
-            
-            > span.rate {
-                color: #fff;
-                padding: 4px;
-                border-radius: $border-radius-base;
-
-                &.green {
-                    background-color: $brand-success;
-                }
-                &.orange {
-                    background-color: $brand-warning;
-                }
-                &.red {
-                    background-color: $brand-danger;
-                }
-            }
-        }
-    }
-
-    @include e(btn) {
-
-        .btn {
-            padding: 0;
-            font-size: 12px;
-            width: 80%;
-            height: 30px;
-            text-align: center;
-            line-height: 30px;
-            margin-top: 4px;
-            margin-bottom: 4px; 
-        }
-
-        .btn-msg{
-            font-size: 13px;
-            color: $gray-dark;
-        }
-    }
-
-    @include e(detail) {
-        text-align: initial;
-        padding-left: 50px !important; 
+      img {
         position: relative;
+        z-index: 1;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        vertical-align: middle;
+      }
     }
 
-    @include e(trunk) {
-        position: absolute;
-        top: -25px;
-        left: 30px;
-        width: 1px;
-        height: 100%;
-        background-color: darken($table-bg-hover, 10%);
+    @include m(username) {
+      display: inline-block;
+      vertical-align: middle;
+      width: 70%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      > a {
+        color: $gray-base;
+      }
+    }
+  }
+
+  @include e(type) {
+    border: 1px solid transparent;
+    border-radius: $border-radius-base;
+    padding: 2px;
+    font-size: 12px;
+    display: inline-block;
+    margin-top: 4px;
+
+    &.own {
+      color: $brand-warning;
+      border-color: $brand-warning;
     }
 
-    @include e(branch) {
-        position: absolute;
-        top: 36px;
-        left: 30px;
-        width: 15px;
-        height: 1px;
-        background-color: darken($table-bg-hover, 10%);
+    &.copy {
+      color: $brand-info;
+      border-color: $brand-info;
     }
+  }
 
-    @include e(operate) {
-        display: inline-block;
-        margin-left: 5px;
-    }
+  @include e(rate) {
+    @include m(promise) {
+      > span {
+        color: #fff;
+        padding: 4px;
+        border-radius: $border-radius-base;
 
-    @include e(action) {
-        
-    }
-
-    @include e(symbol) {
-        color: $gray-darker;
-    }
-}
-.ar-lang{
-    .invest_orders__detail{
-        padding-left: 10px !important;
-        padding-right: 50px !important;
-    }
-    .invest_orders__trunk{
-        left: auto;
-        right: 30px;
-    }
-    .invest_orders__branch{
-        left: auto;
-        right: 30px;
-    }
-}
-
-@include b(copy_modal) {
-    @include e(label) {
-        font-size: 20px;
-    }
-    @include e(tip) {
-        color: $gray-dark;
-    }
-}
-
-@include b(cancel_copy_modal) {
-    @include e(btn_wrapper) {
-        .btn {
-            width: 254px;
+        &.green {
+          background-color: $brand-success;
         }
+        &.orange {
+          background-color: $brand-warning;
+        }
+        &.red {
+          background-color: $brand-danger;
+        }
+      }
     }
+
+    @include m(copy) {
+      > span.number {
+        color: $gray-darker;
+        padding: 4px;
+        display: inline-block;
+        margin-bottom: 8px;
+        cursor: pointer;
+        border: 1px solid $gray;
+        border-radius: $border-radius-base;
+      }
+
+      > span.rate {
+        color: #fff;
+        padding: 4px;
+        border-radius: $border-radius-base;
+
+        &.green {
+          background-color: $brand-success;
+        }
+        &.orange {
+          background-color: $brand-warning;
+        }
+        &.red {
+          background-color: $brand-danger;
+        }
+      }
+    }
+  }
+
+  @include e(btn) {
+    .btn {
+      padding: 0;
+      font-size: 12px;
+      width: 80%;
+      height: 30px;
+      text-align: center;
+      line-height: 30px;
+      margin-top: 4px;
+      margin-bottom: 4px;
+    }
+
+    .btn-msg {
+      font-size: 13px;
+      color: $gray-dark;
+    }
+  }
+
+  @include e(detail) {
+    text-align: initial;
+    padding-left: 50px !important;
+    position: relative;
+  }
+
+  @include e(trunk) {
+    position: absolute;
+    top: -25px;
+    left: 30px;
+    width: 1px;
+    height: 100%;
+    background-color: darken($table-bg-hover, 10%);
+  }
+
+  @include e(branch) {
+    position: absolute;
+    top: 36px;
+    left: 30px;
+    width: 15px;
+    height: 1px;
+    background-color: darken($table-bg-hover, 10%);
+  }
+
+  @include e(operate) {
+    display: inline-block;
+    margin-left: 5px;
+  }
+
+  @include e(action) {
+  }
+
+  @include e(symbol) {
+    color: $gray-darker;
+  }
 }
+.ar-lang {
+  .invest_orders__detail {
+    padding-left: 10px !important;
+    padding-right: 50px !important;
+  }
+  .invest_orders__trunk {
+    left: auto;
+    right: 30px;
+  }
+  .invest_orders__branch {
+    left: auto;
+    right: 30px;
+  }
+}
+
 
 @include b(invest_detail_modal) {
-    background-color: $gray-lightest;
+  background-color: $gray-lightest;
 
-    @include e(content) {
-        position: relative;
-        min-height: 100px;
-        max-height: 400px;
-        overflow-y: auto;
-    }
+  @include e(content) {
+    position: relative;
+    min-height: 100px;
+    max-height: 400px;
+    overflow-y: auto;
+  }
 }
-.history-operation-way{
-    background : #ccc;
-    border-radius:4px;
-    padding:3px 5px;
-    display:inline-block;
+.history-operation-way {
+  background: #ccc;
+  border-radius: 4px;
+  padding: 3px 5px;
+  display: inline-block;
 }
-.icon-history{
-    vertical-align:sub;
+.icon-history {
+  vertical-align: sub;
 }
 // 交易账户home页
 @include b(space_sub_account) {
-    margin-top: 32px;
-    @include e(list) {
-        padding: 32px 0 32px 2px;
-        border-top: 1px solid rgba(151, 151, 151, 0.2);
-    }
-
+  margin-top: 32px;
+  @include e(list) {
+    padding: 32px 0 32px 2px;
+    border-top: 1px solid rgba(151, 151, 151, 0.2);
+  }
 }
 @include b(space_sub_account_info) {
-    @include displayFlex();
-    @include alignItems(center);
-    @include e(list) {
-        &:nth-child(1) {
-            > ul {
-                width: 260px;
+  @include displayFlex();
+  @include alignItems(center);
+  @include e(list) {
+    &:nth-child(1) {
+      > ul {
+        width: 260px;
 
-                > li {
-                    &:nth-child(1) {
-                        span {
-                            display: inline-block;
-                            vertical-align: middle;
-                            overflow: hidden;
-                            white-space:nowrap;
-                            text-overflow:ellipsis;
-                        }
-                        line-height: 22px;
-                        > div {
-                            &:nth-child(1){
-                                @include displayFlex();
-                                @include alignItems(center);
-                            }
-                            > span {
-                                margin-bottom: 7px;
-                            }
-                        }
-                        .name {
-                            font-size: 20px;
-                            color: rgb(25, 79, 130);
-                            font-weight: 500;
-                            overflow: hidden;
-                            max-width: 120px;
-                            text-overflow:ellipsis;
-                            white-space: nowrap;
-                        }
-                        .edit {
-                            width: 22px;
-                            height: 22px;
-                            background-size: 100%;
-                            background: url('/images/space/edit.png') center center no-repeat;
-                            color: rgb(255, 197, 0);
-                            margin-left: 7px;
-                            margin-right: 7px;
-                        }
-                        .mt4id {
-                            font-size: 14px;
-                            color: rgb(74, 74, 74)
-                        }
-                        .edit-name {
-                            &.submit-success {
-                                .input-box{
-                                    padding-right: 44px;
-                                    &:before{ 
-                                        width: 20px;
-                                        height: 20px;
-                                        background: url('/images/space/success.png') center center no-repeat;
-                                    }
-                                }
-                            }
-                            &.submit-error {
-                                .input-box{
-                                    padding-right: 44px;
-                                    border: 1px solid rgb(245, 82, 79);
-                                    &:before{ 
-                                        width: 20px;
-                                        height: 20px;
-                                        background: url('/images/space/error.png') center center no-repeat;
-                                    }
-                                    input[name='account_name']{
-                                        color: rgb(245, 82, 79);
-                                    }
-                                }
-                                .error {
-                                    color: rgb(245, 82, 79);
-                                }
-                            }
-                            .input-box {
-                                position: relative;
-                                width: 190px;
-                                height: 36px;
-                                border: 1px solid rgba(74, 144, 226, 0.4);
-                                padding: 7px 12px; 
-                                border-radius: 4px;
-                                input[name='account_name']{
-                                    font-size: 20px;
-                                    color: rgb(25, 79, 130);
-                                    font-weight: 500;
-                                    width: 100%;
-                                    height: 100%;
-                                    border: none;
-                                }
-                                &:before{
-                                    content: "";
-                                    position: absolute;
-                                    top: 7px;
-                                    right: 12px;
-
-                                }
-                            }
-                            .error {
-                                font-size: 12px;
-                                color: rgba(74, 74, 74, 0.6);
-                            }
-                        }
-                    }
-                    &:nth-child(2) {
-                        margin-top: 22px;
-                        margin-bottom: 5px;
-                        .progress {
-                            display: block;
-                            .bar-bg {
-                                width: 100%;
-                                height: 12px;
-                                display: block;
-                                border-radius: 8px;
-                                background-color: rgb(243, 243, 243);
-                              }
-                              .bar-on {
-                                width: 1%;
-                                display: block;/* 设为block */
-                                border-radius: 8px;
-                                height: 12px; 
-                                background: linear-gradient(to right, rgb(249,226,102) 0%,rgb(255,189,67) 50%,rgb(255,94,67) 100%)
-                              }
-                        }
-                        .master_category {
-                            margin-top: 9px;
-                            @include displayFlex();
-                            @include alignItems(center);
-                            @include justifyContent(space-between);
-                            .grade {
-                                font-size: 14px;
-                                color: rgba(36, 42, 54, 0.6);
-                                > span {
-                                    vertical-align: middle;
-                                    display: inline-block;
-                                    width: 20px;
-                                    height: 20px;
-                                    border-radius: 4px;
-                                    background-image: linear-gradient(90deg,rgb(251,245,175) 0%, rgb(255,210,2) 30%,rgb(255,189,67) 60%, rgb(255,145,24) 100%);
-                                    font-size:  18px;
-                                    text-align: center;
-                                    line-height: 20px;
-                                    color: #fff;
-                                    margin-left: 7px;
-                                    margin-right: 7px;
-                                }
-                            }
-                            .details {
-                                font-size: 12px;
-                                color: rgb(25, 79, 130);
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        &:nth-child(2) {
-            @include flex(1);
-            padding: 0 25px;
-            > ul {
-                @include displayFlex();
-                > li {
-                    position: relative;
-                    p {
-                        line-height: 22px;
-                        &:nth-child(1){
-                            margin-bottom: 3px;
-                            font-size: 18px;
-                            color: rgb(36, 42, 54);
-                        }
-                        &:nth-child(2){
-                            font-size: 12px;
-                            color: rgba(36,42,54,0.6);
-                        }
-                    }
-                    &:nth-child(odd){
-                        @include flex(1);
-                    }
-                    &:nth-child(even){
-                        margin-left: 28px;
-                        padding-right: 28px;
-                        height: 47px;
-                        border-left: 1px solid #d2d2d2;
-                    }
-                }
-            }
-        }
-        &:nth-child(3) {
+        > li {
+          &:nth-child(1) {
             span {
-                margin: 0 30px;
-                color: rgb(74,144,226);
-                font-size: 14px;
-                cursor: pointer;
+              display: inline-block;
+              vertical-align: middle;
+              overflow: hidden;
+              white-space: nowrap;
+              text-overflow: ellipsis;
             }
+            line-height: 22px;
+            > div {
+              &:nth-child(1) {
+                @include displayFlex();
+                @include alignItems(center);
+              }
+              > span {
+                margin-bottom: 7px;
+              }
+            }
+            .name {
+              font-size: 20px;
+              color: rgb(25, 79, 130);
+              font-weight: 500;
+              overflow: hidden;
+              max-width: 120px;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+            }
+            .edit {
+              width: 22px;
+              height: 22px;
+              background-size: 100%;
+              background: url("/images/space/edit.png") center center no-repeat;
+              color: rgb(255, 197, 0);
+              margin-left: 7px;
+              margin-right: 7px;
+            }
+            .mt4id {
+              font-size: 14px;
+              color: rgb(74, 74, 74);
+            }
+            .edit-name {
+              &.submit-success {
+                .input-box {
+                  padding-right: 44px;
+                  &:before {
+                    width: 20px;
+                    height: 20px;
+                    background: url("/images/space/success.png") center center no-repeat;
+                  }
+                }
+              }
+              &.submit-error {
+                .input-box {
+                  padding-right: 44px;
+                  border: 1px solid rgb(245, 82, 79);
+                  &:before {
+                    width: 20px;
+                    height: 20px;
+                    background: url("/images/space/error.png") center center no-repeat;
+                  }
+                  input[name="account_name"] {
+                    color: rgb(245, 82, 79);
+                  }
+                }
+                .error {
+                  color: rgb(245, 82, 79);
+                }
+              }
+              .input-box {
+                position: relative;
+                width: 190px;
+                height: 36px;
+                border: 1px solid rgba(74, 144, 226, 0.4);
+                padding: 7px 12px;
+                border-radius: 4px;
+                input[name="account_name"] {
+                  font-size: 20px;
+                  color: rgb(25, 79, 130);
+                  font-weight: 500;
+                  width: 100%;
+                  height: 100%;
+                  border: none;
+                }
+                &:before {
+                  content: "";
+                  position: absolute;
+                  top: 7px;
+                  right: 12px;
+                }
+              }
+              .error {
+                font-size: 12px;
+                color: rgba(74, 74, 74, 0.6);
+              }
+            }
+          }
+          &:nth-child(2) {
+            margin-top: 22px;
+            margin-bottom: 5px;
+            .progress {
+              display: block;
+              .bar-bg {
+                width: 100%;
+                height: 12px;
+                display: block;
+                border-radius: 8px;
+                background-color: rgb(243, 243, 243);
+              }
+              .bar-on {
+                width: 1%;
+                display: block; /* 设为block */
+                border-radius: 8px;
+                height: 12px;
+                background: linear-gradient(
+                  to right,
+                  rgb(249, 226, 102) 0%,
+                  rgb(255, 189, 67) 50%,
+                  rgb(255, 94, 67) 100%
+                );
+              }
+            }
+            .master_category {
+              margin-top: 9px;
+              @include displayFlex();
+              @include alignItems(center);
+              @include justifyContent(space-between);
+              .grade {
+                font-size: 14px;
+                color: rgba(36, 42, 54, 0.6);
+                > span {
+                  vertical-align: middle;
+                  display: inline-block;
+                  width: 20px;
+                  height: 20px;
+                  border-radius: 4px;
+                  background-image: linear-gradient(
+                    90deg,
+                    rgb(251, 245, 175) 0%,
+                    rgb(255, 210, 2) 30%,
+                    rgb(255, 189, 67) 60%,
+                    rgb(255, 145, 24) 100%
+                  );
+                  font-size: 18px;
+                  text-align: center;
+                  line-height: 20px;
+                  color: #fff;
+                  margin-left: 7px;
+                  margin-right: 7px;
+                }
+              }
+              .details {
+                font-size: 12px;
+                color: rgb(25, 79, 130);
+              }
+            }
+          }
         }
+      }
     }
+    &:nth-child(2) {
+      @include flex(1);
+      padding: 0 25px;
+      > ul {
+        @include displayFlex();
+        > li {
+          position: relative;
+          p {
+            line-height: 22px;
+            &:nth-child(1) {
+              margin-bottom: 3px;
+              font-size: 18px;
+              color: rgb(36, 42, 54);
+            }
+            &:nth-child(2) {
+              font-size: 12px;
+              color: rgba(36, 42, 54, 0.6);
+            }
+          }
+          &:nth-child(odd) {
+            @include flex(1);
+          }
+          &:nth-child(even) {
+            margin-left: 28px;
+            padding-right: 28px;
+            height: 47px;
+            border-left: 1px solid #d2d2d2;
+          }
+        }
+      }
+    }
+    &:nth-child(3) {
+      span {
+        margin: 0 30px;
+        color: rgb(74, 144, 226);
+        font-size: 14px;
+        cursor: pointer;
+      }
+    }
+  }
 }
 
 // 跟单标志
 .z-documentary {
-    background-image: linear-gradient(to bottom, rgba(98, 131, 236, 0.98) 0%, rgb(92, 181, 237) 100%);
+  background-image: linear-gradient(to bottom, rgba(98, 131, 236, 0.98) 0%, rgb(92, 181, 237) 100%);
 }
 // 高手
 .z-superior {
-    background-image: linear-gradient(to bottom, rgb(249, 226, 102) 0%, rgb(255, 189, 67) 50%, rgb(255, 94, 67) 100%);
+  background-image: linear-gradient(to bottom, rgb(249, 226, 102) 0%, rgb(255, 189, 67) 50%, rgb(255, 94, 67) 100%);
 }
 .z-symbol {
-    margin: 0 10px;
-    height: 24px;
-    width: 80px;
-    display: inline-block;
-    text-align: center;
-    line-height: 24px;
-    border-radius: 46px;
-    font-size: 14px;
-    color: #fff;
-    overflow: hidden;
-    white-space:nowrap;
-    text-overflow:ellipsis;
+  margin: 0 10px;
+  height: 24px;
+  width: 80px;
+  display: inline-block;
+  text-align: center;
+  line-height: 24px;
+  border-radius: 46px;
+  font-size: 14px;
+  color: #fff;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }

@@ -88,11 +88,113 @@
       </div>
     </div>
   </div>
-  <div class="index_new__container">
+
+  <!-- 与高手列表页明星高手列表一样 -->
+  <div class="index_new__container" ng-if="masterStarList.records.length > 0">
     <div class="index_new__copy">
       <h3 class="index_new__copy-title"><%= lang.text("newhome_10")%></h3>
           <p class="index_new__copy-sub_tit"><%= lang.text("newhome_11")%></p>
-          <ul class="index_new__copy-lst">
+          <div class="ranklist_cont pd-tp-20">
+              <div class="ranklist_cont__master space-between-center"
+                  ng-repeat="masterStar in masterStarList.records track by $index">
+                  <div class="space-between-center mg-lf-20 mg-rg-20 flex1">
+                      <div class="flex1">
+                          <div class="space-between-center">
+
+                              <div class="ranklist_cont__master-info item-center">
+                                  <a class="avatar" ng-href="/trader/{{masterStar.user_code}}/#/trader/summary"
+                                      ng-click="toQuickPageviewSensorsdata(masterStar.username)" target="_blank">
+                                      <img ng-src="/avatar/{{ masterStar.user_code }}_150.jpg" alt="avatar">
+                                  </a>
+                                  <div class="user flex1">
+                                      <a class="name" ng-href="/trader/{{masterStar.user_code}}/#/trader/summary"
+                                          ng-click="toQuickPageviewSensorsdata(masterStar.username)" target="_blank"
+                                          title="{{ masterStar.username || '-' }}">
+                                          {{ masterStar.username || '-' }}
+                                      </a>
+                                      <p>
+                                          <span ng-repeat="tag in masterStar.tags track by $index">
+                                              #{{tag}}
+                                          </span>
+                                      </p>
+                                  </div>
+                              </div>
+                              <a class="ranklist_cont__master-tip" ng-href="/trader/{{masterStar.user_code}}/#/trader/summary"
+                              ng-click="toQuickPageviewSensorsdata(masterStar.username)" target="_blank">
+                                  <p>{{masterStar.describe}}
+                                  </p>
+                              </a>
+                          </div>
+                          <div class="ranklist_cont__master-trade space-between-center bd-tp">
+                              <div class="dropdown">
+                                  <div class="num"
+                                      ng-class="{'font-danger': (masterStar.thirty_win_rate + '').indexOf('-') < 0, 'font-success': (masterStar.thirty_win_rate + '').indexOf('-') != -1}"
+                                      ng-if="lang.hostIsCn()">
+                                      {{ masterStar.thirty_win_rate }}<span>%</span>
+                                  </div>
+                                  <div class="num"
+                                      ng-class="{'font-success': (masterStar.thirty_win_rate + '').indexOf('-') < 0, 'font-danger': (masterStar.thirty_win_rate + '').indexOf('-') != -1}"
+                                      ng-if="!lang.hostIsCn()">
+                                      {{ masterStar.thirty_win_rate }}<span>%</span>
+                                  </div>
+                                  <div class="tip">
+                                      {{ lang.text("tigerWitID.master.exact") }}
+                                  </div>
+                              </div>
+                              <!-- <div class="dividing"></div> -->
+                              <div class="dropdown">
+                                  <div class="num"
+                                      ng-class="{'font-danger': (masterStar.thirty_profit_rate + '').indexOf('-') < 0, 'font-success': (masterStar.thirty_profit_rate + '').indexOf('-') != -1}"
+                                      ng-if="lang.hostIsCn()">
+                                      {{ masterStar.thirty_profit_rate }}%
+                                  </div>
+                                  <div class="num"
+                                      ng-class="{'font-success': (masterStar.thirty_profit_rate + '').indexOf('-') < 0, 'font-danger': (masterStar.thirty_profit_rate + '').indexOf('-') != -1}"
+                                      ng-if="!lang.hostIsCn()">
+                                      {{ masterStar.thirty_profit_rate }}%
+                                  </div>
+                                  <div class="tip">
+                                      {{ lang.text("tigerWitID.master.last30AaysYield") }}
+                                  </div>
+                              </div>
+                              <div class="dropdown" ng-if="masterStar.follow_profit >= 1000">
+                                  <div class="num">
+                                      ${{ masterStar.follow_profit }}
+                                  </div>
+                                  <div class="tip">
+                                      {{ lang.text("tigerWitID.master.profitCopiers") }}
+                                  </div>
+                              </div>
+                              <div class="dropdown" ng-if="masterStar.follow_profit < 1000">
+                                  <div class="num">
+                                      {{ masterStar.history_copy_count || '0' }}
+                                  </div>
+                                  <div class="tip">
+                                      {{ lang.text("tigerWitID.master.copiers") }}
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="dividing">
+
+                      </div>
+                  </div>
+                  <div class="ranklist_cont__master-copy">
+                      <div class="copy_btn_wrapper" ng-if="!masterStar.is_copy">
+                          <a target="_blank" ng-href="/trader/{{masterStar.user_code}}/#/trader/summary"
+                              class="copy_btn tw-btn tw-btn-sm130 tw-btn-capsule-gradient">{{ masterStar.bonus_amount ? (lang.text("tigerWitID.master.copyGet1") + masterStar.bonus_amount + lang.text("tigerWitID.master.copyGet2")) : lang.text('tigerWitID.copy') }}</a>
+                      </div>
+                      <div class="copy_btn_wrapper" ng-if="masterStar.is_copy">
+                          <a target="_blank"
+                              class="copy_btn tw-btn tw-btn-sm130 tw-btn-capsule-bordered">{{ lang.text("tigerWitID.copied") }}</a>
+                      </div>
+                  </div>
+              </div>
+              <div class="text-center mg-tp-40">
+                <a href="/ranklist/#/ranklist/masters" class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient"><%= lang.text("more")%></a>
+              </div>
+          </div>
+          <!-- <ul class="index_new__copy-lst">
             <li>
               <img ng-src="/white_label/home/copy-icon-1.png" alt="">
               <p class="num">1</p>
@@ -113,12 +215,13 @@
               <p class="num">4</p>
               <p class="tip"><%= lang.text("newhome_15")%></p>
             </li>
-          </ul>
-          <div class="index_new__copy-btn_box">
+          </ul> -->
+          <!-- <div class="index_new__copy-btn_box">
             <a href="/ranklist/#/ranklist/masters" class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient"
               style="width: 220px"
               ng-click="toTrackEvent('home page', 'global_home_click_select_master')"><%= lang.text("newhome_16")%></a>
-          </div>
+          </div> -->
+        </div>
       </div>
     </div>
     <div class="index_new__flexible">

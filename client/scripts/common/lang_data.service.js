@@ -675,56 +675,6 @@
                 "pt-BR": "Operação",
                 "ar": "العملية"
             },
-            "HoldingTrades2": {
-                "en": "Open price",
-                "zh": "开仓价",
-                "vi": "Giá Mở",
-                "zh-Hant": "開倉價",
-                "id": "Harga buka",
-                "es": "Precio Apertura",
-                "pt-BR": "Preço de abertura",
-                "ar": "سعر الفتح"
-            },
-            "HoldingTrades3": {
-                "en": "Current Price",
-                "zh": "现价",
-                "vi": "Giá Hiện Tại",
-                "zh-Hant": "現價",
-                "id": "Harga saat ini",
-                "es": "Precio Actual",
-                "pt-BR": "Preço atual",
-                "ar": "السعر الحالي"
-            },
-            "HoldingTrades4": {
-                "en": "Holding Time",
-                "zh": "持仓时间",
-                "vi": "Thời gian chờ",
-                "zh-Hant": "持倉時間",
-                "id": "Lamanya posisi yang dibuka",
-                "es": "Tiempo posición",
-                "pt-BR": "Tempo de espera",
-                "ar": "زمن الاحتفاظ"
-            },
-            "HoldingTrades5": {
-                "en": "Spread",
-                "zh": "点数",
-                "vi": "Spread",
-                "zh-Hant": "點數",
-                "id": "Spread",
-                "es": "Spread",
-                "pt-BR": "Spread",
-                "ar": "الفرق السعري"
-            },
-            "HoldingTrades6": {
-                "en": "Profit",
-                "zh": "收益",
-                "vi": "Lợi nhuận",
-                "zh-Hant": "收益",
-                "id": "Laba",
-                "es": "Beneficios",
-                "pt-BR": "Lucro",
-                "ar": "الربح"
-            },
             "HoldingTrades9": {
                 "en": "No Data",
                 "zh": "无数据",
@@ -744,86 +694,6 @@
                 "es": "Nota：Los Trades no se mostrarán aquí antes de 7 días.",
                 "pt-BR": "Nota: As negociações não serão exibidas aqui antes de 7 dias.",
                 "ar": "ملحوظة: لن يتم عرض المتداولين هنا قبل 7 أيام"
-            },
-            "TradingHistory1": {
-                "en": "Operation",
-                "zh": "操作",
-                "vi": "Hoạt động",
-                "zh-Hant": "操作",
-                "id": "Transaksi",
-                "es": "Operación",
-                "pt-BR": "Operação",
-                "ar": "العملية"
-            },
-            "TradingHistory2": {
-                "en": "Open price",
-                "zh": "开仓价",
-                "vi": "Giá Mở",
-                "zh-Hant": "開倉價",
-                "id": "Harga buka",
-                "es": "Precio apertura",
-                "pt-BR": "Preço de abertura",
-                "ar": "سعر الفتح"
-            },
-            "TradingHistory3": {
-                "en": "Close price",
-                "zh": "平仓价",
-                "vi": "Giá Đóng",
-                "zh-Hant": "平倉價",
-                "id": "Harga saat posisi ditutup",
-                "es": "Precio cierre",
-                "pt-BR": "Preço de fechamento",
-                "ar": "سعر الإغلاق"
-            },
-            "TradingHistory4": {
-                "en": "Holding Time",
-                "zh": "持仓时间",
-                "vi": "Thời gian chờ",
-                "zh-Hant": "持倉時間",
-                "id": "Lamanya posisi yang dibuka",
-                "es": "Tiempo posición",
-                "pt-BR": "Tempo de espera",
-                "ar": "زمن الاحتفاظ"
-            },
-            "TradingHistory5": {
-                "en": "Spread",
-                "zh": "点数",
-                "vi": "Spread",
-                "zh-Hant": "點數",
-                "id": "Spread",
-                "es": "Spread",
-                "pt-BR": "Spread",
-                "ar": "الفرق السعري"
-            },
-            "TradingHistory6": {
-                "en": "Profit",
-                "zh": "收益",
-                "vi": "Lợi nhuận",
-                "zh-Hant": "收益",
-                "id": "Laba",
-                "es": "Beneficios",
-                "pt-BR": "Lucro",
-                "ar": "الربح"
-            },
-            "TradingHistory9": {
-                "en": "No Data",
-                "zh": "无数据",
-                "vi": "Không dữ liệu",
-                "zh-Hant": "無數據",
-                "id": "Data tidak tersedia",
-                "es": "No Data",
-                "pt-BR": "sem dados",
-                "ar": "ليس هناك بيانات"
-            },
-            "TradingHistory10": {
-                "en": " ago",
-                "zh": "前",
-                "vi": " Cách đây",
-                "zh-Hant": "前",
-                "id": " Sebelumnya",
-                "es": " ",
-                "pt-BR": " atrás",
-                "ar": "منذ"
             },
             "actLogin1": {
                 "zh": "快捷登录",
@@ -2040,16 +1910,6 @@
                         "es": "Guardadas",
                         "pt-BR": "Ganhos totais",
                         "ar": "إجمالي الأرباح"
-                    },
-                    "totalProfitRate": {
-                        "zh": "总收益率",
-                        "en": "Total Profit Rate",
-                        "vi": "Tỷ Suất Tổng Lợi Nhuận",
-                        "zh-Hant": "總收益率",
-                        "id": "Total rata-rata keuntungan",
-                        "es": "Tasa Beneficio Total ",
-                        "pt-BR": "Taxa total de lucro",
-                        "ar": "إجمالي معدل الربح"
                     },
                     "tradingAccount": {
                         "zh": "交易账户",
@@ -3435,16 +3295,6 @@
                         "pt-BR": "Ganhos totais",
                         "ar": "إجمالي الأرباح"
                     },
-                    "totalProfitRate": {
-                        "zh": "总收益率",
-                        "en": "Total Profit Rate",
-                        "vi": "Tổng Tỷ Suất Lợi Nhuận",
-                        "zh-Hant": "總收益率",
-                        "id": "Total rata-rata keuntungan",
-                        "es": "Total Tasa Beneficio",
-                        "pt-BR": "Taxa total de lucro",
-                        "ar": "إجمالي معدل الربح"
-                    },
                     "tradingSubAccounts": {
                         "zh": "交易子账户",
                         "en": "Trade Sub-accounts",
@@ -4417,16 +4267,6 @@
                         "pt-BR": "P/L flutuante",
                         "ar": "الخسارة/الربح غير المحقق"
                     },
-                    "totalProfitRate": {
-                        "zh": "总收益率",
-                        "en": "Total Profit Rate",
-                        "vi": "Tỷ Suất Tổng Lợi Nhuận",
-                        "zh-Hant": "總收益率",
-                        "id": "Total rata-rata keuntungan",
-                        "es": "Tasa Ganancia Total",
-                        "pt-BR": "Taxa total de lucro",
-                        "ar": "إجمالي معدل الربح"
-                    },
                     "currentTrading": {
                         "zh": "当前交易",
                         "en": "Current Trading",
@@ -4460,18 +4300,18 @@
                     "openPrice": {
                         "zh": "开仓价",
                         "en": "Open price",
-                        "vi": "Giá Mở",
+                        "vi": "Giá mở cửa",
                         "zh-Hant": "開倉價",
-                        "id": "Harga buka",
+                        "id": "Harga pembukaan",
                         "es": "Precio de apertura",
                         "pt-BR": "Preço de abertura",
                         "ar": "سعر الفتح"
                     },
                     "currentPrice": {
-                        "zh": "现价",
+                        "zh": "当前价",
                         "en": "Current price",
                         "vi": "Giá Hiện Tại",
-                        "zh-Hant": "現價",
+                        "zh-Hant": "當前價",
                         "id": "Harga saat ini",
                         "es": "Precio actual",
                         "pt-BR": "Preço atual",
@@ -4609,13 +4449,13 @@
                     },
                     "profitRate": {
                         "zh": "收益率",
-                        "en": "Profit Rate",
-                        "vi": "Tỷ Suất Lợi Nhuận",
+                        "en": "Return",
+                        "vi": "Lợi nhuận",
                         "zh-Hant": "收益率",
-                        "id": "Keuntungan rata-rata",
-                        "es": "Tasa Beneficio ",
-                        "pt-BR": "Taxa de lucro",
-                        "ar": "معدل الربح"
+                        "id": "Keuntungan",
+                        "es": "Retorno",
+                        "pt-BR": "Retorno",
+                        "ar": "العائدات "
                     },
                     "investedFunds": {
                         "zh": "投入资金",
@@ -4656,36 +4496,6 @@
                         "es": "Número Orden",
                         "pt-BR": "Número do pedido",
                         "ar": "رقم الأمر"
-                    },
-                    "followMaster": {
-                        "zh": "跟随高手",
-                        "en": "Follow Master",
-                        "vi": "Sao chép Bậc Thầy",
-                        "zh-Hant": "跟隨高手",
-                        "id": "Ikuti Master",
-                        "es": "Seguir Master",
-                        "pt-BR": "Seguir Mestre",
-                        "ar": "متابعة الأستاذ"
-                    },
-                    "openPriceg": {
-                        "zh": "开仓价格",
-                        "en": "Open Price",
-                        "vi": "Giá Mở",
-                        "zh-Hant": "開倉價格",
-                        "id": "Harga buka",
-                        "es": "Precio Apertura",
-                        "pt-BR": "Preço de abertura",
-                        "ar": "سعر الفتح"
-                    },
-                    "currentPriceg": {
-                        "zh": "现在价格",
-                        "en": "Current Price",
-                        "vi": "Giá Hiện Tại",
-                        "zh-Hant": "現在價格",
-                        "id": "Harga saat ini",
-                        "es": "Precio Actual",
-                        "pt-BR": "Preço atual",
-                        "ar": "السعر الحالي"
                     },
                     "margin": {
                         "zh": "交易金额",
@@ -4989,6 +4799,16 @@
                         "pt-BR": "Portfólio",
                         "ar": "المحفظة الاستثمارية"
                     },
+                    "proportion": {
+                        "zh": "占比",
+                        "en": "Proportion",
+                        "vi": "Cơ cấu lệnh",
+                        "zh-Hant": "佔比",
+                        "id": "Perbandingan",
+                        "es": "Proporción",
+                        "pt-BR": "Proporção",
+                        "ar": "نسبة"
+                    },
                     "trading": {
                         "zh": "自主交易",
                         "en": "Trading",
@@ -5012,10 +4832,10 @@
                     "closePrice": {
                         "zh": "平仓价",
                         "en": "Close price",
-                        "vi": "Giá Đóng",
+                        "vi": "Giá đóng cửa",
                         "zh-Hant": "平倉價",
-                        "id": "Harga saat posisi ditutup",
-                        "es": "Precio Cierre",
+                        "id": "Harga penutupan",
+                        "es": "Precio de cierre",
                         "pt-BR": "Preço de fechamento",
                         "ar": "سعر الإغلاق"
                     },
@@ -5212,24 +5032,24 @@
                         "ar": "الأوامر المغلقة"
                     },
                     "profitOrders": {
-                        "zh": "盈利订单",
-                        "en": "Profit",
-                        "vi": "Lệnh Lời",
-                        "zh-Hant": "盈利訂單",
-                        "id": "Laba",
-                        "es": "Beneficios",
-                        "pt-BR": "Lucro",
-                        "ar": "الربح"
+                        "zh": "盈利单数",
+                        "en": "Profit orders",
+                        "vi": "Các lệnh lời",
+                        "zh-Hant": "盈利單數",
+                        "id": "Transaksi untung",
+                        "es": "Órdenes de ganancias",
+                        "pt-BR": "Posições com lucro",
+                        "ar": "العمليات المربحة "
                     },
                     "lossOrders": {
-                        "zh": "亏损订单",
-                        "en": "Loss",
-                        "vi": "Lệnh Lỗ",
-                        "zh-Hant": "虧損訂單",
-                        "id": "Rugi",
-                        "es": "Pérdidas",
-                        "pt-BR": "Perdas",
-                        "ar": "خسارة"
+                        "zh": "亏损单数",
+                        "en": "Loss orders",
+                        "vi": "Các lệnh lỗ",
+                        "zh-Hant": "虧損單數",
+                        "id": "Transaksi Rugi",
+                        "es": "Órdenes de pérdidas",
+                        "pt-BR": "Posições perdedoras",
+                        "ar": "العمليات الخاسرة"
                     },
                     "avgHoldingTime": {
                         "zh": "平均持仓时间",
@@ -5252,14 +5072,14 @@
                         "ar": "متوسط زمن الاحتفاظ:"
                     },
                     "maxDrawdown": {
-                        "zh": "最大回撤",
-                        "en": "Max Drawdown",
-                        "vi": "Max Drawdown",
-                        "zh-Hant": "最大回撤",
-                        "id": "Drawdown maksimum",
-                        "es": "Max Drawdown",
-                        "pt-BR": "Rebaixamento máximo",
-                        "ar": "الحد الأقصى للهبوط"
+                        "zh": "最大回撤率",
+                        "en": "Max. Drawdown",
+                        "vi": "Rủi ro cao nhất",
+                        "zh-Hant": "最大回撤率",
+                        "id": "Drawdown tertinggi",
+                        "es": "Max. Reducción",
+                        "pt-BR": "Máx. Rebaixamento",
+                        "ar": "الحد الأقصى للسحب "
                     },
                     "avgNumberTransactionsPerMonth": {
                         "zh": "月平均交易次数",
@@ -5293,13 +5113,13 @@
                     },
                     "totalProfitRate": {
                         "zh": "总收益率",
-                        "en": "Total profit rate",
-                        "vi": "Tỷ Suất Tổng Lợi Nhuận",
+                        "en": "Overall return",
+                        "vi": "Tổng lợi nhuận",
                         "zh-Hant": "總收益率",
-                        "id": "Total rata-rata keuntungan",
-                        "es": "Tasa Beneficio total",
-                        "pt-BR": "Taxa total de lucro",
-                        "ar": "إجمالي معدل الربح"
+                        "id": "Total keuntungan",
+                        "es": "Retorno General",
+                        "pt-BR": "Retorno geral",
+                        "ar": "العائد الكلي"
                     },
                     "tradingChart": {
                         "zh": "交易走势图",
@@ -5323,23 +5143,23 @@
                     },
                     "profitRate": {
                         "zh": "收益率",
-                        "en": "Profit Rate",
-                        "vi": "Tỷ Suất Lợi Nhuận",
+                        "en": "Return",
+                        "vi": "Lợi nhuận",
                         "zh-Hant": "收益率",
-                        "id": "Keuntungan rata-rata",
-                        "es": "Tasa Beneficio",
-                        "pt-BR": "Taxa de lucro",
-                        "ar": "معدل الربح"
+                        "id": "Keuntungan",
+                        "es": "Retorno",
+                        "pt-BR": "Retorno",
+                        "ar": "العائدات "
                     },
                     "profitRateM": {
                         "zh": "收益率：",
-                        "en": "Profit Rate: ",
-                        "vi": "Tỷ Suất Lợi Nhuận: ",
+                        "en": "Return: ",
+                        "vi": "Lợi nhuận: ",
                         "zh-Hant": "收益率：",
-                        "id": "Keuntungan rata-rata: ",
-                        "es": "Tasa Beneficio: ",
-                        "pt-BR": "Taxa de lucro:",
-                        "ar": "معدل الربح:"
+                        "id": "Keuntungan: ",
+                        "es": "Retorno: ",
+                        "pt-BR": "Retorno:",
+                        "ar": "العائدات :"
                     },
                     "mainTradingSymbols": {
                         "zh": "主要交易品种",
@@ -5350,26 +5170,6 @@
                         "es": "Analítics Mensuales",
                         "pt-BR": "Análise mensal",
                         "ar": "التحليل الشهري"
-                    },
-                    "recommendation": {
-                        "zh": "分类高手",
-                        "en": "Recommendation",
-                        "vi": "Sự giới thiệu",
-                        "zh-Hant": "分類高手",
-                        "id": "Rekomendasi ",
-                        "es": "Recomendaciones",
-                        "pt-BR": "Recomendação",
-                        "ar": "توصية"
-                    },
-                    "highIncome": {
-                        "zh": "收益高手",
-                        "en": "Profitability",
-                        "vi": "Khả năng Sinh Lời",
-                        "zh-Hant": "收益高手",
-                        "id": "Profitabilitas",
-                        "es": "Rentabilidad",
-                        "pt-BR": "Rentabilidade",
-                        "ar": "الربحية"
                     },
                     "revenueLeading": {
                         "zh": "收益领先 表现突出",
@@ -5502,94 +5302,74 @@
                         "ar": "معدل النجاح"
                     },
                     "maximumOpen": {
-                        "zh": "最大开仓",
-                        "en": "Max. open order",
-                        "vi": "Lệnh mở Tối đa",
-                        "zh-Hant": "最大開倉",
-                        "id": "Maksimal posisi terbuka",
-                        "es": "Max. órdenes abiertas",
-                        "pt-BR": "Ordem aberta máxima",
-                        "ar": "الحد الأقصى للأوامر المفتوحة"
+                        "zh": "最大手数",
+                        "en": "Max. lots",
+                        "vi": "Số lot lớn nhất",
+                        "zh-Hant": "最大手數",
+                        "id": "Lot maksimal",
+                        "es": "Número máximo de movimientos",
+                        "pt-BR": "Lote máximo",
+                        "ar": "الحد الأقصى لحجم التداول "
                     },
                     "totalClosingOrders": {
-                        "zh": "总平仓交易",
+                        "zh": "总平仓单数",
                         "en": "Total closed orders",
-                        "vi": "Tổng các lệnh đóng",
-                        "zh-Hant": "總平倉交易",
-                        "id": "Total posisi tertutup",
-                        "es": "Total órdenes cerradas",
-                        "pt-BR": "Total de pedidos fechados",
-                        "ar": "إجمالي الأوامر المغلقة"
+                        "vi": "Tổng số lệnh đã đóng",
+                        "zh-Hant": "總平倉單數",
+                        "id": "Total transaksi yang ditutup",
+                        "es": "Total de pedidos cerrados",
+                        "pt-BR": "Total de posições fechadas",
+                        "ar": "مجموع العمليات المغلقة "
                     },
                     "longsWon": {
                         "zh": "成功做多交易",
-                        "en": "Longs won",
-                        "vi": "Lệnh Mua thắng",
+                        "en": "Longs won orders",
+                        "vi": "Các lệnh mua thắng",
                         "zh-Hant": "成功做多交易",
-                        "id": "Posisi Buy Menang",
-                        "es": "Largos ganados",
-                        "pt-BR": "Ganhos longos",
-                        "ar": "صفقات الشراء الرابحة"
+                        "id": "Transaksi Beli yang untung",
+                        "es": "Ganó órdenes",
+                        "pt-BR": "Posições de compra vencedoras",
+                        "ar": "فوز عمليات تداولية طويلة الأمد"
                     },
                     "shortsWon": {
                         "zh": "成功做空交易",
-                        "en": "Shorts won",
-                        "vi": "Lệnh bán thắng",
+                        "en": "Short won orders",
+                        "vi": "Các lệnh bán thắng",
                         "zh-Hant": "成功做空交易",
-                        "id": "Posisi Sell Menang",
-                        "es": "Cortos ganados",
-                        "pt-BR": "Ganhos curtos",
-                        "ar": "صفقات البيع الرابحة"
+                        "id": "Transaksi Jual yang untung",
+                        "es": "órdenes cortas ganadas",
+                        "pt-BR": "Posições de venda vencedoras",
+                        "ar": "فوز عمليات تداولية قصيرة الأمد"
                     },
                     "lastTradingDay": {
-                        "zh": "上一交易日状况",
-                        "en": "Last day traded",
-                        "vi": "Ngày cuối cùng để giao dịch",
-                        "zh-Hant": "上壹交易日狀況",
-                        "id": "Terakhir transaksi",
-                        "es": "Último día operado",
-                        "pt-BR": "Último dia negociado",
-                        "ar": "أخر يوم تم فيه التداول"
+                        "zh": "上一交易日收益率",
+                        "en": "Last day return",
+                        "vi": "Lợi nhuận ngày hôm qua",
+                        "zh-Hant": "上一交易日收益率",
+                        "id": "Keuntungan terakhir",
+                        "es": "Último día de retorno",
+                        "pt-BR": "Retorno no último dia",
+                        "ar": "اليوم الأخير من العائدات "
                     },
                     "nearly7DaysRateReturn": {
-                        "zh": "近七日交易状况",
-                        "en": "7-day rate of return",
-                        "vi": "Tỷ lệ lợi nhuận 7 ngày",
-                        "zh-Hant": "近七日交易狀況",
-                        "id": "Rata-rata keuntungan dalam 7 hari",
-                        "es": "7-días Tasa Retorno ",
-                        "pt-BR": "Taxa de retorno últimos 7 dias",
-                        "ar": "معدل العائد لفترة 7 أيام"
+                        "zh": "近7天收益率",
+                        "en": "Last 7d  return",
+                        "vi": "Lợi nhuận 7 ngày vừa qua",
+                        "zh-Hant": "近7天收益率",
+                        "id": "Keuntungan 7 hari terakhir",
+                        "es": "Último 7d de retorno",
+                        "pt-BR": "Retorno nos últimos 7 dias",
+                        "ar": "آخر سبعة أيام من العائدات  "
                     },
                     "numberMonthlyAverage": {
                         "zh": "月平均交易笔数",
-                        "en": "Monthly avg.",
-                        "vi": "Trung bình hàng tháng",
+                        "en": "Monthly Avg. orders",
+                        "vi": "Số lệnh trung bình hằng tháng",
                         "zh-Hant": "月平均交易筆數",
-                        "id": "Rata-rata bulanan",
-                        "es": "Media Mensual",
-                        "pt-BR": "Média mensal",
-                        "ar": "المتوسط المتحرك"
-                    },
-                    "maximumDrawdown": {
-                        "zh": "最大跌幅",
-                        "en": "Max drawdown",
-                        "vi": "Max drawdown",
-                        "zh-Hant": "最大跌幅",
-                        "id": "Drawdown maksimum",
-                        "es": "Max Drawdown  ",
-                        "pt-BR": "Rebaixamento máximo",
-                        "ar": "الحد الأقصى للهبوط"
-                    },
-                    "steadyg": {
-                        "zh": "最大跌幅",
-                        "en": "Stability",
-                        "vi": "Sự ổn định",
-                        "zh-Hant": "最大跌幅",
-                        "id": "Stabilitas",
-                        "es": "Estabilidad",
-                        "pt-BR": "Estabilidade",
-                        "ar": "استقرار"
+                        "id": "Rata-rata transaksi bulanan",
+                        "es": "Promedio mensual de órdenes",
+                        "pt-BR": "Média mensal de posições",
+                        "ar": "المعدل الشهري لعمليات التداول "
                     },
                     "follow": {
                         "zh": "复制高手",
@@ -9197,6 +8977,226 @@
                     }
                 },
                 "master": {
+                    "positionTime": {
+                        "zh": "持仓",
+                        "en": "Position ",
+                        "vi": "Vị thế ",
+                        "zh-Hant": "持倉",
+                        "id": "Posisi ",
+                        "es": "Posición ",
+                        "pt-BR": "Posição ",
+                        "ar": "المرتبة "
+                    },
+                    "profitLoss": {
+                        "zh": "止盈/止损",
+                        "en": "Profit/Loss",
+                        "vi": "Lời/Lỗ",
+                        "zh-Hant": "止盈/止損",
+                        "id": "untung/rugi",
+                        "es": "Ganancias/Pérdidas",
+                        "pt-BR": "Lucro/perda",
+                        "ar": "إيقاف الخسارة/ جني الربح"
+                    },
+                    "profit": {
+                        "zh": "盈利",
+                        "en": "Profit",
+                        "vi": "Lợi nhuận",
+                        "zh-Hant": "盈利",
+                        "id": "Keuntungan",
+                        "es": "Ganancia",
+                        "pt-BR": "Lucro",
+                        "ar": "ربح"
+                    },
+                    "loss": {
+                        "zh": "亏损",
+                        "en": "Loss",
+                        "vi": "Lỗ",
+                        "zh-Hant": "虧損",
+                        "id": "Kerugian",
+                        "es": "Pérdida",
+                        "pt-BR": "Perda",
+                        "ar": "خسارة"
+                    },
+                    "starMasters": {
+                        "zh": "明星高手",
+                        "en": "Star Masters",
+                        "vi": "Bậc thầy nổi bật",
+                        "zh-Hant": "明星高手",
+                        "id": "Master Pilihan",
+                        "es": "Star Masters",
+                        "pt-BR": "Mestre estrela",
+                        "ar": "نخبة المحترفين "
+                    },
+                    "profitCopiers": {
+                        "zh": "跟随者收益",
+                        "en": "Profit of copiers",
+                        "vi": "Lợi nhuận của người theo dõi",
+                        "zh-Hant": "跟隨者收益",
+                        "id": "Keuntungan pengikuti",
+                        "es": "Ganancias de Copiadores",
+                        "pt-BR": "Ganancia dos copiadores",
+                        "ar": "ربح الناسخين "
+                    },
+                    "copyGet1": {
+                        "zh": "复制赠$",
+                        "en": "Copy to get $",
+                        "vi": "Sao chép để nhận ",
+                        "zh-Hant": "複製贈$",
+                        "id": "Copy untuk mendapatkan $",
+                        "es": "Copy para obtener $",
+                        "pt-BR": "Copy para obtener $",
+                        "ar": "إنسخ للحصول على"
+                    },
+                    "copyGet2": {
+                        "zh": " ",
+                        "en": " ",
+                        "vi": "$",
+                        "zh-Hant": " ",
+                        "id": " ",
+                        "es": " ",
+                        "pt-BR": " ",
+                        "ar": " دولار"
+                    },
+                    "analytics": {
+                        "zh": "数据统计",
+                        "en": "Analytics",
+                        "vi": "Đánh giá",
+                        "zh-Hant": "數據統計",
+                        "id": "Analisis",
+                        "es": "Analítica",
+                        "pt-BR": "Analítica",
+                        "ar": "تحليلات"
+                    },
+                    "recommendedMasters": {
+                        "zh": "推荐高手",
+                        "en": "Recommended Masters",
+                        "vi": "Bậc thầy được đề xuất",
+                        "zh-Hant": "推薦高手",
+                        "id": "Rekomendasi Master",
+                        "es": "Masters recomendados",
+                        "pt-BR": "Mestre recomendados",
+                        "ar": "المحترف (الأستاذ) الموصى به "
+                    },
+                    "copiers": {
+                        "zh": "跟随者",
+                        "en": "Copiers",
+                        "vi": "Người theo dõi",
+                        "zh-Hant": "跟隨者",
+                        "id": "Pengikut",
+                        "es": "Copiadores",
+                        "pt-BR": "Copiador",
+                        "ar": "الناسخون "
+                    },
+                    "willReceive1": {
+                        "zh": "您将得到$",
+                        "en": "You will receive $",
+                        "vi": "Bạn sẽ nhận được ",
+                        "zh-Hant": "您將得到$",
+                        "id": "Anda akan menerima kupon senilai $",
+                        "es": "Recibirá un cupón de $",
+                        "pt-BR": "Você receberá un cupom de $",
+                        "ar": "سوف تتلقى قسيمة "
+                    },
+                    "willReceive2": {
+                        "zh": "红包当您成功跟随该高手",
+                        "en": " coupon while you copied this Master",
+                        "vi": "$ coupon khi sao chép Bậc Thầy này",
+                        "zh-Hant": "紅包當您成功跟隨該高手",
+                        "id": " ketika mengikuti Master ini",
+                        "es": " mientras copia a este Master",
+                        "pt-BR": " enquanto copia este Mestre",
+                        "ar": " $ أثناء نسخ هذا المحترف "
+                    },
+                    "returnChart30": {
+                        "zh": "收益率对比图",
+                        "en": "Return comparison chart",
+                        "vi": "Biểu đồ so sánh lợi nhuận",
+                        "zh-Hant": "收益率對比圖",
+                        "id": "Kembali ke grafik perbandingan",
+                        "es": "Tabla de comparación de retornos",
+                        "pt-BR": "Tabela de comparação de retorno",
+                        "ar": "جدول مقارنة العائدات (30 يوم)"
+                    },
+                    "currentMasterReturn": {
+                        "zh": "当前高手收益率",
+                        "en": "Current Master's Return",
+                        "vi": "Lợi nhuận của bậc thầy hiện tại",
+                        "zh-Hant": "當前高手收益率",
+                        "id": "Keuntungan Master saat ini",
+                        "es": "Retorno actual del Master",
+                        "pt-BR": "Retorno atual do Mestre",
+                        "ar": "العائد الحالي للمحترف (الأستاذ)"
+                    },
+                    "mastersAverageReturn": {
+                        "zh": "所有高手平均收益率",
+                        "en": "Masters' Average Return",
+                        "vi": "Lợi nhuận trung bình của các bậc thầy",
+                        "zh-Hant": "所有高手平均收益率",
+                        "id": "Rata-rata keuntungan Master",
+                        "es": "Retorno promedio de los Masters",
+                        "pt-BR": "Retorno médio dos Mestres",
+                        "ar": "معدل العائدات للمحترف (الأستاذ)"
+                    },
+                    "positions": {
+                        "zh": "持仓单",
+                        "en": "Positions",
+                        "vi": "Các vị thế",
+                        "zh-Hant": "持倉單",
+                        "id": "Posisi",
+                        "es": "Posiciones",
+                        "pt-BR": "Posições",
+                        "ar": "مراتب  "
+                    },
+                    "closed": {
+                        "zh": "历史单",
+                        "en": "Closed",
+                        "vi": "Đã đóng",
+                        "zh-Hant": "歷史單",
+                        "id": "Sudah ditutup",
+                        "es": "Cerrada",
+                        "pt-BR": "Fechadas",
+                        "ar": "مغلق "
+                    },
+                    "data": {
+                        "zh": "交易表现",
+                        "en": "Data",
+                        "vi": "Dữ liệu",
+                        "zh-Hant": "交易表現",
+                        "id": "Data",
+                        "es": "Datos",
+                        "pt-BR": "Dados",
+                        "ar": "البيانات"
+                    },
+                    "best": {
+                        "zh": "最佳",
+                        "en": "Best",
+                        "vi": "Tốt nhất",
+                        "zh-Hant": "最佳",
+                        "id": "Terbaik",
+                        "es": "Mejor",
+                        "pt-BR": "Melhor",
+                        "ar": "الأفضل"
+                    },
+                    "minimum": {
+                        "zh": "最少",
+                        "en": "Minimum",
+                        "vi": "Tối thiểu",
+                        "zh-Hant": "最少",
+                        "id": "Minimal",
+                        "es": "Mínimo",
+                        "pt-BR": "Mínimo",
+                        "ar": "الحد الأدنى"
+                    },
+                    "available": {
+                        "zh": "可用",
+                        "en": "Available",
+                        "vi": "Khả dụng",
+                        "zh-Hant": "可用",
+                        "id": "Tersedia",
+                        "es": "Disponible",
+                        "pt-BR": "Disponível",
+                        "ar": "متاح"
+                    },
                     "precautions": {
                         "zh": "注意事项",
                         "en": "Precautions",
@@ -9509,33 +9509,13 @@
                     },
                     "last30AaysYield": {
                         "zh": "近30天收益率",
-                        "en": "Last 30 days yield",
-                        "vi": "Lợi nhuận trong 30 ngày qua",
+                        "en": "Last 30d return",
+                        "vi": "Lợi nhuận 30 ngày trước",
                         "zh-Hant": "近30天收益率",
-                        "id": "Hasil selama 30 hari terakhir",
-                        "es": "Retorno últimos 30 días",
-                        "pt-BR": "Últimos 30 dias de rendimento",
+                        "id": "Keuntungan 30 hari terakhir",
+                        "es": "Keuntungan 30 hari terakhir",
+                        "pt-BR": "Retorno nos últimos 30 dias",
                         "ar": "العائد في أخر 30 يومًا"
-                    },
-                    "days30MaximumDrawdown": {
-                        "zh": "近30天最大跌幅",
-                        "en": "Last 30 days the maximum drawdown",
-                        "vi": "maximum drawdown 30 ngày qua",
-                        "zh-Hant": "近30天最大跌幅",
-                        "id": " Maksimal Drawdown 30 hari terakhir",
-                        "es": "Máximo drawdown últimos 30 días",
-                        "pt-BR": "Máximo rebaixamento dos últimos 30 dias",
-                        "ar": "الحد الأقصى للهبوط في أخر 30 يومًا"
-                    },
-                    "lastTradingDay": {
-                        "zh": "上一交易日",
-                        "en": "Last day traded",
-                        "vi": "Ngày cuối cùng để giao dịch",
-                        "zh-Hant": "上壹交易日",
-                        "id": "Terakhir transaksi",
-                        "es": "Último día operado",
-                        "pt-BR": "Último dia negociado",
-                        "ar": "أخر يوم تم فيه التداول"
                     },
                     "tip6": {
                         "zh": "为了最大限度地规避交易风险，TigerWit根据高手的当前跟随金额调整杠杆使用范围：",
@@ -9617,25 +9597,15 @@
                         "pt-BR": "Aproveite os lucros",
                         "ar": "استمتع بالأرباح"
                     },
-                    "highIncome": {
-                        "zh": "收益率",
-                        "en": "Profitability",
-                        "vi": "Tỷ Suất Lợi Nhuận",
-                        "zh-Hant": "收益率",
-                        "id": "Profitabilitas",
-                        "es": "Rentabilidad",
-                        "pt-BR": "Rentabilidade",
-                        "ar": "الربحية"
-                    },
                     "exact": {
                         "zh": "胜率",
-                        "en": "Consistency",
-                        "vi": "Tính nhất quán",
+                        "en": "Win rate",
+                        "vi": "Tỷ lệ thắng",
                         "zh-Hant": "勝率",
-                        "id": "Konsistensi",
-                        "es": "Consistencia",
-                        "pt-BR": "Consistência",
-                        "ar": "الثبات"
+                        "id": "Tingkat kemenangan",
+                        "es": "Ganar ratios",
+                        "pt-BR": "Taxa de acertos",
+                        "ar": "معدل الفوز"
                     },
                     "returnLast30D": {
                         "zh": "近30日收益率",
@@ -9677,35 +9647,15 @@
                         "pt-BR": "Performance:",
                         "ar": "الأداء:"
                     },
-                    "tip29": {
-                        "zh": "数据将于每天北京时间00：00进行更新",
-                        "en": "The data will be updated daily at 00:00GMT",
-                        "vi": "Dữ liệu sẽ được nâng cấp hằng ngày vào lúc 12 giờ GMT",
-                        "zh-Hant": "數據將於每天北京時間00：00進行更新",
-                        "id": "data akan diperbarui setiap hari pada pukul 00:00 GMT",
-                        "es": "Data actualizado diariamente a las 00:00GMT",
-                        "pt-BR": "Os dados serão atualizados à 00:00GMT",
-                        "ar": "سيتم تحميل البيانات يوميًا عند الساعة 00:00 بتوقيت جرينتش"
-                    },
                     "tip30": {
-                        "zh": "过往表现并不能完全代表未来交易的成功率，您需要做出理智的判断",
-                        "en": "Past performance is no guarantee of future performance.",
-                        "vi": "Hiệu suất trước đây không đảm bảo hiệu suất trong tương lai.",
-                        "zh-Hant": "過往表現並不能完全代表未來交易的成功率，您需要做出理智的判斷",
-                        "id": "Hasil kinerja di masa lampau tidak menjamin hasil di masa depan.",
-                        "es": "Rendimientos pasados no garantizan futuros retornos.",
-                        "pt-BR": "Performance passada não é garantia de performance futura.",
+                        "zh": "过往表现并不能完全代表未来交易的成功率，您需要理智的做出判断。数据将会在每天北京时间8：00更新",
+                        "en": "Past performance doesn't represent future performance.Data will updated daily at 00:00 GMT",
+                        "vi": "cập nhaanjt hằng ngày vào lúc 00:00 GMT",
+                        "zh-Hant": "過往的表現並不能完全代表未來交易的成功率，您需要理智的做出判斷。數據將會在每天00：00GMT更新",
+                        "id": "Performa masa lalu tidak mewakili performa untuk masa depan. Data akan diperbarui setiap hari pukul 07:00 WIB",
+                        "es": "El rendimiento pasado no representa el rendimiento futuro. Los datos se actualizarán diariamente a las 00:00 GMT",
+                        "pt-BR": "O desempenho passado não representa o desempenho futuro. Os dados são atualizados diariamente às 00:00 GMT",
                         "ar": "الأداء في الماضي لا يضمن الأداء في المستقبل."
-                    },
-                    "totalClosedOrders": {
-                        "zh": "总平仓交易数",
-                        "en": "Total Closed Orders",
-                        "vi": "Đóng tất cả các lệnh",
-                        "zh-Hant": "總平倉交易數",
-                        "id": "Total posisi tertutup",
-                        "es": "Total Órdenes Cerradas",
-                        "pt-BR": "Total de pedidos fechados",
-                        "ar": "إجمالي الأوامر المغلقة"
                     },
                     "buy": {
                         "zh": "多单",
@@ -9866,6 +9816,46 @@
                         "es": "Con la tecnología totalmente automatizada copy trading de TigerWit, usted también puede convertirse en una Master del Trading.",
                         "pt-BR": "Com a tecnologia para copiar as negociações totalmente automatizada da TigerWit, qualquer um pode ser o mestre de suas próprias negociações",
                         "ar": "مع تكنولوجيا التداول بنسخ الصفقات الآلية بالكامل والتي توفرها شركة  TigerWit، يمكن لأي شخص ربح الأموال."
+                    },
+                    "newhome_12": {
+                        "zh": "在高手榜单中选择一位高手。",
+                        "en": "Select a Master from the ranking table.",
+                        "vi": "Chọn một Bậc thầy từ bảng xếp hạng.",
+                        "zh-Hant": "在高手榜單中選擇壹位高手。",
+                        "id": "Bebas memilih Master dari daftar peringkat",
+                        "es": "Seleccione un Master del ranking",
+                        "pt-BR": "Selecionar um Mestre pelo ranking.",
+                        "ar": "اختر الأستاذ الذي يعجبك من قائمة التصنيف"
+                    },
+                    "newhome_13": {
+                        "zh": "选择你想跟随的高手进行交易。",
+                        "en": "Select the Master’s trade you want to follow.",
+                        "vi": "Tiến hành sao chép giao dịch từ Bậc Thầy.",
+                        "zh-Hant": "選擇妳想跟隨的高手進行交易。",
+                        "id": "Pilih Master yang ingin anda ikuti.",
+                        "es": "Seleccione el trade del Master que quiere seguir.",
+                        "pt-BR": "Selecionar a negociação do Mestre que você quer seguir.",
+                        "ar": "اختر صفقة الأستاذ التي تريد أن تتبعها"
+                    },
+                    "newhome_14": {
+                        "zh": "设置订单值。",
+                        "en": "Set your order value.",
+                        "vi": "Cài đặt giá trị lệnh của bạn.",
+                        "zh-Hant": "設置訂單值。",
+                        "id": "Pilih nilai transaksi anda.",
+                        "es": "Fije el valor de sus órdenes.",
+                        "pt-BR": "Configurar seu valor de ordem.",
+                        "ar": "حدد قيمة الأمر الخاص بك"
+                    },
+                    "newhome_15": {
+                        "zh": "成为TigerWit高手，你将获得跟随者盈利的20%。",
+                        "en": "Become a TigerWit Master and earn 20% commission on your followers’ profits.",
+                        "vi": "Trở thành Bậc thầy TigerWit và nhận 20% hoa hồng lợi nhuận từ người sao chép.",
+                        "zh-Hant": "成為TigerWit高手，妳將獲得跟隨者盈利的20%。",
+                        "id": "Ayo jadi Master di TigerWit dan hasilkan komisi hingga 20% dari total keuntungan pengikut anda.",
+                        "es": "Sea un TigerWit Máster y gane un 20% comisión sobre beneficio seguidores.",
+                        "pt-BR": "Tornar-se um Mestre da TigerWit e ganhe 20% de comissão sobre os lucros de seus seguidores.",
+                        "ar": "كن أحد أساتذة TigerWit واربح عمولة 20% على أرباح المتابعين لك"
                     },
                     "chooseMaster": {
                         "zh": "选择高手",
@@ -10213,6 +10203,16 @@
                     },
                     "forex": {
                         "zh": "外汇",
+                        "en": "FX",
+                        "vi": "FX",
+                        "zh-Hant": "外匯",
+                        "id": "FX",
+                        "es": "FX",
+                        "pt-BR": "Forex",
+                        "ar": "الفوركس"
+                    },
+                    "forexJ": {
+                        "zh": "外汇",
                         "en": "Forex",
                         "vi": "Forex",
                         "zh-Hant": "外匯",
@@ -10221,24 +10221,34 @@
                         "pt-BR": "Forex",
                         "ar": "الفوركس"
                     },
+                    "crypto": {
+                        "zh": "虚拟货币",
+                        "en": "Crypto",
+                        "vi": "Crypto",
+                        "zh-Hant": "虛擬貨幣",
+                        "id": "Kripto",
+                        "es": "Crypto",
+                        "pt-BR": "Crypto",
+                        "ar": "التشفير"
+                    },
                     "metals": {
                         "zh": "贵金属",
                         "en": "Metals",
                         "vi": "Kim Loại",
                         "zh-Hant": "貴金屬",
-                        "id": "Logam Mulia",
+                        "id": "Logam",
                         "es": "Metales",
                         "pt-BR": "Metais",
                         "ar": "المعادن"
                     },
                     "oilEngrgy": {
                         "zh": "能源",
-                        "en": "Oil&Engrgy",
-                        "vi": "Dầu Và Năng Lượng",
+                        "en": "Commodities",
+                        "vi": "Hàng hóa",
                         "zh-Hant": "能源",
-                        "id": "Minyak dan Energi",
-                        "es": "Petróleo&Energía",
-                        "pt-BR": "Petróleo&Energia",
+                        "id": "Komoditas",
+                        "es": "Commodities",
+                        "pt-BR": "Commodities",
                         "ar": "النفط والطاقة"
                     },
                     "indices": {
@@ -12628,6 +12638,16 @@
                     "pt-BR": "Seguir",
                     "ar": "متابعة"
                 },
+                "copied": {
+                    "en": "COPIED",
+                    "zh": "已复制",
+                    "vi": "Sao chép",
+                    "zh-Hant": "已復制",
+                    "id": "Ikuti",
+                    "es": "COPIADO",
+                    "pt-BR": "COPIADO",
+                    "ar": "منسوخ"
+                },
                 "noData": {
                     "zh": "暂无数据！",
                     "en": "No data!",
@@ -13347,7 +13367,17 @@
                     "es": "Dec.",
                     "pt-BR": "Dez.",
                     "ar": "ديسمبر"
-                }
+                },
+                "reset": {
+                    "zh": "还原",
+                    "en": "Reset",
+                    "vi": "Cài đặt lại",
+                    "zh-Hant": "還原",
+                    "id": "Atur kembali",
+                    "es": "Reiniciar",
+                    "pt-BR": "Reiniciar",
+                    "ar": "إعادة تعيين"
+                },
             },
         };
         var indexBasePath = "/white_label";
