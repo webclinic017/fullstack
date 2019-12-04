@@ -65,3 +65,24 @@
     }
   
 }
+@include b(layui-m-layer-wx) {
+  @include e(sensing) {
+    background-color: transparent;
+    box-shadow: none;
+    text-align: right;
+    height: 100%;
+    width: 100%;
+    @include m(con) {
+      padding: px2rem(35) px2rem(60);
+      text-align: right;
+      > img {
+        height: px2rem(135);
+      }
+      > p {
+        color: #fff;
+        font-size: px2rem(26);
+        padding: px2rem(10) px2rem(60);
+      }
+    }
+  }
+}
