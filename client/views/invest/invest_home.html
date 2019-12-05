@@ -38,7 +38,17 @@
     </div>
     <ul class="space_sub_account">
         <li class="space_sub_account__list" ng-repeat="dealAccount in dealAccountList">
-            <ul class="space_sub_account_info">
+            <!-- 账号归档 status === 0 -->
+            <ul class="space_sub_account_info" ng-if="!dealAccount.status">
+                <li class="space_sub_account_info__list">
+                    <ul>
+                        <li><span class="name" style="color: #aaa;">{{ dealAccount.account_name || lang.text('tigerWitID.tradingAccount.title') }}</span></li>
+                    </ul>
+                    <div class="mg-tp-10" style="color: #aaa;">MT4 ID: {{ dealAccount.mt4_id }}</div>
+                </li>
+                <li class="space_sub_account_info__list" style="color: #aaa;font-size: 18px;">{{lang.text('tigerWitID.tradingAccount.accountInvalid')}}</li>
+            </ul>
+            <ul class="space_sub_account_info" ng-if="dealAccount.status">
                 <li class="space_sub_account_info__list">
                     <ul>
                         <li>
