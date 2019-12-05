@@ -4184,7 +4184,17 @@
                         "es": "La cuenta está bajo revisión, vuelva a depositar después de la presentación",
                         "pt-BR": "A conta está em revisão, faça o depósito novamente após o envio",
                         "ar": "الحساب قيد المراجعة، يرجى إعادة الإيداع بعد الإرسال"
-                    }
+                    },
+                    "tip28": {
+                        "zh": "由于复制金额小于最佳金额，您可能无法成功复制该高手",
+                        "en": "The order may not be executed because of the amount is less than best amount",
+                        "vi": "Lệnh có thể bị đóng do số vốn thấp hơn mức khuyến nghị",
+                        "zh-Hant": "由於複製金額小於最佳金額，您可能無法成功複製該高手",
+                        "id": "Transaksi mungkin akan gagal tereksekusi karena jumlahnya kurang dari yang disarankan",
+                        "es": "El pedido no pudo ejecutarse porque la cantidad era inferior a la cantidad Mejor",
+                        "pt-BR": "A ordem pode ou não ser executada porque a quantidade é menor que a quantidade recomendada",
+                        "ar": "قد لا يتم تنفيذ العملية لأن المبلغ أقل من المبلغ المطلوب "
+                    },
                 },
                 "details": {
                     "title": {

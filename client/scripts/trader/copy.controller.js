@@ -18,18 +18,24 @@
             title: passedScope.title || '',
             username: copiedTrader.username,          // 高手 username
             // avatar: copiedTrader.lgAvatar,         // 高手头像
-            amount: copiedTrader.copied || undefined, // 需填写的复制金额，若已经复制则为本人复制高手的复制金额
+            amount: undefined, // 需填写的复制金额，若已经复制则为本人复制高手的复制金额
+            copied: copiedTrader.copied || undefined,   // 已经复制的金额
             minCopyAmount: Number(copiedTrader.minCopyAmount) || '',
             surplusAmount: passedScope.surplusAmount || undefined
         };
         $scope.frontErr = {
             amount: {
                 show: false,
-                reg: validator.regType.amount.reg
+                reg: validator.regType.amount.reg,
+                tip: validator.regType.amount.tip,
             },
             insufficient: {
                 show: false,
                 msg: lang.text('tigerWitID.tradingAccount.tip11')
+            },
+            tip: {
+                show: false,
+                msg: lang.text('tigerWitID.tradingAccount.tip28')  // '由于复制金额小于最佳金额，您可能无法成功复制该高手'
             }
         };
 
@@ -59,13 +65,14 @@
         //     getMasterGrade(copiedTrader.usercode);
         // }
 
-        if(!$scope.copyTrade.surplusAmount){
+        if (!$scope.copyTrade.surplusAmount) {
             getMasterGrade(copiedTrader.usercode);
         }
 
         // 获取可用复制金额
         function getAvaCopyAmount(usercode) {
             trader.getAvaCopyAmount(usercode).then(function (data) {
+                $scope.copyTrade.copied = data.data.copy_amount;
                 $scope.copyTrade.avaCopyAmount = data.data.usable;
                 $scope.copyTrade.advice = data.data.advice || 0.00;
                 $scope.copyTrade.minCopyAmount = Number(data.data.min_copy_amount);
@@ -87,15 +94,19 @@
         }
 
         function getDefaultAmount() {
-            var ava = Number($scope.copyTrade.avaCopyAmount);
-            var adv = Number($scope.copyTrade.advice);
-            var min = $scope.copyTrade.minCopyAmount;
-            console.log(ava, adv, min);
-            if ((min < ava && ava < adv) || ava < min) {
-                setAmount(ava)
-            }
-            if (ava > adv) {
-                setAmount(adv)
+            if ($scope.copyTrade.copied) {
+                setAmount($scope.copyTrade.copied)
+            } else {
+                var ava = Number($scope.copyTrade.avaCopyAmount);
+                var adv = Number($scope.copyTrade.advice);
+                var min = $scope.copyTrade.minCopyAmount;
+                // console.log(ava, adv, min);
+                if ((min < ava && ava < adv) || ava < min) {
+                    setAmount(ava)
+                }
+                if (ava > adv) {
+                    setAmount(adv)
+                }
             }
         }
 
@@ -111,10 +122,10 @@
         $scope.setAmount = setAmount;
         $scope.calAmount = calAmount;
 
-        if ($scope.copyTrade.amount &&
-            parseInt($scope.copyTrade.amount) < $scope.copyTrade.minCopyAmount) {
-            setAmount(1000)
-        }
+        // if ($scope.copyTrade.amount &&
+        //     parseInt($scope.copyTrade.amount) < $scope.copyTrade.minCopyAmount) {
+        //     setAmount(1000)
+        // }
 
         function calAmount() {
             var usableAmount = Number($scope.copyTrade.avaCopyAmount);
@@ -124,10 +135,15 @@
             } else {
                 $scope.frontErr.insufficient.show = false;
             }
+            if (amount >= $scope.copyTrade.minCopyAmount && amount < Number($scope.copyTrade.advice)) {
+                $scope.frontErr.tip.show = true;
+            } else {
+                $scope.frontErr.tip.show = false;
+            }
         }
         function setAmount(amount) {
             $scope.copyTrade.amount = Number(amount);
-            
+
             calAmount()
         }
         function goStep(step) {
@@ -155,11 +171,11 @@
             // console.log((Number($scope.copyTrade.amount), Number($scope.copyTrade.advice.split('.')[0])), isForce);
 
             // if ((Number($scope.copyTrade.amount) <= Number($scope.copyTrade.advice.split('.')[0]))) {
-                // && !isForce
-                //     goStep(2);
-                // } else {
-                // 如果通过直接提交表单
-                submitForm();
+            // && !isForce
+            //     goStep(2);
+            // } else {
+            // 如果通过直接提交表单
+            submitForm();
             // }
         }
 
