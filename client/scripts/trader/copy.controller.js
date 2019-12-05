@@ -25,11 +25,16 @@
         $scope.frontErr = {
             amount: {
                 show: false,
-                reg: validator.regType.amount.reg
+                reg: validator.regType.amount.reg,
+                tip: validator.regType.amount.tip,
             },
             insufficient: {
                 show: false,
                 msg: lang.text('tigerWitID.tradingAccount.tip11')
+            },
+            tip: {
+                show: false,
+                msg: lang.text('tigerWitID.tradingAccount.tip28')  // '由于复制金额小于最佳金额，您可能无法成功复制该高手'
             }
         };
 
@@ -59,7 +64,7 @@
         //     getMasterGrade(copiedTrader.usercode);
         // }
 
-        if(!$scope.copyTrade.surplusAmount){
+        if (!$scope.copyTrade.surplusAmount) {
             getMasterGrade(copiedTrader.usercode);
         }
 
@@ -124,10 +129,16 @@
             } else {
                 $scope.frontErr.insufficient.show = false;
             }
+            console.log($scope.copyTrade.amount)
+            if (amount >= $scope.copyTrade.minCopyAmount && amount < Number($scope.copyTrade.advice)) {
+                $scope.frontErr.tip.show = true;
+            } else {
+                $scope.frontErr.tip.show = false;
+            }
         }
         function setAmount(amount) {
             $scope.copyTrade.amount = Number(amount);
-            
+
             calAmount()
         }
         function goStep(step) {
@@ -155,11 +166,11 @@
             // console.log((Number($scope.copyTrade.amount), Number($scope.copyTrade.advice.split('.')[0])), isForce);
 
             // if ((Number($scope.copyTrade.amount) <= Number($scope.copyTrade.advice.split('.')[0]))) {
-                // && !isForce
-                //     goStep(2);
-                // } else {
-                // 如果通过直接提交表单
-                submitForm();
+            // && !isForce
+            //     goStep(2);
+            // } else {
+            // 如果通过直接提交表单
+            submitForm();
             // }
         }
 
