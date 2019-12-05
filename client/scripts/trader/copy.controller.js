@@ -18,7 +18,8 @@
             title: passedScope.title || '',
             username: copiedTrader.username,          // 高手 username
             // avatar: copiedTrader.lgAvatar,         // 高手头像
-            amount: copiedTrader.copied || undefined, // 需填写的复制金额，若已经复制则为本人复制高手的复制金额
+            amount: undefined, // 需填写的复制金额，若已经复制则为本人复制高手的复制金额
+            copied: copiedTrader.copied || undefined,   // 已经复制的金额
             minCopyAmount: Number(copiedTrader.minCopyAmount) || '',
             surplusAmount: passedScope.surplusAmount || undefined
         };
@@ -71,6 +72,7 @@
         // 获取可用复制金额
         function getAvaCopyAmount(usercode) {
             trader.getAvaCopyAmount(usercode).then(function (data) {
+                $scope.copyTrade.copied = data.data.copy_amount;
                 $scope.copyTrade.avaCopyAmount = data.data.usable;
                 $scope.copyTrade.advice = data.data.advice || 0.00;
                 $scope.copyTrade.minCopyAmount = Number(data.data.min_copy_amount);
@@ -92,15 +94,19 @@
         }
 
         function getDefaultAmount() {
-            var ava = Number($scope.copyTrade.avaCopyAmount);
-            var adv = Number($scope.copyTrade.advice);
-            var min = $scope.copyTrade.minCopyAmount;
-            console.log(ava, adv, min);
-            if ((min < ava && ava < adv) || ava < min) {
-                setAmount(ava)
-            }
-            if (ava > adv) {
-                setAmount(adv)
+            if ($scope.copyTrade.copied) {
+                setAmount($scope.copyTrade.copied)
+            } else {
+                var ava = Number($scope.copyTrade.avaCopyAmount);
+                var adv = Number($scope.copyTrade.advice);
+                var min = $scope.copyTrade.minCopyAmount;
+                // console.log(ava, adv, min);
+                if ((min < ava && ava < adv) || ava < min) {
+                    setAmount(ava)
+                }
+                if (ava > adv) {
+                    setAmount(adv)
+                }
             }
         }
 
@@ -116,10 +122,10 @@
         $scope.setAmount = setAmount;
         $scope.calAmount = calAmount;
 
-        if ($scope.copyTrade.amount &&
-            parseInt($scope.copyTrade.amount) < $scope.copyTrade.minCopyAmount) {
-            setAmount(1000)
-        }
+        // if ($scope.copyTrade.amount &&
+        //     parseInt($scope.copyTrade.amount) < $scope.copyTrade.minCopyAmount) {
+        //     setAmount(1000)
+        // }
 
         function calAmount() {
             var usableAmount = Number($scope.copyTrade.avaCopyAmount);
@@ -129,7 +135,6 @@
             } else {
                 $scope.frontErr.insufficient.show = false;
             }
-            console.log($scope.copyTrade.amount)
             if (amount >= $scope.copyTrade.minCopyAmount && amount < Number($scope.copyTrade.advice)) {
                 $scope.frontErr.tip.show = true;
             } else {
