@@ -17,7 +17,7 @@
         };
         $scope.applyMaster = applyMaster;
         $scope.comfirmApplyMaster = comfirmApplyMaster;
-        console.log($scope.investSelect)
+        // console.log($scope.investSelect)
         // 获取用户交易账户列表
         account.getDealAccountList().then(function (data) {
             $scope.applyInfo.loading = false;
@@ -25,7 +25,7 @@
             if (data.is_succ) {
                 var list;
                 list = data.data.filter(function(item, index, self){
-                    return item.account_type === 1
+                    return item.status && item.account_type === 1 
                 })
                 $scope.accountList = list; 
             } 

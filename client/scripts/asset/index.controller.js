@@ -48,7 +48,9 @@
         if (!data) return;
         // console.info(data);
         if (data.is_succ) {
-          var list = data.data;
+          var list = data.data.filter(function (item) {
+            return item.status;
+          });
           if(list.length == 0) {
             alert($scope.lang.text("tigerWitID.myAccount.loginAgain"))
             return;
