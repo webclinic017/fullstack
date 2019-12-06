@@ -256,8 +256,11 @@
                             account_code: trader.account_code,
                             username: trader.username,
                             callBack: function(){
-                                $scope.master.is_copy = false;
-                                $scope.master.copied = 0;
+                                // $scope.master.is_copy = false;
+                                // $scope.master.copied = 0;
+                                $timeout(function(){
+                                    location.reload();
+                                }, 1000)
                             }
                         }
                     }

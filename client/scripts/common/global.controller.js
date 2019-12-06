@@ -234,7 +234,7 @@
         //     return theRequest;
         // }
         $scope.checkUserSource = function () {
-            var sourceReg = /^DW_|D_|R_/i;
+            var sourceReg = /^DW_|^D_|^R_/i;
             var search_arr = fun.getSearch();
             var search_source = {};
             $.each(search_arr, function (index, value) {

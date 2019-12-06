@@ -43,9 +43,15 @@
                     <p class="alert-arrow_tp_lf" ng-show="copyForm.amount.$error.twformMin">
                         {{lang.text('tigerWitID.tradingAccount.minimumCopyAmount')}}${{ copyTrade.minCopyAmount }}
                     </p>
+                    <p class="alert-arrow_tp_lf" ng-show="copyForm.amount.$error.pattern">
+                        {{frontErr.amount.tip}}
+                    </p>
                 </div>
-                <div class="font-danger">
-                    <p ng-if="frontErr.insufficient.show">{{lang.text('tigerWitID.tradingAccount.tip11')}}</p>
+
+                <!-- 填写金额提示 -->
+                <div>
+                    <p ng-if="frontErr.insufficient.show" class="font-danger">{{frontErr.insufficient.msg}}</p>
+                    <p ng-if="frontErr.tip.show" class="mg-tp-10 font-darker">{{frontErr.tip.msg}}</p>
                 </div>
             </div>
             <br>
@@ -121,7 +127,7 @@
             <p ng-if="frontErr.insufficient.show">{{lang.text('tigerWitID.tradingAccount.tip11')}}</p>
         </div> -->
 
-        <div class="sys_modal__btn_wrapper mg-tp-0">
+        <div class="sys_modal__btn_wrapper">
             <div ng-if="backErr.system.show">
                 <p class="alert-system">
                     {{ backErr.system.msg }}
