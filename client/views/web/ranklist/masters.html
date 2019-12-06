@@ -130,8 +130,8 @@
     </div>
     <div class="currency-width">
         <div class="ranklist" ng-if="masterStarList.records.length > 0">
-            <div class="ranklist__navbar space-between-center">
-                <h3 class="ranklist__navbar-tit flex1">{{ lang.text("tigerWitID.master.starMasters") }}</h3>
+            <div class="ranklist__navbar text-center">
+                <h3 class="ranklist__navbar-tit">{{ lang.text("tigerWitID.master.starMasters") }}</h3>
             </div>
             <div class="ranklist_cont">
                 <div class="ranklist_cont__master space-between-center"
@@ -318,9 +318,11 @@
             </div>
         </div> -->
         <div class="ranklist" ng-show="ranklist.length > 0">
-            <div class="ranklist__navbar space-between-center">
-                <h3 class="ranklist__navbar-tit flex1">{{ lang.text("tigerWitID.master.recommendedMasters") }}</h3>
-                <div class="ranklist__navbar-toggle">
+            <div class="ranklist__navbar text-center">
+                <h3 class="ranklist__navbar-tit">{{ lang.text("tigerWitID.master.recommendedMasters") }}</h3>
+            </div>
+            <div class="justify-flex-end">
+                 <div class="ranklist__navbar-toggle">
                     <div class="tw-btn tw-btn-sm tw-btn-capsule-gradient tw-btn-adaptive">
                         {{rankOrderList[rankOrder].value}}
                         <i class="fa fa-caret-down"></i>
@@ -333,7 +335,6 @@
                         </li>
                     </ul>
                 </div>
-
             </div>
             <div class="ranklist_cont">
                 <div tw-loading-img></div>
@@ -392,15 +393,7 @@
                                             {{ lang.text("tigerWitID.master.last30AaysYield") }}
                                         </div>
                                     </div>
-                                    <div class="dropdown" ng-if="rank.follow_profit >= 1000">
-                                        <div class="num">
-                                            ${{ rank.follow_profit }}
-                                        </div>
-                                        <div class="tip">
-                                            {{ lang.text("tigerWitID.master.profitCopiers") }}
-                                        </div>
-                                    </div>
-                                    <div class="dropdown" ng-if="rank.follow_profit < 1000">
+                                    <div class="dropdown">
                                         <div class="num">
                                             {{ rank.history_copy_count || '0' }}
                                         </div>

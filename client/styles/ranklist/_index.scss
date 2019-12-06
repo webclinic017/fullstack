@@ -247,7 +247,7 @@
     }
     @include m(trade) {
       text-align: center;
-      padding: 0 70px;
+      padding: 0 20px;
       @include flex(1);
       &.bd-tp {
         border-top: 1px dotted rgba(30, 32, 36, 0.2);
@@ -255,7 +255,9 @@
         margin-top: 10px;
       }
       > .dropdown {
-
+        &:nth-child(odd){
+          width: 35%;
+        }
         > .num {
           color: rgba(30, 32, 36, 1);
           font-weight: 600;
