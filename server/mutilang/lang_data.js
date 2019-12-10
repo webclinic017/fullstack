@@ -4090,14 +4090,14 @@ module.exports = {
         "ar": "7- يقبل العميل أن TigerWit هي مكان التنفيذ الوحيد، وهو سوق خارج البورصة."
     },
     "amtClient49": {
-        "zh": "8.客户可以从星期日 12.00.01(GMT+0)至星期五 22.00.00(GMT+0)通过其交易账户交易。请留意，某些金融工具只能在特定的时段交易。客户在交易之前有责任查看相关工具的合约规范了解更多详情。本公司应通过内部电子邮件系统通知客户任何假期。",
-        "en": "8.The client may trade through his/her trading account from 12.00.01 (GMT+0) on a Sunday until 22.00.00 (GMT+0) on a Friday. It should be noted that trading of certain financial instruments occurs during specific timeframes; the client is responsible for looking at the contract specifications of such instruments for further details, prior to trading. The client shall be notified of any Firm holidays through the internal e-mailing system.",
-        "vi": "8. Khách hàng có thể giao dịch thông qua tài khoản giao dịch từ 12.00.01 (GMT+0) vào ngày Chủ Nhật đến 22.00.00 (GMT+0) vào Thứ 6. Lưu ý rằng giao dịch với một vài sản phẩm tài chính cụ thể diễn ra trong các khung thời gian cụ thể; khách hàng có trách nhiệm nghiên cứu điều kiện hợp đồng của các sản phẩm để biết thêm chi tiết, trước khi thực hiện giao dịch. Khách hàng sẽ được thông báo nếu có bất kì kì nghỉ nào của Công ty thông qua hệ thống email nội bộ.",
-        "zh-Hant": "8.客戶可以從星期日 12.00.01(GMT+0)至星期五 22.00.00(GMT+0)通過其交易賬戶交易。請留意，某些金融工具只能在特定的時段交易。客戶在交易之前有責任查看相關工具的合約規範了解更多詳情。本公司應通過內部電子郵件系統通知客戶任何假期。",
-        "id": "8.The client may trade through his/her trading account from 12.00.01 (GMT+0) on a Sunday until 22.00.00 (GMT+0) on a Friday. It should be noted that trading of certain financial instruments occurs during specific timeframes; the client is responsible for looking at the contract specifications of such instruments for further details, prior to trading. The client shall be notified of any Firm holidays through the internal e-mailing system.",
-        "es": "8.El cliente puede realizar transacciones a través de su cuenta de trading desde las 12.00.01 (GMT + 0) de un domingo hasta las 22.00.00 (GMT + 0) de un viernes. Cabe señalar que el trading de ciertos instrumentos financieros se produce durante horarios específicos; El cliente es responsable de consultar las especificaciones contractuales de dichos instrumentos para obtener más detalles, antes de la negociación. El cliente deberá ser notificado de cualquier festivo de la empresa a través del sistema interno de correo electrónico.",
-        "pt-BR": "8.O cliente pode negociar através de sua conta de negociação a partir de 12.00.01 (GMT + 0) em um domingo até 22.00.00 (GMT + 0) em uma sexta-feira. Deve-se notar que a negociação de certos instrumentos financeiros ocorre durante prazos específicos; O cliente é responsável por examinar as especificações do contrato de tais instrumentos para obter mais detalhes, antes de negociar. O cliente será notificado de qualquer feriado da empresa através do sistema interno de e-mail.",
-        "ar": "8- بمقدور العميل التداول باستخدام حساب التداول الخاص به من الساعة 12.00.01 (بتوقيت جرينتش +0) يوم الأحد إلى الساعة 22.00.00 (بتوقيت جرينتش +0) يوم الجمعة.  ويجب ملاحظة أن هناك ساعات محددة لتداول أدوات مالية معينة؛ ويتحمل العميل مسؤولية الرجوع إلى مواصفات العقد الخاصة بتلك الأدوات للحصول على مزيد من التفاصيل قبل التداول.  وسيتم إبلاغ العميل بأي عطلات للشركة عن طريق نظام البريد الإلكتروني الداخلي."
+        "zh": "8.客户可以从星期日 12:00:01(GMT+0)至星期五 22:00:00(GMT+0)通过其交易账户交易。请留意，某些金融工具只能在特定的时段交易。客户在交易之前有责任查看相关工具的合约规范了解更多详情。本公司应通过内部电子邮件系统通知客户任何假期。",
+        "en": "8.The client may trade through his/her trading account from 12:00:01 (GMT+0) on a Sunday until 22:00:00 (GMT+0) on a Friday. It should be noted that trading of certain financial instruments occurs during specific timeframes; the client is responsible for looking at the contract specifications of such instruments for further details, prior to trading. The client shall be notified of any Firm holidays through the internal e-mailing system.",
+        "vi": "8. Khách hàng có thể giao dịch thông qua tài khoản giao dịch từ 12:00:01 (GMT+0) vào ngày Chủ Nhật đến 22:00:00 (GMT+0) vào Thứ 6. Lưu ý rằng giao dịch với một vài sản phẩm tài chính cụ thể diễn ra trong các khung thời gian cụ thể; khách hàng có trách nhiệm nghiên cứu điều kiện hợp đồng của các sản phẩm để biết thêm chi tiết, trước khi thực hiện giao dịch. Khách hàng sẽ được thông báo nếu có bất kì kì nghỉ nào của Công ty thông qua hệ thống email nội bộ.",
+        "zh-Hant": "8.客戶可以從星期日 12:00:01(GMT+0)至星期五 22:00:00(GMT+0)通過其交易賬戶交易。請留意，某些金融工具只能在特定的時段交易。客戶在交易之前有責任查看相關工具的合約規範了解更多詳情。本公司應通過內部電子郵件系統通知客戶任何假期。",
+        "id": "8.The client may trade through his/her trading account from 12:00:01 (GMT+0) on a Sunday until 22:00:00 (GMT+0) on a Friday. It should be noted that trading of certain financial instruments occurs during specific timeframes; the client is responsible for looking at the contract specifications of such instruments for further details, prior to trading. The client shall be notified of any Firm holidays through the internal e-mailing system.",
+        "es": "8.El cliente puede realizar transacciones a través de su cuenta de trading desde las 12:00:01 (GMT + 0) de un domingo hasta las 22:00:00 (GMT + 0) de un viernes. Cabe señalar que el trading de ciertos instrumentos financieros se produce durante horarios específicos; El cliente es responsable de consultar las especificaciones contractuales de dichos instrumentos para obtener más detalles, antes de la negociación. El cliente deberá ser notificado de cualquier festivo de la empresa a través del sistema interno de correo electrónico.",
+        "pt-BR": "8.O cliente pode negociar através de sua conta de negociação a partir de 12:00:01 (GMT + 0) em um domingo até 22:00:00 (GMT + 0) em uma sexta-feira. Deve-se notar que a negociação de certos instrumentos financeiros ocorre durante prazos específicos; O cliente é responsável por examinar as especificações do contrato de tais instrumentos para obter mais detalhes, antes de negociar. O cliente será notificado de qualquer feriado da empresa através do sistema interno de e-mail.",
+        "ar": "8- بمقدور العميل التداول باستخدام حساب التداول الخاص به من الساعة 12:00:01 (بتوقيت جرينتش +0) يوم الأحد إلى الساعة 22:00:00 (بتوقيت جرينتش +0) يوم الجمعة.  ويجب ملاحظة أن هناك ساعات محددة لتداول أدوات مالية معينة؛ ويتحمل العميل مسؤولية الرجوع إلى مواصفات العقد الخاصة بتلك الأدوات للحصول على مزيد من التفاصيل قبل التداول.  وسيتم إبلاغ العميل بأي عطلات للشركة عن طريق نظام البريد الإلكتروني الداخلي."
     },
     "amtClient50": {
         "zh": "9.为保护客户和本公司双方的正当利益，TigerWit 有权在任何时候拒绝向客户提供任何投资或辅助服务，而无需告知客户拒绝缘由。",
@@ -10911,13 +10911,13 @@ module.exports = {
     },
     "amtExecution132": {
         "zh": "1.本公司营业时间：从格林威治时间星期天 22:00:01 到格林威治时间星期五 22:00:00。非工作时间：从格林威治时间星期五 22:00:01到格林威治时间星期天 22:00:00。本公司应通过交易终端的内部电子邮件系统通知客户任何假期。",
-        "en": "1.The Firm operation time: round–the–clock from 22:00:01 GMT Sunday through to 22:00:00 GMT Friday. Non-working periods: from 22:00:01 GMT Friday through 22.00.00 GMT Sunday. Holidays will be announced through the internal mail of the trading terminal supplied by the Firm.",
-        "vi": "1.Thời gian hoạt động của Công ty: tròn-đồng hồ từ 22:00:01 GMT Chủ Nhật đến 22:00:00 GMT Thứ Sáu. Thời gian không làm việc: từ 22:00:01 GMT Thứ Sáu đến 22.00.00 GMT Chủ Nhật. Ngày lễ sẽ được thông báo qua thư nội bộ của nhà giao dịch do Công ty cung cấp.",
+        "en": "1.The Firm operation time: round–the–clock from 22:00:01 GMT Sunday through to 22:00:00 GMT Friday. Non-working periods: from 22:00:01 GMT Friday through 22:00:00 GMT Sunday. Holidays will be announced through the internal mail of the trading terminal supplied by the Firm.",
+        "vi": "1.Thời gian hoạt động của Công ty: tròn-đồng hồ từ 22:00:01 GMT Chủ Nhật đến 22:00:00 GMT Thứ Sáu. Thời gian không làm việc: từ 22:00:01 GMT Thứ Sáu đến 22:00:00 GMT Chủ Nhật. Ngày lễ sẽ được thông báo qua thư nội bộ của nhà giao dịch do Công ty cung cấp.",
         "zh-Hant": "1.本公司營業時間：從格林威治時間星期天 22:00:01 到格林威治時間星期五 22:00:00。非工作時間：從格林威治時間星期五 22:00:01到格林威治時間星期天 22:00:00。本公司應通過交易終端的內部電子郵件系統通知客戶任何假期。",
-        "id": "1.The Firm operation time: round–the–clock from 22:00:01 GMT Sunday through to 22:00:00 GMT Friday. Non-working periods: from 22:00:01 GMT Friday through 22.00.00 GMT Sunday. Holidays will be announced through the internal mail of the trading terminal supplied by the Firm.",
-        "es": "1.El tiempo de operación de la empresa: las 24 horas desde las 22:00:01 GMT del domingo hasta las 22:00:00 GMT del viernes. Períodos no laborables: desde las 22:00:01 GMT del viernes hasta las 22.00.00 GMT del domingo. Los días festivos se anunciarán a través del email interno de la terminal de trading suministrada por la Firma.",
+        "id": "1.The Firm operation time: round–the–clock from 22:00:01 GMT Sunday through to 22:00:00 GMT Friday. Non-working periods: from 22:00:01 GMT Friday through 22:00:00 GMT Sunday. Holidays will be announced through the internal mail of the trading terminal supplied by the Firm.",
+        "es": "1.El tiempo de operación de la empresa: las 24 horas desde las 22:00:01 GMT del domingo hasta las 22:00:00 GMT del viernes. Períodos no laborables: desde las 22:00:01 GMT del viernes hasta las 22:00:00 GMT del domingo. Los días festivos se anunciarán a través del email interno de la terminal de trading suministrada por la Firma.",
         "pt-BR": "1.O tempo de operação da empresa: 24 horas de 22:00:01 GMT de domingo a 22:00:00 GMT de sexta-feira. Períodos não úteis: das 22:00 às 21:00 GMT de sexta a 22:00 GMT de domingo. Os feriados serão anunciados através do correio interno do terminal de negociação fornecido pela Empresa.",
-        "ar": "1- وقت العمل في الشركة: على مدار الساعة من الساعة 22:00:01 بتوقيت جرينتش يوم الأحد إلى الساعة  22:00:00 بتوقيت جرينتش يوم الجمعة.  أوقات عدم العمل: من الساعة 22:00:01 بتوقيت جرينتش يوم الجمعة إلى الساعة 22.00.00 بتوقيت جرينتش يوم الأحد.  وسيتم الإعلان عن العطلات عبر البريد الإلكتروني الداخلي لمنصة التداول التي توفرها الشركة."
+        "ar": "1- وقت العمل في الشركة: على مدار الساعة من الساعة 22:00:01 بتوقيت جرينتش يوم الأحد إلى الساعة  22:00:00 بتوقيت جرينتش يوم الجمعة.  أوقات عدم العمل: من الساعة 22:00:01 بتوقيت جرينتش يوم الجمعة إلى الساعة 22:00:00 بتوقيت جرينتش يوم الأحد.  وسيتم الإعلان عن العطلات عبر البريد الإلكتروني الداخلي لمنصة التداول التي توفرها الشركة."
     },
     "amtExecution133": {
         "zh": "2.根据上文第 3 款所述的因素，本公司严重依赖以上执行场所以及他们的相对重要性。本公司的政策规定需要保持此类内部流程和原则，从而确定这些因素的相对重要性，代表客户的最佳利益行事，并在与他们交易时尽 可 能 为 他 们 提 供 最 佳 结 果 （ 或 “ 最 佳 执行”）。",
@@ -12687,24 +12687,24 @@ module.exports = {
             "ar": "قم بالتسجيل للحصول على حساب"
         },
         "overProbationPeriod": {
-            "zh": "完成磨合期条件",
-            "en": "Over the probation period",
-            "vi": "Qua thời gian thử nghiệm",
-            "zh-Hant": "完成磨合期條件",
-            "id": "Masa Percobaan",
-            "es": "Período de prueba",
-            "pt-BR": "Durante o período de experiência",
-            "ar": "فترة اختبار"
+            "zh": "填写资料",
+            "en": "Fill in the information",
+            "vi": "Nhập thông tin",
+            "zh-Hant": "填寫資料",
+            "id": "Isi informasi berikut",
+            "es": "Completa la información",
+            "pt-BR": "Preencha as informações",
+            "ar": "املأ المعلومات"
         },
         "endTrial": {
-            "zh": "磨合结束，成为代理",
-            "en": "End of trial, become an official agent",
-            "vi": "Kết thúc thử nghiệm, thành đại lý chính thức",
-            "zh-Hant": "磨合結束，成為代理",
-            "id": "Telah melewati masa percobaan, jadi Mitra resmi",
-            "es": "Fin período prueba, conviértase en una agente oficial ",
-            "pt-BR": "Fim do julgamento, torne-se um agente oficial",
-            "ar": "نهاية الفترة التجريبية، كن وكيلاً رسميًا"
+            "zh": "客服审核",
+            "en": "Waiting for audit",
+            "vi": " Chờ kiểm tra",
+            "zh-Hant": "客服審核",
+            "id": "Menunggu peninjauan",
+            "es": "Esperando auditoría",
+            "pt-BR": "Aguardando auditoria",
+            "ar": "في انتظار المراجعة"
         },
         "becomePartnerFlow_1": {
             "zh": "请填写以下表格，我们将联系您提供更多的信息和回答任何问题。",
@@ -16925,6 +16925,46 @@ module.exports = {
             "es": "Por favor, ingrese su número de cuenta y contraseña.",
             "pt-BR": "Por favor entre com seu número da conta e senha.",
             "ar": "يرجى إدخال رقم حسابك وكلمة مرورك"
+        },
+        "setPassword": {
+            "zh": "密码",
+            "en": "Set password",
+            "vi": "Đặt mật khẩu",
+            "zh-Hant": "密碼",
+            "id": "Atur Kata sandi",
+            "es": "Fijar contraseña",
+            "pt-BR": "Configurar senha",
+            "ar": "إنشاء كلمة المرور"
+        },
+        "enterPassword": {
+            "zh": "请输入密码",
+            "en": "Please enter password",
+            "vi": "Vui lòng nhập mật khẩu",
+            "zh-Hant": "請輸入密碼",
+            "id": "Silahkan masukkan Kata sandi",
+            "es": "Por favor, introduzca contraseña",
+            "pt-BR": "Por favor insira a senha",
+            "ar": "يرجى إدخال كلمة المرور"
+        },
+        "confirmPassword": {
+            "zh": "请确认密码",
+            "en": "Confirm password",
+            "vi": "Xác nhận mật khẩu",
+            "zh-Hant": "請確認密碼",
+            "id": "Konfirmasi Kata sandi",
+            "es": "Confirmar contraseña",
+            "pt-BR": "Confirme sua senha",
+            "ar": "تأكيد كلمة المرور"
+        },
+        "passwordsNoMatch": {
+            "zh": "两次输入密码不一致",
+            "en": "These passwords don’t match",
+            "vi": "Những mật khẩu này không khớp",
+            "zh-Hant": "兩次輸入密碼不壹致",
+            "id": " Kata sandi tidak sama",
+            "es": "Las contraseñas no coinciden",
+            "pt-BR": "Essas senhas não coincidem",
+            "ar": "كلمتي المرور غير متطابقتين"
         },
         "addSuccess": {
             "zh": "添加成功",

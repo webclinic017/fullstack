@@ -34,7 +34,7 @@
   }
 }
 @include b(m_t42_layout) {
-  background: url("/images/bd_t42/h5_bg_20190129.png") no-repeat;
+  background: url("/images/bd_t42/h5_bg_20191204.png") no-repeat;
   
   background-position: center top;
   background-size: 100% 100%;
@@ -71,7 +71,7 @@
     font-weight: 500;
     font-size: px2rem(24);
     position: absolute;
-    top: px2rem(400);
+    top: px2rem(370);
     left: 50%;
     margin-left: px2rem(-110);
   }
@@ -103,13 +103,13 @@
       color: #333;
     }
     &.b1 {
-      top: px2rem(1488);
+      top: px2rem(1388);
     }
     &.b2 {
-      top: px2rem(2976);
+      top: px2rem(2786);
     }
     &.b3 {
-      top: px2rem(3472);
+      top: px2rem(3500);
     }
   }
   @include e(box) {
@@ -120,13 +120,13 @@
     width: 100%;
     .h200 {
       position: absolute;
-      top: px2rem(2240);
+      top: px2rem(2115);
       left: 50%;
       margin-left: px2rem(-96);
     }
     .h800 {
       position: absolute;
-      top: px2rem(2800);
+      top: px2rem(2640);
       left: 50%;
       margin-left: px2rem(-96);
     }
@@ -134,7 +134,7 @@
   @include e(form) {
     width: px2rem(576);
     margin: 0 auto;
-    padding: px2rem(3160) px2rem(48) 0;
+    padding: px2rem(2930) px2rem(48) 0;
 
     .verify_code_btn_wrapper {
         position: absolute;
@@ -173,13 +173,13 @@
   @include e(center) {
     color: #ffe082;
     text-align: center;
-    margin-top: px2rem(224);
+    margin-top: px2rem(244);
     font-size: px2rem(28);
   }
   @include e(footer) {
     color: #fff;
     font-size: px2rem(20);
-    margin-top: px2rem(192);
+    margin-top: px2rem(122);
     line-height: px2rem(32);
 
     .section4_ltd {

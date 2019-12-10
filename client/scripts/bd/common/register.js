@@ -17,12 +17,12 @@
     /*
         获取domain
     */
-   function getDomain() {
-    // var domain = location.hostname.match(/\.\w+\.com/) ? location.hostname.match(/\.\w+\.com/)[0] : '.tigerwit.com';
-    var domain = '.' + location.hostname.split('.').slice(-2).join('.');
-    // console.log(url.match(/\.\w+\.com/)[0]);
-    return domain;
-   }
+    function getDomain() {
+        // var domain = location.hostname.match(/\.\w+\.com/) ? location.hostname.match(/\.\w+\.com/)[0] : '.tigerwit.com';
+        var domain = '.' + location.hostname.split('.').slice(-2).join('.');
+        // console.log(url.match(/\.\w+\.com/)[0]);
+        return domain;
+    }
 
     // set_token();
 
@@ -48,7 +48,7 @@
             var interval = null;
 
             /*loading层*/
-            layer.load(1, {shade: false});
+            layer.load(1, { shade: false });
             publicRequest('getPhoneCode', 'POST', {
                 account: $("#telephone").val(),
                 account_type: 1,
@@ -139,7 +139,7 @@
             var href = window.location.href;
             lp = window.location.pathname.replace(/[\/:]/g, "").toLowerCase();
             if (lp != "") {
-                $.cookie('lp', lp, {path: '/', domain: getDomain(), expires: 7});
+                $.cookie('lp', lp, { path: '/', domain: getDomain(), expires: 7 });
             }
             /*获取查询字段*/
             function getSearch() {
@@ -159,18 +159,18 @@
 
                     if (pid != '') {
                         // 清空重写
-                        $.cookie('ib_pid', '', {path: '/', domain: getDomain(), expires: -1});
-                        $.cookie('unit', '', {path: '/', domain: getDomain(), expires: -1});
-                        $.cookie('key', '', {path: '/', domain: getDomain(), expires: -1});
-                        $.cookie('pid', pid, {path: '/', domain: getDomain(), expires: 7});
-                        $.cookie('invite_status', 3, {path: '/', domain: getDomain(), expires: 7});
-                        
+                        $.cookie('ib_pid', '', { path: '/', domain: getDomain(), expires: -1 });
+                        $.cookie('unit', '', { path: '/', domain: getDomain(), expires: -1 });
+                        $.cookie('key', '', { path: '/', domain: getDomain(), expires: -1 });
+                        $.cookie('pid', pid, { path: '/', domain: getDomain(), expires: 7 });
+                        $.cookie('invite_status', 3, { path: '/', domain: getDomain(), expires: 7 });
+
 
                         if (unit) {
-                            $.cookie('unit', unit, {path: '/', domain: getDomain(), expires: 7});
+                            $.cookie('unit', unit, { path: '/', domain: getDomain(), expires: 7 });
                         }
                         if (key) {
-                            $.cookie('key', key, {path: '/', domain: getDomain(), expires: 7});
+                            $.cookie('key', key, { path: '/', domain: getDomain(), expires: 7 });
                         }
                     }
                 }
@@ -195,8 +195,8 @@
 
             /*设置邀请源INVITE_CODE*/
             if (oReg.search_arr.user_code) {
-                $.cookie('invite_code', oReg.search_arr.user_code, {expires: 1, path: '/', domain: getDomain()});
-                $.cookie('invite_status', 2, {expires: 1, path: '/', domain: getDomain()});
+                $.cookie('invite_code', oReg.search_arr.user_code, { expires: 1, path: '/', domain: getDomain() });
+                $.cookie('invite_status', 2, { expires: 1, path: '/', domain: getDomain() });
             }
 
             // if (window.location.hostname === 'lonfx.tigerwit.com') {
@@ -218,9 +218,9 @@
                 /*检测手机号是否已经存在*/
                 if (($("#telephone").val().trim() != "")) {
                     // 代理商时
-                    if($.cookie('invite_status') == 0){
+                    if ($.cookie('invite_status') == 0) {
                         sendVerifyCode(4);
-                    }else{
+                    } else {
                         publicRequest('checkExists', 'GET', {
                             key: 3,
                             value: $("#telephone").val()
@@ -235,7 +235,7 @@
                             }
                         });
                     }
-                    
+
                 }
             });
         }());
@@ -255,16 +255,29 @@
             //     }
             // });
 
-            function toLogin (e, is_agree) {
+            function toLogin(e, is_agree) {
                 // if (!$("#country").val()) {
                 //     layer.msg('请选择国家/大区!');
                 //     return;
                 // }
                 if (!checkTel()) return;
+
+                // 判断密码
+                var password = $('#password').val();
+                var confirmPassword = $('#confirmPassword').val();
+                if (!password) {
+                    layer.msg('请输入密码');
+                    return
+                }
+                if (password != confirmPassword) {
+                    layer.msg('两次输入密码不一致');
+                    return
+                }
+
                 if (!checkVerifyCode()) return;
 
                 /*loading层*/
-                layer.load(1, {shade: false});
+                layer.load(1, { shade: false });
 
                 publicRequest('regOrLogin', 'POST', {
                     ib_pid: $.cookie('ib_pid') || null,
@@ -273,9 +286,9 @@
                     account_type: 1,
                     phone_code: '86',
                     world_code: 'CN',
-                    // password: $("#password").val() || null,
-                    password: $("#verify_code").val() || null,
-                    login_type: 2, // 登录验证方式，1-密码登录，2-验证码登录
+                    password: password,
+                    code: $("#verify_code").val() || null,
+                    login_type: 3, // 登录验证方式，1-密码登录，2-验证码登录 3-密码登录有验证码
                     pid: $.cookie('pid') || null,
                     unit: oReg.search_arr.unit || null,
                     lp: oReg.search_arr.lp || null,
@@ -288,17 +301,17 @@
                     if (data.is_succ) {
                         /*跳转到注册成功页面*/
                         layer.msg('注册成功!');
-                        $.cookie('token', data.data.token, {expires: 30, path: '/', domain: getDomain()});
-                        $.cookie('user_code', data.data.user_code, {expires: 30, path: '/', domain: getDomain()});
-                        $.cookie('username', data.data.username, {expires: 30, path: '/', domain: getDomain()});
-                        $.cookie('username_en', data.data.username_en, {expires: 30, path: '/', domain: getDomain()});
-                        $.cookie('world_code', 'CN', {expires: 30, path: '/', domain: getDomain()});
+                        $.cookie('token', data.data.token, { expires: 30, path: '/', domain: getDomain() });
+                        $.cookie('user_code', data.data.user_code, { expires: 30, path: '/', domain: getDomain() });
+                        $.cookie('username', data.data.username, { expires: 30, path: '/', domain: getDomain() });
+                        $.cookie('username_en', data.data.username_en, { expires: 30, path: '/', domain: getDomain() });
+                        $.cookie('world_code', 'CN', { expires: 30, path: '/', domain: getDomain() });
                         setTimeout(function () {
                             window.location.href = '/space/#/center?type=new';
                         }, 100);
                     } else {
                         if ((data.code == 100402) || (data.code == 100403)) {
-                            openWebAgmentModal(data.code, function(resolve, e){
+                            openWebAgmentModal(data.code, function (resolve, e) {
                                 toLogin(e, 'is_agree');
                                 layer.close(resolve.layIndex)
                             })
@@ -309,10 +322,10 @@
                 });
             }
             // 客户推广
-            if(oReg.search_arr.ib_pid) {
-                $.cookie("pid", "", {path: '/', domain: getDomain(), expires: -1});
-                $.cookie('ib_pid', oReg.search_arr.ib_pid, {expires: 1, path: '/', domain: getDomain()});
-                $.cookie('invite_status', 1, {expires: 1, path: '/', domain: getDomain()});
+            if (oReg.search_arr.ib_pid) {
+                $.cookie("pid", "", { path: '/', domain: getDomain(), expires: -1 });
+                $.cookie('ib_pid', oReg.search_arr.ib_pid, { expires: 1, path: '/', domain: getDomain() });
+                $.cookie('invite_status', 1, { expires: 1, path: '/', domain: getDomain() });
             }
             $("#submit_form").on("click", toLogin);
 
