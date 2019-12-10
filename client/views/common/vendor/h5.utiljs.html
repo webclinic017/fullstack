@@ -221,6 +221,9 @@
         return /like Mac OS X/.test(navigator.userAgent);
     }
 
+    function isWX(){
+        return /MicroMessenger/gi.test(navigator.userAgent)
+    }
     /*
      判断是否在tigerwit公司
      */
@@ -562,7 +565,47 @@
                 "es": "Contraseña 6-15 letras, números o símbolos",
                 "pt-BR": "Senha é um 6-15 dígitos letra, número ou combinação de símbolo",
                 "ar": "تم الجمع بين كلمة المرور بأحرف وأرقام ورموز ، ويبلغ طول الجمع بين حرفين أو أكثر 6 إلى 15 حرفًا"
-            }
+            },
+            "setPassword": {
+                "zh": "密码",
+                "en": "Set password",
+                "vi": "Đặt mật khẩu",
+                "zh-Hant": "密碼",
+                "id": "Atur Kata sandi",
+                "es": "Fijar contraseña",
+                "pt-BR": "Configurar senha",
+                "ar": "إنشاء كلمة المرور"
+            },
+            "enterPassword": {
+                "zh": "请输入密码",
+                "en": "Please enter password",
+                "vi": "Vui lòng nhập mật khẩu",
+                "zh-Hant": "請輸入密碼",
+                "id": "Silahkan masukkan Kata sandi",
+                "es": "Por favor, introduzca contraseña",
+                "pt-BR": "Por favor insira a senha",
+                "ar": "يرجى إدخال كلمة المرور"
+            },
+            "confirmPassword": {
+                "zh": "请确认密码",
+                "en": "Confirm password",
+                "vi": "Xác nhận mật khẩu",
+                "zh-Hant": "請確認密碼",
+                "id": "Konfirmasi Kata sandi",
+                "es": "Confirmar contraseña",
+                "pt-BR": "Confirme sua senha",
+                "ar": "تأكيد كلمة المرور"
+            },
+            "passwordsNoMatch": {
+                "zh": "两次输入密码不一致",
+                "en": "These passwords don’t match",
+                "vi": "Những mật khẩu này không khớp",
+                "zh-Hant": "兩次輸入密碼不壹致",
+                "id": " Kata sandi tidak sama",
+                "es": "Las contraseñas no coinciden",
+                "pt-BR": "Essas senhas não coincidem",
+                "ar": "كلمتي المرور غير متطابقتين"
+            },
         },
         "_comment_third": {
             "en": "this is comments, No translation required -- angularjs-third",

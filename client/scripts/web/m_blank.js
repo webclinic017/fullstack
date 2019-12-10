@@ -1,9 +1,8 @@
 ; $(document).ready(function () {
     var system = getQueryString('system');
     var platform = getQueryString('platform');
-    var userAgent = navigator.userAgent;
     var isCn = system === 'cn' ? true : false;
-    if (/MicroMessenger/gi.test(userAgent)) {
+    if (isWX()) {
         // 微信浏览器中
         $(".weixinTip").css("display", "block");
         return;
