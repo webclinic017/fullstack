@@ -22,7 +22,7 @@
         parentScope.manageCardModalInstance = undefined;
         var codeRage = [100602, 100605, 100608];
 
-        var companyName = $cookies["company_name"];
+        // var companyName = $cookies["company_name"];
         $scope.src = [
             "/white_label/passport/05.png",
             "/white_label/passport/06.png"
@@ -64,7 +64,7 @@
             accountType: 'bank',    // bank, cse
             thirdAccount: undefined,
             success: false,
-            minAmount: companyName == 'tigerwit' ? 20 : 100,
+            minAmount: 20,
             maxAmount: 0
         };
         $scope.withdrawTypeLst = {}; // 出金方式列表
