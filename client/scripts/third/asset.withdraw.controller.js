@@ -15,7 +15,7 @@
         parentScope.manageCardModalInstance = undefined;
         var codeRage = [100602, 100605, 100608];
 
-        var companyName = $cookies["company_name"];
+        // var companyName = $cookies["company_name"];
 
         $scope.message = {};
         // $scope.messageWallet = {};
@@ -37,7 +37,7 @@
             accountType: 'bank',    // bank, cse
             thirdAccount: undefined,
             success: false,
-            minAmount: companyName == 'tigerwit' ? 20 : 100,
+            minAmount: 20,
             maxAmount: 0
         };
         $scope.$watch('{id: accountItem.mt4_id, type: selectWay.type}', function(n){
