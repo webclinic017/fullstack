@@ -1290,24 +1290,24 @@ module.exports = {
         "ar": "تكاليف العمولة ($)"
     },
     "oil30": {
-        "en": "Trading time (Beijing time)",
-        "zh": "交易时间(北京时间)",
+        "en": "Trading time",
+        "zh": "交易时间",
         "vi": "Thời gian giao dịch",
-        "zh-Hant": "交易時間(北京時間)",
+        "zh-Hant": "交易時間",
         "id": "Waktu transaksi",
-        "es": "Trading horario (Beijing hora)",
-        "pt-BR": "Horário de comércio (horário local de Beijing)",
-        "ar": "توقيت التداول (توقيت بكين)"
+        "es": "Trading horario",
+        "pt-BR": "Horário de comércio",
+        "ar": "وقت التداول"
     },
     "oil31": {
-        "en": "Quotation time (Beijing time)",
-        "zh": "报价时间(北京时间)",
+        "en": "Quotation time",
+        "zh": "报价时间",
         "vi": "Thời gian chào giá",
-        "zh-Hant": "報價時間(北京時間)",
-        "id": "Jam Penawaran (Waktu Beijing)",
-        "es": "Horario Cotizaciones (Beijing hora)",
-        "pt-BR": "Horário de cotação (horário local de Beijing)",
-        "ar": "توقيت السعر (توقيت بكين)"
+        "zh-Hant": "報價時間",
+        "id": "Jam Penawaran",
+        "es": "Horario Cotizaciones",
+        "pt-BR": "Horário de cotação",
+        "ar": "وقت التداول"
     },
     "oil32": {
         "en": "Product introduction",
@@ -1910,14 +1910,24 @@ module.exports = {
         "ar": "الحد الأقصى للحجم (عقد)"
     },
     "cfd28": {
-        "en": "Trading time (Beijing time)",
-        "zh": "交易时间(北京时间)",
+        "en": "Trading time",
+        "zh": "交易时间",
         "vi": "Thời gian giao dịch",
-        "zh-Hant": "交易時間(北京時間)",
-        "id": "Waktu transaksi (Waktu Beijing)",
-        "es": "Trading horarios (Beijing hora)",
-        "pt-BR": "Horário de comércio (horário local de Beijing)",
-        "ar": "توقيت التداول (توقيت بكين)"
+        "zh-Hant": "交易時間",
+        "id": "Waktu transaksi",
+        "es": "Trading horarios",
+        "pt-BR": "Horário de comércio",
+        "ar": "وقت التداول"
+    },
+    "cfd28_2": {
+        "en": "time zone",
+        "zh": "时区",
+        "vi": "múi giờ",
+        "zh-Hant": "時區",
+        "id": "Zona waktu",
+        "es": "Zona horaria",
+        "pt-BR": "Zona temporal",
+        "ar": "المنطقة الزمنية"
     },
     "cfd29": {
         "en": "Quotation time (Beijing time)",
@@ -14844,10 +14854,10 @@ module.exports = {
         "ar": "رمز المنطقة"
     },
     "mRegister02": {
-        "zh": "手机号",
+        "zh": "请输入手机号",
         "en": "Phone No.",
         "vi": "Số điệ thoại.",
-        "zh-Hant": "手機號",
+        "zh-Hant": "請輸入手機號",
         "id": "Nomor Telepon",
         "es": "Telefono nº",
         "pt-BR": "Número de telefone",
@@ -19210,5 +19220,125 @@ module.exports = {
         "es": "Recibir el premio",
         "pt-BR": "Receber o prêmio",
         "ar": "الحصول على الجائزة"
-    }
+    },
+    "mInviteNew1": {
+        "zh": "你投资 我出钱",
+        "en": "You invest, I'll pay.",
+        "vi": "Bạn đầu tư, tôi sẽ thanh toán.",
+        "zh-Hant": "你投資，我出錢",
+        "id": "Anda berinvestasi, kami yang membayar anda",
+        "es": "Inviertes, yo pagaré",
+        "pt-BR": "Você investe, eu pagarei",
+        "ar": "أنت تستثمر ، أنا أدفع"
+    },
+    "mInviteNew2": {
+        "zh": "注册并成功交易一笔",
+        "en": "Register and successfully trade 1 lot.",
+        "vi": "Đăng kí và hoàn thành 1 lot giao dịch .",
+        "zh-Hant": "註冊並成功交易一筆",
+        "id": "Daftar dan lakukan transaksi 1 lot.",
+        "es": "Regístrese y tradee con éxito 1 lote.",
+        "pt-BR": "Regístre e faz trading de 1 lote com succeso.",
+        "ar": "تسجل بنجاح وتداول عقد واحد."
+    },
+    "mInviteNew3": {
+        "zh": "得20美金现金红包",
+        "en": "Get a cash red packet of 20 US dollars.",
+        "vi": "Nhận phong bao lì xì trị giá 20$",
+        "zh-Hant": "得20美金現金紅包",
+        "id": "Dapatkan hadiah Dolar AS hingga $20",
+        "es": "Obtenga un paquete rojo de efectivo por US$20",
+        "pt-BR": "Obtenha um pacote vermelho em dinheiro por US$ 20",
+        "ar": "احصل على رزمة نقدية حمراء بقيمة 20 دولارًا أمريكيًا."
+    },
+    "mInviteNew4": {
+        "zh": "验证码已发送",
+        "en": "Has been sent",
+        "vi": "Đã gửi",
+        "zh-Hant": "驗證碼已發送",
+        "id": "Terkirim",
+        "es": "Enviado",
+        "pt-BR": "Foi enviado",
+        "ar": "أرسلت"
+    },
+    "mInviteNew5": {
+        "zh": "领取奖励",
+        "en": "Receive award",
+        "vi": "Nhận tiền thưởng",
+        "zh-Hant": "領取獎勵",
+        "id": "Terima hadiah",
+        "es": "Recibir premio",
+        "pt-BR": "Receber prêmio",
+        "ar": "الحصول على مكافأة"
+    },
+    "mInviteNew6": {
+        "zh": "邀请好友",
+        "en": "Invite friends",
+        "vi": "Bạn mời",
+        "zh-Hant": "邀請好友",
+        "id": "Undang teman",
+        "es": "Invitar amigos",
+        "pt-BR": "Convidar amigos",
+        "ar": "ادع الأصدقاء"
+    },
+    "mInviteNew7": {
+        "zh": "双方同获美金现金红包",
+        "en": "Invite friends, both sides receive cash bonuses in US dollars at the same time",
+        "vi": "Mời bạn bè, cả 2 đều sẽ cùng lúc nhận được tặng thưởng tiền mặt USD",
+        "zh-Hant": "雙方同獲美元現金紅包",
+        "id": "Ajak teman, masing-masing akan mendapatkan bonus uang tunai dalam bentuk dolar AS",
+        "es": "",
+        "pt-BR": "",
+        "ar": ""
+    },
+    "mInviteNew8": {
+        "zh": "向好友发送邀请链接",
+        "en": "Send Invitation Links to Friends",
+        "vi": "Gửi link Lời mời cho Bạn bè",
+        "zh-Hant": "向好友發送邀請鏈接",
+        "id": "Kirimkan tautan undangan ke teman anda",
+        "es": "",
+        "pt-BR": "",
+        "ar": ""
+    },
+    "mInviteNew9": {
+        "zh": "通过邀请链接进行注册",
+        "en": "Sign up by invitation link",
+        "vi": "Đăng ký bằng link Lời mời",
+        "zh-Hant": "通過邀請鏈接進行註冊",
+        "id": "Daftar untuk mendapatkan tautan undangan",
+        "es": "",
+        "pt-BR": "",
+        "ar": ""
+    },
+    "mInviteNew10": {
+        "zh": "下载APP，充值并交易",
+        "en": "Download APP, deposit and trade",
+        "vi": "Tải Ứng dụng, ký quỹ và giao dịch",
+        "zh-Hant": "下載APP，充值並交易",
+        "id": "Unduh Aplikasi, deposit dan transaksi",
+        "es": "",
+        "pt-BR": "",
+        "ar": ""
+    },
+    "mInviteNew11": {
+        "zh": "同时获得美元现金红包",
+        "en": "Invite friends, both sides receive cash bonuses in US dollars at the same time",
+        "vi": "Mời bạn bè, cả 2 đều sẽ cùng lúc nhận được tặng thưởng tiền mặt USD",
+        "zh-Hant": "同時獲得美元現金紅包",
+        "id": "Ajak teman, masing-masing akan mendapatkan bonus uang tunai dalam bentuk dolar AS",
+        "es": "",
+        "pt-BR": "",
+        "ar": ""
+    },
+    "mInviteNew12": {
+        "zh": "立即邀请",
+        "en": "Inviting now",
+        "vi": "Mời ngay",
+        "zh-Hant": "立即邀請",
+        "id": "Ajak sekarang",
+        "es": "",
+        "pt-BR": "",
+        "ar": ""
+    },
 };

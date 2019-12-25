@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<!--引入公用头部-->
+<% include /common/meta/h5.html %>
+<!-- 引入H5 CSS -->
+<!-- build:css(.tmp) /styles/h5_common.css -->
+<link rel="stylesheet" href="/styles/h5_common.css">
+<!-- endbuild -->
+
+<% include /common/vendor/h5.utiljs.html %>
+
+<% include /common/statistic/main.html %>
+<body>
+<div class="m_invite_layout">
+  <div class="m_invite_focus">
+    <img src="/white_label/invite/invite_focus.png" alt="">
+    <span><%=lang.text('mInviteNew1')%></span>
+  </div>
+  <div class="m_invite_box_wrapper">
+    <div class="m_invite_box">
+      <div class="m_invite_box_outside">
+        <div class="m_invite_box_inside" data-lang="<%=lang.isEnglishArea() ? 'en' : ''%>">
+          <p class="m_invite_box_tip"><%=lang.text('mInviteNew2')%></p>
+          <p class="m_invite_box_tip"><%=lang.text('mInviteNew3')%></p>
+        </div>
+      </div>
+      <form >
+        <div class="m_invite_input_wrapper">
+          <span class="m_invite_area_code">
+            <span id="areaCodeShow"><%=lang.text('mRegister01')%></span>
+            <select name="" class="selector" id="areaCode" style="border: none!important"></select>
+          </span>
+          <input type="tel" id="telephone" class="m_invite_input_phone" placeholder="<%=lang.text('mRegister02')%>">
+        </div>
+        <div class="m_invite_input_wrapper">
+          <input type="text" id="verify_code" class="m_invite_input_code" style="padding-right: 52%;" placeholder="<%=lang.text('mRegister04')%>">
+          <span id="verify_code_btn" class="m_invite_input_btn active"><%=lang.text('mRegister05')%></span>
+          <span id="verify_code_btn_disabeld" class="m_invite_input_btn" style="opacity: .5;"><%=lang.text('mInviteNew4')%> (<i>60</i>)</span>
+        </div>
+      </form>
+      <div class="m_invite_box_btn_wrapper">
+        <button id="submit_btn" class="m_invite_box_btn"><%=lang.text('mInviteNew5')%></button>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+<% include /common/vendor/h5.js.html %>
+<!-- 注册协议相关弹窗 -->
+<%include /common/component/agment_mdl.html %>
+<!-- build:js(client) /scripts/m_invite_new.js -->
+<script src="/scripts/invite/m_invite_new.js"></script>
+<script src="/scripts/plugins/baiduTemplate.js"></script>
+<!-- endbuild -->
+
+<%- include('/common/statistic/all.html') %>
+</html>

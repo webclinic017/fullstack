@@ -373,6 +373,11 @@ module.exports = function (app) {
             page: 'register_coupon'
         }, req));
     });
+    //邀请好友新H5 - 2019.12.20
+    app.route('/m/invite').get(function (req, res) {
+        setEnvCf(req, res);
+        res.render('invite/m_invite', extendPublic({}, req));
+    });
 
     app.route('/m/invite02').get(function (req, res) {
         setEnvCf(req, res);

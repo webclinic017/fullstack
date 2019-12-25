@@ -5,9 +5,9 @@
     angular.module('fullstackApp')
         .controller('AssetWithdrawController', AssetWithdrawController);
 
-    AssetWithdrawController.$inject = ['$rootScope', '$scope', '$modal', '$state', 'asset', 'validator', '$cookies', '$layer', '$document'];
+    AssetWithdrawController.$inject = ['$rootScope', '$scope', '$modal', '$state', 'asset', 'validator', '$cookies', 'invest', 'trader', '$document'];
 
-    function AssetWithdrawController($rootScope, $scope, $modal, $state, asset, validator, $cookies, $layer, $document) {
+    function AssetWithdrawController($rootScope, $scope, $modal, $state, asset, validator, $cookies, invest, trader, $document) {
         
         if ($cookies["d&w_czc"] && (!localStorage["withdraw_czc"] || localStorage["withdraw_czc"] !== $cookies["d&w_czc"])) {
             $scope.toTrackEvent('Deposit/withdrawal', 'withdrawal');
@@ -188,12 +188,16 @@
                         };
                         $scope.withdrawNotice = data.data.notice;
                         $scope.maxAmountInvest = data.data.amount < 0 ? 0 : data.data.amount;
-                        // if ($scope.withdraw.type === 'invest') {
                         $scope.withdraw.maxAmount = $scope.maxAmountInvest;
                         if (Number($scope.withdraw.amount) >= Number($scope.withdraw.maxAmount)) {
                             $scope.withdraw.amount = undefined
                         }
-                        // }
+                        if (data.data.status_message) {
+                            openWithdrawMdl({
+                                type: 'statusTip',
+                                message: data.data.status_message
+                            });
+                        }
                     }
                 } else {
                     $scope.message = {
@@ -683,7 +687,7 @@
                 }
             })
         }
-
+        var copy_account = 0, free_amount = 0; //跟随高手数、空闲资金
         function withdrawInvest(paramsAsset) {
             asset.getIsWithdraw($scope.withdraw.amount, noIsWalletId()).then(function (data) {
                 if (data.is_succ) {
@@ -702,6 +706,8 @@
                             message: data.data.status_message
                         });
                     } else {
+                        copy_account = data.data.copy_account;
+                        free_amount = data.data.free_amount;
                         if (data.data.bonus == 0) {
                             var amount = Number($scope.withdraw.amount).toFixed(2);
                             var amountRMB = Number(amount * $scope.withdraw.currency.rate_out).toFixed(2);
@@ -712,7 +718,8 @@
                                 amountRMB: amountRMB,
                                 desc: $scope.withdrawNotice,
                                 currency: $scope.withdraw.currency,
-                                callback: data.data.status_message ? openWithdrawTip(data.data.status_message) : withdraw,
+                                // callback: data.data.status_message ? openWithdrawTip(data.data.status_message) : withdraw,
+                                callback: withdraw,
                                 callbackPara: data.data.status_message
                             });
                         } else {
@@ -769,16 +776,131 @@
                             }
                         } else {
                             var msg = data.message;
+                            //跟单账号提交出金时出金金额大于空闲资金时返回code：100617
+                            if (data.code === 100617) {
+                                $scope.clickable = false;
+                                //获取当前跟随高手列表
+                                invest.getInvestCurrentTraders(paramsAsset.mt4_id).then(function (data) {
+                                    if (!data) return;
+                                    if (data.is_succ) {
+                                        var isOne, params;
+                                        if (copy_account > 1) {
+                                            isOne = false;
+                                            params = data.data.copying_masters;
+                                        } else {
+                                            var s = data.data.copying_masters[0];
+                                            isOne = true;
+                                            params = {
+                                                user_code: s.user_code,
+                                                username: s.username,
+                                                needAmount: Number(paramsAsset.amount - free_amount).toFixed(2),
+                                                amount: Number(s.copy_amount - (paramsAsset.amount - free_amount)).toFixed(2),
+                                                type: 'goWithdrawOne'
+                                            }
+                                        }
+                                        openWithdrawCopyMasterTip({
+                                            type: 'careful',
+                                            message: msg,
+                                            callback: isOne ? modifyCopyAmount : openSelectCopyMaster,
+                                            callbackparams: params
+                                        });
+                                    }
+                                });
+                            } else {
+                                openWithdrawMdl({
+                                    type: 'withdrawFail',
+                                    message: msg
+                                });
+                            }
+                        }
+                    });
+                }
+
+                // 跟随高手可提现弹窗相关
+                function openWithdrawCopyMasterTip(params) {
+                    // console.log(params);
+                    var withdraw = $scope.withdraw;
+                    // var isMessage = $scope.message;
+                    var parentScope = $scope;
+
+                    $modal.open({
+                        templateUrl: '/views/asset/withdraw_modal2.html',
+                        size: 'sm',
+                        backdrop: 'static',
+                        controller: function ($scope, $modalInstance, lang) {
+                            $scope.withdrawAmount = withdraw.amount;
+                            $scope.closeModal = closeModal;
+                            $scope.params = params;
+                            $scope.lang = lang;
+                            $scope.initCopyList = initCopyList;
+                            $scope.selectCopyMaster = selectCopyMaster;
+                            $scope.selectparams = null;
+                            $scope.needAmount = Number(paramsAsset.amount - free_amount).toFixed(2);
+
+                            function initCopyList () {
+                                console.log(params.message);
+                                angular.forEach(params.message, function (value, index) {
+                                    if (value.copy_amount - value.min_follow < $scope.needAmount) {
+                                        value.status = false;
+                                    } else {
+                                        value.status = true;
+                                    }
+                                });
+                            }
+                            function selectCopyMaster (item) {
+                                if (!item.status) return;
+                                $scope.select = item;
+                                $scope.selectparams = {
+                                    user_code: item.user_code,
+                                    username: item.username,
+                                    needAmount: $scope.needAmount,
+                                    amount: Number(item.copy_amount - (paramsAsset.amount - free_amount)).toFixed(2),
+                                    type: 'goWithdraw'
+                                };
+                            }
+
+                            function closeModal(r) {
+                                if (r) {
+                                    parentScope.clickable = true;
+                                }
+                                $modalInstance.dismiss();
+                            }
+                        }
+                    });
+                }
+                //修改复制金额
+                function modifyCopyAmount(params) {
+                    trader.copy(params.user_code, params.amount).then(function (data) {
+                        if (data.is_succ) {
+                            openWithdrawCopyMasterTip({
+                                type: params.type,
+                                message: {
+                                    needAmount: params.needAmount,
+                                    amount: params.amount,
+                                    username: params.username
+                                },
+                                callback: withdraw
+                            })
+                        } else {
+                            $scope.clickable = true;
                             openWithdrawMdl({
                                 type: 'withdrawFail',
-                                message: msg
+                                message: data.message
                             });
                         }
                     });
                 }
+                //选择一个高手修改复制金额
+                function openSelectCopyMaster (params) {
+                    openWithdrawCopyMasterTip({
+                        type: 'copyList',
+                        message: params,
+                        callback: modifyCopyAmount
+                    });
+                }
             });
         }
-
+        
         // function withdrawWallet(paramsAsset) {
 
         //     var amount = Number($scope.withdraw.amount).toFixed(2);

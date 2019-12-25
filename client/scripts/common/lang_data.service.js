@@ -6492,14 +6492,14 @@
                         "ar": "ادعو أصدقائك"
                     },
                     "inviteFriend": {
-                        "zh": "邀请好友，赢取10美元",
-                        "en": "Invite a friend and win 10 dollar",
-                        "vi": "Mời bạn bè và nhận 10 đô la.",
-                        "zh-Hant": "邀請好友，贏取10美元",
-                        "id": "Ajak teman dan dapatkan 10 dolar",
-                        "es": "Invite a un amigo y gane 10 dólares",
-                        "pt-BR": "Convide um amigo e ganhe 10 dólares",
-                        "ar": "ادع أحد أصدقائك واربح 10 دولار"
+                        "zh": "邀请好友，赢取50美元",
+                        "en": "Invite a friend and win 50 dollar",
+                        "vi": "Mời bạn bè và nhận 50 đô la.",
+                        "zh-Hant": "邀請好友，贏取50美元",
+                        "id": "Ajak teman dan dapatkan 50 dolar",
+                        "es": "Invite a un amigo y gane 50 dólares",
+                        "pt-BR": "Convide um amigo e ganhe 50 dólares",
+                        "ar": "ادع أحد أصدقائك واربح 50 دولار"
                     },
                     "invitedFriends": {
                         "zh": "当前邀请人数",
@@ -6522,14 +6522,14 @@
                         "ar": "لوائح دعوة الأصدقاء"
                     },
                     "tip1": {
-                        "zh": "1、注册即获得邀请类红包“人从众”，邀请3名好友注册，且至少有1人入金并完成1手交易即可兑现, 每位用户仅可领取一次；",
-                        "en": "1. A reward coupon will be delivered to your account when you registered, it can be cashed once you invited three friends and at least one of them deposited and had one lot transaction.",
-                        "vi": "1. Một phiếu thưởng sẽ được gửi đến tài khoản của bạn khi bạn đăng ký, nó có thể được đổi thành tiền mặt khi bạn mời ba người bạn và ít nhất một người trong số họ gửi tiền và có một giao dịch rất nhiều.",
-                        "zh-Hant": "1、註冊即獲得邀請類紅包“人從眾”，邀請3名好友註冊，且至少有1人入金並完成1手交易即可兌現, 每位用戶僅可領取壹次；",
-                        "id": "1. Hadiah akan langsung dikirim ke akun anda apabila anda sudah terdaftar di sistem, dan hadiah tersebut dapat dicairkan apabila anda telah mengundang 3 teman lain dan salah satunya telah melakukan penyetoran dana serta bertransaksi minimal 1 lot.",
-                        "es": "1. Un cupón de recompensa será enviado a su cuenta cuando se registre; podrá ser liquidado una vez que haya invitado a tres amigos y al menos uno de ellos haya depositado y haya operado un lote.",
-                        "pt-BR": "1. Um cupom de recompensa será entregue em sua conta quando você se registrou, ele pode ser descontado uma vez que você convidou três amigos e pelo menos um deles depositou e teve uma transação de lote.",
-                        "ar": "1- سيتم تسليم كوبون المكافأة إلى حسابك عندما تقوم بالتسجيل. ويمكنك سحبه نقدًا بعد أن تدعو ثلاثة من أصدقائك ويقوم واحد منهم على الأقل بالإيداع وبالدخول في صفقة حجمها عقد واحد."
+                        "zh": "1、被邀请人注册成功，邀请人和被邀请人同时获得邀请红包，被邀请的用户注册且成功入金并完成1手交易即可兑现；",
+                        "en": "1. The invitee registers successfully, the inviter and the invitee get the invitation red envelope at the same time, and the invited user Redeem after completing 1 lot trade.",
+                        "vi": "1. Khi người được giới thiệu đăng kí thành công, khách hàng được giới thiệu và người giới thiệu nhận được thông báo nhận điểm thưởng trong phong bì đỏ cùng lúc, và người dùng được giới thiệu đổi tiền thưởng sau khi hoàn thành 1 lot giao dịch ",
+                        "zh-Hant": "1、被邀請人註冊成功，邀請人和被邀請人同時獲得邀請紅包，被邀請的用戶註冊且成功入金並完成1手交易即可兌現；",
+                        "id": "1. Apabila teman yang diajak berhasil mendaftar, maka orang yang mengajak dan yang diajak akan mendapatkan amplop merah bersama-sama. Selanjutnya amplop tersebut dapat diklaim apabila sudah menyelesaikan transaksi 1 lot",
+                        "es": "1. El invitado se registra con éxito, el que invita y el invitado reciben un sobre rojo al mismo tiempo. El usuario invitado canjea después de completar 1 lote tradeado",
+                        "pt-BR": "1. O convidado se registra com succeso, a pessoa que convida e o convidado recebem um envelope vermelho do convite ao mesmo tempo, e o usuário convidado resgata após concluir o trading de 1 lote.",
+                        "ar": "1-  يتسجل المدعو بنجاح ، ويحصل المدعو والداعي على المغلف الأحمر للدعوة في نفس الوقت ، ويسجل المستخدم (الداعي) المدعو بنجاح ويكمل المعاملة بيد واحدة."
                     },
                     "tip2": {
                         "zh": "2、您只有通过邀请链接进行注册的好友才算有效；",
@@ -6630,6 +6630,106 @@
                         "es": "Estatus transacciones",
                         "pt-BR": "Status nas transações",
                         "ar": "الحالة في المعاملات"
+                    },
+                    "invite1": {
+                        "zh": "已邀请人数",
+                        "en": "Invited",
+                        "vi": "Người quan tâm",
+                        "zh-Hant": "已邀請人數",
+                        "id": "Undangan",
+                        "es": "Incitado",
+                        "pt-BR": "Incitado",
+                        "ar": "حرض"
+                    },
+                    "invite2": {
+                        "zh": "成功邀请",
+                        "en": "Successful invitation",
+                        "vi": "Lời mời thành công",
+                        "zh-Hant": "成功邀請",
+                        "id": "Undangan sukses",
+                        "es": "Invitación exitosa",
+                        "pt-BR": "Convite bem sucedido",
+                        "ar": "دعوة ناجحة"
+                    },
+                    "invite3": {
+                        "zh": "获得赏金",
+                        "en": "Receive reward",
+                        "vi": "Nhận thưởng",
+                        "zh-Hant": "獲得賞金",
+                        "id": "Hadiah yang diterima",
+                        "es": "Recibe recompensa",
+                        "pt-BR": "Receber recompensa",
+                        "ar": "الحصول على مكافأة"
+                    },
+                    "invite4": {
+                        "zh": "邀请进度",
+                        "en": "Invitation Progress",
+                        "vi": "Quá trình giới thiệu",
+                        "zh-Hant": "邀請進度",
+                        "id": "Perkembangan Undangan",
+                        "es": "Progreso de invitación ",
+                        "pt-BR": "Progresso do convite",
+                        "ar": "تقدم الدعوة"
+                    },
+                    "invite5": {
+                        "zh": "邀请时间",
+                        "en": "Invitation time",
+                        "vi": "Giờ mời",
+                        "zh-Hant": "邀請時間",
+                        "id": "Waktu undangan",
+                        "es": "Tiempo de invitación",
+                        "pt-BR": "Hora do convite",
+                        "ar": "وقت الدعوة"
+                    },
+                    "invite6": {
+                        "zh": "未开户",
+                        "en": "Unopened account",
+                        "vi": "Tài khoản chưa mở",
+                        "zh-Hant": "未開戶",
+                        "id": "Akun belum dibuka",
+                        "es": "Unopened account",
+                        "pt-BR": "Unopened account",
+                        "ar": "لم يتم فتح "
+                    },
+                    "invite7": {
+                        "zh": "未充值",
+                        "en": "Undeposited",
+                        "vi": "Không ký gửi",
+                        "zh-Hant": "未充值",
+                        "id": "Tanpa deposit",
+                        "es": "Undeposited",
+                        "pt-BR": "Undeposited",
+                        "ar": "حساب"
+                    },
+                    "invite8": {
+                        "zh": "未交易",
+                        "en": "Untraded",
+                        "vi": "Chưa giao dịch",
+                        "zh-Hant": "未交易",
+                        "id": "Belum ada transaksi",
+                        "es": "Untraded",
+                        "pt-BR": "Untraded",
+                        "ar": "لا يُتداول"
+                    },
+                    "invite9": {
+                        "zh": "邀请成功",
+                        "en": "Invitation successful",
+                        "vi": "Gửi lời mời thành công",
+                        "zh-Hant": "邀請成功",
+                        "id": "Undangan sukse",
+                        "es": "Invitation successful",
+                        "pt-BR": "Invitation successful",
+                        "ar": "إن الدعوة تمت بنجاح  "
+                    },
+                    "invite10": {
+                        "zh": "",
+                        "en": "",
+                        "vi": "",
+                        "zh-Hant": "",
+                        "id": "",
+                        "es": "",
+                        "pt-BR": "",
+                        "ar": ""
                     }
                 },
                 "commission": {
@@ -9128,24 +9228,24 @@
                         "ar": "جدول مقارنة العائدات (30 يوم)"
                     },
                     "currentMasterReturn": {
-                        "zh": "当前高手收益率",
-                        "en": "Current Master's Return",
-                        "vi": "Lợi nhuận của bậc thầy hiện tại",
-                        "zh-Hant": "當前高手收益率",
-                        "id": "Keuntungan Master saat ini",
-                        "es": "Retorno actual del Master",
-                        "pt-BR": "Retorno atual do Mestre",
-                        "ar": "العائد الحالي للمحترف (الأستاذ)"
+                        "zh": "当前高手总收益率",
+                        "en": "Current Master’s Overall Return",
+                        "vi": "Tổng lợi nhuận của Bậc Thầy Hiện tại",
+                        "zh-Hant": "當前高手總收益率",
+                        "id": "Rata-rata keuntungan Master saat ini",
+                        "es": "Retorno general del maestro actual",
+                        "pt-BR": "Retorno Geral do Mestre Atual",
+                        "ar": "العائد الإجمالي للمتداول المحترف الحالي"
                     },
                     "mastersAverageReturn": {
-                        "zh": "所有高手平均收益率",
-                        "en": "Masters' Average Return",
-                        "vi": "Lợi nhuận trung bình của các bậc thầy",
-                        "zh-Hant": "所有高手平均收益率",
-                        "id": "Rata-rata keuntungan Master",
-                        "es": "Retorno promedio de los Masters",
-                        "pt-BR": "Retorno médio dos Mestres",
-                        "ar": "معدل العائدات للمحترف (الأستاذ)"
+                        "zh": "所有高手平均总收益率",
+                        "en": "All Masters’ Average Overall Return",
+                        "vi": "Tổng lợi nhuận của tất cả Bậc Thầy",
+                        "zh-Hant": "所有高手平均總收益率",
+                        "id": "Total rata-rata keuntungan Master",
+                        "es": "Retorno general promedio de todos los maestros",
+                        "pt-BR": "Retorno Geral Médio de Todos os Mestres",
+                        "ar": "متوسط العائد الكلي للمتداول المحترف"
                     },
                     "positions": {
                         "zh": "持仓单",
@@ -13387,6 +13487,86 @@
                     "es": "Reiniciar",
                     "pt-BR": "Reiniciar",
                     "ar": "إعادة تعيين"
+                },
+                "careful": {
+                    "zh": "注意",
+                    "en": "Notice",
+                    "vi": "lưu ý",
+                    "zh-Hant": "注意",
+                    "id": "Pengumuman",
+                    "es": "Aviso",
+                    "pt-BR": "Aviso",
+                    "ar": "تنويه"
+                },
+                "continue": {
+                    "zh": "继续",
+                    "en": "Continue",
+                    "vi": "Tiếp tục",
+                    "zh-Hant": "繼續",
+                    "id": "Lanjutkan",
+                    "es": "Continuar",
+                    "pt-BR": "Continuar",
+                    "ar": "استمرار"
+                },
+                "inviteNotice1": {
+                    "zh": "需要扣除",
+                    "en": "Need to deduct $",
+                    "vi": "Cần trừ $",
+                    "zh-Hant": "需要扣除",
+                    "id": "Untuk memotong $",
+                    "es": "Necesita deducir $",
+                    "pt-BR": "É necessário deduzir $",
+                    "ar": "انك تحتاج إلى خصم $"
+                },
+                "inviteNotice2": {
+                    "zh": "美金，您跟随一位高手，系统自动扣除，同时变更跟随资金。",
+                    "en": ", you copy a master, the system automatically deducts, and changes the copy amount",
+                    "vi": ", bạn sao chép một bậc thầy, hệ thống tự động trừ tiền, và thay đổi số tiền sao chép",
+                    "zh-Hant": "美金，您跟隨一位高手，系統自動扣除，同時變更複制金額",
+                    "id": ", Sistem akan otomatis mengurangi dana dari akun copy anda yang sedang mengikuti master",
+                    "es": ", haces copy con un master, el sistema deduce automáticamente y cambia el monto copy.",
+                    "pt-BR": ", você copia um mestre, o sistema deduz automaticamente e altera o valor da cópia.",
+                    "ar": "، فأنت تتابع متداول محترف، والنظام يخصم تلقائيا، وسيغيير مبلغ النسخ (المتابعة) "
+                },
+                "inviteNotice3": {
+                    "zh": "美金，您跟随多位高手，需要选择从哪位高手扣除，同时变动复制金额",
+                    "en": ", you copy multiple masters, you need to choose which master to deduct, and change the copy amount at the same time",
+                    "vi": ", bạn sao chép nhiều bậc thầy, bạn cần chọn bậc thầy nào cần để trừ, và đồng thười thay đổi số tiền tiền sao chép cùng lúc này.",
+                    "zh-Hant": "美金，您跟隨多位高手，需要選擇從哪位高手扣除，同時變動複製金額",
+                    "id": ", anda harus memilih master mana yang anda ingin anda berhenti ikuti dan dana di akun tersebut akan berubah.",
+                    "es": ", para hacer copy a múltiples Masters, debe elegir cuál master deducir y cambiar el monto copy al mismo tiempo.",
+                    "pt-BR": ", você faz copy vários mestres, precisa escolher qual mestre deduzir e alterar o valor do copy ao mesmo tempo.",
+                    "ar": "ختيارك لمتداول لخصم المبلغ ، وتغيير مبلغ النسخ في نفس الوقت"
+                },
+                "inviteNotice4": {
+                    "zh": "您跟随的高手",
+                    "en": "Your copy master",
+                    "vi": "Số tiền sao chép bậc thầy",
+                    "zh-Hant": "您跟隨的高手",
+                    "id": "Jumlah dana",
+                    "es": "Su copy master",
+                    "pt-BR": "Seu mestre de copy",
+                    "ar": "تم ت"
+                },
+                "inviteNotice5": {
+                    "zh": "跟随资金变更为",
+                    "en": "copy amount changed to $",
+                    "vi": "của bạn đã thay đổi thành $",
+                    "zh-Hant": "複製金額變更為",
+                    "id": "yang mengikuti Master akan diubah ke $",
+                    "es": "el monto copy cambió a $",
+                    "pt-BR": "valor do copy alterado para $",
+                    "ar": "ير مبلغ المتداول المحترف"
+                },
+                "inviteNotice6": {
+                    "zh": "美金。",
+                    "en": " ",
+                    "vi": " ",
+                    "zh-Hant": "美金",
+                    "id": " ",
+                    "es": " ",
+                    "pt-BR": " ",
+                    "ar": "دولار أمريكي"
                 },
             },
         };

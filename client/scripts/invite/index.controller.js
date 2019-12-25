@@ -36,6 +36,8 @@
             getList: getInviteFriendsInfo
         }
         $scope.friendsNum = 0;
+        $scope.succNum = 0;
+        $scope.reward = 0;
         $scope.bonusList = [];
         $scope.selectTxt = selectTxt;
         var pagesize = 10;
@@ -45,11 +47,17 @@
 
         function getInviteFriendsInfo (page) {
             invite.getInviteFriendsInfo(page, pagesize).then(function (data) {
-                // console.info(data);
+                console.info(data);
                 if (data.is_succ) {
                     $scope.bonusList = data.data.records;
                     $scope.friendsNum = data.data.record_count;
+                    $scope.succNum = data.data.success_count;
+                    $scope.reward = data.data.reward_amount;
                 }
+                angular.forEach($scope.bonusList, function (value, index) {
+                    var date = new Date(value.invite_time*1000);
+                    value.time = date.getFullYear()+'/'+(date.getMonth()+1)+'/'+date.getDate();
+                })
                 angular.extend($scope.pagebar.config, {
                     total: utils.getTotal(data.data.record_count, pagesize),
                     page: page
