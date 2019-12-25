@@ -174,4 +174,7 @@
             }
         });
     }
+    var $inviteBox = $(".m_invite_box_wrapper");
+    var originalHeight=document.documentElement.clientHeight ||document.body.clientHeight;
+    $inviteBox.css('height', (originalHeight - $inviteBox.offset().top)+'px');
 }(jQuery));
