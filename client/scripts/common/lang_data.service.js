@@ -4184,7 +4184,17 @@
                         "es": "La cuenta está bajo revisión, vuelva a depositar después de la presentación",
                         "pt-BR": "A conta está em revisão, faça o depósito novamente após o envio",
                         "ar": "الحساب قيد المراجعة، يرجى إعادة الإيداع بعد الإرسال"
-                    }
+                    },
+                    "tip28": {
+                        "zh": "由于复制金额小于最佳金额，您可能无法成功复制该高手",
+                        "en": "The order may not be executed because of the amount is less than best amount",
+                        "vi": "Lệnh có thể bị đóng do số vốn thấp hơn mức khuyến nghị",
+                        "zh-Hant": "由於複製金額小於最佳金額，您可能無法成功複製該高手",
+                        "id": "Transaksi mungkin akan gagal tereksekusi karena jumlahnya kurang dari yang disarankan",
+                        "es": "El pedido no pudo ejecutarse porque la cantidad era inferior a la cantidad Mejor",
+                        "pt-BR": "A ordem pode ou não ser executada porque a quantidade é menor que a quantidade recomendada",
+                        "ar": "قد لا يتم تنفيذ العملية لأن المبلغ أقل من المبلغ المطلوب "
+                    },
                 },
                 "details": {
                     "title": {
@@ -7357,11 +7367,11 @@
                     },
                     "tip12": {
                         "zh": "提示：手机端充值最低限额$50.00，每天最高限额$7000.00，充值成功后，到账时间约为10分钟，请耐心等待。如有问题，可在电脑端登录官网（）操作。",
-                        "en": "The minimum deposit for mobile phones is $ 50.00，maximum daily limit of $ 7000.00. After the success of the deposit, the arrival time is about 10 minutes, please be patient.If there are problems, you can log on the computer side of the official website (www.tigerwit.com) operation.",
-                        "vi": "Khoản tiền gửi tối thiểu cho điện thoại di động là $ 50,00 ， giới hạn tối đa hàng ngày là $ 7000.00. Sau khi thành công của tiền gửi, thời gian đến là khoảng 10 phút, hãy kiên nhẫn. Nếu có vấn đề, bạn có thể đăng nhập bằng máy tính của trang web chính thức (www.tigerwit.com) hoạt động.",
+                        "en": "The minimum deposit for mobile phones is $ 50.00，maximum daily limit of $ 7000.00 After the success of the deposit, the arrival time is about 10 minutes, please be patient.If there are problems, you can log on the computer side of the official website (www.tigerwit.com) operation.",
+                        "vi": "Khoản tiền gửi tối thiểu cho điện thoại di động là $ 50,00 ， giới hạn tối đa hàng ngày là $ 7000.00 Sau khi thành công của tiền gửi, thời gian đến là khoảng 10 phút, hãy kiên nhẫn. Nếu có vấn đề, bạn có thể đăng nhập bằng máy tính của trang web chính thức (www.tigerwit.com) hoạt động.",
                         "zh-Hant": "提示：手機端充值最低限額$50.00，每天最高限額$7000.00，充值成功後，到帳時間約為10分鐘，請耐心等待。如有問題，可在電腦端登錄官網（）操作。",
                         "id": "Minimal pengisian dana melalui ponsel adalah 50$ dan maksimum sebesar 7000$. Dana biasanya akan masuk dalam kurun waktu 10 menit, mohon menunggu. Apabila mengalami masalah, anda dapat masuk melalui komputer ",
-                        "es": "El depósito mínimo para teléfonos móviles es de $ 50.00，límite máximo diario de $ 7000.00. Después éxito en depósito, el tiempo de llegada es de aproximadamente 10 minutos; sea paciente, por favor. Si encontrara problemas, puede iniciar sesión en el ordenador en el sitio web oficial (www.tigerwit.com).",
+                        "es": "El depósito mínimo para teléfonos móviles es de $ 50.00，límite máximo diario de $ 7000.00 Después éxito en depósito, el tiempo de llegada es de aproximadamente 10 minutos; sea paciente, por favor. Si encontrara problemas, puede iniciar sesión en el ordenador en el sitio web oficial (www.tigerwit.com).",
                         "pt-BR": "O depósito mínimo para telefones celulares é de US $ 50,00, limite máximo diário de US $ 7000,00. Após o sucesso do depósito, o tempo de chegada é de cerca de 10 minutos, por favor, seja paciente.Se houver problemas, você pode fazer logon no lado do computador do site oficial (www.tigerwit.com) operação.",
                         "ar": "الحد الأدنى للإيداع بالنسبة للهواتف المحمولة هو  50 دولار، والحد الأقصى اليومي هو 7000 دولار بعد نجاح الإيداع، يكون وقت وصول الأموال للحساب حوالي 10 دقائق، يرجى التحلي بالصبر. إذا واجهت مشاكل، يمكنك الدخول إلى منطقة العميل في الموقع الإلكتروني الرسمي (www.tigerwit.com)."
                     },
