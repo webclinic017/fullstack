@@ -94,11 +94,11 @@
                 },
                 android: {
                     app_info: {
-                        version_name : "V4.1.1",
-                        description: "This update: \n1. Optimized document expiration \nOptimized list of countries in the Dominican Republic \nOptimized add symbols \nFix known bugs",
-                        updated_description: "70% users are using new version",
-                        url: "https://static.tigerwitfx.com/downloads/apk/tigerwit_v4.1.1.apk",
-                        force_update : false
+                        version_name : "V4.5.3",
+                        description: "This update: Fix known bugs",
+                        updated_description: "98% users are using new version",
+                        url: "https://dltw.oss-cn-beijing.aliyuncs.com/apk/tigerwit_v4.5.3.apk",
+                        force_update : true
                     }
                 }
             },
@@ -113,11 +113,11 @@
                 },
                 android: {
                     app_info: {
-                        version_name : "V4.1.1",
-                        description: "本次更新：\n1.证件过期功能优化\n优化多米尼加共和国国家列表\n优化添加交易品种功能\n修复已知bug",
-                        updated_description: "70%的用户正在使用新版本",
-                        url: "https://static.tigerwitfx.com/downloads/apk/tigerwit_v4.1.1.apk",
-                        force_update : false
+                        version_name : "V4.5.3",
+                        description: "本次更新：修复已知bug",
+                        updated_description: "98%的用户正在使用新版本",
+                        url: "https://dltw.oss-cn-beijing.aliyuncs.com/apk/tigerwit_v4.5.3.apk",
+                        force_update : true
                     }
                 }
             }
