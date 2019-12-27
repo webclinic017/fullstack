@@ -13568,6 +13568,16 @@
                     "pt-BR": " ",
                     "ar": "دولار أمريكي"
                 },
+                "inviteNotice7": {
+                    "zh": "只能选择一位高手。如果出现高手都不可选择的情况，是因为需要扣除的金额已经超出跟随资金的范围（最低复制金额$200）",
+                    "en": "Only one master can be selected. If a master can't choose, it is because the amount to be deducted is beyond the range of the copied amount (the minimum copied amount is $ 200)",
+                    "vi": "Chỉ chọn được 1 bậc thầy. Nếu bạn không chọn được bậc thầy, đó là do số tiền sẽ bị trừ đã vượt quá mức tối thiểu để sao chép (vốn khuyến nghị tối thiểu để sao chép là 200$)",
+                    "zh-Hant": "只能選擇一位高手。如果出現高手都不可選擇的情況，是因為需要扣除的金額已經超出跟隨資金的範圍（最低複製金額$200）",
+                    "id": "Hanya satu master yang dapat dipilih. Jika anda tidak dapat memilih Master, silahkan cek apakah jumlah dana anda mencukupi untuk mengikuti master tersebut (Minimum dana adalah $200)",
+                    "es": "Somente um mestre pode ser selecionado. Se um mestre não pode escolher, é porque o valor a ser deduzido está além do escopo dos fundos de acompanhamento (o valor mínimo de cópia é de US $ 200)",
+                    "pt-BR": "Solo se puede seleccionar un maestro. Si un maestro no puede elegir, es porque el monto a deducir está más allá del alcance de los fondos de seguimiento (el monto mínimo de copia es $ 200)",
+                    "ar": "يمكن اختيار سيد واحد فقط. إذا تعذر على السيد الاختيار ، فذلك لأن المبلغ المراد خصمه يتجاوز نطاق أموال المتابعة (الحد الأدنى لمبلغ النسخ هو 200 دولار)"
+                }
             },
         };
         var indexBasePath = "/white_label";

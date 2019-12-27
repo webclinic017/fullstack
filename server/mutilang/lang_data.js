@@ -19287,9 +19287,9 @@ module.exports = {
         "vi": "Mời bạn bè, cả 2 đều sẽ cùng lúc nhận được tặng thưởng tiền mặt USD",
         "zh-Hant": "雙方同獲美元現金紅包",
         "id": "Ajak teman, masing-masing akan mendapatkan bonus uang tunai dalam bentuk dolar AS",
-        "es": "",
-        "pt-BR": "",
-        "ar": ""
+        "es": "Invite amigos, ambas partes reciben bonos en efectivo en dólares estadounidenses al mismo tiempo",
+        "pt-BR": "Convide amigos, os dois lados recebem bônus em dinheiro em dólares americanos ao mesmo tempo",
+        "ar": "ادع الأصدقاء ، يتلقى كلا الجانبين مكافآت نقدية بالدولار الأمريكي في نفس الوقت"
     },
     "mInviteNew8": {
         "zh": "向好友发送邀请链接",
@@ -19297,9 +19297,9 @@ module.exports = {
         "vi": "Gửi link Lời mời cho Bạn bè",
         "zh-Hant": "向好友發送邀請鏈接",
         "id": "Kirimkan tautan undangan ke teman anda",
-        "es": "",
-        "pt-BR": "",
-        "ar": ""
+        "es": "Enviar enlaces de invitación a amigos",
+        "pt-BR": "Enviar links de convite para amigos",
+        "ar": "إرسال روابط الدعوة إلى الأصدقاء"
     },
     "mInviteNew9": {
         "zh": "通过邀请链接进行注册",
@@ -19307,9 +19307,9 @@ module.exports = {
         "vi": "Đăng ký bằng link Lời mời",
         "zh-Hant": "通過邀請鏈接進行註冊",
         "id": "Daftar untuk mendapatkan tautan undangan",
-        "es": "",
-        "pt-BR": "",
-        "ar": ""
+        "es": "Registrarse por enlace de invitación",
+        "pt-BR": "Inscreva-se por link de convite",
+        "ar": "الاشتراك عن طريق رابط الدعوة"
     },
     "mInviteNew10": {
         "zh": "下载APP，充值并交易",
@@ -19317,9 +19317,9 @@ module.exports = {
         "vi": "Tải Ứng dụng, ký quỹ và giao dịch",
         "zh-Hant": "下載APP，充值並交易",
         "id": "Unduh Aplikasi, deposit dan transaksi",
-        "es": "",
-        "pt-BR": "",
-        "ar": ""
+        "es": "Descargar APP, depositar y comerciar",
+        "pt-BR": "Baixe o APP, deposite e negocie",
+        "ar": "تحميل التطبيق والودائع والتجارة"
     },
     "mInviteNew11": {
         "zh": "同时获得美元现金红包",
@@ -19327,9 +19327,9 @@ module.exports = {
         "vi": "Mời bạn bè, cả 2 đều sẽ cùng lúc nhận được tặng thưởng tiền mặt USD",
         "zh-Hant": "同時獲得美元現金紅包",
         "id": "Ajak teman, masing-masing akan mendapatkan bonus uang tunai dalam bentuk dolar AS",
-        "es": "",
-        "pt-BR": "",
-        "ar": ""
+        "es": "Invite amigos, ambas partes reciben bonos en efectivo en dólares estadounidenses al mismo tiempo",
+        "pt-BR": "Convide amigos, os dois lados recebem bônus em dinheiro em dólares americanos ao mesmo tempo",
+        "ar": "ادع الأصدقاء ، يتلقى كلا الجانبين مكافآت نقدية بالدولار الأمريكي في نفس الوقت"
     },
     "mInviteNew12": {
         "zh": "立即邀请",
@@ -19337,8 +19337,8 @@ module.exports = {
         "vi": "Mời ngay",
         "zh-Hant": "立即邀請",
         "id": "Ajak sekarang",
-        "es": "",
-        "pt-BR": "",
-        "ar": ""
+        "es": "Invitando ahora",
+        "pt-BR": "Convidando agora",
+        "ar": "دعوة الآن"
     },
 };
