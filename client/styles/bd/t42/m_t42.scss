@@ -34,7 +34,7 @@
   }
 }
 @include b(m_t42_layout) {
-  background: url("/images/bd_t42/h5_bg_20191204.png") no-repeat;
+  background: url("/white_label/bd_t35/h5_focus.png") no-repeat;
   
   background-position: center top;
   background-size: 100% 100%;
@@ -61,19 +61,19 @@
     }
   }
   @include e(detail_btn) {
-    width: px2rem(220);
-    height: px2rem(55);
-    background: url("/images/bd_t42/h5_btn_20190129.png") no-repeat;
+    width: px2rem(178);
+    height: px2rem(42);
+    background: url("/white_label/bd_t35/h5_btn.png") no-repeat;
     background-size: 100%;
     text-align: center;
-    line-height: px2rem(55);
+    line-height: px2rem(42);
     color: #333;
     font-weight: 500;
     font-size: px2rem(24);
     position: absolute;
-    top: px2rem(370);
+    top: px2rem(300);
     left: 50%;
-    margin-left: px2rem(-110);
+    margin-left: px2rem(-90);
   }
   @include e(title) {
     color: #fff;
@@ -86,27 +86,27 @@
     top: px2rem(1290);
   }
   @include e(btn_wrapper) {
-    width: px2rem(220);
-    height: px2rem(55);
-    background: url("/images/bd_t42/h5_btn_20190129.png") no-repeat;
+    width: px2rem(178);
+    height: px2rem(42);
+    background: url("/white_label/bd_t35/h5_btn.png") no-repeat;
     background-size: 100%;
     text-align: center;
-    line-height: px2rem(55);
+    line-height: px2rem(42);
     font-weight: 500;
     font-size: px2rem(24);
     position: absolute;
     left: 50%;
-    margin-left: px2rem(-110);
+    margin-left: px2rem(-90);
 
     a {
       display: block;
       color: #333;
     }
     &.b1 {
-      top: px2rem(1388);
+      top: px2rem(1324);
     }
     &.b2 {
-      top: px2rem(2786);
+      top: px2rem(2754);
     }
     &.b3 {
       top: px2rem(3500);
@@ -120,13 +120,13 @@
     width: 100%;
     .h200 {
       position: absolute;
-      top: px2rem(2115);
+      top: px2rem(2060);
       left: 50%;
       margin-left: px2rem(-96);
     }
     .h800 {
       position: absolute;
-      top: px2rem(2640);
+      top: px2rem(2592);
       left: 50%;
       margin-left: px2rem(-96);
     }
