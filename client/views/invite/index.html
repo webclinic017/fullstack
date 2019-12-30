@@ -92,7 +92,7 @@
                                 {{lang.text('tigerWitID.inviteFriends.invite'+(bonus.progress+5))}}
                             </span>
                         </span>
-                        <p style="height: 100%;border-radius: 13px;background-color: #FEDB30;" ng-style="{width: bonus.progress*25+'%'}"></p>
+                        <p style="height: 100%;border-radius: 13px;background-color: #FEDB30;" ng-style="{width: bonus.progress < 4 ? bonus.progress*25+'%' : (bonus.progress - 1)*25+'%'}"></p>
                     </div>
                 </td>
                 <td>

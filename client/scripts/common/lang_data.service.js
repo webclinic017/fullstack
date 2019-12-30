@@ -6712,6 +6712,16 @@
                         "ar": "لا يُتداول"
                     },
                     "invite9": {
+                        "zh": "交易中",
+                        "en": "",
+                        "vi": "",
+                        "zh-Hant": "",
+                        "id": "",
+                        "es": "",
+                        "pt-BR": "",
+                        "ar": ""
+                    },
+                    "invite10": {
                         "zh": "邀请成功",
                         "en": "Invitation successful",
                         "vi": "Gửi lời mời thành công",
@@ -6720,16 +6730,6 @@
                         "es": "Invitation successful",
                         "pt-BR": "Invitation successful",
                         "ar": "إن الدعوة تمت بنجاح  "
-                    },
-                    "invite10": {
-                        "zh": "",
-                        "en": "",
-                        "vi": "",
-                        "zh-Hant": "",
-                        "id": "",
-                        "es": "",
-                        "pt-BR": "",
-                        "ar": ""
                     }
                 },
                 "commission": {
