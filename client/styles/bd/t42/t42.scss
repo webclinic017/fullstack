@@ -10,7 +10,7 @@
 @include b(bd_t42) {
   margin-top: 69px;
   height: 2307px;
-  background: url("/images/bd_t42/web_bg_20190129.png") no-repeat;
+  background: url("/white_label/bd_t35/web_focus.png") no-repeat;
   background-position: center top;
   background-size: auto 100%;
   position: relative;
@@ -20,13 +20,13 @@
   }
 
   @include e(reg) {
-    top: 248px;
-    left: 740px;
+    top: 210px;
+    left: 765px;
   }
   @include e(btn) {
     width: 148px;
     height: 34px;
-    background: url("/images/bd_t42/web_btn_20190129.png") no-repeat;
+    background: url("/white_label/bd_t35/web_btn.png") no-repeat;
     text-align: center;
     line-height: 34px;
     color: #333;
@@ -38,14 +38,14 @@
   @include e(details_btn) {
     width: 148px;
     height: 34px;
-    background: url("/images/bd_t42/web_btn_20190129.png") no-repeat;
+    background: url("/white_label/bd_t35/web_btn.png") no-repeat;
     text-align: center;
     line-height: 34px;
     color: #333;
     font-weight: 500;
     font-size: 16px;
     position: absolute;
-    top: 405px;
+    top: 535px;
     left: 318px;
     cursor: pointer;
   }
@@ -55,7 +55,7 @@
       display: inline-block;
       width: 148px;
       height: 34px;
-      background: url("/images/bd_t42/web_btn_20190129.png") no-repeat;
+      background: url("/white_label/bd_t35/web_btn.png") no-repeat;
       text-align: center;
       line-height: 34px;
       color: #333;
@@ -63,10 +63,10 @@
       font-size: 16px;
     }
     &.b1 {
-      margin-top: 1070px;
+      margin-top: 1100px;
     }
     &.b2 {
-      margin-top: 560px;
+      margin-top: 570px;
     }
   }
   @include e(title) {
@@ -84,7 +84,7 @@
   }
   @include e(bag) {
     position: absolute;
-    top: 1570px;
+    top: 1635px;
     left: 0px;
     width: 100%;
     span {
@@ -103,7 +103,7 @@
   @include e(client) {
     color: #fbe091;
     font-size: 16px;
-    margin-top: 200px;
+    margin-top: 160px;
     font-weight: 500;
   }
   @include e(footer) {
