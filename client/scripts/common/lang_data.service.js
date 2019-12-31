@@ -6713,13 +6713,13 @@
                     },
                     "invite9": {
                         "zh": "交易中",
-                        "en": "",
-                        "vi": "",
-                        "zh-Hant": "",
-                        "id": "",
-                        "es": "",
-                        "pt-BR": "",
-                        "ar": ""
+                        "en": "In transaction",
+                        "vi": "Đang giao dịch",
+                        "zh-Hant": "交易中",
+                        "id": "Ada transaksi",
+                        "es": "En transacciones",
+                        "pt-BR": "Em transacção",
+                        "ar": "متداول"
                     },
                     "invite10": {
                         "zh": "邀请成功",
