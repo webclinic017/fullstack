@@ -6652,10 +6652,10 @@
                         "ar": "دعوة ناجحة"
                     },
                     "invite3": {
-                        "zh": "获得赏金",
+                        "zh": "获得赠金",
                         "en": "Receive reward",
                         "vi": "Nhận thưởng",
-                        "zh-Hant": "獲得賞金",
+                        "zh-Hant": "獲得贈金",
                         "id": "Hadiah yang diterima",
                         "es": "Recibe recompensa",
                         "pt-BR": "Receber recompensa",
@@ -6692,10 +6692,10 @@
                         "ar": "لم يتم فتح "
                     },
                     "invite7": {
-                        "zh": "未充值",
+                        "zh": "未入金",
                         "en": "Undeposited",
                         "vi": "Không ký gửi",
-                        "zh-Hant": "未充值",
+                        "zh-Hant": "未入金",
                         "id": "Tanpa deposit",
                         "es": "Undeposited",
                         "pt-BR": "Undeposited",
