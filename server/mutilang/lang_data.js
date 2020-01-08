@@ -14805,13 +14805,13 @@ module.exports = {
     },
     "tradeFee33": {
         "zh": "手续费",
-        "en": "Swap",
-        "vi": "Phí qua đêm",
+        "en": "Commission(USD/Lot)",
+        "vi": "hoa hồng",
         "zh-Hant": "手續費",
-        "id": "Bunga",
-        "es": "Swap",
-        "pt-BR": "Inverter",
-        "ar": "فائدة التمديد"
+        "id": "Komisi",
+        "es": "Comisión",
+        "pt-BR": "Comissão",
+        "ar": "العمولة"
     },
     "tradeFee34": {
         "zh": "网银入金：支付通道收取的手续费由客户自行承担，移动端网银入金每笔收取2%费率，PC端网银入金每笔收取1.8%费率，TigerWit不收取任何手续费用。",
