@@ -14805,13 +14805,13 @@ module.exports = {
     },
     "tradeFee33": {
         "zh": "手续费",
-        "en": "Swap",
-        "vi": "Phí qua đêm",
+        "en": "Commission(USD/Lot)",
+        "vi": "hoa hồng",
         "zh-Hant": "手續費",
-        "id": "Bunga",
-        "es": "Swap",
-        "pt-BR": "Inverter",
-        "ar": "فائدة التمديد"
+        "id": "Komisi",
+        "es": "Comisión",
+        "pt-BR": "Comissão",
+        "ar": "العمولة"
     },
     "tradeFee34": {
         "zh": "网银入金：支付通道收取的手续费由客户自行承担，移动端网银入金每笔收取2%费率，PC端网银入金每笔收取1.8%费率，TigerWit不收取任何手续费用。",
@@ -16992,7 +16992,7 @@ module.exports = {
             "vi": "Tài khoản ngân hàng",
             "zh-Hant": "銀行帳戶",
             "id": "Rekening Bank",
-            "es": "Cuenta banco",
+            "es": "Cuenta Bancaria",
             "pt-BR": "Conta bancária",
             "ar": "الحساب المصرفي"
         },
@@ -17002,7 +17002,7 @@ module.exports = {
             "vi": "Không thẻ ngân hàng nào được thêm",
             "zh-Hant": "暫未添加銀行卡",
             "id": "Belum ada rekening bank yang ditambahkan",
-            "es": "No tarjeta banco añadida",
+            "es": "No Cuenta Bancaria añadida",
             "pt-BR": "Nenhum cartão bancário adicionado",
             "ar": "لم يتم إضافة بطاقة مصرفية"
         },
@@ -17232,7 +17232,7 @@ module.exports = {
             "vi": "Họ Tên",
             "zh-Hant": "持卡人",
             "id": "Nama",
-            "es": "Nombre",
+            "es": "Nombre Completo",
             "pt-BR": "Nome",
             "ar": "الاسم"
         },
@@ -17452,7 +17452,7 @@ module.exports = {
             "vi": "Thêm Tài khoản \"Ngân hàng\"",
             "zh-Hant": "添加銀行卡",
             "id": "Tambah rekening bank",
-            "es": "Añadir Tarjetas Banco",
+            "es": "Solicitud de retiro a Cuenta Bancaria",
             "pt-BR": "Adicionar cartões de banco",
             "ar": "أضف بطاقات مصرفية"
         },
@@ -17762,7 +17762,7 @@ module.exports = {
             "vi": "Giấy tờ xác nhận phải được xác nhận lại tài khoản ngân hàng của chính khách hàng.",
             "zh-Hant": "憑證信息必須為實名認證本人銀行賬戶。",
             "id": "Bukti setoran harus memiliki informasi yang sama dengan nama pemilik akun.",
-            "es": "La información del cupón debe corresponder con la cuenta banco verificada por el cliente.",
+            "es": "La información del cupón debe corresponder con la Cuenta Bancaria verificada por el cliente.",
             "pt-BR": "A informação do comprovante deve ser verificada conta bancária do próprio cliente.",
             "ar": "يجب أن تكون معلومات القسيمة من نفس الحساب المصرفي الذي تم التحقق منه."
         },
@@ -18342,7 +18342,7 @@ module.exports = {
             "vi": "Ngân hàng",
             "zh-Hant": "銀行卡",
             "id": "Nomor rekening",
-            "es": "Tarjeta banco",
+            "es": "Cuenta Bancaria",
             "pt-BR": "Cartão bancário",
             "ar": "البطاقة المصرفية"
         },
@@ -18352,7 +18352,7 @@ module.exports = {
             "vi": "‘Vui lòng chọn thẻ ngân hàng.",
             "zh-Hant": "請選擇銀行卡",
             "id": "Silahkan Pilih nomor rekening",
-            "es": "Por favor, seleccione una tarjeta banco",
+            "es": "Por favor, seleccione una Cuenta Bancaria",
             "pt-BR": "Por favor selece o cartão bancário",
             "ar": "يرجى اختيار بطاقة مصرفية"
         },

@@ -2997,7 +2997,7 @@
                         "vi": "Trang địa chỉ ngân hàng",
                         "zh-Hant": "銀行帳護信息頁",
                         "id": "Halaman informasi rekening bank",
-                        "es": "Página información cuenta banco",
+                        "es": "Página información Cuenta Bancaria",
                         "pt-BR": "Página de informações da conta bancária",
                         "ar": "صفحة معلومات الحساب المصرفي"
                     },
@@ -5661,7 +5661,7 @@
                         "vi": "Thêm Tài khoản \"Ngân hàng\"",
                         "zh-Hant": "添加銀行卡",
                         "id": "Tambah rekening bank",
-                        "es": "Añadir Tarjetas Banco ",
+                        "es": "Solicitud de retiro a Cuenta Bancaria ",
                         "pt-BR": "Adicionar cartões de banco",
                         "ar": "أضف بطاقات مصرفية"
                     },
@@ -5671,7 +5671,7 @@
                         "vi": "Họ Tên",
                         "zh-Hant": "持卡人",
                         "id": "Nama",
-                        "es": "Nombre",
+                        "es": "Nombre Completo",
                         "pt-BR": "Nome",
                         "ar": "الاسم"
                     },
@@ -5681,7 +5681,7 @@
                         "vi": "Họ Tên: ",
                         "zh-Hant": "持卡人：",
                         "id": "Nama: ",
-                        "es": "Nombre: ",
+                        "es": "Nombre Completo: ",
                         "pt-BR": "Nome:",
                         "ar": "الاسم:"
                     },
@@ -5701,7 +5701,7 @@
                         "vi": "Quốc gia",
                         "zh-Hant": "銀行國家",
                         "id": "Negara Bank",
-                        "es": "Banco País",
+                        "es": "País del Banco",
                         "pt-BR": "País do Banco",
                         "ar": "بلد البنك"
                     },
@@ -5711,7 +5711,7 @@
                         "vi": "Quốc gia: ",
                         "zh-Hant": "銀行國家：",
                         "id": "Negara Bank: ",
-                        "es": "Banco País: ",
+                        "es": "País del Banco: ",
                         "pt-BR": "País do Banco:",
                         "ar": "بلد البنك:"
                     },
@@ -5871,7 +5871,7 @@
                         "vi": "Tên tài khoản ngân hàng",
                         "zh-Hant": "請填寫您的銀行名稱",
                         "id": "Nama Bank",
-                        "es": "Nombre banco",
+                        "es": "Ingrese el Nombre completo de su Banco",
                         "pt-BR": "Nome do Banco",
                         "ar": "اسم البنك"
                     },
@@ -5881,7 +5881,7 @@
                         "vi": "Tên ngân hàng (bằng tiếng Anh)",
                         "zh-Hant": "填寫開戶行",
                         "id": "Isi data pembukaan rekening bank",
-                        "es": "Escriba cuenta banco apertura",
+                        "es": "Nombre del Banco",
                         "pt-BR": "Preencha o banco da conta de abertura",
                         "ar": "ادخل بنك فتح الحساب"
                     },
@@ -5891,7 +5891,7 @@
                         "vi": "Tên ngân hàng (bằng tiếng Anh): ",
                         "zh-Hant": "填寫開戶行：",
                         "id": " Isi data pembukaan rekening bank ",
-                        "es": "Escriba cuenta banco apertura: ",
+                        "es": "Nombre del Banco: ",
                         "pt-BR": "Preencher o banco de abertura de conta:",
                         "ar": "ادخل بنك فتح الحساب:"
                     },
@@ -5901,7 +5901,7 @@
                         "vi": "Mã nhận dạng ngân hàng",
                         "zh-Hant": "銀行機構鑒定代碼",
                         "id": "Kode identifikasi bank",
-                        "es": "Código identificación banco",
+                        "es": "SWIFT",
                         "pt-BR": "Código de identificação do banco",
                         "ar": "رمز معرف البنك"
                     },
@@ -5911,7 +5911,7 @@
                         "vi": "Mã nhận dạng ngân hàng ",
                         "zh-Hant": "銀行機構鑒定代碼：",
                         "id": " Kode identifikasi bank ",
-                        "es": "Código identificación banco: ",
+                        "es": "SWIFT: ",
                         "pt-BR": "Código de identificação do banco:",
                         "ar": "رمز معرف البنك:"
                     },
@@ -5921,7 +5921,7 @@
                         "vi": "Vui lòng điền vào mã nhận dạng ngân hàng",
                         "zh-Hant": "請填寫您的銀行機構鑒定代碼",
                         "id": "Silahkan masukkan kode identifikasi bank",
-                        "es": "Por favor, rellene el código de identificación banco",
+                        "es": "Ingrese el Código SWIFT",
                         "pt-BR": "Por favor, preencha o código de identificação do banco",
                         "ar": "يرجى إدخال رمز معرف البنك"
                     },
@@ -5961,7 +5961,7 @@
                         "vi": "Tỉnh",
                         "zh-Hant": "請輸入開戶地址",
                         "id": "Masukkan alamat rekening",
-                        "es": "Ingrese la dirección de la cuenta de apertura",
+                        "es": "Ingrese la dirección de su Banco",
                         "pt-BR": "Inserir endereço de abertura de conta",
                         "ar": "ادخل عنوان فتح الحساب"
                     },
@@ -6001,7 +6001,7 @@
                         "vi": "Tỉnh",
                         "zh-Hant": "開戶地址",
                         "id": "Alamat bank",
-                        "es": "Dirección apertura cuenta banco.",
+                        "es": "Dirección de la Sucursal del Banco.",
                         "pt-BR": "Endereço do banco de abertura de conta",
                         "ar": "عنوان بنك فتح الحساب"
                     },
@@ -6011,7 +6011,7 @@
                         "vi": "Tỉnh: ",
                         "zh-Hant": "開戶地址：",
                         "id": "Alamat bank",
-                        "es": "Dirección apertura cuenta banco: ",
+                        "es": "Dirección de la Sucursal del Banco: ",
                         "pt-BR": "Endereço do banco de abertura de conta:",
                         "ar": "عنوان بنك فتح الحساب:"
                     },
@@ -6111,7 +6111,7 @@
                         "vi": "Liên kết tài khoản ngân hàng",
                         "zh-Hant": "點擊邦定銀行卡",
                         "id": "Daftarkan rekening bank",
-                        "es": "Asociar tarjeta bancaria",
+                        "es": "Asociar Cuenta Bancaria",
                         "pt-BR": "Vincular cartão bancário",
                         "ar": "اربط بطاقة مصرفية"
                     },
@@ -7081,7 +7081,7 @@
                         "vi": "Rút tiền từ thẻ ngân hàng",
                         "zh-Hant": "提現至銀行卡",
                         "id": "Tarik ke rekening bank",
-                        "es": "Reembolsar a tarjeta banco",
+                        "es": "Reembolsar a Cuenta Bancaria",
                         "pt-BR": "Retirada para cartão bancário",
                         "ar": "السحب إلى بطاقة مصرفية"
                     },
@@ -7221,7 +7221,7 @@
                         "vi": "Số tài khoản ngân hàng",
                         "zh-Hant": "銀行賬號",
                         "id": "Nomor rekening bank",
-                        "es": "Número de cuenta bancaria",
+                        "es": "Número de Cuenta bancaria",
                         "pt-BR": "Número da conta bancária",
                         "ar": "رقم البطاقة"
                     },
@@ -7231,7 +7231,7 @@
                         "vi": "Số tài khoản ngân hàng: ",
                         "zh-Hant": "銀行賬號：",
                         "id": "Nomor rekening bank: ",
-                        "es": "Número de cuenta bancaria: ",
+                        "es": "Número de Cuenta bancaria: ",
                         "pt-BR": "Número da conta bancária: ",
                         "ar": "رقم البطاقة:"
                     },
@@ -7461,7 +7461,7 @@
                         "vi": "Thẻ ngân hàng",
                         "zh-Hant": "銀行卡",
                         "id": "Rekening bank",
-                        "es": "Tarjeta Banco",
+                        "es": "Cuenta Bancaria",
                         "pt-BR": "Cartão bancário",
                         "ar": "البطاقة المصرفية"
                     },
@@ -7481,7 +7481,7 @@
                         "vi": "Số tài khoản ngân hàng",
                         "zh-Hant": "請填寫銀行卡號",
                         "id": "Nomor rekening",
-                        "es": "Tarjeta Número",
+                        "es": "Ingrese su número de Cuenta Bancaria",
                         "pt-BR": "Número do cartão",
                         "ar": "رقم البطاقة"
                     },
@@ -7971,7 +7971,7 @@
                         "vi": "Để đảm bảo kí quỹ thành công, xin sử dụng thẻ và tài khoản ngân hàng của bạn",
                         "zh-Hant": "為保證充值成功，請務必使用本人銀行卡和賬戶",
                         "id": "Untuk memastikan pengisian dana berhasil, mohon gunakan rekening dan akun milik anda sendiri",
-                        "es": "Para garabtizar un depósito correcto, por favor, use su tarjeta banco y cuenta",
+                        "es": "Para garabtizar un depósito correcto, por favor, use su Cuenta Bancaria y cuenta",
                         "pt-BR": "Para garantir o depósito bem-sucedido, use seu cartão bancário e sua conta",
                         "ar": "من أجل ضمان نجاح الإيداع، يرجى استخدام البطاقة المصرفية والحساب الخاصين بك"
                     },
@@ -8081,7 +8081,7 @@
                         "vi": "1. Khách hàng phải dung thẻ ngân hàng của họ để gửi tiền;",
                         "zh-Hant": "1、客戶必須使用本人銀行卡入金；",
                         "id": "1. Nasabah harus menggunakan rekening bank sendiri untuk mengisi dana;",
-                        "es": "1.El cliente debe usar su tarjeta banco para depositar；",
+                        "es": "1.El cliente debe usar su Cuenta Bancaria para depositar；",
                         "pt-BR": "O cliente 1.The deve usar seu cartão de banco para depositar;",
                         "ar": "1- يجب على العميل استخدام بطاقته المصرفية في الإيداع؛"
                     },
@@ -8791,7 +8791,7 @@
                         "vi": "Nhập vào số tài khoản ngân hàng",
                         "zh-Hant": "請輸入銀行卡號",
                         "id": "Masukkan rekening bank",
-                        "es": "Enter número tarjeta banco",
+                        "es": "Enter número Cuenta Bancaria",
                         "pt-BR": "Inserir número do cartão bancário",
                         "ar": "ادخل رقم البطاقة المصرفية"
                     },
