@@ -1069,6 +1069,8 @@
                     if (flag == null) {
                         alert("Enable popup filtering in your browser!\n\n Please turn off this function temporarily!");
                     }
+                }else{
+                    layer.msg(data.message)
                 }
             })
         }

@@ -14805,13 +14805,13 @@ module.exports = {
     },
     "tradeFee33": {
         "zh": "手续费",
-        "en": "Swap",
-        "vi": "Phí qua đêm",
+        "en": "Commission(USD/Lot)",
+        "vi": "hoa hồng",
         "zh-Hant": "手續費",
-        "id": "Bunga",
-        "es": "Swap",
-        "pt-BR": "Inverter",
-        "ar": "فائدة التمديد"
+        "id": "Komisi",
+        "es": "Comisión",
+        "pt-BR": "Comissão",
+        "ar": "العمولة"
     },
     "tradeFee34": {
         "zh": "网银入金：支付通道收取的手续费由客户自行承担，移动端网银入金每笔收取2%费率，PC端网银入金每笔收取1.8%费率，TigerWit不收取任何手续费用。",
@@ -16992,7 +16992,7 @@ module.exports = {
             "vi": "Tài khoản ngân hàng",
             "zh-Hant": "銀行帳戶",
             "id": "Rekening Bank",
-            "es": "Cuenta banco",
+            "es": "Cuenta Bancaria",
             "pt-BR": "Conta bancária",
             "ar": "الحساب المصرفي"
         },
@@ -17002,7 +17002,7 @@ module.exports = {
             "vi": "Không thẻ ngân hàng nào được thêm",
             "zh-Hant": "暫未添加銀行卡",
             "id": "Belum ada rekening bank yang ditambahkan",
-            "es": "No tarjeta banco añadida",
+            "es": "No Cuenta Bancaria añadida",
             "pt-BR": "Nenhum cartão bancário adicionado",
             "ar": "لم يتم إضافة بطاقة مصرفية"
         },
@@ -17232,7 +17232,7 @@ module.exports = {
             "vi": "Họ Tên",
             "zh-Hant": "持卡人",
             "id": "Nama",
-            "es": "Nombre",
+            "es": "Nombre Completo",
             "pt-BR": "Nome",
             "ar": "الاسم"
         },
@@ -17452,7 +17452,7 @@ module.exports = {
             "vi": "Thêm Tài khoản \"Ngân hàng\"",
             "zh-Hant": "添加銀行卡",
             "id": "Tambah rekening bank",
-            "es": "Añadir Tarjetas Banco",
+            "es": "Solicitud de retiro a Cuenta Bancaria",
             "pt-BR": "Adicionar cartões de banco",
             "ar": "أضف بطاقات مصرفية"
         },
@@ -17762,7 +17762,7 @@ module.exports = {
             "vi": "Giấy tờ xác nhận phải được xác nhận lại tài khoản ngân hàng của chính khách hàng.",
             "zh-Hant": "憑證信息必須為實名認證本人銀行賬戶。",
             "id": "Bukti setoran harus memiliki informasi yang sama dengan nama pemilik akun.",
-            "es": "La información del cupón debe corresponder con la cuenta banco verificada por el cliente.",
+            "es": "La información del cupón debe corresponder con la Cuenta Bancaria verificada por el cliente.",
             "pt-BR": "A informação do comprovante deve ser verificada conta bancária do próprio cliente.",
             "ar": "يجب أن تكون معلومات القسيمة من نفس الحساب المصرفي الذي تم التحقق منه."
         },
@@ -18342,7 +18342,7 @@ module.exports = {
             "vi": "Ngân hàng",
             "zh-Hant": "銀行卡",
             "id": "Nomor rekening",
-            "es": "Tarjeta banco",
+            "es": "Cuenta Bancaria",
             "pt-BR": "Cartão bancário",
             "ar": "البطاقة المصرفية"
         },
@@ -18352,7 +18352,7 @@ module.exports = {
             "vi": "‘Vui lòng chọn thẻ ngân hàng.",
             "zh-Hant": "請選擇銀行卡",
             "id": "Silahkan Pilih nomor rekening",
-            "es": "Por favor, seleccione una tarjeta banco",
+            "es": "Por favor, seleccione una Cuenta Bancaria",
             "pt-BR": "Por favor selece o cartão bancário",
             "ar": "يرجى اختيار بطاقة مصرفية"
         },
@@ -18726,7 +18726,7 @@ module.exports = {
             "id": "Anda akan mendapatkan kupon ketika registrasi",
             "es": "Puede obtener el cupón una vez registrado.",
             "pt-BR": "Você pode ganhar o cupom depois de registrado.",
-            "ar": "يمكنك الفوز بالمكافأة بمجرد قيامك بالتسجيل"
+            "ar": "يجب عليك مطابقة الشروط الأساسيّة قبل تاريخ الاستحقاق لنيل بالقسيمة."
         },
         "eventDetails2": {
             "zh": "You must meet the requirements before the specified date to claim the coupon.",
@@ -18736,7 +18736,7 @@ module.exports = {
             "id": "Anda bisa klaim kupon tersebut setelah anda memenuhi kriteria yang dipaparkan dan sebelum masa berlakunya selesai.",
             "es": "Debe cumplir los requisitos antes de la fecha especificada para reclamar el cupón.",
             "pt-BR": "Você deve atender aos requisitos antes da data especificada para reivindicar o cupom.",
-            "ar": "يجب عليك استيفاء المتطلبات قبل الموعد المحدد للحصول على المكافأة."
+            "ar": "ستحصل على عرض القسيمة مرة واحدة, كما سيتم إيداعه في حساب المستخدم."
         },
         "eventDetails3": {
             "zh": "The coupon promotion will be applied only once, which will be deposited into the user’s account after redemption.",
@@ -18746,7 +18746,7 @@ module.exports = {
             "id": "Promosi kupon ini hanya berlaku sekali saja, dan dana akan dimasukkan ke dalam akun pengguna pada saat penebusan",
             "es": "La promoción del cupón se aplicará solo una vez y se depositará en la cuenta del usuario después del canje.",
             "pt-BR": "A promoção do cupom será aplicada apenas uma vez, que será depositada na conta do usuário após o resgate.",
-            "ar": "سوف يسري عرض المكافأة لمرة واحدة فقط، وسيتم إيداعها في حساب المستخدم بعد الاستحقاق."
+            "ar": "ينطبق عدد العقود المطلوبة أدناه فقط على العملات الأجنبية والمعادن النفيسة والطاقات."
         },
         "eventDetails4": {
             "zh": "The number of lots required hereunder only applies to forex, precious metals, and energies. USD/CNY and CFD products are not eligible for this campaign.",
@@ -18756,7 +18756,7 @@ module.exports = {
             "id": "Lot yang dihitung hanya untuk produk mata uang, logam mulia, dan energi. USD/CNY dan produk CFD tidak dihitung.",
             "es": "El número de lotes requeridos a continuación solo se aplica a divisas, metales preciosos y energías. Los productos USD / CNY y CFD no son elegibles para esta campaña.",
             "pt-BR": "O número de lotes exigidos abaixo aplica-se apenas a forex, metais preciosos e energias. Os produtos USD / CNY e CFD não são elegíveis para esta campanha.",
-            "ar": "عدد العقود المطلوب أدناه يسري فقط على الفوركس والمعادن النفيسة والطاقة. زوج USD/CNY ومنتجات عقود الفروقات غير مؤهلة لهذه الحملة."
+            "ar": "أما USD / CNY و CFD لا تدخل ضمن هذا العرض."
         },
         "eventDetails5": {
             "zh": "While EA trading is allowed, the use of EAs for scalping is prohibited. Failure to comply with this rule will result in disqualification.",
@@ -18766,7 +18766,7 @@ module.exports = {
             "id": "EA trading diperbolehkan, namun EA scalping dilarang. Bagi yang melanggar akan didiskualifikasi.",
             "es": "Si bien se permite el trading de EA, el uso de EA para el scalping está prohibido. El incumplimiento de esta regla dará lugar a la descalificación.",
             "pt-BR": "Embora o trading de EA seja permitida, o uso de EAs para escalpelamento é proibido. O não cumprimento desta regra resultará na desqualificação.",
-            "ar": "في حين أن التداول الآلي مسموح به، يحظر استخدام التداول الآلي في إستراتيجية الاسكالبينج. عدم الامتثال إلى هذه القاعدة سيؤدي إلى الاستبعاد."
+            "ar": "بينما يُسمح التداول بتقنيّة EA ، يُحظر استخدام EAs في التداول بهدف المضاربة. إن عدم الامتثال لهذه القاعدة سوف يؤدي إلى إلغاء العرض."
         },
         "eventDetails6": {
             "zh": "TigerWit reserves the right of final decision and interpretation in the case of any dispute. For questions, please contact us: customerservice@tigerwit.com.",
@@ -18776,7 +18776,7 @@ module.exports = {
             "id": "TigerWit memiliki hak untuk keputusan final dan interpretasi dalam hal terjadi perselisihan. Jika ada pertanyaan, silahkan hubungi kami di : idsupport@tigerwit.com.",
             "es": "TigerWit se reserva el derecho de decisión final e interpretación en caso de disputa. Por consultas  contáctenos en: customerservice@tigerwit.com.",
             "pt-BR": "TigerWit reserva o direito de decisão e interpretação finais no caso de qualquer disputa. Em caso de dúvidas, entre em contato conosco: customerservice@tigerwit.com.",
-            "ar": "تحتفظ TigerWit بالحق في أن يكون لها التفسير والقرار النهائي في حال نشوء أي نزاع. لطرح أي أسئلة، يرجى الاتصال بنا: customerservice@tigerwit.com"
+            "ar": "تحتفظ TigerWit بحق القرار النهائي والتفسير في حالة حدوث أية مشكلة. إذا كانت لديكم أية أسئلة أو استفسار يرجى التواصل معنا:  menasupport@tigerwit.com."
         },
         "eventDetails7": {
             "zh": "High Risk Warning: ",
