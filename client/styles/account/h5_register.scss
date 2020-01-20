@@ -16,9 +16,9 @@
   }
   .h5_register_main {
     width: 92%;
-    height: 22.5rem;
+    max-height: 22.5rem;
     position: absolute;
-    bottom: 0;
+    bottom: 1rem;
     left: 4%;
     opacity: 0.95;
     .submit_form {

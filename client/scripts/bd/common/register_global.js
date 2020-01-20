@@ -71,6 +71,19 @@ $(document).ready(function () {
   }
   if (oReg.search_arr.pid) {
     $.cookie('pid', oReg.search_arr.pid, { path: '/', domain: getDomain(), expires: 7 });
+    // 清空重写
+    $.cookie('ib_pid', '', { path: '/', domain: getDomain(), expires: -1 });
+    $.cookie('unit', '', { path: '/', domain: getDomain(), expires: -1 });
+    $.cookie('key', '', { path: '/', domain: getDomain(), expires: -1 });
+    $.cookie('invite_status', 3, { path: '/', domain: getDomain(), expires: 7 });
+
+
+    if (unit) {
+        $.cookie('unit', unit, { path: '/', domain: getDomain(), expires: 7 });
+    }
+    if (key) {
+        $.cookie('key', key, { path: '/', domain: getDomain(), expires: 7 });
+    }
   }
   // 客户推广
   if (oReg.search_arr.ib_pid) {

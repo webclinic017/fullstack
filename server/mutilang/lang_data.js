@@ -3389,6 +3389,96 @@ module.exports = {
         "pt-BR": "Ler e entender a Declaração de Cópia Comercial da TigerWit.",
         "ar": "اقرأ وأفهم إقرار نسخ صفقات التداول مع TigerWit ."
     },
+    "latencyTrading1": {
+        "zh": "延迟交易",
+        "en": "Latency Trading",
+        "vi": "Độ Trễ Giao Dịch",
+        "zh-Hant": "延遲交易",
+        "id": "Trading Latensi",
+        "es": "Latencia del Trading",
+        "pt-BR": "Trading de Latência",
+        "ar": "الوقت لتنفيذ التداول"
+    },
+    "latencyTrading2": {
+        "zh": "阅读和理解适用于延迟交易的附加条款和条件。",
+        "en": "Read and understand the TigerWit Latency Trading.",
+        "vi": "Đọc và hiểu thông tin Độ Trễ Giao Dịch của TigerWit",
+        "zh-Hant": "閱讀和理解適用於延遲交易的附加條款和條件。",
+        "id": "Baca dan pahami Trading Latensi TigerWit",
+        "es": "Lea y comprenda el comercio de latencia de TigerWit.",
+        "pt-BR": "Leia e compreenda o Trading de Latencia do TigerWit.",
+        "ar": "قراءة وفهم الوقت لتنفيذ التداول لدى تيغرويت"
+    },
+    "latencyTrading3": {
+        "zh": "我们的报价仅供参考，我们将全权决定接受交易。由于在线交易系统的性质以及市场报价的潜在不可靠性，我们可以自行决定删除或修改您的交易（以及任何相关交易），我们认为，进行相关交易时不反映基础市场价格。对于您因我们拒绝或取消交易而蒙受的损失，我们将不承担任何责任。",
+        "en": "Our quotes are indicative only and we will accept trades at our sole discretion. Due to the nature of online trading systems and the potential unreliability of market price feeds, we may, at our sole discretion, delete or amend your trades (and any related trades) which, in our opinion, do not reflect the underlying market prices when the relevant trade was placed. We will not be responsible for losses sustained by you through our rejection or cancellation of a trade. Should you incur losses with another company due to reliance on a trade subsequently cancelled or amended by us we are not liable for said losses.",
+        "vi": "Báo giá của chúng tôi chỉ hiện thị và sẽ chấp nhận các giao dịch một cách thận trọng nhất theo qui định riêng của chúng tôi. Do tính chất của hệ thống giao dịch trực tuyến và sự không chính xác của truyền giá thị trường. Chúng tôi có thể sẽ xóa hoặc sửa đổi những giao dịch của bạn (và những giao dịch có liên quan) mà các giao dịch đó không đúng giá của thị trường. Chúng tôi sẽ không chịu trách nhiệm về những giao dịch thua lỗ của bạn, chúng sẽ bị từ chối hoặc hủy lệnh của bạn. Nếu bạn bị thua lỗ với một nhà môi giới khác do bị hủy giao dịch bởi chúng tôi, chúng tôi không chịu trách nhiệm cho tổn thất nói trên.",
+        "zh-Hant": "我們的報價僅供參考，我們將全權決定接受交易。由於在線交易系統的性質以及市場報價的潛在不可靠性，我們可以自行決定刪除或修改您的交易（以及任何相關交易），我們認為，進行相關交易時不反映基礎市場價格。對於您因我們拒絕或取消交易而蒙受的損失，我們將不承擔任何責任。",
+        "id": "Harga-harga yang kami miliki hanya bersifat indikatif dan kami hanya akan menerima transaksi yang sesuai dengan kebijakan kami sendiri. Dikarenakan sifat sistem trading online ini memiliki potensi kelemahan dalam mendapatkan harga pasar, kami mungkin saja, atas kebijakan kami, menghapus, atau mengubah transaksi anda (dan transaksi yang berkaitan) apabila menurut pendapat kami, harga pasar tidak mencerminkan dengan harga yang telah ditransaksikan. Kami tidak akan bertanggung jawab atas kerugian yang anda alami akibat dari penolakan atau pembatalan transaksi oleh kami. Kami juga tidak bertanggung jawab apabila anda mengalami kerugian dengan perusahaan lain akibat mengandalkan transaksi yang dibatalkan oleh dihapus oleh kami.",
+        "es": "Nuestras cotizaciones son solo indicativas y aceptaremos intercambios a nuestro exclusivo criterio. Debido a la naturaleza de los sistemas de negociación en línea y a la posible falta de confiabilidad de los precios de mercado, podemos, a nuestro exclusivo criterio, eliminar o modificar sus operaciones (y cualquier operación relacionada) que, en nuestra opinión, no reflejan los precios subyacentes del mercado cuando se colocó el Trade. No seremos responsables de las pérdidas sufridas por usted a través de nuestro rechazo o cancelación de una operación. En caso de incurrir en pérdidas con otra compañía debido a la dependencia de un comercio posteriormente cancelado o modificado por nosotros, no somos responsables de dichas pérdidas.",
+        "pt-BR": "Nossas cotações são apenas indicativas e aceitaremos trocas a nosso exclusivo critério. Devido à natureza dos sistemas de negociação on-line e à possível falta de confiabilidade dos preços de mercado, podemos, a nosso critério, eliminar ou modificar suas operações (e qualquer operação relacionada) que, em nossa opinião, não reflitam o preços de mercado subjacentes quando o comércio foi realizado. Não seremos responsáveis pelas perdas sofridas por você através da rejeição ou cancelamento de uma operação. Em caso de ocorrência de perdas com outra empresa devido à dependência de uma negociação posteriormente cancelada ou modificada por nós, não somos responsáveis por tais perdas.",
+        "ar": "إن عروض الأسعار لدينا هي إرشادية فقط وسنقبل التداولات وفقًا لتقديرنا الخاص. نظرًا لطبيعة أنظمة التداول عبر الإنترنت وعدم الموثوقية المحتملة لتغذية أسعار السوق، يجوز لنا، وفقًا لتقديرنا الخاص، حذف أو تعديل تداولاتك (وأي تداولات ذات صلة) والتي، في رأينا، لا تعكس أسعار السوق الأساسية عندما تم وضع التداول. لن نكون مسؤولين عن الخسائر التي تتحملها من خلال رفضنا أو إلغاء صفقة. إذا تكبدت خسائر مع شركة أخرى بسبب الاعتماد على صفقة تم إلغاؤها أو تعديلها فيما بعد ، فنحن لسنا مسؤولين عن الخسائر المذكورة."
+    },
+    "latencyTrading4": {
+        "zh": "如果在我们的交易平台上进行了任何交易，而该交易受到该交易平台上提供的价格的外部操纵（或通过对基础市场的操纵），我们保留未经您同意而修改该交易价格的权利。 进行或完全取消交易的任何交易。任何此类操纵我们的报价，交易接受程序或操纵基础市场的非法企图都可以向有关当局报告。 如果您以前由于这种操作而收到我们的款项，则表示您同意立即将所有此类款项退还给我们。",
+        "en": "If any trade is placed on our trading platform that has been subject to an external manipulation of the price offered on the trading platform (or through the manipulation of the underlying market) we reserve the right, without your consent, to either amend the price of any trade made or to cancel the trade in its entirety. Any such unlawful attempt to manipulate our quoted prices, our trade acceptance process or to manipulate the underlying market may be reported to the relevant authorities. If you have previously received monies from us as a consequence of such manipulation you agree to immediately return all such monies to us.",
+        "vi": "Nếu bất kỳ những giao dịch nào được thực hiện trên nền tảng của chúng tôi và bị lỗi giá từ nhà cung cấp. Chúng tôi có quyền bảo lưu mà không có sự đồng ý của bạn để sửa đổi giá của giao dịch được thực hiện hoặc hủy bỏ toàn bộ giao dịch đó. Bất kỳ giao dịch nào bất hợp pháp để trục lợi, quy trình chấp nhận giao dịch của chúng tôi hoặc lỗi giá thị trường có thể được báo cáo cho các công ty liên quan. Nếu trước đây bạn có nhận được tiền từ chúng tôi do hậu quả của lỗi giá, bạn phải đồng ý hoàn lại các khoản đó cho chúng tôi.",
+        "zh-Hant": "如果在我們的交易平台上進行了任何交易，而該交易受到該交易平台上提供的價格的外部操縱（或通過對基礎市場的操縱），我們保留未經您同意而修改該交易價格的權利。進行或完全取消交易的任何交易。任何此類操縱我們的報價，交易接受程序或操縱基礎市場的非法企圖都可以向有關當局報告。如果您以前由於這種操作而收到我們的款項，則表示您同意立即將所有此類款項退還給我們。",
+        "id": "Apabila ada transaksi pada platform trading kami yang berkaitan dengan manipulasi harga dari pihak luar atau eksternal dibandingkan dengan harga yang ada di platform trading kami (atau melalui manipulasi harga pasar), maka kami berhak, tanpa persetujuan dari anda, untuk mengubah setiap transaksi atau membatalkan seluruh transaksi tersebut. Setiap upaya yang melanggar hukum dengan tujuan untuk memanipulasi harga yang ditawarkan oleh kami atau sejenisnya, akan kami laporkan kepada pihak berwenenang. Jika anda sebelumnya telah menghasilkan sejumlah uang dari kami yang berasal dari hasil manipulasi, anda setuju untuk mengembalikannya kembali kepada kami dalam waktu sesingkat-singkatnya.",
+        "es": "Si se coloca una operación en nuestra plataforma de negociación que ha sido objeto de una manipulación externa del precio ofrecido en la plataforma de negociación (o mediante la manipulación del mercado subyacente), nos reservamos el derecho, sin su consentimiento, de modificar el precio de cualquier operación realizada o para cancelar la operación en su totalidad. Cualquier intento ilegal de manipular nuestros precios cotizados, nuestro proceso de aceptación comercial o manipular el mercado subyacente puede ser reportado a las autoridades relevantes. Si anteriormente ha recibido dinero de nosotros como consecuencia de dicha manipulación, usted acepta devolvernos de inmediato todos esos fondos.",
+        "pt-BR": "Se uma operação for colocada em nossa plataforma de negociação sujeita a manipulação externa do preço oferecido na plataforma de negociação (ou manipulando o mercado subjacente), reservamo-nos o direito, sem o seu consentimento, de modificar o preço de qualquer operação realizada ou para cancelar a operação na sua totalidade. Qualquer tentativa ilegal de manipular nossos preços cotados, nosso processo de aceitação comercial ou manipular o mercado subjacente pode ser relatada às autoridades relevantes. Se você já recebeu dinheiro de nós como resultado de tal manipulação, concorda em devolver todos esses fundos imediatamente.",
+        "ar": "إذا تم وضع أي صفقة على منصة التداول الخاصة بنا والتي خضعت للتلاعب الخارجي بالسعر المعروض على منصة التداول (أو من خلال التلاعب بالسوق الأساسي) ، فإننا نحتفظ بالحق ، دون موافقتك ، في تعديل سعر أي تداول أو لإلغاء التداول في مجمله. قد يتم إبلاغ السلطات المختصة بأي محاولة غير قانونية لمعالجة أسعارنا المعروضة أو عملية قبول التداول لدينا أو التلاعب بالأسواق الأساسية. إذا كنت قد استلمت أموالًا من قبل كنتيجة لمثل هذا التلاعب ، فأنت توافق على إعادة جميع هذه الأموال إلينا على الفور."
+    },
+    "latencyTrading5": {
+        "zh": "TigerWit真诚地提供其服务，并期望客户提供相同的服务。 如果我们认为任何帐户的行为均不利于这种精神，我们可以自行决定关闭该帐户，并删除有关活动所产生的任何利润。所有交易均应以公平的价格进行，并基于相关市场的基础市场价格。如果认为不是这种情况（即清单价格错误，延迟交易等两个例子），那么TigerWit可以调整所述交易的价格以反映交易时正确的基础市场价格或取消相关交易 （以及所有相关行业）。",
+        "en": "TigerWit offers its services in all good faith and expects the same from our clients. If we believe that any account is acting in any way that is detrimental to this ethos we may, at our sole discretion, close said account and remove any profits made by the activity involved. All trades should be made at a price that is fair and based upon the underlying market price of the relevant market. If this is deemed to not be the case (i.e. Manifest Price Error, Latency Trading to name two such examples) then TigerWit may adjust the prices of said trades to reflect the correct underlying market price at the time of the transaction or cancel the relevant trades (and any related trades) in their entirety.",
+        "vi": "TigerWit cung cấp dịch vụ với tất cả thiện chí và mong đợi điều tương tự từ khách hàng. Nếu chúng tôi thấy bất kỳ tài khoản nào đang hoạt động theo bất kỳ cách nào bất hợp pháp, chúng tôi sẽ đóng tài khoản và hủy bất kỳ lợi nhuận nào phát sinh từ các giao dịch liên quan. Tất cả các giao dịch nên được thực hiện ở giá hợp lý và dựa trên giá của thị trường. Ngoại trừ những trường hợp như là Lỗi giá, Giao dịch trễ giá thì TigerWit có thể điều chỉnh giá để cập nhật chính xác giá thị trường cơ bản tại thời điểm giao dịch đó hoặc hủy bỏ toàn bộ các giao dịch có liên quan (và bất kỳ những vấn đề liên quan đến giao dịch)",
+        "zh-Hant": "TigerWit真誠地提供其服務，並期望客戶提供相同的服務。如果我們認為任何帳戶的行為均不利於這種精神，我們可以自行決定關閉該帳戶，並刪除有關活動所產生的任何利潤。所有交易均應以公平的價格進行，並基於相關市場的基礎市場價格。如果認為不是這種情況（即清單價格錯誤，延遲交易等兩個例子），那麼TigerWit可以調整所述交易的價格以反映交易時正確的基礎市場價格或取消相關交易 （以及所有相關行業）。",
+        "id": "TigerWit menawarkan jasa dan layanan dengan itikad dan etika yang baik dan begitu pula harapan yang sama pada klien kami. Apabila kami mendapati akun yang bertindak menyimpang dan bertujuan merusak etos kerja kami, maka atas kebijakan kami sendiri, kami berhak menutup akun tersebut dan menghapus segala keuntungan yang telah dihasilkan dari aktivitas terkait. Seluruh trader harus melakukan transaksi dengan harga pasar yang adil dan mendapatkan harga berdasarkan harga pasar yang relevan. Jika dianggap tidak demikian (contohnya, memanfaatkan kesalahan harga, trading latensi) maka TigerWIt berhak memberikan harga yang sesuai dengan kondisi harga pasar pada waktu tersebut untuk setiap transaksi atau membatalkan sebagian atau seluruh transaksi (yang berkaitan dengan isu tersebut).",
+        "es": "Si se coloca una operación en nuestra plataforma de negociación que ha sido objeto de una manipulación externa del precio ofrecido en la plataforma de negociación (o mediante la manipulación del mercado subyacente), nos reservamos el derecho, sin su consentimiento, de modificar el precio de cualquier operación realizada o para cancelar la operación en su totalidad. Cualquier intento ilegal de manipular nuestros precios cotizados, nuestro proceso de aceptación comercial o manipular el mercado subyacente puede ser reportado a las autoridades relevantes. Si previamente ha recibido dinero de nosotros como consecuencia de dicha solución, acepta devoluciones de inmediato todos esos fondos.",
+        "pt-BR": "Se uma operação for colocada em nossa plataforma de negociação sujeita a manipulação externa do preço oferecido na plataforma de negociação (ou manipulando o mercado subjacente), reservamo-nos o direito, sem o seu consentimento, de modificar o preço de qualquer operação realizada ou para cancelar a operação na sua totalidade. Qualquer tentativa ilegal de manipular nossos preços cotados, nosso processo de aceitação comercial ou manipular o mercado subjacente pode ser relatada às autoridades relevantes. Se você já recebeu dinheiro de nós como resultado dessa solução, aceita todos esses fundos imediatamente.",
+        "ar": "تقدم تيغرويت خدماتها بحسن نية وتتوقع نفس الشيء من عملائها. إذا كنا نعتقد أن أي حساب يتصرف بأي طريقة تكون ضارة، فيجوز لنا، وفقًا لتقديرنا الخاص ، إغلاق الحساب المذكور وإزالة أي أرباح يحققها النشاط المعني. ينبغي إجراء جميع الصفقات بسعر عادل وعلى أساس سعر السوق الأساسي للسوق ذات الصلة. إذا اعتُبر أن هذا ليس هو الحال (على سبيل المثال، خطأ في سعر البيع الظاهر، والوقت لتنفيذ التداول) ، فقد تقوم تيغرويت بضبط أسعار الصفقات المذكورة لتعكس سعر السوق الأساسي الصحيح في وقت المعاملة أو تلغي التداولات ذات الصلة (وأي صفقات ذات صلة) في مجملها."
+    },
+    "latencyTrading6": {
+        "zh": "清单价格错误：",
+        "en": "Manifest Price Error:",
+        "vi": "Lỗi giá:",
+        "zh-Hant": "清單價格錯誤：",
+        "id": "Memanfaatkan kesalahan harga :",
+        "es": "Error de precio manifiesto:",
+        "pt-BR": "Erro de preço manifesto:",
+        "ar": "خطأ واضح في الأسعار:"
+    },
+    "latencyTrading7": {
+        "zh": "报价实质性地明显偏离报价时的现行基础市场价格。",
+        "en": "where the price quoted materially and clearly deviates from the prevailing underlying market price at the time that it was quoted.",
+        "vi": "giá được biểu hiện rõ ràng và có sai lệch so với giá hiện hành của thị trường nhà cung cập tại thời điểm đó.",
+        "zh-Hant": "報價實質性地明顯偏離報價時的現行基礎市場價格。",
+        "id": "ketika harga-harga yang ditawarkan menyimpang dari harga pasar yang berlaku pada harga tersebut",
+        "es": "cuando el precio cotizado se desvía material y claramente del precio de mercado subyacente vigente en el momento en que fue cotizado.",
+        "pt-BR": "quando o preço cotado diverge material e claramente do preço de mercado subjacente em vigor no momento em que foi cotado.",
+        "ar": "خطأ واضح في الأسعار: حيث يتقلب السعر بشكلٍ واضحٍ عن سعر السوق الأساسي."
+    },
+    "latencyTrading8": {
+        "zh": "延迟交易：",
+        "en": "Latency Trading:",
+        "vi": "Giao dịch trễ giá:",
+        "zh-Hant": "延遲交易：",
+        "id": "Trading Latensi :",
+        "es": "Latencia del Trading:",
+        "pt-BR": "Latência do Trading:",
+        "ar": "الوقت لتنفيذ التداول:"
+    },
+    "latencyTrading9": {
+        "zh": "我们单方面认为客户使用我们单方面决定的不正当手段在价格更新之前利用其优势进行交易。",
+        "en": "where we believe, at our sole discretion, that the client is using unfair means, as determined in our sole discretion, to trade to their advantage ahead of our price updates.",
+        "vi": "Theo quyết định cẩn trọng của chúng tôi, khách hàng nào sử dụng các thủ thuật giao dịch để trục lợi trước khi giá của chúng tôi được cập nhật thì chúng tôi sẽ xử lý theo quy định.",
+        "zh-Hant": "我們單方面認為客戶使用我們單方面決定的不正當手段在價格更新之前利用其優勢進行交易。",
+        "id": "yaitu waktu dimana kami menilai (melalui kebijakan kami sendiri )bahwa klien menggunakan cara yang tidak jujur, sebagaimana ditentukan dalam kebijakan, dan bertransaksi demi keuntungan diri sendiri dengan memanfaatkan harga sebelum pembaruan harga terbaru",
+        "es": "Cuando creamos, a nuestro exclusivo criterio, que el cliente está utilizando medios injustos, según lo determinado a nuestro exclusivo criterio, para comerciar en su beneficio antes de nuestras actualizaciones de precios.",
+        "pt-BR": "Quando criamos, a nosso critério, que o cliente esteja usando meios injustos, conforme determinado a nosso critério, para negociar em seu benefício antes de nossas atualizações de preços.",
+        "ar": "الوقت لتنفيذ التداول: وفقًا لتقديرنا الخاص ،نحن نعتقد أن العميل يستخدم وسائل غير عادلة، للتداول لصالحهم قبل تحديثات الأسعار لدينا."
+    },
     "amtLegal1": {
         "zh": "声明",
         "en": "Notice",
