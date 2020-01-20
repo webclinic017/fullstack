@@ -6492,14 +6492,24 @@
                         "ar": "ادعو أصدقائك"
                     },
                     "inviteFriend": {
-                        "zh": "邀请好友，赢取50美元",
-                        "en": "Invite a friend and win 50 dollar",
-                        "vi": "Mời bạn bè và nhận 50 đô la.",
-                        "zh-Hant": "邀請好友，贏取50美元",
-                        "id": "Ajak teman dan dapatkan 50 dolar",
-                        "es": "Invite a un amigo y gane 50 dólares",
-                        "pt-BR": "Convide um amigo e ganhe 50 dólares",
-                        "ar": "ادع أحد أصدقائك واربح 50 دولار"
+                        "zh": "邀请好友，赢取",
+                        "en": "Invite a friend and win ",
+                        "vi": "Mời bạn bè và nhận ",
+                        "zh-Hant": "邀請好友，贏取",
+                        "id": "Ajak teman dan dapatkan ",
+                        "es": "Invite a un amigo y gane ",
+                        "pt-BR": "Convide um amigo e ganhe ",
+                        "ar": "ادع أحد أصدقائك واربح "
+                    },
+                    "inviteFriend2": {
+                        "zh": "美元",
+                        "en": " dollar",
+                        "vi": " đô la.",
+                        "zh-Hant": "美元",
+                        "id": " dolar",
+                        "es": " dólares",
+                        "pt-BR": " dólares",
+                        "ar": " دولار"
                     },
                     "invitedFriends": {
                         "zh": "当前邀请人数",
@@ -7577,7 +7587,7 @@
                     },
                     "enterCardNumber": {
                         "zh": "请填写银行卡号",
-                        "en": "Card Number",
+                        "en": "Bank account number",
                         "vi": "Số tài khoản ngân hàng",
                         "zh-Hant": "請填寫銀行卡號",
                         "id": "Nomor rekening",
@@ -8887,7 +8897,7 @@
                     },
                     "enterBankCardNum": {
                         "zh": "请输入银行卡号",
-                        "en": "Enter bank card number",
+                        "en": "Enter bank account number",
                         "vi": "Nhập vào số tài khoản ngân hàng",
                         "zh-Hant": "請輸入銀行卡號",
                         "id": "Masukkan rekening bank",

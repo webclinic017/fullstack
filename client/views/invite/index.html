@@ -1,7 +1,7 @@
 <!-- side navbar -->
 <div class="invite-con space_block">
     <div class="invite-con__title">
-        {{lang.text('tigerWitID.inviteFriends.inviteFriend')}}
+        {{lang.text('tigerWitID.inviteFriends.inviteFriend')}}{{inviteRules.reward || 0}}{{lang.text('tigerWitID.inviteFriends.inviteFriend2')}}
     </div>
     <div class="invite-con__link item-center">
         <div class="item-center flex1">
@@ -33,23 +33,8 @@
         <p class="font-base font-size-18">{{lang.text('tigerWitID.inviteFriends.inviteFriendsRegulations')}}</p>
         <br>
         <ul>
-            <!--<li>
-                1、邀请好友成功注册、认证、入金并投资满足5标准手（不包含CFD），即可获得20美元赠金。
-            </li>-->
             <li>
-                {{lang.text('tigerWitID.inviteFriends.tip1')}}
-            </li>
-            <li>
-                {{lang.text('tigerWitID.inviteFriends.tip2')}}
-            </li>
-            <li>
-                {{lang.text('tigerWitID.inviteFriends.tip3')}}
-            </li>
-            <li>
-                {{lang.text('tigerWitID.inviteFriends.tip4_1')}}{{lang.text('companyNameZh')}}{{lang.text('tigerWitID.inviteFriends.tip4_2')}}
-            </li>
-            <li>
-                {{lang.text('tigerWitID.inviteFriends.tip5_1')}}{{lang.text('companyNameZh')}}{{lang.text('tigerWitID.inviteFriends.tip5_2')}}{{sysMessage.phone_list[0].phone}}{{lang.text('tigerWitID.inviteFriends.tip5_3')}}
+            <pre style="white-space: pre-wrap;font-family: none;margin-top: 0px;">{{inviteRules.rule}}</pre>
             </li>
         </ul>
     </div>

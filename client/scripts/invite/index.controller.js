@@ -19,7 +19,10 @@
                 });
             }
         });
-
+        $scope.inviteRules = {
+            reward: 0,
+            rule: ''
+        }
 
         $scope.invitation = {
             // usercode: 3303,
@@ -44,6 +47,16 @@
 
         getInfo();
         getInviteFriendsInfo(1);
+        getInviteRules();
+
+        function getInviteRules () {
+            invite.getInviteRules().then(function (rs) {
+                $scope.inviteRules = {
+                    reward: rs.data.reward_amount,
+                    rule: rs.data.rule_explain
+                }
+            })
+        }
 
         function getInviteFriendsInfo (page) {
             invite.getInviteFriendsInfo(page, pagesize).then(function (data) {

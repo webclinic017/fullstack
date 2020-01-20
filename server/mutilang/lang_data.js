@@ -17248,7 +17248,7 @@ module.exports = {
         },
         "bankCardNumber": {
             "zh": "银行卡号",
-            "en": "Bank card number",
+            "en": "Bank account number",
             "vi": "Số tài khoản ngân hàng",
             "zh-Hant": "銀行卡號",
             "id": "Nomor rekening bank",
@@ -17258,7 +17258,7 @@ module.exports = {
         },
         "enterBankCardNum": {
             "zh": "请输入银行卡号",
-            "en": "Enter bank card number",
+            "en": "Enter bank account number",
             "vi": "Nhập vào số tài khoản ngân hàng",
             "zh-Hant": "請輸入銀行卡號",
             "id": "Masukkan rekening bank",
@@ -17478,7 +17478,7 @@ module.exports = {
         },
         "cardNumber": {
             "zh": "卡号",
-            "en": "Card Number",
+            "en": "Bank account number",
             "vi": "Số tài khoản ngân hàng",
             "zh-Hant": "卡號",
             "id": "Nomor rekening",
@@ -17488,7 +17488,7 @@ module.exports = {
         },
         "enterCardNumber": {
             "zh": "请填写银行卡号",
-            "en": "Card Number",
+            "en": "Bank account number",
             "vi": "Số tài khoản ngân hàng",
             "zh-Hant": "請填寫銀行卡號",
             "id": "Nomor rekening",
