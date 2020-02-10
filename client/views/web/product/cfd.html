@@ -84,13 +84,14 @@
             <table class="table table-personal table-hover table-bordered font-size-12">
                 <colgroup>
                     <col width="8%">
-                    <col width="12%" ng-if="!lang.isEnglishArea()">
-                    <col width="12%">
+                    <col width="10%" ng-if="!lang.isEnglishArea()">
+                    <col width="10%">
                     <col width="10%">
                     <col width="8%">
                     <col width="15%">
                     <col width="15%">
-                    <col width="20%">
+                    <col width="8%">
+                    <col width="16%">
                 </colgroup>
                 <thead>
                     <tr>
@@ -100,7 +101,8 @@
                         <th class="pro-public__no-padding"><%= lang.text("cfd26")%></th>
                         <th class="pro-public__no-padding"><%= lang.text("cfd27")%></th>
                         <th class="pro-public__no-padding"><%= lang.text("cfd28")%></th>
-                        <th class="pro-public__no-padding"><%= lang.text("cfd29")%></th>
+                        <th class="pro-public__no-padding"><%= lang.text("oil31")%></th>
+                        <th class="pro-public__no-padding"><%= lang.text("cfd28_2")%></th>
                         <th class="pro-public__no-padding"><%= lang.text("cfd30")%></th>
                     </tr>
                 </thead>
@@ -113,8 +115,9 @@
                         <td>{{ item.lot_max }}</td>
                         <td class="pro-public__no-padding">{{ item.info_trade_session }}</td>
                         <td class="pro-public__no-padding">{{ item.info_quote_session }}</td>
+                        <td>{{ item.timezone }}</td>
                         <td class="pro-public__no-padding">
-                            {{ lang.text('productInfo.cfd.' + item.symbol) === ('productInfo.cfd.' +  item.symbol) ? '' : lang.text('productInfo.cfd.' + item.symbol) }}
+                            {{ lang.text('productInfo.cfd.' + item.symbol) === ('productInfo.cfd.' +  item.symbol) ? '-' : lang.text('productInfo.cfd.' + item.symbol) }}
                         </td>
                     </tr>
                 </tbody>

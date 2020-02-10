@@ -11,7 +11,8 @@
         var service = {
             getInviteFriendsInfo: getInviteFriendsInfo,
             setInviteFriendsLink: setInviteFriendsLink,
-            setUserSource: setUserSource
+            setUserSource: setUserSource,
+            getInviteRules: getInviteRules
         };
         return service;
 
@@ -41,6 +42,10 @@
 
         function setUserSource (params) {
             return publicHttp.dealPublicRequest(o.setUserSourceApi, 'POST', params);
+        }
+
+        function getInviteRules () {
+            return publicHttp.dealPublicRequest(o.getInviteRulesApi, 'GET');
         }
 
     }

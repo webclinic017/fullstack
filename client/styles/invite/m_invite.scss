@@ -359,3 +359,145 @@ html,body{
     }
   }
 }
+
+.m_invite_layout {
+  height: 100%;
+  // overflow: hidden;
+  .m_invite_focus {
+    position: relative;
+    padding: px2rem(40) px2rem(20) 0;
+    img {
+      vertical-align: top;
+      width: 100%;
+    }
+    span {
+      position: absolute;
+      top: px2rem(40);
+      left: 0;
+      font-size: px2rem(80);
+      line-height: px2rem(80);
+      width: 100%;
+      padding: 0 px2rem(80);
+      text-align: center;
+      color: #43457B;
+      font-weight:600;
+    }
+  }
+  .m_invite_box_wrapper {
+    height: 100%;
+    background-color: #F8E71B;
+    padding: px2rem(50) px2rem(40);
+    .m_invite_box {
+      padding: px2rem(80) px2rem(64) px2rem(36);
+      position: relative;
+      background-color: #fff;
+      border-radius: px2rem(46);
+      .m_invite_input_wrapper {
+        position: relative;
+        margin-bottom: px2rem(54);
+        height: px2rem(88);
+        input {
+          font-size: px2rem(50);
+          border-bottom: 1px solid #ccc;
+          width: 100%;
+          padding: px2rem(13) 0;
+          &.m_invite_input_phone {
+            padding-left: px2rem(110);
+          }
+        }
+
+        .m_invite_input_btn {
+          position: absolute;
+          width: 50%;
+          top: 0;
+          right: 0;
+          text-align: right;
+          color: #2999FF;
+          font-size: px2rem(26);
+          font-weight: 500;
+          height: px2rem(88);
+          line-height: px2rem(88);
+          display: none;
+          i {
+            font-style: normal;
+          }
+
+          &.active {
+            display: block;
+          }
+        }
+        .m_invite_area_code {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: px2rem(88);
+          line-height: px2rem(88);
+          width: px2rem(110);
+          overflow: hidden;
+          select {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            max-width: px2rem(110);
+            color: transparent;
+            background: transparent;
+          }
+          &:after {
+            content: "▼";
+            display: inline-block;
+            font-size: 10px;
+            color: #aaa;
+          }
+        }
+      }
+      .m_invite_box_outside {
+        position: absolute;
+        top: px2rem(-122);
+        left: 0;
+        width: 100%;
+        text-align: center;
+        background-color: #43457B;
+        border-radius: px2rem(32);
+        .m_invite_box_inside {
+          margin: px2rem(5);
+          border: px2rem(4) solid #F8E71B;
+          border-radius: px2rem(32);
+          padding: px2rem(22) 0;
+          color: #F8E71B;
+          font-size: px2rem(40);
+          font-weight: 500;
+          p {
+            height: px2rem(56);
+            line-height: px2rem(56);
+            overflow: hidden;
+          }
+          &[data-lang=en] {
+            font-size: px2rem(26);
+          }
+        }
+      }
+      .m_invite_box_btn_wrapper {
+        position: absolute;
+        bottom: px2rem(-40);
+        left: 0;
+        width: 100%;
+        text-align: center;
+        .m_invite_box_btn {
+          margin: 0;
+          border: none;
+          display: inline-block;
+          width: px2rem(464);
+          height: px2rem(80);
+          line-height: px2rem(80);
+          color: #F8E71B;
+          text-align: center;
+          font-weight: 500;
+          background-color: #43457B;
+          border-radius: px2rem(50);
+        }
+      }
+    }
+  }
+}
