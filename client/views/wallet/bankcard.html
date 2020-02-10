@@ -6,19 +6,24 @@
         <table class="manage_card_list">
             <colgroup>
                 <col width="40%">
-                <col width="30%">
-                <col width="30%">
+                <col width="20%">
+                <col width="25%">
+                <col width="15%">
             </colgroup>
             <tbody>
                 <tr class="manage_card_list__item" ng-repeat="card in cardList track by $index">
                     <td>
-                        <div class="widthdraw__card_bg" style="width: 80%;">
+                        <div class="widthdraw__card_bg" ng-class="{invalid: !card.status}" style="width: 80%;">
                             <img ng-show="card.bank_img" ng-src="{{ card.bank_img }}">
                             <span>{{ card.bank_name ||  card.bank_code }}</span>
                         </div>
                     </td>
                     <td>
                         <p class="card_number text-center">{{ card.card_no }}</p>
+                    </td>
+                    <td>
+                        <p ng-if="card.status" class="text-right">{{lang.text('tigerWitID.verified')}}</p>
+                        <p ng-if="!card.status" class="text-right">{{lang.text('tigerWitID.verifiedFail')}}</p>
                     </td>
                     <td>
                         <p class="text-center">

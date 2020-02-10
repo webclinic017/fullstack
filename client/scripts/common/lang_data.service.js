@@ -4195,6 +4195,16 @@
                         "pt-BR": "A ordem pode ou não ser executada porque a quantidade é menor que a quantidade recomendada",
                         "ar": "قد لا يتم تنفيذ العملية لأن المبلغ أقل من المبلغ المطلوب "
                     },
+                    "accountInvalid": {
+                        "zh": "账号已失效，如需找回请联系客服。",
+                        "en": "The account has already invalided, please contact customer service if you need to recover it.",
+                        "vi": "Tài khoản vừa hết hiệu lực, vui lòng liên hệ bộ phận Dịch vụ khách hàng nếu bạn muốn gia hạn tài khoản.",
+                        "zh-Hant": "賬號已失效，如需找回請聯繫客服。",
+                        "id": "Akun anda sudah tidak aktif. Silahkan hubungi layanan pelanggan kami apabila anda ingin mengaktifkannya kembali.",
+                        "es": "La cuenta ya ha sido invalidada, comuníquese con el servicio de Atención al Cliente si necesita recuperarla.",
+                        "pt-BR": "A conta já foi invalidada. Entre em contato com o atendimento ao cliente se precisar recuperá-la.",
+                        "ar": "لقد تم إبطال حسابك ، يرجى التواصل بخدمة الزبائن إذا كنت بحاجة إلى استرداده"
+                    }
                 },
                 "details": {
                     "title": {
@@ -12997,6 +13007,36 @@
                     "es": "Confirmar",
                     "pt-BR": "Confirmar",
                     "ar": "تأكيد"
+                },
+                "notSelect": {
+                    "zh": "不可选",
+                    "en": "Not selectable",
+                    "vi": "Không thể lựa chọn",
+                    "zh-Hant": "不可選",
+                    "id": "Tidak dapat dipilih",
+                    "es": "No seleccionable",
+                    "pt-BR": "Não selecionável",
+                    "ar": "غير قابل للاختيار"
+                },
+                "verified": {
+                    "zh": "已认证",
+                    "en": "verified",
+                    "vi": "đã xác minh",
+                    "zh-Hant": "已認證",
+                    "id": "Selesai verifikasi",
+                    "es": "Verificado",
+                    "pt-BR": "Verificado",
+                    "ar": "تم التحقق منه"
+                },
+                "verifiedFail": {
+                    "zh": "系统认证失败",
+                    "en": "Authentication failed",
+                    "vi": "Quá trình xác minh thất bại",
+                    "zh-Hant": "系統認證失敗",
+                    "id": "Otentikasi gagal",
+                    "es": "Autenticación fallida",
+                    "pt-BR": "Falha na autenticação",
+                    "ar": "رُفضت المصادقة"
                 },
                 "audit": {
                     "zh": "审核",
