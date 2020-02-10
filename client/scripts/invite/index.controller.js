@@ -19,7 +19,10 @@
                 });
             }
         });
-
+        $scope.inviteRules = {
+            reward: 0,
+            rule: ''
+        }
 
         $scope.invitation = {
             // usercode: 3303,
@@ -36,20 +39,38 @@
             getList: getInviteFriendsInfo
         }
         $scope.friendsNum = 0;
+        $scope.succNum = 0;
+        $scope.reward = 0;
         $scope.bonusList = [];
         $scope.selectTxt = selectTxt;
         var pagesize = 10;
 
         getInfo();
         getInviteFriendsInfo(1);
+        getInviteRules();
+
+        function getInviteRules () {
+            invite.getInviteRules().then(function (rs) {
+                $scope.inviteRules = {
+                    reward: rs.data.reward_amount,
+                    rule: rs.data.rule_explain
+                }
+            })
+        }
 
         function getInviteFriendsInfo (page) {
             invite.getInviteFriendsInfo(page, pagesize).then(function (data) {
-                // console.info(data);
+                console.info(data);
                 if (data.is_succ) {
                     $scope.bonusList = data.data.records;
                     $scope.friendsNum = data.data.record_count;
+                    $scope.succNum = data.data.success_count;
+                    $scope.reward = data.data.reward_amount;
                 }
+                angular.forEach($scope.bonusList, function (value, index) {
+                    var date = new Date(value.invite_time*1000);
+                    value.time = date.getFullYear()+'/'+(date.getMonth()+1)+'/'+date.getDate();
+                })
                 angular.extend($scope.pagebar.config, {
                     total: utils.getTotal(data.data.record_count, pagesize),
                     page: page

@@ -1,7 +1,7 @@
 <!-- side navbar -->
 <div class="invite-con space_block">
     <div class="invite-con__title">
-        {{lang.text('tigerWitID.inviteFriends.inviteFriend')}}
+        {{lang.text('tigerWitID.inviteFriends.inviteFriend')}}{{inviteRules.reward || 0}}{{lang.text('tigerWitID.inviteFriends.inviteFriend2')}}
     </div>
     <div class="invite-con__link item-center">
         <div class="item-center flex1">
@@ -23,36 +23,36 @@
                 <a class="btn btn-primary btn-sm" ng-click="selectTxt()">{{lang.text('tigerWitID.copy')}}</a>
             </div>
         </div>
-        <div class="">
+        <!-- <div class="">
             <p class="num">{{ friendsNum }}</p>
             <p class="tip">{{lang.text('tigerWitID.inviteFriends.invitedFriends')}}</p>
-        </div>
+        </div> -->
     </div>
 
     <div class="invite-con__rules">
         <p class="font-base font-size-18">{{lang.text('tigerWitID.inviteFriends.inviteFriendsRegulations')}}</p>
         <br>
         <ul>
-            <!--<li>
-                1、邀请好友成功注册、认证、入金并投资满足5标准手（不包含CFD），即可获得20美元赠金。
-            </li>-->
             <li>
-                {{lang.text('tigerWitID.inviteFriends.tip1')}}
-            </li>
-            <li>
-                {{lang.text('tigerWitID.inviteFriends.tip2')}}
-            </li>
-            <li>
-                {{lang.text('tigerWitID.inviteFriends.tip3')}}
-            </li>
-            <li>
-                {{lang.text('tigerWitID.inviteFriends.tip4_1')}}{{lang.text('companyNameZh')}}{{lang.text('tigerWitID.inviteFriends.tip4_2')}}
-            </li>
-            <li>
-                {{lang.text('tigerWitID.inviteFriends.tip5_1')}}{{lang.text('companyNameZh')}}{{lang.text('tigerWitID.inviteFriends.tip5_2')}}{{sysMessage.phone_list[0].phone}}{{lang.text('tigerWitID.inviteFriends.tip5_3')}}
+            <pre style="white-space: pre-wrap;font-family: none;margin-top: 0px;">{{inviteRules.rule}}</pre>
             </li>
         </ul>
     </div>
+
+    <ul class="clearfix row mg-tp-30">
+        <li class="col-xs-4 text-center font-size-16">
+            <p>{{lang.text('tigerWitID.inviteFriends.invite1')}}</p>
+            <p class="mg-tp-20">{{ friendsNum }}</p>
+        </li>
+        <li class="col-xs-4 text-center font-size-16">
+            <p>{{lang.text('tigerWitID.inviteFriends.invite2')}}</p>
+            <p class="mg-tp-20">{{ succNum }}</p>
+        </li>
+        <li class="col-xs-4 text-center font-size-16">
+            <p>{{lang.text('tigerWitID.inviteFriends.invite3')}}</p>
+            <p class="mg-tp-20">${{ reward }}</p>
+        </li>
+    </ul>
 
     <table class="table table-header table-hover table-traffic mg-tp-30">
         <colgroup>
@@ -63,28 +63,25 @@
         <thead>
             <tr>
                 <th>{{lang.text('tigerWitID.inviteFriends.nameFriend')}}</th>
-                <th>{{lang.text('tigerWitID.inviteFriends.statusDeposit')}}</th>
-                <th>{{lang.text('tigerWitID.inviteFriends.statusTransactions')}}</th>
+                <th>{{lang.text('tigerWitID.inviteFriends.invite4')}}</th>
+                <th>{{lang.text('tigerWitID.inviteFriends.invite5')}}</th>
             </tr>
         </thead>
         <tbody>
             <tr ng-repeat="bonus in bonusList">
                 <td>{{bonus.user_name}}</td>
                 <td>
-                    <span style="color: #ffbd43;" ng-show="bonus.is_deposit == 1">
-                        {{lang.text('tigerWitID.tradingAccount.deposited')}}
-                    </span>
-                    <span ng-show="bonus.is_deposit == 0">
-                        {{lang.text('tigerWitID.tradingAccount.noDeposit')}}
-                    </span>
+                    <div style="position: relative; height: 26px;background-color: #eee;border-radius: 13px;padding: 2px;">
+                        <span style="position: absolute;width: 100%;height: 26px;line-height: 26px;text-align: center;top: 0;left: 0;">
+                            <span>
+                                {{lang.text('tigerWitID.inviteFriends.invite'+(bonus.progress+5))}}
+                            </span>
+                        </span>
+                        <p style="height: 100%;border-radius: 13px;background-color: #FEDB30;" ng-style="{width: bonus.progress < 4 ? bonus.progress*25+'%' : (bonus.progress - 1)*25+'%'}"></p>
+                    </div>
                 </td>
                 <td>
-                    <span style="color: #ffbd43;" ng-show="bonus.volume >= 1">
-                        {{lang.text('tigerWitID.yes')}}
-                    </span>
-                    <span ng-show="bonus.volume < 1">
-                        {{lang.text('tigerWitID.no')}}
-                    </span>
+                    {{bonus.time}}
                 </td>
             </tr>
         </tbody>

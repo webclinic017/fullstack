@@ -72,10 +72,11 @@
                     <col width="10%" ng-if="!lang.isEnglishArea()">
                     <col width="11%">
                     <col width="12%">
-                    <col width="14%">
+                    <col width="8%">
                     <col width="13%">
                     <col width="10%">
-                    <col width="22%">
+                    <col width="20%">
+                    <col width="8%">
                 </colgroup>
                 <thead>
                     <tr>
@@ -87,6 +88,7 @@
                         <th class="pro-public__no-padding"><%= lang.text("forex27")%></th>
                         <th class="pro-public__no-padding"><%= lang.text("forex28")%><br> <%= lang.text("forex29")%></th>
                         <th class="pro-public__no-padding"><%= lang.text("cfd28")%></th>
+                        <th class="pro-public__no-padding"><%= lang.text("cfd28_2")%></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -99,9 +101,10 @@
                         <td>{{ item.lot_min }}</td>
                         <td>{{ item.contract_size }}</td>
                         <td class="pro-public__no-padding">{{ item.info_trade_session }}</td>
+                        <td>{{ item.timezone }}</td>
                     </tr>
                     <tr>
-                        <td class="font-info" colspan="8">
+                        <td class="font-info" colspan="9">
                             <%= lang.text("forex36")%>
                         </td>
                     </tr>

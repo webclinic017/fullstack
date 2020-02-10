@@ -248,6 +248,8 @@
                         $(cBtn).html(lang.text('invite.Expired'));
                     } else if (data.data.bonus_status == 5) {
                         $(cBtn).html(lang.text('invite.Lapsed'));
+                    } else if (data.data.bonus_status == 6) {
+                        $(cBtn).html(lang.text('invite.uncollected'));
                     }
 
                     /*模板引擎*/

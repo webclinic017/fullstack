@@ -60,7 +60,9 @@
             account.getDealAccountList(0, 0, 'trade').then(function (data) {
                 if (!data) return;
                 if (data.is_succ) {
-                    $scope.accountInfo.accountList = data.data; 
+                    $scope.accountInfo.accountList = data.data.filter(function (item) {
+                        return item.status;
+                    }); 
                     if($scope.accountInfo.accountList.length > 0){
                         // 当全局mt4_id为空
                         if(!$scope.investSelect.id){
