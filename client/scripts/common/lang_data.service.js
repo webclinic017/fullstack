@@ -7591,7 +7591,7 @@
                         "vi": "Vui lòng liên kết thẻ ngân hàng của riêng người dùng",
                         "zh-Hant": "請邦定認證用戶本人的銀行卡",
                         "id": "Mohon daftarkan nomor rekening anda",
-                        "es": "Por favor, asocie la propia tarjeta bancaria del usuario.",
+                        "es": "Por favor, complete sus datos de cuenta bancaria.",
                         "pt-BR": "Por favor, associe o bancário do usuário",
                         "ar": "يرجى ربط البطاقة المصرفية المملوكة للمستخدم"
                     },
