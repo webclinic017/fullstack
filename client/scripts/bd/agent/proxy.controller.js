@@ -14,6 +14,7 @@
         var ib_pid = fun.getSearch().ib_pid;
         var link = '/m/h5_register/reg';
         if(ib_pid) {
+            link += '?action=quick_login'   // 兼容对已有用户的推广
             $scope.spread = true;
             var d = new Date();
             var overExpires = 'Thu, 01 Jan 1970 00:00:01 GMT;' // 过去时间
