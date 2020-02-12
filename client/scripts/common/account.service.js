@@ -601,7 +601,7 @@
 
         /**
          * @name getAgentPromotion
-         * @desc 代理商推广
+         * @desc 代理商推广 成为下级代理商
          */
         function setAgentPromotion(ib_pid) {
             return publicHttp.dealPublicRequest(o.setAgentPromotionApi, 'POST', {

@@ -285,7 +285,10 @@
             // }
 
             oReg.search_arr = getSearch();
-
+            if (oReg.search_arr.action === 'quick_login') {
+                $('#password').parent().remove();
+                $('#confirmPassword').parent().remove();
+            }
             var unit = oReg.search_arr.unit ? oReg.search_arr.unit : "";
             var key = oReg.search_arr.key ? oReg.search_arr.key : "";
             if (oReg.search_arr.pid) {
@@ -383,26 +386,28 @@
         (function () {
             function toRegister(e, is_agree) {
                 if (!checkTel()) return;
-                // 判断密码
-                var password = $('#password').val();
-                var confirmPassword = $('#confirmPassword').val();
-                if (!password) {
-                    layer.open({
-                        content: lang.text('register.enterPassword'),
-                        skin: 'msg',
-                        anim: false,
-                        time: 2 /*1.2秒后自动关闭*/
-                    });
-                    return
-                }
-                if (password != confirmPassword) {
-                    layer.open({
-                        content: lang.text('register.passwordsNoMatch'),
-                        skin: 'msg',
-                        anim: false,
-                        time: 2 /*1.2秒后自动关闭*/
-                    });
-                    return
+                if ($('#password').length > 0) {
+                    // 判断密码
+                    var password = $('#password').val();
+                    var confirmPassword = $('#confirmPassword').val();
+                    if (!password) {
+                        layer.open({
+                            content: lang.text('register.enterPassword'),
+                            skin: 'msg',
+                            anim: false,
+                            time: 2 /*1.2秒后自动关闭*/
+                        });
+                        return
+                    }
+                    if (password != confirmPassword) {
+                        layer.open({
+                            content: lang.text('register.passwordsNoMatch'),
+                            skin: 'msg',
+                            anim: false,
+                            time: 2 /*1.2秒后自动关闭*/
+                        });
+                        return
+                    }
                 }
                 if (!checkVerifyCode()) return;
                 // if (!checkPassword()) return;
@@ -419,24 +424,34 @@
                 if (window.location.pathname.indexOf('t35') != -1) {
                     _taq.push({ convert_id: "81431259366", event_type: "form" })
                 }
-
-                publicRequest('regOrLogin', 'POST', {
+                var params = {
+                    action: oReg.search_arr.action || undefined,
                     ib_pid: $.cookie('ib_pid') || null,
                     invite_status: $.cookie('invite_status') || null,
                     account: $("#telephone").val() || null,
                     account_type: 1,
                     phone_code: areaCode || '86',
                     world_code: world_code || 'CN',
-                    password: password,
-                    code: $("#verify_code").val() || null,
-                    login_type: 3, // 登录验证方式，1-密码登录，2-验证码登录 3-密码登录有验证码
                     pid: $.cookie('pid') || null,
                     unit: oReg.search_arr.unit || null,
                     lp: oReg.search_arr.lp || null,
                     key: oReg.search_arr.key || null,
                     email: oReg.search_arr.email || null,
                     is_agree: is_agree == 'is_agree' ? 1 : 0
-                }).then(function (data) {
+                }
+                if ($('#password').length > 0) {
+                    params = $.extend(params, {
+                        password: password,
+                        code: $("#verify_code").val() || null,
+                        login_type: 3, // 登录验证方式，1-密码登录，2-验证码登录 3-密码登录有验证码
+                    })
+                } else {
+                    params = $.extend(params, {
+                        password: $("#verify_code").val() || null,
+                        login_type: 2, // 登录验证方式，1-密码登录，2-验证码登录 3-密码登录有验证码
+                    })
+                }
+                publicRequest('regOrLogin', 'POST', params).then(function (data) {
                     // console.log(data);
                     if (!data) return;
                     if (data.is_succ) {
