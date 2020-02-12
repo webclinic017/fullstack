@@ -372,6 +372,8 @@
                                 })
                                 getCard()
                                 closeModal()
+                            }else{
+                                layer.msg(data.message)
                             }
                         })
                     }

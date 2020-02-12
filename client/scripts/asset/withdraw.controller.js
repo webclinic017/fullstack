@@ -485,6 +485,8 @@
                                 })
                                 getThird()
                                 closeModal()
+                            }else{
+                                layer.msg(data.message)
                             }
                         })
                     }
@@ -564,6 +566,8 @@
                                 })
                                 getTransfer()
                                 closeModal()
+                            }else{
+                                layer.msg(data.message)
                             }
                         })
                     }
