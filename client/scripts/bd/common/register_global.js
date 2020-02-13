@@ -78,11 +78,11 @@ $(document).ready(function () {
     $.cookie('invite_status', 3, { path: '/', domain: getDomain(), expires: 7 });
 
 
-    if (unit) {
-        $.cookie('unit', unit, { path: '/', domain: getDomain(), expires: 7 });
+    if (oReg.search_arr.unit) {
+        $.cookie('unit', oReg.search_arr.unit, { path: '/', domain: getDomain(), expires: 7 });
     }
-    if (key) {
-        $.cookie('key', key, { path: '/', domain: getDomain(), expires: 7 });
+    if (oReg.search_arr.key) {
+        $.cookie('key', oReg.search_arr.key, { path: '/', domain: getDomain(), expires: 7 });
     }
   }
   // 客户推广

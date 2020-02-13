@@ -706,7 +706,7 @@
             {
                 key: $scope.lang.text("tigerWitID.settings.driverLicense"),
                 value: 4,
-                isCN: true,
+                isCN: false,
                 isGlobal: true
             },
             {
