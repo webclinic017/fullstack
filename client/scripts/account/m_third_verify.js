@@ -126,10 +126,10 @@ $(document).ready(function () {
                 key: lang.text('third.third_username11'),
                 value: 3
             },
-            {
-                key: lang.text('third.third_username12'),
-                value: 4
-            }
+            // {
+            //     key: lang.text('third.third_username12'),
+            //     value: 4
+            // }
         ],
         en: [
             {
