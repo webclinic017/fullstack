@@ -470,30 +470,33 @@
                     }
 
                     $scope.openDemo = function () {
-                        
                         if ($scope.isIslamic) {
+                            //Demo账户可以开通伊斯兰账户 2020.02.14
+                            $modalInstance.dismiss();
                             $modal.open({
                                 templateUrl: '/views/account/islamic_modal.html',
                                 size: 'sm',
                                 backdrop: 'false',
                                 resolve: {
                                     passedScope: function () {
-                                        return {
-                                            confirmDemo: confirmDemo
-                                        }
+                                        return {}
                                     }
                                 },
                                 controller: ['$scope', 'passedScope', '$modalInstance', 'lang', function ($scope, passedScope, $modalInstance, lang) {
                                     $scope.lang = lang;
                                     $scope.loading = 0;
-                                    $scope.modalType = 0;
-
+                                    $scope.modalType = 1;
+            
                                     $scope.closeModal = closeModal;
                                     $scope.submitConfrim = submitConfrim;
-
-                                    function submitConfrim () {
-                                        closeModal();
-                                        passedScope.confirmDemo && passedScope.confirmDemo();
+            
+                                    function submitConfrim (type) {
+                                        $modalInstance.dismiss();
+                                        if (type === 'no') {
+                                            confirmDemo();
+                                        } else {
+                                            confirmDemo(2);
+                                        }
                                     }
                                     function closeModal() {
                                         $modalInstance.dismiss();
@@ -504,7 +507,7 @@
                             confirmDemo();
                         }
 
-                        function confirmDemo () {
+                        function confirmDemo (extra_type) {
                             globalScope.personal.is_live = '2'
                             $scope.loading.demo = true
                             getAuthStatus({
@@ -514,7 +517,7 @@
                                 // console.log(data);
                                 if (data.is_succ) {
                                     if (data.data.status == 0) {
-                                        account.openTrialAccount().then(function (data) {
+                                        account.openTrialAccount({extra_type: extra_type}).then(function (data) {
                                             if (!data) return;
                                             // console.log(data);
                                             if (data.is_succ) {

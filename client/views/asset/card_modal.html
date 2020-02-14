@@ -106,7 +106,7 @@
                     </div>
                 </div>
                 <!-- 判断不是第三方platform    TODO（后台有判断）所以银行name也可根据后台返回的列表长度判断，有值选择，没有值填写 -->
-                <div class="item-center" ng-if="!platform && card.world && card.world.world_code === 'CN'">
+                <div class="item-center" ng-if="banks.length > 0">
                     <div class="col-xs-3">
                         <label class="form-control-wrapper">{{lang.text('tigerWitID.wallet.selectBankM')}}</label>
                     </div>
@@ -132,7 +132,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="item-center" ng-if="!platform && card.world && card.world.world_code !== 'CN'">
+                <div class="item-center" ng-if="banks.length <= 0">
                     <div class="col-xs-3">
                         <label class="form-control-wrapper">{{lang.text('tigerWitID.wallet.fillBankM')}}</label>
                     </div>
@@ -157,66 +157,13 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- 判断是第三方platform -->
-                <div class="item-center" ng-if="platform && banks.length > 0">
-                    <div class="col-xs-3">
-                        <label class="form-control-wrapper">{{lang.text('tigerWitID.wallet.selectBankM')}}</label>
-                    </div>
-
-                    <div class="col-xs-9">
-                        <div class="form-control-wrapper">
-                            <select class="form-control"
-                                    name="bank"
-                                    required
-                                    ng-class="{'form-control-error': frontErr.bank.show && cardForm.bank.$invalid}"
-                                    ng-model="card.bank"
-                                    ng-options="bank.name for bank in banks"
-                                    ng-focus="hideErr('bank')"
-                                    ng-blur="showErr('bank')">
-                                <option value="">{{lang.text('tigerWitID.pleaseSelect')}}</option>
-                            </select>
-
-                            <div ng-show="frontErr.bank.show">
-                                <p class="alert alert-arrow_tp_lf" ng-show="cardForm.bank.$error.required">
-                                    {{lang.text('tigerWitID.wallet.pSelectBank')}}
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item-center" ng-if="platform && !banks.length">
-                    <div class="col-xs-3">
-                        <label class="form-control-wrapper">{{lang.text('tigerWitID.wallet.fillBankM')}}</label>
-                    </div>
-
-                    <div class="col-xs-9">
-                        <div class="form-control-wrapper">
-                            <input class="form-control"
-                                    name="bankOther"
-                                    type="text"
-                                    required
-                                    ng-class="{'form-control-error': frontErr.bankOther.show && cardForm.bankOther.$invalid}"
-                                    ng-model="card.bankOther"
-                                    placeholder="{{lang.text('tigerWitID.wallet.bankName')}}"
-                                    ng-focus="hideErr('bankOther')"
-                                    ng-blur="showErr('bankOther')">
-
-                            <div ng-show="frontErr.bankOther.show">
-                                <p class="alert alert-arrow_tp_lf" ng-show="cardForm.bankOther.$error.required">
-                                    {{lang.text('tigerWitID.wallet.bankName')}}
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+                
                 <div class="item-center" ng-if="card.world && (card.world.world_code !== 'CN' && card.world.world_code !== 'VN')">
                     <div class="col-xs-3">
                         <label class="form-control-wrapper">{{lang.text('tigerWitID.wallet.bankIdentificationCodeM')}}</label>
                     </div>
 
-                    <div class="col-xs-9">
+                    <div class="col-xs-9" ng-if="banks.length <= 0">
                         <div class="form-control-wrapper">
                             <input class="form-control"
                                     name="swift_code"
@@ -227,6 +174,26 @@
                                     placeholder="{{lang.text('tigerWitID.wallet.fillBankIdentificationCode')}}"
                                     ng-focus="hideErr('swift_code')"
                                     ng-blur="showErr('swift_code')">
+
+                            <div ng-show="frontErr.swift_code.show">
+                                <p class="alert alert-arrow_tp_lf" ng-show="cardForm.swift_code.$error.required">
+                                    {{lang.text('tigerWitID.wallet.fillBankIdentificationCode')}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-9" ng-if="banks.length > 0">
+                        <div class="form-control-wrapper">
+                            <select class="form-control"
+                                    name="swift_code"
+                                    required
+                                    ng-class="{'form-control-error': frontErr.swift_code.show && cardForm.swift_code.$invalid}"
+                                    ng-model="card.swift_code"
+                                    ng-options="bank.swift_code for bank in banks"
+                                    ng-focus="hideErr('swift_code')"
+                                    ng-blur="showErr('swift_code')">
+                                <option value="">{{lang.text('tigerWitID.pleaseSelect')}}</option>
+                            </select>
 
                             <div ng-show="frontErr.swift_code.show">
                                 <p class="alert alert-arrow_tp_lf" ng-show="cardForm.swift_code.$error.required">
