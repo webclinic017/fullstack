@@ -12760,6 +12760,16 @@
                 },
                 "copy": {
                     "zh": "复制",
+                    "en": "Follow",
+                    "vi": "Sao chép",
+                    "zh-Hant": "復制",
+                    "id": "Ikuti",
+                    "es": "Seguir",
+                    "pt-BR": "Seguir",
+                    "ar": "متابعة"
+                },
+                "copyTxt": {
+                    "zh": "复制",
                     "en": "Copy",
                     "vi": "Sao chép",
                     "zh-Hant": "復制",
