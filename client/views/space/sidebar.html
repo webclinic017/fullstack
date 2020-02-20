@@ -98,7 +98,7 @@
                     <span class="space_sidebar__bag-num" ng-show="personal.redbagUnreadNum && personal.redbagUnreadNum > 0">{{ personal.redbagUnreadNum || '0' }}</span>
                 </a>
             </li>
-            <li class="space_sidebar__nav-menu" ui-sref-active="active">
+            <li ng-if="inviteModuleStatus" class="space_sidebar__nav-menu" ui-sref-active="active">
                 <a ui-sref="space.invite">{{lang.text('tigerWitID.inviteFriends.title')}}</a>
             </li>
             <li class="space_sidebar__nav-menu" ui-sref-active="active">
