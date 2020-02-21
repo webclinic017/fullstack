@@ -68,6 +68,7 @@
         $scope.closeModal = closeModal;
         $scope.submitForm = submitForm;
         $scope.getCity = getCity;
+        $scope.setSwiftCode = setSwiftCode;
 
         // getWorlds();
         getProvince();
@@ -114,7 +115,9 @@
         //         }
         //     });
         // }
-
+        function setSwiftCode () {
+            $scope.card.swift_code = $scope.card.bank.swift_code;
+        }
         function getProvince() {
             account.getStates('CN').then(function (data) {
                 if (!data) return;
