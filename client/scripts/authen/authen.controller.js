@@ -680,42 +680,74 @@
         $scope.identityImgBack = undefined;
         $scope.idType = [
             {
-                key: $scope.lang.text("tigerWitID.settings.mainlandResidentIdentityCard"),
+                key: $scope.lang.text("tigerWitID.settings.mainlandResidentIdentityCard"), //大陆居民身份证
                 value: 0,
-                isCN: true,         //中国区
-                isGlobal: false     //国际区
+                isCN: true, //中国区
+                isHMT: false, // 港澳台
+                isGlobal: false //国际区
             },
             {
-                key: $scope.lang.text("tigerWitID.settings.gAPermit"),
+                key: $scope.lang.text("tigerWitID.settings.gAPermit"),//港澳居民来往内地通行证
                 value: 1,
                 isCN: true,
+                isHMT: true, // 港澳台
                 isGlobal: false
             },
             {
-                key: $scope.lang.text("tigerWitID.settings.tPermit"),
+                key: $scope.lang.text("tigerWitID.settings.tPermit"),// 台湾居民来往大陆通行证
                 value: 2,
                 isCN: true,
+                isHMT: true, // 港澳台
                 isGlobal: false
             },
             {
-                key: $scope.lang.text("tigerWitID.settings.passport"),
+                key: $scope.lang.text("tigerWitID.settings.passport"),// 护照
                 value: 3,
                 isCN: true,
+                isHMT: true, // 港澳台
                 isGlobal: true
             },
             {
-                key: $scope.lang.text("tigerWitID.settings.driverLicense"),
+                key: $scope.lang.text("tigerWitID.settings.driverLicense"),// 驾驶证
                 value: 4,
                 isCN: false,
+                isHMT: false, // 港澳台
                 isGlobal: true
             },
             {
-                key: $scope.lang.text("tigerWitID.settings.iDCard"),
+                key: $scope.lang.text("tigerWitID.settings.iDCard"), // 身份证
                 value: 5,
                 isCN: false,
+                isHMT: true, // 港澳台
                 isGlobal: true
             }
         ]
+        // 根据当前国家筛选证件类型
+        function filterIdType() {
+            var idType = $scope.idType;
+            var fIdType = [];
+            for (var i = 0; i < idType.length; i++) {
+                var item = idType[i];
+                if ($scope.personal.region.world_code === 'CN') {
+                    if (item.isCN) {
+                        fIdType.push(item)
+                    }
+                } else if (
+                    $scope.personal.region.world_code === "MO" ||
+                    $scope.personal.region.world_code === "TW" ||
+                    $scope.personal.region.world_code === "HK"
+                ) {
+                    if (item.isHMT) {
+                        fIdType.push(item)
+                    }
+                } else {
+                    if (item.isGlobal) {
+                        fIdType.push(item)
+                    }
+                }
+            }
+            $scope.idType = fIdType;
+        }
         $scope.$watch('personal.updatePapers', function (newVal, oldVal) {
             if (JSON.stringify(newVal) != "{}") {
                 // 中国与越南姓与名是连在一起的
@@ -737,6 +769,7 @@
                 $scope.realnameInfo.id_type.key = $scope.idType[newVal.idcard_type].key;
                 $scope.realnameInfo.id_type.value = $scope.idType[newVal.idcard_type].value;
                 $scope.realnameInfo.id_num = newVal.id_no;
+                filterIdType();
             }
         }, true);
         $scope.frontErr = {
@@ -1069,7 +1102,7 @@
                     if (flag == null) {
                         alert("Enable popup filtering in your browser!\n\n Please turn off this function temporarily!");
                     }
-                }else{
+                } else {
                     layer.msg(data.message)
                 }
             })
