@@ -5,15 +5,16 @@
     angular.module('fullstackApp')
         .controller('SpaceInfoController', SpaceInfoController);
 
-    SpaceInfoController.$inject = ['$rootScope','$scope', '$location', '$interval', '$state', 'account', 'config', 'redbag', 'trader', 'asset', '$modal'];
+    SpaceInfoController.$inject = ['$rootScope','$scope', '$location', '$interval', '$state', 'account', 'config', 'redbag', 'invite', 'asset', '$modal'];
 
     /**
      * @name SpaceInfoController
      * @desc
      */
-    function SpaceInfoController($rootScope,$scope, $location, $interval, $state, account, config, redbag, trader, asset, $modal) {
+    function SpaceInfoController($rootScope,$scope, $location, $interval, $state, account, config, redbag, invite, asset, $modal) {
         $scope.unreadLength = 0;        // 未读消息
         $scope.investSelect = {id: '', type: ''};   // 记录账号页面选中的账号
+        $scope.inviteModuleStatus = false;
         // $scope.updatePaper = updatePaper;
         var noticeId;
         //一次性获取用户的相关信息。更换用户时需要触发重置。
@@ -29,6 +30,7 @@
             getVerifyStatus();
             getRedBagNum();
             checkEvidenceStatus();
+            getModuleManagerment();
         }
 
         var url = $location.search();
@@ -37,6 +39,14 @@
             $scope.$emit('global.openDredgeMdl', {position: 'register'});
         }
 
+        //获取邀请好友模块权限
+        function getModuleManagerment () {
+            invite.getModuleManagerment().then(function (rs) {
+                if (rs.is_succ) {
+                    $scope.inviteModuleStatus = rs.data.is_show;
+                }
+            })
+        }
         // 检查新消息
         // $scope.$on('refreshNoticeList', function() {
         //     console.log('refreshNoticlist jihuo');

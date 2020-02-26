@@ -138,7 +138,8 @@
             getInviteFriendsInfoApi: urlOrigin2 + '/user/invites',
             setInviteFriendsLinkApi: urlOrigin2 + '/invite_code',
             setUserSourceApi: urlOrigin2 + '/user/source', //post
-            getInviteRulesApi: urlOrigin2 + '/bonus/invite_rule'
+            getInviteRulesApi: urlOrigin2 + '/bonus/invite_rule',
+            getModuleManagermentApi: urlOrigin2 + '/module/management'
         };
         var market = {
             getVideoListApi: o + '/data/video_list.json',

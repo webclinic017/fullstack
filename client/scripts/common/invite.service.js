@@ -12,7 +12,8 @@
             getInviteFriendsInfo: getInviteFriendsInfo,
             setInviteFriendsLink: setInviteFriendsLink,
             setUserSource: setUserSource,
-            getInviteRules: getInviteRules
+            getInviteRules: getInviteRules,
+            getModuleManagerment: getModuleManagerment
         };
         return service;
 
@@ -46,6 +47,12 @@
 
         function getInviteRules () {
             return publicHttp.dealPublicRequest(o.getInviteRulesApi, 'GET');
+        }
+
+        function getModuleManagerment (direction) {
+            return publicHttp.dealPublicRequest(o.getModuleManagermentApi, 'GET', {
+                direction: direction
+            });
         }
 
     }

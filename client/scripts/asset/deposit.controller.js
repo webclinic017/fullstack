@@ -407,23 +407,20 @@
                             } else if ($scope.deposit.type === 'wallet') {
                                 submitDeposit();
                             } else {
-                                $scope.isLoading = false;
                                 if ($scope.deposit.isAbleDeposit === 0) {
-                                    computeAmount();
+                                    //2020.2.18修改 先调用入金接口，再弹窗提示
+                                    submitDeposit();
                                 } else {
                                     checkInvestLimit();
                                 }
                             }
 
-                            function computeAmount() {
-                                var poundage = $scope.depositTypeLst[$scope.deposit.type].poundage.substring(0, $scope.depositTypeLst[$scope.deposit.type].poundage.length - 1) * 0.01;
-                                var amountRMB = Number(amount * $scope.deposit.currency.rate_in).toFixed(2);
-                                var amountFee = Number(amountRMB * poundage).toFixed(2);
+                            function computeAmount(amountDollar, amountRMB, amountFee, amountTotal) {
                                 openDepositMdl('confirmDeposit', isAccount, {
-                                    amountDollar: amount,
+                                    amountDollar: amountDollar,
                                     amountRMB: amountRMB,
                                     amountFee: amountFee,
-                                    amountTotal: $scope.depositTypeLst[$scope.deposit.type].poundage_status ? (Number(amountRMB) + Number(amountFee)).toFixed(2) : Number(amountRMB).toFixed(2),
+                                    amountTotal: amountTotal,
                                     isFree: $scope.depositTypeLst[$scope.deposit.type].poundage_status,
                                     desc: $scope.depositTypeLst[$scope.deposit.type].poundage_desc,
                                     currency: $scope.deposit.currency,
@@ -441,21 +438,46 @@
                                             content: $scope.lang.text("tigerWitID.depositWithdrawal.hasAvodaAccount") + '\n\r' + $scope.lang.text("tigerWitID.depositWithdrawal.noAvodaAccount")
                                         },
                                         url: $scope.depositTypeLst[$scope.deposit.type].url,
-                                        callback: submitDeposit
+                                        callback: jumpUrl
                                     });
                                 } else {
-                                    submitDeposit()
+                                    jumpUrl()
                                 }
                             }
                             function submitDeposit() {
                                 var p = $scope.depositTypeLst[$scope.deposit.type].platform || undefined;
                                 var c = $scope.deposit.currency ? $scope.deposit.currency.currency : undefined;
                                 var token = $cookies["token"] || '';
+                                asset.deposit(amount, p, c, mt4_id).then(function (data) {
+                                    $scope.isLoading = false;
+                                    if (!data) return;
+                                    if (data.is_succ) {
+                                        $scope.toGtagEvent('完成入金');
+                                        if ($scope.deposit.type === 'wallet') {
+                                            $scope.$emit('asset.transfer')
+                                            $scope.walletDepositSucc = true;
+                                        } else {
+                                            $scope.jumpTargetUrl = fun.setUrlParam(data.data.url) + 'token=' + token;
+                                            computeAmount(data.data.usd_amount,data.data.actual_amount,data.data.usd_poundage,data.data.pay_amount);
+                                        }
+                                        if ($scope.lang.isThird()) {
+                                            $scope.$emit('main.getAssetInfo')
+                                        }
+                                    } else {
+                                        layer.msg(data.message);
+                                        if ($scope.deposit.type !== 'wallet') {
+                                            w.close();
+                                        }
+                                    }
+                                });
+                            }
+                            function jumpUrl () {
+                                var p = $scope.depositTypeLst[$scope.deposit.type].platform || undefined;
+                                var c = $scope.deposit.currency ? $scope.deposit.currency.currency : undefined;
+                                var token = $cookies["token"] || '';
                                 var lang = $cookies["lang"] || '';
                                 var m = mt4_id ? mt4_id : '';
-                                if ($scope.deposit.type !== 'wallet') {
-                                    var w = $window.open('/waiting');
-                                }
+                                var w = $window.open('/waiting');
                                 if ($scope.depositTypeLst[$scope.deposit.type].channel_type === 2) {
                                     openDepositMdl('depositFinish');
                                     var params = [
@@ -470,29 +492,8 @@
                                     w.location = fun.setUrlParam($scope.depositTypeLst[$scope.deposit.type].url) + params.join('&');
                                     return;
                                 }
-                                asset.deposit(amount, p, c, mt4_id).then(function (data) {
-                                    $scope.isLoading = false;
-                                    if (!data) return;
-                                    if (data.is_succ) {
-                                        $scope.toGtagEvent('完成入金');
-                                        if ($scope.deposit.type === 'wallet') {
-                                            $scope.$emit('asset.transfer')
-                                            $scope.walletDepositSucc = true;
-                                        } else {
-                                            var url = fun.setUrlParam(data.data.url) + 'token=' + token;
-                                            openDepositMdl('depositFinish');
-                                            w.location = url;
-                                        }
-                                        if ($scope.lang.isThird()) {
-                                            $scope.$emit('main.getAssetInfo')
-                                        }
-                                    } else {
-                                        layer.msg(data.message);
-                                        if ($scope.deposit.type !== 'wallet') {
-                                            w.close();
-                                        }
-                                    }
-                                });
+                                openDepositMdl('depositFinish');
+                                w.location = $scope.jumpTargetUrl;
                             }
                         }
                         if ($scope.deposit.type === 'tele') {

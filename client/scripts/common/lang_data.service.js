@@ -12768,6 +12768,16 @@
                     "pt-BR": "Seguir",
                     "ar": "متابعة"
                 },
+                "copyTxt": {
+                    "zh": "复制",
+                    "en": "Copy",
+                    "vi": "Sao chép",
+                    "zh-Hant": "復制",
+                    "id": "Ikuti",
+                    "es": "Copia",
+                    "pt-BR": "Copiar",
+                    "ar": "متابعة"
+                },
                 "copied": {
                     "en": "COPIED",
                     "zh": "已复制",
