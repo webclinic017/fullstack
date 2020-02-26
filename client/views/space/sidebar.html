@@ -98,7 +98,7 @@
                     <span class="space_sidebar__bag-num" ng-show="personal.redbagUnreadNum && personal.redbagUnreadNum > 0">{{ personal.redbagUnreadNum || '0' }}</span>
                 </a>
             </li>
-            <li class="space_sidebar__nav-menu" ui-sref-active="active">
+            <li ng-if="inviteModuleStatus" class="space_sidebar__nav-menu" ui-sref-active="active">
                 <a ui-sref="space.invite">{{lang.text('tigerWitID.inviteFriends.title')}}</a>
             </li>
             <li class="space_sidebar__nav-menu" ui-sref-active="active">
@@ -110,7 +110,7 @@
             <li class="space_sidebar__nav-menu" ui-sref-active="active">
                 <a ui-sref="space.setting.subpage({subpage: 'name'})">{{lang.text('tigerWitID.settings.title')}}</a>
             </li>
-            <li class="space_sidebar__nav-menu" ng-if="personal.account_status == 1 && personal.islamic_remain_num > 0">
+            <li class="space_sidebar__nav-menu" ng-if="(personal.account_status == 1 || personal.account_status == 2) && personal.islamic_remain_num > 0">
                 <a style="cursor: pointer" ng-click="openChangeIslamicModal()">
                     <span ng-if="personal.islamic_status == 1">{{lang.text('islamic_message8')}}</span>
                     <span ng-if="personal.islamic_status == 2">{{lang.text('islamic_message9')}}</span>

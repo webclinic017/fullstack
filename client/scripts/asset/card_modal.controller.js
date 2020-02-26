@@ -68,6 +68,7 @@
         $scope.closeModal = closeModal;
         $scope.submitForm = submitForm;
         $scope.getCity = getCity;
+        $scope.setSwiftCode = setSwiftCode;
 
         // getWorlds();
         getProvince();
@@ -114,7 +115,9 @@
         //         }
         //     });
         // }
-
+        function setSwiftCode () {
+            $scope.card.swift_code = $scope.card.bank.swift_code;
+        }
         function getProvince() {
             account.getStates('CN').then(function (data) {
                 if (!data) return;
@@ -162,19 +165,10 @@
             showErr('number');
             showErr('address');
 
-            if($scope.platform){
-                if($scope.banks.length){
-                    showErr('bank');
-                }else{
-                    showErr('bankOther');
-                }
+            if($scope.banks.length){
+                showErr('bank');
             }else{
-                if ($scope.card.world && $scope.card.world.world_code === 'CN') {
-                    showErr('bank');
-                }
-                if ($scope.card.world && $scope.card.world.world_code !== 'CN') {
-                    showErr('bankOther');
-                }
+                showErr('bankOther');
             }
             if ($scope.card.world && $scope.card.world.world_code === 'CN') {
                 showErr('province');
@@ -187,7 +181,6 @@
                 }
 
             }
-
             if ($scope.cardForm.$invalid) {
                 return;
             }
@@ -199,17 +192,11 @@
             };
             if($scope.platform){
                 oParams.platform = $scope.platform;
-                if($scope.banks.length){
-                    oParams.bank_name = $scope.card.bank.code;
-                }else{
-                    oParams.bank_name = $scope.card.bankOther;
-                }
+            }
+            if($scope.banks.length){
+                oParams.bank_name = $scope.card.bank.code;
             }else{
-                if ($scope.card.world && $scope.card.world.world_code === 'CN') {
-                    oParams.bank_name = $scope.card.bank.code;
-                } else {
-                    oParams.bank_name = $scope.card.bankOther;
-                }
+                oParams.bank_name = $scope.card.bankOther;
             }
             if ($scope.card.world && $scope.card.world.world_code === 'CN') {
                 oParams.province = $scope.card.province.code;
@@ -217,7 +204,7 @@
                 oParams.phone = $scope.card.phone;
             } else {
                 if ($scope.card.world.world_code !== 'VN') {
-                    oParams.swift_code = $scope.card.swift_code;
+                    oParams.swift_code = typeof $scope.card.swift_code === 'object' ? $scope.card.swift_code.swift_code : $scope.card.swift_code;
                 }
             }
 
