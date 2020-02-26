@@ -20,7 +20,7 @@
             }) %>
         </div>
         <div class="body" ng-controller="WebDownloadController">
-            <div class="index_download_layout">
+            <!-- <div class="index_download_layout">
                 <div class="download_banner">
                     <div class="center download_banner__ctn">
                         <div class="download_banner__ctn-action">
@@ -69,18 +69,10 @@
                             <%if (lang.areaId != 1) {%>
                             <div class="swiper-slide"
                                 style='background: url("<%= lang.image('downloadGlobalFocus')%>")  no-repeat top center'>
-                                <!-- <div class="download_banner__ctn-des">
-                                    <h2><%= lang.text('downloadApp.tip1')%></h2>
-                                    <span><%= lang.text('downloadApp.tip2')%></span>
-                                </div> -->
                             </div>
                             <%} else {%>
                             <div class="swiper-slide"
                                 style='background: url("<%= lang.image('downloadFocus')%>")  no-repeat top center'>
-                                <!-- <div class="download_banner__ctn-des">
-                                            <h2><%= lang.text('downloadApp.tip1')%></h2>
-                                            <span><%= lang.text('downloadApp.tip2')%></span>
-                                        </div> -->
                             </div>
                             <%}%>     
                         </div>
@@ -110,36 +102,114 @@
                     <div class="index_new__camber">
 
                     </div>
-                </div>
-                <div class="footer">
-                    <%- include('/common/nav/web.footer.html') %>
+                </div> -->
+            <div class="index_download">
+                <div class="index_download__con">
+                    <div class="index_download__left">
+                        <div class="index_download__left-top">
+                            <div class="logo">
+                                <img src="/white_label/bd/download/logo.png" alt="tigeriWit">
+                            </div>
+                            <h3 class="title">
+                                链接全球金融市场
+                            </h3>
+                            <p>人人都是交易高手 你准备好了吗？</p>
+                        </div>
+                        <div class="index_download__left-bottom">
+                            <h4>灵活满足用户对风险控制、资金管理的需求</h4>
+                            <p>使用一个10000美金的体验金账户，即可零风险参与市场实时交易。开设一个真实账户，最多可使用七个子账户进行自主交易和复制跟单交易。</p>
+                            <button class="tw-btn tw-btn-sm130 tw-btn-capsule-gradient">
+                                立即注册
+                            </button>
+                        </div>
+                    </div>
+                    <div class="index_download__right" ng-cloak>
+                        <div class="index_download__right-top">
+                            <ul class="title space-between">
+                                <li ng-click="clientClick(0)" ng-class="{active: client == 0}">安卓客户端<span></span></li>
+                                <li ng-click="clientClick(1)" ng-class="{active: client == 1}">iOS客户端<span></span></li>
+                            </ul>
+                            <div class="qrcode space-between">
+                                <div>
+                                    <img class="qrcode-img" id="qrcode-img__ios__global" system="global" platform="ios" ng-show="client == 1">
+                                    <img class="qrcode-img" id="qrcode-img__android__global" system="global" platform="android" ng-show="client == 0">
+                                        <!-- <img src="/images/web/download_m_blank_cn_20191022.png" alt=""> -->
+                                    <p>全球应用商店下载</p>
+                                </div>
+                                <div>
+                                    <img class="qrcode-img" id="qrcode-img__ios__cn" system="cn" platform="ios" ng-show="client == 1">
+                                    <img class="qrcode-img" id="qrcode-img__android__cn" system="cn" platform="android" ng-show="client == 0">
+                                    <!-- <div class="qrcode-img">
+                                        <img src="/images/web/download_m_blank_cn_20191022.png" alt="">
+                                    </div> -->
+                                    <p>地区应用商店下载</p>
+                                </div>
+                            </div>
+                            <p>扫码轻松赚收益 请使用手机浏览器扫描功能</p>
+                        </div>
+                        <p>为了给您提供更优质的服务 推荐您使用全球应用商店下载</p>
+                        <ul class="index_download__right-bottom space-between" ng-show="client == 1">
+                            <li>
+                                <div>
+                                    <img src="/white_label/bd/download/ios.png" alt="">
+                                </div>
+
+                                <a href="/m/blank?system=global&platform=ios" class="tw-btn tw-btn-sm130 tw-btn-capsule-gradient-black">全球应用</a>
+                            </li>
+                            <li>
+                                <div>
+                                    <img src="/white_label/bd/download/ios.png" alt="">
+                                </div>
+                                <a href="/m/blank?system=cn&platform=ios" class="tw-btn tw-btn-sm130 tw-btn-capsule-gradient-black">地区应用</a>
+                            </li>
+                        </ul>
+                        <ul class="index_download__right-bottom space-between" ng-show="client == 0">
+                            <li>
+                                <div>
+                                    <img src="/white_label/bd/download/android.png" alt="">
+                                </div>
+
+                                <a href="/m/blank?system=global&platform=android" class="tw-btn tw-btn-sm130 tw-btn-capsule-gradient-black">全球应用</a>
+                            </li>
+                            <li>
+                                <div>
+                                    <img src="/white_label/bd/download/android.png" alt="">
+                                </div>
+                                <a href="/m/blank?system=cn&platform=android" class="tw-btn tw-btn-sm130 tw-btn-capsule-gradient-black">地区应用</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <%- include('/common/vendor/web.js.html') %>
-            <!-- build:js(client) /scripts/web_download.js -->
-            <script src="/scripts/plugins/sha1.js"></script>
-            <script src="/scripts/common/config.service.js"></script>
-            <script src="/scripts/common/account.service.js"></script>
-            <script src="/scripts/common/authorization.service.js"></script>
-            <script src="/scripts/common/ranklist.service.js"></script>
-            <script src="/scripts/common/product.service.js"></script>
-            <script src="/scripts/common/lang.service.js"></script>
-            <script src="/scripts/common/lang_data.service.js"></script>
-            <script src="/scripts/common/redbag.service.js"></script>
-            <script src="/scripts/common/invite.service.js"></script>
+            <div class="footer">
+                <%- include('/common/nav/web.footer.html') %>
+            </div>
+        </div>
+        <%- include('/common/vendor/web.js.html') %>
+        <!-- build:js(client) /scripts/web_download.js -->
+        <script src="/scripts/plugins/sha1.js"></script>
+        <script src="/scripts/common/config.service.js"></script>
+        <script src="/scripts/common/account.service.js"></script>
+        <script src="/scripts/common/authorization.service.js"></script>
+        <script src="/scripts/common/ranklist.service.js"></script>
+        <script src="/scripts/common/product.service.js"></script>
+        <script src="/scripts/common/lang.service.js"></script>
+        <script src="/scripts/common/lang_data.service.js"></script>
+        <script src="/scripts/common/redbag.service.js"></script>
+        <script src="/scripts/common/invite.service.js"></script>
 
-            <script src="/scripts/common/global.controller.js"></script>
+        <script src="/scripts/common/global.controller.js"></script>
 
-            <script src="/scripts/common/navbar.directive.js"></script>
-            <script src="/scripts/common/dropdown.directive.js"></script>
-            <script src="/scripts/common/carousel.directive.js"></script>
-            <script src="/scripts/common/line_chart.directive.js"></script>
-            <script src="/scripts/common/progress.directive.js"></script>
+        <script src="/scripts/common/navbar.directive.js"></script>
+        <script src="/scripts/common/dropdown.directive.js"></script>
+        <script src="/scripts/common/carousel.directive.js"></script>
+        <script src="/scripts/common/line_chart.directive.js"></script>
+        <script src="/scripts/common/progress.directive.js"></script>
 
-            <script src="/scripts/ranklist/all.controller.js"></script>
+        <script src="/scripts/ranklist/all.controller.js"></script>
 
-            <script src="/scripts/web/download.controller.js"></script>
-            <!-- endbuild -->
+        <script src="/scripts/web/download.controller.js"></script>
+        <!-- endbuild -->
 </body>
 
 </html>
