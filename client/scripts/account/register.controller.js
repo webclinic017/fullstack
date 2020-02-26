@@ -34,8 +34,13 @@
         //     console.log(this, resolve, e)
         //     layer.close(resolve.layIndex)
         // })
-
         var source = $scope.checkUserSource();
+        if (lang.currentLanguage() === 'es') {
+            source["R_SPANISH"] = "001"
+        }
+        if (lang.currentLanguage() === 'pt-BR') {
+            source["R_PTG"] = "001"
+        }
         invite.setUserSource({
             source: JSON.stringify(source)
         });
