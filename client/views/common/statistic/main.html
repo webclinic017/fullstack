@@ -1,58 +1,3 @@
-<%if (lang.areaId != 1) {%>
-<!-- Facebook Pixel Code -->
-<script>
-    !function (f, b, e, v, n, t, s) {
-        if (f.fbq) return; n = f.fbq = function () {
-            n.callMethod ?
-            n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-        };
-        if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
-        n.queue = []; t = b.createElement(e); t.async = !0;
-        t.src = v; s = b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t, s)
-    }(window, document, 'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '246588836047542');
-    fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-        src="https://www.facebook.com/tr?id=246588836047542&ev=PageView&noscript=1" /></noscript>
-<!-- End Facebook Pixel Code -->
-<!-- 2019.01.03 -->
-<!-- Facebook Pixel Code-->
-<script>
-    fbq('init', '2082695268476120');
-    fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-        src="https://www.facebook.com/tr?id=2082695268476120&ev=PageView&noscript=1" /></noscript>
-<!-- End Facebook Pixel Code -->
-<!--here is the tracking code for the global website, we need to make sure this is implemented across every page.-->
-<!-- Global site tag (gtag.js) - Google Analytics - added at 2019.06.28 -->
-<!-- 接口文档 https://developers.google.com/analytics/devguides/collection/gtagjs/events -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-142852435-1"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'UA-142852435-1');
-</script>
-<!-- facebook事件埋点 https://developers.facebook.com/docs/app-events/getting-started-app-events-web -->
-<!-- <script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '2496083880613464',
-      xfbml      : true,
-      version    : 'v4.0'
-    });
-    FB.AppEvents.logPageView();
-  };
-</script>
-<script async defer 
-  src="https://connect.facebook.net/en_US/sdk.js">
-</script> -->
-<%}%>
 <script>
     //声明_czc对象:
     var _czc = _czc || [];
@@ -60,6 +5,15 @@
     _czc.push(["_setAccount", "1260394016"]);
 </script>
 <script>
+    function getCookie(name) {
+        var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+        if (arr = document.cookie.match(reg)) {
+            return unescape(arr[2]);
+        }
+        else {
+            return null;
+        }
+    }
     // var allowPath = [
     //     'global.tigerwit.com',
     //     'cn.tigerwit.com',
@@ -128,14 +82,7 @@
                 scroll_delay_time: 3000
             }
         });
-        var user_id = undefined;
-        var cookiesArr = document.cookie.split('; ');
-        for (var i = 0; i < cookiesArr.length; i++) {
-            var cookieArr = cookiesArr[i].split('=');
-            if (cookieArr[0] === 'user_code') {
-                user_id = cookieArr[1];
-            }
-        }
+        var user_id = getCookie('user_code');
         // console.log(sa.track);
         if (user_id) {  //此处user_id为tigerwit的用户id ,可在拿到后再调用
             sa.login(user_id);  //参数必须是字符串，且必须有值 
@@ -156,3 +103,74 @@
         })(window);
     }
 </script>
+<script>
+    // 避免掉不必要的try catch
+    function setGtagUserId(userId) {
+        console.log('国内不需要google Analytics统计', userId)
+    }
+</script>
+<%if (lang.areaId != 1) {%>
+<!-- Facebook Pixel Code -->
+<script>
+    !function (f, b, e, v, n, t, s) {
+        if (f.fbq) return; n = f.fbq = function () {
+            n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+        };
+        if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+        n.queue = []; t = b.createElement(e); t.async = !0;
+        t.src = v; s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '246588836047542');
+    fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=246588836047542&ev=PageView&noscript=1" /></noscript>
+<!-- End Facebook Pixel Code -->
+<!-- 2019.01.03 -->
+<!-- Facebook Pixel Code-->
+<script>
+    fbq('init', '2082695268476120');
+    fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=2082695268476120&ev=PageView&noscript=1" /></noscript>
+<!-- End Facebook Pixel Code -->
+<!--here is the tracking code for the global website, we need to make sure this is implemented across every page.-->
+<!-- Global site tag (gtag.js) - Google Analytics - added at 2019.06.28 -->
+<!-- 接口文档 https://developers.google.com/analytics/devguides/collection/gtagjs/events -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-142852435-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    function setGtagUserId(userId) {
+        gtag('config', 'UA-142852435-1', {
+            'user_id': userId
+        });
+    }
+    var user_id = getCookie('user_code');
+    if (user_id) {
+        setGtagUserId(user_id)
+    } else {
+        gtag('config', 'UA-142852435-1');
+    }
+</script>
+<!-- facebook事件埋点 https://developers.facebook.com/docs/app-events/getting-started-app-events-web -->
+<!-- <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '2496083880613464',
+      xfbml      : true,
+      version    : 'v4.0'
+    });
+    FB.AppEvents.logPageView();
+  };
+</script>
+<script async defer 
+  src="https://connect.facebook.net/en_US/sdk.js">
+</script> -->
+<%}%>

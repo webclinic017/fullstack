@@ -266,7 +266,7 @@
                     // $scope.writeCookie({nameKey: 'user_code', nameValue: '1234'});
                     // $scope.writeCookie({nameKey: 'username', nameValue: '123k'});
                     // $scope.writeCookie({nameKey: 'username_en', nameValue: '22asd'});
-
+                    setGtagUserId(data.data.user_code)
                     /**
                      * 为了deposit&withdraw页面的友盟统计
                      * 登录用户进入这两个页面统计一次，退出后在进入才重新统计一次

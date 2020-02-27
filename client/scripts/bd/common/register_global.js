@@ -156,6 +156,8 @@ $(document).ready(function () {
           $.cookie('username', data.data.username, { expires: 30, path: '/', domain: getDomain() });
           $.cookie('username_en', data.data.username_en, { expires: 30, path: '/', domain: getDomain() });
           $.cookie('world_code', $("#country").val(), { expires: 30, path: '/', domain: getDomain() });
+
+          setGtagUserId(data.data.user_code)
           setTimeout(function () {
             window.location.href = '/space/#/center?type=new';
           }, 100);

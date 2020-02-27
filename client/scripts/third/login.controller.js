@@ -51,6 +51,8 @@
                     $scope.writeCookie({nameKey: 'user_code', nameValue: data.data.user_code, path: '/payment'});
                     $scope.writeCookie({nameKey: 'username', nameValue: data.data.username, path: '/payment'});
                     $scope.writeCookie({nameKey: 'username_en', nameValue: data.data.username_en, path: '/payment'});
+
+                    setGtagUserId(data.data.user_code)
                     $timeout(function () {
                         account.hasChecked = false;
                         $window.location.href = '/payment/asset';
