@@ -131,8 +131,8 @@ $(document).ready(function () {
       sa.track('click_register');
     }
     publicRequest('regOrLogin', 'POST', {
-      ib_pid: $.cookie('ib_pid') || null,
-      invite_status: $.cookie('invite_status') || null,
+      ib_pid: oReg.search_arr.ib_pid || $.cookie('ib_pid') || null,
+      invite_status: oReg.search_arr.invite_status || $.cookie('invite_status') || null,
       account: $("#email").val(),
       account_type: 2,
       world_code: $("#country").val(),

@@ -6,9 +6,9 @@
         .module('fullstackApp')
         .controller('AccountLoginController', AccountLoginController);
 
-    AccountLoginController.$inject = ['$scope', '$interval', '$timeout', '$rootScope', '$state', 'account', 'validator', '$cookies', 'lang', '$modal', '$layer'];
+    AccountLoginController.$inject = ['$scope', '$interval', '$timeout', '$rootScope', '$state', 'account', 'validator', '$cookies', 'lang', '$modal', '$layer', 'fun'];
 
-    function AccountLoginController($scope, $interval, $timeout, $rootScope, $state, account, validator, $cookies, lang, $modal, $layer) {
+    function AccountLoginController($scope, $interval, $timeout, $rootScope, $state, account, validator, $cookies, lang, $modal, $layer, fun) {
         $scope.toGtagEvent('open_login_web');
         $scope.loginType = 'pass';  // 登录方式 code ->验证码登录，pass ->密码登录
         $scope.loginStep2 = 1;      // 密码登录进行到哪一步
@@ -178,11 +178,11 @@
             //     layer.msg(lang.text("actLogin19"));       //请填写完整信息
             //     return;
             // }
-            
+            var search_arr = fun.getSearch();
             var msg;
             var para = {
-                ib_pid: $cookies['ib_pid'] || null,  // 代理推广
-                invite_status: $cookies['invite_status'] || null,
+                ib_pid: search_arr.ib_pid || $cookies['ib_pid'] || null,  // 代理推广
+                invite_status: search_arr.invite_status || $cookies['invite_status'] || null,
             };
             para.remember = $scope.rememberLoginStatus ? 1 : 0;
             // 验证码登录

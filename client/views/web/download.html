@@ -45,6 +45,9 @@
                                     <p class="mg-lf-20"> </p>
                                     <div class="text-center">
                                         <div class="code global">
+
+
+
                                             <div class="img_box">
                                                 <img class="mg-bt-10" src="/images/web/download_m_blank_global_20191022.png"
                                                     alt="" draggable=false>
@@ -56,6 +59,9 @@
                                                 <span><%= lang.text('mRegister12')%></span>
                                             </div>
                                         </div>
+
+
+
                                         <p><%= lang.text('downloadApp.tip5')%></p>
                                         <p><%= lang.text('downloadApp.tip6')%></p>
                                     </div>
@@ -111,71 +117,80 @@
                                 <img src="/white_label/bd/download/logo.png" alt="tigeriWit">
                             </div>
                             <h3 class="title">
-                                链接全球金融市场
+                                <%= lang.text('downloadApp.tip15')%>
                             </h3>
-                            <p>人人都是交易高手 你准备好了吗？</p>
+                            <p><%= lang.text('downloadApp.tip16')%></p>
                         </div>
                         <div class="index_download__left-bottom">
-                            <h4>灵活满足用户对风险控制、资金管理的需求</h4>
-                            <p>使用一个10000美金的体验金账户，即可零风险参与市场实时交易。开设一个真实账户，最多可使用七个子账户进行自主交易和复制跟单交易。</p>
-                            <button class="tw-btn tw-btn-sm130 tw-btn-capsule-gradient">
-                                立即注册
-                            </button>
+                            <h4><%= lang.text("newhome_43")%></h4>
+                            <p><%= lang.text("newhome_44")%><%= lang.text("newhome_45")%></p>
+                            <a href="/space/#/account/register" class="tw-btn tw-btn-sm130 tw-btn-capsule-gradient">
+                                <%= lang.text("newhome_46")%>
+                            </a>
                         </div>
                     </div>
                     <div class="index_download__right" ng-cloak>
                         <div class="index_download__right-top">
                             <ul class="title space-between">
-                                <li ng-click="clientClick(0)" ng-class="{active: client == 0}">安卓客户端<span></span></li>
-                                <li ng-click="clientClick(1)" ng-class="{active: client == 1}">iOS客户端<span></span></li>
+                                <li ng-click="clientClick(0)" ng-class="{active: client == 0}">
+                                    <%= lang.text('downloadApp.android')%><span></span></li>
+                                <li ng-click="clientClick(1)" ng-class="{active: client == 1}">
+                                    <%= lang.text('downloadApp.ios')%><span></span></li>
                             </ul>
                             <div class="qrcode space-between">
                                 <div>
-                                    <img class="qrcode-img" id="qrcode-img__ios__global" system="global" platform="ios" ng-show="client == 1">
-                                    <img class="qrcode-img" id="qrcode-img__android__global" system="global" platform="android" ng-show="client == 0">
-                                        <!-- <img src="/images/web/download_m_blank_cn_20191022.png" alt=""> -->
-                                    <p>全球应用商店下载</p>
+                                    <img class="qrcode-img" id="qrcode-img__ios__global" system="global" platform="ios"
+                                        ng-show="client == 1">
+                                    <img class="qrcode-img" id="qrcode-img__android__global" system="global"
+                                        platform="android" ng-show="client == 0">
+                                    <p><%= lang.text('downloadApp.global')%></p>
                                 </div>
                                 <div>
-                                    <img class="qrcode-img" id="qrcode-img__ios__cn" system="cn" platform="ios" ng-show="client == 1">
-                                    <img class="qrcode-img" id="qrcode-img__android__cn" system="cn" platform="android" ng-show="client == 0">
-                                    <!-- <div class="qrcode-img">
-                                        <img src="/images/web/download_m_blank_cn_20191022.png" alt="">
-                                    </div> -->
-                                    <p>地区应用商店下载</p>
+                                    <img class="qrcode-img" id="qrcode-img__ios__cn" system="cn" platform="ios"
+                                        ng-show="client == 1">
+                                    <img class="qrcode-img" id="qrcode-img__android__cn" system="cn" platform="android"
+                                        ng-show="client == 0">
+                                    <p><%= lang.text('downloadApp.cn')%></p>
                                 </div>
                             </div>
-                            <p>扫码轻松赚收益 请使用手机浏览器扫描功能</p>
+                            <p><%= lang.text('downloadApp.tip5')%></p>
                         </div>
-                        <p>为了给您提供更优质的服务 推荐您使用全球应用商店下载</p>
+                        <%if (lang.areaId != 1) {%>
+                        <p><%= lang.text('downloadApp.tip6')%></p>
+                        <%} else {%>
+                        <p><%= lang.text('downloadApp.tip7')%></p>
+                        <%}%>
                         <ul class="index_download__right-bottom space-between" ng-show="client == 1">
                             <li>
                                 <div>
                                     <img src="/white_label/bd/download/ios.png" alt="">
                                 </div>
 
-                                <a href="/m/blank?system=global&platform=ios" class="tw-btn tw-btn-sm130 tw-btn-capsule-gradient-black">全球应用</a>
-                            </li>
-                            <li>
-                                <div>
-                                    <img src="/white_label/bd/download/ios.png" alt="">
-                                </div>
-                                <a href="/m/blank?system=cn&platform=ios" class="tw-btn tw-btn-sm130 tw-btn-capsule-gradient-black">地区应用</a>
-                            </li>
+                                <a href="/m/blank?system=global&platform=ios" class="tw-btn tw-btn-sm130 tw-btn-capsule-gradient-black"><%= lang.text('downloadApp.globaliOS')%></a>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="/white_label/bd/download/ios.png" alt="">
+                            </div>
+                            <a href="/m/blank?system=cn&platform=ios"
+                                class="tw-btn tw-btn-sm130 tw-btn-capsule-gradient-black"><%= lang.text('downloadApp.cniOS')%></a>
+                        </li>
                         </ul>
                         <ul class="index_download__right-bottom space-between" ng-show="client == 0">
                             <li>
                                 <div>
-                                    <img src="/white_label/bd/download/android.png" alt="">
+                                    <img src="/white_label/bd/download/google.png" alt="">
                                 </div>
 
-                                <a href="/m/blank?system=global&platform=android" class="tw-btn tw-btn-sm130 tw-btn-capsule-gradient-black">全球应用</a>
+                                <a href="/m/blank?system=global&platform=android"
+                                    class="tw-btn tw-btn-sm130 tw-btn-capsule-gradient-black"><%= lang.text('downloadApp.globalAndroid')%></a>
                             </li>
                             <li>
                                 <div>
                                     <img src="/white_label/bd/download/android.png" alt="">
                                 </div>
-                                <a href="/m/blank?system=cn&platform=android" class="tw-btn tw-btn-sm130 tw-btn-capsule-gradient-black">地区应用</a>
+                                <a href="/m/blank?system=cn&platform=android"
+                                    class="tw-btn tw-btn-sm130 tw-btn-capsule-gradient-black"><%= lang.text('downloadApp.cnAndroid')%></a>
                             </li>
                         </ul>
                     </div>

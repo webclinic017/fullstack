@@ -16,6 +16,25 @@ if(urlSearch.world_code == 'pt-br'){
     activityId = 6;
     rewardId = 6;
 }
+
+// 渲染二维码
+function qrcode(dom) {
+    QrCodeWithLogo.toImage({
+        image: document.getElementById(dom), // 换成你的img节点
+        content: location.host + '/m/blank?system=global',
+        width: 150,
+        nodeQrCodeOptions: {
+            margin: 1
+        },
+        logo: {
+            src: '/images/logo@2x.png',
+            radius: 8,
+            logoSize: 0.22
+        }
+    })
+}
+qrcode('qrcode-img');
+qrcode('qrcode-img1');
 // 获取当前状态
 function checkReward () {
     if($.cookie("token")){

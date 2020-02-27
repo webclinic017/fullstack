@@ -426,8 +426,8 @@
                 }
                 var params = {
                     action: oReg.search_arr.action || undefined,
-                    ib_pid: $.cookie('ib_pid') || null,
-                    invite_status: $.cookie('invite_status') || null,
+                    ib_pid: oReg.search_arr.ib_pid || $.cookie('ib_pid') || null,
+                    invite_status: oReg.search_arr.invite_status || $.cookie('invite_status') || null,
                     account: $("#telephone").val() || null,
                     account_type: 1,
                     phone_code: areaCode || '86',

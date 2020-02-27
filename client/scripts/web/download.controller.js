@@ -9,15 +9,10 @@
     WebDownloadController.$inject = ['$scope', '$location', 'invite'];
 
     function WebDownloadController($scope, $location, invite) {
-        $scope.androidLiveImg = true;
-        if ($location.host() === 'globaldemo.tigerwit.com' || $location.host() === 'w.dev.tigerwit.com') {
-            $scope.androidLiveImg = false;
-        }
-
         // 显示二维码
         function qrcode(system, platform) {
             QrCodeWithLogo.toImage({
-                image: document.getElementById('qrcode-img__' + platform + '__' + system), // 换成你的canvas节点
+                image: document.getElementById('qrcode-img__' + platform + '__' + system), // 换成你的img节点
                 content: $location.host() + '/m/blank?system=' + system + '&platform=' + platform,
                 width: 180,
                 nodeQrCodeOptions: {

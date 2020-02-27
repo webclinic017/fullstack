@@ -748,6 +748,11 @@
             }
             $scope.idType = fIdType;
         }
+        $scope.$watch('personal.region.world_code', function (newVal, oldVal) {
+            if (newVal) {
+                filterIdType();
+            }
+        })
         $scope.$watch('personal.updatePapers', function (newVal, oldVal) {
             if (JSON.stringify(newVal) != "{}") {
                 // 中国与越南姓与名是连在一起的
@@ -766,10 +771,11 @@
                         $scope.nameDisabled.first = newVal.real_name;
                     }
                 }
-                $scope.realnameInfo.id_type.key = $scope.idType[newVal.idcard_type].key;
-                $scope.realnameInfo.id_type.value = $scope.idType[newVal.idcard_type].value;
-                $scope.realnameInfo.id_num = newVal.id_no;
-                filterIdType();
+                if (typeof newVal.idcard_type === 'number') {
+                    $scope.realnameInfo.id_type.key = $scope.idType[newVal.idcard_type].key;
+                    $scope.realnameInfo.id_type.value = $scope.idType[newVal.idcard_type].value;
+                    $scope.realnameInfo.id_num = newVal.id_no;
+                }
             }
         }, true);
         $scope.frontErr = {

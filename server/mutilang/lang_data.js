@@ -12290,6 +12290,86 @@ module.exports = {
         "ar": "فيما يتعلق بالتداول بنسخ الصفقات، لا يجوز لصاحب الحساب الإسلامي إتباع حسابات الأساتذة باستثناء حسابات الأساتذة التي تعمل تحت هيكل حسابات TigerWit الإسلامية."
     },
     "downloadApp": {
+        "android": {
+            "zh": "安卓客户端",
+            "en": "Android",
+            "vi": "Android",
+            "zh-Hant": "安卓客戶端",
+            "id": "Android",
+            "es": "Android",
+            "pt-BR": "Android",
+            "ar": "عميل أندرويد"
+        },
+        "ios": {
+            "zh": "iOS客户端",
+            "en": "iOS",
+            "vi": " iOS",
+            "zh-Hant": "iOS客戶端",
+            "id": "iOS",
+            "es": "iOS",
+            "pt-BR": "iOS",
+            "ar": "عميل IOS"
+        },
+        "global": {
+            "zh": "全球应用商店下载",
+            "en": "Global APP Store Download",
+            "vi": "Tải về trên APP Store Toàn Cầu",
+            "zh-Hant": "全球應用商店下載",
+            "id": "Unduh App Store Dunia",
+            "es": "Descargas de la App Store Global",
+            "pt-BR": "Downloads Globais da App Store",
+            "ar": "تحميل متجر التطبيقات العالمية"
+        },
+        "cn": {
+            "zh": "地区应用商店下载",
+            "en": "Regional APP Store Download",
+            "vi": "Tải về trên APP Store theo Khu Vực",
+            "zh-Hant": "地區應用商店下載",
+            "id": "Unduh App Store Regional",
+            "es": "Descargas de la App Store Regional ",
+            "pt-BR": "Downloads Regional da App Store",
+            "ar": "تحميل متجر التطبيقات الإقليمي "
+        },
+        "globaliOS": {
+            "zh": "全球应用",
+            "en": "全球应用",
+            "vi": "全球应用",
+            "zh-Hant": "全球应用",
+            "id": "全球应用",
+            "es": "全球应用",
+            "pt-BR": "全球应用",
+            "ar": "全球应用"
+        },
+        "cniOS": {
+            "zh": "地区应用",
+            "en": "地区应用",
+            "vi": "地区应用",
+            "zh-Hant": "地区应用",
+            "id": "地区应用",
+            "es": "地区应用",
+            "pt-BR": "地区应用",
+            "ar": "地区应用"
+        },
+        "globalAndroid": {
+            "zh": "Google play 下载",
+            "en": "Google Play download",
+            "vi": "Tải về trên Google Play",
+            "zh-Hant": "Google play 下載",
+            "id": "Unduh di Google Play",
+            "es": "Descargas de Google Play",
+            "pt-BR": "Downloads de Google Play",
+            "ar": "تحميل جوجل بلاي"
+        },
+        "cnAndroid": {
+            "zh": "Android下载",
+            "en": "Android download",
+            "vi": "Tải về trên Android",
+            "zh-Hant": "Android下載",
+            "id": "Unduh Android",
+            "es": "Descargas de Android ",
+            "pt-BR": "Downloads de Android",
+            "ar": "تحميل أندرويد"
+        },
         "title": {
             "zh": "下载APP",
             "en": "Download APP",
@@ -12341,40 +12421,50 @@ module.exports = {
             "ar": "يدعم Apple iOS7.0 وأعلى"
         },
         "tip5": {
-            "zh": "扫码轻松赚收益",
+            "zh": "扫码轻松赚收益 请使用手机浏览器扫描功能",
             "en": "Scan QR code and take profit easily",
             "vi": "Quét mã QR và nhận lợi nhuận dễ dàng",
-            "zh-Hant": "掃碼輕松賺收益",
+            "zh-Hant": "掃碼輕松賺收益 請使用手機瀏覽器掃描功能",
             "id": "Pindai kode QR dan hasilkan uang dengan mudah",
             "es": "Escanear código QR y obtener beneficios",
             "pt-BR": "Escanear código QR e ganhar lucro fácil",
             "ar": "امسح الرمز ضوئيًا واستمتع بجني الأرباح بسهولة"
         },
         "tip6": {
-            "zh": "请使用手机浏览器扫描功能",
-            "en": "Please use the mobile browser scan function",
-            "vi": "Vui lòng sử dụng chức năng quét trình duyệt di động",
-            "zh-Hant": "請使用手機瀏覽器掃描功能",
-            "id": "Mohon gunakan pemindai browser seluler",
-            "es": "Por favor, emplee la función escaner del navegador del móvil ",
-            "pt-BR": "Por favor, use a função do navegador móvel",
-            "ar": "يرجى استخدام وظيفة المسح الضوئي في متصفح الهاتف المحمول"
+            "zh": "为了给您提供更优质的服务，我们推荐您使用全球应用商店下载",
+            "en": "In order to provide you with better service,we recomment that you use the Global App Store to download",
+            "vi": "Để cung cấp cho bạn dịch vụ tốt hơn, chúng tôi khuyến nghị bạn sử dụng App Store Global để tải về",
+            "zh-Hant": "為了給您提供更優質的服務，我們推薦您使用全球應用商店下載",
+            "id": "Untuk mendapatkan layanan terbaik, kami merekomendasikan anda untuk mengunduh di App Store Dunia.",
+            "es": "Para brindarle un mejor servicio, le recomendamos que utilice la App Store Global para realizar descargas.",
+            "pt-BR": "Para oferecer um melhor serviço, recomendamos o uso da Global App Store para fazer o download.",
+            "ar": "لتزويدك بخدمة أفضل ، نوصي باستخدامك متجر التطبيقات العالمي للتحميل"
+        },
+        "tip7": {
+            "zh": "为了给您提供更优质的服务，推荐您使用区域应用商店下载",
+            "en": "In order to provide you with better service,we recomment that you use the Regional App Store to download",
+            "vi": "Để cung cấp cho bạn dịch vụ tốt hơn, chúng tôi khuyến nghị bạn sử dụng App Store Global để tải về",
+            "zh-Hant": "為了給您提供更優質的服務，推薦您使用區域應用商店下載",
+            "id": "Untuk mendapatkan layanan terbaik, kami merekomendasikan anda untuk mengunduh di App Store Regional.",
+            "es": "Para brindarle un mejor servicio, le recomendamos que utilice la App Store Regional para realizar descargas.",
+            "pt-BR": "Para oferecer um melhor serviço, recomendamos o uso da Regional App Store para fazer o download.",
+            "ar": "لتوفير خدمة أفضل لك ، نوصيك باستخدام تطبيق متجر التطبيقات الإقليمي للتحميل"
         },
         "tip15": {
-            "zh": "TigerWit APP 链接全球金融市场",
-            "en": "TigerWit APP Link to global financial markets",
-            "vi": "TigerWit APP Liên kết với các thị trường tài chính toàn cầu",
-            "zh-Hant": "TigerWit APP 鏈接全球金融市場",
-            "id": "APP TigerWit menghubungkan anda ke pasar keuangan global",
-            "es": "TigerWit APP Su ventana a los mercados financieros globales",
-            "pt-BR": "Link do APP da TigerWit para mercados financeiros globais",
-            "ar": "رابط تطبيق TigerWit للأسواق المالية العالمية"
+            "zh": "链接全球金融市场",
+            "en": "Linking global financial markets",
+            "vi": "Liên kết với các thị trường tài chính toàn cầu",
+            "zh-Hant": "鏈接全球金融市場",
+            "id": "Hubungkan ke pasar keuangan dunia",
+            "es": "Vinculación de los mercados financieros mundiales",
+            "pt-BR": "Vinculando mercados financeiros globais",
+            "ar": "ربط الأسواق المالية العالمية"
         },
         "tip16": {
-            "zh": "人人都是投资高手—你准备好了吗？",
+            "zh": "人人都是交易高手 你准备好了吗？",
             "en": "Trade like a master—Are you ready for it?",
             "vi": "Giao dịch như một bậc thầy - Bạn đã sẵn sàng chưa?",
-            "zh-Hant": "人人都是投資高手—妳準備好了嗎？",
+            "zh-Hant": "人人都是交易高手 妳準備好了嗎？",
             "id": "Trading layaknya seorang Master - Anda sudah siap?",
             "es": "Opere como un master—¿Está usted listo?",
             "pt-BR": "Negociar como um mestre - Você está pronto para isso?",

@@ -5,17 +5,18 @@
     angular.module('fullstackApp')
         .controller('CenterHomeController', CenterHomeController);
 
-    CenterHomeController.$inject = ['$rootScope','$scope', '$location', '$interval', '$state', 'account', 'invite', '$timeout', 'config', 'redbag', 'trader', '$modal', '$cookies'];
+    CenterHomeController.$inject = ['$rootScope','$scope', '$location', '$interval', '$state', 'account', 'invite', '$timeout', 'config', 'redbag', 'trader', '$modal', '$cookies', 'fun'];
 
     /**
      * @name CenterHomeController
      * @desc
      */
-    function CenterHomeController($rootScope,$scope, $location, $interval, $state, account, invite, $timeout, config, redbag, trader, $modal, $cookies) {
+    function CenterHomeController($rootScope,$scope, $location, $interval, $state, account, invite, $timeout, config, redbag, trader, $modal, $cookies, fun) {
         var summaryId, competitionListId;
+        var search_arr = fun.getSearch();
         $scope.cookiesParams = {
-            ib_pid: $cookies['ib_pid'],
-            invite_status: $cookies['invite_status']
+            ib_pid: search_arr.ib_pid || $cookies['ib_pid'],
+            invite_status: search_arr.invite_status || $cookies['invite_status']
         }
         $scope.$on('$destroy',function(){  
             $interval.cancel(summaryId);  

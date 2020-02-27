@@ -6,9 +6,9 @@
         .module('fullstackApp')
         .controller('AccountRegisterController', AccountRegisterController);
 
-    AccountRegisterController.$inject = ['$scope', '$interval', '$timeout', '$window', '$state', 'account', 'validator', '$cookies', 'lang', 'invite', '$layer'];
+    AccountRegisterController.$inject = ['$scope', '$interval', '$timeout', '$window', '$state', 'account', 'validator', '$cookies', 'lang', 'invite', '$layer', 'fun'];
 
-    function AccountRegisterController($scope, $interval, $timeout, $window, $state, account, validator, $cookies, lang, invite, $layer) {
+    function AccountRegisterController($scope, $interval, $timeout, $window, $state, account, validator, $cookies, lang, invite, $layer, fun) {
         $scope.toGtagEvent('open_register_page_web');
         $scope.registerStep1 = 1;      // 验证码注册进行到哪一步
         $scope.registerStep3 = 1;      // 2邮箱验证码注册1手机验证码注册
@@ -160,6 +160,7 @@
             //     layer.msg(lang.text("actLogin19"));       //请填写完整信息
             //     return;
             // }
+            var search_arr = fun.getSearch();
             var msg;
             var para = {
                 login_type: 2,
@@ -168,8 +169,8 @@
                 unit: $state.params.unit,
                 key: $state.params.key,
                 world_code: $scope.account.country.value,
-                ib_pid: $cookies['ib_pid'] || null,  // 代理推广
-                invite_status: $cookies['invite_status'] || null,
+                ib_pid: search_arr.ib_pid || $cookies['ib_pid'] || null,  // 代理推广
+                invite_status: search_arr.invite_status || $cookies['invite_status'] || null,
             };
             if($scope.registerStep3 == '2'){
                 // 邮箱注册
