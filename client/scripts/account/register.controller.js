@@ -170,7 +170,7 @@
                 key: $state.params.key,
                 world_code: $scope.account.country.value,
                 ib_pid: search_arr.ib_pid || $cookies['ib_pid'] || null,  // 代理推广
-                invite_status: search_arr.invite_status || $cookies['invite_status'] || null,
+                invite_status: $cookies['invite_status'] || null,
             };
             if($scope.registerStep3 == '2'){
                 // 邮箱注册

@@ -16,7 +16,7 @@
         var search_arr = fun.getSearch();
         $scope.cookiesParams = {
             ib_pid: search_arr.ib_pid || $cookies['ib_pid'],
-            invite_status: search_arr.invite_status || $cookies['invite_status']
+            invite_status: $cookies['invite_status']
         }
         $scope.$on('$destroy',function(){  
             $interval.cancel(summaryId);  
