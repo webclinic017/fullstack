@@ -108,6 +108,11 @@
     function setGtagUserId(userId) {
         console.log('国内不需要google Analytics统计', userId)
     }
+
+    function toGtagEvent(action) {
+        console.log('国内不需要google Analytics统计')
+        console.log('国内不需要facebook统计')
+    };
 </script>
 <%if (lang.areaId != 1) {%>
 <!-- Facebook Pixel Code -->
@@ -146,7 +151,7 @@
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
+    // 设置用户名
     function setGtagUserId(userId) {
         gtag('config', 'UA-142852435-1', {
             'user_id': userId
@@ -158,6 +163,18 @@
     } else {
         gtag('config', 'UA-142852435-1');
     }
+    // 传递事件
+    function toGtagEvent(action) {
+        gtag('event', action, {
+            'event_category': 'action',
+            'event_label': 'catalogory'
+        });
+        // goog_report_conversion(action)
+
+        // Add this to a button's onclick handler
+        // FB.AppEvents.logEvent(action);
+        fbq('trackCustom', action)
+    };
 </script>
 <!-- facebook事件埋点 https://developers.facebook.com/docs/app-events/getting-started-app-events-web -->
 <!-- <script>
