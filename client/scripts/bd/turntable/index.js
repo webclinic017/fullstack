@@ -27,7 +27,7 @@ function qrcode(dom) {
             margin: 1
         },
         logo: {
-            src: '/images/logo@2x.png',
+            src: './white_label/logo@2x.png',
             radius: 8,
             logoSize: 0.22
         }
