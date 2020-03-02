@@ -12332,23 +12332,23 @@ module.exports = {
         },
         "globaliOS": {
             "zh": "全球应用",
-            "en": "全球应用",
-            "vi": "全球应用",
-            "zh-Hant": "全球应用",
-            "id": "全球应用",
-            "es": "全球应用",
-            "pt-BR": "全球应用",
-            "ar": "全球应用"
+            "en": "Global APP",
+            "vi": "Ứng dụng toàn cầu",
+            "zh-Hant": "全球應用",
+            "id": "Global APP",
+            "es": "APP global",
+            "pt-BR": "APP global",
+            "ar": "التطبيق العالمي"
         },
         "cniOS": {
             "zh": "地区应用",
-            "en": "地区应用",
-            "vi": "地区应用",
-            "zh-Hant": "地区应用",
-            "id": "地区应用",
-            "es": "地区应用",
-            "pt-BR": "地区应用",
-            "ar": "地区应用"
+            "en": "Regional APP",
+            "vi": "Ứng dụng khu vực",
+            "zh-Hant": "地區應用",
+            "id": "Regional APP",
+            "es": "APP regional",
+            "pt-BR": "APP regional",
+            "ar": "التطبيق الإقليمي"
         },
         "globalAndroid": {
             "zh": "Google play 下载",
@@ -12422,16 +12422,16 @@ module.exports = {
         },
         "tip5": {
             "zh": "扫码轻松赚收益 请使用手机浏览器扫描功能",
-            "en": "Scan QR code and take profit easily",
-            "vi": "Quét mã QR và nhận lợi nhuận dễ dàng",
+            "en": "Scan QR code and take profit easily, Please use the mobile browser scan function",
+            "vi": "Quét mã QR và nhận lợi nhuận dễ dàng, Vui lòng sử dụng chức năng quét trình duyệt di động",
             "zh-Hant": "掃碼輕松賺收益 請使用手機瀏覽器掃描功能",
-            "id": "Pindai kode QR dan hasilkan uang dengan mudah",
-            "es": "Escanear código QR y obtener beneficios",
-            "pt-BR": "Escanear código QR e ganhar lucro fácil",
-            "ar": "امسح الرمز ضوئيًا واستمتع بجني الأرباح بسهولة"
+            "id": "Pindai kode QR dan hasilkan uang dengan mudah, Mohon gunakan pemindai browser seluler",
+            "es": "Escanear código QR y obtener beneficios, Por favor, emplee la función escaner del navegador del móvil",
+            "pt-BR": "Escanear código QR e ganhar lucro fácil, Por favor, use a função do navegador móvel",
+            "ar": "يرجى استخدام وظيفة المسح الضوئي في متصفح الهاتف المحمول  امسح الرمز ضوئيًا واستمتع بجني الأرباح بسهولة"
         },
         "tip6": {
-            "zh": "为了给您提供更优质的服务，我们推荐您使用全球应用商店下载",
+            "zh": "为了给您提供更优质的服务，推荐您使用区域应用商店下载",
             "en": "In order to provide you with better service,we recomment that you use the Global App Store to download",
             "vi": "Để cung cấp cho bạn dịch vụ tốt hơn, chúng tôi khuyến nghị bạn sử dụng App Store Global để tải về",
             "zh-Hant": "為了給您提供更優質的服務，我們推薦您使用全球應用商店下載",
