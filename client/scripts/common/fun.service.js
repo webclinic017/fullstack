@@ -10,9 +10,12 @@
 
         var fun = {
             /*获取Url查询字段 返回Object*/
-            getSearch: function() {
+            getSearch: function(type) {
                 // console.log($location.search())
                 var url = location.search || location.href.slice(location.href.indexOf('?'));
+                if(type === 'string'){
+                    return url;
+                }
                 /*获取url中"?"符后的字串*/
                 var theRequest = new Object();
                 if (url.indexOf("?") != -1) {

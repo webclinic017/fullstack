@@ -144,6 +144,24 @@ $(document).ready(function () {
                 key: lang.text('third.third_username13'),
                 value: 5
             }
+        ],
+        hmt: [
+            {
+                key: lang.text('third.third_username10'),
+                value: 1
+            },
+            {
+                key: lang.text('third.third_username8'),
+                value: 2
+            },
+            {
+                key: lang.text('third.third_username11'),
+                value: 3
+            },
+            {
+                key: lang.text('third.third_username13'),
+                value: 5
+            }
         ]
     };
     // 请求当前用户认证到哪一步
@@ -954,9 +972,9 @@ $(document).ready(function () {
             needTwo = false;
         }
         var firstName, lastName;
-        if(cardCountry === 'CN' || cardCountry === 'VN'){
+        if (cardCountry === 'CN' || cardCountry === 'VN') {
             firstName = $(ele.identityRealname).val()
-        }else{
+        } else {
             firstName = $(ele.identityFirstname).val()
             lastName = $(ele.identityLastname).val()
         }
@@ -1028,7 +1046,14 @@ $(document).ready(function () {
             var list = addressTypeList;
             var id = 'address_type_list';
         } else {
-            var identityType = type === 'CN' ? 'cn' : 'en';
+            var identityType;
+            if (type === 'CN') {
+                identityType = 'cn'
+            } else if (type === 'MO' || type === 'TW' || type === 'HK') {
+                identityType = 'hmt'
+            } else {
+                identityType = 'en'
+            }
             var list = {
                 data: cardTypeList[identityType]
             };
@@ -1041,11 +1066,11 @@ $(document).ready(function () {
         $("#" + id).html(html);
     }
     // 国家切换时cn填写真实姓名，global显示姓 + 名
-    function realnameSwitch(type){
-        if(type === 'CN' || type === 'VN'){
+    function realnameSwitch(type) {
+        if (type === 'CN' || type === 'VN') {
             $(ele.identity + ' .global').removeClass('active');
             $(ele.identity + ' .cn').addClass('active');
-        }else{
+        } else {
             $(ele.identity + ' .global').addClass('active');
             $(ele.identity + ' .cn').removeClass('active');
         }

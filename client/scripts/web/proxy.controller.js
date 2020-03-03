@@ -12,8 +12,10 @@
         // console.log($scope.getDomain());
         $scope.spread = false;
         // 使用$location会导致跳转问题
+
+        var searchString = fun.getSearch('string');
         var ib_pid = fun.getSearch().ib_pid;
-        var link = '/space/#/account/register';
+        var link = '/space/#/account/register' + searchString;
         if (ib_pid) {
             $scope.spread = true;
             // var d = new Date();
@@ -30,7 +32,7 @@
                     account.setAgentPromotion(ib_pid).then(function (data) {
                         if (!data) return;
                         if (data.is_succ) {
-                            link = '/space/#/center';
+                            link = '/space/#/center' + searchString;
                         }
                     })
                 }

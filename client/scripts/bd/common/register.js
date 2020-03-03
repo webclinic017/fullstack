@@ -280,7 +280,7 @@
                 layer.load(1, { shade: false });
 
                 publicRequest('regOrLogin', 'POST', {
-                    ib_pid: $.cookie('ib_pid') || null,
+                    ib_pid: oReg.search_arr.ib_pid || $.cookie('ib_pid') || null,
                     invite_status: $.cookie('invite_status') || null,
                     account: $("#telephone").val() || null,
                     account_type: 1,
@@ -289,7 +289,7 @@
                     password: password,
                     code: $("#verify_code").val() || null,
                     login_type: 3, // 登录验证方式，1-密码登录，2-验证码登录 3-密码登录有验证码
-                    pid: $.cookie('pid') || null,
+                    pid: oReg.search_arr.pid || $.cookie('pid') || null,
                     unit: oReg.search_arr.unit || null,
                     lp: oReg.search_arr.lp || null,
                     key: oReg.search_arr.key || null,
