@@ -219,6 +219,8 @@
                     $scope.writeCookie({nameKey: 'username', nameValue: data.data.username});
                     $scope.writeCookie({nameKey: 'username_en', nameValue: data.data.username_en});
                     $scope.writeCookie({nameKey: 'world_code', nameValue: para.world_code});
+
+                    setGtagUserId(data.data.user_code)
                     // 新用户
                     $scope.registerStep1 = 2;
                     // $scope.area_id = data.data.area_id;
