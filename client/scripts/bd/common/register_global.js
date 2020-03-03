@@ -131,7 +131,7 @@ $(document).ready(function () {
       sa.track('click_register');
     }
     publicRequest('regOrLogin', 'POST', {
-      ib_pid: $.cookie('ib_pid') || null,
+      ib_pid: oReg.search_arr.ib_pid || $.cookie('ib_pid') || null,
       invite_status: $.cookie('invite_status') || null,
       account: $("#email").val(),
       account_type: 2,
@@ -156,6 +156,8 @@ $(document).ready(function () {
           $.cookie('username', data.data.username, { expires: 30, path: '/', domain: getDomain() });
           $.cookie('username_en', data.data.username_en, { expires: 30, path: '/', domain: getDomain() });
           $.cookie('world_code', $("#country").val(), { expires: 30, path: '/', domain: getDomain() });
+
+          setGtagUserId(data.data.user_code)
           setTimeout(function () {
             window.location.href = '/space/#/center?type=new';
           }, 100);

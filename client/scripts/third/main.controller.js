@@ -52,27 +52,6 @@
          * 2019.10.14
          */
         $scope.toGtagEvent = toGtagEvent;
-        function toGtagEvent(action) {
-            try{
-                gtag('event', action, {
-                    'event_category': 'action',
-                    'event_label': 'catalogory'
-                });
-                // goog_report_conversion(action)
-            }
-            catch(err){
-                console.log('国内不需要google Analytics统计', err)
-            }
-            try{
-                // Add this to a button's onclick handler
-                // FB.AppEvents.logEvent(action);
-                fbq('trackCustom', action)
-            }
-            catch(err){
-                console.log('国内不需要facebook统计', err)
-            }
-                
-        };
 
         /**
          * 友盟统计
@@ -82,9 +61,9 @@
             console.log(category, action);
             _czc.push(["_trackEvent", category, action]);
         };
-        
+
         $scope.writeCookie = writeCookie;
-        function writeCookie (params) {
+        function writeCookie(params) {
             params.expires = params.expires || 30;
             params.path = params.path || '/';
             /**
@@ -96,18 +75,18 @@
              *  */
             var oDate = new Date();
             oDate.setTime(oDate.getTime() + (params.expires * 24 * 60 * 60 * 1000));
-            document.cookie = params.nameKey+'='+params.nameValue+';path='+params.path+';domain='+$scope.getDomain()+';expires='+oDate.toUTCString();
-        } 
+            document.cookie = params.nameKey + '=' + params.nameValue + ';path=' + params.path + ';domain=' + $scope.getDomain() + ';expires=' + oDate.toUTCString();
+        }
 
         function thirdLogout() {
             account.logout().then(function (data) {
                 if (!data) return;
                 if (data.is_succ) {
                     account.hasChecked = false;
-                    writeCookie({nameKey: 'token', nameValue: '', expires: -1, path: '/payment'});
-                    writeCookie({nameKey: 'user_code', nameValue: '', expires: -1, path: '/payment'});
-                    writeCookie({nameKey: 'username', nameValue: '', expires: -1, path: '/payment'});
-                    writeCookie({nameKey: 'username_en', nameValue: '', expires: -1, path: '/payment'});
+                    writeCookie({ nameKey: 'token', nameValue: '', expires: -1, path: '/payment' });
+                    writeCookie({ nameKey: 'user_code', nameValue: '', expires: -1, path: '/payment' });
+                    writeCookie({ nameKey: 'username', nameValue: '', expires: -1, path: '/payment' });
+                    writeCookie({ nameKey: 'username_en', nameValue: '', expires: -1, path: '/payment' });
                     $window.location.href = '/payment/login';
                 }
             });
@@ -171,7 +150,7 @@
         main.switchPage = function (page) {
             main.pageCtrl = page
         }
-        
+
         $scope.$on('global.checkAuthenFlow', function (e, resolve) {
             if (resolve && resolve.ctrlName) {
                 if (checkAuthenFlow()) {

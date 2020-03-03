@@ -106,7 +106,7 @@
                 }
 
                 $scope.clickable.captcha = false;
-                var tmp = account.sendCode($scope.phone.phoneNew, token, 3, '', 1);
+                var tmp = account.sendCode($scope.phone.phoneNew, token, 3, $scope.phone.phone_code.value, 1);
                 tmp.then(function (data) {
                     if (!data) return;
                     if (data.is_succ) {
