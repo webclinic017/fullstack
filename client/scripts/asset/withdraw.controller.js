@@ -745,7 +745,7 @@
                         callback: withdraw
                     });
                 }
-
+                
                 function withdraw() {
                     paramsAsset.mt4_id = noIsWalletId();
                     asset.withdraw(paramsAsset).then(function (data) {
@@ -772,10 +772,9 @@
                                         message: ''
                                     });
                                 }
-
                                 $state.go('space.asset.subpage', {
                                     subpage: 'withdraw',
-                                    account: paramsAsset.mt4_id
+                                    account: paramsAsset.mt4_id || 'wallet'
                                 }, { reload: true });
                             }
                         } else {
