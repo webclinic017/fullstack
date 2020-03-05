@@ -243,6 +243,7 @@
                     if (!data) return;
                     if (data.is_succ) {
                         $.cookie('token', data.data.token, {domain: getDomain()});
+                        setGtagUserId(data.data.user_code)
                         layer.closeAll();
                         layer.open({
                             type: 1,

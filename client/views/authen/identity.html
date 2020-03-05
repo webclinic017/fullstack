@@ -14,8 +14,7 @@
                     <div class="form-control-wrapper">
                         <input class="form-control" name="firstname" type="text" required
                             placeholder="{{ (personal.region.world_code !== 'CN' && personal.region.world_code !== 'VN') ? lang.text('tigerWitID.myAccount.firstName') : lang.text('tigerWitID.myAccount.realName')}}"
-                            ng-model="realnameInfo.firstname"
-                            ng-disabled="nameDisabled.first"
+                            ng-model="realnameInfo.firstname" ng-disabled="nameDisabled.first"
                             ng-class="{'disabled': nameDisabled.first, 'form-control-error': frontErr.firstname.show && realnameForm.firstname.$invalid}"
                             ng-blur="showErr('firstname')" ng-focus="hideErr('firstname')">
                         <div ng-show="frontErr.firstname.show">
@@ -31,8 +30,7 @@
                     <div class="form-control-wrapper">
                         <input class="form-control" name="lastname" type="text"
                             placeholder="{{lang.text('tigerWitID.myAccount.lastName')}}"
-                            ng-model="realnameInfo.lastname"
-                            ng-disabled="nameDisabled.last"
+                            ng-model="realnameInfo.lastname" ng-disabled="nameDisabled.last"
                             ng-class="{'disabled': nameDisabled.last}">
                     </div>
                 </div>
@@ -51,8 +49,7 @@
 
                             <ul class="select__dropdown" twform-select data-bind-model="realnameInfo.id_type">
                                 <li ng-repeat="id_type in idType"
-                                    ng-class="{'selected': id_type.value === realnameInfo.id_type.value}"
-                                    ng-if="(personal.region.world_code === 'CN' && id_type.isCN) || (personal.region.world_code !== 'CN' && id_type.isGlobal)">
+                                    ng-class="{'selected': id_type.value === realnameInfo.id_type.value}">
                                     <span data-value="{{id_type.value}}">{{ id_type.key }}</span>
                                 </li>
                             </ul>

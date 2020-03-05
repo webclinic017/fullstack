@@ -250,6 +250,10 @@ $tw-btn-bg-black-end: #2b323e;
     @include tw-button-variant(#fff, none, none, $tw-btn-radius-square);
     @include tw-button-gradient-horizontal($tw-btn-bg-black-start, $tw-btn-bg-black-end);
 }
+.tw-btn-capsule-gradient-black {
+    @include tw-button-variant(#fff, none, none, $tw-btn-radius-capsule);
+    @include tw-button-gradient-horizontal($tw-btn-bg-black-start, $tw-btn-bg-black-end);
+}
 .tw-btn-square-bordered {
     @include tw-button-variant($tw-btn-color, $tw-btn-border, $tw-btn-border-hover, $tw-btn-radius-square);
     @include tw-button-color-trans(lighten($tw-btn-color, 30%), $tw-btn-color);
