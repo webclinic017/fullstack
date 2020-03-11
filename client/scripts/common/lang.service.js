@@ -8,7 +8,7 @@
 
     function lang(langData, $location, $timeout, $cookies) {
 
-        var language = 'zh';
+        var language = 'en';
         var domain = '.' + location.hostname.split('.').slice(-2).join('.');
         var cookieLang = $cookies.lang; // cookieLang肯定会有值
         if (cookieLang) {
