@@ -723,6 +723,8 @@
                 if (data.is_succ) {
                     $scope.personal.agentAuthStatus = data.data;
                     resolve && resolve.callback()
+                }else{
+                    layer.msg(data.message);
                 }
             });
         })
