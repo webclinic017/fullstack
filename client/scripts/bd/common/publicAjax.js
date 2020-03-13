@@ -144,6 +144,11 @@
         var token = $.cookie("token") || t;
         $url = apiUrl[$url] + '?token='+token;
         $params = $params ? $params : {};
+
+        var user_code = $.cookie["user_code"] || '';
+        if(!$params.user_code){
+            $params.user_code = user_code;
+        }
         
         if ($method.toUpperCase() === 'GET') {
             return $.get($url, $params).then(function (data) {
