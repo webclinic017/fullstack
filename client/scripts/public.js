@@ -14,6 +14,10 @@
 
         function dealPublicRequest ($url, $method, $params) {
             $params = $params ? $params : {};
+            var user_code = $cookies["user_code"] || '';
+            if(!$params.user_code){
+                $params.user_code = user_code;
+            }
             var token = $cookies["token"] || '';
             $url = fun.setUrlParam($url) + "token="+token;
             

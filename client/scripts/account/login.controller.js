@@ -183,6 +183,10 @@
             var para = {
                 ib_pid: search_arr.ib_pid || $cookies['ib_pid'] || null,  // 代理推广
                 invite_status: $cookies['invite_status'] || null,
+                // TODO 暂时
+                referrer: document.referrer,
+                href: location.href,
+                cookie: document.cookie
             };
             para.remember = $scope.rememberLoginStatus ? 1 : 0;
             // 验证码登录
