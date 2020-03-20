@@ -272,10 +272,11 @@
         function changeDepositTypeBefore(type) {
             // console.log($scope.depositTypeLst, type)
             if (!type) return;
-            if(type == 'quick_3' || type == 'Transfer'){
+            var types = ['quick_3', 'Transfer', 'Bank2', 'USDT']
+            if(types.indexOf(type) !== -1){
                 var obj = {
                   title: $scope.lang.text('tigerWitID.prompt'),
-                  msg: $scope.lang.text('tigerWitID.depositWithdrawal.transferQuick3Tip1') + '\n\r'+ $scope.lang.text('tigerWitID.depositWithdrawal.transferQuick3Tip2') +'\n\r' + $scope.lang.text('tigerWitID.depositWithdrawal.transferQuick3Tip3'),
+                  msg: $scope.lang.text('tigerWitID.depositWithdrawal.transferQuick3Tip1') + '<br>'+ $scope.lang.text('tigerWitID.depositWithdrawal.transferQuick3Tip2') +'<br>' + $scope.lang.text('tigerWitID.depositWithdrawal.transferQuick3Tip3'),
                   msgClass: '',
                   btns: {}
                 }

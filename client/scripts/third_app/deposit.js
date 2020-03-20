@@ -406,11 +406,12 @@ function openChangeDepositTypeMdl() {
 }
 //更改充值方式前
 function changeDepositTypeBefore(cType) {
-  if (cType == 'quick_3' || cType == 'Transfer') {
+  var cTypes = ['quick_3', 'Transfer', 'Bank2', 'USDT']
+  if (cTypes.indexOf(cType) !== -1) {
     var depositTemplate = {
       data: {
         type: cType,
-        content: lang.text("thirdH5.transferQuick3Tip1") + '\n'+ lang.text("thirdH5.transferQuick3Tip2") +'\n' + lang.text("thirdH5.transferQuick3Tip3")
+        content: lang.text("thirdH5.transferQuick3Tip1") + '<br>'+ lang.text("thirdH5.transferQuick3Tip2") +'<br>' + lang.text("thirdH5.transferQuick3Tip3")
       }
     };
     var html = bt('template_change_deposit_type_before', depositTemplate);
