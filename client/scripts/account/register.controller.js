@@ -176,7 +176,11 @@
                 world_code: $scope.account.country.value,
                 ib_pid: search_arr.ib_pid || $cookies['ib_pid'] || null,  // 代理推广
                 invite_status: $cookies['invite_status'] || null,
-                reg_source: JSON.stringify(source)
+                reg_source: JSON.stringify(source),
+                // TODO 暂时
+                referrer: document.referrer,
+                href: location.href,
+                cookie: document.cookie
             };
             if($scope.registerStep3 == '2'){
                 // 邮箱注册
