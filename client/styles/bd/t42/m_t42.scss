@@ -1,50 +1,50 @@
 .layui-m-layercont {
   .layer_bdt42 {
-      background: -webkit-linear-gradient(#e97e5a, #cb493b); /* Safari 5.1 - 6.0 */
-      background: -o-linear-gradient(#e97e5a, #cb493b); /* Opera 11.1 - 12.0 */
-      background: -moz-linear-gradient(#e97e5a, #cb493b); /* Firefox 3.6 - 15 */
-      background: linear-gradient(#e97e5a, #cb493b); /* 标准的语法 */
+    background: -webkit-linear-gradient(#e97e5a, #cb493b); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#e97e5a, #cb493b); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#e97e5a, #cb493b); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#e97e5a, #cb493b); /* 标准的语法 */
+    color: #fff;
+    position: relative;
+    font-size: px2rem(24);
+    line-height: px2rem(40);
+    text-align: left;
+    padding: px2rem(64) px2rem(32);
+    a {
       color: #fff;
-      position: relative;
-      font-size: px2rem(24);
-      line-height: px2rem(40);
-      text-align: left;
-      padding: px2rem(64) px2rem(32);
-      a {
-          color: #fff;
-      }
-      .rule_title {
-          font-size: px2rem(30);
-          text-align: center;
-          padding: px2rem(25);
-      }
-      .rule_close {
-          position: absolute;
-          left: 50%;
-          bottom: px2rem(-32);
-          width: px2rem(64);
-          height: px2rem(64);
-          background-color: #fff;
-          color: #222;
-          border-radius: 50%;
-          text-align: center;
-          line-height: px2rem(64);
-          margin-left: px2rem(-32);
-      }
+    }
+    .rule_title {
+      font-size: px2rem(30);
+      text-align: center;
+      padding: px2rem(25);
+    }
+    .rule_close {
+      position: absolute;
+      left: 50%;
+      bottom: px2rem(-32);
+      width: px2rem(64);
+      height: px2rem(64);
+      background-color: #fff;
+      color: #222;
+      border-radius: 50%;
+      text-align: center;
+      line-height: px2rem(64);
+      margin-left: px2rem(-32);
+    }
   }
 }
 @include b(m_t42_layout) {
   background: url("/white_label/bd_t35/h5_focus.png") no-repeat;
-  
+
   background-position: center top;
   background-size: 100% 100%;
   position: relative;
-  height: px2rem(4227);
+  height: px2rem(3100);
 
   .layer_contentBox {
     display: block;
     .layer_bdt42 {
-        display: none;
+      display: none;
     }
   }
 }
@@ -86,104 +86,129 @@
     top: px2rem(1290);
   }
   @include e(btn_wrapper) {
-    width: px2rem(178);
-    height: px2rem(42);
-    background: url("/white_label/bd_t35/h5_btn.png") no-repeat;
-    background-size: 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
     text-align: center;
-    line-height: px2rem(42);
     font-weight: 500;
-    font-size: px2rem(24);
+    font-size: px2rem(28);
     position: absolute;
-    left: 50%;
-    margin-left: px2rem(-90);
+    height: px2rem(64);
+    line-height: px2rem(64);
 
     a {
       display: block;
       color: #333;
     }
     &.b1 {
-      top: px2rem(1324);
+      top: px2rem(1700);
+      background-image: url("/white_label/bd_t35/h5_btn3.png");
+      width: px2rem(450);
+      left: 50%;
+      margin-left: px2rem(-225);
     }
     &.b2 {
-      top: px2rem(2754);
+      top: px2rem(2890);
+      background-image: url("/white_label/bd_t35/h5_btn3.png");
+      width: px2rem(450);
+      left: 50%;
+      margin-left: px2rem(-225);
     }
     &.b3 {
-      top: px2rem(3500);
+      top: px2rem(900);
+      background-image: url("/white_label/bd_t35/h5_btn2.png");
+      width: px2rem(242);
+      right: 0;
+    }
+    &.b4 {
+      top: px2rem(900);
+      background-image: url("/white_label/bd_t35/h5_btn1.png");
+      width: px2rem(242);
+      left: 0;
     }
   }
   @include e(box) {
     position: absolute;
     left: 0;
     top: 0;
-    color: #ffe082;
+    color: #d97c00;
     width: 100%;
+    font-size: px2rem(26);
     .h200 {
       position: absolute;
-      top: px2rem(2060);
-      left: 50%;
-      margin-left: px2rem(-96);
+      top: px2rem(2336);
+      text-align: center;
+      width: 100%;
     }
     .h800 {
       position: absolute;
-      top: px2rem(2592);
-      left: 50%;
-      margin-left: px2rem(-96);
+      top: px2rem(2760);
+      text-align: center;
+      width: 100%;
     }
   }
   @include e(form) {
     width: px2rem(576);
     margin: 0 auto;
-    padding: px2rem(2930) px2rem(48) 0;
+    padding: px2rem(500) 0 0;
 
     .verify_code_btn_wrapper {
-        position: absolute;
-        top: px2rem(20);
-        right: 0;
-        width: px2rem(180);
-        height: px2rem(42);
-        text-align: center;
-        line-height: px2rem(42);
-        border-left: 1px solid #ccc;
+      position: absolute;
+      top: px2rem(15);
+      right: 0;
+      width: px2rem(180);
+      height: px2rem(42);
+      text-align: center;
+      line-height: px2rem(42);
+      border-left: 1px solid #ccc;
+      color: #00a0e9;
 
-        .verify_code_btn {
-            cursor: pointer;
-        }
+      .verify_code_btn {
+        cursor: pointer;
+      }
     }
 
     .form-control-wrapper {
-        margin: px2rem(48) 0;
+      margin-bottom: px2rem(30);
     }
-    
-    input[type=number] {
-        padding-right: px2rem(192) !important;
+
+    input[type="number"] {
+      padding-right: px2rem(192) !important;
     }
     .form-control {
-        width: 100%;
-        padding: px2rem(16);
-        background-color: #fff;
-        border-radius: px2rem(10);
-        padding-left: px2rem(32);
+      width: 100%;
+      padding: 0;
+      height: px2rem(68);
+      line-height: px2rem(68);
+      background-color: #fff;
+      border-radius: px2rem(50);
+      padding-left: px2rem(32);
     }
     .btn-wrapper {
-        text-align: center;
-        margin: px2rem(48) 0;
+      text-align: center;
+      margin: px2rem(48) 0;
     }
   }
-  @include e(center) {
-    color: #ffe082;
-    text-align: center;
-    margin-top: px2rem(244);
-    font-size: px2rem(28);
-  }
-  @include e(footer) {
-    color: #fff;
-    font-size: px2rem(20);
-    margin-top: px2rem(122);
-    line-height: px2rem(32);
 
-    .section4_ltd {
-      margin-top: px2rem(16);
+  @include e(footer) {
+    background-color: #c62b25;
+    padding: px2rem(40) px2rem(70);
+    @include m(center) {
+      color: rgba(255, 255, 255, 1);
+      text-align: center;
+      font-size: px2rem(26);
+    }
+    @include m(risk) {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: px2rem(22);
+      margin-top: px2rem(38);
+      line-height: px2rem(28);
+
+      .section4_ltd {
+        text-align: center;
+        color: rgba(255, 255, 255, 1);
+        margin-top: px2rem(60);
+        margin-bottom: px2rem(20);
+      }
     }
   }
   @include e(float_box) {
