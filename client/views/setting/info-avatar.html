@@ -29,11 +29,11 @@
     <div class="setting_info_zero__avatar mg-tp-40 pd-bt-50">
         <p class="tip">{{lang.text('tigerWitID.settings.onlySupport')}}</p>
         <img ng-src="{{ personal.lgAvatar }}" class="showImg"/>
-        <label for="input" class="setting_info_zero__avatar-file tw-btn-sm tw-btn-capsule-bordered" ng-if="!personal.has_master">
+        <label for="input" class="setting_info_zero__avatar-file tw-btn-sm tw-btn-capsule-bordered" ng-if="!(personal.has_master || personal.master_apply_status)">
             <div tw-upload-file-base64-two data-file-name="selectHeadImg.avatar" ban="ban"></div>
             <div class="select-head">{{lang.text('tigerWitID.settings.choosePhoto')}}</div>
         </label>
-        <div class="text-center mg-bt-30 mg-tp-84" ng-if="!showSubmit" ng-if="!personal.has_master">
+        <div class="text-center mg-bt-30 mg-tp-84" ng-if="!showSubmit" ng-if="!(personal.has_master || personal.master_apply_status)">
             <div ng-show="backErr.system.show">
                 <p class="alert-system">
                     {{ backErr.system.msg }}

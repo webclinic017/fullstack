@@ -12183,6 +12183,16 @@
                         "pt-BR": "Você já é um mestre, não pode modificar a foto do perfil",
                         "ar": "أنت أستاذ بالفعل، لا يمكن تعديل صورة الملف الشخصي"
                     },
+                    "tip10_1": {
+                        "zh": "高手申请审核期间不能修改头像",
+                        "en": "The master’s application is under review, cannot edit image",
+                        "vi": "Đơn đăng kí tài khoản Bậc thầy đang được kiểm tra, bạn không thể chỉnh sửa hình ảnh",
+                        "zh-Hant": "高手申請審核期間不能修改頭像",
+                        "id": "Permintaan menjadi Master sedang ditinjau, tidak dapat merubah gambar",
+                        "es": "La aplicación del maestro está en revisión, no se puede editar la imagen.",
+                        "pt-BR": "O aplicativo do mestre está em revisão, não pode editar a imagem",
+                        "ar": "إن طلب التطبيق لمتداول محترف (أستاذ) قيد المراجعة، ولا يمكن تعديل الصورة."
+                    },
                     "tip11": {
                         "zh": "您已是高手，暂不能修改基本资料",
                         "en": "You already are a master, cannot modify the profile photo",
@@ -12192,6 +12202,16 @@
                         "es": "Ya eres un master, no puedes modificar la foto de perfil.",
                         "pt-BR": "Você já é um mestre, não pode modificar a foto do perfil",
                         "ar": "أنت أستاذ بالفعل، لا يمكن تعديل صورة الملف الشخصي"
+                    },
+                    "tip11_1": {
+                        "zh": "高手申请审核期间不能修改昵称",
+                        "en": "The master's application is under review, cannot edit username",
+                        "vi": "Đơn đăng kí Nhà Giao Dịch chính đang được xem xét, không thể thay đổi tên người dùng.",
+                        "zh-Hant": "高手申請審核期間不能修改暱稱",
+                        "id": "Permohonan Master sedang dalam peninjauan, tidak dapat mengubah nama",
+                        "es": "La solicitud de Master está bajo revisión, no puede ediat nombre usuario",
+                        "pt-BR": "A aplicação para Mestre está sob revisão, não é possível editar o nome de usuário.",
+                        "ar": "طلب الأستاذ قيد المراجعة ، لا يمكن تعديل اسم المستخدم"
                     },
                     "bindNewEmailSucc": {
                         "zh": "新邮箱绑定成功",
