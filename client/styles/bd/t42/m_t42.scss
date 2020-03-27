@@ -116,13 +116,15 @@
     &.b3 {
       top: px2rem(900);
       background-image: url("/white_label/bd_t35/h5_btn2.png");
-      width: px2rem(242);
+      width: 46%;
+      max-width: px2rem(242);
       right: 0;
     }
     &.b4 {
       top: px2rem(900);
       background-image: url("/white_label/bd_t35/h5_btn1.png");
-      width: px2rem(242);
+      width: 46%;
+      max-width: px2rem(242);
       left: 0;
     }
   }
@@ -147,7 +149,7 @@
     }
   }
   @include e(form) {
-    width: px2rem(576);
+    width: 80%; // px2rem(576)
     margin: 0 auto;
     padding: px2rem(500) 0 0;
 
