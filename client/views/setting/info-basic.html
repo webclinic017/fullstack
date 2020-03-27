@@ -120,7 +120,7 @@
                         <div class="select">
                             {{ basicInfo.username_en }}
                         </div>
-                        <div class="edit" ng-click="editName('en')">
+                        <div class="edit" ng-click="editName('en')" ng-if="!personal.has_master">
                             {{lang.text('tigerWitID.edit')}}
                         </div>
                     </div>
