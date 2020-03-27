@@ -10,6 +10,7 @@
     function AssetCardController($scope, config, $state, $modalInstance, validator, account, asset, passedScope, lang) {
         $scope.personal = passedScope.personal;
         $scope.platform = passedScope.platform;
+        // console.log($scope.platform)
         $scope.card = {
             //number: ,         // 卡号
             //bank: ,           // 银行
@@ -194,7 +195,7 @@
                 oParams.platform = $scope.platform;
             }
             if($scope.banks.length){
-                oParams.bank_name = $scope.card.bank.code;
+                oParams.bank_name = $scope.card.bank.name;
             }else{
                 oParams.bank_name = $scope.card.bankOther;
             }
