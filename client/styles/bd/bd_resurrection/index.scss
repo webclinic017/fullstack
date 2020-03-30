@@ -114,6 +114,7 @@
       position: absolute;
       width: 100%;
       top: px2rem(32);
+      padding: 0 px2rem(224);
       display: none;
       &.active {
         display: block;

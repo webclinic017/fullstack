@@ -74,6 +74,7 @@
         $(".lots").html(data.data.lot);
         
       } else {
+        $(".message").html(data.message);
         $(".message").addClass('active');
       }
     });
