@@ -1,0 +1,162 @@
+.bd_resurrection {
+  width: 100%;
+  max-width: px2rem(750);
+  // min-height: px2rem(1334);
+  margin: 0 auto;
+
+  &.en {
+    background: url("/white_label/bd_resurrection/login-bg-en.png") no-repeat;
+    background-size: 100% auto;
+    background-position: top center;
+  }
+  &.cn {
+    background: url("/white_label/bd_resurrection/login-bg-cn.png") no-repeat;
+    background-size: 100% auto;
+    background-position: top center;
+  }
+
+  .bd_resurrection_form_wrapper {
+    padding-top: px2rem(960);
+    margin: 0 px2rem(32);
+    form {
+      padding: 0rem px2rem(32) px2rem(64);
+    }
+    .bd_resurrection_control_wrapper {
+      position: relative;
+      margin-top: px2rem(16);
+      .phone_code_wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: px2rem(96);
+        height: 100%;
+        span {
+          width: 100%;
+          margin: px2rem(16) 0;
+          position: absolute;
+          color: #bfb594;
+          border-right: 2px solid #bfb594;
+          i {
+            font-style: normal;
+          }
+        }
+        select {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+        }
+      }
+      input {
+        width: 100%;
+        padding: px2rem(16) 0;
+        border-bottom: 2px solid #bfb594;
+        background-color: transparent;
+        color: #bfb594;
+        &.phone {
+          padding-left: px2rem(128);
+        }
+      }
+      ::placeholder {
+        color: #bfb594;
+      }
+    }
+    .bd_resurrection_btn {
+      width: 100%;
+      text-align: center;
+      color: #fff;
+      background-color: #b28b23;
+      padding: px2rem(16) 0;
+      margin-top: px2rem(64);
+    }
+  }
+}
+
+.bd_resurrection_detail {
+  width: 100%;
+  max-width: px2rem(750);
+  min-height: px2rem(1120);
+  margin: 0 auto;
+
+  background: url("/white_label/bd_resurrection/page-bg.png") no-repeat;
+  background-size: 100% auto;
+  background-position: top center;
+
+  .bd_resurrection_detail_title {
+    margin: 0;
+    color: #bfb594;
+    text-align: center;
+    padding-top: px2rem(288);
+    font-size: px2rem(26);
+    padding-left: px2rem(16);
+  }
+  .bd_resurrection_detail_redbag {
+    display: none;
+    text-align: center;
+    margin-top: px2rem(32);
+    position: relative;
+    img {
+      width: px2rem(352);
+    }
+    .open {
+      position: absolute;
+      color: #fff;
+      width: 100%;
+      top: px2rem(224);
+      font-size: px2rem(36);
+      span {
+        padding: px2rem(16);
+      }
+    }
+    .message {
+      color: #fff;
+      font-size: px2rem(32);
+      position: absolute;
+      width: 100%;
+      top: px2rem(32);
+      display: none;
+      &.active {
+        display: block;
+      }
+    }
+    .s-message {
+      position: absolute;
+      color: #fff;
+      width: px2rem(320);
+      top: px2rem(48);
+      left: 50%;
+      margin-left: px2rem(-160);
+      p {
+        margin-top: px2rem(9);
+        &.amount {
+          font-size: px2rem(80);
+          line-height: px2rem(96);
+        }
+      }
+    }
+    &.active {
+      display: block;
+    }
+  }
+  .bd_resurrection_detail_tip {
+    color: #bfb594;
+    padding: 0 px2rem(96);
+    font-size: px2rem(25);
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+  .bd_resurrection_detail_rules {
+    color: #bfb594;
+    padding: px2rem(64);
+    font-size: px2rem(25);
+    display: none;
+    p {
+      padding-bottom: px2rem(6);
+    }
+    &.active {
+      display: block;
+    }
+  }
+}

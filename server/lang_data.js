@@ -166,11 +166,14 @@ module.exports = function () {
     // console.log(faq)
     // 邀请好友
     var mInvite = replaceTiger(require('./mutilang/mInvite'))
+    // 复活节活动 只有中英文
+    var resurrection = replaceTiger(require('./mutilang/resurrection'))
 
     return _.merge(
         data,
         lang_data,
         faq,
-        mInvite
+        mInvite,
+        resurrection
     );
 }; 
