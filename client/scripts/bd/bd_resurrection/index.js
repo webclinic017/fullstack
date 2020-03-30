@@ -19,7 +19,7 @@
       layer.closeAll();
       if (!data) return;
       if (data.is_succ) {
-        $.cookie('token', data.data.token , { path: '/'})
+        $.cookie('token', data.data.token , { path: '/', domain: getDomain()})
         location.href = "/bd/resurrection/detail/"+$("#bd_resurrection").attr("data-page-id");
       } else {
         layer.open({
