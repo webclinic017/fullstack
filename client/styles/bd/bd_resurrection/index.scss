@@ -142,7 +142,7 @@
   }
   .bd_resurrection_detail_tip {
     color: #bfb594;
-    padding: 0 px2rem(96);
+    padding: 0 px2rem(144);
     font-size: px2rem(25);
     display: none;
     &.active {
@@ -151,8 +151,8 @@
   }
   .bd_resurrection_detail_rules {
     color: #bfb594;
-    padding: px2rem(64);
-    font-size: px2rem(25);
+    padding: px2rem(96) px2rem(64);
+    font-size: px2rem(22.4);
     display: none;
     p {
       padding-bottom: px2rem(6);

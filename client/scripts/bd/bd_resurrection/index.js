@@ -79,8 +79,5 @@
       }
     });
   });
-  // publicRequest('getRedbags', 'GET', function (data) {
-  //   console.log(data)
-  // })
   
 })();
