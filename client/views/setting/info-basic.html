@@ -80,7 +80,7 @@
                         <div class="select">
                             {{ basicInfo.username }}
                         </div>
-                        <div class="edit" ng-click="editName('cn')" ng-if="!personal.has_master">
+                        <div class="edit" ng-click="editName('cn')" ng-if="!(personal.has_master || personal.master_apply_status)">
                             {{lang.text('tigerWitID.edit')}}
                         </div>
                     </div>
@@ -120,7 +120,7 @@
                         <div class="select">
                             {{ basicInfo.username_en }}
                         </div>
-                        <div class="edit" ng-click="editName('en')">
+                        <div class="edit" ng-click="editName('en')" ng-if="!(personal.has_master || personal.master_apply_status)">
                             {{lang.text('tigerWitID.edit')}}
                         </div>
                     </div>
