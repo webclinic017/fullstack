@@ -208,7 +208,8 @@ function submitDeposit() {
     amount: Number($(eleDeposit.payDepositAmount).val()),
     platform: selectKeyFromType('platform'),
     currency: deoisitCurrency.currency,
-    mt4_id: depositAccount !== 'wallet' ? Number(depositAccount) : undefined
+    mt4_id: depositAccount !== 'wallet' ? Number(depositAccount) : undefined,
+    bank_card_id: selectKeyFromType('need_card') === 1 ? depositBankId : undefined
   }).then(function (data) {
     // console.log(data);
     closeAllMdl();
@@ -304,7 +305,8 @@ $(eleDeposit.paySelectBankBtn).on("tap", function () {
     listType: 'bank_account',
     pageType: 'deposit',
     bankId: depositBankId,
-    notInsertTemp: false
+    notInsertTemp: false,
+    source: 'deposit_type'   // 来源
   });
   return false;
 });
@@ -360,7 +362,7 @@ function setDepositBtnStatus() {
     return;
   }
   //7.转账
-  if (selectKeyFromType('channel_type') === 2 && !depositBankId) {
+  if (selectKeyFromType('need_card') === 1 && !depositBankId) {
     depositBtnStatus = false;
     $(eleDeposit.payDepositBtn).addClass('disabled');
     return;
@@ -522,7 +524,7 @@ function changeDepositType(cType) {
     $(eleDeposit.payDepositAmountWrapperMull).removeClass('active');
   }
   //转账
-  if (selectKeyFromType('channel_type') === 2) {
+  if (selectKeyFromType('need_card') === 1) {
     $(eleDeposit.paySelectBankInfo).addClass('active');
   } else {
     $(eleDeposit.paySelectBankInfo).removeClass('active');
