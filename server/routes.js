@@ -825,7 +825,20 @@ module.exports = function (app) {
             mobile: mobile
         }, req));
     });
-    //
+    app.route('/bd/resurrection/:id').get(function (req, res) {
+        var id = req.params.id;
+        setEnvCf(req, res);
+        res.render('bd/resurrection/index.html', extendPublic({
+            id:id
+        }, req));
+    })
+    app.route('/bd/resurrection/detail/:id').get(function (req, res) {
+        var id = req.params.id;
+        setEnvCf(req, res);
+        res.render('bd/resurrection/detail.html', extendPublic({
+            id:id
+        }, req));
+    })
     app.route('/grupo/creex').get(function (req, res) {
         setEnvCf(req, res);
         if (isMobile(req)) {
