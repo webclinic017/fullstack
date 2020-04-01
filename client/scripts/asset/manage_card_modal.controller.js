@@ -80,7 +80,7 @@
 
                 function getCardList() {
                   $scope.$emit('showLoadingImg');
-                  var param = (params.parentScope.withdraw.accountType === 'third_account') ? {platform: params.parentScope.withdraw.third.third_type} : {};
+                  var param = {platform: getPlatform(params.page, params.parentScope)}
                   return asset.getCardList(param).then(function (data) {
                       $scope.$broadcast('hideLoadingImg');
                       if (!data) {
@@ -97,7 +97,16 @@
             }]
         });
       }
-
+    //   根据条件返回platform
+    function getPlatform(page, parentScope){
+        var platform;
+        if(page == 'withdraw' && parentScope.withdraw.accountType === 'third_account'){
+            platform = parentScope.withdraw.third.third_type; // 是否为第三方账户的银行卡
+        }else if(page == 'deposit' && parentScope.depositTypeLst[parentScope.deposit.type].need_card === 1 && parentScope.depositTypeLst[parentScope.deposit.type].channel_type === 1){
+            platform = parentScope.depositTypeLst[parentScope.deposit.type].platform // 入金通道支持选择银行卡
+        }
+        return platform;
+    }
       // 添加银行卡
       function openCardMdl(page, parentScope) {
         if (parentScope && parentScope.manageCardModalInstance) {
@@ -118,10 +127,11 @@
                     controller: 'AssetCardController',
                     resolve: {
                         passedScope: function () {
+                            // console.log(page, parentScope)
                             return {
                                 personal: $scope.lang.isThird() ? $scope.main : $scope.personal,
-                                card: $scope[page].card,
-                                platform: (page == 'withdraw' && $scope[page].accountType === 'third_account') ? $scope[page].third.third_type : ''  // 是否为第三方的银行卡
+                                card: parentScope && parentScope[page].card,
+                                platform: getPlatform(page, parentScope)
                             };
                         }
                     }

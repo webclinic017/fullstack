@@ -72,7 +72,7 @@
         $scope.selcetCurrency = selcetCurrency;
         // 获取默认银行卡
         $scope.getCard = getCard;
-        getCard();
+        // getCard();
 
         //绑定银行卡后获取银行卡信息
         $rootScope.$on('bindCardSuccess', function () {
@@ -118,7 +118,13 @@
         });
         // 获取银行卡信息
         function getCard() {
-            asset.getCard().then(function (data) {
+            // 支付方式不同银行卡列表不同，所以提前清空
+            $scope.deposit.card = {};
+            if(!($scope.deposit.type && $scope.depositTypeLst[$scope.deposit.type].need_card === 1)){
+                return 
+            }
+            var params = ($scope.depositTypeLst[$scope.deposit.type].channel_type === 1) ? {platform: $scope.depositTypeLst[deposit.type].platform} : {};
+            asset.getCard(params).then(function (data) {
                 if (!data) return;
                 // console.log(data);
                 if (data.is_succ && data.data) {
@@ -134,6 +140,9 @@
                     $scope.deposit.card.country = data.data.country_code;
                     // 判断是否为英文简称
                     $scope.deposit.card.is_short = /^[A-Za-z]/.test(data.data.bank_name);
+
+                    checkInputAmount();
+
                 }
             });
         }
@@ -256,8 +265,8 @@
                 }
                 return;
             }
-            // 转账or网银
-            if (type.channel_type === 2) {
+            // 转账or网银（判断是否需要添加银行卡）need_card兼容channel_type
+            if (type.need_card === 1) {
                 if ($scope.deposit.card.id) {
                     $scope.deposit.submitBtn = true;
                 } else {
@@ -272,10 +281,11 @@
         function changeDepositTypeBefore(type) {
             // console.log($scope.depositTypeLst, type)
             if (!type) return;
-            if(type == 'quick_3' || type == 'Transfer'){
+            var types = ['quick_3', 'Transfer', 'Bank2', 'USDT']
+            if(types.indexOf(type) !== -1){
                 var obj = {
                   title: $scope.lang.text('tigerWitID.prompt'),
-                  msg: $scope.lang.text('tigerWitID.depositWithdrawal.transferQuick3Tip1') + '\n\r'+ $scope.lang.text('tigerWitID.depositWithdrawal.transferQuick3Tip2') +'\n\r' + $scope.lang.text('tigerWitID.depositWithdrawal.transferQuick3Tip3'),
+                  msg: $scope.lang.text('tigerWitID.depositWithdrawal.transferQuick3Tip1') + '<br>'+ $scope.lang.text('tigerWitID.depositWithdrawal.transferQuick3Tip2') +'<br>' + $scope.lang.text('tigerWitID.depositWithdrawal.transferQuick3Tip3'),
                   msgClass: '',
                   btns: {}
                 }
@@ -301,6 +311,7 @@
             checkInvestLimit();
             checkInputAmount();
             checkInvestBank();
+            getCard();
         }
 
 
@@ -447,8 +458,9 @@
                             function submitDeposit() {
                                 var p = $scope.depositTypeLst[$scope.deposit.type].platform || undefined;
                                 var c = $scope.deposit.currency ? $scope.deposit.currency.currency : undefined;
+                                var cardId = $scope.depositTypeLst[$scope.deposit.type].need_card === 1 ? $scope.deposit.card.id : undefined;
                                 var token = $cookies["token"] || '';
-                                asset.deposit(amount, p, c, mt4_id).then(function (data) {
+                                asset.deposit(amount, p, c, mt4_id, cardId).then(function (data) {
                                     $scope.isLoading = false;
                                     if (!data) return;
                                     if (data.is_succ) {

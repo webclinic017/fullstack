@@ -26,6 +26,10 @@
                 $scope.ban = {
                     msg: $scope.lang.text("tigerWitID.settings.tip10")
                 }
+            } else if($scope.personal.master_apply_status){
+                $scope.ban = {
+                    msg: $scope.lang.text("tigerWitID.settings.tip10_1")
+                }
             } else {
                 $scope.ban = undefined
             }

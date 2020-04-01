@@ -26,7 +26,7 @@ setTimeout(function () {
   changePageIndex();
   getTradeAccount();
   getWalletBalance();
-},10);
+}, 10);
 
 $(ele.nav).find('span').on('tap', function () {
   var currentPage = $(this).attr("data-page");
@@ -73,7 +73,7 @@ function selectAccount(cType, cAccount, cName, cTag, cAmount) {
 }
 
 //获取零钱包可用余额
-function getWalletBalance () {
+function getWalletBalance() {
   publicRequest('getThirdWalletBalance', 'GET').then(function (data) {
     // console.log(data);
     if (!data) return;
@@ -83,7 +83,7 @@ function getWalletBalance () {
   });
 }
 //获取交易账户列表
-function getTradeAccount () {
+function getTradeAccount() {
   publicRequest('getThirdTradeAccount', 'GET').then(function (data) {
     // console.log(data);
     if (!data) return;
@@ -91,29 +91,29 @@ function getTradeAccount () {
       tradeAccountLst = data.data;
       var deposit = true;
       var withdraw = true;
-      if(depositAccount || withdrawAccount) {
-        $.each(tradeAccountLst, function(index, value) {
-          if(value.mt4_id == depositAccount) {
+      if (depositAccount || withdrawAccount) {
+        $.each(tradeAccountLst, function (index, value) {
+          if (value.mt4_id == depositAccount) {
             selectAccount('deposit', value.mt4_id, value.account_name, tradeAccountType[value.account_type] || '', value.balance);
             deposit = false;
           }
-          if(value.mt4_id == withdrawAccount) {
+          if (value.mt4_id == withdrawAccount) {
             selectAccount('withdraw', value.mt4_id, value.account_name, tradeAccountType[value.account_type] || '', value.balance);
             withdraw = false;
           }
         })
       }
-     
-      if(deposit) {
+
+      if (deposit) {
         selectAccount('deposit', tradeAccountLst[0].mt4_id, tradeAccountLst[0].account_name, tradeAccountType[tradeAccountLst[0].account_type] || '', tradeAccountLst[0].balance);
       };
-      if(withdraw && pageIndex == '2') {
+      if (withdraw && pageIndex == '2') {
         selectAccount('withdraw', tradeAccountLst[0].mt4_id, tradeAccountLst[0].account_name, tradeAccountType[tradeAccountLst[0].account_type] || '', tradeAccountLst[0].balance);
       }
     }
   });
 }
-function changePageIndex (page) {
+function changePageIndex(page) {
   pageIndex = page || pageIndex;
   $(ele.nav).find('span').removeClass('active');
   $.each($(ele.nav).find('span'), function (index, value) {
@@ -129,21 +129,21 @@ function changePageIndex (page) {
       $(elePage.deposit).addClass('active');
       getDepositPlatform();
       break;
-    case "2": 
+    case "2":
       $(elePage.withdraw).addClass('active');
       getWithdrawPlatform();
       if (page) {
         selectAccount('withdraw', tradeAccountLst[0].mt4_id, tradeAccountLst[0].account_name, tradeAccountType[tradeAccountLst[0].account_type] || '', tradeAccountLst[0].balance);
       }
       break;
-    case "3": 
+    case "3":
       $(elePage.evidence).addClass('active');
       changeEvidencePageIndex();
       break;
   }
 }
 //打开更改充值/提现账号弹窗
-function openChangeAccountMdl (msg) {
+function openChangeAccountMdl(msg) {
   // console.log(msg);
   var depositTemplate = {
     data: {
@@ -155,14 +155,14 @@ function openChangeAccountMdl (msg) {
       lst: tradeAccountLst
     }
   }
-  var html=bt('template_deposit_account',depositTemplate);
+  var html = bt('template_deposit_account', depositTemplate);
   $("#third_app_bottom_template").html(html);
   openBottomMdl();
   $("input").blur();
   return false;
 }
 //获取银行列表
-function getBankLst (params) {
+function getBankLst(params) {
   /**
    * params
    *  listType      列表类型 bank_account、third_account
@@ -172,7 +172,15 @@ function getBankLst (params) {
    *  notInsertTemp 是否加载弹窗 true、false
    *  */
   var listType = params.listType || '';
-  var bankAccountParams = (params.source === 'withdraw_type' ? {platform: thirdThirdType} : null);
+  console.log(selectKeyFromType('need_card'), selectKeyFromType('channel_type'));
+
+  var bankAccountParams;
+  if (params.source === 'withdraw_type') {
+    bankAccountParams = { platform: thirdThirdType } // 是否为第三方账户的银行卡
+  } else if (params.source === 'deposit_type' && selectKeyFromType('need_card') === 1 && selectKeyFromType('channel_type') === 1) {
+    bankAccountParams = { platform: selectKeyFromType('platform') } // 入金通道支持选择银行卡
+  }
+
   var different = {
     'bank_account': {
       id: 'template_withdraw_bank_list',
@@ -181,12 +189,12 @@ function getBankLst (params) {
     // 获取第三方账号列表
     'third_account': {
       id: 'template_withdraw_third_list',
-      params: ['getThirdAccountList', 'GET', {limit: 100}]
+      params: ['getThirdAccountList', 'GET', { limit: 100 }]
     },
     // 获取电汇列表
     'transfer': {
       id: 'template_withdraw_transfer_list',
-      params: ['getThirdBankLst', 'GET', {type: 2}]
+      params: ['getThirdBankLst', 'GET', { type: 2 }]
     }
   }
   // apply将数组转为参数传递
@@ -210,7 +218,7 @@ function getBankLst (params) {
       }
 
       if (params.notInsertTemp) return;
-      var html=bt(different[listType].id, bankLstTemplate);
+      var html = bt(different[listType].id, bankLstTemplate);
       $("#third_app_bottom_template").html(html);
       openBottomMdl();
     } else {
@@ -229,52 +237,52 @@ $(document).on("tap", "#third_app_bottom_template .bank_item", function () {
   var cSource = $(this).attr("data-source");
   var cThirdType = $(this).attr("data-third-type");
   // 第三方id不唯一
-  if(cType === 'third_account'){
-    if(cId === cSelectId && cThirdType === thirdThirdType){
+  if (cType === 'third_account') {
+    if (cId === cSelectId && cThirdType === thirdThirdType) {
       return
     }
-  }else if (cId === cSelectId){
-      return 
+  } else if (cId === cSelectId) {
+    return
   }
   $("#third_app_bottom_template .bank_item").removeClass('active');
   $(this).addClass('active');
   closeAllMdl();
   if (cPageType == 'withdraw') {
-    if(cSource === 'withdraw_type'){
+    if (cSource === 'withdraw_type') {
       thirdThirdWithdrawBankId = cId;
       $(eleWithdraw.payAccountLstBankAdd).empty();
-      $(eleWithdraw.payAccountLstBankAdd).append(lang.text("thirdH5.bankCardNameM") + " <span class='bank-account s-select' data-type='bank_account'><p>"+cName+'('+cNo.substring(cNo.length-4)+')'+"</p></span>")
-    }else{
+      $(eleWithdraw.payAccountLstBankAdd).append(lang.text("thirdH5.bankCardNameM") + " <span class='bank-account s-select' data-type='bank_account'><p>" + cName + '(' + cNo.substring(cNo.length - 4) + ')' + "</p></span>")
+    } else {
       // 清空第三方账户选择的内容
       thirdThirdType = '';
       thirdThirdAccount = '';
       thirdThirdWithdrawBankId = '';
       thirdThirdWithdrawType = '';
       $(eleWithdraw.payAccountLstBankAdd).empty();
-      
+
       withdrawType = cType;
-      withdrawBankId = cId; 
-      if(withdrawType == 'third_account') {
+      withdrawBankId = cId;
+      if (withdrawType == 'third_account') {
         thirdThirdType = cThirdType;
         thirdThirdAccount = cNo;
         thirdThirdWithdrawType = $(this).attr("data-withdraw-type");
-        if(thirdThirdWithdrawType == 1){
+        if (thirdThirdWithdrawType == 1) {
           $(eleWithdraw.payAccountLstBankAdd).empty();
-          $(eleWithdraw.payAccountLstBankAdd).append(lang.text("thirdH5.bankCardNameM") + " <span class='bank-account link-color' data-type='bank_account'>"+ lang.text("thirdH5.bindBankCard") +"</span>")
+          $(eleWithdraw.payAccountLstBankAdd).append(lang.text("thirdH5.bankCardNameM") + " <span class='bank-account link-color' data-type='bank_account'>" + lang.text("thirdH5.bindBankCard") + "</span>")
         }
       }
-      var tp = '<li class="s-select" data-select="bank_chosen" data-type="'+ cType +'"><p>'+cName+(
-        cNo ? '('+cNo.substring(cNo.length-4)+')' : ''
-      )+'</p></li>';
+      var tp = '<li class="s-select" data-select="bank_chosen" data-type="' + cType + '"><p>' + cName + (
+        cNo ? '(' + cNo.substring(cNo.length - 4) + ')' : ''
+      ) + '</p></li>';
       $(eleWithdraw.payAccountLst).find("li[data-select=bank_chosen]").remove();
       $(eleWithdraw.payAccountLst).find("li").removeClass('active');
-      $(eleWithdraw.payAccountLst).find("li[data-type="+ withdrawType +"]").addClass('active').after(tp);
+      $(eleWithdraw.payAccountLst).find("li[data-type=" + withdrawType + "]").addClass('active').after(tp);
     }
     setWithdrawBtnStatus();
   }
   if (cPageType == 'deposit') {
     depositBankId = cId;
-    var tp = cName+'('+cNo.substring(cNo.length-4)+')';
+    var tp = cName + '(' + cNo.substring(cNo.length - 4) + ')';
     $(eleDeposit.paySelectBankName).html(tp);
     setDepositBtnStatus();
   }
@@ -289,13 +297,13 @@ $(document).on("tap", "#third_app_bottom_template .third_app_template_del_bank",
   openLoadingMdl();
   var different = {
     'bank_account': {
-      params: ['delThirdBank', 'POST', {id: cId}]
+      params: ['delThirdBank', 'POST', { id: cId }]
     },
     'third_account': {
-      params: ['destroyThirdAccount', 'POST', {id: cId}]
+      params: ['destroyThirdAccount', 'POST', { id: cId }]
     },
     'transfer': {
-      params: ['delThirdBank', 'POST', {id: cId, type: 2}]
+      params: ['delThirdBank', 'POST', { id: cId, type: 2 }]
     },
   }
   publicRequest.apply(this, different[cType].params).then(function (data) {
@@ -304,29 +312,29 @@ $(document).on("tap", "#third_app_bottom_template .third_app_template_del_bank",
     if (!data) return;
     if (data.is_succ) {
       openMessageMdl(lang.text("thirdH5.deleteSuccessful"), true);
-      $("#third_app_bottom_template .bank_item[data-id="+cId+"]").remove();
+      $("#third_app_bottom_template .bank_item[data-id=" + cId + "]").remove();
       if (cPageType === 'withdraw' && cId == cSelectId) {
-        if(cSource === 'withdraw_type'){
-            thirdThirdWithdrawBankId = '';
-            $(eleWithdraw.payAccountLstBankAdd).empty();
-            $(eleWithdraw.payAccountLstBankAdd).append(lang.text("thirdH5.bankCardNameM") + " <span class='bank-account link-color' data-type='bank_account'>"+ lang.text("thirdH5.bindBankCard") +"</span>")
-        }else{
-            withdrawType = undefined;
-            withdrawBankId = undefined;
-            $(eleWithdraw.payAccountLst).find("li").removeClass('active');
-            $(eleWithdraw.payAccountLst).find("li[data-select=bank_chosen]").remove();
+        if (cSource === 'withdraw_type') {
+          thirdThirdWithdrawBankId = '';
+          $(eleWithdraw.payAccountLstBankAdd).empty();
+          $(eleWithdraw.payAccountLstBankAdd).append(lang.text("thirdH5.bankCardNameM") + " <span class='bank-account link-color' data-type='bank_account'>" + lang.text("thirdH5.bindBankCard") + "</span>")
+        } else {
+          withdrawType = undefined;
+          withdrawBankId = undefined;
+          $(eleWithdraw.payAccountLst).find("li").removeClass('active');
+          $(eleWithdraw.payAccountLst).find("li[data-select=bank_chosen]").remove();
 
-            if(cType === 'third_account'){
-              thirdThirdType = '';
-              thirdThirdAccount = '';
-              thirdThirdWithdrawBankId = '';
-              thirdThirdWithdrawType = '';
-              $(eleWithdraw.payAccountLstBankAdd).empty();
-            }
+          if (cType === 'third_account') {
+            thirdThirdType = '';
+            thirdThirdAccount = '';
+            thirdThirdWithdrawBankId = '';
+            thirdThirdWithdrawType = '';
+            $(eleWithdraw.payAccountLstBankAdd).empty();
+          }
         }
         setWithdrawBtnStatus();
       }
-      
+
       if (cPageType === 'deposit' && cId == cSelectId) {
         depositBankId = undefined;
         $(eleDeposit.paySelectBankName).html(lang.text("thirdH5.bankCardTip"));
@@ -341,11 +349,16 @@ $(document).on("tap", "#third_app_bottom_template .third_app_template_del_bank",
 $(document).on("tap", "#third_app_bottom_template .third_app_add_card", function () {
   var cType = $(this).attr("data-type");
   var cSource = $(this).attr("data-source");
-  var cSourceUrl = (cSource === 'withdraw_type' ? '&platform='+thirdThirdType : '');
+  var cSourceUrl = '';
+  if (cSource === 'withdraw_type') {
+    cSourceUrl = '&platform=' + thirdThirdType // 是否为第三方账户的银行卡
+  } else if (cSource === 'deposit_type' && selectKeyFromType('need_card') === 1 && selectKeyFromType('channel_type') === 1) {
+    cSourceUrl = '&platform=' + selectKeyFromType('platform') // 入金通道支持选择银行卡
+  }
   closeAllMdl();
   var different = {
     'bank_account': {
-      link: '/m/third/add_bank?world_code='+personalInfo.region.world_code + cSourceUrl
+      link: '/m/third/add_bank?world_code=' + personalInfo.region.world_code + cSourceUrl
     },
     'transfer': {
       link: '/m/third/add_transfer'
@@ -359,6 +372,6 @@ $(document).on("tap", "#third_app_bottom_template .third_app_add_card", function
   //   title: "添加银行卡",
   //   url: window.location.origin + '/m/third/add_bank'
   // });
-  window.location.href= different[cType].link;
+  window.location.href = different[cType].link;
   return false;
 });

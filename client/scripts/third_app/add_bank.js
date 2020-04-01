@@ -174,7 +174,7 @@ function getBankNames() {
           $(".third_app_bank__item.is_bank_input").css("display", "none");
         }
       }
-      setOptions('third_app_bank_bank_name', 'name', 'code', data.data);
+      setOptions('third_app_bank_bank_name', 'name', 'name', data.data); // 后台要求传输name
     }
   });
 }

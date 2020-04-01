@@ -237,12 +237,13 @@
         // }
 
         function submitForm(formName) {
-            if($scope.personal.has_master){
+            if($scope.personal.has_master || $scope.personal.master_apply_status){
+                var msg = ($scope.personal.has_master && $scope.lang.text("tigerWitID.settings.tip11")) || ($scope.personal.master_apply_status && $scope.lang.text("tigerWitID.settings.tip11_1"))
                 var obj = {
                     title: $scope.lang.text("tigerWitID.settings.error"),
                     size: 'sm',
                     msgClass: 'font-danger',
-                    msg: $scope.lang.text("tigerWitID.settings.tip11"),
+                    msg: msg,
                     btns: {}
                 }
                 obj.btns[$scope.lang.text("tigerWitID.confirm")] = function(){}
@@ -319,6 +320,19 @@
         }
     
         function submitEnNameForm(formName){
+            if($scope.personal.has_master || $scope.personal.master_apply_status){
+                var msg = ($scope.personal.has_master && $scope.lang.text("tigerWitID.settings.tip11")) || ($scope.personal.master_apply_status && $scope.lang.text("tigerWitID.settings.tip11_1"))
+                var obj = {
+                    title: $scope.lang.text("tigerWitID.settings.error"),
+                    size: 'sm',
+                    msgClass: 'font-danger',
+                    msg: msg,
+                    btns: {}
+                }
+                obj.btns[$scope.lang.text("tigerWitID.confirm")] = function(){}
+                $layer(obj)
+                return
+            }
             showErr(formName, 'username_en');
 
             if ($scope[formName].$invalid) {
