@@ -43,12 +43,7 @@
         $scope.indexMasters = [];// 首页 第二模块的高手
         $scope.advertiseLst = [];
 
-        var source = $scope.checkUserSource();
-        if (source) {
-            invite.setUserSource({
-                source: JSON.stringify(source)
-            });
-        }
+        $scope.saveUserSourceToSession();
 
         // 此为index2 首页的高手信息
         // ranklist.getIndexMasters().then(function (data) {
