@@ -157,12 +157,13 @@
          *      
          * @params platform   支付宝入金 -> 4
          */
-        function deposit(amount, platform, currency, mt4_id) {
+        function deposit(amount, platform, currency, mt4_id, cardId) {
             return publicHttp.dealPublicRequest(o.depositApi, 'POST', {
                 amount: amount,
                 platform: platform,
                 currency: currency,
-                mt4_id: mt4_id
+                mt4_id: mt4_id,
+                bank_card_id: cardId
             });
         }
 

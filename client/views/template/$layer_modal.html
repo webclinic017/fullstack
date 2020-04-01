@@ -7,7 +7,8 @@
 
     <div class="sys_modal_v2__content">
         <p class="sys_modal_v2__tip pd-bt-10" ng-class="msgClass">
-            <span>{{ msg }}</span>
+            <span ng-bind-html="msg | bindhtml"></span>
+            <!-- {{ msg }} -->
         </p>
         <p class="mg-tp-20 text-center" ng-if="btns && loading == 0" ng-class="btnsClass">
             <a ng-repeat="(key, value) in btns track by $index" class="btn tw-btn-capsule-gradient btn-lt" ng-class="{'mg-lf-15': $index !== 0}" ng-click="handler(value)">

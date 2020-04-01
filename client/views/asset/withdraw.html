@@ -42,7 +42,7 @@
         </div>
 
         <div class="col-xs-10 pd-tp-10" ng-show="!withdraw.card.id">
-            <span class="deposit__pointer font-info" ng-click="openCardMdl('withdraw')">{{lang.text('tigerWitID.wallet.bindBankCard')}} ></span>
+            <span class="deposit__pointer font-info" ng-click="openCardMdl('withdraw', parentScope)">{{lang.text('tigerWitID.wallet.bindBankCard')}} ></span>
         </div>
 
         <div class="col-xs-9 withdraw__card_handler" ng-show="withdraw.card.id">

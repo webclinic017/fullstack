@@ -266,6 +266,8 @@
     }
   }
   @include e(tip) {
+    font-size: 14px;
+    line-height: 25px;
     > span {
       white-space: pre-line;
     }
