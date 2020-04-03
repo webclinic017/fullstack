@@ -18,7 +18,14 @@
             <!--(TigerWit-Live服务器)-->
         <!--</span>-->
         <!--<p class="reg_success_tip3">MT4密码:与登录密码相同</p>-->
-        <a class="reg_btn" href="/m/blank?system=global"><%=lang.text('mRegister11')%></a>
-        <a class="reg_btn" href="/m/blank?system=cn"><%=lang.text('mRegister12')%></a>
+        <span>
+        <% if (lang.isEnglishArea()){%>
+            <a class="reg_btn" href="/m/blank?system=global"><%=lang.text('mRegister11')%></a>
+            <a class="reg_btn" href="/m/blank?system=cn"><%=lang.text('mRegister12')%></a>
+        </span>
+        <%} else {%>
+            <a class="reg_btn" href="/m/blank?system=cn"><%=lang.text('mRegister13')%></a>
+            <a class="reg_btn" href="/m/blank?system=global"><%=lang.text('mRegister12')%></a>
+        <%}%>
     </div>
 </div>
