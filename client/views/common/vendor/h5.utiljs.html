@@ -307,6 +307,7 @@
                 search_source[index] = value;
             }
         });
+        search_source = Object.keys(search_source).length ? search_source : undefined;
         return search_source;
     }
 

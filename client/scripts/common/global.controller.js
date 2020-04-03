@@ -233,15 +233,27 @@
         //     }
         //     return theRequest;
         // }
+        $scope.saveUserSourceToSession = function () {
+            var source = dealUserSource();
+            if (source) {
+                sessionStorage.setItem('sessionSource', JSON.stringify(source));
+            }
+        }
         $scope.checkUserSource = function () {
+            var session_source = sessionStorage.getItem('sessionSource');
+            var search_source = session_source ? dealUserSource(JSON.parse(session_source)) : dealUserSource();
+            return search_source;
+        }
+        function dealUserSource (source) {
             var sourceReg = /^DW_|^D_|^R_/i;
             var search_arr = fun.getSearch();
-            var search_source = {};
+            var search_source = source || {};
             $.each(search_arr, function (index, value) {
                 if (sourceReg.test(index)) {
                     search_source[index] = value;
                 }
             });
+            search_source = Object.keys(search_source).length ? search_source : undefined;
             return search_source;
         }
 
