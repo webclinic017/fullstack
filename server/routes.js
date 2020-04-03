@@ -203,19 +203,20 @@ module.exports = function (app) {
     app.route('/').get(function (req, res) {
         setEnvCf(req, res);
         if (isMobile(req)) {
-            if (req.host.indexOf('global') != -1) {
-                res.redirect('/download');
-                return
-            } else {
-                res.redirect('/download');
-                return
+            var queryArr = [];
+            var redirectUrl = '/download';
+            for (var key in req.query) {
+                queryArr.push(key+"="+req.query[key]);
             }
+            if (queryArr.length) redirectUrl = redirectUrl + '?' + queryArr.join('&');
+            res.redirect(redirectUrl);
+            return;
         } else {
             if (COMPANY_NAME === 'tigerwit') {
                 res.render('home.html', extendPublic({
                     pageInfo: {}
                 }, req));
-                return
+                return;
             }
         }
     });
