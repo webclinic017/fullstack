@@ -195,6 +195,10 @@
             return false;
         }
     }
+    // Demo or Live
+    function isDemo() {
+        return /\.dev|\.r62g/.test(location.host);
+    }
 
     function isTigerSpecial() {
         var userPlatForm = window.navigator.userAgent;
