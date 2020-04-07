@@ -41,9 +41,6 @@
         if (lang.currentLanguage() === 'pt-BR') {
             source["R_PTG"] = "001"
         }
-        invite.setUserSource({
-            source: JSON.stringify(source)
-        });
 
         $scope.account = {
             country: {
