@@ -31,7 +31,7 @@
         });
     }
     function downloadAndroid() {
-        if (isCn) {
+        if (isDemo() || isCn) {
             // window.location.href = 'http://dltw.oss-cn-beijing.aliyuncs.com/apk/tigerwit_v4.3.1.apk';
             publicRequest('getVersionCheck', 'GET', {
                 type: 3,
@@ -39,6 +39,7 @@
                 lang: 'cn'
             }).then(function (data) {
                 if (data.is_succ) {
+                    // console.log(data.data.url);
                     window.location.href = data.data.url;
                 }
             });
