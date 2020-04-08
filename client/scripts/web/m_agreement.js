@@ -80,6 +80,12 @@
             en: "SUMMARY OF COMPLAINTS PROCEDURE,INTRODUCTION,INTERPRETATION OF TERMS,SCOPE OF THE COMPLAINTS HANDLING PROCEDURE,DEFINITION OF A COMPLAINT,PROCEDURE,FAQs,CONTACTS",
             vi: "TÓM TẮT QUY TRÌNH GIẢI QUYẾT PHÀN NÀN,GIỚI THIỆU,GIẢI THÍCH CÁC ĐIỀU KHOẢN,PHẠM VI THỦ TỤC XỬ LÝ KHIẾU NẠI,ĐỊNH NGHĨA KHIẾU NẠI,QUY TRÌNH,FAQs,LIÊN HỆ",
             "zh-Hant": "投訴程序概述,序言,條款解釋,投訴處理程序的範圍,投訴的定義,程序,常見問題,聯系方式"
+        },
+        cookie: {
+            zh: "运营公司情况,承诺,申请,保密性和保护客户个人数据,披露您的信息,收集的个人信息类型,选择/选择退出,Cookie,个人信息的安全性和保护措施,访问个人身份信息,法律免责声明,本隐私声明的变更,查询",
+            en: "运营公司情况,Commitment,Application,Confidentiality and Client's Personal Data Protection,Disclosure of your information,Information we may collect about you,Choice/Opt-out,Cookies,Security and Protection of your personal information,Access to Personally Identifiable Information,Legal Disclaimer,Changes in this Privacy Statement,Enquiries",
+            vi: "运营公司情况,Cam kết,Đăng Kí,Bảo Mật Và Bảo Vệ Dữ Liệu Cá Nhân Của Khách Hàng,Tiết lộ thông tin của bạn,Thông tin chúng tôi có thể thu thập về bạn,Chọn / Chọn không tham gia,Cookies,Bảo Mật Và Bảo Vệ Thông Tin Cá Nhân Của Bạn,Truy cập thông tin nhận dạng cá nhân,Tuyên Bố Từ Chối Trách Nhiệm Pháp Lý,Thay đổi trong Tuyên bố về quyền riêng tư này,Thắc mắc",
+            "zh-Hant": "运营公司情况,承諾,申請,保密性和保護客戶個人數據,披露您的信息,收集的個人信息類型,選擇/選擇退出,Cookie,個人信息的安全性和保護措施,訪問個人身份信息,法律免責聲明,本隱私聲明的變更,查詢"
         }
     };
     var tabList=[];
