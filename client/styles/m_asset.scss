@@ -803,3 +803,42 @@
     }
 }
 
+// ccpay
+@include b(m_deposit_ccpay) {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 32px 16px;
+    .btn {
+        width: 100%;
+        font-size: 14px;
+        height: auto;
+        padding: 8px 0px;
+        margin-bottom: 10px;
+        &.none {
+            display: none;
+        }
+    }
+    .link_info {
+        display: none;
+        &.active {
+            display: block;
+        }
+        span {
+            float: left;
+            width: 75%;
+            padding: 5px 0px;
+            overflow-wrap: break-word;
+        }
+        input {
+            opacity: 0;
+            position: absolute;
+            z-index: -1;
+        }
+        .btn {
+            float: right;
+            width: 20%;
+            padding: 4px 0px;
+            font-size: 12px;
+        }
+    }
+}

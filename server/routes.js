@@ -465,6 +465,17 @@ module.exports = function (app) {
             banklistStatus: banklistStatus
         }, req));
     });
+    //ccpay 支付页面 -- H5/web 共用 2020.04.08
+    app.route('/m/deposit/ccpay').get(function (req, res) {
+        setEnvCf(req, res);
+        var platform = 'pc';
+        if (isMobile(req)) {
+            platform = 'mobile';
+        }
+        res.render('m_vue/m_deposit_ccpay', extendPublic({
+            platform: platform
+        }, req));
+    });
     /* H5 充值成功 */
     app.route('/m/deposit/success').get(function (req, res) {
         setEnvCf(req, res);
@@ -476,7 +487,7 @@ module.exports = function (app) {
         res.render('m_vue/m_deposit_evidence', extendPublic({}, req));
     });
 
-    // H5 空白页
+    // H5 下载APP
     app.route('/m/blank').get(function (req, res) {
         setEnvCf(req, res);
         res.render('m_vue/m_blank', extendPublic({}, req));

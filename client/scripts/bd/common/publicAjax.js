@@ -132,7 +132,12 @@
         setThirdBindAccount: origin + '/third/accounts/bind',   //post
         getThirdAccountList: origin + '/third/accounts/lists',  //get
         destroyThirdAccount: origin + '/third/accounts/destroy',  //post
-        bindCardPhone: origin + '/user/bank_card/phone'  //post
+        bindCardPhone: origin + '/user/bank_card/phone',  //post
+
+        getCCpayAddress: origin + '/ccpay/address', //get
+        createCCpayAddress: origin + '/ccpay/address/create',   //post
+        getCCpayAddressForApp: origin_app + '/ccpay/address', //get
+        createCCpayAddressForApp: origin_app + '/ccpay/address/create',   //post
     };
 
     w.publicRequest = publicRequest;

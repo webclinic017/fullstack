@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<!--引入公用头部-->
+<% include /common/meta/h5.html %>
+<!-- 引入H5 CSS -->
+<!-- build:css(.tmp) /styles/h5_common.css -->
+<link rel="stylesheet" href="/styles/h5_common.css">
+<!-- endbuild -->
+<% include /common/vendor/h5.utiljs.html %>
+<% include /common/statistic/main.html %>
+
+<body>
+
+<div class="m_deposit_ccpay" data-platform="<%= platform%>">
+    <p class="cont mg-bt-20">
+      此链接为您在TigerWit的专属链接，您可以到任何交易所去购买USDT来对此链接进行充值。系统会为您自动生成购买订单。
+    </p>
+    <div class="btn-wrapper">
+      <div data-symbol="BTC_USDT" class="link_info">
+        <p>比特币链接</p>
+        <div class="mg-bt-10 clearfix">
+          <span></span>
+          <input type="text" readonly>
+          <button data-symbol="BTC_USDT" class="btn btn-primary btn-copy">复制</button>
+        </div>
+      </div>
+      <button data-symbol="BTC_USDT" class="btn btn-primary btn-create">生成比特币链接</button>
+    </div>
+    <div class="btn-wrapper">
+      <div data-symbol="ETH_USDT" class="link_info">
+        <p>以太坊链接</p>
+        <div class="clearfix">
+          <span></span>
+          <input type="text" readonly>
+          <button data-symbol="ETH_USDT" class="btn btn-primary btn-copy">复制</button>
+        </div>
+      </div>
+      <button data-symbol="ETH_USDT" class="btn btn-primary btn-create">生成以太坊链接</button>
+    </div>
+    <span class="copy_text" style="position: absolute;left: -9999px;opacity: 0;"><%= lang.text('thirdH5.copySuccess')%></span>
+</div>
+
+</body>
+<% include /common/vendor/h5.js.html %>
+<!-- build:js(client) /scripts/m_deposit.js -->
+<script src="/scripts/plugins/baiduTemplate.js"></script>
+<script src="/scripts/asset/m_deposit_ccpay.js"></script>
+<!-- endbuild -->
+
+<%- include('/common/statistic/all.html') %>
+</html>
