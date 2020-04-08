@@ -140,6 +140,16 @@
                 "es": "SUMARIO PROCEDIMIENTO RECLAMACIONES,Introducción,INTERPRETACIÓN DE LOS TÉRMINOS,ALCANCE PROCEDIMIENTO RESOLUCIÓN RECLAMACIONES,DEFINICIÓN DE UNA QUEJA,PROCEDIMIENTO,PP.FF,CONTACTOS",
                 "pt-BR": "RESUMO DO PROCEDIMENTO DE RECLAMAÇÕES,Introdução,Interpretação dos Termos,ÂMBITO DO PROCEDIMENTO DE MANIPULAÇÃO DE RECLAMAÇÕES,DEFINIÇÃO DE UMA QUEIXA,PROCEDIMENTO,FAQs,Contatos",
                 "ar": "ملخص إجراءات الشكاوي,مقدمة,تفسير المصطلحات,نطاق إجراءات التعامل مع الشكاوي,تعريف الشكوى,الإجراءات,الأسئلة المتكررة,جهات الاتصال"
+            },
+            cookieLocal: {
+                zh: "运营公司情况,承诺,申请,保密性和保护客户个人数据,披露您的信息,收集的个人信息类型,选择/选择退出,Cookie,个人信息的安全性和保护措施,访问个人身份信息,法律免责声明,本隐私声明的变更,查询",
+                en: "运营公司情况,Commitment,Application,Confidentiality and Client's Personal Data Protection,Disclosure of your information,Information we may collect about you,Choice/Opt-out,Cookies,Security and Protection of your personal information,Access to Personally Identifiable Information,Legal Disclaimer,Changes in this Privacy Statement,Enquiries",
+                vi: "运营公司情况,Cam kết,Đăng Kí,Bảo Mật Và Bảo Vệ Dữ Liệu Cá Nhân Của Khách Hàng,Tiết lộ thông tin của bạn,Thông tin chúng tôi có thể thu thập về bạn,Chọn / Chọn không tham gia,Cookies,Bảo Mật Và Bảo Vệ Thông Tin Cá Nhân Của Bạn,Truy cập thông tin nhận dạng cá nhân,Tuyên Bố Từ Chối Trách Nhiệm Pháp Lý,Thay đổi trong Tuyên bố về quyền riêng tư này,Thắc mắc",
+                "zh-Hant": "运营公司情况,承諾,申請,保密性和保護客戶個人數據,披露您的信息,收集的個人信息類型,選擇/選擇退出,Cookie,個人信息的安全性和保護措施,訪問個人身份信息,法律免責聲明,本隱私聲明的變更,查詢",
+                "id": "运营公司情况,Commitment,Application,Confidentiality and Client's Personal Data Protection,Disclosure of your information,Information we may collect about you,Choice/Opt-out,Cookies,Security and Protection of your personal information,Access to Personally Identifiable Information,Legal Disclaimer,Changes in this Privacy Statement,Enquiries",
+                "es": "运营公司情况,Compromiso,Solicitud,Confidencialidad y Protección Datos Personales Cliente,Divulgación de su información,Información que podemos recopilar sobre usted,Opción/Opt-out,Cookies,Seguridad y Protección de su información personal.,Acceso a información de identificación personal,Notas Legales,Cambios en esta Declaración de Privacidad,Consultas",
+                "pt-BR": "运营公司情况,Comprometimento,Aplicativo,Confidencialidade e Proteção de Dados Pessoais do Cliente,Divulgação de sua informação,Informações que podemos coletar sobre você,Escolha/Opt-out,Cookies,Segurança e Proteção da sua informação pessoal,Acesso a informações pessoalmente identificáveis,Isenção Legal,Alterações nesta declaração de privacidade,Inquéritos",
+                "ar": "التزام,الطلب,السرية وحماية البيانات الشخصية للعملاء,الإفصاح عن المعلومات الخاصة بك,المعلومات التي يمكن أن نجمعها عنك,الخيار/ إلغاء الاشتراك,ملفات تعريف الارتباط,أمن وحماية معلوماتك الشخصية,الوصول إلى المعلومات المحددة للهوية الشخصية,إخلاء المسؤولية القانونية,التغييرات التي تطرأ على بيان الخصوصية هذا,الاستفسارات"
             }
         };
         $scope.tabList = [];
