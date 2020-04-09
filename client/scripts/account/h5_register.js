@@ -285,7 +285,7 @@
             // }
 
             oReg.search_arr = getSearch();
-            if (oReg.search_arr.action === 'quick_login') {
+            if (oReg.search_arr.origin === 'proxy') {
                 $('#password').parent().remove();
                 $('#confirmPassword').parent().remove();
             }
@@ -308,11 +308,13 @@
                 }
             }
 
-            // 客户推广
+            // 客户推广(有proxy参数为代理商推广)
             if (oReg.search_arr.ib_pid) {
                 $.cookie('pid', '', { path: '/', domain: getDomain(), expires: -1 });
                 $.cookie('ib_pid', oReg.search_arr.ib_pid, { expires: 1, path: '/', domain: getDomain() });
-                $.cookie('invite_status', 1, { expires: 1, path: '/', domain: getDomain() });
+                if (oReg.search_arr.origin !== 'proxy') {
+                    $.cookie('invite_status', 1, { expires: 1, path: '/', domain: getDomain() });
+                }
             }
 
             /*获取lp*/
@@ -425,7 +427,6 @@
                     _taq.push({ convert_id: "81431259366", event_type: "form" })
                 }
                 var params = {
-                    action: oReg.search_arr.action || undefined,
                     ib_pid: oReg.search_arr.ib_pid || $.cookie('ib_pid') || null,
                     invite_status: $.cookie('invite_status') || null,
                     account: $("#telephone").val() || null,
