@@ -15113,6 +15113,16 @@ module.exports = {
         "pt-BR": "Você se registrou com sucesso!",
         "ar": "قد سجلت بنجاح!"
     },
+    "mRegisterProxySucc": {
+        "zh": "请登陆电脑端个人中心查看详情并补充代理商申请信息",
+        "en": "Please log in the personal center of the computer to view the details and supplement the agent application information",
+        "vi": "Vui lòng truy cập trang cá nhân trên máy tính để xem chi tiết và bổ sung thông tin đăng ký trở thành đại lý",
+        "zh-Hant": "請登陸電腦端個人中心查看詳情並補充代理商申請信息",
+        "id": "Silahkan masuk ke pengaturan pribadi untuk melihat lebih lengkap dan informasi tentang pendaftaran agen",
+        "es": "",
+        "pt-BR": "",
+        "ar": "",
+    },
     "mRegister10": {
         "zh": "下载APP",
         "en": "Download App",

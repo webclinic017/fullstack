@@ -285,6 +285,7 @@
             // }
 
             oReg.search_arr = getSearch();
+            // 代理商推广
             if (oReg.search_arr.origin === 'proxy') {
                 $('#password').parent().remove();
                 $('#confirmPassword').parent().remove();
@@ -468,6 +469,8 @@
                                 pandaDownloadUrl = "&panda_download_url=" + oReg.search_arr.panda_download_url;
                             }
                             window.location.href = window.location.origin + "/m/h5_register/succ?origin=redbag" + pandaDownloadUrl;
+                        } else if (oReg.search_arr.origin === 'proxy') {
+                            window.location.href = window.location.origin + "/m/h5_register/succ?origin=proxysucc";
                         } else {
                             window.location.href = window.location.origin + "/m/h5_register/succ";
                         }
@@ -502,12 +505,15 @@
             /*第二页注册逻辑*/
 
             // 判断是否在红包页面，更改文字样式
-            if (window.location.href.indexOf('redbag') >= 0) {
-                $('.h5_register_main').find('.forNormalPage').css('display', 'none');
+            if (oReg.search_arr.origin === 'redbag') {
+                // $('.h5_register_main').find('.forNormalPage').css('display', 'none');
                 $('.h5_register_main').find('.forRedbag').css('display', 'block');
+            } else if (oReg.search_arr.origin === 'proxysucc') {
+                // 代理商绑定成功
+                $('.h5_register_main').find('.forProxySucc').css('display', 'block');
             } else {
                 $('.h5_register_main').find('.forNormalPage').css('display', 'block');
-                $('.h5_register_main').find('.forRedbag').css('display', 'none');
+                // $('.h5_register_main').find('.forRedbag').css('display', 'none');
             }
         }
 

@@ -1,16 +1,15 @@
 .h5_register_reg_layout {
-
   max-width: px2rem(750);
   width: 100%;
   height: 100%;
   background: url("/images/mobile/h5_register_bg2.png") no-repeat center center;
   // background-size: 100% auto;
   position: relative;
-  .h5_register_logo{
+  .h5_register_logo {
     margin: 0 auto;
     padding-top: px2rem(110);
     width: px2rem(385);
-    img{
+    img {
       width: 100%;
     }
   }
@@ -64,11 +63,11 @@
           margin-right: px2rem(20);
         }
         select {
-          appearance:none;
-          -moz-appearance:none;
-          -webkit-appearance:none;
-          border: none!important;
-          padding-left:0px;
+          appearance: none;
+          -moz-appearance: none;
+          -webkit-appearance: none;
+          border: none !important;
+          padding-left: 0px;
           padding-right: 1rem;
         }
         .area_code {
@@ -99,7 +98,6 @@
       }
       .telephone {
         span:nth-child(1) {
-
         }
         input {
           @include flex(1);
@@ -125,12 +123,10 @@
           top: -2%;
           white-space: nowrap;
         }
-        
       }
       .password {
         border: none;
         span:nth-child(1) {
-
         }
         .password_btn {
           display: inline-block;
@@ -158,14 +154,14 @@
   // background-size: 100% auto;
   position: relative;
 
-  .h5_register_logo{
+  .h5_register_logo {
     margin: 0 auto;
     padding-top: px2rem(110);
     width: px2rem(385);
-    &.pandafx{
+    &.pandafx {
       width: 100%;
     }
-    img{
+    img {
       width: 100%;
     }
   }
@@ -194,7 +190,8 @@
       -moz-border-radius: px2rem(8);
       border-radius: px2rem(8);
     }
-    span, p {
+    span,
+    p {
       color: $gray-light;
       font-weight: 200;
     }
@@ -206,7 +203,9 @@
       margin-bottom: px2rem(40);
       font-weight: 500;
       color: #fff;
-      &.forNormalPage, &.forRedbag{
+      &.forNormalPage,
+      &.forRedbag,
+      &.forProxySucc {
         display: none;
       }
       img {
@@ -216,19 +215,20 @@
         height: px2rem(50);
         background-color: $brand-primary-dark;
       }
-      span{
+      span {
         display: inline-block;
-        line-height:px2rem(50);
+        line-height: px2rem(50);
         text-align: center;
       }
-      span.forRedbag{
+      span.forRedbag {
         font-size: 1.2rem;
       }
     }
     .reg_success_tip1 {
-      font-size: px2rem(30);
+      font-size: px2rem(40);
       display: block;
-      margin-bottom: px2rem(50);
+      margin-top: px2rem(50);
+      margin-bottom: px2rem(40);
       font-family: PingFangSC-Regular;
       text-align: center;
     }
@@ -248,58 +248,29 @@
 }
 
 .h5_agreement_layout {
-    padding: px2rem(40);
+  padding: px2rem(40);
 
-    .h5_agreement_title {
-        margin-bottom: px2rem(42);
-        color: rgb(74,74,74);
+  .h5_agreement_title {
+    margin-bottom: px2rem(42);
+    color: rgb(74, 74, 74);
 
-        .tit {
-            font-size: px2rem(60);
-            line-height: px2rem(75);
-            font-weight: 500;
-            margin: 0;
-            padding-bottom: px2rem(10);
-        }
-        .tip {
-            font-size: px2rem(28);
-            color: rgb(181,181,181);
-        }
+    .tit {
+      font-size: px2rem(60);
+      line-height: px2rem(75);
+      font-weight: 500;
+      margin: 0;
+      padding-bottom: px2rem(10);
     }
-    .h5_agreement_content {
-        .h5_agreement_item {
-            margin-bottom: px2rem(42);
-            font-size: px2rem(30);
-            color: rgb(74,74,74);
-        }
+    .tip {
+      font-size: px2rem(28);
+      color: rgb(181, 181, 181);
     }
+  }
+  .h5_agreement_content {
+    .h5_agreement_item {
+      margin-bottom: px2rem(42);
+      font-size: px2rem(30);
+      color: rgb(74, 74, 74);
+    }
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
