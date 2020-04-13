@@ -18737,15 +18737,25 @@ module.exports = {
         "pt-BR": "Code tow factors",
         "ar": "Code tow factors"
     },
+    "ccpayTip0": {
+        "zh": "请注意：",
+        "en": "Please note: ",
+        "vi": "Xin lưu ý: ",
+        "zh-Hant": "請注意：",
+        "id": "Catatan penting : ",
+        "es": "Tenga en cuenta ",
+        "pt-BR": "Observação: ",
+        "ar": "Please note: "
+    },
     "ccpayTip1": {
-        "zh": "请注意：每次使用该通道入金时，请您务必先在本平台提交申请，以确认该支付方式仍在生效。",
-        "en": "Please note: every time you use this channel to deposit funds, you must first submit an application on this platform to confirm that the payment method is still in effect.",
-        "vi": "Xin lưu ý: mỗi khi bạn sử dụng kênh này để ký quỹ , trước tiên bạn phải gửi yêu cầu trên nền tảng này để xác nhận rằng phương thức thanh toán này vẫn còn hiệu lực.",
-        "zh-Hant": "請注意：每次使用該通道入金時，請您務必先在本平台提交申請，以確認該支付方式仍在生效。",
-        "id": "Catatan penting : Setiap kali anda deposit menggunakan kanal ini, anda harus mengajukan pendaftaran terlebih dahulu agar konfirmasi pembayaran ini dapat terhubung.",
-        "es": "Tenga en cuenta que cada vez que use este canal para depositar fondos, primero debe enviar una solicitud en esta plataforma para confirmar que el método de pago todavía está vigente.",
-        "pt-BR": "Observação: sempre que você usar esse canal para depositar fundos, primeiro envie uma inscrição nesta plataforma para confirmar que o método de pagamento ainda está em vigor.",
-        "ar": "Please note: every time you use this channel to deposit funds, you must first submit an application on this platform to confirm that the payment method is still in effect."
+        "zh": "每次使用该通道入金时，请您务必先在本平台提交申请，以确认该支付方式仍在生效。",
+        "en": "every time you use this channel to deposit funds, you must first submit an application on this platform to confirm that the payment method is still in effect.",
+        "vi": "mỗi khi bạn sử dụng kênh này để ký quỹ , trước tiên bạn phải gửi yêu cầu trên nền tảng này để xác nhận rằng phương thức thanh toán này vẫn còn hiệu lực.",
+        "zh-Hant": "每次使用該通道入金時，請您務必先在本平台提交申請，以確認該支付方式仍在生效。",
+        "id": "Setiap kali anda deposit menggunakan kanal ini, anda harus mengajukan pendaftaran terlebih dahulu agar konfirmasi pembayaran ini dapat terhubung.",
+        "es": "que cada vez que use este canal para depositar fondos, primero debe enviar una solicitud en esta plataforma para confirmar que el método de pago todavía está vigente.",
+        "pt-BR": "sempre que você usar esse canal para depositar fundos, primeiro envie uma inscrição nesta plataforma para confirmar que o método de pagamento ainda está em vigor.",
+        "ar": "every time you use this channel to deposit funds, you must first submit an application on this platform to confirm that the payment method is still in effect."
     },
     "ccpayTip2": {
         "zh": "此链接为您在TigerWit的专属链接，您可以到任何交易所去购买USDT来对此链接进行充值。",
