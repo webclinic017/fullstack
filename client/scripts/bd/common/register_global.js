@@ -24,6 +24,12 @@ $(document).ready(function () {
 
   oReg.search_arr = getSearch();
   oReg.search_source = checkUserSource();
+  /* 客户推广参数写入 */
+  if (oReg.search_source) {
+    publicRequest('setUserSource', 'POST', {
+      source: JSON.stringify(search_source)
+    });
+  }
   /*获取lp*/
   if (!oReg.search_arr.lp) {
     oReg.search_arr.lp = window.location.pathname.replace(/[\/:]/g, "").toLowerCase();

@@ -20,12 +20,13 @@
         // }());
 
         var search_source = checkUserSource();
-        console.log(search_source);
         /* 客户推广参数写入 */
-        publicRequest('setUserSource', 'POST', {
-            source: JSON.stringify(search_source)
-        });
-
+        if (search_source) {
+            publicRequest('setUserSource', 'POST', {
+                source: JSON.stringify(search_source)
+            });
+        }
+        
         (function () {
             $(".download_btn").on('touchend', function (e) {
                 sa.track('DI_click', {

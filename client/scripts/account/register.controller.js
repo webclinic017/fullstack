@@ -36,12 +36,16 @@
         // })
         var source = $scope.checkUserSource();
         if (lang.currentLanguage() === 'es') {
-            source["R_SPANISH"] = "001"
+            source ? source["R_SPANISH"] = "001" : source = {"R_SPANISH": "001"};
         }
         if (lang.currentLanguage() === 'pt-BR') {
-            source["R_PTG"] = "001"
+            source ? source["R_PTG"] = "001" : source = {"R_PTG": "001"};
         }
-
+        if (source) {
+            invite.setUserSource({
+                source: JSON.stringify(source)
+            });
+        }
         $scope.account = {
             country: {
                 key: '',

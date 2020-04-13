@@ -13,7 +13,7 @@
         function qrcode(system, platform) {
             QrCodeWithLogo.toImage({
                 image: document.getElementById('qrcode-img__' + platform + '__' + system), // 换成你的img节点
-                content: $location.host() + '/m/blank?system=' + system + '&platform=' + platform,
+                content: $location.protocol() + '://' + $location.host() + '/m/blank?system=' + system + '&platform=' + platform,
                 width: 180,
                 nodeQrCodeOptions: {
                     margin: 1
@@ -40,9 +40,10 @@
         };
 
         var source = $scope.checkUserSource();
-
-        invite.setUserSource({
-            source: JSON.stringify(source)
-        });
+        if (source) {
+            invite.setUserSource({
+                source: JSON.stringify(source)
+            });
+        }
     }
 })();

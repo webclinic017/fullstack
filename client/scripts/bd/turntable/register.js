@@ -16,6 +16,11 @@
         areaCode = '84'
     }
     var search_source = checkUserSource();
+    if (search_source) {
+        publicRequest('setUserSource', 'POST', {
+            source: JSON.stringify(search_source)
+        });
+    }
     // 获取区号列表
     var areaCodes = [];
     getCountries();
