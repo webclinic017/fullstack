@@ -18737,6 +18737,86 @@ module.exports = {
         "pt-BR": "Code tow factors",
         "ar": "Code tow factors"
     },
+    "ccpayTip0": {
+        "zh": "请注意：",
+        "en": "Please note: ",
+        "vi": "Xin lưu ý: ",
+        "zh-Hant": "請注意：",
+        "id": "Catatan penting : ",
+        "es": "Tenga en cuenta ",
+        "pt-BR": "Observação: ",
+        "ar": "Please note: "
+    },
+    "ccpayTip1": {
+        "zh": "每次使用该通道入金时，请您务必先在本平台提交申请，以确认该支付方式仍在生效。",
+        "en": "every time you use this channel to deposit funds, you must first submit an application on this platform to confirm that the payment method is still in effect.",
+        "vi": "mỗi khi bạn sử dụng kênh này để ký quỹ , trước tiên bạn phải gửi yêu cầu trên nền tảng này để xác nhận rằng phương thức thanh toán này vẫn còn hiệu lực.",
+        "zh-Hant": "每次使用該通道入金時，請您務必先在本平台提交申請，以確認該支付方式仍在生效。",
+        "id": "Setiap kali anda deposit menggunakan kanal ini, anda harus mengajukan pendaftaran terlebih dahulu agar konfirmasi pembayaran ini dapat terhubung.",
+        "es": "que cada vez que use este canal para depositar fondos, primero debe enviar una solicitud en esta plataforma para confirmar que el método de pago todavía está vigente.",
+        "pt-BR": "sempre que você usar esse canal para depositar fundos, primeiro envie uma inscrição nesta plataforma para confirmar que o método de pagamento ainda está em vigor.",
+        "ar": "every time you use this channel to deposit funds, you must first submit an application on this platform to confirm that the payment method is still in effect."
+    },
+    "ccpayTip2": {
+        "zh": "此链接为您在TigerWit的专属链接，您可以到任何交易所去购买USDT来对此链接进行充值。",
+        "en": "This link is your exclusive link in TigerWit, you can go to any exchange to buy USDT to recharge this link.",
+        "vi": "Liên kết này là liên kết độc quyền của bạn trong TigerWit, bạn có thể đến bất kỳ sàn giao dịch nào để mua USDT để nạp tiền cho liên kết này.",
+        "zh-Hant": "此链接为您在TigerWit的专属链接，您可以到任何交易所去购买USDT来对此链接进行充值。",
+        "id": "Tautan ini eksklusif hanya TigerWit, anda dapat menukarkan atau membeli USDT melalui tautan ini.",
+        "es": "Este enlace es su enlace exclusivo en TigerWit, puede ir a cualquier intercambio para comprar USDT para recargar este enlace.",
+        "pt-BR": "Este link é o seu link exclusivo no TigerWit, você pode ir a qualquer bolsa para comprar USDT para recarregar esse link.",
+        "ar": "This link is your exclusive link in TigerWit, you can go to any exchange to buy USDT to recharge this link."
+    },
+    "ccpayTip3": {
+        "zh": "复制",
+        "en": "copy",
+        "vi": "sao chép",
+        "zh-Hant": "复制",
+        "id": "Salin",
+        "es": "Copiar",
+        "pt-BR": "cópia de",
+        "ar": "copy"
+    },
+    "ccpayTip4": {
+        "zh": "比特币链接",
+        "en": "BTCUSDT",
+        "vi": "BTCUSDT",
+        "zh-Hant": "比特幣鏈接",
+        "id": "BTCUSDT",
+        "es": "BTCUSDT",
+        "pt-BR": "BTCUSDT",
+        "ar": "BTCUSDT"
+    },
+    "ccpayTip5": {
+        "zh": "以太坊链接",
+        "en": "ETHUSDT",
+        "vi": "ETHUSDT",
+        "zh-Hant": "以太坊鏈接",
+        "id": "ETHUSDT",
+        "es": "ETHUSDT",
+        "pt-BR": "ETHUSDT",
+        "ar": "ETHUSDT"
+    },
+    "ccpayTip6": {
+        "zh": "生成比特币链接（BTCUSDT）",
+        "en": "Generate Bitcoin Link（BTCUSDT）",
+        "vi": "Tạo liên kết Bitcoin (BTCUSDT)",
+        "zh-Hant": "生成比特幣鏈接（BTCUSDT）",
+        "id": "Munculkan tautan Bitcoin (BTCUSDT)",
+        "es": "Generar enlace de Bitcoin （BTCUSDT）",
+        "pt-BR": "Gerar link Bitcoin (BTCUSDT)",
+        "ar": "Generate Bitcoin Link（BTCUSDT）"
+    },
+    "ccpayTip7": {
+        "zh": "生成以太坊链接（ETHUSDT）",
+        "en": "Generate Ethereum link（ETHUSDT）",
+        "vi": "Tạo liên kết Ethereum (ETHUSDT)",
+        "zh-Hant": "生成以太坊鏈接（ETHUSDT）",
+        "id": "Munculkan tautan Ethereum (ETHUSDT)",
+        "es": "Generar enlace Ethereum （ETHUSDT）",
+        "pt-BR": "Gerar link Ethereum (ETHUSDT)",
+        "ar": "Generate Ethereum link（ETHUSDT）"
+    },
     "go_registration": {
         "zh": "前往注册",
         "en": "Go to register",
