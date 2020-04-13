@@ -47,9 +47,11 @@
 
         var source = $scope.checkUserSource();
 
-        invite.setUserSource({
-            source: JSON.stringify(source)
-        });
+        if (source) {
+            invite.setUserSource({
+                source: JSON.stringify(source)
+            });
+        }
 
         function submitForm () {
             $scope.error = {
