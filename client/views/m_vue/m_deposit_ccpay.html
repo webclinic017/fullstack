@@ -12,30 +12,33 @@
 <body>
 
 <div class="m_deposit_ccpay" data-platform="<%= platform%>">
+    <p class="cont">
+      <%= lang.text("ccpayTip1")%>
+    </p>
     <p class="cont mg-bt-20">
-      此链接为您在TigerWit的专属链接，您可以到任何交易所去购买USDT来对此链接进行充值。系统会为您自动生成购买订单。
+      <%= lang.text("ccpayTip2")%>
     </p>
     <div class="btn-wrapper">
       <div data-symbol="BTC_USDT" class="link_info">
-        <p>比特币链接</p>
+        <p><%= lang.text("ccpayTip4")%></p>
         <div class="mg-bt-10 clearfix">
           <span></span>
           <input type="text" readonly>
-          <button data-symbol="BTC_USDT" class="btn btn-primary btn-copy">复制</button>
+          <button data-symbol="BTC_USDT" class="btn btn-primary btn-copy"><%= lang.text("ccpayTip3")%></button>
         </div>
       </div>
-      <button data-symbol="BTC_USDT" class="btn btn-primary btn-create">生成比特币链接</button>
+      <button data-symbol="BTC_USDT" class="btn btn-primary btn-create"><%= lang.text("ccpayTip6")%></button>
     </div>
     <div class="btn-wrapper">
       <div data-symbol="ETH_USDT" class="link_info">
-        <p>以太坊链接</p>
+        <p><%= lang.text("ccpayTip5")%></p>
         <div class="clearfix">
           <span></span>
           <input type="text" readonly>
-          <button data-symbol="ETH_USDT" class="btn btn-primary btn-copy">复制</button>
+          <button data-symbol="ETH_USDT" class="btn btn-primary btn-copy"><%= lang.text("ccpayTip3")%></button>
         </div>
       </div>
-      <button data-symbol="ETH_USDT" class="btn btn-primary btn-create">生成以太坊链接</button>
+      <button data-symbol="ETH_USDT" class="btn btn-primary btn-create"><%= lang.text("ccpayTip7")%></button>
     </div>
     <span class="copy_text" style="position: absolute;left: -9999px;opacity: 0;"><%= lang.text('thirdH5.copySuccess')%></span>
 </div>

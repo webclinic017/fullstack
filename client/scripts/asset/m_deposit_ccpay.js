@@ -17,6 +17,7 @@ $(document).ready(function () {
       layer.closeAll();
       if (data.is_succ) {
         linkInfo[symbol] = data.data[symbol] || null;
+        setLinkInfo();
       } else {
         layerMsg(data.message);
       }
