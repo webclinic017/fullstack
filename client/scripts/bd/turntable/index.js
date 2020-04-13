@@ -21,7 +21,7 @@ if(urlSearch.world_code == 'pt-br'){
 function qrcode(dom) {
     QrCodeWithLogo.toImage({
         image: document.getElementById(dom), // 换成你的img节点
-        content: location.host + '/m/blank?system=global',
+        content: location.origin + '/m/blank?system=global',
         width: 150,
         nodeQrCodeOptions: {
             margin: 1
