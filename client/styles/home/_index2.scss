@@ -818,7 +818,6 @@
         background-position: center center;
         width: 550px;
         height: 340px;
-        //@include img-normal($image-path-home + "index2-trade-img-pkdss.png");
 
         &.en {
             @include img-normal($image-path-home + "index2-trade-img-en.png");

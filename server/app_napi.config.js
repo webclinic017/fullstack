@@ -23,10 +23,6 @@
                 title: "【MACD月盈201610-01】"
             }
         ];
-
-        if (COMPANY === 'pkds') {
-            data = {};
-        }
         return data;
     }
     function getBannerInfoIos () {
@@ -47,10 +43,6 @@
             title: "【MACD月盈201610-01】"
           }
         ];
-
-        if (COMPANY === 'pkds') {
-            data = {};
-        }
         return data;
     }
 
