@@ -66,38 +66,6 @@
                     colors2: ['#BC6FFF', '#44BCFF', '#C5EF9B', '#7DF4DA', '#FFC86F']
                 };
                 break;
-            case 'pkds':
-                /*条形图*/
-                oWhiteLabel.columnChart = {
-                    /*正值的颜色*/
-                    positive: '#c81527',
-                    /*负值的颜色*/
-                    negative: '#06ba82',
-                    /*正值的背景颜色*/
-                    positiveBg: '#f5d8db',
-                    /*负值的背景颜色*/
-                    negativeBg: '#dbf5ec',
-                    /*气泡框字体*/
-                    toolTip: '#d19b19',
-                };
-                /*区域图*/
-                oWhiteLabel.areaChart = {
-                    /*渐变色*/
-                    colors: ['#d29d1d', '#fefdfa'],
-                    fillColor: {
-                        linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1 },
-                        stops: [
-                            [0, Highcharts.getOptions().colors[1]],
-                            [1, Highcharts.Color(Highcharts.getOptions().colors[3]).setOpacity(0).get('rgba')]
-                        ]
-                    },
-                };
-                /*饼图*/
-                oWhiteLabel.pieChart = {
-                    /*渐变色*/
-                    colors: ['#c81527', '#ebebeb']
-                };
-                break;
             default:
                 /*条形图*/
                 oWhiteLabel.columnChart = {
