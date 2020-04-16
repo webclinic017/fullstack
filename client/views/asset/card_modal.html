@@ -108,7 +108,7 @@
                 <!-- 判断不是第三方platform    TODO（后台有判断）所以银行name也可根据后台返回的列表长度判断，有值选择，没有值填写 -->
                 <div class="item-center" ng-if="banks.length > 0">
                     <div class="col-xs-3">
-                        <label class="form-control-wrapper">{{lang.text('tigerWitID.wallet.selectBankM')}}</label>
+                        <label class="form-control-wrapper">{{lang.text(type === 'Noire' ? 'tigerWitID.wallet.selectBankM2' : 'tigerWitID.wallet.selectBankM')}}</label>
                     </div>
 
                     <div class="col-xs-9">
@@ -127,7 +127,7 @@
 
                             <div ng-show="frontErr.bank.show">
                                 <p class="alert alert-arrow_tp_lf" ng-show="cardForm.bank.$error.required">
-                                    {{lang.text('tigerWitID.wallet.pSelectBank')}}
+                                    {{lang.text(lang.text(type === 'Noire' ? 'tigerWitID.wallet.selectCardType' : 'tigerWitID.wallet.pSelectBank'))}}
                                 </p>
                             </div>
                         </div>
@@ -292,6 +292,32 @@
                                 </p>
                                 <p class="alert alert-arrow_tp_lf" ng-show="cardForm.phone.$error.pattern">
                                     {{frontErr.phone.tip}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item-center" ng-if="type === 'Noire'">
+                    <div class="col-xs-3">
+                        <label class="form-control-wrapper">{{lang.text('tigerWitID.wallet.expirationDate')}}</label>
+                    </div>
+
+                    <div class="col-xs-9">
+                        <div class="form-control-wrapper">
+                            <input class="form-control"
+                                   style="padding-left: 30px;"
+                                   name="date"
+                                   type="text"
+                                   required
+                                   ng-model="card.date"
+                                   tw-datetimepicker
+                                   ng-focus="hideErr('date')"
+                                   datetimepicker-options="{{datepicker.options}}">
+                            <i class="fa fa-calendar"></i>
+                            <div ng-show="frontErr.date.show">
+                                <p class="alert alert-arrow_tp_lf" ng-show="!card.date">
+                                    {{lang.text('tigerWitID.wallet.fillExpirationDate')}}
                                 </p>
                             </div>
                         </div>

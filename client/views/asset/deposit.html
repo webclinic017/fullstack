@@ -104,6 +104,18 @@
                 <span class="font-danger">＊{{lang.text('tigerWitID.depositWithdrawal.bankCardTransferTip')}}</span>
             </div>
         </div>
+        <div class="display-flex mg-tp-30" ng-if="deposit.type && depositTypeLst[deposit.type].need_card === 1 && deposit.type === 'Noire'">
+            <div class="col-xs-2 justify-flex-end deposit__title-money">{{lang.text('tigerWitID.wallet.securityCode')}}</div>
+            <div class="col-xs-7 deposit__input">
+                <div class="form-control-wrapper">
+                    <input class="form-control form-control-size-lg form-control-shape-capsule"
+                        name="safetyCode"
+                        type="text"
+                        ng-model="deposit.safetyCode"
+                        ng-change="checkInputAmount()">
+                </div>
+            </div>
+        </div>
 
         <div ng-if="deposit.isNeedBank && deposit.depositCard" class="mg-tp-30">
             <div class="display-flex" style="padding-left: 65px;padding-right: 65px;">

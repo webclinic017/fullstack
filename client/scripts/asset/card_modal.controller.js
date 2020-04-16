@@ -9,8 +9,14 @@
 
     function AssetCardController($scope, config, $state, $modalInstance, validator, account, asset, passedScope, lang) {
         $scope.personal = passedScope.personal;
-        $scope.platform = passedScope.platform;
-        // console.log($scope.platform)
+        $scope.payment_platform = passedScope.payment_platform;
+        $scope.type = passedScope.type;
+        $scope.datepicker = {
+            options: {
+                format: 'YYYY-MM'
+            }
+        };
+
         $scope.card = {
             //number: ,         // 卡号
             //bank: ,           // 银行
@@ -61,6 +67,9 @@
             },
             realname: {
                 show: false
+            },
+            date: {
+                show: false
             }
         };
 
@@ -79,8 +88,8 @@
                 type: 1,
                 world_code: $scope.card.world.world_code
             }
-            if($scope.platform){
-                params.platform = $scope.platform;
+            if($scope.payment_platform){
+                params.platform = $scope.payment_platform;
             }
             asset.getBanks(params).then(function (data) {
                 // console.log(data);
@@ -180,8 +189,9 @@
                 if ($scope.card.world.world_code !== 'VN') {
                     showErr('swift_code');
                 }
-
             }
+            if ($scope.type === 'Noire') showErr('date');
+            
             if ($scope.cardForm.$invalid) {
                 return;
             }
@@ -191,8 +201,8 @@
                 country: $scope.card.world.world_code,
                 bank_addr: $scope.card.address,
             };
-            if($scope.platform){
-                oParams.platform = $scope.platform;
+            if($scope.payment_platform){
+                oParams.platform = $scope.payment_platform;
             }
             if($scope.banks.length){
                 oParams.bank_name = $scope.card.bank.name;
@@ -208,6 +218,7 @@
                     oParams.swift_code = typeof $scope.card.swift_code === 'object' ? $scope.card.swift_code.swift_code : $scope.card.swift_code;
                 }
             }
+            if ($scope.type === 'Noire') oParams.expiry_date = $scope.card.date;   //信用卡有效期
 
             $scope.clickable = false;
 

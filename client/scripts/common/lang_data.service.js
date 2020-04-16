@@ -5835,6 +5835,66 @@
                         "pt-BR": "Selecione o banco de abertura de conta:",
                         "ar": "حدد بنك فتح الحساب:"
                     },
+                    "selectBankM2": {
+                        "zh": "卡类型：",
+                        "en": "Card type: ",
+                        "vi": "Loại thẻ: ",
+                        "zh-Hant": "卡類型：",
+                        "id": "Tipe Kartu: ",
+                        "es": "Tipo de tarjeta: ",
+                        "pt-BR": "Tipo de cartão:",
+                        "ar": "نوع البطاقة:"
+                    },
+                    "securityCode": {
+                        "zh": "安全码",
+                        "en": "Security code",
+                        "vi": "Mã bảo mật",
+                        "zh-Hant": "安全碼",
+                        "id": "Kode Keamanan",
+                        "es": "Código de seguridad",
+                        "pt-BR": "Código de segurança",
+                        "ar": "رمز الحماية"
+                    },
+                    "addCreditCard": {
+                        "zh": "添加信用卡",
+                        "en": "Add credit card",
+                        "vi": "Thêm thẻ tín dụng",
+                        "zh-Hant": "添加信用卡",
+                        "id": "Tambah Kartu Kredit",
+                        "es": "Agregar tarjeta de crédito",
+                        "pt-BR": "Adicionar cartão de crédito",
+                        "ar": "أضف بطاقة ائتمان"
+                    },
+                    "expirationDate": {
+                        "zh": "信用卡有效期",
+                        "en": "Expiration date",
+                        "vi": "Ngày hết hạn",
+                        "zh-Hant": "信用卡有效期",
+                        "id": "Tanggal Kadaluarsa",
+                        "es": "Fecha de caducidad",
+                        "pt-BR": "Data de validade",
+                        "ar": "تاريخ إنتهاء الصلاحية"
+                    },
+                    "fillExpirationDate": {
+                        "zh": "请填写信用卡有效期",
+                        "en": "Please fill in the Expiration date",
+                        "vi": "Vui lòng điền vào ngày hết hạn",
+                        "zh-Hant": "請填寫信用卡有效期",
+                        "id": "Silakan isi tanggal Kedaluwarsa",
+                        "es": "Por favor complete la fecha de vencimiento",
+                        "pt-BR": "Por favor, preencha a data de validade",
+                        "ar": "يرجى ملء تاريخ انتهاء الصلاحية"
+                    },
+                    "selectCardType": {
+                        "zh": "请选择卡类型",
+                        "en": "Please select a card type",
+                        "vi": "Vui lòng chọn một loại thẻ",
+                        "zh-Hant": "請選擇卡類型",
+                        "id": "Silakan pilih jenis kartu",
+                        "es": "Por favor seleccione un tipo de tarjeta",
+                        "pt-BR": "Por favor, selecione um tipo de cartão",
+                        "ar": "يرجى تحديد نوع البطاقة"
+                    },
                     "fillAccount": {
                         "zh": "请填写账号",
                         "en": "Fill in the account",
