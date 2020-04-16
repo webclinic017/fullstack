@@ -127,7 +127,7 @@
 
                             <div ng-show="frontErr.bank.show">
                                 <p class="alert alert-arrow_tp_lf" ng-show="cardForm.bank.$error.required">
-                                    {{lang.text('tigerWitID.wallet.pSelectBank')}}
+                                    {{lang.text(lang.text(type === 'Noire' ? 'tigerWitID.wallet.selectCardType' : 'tigerWitID.wallet.pSelectBank'))}}
                                 </p>
                             </div>
                         </div>
@@ -317,7 +317,7 @@
                             <i class="fa fa-calendar"></i>
                             <div ng-show="frontErr.date.show">
                                 <p class="alert alert-arrow_tp_lf" ng-show="!card.date">
-                                    {{lang.text('tigerWitID.wallet.expirationDate')}}
+                                    {{lang.text('tigerWitID.wallet.fillExpirationDate')}}
                                 </p>
                             </div>
                         </div>

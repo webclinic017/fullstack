@@ -5875,6 +5875,26 @@
                         "pt-BR": "Data de validade",
                         "ar": "تاريخ إنتهاء الصلاحية"
                     },
+                    "fillExpirationDate": {
+                        "zh": "请填写信用卡有效期",
+                        "en": "Please fill in the Expiration date",
+                        "vi": "Vui lòng điền vào ngày hết hạn",
+                        "zh-Hant": "請填寫信用卡有效期",
+                        "id": "Silakan isi tanggal Kedaluwarsa",
+                        "es": "Por favor complete la fecha de vencimiento",
+                        "pt-BR": "Por favor, preencha a data de validade",
+                        "ar": "يرجى ملء تاريخ انتهاء الصلاحية"
+                    },
+                    "selectCardType": {
+                        "zh": "请选择卡类型",
+                        "en": "Please select a card type",
+                        "vi": "Vui lòng chọn một loại thẻ",
+                        "zh-Hant": "請選擇卡類型",
+                        "id": "Silakan pilih jenis kartu",
+                        "es": "Por favor seleccione un tipo de tarjeta",
+                        "pt-BR": "Por favor, selecione um tipo de cartão",
+                        "ar": "يرجى تحديد نوع البطاقة"
+                    },
                     "fillAccount": {
                         "zh": "请填写账号",
                         "en": "Fill in the account",
