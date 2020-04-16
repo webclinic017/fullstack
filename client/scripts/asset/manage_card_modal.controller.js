@@ -25,7 +25,7 @@
             size: 'md',
             backdrop: 'true',
             controller: ['$scope', '$modalInstance', '$state', 'asset', '$timeout', 'lang', function ($scope, $modalInstance, $state, asset, $timeout, lang) {
-                console.log(params);
+                // console.log(params);
                 params.parentScope.manageCardModalInstance = $modalInstance
                 $timeout(function () {
                     $scope.$broadcast('hideLoadingImg');
@@ -36,6 +36,7 @@
                 $scope.openAddCardModal = openCardMdl
                 $scope.parentScope = params.parentScope
                 $scope.page = params.page
+                $scope.type = params.parentScope.deposit.type;
                 //刷新列表 
                 getCardList();
 
@@ -99,13 +100,13 @@
       }
     //   根据条件返回platform
     function getPlatform(page, parentScope){
-        var platform;
+        var payment_platform;
         if(page == 'withdraw' && parentScope.withdraw.accountType === 'third_account'){
-            platform = parentScope.withdraw.third.third_type; // 是否为第三方账户的银行卡
+            payment_platform = parentScope.withdraw.third.third_type; // 是否为第三方账户的银行卡
         }else if(page == 'deposit' && parentScope.depositTypeLst[parentScope.deposit.type].need_card === 1 && parentScope.depositTypeLst[parentScope.deposit.type].channel_type === 1){
-            platform = parentScope.depositTypeLst[parentScope.deposit.type].platform // 入金通道支持选择银行卡
+            payment_platform = parentScope.depositTypeLst[parentScope.deposit.type].payment_platform // 入金通道支持选择银行卡
         }
-        return platform;
+        return payment_platform;
     }
       // 添加银行卡
       function openCardMdl(page, parentScope) {
@@ -131,7 +132,8 @@
                             return {
                                 personal: $scope.lang.isThird() ? $scope.main : $scope.personal,
                                 card: parentScope && parentScope[page].card,
-                                platform: getPlatform(page, parentScope)
+                                payment_platform: getPlatform(page, parentScope),
+                                type: page === 'deposit' ? parentScope.deposit.type : undefined
                             };
                         }
                     }
