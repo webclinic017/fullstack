@@ -195,6 +195,10 @@
             return false;
         }
     }
+    // Demo or Live
+    function isDemo() {
+        return /\.dev|\.r62g/.test(location.host);
+    }
 
     function isTigerSpecial() {
         var userPlatForm = window.navigator.userAgent;
@@ -307,6 +311,7 @@
                 search_source[index] = value;
             }
         });
+        search_source = Object.keys(search_source).length ? search_source : undefined;
         return search_source;
     }
 

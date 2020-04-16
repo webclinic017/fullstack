@@ -18677,6 +18677,16 @@ module.exports = {
         "pt-BR": "Download de outra área",
         "ar": "التحميل لمنطقة أخرى"
     },
+    "mRegister13": {
+        "zh": "本地应用下载",
+        "en": "Global area download",
+        "vi": "Tải về khu vực toàn cầu",
+        "zh-Hant": "本地應用下載",
+        "id": "Unduh area Global",
+        "es": "Área global de descarga",
+        "pt-BR": "Download da área global",
+        "ar": "التحميل للمنطقة العالمية"
+    },
     "avoda_pay_tip": {
         "zh": "首次使用，请先注册 AVODA Pay 账号并充值。如已注册，请直接填写下方信息。",
         "en": "For the first time, please register your ACODA Pay account and deposit. If registered, please fill in the following information.",

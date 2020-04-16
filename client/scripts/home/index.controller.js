@@ -5,9 +5,9 @@
     angular.module('fullstackApp')
         .controller('HomeIndexController', HomeIndexController);
 
-    HomeIndexController.$inject = ['$scope', 'product', 'ranklist', '$cookies', '$location', 'account', '$timeout'];
+    HomeIndexController.$inject = ['$scope', 'invite', 'ranklist', '$cookies', '$location', 'account', '$timeout'];
 
-    function HomeIndexController($scope, product, ranklist, $cookies, $location, account, $timeout) {
+    function HomeIndexController($scope, invite, ranklist, $cookies, $location, account, $timeout) {
         var company = $cookies["company_name"];
         var userCode = $cookies["user_code"];
 
@@ -42,6 +42,8 @@
 
         $scope.indexMasters = [];// 首页 第二模块的高手
         $scope.advertiseLst = [];
+
+        $scope.saveUserSourceToSession();
 
         // 此为index2 首页的高手信息
         // ranklist.getIndexMasters().then(function (data) {

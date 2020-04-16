@@ -63,6 +63,8 @@
         // 抽奖活动
         getPrizeChangce: origin_app + '/lucky_draw', // get
         drawPrize: origin_app + '/lucky_draw', // post
+        receiveRedbagWeb: origin + '/bonus/receive', // put
+        getRedbags: origin + '/bonus',
 
         // 三方接口
         thirdGetStatus: origin_third2 + '/user/auth_status', // get
@@ -135,6 +137,7 @@
 
     w.publicRequest = publicRequest;
     w.publicUploadFile = publicUploadFile;
+    w.encryptPassword = encryptPassword;
 
     function publicRequest ($url, $method, $params) {
         var t = '';
@@ -263,5 +266,14 @@
                 });
             }
         });
+    }
+    var login_key_dev = '-----BEGIN PUBLIC KEY-----MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCwyjx6cQ4AHOnmeIU15A+EvLk3V3oHv2YLp8nZBNqeg+uLPn2HyYF1/s/Mi2EZE2ypIFuvKiCX3ACrZuM55nJSTTjJzOfohh2tLMClLlbfHxdNyg8cotza4+iutrru2vy+kUWp0UuydNrjDJoVJwPXOkToLXjtOEofPmdzjLbE4QIDAQAB-----END PUBLIC KEY-----';
+    var login_key_live = '-----BEGIN PUBLIC KEY-----MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDN67wAcj1WL/scb9TuvawbqMABg2sYXdmLkzXYUK/qbZI168gpM1t4SqS2qxYuEy+a/rOQ/YokJy0Q+dwQBEUmRWd4//64D3shkMMPZ0VuQ67LmVbFzbaly9dEYbAkoKvd4qcVxG1qAYlPGAKVZjRbf3q6d1CGeUGQqoynofTZNwIDAQAB-----END PUBLIC KEY-----';
+    function encryptPassword(text) {
+        var login_key = /\.dev|\.r62g/.test(location.host) ? login_key_dev : login_key_live;
+        var crypt = new JSEncrypt();
+        crypt.setKey(login_key);
+        var textEnc = crypt.encrypt(text);
+        return textEnc;
     }
 })(window);

@@ -16,10 +16,6 @@
         areaCode = '84'
     }
     var search_source = checkUserSource();
-    /* 客户推广参数写入 */
-    publicRequest('setUserSource', 'POST', {
-        source: JSON.stringify(search_source)
-    });
     // 获取区号列表
     var areaCodes = [];
     getCountries();
@@ -236,6 +232,7 @@
                     code: $(".registerLayer .verify_code").val() || null,
                     password: $(".registerLayer .password").val() || null,
                     activity: activity,
+                    register_rule: JSON.stringify(search_source),
                     login_type: 3, // 登录验证方式，1-密码登录，2-验证码登录 3-验证码密码都有
                     is_agree: is_agree == 'is_agree' ? 1 : 0
                 }).then(function (data) {
