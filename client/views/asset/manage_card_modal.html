@@ -41,7 +41,7 @@
             </tbody>
         </table>
         <div class="mg-tp-10" ng-if="manageType == 'manage'">
-            <a class="btn-text" ng-click="openAddCardModal(page, parentScope)">{{lang.text('tigerWitID.wallet.addBankCards')}}</a>
+            <a class="btn-text" ng-click="openAddCardModal(page, parentScope)">{{lang.text(type === 'Noire' ? 'tigerWitID.wallet.addCreditCard' : 'tigerWitID.wallet.addBankCards')}}</a>
         </div>
     </div>
 

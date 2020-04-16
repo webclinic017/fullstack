@@ -8,7 +8,13 @@
     AssetDepositController.$inject = ['$rootScope', '$scope', '$window', '$document', '$cookies', '$modal', '$state', '$timeout', 'asset', 'validator', 'account', '$layer', 'previewImage', 'fun'];
 
     function AssetDepositController($rootScope, $scope, $window, $document, $cookies, $modal, $state, $timeout, asset, validator, account, $layer, previewImage, fun) {
-
+        /**  2020.04.15 
+         * 注意 这四个接口参数中的 platform 都已修改成取交易列表中的 payment_platform 字段
+         *  api/v3/user/bank_card       //获取默认银行卡
+            api/v3/user/bank_card/lists //银行卡列表
+            api/v3/bank_names           //银行列表
+            api/v3/user/bank_card       //绑定银行卡
+         */
         if ($cookies["d&w_czc"] && (!localStorage["deposit_czc"] || localStorage["deposit_czc"] !== $cookies["d&w_czc"])) {
             $scope.toTrackEvent('Deposit/withdrawal', 'deposit');
             localStorage["deposit_czc"] = $cookies["d&w_czc"];
@@ -31,7 +37,8 @@
             submitBtn: false,                   // 充值按钮true/false
             isAbleDeposit: 0,    //是否能够入金（是否上传凭证）evidence  0不需要上传，1需要上传，2未审核
             depositCard: undefined,
-            isNeedBank: 0
+            isNeedBank: 0,
+            safetyCode: undefined   //信用卡安全码 (Noire通道)
         };
         $scope.currencyStatus = false; // 选择币种列表
         $scope.walletDepositSucc = false;
@@ -123,7 +130,7 @@
             if(!($scope.deposit.type && $scope.depositTypeLst[$scope.deposit.type].need_card === 1)){
                 return 
             }
-            var params = ($scope.depositTypeLst[$scope.deposit.type].channel_type === 1) ? {platform: $scope.depositTypeLst[deposit.type].platform} : {};
+            var params = ($scope.depositTypeLst[$scope.deposit.type].channel_type === 1) ? {platform: $scope.depositTypeLst[$scope.deposit.type].payment_platform} : {};
             asset.getCard(params).then(function (data) {
                 if (!data) return;
                 // console.log(data);
@@ -245,6 +252,13 @@
                     $scope.amountVerify.show = true;
                     $scope.amountVerify.tip = type.describe;
                     return
+                }
+            }
+            // 支付方式为Noire 检查安全码
+            if (type.key === 'Noire') {
+                if (!$scope.deposit.safetyCode) {
+                    $scope.deposit.submitBtn = false;
+                    return;
                 }
             }
             // 支付方式为钱包时
@@ -459,8 +473,9 @@
                                 var p = $scope.depositTypeLst[$scope.deposit.type].platform || undefined;
                                 var c = $scope.deposit.currency ? $scope.deposit.currency.currency : undefined;
                                 var cardId = $scope.depositTypeLst[$scope.deposit.type].need_card === 1 ? $scope.deposit.card.id : undefined;
+                                var safetyCode = $scope.deposit.type === 'Noire' ? $scope.deposit.safetyCode : undefined;
                                 var token = $cookies["token"] || '';
-                                asset.deposit(amount, p, c, mt4_id, cardId).then(function (data) {
+                                asset.deposit(amount, p, c, mt4_id, cardId, safetyCode).then(function (data) {
                                     $scope.isLoading = false;
                                     if (!data) return;
                                     if (data.is_succ) {
