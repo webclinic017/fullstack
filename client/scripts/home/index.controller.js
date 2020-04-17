@@ -161,6 +161,8 @@
             US30: '道琼斯指数',
             USDJPY: '美元日元',
             JPN225: '日经指数',
+            "AAPL.nd": '苹果',
+            "BABA.ny": '阿里巴巴'
         }
         var forCloneSymbolZh = {
             AUDUSD: '澳元美元',
