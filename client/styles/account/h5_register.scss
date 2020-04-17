@@ -59,30 +59,31 @@
         span {
           display: inline-block;
         }
-        span:nth-child(1) {
-          margin-right: px2rem(20);
-        }
+        // > span:nth-child(1) {
+        //   margin-right: px2rem(20);
+        // }
         select {
           appearance: none;
           -moz-appearance: none;
           -webkit-appearance: none;
           border: none !important;
           padding-left: 0px;
-          padding-right: 1rem;
+          // padding-right: 1rem;
         }
         .area_code {
-          display: inline-block;
+          @include displayFlex();
+          @include justifyContent(space-between);
           height: 100%;
           max-width: 5.5rem;
           position: relative;
           &:after {
             content: "▼";
             display: inline-block;
-            position: absolute;
+            // position: absolute;
             font-size: 10px;
             color: #aaa;
-            right: -5px;
-            top: 0;
+            // right: -5px;
+            // top: 0;
           }
           .selector {
             position: absolute;
@@ -90,7 +91,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            max-width: 5.5rem;
+            width: 100%;
             color: transparent;
             background: transparent;
           }

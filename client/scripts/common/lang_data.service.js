@@ -4043,7 +4043,7 @@
                         "id": " Segala keputusan akhir ada di tangan TigerWit dan tidak dapat diganggu gugat. Apabila anda memiliki pertanyaan, silahkan hubungi Layanan Pelanggan",
                         "es": "La interpretación final de esta actividad corresponde a TigerWit. Para cualquier cuestión，por favor contacte con el Servicio al Cliente TigerWit.",
                         "pt-BR": "A interpretação final desta atividade pertence a TigerWit. Se você tiver outras dúvidas, entre em contato com o atendimento ao cliente TigerWit.",
-                        "ar": "تمتلك TigerWit حق التفسير النهائي لهذا النشاط. إذا كان لديك أي أسئلة تود طرحها، يرجى الاتصال بخدمة عملاء TigerWit."
+                        "ar": "-هذا هو التفسير من TigerWit. إذا لديك اسئلة أخرى، الرجاء التواصل بخدمة الزبائن.  "
                     },
                     "deposited": {
                         "zh": "已入金",
@@ -6539,7 +6539,7 @@
                         "id": "Peraturan dalam mengundang teman: ",
                         "es": "Regulación Invite a un Amigo: ",
                         "pt-BR": "Regulamento de convite a amigos:",
-                        "ar": "لوائح دعوة الأصدقاء"
+                        "ar": "شروط لدعوة الأصدقاء:"
                     },
                     "tip1": {
                         "zh": "1、被邀请人注册成功，邀请人和被邀请人同时获得邀请红包，被邀请的用户注册且成功入金并完成1手交易即可兑现；",
@@ -6549,7 +6549,7 @@
                         "id": "1. Apabila teman yang diajak berhasil mendaftar, maka orang yang mengajak dan yang diajak akan mendapatkan amplop merah bersama-sama. Selanjutnya amplop tersebut dapat diklaim apabila sudah menyelesaikan transaksi 1 lot",
                         "es": "1. El invitado se registra con éxito, el que invita y el invitado reciben un sobre rojo al mismo tiempo. El usuario invitado canjea después de completar 1 lote tradeado",
                         "pt-BR": "1. O convidado se registra com succeso, a pessoa que convida e o convidado recebem um envelope vermelho do convite ao mesmo tempo, e o usuário convidado resgata após concluir o trading de 1 lote.",
-                        "ar": "1-  يتسجل المدعو بنجاح ، ويحصل المدعو والداعي على المغلف الأحمر للدعوة في نفس الوقت ، ويسجل المستخدم (الداعي) المدعو بنجاح ويكمل المعاملة بيد واحدة."
+                        "ar": "1-  عند دعوتك لصديق وقيامه بالتسجيل، يحصل كلاكما على المغلف الأحمر  الخاص بالدعوة في الوقت نفسه، وعند التداول على عقد قياسي واحد، يمكن للمستخدم الحصول على جائزته. "
                     },
                     "tip2": {
                         "zh": "2、您只有通过邀请链接进行注册的好友才算有效；",
@@ -6559,7 +6559,7 @@
                         "id": "2. Hanya berlaku apabila teman anda mendaftar melalui tautan yang anda kirimkan.",
                         "es": "2. Sólo se hace efectivo cuando sus amigos se registren vía el link de invitación. ",
                         "pt-BR": "2. Pode ser efetivo somente quando seu amigo é registrado pelo link de convite.",
-                        "ar": "2- لن تصبح المكافأة سارية إلا بعد أن يقوم صديقك بالتسجيل باستخدام رابط الدعوة الخاص بك."
+                        "ar": "2- لا يمكن لصديق التسجل إلى من خلال الرابط المخصص"
                     },
                     "tip3": {
                         "zh": "3、同一手机号，身份证号和银行卡号视为同一用户；",
@@ -6569,7 +6569,7 @@
                         "id": "3. Identitas, nomor telepon dan rekening bank yang sama akan dianggap sebagai satu orang saja.",
                         "es": "3. Mismo móvil, ID y número de tarjeta de banco serán tratados como el mismo usuario. ",
                         "pt-BR": "3.Same celular, ID e número do cartão bancário serão tratados como o mesmo usuário.",
-                        "ar": "3- سيتم التعامل مع نفس رقم الهاتف والهوية ورقم البطاقة المصرفية باعتبارهم نفس المستخدم."
+                        "ar": "3- لكل مستخدم: رقم الهاتف، و الهوية و البطاقة المصرفية. لا يمكنك إدخال نفس المعلومات لعدة مستخدمين. "
                     },
                     "tip4_1": {
                         "zh": "4、任何通过第三方作弊软件刷取好友邀请奖励，一经发现",
@@ -6659,7 +6659,7 @@
                         "id": "Undangan",
                         "es": "Incitado",
                         "pt-BR": "Incitado",
-                        "ar": "حرض"
+                        "ar": "تم تقديم الدعوة"
                     },
                     "invite2": {
                         "zh": "成功邀请",
@@ -6679,7 +6679,7 @@
                         "id": "Hadiah yang diterima",
                         "es": "Recibe recompensa",
                         "pt-BR": "Receber recompensa",
-                        "ar": "الحصول على مكافأة"
+                        "ar": "الحصول على مكافأة "
                     },
                     "invite4": {
                         "zh": "邀请进度",
@@ -6689,7 +6689,7 @@
                         "id": "Perkembangan Undangan",
                         "es": "Progreso de invitación ",
                         "pt-BR": "Progresso do convite",
-                        "ar": "تقدم الدعوة"
+                        "ar": "جاري إرسال الدعوة"
                     },
                     "invite5": {
                         "zh": "邀请时间",
@@ -6709,7 +6709,7 @@
                         "id": "Akun belum dibuka",
                         "es": "Unopened account",
                         "pt-BR": "Unopened account",
-                        "ar": "لم يتم فتح "
+                        "ar": "لا يوجد حساب حقيقي"
                     },
                     "invite7": {
                         "zh": "未入金",
@@ -6719,7 +6719,7 @@
                         "id": "Tanpa deposit",
                         "es": "Undeposited",
                         "pt-BR": "Undeposited",
-                        "ar": "حساب"
+                        "ar": "لا يوجد إيداع"
                     },
                     "invite8": {
                         "zh": "未交易",
@@ -6749,7 +6749,7 @@
                         "id": "Undangan sukse",
                         "es": "Invitation successful",
                         "pt-BR": "Invitation successful",
-                        "ar": "إن الدعوة تمت بنجاح  "
+                        "ar": "دعوة ناجحة"
                     }
                 },
                 "commission": {
