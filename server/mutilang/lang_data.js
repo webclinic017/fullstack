@@ -15113,6 +15113,16 @@ module.exports = {
         "pt-BR": "Você se registrou com sucesso!",
         "ar": "قد سجلت بنجاح!"
     },
+    "mRegisterProxySucc": {
+        "zh": "请登陆电脑端个人中心查看详情并补充代理商申请信息",
+        "en": "Please visit the personal center of the official website to view the details and supplement the agent application information",
+        "vi": "Vui lòng truy cập trang cá nhân trên trang website chính thức để xem chi tiết và bổ sung thông tin đăng ký trở thành đại lý",
+        "zh-Hant": "請登陸電腦端個人中心查看詳情並補充代理商申請信息",
+        "id": "Silahkan masuk ke pengaturan pribadi pada situs resmi untuk melihat informasi aplikasi agen dan selengkapnya",
+        "es": "Visite el centro personal del sitio web oficial para ver los detalles y complementar la información de la solicitud del agente.",
+        "pt-BR": "Visite o centro pessoal do site oficial para ver os detalhes e complementar as informações de inscrição do agente.",
+        "ar": "يرجى زيارة المركز الشخصي للموقع الرسمي لعرض التفاصيل وتكملة معلومات طلب الوكيل",
+    },
     "mRegister10": {
         "zh": "下载APP",
         "en": "Download App",
@@ -19499,7 +19509,7 @@ module.exports = {
         "id": "Anda berinvestasi, kami yang membayar anda",
         "es": "Inviertes, yo pagaré",
         "pt-BR": "Você investe, eu pagarei",
-        "ar": "أنت تستثمر ، أنا أدفع"
+        "ar": "الاستثمار عليك والدفع علينا"
     },
     "mInviteNew2": {
         "zh": "注册并成功交易一笔",
@@ -19509,7 +19519,7 @@ module.exports = {
         "id": "Daftar dan lakukan transaksi 1 lot.",
         "es": "Regístrese y tradee con éxito 1 lote.",
         "pt-BR": "Regístre e faz trading de 1 lote com succeso.",
-        "ar": "تسجل بنجاح وتداول عقد واحد."
+        "ar": "سجل بنجاح وتداول عقد واحد."
     },
     "mInviteNew3": {
         "zh": "得20美金现金红包",
@@ -19519,7 +19529,7 @@ module.exports = {
         "id": "Dapatkan hadiah Dolar AS hingga $20",
         "es": "Obtenga un paquete rojo de efectivo por US$20",
         "pt-BR": "Obtenha um pacote vermelho em dinheiro por US$ 20",
-        "ar": "احصل على رزمة نقدية حمراء بقيمة 20 دولارًا أمريكيًا."
+        "ar": "احصل على 20 دولار  إلى حساب التداول"
     },
     "mInviteNew4": {
         "zh": "验证码已发送",

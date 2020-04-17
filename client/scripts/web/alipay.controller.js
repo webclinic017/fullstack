@@ -27,7 +27,8 @@
                 }
                 if (data.is_succ) {
                     var token = $cookies["token"] || '';
-                    var url = data.data.url + '?token=' + token;
+                    var lang = $cookies["lang"] || '';
+                    var url = data.data.url + '?lang=' + lang + '&token=' + token;
                     w.location = url;
                 } else {
                     layer.msg(data.message);

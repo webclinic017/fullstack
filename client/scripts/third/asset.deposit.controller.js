@@ -33,20 +33,20 @@
         $scope.openCurrency = openCurrency;
         $scope.selcetCurrency = selcetCurrency;
 
-        $scope.$watch('selectWay.type', function(n){
-            if(!n) return;
-            if(n === 'wallet'){
+        $scope.$watch('selectWay.type', function (n) {
+            if (!n) return;
+            if (n === 'wallet') {
                 $scope.accountIsWallet = true;
-                if($scope.deposit.type === 'wallet'){
-                    angular.forEach($scope.depositTypeLst,function(value, index){
+                if ($scope.deposit.type === 'wallet') {
+                    angular.forEach($scope.depositTypeLst, function (value, index) {
                         // console.log(value, index,'1')
-                        if(value.default) {
+                        if (value.default) {
                             changeDepositType(index)
                             return
                         }
                     })
                     // 如果还等于钱包
-                    if($scope.deposit.type === 'wallet') {
+                    if ($scope.deposit.type === 'wallet') {
                         changeDepositType(Object.keys($scope.depositTypeLst)[0])
                     }
                 }
@@ -110,7 +110,7 @@
         };
 
         // 网银入金限制
-        function checkInvestLimit () {
+        function checkInvestLimit() {
             if ($scope.deposit.isAbleDeposit === 1) {
                 openDepositMdl('depositLimit', openChangeDepTypeMdl, {
                     msgTip: '您有未上传的充值凭证，需上传历史充值凭证后才可继续使用网银支付功能。',
@@ -124,7 +124,7 @@
         }
 
         // 判断网银绑定银行卡
-        function checkInvestBank () {
+        function checkInvestBank() {
             if (!$scope.deposit.isNeedBank) return;
             if ($scope.deposit.isAbleDeposit !== 0) return;
             asset.checkInvestBank().then(function (data) {
@@ -148,7 +148,7 @@
             tip: ''
         };
         // 选择倍数金额
-        $scope.selectMoney = function(money){
+        $scope.selectMoney = function (money) {
             $scope.deposit.amount = money;
             checkInputAmount();
         }
@@ -162,22 +162,22 @@
                 return;
             }
             var type = $scope.depositTypeLst[$scope.deposit.type]; // 当前支付方式内容
-            if($scope.deposit.amount < Number(type.min)){
+            if ($scope.deposit.amount < Number(type.min)) {
                 $scope.amountVerify.show = true;
                 $scope.amountVerify.tip = '当前支付方式最低充值金额为' + type.min;
                 return
             }
-            if(type.max != "0.00"){
-                if($scope.deposit.amount > Number(type.max)){
+            if (type.max != "0.00") {
+                if ($scope.deposit.amount > Number(type.max)) {
                     $scope.amountVerify.show = true;
                     $scope.amountVerify.tip = '当前支付方式最高充值金额为' + type.max;
                     return
                 }
             }
             // 需要判断金额倍数时
-            if(type.key === 'omipay'){
+            if (type.key === 'omipay') {
                 var re = (/^[0-9]*[0-9]$/i);
-                if(!(re.test($scope.deposit.amount) && $scope.deposit.amount%100 === 0)){
+                if (!(re.test($scope.deposit.amount) && $scope.deposit.amount % 100 === 0)) {
                     $scope.amountVerify.show = true;
                     $scope.amountVerify.tip = type.describe;
                     return
@@ -244,9 +244,9 @@
                     $scope.selectType = selectType;
                     $scope.changeType = changeType;
 
-                    $scope.isWallet = function(key){
-                        if(passedScope.isWallet){
-                            return key === 'wallet'? "false" : "true"
+                    $scope.isWallet = function (key) {
+                        if (passedScope.isWallet) {
+                            return key === 'wallet' ? "false" : "true"
                         } else {
                             return true
                         }
@@ -275,12 +275,12 @@
                 $scope.currencyStatus = false;
             });
         });
-        function openCurrency (e) {
+        function openCurrency(e) {
             e.preventDefault();
             e.stopPropagation();
             $scope.currencyStatus = !$scope.currencyStatus;
         }
-        function selcetCurrency (item) {
+        function selcetCurrency(item) {
             $scope.currencyStatus = false;
             $scope.deposit.currency = item;
         }
@@ -301,7 +301,7 @@
 
                     function confirmDeposit() {
                         var mt4_id;
-                        if($scope.selectWay.type !== 'wallet'){
+                        if ($scope.selectWay.type !== 'wallet') {
                             mt4_id = $scope.accountItem.mt4_id;
                         }
                         $scope.isLoading = true;
@@ -316,7 +316,7 @@
                                     url: $scope.depositTypeLst[$scope.deposit.type].url,
                                     callback: submitDeposit
                                 });
-                            } else if($scope.deposit.type === 'wallet' ){
+                            } else if ($scope.deposit.type === 'wallet') {
                                 submitDeposit()
                             } else {
                                 $scope.isLoading = false;
@@ -327,10 +327,10 @@
                                 }
                             }
 
-                            function computeAmount () {
-                                var poundage = $scope.depositTypeLst[$scope.deposit.type].poundage.substring(0, $scope.depositTypeLst[$scope.deposit.type].poundage.length-1)*0.01;
-                                var amountRMB = Number(amount*$scope.deposit.currency.rate_in).toFixed(2);
-                                var amountFee = Number(amountRMB*poundage).toFixed(2);
+                            function computeAmount() {
+                                var poundage = $scope.depositTypeLst[$scope.deposit.type].poundage.substring(0, $scope.depositTypeLst[$scope.deposit.type].poundage.length - 1) * 0.01;
+                                var amountRMB = Number(amount * $scope.deposit.currency.rate_in).toFixed(2);
+                                var amountFee = Number(amountRMB * poundage).toFixed(2);
                                 openDepositMdl('confirmDeposit', submitDeposit, {
                                     amountDollar: amount,
                                     amountRMB: amountRMB,
@@ -346,7 +346,7 @@
                             function submitDeposit() {
                                 var p = $scope.depositTypeLst[$scope.deposit.type].platform || undefined;
                                 var c = $scope.deposit.currency ? $scope.deposit.currency.currency : undefined;
-                                if($scope.deposit.type !== 'wallet'){
+                                if ($scope.deposit.type !== 'wallet') {
                                     var w = $window.open('/waiting');
                                 }
 
@@ -354,16 +354,17 @@
                                     $scope.isLoading = false;
                                     if (!data) return;
                                     if (data.is_succ) {
-                                        if($scope.deposit.type === 'wallet'){
+                                        if ($scope.deposit.type === 'wallet') {
                                             $scope.walletDepositSucc = true;
                                         } else {
                                             var token = $cookies["token"] || '';
-                                            var url = data.data.url + '?token=' + token;
+                                            var lang = $cookies["lang"] || '';
+                                            var url = data.data.url + '?lang=' + lang + '&token=' + token;
                                             w.location = url;
                                         }
                                     } else {
                                         layer.msg(data.message);
-                                        if($scope.deposit.type !== 'wallet'){
+                                        if ($scope.deposit.type !== 'wallet') {
                                             w.close();
                                         }
                                     }
@@ -464,7 +465,7 @@
                     }
 
                     // 绑定入金银行卡
-                    function bindBankCard () {
+                    function bindBankCard() {
                         if ($scope.depositCard.backErr) return;
                         if (!$scope.depositCard.num) {
                             $scope.depositCard.backErr = true;
@@ -485,7 +486,7 @@
                         });
                     }
 
-                    function gotoEvidence () {
+                    function gotoEvidence() {
                         console.log($scope.main)
                         $rootScope.main.switchPage('evidence');
                         closeModal();
@@ -515,9 +516,9 @@
                     $scope.closeModal = closeModal;
                     $scope.toUrl = function () {
                         var flag = window.open($scope.msgInfo.msgUrl);
-                        if(flag == null) {
-                            alert("Enable popup filtering in your browser!\n\n Please turn off this function temporarily!") ;  
-                        } 
+                        if (flag == null) {
+                            alert("Enable popup filtering in your browser!\n\n Please turn off this function temporarily!");
+                        }
                     };
                     function closeModal() {
                         $modalInstance.dismiss();
@@ -528,7 +529,7 @@
         }
 
         //填写完成银行卡号后回调
-        function fillBankCard (card) {
+        function fillBankCard(card) {
             $scope.deposit.depositCard = card;
             checkInputAmount();
         }
