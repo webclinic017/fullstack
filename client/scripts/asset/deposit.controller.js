@@ -475,6 +475,7 @@
                                 var cardId = $scope.depositTypeLst[$scope.deposit.type].need_card === 1 ? $scope.deposit.card.id : undefined;
                                 var safetyCode = $scope.deposit.type === 'Noire' ? $scope.deposit.safetyCode : undefined;
                                 var token = $cookies["token"] || '';
+                                var lang = $cookies["lang"] || '';
                                 asset.deposit(amount, p, c, mt4_id, cardId, safetyCode).then(function (data) {
                                     $scope.isLoading = false;
                                     if (!data) return;
@@ -484,7 +485,7 @@
                                             $scope.$emit('asset.transfer')
                                             $scope.walletDepositSucc = true;
                                         } else {
-                                            $scope.jumpTargetUrl = fun.setUrlParam(data.data.url) + 'token=' + token;
+                                            $scope.jumpTargetUrl = fun.setUrlParam(data.data.url) + 'lang=' + lang + '&token=' + token;
                                             computeAmount(data.data.usd_amount,data.data.actual_amount,data.data.usd_poundage,data.data.pay_amount);
                                         }
                                         if ($scope.lang.isThird()) {

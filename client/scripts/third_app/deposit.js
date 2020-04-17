@@ -221,7 +221,7 @@ function submitDeposit() {
         $(eleDeposit.payDepositMsg).find('.wallet').addClass('active');
       } else {
         openLoadingMdl();
-        window.location.href = setUrlParam(data.data.url) + 'token=' + token;
+        window.location.href = setUrlParam(data.data.url) + 'lang=' + lang + '&token=' + token;
       }
     } else {
       showBackErr(data.message);
