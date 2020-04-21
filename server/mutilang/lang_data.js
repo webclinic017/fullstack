@@ -12217,7 +12217,7 @@ module.exports = {
         "id": "Apabila posisi terbuka telah melewati jangka waktu 10 hari, maka akan dikenakan biaya administrasi harian oleh TigerWit hingga posisi ditutup. Biaya administrasi akan berlaku setiap ataupun setengah hari. Berikut adalah biaya yang akan dibebankan setelah sepuluh hari :",
         "es": "Si la posición permanece abierta después de 10 días, TigerWit aplicará una tarifa de administración diaria de $ 25 por lote hasta que se cierre la posición. La tarifa de administración se aplicará en su totalidad por cada día o parte del mismo que una posición permanezca abierta.",
         "pt-BR": "Se a posição permanecer aberta após 10 dias, uma taxa de administração diária será aplicada pela TigerWit até que a posição seja fechada. A taxa de administração será aplicada integralmente para cada dia ou parte do mesmo que uma posição permanecer aberta. Por favor, veja nossa taxa abaixo:",
-        "ar": "إذا ظل المركز مفتوحًا بعد مرور مدة 10 أيام، ستقوم TigerWit بتطبيق رسوم إدارية يوميًا إلى حين يتم إغلاق المركز. سيتم تطبيق الرسوم الإدارية بشكل كامل عن كل يوم أو أي جزء منه يظل فيه المركز مفتوحًا. يرجى الإطلاع على رسومنا أدناه:"
+        "ar": "إذا ظل المركز مفتوحًا بعد مرور مدة 10 أيام، ستقوم TigerWit بتطبيق رسوم إدارية يوميًا حتى إغلاق المركز. سيتم تطبيق الرسوم الإدارية بشكل كامل عن كل يوم أو أي جزء منه يبقى فيه المركز مفتوحًا. يرجى الإطلاع على رسومنا أدناه:"
     },
     "amtIslamic7": {
         "zh": "外汇、贵金属、加密货币：每自然日每标准手收取$25；",
@@ -12247,7 +12247,7 @@ module.exports = {
         "id": "Setiap akun TigerWit yang ada akan dikonversikan ke dalam bentuk Akun Islami pada saat akun Islami TigerWit dibuka. Akibatnya, semua posisi akan ditutup pada harga instrumen masing-masing, semua dana akan dipindahkan ke Wallet dan semua transaksi copy yang ada akan dihentikan.",
         "es": "Todas las cuentas de TigerWit existentes se convertirán en una cuenta islámica en el momento en que la nueva cuenta de TigerWit Islamica esté abierta. No será posible revertir ninguna de estas cuentas a un formato de cuenta no islámico. Como parte de la conversión, todas las posiciones se cerrarán al siguiente precio disponible para el (los) instrumento (s) correspondiente (s), todos los fondos se transferirán a la Cartera y todos los acuerdos existentes de comercio tímido cesarán. ",
         "pt-BR": "Quaisquer contas TigerWit existentes serão convertidas em uma conta islâmica no momento em que a nova conta islâmica TigerWit for aberta. Como parte da conversão, todas as posições serão fechadas no próximo preço disponível para o (s) instrumento (s) relevante (s), todos os fundos serão movidos para a Wallet e todos os copy tradings existentes cessarão. ",
-        "ar": "سيتم تحويل أي حسابات حالية مع TigerWit إلى حسابات إسلامية في الوقت الذي يكون فيه الحساب الإسلامي الجديد مع TigerWit مفتوحًا."
+        "ar": "سيتم تحويل أي حسابات حالية مع TigerWit إلى حسابات إسلامية حين يتم فتح الحساب الإسلامي الجديد مع TigerWit، كجزء من عملية الانتقال للحساب الاسلامي، سيتم إغلاق جميع المراكز وفقًا للسعر التالي المتاح بالنسبة للأداة (الأدوات) المالية ذات الصلة، وسيتم تحويل جميع الأموال إلى المحفظة وسيتم إيقاف جميع الترتيبات الحالية للتداول بنسخ الصفقات."
     },
     "amtIslamic10": {
         "zh": "所有持仓单必须全部平仓；",
@@ -12287,7 +12287,7 @@ module.exports = {
         "id": "Sehubungan dengan copy trading, pemegang akun Islami hanya dapat mengikuti akun Master yang menggunakan akun Islami TigerWit.",
         "es": "En relación con el copy trading, el titular de una cuenta islámica solo puede seguir una cuenta maestra que también opera bajo la estructura de cuenta TigerWit Islamic. ",
         "pt-BR": "Em relação ao copy trading, um titular de conta islâmica só pode seguir uma conta principal que também opera sob a estrutura de conta islâmica do TigerWit. ",
-        "ar": "فيما يتعلق بالتداول بنسخ الصفقات، لا يجوز لصاحب الحساب الإسلامي إتباع حسابات الأساتذة باستثناء حسابات الأساتذة التي تعمل تحت هيكل حسابات TigerWit الإسلامية."
+        "ar": "فيما يتعلق بالتداول بنسخ الصفقات، لا يجوز لصاحب الحساب الإسلامي متابعة حسابات المتداولين الموهوبين باستثناء حسابات المتداولين الموهوبين التي تعمل تحت هيكل حسابات TigerWit الإسلامية."
     },
     "downloadApp": {
         "android": {
@@ -15521,7 +15521,7 @@ module.exports = {
         "id": "Nama Depan",
         "es": "Nombre real",
         "pt-BR": "Nome real",
-        "ar": "الاسم الأخير"
+        "ar": "العائلة"
     },
     "third_username21": {
         "zh": "名",
@@ -15561,7 +15561,7 @@ module.exports = {
         "id": "Sudahkah Anda tinggal di sini selama lebih dari tiga bulan?",
         "es": "¿Has vivido aquí por más de tres meses?",
         "pt-BR": "Você já morou neste endereço por mais de três meses?",
-        "ar": "هل عشت هنا لأكثر من ثلاثة أشهر؟"
+        "ar": "هل تقيم في هذا العنوان لفترة تزيد عن ثلاثة أشهر؟"
     },
     "third_username25": {
         "zh": "您的国籍是否在您居住的国家以外的地方？",
@@ -15571,7 +15571,7 @@ module.exports = {
         "id": "Apakah anda bertempat tinggal di daerah yang bukan asal Negara anda?",
         "es": "Tu nacionalidad es diferente a la del país em que resides?",
         "pt-BR": "A sua nacionalidade é diferente do seu país de residência?",
-        "ar": "هل جنسيتك في أي مكان آخر غير بلد إقامتك؟"
+        "ar": "هل تختلف جنسيتك عن جنسية الدولة التي تقيم بها؟"
     },
     "third_username26": {
         "zh": "您的纳税地是否在您居住的国家以外的地方？",
@@ -15581,7 +15581,7 @@ module.exports = {
         "id": "Apakah Pajak kewarganegaraan anda merupakan negara tempat asal anda?",
         "es": "Es tu residencia fiscal (pagamento de tributos) en otro país diferente al que vives?",
         "pt-BR": "É sua residência fiscal (pagamento de tributos) em outro país diferente ao que você mora?",
-        "ar": "هل إقامتك الضريبية في أي مكان آخر غير بلد إقامتك؟"
+        "ar": "هل إقامتك الضريبية تختلف عن دولة إقامتك؟"
     },
     "third_username27": {
         "zh": "差价合约是复杂的产品，存在高额亏损的风险。 只有在您通过应用风险控制（包括止损和止盈订单）来寻求最小化损失时，才应该继续使用该产品。",
@@ -15591,7 +15591,7 @@ module.exports = {
         "id": "CFD adalah produk yang memiliki kompleksitas serta risiko yang tinggi dan dapat mengakibatkan anda kehilangan modal. Oleh karena itu anda selalu disarankan untuk meminimalisir kerugian anda dengan cara mengontrol risiko, termasuk penggunaan stop loss dan take profit.",
         "es": "Los CFDs son productos complejos que conllevan un alto riesgo de perder su dinero. Debe proseguir solamente si intentará minimizar las pérdidas mediante la aplicación de control de riesgos, incluyendo operaciones del tipo stop loss o take profit.",
         "pt-BR": "CFDs são produtos complexos que envolvem um alto risco de perder seu dinheiro. Você deve proceder somente se procurar minimizar as perdas aplicando controles de risco, incluindo stop loss e take profit orders.",
-        "ar": "العقود مقابل الفروقات هي منتجات معقدة تنطوي على مخاطر عالية لفقد أموالك. يجب عليك المتابعة فقط إذا كنت ستسعى لتقليل الخسائر إلى الحد الأدنى عن طريق تطبيق ضوابط المخاطر ، بما في ذلك وقف الخسارة وأوامر الربح."
+        "ar": "العقود مقابل الفروقات هي منتجات معقدة تنطوي على مخاطر عالية بخسارة أموالك. يجب عليك المتابعة فقط إذا كنت ستسعى لتقليل الخسائر إلى الحد الأدنى عن طريق تطبيق ضوابط المخاطر ، بما في ذلك وقف الخسارة وأوامر الربح."
     },
     "third_username28": {
         "zh": "如果您的承受风险能力较低，差价合约将不适合您。",
@@ -15801,7 +15801,7 @@ module.exports = {
         "id": "Kami menerima dokumen sebagai berikut:",
         "es": "Aceptaremos los siguientes documentos:",
         "pt-BR": "Aceitaremos os seguintes documentos:",
-        "ar": "سوف نقبل الوثائق التالية:"
+        "ar": " نقبل الوثائق التالية:"
     },
     "third_address_3": {
         "zh": "电费单（水，煤气，电）",
@@ -16141,7 +16141,7 @@ module.exports = {
         "id": "Trading dipasar manapun",
         "es": "Opere los mercados que busca",
         "pt-BR": "Negocie nos mercados que você quiser",
-        "ar": "استمتع بالتداول في الأسواق التي تريدها"
+        "ar": "تمتع بالتداول بتقنية بلوكتشاين"
     },
     "newhome_1_1": {
         "zh": "你需要的交易方式",
@@ -16151,7 +16151,7 @@ module.exports = {
         "id": "Dengan cara yang anda inginkan",
         "es": "Del modo que desea",
         "pt-BR": "Da maneira que você gosta",
-        "ar": "بالطريقة التي تريد التداول بها"
+        "ar": "مع وسيط عالمي بتراخيص متعددة"
     },
     "newhome_1_2": {
         "zh": "区块链助力",
@@ -16161,7 +16161,7 @@ module.exports = {
         "id": "Didukung oleh teknologi blockchain",
         "es": "Powered by blockchain",
         "pt-BR": "Powered by blockchain",
-        "ar": "مدعومة من تقنية بلوك تشين"
+        "ar": "تداول بثقة وشفافية على أسواقك المفضلة"
     },
     "newhome_2": {
         "zh": "打开官网或APP，开始交易。",
@@ -16471,7 +16471,7 @@ module.exports = {
         "id": "Didukung oleh teknologi blockchain",
         "es": "Powered by blockchain",
         "pt-BR": "Powered by blockchain",
-        "ar": "مدعومة من تقنية بلوك تشين"
+        "ar": "تداول بثقة وشفافية على أسواقك المفضلة"
     },
     "newhome_31": {
         "zh": "TigerWit正在利用区块链的力量建立一个分布式记账交易系统。这是一种能在交易网络中共享，并且经过编码加密，高度详细的交易记录。TigerWit的分布式记账交易系统是建立在区块链结算基础上的，能够提供更公平、更保险、更透明的交易环境。",
@@ -16501,7 +16501,7 @@ module.exports = {
         "id": "Dengan cara yang anda inginkan",
         "es": "Del modo que desea operar",
         "pt-BR": "Da maneira que você gosta",
-        "ar": "بالطريقة التي تريد التداول بها"
+        "ar": "مع وسيط عالمي بتراخيص متعددة"
     },
     "newhome_33": {
         "zh": "一个流畅、智能、便捷的交易APP",
