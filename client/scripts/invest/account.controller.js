@@ -63,15 +63,15 @@
                     $scope.accountInfo.accountList = data.data.filter(function (item) {
                         return item.status;
                     }); 
-                    if($scope.accountInfo.accountList.length > 0){
-                        // 当全局mt4_id为空
-                        if(!$scope.investSelect.id){
-                            $scope.investSelect.id = $scope.accountInfo.accountList[0].mt4_id
-                            $scope.investSelect.type = $scope.accountInfo.accountList[0].account_type
-
-                        }
-                    }
-                } 
+                    //在user/info中 拿trade_account 做默认，不在这里取了
+                    // if($scope.accountInfo.accountList.length > 0){
+                    //     // 当全局mt4_id为空
+                    //     if(!$scope.investSelect.id){
+                    //         $scope.investSelect.id = $scope.accountInfo.accountList[0].mt4_id
+                    //         $scope.investSelect.type = $scope.accountInfo.accountList[0].account_type
+                    //     }
+                    // }
+                }
             });
         }
         // 下拉选项变化时触发
@@ -79,6 +79,7 @@
             angular.forEach($scope.accountInfo.accountList, function(val, key){
                 if(val.mt4_id == $scope.investSelect.id) {
                     $scope.investSelect.type = val.account_type;
+                    $scope.checkStockTrading(val.mt4_id);
                     return
                 }
             })

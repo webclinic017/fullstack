@@ -115,6 +115,36 @@
                     }
                 }
             },
+            "common_confirm": {
+                "zh": "确认",
+                "en": "",
+                "vi": "",
+                "zh-Hant": "",
+                "id": "",
+                "es": "Enviar",
+                "pt-BR": "",
+                "ar": ""
+            },
+            "common_checkOrders": {
+                "zh": "查看订单",
+                "en": "",
+                "vi": "",
+                "zh-Hant": "",
+                "id": "",
+                "es": "Enviar",
+                "pt-BR": "",
+                "ar": ""
+            },
+            "common_pending": {
+                "zh": "待处理",
+                "en": "",
+                "vi": "",
+                "zh-Hant": "",
+                "id": "",
+                "es": "Enviar",
+                "pt-BR": "",
+                "ar": ""
+            },
             "islamic_confirm": {
                 "zh": "确认",
                 "en": "Submit",

@@ -106,6 +106,7 @@
                             <i class="fa fa-dollar"></i>{{ order.gross_profit }}
                         </td>
                         <td>
+                            <button ng-if="order.is_pending === 1" href="" class="btn tw-btn-capsule-gradient tw-btn-sm" style="padding: 0px;" ng-click="invalidStockTrade(investSelect.id, order.ticket)">{{ lang.text('common_pending') }}</button>
                         </td>
                     </tr>
                 </tbody>
@@ -201,10 +202,12 @@
                             <td ng-class="{'font-danger': order.gross_profit.indexOf('-') != -1, 'font-success': order.gross_profit.indexOf('-') < 0}" ng-if="!lang.hostIsCn()">
                                 <i class="fa fa-dollar"></i>{{ order.gross_profit }}
                             </td>
-                    
                             <td>
                                 <span ng-if="!order.cancel_control" class="font-size-12">{{lang.text('tigerWitID.tradingAccount.tip13')}}</span>
                                 <span ng-if="!!order.cancel_control" class="font-size-12">{{lang.text('tigerWitID.tradingAccount.tip14')}}</span>
+                            </td>
+                            <td>
+                                <button ng-if="order.is_pending === 1" href="" class="btn tw-btn-capsule-gradient tw-btn-sm" style="padding: 0px;" ng-click="invalidStockTrade(investSelect.id, order.ticket)">{{ lang.text('common_pending') }}</button>
                             </td>
                         </tr>
                         <tr ng-if="trader.orders.length <= 0 && trader.detailsShow">
