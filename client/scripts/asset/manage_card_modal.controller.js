@@ -36,7 +36,7 @@
                 $scope.openAddCardModal = openCardMdl
                 $scope.parentScope = params.parentScope
                 $scope.page = params.page
-                $scope.type = params.parentScope.deposit.type;
+                $scope.type = params.parentScope.deposit ? params.parentScope.deposit.type : undefined;
                 //刷新列表 
                 getCardList();
 
