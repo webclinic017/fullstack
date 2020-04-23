@@ -357,7 +357,7 @@
                 /*检测手机号是否已经存在*/
                 if (($("#telephone").val().trim() != "")) {
                     // 代理商时
-                    if ($.cookie('invite_status') == 0) {
+                    if (oReg.search_arr.origin === 'proxy') {
                         sendVerifyCode(6);
                     } else {
                         publicRequest('checkExists', 'GET', {
