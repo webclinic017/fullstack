@@ -1,33 +1,42 @@
-<div class="authen_content mg-tp-40 mg-bt-100 ctn center" ng-if="personal.dredged_type == 'live' || dredgingType == 'live' || dredgingType == '1'">
+<div class="authen_content mg-tp-40 mg-bt-100 ctn center"
+    ng-if="personal.dredged_type == 'live' || dredgingType == 'live' || dredgingType == '1'">
     <h3 class="sys_modal_v2__title text-center">{{lang.text('tigerWitID.myAccount.tip20')}}</h3>
-    <div class="authen_submit pd-tp-30">
-        <div class="text-left pd-lf-50 mg-lf-100 mg-tp-40">
-            <p class="sys_modal_v2__desp">{{lang.text('tigerWitID.tradingAccount.tip6')}}</p>
-            <p class="sys_modal_v2__desp">{{lang.text('tigerWitID.tradingAccount.tip5')}}</p>
-            <p class="sys_modal_v2__desp pd-tp-10">1. {{lang.text('tigerWitID.myAccount.tip6')}}</p>
-            <p class="sys_modal_v2__desp">2. {{lang.text('tigerWitID.myAccount.depositToActivate')}}</p>
-        </div>
-        <div class="text-left mg-lf-100 mg-tp-40">
-            <div class="btn_wrapper">
-                <a class="btn btn-sm btn-primary-gradient mg-tp-20" ui-sref="space.center.index" ng-click="toAuthenCompleteSensorsdata('真实账户')">{{lang.text('tigerWitID.finish')}}</a>
+    <div class="justify-center pd-tp-30">
+        <div class="">
+            <div class="mg-tp-40">
+                <p class="sys_modal_v2__desp">{{lang.text('tigerWitID.tradingAccount.tip6')}}</p>
+                <p class="sys_modal_v2__desp">{{lang.text('tigerWitID.tradingAccount.tip5')}}</p>
+                <p class="sys_modal_v2__desp pd-tp-10">1. {{lang.text('tigerWitID.myAccount.tip6')}}</p>
+                <p class="sys_modal_v2__desp">2. {{lang.text('tigerWitID.myAccount.depositToActivate')}}</p>
+            </div>
+            <div class="mg-tp-40">
+                <div class="btn_wrapper">
+                    <a class="btn btn-sm btn-primary-gradient mg-tp-20" ui-sref="space.center.index"
+                        ng-click="toAuthenCompleteSensorsdata('真实账户')">{{lang.text('tigerWitID.finish')}}</a>
+                </div>
             </div>
         </div>
+
     </div>
 </div>
 
-<div class="authen_content mg-tp-40 mg-bt-100 ctn center" ng-if="personal.dredged_type == 'demo' || dredgingType == 'demo' || dredgingType == '2'">
+<div class="authen_content mg-tp-40 mg-bt-100 ctn center"
+    ng-if="personal.dredged_type == 'demo' || dredgingType == 'demo' || dredgingType == '2'">
     <h3 class="sys_modal_v2__title text-center">{{lang.text('tigerWitID.myAccount.tip2')}}</h3>
-    <div class="authen_submit pd-tp-30">
-        <div class="text-left pd-lf-50 mg-lf-100 mg-tp-40">
-            <p class="sys_modal_v2__desp">{{lang.text('tigerWitID.myAccount.tip3')}}</p>
-            <p class="sys_modal_v2__desp">{{lang.text('tigerWitID.myAccount.tip4')}}</p>
-            <p class="sys_modal_v2__desp">{{lang.text('tigerWitID.myAccount.tip5')}}</p>
-            <p class="sys_modal_v2__desp pd-tp-10">1. {{lang.text('tigerWitID.myAccount.tip6')}}</p>
-            <p class="sys_modal_v2__desp">2. {{lang.text('tigerWitID.myAccount.depositToActivate')}}</p>
-        </div>
-        <div class="text-left mg-lf-100 mg-tp-40">
-            <div class="btn_wrapper">
-                <a class="btn btn-sm btn-primary-gradient mg-tp-20" ui-sref="space.center.index" ng-click="toAuthenCompleteSensorsdata('体验金账户')">{{lang.text('tigerWitID.finish')}}</a>
+    <div class="justify-center pd-tp-30">
+        <div class="">
+            <div class="mg-tp-40">
+                <p class="sys_modal_v2__desp">{{lang.text('tigerWitID.myAccount.tip3')}}</p>
+                <p class="sys_modal_v2__desp">{{lang.text('tigerWitID.myAccount.tip4')}}</p>
+                <p class="sys_modal_v2__desp">{{lang.text('tigerWitID.myAccount.tip5')}}</p>
+                <p class="sys_modal_v2__desp pd-tp-10">1. {{lang.text('tigerWitID.myAccount.tip6')}}</p>
+                <p class="sys_modal_v2__desp">2. {{lang.text('tigerWitID.myAccount.depositToActivate')}}</p>
+            </div>
+            <div class="mg-tp-40">
+                <div class="btn_wrapper">
+                    <a class="btn btn-sm btn-primary-gradient mg-tp-20" ui-sref="space.center.index"
+                        ng-click="toAuthenCompleteSensorsdata('体验金账户')">{{lang.text('tigerWitID.finish')}}</a>
+                </div>
             </div>
         </div>
     </div>
