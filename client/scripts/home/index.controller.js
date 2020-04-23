@@ -135,6 +135,13 @@
         //     });
         // }
 
+        function getSymbolQuoteStatus (symbols) {
+            account.getSymbolQuoteStatus(symbols).then(function (rs) {
+                if (rs.is_succ) {
+                    $scope.quoteStatus = rs.data;
+                }
+            })
+        }
         // 报价服务
         $scope.quoteSymbols = [];
         $scope.spreadInfo = {};     // 点差
@@ -182,6 +189,8 @@
         angular.forEach(isCloned ? forCloneSymbolZh : forNormalSymbolZh, function (value, key) {
             requestSymbols.push(key);
         });
+        //品种报价状态
+        getSymbolQuoteStatus(requestSymbols.join(','));
         var socketPara = {
             websocketTigerUrl: $scope.lang.isDemo() ? ('wss://demo'+ $scope.getDomain() +':4567') : 'wss://quotephp'+ $scope.getDomain() +':4567',
             request_symbols: requestSymbols,

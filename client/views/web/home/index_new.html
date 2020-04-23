@@ -293,23 +293,23 @@
                     <%}%>
                     </li>
                     <%if (lang.areaId != 1) {%>
-                  <li class="sell" ng-class="{down: quoteSymbol.type === 'up', up: quoteSymbol.type === 'down'}">
+                  <li class="sell" ng-class="{down: quoteSymbol.type === 'up', up: quoteSymbol.type === 'down', gray: !quoteStatus[quoteSymbol.symbol]}">
                     <span>
                       {{ quoteSymbol.sell }}
                     </span>
                   </li>
-                  <li class="buy" ng-class="{down: quoteSymbol.type === 'up', up: quoteSymbol.type === 'down'}">
+                  <li class="buy" ng-class="{down: quoteSymbol.type === 'up', up: quoteSymbol.type === 'down', gray: !quoteStatus[quoteSymbol.symbol]}">
                     <span>
                       {{ quoteSymbol.buy }}
                     </span>
                   </li>
                   <%} else {%>
-                  <li class="sell" ng-class="{up: quoteSymbol.type === 'up', down: quoteSymbol.type === 'down'}">
+                  <li class="sell" ng-class="{up: quoteSymbol.type === 'up', down: quoteSymbol.type === 'down', gray: !quoteStatus[quoteSymbol.symbol]}">
                     <span>
                       {{ quoteSymbol.sell }}
                     </span>
                   </li>
-                  <li class="buy" ng-class="{up: quoteSymbol.type === 'up', down: quoteSymbol.type === 'down'}">
+                  <li class="buy" ng-class="{up: quoteSymbol.type === 'up', down: quoteSymbol.type === 'down', gray: !quoteStatus[quoteSymbol.symbol]}">
                     <span>
                       {{ quoteSymbol.buy }}
                     </span>

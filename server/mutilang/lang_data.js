@@ -60,14 +60,34 @@ module.exports = {
         "ar": "الطاقة"
     },
     "CFD": {
-        "en": "CFD",
-        "zh": "差价合约",
-        "vi": "CFD",
-        "zh-Hant": "差價合約",
-        "id": "CFD",
-        "es": "CFD",
-        "pt-BR": "CFD",
-        "ar": "عقود الفروقات"
+        "en": "Index",
+        "zh": "指数",
+        "vi": "Chỉ số",
+        "zh-Hant": "指數",
+        "id": "Indeks",
+        "es": "Índice",
+        "pt-BR": "Índice",
+        "ar": "المؤشر"
+    },
+    "feeCrypto": {
+        "en": "Crypto",
+        "zh": "虚拟货币",
+        "vi": "Tiền điện tử",
+        "zh-Hant": "虛擬貨幣",
+        "id": "Crypto",
+        "es": "Crypto",
+        "pt-BR": "Crypto",
+        "ar": "الكريبتو"
+    },
+    "feeStock": {
+        "en": "Stocks",
+        "zh": "股票",
+        "vi": "Cổ phiếu",
+        "zh-Hant": "股票",
+        "id": "Saham",
+        "es": "Acciones",
+        "pt-BR": "Ações",
+        "ar": "Stocks"
     },
     "faq": {
         "en": "FAQ",
@@ -14814,14 +14834,14 @@ module.exports = {
         "ar": "رسوم الإجراءات"
     },
     "tradeFee15": {
-        "zh": "TigerWit对差价合约产品收取的点差为0，TigerWit对差价合约产品收取一定比例的手续费。",
-        "en": "CFD spread is 0, TigerWit charges a certain percentage fees of CFDs.",
-        "vi": "Mức chênh lệch CFD là 0, TigerWit tính một khoản phí phần trăm nhất định của CFD.",
-        "zh-Hant": "TigerWit對差價合約產品收取的點差為0，TigerWit對差價合約產品收取壹定比例的手續費。",
-        "id": "Spread CFD adalah 0, namun TigerWit akan membebankan biaya komisi.",
-        "es": "CFD spread es 0, TigerWit carga un determinado procentaje de comisiones en CFDs.",
-        "pt-BR": "O spread do CFD é 0, o TigerWit cobra uma certa porcentagem de CFDs.",
-        "ar": "فرق أسعار عقود الفروقات هو صفر، وتتقاضى TigerWit نسبة مئوية محددة من عقود الفروقات كرسوم."
+        "zh": "TigerWit对指数产品收取的点差为0，TigerWit对指数产品收取一定比例的手续费。",
+        "en": "The spread of Index product is 0, TigerWit will charges a certain percentage fees for Index.",
+        "vi": "Sản phẩm Chỉ số có spread bằng 0, TigerWit sẽ tính cố định phần trăm phí của Chỉ số.",
+        "zh-Hant": "TigerWit對指數產品收取的點差為0，TigerWit對指數產品收取一定比例的手續費。",
+        "id": "Spread untuk produk Indeks adalah 0. TigerWit hanya menarik biaya berdasarkan persentase tertentu untuk indeks.",
+        "es": "La dispersión del producto del índice es 0, TigerWit cobrará un cierto porcentaje del índice.",
+        "pt-BR": "O spread do produto do índice é 0, a TigerWit cobrará uma determinada taxa percentual pelo índice.",
+        "ar": "إن فروق الأسعار لمنتج المؤشر هو 0، سوف تفرض TigerWit رسوم نسبة مئوية معينة للمؤشر."
     },
     "tradeFee16": {
         "zh": "复制高手佣金",
