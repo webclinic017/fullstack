@@ -87,7 +87,7 @@ module.exports = {
         "id": "Saham",
         "es": "Acciones",
         "pt-BR": "Ações",
-        "ar": "Stocks"
+        "ar": "الأسهم"
     },
     "faq": {
         "en": "FAQ",
