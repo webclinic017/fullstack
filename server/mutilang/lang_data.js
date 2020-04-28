@@ -14033,9 +14033,9 @@ module.exports = {
         "rulesTit2Con1": {
             "zh": "1.客户注册TigerWit通行证并激活联赛帐户",
             "en": "1. To enter the League, clients MUST register and activate their League accounts.",
-            "vi": "1.	Khách hàng có thể đăng ký và xác nhận qua số điện thoại và kích hoạt tài khoản dự thi.",
+            "vi": "1. Khách hàng có thể đăng ký và xác nhận qua số điện thoại và kích hoạt tài khoản dự thi.",
             "zh-Hant": "1.客戶註冊TigerWit通行證並激活聯賽帳戶",
-            "id": "1.  Klien harus mendaftar di TigerWit dan aktivasi akun",
+            "id": "1. Klien harus mendaftar di TigerWit dan aktivasi akun",
             "es": "1. El cliente debe registrarse con TigerWit y activar la cuenta de la liga.",
             "pt-BR": "1. O cliente precisa registrar na TigerWit e ativar a conta da liga.",
             "ar": "1. يحتاج العميل إلى تسجيل وتفعيل حساب الدوري."
@@ -14043,7 +14043,7 @@ module.exports = {
         "rulesTit2Con2": {
             "zh": "2.交易者可直接使用联赛账户里的体验金进行交易",
             "en": "2. Virtual funds will then become available to the trader.",
-            "vi": "2.	Khách hàng có thể trực tiếp sử dụng quỹ ảo trong tài khoản dự thi để giao dịch.",
+            "vi": "2. Khách hàng có thể trực tiếp sử dụng quỹ ảo trong tài khoản dự thi để giao dịch.",
             "zh-Hant": "2.交易者可直接使用聯賽賬戶裡的體驗金進行交易",
             "id": "2. Trader dapat menggunakan dana virtual tersebut untuk bertransaksi",
             "es": "2. Los operadores pueden usar directamente fondos de experiencia en la cuenta de la liga para comerciar.",
@@ -14053,7 +14053,7 @@ module.exports = {
         "rulesTit2Con3": {
             "zh": "3.排名前100位的交易员将能够看到他们在排行榜上的位置",
             "en": "3. Traders who are ranked in the TOP 100 will be able to see their position on the League Table.",
-            "vi": "3.	Các nhà giao dịch được xếp hạng trong TOP 100 sẽ xem được thứ hạng của họ trên Bảng Thành Tích.",
+            "vi": "3. Các nhà giao dịch được xếp hạng trong TOP 100 sẽ xem được thứ hạng của họ trên Bảng Thành Tích.",
             "zh-Hant": "3.排名前100位的交易員將能夠看到他們在排行榜上的位置",
             "id": "3.  Trader yang masuk peringkat 100 besar akan dapat melihat posisinya di Tabel Liga",
             "es": "3. Los Traders que estén clasificados en el TOP 100 podrán ver su posición en la Tabla de la Liga.",
@@ -14063,7 +14063,7 @@ module.exports = {
         "rulesTit2Con4": {
             "zh": "4.每周必须至少开设一次交易以保持竞争",
             "en": "4. A minimum of one trade a week must be opened in the account to remain in the competition.",
-            "vi": "4.	Mỗi tuần phải có ít nhất một giao dịch để duy trì thi đấu.",
+            "vi": "4. Mỗi tuần phải có ít nhất một giao dịch để duy trì thi đấu.",
             "zh-Hant": "4.每週必須至少開設一次交易以保持競爭",
             "id": "4. Peserta wajib melakukan transaksi minimum 1 kali setiap minggunya agar tetap dapat ikut berpartisipasi",
             "es": "4. Se debe abrir un mínimo de una operación por semana en la cuenta para permanecer en la competencia.",
@@ -14083,7 +14083,7 @@ module.exports = {
         "rulesTit3Con1": {
             "zh": "1.所有交易者都可以创建一个联赛账户。",
             "en": "1. All traders can open a league account.",
-            "vi": "1.	Tất cả người chơi có thể mở một tài khoản Dự Thi.",
+            "vi": "1. Tất cả người chơi có thể mở một tài khoản Dự Thi.",
             "zh-Hant": "1.所有交易者都可以創建一個聯賽賬戶。",
             "id": "1. Semua peserta wajib membuka Akun Liga",
             "es": "1. Todos los comerciantes pueden crear una cuenta en la liga.",
@@ -14093,7 +14093,7 @@ module.exports = {
         "rulesTit3Con2": {
             "zh": "2.交易者必须在其联赛账户上开设一些交易。",
             "en": "2. Traders must open some trades on their League account.",
-            "vi": "2.	Người chơi phải mở một số lệnh trên tài khoản dự thi của mình.",
+            "vi": "2. Người chơi phải mở một số lệnh trên tài khoản dự thi của mình.",
             "zh-Hant": "2.交易者必須在其聯賽賬戶上開設一些交易。",
             "id": "2. Trader harus melakukan transaksi pada akun Liga mereka",
             "es": "2. Los operadores deben abrir algunas operaciones en la cuenta de la liga.",
@@ -14103,7 +14103,7 @@ module.exports = {
         "rulesTit3Con3": {
             "zh": "3.排名前100位的交易员将能够看到他们在排行榜上的位置。",
             "en": "3. Traders who are ranked in the TOP 100 will be able to see their position on the League Table.",
-            "vi": "3.	Các nhà giao dịch được xếp hạng trong TOP 100 sẽ xem được thứ hạng của họ trên Bảng Thành Tích",
+            "vi": "3. Các nhà giao dịch được xếp hạng trong TOP 100 sẽ xem được thứ hạng của họ trên Bảng Thành Tích",
             "zh-Hant": "3.排名前100位的交易員將能夠看到他們在排行榜上的位置。",
             "id": "3. Trader yang masuk peringkat 100 besar akan dapat melihat posisinya di Tabel Liga",
             "es": "3. Los Traders que estén clasificados en el TOP 100 podrán ver su posición en la Tabla de la Liga.",
@@ -14113,7 +14113,7 @@ module.exports = {
         "rulesTit3Con4": {
             "zh": "4.每周必须至少开设一次交易以保持竞争。",
             "en": "4. A minimum of one trade a week must be opened in the account to remain in the competition.",
-            "vi": "4.	Mỗi tuần phải có ít nhất một giao dịch để duy trì thi đấu.",
+            "vi": "4. Mỗi tuần phải có ít nhất một giao dịch để duy trì thi đấu.",
             "zh-Hant": "4.每週必須至少開設一次交易以保持競爭。",
             "id": "4. Peserta wajib melakukan transaksi minimum 1 kali setiap minggunya agar tetap dapat ikut berpartisipasi",
             "es": "4. Debe negociar al menos una operación por semana para mantenerse en competencia.",
@@ -14133,7 +14133,7 @@ module.exports = {
         "rulesTit4Con1": {
             "zh": "1.客户必须创建联赛帐户才能参与。",
             "en": "1. The client must open a League account in order to participate.",
-            "vi": "1.	Khách hàng phải mở tài khoản Dự Thi để tham gia cuộc thi.",
+            "vi": "1. Khách hàng phải mở tài khoản Dự Thi để tham gia cuộc thi.",
             "zh-Hant": "1.客戶必須創建聯賽帳戶才能參與。",
             "id": "1. Klien harus membuka akun Liga untuk dapat berpartisipasi",
             "es": "1. El cliente debe crear una cuenta de liga para participar.",
@@ -14143,7 +14143,7 @@ module.exports = {
         "rulesTit4Con2": {
             "zh": "2.11月22日 00:00（GMT+3）后将不再接受新报名",
             "en": "2. No new entries will be taken after the November 22nd 00:00 (GMT+3).",
-            "vi": "2.	Khách hàng không được tham gia cuộc thi sau 00:00 (GMT+3) ngày 22 tháng 11.",
+            "vi": "2. Khách hàng không được tham gia cuộc thi sau 00:00 (GMT+3) ngày 22 tháng 11.",
             "zh-Hant": "2.11月22日 00:00（GMT+3）後將不再接受新報名",
             "id": "2.  Klien tidak boleh melakukan transaksi apapun di akun Liga sebelum tanggal 22 November pukul 04:00 WIB",
             "es": "2. No se realizarán nuevas inscripciones después de las 11:00 del 22 de noviembre (GMT +3).",
@@ -14153,7 +14153,7 @@ module.exports = {
         "rulesTit4Con3": {
             "zh": "3.客户必须在联赛帐户中开设头寸才能获得资格。",
             "en": "3. The client must open a position on the League account in order to be eligible.",
-            "vi": "3.	Mỗi khách hàng phải mở một lệnh trên tài khoản Dự thi để đủ điện tham gia cuộc thi.",
+            "vi": "3. Mỗi khách hàng phải mở một lệnh trên tài khoản Dự thi để đủ điện tham gia cuộc thi.",
             "zh-Hant": "3.客戶必須在聯賽帳戶中開設頭寸才能獲得資格。",
             "id": "3. Klien harus membuka posisi pada akun Liga agar terpenuhi syaratnya",
             "es": "3. El cliente debe abrir una posición en la cuenta de la Liga para calificar.",
@@ -14163,7 +14163,7 @@ module.exports = {
         "rulesTit4Con4": {
             "zh": "4. 必须至少每周进行一次新交易以保持竞争。",
             "en": "4. A new trade must be placed every week (as a minimum) to stay in the competition.",
-            "vi": "4.	Mỗi tuần phải mở một giao dịch để duy trì trong cuộc thi.",
+            "vi": "4. Mỗi tuần phải mở một giao dịch để duy trì trong cuộc thi.",
             "zh-Hant": "4.必須至少每週進行一次新交易以保持競爭。",
             "id": "4. Klien harus memiliki transaksi baru setiap minggunya (minimal satu kali) agar tetap bertahan di kompetisi",
             "es": "4. Se debe abrir una nueva posición cada semana (mínimo) para permanecer en la competencia.",
@@ -14173,7 +14173,7 @@ module.exports = {
         "rulesTit4Con5": {
             "zh": "5. 排名前100位的交易员将能够看到他们在排行榜上的位置。",
             "en": "5. Traders who are ranked in the TOP 100 will be able to see their position on the League Table.",
-            "vi": "5.	Các nhà giao dịch được xếp hạng trong TOP 100 sẽ xem được thứ hạng của họ trên Bảng Thành Tích",
+            "vi": "5. Các nhà giao dịch được xếp hạng trong TOP 100 sẽ xem được thứ hạng của họ trên Bảng Thành Tích",
             "zh-Hant": "5.排名前100位的交易員將能夠看到他們在排行榜上的位置。",
             "id": "5.Trader yang masuk peringkat 100 besar akan dapat melihat posisinya di Tabel Liga",
             "es": "5. Los Traders que estén clasificados en el TOP 100 podrán ver su posición en la Tabla de la Liga.",
@@ -14183,7 +14183,7 @@ module.exports = {
         "rulesTit4Con6": {
             "zh": "6. 排名最高、收益最好的交易者将获得最高净值的奖金。",
             "en": "6. The top-ranked, most profitable trader based on the highest net worth will receive the winning prize.",
-            "vi": "6.	Người có thứ hạng cao nhất và có tỷ lệ lợi nhuận cao nhất sẽ giành chiến thắng",
+            "vi": "6. Người có thứ hạng cao nhất và có tỷ lệ lợi nhuận cao nhất sẽ giành chiến thắng",
             "zh-Hant": "6.排名最高、收益最好的交易者將獲得最高淨值的獎金。",
             "id": "6. Untuk pemenang akan dihitung berdasarkan berapa keuntungan (net) yang didapatkan",
             "es": "6. El comerciante mejor calificado y más rentable, basado en el patrimonio neto más alto, recibirá el premio ganador.",
@@ -14193,7 +14193,7 @@ module.exports = {
         "rulesTit4Con7": {
             "zh": "7. 两名亚军将获得亚军奖。",
             "en": "7. Traders finishing in 2nd and 3rd position will receive runner up prizes.",
-            "vi": "7.	2 á quân sẽ nhận được giải á quân.",
+            "vi": "7. 2 á quân sẽ nhận được giải á quân.",
             "zh-Hant": "兩名亞軍將獲得亞軍獎。",
             "id": "7. 2 Runner up  akan mendapatkan hadiah spesial",
             "es": "7. Dos subcampeones recibirán premios de subcampeón",
@@ -14223,7 +14223,7 @@ module.exports = {
         "rulesTit5Con1": {
             "zh": "10月25日0:00（GMT+3）到12月11日24:00（GMT+3）期间开设的订单为有效订单；",
             "en": "1. Orders opened between 00:00:00 (GMT+3) on October 25 and 23:59:59 (GMT+3) on December 11 are valid.",
-            "vi": "1.	Các giao dịch được mở từ 00:00:00 (GMT +3) ngày 25 tháng 10 đến 23:59:59 (GMT+3) ngày 11 tháng 12 là hợp lệ.",
+            "vi": "1. Các giao dịch được mở từ 00:00:00 (GMT +3) ngày 25 tháng 10 đến 23:59:59 (GMT+3) ngày 11 tháng 12 là hợp lệ.",
             "zh-Hant": "10月25日0:00（GMT+3）到12月11日24:00（GMT+3）期間開設的訂單為有效訂單；",
             "id": "1. Transaksi yang valid adalah transaksi yang dilakukan antara tanggal 25 Oktober pukul 04:00:00 WIB hingga 12 Desember pukul 03:59:59 WIB",
             "es": "1. Los pedidos abiertos entre las 00:00:00 (GMT +3) del 25 de octubre y las 23:59:59 (GMT +3) del 11 de diciembre son válidos;",
@@ -14233,7 +14233,7 @@ module.exports = {
         "rulesTit5Con2": {
             "zh": "系统将以12月11日24:00(GMT+3)的净值计算排名。",
             "en": "2. The system will calculate the ranking based on the net value at 23:59:59(GMT+3) on December 11.",
-            "vi": "2.	Hệ thống sẽ tính toàn bảng xếp hạng dựa trên giá trị ròng vào lúc 23: 59:59 (GMT+3) ngày 11 tháng 12",
+            "vi": "2. Hệ thống sẽ tính toàn bảng xếp hạng dựa trên giá trị ròng vào lúc 23: 59:59 (GMT+3) ngày 11 tháng 12",
             "zh-Hant": "系統將以12月11日24:00(GMT+3)的淨值計算排名。",
             "id": "2. Sistem akan mulai mencatat perhitungan mulai dari pukul 03:59:59 WIB pada tanggal 12 Desember 2019",
             "es": "2. El sistema calculará la calificación en función del patrimonio neto a las 23:59:59 (GMT +3) del 11 de diciembre.",
@@ -14713,16 +14713,6 @@ module.exports = {
         "pt-BR": "Por favor, verifique detalhes de propagação TigerWit de cada símbolo",
         "ar": "يرجى التحقق من تفاصيل فروق أسعار TigerWit لكل رمز."
     },
-    "tradeFee5": {
-        "zh": "TigerWit点差计算时段为截止2017年7月21日的前十四天。",
-        "en": "TigerWit spreads calculation is the first fourteen days ending 21 July 2017.",
-        "vi": "Tính toán chênh lệch giữa má mua và bán TigerWit là mười bốn ngày đầu tiên kết thúc vào ngày 21 tháng 7 năm 2017.",
-        "zh-Hant": "TigerWit點差計算時段為截止2017年7月21日的前十四天。",
-        "id": "Perhitungan spread di TigerWit dilaksanakan pada hari ke empat belas dan berakhir pada tanggal 21 juli 2017",
-        "es": "El cálculo de los spreads TigerWit deriva de tasas en los mercados interbancarios",
-        "pt-BR": "O cálculo de spreads do TigerWit é o primeiro quatorze dias que terminam em 21 de julho de 2017.",
-        "ar": "حساب فروق أسعار TigerWit هو أول أربعة عشر يومًا والتي تنتهي في 21 يوليو 2017."
-    },
     "tradeFee6": {
         "zh": "隔夜利息",
         "en": "Overnight Interest",
@@ -15121,7 +15111,7 @@ module.exports = {
         "id": "Silahkan masuk ke pengaturan pribadi pada situs resmi untuk melihat informasi aplikasi agen dan selengkapnya",
         "es": "Visite el centro personal del sitio web oficial para ver los detalles y complementar la información de la solicitud del agente.",
         "pt-BR": "Visite o centro pessoal do site oficial para ver os detalhes e complementar as informações de inscrição do agente.",
-        "ar": "يرجى زيارة المركز الشخصي للموقع الرسمي لعرض التفاصيل وتكملة معلومات طلب الوكيل",
+        "ar": "يرجى زيارة المركز الشخصي للموقع الرسمي لعرض التفاصيل وتكملة معلومات طلب الوكيل"
     },
     "mRegister10": {
         "zh": "下载APP",
@@ -19422,51 +19412,51 @@ module.exports = {
         }
     },
     "mInvite05": {
-        zh: "你投资,我出钱!",
-        en: "你投资,我出钱!",
-        vi: "你投资,我出钱!",
+        "zh": "你投资,我出钱!",
+        "en": "你投资,我出钱!",
+        "vi": "你投资,我出钱!",
         "zh-Hant": "妳投資,我出錢!",
-        id: "你投资,我出钱!",
+        "id": "你投资,我出钱!",
         "es": "你投资,我出钱!",
         "pt-BR": "你投资,我出钱!",
         "ar": "你投资,我出钱!"
     },
     "mInvite06": {
-        zh: "注册就送",
-        en: "Register to receive a ",
-        vi: "Đăng kí để nhận được một ",
+        "zh": "注册就送",
+        "en": "Register to receive a ",
+        "vi": "Đăng kí để nhận được một ",
         "zh-Hant": "註冊就送",
-        id: "Daftar untuk mendapatkan ",
+        "id": "Daftar untuk mendapatkan ",
         "es": "Regístrese para recibir un ",
         "pt-BR": "Registre-se para receber um ",
         "ar": "سجل لتلقي"
     },
     "mInvite07": {
-        zh: "$10000体验金",
-        en: "$10000 coupons",
-        vi: "coupon trị giá 10000 USD",
+        "zh": "$10000体验金",
+        "en": "$10000 coupons",
+        "vi": "coupon trị giá 10000 USD",
         "zh-Hant": "$10000體驗金",
-        id: "Kupon senilai $10,000",
+        "id": "Kupon senilai $10,000",
         "es": "$ 10.000 cupones",
         "pt-BR": "$ 10.000 cupons",
         "ar": "10000$ قسيمة"
     },
     "mInvite08": {
-        zh: "在TigerWit, 已经有86253 人选择外汇跟单交易",
-        en: "In TigerWit, there have been 86,253 people who choose to follow the masters trading.",
-        vi: "Sàn TigerWit có 86253 người chọn theo dõi các bậc thầy giao dịch.",
+        "zh": "在TigerWit, 已经有86253 人选择外汇跟单交易",
+        "en": "In TigerWit, there have been 86,253 people who choose to follow the masters trading.",
+        "vi": "Sàn TigerWit có 86253 người chọn theo dõi các bậc thầy giao dịch.",
         "zh-Hant": "在老虎外匯, 已經有86253 人選擇外匯跟單交易",
-        id: "Sudah ada 86,253 orang yang mengikuti trading para Master di TigerWit.",
+        "id": "Sudah ada 86,253 orang yang mengikuti trading para Master di TigerWit.",
         "es": "En TigerWit, hay 86.253 personas que han elegido seguir operaciones de Masters",
         "pt-BR": "Em TigerWit, houve 86.253 pessoas que optaram por seguir operações de Masters.",
         "ar": "، كان هناك 86253 شخصًا يختارون متابعة تداول المحترف  TigerWit في ."
     },
     "mInvite09": {
-        zh: "我刚刚在老虎外汇领取了$10000体验金,好东西",
-        en: "I just received $10000 Coupons from TigerWit. ",
-        vi: "Tôi vừa nhận được coupon 10000 USD từ TigerWit",
+        "zh": "我刚刚在老虎外汇领取了$10000体验金,好东西",
+        "en": "I just received $10000 Coupons from TigerWit. ",
+        "vi": "Tôi vừa nhận được coupon 10000 USD từ TigerWit",
         "zh-Hant": "我剛剛在老虎外匯領取了$10000體驗金,好東西",
-        id: "Saya baru saja mendapatkan kupon senilai $10,000 dari TigerWit",
+        "id": "Saya baru saja mendapatkan kupon senilai $10,000 dari TigerWit",
         "es": "Acabo de recibir $10.000 cupones de TigerWit",
         "pt-BR": "Acabo de receber $10.000 cupons da TigerWit.",
         "ar": "لقد تلقيت للتو 10000 قسيمة من tigerwit"
