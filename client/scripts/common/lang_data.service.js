@@ -7063,7 +7063,7 @@
                         "id": "2. \"<span class='font-danger'>Keterangan Transfer</span>\" dari transfer adalah informasi penting untuk memverifikasi sumber dana, <span class='font-danger'>pastikan untuk mengisi</span>.",
                         "es": "2. Los \"<span class='font-danger'>Comentarios de transferencia</span>\" de la transferencia son información importante para verificar la fuente de los fondos, <span class='font-danger'>asegúrese de completarlos</span>.",
                         "pt-BR": "2. \"<span class='font-danger'>Transferir observações</span>\" de transferência é uma informação importante para verificar a origem dos fundos, por favor, <span class='font-danger'>não se esqueça de preencher</span>.",
-                        "ar": "ملاحظات نقل \ نقل معلومات مهمة للتحقق من مصدر الأموال ، يرجى التأكد من ملء. ،"
+                        "ar": "ملاحظات نقل نقل معلومات مهمة للتحقق من مصدر الأموال ، يرجى التأكد من ملء. ،"
                     },
                     "transferQuick3Tip3": {
                         "zh": "3.实际转账金额必须与订单<span class='font-danger'>一致</span>，否则资金无法到账。",
@@ -12947,16 +12947,6 @@
                     "es": "Cancelar",
                     "pt-BR": "Cancelar",
                     "ar": "إلغاء"
-                },
-                "continue": {
-                    "zh": "继续",
-                    "en": "Continue",
-                    "vi": "Tiếp tục",
-                    "zh-Hant": "繼續",
-                    "id": "Lanjutkan",
-                    "es": "Continuar",
-                    "pt-BR": "Continuar",
-                    "ar": "استمرار"
                 },
                 "finish": {
                     "zh": "完成",
