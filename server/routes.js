@@ -103,8 +103,19 @@ module.exports = function (app) {
     //     res.sendFile(path.resolve(app.get('appPath') + '/index.html'));
     // });
 
-    app.use('/:lang(en|zh)',require('./routers'));
-    app.use('/',require('./routers'));
+    app.use('/:lang(en|zh)', function (req, res, next) {
+        console.log('-----------host2------', req.originalUrl)
+        console.log('-----------lang2------', req.params.lang)
+        next()
+    }, require('./routers'));
+    app.use('/', function (req, res,next) {
+        console.log('-----------host3------', req.headers.referer)
+        console.log('-----------lang3------', req.params.lang)
+        if(req.headers.referer && req.headers.referer.indexOf('/zh')){
+            res.redirect('/zh' + req.originalUrl)
+        }
+        next()
+    },require('./routers'));
 
     // nodeAPI
     app.route('/napi').get(function (req, res) {
@@ -295,13 +306,13 @@ module.exports = function (app) {
         }
         // 获取邀请好友图片
         if (action == 'get_share_img') {
-            (function(){
+            (function () {
                 var QRSynthesizer = require('./api/invite_img.js').QRSynthesizer
                 var Synthesizer = new QRSynthesizer(req)
                 Synthesizer.merge(function (output) {
-                    if(output){
-                        res.sendFile(output, function(err){
-                            if(err){
+                    if (output) {
+                        res.sendFile(output, function (err) {
+                            if (err) {
                                 console.log(err)
                             } else {
                                 Synthesizer.clearOutput()

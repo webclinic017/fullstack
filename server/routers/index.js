@@ -49,6 +49,11 @@ function isMobile(req) {
 }
 
 
+router.use(function(req,res,next){
+    console.log('-----------host------',req.originalUrl)
+    console.log('-----------lang------', req.params.lang)
+    next()
+})
 
 // 个人中心
 router.get('/space/',function (req, res) {

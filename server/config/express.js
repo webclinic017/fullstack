@@ -30,6 +30,7 @@ module.exports = function (app) {
     app.use(bodyParser.json());
     app.use(methodOverride());
     app.use(cookieParser());
+    
     // app.use(favicon(path.join(config.root, 'client', 'favicon.ico')));
 
     // Persist sessions with mongoStore / sequelizeStore
