@@ -28,6 +28,7 @@ module.exports = function () {
         this.clonedBaidu = clonedBaidu;
         // 根据areaId大区显示({"key": "中国区","value": 1},{"key": "国际区","value": 2},{"key": "英国区","value": 3})
         this.areaId = parseCookie(req.headers.cookie).area_id;
+        // TODO req.cookies
         // console.log(this.areaId, 'areaId')
         // return this;         
     }

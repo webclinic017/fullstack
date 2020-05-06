@@ -12,7 +12,9 @@ var http = require('http');
 // Setup server
 var app = express();
 var server = http.createServer(app);
+// 一些区分环境中间件
 require('./config/express')(app);
+// 路由
 require('./routes')(app);
 
 startServer();

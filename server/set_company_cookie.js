@@ -2,14 +2,16 @@
     'use strict';
 
     module.exports = function (req, res) {
-        var envConfig = require('./get_env_config').envConfig;
         var decideLang = require('./get_lang')(req, res).decideLang();
+        var lang = '';
+
+
+        var envConfig = require('./get_env_config').envConfig;
         var company_name = envConfig.company_name;
         var access_origin = envConfig.access_origin || '';
         var access_origin2 = envConfig.access_origin2 || '';
         var cdn_url = envConfig.cdn_url || '';
         var is_cloned = envConfig.isCloned || '';
-        var lang = '';
         // var domain = req.host.match(/\.\w+\.com/) ? req.host.match(/\.\w+\.com/)[0] : '.tigerwit.com';
         // console.log(req.host)
         var domain = '.' + req.host.split('.').slice(-2).join('.');
@@ -22,6 +24,8 @@
         ];
         // console.log(decideLang);
        
+
+        
         lang = decideLang == 'zh' ? 'cn' : decideLang
 
         if (lang) {

@@ -36,6 +36,7 @@ module.exports = function (req, res) {
         // ['zh', 'en', 'vi', 'zh', 'id', 'ar']
         return browserLang;
     }
+    // TODO req.cookies
     function cookieLang() {
         var lang = '';
         var cookieLang;
