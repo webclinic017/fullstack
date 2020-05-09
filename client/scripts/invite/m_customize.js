@@ -2,32 +2,41 @@
     'use strict';
     var arrow = false;
     var allowCopy = false;
-    var inviteLink = '';
+    var searchPara = getSearch() || {};
+    var inviteLink = location.origin+'/m/customize/invite_come?'+(searchPara.lang?'lang='+searchPara.lang+'&':'')+'user_code=';
 
-    getUserInfo();
     getInviteInfo();
-
+    
+    if (searchPara.user_code) {
+      setInviteSource(searchPara.user_code);
+    } else {
+      getUserInfo();
+    }
+    
     function getUserInfo () {
       publicRequest('getUserInfo', 'GET').then(function (data) {
         if (!data) return;
         if (data.is_succ) {
-          allowCopy = true;
-          inviteLink = location.origin+'/m/customize/invite_come?user_code='+data.data.user_code;
-          $(".copy_link").val(inviteLink);
-          //生成image
-          QrCodeWithLogo.toImage({
-            image: document.getElementById('invite_face_code'),
-            content: inviteLink,
-            width: 180,
-            nodeQrCodeOptions: {
-                margin: 1
-            },
-            logo: {
-                src: '/white_label/logo@2x.png',
-                radius: 8,
-                logoSize: 0.22
-            }
-          });
+          setInviteSource(data.data.user_code);
+        }
+      });
+    }
+    function setInviteSource(user_code) {
+      allowCopy = true;
+      inviteLink = inviteLink+user_code;
+      $(".copy_link").val(inviteLink);
+      //生成image
+      QrCodeWithLogo.toImage({
+        image: document.getElementById('invite_face_code'),
+        content: inviteLink,
+        width: 180,
+        nodeQrCodeOptions: {
+            margin: 1
+        },
+        logo: {
+            src: '/white_label/logo@2x.png',
+            radius: 8,
+            logoSize: 0.22
         }
       });
     }
