@@ -5,46 +5,21 @@
 'use strict';
 
 var path = require('path');
-var fs = require('fs');
 var url = require('url');
-var request = require('request');
-var querystring = require('querystring');
-var masterApi = require('./api/master');
+
+// var ACCESS_ORIGIN2 = require('./get_env_config').envConfig.access_origin2 || 'https://a.tigerwit.com';
+
+var envConfig = require('./get_env_config').SetEnvConfig();
+var COMPANY_NAME = envConfig.company_name;
+
+var global_modelRegular = require('./model/modelRegular')();
+
 // 常量数据
 var report_sites = require('./report_site');
 var depositBankList = require('./deposit_bank_list');
 var depositEvidenceList = require('./deposit_evidence_list');
 
-// var ACCESS_ORIGIN2 = require('./get_env_config').envConfig.access_origin2 || 'https://a.tigerwit.com';
-var setCompanyCookie,
-    envConfig,
-    URL_PATH,
-    COMPANY_NAME,
-    Lang,
-    global_modelRegular,
-    gloal_modelRegularDetail;
-
-var SetEnvConfig = require('./get_env_config').SetEnvConfig;
-var recordAccessTimes = require('./record_access_times');
-
-// TODO
-function setEnvCf(req, res) {
-    // 常量
-    new SetEnvConfig(req);
-    envConfig = require('./get_env_config').envConfig;
-    COMPANY_NAME = envConfig.company_name;
-    URL_PATH = envConfig.url_path;
-
-
-    setCompanyCookie = require('./set_company_cookie');
-    setCompanyCookie(req, res);  // 设置cookies
-
-    Lang = require('./lang')();
-    global_modelRegular = require('./model/modelRegular')();
-    gloal_modelRegularDetail = require('./model/modelRegularDetail');
-    // console.log(global_modelRegular);
-}
-
+var Lang = require('./lang')();
 function extendPublic(data, req) {
     var lang = new Lang(req);
     data["lang"] = lang;
@@ -58,12 +33,8 @@ function extendPublic(data, req) {
     return data;
 }
 
-function isMobile(req) {
-    var deviceAgent = req.headers["user-agent"].toLowerCase();
-    //var agentID = deviceAgent.match(/(iphone|ipod|ipad|android)/);
-    return deviceAgent.match(/(iphone|ipod|ipad|android)/);
-}
-
+var langArr = require('./get_lang')().langArr;
+var langArrFilter = langArr.join('|');
 // function checkGlobalOrCN (req, res, u) {
 //     // u 是需要跳转404的域名 cn/global
 //     // console.log(req.protocol);
@@ -76,6 +47,16 @@ function isMobile(req) {
 module.exports = function (app) {
 
     app.use('/api', require('./api'));
+    app.use(function (req, res, next) {
+        // 重写render方法，避免子路由在引入extendPublic方法
+        var _render = res.render;
+        res.render = function (view, obj, callback) {
+            obj = obj || {}
+            _render.call(this, view, extendPublic(obj, req), callback)
+        };
+
+        next()
+    })
 
     //添加百度验证  --徐萌
     // app.route('/baidu_verify_qTHsV5cQAY.html').get(function (req, res) {
@@ -103,23 +84,49 @@ module.exports = function (app) {
     //     res.sendFile(path.resolve(app.get('appPath') + '/index.html'));
     // });
 
-    app.use('/:lang(en|zh)', function (req, res, next) {
-        console.log('-----------host2------', req.originalUrl)
-        console.log('-----------lang2------', req.params.lang)
+
+
+    // :params为语言或者空
+    app.use('/:lang(' + langArrFilter + ')?', function (req, res, next) {
+        // console.log('-----------host------', req.originalUrl)
+        // console.log('-----------lang------', req.params.lang)
+        // console.log('----referer-----', req.headers.referer)
+
+        // console.log('-----1---', req.url)
+        // console.log('-----1---', req.baseUrl)
+        var paramsLang = req.params.lang;  // 重定向时req已经不是当前params
+        // 如果上一个url是带params参数的就重定向
+        if (!paramsLang) {
+            if (req.headers.referer) {
+                var pathname = url.parse(req.headers.referer).pathname;
+                if (pathname) {
+                    var firstPath = pathname.split(path.sep)[1];
+                    // console.log('-----firstPath-----',firstPath)
+                    if (firstPath && langArr.indexOf(firstPath) !== -1) {
+                        var redirectUrl = path.sep + firstPath + req.originalUrl;
+                        return res.redirect(redirectUrl);
+
+                    }
+                }
+            }
+        }
+        // 重写重定向方法，添加lang参数
+        var _redirect = res.redirect;
+        res.redirect = function (url) {
+            if (paramsLang) {
+                url = path.sep + paramsLang + url;
+            }
+            return _redirect.call(this, url)
+        };
+
+        // 设置所有的cookie
+        require('./set_company_cookie')(req, res);
         next()
     }, require('./routers'));
-    app.use('/', function (req, res,next) {
-        console.log('-----------host3------', req.headers.referer)
-        console.log('-----------lang3------', req.params.lang)
-        if(req.headers.referer && req.headers.referer.indexOf('/zh')){
-            res.redirect('/zh' + req.originalUrl)
-        }
-        next()
-    },require('./routers'));
+
 
     // nodeAPI
     app.route('/napi').get(function (req, res) {
-        setEnvCf(req, res);
         req.query.action = Array.isArray(req.query.action) ? req.query.action[1] : req.query.action;
         var action = req.query.action;
         // var model = require('./model/modelRegular');
@@ -400,8 +407,7 @@ module.exports = function (app) {
         //     }
         //     res.send(html);
         // });
-        setEnvCf(req, res);
-        res.render('404.html', extendPublic({}, req));
+        res.render('404.html');
     });
 
 };

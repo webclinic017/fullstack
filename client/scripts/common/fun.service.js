@@ -6,14 +6,14 @@
 
     fun.$inject = ['$location'];
 
-    function fun ($location) {
+    function fun($location) {
 
         var fun = {
             /*获取Url查询字段 返回Object*/
-            getSearch: function(type) {
+            getSearch: function (type) {
                 // console.log($location.search())
                 var url = location.search || location.href.slice(location.href.indexOf('?'));
-                if(type === 'string'){
+                if (type === 'string') {
                     return url;
                 }
                 /*获取url中"?"符后的字串*/
@@ -35,6 +35,48 @@
                     return url + '&'
                 }
             },
+
+            // 删除url?后某个参数
+            delQuery: function (queryKey) {
+                var url = window.location.href;    //页面url
+                var beforeUrl;   //页面主地址（参数之前地址）
+                if (url.indexOf("?") !== -1) {
+                    beforeUrl = url.substr(0, url.indexOf("?"))
+                } else {
+                    return url;
+                }
+                var query = getSearch();
+                if (query[queryKey]) {
+                    delete query[queryKey]
+                } else {
+                    return url;
+                }
+                var str = '';
+                for (key in query) {
+                    str += (key + '=' + query[key] + '&')
+                }
+                if (str) {
+                    str = str.substring(0, str.length - 1);
+                    str = '?' + str
+                }
+                return (beforeUrl + str)
+            },
+            // 截取路由的第一个语言参数，如果是则去掉
+            // @params lang 准备切换的语言
+            // @params cookieLang 当前的cookie语言
+            switchParam: function (lang, cookieLang) {
+                var url = this.delQuery('lang');
+                var reg = new RegExp('/' + cookieLang + '/');
+                var replaceStr = '/' + lang + '/';
+                if (reg.test(url)) {
+                    return url.replace(reg, replaceStr)
+                } else {
+                    var length = location.origin.length;
+                    return url.slice(0, length) + replaceStr + url.slice(length + 1)
+                }
+            },
+
+
             // 复制text到剪切板
             copyText: function (text) {
                 var textArea = document.createElement("textarea");

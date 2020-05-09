@@ -301,6 +301,46 @@
         return theRequest;
     }
 
+    // 删除url?后某个参数
+    function delQuery(queryKey) {
+        var url = window.location.href;    //页面url
+        var beforeUrl;   //页面主地址（参数之前地址）
+        if (url.indexOf("?") !== -1) {
+            beforeUrl = url.substr(0, url.indexOf("?"))
+        } else {
+            return url;
+        }
+        var query = getSearch();
+        if (query[queryKey]) {
+            delete query[queryKey]
+        } else {
+            return url;
+        }
+        var str = '';
+        for (key in query) {
+            str += (key + '=' + query[key] + '&')
+        }
+        if (str) {
+            str = str.substring(0, str.length - 1);
+            str = '?' + str
+        }
+        return (beforeUrl + str)
+    }
+    // 截取路由的第一个语言参数，如果是则去掉
+    // @params lang 准备切换的语言
+    // @params cookieLang 当前的cookie语言
+    function switchParam(lang, cookieLang) {
+        var url = delQuery('lang');
+        var reg = new RegExp('/' + cookieLang + '/');
+        var replaceStr = '/' + lang + '/';
+        if (reg.test(url)) {
+            return url.replace(reg, replaceStr)
+        } else {
+            var length = location.origin.length;
+            return url.slice(0, length) + replaceStr + url.slice(length + 1)
+        }
+    }
+
     //为客户推广参数做筛选
     function checkUserSource() {
         var sourceReg = /^DW_|^D_|^R_/i;
@@ -1737,11 +1777,14 @@
         reloadLanguage: setCookieLang,
     }
     function setCookieLang(lang) {
+        if (lang === get_cookie('lang')) { return }
         var d = new Date();
         d.setTime(d.getTime() + (-1 * 24 * 60 * 60 * 1000));
         document.cookie = 'lang=' + lang + '; path=/; expires=' + d.toUTCString();
         document.cookie = 'lang=' + lang + '; path=/; domain=' + getDomain();
-        location.reload();
+
+        // 重定向需要判断链接上语言参数
+        location.href = switchParam((lang == 'cn' ? 'zh' : lang), language);
     };
     function languageFun() {
         var language = 'en';
