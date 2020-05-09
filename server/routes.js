@@ -567,7 +567,7 @@ module.exports = function (app) {
     });
 
     // 交易品种
-    app.route('/web/product/:subpage(forex|metal|oil|cfd)').get(function (req, res) {
+    app.route('/web/product/:subpage(forex|metal|oil|cfd|stock)').get(function (req, res) {
         var subpage = req.params.subpage || 'forex';
         var pageInfo = {
             id: subpage
