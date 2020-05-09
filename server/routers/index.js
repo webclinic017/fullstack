@@ -63,6 +63,13 @@ router.get('/m/third/add_third', function (req, res) {
 router.get('/m/third/add_transfer', function (req, res) {
     res.render('third_app/add_transfer.html');
 });
+//邀请好友 定制活动 H5 - 2020.05.07 (pandafx)
+router.get('/m/customize/invite',function (req, res) {
+    res.render('invite/m_customize');
+});
+router.get('/m/customize/invite_come', function (req, res) {
+    res.render('invite/m_customize_come');
+});
 
 /*
  * 三方相关页面 end
@@ -149,7 +156,6 @@ router.get('/', function (req, res) {
 // });
 
 router.get('/ranklist', function (req, res) {
-
     res.render('web/ranklist.html');
 });
 
@@ -475,7 +481,7 @@ router.get('/blog/:subpage(*)', function (req, res) {
 });
 
 // 交易品种
-router.get('/web/product/:subpage(forex|metal|oil|cfd)', function (req, res) {
+router.get('/web/product/:subpage(forex|metal|oil|cfd|stock)', function (req, res) {
     var subpage = req.params.subpage || 'forex';
     var pageInfo = {
         id: subpage
