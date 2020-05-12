@@ -148,18 +148,18 @@
             en: {
                 ios: {
                     app_info: {
-                        version_name : "V2.1.0",
-                        description: "Optimise onboarding process\nAdded TC trading strategies\nAdd Multi account management function Allow transfer of funds between sub-accounts Fingerprint unlock feature optimised\nUpdated UI of Wallet and trading history\nAdd live chat function\nFix bugs",
-                        updated_description: "Version 2.1.0 available",
+                        version_name : "V2.5.0",
+                        description: "1.Updated onboarding process\n2.Optimize the user experience",
+                        updated_description: "Version 2.5.0 available",
                         force_update : true
                     }
                 },
                 android: {
                     app_info: {
-                        version_name : "V2.4.0",
-                        description: "Fixed bug.",
-                        updated_description: "Updated client account opening process",
-                        url : "https://static.tigerwitfx.com/downloads/apk/tigerwit_uk_v2.4.0.apk",
+                        version_name : "V2.5.0",
+                        description: "1.Updated onboarding process\n2.Optimize the user experience",
+                        updated_description: "Go to Google play for updates and enjoy a new trading experience",
+                        url : "",
                         force_update : true
                     }
                 }
@@ -167,18 +167,18 @@
             cn: {
                ios: {
                     app_info: {
-                        version_name : "V2.1.0",
-                        description: "Optimise onboarding process\nAdded TC trading strategies\nAdd Multi account management function Allow transfer of funds between sub-accounts Fingerprint unlock feature optimised\nUpdated UI of Wallet and trading history\nAdd live chat function\nFix bugs",
-                        updated_description: "Version 2.1.0 available",
+                        version_name : "V2.5.0",
+                        description: "1.Updated onboarding process\n2.Optimize the user experience",
+                        updated_description: "Version 2.5.0 available",
                         force_update : true
                     }
                 },
                 android: {
                     app_info: {
-                        version_name : "V2.4.0",
-                        description: "Fixed bug.",
-                        updated_description: "Updated client account opening process",
-                        url : "https://static.tigerwitfx.com/downloads/apk/tigerwit_uk_v2.4.0.apk",
+                        version_name : "V2.5.0",
+                        description: "1.Updated onboarding process\n2.Optimize the user experience",
+                        updated_description: "Go to Google play for updates and enjoy a new trading experience",
+                        url : "",
                         force_update : true
                     }
                 } 
