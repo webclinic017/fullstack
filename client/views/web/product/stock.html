@@ -86,7 +86,7 @@
                 <tbody>
                     <tr ng-if="stock" ng-repeat="item in stock" ng-cloak>
                         <td>{{ item.symbol }}</td>
-                        <td class="pro-public__no-padding" ng-if="!lang.isEnglishArea()">{{ item.symbol_cn }}</td>
+                        <td class="pro-public__no-padding" ng-if="!lang.isEnglishArea()">{{ item.company }}</td>
                         <td>{{ item.contract_size }}</td>
                         <td>{{ item.lot_min }}</td>
                         <td>{{ item.lot_max }}</td>
