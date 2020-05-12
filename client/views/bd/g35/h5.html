@@ -38,6 +38,7 @@
 <!--引入公用头部-->
 <% include /common/vendor/h5.utiljs.html %>
 <% include /common/statistic/main.html %>
+
 <body style="height: 100%;" class="<%= lang.isAr('ar-lang')%>">
   <div id="m_global_t35" class="m_global_t35 active">
     <div class="m_global_t35_layout">
@@ -161,9 +162,9 @@
         </li>
       </ul>
       <div class="m_global_t35__title t3">
-        <img src="<%= lang.image('eventDetailsTitle')%>" alt="">
+        <!-- <img src="<%= lang.image('eventDetailsTitle')%>" alt=""> -->
       </div>
-      <div class="m_global_t35__cont-3">
+      <!-- <div class="m_global_t35__cont-3">
         <span></span>
         <p>
             <%= lang.text('bonusBd.eventDetails1')%>
@@ -198,7 +199,7 @@
         <p>
             <%= lang.text('bonusBd.eventDetails6')%>
         </p>
-      </div>
+      </div> -->
       <div class="m_global_t35__register_box" id="register_box">
         <div class="form-control-wrapper">
           <select class="form-control" name="country" id="country">
@@ -206,15 +207,17 @@
           </select>
         </div>
         <div class="form-control-wrapper">
-          <input type="text" class="form-control" name="email" id="email" placeholder="<%= lang.text('partner.email')%>">
+          <input type="text" class="form-control" name="email" id="email"
+            placeholder="<%= lang.text('partner.email')%>">
         </div>
         <div class="form-control-wrapper <%= lang.isAr('ar')%>">
-          <input type="text" class="form-control verify-code" name="code" id="verify_code" placeholder="<%= lang.text('mRegister03')%>">
+          <input type="text" class="form-control verify-code" name="code" id="verify_code"
+            placeholder="<%= lang.text('mRegister03')%>">
           <p class="verify_code_btn_wrapper">
-              <span class="verify_code_btn" id="verify_code_btn"><%= lang.text('mRegister05')%></span>
+            <span class="verify_code_btn" id="verify_code_btn"><%= lang.text('mRegister05')%></span>
           </p>
         </div>
-        
+
         <div class="form-control-wrapper">
           <input type="password" class="form-control" name="password" id="password"
             placeholder="<%= lang.text('thirdH5.setPassword')%>">
@@ -229,11 +232,11 @@
         </div>
       </div>
       <div class="m_global_t35__warning">
-        <p class="tit"><%= lang.text('bonusBd.eventDetails7')%></p>
+        <!-- <p class="tit"><%= lang.text('bonusBd.eventDetails7')%></p>
         <p class="tit">
             <%= lang.text('bonusBd.eventDetails8')%>
         </p>
-        <p><%= lang.text('bonusBd.copyright')%></p>
+        <p><%= lang.text('bonusBd.copyright')%></p> -->
       </div>
       <div class="m_global_t35__float_box">
         <a target="_self" href="#register_box"><%= lang.text('bonusBd.getRebateNow')%></a>
@@ -242,19 +245,20 @@
   </div>
   <div id="m_global_t35_success" class="m_global_t35_success">
     <div class="m_global_t35_success__layout">
-        <div class="m_global_t35_success__tip">
-            <p><%= lang.text('bonusBd.resendTip1')%></p>
-            <p><%= lang.text('bonusBd.resendTip2')%></p>
-        </div>
-        <div class="m_global_t35__btn_wrapper">
-          <button id="submit_resend" class="m_global_t35__btn"><%= lang.text('bonusBd.resend')%></button>
-        </div>
-        <div class="m_global_t35__btn_wrapper">
-          <button id="m_global_t35_success_rewrite" class="m_global_t35__btn"><%= lang.text('bonusBd.modifyAddress')%></button>
-        </div>
-        <p class="m_global_t35_success__download">
-          <span><%= lang.text('bonusBd.downloadMobileApp')%></span>
-        </p>
+      <div class="m_global_t35_success__tip">
+        <p><%= lang.text('bonusBd.resendTip1')%></p>
+        <p><%= lang.text('bonusBd.resendTip2')%></p>
+      </div>
+      <div class="m_global_t35__btn_wrapper">
+        <button id="submit_resend" class="m_global_t35__btn"><%= lang.text('bonusBd.resend')%></button>
+      </div>
+      <div class="m_global_t35__btn_wrapper">
+        <button id="m_global_t35_success_rewrite"
+          class="m_global_t35__btn"><%= lang.text('bonusBd.modifyAddress')%></button>
+      </div>
+      <p class="m_global_t35_success__download">
+        <span><%= lang.text('bonusBd.downloadMobileApp')%></span>
+      </p>
     </div>
   </div>
 </body>
@@ -265,4 +269,5 @@
 <script src="/scripts/bd/common/register_global.js"></script>
 <script src="/scripts/bd/g35/h5.js"></script>
 <!-- endbuild -->
+
 </html>
