@@ -153,7 +153,7 @@
                 "id": "Untuk trader yang menganut agama Islam dapat memanfaatkan akun Islami TigerWit. Trader akan mendapatkan free-swap untuk posisi yang menginap. Silahkan lihat ",
                 "es": "Los traders de divisas que profesen de la fe islámica , pueden aprovechar nuestras cuentas islámicas TigerWit. Trading libre de swaps en posiciones durante la noche. Se aplican límites de tiempo. Para mas información, por favor vea nuestros ",
                 "pt-BR": "Os comerciantes da fé islâmica podem tirar proveito de nossas contas islâmicas TigerWit. Comércio livre de swap nas posições overnight. Os prazos são aplicáveis. Por favor, consulte nossos ",
-                "ar": "يمكن للمتداولين المسلمين الاستفادة من حساب TigerWit الإسلامي. تداول بدون فوائد تمديد على المراكز التي يتم الاحتفاظ بها مفتوحة لليوم التالي. تسري الحدود الزمنية. يرجى الإطلاع على"
+                "ar": "يمكن للمتداولين المسلمين الاستفادة من حساب TigerWit الإسلامي. تداول بدون فوائد تمديد على المراكز التي يتم الاحتفاظ بها مفتوحة لليوم التالي. تطبق الحدود الزمنية. يرجى الإطلاع على"
             },
             "islamic_message4": {
                 "zh": "条款和条件",
@@ -223,7 +223,7 @@
                 "id": "Permintaan Akun Standar",
                 "es": "Request Standard Account",
                 "pt-BR": "Request Standard Account",
-                "ar": "طلب حساب Standard"
+                "ar": "طلب حساب قياسي"
             },
             "islamic_message10": {
                 "zh": "申请伊斯兰账户",
@@ -323,7 +323,7 @@
                 "id": "Apabila posisi terbuka telah melewati jangka waktu 10 hari, maka akan dikenakan biaya administrasi harian oleh TigerWit hingga posisi ditutup. Biaya administrasi akan berlaku setiap ataupun setengah hari. Berikut adalah biaya yang akan dibebankan setelah sepuluh hari :",
                 "es": "Si la posición permanece abierta después de 10 días, TigerWit aplicará una tarifa de administración diaria de $ 25 por lote hasta que se cierre la posición. La tarifa de administración se aplicará en su totalidad por cada día o parte del mismo que una posición permanezca abierta.",
                 "pt-BR": "Se a posição permanecer aberta após 10 dias, uma taxa de administração diária será aplicada pela TigerWit até que a posição seja fechada. A taxa de administração será aplicada integralmente para cada dia ou parte do mesmo que uma posição permanecer aberta. Por favor, veja nossa taxa abaixo:",
-                "ar": "إذا ظل المركز مفتوحًا بعد مرور مدة 10 أيام، ستقوم TigerWit بتطبيق رسوم إدارية يوميًا إلى حين يتم إغلاق المركز. سيتم تطبيق الرسوم الإدارية بشكل كامل عن كل يوم أو أي جزء منه يظل فيه المركز مفتوحًا. يرجى الإطلاع على رسومنا أدناه:"
+                "ar": "إذا ظل المركز مفتوحًا بعد مرور مدة 10 أيام، ستقوم TigerWit بتطبيق رسوم إدارية يوميًا حتى إغلاق المركز. سيتم تطبيق الرسوم الإدارية بشكل كامل عن كل يوم أو أي جزء منه يبقى فيه المركز مفتوحًا. يرجى الإطلاع على رسومنا أدناه:"
             },
             "islamic_message21": {
                 "zh": "外汇、贵金属、能源、加密货币：每自然日每标准手收取$25；",
@@ -353,7 +353,7 @@
                 "id": "Setiap akun TigerWit yang ada akan dikonversikan ke dalam bentuk Akun Islami pada saat akun Islami TigerWit dibuka. Akibatnya, semua posisi akan ditutup pada harga instrumen masing-masing, semua dana akan dipindahkan ke Wallet dan semua transaksi copy yang ada akan dihentikan.",
                 "es": "Todas las cuentas de TigerWit existentes se convertirán en una cuenta islámica en el momento en que la nueva cuenta de TigerWit Islamica esté abierta. No será posible revertir ninguna de estas cuentas a un formato de cuenta no islámico. Como parte de la conversión, todas las posiciones se cerrarán al siguiente precio disponible para el (los) instrumento (s) correspondiente (s), todos los fondos se transferirán a la Cartera y todos los acuerdos existentes de comercio tímido cesarán. ",
                 "pt-BR": "Quaisquer contas TigerWit existentes serão convertidas em uma conta islâmica no momento em que a nova conta islâmica TigerWit for aberta. Como parte da conversão, todas as posições serão fechadas no próximo preço disponível para o (s) instrumento (s) relevante (s), todos os fundos serão movidos para a Wallet e todos os copy tradings existentes cessarão. ",
-                "ar": "سيتم تحويل أي حسابات حالية مع TigerWit إلى حسابات إسلامية في الوقت الذي يكون فيه الحساب الإسلامي الجديد مع TigerWit مفتوحًا. كجزء من التحويل، سيتم إغلاق جميع المراكز وفقًا للسعر التالي المتاح بالنسبة للأداة (الأدوات) المالية ذات الصلة، وسيتم تحويل جميع الأموال إلى المحفظة وسيتم إيقاف جميع الترتيبات الحالية للتداول بنسخ الصفقات."
+                "ar": "سيتم تحويل أي حسابات حالية مع TigerWit إلى حسابات إسلامية حين يتم فتح الحساب الإسلامي الجديد مع TigerWit، كجزء من عملية الانتقال للحساب الاسلامي، سيتم إغلاق جميع المراكز وفقًا للسعر التالي المتاح بالنسبة للأداة (الأدوات) المالية ذات الصلة، وسيتم تحويل جميع الأموال إلى المحفظة وسيتم إيقاف جميع الترتيبات الحالية للتداول بنسخ الصفقات."
             },
             "islamic_message24": {
                 "zh": "所有持仓单必须全部平仓；",
@@ -393,7 +393,7 @@
                 "id": "Sehubungan dengan copy trading, pemegang akun Islami hanya dapat mengikuti akun Master yang menggunakan akun Islami TigerWit.",
                 "es": "En relación con el copy trading, el titular de una cuenta islámica solo puede seguir una cuenta maestra que también opera bajo la estructura de cuenta TigerWit Islamic. ",
                 "pt-BR": "Em relação ao copy trading, um titular de conta islâmica só pode seguir uma conta principal que também opera sob a estrutura de conta islâmica do TigerWit. ",
-                "ar": "فيما يتعلق بالتداول بنسخ الصفقات، لا يجوز لصاحب الحساب الإسلامي إتباع حسابات الأساتذة باستثناء حسابات الأساتذة التي تعمل تحت هيكل حسابات TigerWit الإسلامية."
+                "ar": "فيما يتعلق بالتداول بنسخ الصفقات، لا يجوز لصاحب الحساب الإسلامي متابعة حسابات المتداولين الموهوبين باستثناء حسابات المتداولين الموهوبين التي تعمل تحت هيكل حسابات TigerWit الإسلامية."
             },
             "islamic_message28": {
                 "zh": "我已阅读并接受伊斯兰账户的条件和条款。",
@@ -423,7 +423,7 @@
                 "id": "Tidak, saya ingin menggunakan akun standar",
                 "es": "No me gustaría una cuenta estándar",
                 "pt-BR": "Não, eu gostaria de uma conta padrão",
-                "ar": "لا، أنا أريد حساب Standard"
+                "ar": "لا، أنا أريد حساب قياسي"
             },
             "islamic_message31": {
                 "zh": "您当前的账户类型是【伊斯兰账户】，一旦您切换回标准账户, 您将无法重新激活您的伊斯兰账户类型。",
@@ -433,7 +433,7 @@
                 "id": "Akun anda saat ini adalah (Islami). Apabila anda merubah akun anda menjadi Akun Standar, maka anda tidak dapat lagi mengaktifkan kembali akun islami anda.",
                 "es": "Su tipo de cuenta actual es [Islámico]. Una vez que realice la conversión a una cuenta estándar, no podrá reactivar su tipo de cuenta Islámica nuevamente. ",
                 "pt-BR": "Seu tipo de conta atual é [islâmico]. Depois de converter para uma conta padrão, você não poderá reativar seu tipo de conta islâmica novamente. ",
-                "ar": "نوع حسابك الحالي هو [إسلامي]. بمجرد أن تقوم بالتحويل مرة أخرى إلى الحساب من نوع Standard، لن يكون بمقدورك إعادة تنشيط حسابك الإسلامي مرة أخرى."
+                "ar": "نوع حسابك الحالي هو [إسلامي]. بمجرد أن تقوم بالتحويل مرة أخرى إلى الحساب من نوع قياسي، لن يكون بمقدورك إعادة تنشيط حسابك الإسلامي مرة أخرى."
             },
             "islamic_message32": {
                 "zh": "您当前的账户类型是【标准】，如果您切换为伊斯兰账户，您将享受在伊斯兰交易条件下的权益。",
@@ -443,7 +443,7 @@
                 "id": "Akun anda saat ini adalah (Standar). Apabila anda merubah akun anda menjadi Akun Islami, maka anda tidak dapat lagi menikmati free-swap. ",
                 "es": "Su tipo de cuenta actual es [Estándar]. Si se convierte a una cuenta islámica, podrá disfrutar de los beneficios del intercambio sin swap bajo las condiciones comerciales islámicas. ",
                 "pt-BR": "Seu tipo de conta atual é [Padrão]. Se você converter para uma conta islâmica, poderá aproveitar os benefícios do comércio livre de swap sob condições comerciais islâmicas.",
-                "ar": "نوع حسابك الحالي هو [Standard]. إذا قمت بالتحويل إلى حساب إسلامي، سيكون بمقدورك الاستمتاع بمزايا التداول الخالي من فوائد التمديد بموجب شروط التداول الإسلامي."
+                "ar": "نوع حسابك الحالي هو [قياسي]. إذا قمت بالتحويل إلى حساب إسلامي، سيكون بمقدورك الاستمتاع بمزايا التداول الخالي من فوائد التمديد بموجب شروط التداول الإسلامي."
             },
             "islamic_message33": {
                 "zh": "您确定要继续吗?",
@@ -1777,7 +1777,7 @@
                         "id": "Kami menerima dokumen sebagai berikut:",
                         "es": "Aceptaremos los siguientes documentos:",
                         "pt-BR": "Aceitaremos os seguintes documentos:",
-                        "ar": "سوف نقبل الوثائق التالية:"
+                        "ar": " نقبل الوثائق التالية:"
                     },
                     "utilityBill": {
                         "zh": "电费单（水，煤气，电）",
@@ -2109,7 +2109,7 @@
                         "id": "Isi dana untuk mengaktifkan akun",
                         "es": "Deposite para activar la cuenta.",
                         "pt-BR": "Deposite para ativar a conta.",
-                        "ar": "قم بالإيداع من أجل تنشيط الحساب."
+                        "ar": "يرجى الإيداع لتنشيط حساب التداول"
                     },
                     "tip7": {
                         "zh": "TigerWit真实交易账户",
@@ -2129,7 +2129,7 @@
                         "id": " Hanya perlu 2 langkah untuk bisa trading : 1. Unggah dokumen identitas, 2. Isi dana ",
                         "es": "Está Usted a dos pasos de la transacción: 1.Subir auditoría de identidad 2.Deposite",
                         "pt-BR": "Você está a duas etapas da transação: 1.Upload da auditoria de identidade 2.Depósito",
-                        "ar": "أنت على بعد خطوتين فقط من التداول: 1- تحميل مراجعة الهوية  2- الإيداع"
+                        "ar": " أنت على بعد خطوتين فقط من التداول: 1- تحميل إثبات الهوية  2- الإيداع"
                     },
                     "tip9": {
                         "zh": "即刻入金，立即领取$1000红包！",
@@ -2149,7 +2149,7 @@
                         "id": "TigerWit melindungi keamanan dana nasabah",
                         "es": "TigerWit protege la seguridad de los fondos de los clientes.",
                         "pt-BR": "A TigerWit protege a segurança dos fundos do cliente.",
-                        "ar": "تحمي TigerWit سلامة وأمان أموال العملاء."
+                        "ar": "توفر TigerWit الحماية لأمان أموال العملاء"
                     },
                     "tip11": {
                         "zh": "客户资金完全与公司资金隔离，保存在独立银行账户中，确保属于客户的资金不会被用于任何其他目的。",
@@ -2179,7 +2179,7 @@
                         "id": "Anda belum membuka akun. Silahkan buka akun terlebih dahulu",
                         "es": "No ha abierto ninguna cuenta, por favor, ábrala primero",
                         "pt-BR": "Você não abriu nenhuma conta, abra-a primeiro",
-                        "ar": "لم تفتح أي حساب، يرجى الفتح أولاً"
+                        "ar": " لم تقم بفتح أي حساب، يرجى فتح حساب أولً"
                     },
                     "tip14": {
                         "zh": "您当前的账户类型不支持使用该功能，请及时升级账户",
@@ -2339,7 +2339,7 @@
                         "id": "Nama asli",
                         "es": "Nombre real",
                         "pt-BR": "Nome real",
-                        "ar": "الاسم الحقيقي"
+                        "ar": "الاسم"
                     },
                     "lastName": {
                         "zh": "姓",
@@ -2349,7 +2349,7 @@
                         "id": "Nama Depan",
                         "es": "Nombre real",
                         "pt-BR": "Sobrenome",
-                        "ar": "الاسم الأخير"
+                        "ar": "العائلة"
                     },
                     "firstName": {
                         "zh": "名",
@@ -2449,7 +2449,7 @@
                         "id": "Tanggal Lahir",
                         "es": "Cumpleaños",
                         "pt-BR": "Data de Aniversário",
-                        "ar": "يوم الميلاد"
+                        "ar": "تاريخ الميلاد"
                     },
                     "uploadFrontSide": {
                         "zh": "点击上传证件正面",
@@ -2499,7 +2499,7 @@
                         "id": "Gagal mengunggah! Mohon kirim foto dengan ukuran dibawah 2MB",
                         "es": "¡Subida fallida! Por favor envíe imágenes de menos de 2MB",
                         "pt-BR": "Erro no upload! Favor enviar imagens com menos de 2MB",
-                        "ar": "تعذر التحميل! يرجى إرسال صور ذو حجم أقل من 2 م.ب"
+                        "ar": "تعذر التحميل! يرجى إرسال صور لا يتجاوز حجمها 2 ميجابايت"
                     },
                     "uploadBackSide": {
                         "zh": "点击上传证件反面",
@@ -2529,7 +2529,7 @@
                         "id": " Hanya mendukung format PNG, JPG dan maksimal 2MB",
                         "es": "Actualmente sólo se admiten 2MB PNG, formato JPG",
                         "pt-BR": "No momento, somente os formatos JPG e PNG de até 2MB são suportados",
-                        "ar": "في الوقت الحالي نحن ندعم فقط الصور بصيغتي JPG و PNG والتي لا يتجاوز حجمها 2 م.ب"
+                        "ar": "في الوقت الحالي نحن ندعم فقط الصور بصيغتي JPG و PNG والتي لا يتجاوز حجمها 2 ميجابايت"
                     },
                     "uploadWait": {
                         "zh": "文件上传中,请耐心等待",
@@ -2769,7 +2769,7 @@
                         "id": "s)",
                         "es": "s)",
                         "pt-BR": "s)",
-                        "ar": "(S"
+                        "ar": "S)"
                     },
                     "tip40_1": {
                         "zh": "由于您没有登录，无法",
@@ -2939,7 +2939,7 @@
                         "id": "Kontrak ditolak. Alasan: ",
                         "es": "El contrato ha sido rechazado. Razón: ",
                         "pt-BR": "O contrato foi rejeitado. Motivo: ",
-                        "ar": "تم رفض العقد السبب:"
+                        "ar": "تم رفض العقد، السبب:"
                     },
                     "tryAgain": {
                         "zh": "您可以重新尝试",
@@ -7063,7 +7063,7 @@
                         "id": "2. \"<span class='font-danger'>Keterangan Transfer</span>\" dari transfer adalah informasi penting untuk memverifikasi sumber dana, <span class='font-danger'>pastikan untuk mengisi</span>.",
                         "es": "2. Los \"<span class='font-danger'>Comentarios de transferencia</span>\" de la transferencia son información importante para verificar la fuente de los fondos, <span class='font-danger'>asegúrese de completarlos</span>.",
                         "pt-BR": "2. \"<span class='font-danger'>Transferir observações</span>\" de transferência é uma informação importante para verificar a origem dos fundos, por favor, <span class='font-danger'>não se esqueça de preencher</span>.",
-                        "ar": "ملاحظات نقل \ نقل معلومات مهمة للتحقق من مصدر الأموال ، يرجى التأكد من ملء. ،"
+                        "ar": "ملاحظات نقل نقل معلومات مهمة للتحقق من مصدر الأموال ، يرجى التأكد من ملء. ،"
                     },
                     "transferQuick3Tip3": {
                         "zh": "3.实际转账金额必须与订单<span class='font-danger'>一致</span>，否则资金无法到账。",
@@ -11431,7 +11431,7 @@
                         "id": "Data Anda",
                         "es": "Tus datos",
                         "pt-BR": "Seus dados",
-                        "ar": "يور ديتايل"
+                        "ar": "بياناتك الشخصية"
                     },
                     "openAccountNewTip3": {
                         "zh": "请在下面填写您的个人信息以注册TigerWit真实账户。 开户将花费不到五分钟，并且您需要提供一些您的身份证明和地址证明的文档。",
@@ -11441,7 +11441,7 @@
                         "id": "Silahkan masukkan data diri anda untuk melakukan pendaftaran di TigerWit. Pendaftarakan akan memakan waktu kurang dari 5 menit dan mohon siapkan data identitas anda beserta bukti alamatnya",
                         "es": "Por favor, ingresa tu información personal a continuación para registrarse para cuenta real en TigerWit. Registrarte tomará menos de cinco minutos y necesitarás documentación de respaldo al proporcionarnos tu identidad y tu dirección.",
                         "pt-BR": "Por favor, digite suas informações pessoais abaixo para se registrar para uma conta real na TigerWit. O registro levará menos de cinco minutos e você precisará de documentação de apoio que nos comprove sua identidade e seu endereço.",
-                        "ar": "يرجى إرسال معلوماتك الشخصية أدناه للتسجيل في حساب TigerWit حقيقي. سيستغرق التسجيل أقل من خمس دقائق وستقوم بتوثيق بعض المستندات الداعمة لإثبات هويتك وعنوانك"
+                        "ar": "يرجى إرسال معلوماتك الشخصية أدناه للتسجيل في حساب حقيقي مع TigerWit. سيستغرق التسجيل أقل من خمس دقائق وستقوم بتوثيق بعض المستندات الداعمة لإثبات هويتك وعنوانك"
                     },
                     "openAccountNewTip4": {
                         "zh": "地址细节",
@@ -11461,7 +11461,7 @@
                         "id": "Silahkan masukkan alamat anda beserta kode pos dan sistem kami akan melakukan verifikasi secara otomatis",
                         "es": "Por favor, comienza a digitar la primera línea de tu dirección o código postal y nuestro sistema lo completará automáticamente",
                         "pt-BR": "Por favor, comece a digitar a primeira linha do seu endereço ou código postal e nosso sistema o completará automaticamente.",
-                        "ar": "يرجى البدء في كتابة السطر الأول من عنوانك أو الرمز البريدي وسوف يكمل نظامنا الهعلومات تلقائيًا"
+                        "ar": "يرجى البدء في كتابة السطر الأول من عنوانك أو الرمز البريدي وسوف يكمل نظامنا المعلومات تلقائيًا"
                     },
                     "openAccountNewTip6": {
                         "zh": "名",
@@ -11481,7 +11481,7 @@
                         "id": "Nama belakang",
                         "es": "Apellido",
                         "pt-BR": "Sobrenome",
-                        "ar": "الاسم الأخير"
+                        "ar": "العائلة"
                     },
                     "openAccountNewTip8": {
                         "zh": "第一行地址",
@@ -11521,7 +11521,7 @@
                         "id": "Sudahkah Anda tinggal di sini selama lebih dari tiga bulan?",
                         "es": "¿Has vivido aquí por más de tres meses?",
                         "pt-BR": "Você já morou neste endereço por mais de três meses?",
-                        "ar": "هل عشت هنا لأكثر من ثلاثة أشهر؟"
+                        "ar": "هل تقيم في هذا العنوان لفترة تزيد عن ثلاثة أشهر؟"
                     },
                     "openAccountNewTip12": {
                         "zh": "您的国籍是否在您居住的国家以外的地方？",
@@ -11531,7 +11531,7 @@
                         "id": "Apakah anda bertempat tinggal di daerah yang bukan asal Negara anda?",
                         "es": "Tu nacionalidad es diferente a la del país em que resides?",
                         "pt-BR": "A sua nacionalidade é diferente do seu país de residência?",
-                        "ar": "هل جنسيتك في أي مكان آخر غير بلد إقامتك؟"
+                        "ar": "هل تختلف جنسيتك عن جنسية الدولة التي تقيم بها؟"
                     },
                     "openAccountNewTip13": {
                         "zh": "您的纳税地是否在您居住的国家以外的地方？",
@@ -11541,7 +11541,7 @@
                         "id": "Apakah Pajak kewarganegaraan anda merupakan negara tempat asal anda?",
                         "es": "Es tu residencia fiscal (pagamento de tributos) en otro país diferente al que vives?",
                         "pt-BR": "É sua residência fiscal (pagamento de tributos) em outro país diferente ao que você mora?",
-                        "ar": "هل إقامتك الضريبية في أي مكان آخر غير بلد إقامتك؟"
+                        "ar": "هل إقامتك الضريبية تختلف عن دولة إقامتك؟"
                     },
                     "openAccountNewTip14": {
                         "zh": "交易经验",
@@ -11561,7 +11561,7 @@
                         "id": "Kami perlu mengetahui tentang pengalaman trading dan pemahaman produk-produk kami",
                         "es": "Necesitamos hacerte algunas preguntas sobre tu experiencia con trading y tu comprensión de nuestros productos.",
                         "pt-BR": "Precisamos fazer algumas perguntas sobre sua experiência com trading e seu entendimento de nossos produtos.",
-                        "ar": "نحتاج إلى طرح بعض الأسئلة حول تجربتك في التداول وفهمك لمنتجاتنا"
+                        "ar": "نحتاج إلى طرح بعض الأسئلة حول خبرتك في التداول وفهمك لمنتجاتنا"
                     },
                     "openAccountNewTip16": {
                         "zh": "财务细节",
@@ -11641,7 +11641,7 @@
                         "id": "CFD adalah produk yang memiliki kompleksitas serta risiko yang tinggi dan dapat mengakibatkan anda kehilangan modal. Oleh karena itu anda selalu disarankan untuk meminimalisir kerugian anda dengan cara mengontrol risiko, termasuk penggunaan stop loss dan take profit.",
                         "es": "Los CFDs son productos complejos que conllevan un alto riesgo de perder su dinero. Debe proseguir solamente si intentará minimizar las pérdidas mediante la aplicación de control de riesgos, incluyendo operaciones del tipo stop loss o take profit.",
                         "pt-BR": "CFDs são produtos complexos que envolvem um alto risco de perder seu dinheiro. Você deve proceder somente se procurar minimizar as perdas aplicando controles de risco, incluindo stop loss e take profit orders.",
-                        "ar": "العقود مقابل الفروقات هي منتجات معقدة تنطوي على مخاطر عالية لفقد أموالك. يجب عليك المتابعة فقط إذا كنت ستسعى لتقليل الخسائر إلى الحد الأدنى عن طريق تطبيق ضوابط المخاطر ، بما في ذلك وقف الخسارة وأوامر الربح."
+                        "ar": "العقود مقابل الفروقات هي منتجات معقدة تنطوي على مخاطر عالية بخسارة أموالك. يجب عليك المتابعة فقط إذا كنت ستسعى لتقليل الخسائر إلى الحد الأدنى عن طريق تطبيق ضوابط المخاطر ، بما في ذلك وقف الخسارة وأوامر الربح."
                     },
                     "openAccountNewTip24": {
                         "zh": "如果您的承受风险能力较低，差价合约将不适合您。",
@@ -12947,16 +12947,6 @@
                     "es": "Cancelar",
                     "pt-BR": "Cancelar",
                     "ar": "إلغاء"
-                },
-                "continue": {
-                    "zh": "继续",
-                    "en": "Continue",
-                    "vi": "Tiếp tục",
-                    "zh-Hant": "繼續",
-                    "id": "Lanjutkan",
-                    "es": "Continuar",
-                    "pt-BR": "Continuar",
-                    "ar": "استمرار"
                 },
                 "finish": {
                     "zh": "完成",
