@@ -16393,6 +16393,16 @@ module.exports = {
         "pt-BR": "Bitcoin",
         "ar": "بيتكوين"
     },
+    "newhome_stock": {
+        "zh": "股票",
+        "en": "Stocks",
+        "vi": "Cổ phiếu",
+        "zh-Hant": "股票",
+        "id": "Saham",
+        "es": "Acciones",
+        "pt-BR": "Ações",
+        "ar": "Stocks"
+    },
     "newhome_9_1": {
         "zh": "下载注册交易账户",
         "en": "Download the app to open an account",
