@@ -17387,24 +17387,24 @@ module.exports = {
             "ar": "لم يتم إضافة بطاقة مصرفية"
         },
         "noThirdParty": {
-            "zh": "暂未添加第三方账户",
-            "en": "No third-party account",
-            "vi": "Không có tài khoản phụ",
-            "zh-Hant": "暫未添加協力廠商帳戶",
-            "id": "Tidak ada akun pihak ketiga",
-            "es": "No cuenta de terceros",
-            "pt-BR": "Nenhuma conta de terceiros",
-            "ar": "لا يوجد حساب طرف ثالث"
+            "zh": "暂未添加账户",
+            "en": "No account added yet",
+            "vi": "No account added yet",
+            "zh-Hant": "暫未添加賬戶",
+            "id": "Chưa có tài khoản nào được thêm vào",
+            "es": "Ninguna cuenta agregada todavía",
+            "pt-BR": "Nenhuma conta adicionada ainda",
+            "ar": "لم تتم إضافة حساب بعد"
         },
         "addingThirdParty": {
-            "zh": "添加第三方账户",
-            "en": "Add third-party account",
-            "vi": "Thêm tài khoản phụ",
-            "zh-Hant": "添加協力廠商帳戶",
-            "id": "Tambah akun pihak ketiga",
-            "es": "Añadir cuenta de terceros",
+            "zh": "绑定账户",
+            "en": "Bind account",
+            "vi": "Liên kết tài khoản",
+            "zh-Hant": "綁定賬戶",
+            "id": "Hubungkan rekening",
+            "es": "Link da conta",
             "pt-BR": "Adicionar conta de terceiros",
-            "ar": "أضف حساب الطرف الثالث"
+            "ar": "ربط الحساب"
         },
         "minimum$20": {
             "zh": "最低20美元",
@@ -17917,14 +17917,14 @@ module.exports = {
             "ar": "حدد مدينة فتح الحساب"
         },
         "completeInfo": {
-            "zh": "请完善第三方账户信息",
-            "en": "Please complete third party account information",
-            "vi": "Vui lòng xóa thông tin tài khoản bên thứ ba",
-            "zh-Hant": "請完善第三方賬戶信息",
-            "id": "Silahkan lengkapi informasi rekening pihak ke tiga",
-            "es": "Por favor, complete la información cuenta tercero",
-            "pt-BR": "Por favor complete informações da conta de terceiros",
-            "ar": "يرجى استكمال معلومات الحساب للطرف الثالث"
+            "zh": "请完善收款账户信息",
+            "en": "Please complete the receive account information",
+            "vi": "Vui lòng cung cấp đủ thông tin tài khoản nhận",
+            "zh-Hant": "請完善收款賬戶信息",
+            "id": "Mohon masukkan informasi rekening secara lengkap",
+            "es": "Por favor complete la información de cuenta recibida",
+            "pt-BR": "Por favor, preencha as informações da conta recebidas",
+            "ar": "يرجى استكمال معلومات الحساب المتلقي"
         },
         "city": {
             "zh": "城市",
@@ -18457,14 +18457,14 @@ module.exports = {
             "ar": "حذف"
         },
         "thirdPartyAccount": {
-            "zh": "第三方账户",
-            "en": "Third-party accounts",
-            "vi": "Các tài khoản bên thứ 3",
-            "zh-Hant": "第三方賬戶",
-            "id": "Rekening pihak ke tiga",
-            "es": "Cuentas de terceros",
-            "pt-BR": "Conta de terceiros",
-            "ar": "حسابات طرف ثالث"
+            "zh": "其它收款账户",
+            "en": "Alternative Payment Methods",
+            "vi": "Các Phương Thức Thanh Toán Khác",
+            "zh-Hant": "其它收款賬戶",
+            "id": "Metode Pembayaran alternatif",
+            "es": "Métodos de Pago Alternativos",
+            "pt-BR": "Métodos de pagamento alternativos",
+            "ar": "طرق الدفع البديلة"
         },
         "transferTip1": {
             "zh": "请注意，我们不接受直接支付到我们银行账户的现金付款。为了您的注资能及时、准确到账，在填写电汇申请单时，",
