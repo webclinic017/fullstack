@@ -78,7 +78,7 @@
                     }
                 } else {
                     // set_token();
-                    layer.msg('获取失败,请重试!');
+                    layer.msg(data.message || '获取失败,请重试!');
                 }
             });
         }
@@ -218,8 +218,8 @@
                 /*检测手机号是否已经存在*/
                 if (($("#telephone").val().trim() != "")) {
                     // 代理商时
-                    if ($.cookie('invite_status') == 0) {
-                        sendVerifyCode(4);
+                    if (oReg.search_arr.origin === 'proxy') {
+                        sendVerifyCode(6);
                     } else {
                         publicRequest('checkExists', 'GET', {
                             key: 3,
@@ -331,7 +331,9 @@
             if (oReg.search_arr.ib_pid) {
                 $.cookie("pid", "", { path: '/', domain: getDomain(), expires: -1 });
                 $.cookie('ib_pid', oReg.search_arr.ib_pid, { expires: 1, path: '/', domain: getDomain() });
-                $.cookie('invite_status', 1, { expires: 1, path: '/', domain: getDomain() });
+                if (oReg.search_arr.origin !== 'proxy') { // 应该是成立的，web端不会来自proxy
+                    $.cookie('invite_status', 1, { expires: 1, path: '/', domain: getDomain() });
+                }
             }
             $("#submit_form").on("click", toLogin);
 
