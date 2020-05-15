@@ -8,7 +8,7 @@
     origin = origin + '/v3';
     // console.log(origin);
     var apiUrl = {
-        getUserInfo: origin_app + '/user/info',     // get
+        getUserInfo: origin + '/user/info',     // get
         register: origin_app + '/auth/register',     // post
         regOrLogin: origin + '/auth/login',     // post
         getAssetInfo: origin_app + '/centre/asset',  // get
@@ -26,7 +26,7 @@
         checkExists: origin + '/user/check_exists', // get
         getPhoneCode: origin + '/validation/send_code', // post
         sendCode: origin + '/validation/send_code', // post
-        getInviteList: origin_app + '/user/invites', // get
+        getInviteList: origin + '/user/invites', // get
         setClueCustomer: origin + '/auth/page_signup', // post
         setInviteCode: origin + '/invite_code', // post
         // setCustomerPromotion: origin + '/user/ib_agent', // post

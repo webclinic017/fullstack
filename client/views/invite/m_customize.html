@@ -24,7 +24,7 @@
     <div class="invite_rules_box">
       <div class="relative text-center">
         <img class="icon" src="/white_label/invite/customize/icon.png" alt="">
-        <p class="clearfix icon-tip-wrapper">
+        <p class="clearfix icon-tip-wrapper <%=lang.isEnglishArea() ? 'en' : ''%>">
           <span class="icon-tip"><%=lang.text('mInviteCustomize4')%></span>
           <span class="icon-tip"><%=lang.text('mInviteCustomize5')%></span>
           <span class="icon-tip"><%=lang.text('mInviteCustomize6')%></span>
@@ -47,14 +47,22 @@
       <ul class="nav clearfix">
         <li class="col-xs-4 text-center">
             <p class="tip"><%=lang.text('mInviteCustomize13')%></p>
-            <p class="num"><span id="invite_count"></span></p>
         </li>
         <li class="col-xs-4 text-center">
             <p class="tip"><%=lang.text('mInviteCustomize14')%></p>
-            <p class="num"><span id="invite_succ"></span></p>
         </li>
         <li class="col-xs-4 text-center">
             <p class="tip"><%=lang.text('mInviteCustomize15')%></p>
+        </li>
+      </ul>
+      <ul class="nav clearfix">
+        <li class="col-xs-4 text-center">
+            <p class="num"><span id="invite_count"></span></p>
+        </li>
+        <li class="col-xs-4 text-center">
+            <p class="num"><span id="invite_succ"></span></p>
+        </li>
+        <li class="col-xs-4 text-center">
             <p class="num">$<span id="invite_reward"></span></p>
         </li>
       </ul>
