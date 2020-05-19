@@ -5705,6 +5705,16 @@
                         "pt-BR": "Adicionar cartões de banco",
                         "ar": "أضف بطاقات مصرفية"
                     },
+                    "addCards": {
+                        "zh": "添加银行卡",
+                        "en": "Add Card",
+                        "vi": "Thêm Tài khoản \"Ngân hàng\"",
+                        "zh-Hant": "添加銀行卡",
+                        "id": "Tambah rekening bank",
+                        "es": "Solicitud de retiro a Cuenta Bancaria ",
+                        "pt-BR": "Adicionar cartões de banco",
+                        "ar": "أضف بطاقات مصرفية"
+                    },
                     "name": {
                         "zh": "持卡人",
                         "en": "Name",
@@ -7688,6 +7698,16 @@
                     "bindUserBankCard": {
                         "zh": "请绑定认证用户本人的银行卡",
                         "en": "Please bind the user’s own bank card",
+                        "vi": "Vui lòng liên kết thẻ ngân hàng của riêng người dùng",
+                        "zh-Hant": "請邦定認證用戶本人的銀行卡",
+                        "id": "Mohon daftarkan nomor rekening anda",
+                        "es": "Por favor, complete sus datos de cuenta bancaria.",
+                        "pt-BR": "Por favor, associe o bancário do usuário",
+                        "ar": "يرجى ربط البطاقة المصرفية المملوكة للمستخدم"
+                    },
+                    "bindUserBankCard2": {
+                        "zh": "请绑定认证用户本人的银行卡",
+                        "en": "Please add your card details. The card must be held by the TigerWit account holder.",
                         "vi": "Vui lòng liên kết thẻ ngân hàng của riêng người dùng",
                         "zh-Hant": "請邦定認證用戶本人的銀行卡",
                         "id": "Mohon daftarkan nomor rekening anda",

@@ -3,10 +3,10 @@
 
     <div>
         <h5 class="sys_modal_v2__title">
-            {{lang.text('tigerWitID.wallet.addBankCards')}}
+            {{lang.text(type === 'Noire'?'tigerWitID.wallet.addCards':'tigerWitID.wallet.addBankCards')}}
             <br>
             <span class="desp">
-                {{lang.text('tigerWitID.depositWithdrawal.bindUserBankCard')}}
+                {{lang.text(type === 'Noire'?'tigerWitID.depositWithdrawal.bindUserBankCard2':'tigerWitID.depositWithdrawal.bindUserBankCard')}}
             </span>
         </h5>
         <div class="sys_modal_v2__content" ng-show="!card.binding">
