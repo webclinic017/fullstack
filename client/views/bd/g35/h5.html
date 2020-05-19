@@ -38,168 +38,24 @@
 <!--引入公用头部-->
 <% include /common/vendor/h5.utiljs.html %>
 <% include /common/statistic/main.html %>
-<body style="height: 100%;" class="<%= lang.isAr('ar-lang')%>">
+<body>
   <div id="m_global_t35" class="m_global_t35 active">
-    <div class="m_global_t35_layout">
-      <div class="m_global_t35__logo">
-        <img src="/images/static_logo.png" alt="">
+    <div class="m_global_t35__focus">
+      <div class="m_global_t35__focus-bg"><img src="/white_label/bd/g35/h5-focus.png" alt=""></div>
+      <div class="m_global_t35__focus-content">
+        <h2><img src="/white_label/bd/g35/logo.png" alt=""></h2>
+        <h3>Trade with Champions</h3>
+        <p>Teamwork is the key to successful partnership, now we invite you to join the best team in the world.</p>
       </div>
-      <div class="m_global_t35__focus">
-        <img src="<%= lang.image('freesignH5Title')%>" alt="">
+      <div class="m_global_t35__focus-btn" id="goToRegister">
+        <span>Register now</span>
       </div>
-      <!-- <div class="m_global_t35__focus_tip">
-          <%= lang.text('bonusBd.gainRebateUs')%><span> $200 </span><%= lang.text('bonusBd.onceRegistered')%>
-      </div> -->
-      <div class="m_global_t35__btn_wrapper" style="padding-top: 40px;">
-        <a class="m_global_t35__btn" target="_self" href="#register_box"><%= lang.text('bonusBd.getRebateNow')%></a>
-      </div>
-      <!-- <div class="m_global_t35__title t1">
-        <img src="<%= lang.image('rebateplanTitle')%>" alt="">
-      </div>
-      <div class="m_global_t35__cont-1 item-center">
-        <div class="cont-left">
-          <img src="/images/bd_g35/h5_bar.png" alt="">
-        </div>
-        <div class="cont-right flex1">
-          <ul>
-            <li class="l1">
-              <div class="l">
-                <p><%= lang.text('bonusBd.us')%></p>
-                <p>$2.00</p>
-              </div>
-              <div class="r">
-                <p>0.5 <%= lang.text('bonusBd.lot')%></p>
-                <p><%= lang.text('bonusBd.within')%>14 days</p>
-              </div>
-            </li>
-            <li class="l2">
-              <div class="l">
-                <p><%= lang.text('bonusBd.us')%></p>
-                <p>$6.00</p>
-              </div>
-              <div class="r">
-                <p>3 <%= lang.text('bonusBd.lot')%></p>
-                <p><%= lang.text('bonusBd.within')%>30 days</p>
-              </div>
-            </li>
-            <li class="l3">
-              <div class="l">
-                <p><%= lang.text('bonusBd.us')%></p>
-                <p>$18.00</p>
-              </div>
-              <div class="r">
-                <p>8 <%= lang.text('bonusBd.lot')%></p>
-                <p><%= lang.text('bonusBd.within')%>60 days</p>
-              </div>
-            </li>
-            <li class="l4">
-              <div class="l">
-                <p><%= lang.text('bonusBd.us')%></p>
-                <p>$25.00</p>
-              </div>
-              <div class="r">
-                <p>15 <%= lang.text('bonusBd.lot')%></p>
-                <p><%= lang.text('bonusBd.within')%>90 days</p>
-              </div>
-            </li>
-            <li class="l5">
-              <div class="l">
-                <p><%= lang.text('bonusBd.us')%></p>
-                <p>$50.00</p>
-              </div>
-              <div class="r">
-                <p>30 <%= lang.text('bonusBd.lot')%></p>
-                <p><%= lang.text('bonusBd.within')%>90 days</p>
-              </div>
-            </li>
-            <li class="l6">
-              <div class="l">
-                <p><%= lang.text('bonusBd.us')%></p>
-                <p>$99.00</p>
-              </div>
-              <div class="r">
-                <p>50 <%= lang.text('bonusBd.lot')%></p>
-                <p><%= lang.text('bonusBd.within')%>90 days</p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div> -->
-      <div class="m_global_t35__title t2">
-        <img src="<%= lang.image('whyChooseTitle')%>" alt="">
-      </div>
-      <ul class="m_global_t35__cont-2 display-flex">
-        <li>
-          <p><img src="/images/bd_g35/comm_icon1.png" alt=""></p>
-          <p><%= lang.text('bonusBd.whyChoose1')%></p>
-        </li>
-        <li>
-          <p><img src="/images/bd_g35/comm_icon2.png" alt=""></p>
-          <p><%= lang.text('bonusBd.whyChoose2')%></p>
-        </li>
-      </ul>
-      <ul class="m_global_t35__cont-2 display-flex">
-        <li>
-          <p><img src="/images/bd_g35/comm_icon3.png" alt=""></p>
-          <p><%= lang.text('bonusBd.whyChoose3')%></p>
-        </li>
-        <li>
-          <p><img src="/images/bd_g35/comm_icon4.png" alt=""></p>
-          <p><%= lang.text('bonusBd.whyChoose4')%></p>
-        </li>
-      </ul>
-      <ul class="m_global_t35__download display-flex">
-        <li>
-          <a href="<%= lang.text('downloadGlobalApp')%>">
-            <img src="<%= lang.image('downloadAppGlobal')%>" alt="">
-          </a>
-        </li>
-        <li>
-          <a href="<%= lang.text('downloadCnApp')%>">
-            <img src="<%= lang.image('downloadAppCn')%>" alt="">
-          </a>
-        </li>
-      </ul>
-      <div class="m_global_t35__title t3">
-        <img src="<%= lang.image('eventDetailsTitle')%>" alt="">
-      </div>
-      <div class="m_global_t35__cont-3">
-        <span></span>
-        <p>
-            <%= lang.text('bonusBd.eventDetails1')%>
+    </div>
+    <div class="m_global_t35__register_box" id="register_box">
+      <div class="m_global_t35__register">
+        <p class="box_tip">
+          Enter your details below and become a partner of a winning team
         </p>
-      </div>
-      <div class="m_global_t35__cont-3">
-        <span></span>
-        <p>
-            <%= lang.text('bonusBd.eventDetails2')%>
-        </p>
-      </div>
-      <div class="m_global_t35__cont-3">
-        <span></span>
-        <p>
-            <%= lang.text('bonusBd.eventDetails3')%>
-        </p>
-      </div>
-      <div class="m_global_t35__cont-3">
-        <span></span>
-        <p>
-            <%= lang.text('bonusBd.eventDetails4')%>
-        </p>
-      </div>
-      <div class="m_global_t35__cont-3">
-        <span></span>
-        <p>
-            <%= lang.text('bonusBd.eventDetails5')%> 
-        </p>
-      </div>
-      <div class="m_global_t35__cont-3">
-        <span></span>
-        <p>
-            <%= lang.text('bonusBd.eventDetails6')%>
-        </p>
-      </div>
-      <div class="m_global_t35__register_box" id="register_box">
         <div class="form-control-wrapper">
           <select class="form-control" name="country" id="country">
             <option value=""><%= lang.text('third_placeholder4')%></option>
@@ -223,38 +79,90 @@
           <input type="password" class="form-control" name="confirmPassword" id="confirmPassword"
             placeholder="<%= lang.text('thirdH5.confirmPassword')%>">
         </div>
-
-        <div class="m_global_t35__btn_wrapper">
-          <button id="submit_form" class="m_global_t35__btn" href=""><%= lang.text('bonusBd.confirmNow')%></button>
+        <div class="form-control-wrapper select-wrapper">
+          <img id="select" class="select-box" src="/white_label/bd/g35/select.png" alt="">
+          <img id="selected" class="select-box active" src="/white_label/bd/g35/selected.png" alt="">
+          <span>
+            I consent to the collection, storage and processing of my personal data by TigerWit in accordance with its Privacy Policy.
+          </span>
         </div>
-      </div>
-      <div class="m_global_t35__warning">
-        <p class="tit"><%= lang.text('bonusBd.eventDetails7')%></p>
-        <p class="tit">
-            <%= lang.text('bonusBd.eventDetails8')%>
-        </p>
-        <p><%= lang.text('bonusBd.copyright')%></p>
-      </div>
-      <div class="m_global_t35__float_box">
-        <a target="_self" href="#register_box"><%= lang.text('bonusBd.getRebateNow')%></a>
+        <div class="m_global_t35__btn_wrapper">
+          <button id="submit_form" class="m_global_t35__btn" href="">SUBMIT</button>
+        </div>
       </div>
     </div>
-  </div>
-  <div id="m_global_t35_success" class="m_global_t35_success">
-    <div class="m_global_t35_success__layout">
-        <div class="m_global_t35_success__tip">
-            <p><%= lang.text('bonusBd.resendTip1')%></p>
-            <p><%= lang.text('bonusBd.resendTip2')%></p>
-        </div>
-        <div class="m_global_t35__btn_wrapper">
-          <button id="submit_resend" class="m_global_t35__btn"><%= lang.text('bonusBd.resend')%></button>
-        </div>
-        <div class="m_global_t35__btn_wrapper">
-          <button id="m_global_t35_success_rewrite" class="m_global_t35__btn"><%= lang.text('bonusBd.modifyAddress')%></button>
-        </div>
-        <p class="m_global_t35_success__download">
-          <span><%= lang.text('bonusBd.downloadMobileApp')%></span>
-        </p>
+    <div class="m_global_t35__content_wrapper">
+      <h3>Our state-of-the-art trading technology, powered by blockchain, is supported by an unparalleled squad of features</h3>
+      <ul class="m_global_t35__content display-flex">
+        <li>
+          <p><img src="/white_label/bd/g35/icon-1.png" alt=""></p>
+          <h4>Active Copy Trading</h4>
+          <p>Clients can choose to copy a wide range of traders offering multiple strategies</p>
+        </li>
+        <li>
+          <p><img src="/white_label/bd/g35/icon-2.png" alt=""></p>
+          <h4>Transparent Payments</h4>
+          <p>Our payment plans are clear and tailored to suit our partners needs</p>
+        </li>
+      </ul>
+      <ul class="m_global_t35__content display-flex">
+        <li>
+          <p><img src="/white_label/bd/g35/icon-3.png" alt=""></p>
+          <h4>Multi Award Winning App</h4>
+          <p>Our unique platform has been recognized by the industry with multiple awards</p>
+        </li>
+        <li>
+          <p><img src="/white_label/bd/g35/icon-4.png" alt=""></p>
+          <h4>Converting Marketing Material</h4>
+          <p>Our experienced marketing team can provide you with unique and converting materials</p>
+        </li>
+      </ul>
+      <ul class="m_global_t35__content display-flex">
+        <li>
+          <p><img src="/white_label/bd/g35/icon-5.png" alt=""></p>
+          <h4>1-on-1 Account Support</h4>
+          <p>Our global offices provide local support to both you and your clients</p>
+        </li>
+        <li>
+          <p><img src="/white_label/bd/g35/icon-6.png" alt=""></p>
+          <h4>Live Webinars and Education Centre</h4>
+          <p>Exclusive training and educational services are provided at no extra cost</p>
+        </li>
+      </ul>
+    </div>
+    <div class="m_global_t35__payment_wrapper">
+      <h3>Payment methids include</h3>
+      <ul class="m_global_t35__payment display-flex payment1">
+        <li>
+          <p><img src="/white_label/bd/g35/payment-1.png" alt=""></p>
+          <p>Bank Transfer</p>
+        </li>
+        <li>
+          <p><img src="/white_label/bd/g35/payment-2.png" alt=""></p>
+          <p>Mastercard</p>
+        </li>
+      </ul>
+      <ul class="m_global_t35__payment display-flex payment2">
+        <li>
+          <p><img src="/white_label/bd/g35/payment-3.png" alt=""></p>
+          <p>Visa</p>
+        </li>
+        <li>
+          <p><img src="/white_label/bd/g35/payment-4.png" alt=""></p>
+          <p>Epoch</p>
+        </li>
+        <li>
+          <p><img src="/white_label/bd/g35/payment-5.png" alt=""></p>
+          <p>Paypal</p>
+        </li>
+      </ul>
+      <p class="tips">To be locallised according to each territories payments</p>
+    </div>
+    <div class="m_global_t35__warning">
+      <h3><%= lang.text('bonusBd.eventDetails7')%></h3>
+      <p>
+        <%= lang.text('bonusBd.eventDetails8')%>
+      </p>
     </div>
   </div>
 </body>

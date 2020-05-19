@@ -19059,14 +19059,14 @@ module.exports = {
             "ar": "تحتفظ TigerWit بحق القرار النهائي والتفسير في حالة حدوث أية مشكلة. إذا كانت لديكم أية أسئلة أو استفسار يرجى التواصل معنا:  menasupport@tigerwit.com."
         },
         "eventDetails7": {
-            "zh": "High Risk Warning: ",
-            "en": "High Risk Warning: ",
-            "vi": "Cảnh báo Rủi Ro Cao:",
-            "zh-Hant": "High Risk Warning: ",
-            "id": "Peringatan Resiko Tinggi :",
-            "es": "Aviso Alto Riesgo: ",
-            "pt-BR": "Aviso de alto risco:",
-            "ar": "تحذير بشأن المخاطر المرتفعة:"
+            "zh": "High Risk Warning",
+            "en": "High Risk Warning",
+            "vi": "Cảnh báo Rủi Ro Cao",
+            "zh-Hant": "High Risk Warning",
+            "id": "Peringatan Resiko Tinggi",
+            "es": "Aviso Alto Riesgo",
+            "pt-BR": "Aviso de alto risco",
+            "ar": "تحذير بشأن المخاطر المرتفعة"
         },
         "eventDetails8": {
             "zh": "Margin transactions in financial markets have a high level of risk and are not suitable for every investor. Investors should take into consideration their investment goals, ability to withstand losing part or all their investment and their investment experience and knowledge. Past results cannot be taken as a guarantee of future results. ",
