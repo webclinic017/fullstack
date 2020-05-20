@@ -17,7 +17,7 @@
     <img src="/white_label/invite/customize/focus.png" alt="">
     <div class="reward">
       <p class="tip"><%=lang.text('mInviteCustomize2')%></p>
-      <p class="amount">20<%=lang.text('mInviteCustomize3')%></p>
+      <p class="amount">10<%=lang.text('mInviteCustomize3')%></p>
     </div>
   </div>
   <div class="invite_box">
@@ -69,13 +69,10 @@
       <p class="arrow_wrapper"><img id="arrow_btn" class="arrow" src="/white_label/invite/customize/arrow.png" alt=""></p>
       <div class="records_list" id="records_list">
         <ul class="nav clearfix">
-          <li class="col-xs-4">
+          <li class="col-xs-6">
               <p class="tip"><%=lang.text('mInviteCustomize16')%></p>
           </li>
-          <li class="col-xs-4">
-              <p class="tip"><%=lang.text('mInviteCustomize17')%></p>
-          </li>
-          <li class="col-xs-4 text-center">
+          <li class="col-xs-6">
               <p class="tip"><%=lang.text('mInviteCustomize18')%></p>
           </li>
         </ul>
@@ -91,22 +88,25 @@
 <script id="invite_list" type="text/template">
     <$for(var i=0; i<list.length; i++){$>
     <ul class="content clearfix">
-      <li class="col-xs-4">
-        <span class="num"><$=list[i].user_name$></span>
+      <li class="col-xs-6">
+        <span class="num"><$=list[i].user_name$></span><br>
+        <span class="num" style="color: #999"><$=list[i].time$></span>
       </li>
-      <li class="col-xs-4">
-        <span class="num"><$=list[i].time$></span>
-      </li>
-      <li class="col-xs-4 progress_wrapper text-center">
+      <li class="col-xs-6 progress_wrapper">
         <$if (list[i].progress === 1) {$>
+          <span class="bar" style="width:25%;"></span>
           <span class="num"><%=lang.text('mInviteCustomize19')%></span>
         <$}else if (list[i].progress === 2) {$>
+          <span class="bar" style="width:50%;"></span>
           <span class="num"><%=lang.text('mInviteCustomize20')%></span>
         <$} else if (list[i].progress === 3) {$>
+          <span class="bar" style="width:75%;"></span>
           <span class="num"><%=lang.text('mInviteCustomize21')%></span>
         <$} else if (list[i].progress === 4) {$>
+          <span class="bar" style="width:75%;"></span>
           <span class="num"><%=lang.text('mInviteCustomize22')%></span>
         <$} else {$>
+          <span class="bar" style="width:100%;"></span>
           <span class="num"><%=lang.text('mInviteCustomize23')%></span>
         <$}$>
       </li>

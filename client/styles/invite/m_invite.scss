@@ -653,9 +653,9 @@ html,body{
         color: #2999ff;
         text-align: center;
         margin: 0;
+        margin-bottom: px2rem(16);
       }
       .nav {
-        margin-top: px2rem(32);
         margin-bottom: px2rem(16);
         li {
           padding: 0;
@@ -670,22 +670,33 @@ html,body{
         }
       }
       .content {
+        margin-bottom: px2rem(16);
         li {
           padding: 0;
           .num {
             font-size: px2rem(24);
-
           }
           &.progress_wrapper {
+            position: relative;
+            background-color: #ddd;
+            height: px2rem(50);
+            border-radius: px2rem(50);
+
             .num {
-              width: 98%;
-              padding: px2rem(6) px2rem(20);
-              display: inline-block;
+              width: 100%;
+              height: px2rem(50);
+              line-height: px2rem(50);
               color: #fff;
-              background-color: #2999ff;
-              border-radius: px2rem(50);
               text-align: center;
-              border: none;
+              position: absolute;
+              top: 0;
+              left: 0;
+            }
+            .bar {
+              display: block;
+              height: px2rem(50);
+              border-radius: px2rem(50);
+              background-color: #2999ff;
             }
           }
         }

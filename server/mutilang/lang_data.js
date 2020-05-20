@@ -17807,14 +17807,14 @@ module.exports = {
             "ar": "إرسال"
         },
         "addThirdAccount": {
-            "zh": "添加账户",
-            "en": "Add the third-party account",
-            "vi": "Thêm vào tài khoản bên thứ 3",
-            "zh-Hant": "添加賬戶",
-            "id": "Tambah Rekening pihak ke tiga",
-            "es": "Añadir la cuenta de terceros",
-            "pt-BR": "Adicione conta de terceiros",
-            "ar": "أضف حساب الطرف الثالث"
+            "zh": "增加账户",
+            "en": "Increase account",
+            "vi": "Thêm tài khoản",
+            "zh-Hant": "增加賬戶",
+            "id": "Tambahkan rekening",
+            "es": "Incremente cuenta",
+            "pt-BR": "Aumentar contagem",
+            "ar": "نمّي الحساب"
         },
         "accountName": {
             "zh": "账户名称",
