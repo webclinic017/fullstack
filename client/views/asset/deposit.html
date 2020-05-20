@@ -110,9 +110,9 @@
                 <div class="form-control-wrapper">
                     <input class="form-control form-control-size-lg form-control-shape-capsule"
                         name="safetyCode"
-                        type="text"
+                        type="number"
                         ng-model="deposit.safetyCode"
-                        ng-change="checkInputAmount()">
+                        ng-change="[checkInputAmount(), checkSafetyCode(deposit.safetyCode)]">
                 </div>
             </div>
         </div>
