@@ -14,8 +14,8 @@
             copy: copy,
             cancelCopy: cancelCopy,
             getAvaCopyAmount: getAvaCopyAmount,
-            getHistoricalRate: getHistoricalRate,
-            getMasterInfo: getMasterInfo,
+            // getHistoricalRate: getHistoricalRate,
+            // getMasterInfo: getMasterInfo,
             getMasterNewInfo: getMasterNewInfo,
             getMonthlySymbols: getMonthlySymbols,
             getMasterGrade: getMasterGrade,
@@ -102,26 +102,26 @@
          * @param user_code
          * @returns {*}
          */
-        function getHistoricalRate(user_code) {
-            return publicHttp.dealPublicRequest(o.getHistoricalRateApi, 'GET', {
-                user_code: user_code
-            });
-        }
+        // function getHistoricalRate(user_code) {
+        //     return publicHttp.dealPublicRequest(o.getHistoricalRateApi, 'GET', {
+        //         user_code: user_code
+        //     });
+        // }
 
 		/**
          * trader 获取高手的基本信息
          * @param user_code
          * @returns {*}
          */
-        function getMasterInfo(user_code) {
-            return publicHttp.dealPublicRequest(o.getMasterInfoApi, 'GET', {
-                user_code: user_code
-            }).then(function (data) {
-                //console.log(data);
-                data.data.usercode = data.data.user_code;
-                return data;
-            });
-        }
+        // function getMasterInfo(user_code) {
+        //     return publicHttp.dealPublicRequest(o.getMasterInfoApi, 'GET', {
+        //         user_code: user_code
+        //     }).then(function (data) {
+        //         //console.log(data);
+        //         data.data.usercode = data.data.user_code;
+        //         return data;
+        //     });
+        // }
 		/**
          * trader 获取高手的基本信息
          * @param user_code
