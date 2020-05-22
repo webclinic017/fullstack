@@ -111,12 +111,12 @@ module.exports = function (app) {
             }
         }
         // 重写重定向方法，添加lang参数
-        var _redirect = res.redirect;
-        res.redirect = function (url) {
-            if (paramsLang) {
+        if (paramsLang) {
+            var _redirect = res.redirect;
+            res.redirect = function (url) {
                 url = path.sep + paramsLang + url;
+                return _redirect.call(this, url)
             }
-            return _redirect.call(this, url)
         };
 
         // 设置所有的cookie
