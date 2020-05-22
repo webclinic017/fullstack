@@ -108,22 +108,7 @@ $(document).ready(function () {
   $("#country").on('change', function (e) {
     $(this).css('color', '#333');
   });
-  //同意协议
-  var isAgree = true;
-  $(".select-box").on('click', function () {
-    if (isAgree) {
-      $("#select").addClass('active');
-      $("#selected").removeClass('active');
-      $("#submit_form").addClass('gray');
-    } else {
-      $("#selected").addClass('active');
-      $("#select").removeClass('active');
-      $("#submit_form").removeClass('gray');
-    }
-    isAgree = !isAgree;
-  })
   function toRegister(is_agree) {
-    if (!isAgree) return;
     if (!$("#country").val()) {
       openLayer(lang.text('registerJs.selectCountry'));
       return;

@@ -105,26 +105,14 @@
       }
     }
     .select-wrapper {
-      .select-box {
-        width: px2rem(32);
-        vertical-align: middle;
-        display: none;
-        &.active {
-          display: inline-block;
-        }
-      }
       span {
         color: #fff;
-        font-size: px2rem(28);
-        line-height: px2rem(32);
+        font-size: px2rem(24);
+        line-height: px2rem(30);
       }
     }
     .m_global_t35__btn {
       border-radius: 1000px;
-
-      &.gray {
-        opacity: .6;
-      }
     }
   }
   @include e(content_wrapper) {
@@ -177,20 +165,9 @@
     li {
       font-size: px2rem(24);
       text-align: center;
+      width: 33.33%;
       img {
         height: px2rem(60);
-      }
-    }
-    &.payment1 {
-      margin-left: 16%;
-      margin-right: 16%;
-      li {
-        width: 50%;
-      }
-    }
-    &.payment2 {
-      li {
-        width: 33.33%;
       }
     }
   }
