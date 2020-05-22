@@ -7637,7 +7637,7 @@
                     },
                     "bankCard": {
                         "zh": "银行卡",
-                        "en": "Bank Card",
+                        "en": "Card",
                         "vi": "Thẻ ngân hàng",
                         "zh-Hant": "銀行卡",
                         "id": "Rekening bank",

@@ -104,6 +104,10 @@ $(document).ready(function () {
       $("#country").append(optionStr);
     }
   });
+  //更改select color
+  $("#country").on('change', function (e) {
+    $(this).css('color', '#333');
+  });
   function toRegister(is_agree) {
     if (!$("#country").val()) {
       openLayer(lang.text('registerJs.selectCountry'));

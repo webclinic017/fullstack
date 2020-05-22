@@ -40,34 +40,75 @@
   }
 }
 @include b(global_t35) {
-  // height: 2700px;
-  padding-bottom: 150px;
-  // 阿拉伯换图
-  background-image: url('/images/bd_g35/web_bg_new.png');
-  background-position: center top;
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  color: #fff;
+  padding-top: 69px;
+  .global_t35_container {
+    width: 100%;
+    min-width: 1200px;
+    max-width: 1600px;
+    padding: 0 70px;
+    margin: 0 auto;
+  }
 
-  @include e(layer_wrapper) {
-    display: none;
+  @include e(focus) {
+    height: 1136px;
+    background-image: url('/white_label/bd/g35/web-focus.png');
+    background-position: center top;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    @include m(content) {
+      .main_info {
+        margin-top: 580px;
+        color: #ffd521;
+        h3 {
+          font-size: 68px;
+        }
+        p {
+          font-size: 22px;
+        }
+        img {
+          vertical-align: top;
+        }
+      }
+    }
+    h2 img {
+      width: 224px;
+    }
+  }
+  @include e(arrow_wrapper) {
+    position: absolute;
+    left: 50%;
+    bottom: 70px;
+    margin-left: -25px;
+  }
+  @include e(register_wrapper) {
+    margin-top: 320px;
   }
   @include e(register_box) {
-    border: 1px solid #ccc;
     background: rgba(255,255,255,.25);
-    border-radius: 2px;
+    border-radius: 6px;
     padding: 25px;
     width: 350px;
-    margin-top: 20px;
 
     .form-control-wrapper {
       .verify-code{
-        padding-right: 172px;
+        padding-right: 140px;
+      }
+      .verify_code_btn_wrapper {
+        width: 136px;
+        height: 22px;
+        line-height: 22px;
+        top: 9px;
+        color: #049ee9;
+      }
+      select.form-control {
+        -webkit-appearance: none;
+        color: #999;
       }
       .form-control {
-        border-radius: 4px;
+        border-radius: 20px;
         color: #333;
         background-color: #fff;
+        padding-left: 20px;
       }
       &.ar{
         .verify-code{
@@ -76,179 +117,95 @@
         }
       }
     }
+    .select-wrapper {
+      margin-top: 15px;
+      span {
+        font-size: 12px;
+        color: #fff;
+        line-height: 16px;
+      }
+    }
+    @include m(tip) {
+      font-size: 22px;
+      line-height: 26px;
+      margin-bottom: 25px;
+      color: #ffd521;
+      padding-right: 40px;
+    }
   }
   @include e(btn_wrapper) {
-    text-align: center;
   }
   @include e(btn) {
     color: #222;
     font-weight: 500;
-    padding: 10px 15px;
-    border-radius: 4px;
+    padding: 9px 34px;
+    border-radius: 20px;
     font-size: 16px;
     display: inline-block;
     border: none;
-    box-shadow: 0px 0px 15px 1px #ccc;
     background: -webkit-linear-gradient(left, #fbd427, #e4c548); /* Safari 5.1 - 6.0 */
     background: -o-linear-gradient(left, #fbd427, #e4c548); /* Opera 11.1 - 12.0 */
     background: -moz-linear-gradient(left, #fbd427, #e4c548); /* Firefox 3.6 - 15 */
     background: linear-gradient(left, #fbd427, #e4c548); /* 标准的语法 */
   }
-
-  @include e(focus) {
-    margin-top: 265px;
-    .img-parent{
-      width: 575px;
-    }
-    img {
-      width: 100%;
-    }
-  }
-  @include e(focus_tip) {
-    font-size: 20px;
-    padding-left: 20px;
-
-    span {
-      font-weight: 500;
-      font-size: 30px;
-    }
-  }
-  @include e(date) {
-    font-weight: 500;
-    font-size: 26px;
-    padding-top: 20px;
-    padding-left: 20px;
-  }
-
-  @include e(title) {
-    text-align: center;
-    position: relative;
-
-    &.t1 {
-      margin-top: 260px;
-      .bar {
-        position: absolute;
-        top: -85px;
-        left: 0;
-        width: 100%;
-      }
-    }
-    &.t2 {
-      margin-top: 115px;
-    }
-    &.t3 {
-      margin-top: 120px;
-      margin-bottom: 50px;
-    }
-  }
-  @include e(plan) {
-    @include displayFlex();
-    @include alignItems(flex-end);
-    li {
+  @include e(content_wrapper) {
+    margin-bottom: 120px !important;
+    h3 {
+      width: 700px;
+      margin: 80px auto 0px;
       text-align: center;
-      width: 166px;
-      margin-right: 2.5px;
-      margin-left: 2.5px;
-      font-size: 16px;
-
-      span {
-        font-size: 20px;
-      }
-
-      .l {
-        height: 50%;
-        font-size: 18px;
-        line-height: 22px;
-        @include displayFlex();
-        @include alignItems(center);
-        @include justifyContent(center);
-        width: 100%;
-
-      }
-      .r {
-        height: 50%;
-        line-height: 22px;
-        @include displayFlex();
-        @include alignItems(center);
-        @include justifyContent(center);
-      }
-      &.l1 {
-        height: 130px;
-        background: rgba(5,8,39,.4);
-      }
-      &.l2 {
-        height: 165px;
-        background: rgba(220,220,220,.4);
-      }
-      &.l3 {
-        height: 200px;
-        background: rgba(5,8,39,.4);
-      }
-      &.l4 {
-        height: 240px;
-        background: rgba(220,220,220,.4);
-      }
-      &.l5 {
-        height: 280px;
-        background: rgba(5,8,39,.4);
-      }
-      &.l6 {
-        height: 340px;
-        background: rgba(220,220,220,.4);
-      }
+      font-size: 20px;
     }
   }
-  @include e(cont) {
+  @include e(content) {
     margin-top: 50px;
-
     li {
-      width: 25%;
+      width: 33.33%;
       text-align: center;
       padding: 0 35px;
-
+      h4 {
+        font-size: 20px;
+        margin: 10px 0px;
+      }
+      p {
+        color: #fed914;
+      }
       img {
-        height: 110px;
-        margin-bottom: 15px;
+        height: 90px;
       }
     }
   }
-  @include e(download) {
-    margin-top: 50px;
-
+  @include e(payment_wrapper) {
+    background-color: #ffd521;
+    h3 {
+      margin: 0px auto;
+      padding: 70px 0px;
+      text-align: center;
+      font-size: 20px;
+    }
+    .tips {
+      text-align: center;
+      opacity: .3;
+      padding: 40px 0px;
+    }
+  }
+  @include e(payment) {
     li {
-      padding: 0 15px;
-      a{
-        display: inline-block;
-        img {
-          width: 250px;
-        }
+      width: 16.66%;
+      text-align: center;
+      padding: 0 30px;
+      img {
+        height: 60px;
       }
-    }
-  }
-  @include e(details) {
-    @include displayFlex();
-    font-size: 16px;
-    line-height: 22px;
-    padding-bottom: 15px;
-
-    span {
-      width: 10px;
-      height: 10px;
-      background-color: #fff;
-      border-radius: 8px;
-      margin-top: 8px;
-    }
-    p {
-      @include flex(1);
-      padding-left: 10px;
-      padding-right: 10px;
     }
   }
   @include e(warning) {
-    .tit {
-      margin-bottom: 10px;
+    margin: 70px auto 100px !important;
+    text-align: center;
+    opacity: .5;
+    padding: 0px 150px !important;
+    h3 {
+      font-size: 22px;
     }
-    font-size: 16px;
-    margin-top: 150px;
   }
 }
