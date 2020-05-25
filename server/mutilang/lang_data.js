@@ -18007,14 +18007,14 @@ module.exports = {
             "ar": "إرسال"
         },
         "addThirdAccount": {
-            "zh": "添加账户",
-            "en": "Add the third-party account",
-            "vi": "Thêm vào tài khoản bên thứ 3",
-            "zh-Hant": "添加賬戶",
-            "id": "Tambah Rekening pihak ke tiga",
-            "es": "Añadir la cuenta de terceros",
-            "pt-BR": "Adicione conta de terceiros",
-            "ar": "أضف حساب الطرف الثالث"
+            "zh": "增加账户",
+            "en": "Increase account",
+            "vi": "Thêm tài khoản",
+            "zh-Hant": "增加賬戶",
+            "id": "Tambahkan rekening",
+            "es": "Incremente cuenta",
+            "pt-BR": "Aumentar contagem",
+            "ar": "نمّي الحساب"
         },
         "accountName": {
             "zh": "账户名称",
@@ -19821,4 +19821,254 @@ module.exports = {
         "pt-BR": "Convidando agora",
         "ar": "دعوة الآن"
     },
+    "mInviteCustomize1": {
+        "zh": "邀好友 赠美金",
+        "en": "Invite friends Earn US dollars",
+        "vi": "Mời bạn bè nhận ngay đô la Mỹ",
+        "zh-Hant": "邀好友 贈美金",
+        "id": "Ajak Teman dan hasilkan Dolar",
+        "es": "Invite Amigos y gane dólares Americanos",
+        "pt-BR": "Convide amigos e ganhe dólares",
+        "ar": "قم بدعوة الأصدقاء واحصل على دولار أميركي"
+    },
+    "mInviteCustomize2": {
+        "zh": "邀请好友，马上赚",
+        "en": "Invite friends and earn",
+        "vi": "Mời bạn bè và nhận thưởng",
+        "zh-Hant": "邀請好友，馬上賺",
+        "id": "Ajak Teman dan hasilkan",
+        "es": "Invite Amigos y gane ",
+        "pt-BR": "Convide amigos e ganhe",
+        "ar": "قم بدعوة الأصدقاء واربح"
+    },
+    "mInviteCustomize3": {
+        "zh": "美金",
+        "en": "dollars",
+        "vi": "dollars",
+        "zh-Hant": "美金",
+        "id": "dollars",
+        "es": "dollars",
+        "pt-BR": "dollars",
+        "ar": "dollars"
+    },
+    "mInviteCustomize4": {
+        "zh": "邀请好友",
+        "en": "Invite Friends",
+        "vi": "Mời bạn bè",
+        "zh-Hant": "邀請好友",
+        "id": "Ajak Teman",
+        "es": "Invite Amigos",
+        "pt-BR": "Convide amigos",
+        "ar": "قم بدعوة الأصدقاء"
+    },
+    "mInviteCustomize5": {
+        "zh": "激活账户",
+        "en": "Activate account",
+        "vi": "Kích hoạt tài khoản",
+        "zh-Hant": "激活賬戶",
+        "id": "Aktivasi Akun",
+        "es": "Active cuenta",
+        "pt-BR": "Ativar conta",
+        "ar": "تفعيل حساب"
+    },
+    "mInviteCustomize6": {
+        "zh": "产生交易",
+        "en": "Generate transactions",
+        "vi": "Tạo giao dịch",
+        "zh-Hant": "產生交易",
+        "id": "Munculkan transaksi",
+        "es": "Genere transacciones",
+        "pt-BR": "Gere transações",
+        "ar": "إنشاء المعاملات"
+    },
+    "mInviteCustomize7": {
+        "zh": "赠金到账",
+        "en": "Bounty to account",
+        "vi": "Tiền thưởng về tài khoản",
+        "zh-Hant": "贈金到賬",
+        "id": "Kredit Bonus",
+        "es": "Recompenza para cuenta",
+        "pt-BR": "Receba a recompensa na sua conta",
+        "ar": "جائزة على الحساب "
+    },
+    "mInviteCustomize8": {
+        "zh": "邀请好友规则",
+        "en": "Invite Friends Regulations",
+        "vi": "Quy định Mời bạn bè",
+        "zh-Hant": "邀請好友規則",
+        "id": "Peraturan Ajak Teman",
+        "es": "Regulaciones para Invitar Amigos",
+        "pt-BR": "Convidar Amigos Termos e Condições",
+        "ar": "قواعد لدعوة صديق "
+    },
+    "mInviteCustomize9": {
+        "zh": "1.新用户注册即获得邀请类红包“人从众”。邀请3名好友注册，且至少有1人入金并完成1手交易即可兑现, 每位用户仅可领取一次。\n2.您只有通过邀请链接和二维码进行注册的好友才视为有效邀请。\n3.同一手机号、身份证和银行卡号视为同一用户。\n4.任何通过第三方作弊软件刷取好友邀请奖励的行为，一经发现TigerWit有权取消红包兑现奖励的资格。\n5.本活动最终解释权归TigerWit所有。如有疑问，请联系TigerWit客服。",
+        "en": "1. A reward coupon will be delivered to your account when you registered, it can be cashed once you invited three friends and at least one of them deposited and had one lot transaction.\n2. It can be effective only when your friend is registered by the invite link.\n3.Same cellphone, ID and bank card number will be treated as same user. \n4.Tigerwit have the right to cancel the coupon reward once boost invite rewards by third party cheating software was found.\n5.TigerWit reserve all the right for the final explanation. If you have any questions, please contact TigerWit customer service",
+        "vi": "1. Một phiếu thưởng sẽ được gửi đến tài khoản của bạn khi bạn đăng ký, phiếu này có thể được đổi thành tiền sau khi bạn mời 3 người bạn và ít nhất 1 trong số họ ký quỹ và có giao dịch. \n2. Nó chỉ có thể có hiệu lực khi bạn của bạn đăng ký bởi link mời bạn bè. \n3. Cùng số điện thoại di động, chứng minh nhân dân và số thẻ ngân hàng sẽ được xem là cùng một người dùng. \n4.Tigerwit có quyền hủy phiếu thưởng ngay khi phát hiện có sử dụng phần mềm gian lận trong phần thưởng mời. \n5.TigerWit bảo lưu tất cả các quyền cho lời giải thích cuối cùng. Nếu bạn có bất kỳ câu hỏi nào, xin vui lòng liên hệ với Bộ phận Dịch vụ khách hàng của TigerWit.",
+        "zh-Hant": "1.新用戶註冊即獲得邀請類紅包“人從眾”。邀請3名好友註冊，且至少有1人入金並完成1手交易即可兌現, 每位用戶僅可領取一次。\n2.您只有通過邀請鏈接和二維碼進行註冊的好友才視為有效邀請。\n3.同一手機號、身份證和銀行卡號視為同一用戶。\n4.任何通過第三方作弊軟件刷取好友邀請獎勵的行為，一經發現TigerWit有權取消紅包兌現獎勵的資格。\n5.本活動最終解釋權歸TigerWit所有。如有疑問，請聯繫TigerWit客服。 ",
+        "id": "1. Kupon hadiah akan dikirimkan ke dalam akun anda ketika anda mendaftar dan dapat di tarik tunai ketika anda telah mengajak 3 orang teman dan setidaknya salah satu dari 3 orang tersebut melakukan deposit dan telah menutup transaksi 1 lot\n2.Program ini akan berjalan efektif hanya pada saat teman anda mendaftar melalui tautan Ajak Teman\n3. Kartu Identitas, nomor hp dan rekening bank yang sama akan dianggap satu pengguna\n4. TigerWit memiliki hak untuk membatalkan kupon hadiah apabila kami menemukan kecurangan dari pihak ketiga ataupun dari perangkat lunak apaun.\n5. TigerWit memiliki hak penuh untuk keputusan final. Apabila anda memiliki pertanyaan, silahkan hubungi layanan pelanggan TigerWit",
+        "es": "1. Cuando se registre, se le entregará un cupón de recompensa en su cuenta, que se puede cobrar una vez que haya invitado a tres amigos y al menos uno de ellos haya depositado y haya realizado una transacción de lote.\n2. Puede ser efectivo solo cuando su amigo está registrado por el enlace de invitación.\n3.El mismo teléfono celular, ID y número de tarjeta bancaria se tratarán como el mismo usuario.\n4.Tigerwit tiene el derecho de cancelar la recompensa del cupón si se encontra el uso de software para envío de invitaciones a terceros.\n5.TigerWit se reserva todos los derechos de la explicación anterior. Si tiene alguna pregunta, comuníquese con el servicio al cliente de TigerWit",
+        "pt-BR": "1. Um cupom de recompensa será entregue em sua conta quando você se registrar. Ele poderá ser usado depois que você convidar três amigos e pelo menos um deles depositar e realizar transação de 1 lote.\n2. Só pode ser valido quando seu amigo for registrado pelo link de convite.\n3. O mesmo telefone celular, ID e número do cartão do banco serão tratados como o mesmo usuário.\n4.TigerWit tem o direito de cancelar a recompensa do cupom, uma vez que for constatado conduta de má-fe por parte do client ou terceiros.\n5.TigerWit reserva todo o direito para a explicação final. Se você tiver alguma dúvida, entre em contato com o atendimento ao cliente TigerWit",
+        "ar": "1. سيتم تسليم قسيمة المكافأة إلى حسابك عند التسجيل، ويمكن صرفها بمجرد دعوة ثلاثة أصدقاء وإيداع واحد منهم على الأقل مع إجراء صفقة بعقدٍ واحد.\n2. يمكن أن تكون فعالة فقط عندما يسجل صديقك عن طريق رابط الدعوة.\n3. سيتم التعامل مع نفس الهاتف المحمول والهوية ورقم البطاقة المصرفية بنفس المستخدم.\n4.Tigerwit لها الحق في إلغاء مكافأة القسيمة بمجرد العثور على مكافآت الدعوة من قبل برنامج غش من طرف ثالث.\n5.تحتفظ TigerWit بكل الحق في التفسير النهائي. إذا كان لديك أي أسئلة، يرجى التواصل بخدمة زبائن TigerWit."
+    },
+    "mInviteCustomize10": {
+        "zh": "当面邀请",
+        "en": "Face-to-face invitation",
+        "vi": "Lời mời trực tiếp",
+        "zh-Hant": "當面邀請",
+        "id": "Undangan Face-to-Face",
+        "es": "Invitación cara a cara",
+        "pt-BR": "Convite Presencial",
+        "ar": "دعوة وجهًا لوجه"
+    },
+    "mInviteCustomize11": {
+        "zh": "链接邀请",
+        "en": "Link invitation",
+        "vi": "Link mời",
+        "zh-Hant": "鏈接邀請",
+        "id": "Tautan Undangan",
+        "es": "Enlace de invitación",
+        "pt-BR": "Link do Convite",
+        "ar": "رابط الدعوة"
+    },
+    "mInviteCustomize12": {
+        "zh": "邀请好友记录",
+        "en": "Invite friend record",
+        "vi": "Lịch sử mời bạn bè",
+        "zh-Hant": "邀請好友記錄",
+        "id": "Catatan Ajak Teman",
+        "es": "Registro de amigos invitados",
+        "pt-BR": "Registro de amigos convidado",
+        "ar": "دعوة تسجيل صديق"
+    },
+    "mInviteCustomize13": {
+        "zh": "邀请人数",
+        "en": "Invited",
+        "vi": "Người quan tâm",
+        "zh-Hant": "邀請人數",
+        "id": "Undangan",
+        "es": "Incitado",
+        "pt-BR": "Incitado",
+        "ar": "تم تقديم الدعوة"
+    },
+    "mInviteCustomize14": {
+        "zh": "成功邀请",
+        "en": "Successful invitation",
+        "vi": "Lời mời thành công",
+        "zh-Hant": "成功邀請",
+        "id": "Undangan sukses",
+        "es": "Invitación exitosa",
+        "pt-BR": "Convite bem sucedido",
+        "ar": "دعوة ناجحة"
+    },
+    "mInviteCustomize15": {
+        "zh": "获得赠金",
+        "en": "Receive reward",
+        "vi": "Nhận thưởng",
+        "zh-Hant": "獲得贈金",
+        "id": "Hadiah yang diterima",
+        "es": "Recibe recompensa",
+        "pt-BR": "Receber recompensa",
+        "ar": "الحصول على مكافأة "
+    },
+    "mInviteCustomize16": {
+        "zh": "好友昵称",
+        "en": "Name of friend",
+        "vi": "Tên của bạn",
+        "zh-Hant": "好友昵稱",
+        "id": "Nama teman",
+        "es": "Nombre amigo",
+        "pt-BR": "Nome do amigo",
+        "ar": "اسم الصديق"
+    },
+    "mInviteCustomize17": {
+        "zh": "邀请时间",
+        "en": "Invitation time",
+        "vi": "Giờ mời",
+        "zh-Hant": "邀請時間",
+        "id": "Waktu undangan",
+        "es": "Tiempo de invitación",
+        "pt-BR": "Hora do convite",
+        "ar": "وقت الدعوة"
+    },
+    "mInviteCustomize18": {
+        "zh": "邀请进度",
+        "en": "Invitation Progress",
+        "vi": "Quá trình giới thiệu",
+        "zh-Hant": "邀請進度",
+        "id": "Perkembangan Undangan",
+        "es": "Progreso de invitación ",
+        "pt-BR": "Progresso do convite",
+        "ar": "جاري إرسال الدعوة"
+    },
+    "mInviteCustomize19": {
+        "zh": "未开户",
+        "en": "Unopened account",
+        "vi": "Tài khoản chưa mở",
+        "zh-Hant": "未開戶",
+        "id": "Akun belum dibuka",
+        "es": "Unopened account",
+        "pt-BR": "Unopened account",
+        "ar": "لا يوجد حساب حقيقي"
+    },
+    "mInviteCustomize20": {
+        "zh": "未充值",
+        "en": "Undeposited",
+        "vi": "Không ký gửi",
+        "zh-Hant": "未充值",
+        "id": "Tanpa deposit",
+        "es": "Undeposited",
+        "pt-BR": "Undeposited",
+        "ar": "لا يوجد إيداع"
+    },
+    "mInviteCustomize21": {
+        "zh": "未交易",
+        "en": "Untraded",
+        "vi": "Chưa giao dịch",
+        "zh-Hant": "未交易",
+        "id": "Belum ada transaksi",
+        "es": "Untraded",
+        "pt-BR": "Untraded",
+        "ar": "لا يُتداول"
+    },
+    "mInviteCustomize22": {
+        "zh": "交易中",
+        "en": "In transaction",
+        "vi": "Đang giao dịch",
+        "zh-Hant": "交易中",
+        "id": "Ada transaksi",
+        "es": "En transacciones",
+        "pt-BR": "Em transacção",
+        "ar": "متداول"
+    },
+    "mInviteCustomize23": {
+        "zh": "邀请成功",
+        "en": "Invitation successful",
+        "vi": "Gửi lời mời thành công",
+        "zh-Hant": "邀請成功",
+        "id": "Undangan sukse",
+        "es": "Invitation successful",
+        "pt-BR": "Invitation successful",
+        "ar": "دعوة ناجحة"
+    },
+    "mInviteCustomize24": {
+        "zh": "现在注册",
+        "en": "In transaction",
+        "vi": "Đăng ký ngay",
+        "zh-Hant": "現在註冊",
+        "id": "Daftar sekarang",
+        "es": "Regístrate ahora",
+        "pt-BR": "Registrar agora",
+        "ar": "سجل الان"
+    },
+    "mInviteCustomize25": {
+        "zh": "现金红包等你拿",
+        "en": "Coupons waiting for you",
+        "vi": "Phiếu giảm giá đang chờ bạn",
+        "zh-Hant": "現金紅包等你拿",
+        "id": "Kupon menunggu Anda",
+        "es": "Cupones esperando por ti",
+        "pt-BR": "Cupons esperando por você",
+        "ar": "كوبونات في انتظارك"
+    }
 };

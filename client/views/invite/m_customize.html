@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<!--引入公用头部-->
+<% include /common/meta/h5.html %>
+<!-- 引入H5 CSS -->
+<!-- build:css(.tmp) /styles/h5_common.css -->
+<link rel="stylesheet" href="/styles/h5_common.css">
+<!-- endbuild -->
+
+<% include /common/vendor/h5.utiljs.html %>
+
+<% include /common/statistic/main.html %>
+<body>
+<div class="m_invite_customize">
+  <div class="invite_focus">
+    <span class="title"><%=lang.text('mInviteCustomize1')%></span>
+    <img src="/white_label/invite/customize/focus.png" alt="">
+    <div class="reward">
+      <p class="tip"><%=lang.text('mInviteCustomize2')%></p>
+      <p class="amount">10<%=lang.text('mInviteCustomize3')%></p>
+    </div>
+  </div>
+  <div class="invite_box">
+    <div class="invite_rules_box">
+      <div class="relative text-center">
+        <img class="icon" src="/white_label/invite/customize/icon.png" alt="">
+        <p class="clearfix icon-tip-wrapper <%=lang.isEnglishArea() ? 'en' : ''%>">
+          <span class="icon-tip"><%=lang.text('mInviteCustomize4')%></span>
+          <span class="icon-tip"><%=lang.text('mInviteCustomize5')%></span>
+          <span class="icon-tip"><%=lang.text('mInviteCustomize6')%></span>
+          <span class="icon-tip"><%=lang.text('mInviteCustomize7')%></span>
+        </p>
+      </div>
+      <div class="rules">
+        <h4><%=lang.text('mInviteCustomize8')%></h4>
+        <pre><%=lang.text('mInviteCustomize9')%></pre>
+      </div>
+      <div class="invite_btn_wrapper">
+        <button id="invite_face" class="invite_btn"><img src="/white_label/invite/customize/qrcode.png" alt=""><%=lang.text('mInviteCustomize10')%></button>
+        <button id="invite_link" class="invite_btn"><%=lang.text('mInviteCustomize11')%></button>
+        <input type="text" class="copy_link" style="position: absolute; left: -9999px; top: -9999px;opacity: 0;">
+        <span class="copy_succ" style="position: absolute; left: -9999px; top: -9999px;opacity: 0;"><%=lang.text('thirdH5.copySuccess')%></span>
+      </div>
+    </div>
+    <div class="invite_record_box">
+      <h4><%=lang.text('mInviteCustomize12')%></h4>
+      <ul class="nav clearfix">
+        <li class="col-xs-4 text-center">
+            <p class="tip"><%=lang.text('mInviteCustomize13')%></p>
+        </li>
+        <li class="col-xs-4 text-center">
+            <p class="tip"><%=lang.text('mInviteCustomize14')%></p>
+        </li>
+        <li class="col-xs-4 text-center">
+            <p class="tip"><%=lang.text('mInviteCustomize15')%></p>
+        </li>
+      </ul>
+      <ul class="nav clearfix">
+        <li class="col-xs-4 text-center">
+            <p class="num"><span id="invite_count"></span></p>
+        </li>
+        <li class="col-xs-4 text-center">
+            <p class="num"><span id="invite_succ"></span></p>
+        </li>
+        <li class="col-xs-4 text-center">
+            <p class="num">$<span id="invite_reward"></span></p>
+        </li>
+      </ul>
+      <p class="arrow_wrapper"><img id="arrow_btn" class="arrow" src="/white_label/invite/customize/arrow.png" alt=""></p>
+      <div class="records_list" id="records_list">
+        <ul class="nav clearfix">
+          <li class="col-xs-6">
+              <p class="tip"><%=lang.text('mInviteCustomize16')%></p>
+          </li>
+          <li class="col-xs-6">
+              <p class="tip"><%=lang.text('mInviteCustomize18')%></p>
+          </li>
+        </ul>
+        <div id="records_wrapper"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="invite_code_wrapper" style="display: none;">
+  <img style="margin: 10px; vertical-align: top;" id="invite_face_code">
+</div>
+</body>
+<script id="invite_list" type="text/template">
+    <$for(var i=0; i<list.length; i++){$>
+    <ul class="content clearfix">
+      <li class="col-xs-6">
+        <span class="num"><$=list[i].user_name$></span><br>
+        <span class="num" style="color: #999"><$=list[i].time$></span>
+      </li>
+      <li class="col-xs-6 progress_wrapper">
+        <$if (list[i].progress === 1) {$>
+          <span class="bar" style="width:25%;"></span>
+          <span class="num"><%=lang.text('mInviteCustomize19')%></span>
+        <$}else if (list[i].progress === 2) {$>
+          <span class="bar" style="width:50%;"></span>
+          <span class="num"><%=lang.text('mInviteCustomize20')%></span>
+        <$} else if (list[i].progress === 3) {$>
+          <span class="bar" style="width:75%;"></span>
+          <span class="num"><%=lang.text('mInviteCustomize21')%></span>
+        <$} else if (list[i].progress === 4) {$>
+          <span class="bar" style="width:75%;"></span>
+          <span class="num"><%=lang.text('mInviteCustomize22')%></span>
+        <$} else {$>
+          <span class="bar" style="width:100%;"></span>
+          <span class="num"><%=lang.text('mInviteCustomize23')%></span>
+        <$}$>
+      </li>
+    </ul>
+    <$}$>
+</script>
+<% include /common/vendor/h5.js.html %>
+<!-- 注册协议相关弹窗 -->
+<%include /common/component/agment_mdl.html %>
+<!-- build:js(client) /scripts/m_customize.js -->
+<script src="/scripts/invite/m_customize.js"></script>
+<script src="/scripts/plugins/baiduTemplate.js"></script>
+<!-- endbuild -->
+
+<%- include('/common/statistic/all.html') %>
+</html>

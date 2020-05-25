@@ -13,7 +13,8 @@
         $scope.type = passedScope.type;
         $scope.datepicker = {
             options: {
-                format: 'YYYY-MM'
+                format: 'YYYY-MM',
+                toolbarPlacement: 'top'
             }
         };
 
