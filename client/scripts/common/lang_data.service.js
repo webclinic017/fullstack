@@ -115,6 +115,36 @@
                     }
                 }
             },
+            "common_confirm": {
+                "zh": "确认",
+                "en": "",
+                "vi": "",
+                "zh-Hant": "",
+                "id": "",
+                "es": "Enviar",
+                "pt-BR": "",
+                "ar": ""
+            },
+            "common_checkOrders": {
+                "zh": "查看订单",
+                "en": "",
+                "vi": "",
+                "zh-Hant": "",
+                "id": "",
+                "es": "Enviar",
+                "pt-BR": "",
+                "ar": ""
+            },
+            "common_pending": {
+                "zh": "待处理",
+                "en": "",
+                "vi": "",
+                "zh-Hant": "",
+                "id": "",
+                "es": "Enviar",
+                "pt-BR": "",
+                "ar": ""
+            },
             "islamic_confirm": {
                 "zh": "确认",
                 "en": "Submit",
@@ -5675,6 +5705,16 @@
                         "pt-BR": "Adicionar cartões de banco",
                         "ar": "أضف بطاقات مصرفية"
                     },
+                    "addCards": {
+                        "zh": "添加银行卡",
+                        "en": "Add Card",
+                        "vi": "Thêm Tài khoản \"Ngân hàng\"",
+                        "zh-Hant": "添加銀行卡",
+                        "id": "Tambah rekening bank",
+                        "es": "Solicitud de retiro a Cuenta Bancaria ",
+                        "pt-BR": "Adicionar cartões de banco",
+                        "ar": "أضف بطاقات مصرفية"
+                    },
                     "name": {
                         "zh": "持卡人",
                         "en": "Name",
@@ -5746,24 +5786,24 @@
                         "ar": "请选择第三方平台"
                     },
                     "thirdPartyAccount": {
-                        "zh": "第三方账户",
-                        "en": "Third-party accounts",
-                        "vi": "Các tài khoản bên thứ 3",
-                        "zh-Hant": "第三方賬戶",
-                        "id": "Rekening pihak ke tiga",
-                        "es": "Cuentas de terceros",
-                        "pt-BR": "Conta de terceiros",
-                        "ar": "حسابات طرف ثالث"
+                        "zh": "其它收款账户",
+                        "en": "Alternative Payment Methods",
+                        "vi": "Các Phương Thức Thanh Toán Khác",
+                        "zh-Hant": "其它收款賬戶",
+                        "id": "Metode Pembayaran alternatif",
+                        "es": "Métodos de Pago Alternativos",
+                        "pt-BR": "Métodos de pagamento alternativos",
+                        "ar": "طرق الدفع البديلة"
                     },
                     "manageThird": {
-                        "zh": "管理第三方账户",
-                        "en": "Manage",
-                        "vi": "Quản lý",
-                        "zh-Hant": "管理第三方賬戶",
-                        "id": "Kelola",
-                        "es": "Gestionar",
+                        "zh": "管理账户",
+                        "en": "Manage account",
+                        "vi": "Quản lý tài khoản",
+                        "zh-Hant": "管理賬戶",
+                        "id": "Kelola rekening",
+                        "es": "Gerenciar conta",
                         "pt-BR": "Gerenciar",
-                        "ar": "إدارة"
+                        "ar": "إدارة الحساب"
                     },
                     "addThirdAccount": {
                         "zh": "添加账户",
@@ -5796,14 +5836,14 @@
                         "ar": "هل أنت متأكد من أنك تريد حذف هذا الحساب؟"
                     },
                     "switchThird": {
-                        "zh": "切换第三方账户",
-                        "en": "Switch",
-                        "vi": "Chuyển đổi",
+                        "zh": "切换账户",
+                        "en": "Switch account",
+                        "vi": "Chuyển tài khoản",
                         "zh-Hant": "切換賬戶",
-                        "id": "Pindah",
-                        "es": "Cambiar",
-                        "pt-BR": "Trocar",
-                        "ar": "تحويل"
+                        "id": "Ganti rekening",
+                        "es": "Cambiar cuenta",
+                        "pt-BR": "Mudar de conta",
+                        "ar": "تبديل الحساب"
                     },
                     "pSelectBank": {
                         "zh": "请选择开户行",
@@ -5926,14 +5966,14 @@
                         "ar": "اسم الحساب:"
                     },
                     "completeInfo": {
-                        "zh": "请完善第三方账户信息",
-                        "en": "Please complete third party account information",
-                        "vi": "Vui lòng xóa thông tin tài khoản bên thứ ba",
-                        "zh-Hant": "請完善第三方賬戶信息",
-                        "id": "Silahkan lengkapi informasi rekening pihak ke tiga",
-                        "es": "Por favor, complete información cuentas terceros",
-                        "pt-BR": "Por favor complete informações da conta de terceiros",
-                        "ar": "يرجى استكمال معلومات الحساب للطرف الثالث"
+                        "zh": "请完善收款账户信息",
+                        "en": "Please complete the receive account information",
+                        "vi": "Vui lòng cung cấp đủ thông tin tài khoản nhận",
+                        "zh-Hant": "請完善收款賬戶信息",
+                        "id": "Mohon masukkan informasi rekening secara lengkap",
+                        "es": "Por favor complete la información de cuenta recibida",
+                        "pt-BR": "Por favor, preencha as informações da conta recebidas",
+                        "ar": "يرجى استكمال معلومات الحساب المتلقي"
                     },
                     "bankName": {
                         "zh": "请填写您的银行名称",
@@ -6217,7 +6257,7 @@
                     },
                     "tip4_2": {
                         "zh": " 绑定成功",
-                        "en": " has been successfully bound",
+                        "en": " has been successfully bind",
                         "vi": " đã được liên kết thành công",
                         "zh-Hant": " 邦定成功",
                         "id": " telah berhasil didaftarkan",
@@ -6810,6 +6850,16 @@
                         "es": "Invitation successful",
                         "pt-BR": "Invitation successful",
                         "ar": "دعوة ناجحة"
+                    },
+                    "invite11": {
+                        "zh": "1.新用户注册即获得邀请类红包“人从众”。邀请3名好友注册，且至少有1人入金并完成1手交易即可兑现, 每位用户仅可领取一次。\n2.您只有通过邀请链接和二维码进行注册的好友才视为有效邀请。\n3.同一手机号、身份证和银行卡号视为同一用户。\n4.任何通过第三方作弊软件刷取好友邀请奖励的行为，一经发现TigerWit有权取消红包兑现奖励的资格。\n5.本活动最终解释权归TigerWit所有。如有疑问，请联系TigerWit客服。",
+                        "en": "1. A reward coupon will be delivered to your account when you registered, it can be cashed once you invited three friends and at least one of them deposited and had one lot transaction.\n2. It can be effective only when your friend is registered by the invite link.\n3.Same cellphone, ID and bank card number will be treated as same user. \n4.Tigerwit have the right to cancel the coupon reward once boost invite rewards by third party cheating software was found.\n5.TigerWit reserve all the right for the final explanation. If you have any questions, please contact TigerWit customer service",
+                        "vi": "1. Một phiếu thưởng sẽ được gửi đến tài khoản của bạn khi bạn đăng ký, phiếu này có thể được đổi thành tiền sau khi bạn mời 3 người bạn và ít nhất 1 trong số họ ký quỹ và có giao dịch. \n2. Nó chỉ có thể có hiệu lực khi bạn của bạn đăng ký bởi link mời bạn bè. \n3. Cùng số điện thoại di động, chứng minh nhân dân và số thẻ ngân hàng sẽ được xem là cùng một người dùng. \n4.Tigerwit có quyền hủy phiếu thưởng ngay khi phát hiện có sử dụng phần mềm gian lận trong phần thưởng mời. \n5.TigerWit bảo lưu tất cả các quyền cho lời giải thích cuối cùng. Nếu bạn có bất kỳ câu hỏi nào, xin vui lòng liên hệ với Bộ phận Dịch vụ khách hàng của TigerWit.",
+                        "zh-Hant": "1.新用戶註冊即獲得邀請類紅包“人從眾”。邀請3名好友註冊，且至少有1人入金並完成1手交易即可兌現, 每位用戶僅可領取一次。\n2.您只有通過邀請鏈接和二維碼進行註冊的好友才視為有效邀請。\n3.同一手機號、身份證和銀行卡號視為同一用戶。\n4.任何通過第三方作弊軟件刷取好友邀請獎勵的行為，一經發現TigerWit有權取消紅包兌現獎勵的資格。\n5.本活動最終解釋權歸TigerWit所有。如有疑問，請聯繫TigerWit客服。 ",
+                        "id": "1. Kupon hadiah akan dikirimkan ke dalam akun anda ketika anda mendaftar dan dapat di tarik tunai ketika anda telah mengajak 3 orang teman dan setidaknya salah satu dari 3 orang tersebut melakukan deposit dan telah menutup transaksi 1 lot\n2.Program ini akan berjalan efektif hanya pada saat teman anda mendaftar melalui tautan Ajak Teman\n3. Kartu Identitas, nomor hp dan rekening bank yang sama akan dianggap satu pengguna\n4. TigerWit memiliki hak untuk membatalkan kupon hadiah apabila kami menemukan kecurangan dari pihak ketiga ataupun dari perangkat lunak apaun.\n5. TigerWit memiliki hak penuh untuk keputusan final. Apabila anda memiliki pertanyaan, silahkan hubungi layanan pelanggan TigerWit",
+                        "es": "1. Cuando se registre, se le entregará un cupón de recompensa en su cuenta, que se puede cobrar una vez que haya invitado a tres amigos y al menos uno de ellos haya depositado y haya realizado una transacción de lote.\n2. Puede ser efectivo solo cuando su amigo está registrado por el enlace de invitación.\n3.El mismo teléfono celular, ID y número de tarjeta bancaria se tratarán como el mismo usuario.\n4.Tigerwit tiene el derecho de cancelar la recompensa del cupón si se encontra el uso de software para envío de invitaciones a terceros.\n5.TigerWit se reserva todos los derechos de la explicación anterior. Si tiene alguna pregunta, comuníquese con el servicio al cliente de TigerWit",
+                        "pt-BR": "1. Um cupom de recompensa será entregue em sua conta quando você se registrar. Ele poderá ser usado depois que você convidar três amigos e pelo menos um deles depositar e realizar transação de 1 lote.\n2. Só pode ser valido quando seu amigo for registrado pelo link de convite.\n3. O mesmo telefone celular, ID e número do cartão do banco serão tratados como o mesmo usuário.\n4.TigerWit tem o direito de cancelar a recompensa do cupom, uma vez que for constatado conduta de má-fe por parte do client ou terceiros.\n5.TigerWit reserva todo o direito para a explicação final. Se você tiver alguma dúvida, entre em contato com o atendimento ao cliente TigerWit",
+                        "ar": "1. سيتم تسليم قسيمة المكافأة إلى حسابك عند التسجيل، ويمكن صرفها بمجرد دعوة ثلاثة أصدقاء وإيداع واحد منهم على الأقل مع إجراء صفقة بعقدٍ واحد.\n2. يمكن أن تكون فعالة فقط عندما يسجل صديقك عن طريق رابط الدعوة.\n3. سيتم التعامل مع نفس الهاتف المحمول والهوية ورقم البطاقة المصرفية بنفس المستخدم.\n4.Tigerwit لها الحق في إلغاء مكافأة القسيمة بمجرد العثور على مكافآت الدعوة من قبل برنامج غش من طرف ثالث.\n5.تحتفظ TigerWit بكل الحق في التفسير النهائي. إذا كان لديك أي أسئلة، يرجى التواصل بخدمة زبائن TigerWit."
                     }
                 },
                 "commission": {
@@ -7415,6 +7465,16 @@
                         "pt-BR": "Número da conta bancária: ",
                         "ar": "رقم البطاقة:"
                     },
+                    "cardNumberNoire": {
+                        "zh": "银行账号：",
+                        "en": "Card number: ",
+                        "vi": "Số tài khoản ngân hàng: ",
+                        "zh-Hant": "銀行賬號：",
+                        "id": "Nomor rekening bank: ",
+                        "es": "Número de Cuenta bancaria: ",
+                        "pt-BR": "Número da conta bancária: ",
+                        "ar": "رقم البطاقة:"
+                    },
                     "bank": {
                         "zh": "开户行",
                         "en": "Bank",
@@ -7655,9 +7715,29 @@
                         "pt-BR": "Por favor, associe o bancário do usuário",
                         "ar": "يرجى ربط البطاقة المصرفية المملوكة للمستخدم"
                     },
+                    "bindUserBankCard2": {
+                        "zh": "请绑定认证用户本人的银行卡",
+                        "en": "Please add your card details. The card must be held by the TigerWit account holder.",
+                        "vi": "Vui lòng liên kết thẻ ngân hàng của riêng người dùng",
+                        "zh-Hant": "請邦定認證用戶本人的銀行卡",
+                        "id": "Mohon daftarkan nomor rekening anda",
+                        "es": "Por favor, complete sus datos de cuenta bancaria.",
+                        "pt-BR": "Por favor, associe o bancário do usuário",
+                        "ar": "يرجى ربط البطاقة المصرفية المملوكة للمستخدم"
+                    },
                     "enterCardNumber": {
                         "zh": "请填写银行卡号",
                         "en": "Bank account number",
+                        "vi": "Số tài khoản ngân hàng",
+                        "zh-Hant": "請填寫銀行卡號",
+                        "id": "Nomor rekening",
+                        "es": "Ingrese su número de Cuenta Bancaria",
+                        "pt-BR": "Número do cartão",
+                        "ar": "رقم البطاقة"
+                    },
+                    "enterCardNumberNoire": {
+                        "zh": "请填写银行卡号",
+                        "en": "Card number",
                         "vi": "Số tài khoản ngân hàng",
                         "zh-Hant": "請填寫銀行卡號",
                         "id": "Nomor rekening",

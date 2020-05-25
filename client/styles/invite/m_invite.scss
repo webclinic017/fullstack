@@ -361,6 +361,42 @@ html,body{
 }
 
 .m_invite_layout {
+  &.customize {
+    .m_invite_focus {
+      padding: px2rem(40) 0 0;
+      span {
+        color: #0183fb;
+      }
+      .reward {
+        position: absolute;
+        top: px2rem(456);
+        left: 0;
+        width: 100%;
+        text-align: center;
+        color: #3d61ab;
+        .tip {
+          font-size: px2rem(24);
+          line-height: px2rem(20);
+        }
+        .amount {
+          font-size: px2rem(80);
+          line-height: px2rem(80);
+          padding: px2rem(6) 0;
+          font-weight: 500;
+        }
+      }
+    }
+    .m_invite_box_wrapper {
+      background-color: #0082fa;
+      .m_invite_box_btn_wrapper {
+        position: static !important;
+      }
+      .m_invite_box_btn {
+        color: #fff !important;
+        background-color: #2999ff !important;
+      }
+    }
+  }
   height: 100%;
   // overflow: hidden;
   .m_invite_focus {
@@ -500,4 +536,190 @@ html,body{
       }
     }
   }
+}
+
+.m_invite_customize {
+  .invite_focus {
+    position: relative;
+    padding: px2rem(40) 0 0;
+    img {
+      vertical-align: top;
+      width: 100%;
+      height: px2rem(648);
+    }
+    .title {
+      position: absolute;
+      top: px2rem(40);
+      left: 0;
+      font-size: px2rem(80);
+      line-height: px2rem(80);
+      width: 100%;
+      padding: 0 px2rem(80);
+      text-align: center;
+      color: #0183fb;
+      font-weight:600;
+    }
+    .reward {
+      position: absolute;
+      top: px2rem(460);
+      left: 0;
+      width: 100%;
+      text-align: center;
+      color: #3d61ab;
+      .tip {
+        font-size: px2rem(24);
+        line-height: px2rem(20);
+      }
+      .amount {
+        font-size: px2rem(76);
+        line-height: px2rem(76);
+        padding-top: px2rem(16);
+        font-weight: 500;
+      }
+    }
+  }
+  .invite_box {
+    background-color: #0082fa;
+    padding-bottom: px2rem(20);
+    .invite_rules_box {
+      margin: 0 px2rem(40);
+      background-color: #fff;
+      border-radius: px2rem(40);
+      padding: px2rem(40) px2rem(50);
+      margin-bottom: px2rem(20);
+      .icon {
+        width: 92%;
+        vertical-align: top;
+      }
+      .icon-tip-wrapper {
+        margin-top: px2rem(-46);
+        &.en {
+          .icon-tip {
+            font-size: px2rem(20);
+          }
+        }
+      }
+      .icon-tip {
+        float: left;;
+        width: 25%;
+        text-align: center;
+        font-size: px2rem(26);
+        color: #0082fa;
+        font-weight: 500;
+      }
+      
+      .rules {
+        padding-bottom: px2rem(66);
+        h4 {
+          font-size: px2rem(34);
+          color: #2999ff;
+          text-align: center;
+        }
+        pre {
+          white-space: pre-wrap;
+          font-family: none;
+          margin-top: 0px;
+          font-size: px2rem(24);
+        }
+      }
+      .invite_btn_wrapper {
+        .invite_btn {
+          width: 100%;
+          font-size: px2rem(30);
+          height: px2rem(82);
+          line-height: px2rem(82);
+          color: #fff;
+          background-color: #2999ff;
+          border-radius: px2rem(50);
+          text-align: center;
+          border: none;
+          margin-bottom: px2rem(26);
+          img {
+            height: px2rem(32);
+            padding-right: px2rem(10);
+            padding-top: px2rem(4);
+            vertical-align: text-top;
+          }
+        }
+      }
+    }
+    .invite_record_box {
+      margin: 0 px2rem(40);
+      background-color: #fff;
+      border-radius: px2rem(40);
+      padding: px2rem(20) px2rem(50) px2rem(10);
+      h4 {
+        font-size: px2rem(34);
+        color: #2999ff;
+        text-align: center;
+        margin: 0;
+        margin-bottom: px2rem(16);
+      }
+      .nav {
+        margin-bottom: px2rem(16);
+        li {
+          padding: 0;
+          .tip {
+            color: #666;
+            font-size: px2rem(24);
+          }
+          .num {
+            margin-top: px2rem(10);
+            font-size: px2rem(32);
+          }
+        }
+      }
+      .content {
+        margin-bottom: px2rem(16);
+        li {
+          padding: 0;
+          .num {
+            font-size: px2rem(24);
+          }
+          &.progress_wrapper {
+            position: relative;
+            background-color: #ddd;
+            height: px2rem(50);
+            border-radius: px2rem(50);
+
+            .num {
+              width: 100%;
+              height: px2rem(50);
+              line-height: px2rem(50);
+              color: #fff;
+              text-align: center;
+              position: absolute;
+              top: 0;
+              left: 0;
+            }
+            .bar {
+              display: block;
+              height: px2rem(50);
+              border-radius: px2rem(50);
+              background-color: #2999ff;
+            }
+          }
+        }
+      }
+      .arrow_wrapper {
+        text-align: center;
+        margin: px2rem(20) 0;
+        img {
+          width: px2rem(20);
+          &.active {
+            transform: rotate(180deg);
+          }
+        }
+      }
+      .records_list {
+        display: none;
+        &.active {
+          display: block;
+        }
+      }
+    }
+  }
+}
+.layui-m-layer-content {
+  width: auto !important;
 }

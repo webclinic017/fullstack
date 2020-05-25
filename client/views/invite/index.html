@@ -33,9 +33,10 @@
         <p class="font-base font-size-18">{{lang.text('tigerWitID.inviteFriends.inviteFriendsRegulations')}}</p>
         <br>
         <ul>
-            <li>
-            <pre style="white-space: pre-wrap;font-family: none;margin-top: 0px;">{{inviteRules.rule}}</pre>
-            </li>
+          <li>
+            <pre ng-if="personal.private_key && personal.private_key !== 'pandafx'" style="white-space: pre-wrap;font-family: none;margin-top: 0px;">{{inviteRules.rule}}</pre>
+            <pre ng-if="personal.private_key && personal.private_key === 'pandafx'" style="white-space: pre-wrap;font-family: none;margin-top: 0px;">{{lang.text('tigerWitID.inviteFriends.invite11')}}</pre>
+          </li>
         </ul>
     </div>
 

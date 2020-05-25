@@ -18,7 +18,9 @@
             getInvestHistoryData: getInvestHistoryData,
             getInvestHistoryTraders: getInvestHistoryTraders,
             getInvestHistoryDetails: getInvestHistoryDetails,
-            getWalletHistory: getWalletHistory
+            getWalletHistory: getWalletHistory,
+            checkStockTrading: checkStockTrading,
+            invalidStockTrade: invalidStockTrade
         };
         return service;
 
@@ -157,6 +159,23 @@
                 offset: offset,
                 limit: limit,
                 direction: direction,
+            });
+        }
+
+        //检测交易订单是否需要拆合股提示
+        function checkStockTrading (mt4_id) {
+            return publicHttp.dealPublicRequest(o.checkStockTradingApi, 'GET', {
+                mt4_id: mt4_id
+            });
+        }
+
+        //持仓订单点击待处理查看不符合拆合股的详细提示
+        // mt4_id	int	yes	mt4_id
+        // ticket	int	yes	订单号
+        function invalidStockTrade (mt4_id, ticket) {
+            return publicHttp.dealPublicRequest(o.invalidStockTradeApi, 'GET', {
+                mt4_id: mt4_id,
+                ticket: ticket
             });
         }
        

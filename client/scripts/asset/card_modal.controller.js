@@ -13,7 +13,8 @@
         $scope.type = passedScope.type;
         $scope.datepicker = {
             options: {
-                format: 'YYYY-MM'
+                format: 'YYYY-MM',
+                toolbarPlacement: 'top'
             }
         };
 
@@ -173,7 +174,8 @@
             showErr('realname');
             showErr('world');
             showErr('number');
-            showErr('address');
+            
+            if ($scope.type !== 'Noire') showErr('address');
 
             if($scope.banks.length){
                 showErr('bank');
@@ -185,7 +187,7 @@
                 showErr('city');
                 showErr('phone');
             }
-            if ($scope.card.world && $scope.card.world.world_code !== 'CN') {
+            if ($scope.card.world && $scope.card.world.world_code !== 'CN' && $scope.type !== 'Noire') {
                 if ($scope.card.world.world_code !== 'VN') {
                     showErr('swift_code');
                 }
@@ -201,6 +203,7 @@
                 country: $scope.card.world.world_code,
                 bank_addr: $scope.card.address,
             };
+            if ($scope.type !== 'Noire') oParams.bank_addr = $scope.card.address;
             if($scope.payment_platform){
                 oParams.platform = $scope.payment_platform;
             }
@@ -213,7 +216,7 @@
                 oParams.province = $scope.card.province.code;
                 oParams.city = $scope.card.city.code;
                 oParams.phone = $scope.card.phone;
-            } else {
+            } else if ($scope.type !== 'Noire') {
                 if ($scope.card.world.world_code !== 'VN') {
                     oParams.swift_code = typeof $scope.card.swift_code === 'object' ? $scope.card.swift_code.swift_code : $scope.card.swift_code;
                 }

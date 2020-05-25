@@ -379,6 +379,15 @@ module.exports = function (app) {
         setEnvCf(req, res);
         res.render('invite/m_invite', extendPublic({}, req));
     });
+    //邀请好友 定制活动 H5 - 2020.05.07 (pandafx)
+    app.route('/m/customize/invite').get(function (req, res) {
+        setEnvCf(req, res);
+        res.render('invite/m_customize', extendPublic({}, req));
+    });
+    app.route('/m/customize/invite_come').get(function (req, res) {
+        setEnvCf(req, res);
+        res.render('invite/m_customize_come', extendPublic({}, req));
+    });
 
     app.route('/m/invite02').get(function (req, res) {
         setEnvCf(req, res);
@@ -567,7 +576,7 @@ module.exports = function (app) {
     });
 
     // 交易品种
-    app.route('/web/product/:subpage(forex|metal|oil|cfd)').get(function (req, res) {
+    app.route('/web/product/:subpage(forex|metal|oil|cfd|stock)').get(function (req, res) {
         var subpage = req.params.subpage || 'forex';
         var pageInfo = {
             id: subpage

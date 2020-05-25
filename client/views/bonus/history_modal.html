@@ -24,8 +24,6 @@
                     <td>
                         <span ng-class="bonusDetail.action?'font-down':'font-up'">{{ bonusDetail.action ? '买跌' : '买涨'}}</span>
                         {{ bonusDetail.symbol | symbolMod: 'zh' }}
-
-                        <!-- <span class="icon-forex-{{ bonusDetail.symbol.toLowerCase() }} vertical-middle"></span> -->
                     </td>
                     <td>{{ bonusDetail.open_time }}</td>
                     <td>{{ bonusDetail.close_time }}</td>

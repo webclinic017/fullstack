@@ -77,7 +77,8 @@
             getVersionCheck: getVersionCheck,
             getAddressUrl: getAddressUrl,
             competitionList: competitionList,
-            competitionOpenAccount: competitionOpenAccount
+            competitionOpenAccount: competitionOpenAccount,
+            getSymbolQuoteStatus: getSymbolQuoteStatus
         };
         var resolveValue;
         return service;
@@ -754,6 +755,12 @@
         function competitionOpenAccount(params) {
             
             return publicHttp.dealPublicRequest(o.competitionOpenAccountApi, 'POST', params)
+        }
+
+        function getSymbolQuoteStatus (symbols) {
+            return publicHttp.dealPublicRequest(o.getSymbolQuoteStatusApi, 'GET', {
+                symbols: symbols
+            })
         }
     }
 })();

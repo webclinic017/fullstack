@@ -60,7 +60,7 @@
 
         function getInviteFriendsInfo (page) {
             invite.getInviteFriendsInfo(page, pagesize).then(function (data) {
-                console.info(data);
+                // console.info(data);
                 if (data.is_succ) {
                     $scope.bonusList = data.data.records;
                     $scope.friendsNum = data.data.record_count;

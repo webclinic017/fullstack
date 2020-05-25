@@ -137,12 +137,12 @@
     function getEmailPhone(ele, emailOrPhone, callback) {
         // console.log(getDomain());
         //emailOrPhone 默认邮箱
-        if (sessionStorage["sysMessage"]) {
+        if (sessionStorage["systemMessage"]) {
             if (ele) {
                 if (emailOrPhone && emailOrPhone == 'phone') {
-                    $(ele).html(JSON.parse(sessionStorage["sysMessage"]).phone_list[0].phone);
+                    $(ele).html(JSON.parse(sessionStorage["systemMessage"]).phone);
                 } else {
-                    $(ele).html(JSON.parse(sessionStorage["sysMessage"]).email_list[0].email);
+                    $(ele).html(JSON.parse(sessionStorage["systemMessage"]).email);
                 }
             }
             callback && callback();
@@ -155,12 +155,12 @@
                 if (data.is_succ) {
                     if (ele) {
                         if (emailOrPhone && emailOrPhone == 'phone') {
-                            $(ele).html(data.data.phone_list[0].phone);
+                            $(ele).html(data.data.phone);
                         } else {
-                            $(ele).html(data.data.email_list[0].email);
+                            $(ele).html(data.data.email);
                         }
                     }
-                    sessionStorage["sysMessage"] = JSON.stringify(data.data);
+                    sessionStorage["systemMessage"] = JSON.stringify(data.data);
                     callback && callback();
                 }
             });
@@ -1026,14 +1026,14 @@
                 "ar": "ادخل الحساب"
             },
             "completeInfo": {
-                "zh": "请完善第三方账户信息",
-                "en": "Please complete third party account information",
-                "vi": "Vui lòng xóa thông tin tài khoản bên thứ ba",
-                "zh-Hant": "請完善第三方賬戶信息",
-                "id": "Silahkan lengkapi informasi rekening pihak ke tiga",
-                "es": "Por favor, complete información cuenta tercero",
-                "pt-BR": "Por favor complete informações da conta de terceiros",
-                "ar": "يرجى استكمال معلومات الحساب للطرف الثالث"
+                "zh": "请完善收款账户信息",
+                "en": "Please complete the receive account information",
+                "vi": "Vui lòng cung cấp đủ thông tin tài khoản nhận",
+                "zh-Hant": "請完善收款賬戶信息",
+                "id": "Mohon masukkan informasi rekening secara lengkap",
+                "es": "Por favor complete la información de cuenta recibida",
+                "pt-BR": "Por favor, preencha as informações da conta recebidas",
+                "ar": "يرجى استكمال معلومات الحساب المتلقي"
             },
             "paymentRule": {
                 "zh": "网银支付规则",
