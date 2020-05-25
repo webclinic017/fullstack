@@ -115,6 +115,36 @@
                     }
                 }
             },
+            "common_confirm": {
+                "zh": "确认",
+                "en": "",
+                "vi": "",
+                "zh-Hant": "",
+                "id": "",
+                "es": "Enviar",
+                "pt-BR": "",
+                "ar": ""
+            },
+            "common_checkOrders": {
+                "zh": "查看订单",
+                "en": "",
+                "vi": "",
+                "zh-Hant": "",
+                "id": "",
+                "es": "Enviar",
+                "pt-BR": "",
+                "ar": ""
+            },
+            "common_pending": {
+                "zh": "待处理",
+                "en": "",
+                "vi": "",
+                "zh-Hant": "",
+                "id": "",
+                "es": "Enviar",
+                "pt-BR": "",
+                "ar": ""
+            },
             "islamic_confirm": {
                 "zh": "确认",
                 "en": "Submit",
@@ -5675,6 +5705,16 @@
                         "pt-BR": "Adicionar cartões de banco",
                         "ar": "أضف بطاقات مصرفية"
                     },
+                    "addCards": {
+                        "zh": "添加银行卡",
+                        "en": "Add Card",
+                        "vi": "Thêm Tài khoản \"Ngân hàng\"",
+                        "zh-Hant": "添加銀行卡",
+                        "id": "Tambah rekening bank",
+                        "es": "Solicitud de retiro a Cuenta Bancaria ",
+                        "pt-BR": "Adicionar cartões de banco",
+                        "ar": "أضف بطاقات مصرفية"
+                    },
                     "name": {
                         "zh": "持卡人",
                         "en": "Name",
@@ -5746,24 +5786,24 @@
                         "ar": "请选择第三方平台"
                     },
                     "thirdPartyAccount": {
-                        "zh": "第三方账户",
-                        "en": "Third-party accounts",
-                        "vi": "Các tài khoản bên thứ 3",
-                        "zh-Hant": "第三方賬戶",
-                        "id": "Rekening pihak ke tiga",
-                        "es": "Cuentas de terceros",
-                        "pt-BR": "Conta de terceiros",
-                        "ar": "حسابات طرف ثالث"
+                        "zh": "其它收款账户",
+                        "en": "Alternative Payment Methods",
+                        "vi": "Các Phương Thức Thanh Toán Khác",
+                        "zh-Hant": "其它收款賬戶",
+                        "id": "Metode Pembayaran alternatif",
+                        "es": "Métodos de Pago Alternativos",
+                        "pt-BR": "Métodos de pagamento alternativos",
+                        "ar": "طرق الدفع البديلة"
                     },
                     "manageThird": {
-                        "zh": "管理第三方账户",
-                        "en": "Manage",
-                        "vi": "Quản lý",
-                        "zh-Hant": "管理第三方賬戶",
-                        "id": "Kelola",
-                        "es": "Gestionar",
+                        "zh": "管理账户",
+                        "en": "Manage account",
+                        "vi": "Quản lý tài khoản",
+                        "zh-Hant": "管理賬戶",
+                        "id": "Kelola rekening",
+                        "es": "Gerenciar conta",
                         "pt-BR": "Gerenciar",
-                        "ar": "إدارة"
+                        "ar": "إدارة الحساب"
                     },
                     "addThirdAccount": {
                         "zh": "添加账户",
@@ -5796,14 +5836,14 @@
                         "ar": "هل أنت متأكد من أنك تريد حذف هذا الحساب؟"
                     },
                     "switchThird": {
-                        "zh": "切换第三方账户",
-                        "en": "Switch",
-                        "vi": "Chuyển đổi",
+                        "zh": "切换账户",
+                        "en": "Switch account",
+                        "vi": "Chuyển tài khoản",
                         "zh-Hant": "切換賬戶",
-                        "id": "Pindah",
-                        "es": "Cambiar",
-                        "pt-BR": "Trocar",
-                        "ar": "تحويل"
+                        "id": "Ganti rekening",
+                        "es": "Cambiar cuenta",
+                        "pt-BR": "Mudar de conta",
+                        "ar": "تبديل الحساب"
                     },
                     "pSelectBank": {
                         "zh": "请选择开户行",
@@ -5926,14 +5966,14 @@
                         "ar": "اسم الحساب:"
                     },
                     "completeInfo": {
-                        "zh": "请完善第三方账户信息",
-                        "en": "Please complete third party account information",
-                        "vi": "Vui lòng xóa thông tin tài khoản bên thứ ba",
-                        "zh-Hant": "請完善第三方賬戶信息",
-                        "id": "Silahkan lengkapi informasi rekening pihak ke tiga",
-                        "es": "Por favor, complete información cuentas terceros",
-                        "pt-BR": "Por favor complete informações da conta de terceiros",
-                        "ar": "يرجى استكمال معلومات الحساب للطرف الثالث"
+                        "zh": "请完善收款账户信息",
+                        "en": "Please complete the receive account information",
+                        "vi": "Vui lòng cung cấp đủ thông tin tài khoản nhận",
+                        "zh-Hant": "請完善收款賬戶信息",
+                        "id": "Mohon masukkan informasi rekening secara lengkap",
+                        "es": "Por favor complete la información de cuenta recibida",
+                        "pt-BR": "Por favor, preencha as informações da conta recebidas",
+                        "ar": "يرجى استكمال معلومات الحساب المتلقي"
                     },
                     "bankName": {
                         "zh": "请填写您的银行名称",
@@ -6217,7 +6257,7 @@
                     },
                     "tip4_2": {
                         "zh": " 绑定成功",
-                        "en": " has been successfully bound",
+                        "en": " has been successfully bind",
                         "vi": " đã được liên kết thành công",
                         "zh-Hant": " 邦定成功",
                         "id": " telah berhasil didaftarkan",
@@ -7415,6 +7455,16 @@
                         "pt-BR": "Número da conta bancária: ",
                         "ar": "رقم البطاقة:"
                     },
+                    "cardNumberNoire": {
+                        "zh": "银行账号：",
+                        "en": "Card number: ",
+                        "vi": "Số tài khoản ngân hàng: ",
+                        "zh-Hant": "銀行賬號：",
+                        "id": "Nomor rekening bank: ",
+                        "es": "Número de Cuenta bancaria: ",
+                        "pt-BR": "Número da conta bancária: ",
+                        "ar": "رقم البطاقة:"
+                    },
                     "bank": {
                         "zh": "开户行",
                         "en": "Bank",
@@ -7655,9 +7705,29 @@
                         "pt-BR": "Por favor, associe o bancário do usuário",
                         "ar": "يرجى ربط البطاقة المصرفية المملوكة للمستخدم"
                     },
+                    "bindUserBankCard2": {
+                        "zh": "请绑定认证用户本人的银行卡",
+                        "en": "Please add your card details. The card must be held by the TigerWit account holder.",
+                        "vi": "Vui lòng liên kết thẻ ngân hàng của riêng người dùng",
+                        "zh-Hant": "請邦定認證用戶本人的銀行卡",
+                        "id": "Mohon daftarkan nomor rekening anda",
+                        "es": "Por favor, complete sus datos de cuenta bancaria.",
+                        "pt-BR": "Por favor, associe o bancário do usuário",
+                        "ar": "يرجى ربط البطاقة المصرفية المملوكة للمستخدم"
+                    },
                     "enterCardNumber": {
                         "zh": "请填写银行卡号",
                         "en": "Bank account number",
+                        "vi": "Số tài khoản ngân hàng",
+                        "zh-Hant": "請填寫銀行卡號",
+                        "id": "Nomor rekening",
+                        "es": "Ingrese su número de Cuenta Bancaria",
+                        "pt-BR": "Número do cartão",
+                        "ar": "رقم البطاقة"
+                    },
+                    "enterCardNumberNoire": {
+                        "zh": "请填写银行卡号",
+                        "en": "Card number",
                         "vi": "Số tài khoản ngân hàng",
                         "zh-Hant": "請填寫銀行卡號",
                         "id": "Nomor rekening",

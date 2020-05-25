@@ -60,14 +60,34 @@ module.exports = {
         "ar": "الطاقة"
     },
     "CFD": {
-        "en": "CFD",
-        "zh": "差价合约",
-        "vi": "CFD",
-        "zh-Hant": "差價合約",
-        "id": "CFD",
-        "es": "CFD",
-        "pt-BR": "CFD",
-        "ar": "عقود الفروقات"
+        "en": "Index",
+        "zh": "指数",
+        "vi": "Chỉ số",
+        "zh-Hant": "指數",
+        "id": "Indeks",
+        "es": "Índice",
+        "pt-BR": "Índice",
+        "ar": "المؤشر"
+    },
+    "feeCrypto": {
+        "en": "Crypto",
+        "zh": "虚拟货币",
+        "vi": "Tiền điện tử",
+        "zh-Hant": "虛擬貨幣",
+        "id": "Crypto",
+        "es": "Crypto",
+        "pt-BR": "Crypto",
+        "ar": "الكريبتو"
+    },
+    "feeStock": {
+        "en": "Stocks",
+        "zh": "股票",
+        "vi": "Cổ phiếu",
+        "zh-Hant": "股票",
+        "id": "Saham",
+        "es": "Acciones",
+        "pt-BR": "Ações",
+        "ar": "الأسهم"
     },
     "faq": {
         "en": "FAQ",
@@ -1948,6 +1968,186 @@ module.exports = {
         "es": "Introducción Producto ",
         "pt-BR": "Informação do produto",
         "ar": "مقدمة عن المنتج"
+    },
+    "stock1": {
+        "zh": "股票差价合约",
+        "zh-Hant": "股票差價合約",
+        "en": "Stock CFD Trading",
+        "vi": "Giao dịch Cổ Phiếu CFD",
+        "id": "Trading Saham CFD",
+        "es": "Operación CFD de acciones",
+        "pt-BR": "Negociação de CFD de ações",
+        "ar": "تداول عقود الفروقات على الاسهم"
+    },
+    "stock2": {
+        "zh": "股票差价合约介绍",
+        "zh-Hant": "股票差價合約介紹",
+        "en": "TigerWit Stock CFD Product Introduction",
+        "vi": "TigerWit Giới thiệu Sản phẩm Cổ Phiếu CFD",
+        "id": "Pengenalan Produk Saham CFD TigerWIt",
+        "es": "Introducción a los CFDs de acciones en Tigerwit",
+        "pt-BR": "Introdução aos CFDs da Tigerwit Stock",
+        "ar": "مقدمة منتج تداول عقود مقابل الفروقات على الأسهم لدى Tigerwit."
+    },
+    "stock3": {
+        "zh": "通过差价合约进行股票交易是一种简单的投资方式，您可以推测公司股票的价值会增加还是减少。 与在股票市场上购买公司的实物股票不同，通过股票差价合约交易，您可以从公司的价格上涨或下跌中受益。",
+        "zh-Hant": "通過差價合約進行股票交易是一種簡單的投資方式，您可以推測公司股票的價值會新增還是减少。與在股票市場上購買公司的實物股票不同，通過股票差價合約交易，您可以從公司的價格上漲或下跌中受益。",
+        "en": "Stock trading via CFDs is a simple way to speculate on whether you think that the value of a companies share will increase or decrease in value. Unlike buying physical shares of a company on a stock market, by trading share CFDs, you can benefit from their price going up or down.",
+        "vi": "Giao dịch chứng khoán qua CFD là một cách đơn giản để phân tích tầm nhìn của bạn về giá trị cổ phiếu của công ty sẽ tăng hay giảm. Không giống như khi bạn mua cổ phiếu thực của một công ty trên thị trường chứng khoán, bạn có thể hưởng lợi từ biến động giá tăng hay giảm của cổ phiếu bằng cách giao dịch cổ phiếu CFD.",
+        "id": "Trading pada saham CFD merupakan cara sederhana dalam berspekulasi apakah nilai saham dari perusahaan tersebut akan naik atau menurun. Berbeda dengan membeli saham fisik sebuah perusahaan, dengan bertransaksi di saham CFD, anda memiliki kesempatan untuk mendapatkan keuntungan baik harga sahamnya naik ataupun turun",
+        "es": "La operativa de acciones a través de CFD es una forma simple de especular si cree que el valor de una acción de las empresas aumentará o disminuirá. A diferencia de la compra de acciones físicas de una empresa en un mercado de valores, al negociar CFD de acciones, puede beneficiarse de que su precio suba o baje.",
+        "pt-BR": "Negociar ações através de CFDs é uma maneira simples de especular se você acredita que o valor das ações de uma empresa vai subir ou cair. Ao contrário da compra de ações físicas de uma empresa em uma bolsa de valores, ao negociar CFDs de ações, você pode lucrar com a subida ou descida do preço.",
+        "ar": "تداول الأسهم عبر العقود مقابل الفروقات هو طريقة بسيطة للتكهن بما إذا كنت تعتقد أن قيمة أسهم الشركات ستزيد أو تنخفض في قيمتها. على عكس شراء الأسهم الفعلية للشركة في سوق الأسهم، من خلال تداول العقود مقابل الفروقات على الأسهم، يمكنك الاستفادة من ارتفاع أو انخفاض سعرها."
+    },
+    "stock4": {
+        "zh": "股票差价合约还具有增加市场流动性和杠杆交易的额外优势，这也是为什么它们已成为在线交易的流行形式。交易股票差价合约也是免佣金的，这就避免了在购买或出售公司股票时可能包含的交易成本。",
+        "zh-Hant": "股票差價合約還具有新增市場流動性和杠杆交易的額外優勢，這也是為什麼它們已成為線上交易的流行形式。交易股票差價合約也是免傭金的，這就避免了在購買或出售公司股票時可能包含的交易成本。",
+        "en": "Equity CFDs also have the added advantage of increased market liquidity and leveraged trading which is why they have become such a popular form of online trading.Trading share CFDs is also commission free which avoids transactional costs that can be included in buying or selling physical stock in a company.",
+        "vi": "Tổng vốn thực CFD cũng có thêm lợi thế về thanh khoản thị trường lớn và giao dịch đòn bẩy. Điều này chính là lý do tại sao cổ phiếu CFD trở thành một hình thức giao dịch trực tuyến phổ biến như vậy.Giao dịch Cổ phiếu CFD cũng được miễn phí hoa hồng giao dịch. Phần chi phí này thường có thể được bao gồm trong việc mua hoặc bán cổ phiếu thực trong một công ty.",
+        "id": "Trading Ekuitas CFD selain dapat menggunakan leverage juga menambah manfaaat dengan menambah likuiditas dalam pasar, oleh karena itulah produk tersebut cukup populer di dunia online trading.Trading pada saham CFD juga bebas komisi, sehingga membantu menekan biaya dalam pembelian atau penjualan saham fisik pada sebuah perusahaan.",
+        "es": "Los CFDs sobre acciones también tienen la ventaja adicional de aumentar la liquidez del mercado y la operativa apalancada, por lo que se han convertido en un instrumento popular de comercio en línea.Los CFDs de acciones comerciales también están libres de comisiones, lo que evita incrementar los costos de transacción que pueden incluirse en la compra o venta de acciones físicas en una empresa.",
+        "pt-BR": "Os CFDs de ações também têm a vantagem adicional de aumentar a liquidez do mercado e a negociação alavancada, tornando-os um instrumento popular de negociação online.A negociação de CFDs de ações também é livre de comissões, o que evita o aumento dos custos de transação que podem ser incluídos na compra ou venda de ações físicas de uma empresa.",
+        "ar": "تتمتع العقود مقابل الفروقات للأسهم أيضًا بميزة إضافية تتمثل في زيادة سيولة السوق والتداول بالرافعة المالية، وهذا هو السبب في أنها أصبحت نوعاً شائعاً في التداول عبر الإنترنت.تداول العقود مقابل الفروقات على الأسهم هو أيضًا بدون عمولة مما يتجنب تكاليف المعاملات التي يمكن تضمينها في شراء أو بيع الأسهم المادية في الشركة"
+    },
+    "stock5": {
+        "zh": "TigerWit为您提供全球交易量最大的股票差价合约的买入或卖出交易。 除了最受欢迎的外汇交易货币对，包括石油和黄金的商品以及全球的指数以外，我们还为客户提供可交易的产品。 所有这些都是通过利用我们的交易技术的力量，并以区块链为后盾。",
+        "zh-Hant": "TigerWit為您提供全球交易量最大的股票差價合約的買入或賣出交易。除了最受歡迎的外匯交易貨幣對，包括石油和黃金的商品以及全球的指數以外，我們還為客戶提供可交易的產品。所有這些都是通過利用我們的交易科技的力量，並以區塊鏈為後盾。",
+        "en": "TigerWit offers you the ability to go long or short on some of the most heavily traded stock CFDs in the world. This is in addition to the most popular FX pairs, Commodities including Oil and Gold, and Indices from around the world that we provide as tradable products to our clients. All of which by harnessing the power of our trading technology and backed by blockchain.",
+        "vi": "Ngoài các sản phẩm có thể giao dịch như các cặp FX phổ biến nhất hay Hàng hóa bao gồm Vàng, Dầu hoặc Chỉ số từ khắp nơi trên thế giới, bạn có khả năng mua hoặc bán một số Cổ phiếu CFD được giao dịch nhiều nhất toàn cầu bằng cách khai thác sức mạnh của công nghệ giao dịch được hỗ trợ bởi blockchain từ TigerWit.",
+        "id": "TigerWit memberikan anda kesempatan untuk membeli atau menjual produk saham CFD yang paling banyak ditransaksikan di dunia. Produk ini merupakan produk tambahan selain pasangan mata uang, komoditas, termasuk minyak dan saham serta indeks saham dari seluruh dunia yang kami sediakan untuk semua klien kami. Semua itu dapat kami lakukan dengan memanfaatkan teknologi trading kami dan dilindungi oleh blockchain",
+        "es": "TigerWit le ofrece la posibilidad de abrir posiciones largas o cortas en algunos de los CFD de acciones más cotizados del mundo. A esto se le suman los pares de divisas más populares, materias primas que incluyen al petróleo y oro e índices de todo el mundo que ofrecemos como productos negociables para nuestros clientes. Todo esto aprovechando también el poder de nuestra tecnología comercial y respaldo por blockchain.",
+        "pt-BR": "A TigerWit lhe oferece a possibilidade de abrir posições longas ou curtas em alguns dos CFDs de ações mais negociados do mundo. Isso se soma aos mais populares pares de moedas, commodities incluindo petróleo e ouro, e índices de todo o mundo que oferecemos como produtos comercializáveis para nossos clientes. Tudo isso é suportado pelo poder de nossa tecnologia de negociação e suporte de blockchain.",
+        "ar": "توفر لك TigerWit القدرة على الشراء أو البيع على بعض من أكثر العقود مقابل فروقات الأسهم تداولًا في العالم. هذا بالإضافة إلى أزواج العملات الأجنبية الأكثر شيوعًا والسلع بما في ذلك النفط والذهب والمؤشرات من جميع أنحاء العالم التي نقدمها كمنتجات قابلة للتداول لعملائنا. كل ذلك من خلال تسخير قوة تقنية التداول لدينا ودعمها من خلال بلوك تشين."
+    },
+    "stock6": {
+        "zh": "在TigerWit交易股票差价合约的优势",
+        "zh-Hant": "在TigerWit交易股票差價合約的優勢",
+        "en": "Advantages of trading equity CFDs with TigerWit",
+        "vi": "Ưu điểm của Giao dịch tổng vốn thực CFD với TigerWit",
+        "id": "Keuntungan bertransaksi Ekuitas CFD bersama TigerWIt",
+        "es": "Ventajas de operar CFDs de acciones con TigerWit",
+        "pt-BR": "Vantagens de negociar CFDs de ações com a TigerWit",
+        "ar": "مزايا تداول عقود مقابل الفروقات على الأسهم مع Tigerwit"
+    },
+    "stock7": {
+        "zh": "交易成本低",
+        "zh-Hant": "交易成本低",
+        "en": "Low transaction costs",
+        "vi": "Chi phí giao dịch thấp",
+        "id": "Biaya yang sangat rendah",
+        "es": "Costos de transacción bajos",
+        "pt-BR": "Baixos custos de transação",
+        "ar": "تكاليف منخفضة للمعاملات "
+    },
+    "stock8": {
+        "zh": "利用杠杆交易，您仅需投入少量保证金便可获得远高于此的市场仓位。 此外，与TigerWit交易股票无需支付佣金。",
+        "zh-Hant": "利用杠杆交易，您僅需投入少量保證金便可獲得遠高於此的市場倉位。此外，與TigerWit交易股票無需支付傭金。",
+        "en": "With leveraged trading, you only need to put down a small amount of margin to open a market position that of much greater value. In addition, share dealing with TigerWit is commission free.",
+        "vi": "Với giao dịch có đòn bẩy, bạn chỉ cần đặt một lượng tiền ký quỹ nhỏ để mở một vị thế trên thị trường có giá trị lớn hơn nhiều lần. Ngoài ra, giao dịch cổ phiếu với TigerWit bạn sẽ được miễn phí hoa hồng.",
+        "id": "Dengan bertransaksi menggunakan leverage, anda hanya perlu menggunakan margin yang kecil untuk membuka posisi pada pasar. Selain itu transaksi saham di TigerWIt bebas biaya.",
+        "es": "Con la operativa apalancada, solo necesita colocar una pequeña nivel de margen para abrir una posición de mercado que tenga un valor mucho mayor. Además, el trato compartido con TigerWit no tiene comisión.",
+        "pt-BR": "Com negociação alavancada, você só precisa colocar um pequeno nível de margem para abrir uma posição de mercado que tenha um valor muito maior. Além disso, o negócio TigerWit é livre de comissão.",
+        "ar": "مع التداول بالرافعة المالية، ما عليك سوى وضع كمية صغيرة من الهامش لفتح مركز في السوق ذو قيمة أكبر بكثير. بالإضافة إلى ذلك ، فإن التعامل مع TigerWit هو بدون عمولة."
+    },
+    "stock9": {
+        "zh": "同时支持双向交易",
+        "zh-Hant": "同時支持雙向交易",
+        "en": "Buy or Sell stock CFDs",
+        "vi": "Mua hoặc Bán cổ phiếu CFD",
+        "id": "Beli atau Jual saham CFD",
+        "es": "Compre o Venda acciones en CFDs",
+        "pt-BR": "Compra ou Venda de ações em CFDs",
+        "ar": "قم بشراء أو بيع عقود مقلبل الفروقات على الأسهم"
+    },
+    "stock10": {
+        "zh": "通过交易股票差价合约，您可以在任何一个方向上开仓，从而可以推测上涨或下跌的股票价值。",
+        "zh-Hant": "通過交易股票差價合約，您可以在任何一個方向上開倉，從而可以推測上漲或下跌的股票價值。",
+        "en": "By trading stock CFDs, you can open a position in either direction so that you can speculate on the value of a share going up or down. ",
+        "vi": "Bằng cách giao dịch cổ phiếu CFD,  bạn có thể mở một vị trí theo một trong hai hướng để có thể suy đoán, phân tích giá trị của một cổ phiếu tăng hay giảm.",
+        "id": "Dengan bertransaksi pada saham CFD, anda dapat membuka posisi dua arah, dimana anda berpotensi mendapatkan keuntungan baik nilai saham itu naik ataupun turun",
+        "es": "Al operar CFDs sobre acciones, puede abrir una posición en cualquier dirección para poder especular sobre el valor de una acción que sube o baja.",
+        "pt-BR": "Ao negociar CFDs sobre ações, você pode abrir uma posição em qualquer direção para poder especular sobre o valor de uma ação em alta ou em queda.",
+        "ar": "من خلال تداول عقود مقابل الفروقات على الأسهم، يمكنك فتح مركز في أي من الاتجاهين حتى تتمكن من المضاربة على قيمة السهم صعوداً أو هبوطاً."
+    },
+    "stock11": {
+        "zh": "复制跟单交易",
+        "zh-Hant": "複製跟單交易",
+        "en": "Copy Trading feature",
+        "vi": "Tính năng Sao chép Giao dịch",
+        "id": "Salin fitur Perdagangan",
+        "es": "Función de réplica de operación",
+        "pt-BR": "Função de operação réplica",
+        "ar": "ميزة التداول بنسخ الصفقات."
+    },
+    "stock12": {
+        "zh": "TigerWit提供业内先进创新的全自动订单复制跟单系统，并且汇聚众多颇具盈利能力的投资高手。您可以利用复制跟单系统，该功能将自动跟踪高手的交易，并从他们的经验和策略中获益。",
+        "zh-Hant": "TigerWit提供業內先進創新的全自動訂單複製跟單系統，並且彙聚眾多頗具盈利能力的投資高手。您可以利用複製跟單系統，該功能將自動跟蹤高手的交易，並從他們的經驗和策略中獲益。",
+        "en": "By trading stock CFDs with TigerWit, you can take advantage of the Copy Trading feature that will automatically follow the trades of the investors of their choice and benefit from their experience and strategies. ",
+        "vi": "Bằng cách giao dịch cổ phiếu CFD với TigerWit, bạn có thể tận dụng tính năng Sao chép Giao dịch. Tính năng này sẽ giúp bạn tự động sao chép giao dịch của các nhà đầu tư mà bạn lựa chọn để hưởng lợi từ kinh nghiệm và chiến lược của họ.",
+        "id": "Dengan bertransaksi pada saham CFD bersama TigerWit, anda juga dapat memanfaatkan fitur Copy Trade yang akan mengikuti para Master trader terbaik yang sesuai dengan anda, dan mendapatkan memanfaatkan pengalaman serta strategi mereka",
+        "es": "Al operar CFDs de acciones con TigerWit, puede aprovechar la función de copiar operaciones de otros inversores para seguir automáticamente las operaciones de los inversores de su elección y beneficiarse de su experiencia y estrategias.",
+        "pt-BR": "Ao negociar CFDs de ações com a TigerWit, você pode aproveitar o recurso de copy trade para acompanhar automaticamente os negócios dos investidores de sua escolha e se beneficiar de sua experiência e estratégias.",
+        "ar": "من خلال تداول عقود مقابل الفروقات على الأسهم مع TigerWit، يمكنك الاستفادة من ميزة التداول بنسخ الصفقات التي ستتبع تلقائيًا تداولات المستثمرين من اختيارهم والاستفادة من خبرتهم واستراتيجياتهم."
+    },
+    "stock13": {
+        "zh": "在线股票差价合约交易如何操作",
+        "zh-Hant": "線上股票差價合約交易如何操作",
+        "en": "How online stock CFD trading works",
+        "vi": "Giao dịch cổ phiếu CFD trực tuyến hoạt động như thế nào?",
+        "id": "Bagaimana trading saham online CFD ini bekerja",
+        "es": "¿Cómo funciona la operativa de CFD de acciones en línea?",
+        "pt-BR": "Como funciona a negociação online de CFDs de ações?",
+        "ar": "كيفية تداول العقود مقابل الفروقات عبر الإنترنت"
+    },
+    "stock14": {
+        "zh": "交易者可以选择使用屡获殊荣的TigerWit应用程序或MT4平台来买卖股票差价合约以满足自己的需求。",
+        "zh-Hant": "交易者可以選擇使用屢獲殊榮的TigerWit應用程序或MT4平臺來買賣股票差價合約以滿足自己的需求。",
+        "en": "Traders have the choice of using either the award-winning TigerWit app or the MT4 platform to buy and sell share CFDs to suit their needs. ",
+        "vi": "Nhà giao dịch có thể lựa chọn sử dụng ứng dụng đã giành giải thưởng của TigerWit hoặc dùng nền tảng MT4 để mua và bán cổ phiếu CFD phù hợp với nhu cầu của bạn.",
+        "id": "Trader dapat menggunakan aplikasi TigerWit ataupun platform MT4 untuk membeli atau menjual saham CFD sesuai kebutuhan",
+        "es": "Los operadores tienen la opción de usar la galardonada aplicación TigerWit o la plataforma MT4 para comprar y vender CFDs de acciones para satisfacer sus necesidades.",
+        "pt-BR": "Os negociadores têm a opção de utilizar o premiado aplicativo TigerWit ou a plataforma MT4 para comprar e vender CFDs de ações para atender às suas necessidades.",
+        "ar": "يمكن للمتداولين استخدام إما تطبيق TigerWit الحائز على جوائز أو منصة MT4 لشراء وبيع عقود مقابل الفروقات على الأسهم لتناسب احتياجاتهم."
+    },
+    "stock15": {
+        "zh": "在研究股票时，许多人会利用图表，关注财经新闻等交易工具来发现市场中出现的机会。 如果他们认为自己在市场上找到了机会，那么只需单击几下即可打开和关闭交易。",
+        "zh-Hant": "在研究股票時，許多人會利用圖表，關注財經新聞等交易工具來發現市場中出現的機會。如果他們認為自己在市場上找到了機會，那麼只需按一下幾下即可打開和關閉交易。",
+        "en": "When researching a stock, many people take advantage of charts, following financial news and other trading tools to spot opportunities that arise in the market. If they believe that they have found an opportunity in the market, they can open and close deals with just a couple of clicks.",
+        "vi": "Khi nghiên cứu một cổ phiếu, nhiều người tận dụng các biểu đồ, theo dõi tin tức tài chính và sử dụng các công cụ giao dịch khác để nhìn ra các cơ hội phát sinh trên thị trường. Nếu bạn tin rằng bạn đã tìm thấy cơ hội trên thị trường, bạn có thể mở và đóng giao dịch một cách đơn giản chỉ bằng một vài cú nhấp chuột.",
+        "id": "Ketika sedang menganalisa sebuah saham, banyak orang yang memantau grafik, mengikuti berita keuangan dan memanfaatkan peralatan trading lainnya untuk mencari kesempatan pada pasar. Jika ada peluang, maka mereka akan masuk ke pasar kemudian membuka atau menutup transaksi hanya dengan beberapa klik",
+        "es": "Al buscar una acción específica, muchas personas aprovechan los gráficos, siguen las noticias financieras y otras herramientas de negociación para detectar oportunidades que surgen en el mercado. Si creen que han encontrado una oportunidad en el mercado, pueden abrir y cerrar operaciones con solo un par de clics.",
+        "pt-BR": "Ao buscar uma ação específica, muitas pessoas aproveitam os gráficos, seguem notícias financeiras e outras ferramentas de negociação para detectar oportunidades que surgem no mercado. Se eles acham que encontraram uma oportunidade no mercado, eles podem abrir e fechar negócios com apenas alguns cliques.",
+        "ar": "عند البحث عن الأسهم، يستفيد العديد من الأشخاص من الرسوم البيانية، ويتابعون الأخبار المالية وأدوات التداول الأخرى لاكتشاف الفرص التي تنشأ في السوق. إذا اعتقدوا أنهم وجدوا فرصة في السوق، يمكنهم فتح وإغلاق الصفقات ببضع نقرات فقط."
+    },
+    "stock16": {
+        "zh": "为了确保自己的交易策略保持不变，他们还可以使用止损或获利等工具来维持或自动平仓。",
+        "zh-Hant": "為了確保自己的交易策略保持不變，他們還可以使用止損或獲利等工具來維持或自動平倉。",
+        "en": "To ensure their trading strategy remains in place, they can also use tools including a stop loss or take profit to maintain or close their position automatically. ",
+        "vi": "Để đảm bảo chiến lược giao dịch của bạn vẫn được giữ nguyên, bạn cũng có thể sử dụng các công cụ bao gồm dừng lỗ hoặc chốt lãi để duy trì hoặc đóng vị thế tự động.",
+        "id": "Untuk memastikan strategi trading dengan baik, anda dapat memanfaatkan fitur yang tersedia seperti stop loss, ataupun take profit dalam mengatur atau menutup posisi anda secara otomatis.",
+        "es": "Para garantizar que su estrategia de trading permanezca en su lugar, también puede usar herramientas que incluyen un stop loss o take profit para mantener o cerrar su posición automáticamente.",
+        "pt-BR": "Para garantir que sua estratégia de negociação permaneça em vigor, você também pode usar ferramentas que incluem um stop loss ou tirar lucro para manter ou fechar automaticamente sua posição.",
+        "ar": "لضمان استمرار استراتيجية التداول الخاصة بهم، يمكنهم أيضًا استخدام الأدوات بما في ذلك وقف الخسارة أو جني الأرباح للحفاظ على مركزهم أو إغلاقه تلقائيًا."
+    },
+    "stock17": {
+        "zh": "TigerWit股票差价合约产品介绍",
+        "zh-Hant": "TigerWit股票差價合約產品介紹",
+        "en": "TigerWit Stock CFD Product Introduction",
+        "vi": "TigerWit Stock CFD Giới thiệu sản phẩm",
+        "id": "Mengenal Stock CFD di TigerWit",
+        "es": "Introducción al producto de acciones CFD en TigerWit",
+        "pt-BR": "Introdução ao produto de estoque CFD na TigerWit",
+        "ar": "مقدمة منتج TigerWit Stock CFD"
+    },
+    "stock18": {
+        "zh": "",
+        "zh-Hant": "",
+        "en": "",
+        "vi": "",
+        "id": "",
+        "es": "",
+        "pt-BR": "",
+        "ar": ""
     },
     "aboutb_1": {
         "zh": " ",
@@ -14804,14 +15004,14 @@ module.exports = {
         "ar": "رسوم الإجراءات"
     },
     "tradeFee15": {
-        "zh": "TigerWit对差价合约产品收取的点差为0，TigerWit对差价合约产品收取一定比例的手续费。",
-        "en": "CFD spread is 0, TigerWit charges a certain percentage fees of CFDs.",
-        "vi": "Mức chênh lệch CFD là 0, TigerWit tính một khoản phí phần trăm nhất định của CFD.",
-        "zh-Hant": "TigerWit對差價合約產品收取的點差為0，TigerWit對差價合約產品收取壹定比例的手續費。",
-        "id": "Spread CFD adalah 0, namun TigerWit akan membebankan biaya komisi.",
-        "es": "CFD spread es 0, TigerWit carga un determinado procentaje de comisiones en CFDs.",
-        "pt-BR": "O spread do CFD é 0, o TigerWit cobra uma certa porcentagem de CFDs.",
-        "ar": "فرق أسعار عقود الفروقات هو صفر، وتتقاضى TigerWit نسبة مئوية محددة من عقود الفروقات كرسوم."
+        "zh": "TigerWit对指数产品收取的点差为0，TigerWit对指数产品收取一定比例的手续费。",
+        "en": "The spread of Index product is 0, TigerWit will charges a certain percentage fees for Index.",
+        "vi": "Sản phẩm Chỉ số có spread bằng 0, TigerWit sẽ tính cố định phần trăm phí của Chỉ số.",
+        "zh-Hant": "TigerWit對指數產品收取的點差為0，TigerWit對指數產品收取一定比例的手續費。",
+        "id": "Spread untuk produk Indeks adalah 0. TigerWit hanya menarik biaya berdasarkan persentase tertentu untuk indeks.",
+        "es": "La dispersión del producto del índice es 0, TigerWit cobrará un cierto porcentaje del índice.",
+        "pt-BR": "O spread do produto do índice é 0, a TigerWit cobrará uma determinada taxa percentual pelo índice.",
+        "ar": "إن فروق الأسعار لمنتج المؤشر هو 0، سوف تفرض TigerWit رسوم نسبة مئوية معينة للمؤشر."
     },
     "tradeFee16": {
         "zh": "复制高手佣金",
@@ -16213,6 +16413,16 @@ module.exports = {
         "pt-BR": "Bitcoin",
         "ar": "بيتكوين"
     },
+    "newhome_stock": {
+        "zh": "股票",
+        "en": "Stocks",
+        "vi": "Cổ phiếu",
+        "zh-Hant": "股票",
+        "id": "Saham",
+        "es": "Acciones",
+        "pt-BR": "Ações",
+        "ar": "Stocks"
+    },
     "newhome_9_1": {
         "zh": "下载注册交易账户",
         "en": "Download the app to open an account",
@@ -17197,24 +17407,24 @@ module.exports = {
             "ar": "لم يتم إضافة بطاقة مصرفية"
         },
         "noThirdParty": {
-            "zh": "暂未添加第三方账户",
-            "en": "No third-party account",
-            "vi": "Không có tài khoản phụ",
-            "zh-Hant": "暫未添加協力廠商帳戶",
-            "id": "Tidak ada akun pihak ketiga",
-            "es": "No cuenta de terceros",
-            "pt-BR": "Nenhuma conta de terceiros",
-            "ar": "لا يوجد حساب طرف ثالث"
+            "zh": "暂未添加账户",
+            "en": "No account added yet",
+            "vi": "No account added yet",
+            "zh-Hant": "暫未添加賬戶",
+            "id": "Chưa có tài khoản nào được thêm vào",
+            "es": "Ninguna cuenta agregada todavía",
+            "pt-BR": "Nenhuma conta adicionada ainda",
+            "ar": "لم تتم إضافة حساب بعد"
         },
         "addingThirdParty": {
-            "zh": "添加第三方账户",
-            "en": "Add third-party account",
-            "vi": "Thêm tài khoản phụ",
-            "zh-Hant": "添加協力廠商帳戶",
-            "id": "Tambah akun pihak ketiga",
-            "es": "Añadir cuenta de terceros",
+            "zh": "绑定账户",
+            "en": "Bind account",
+            "vi": "Liên kết tài khoản",
+            "zh-Hant": "綁定賬戶",
+            "id": "Hubungkan rekening",
+            "es": "Link da conta",
             "pt-BR": "Adicionar conta de terceiros",
-            "ar": "أضف حساب الطرف الثالث"
+            "ar": "ربط الحساب"
         },
         "minimum$20": {
             "zh": "最低20美元",
@@ -17727,14 +17937,14 @@ module.exports = {
             "ar": "حدد مدينة فتح الحساب"
         },
         "completeInfo": {
-            "zh": "请完善第三方账户信息",
-            "en": "Please complete third party account information",
-            "vi": "Vui lòng xóa thông tin tài khoản bên thứ ba",
-            "zh-Hant": "請完善第三方賬戶信息",
-            "id": "Silahkan lengkapi informasi rekening pihak ke tiga",
-            "es": "Por favor, complete la información cuenta tercero",
-            "pt-BR": "Por favor complete informações da conta de terceiros",
-            "ar": "يرجى استكمال معلومات الحساب للطرف الثالث"
+            "zh": "请完善收款账户信息",
+            "en": "Please complete the receive account information",
+            "vi": "Vui lòng cung cấp đủ thông tin tài khoản nhận",
+            "zh-Hant": "請完善收款賬戶信息",
+            "id": "Mohon masukkan informasi rekening secara lengkap",
+            "es": "Por favor complete la información de cuenta recibida",
+            "pt-BR": "Por favor, preencha as informações da conta recebidas",
+            "ar": "يرجى استكمال معلومات الحساب المتلقي"
         },
         "city": {
             "zh": "城市",
@@ -18267,14 +18477,14 @@ module.exports = {
             "ar": "حذف"
         },
         "thirdPartyAccount": {
-            "zh": "第三方账户",
-            "en": "Third-party accounts",
-            "vi": "Các tài khoản bên thứ 3",
-            "zh-Hant": "第三方賬戶",
-            "id": "Rekening pihak ke tiga",
-            "es": "Cuentas de terceros",
-            "pt-BR": "Conta de terceiros",
-            "ar": "حسابات طرف ثالث"
+            "zh": "其它收款账户",
+            "en": "Alternative Payment Methods",
+            "vi": "Các Phương Thức Thanh Toán Khác",
+            "zh-Hant": "其它收款賬戶",
+            "id": "Metode Pembayaran alternatif",
+            "es": "Métodos de Pago Alternativos",
+            "pt-BR": "Métodos de pagamento alternativos",
+            "ar": "طرق الدفع البديلة"
         },
         "transferTip1": {
             "zh": "请注意，我们不接受直接支付到我们银行账户的现金付款。为了您的注资能及时、准确到账，在填写电汇申请单时，",

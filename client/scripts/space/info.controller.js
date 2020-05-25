@@ -5,13 +5,13 @@
     angular.module('fullstackApp')
         .controller('SpaceInfoController', SpaceInfoController);
 
-    SpaceInfoController.$inject = ['$rootScope','$scope', '$location', '$interval', '$state', 'account', 'config', 'redbag', 'invite', 'asset', '$modal'];
+    SpaceInfoController.$inject = ['$rootScope','$scope', '$location', 'invest', '$state', 'account', 'config', 'redbag', 'invite', 'asset', '$modal'];
 
     /**
      * @name SpaceInfoController
      * @desc
      */
-    function SpaceInfoController($rootScope,$scope, $location, $interval, $state, account, config, redbag, invite, asset, $modal) {
+    function SpaceInfoController($rootScope,$scope, $location, invest, $state, account, config, redbag, invite, asset, $modal) {
         $scope.unreadLength = 0;        // 未读消息
         $scope.investSelect = {id: '', type: ''};   // 记录账号页面选中的账号
         $scope.inviteModuleStatus = false;
@@ -47,13 +47,6 @@
                 }
             })
         }
-        // 检查新消息
-        // $scope.$on('refreshNoticeList', function() {
-        //     console.log('refreshNoticlist jihuo');
-        //     noticeId = $interval(function() {
-        //         getUnreadLength();
-        //     },30000);
-        // });
 
         // 获取未读红包数
         function getRedBagNum () {
@@ -66,10 +59,38 @@
             });
         }
 
+        $scope.checkStockTrading = checkStockTrading;
+        //检测订单是否符合拆合股需求
+        function checkStockTrading (mt4_id) {
+            invest.checkStockTrading(mt4_id).then(function (rs) {
+                if (rs.is_succ && rs.message) {
+                    $modal.open({
+                        templateUrl: '/views/space/stock_modal.html',
+                        size: 'sm',
+                        backdrop: 'static',
+                        controller: ['$scope', '$modalInstance', 'lang', function ($scope, $modalInstance, lang) {
+                            $scope.message = rs.message;
+                            $scope.lang = lang;
+                            $scope.closeModal = closeModal;
+                            
+                            function closeModal() {
+                                $modalInstance.dismiss();
+                            }
+                        }]
+                    });
+                }
+            });
+        }
+
         // 初始化所需的全局数据
         function initialize() {
             account.getPersonalInfo().then(function (data) {
                 if (!data) return;
+                //当前 默认登录的 MT4 信息，不主动切换一直是用这个
+                $scope.investSelect.id = data.trade_account.mt4_id;
+                $scope.investSelect.type = data.trade_account.account_type;
+                checkStockTrading(data.trade_account.mt4_id);
+
                 angular.extend($scope.personal, data, {
                     xsAvatar: config.avatarCfg.path + data.usercode + config.avatarCfg.xs + '?timestamp=' + (+new Date()),
                     smAvatar: config.avatarCfg.path + data.usercode + config.avatarCfg.sm + '?timestamp=' + (+new Date()),

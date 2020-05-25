@@ -226,5 +226,29 @@
                 }
             });
         }
+
+        $scope.invalidStockTrade = invalidStockTrade;
+        function invalidStockTrade (id, ticket) {
+            $modal.open({
+                templateUrl: '/views/invest/invalid_modal.html',
+                size: 'sm',
+                backdrop: 'static',
+
+                controller: ['$scope', '$modalInstance', 'lang', function ($scope, $modalInstance, lang) {
+                    $scope.message = '';
+                    $scope.lang = lang;
+                    $scope.closeModal = closeModal;
+                    
+                    invest.invalidStockTrade(id, ticket).then(function (rs) {
+                        if (rs.is_succ) {
+                            $scope.message = rs.message || 'none!';
+                        }
+                    })
+                    function closeModal() {
+                        $modalInstance.dismiss();
+                    }
+                }]
+            });
+        }
     }
 })();

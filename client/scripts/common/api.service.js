@@ -80,7 +80,9 @@
             setIslamicStatusApi: urlOrigin3 + '/user/set_islamic_status',
             transferIslamicApi: urlOrigin2 + '/user/transfer_islamic',
             getVersionCheckApi: urlOrigin2 + '/system/version_check',
-            getAddressUrlApi: 'https://services.postcodeanywhere.co.uk/Capture/Interactive/Find/v1.00/json3ex.ws'
+            getAddressUrlApi: 'https://services.postcodeanywhere.co.uk/Capture/Interactive/Find/v1.00/json3ex.ws',
+            // 报价开／停盘状态
+            getSymbolQuoteStatusApi: urlOrigin2 + '/symbol/quote_status',
         };
         var asset = {
             withdrawApi: urlOrigin2 + '/payment/withdraw',
@@ -117,7 +119,7 @@
             getThirdPlatformsApi: urlOrigin2 + '/third/platforms',
             setThirdBindAccountApi: urlOrigin2 + '/third/accounts/bind',
             getThirdAccountListApi: urlOrigin2 + '/third/accounts/lists',
-            destroyThirdAccountApi: urlOrigin2 + '/third/accounts/destroy',
+            destroyThirdAccountApi: urlOrigin2 + '/third/accounts/destroy'
         };
         var forex = {
             
@@ -132,7 +134,9 @@
             getInvestHistoryDataApi: urlOrigin2 + '/centre/past/self_trades',
             getInvestHistoryTradersApi: urlOrigin2 + '/centre/past/copy_masters',
             getInvestHistoryDetailsApi: urlOrigin2 + '/centre/past/copy_trades',
-            getWalletHistoryApi: urlOrigin2 + '/wallet/histories'
+            getWalletHistoryApi: urlOrigin2 + '/wallet/histories',
+            checkStockTradingApi: urlOrigin2 + '/stock/check_trading',
+            invalidStockTradeApi: urlOrigin2 + '/stock/invalid_trade'
         };
         var invite = {
             getInviteFriendsInfoApi: urlOrigin2 + '/user/invites',

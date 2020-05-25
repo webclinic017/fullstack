@@ -141,6 +141,13 @@
         //     });
         // }
 
+        function getSymbolQuoteStatus (symbols) {
+            account.getSymbolQuoteStatus(symbols).then(function (rs) {
+                if (rs.is_succ) {
+                    $scope.quoteStatus = rs.data;
+                }
+            })
+        }
         // 报价服务
         $scope.quoteSymbols = [];
         $scope.spreadInfo = {};     // 点差
@@ -161,6 +168,8 @@
             US30: '道琼斯指数',
             USDJPY: '美元日元',
             JPN225: '日经指数',
+            "AMZN.nd": '亚马逊',
+            "AAPL.nd": '苹果'
         }
         var forCloneSymbolZh = {
             AUDUSD: '澳元美元',
@@ -186,6 +195,8 @@
         angular.forEach(isCloned ? forCloneSymbolZh : forNormalSymbolZh, function (value, key) {
             requestSymbols.push(key);
         });
+        //品种报价状态
+        getSymbolQuoteStatus(requestSymbols.join(','));
         var socketPara = {
             websocketTigerUrl: $scope.lang.isDemo() ? ('wss://demo'+ $scope.getDomain() +':4567') : 'wss://quotephp'+ $scope.getDomain() +':4567',
             request_symbols: requestSymbols,

@@ -21,6 +21,7 @@
         $scope.detailsUrl = function(id, type){
             $scope.investSelect.id = id;
             $scope.investSelect.type = type;
+            $scope.checkStockTrading(id);
             $state.go('space.center.invest.subpage',({ subpage: 'current' }))
         }
         // 记录当前修改的账户与修改的情况

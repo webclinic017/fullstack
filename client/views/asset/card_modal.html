@@ -3,10 +3,10 @@
 
     <div>
         <h5 class="sys_modal_v2__title">
-            {{lang.text('tigerWitID.wallet.addBankCards')}}
+            {{lang.text(type === 'Noire'?'tigerWitID.wallet.addCards':'tigerWitID.wallet.addBankCards')}}
             <br>
             <span class="desp">
-                {{lang.text('tigerWitID.depositWithdrawal.bindUserBankCard')}}
+                {{lang.text(type === 'Noire'?'tigerWitID.depositWithdrawal.bindUserBankCard2':'tigerWitID.depositWithdrawal.bindUserBankCard')}}
             </span>
         </h5>
         <div class="sys_modal_v2__content" ng-show="!card.binding">
@@ -79,7 +79,7 @@
 
                 <div class="item-center">
                     <div class="col-xs-3">
-                        <label class="form-control-wrapper">{{lang.text('tigerWitID.depositWithdrawal.cardNumberM')}}</label>
+                        <label class="form-control-wrapper">{{lang.text(type === 'Noire'?'tigerWitID.depositWithdrawal.cardNumberNoire':'tigerWitID.depositWithdrawal.cardNumberM')}}</label>
                     </div>
 
                     <div class="col-xs-9">
@@ -90,17 +90,14 @@
                                    required
                                    ng-class="{'form-control-error': frontErr.number.show && cardForm.number.$invalid}"
                                    ng-model="card.number"
-                                   placeholder="{{lang.text('tigerWitID.depositWithdrawal.enterCardNumber')}}"
+                                   placeholder="{{lang.text(type === 'Noire'?'tigerWitID.depositWithdrawal.enterCardNumberNoire':'tigerWitID.depositWithdrawal.enterCardNumber')}}"
                                    ng-focus="hideErr('number')"
                                    ng-blur="showErr('number')">
 
                             <div ng-show="frontErr.number.show">
                                 <p class="alert alert-arrow_tp_lf" ng-show="cardForm.number.$error.required">
-                                    {{lang.text('tigerWitID.depositWithdrawal.enterCardNumber')}}
+                                    {{lang.text(type === 'Noire'?'tigerWitID.depositWithdrawal.enterCardNumberNoire':'tigerWitID.depositWithdrawal.enterCardNumber')}}
                                 </p>
-                                <!-- <p class="alert alert-arrow_tp_lf" ng-show="cardForm.number.$error.pattern">
-                                    {{frontErr.number.tip}}
-                                </p> -->
                             </div>
                         </div>
                     </div>
@@ -159,7 +156,7 @@
                     </div>
                 </div>
                 
-                <div class="item-center" ng-if="card.world && (card.world.world_code !== 'CN' && card.world.world_code !== 'VN')">
+                <div class="item-center" ng-if="card.world && (card.world.world_code !== 'CN' && card.world.world_code !== 'VN') && type !== 'Noire'">
                     <div class="col-xs-3">
                         <label class="form-control-wrapper">{{lang.text('tigerWitID.wallet.bankIdentificationCodeM')}}</label>
                     </div>
@@ -241,7 +238,7 @@
                     </div>
                 </div>
 
-                <div class="item-center" ng-if="card.world">
+                <div class="item-center" ng-if="card.world && type !== 'Noire'">
                     <div class="col-xs-3">
                         <label class="form-control-wrapper" ng-if="card.world && card.world.world_code === 'CN'">{{lang.text('tigerWitID.depositWithdrawal.branchM')}}</label>
                         <label class="form-control-wrapper" ng-if="card.world && card.world.world_code !== 'CN'">{{lang.text('tigerWitID.wallet.bankAddressM')}}</label>

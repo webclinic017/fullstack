@@ -26,7 +26,7 @@
       $scope.unfold = false
     }
 
-    if ('forex_oil_cfd_metal'.indexOf(curProduct) != -1) {
+    if ('forex_oil_cfd_metal_stock'.indexOf(curProduct) != -1) {
       var params = {
         type: curProduct === 'oil' ? 'energy' : curProduct,
         detail: true

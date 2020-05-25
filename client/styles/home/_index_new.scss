@@ -379,6 +379,11 @@
           &.pro {
               width: 40%;
           }
+          &.gray {
+            span {
+              background-color: #ccc !important;
+            }
+          }
           &.sell {
               width: 28%;
 
