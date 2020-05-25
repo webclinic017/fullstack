@@ -313,15 +313,15 @@
         })
         function getEmailPhone(force_update) {
             // force_update = true;    //上线时去掉
-            if (!force_update && sessionStorage["sysMessage"]) {
-                $rootScope.sysMessage = JSON.parse(sessionStorage["sysMessage"]);
+            if (!force_update && sessionStorage["systemMessage"]) {
+                $rootScope.sysMessage = JSON.parse(sessionStorage["systemMessage"]);
             } else {
                 account.getEmailPhone({
                     world_code: $scope.personal.region ? $scope.personal.region.world_code : undefined
                 }).then(function (data) {
                     if (data.is_succ) {
                         $rootScope.sysMessage = data.data;
-                        sessionStorage["sysMessage"] = JSON.stringify(data.data);
+                        sessionStorage["systemMessage"] = JSON.stringify(data.data);
                     }
                 });
             }

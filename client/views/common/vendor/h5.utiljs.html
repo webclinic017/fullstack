@@ -137,12 +137,12 @@
     function getEmailPhone(ele, emailOrPhone, callback) {
         // console.log(getDomain());
         //emailOrPhone 默认邮箱
-        if (sessionStorage["sysMessage"]) {
+        if (sessionStorage["systemMessage"]) {
             if (ele) {
                 if (emailOrPhone && emailOrPhone == 'phone') {
-                    $(ele).html(JSON.parse(sessionStorage["sysMessage"]).phone_list[0].phone);
+                    $(ele).html(JSON.parse(sessionStorage["systemMessage"]).phone);
                 } else {
-                    $(ele).html(JSON.parse(sessionStorage["sysMessage"]).email_list[0].email);
+                    $(ele).html(JSON.parse(sessionStorage["systemMessage"]).email);
                 }
             }
             callback && callback();
@@ -155,12 +155,12 @@
                 if (data.is_succ) {
                     if (ele) {
                         if (emailOrPhone && emailOrPhone == 'phone') {
-                            $(ele).html(data.data.phone_list[0].phone);
+                            $(ele).html(data.data.phone);
                         } else {
-                            $(ele).html(data.data.email_list[0].email);
+                            $(ele).html(data.data.email);
                         }
                     }
-                    sessionStorage["sysMessage"] = JSON.stringify(data.data);
+                    sessionStorage["systemMessage"] = JSON.stringify(data.data);
                     callback && callback();
                 }
             });
