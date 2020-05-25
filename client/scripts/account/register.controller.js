@@ -36,10 +36,10 @@
         // })
         var source = $scope.checkUserSource();
         if (lang.currentLanguage() === 'es') {
-            source ? source["R_SPANISH"] = "001" : source = {"R_SPANISH": "001"};
+            source ? source["R_SPANISH"] = "001" : source = { "R_SPANISH": "001" };
         }
         if (lang.currentLanguage() === 'pt-BR') {
-            source ? source["R_PTG"] = "001" : source = {"R_PTG": "001"};
+            source ? source["R_PTG"] = "001" : source = { "R_PTG": "001" };
         }
         if (source) {
             invite.setUserSource({
@@ -50,7 +50,7 @@
             country: {
                 key: '',
                 value: ''
-            }, 
+            },
             step1Phone: '',
             step1Code: '',
             step1Password: '',
@@ -67,7 +67,7 @@
             }, // 手机区号+国家(无用只为兼容指令)
         };
         $scope.selectArea = selectPhoneArea;
-        function selectPhoneArea(target){
+        function selectPhoneArea(target) {
             $scope.account.phoneArea = {
                 key: '+' + target.phone_code,
                 value: target.phone_code
@@ -77,16 +77,16 @@
         // 选择国家
         $scope.selectWorld = function (target) {
             // $scope.toGtagEvent('click_country_register_web');
-            if(target.code === 'CN'){
+            if (target.code === 'CN') {
                 $scope.registerStep3 = 1;
             }
             selectPhoneArea(target);
         }
         // 缓存区号
-        if(localStorage['phone_code'] == '86'){
+        if (localStorage['phone_code'] == '86') {
             $scope.account.country.key = lang.text("china");
             $scope.account.country.value = 'CN';
-            $scope.selectWorld({phone_code: 86, code: 'CN'})
+            $scope.selectWorld({ phone_code: 86, code: 'CN' })
         }
         var token;
         // console.log(lang.text("actLogin1"));
@@ -120,14 +120,14 @@
             //     return;
             // }
             // 手机
-            if($scope.registerStep3 == 1){
-                if(!showPhoneVel()){ return };
+            if ($scope.registerStep3 == 1) {
+                if (!showPhoneVel()) { return };
                 phone_code = $scope.account.phoneArea.value;
                 account_num = $scope.account.step1Phone;
                 account_type = 1;
                 msg = lang.text('tigerWitID.login.tip6_21')
-            }else if($scope.registerStep3 == 2){
-                if(!showEmaliVel()){ return };
+            } else if ($scope.registerStep3 == 2) {
+                if (!showEmaliVel()) { return };
                 phone_code = ''
                 account_num = $scope.account.emailText;
                 account_type = 2;
@@ -148,7 +148,7 @@
                         btns: {},
                         btnsClass: 'account_login__layer-btns'
                     }
-                    obj.btns[lang.text("tigerWitID.confirm2")] = function(){};
+                    obj.btns[lang.text("tigerWitID.confirm2")] = function () { };
                     $layer(obj);
                 } else {
                     layer.msg(data.message);
@@ -158,7 +158,7 @@
         // 注册
         $scope.register = function (formName, is_agree) {
             if (!$scope.registerBtnStatus) return;
-            if(!($scope.account.country.value)){
+            if (!($scope.account.country.value)) {
                 layer.msg(lang.text("tigerWitID.login.selectCountry"));
                 return;
             }
@@ -177,15 +177,16 @@
                 world_code: $scope.account.country.value,
                 ib_pid: search_arr.ib_pid || $cookies['ib_pid'] || null,  // 代理推广
                 invite_status: $cookies['invite_status'] || null,
+                browser_id: $cookies['BROWSER_ID'] || null,
                 register_rule: JSON.stringify(source),
                 // TODO 暂时
                 referrer: document.referrer,
                 href: location.href,
                 cookie: document.cookie
             };
-            if($scope.registerStep3 == '2'){
+            if ($scope.registerStep3 == '2') {
                 // 邮箱注册
-                if(!showEmaliVel()){ return };
+                if (!showEmaliVel()) { return };
                 if (!($scope.account.emailCode)) {
                     layer.msg(lang.text('tigerWitID.login.verificationCode'));     //请填写验证码
                     return;
@@ -194,11 +195,11 @@
                     account_type: 2,
                     account: $scope.account.emailText,
                     password: $scope.account.emailCode,
-                },para);
+                }, para);
                 msg = lang.text('tigerWitID.login.tip8_21');
-            }else if($scope.registerStep3 == '1'){
+            } else if ($scope.registerStep3 == '1') {
                 // 手机号注册
-                if(!showPhoneVel()){ return };
+                if (!showPhoneVel()) { return };
                 if (!($scope.account.step1Code)) {
                     layer.msg(lang.text('tigerWitID.login.verificationCode'));     //请填写验证码
                     return;
@@ -208,7 +209,7 @@
                     account: $scope.account.step1Phone,
                     password: $scope.account.step1Code,
                     phone_code: $scope.account.phoneArea.value,
-                },para);
+                }, para);
                 msg = lang.text('tigerWitID.login.tip8_2');
             }
             (is_agree == "is_agree") && (para.is_agree = 1);
@@ -220,11 +221,11 @@
                 $scope.registerBtnStatus = true;
 
                 if (data.is_succ) {
-                    $scope.writeCookie({nameKey: 'token', nameValue: data.data.token});
-                    $scope.writeCookie({nameKey: 'user_code', nameValue: data.data.user_code});
-                    $scope.writeCookie({nameKey: 'username', nameValue: data.data.username});
-                    $scope.writeCookie({nameKey: 'username_en', nameValue: data.data.username_en});
-                    $scope.writeCookie({nameKey: 'world_code', nameValue: para.world_code});
+                    $scope.writeCookie({ nameKey: 'token', nameValue: data.data.token });
+                    $scope.writeCookie({ nameKey: 'user_code', nameValue: data.data.user_code });
+                    $scope.writeCookie({ nameKey: 'username', nameValue: data.data.username });
+                    $scope.writeCookie({ nameKey: 'username_en', nameValue: data.data.username_en });
+                    $scope.writeCookie({ nameKey: 'world_code', nameValue: para.world_code });
 
                     setGtagUserId(data.data.user_code)
                     // 新用户
@@ -233,9 +234,9 @@
                     $scope.$emit('relogin_info', 'is_register');
                     // 神策统计 - 注册
                     $timeout(function () {
-                        if($scope.registerStep3 == '1'){
+                        if ($scope.registerStep3 == '1') {
                             $scope.toGtagEvent('phone_register_success_web');
-                        }else if($scope.registerStep3 == '2'){
+                        } else if ($scope.registerStep3 == '2') {
                             $scope.toGtagEvent('email_register_success_web');
                         }
                         $scope.getEmailPhone(true);
@@ -244,9 +245,9 @@
                         $scope.toTrackEvent('Login and register', 'login_success');
                     }, 150);
                     return;
-                }else {
+                } else {
                     if ((data.code == 100402) || (data.code == 100403)) {
-                        openWebAgmentModal(data.code, function(resolve, e){
+                        openWebAgmentModal(data.code, function (resolve, e) {
                             $scope.register(formName, 'is_agree');
                             layer.close(resolve.layIndex)
                         })
@@ -260,10 +261,10 @@
                             btns: {},
                             btnsClass: 'account_login__layer-btns'
                         }
-                        obj.btns[lang.text('tigerWitID.login.goLogin')] = function(){
-                            $state.go('account.subpage', {subpage: 'login'});
+                        obj.btns[lang.text('tigerWitID.login.goLogin')] = function () {
+                            $state.go('account.subpage', { subpage: 'login' });
                         }
-                        obj.btns[lang.text("tigerWitID.cancel")] = function(){};
+                        obj.btns[lang.text("tigerWitID.cancel")] = function () { };
                         $layer(obj)
                     } else {
                         layer.msg(data.message);
@@ -278,7 +279,7 @@
                 layer.msg(lang.text('register11')); //请输入密码
                 return;
             }
-            if($scope.account.step1Password !== $scope.account.step2Password) {
+            if ($scope.account.step1Password !== $scope.account.step2Password) {
                 layer.msg(lang.text('tigerWitID.login.passwordsEnteredDoNotMatch'));     //两次输入的密码不一致
                 return;
             }
@@ -292,32 +293,32 @@
 
                 if (data.is_succ) {
                     $timeout(function () {
-                        $scope.$emit('global.openDredgeMdl', {position: 'register'});
+                        $scope.$emit('global.openDredgeMdl', { position: 'register' });
                         // lang.globalOrCn($scope.area_id);
                         // $state.go('space.center');
-                        window.location.href="/space/#/center";
+                        window.location.href = "/space/#/center";
                     }, 100);
-                    
+
                 } else {
                     layer.msg(data.message);
                 }
             });
         };
-        $scope.skipSetPass = function(){
-            $scope.$emit('global.openDredgeMdl', {position: 'register'});
+        $scope.skipSetPass = function () {
+            $scope.$emit('global.openDredgeMdl', { position: 'register' });
             // lang.globalOrCn($scope.area_id);
             // $state.go('space.center');
-            window.location.href="/space/#/center";
+            window.location.href = "/space/#/center";
         }
 
         // 获取验证码倒计时
-        function countDown (codeType) {
+        function countDown(codeType) {
             $scope.codeBtnStatus[codeType].count = true;
             $scope.codeBtnStatus[codeType].msg = 60;
 
             $interval.cancel($scope.codeBtnStatus[codeType].timer);
             $scope.codeBtnStatus[codeType].timer = $interval(function () {
-                $scope.codeBtnStatus[codeType].msg --;
+                $scope.codeBtnStatus[codeType].msg--;
 
                 if ($scope.codeBtnStatus[codeType].msg <= 0) {
                     $scope.codeBtnStatus[codeType].count = false;
@@ -328,8 +329,8 @@
         }
 
         // 验证手机号与区号
-        function showPhoneVel () {
-            if(!($scope.account.phoneArea.value)){
+        function showPhoneVel() {
+            if (!($scope.account.phoneArea.value)) {
                 layer.msg(lang.text("tigerWitID.login.selectAreaCode"))
                 return false;
             }
@@ -341,7 +342,7 @@
         }
 
         // 验证邮箱
-        function showEmaliVel () {
+        function showEmaliVel() {
             if (!($scope.account.emailText)) {
                 layer.msg(lang.text("tigerWitID.login.enterEmail"));     //请输入邮箱
                 return false;

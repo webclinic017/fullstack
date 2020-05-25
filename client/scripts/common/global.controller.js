@@ -244,15 +244,22 @@
             var search_source = session_source ? dealUserSource(JSON.parse(session_source)) : dealUserSource();
             return search_source;
         }
+        var dealUserSourceOne = 1;   // 进入页面后只执行一次，，刷新后再执行
         function dealUserSource (source) {
             var sourceReg = /^DW_|^D_|^R_/i;
             var search_arr = fun.getSearch();
+            var bol = false;
             var search_source = source || {};
             $.each(search_arr, function (index, value) {
                 if (sourceReg.test(index)) {
+                    bol = true;
                     search_source[index] = value;
                 }
             });
+            if(bol && dealUserSourceOne == 1){
+                setBrowserID(true);
+            }
+            dealUserSourceOne++;
             search_source = Object.keys(search_source).length ? search_source : undefined;
             return search_source;
         }

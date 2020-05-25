@@ -282,6 +282,7 @@
                 publicRequest('regOrLogin', 'POST', {
                     ib_pid: oReg.search_arr.ib_pid || $.cookie('ib_pid') || null,
                     invite_status: $.cookie('invite_status') || null,
+                    browser_id: $.cookie('BROWSER_ID') || null,
                     account: $("#telephone").val() || null,
                     account_type: 1,
                     phone_code: '86',
@@ -313,6 +314,7 @@
                         
                         setGtagUserId(data.data.user_code)
                         setTimeout(function () {
+                            toGtagEvent('phone_register_success_web');
                             window.location.href = '/space/#/center?type=new';
                         }, 100);
                     } else {

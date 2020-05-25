@@ -22,7 +22,7 @@
                     </div>
                 </div>
                 <div class="" ng-if="!master.is_copy">
-                    <button class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient" ng-click="toCopy()">
+                    <button class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient" ng-click="[toCopy(), toGtagEvent('click_copy_star_button_web', {belong: 'tigerwit'})]">
                         {{ master.bonus_amount ? (lang.text("tigerWitID.master.copyGet1") + master.bonus_amount + lang.text("tigerWitID.master.copyGet2")) : lang.text('tigerWitID.copy') }}
                     </button>
                 </div>

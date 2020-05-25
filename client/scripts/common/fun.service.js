@@ -6,14 +6,14 @@
 
     fun.$inject = ['$location'];
 
-    function fun ($location) {
+    function fun($location) {
 
         var fun = {
             /*获取Url查询字段 返回Object*/
-            getSearch: function(type) {
+            getSearch: function (type) {
                 // console.log($location.search())
                 var url = location.search || location.href.slice(location.href.indexOf('?'));
-                if(type === 'string'){
+                if (type === 'string') {
                     return url;
                 }
                 /*获取url中"?"符后的字串*/
@@ -33,6 +33,23 @@
                     return url + '?'
                 } else {
                     return url + '&'
+                }
+            },
+            /**
+            *防抖函数
+            *@param fn 事件触发的操作
+            *@param delay 多少毫秒内连续触发事件，不会执行
+            *@returns {Function}
+            */
+           debounce: function (fn, delay) {
+                var timer = null;
+                return function () {
+                    var self = this,
+                        args = arguments;
+                    timer && clearTimeout(timer);
+                    timer = setTimeout(function () {
+                        fn.apply(self, args);
+                    }, delay);
                 }
             },
             // 复制text到剪切板

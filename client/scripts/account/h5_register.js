@@ -430,6 +430,7 @@
                 var params = {
                     ib_pid: oReg.search_arr.ib_pid || $.cookie('ib_pid') || null,
                     invite_status: $.cookie('invite_status') || null,
+                    browser_id: $.cookie('BROWSER_ID') || null,
                     account: $("#telephone").val() || null,
                     account_type: 1,
                     phone_code: areaCode || '86',
@@ -461,6 +462,7 @@
                     // console.log(data);
                     if (!data) return;
                     if (data.is_succ) {
+                        setGtagUserId(data.data.user_code)
 
                         /*跳转到注册成功页面*/
                         if (window.location.pathname.indexOf('t35') >= 0) {
