@@ -16142,7 +16142,7 @@ module.exports = {
         "id": "Trading dipasar manapun",
         "es": "Opere los mercados que busca",
         "pt-BR": "Negocie nos mercados que você quiser",
-        "ar": "تمتع بالتداول بتقنية بلوكتشاين"
+        "ar": "تمتع بالتداول بتقنية  بلوكشين  "
     },
     "newhome_1_1": {
         "zh": "你需要的交易方式",
@@ -16162,7 +16162,7 @@ module.exports = {
         "id": "Didukung oleh teknologi blockchain",
         "es": "Powered by blockchain",
         "pt-BR": "Powered by blockchain",
-        "ar": "تداول بثقة وشفافية على أسواقك المفضلة"
+        "ar": "تداول بثقة وشفافية "
     },
     "newhome_2": {
         "zh": "打开官网或APP，开始交易。",
