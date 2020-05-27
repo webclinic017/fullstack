@@ -177,6 +177,7 @@
   }
   @include e(payment_wrapper) {
     background-color: #ffd521;
+    padding-bottom: 40px;
     h3 {
       margin: 0px auto;
       padding: 70px 0px;
@@ -186,7 +187,6 @@
     .tips {
       text-align: center;
       opacity: .3;
-      padding: 40px 0px;
     }
   }
   @include e(payment) {

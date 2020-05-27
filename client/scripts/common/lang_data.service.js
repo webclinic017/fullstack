@@ -5806,14 +5806,14 @@
                         "ar": "إدارة الحساب"
                     },
                     "addThirdAccount": {
-                        "zh": "添加账户",
-                        "en": "Add the third-party account",
-                        "vi": "Thêm vào tài khoản bên thứ 3",
-                        "zh-Hant": "添加賬戶",
-                        "id": "Tambah Rekening pihak ke tiga",
-                        "es": "Añadir la cuenta de terceros",
-                        "pt-BR": "Adicione conta de terceiros",
-                        "ar": "أضف حساب الطرف الثالث"
+                        "zh": "添加其它收款账户",
+                        "en": "Add Alternative Payment Methods",
+                        "vi": "Thêm các phương thức thanh toán khác",
+                        "zh-Hant": "添加其它收款賬戶",
+                        "id": "Tambahkan Metode Pembayaran Alternatif",
+                        "es": "Agregar métodos de pago alternativos",
+                        "pt-BR": "Adicionar métodos de pagamento alternativos",
+                        "ar": "أضف طرق دفع بديلة"
                     },
                     "deleteThirdAccount": {
                         "zh": "删除账户",

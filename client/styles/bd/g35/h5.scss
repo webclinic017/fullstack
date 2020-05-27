@@ -146,6 +146,7 @@
   }
   @include e(payment_wrapper) {
     background-color: #ffd521;
+    padding-bottom: px2rem(60);
     h3 {
       padding: px2rem(64) 0;
       text-align: center;
@@ -157,7 +158,6 @@
       font-size: px2rem(24);
       text-align: center;
       opacity: .3;
-      padding: px2rem(10) 0 px2rem(60);
     }
   }
   @include e(payment) {
