@@ -743,7 +743,7 @@
                 "id": "Kata sandi",
                 "es": "Ingreso contraseña",
                 "pt-BR": "Senha de acesso",
-                "ar": "كلمة مرور تسجيل الدخول"
+                "ar": "كلمة المرور"
             },
             "actLogin3": {
                 "zh": "请输入手机号码",
@@ -773,7 +773,7 @@
                 "id": "Saya menerima ",
                 "es": "Acepto el ",
                 "pt-BR": "Eu aceito que",
-                "ar": "أنا أقبل"
+                "ar": "أوافق على"
             },
             "actLogin11": {
                 "zh": "客户协议",
@@ -1055,7 +1055,7 @@
                         "id": "Kata sandi",
                         "es": "Ingreso contraseña",
                         "pt-BR": "Senha de acesso",
-                        "ar": "كلمة مرور تسجيل الدخول"
+                        "ar": "كلمة المرور"
                     },
                     "enterPhoneNumber": {
                         "zh": "请输入手机号",
@@ -3583,7 +3583,7 @@
                         "id": "Akun Master",
                         "es": "Cuenta Master",
                         "pt-BR": "Conta Princ",
-                        "ar": "حساب الأستاذ"
+                        "ar": "حساب المتداول الموهوب"
                     },
                     "masterLevelCommission": {
                         "zh": "高手等级&佣金",
@@ -3923,7 +3923,7 @@
                         "id": "Sao Chép",
                         "es": "Cuenta copy",
                         "pt-BR": "Conta de cópia",
-                        "ar": "نسخ حساب"
+                        "ar": "حساب نسخ"
                     },
                     "enterAccountName": {
                         "zh": "请输入账号名称",
@@ -4133,7 +4133,7 @@
                         "id": "Sao Chép",
                         "es": "Cuenta copy",
                         "pt-BR": "Conta de cópia",
-                        "ar": "نسخ حساب"
+                        "ar": "حساب نسخ"
                     },
                     "tradingAccountg": {
                         "zh": "交易账号",
@@ -6285,7 +6285,7 @@
                         "id": "Tambah rekening pengiriman uang",
                         "es": "Añadir cuenta de transferencia bancaria",
                         "pt-BR": "Adicionar conta para transferência bancária",
-                        "ar": "أضف حساب التحويل المصرفي"
+                        "ar": "إضافة حساب التحويل المصرفي"
                     },
                     "clickDelete": {
                         "zh": "点击删除账户",
@@ -10307,7 +10307,7 @@
                         "id": "Akun Master",
                         "es": "Cuenta Master",
                         "pt-BR": "Conta Princ",
-                        "ar": "حساب الأستاذ"
+                        "ar": "حساب المتداول الموهوب"
                     },
                     "copyAccount": {
                         "zh": "跟单账号",
@@ -10317,7 +10317,7 @@
                         "id": "Sao Chép",
                         "es": "Cuenta Copy",
                         "pt-BR": "Conta de cópia",
-                        "ar": "نسخ حساب"
+                        "ar": "حساب نسخ"
                     },
                     "accountAccess": {
                         "zh": "账号权限",
@@ -10799,7 +10799,7 @@
                         "id": "Harga Pending tidak boleh kosong",
                         "es": "El precio pendiente no puede estar vacío",
                         "pt-BR": "O valor pendente não pode estar vazio",
-                        "ar": "السعر المعلق لا يجوز أن يكون فارغًا"
+                        "ar": "سعر الأمر المعلق لا يمكن أن يكون فارغًا"
                     },
                     "tip3": {
                         "zh": "您的账户尚未通过认证审核，请先完善资料。",
@@ -10849,7 +10849,7 @@
                         "id": "S/L, T/P tidak valid",
                         "es": "S/L, T/P inválidos",
                         "pt-BR": "S/L, T/P são inválidos",
-                        "ar": "إيقاف الخسارة وجني الربح غير صالحان"
+                        "ar": "إيقاف الخسارة وجني الأرباح غير صالحين"
                     },
                     "tip6": {
                         "zh": "止损价格无效",
@@ -10859,7 +10859,7 @@
                         "id": "S/L Tidak valid",
                         "es": "S/L inválido",
                         "pt-BR": "S/L é inválido",
-                        "ar": "إيقاف الخسارة غير صالح"
+                        "ar": "إيقاف خسارة غير صالح"
                     },
                     "tip7": {
                         "zh": "挂单价必须远离市价至少50点",
@@ -12786,7 +12786,7 @@
                         "ar": "(انتهت صلاحية الشهادة)"
                     }
                 },
-                "liverpool":{
+                "liverpool": {
                     "floatingRate": {
                         "zh": "浮动收益率",
                         "en": "Floating rate of return",
@@ -13016,7 +13016,7 @@
                     "id": "Tambah",
                     "es": "Añadir",
                     "pt-BR": "Adicionar",
-                    "ar": "أضف"
+                    "ar": "إضافة"
                 },
                 "cancel": {
                     "zh": "取消",
@@ -13855,7 +13855,7 @@
                     "es": indexBasePath + "/bd/liverpool/liverpool-sm.png",
                     "pt-BR": indexBasePath + "/bd/liverpool/liverpool-sm.png",
                     "ar": indexBasePath + "/bd/liverpool/liverpool-sm-ar.png"
-                } 
+                }
             }
         }, lang_data);
 

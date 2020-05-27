@@ -8,7 +8,7 @@
 
     WebAgreementController.$inject = ['$scope', 'lang'];
 
-    function WebAgreementController ($scope, lang) {
+    function WebAgreementController($scope, lang) {
         $scope.listType = $(".agreement_common").attr("data-list-type");
         var agreementList = {
             legal: {
@@ -29,7 +29,7 @@
                 "id": "Introduction,Acknowledgement,Scope of Client Agreement,Commencement of the Client Agreement,Interpretation of Terms,Provision of Services,Client Classification,Capacity,Assurances and Guarantees,Client Money,Charges,Liability,Compensation Scheme,Indemnity,Duration of the Client Agreement,Notifications and Amendments to the Client Agreement,Termination and Default,Risk Disclosure,Confidentiality and Personal Data Protection,Recordings of Telephone Calls,Conflicts of Interest,Direct Contact Consent,Representations and Warranties,Force Majeur Event,Governing Law, Jurisdiction and Dispute Resolution,Miscellaneous,FAQs,Additional Contacts",
                 "es": "Introducción,Reconocimientos,Alcance Acuerdo Cliente,Inicio Acuerdo de Cliente,Interpretación de los Términos,Provisión de Servicios,Clasificación Clientes,Capacidad,Aseveraciones y Garantías,Dinero Clientes,Cargos,Responsabilidad,Esquema de Compensacion,Indemnización,Duración Acuerdo de Cliente,Notificaciones y modificaciones al acuerdo del cliente,Terminación y Default,Divulgación del Riesgo,Confidencialidad y Protección Datos Personales,Grabaciones de Llamadas Telefónicas,Conflictos de Interés,Consentimiento Contacto Directo,Representaciones y Garantías,Evento de Fuerza Mayor,Jurisdicción, Ley Gobierna y Resolución Disputas,Varios,PP.FF,Adicional Contacts",
                 "pt-BR": "Introdução,Reconhecimento,Âmbito do Contrato do Cliente,Início do Contrato de Cliente,Interpretação dos Termos,Fornecimento de serviços,Classificação de clientes,Capacidade,Garantias,Dinheiro do Cliente,Cobranças,Responsabilidade,Esquema de compensação,Indenização,Duração do contrato do cliente,Notificações e alterações ao contrato de cliente,Rescisão e Default,Divulgação de Risco,Confidencialidade e Proteção de Dados Pessoais,Gravações de Chamadas Telefônicas,Conflitos de Interesse,Consentimento de Contato Direto,Representações e Garantias,Evento de Força Maior,Lei Aplicável, Jurisdição e Resolução de Conflitos,Diversos,FAQs,Contatos Adicionais",
-                "ar": "مقدمة,إقرار,نطاق اتفاقية العميل,بدء اتفاقية العميل,تفسير المصطلحات,تقديم الخدمات,تصنيف العميل,الصفة,الكفالات والضمانات,أموال العميل,التكاليف,المسؤولية,برنامج التعويضات,التعويضات,مدة اتفاقية العميل,الإخطارات والتعديلات على اتفاقية العميل,الإنهاء والتقصير,الإفصاح عن المخاطر,السرية وحماية البيانات الشخصية,تسجيلات المكالمات الهاتفية,تضارب المصالح,الموافقة على الاتصال المباشر,الإقرارات والضمانات,أحداث القوة القاهرة,القانون الحاكم والاختصاص القضائي وحل المنازعات,متفرقات,الأسئلة المتكررة,بيانات اتصال إضافية"
+                "ar": "مقدمة,إقرار,نطاق اتفاقية العميل,بدء اتفاقية العميل,تفسير المصطلحات,تقديم الخدمات,تصنيف العميل,الصفة,الكفالات والضمانات,أموال العميل,التكاليف,المسؤولية,برنامج التعويضات,التعويضات,مدة اتفاقية العميل,الإخطارات والتعديلات على اتفاقية العميل,الإنهاء والتقصير,الإفصاح عن المخاطر,السرية وحماية البيانات الشخصية,تسجيلات المكالمات الهاتفية,تضارب المصالح,الموافقة على الاتصال المباشر,الإقرارات والضمانات,أحداث القوة القاهرة,القانون الحاكم والاختصاص القضائي وحل المنازعات,متفرقات,أسئلة شائعة,بيانات اتصال إضافية"
             },
             risk: {
                 zh: "本声明的范围,适当性评估,CFD 的性质,价格和成本,市场状况、所需保证金、杠杆和强平水平,外汇和其他相关风险,技术风险,客户资金,不作建议,过往业绩,更多信息",
@@ -59,7 +59,7 @@
                 "id": "Introduction,Acknowledgement,Scope of the Terms and Conditions of Business,Interpretation of Terms,Electronic Trading,Instructions and Orders,Refusal to Execute Orders,Corporate Actions,Complaints Handling Procedure,Miscellaneous,FAQs,Additional Contacts",
                 "es": "Introducción,Reconocimientos,Alcance de los Términos y Condiciones del Negocio,Interpretación de Términos,Trading Electrónico,Órdenes e Instrucciones,Negativa a Ejecutar Órdenes,Acciones Corporativas,GESTIÓN PROCEDIMIENTO RECLAMACIONES,Miscelánea,PP.FF,Contactos adicionales",
                 "pt-BR": "Introdução,Reconhecimento,Âmbito dos Termos e Condições de Negócio,Interpretação dos Termos,Negociação Eletrônica,Instrucões e Ordens,Recusa a Executar Ordens,Ações corporativas,Procedimento de Tratamento de Reclamações,Diversos,FAQs,Contatos Adicionais",
-                "ar": "مقدمة,إقرار,نطاق شروط وأحكام العمل,تفسير المصطلحات,التداول الإلكتروني,التعليمات والأوامر,رفض تنفيذ الأوامر,إجراءات الشركات,إجراءات التعامل مع الشكاوي,متفرقات,الأسئلة المتكررة,جهات اتصال إضافية"
+                "ar": "مقدمة,إقرار,نطاق شروط وأحكام العمل,تفسير المصطلحات,التداول الإلكتروني,التعليمات والأوامر,رفض تنفيذ الأوامر,إجراءات الشركات,إجراءات التعامل مع الشكاوي,متفرقات,أسئلة شائعة,جهات اتصال إضافية"
             },
             responsibly: {
                 zh: "负责任地交易——理解涉及的风险,如何利用杠杆优势",
@@ -79,7 +79,7 @@
                 "id": "Functions or strategies to mitigate risks,Price,Information delay,Spread Fluctuations,Slippage,Exchange rate gap,Risk of System Quotation (Mispricing),Arbitrage and control,Price manipulation,Trade and third-party participation,Platform Trading Hours,Circulation,Margin call,Risks over weekends,Online trading,Commission charge,Application for abnormal conditions,The announcement,FAQs,Customer Support Department,Additional Contacts",
                 "es": "Funciones y estrategias para mitigar riesgos,Precios,Retraso información,Spread Fluctuaciones,Slippage,Gap tipos de cambio,Riesgos del Sistema Cotizaciones (Mispricing),Arbitraje y control,Manipulación precios,Trade y participación terceros,Horarios Plataforma Trading,Circulación,Margen llamada,Riesgos fines de semana,Trading Online,Cargo comisiones,Solicitud condiciones anormales,El anuncio,PP.FF,Departamento de Soporte al Cliente,Contactos Adicionales",
                 "pt-BR": "Funções ou estratégias para mitigar riscos,Preço,Atraso da informação,Flutuações Spread,Deslizamento,Diferença de taxa de câmbio,Risco de cotação do sistema (Mispricing),Arbitragem e controle,Manipulação de preços,Comércio e participação de terceiros,Horário de negociação da plataforma,Circulação,Chamada de margem,Riscos nos finais de semana,Comércio on-line,Comissão responsável,Aplicação para condições anormais,O anúncio,FAQs,Departamento de Suporte ao Cliente,Contatos Adicionais",
-                "ar": "وظائف وإستراتيجيات لتقليل المخاطر,السعر,تأخير المعلومات,تقلبات فروق الأسعار,الانزلاق,فجوة سعر الصرف,مخاطر أسعار النظام (سوء التسعير),المراجحة والتحكم,التلاعب في الأسعار,التداول ومشاركة الأطراف الثالثة,مواعيد التداول على المنصة,التداول,طلب تغطية الهامش,مخاطر عطلات نهاية الأسبوع,التداول عبر الإنترنت,تكاليف العمولة,تطبيق الظروف غير الطبيعية,الإعلان,الأسئلة المتكررة,إدارة دعم العملاء,بيانات اتصال إضافية"
+                "ar": "وظائف وإستراتيجيات لتقليل المخاطر,السعر,تأخير المعلومات,تقلبات فروق الأسعار,الانزلاق,فجوة سعر الصرف,مخاطر أسعار النظام (سوء التسعير),المراجحة والتحكم,التلاعب في الأسعار,التداول ومشاركة الأطراف الثالثة,مواعيد التداول على المنصة,التداول,طلب تغطية الهامش,مخاطر عطلات نهاية الأسبوع,التداول عبر الإنترنت,تكاليف العمولة,تطبيق الظروف غير الطبيعية,الإعلان,أسئلة شائعة,إدارة دعم العملاء,بيانات اتصال إضافية"
             },
             statement: {
                 zh: "客户声明,TigerWit交易平台风险提示及免责条款",
@@ -99,7 +99,7 @@
                 "id": "Introduction,Categorization Criteria,Request for Different Categorization,Protection Rights,FAQs,Contacts",
                 "es": "Introducción,Criterios Categorización,Solicitud Categorización Diferente,Derechos de Protección,PP.FF,Contactos",
                 "pt-BR": "Introdução,Critérios de categorização,Pedido de Categorização Diferente,Direitos de Proteção,FAQs,Contatos",
-                "ar": "مقدمة,معايير التصنيف,طلب الحصول على تصنيف مختلف,حقوق الحماية,الأسئلة المتكررة,بيانات الاتصال"
+                "ar": "مقدمة,معايير التصنيف,طلب الحصول على تصنيف مختلف,حقوق الحماية,أسئلة شائعة,بيانات الاتصال"
             },
             funds: {
                 zh: "资金隔离,我们采取的其他措施",
@@ -119,7 +119,7 @@
                 "id": "Introduction,Scope and Services,Best Execution,Execution Venues,Monitor and Review,Client Consent,Important Information,FAQs,Additional Contacts",
                 "es": "Introducción,Alcance y Servicios,Mejor Ejecución,Venues Ejecución,Monitorizar y Revisar,Consentimiento del Cliente,Información Importante,PP.FF,Contactos Adicionales",
                 "pt-BR": "Introdução,Âmbito e Serviços,Melhor Execução,Locais de Execução,Monitorar e Rever,Consentimento do Cliente,Informação importante,FAQs,Contatos Adicionais",
-                "ar": "مقدمة,النطاق والخدمات,التنفيذ الأمثل,أماكن التنفيذ,الرقابة والمراجعة,موافقة العميل,معلومات مهمة,الأسئلة المتكررة,بيانات اتصال إضافية"
+                "ar": "مقدمة,النطاق والخدمات,التنفيذ الأمثل,أماكن التنفيذ,الرقابة والمراجعة,موافقة العميل,معلومات مهمة,أسئلة شائعة,بيانات اتصال إضافية"
             },
             conflicts: {
                 zh: "序言,政策范围,识别利益冲突,管理利益冲突,披露,常见问题解答,其他联系人",
@@ -129,7 +129,7 @@
                 "id": "Introduction,Scope of the Policy,Identification of Conflicts of Interest,Managing Conflicts of Interest,Disclosure,Frequently Asked Questions,Additional Contacts",
                 "es": "Introducción,Alcance de la Política,Identificación de Conflictos de Interés,Gestionando Conflictos de Interés,Divulgación,Preguntas Frecuentes,Contactos Adicionales",
                 "pt-BR": "Introdução,Escopo da Política,Identificação de Conflitos de Interesse,Gerenciando Conflitos de Interesse,Divulgação,perguntas frequentes,Contatos Adicionais",
-                "ar": "مقدمة,نطاق السياسة,تحديد تضارب المصالح,إدارة تضارب المصالح,الإفصاح,الأسئلة المتكررة,بيانات اتصال إضافية"
+                "ar": "مقدمة,نطاق السياسة,تحديد تضارب المصالح,إدارة تضارب المصالح,الإفصاح,أسئلة شائعة,بيانات اتصال إضافية"
             },
             complaint: {
                 zh: "投诉程序概述,序言,条款解释,投诉处理程序的范围,投诉的定义,程序,常见问题,联系方式",
@@ -139,7 +139,7 @@
                 "id": "SUMMARY OF COMPLAINTS PROCEDURE,Introduction,INTERPRETATION OF TERMS,SCOPE OF THE COMPLAINTS HANDLING PROCEDURE,DEFINITION OF A COMPLAINT,PROCEDURE,FAQs,CONTACTS",
                 "es": "SUMARIO PROCEDIMIENTO RECLAMACIONES,Introducción,INTERPRETACIÓN DE LOS TÉRMINOS,ALCANCE PROCEDIMIENTO RESOLUCIÓN RECLAMACIONES,DEFINICIÓN DE UNA QUEJA,PROCEDIMIENTO,PP.FF,CONTACTOS",
                 "pt-BR": "RESUMO DO PROCEDIMENTO DE RECLAMAÇÕES,Introdução,Interpretação dos Termos,ÂMBITO DO PROCEDIMENTO DE MANIPULAÇÃO DE RECLAMAÇÕES,DEFINIÇÃO DE UMA QUEIXA,PROCEDIMENTO,FAQs,Contatos",
-                "ar": "ملخص إجراءات الشكاوي,مقدمة,تفسير المصطلحات,نطاق إجراءات التعامل مع الشكاوي,تعريف الشكوى,الإجراءات,الأسئلة المتكررة,جهات الاتصال"
+                "ar": "ملخص إجراءات الشكاوي,مقدمة,تفسير المصطلحات,نطاق إجراءات التعامل مع الشكاوي,تعريف الشكوى,الإجراءات,أسئلة شائعة,جهات الاتصال"
             },
             cookieLocal: {
                 zh: "运营公司情况,承诺,申请,保密性和保护客户个人数据,披露您的信息,收集的个人信息类型,选择/选择退出,Cookie,个人信息的安全性和保护措施,访问个人身份信息,法律免责声明,本隐私声明的变更,查询",
@@ -163,17 +163,17 @@
                     $scope.showScrollTop = false;
                 } else {
                     $scope.showScrollTop = true;
-                }   
+                }
             });
         });
 
-        function setTabList () {
+        function setTabList() {
             // console.log(lang.currentLanguage());
             var lst = agreementList[$scope.listType][lang.currentLanguage()] ? agreementList[$scope.listType][lang.currentLanguage()].split(',') : agreementList[$scope.listType]["en"].split(',');
             angular.forEach(lst, function (value, index) {
                 $scope.tabList.push({
                     title: value,
-                    link: 'agreement'+index
+                    link: 'agreement' + index
                 });
             });
         }

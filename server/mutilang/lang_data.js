@@ -1,3 +1,15 @@
+// 若要使用cms中语言代码转excel的功能；
+// 限定文件大小： 4M（后台定，防止失败）；
+// 文件格式
+// {
+//     "nodejs": {},
+//     "angularjs": {},
+//     "h5": {}
+// }
+// 上传最新代码时需要先清空语言数据库表；
+// 转成excel时需要重新上传最新的语言数据；
+// 上传excel时需要重新上传最新的语言数据（excel是覆盖）；
+// 语言翻译途中翻译的当前语言若修改需记录（防止被翻译好的excel覆盖）
 module.exports = {
     "_comment_data": {
         "en": "this is comments, No translation required",
@@ -97,7 +109,7 @@ module.exports = {
         "id": "FAQ",
         "es": "PP.FF",
         "pt-BR": "FAQ",
-        "ar": "الأسئلة المتكررة"
+        "ar": "أسئلة شائعة"
     },
     "login": {
         "en": "Login",
@@ -2217,7 +2229,7 @@ module.exports = {
         "id": "Dengan menggunakan teknologi yang kuat dan dirancang atas dasar keterbukaan, kredibilitas dan Integritas, TigerWIt menawarkan pengalaman transaksi di pasar dengan kemampuan yang berbeda dengan yang lainna",
         "es": "TigerWit ofrece a sus clientes la posibilidad de acceder a los mercados y operar con una infraestructura tecnológica vanguardista inspirada en una filosofía de transparencia, credibilidad e integridad. ",
         "pt-BR": "Com um forte núcleo tecnológico contruído com a filosofia de transparência, credibilidade e integridade, TigerWit oferece aos seus clientes capacidades excepcionais de negociar nos mercados.",
-        "ar": "توفر TigerWit لعملائها قدرات هائلة للتداول في الأسواق من خلال بنية تحتية تكنولوجية قوية قائمة على فلسفة الشفافية والمصداقية والنزاهة."
+        "ar": "توفر TigerWit لعملائها إمكانيات غير اعتيادية للتداول في الأسواق من خلال بنية تكنولوجية قوية قائمة على فلسفة الشفافية والمصداقية والنزاهة."
     },
     "aboutb_8": {
         "zh": " ",
@@ -2227,7 +2239,7 @@ module.exports = {
         "id": "Para pendiri TigerWit merupakan individu yang memiliki latar belakang dan pengalaman yang sukses serta perjalanan yang panjang dimana mereka berhasil menggabungkan sekelompok tim yang profesional dan berpengalaman di dunia valuta asing, CFD, spread betting, peraturan, manajemen investasi, penelitian dan pengembangan platform online dan penjualan dan pemasaran global.",
         "es": "Los fundadores de Tigerwit poseen una dilatada trayectoria profesional y han aglutinado un equipo de expertos con diversos backgrounds en trading Forex, CFDs, spread betting, investment management, Investigación y Desarrollo de plataformas de trading online y ventas & marketing globales. ",
         "pt-BR": "Os fundadores da TigerWit são indivíduos com vasta experiência e uma longa história de conquistas, que juntam um time de profissionais com diversos históricos acadêmicos e experiência em negociar Forex, CFD e propagação de apostas, conformidade regulatória, gerenciamento de investimento, pesquisa e desenvolvimento de plataformas online, vendas globais e marketing.",
-        "ar": "تأسست TigerWit على يد أشخاص يتمتعون بخبرة كبيرة وسجل حافل بالنجاحات مع تاريخ طويل من الإنجازات، ويشكلون معًا فريقًا من المحترفين الذين لديهم خلفيات أكاديمية وعملية متنوعة ويمتلكون خبرة متميزة في تداول الفوركس وعقود الفروقات والمراهنة على فروق الأسعار  والامتثال للهيئات الرقابية والتنظيمية وإدارة الاستثمار والأبحاث والتطوير للمنصات الإلكترونية والمبيعات والتسويق على المستوى العالمي."
+        "ar": "تأسست TigerWit على يد أشخاص يتمتعون بخبرة كبيرة وسجل حافل بالنجاحات مع تاريخ طويل من الإنجازات، ويشكلون معًا فريقًا من المحترفين يملكون مؤهلات أكاديمية وعملية متنوعة ويمتلكون خبرة متميزة في تداول الفوركس والعقود مقابل الفروقات والامتثال للهيئات الرقابية والتنظيمية وإدارة الاستثمار والأبحاث والتطوير للمنصات الإلكترونية والمبيعات والتسويق على المستوى العالمي."
     },
     "aboutb_9": {
         "zh": "关于我们",
@@ -2377,7 +2389,7 @@ module.exports = {
         "id": "TigerWit menawarkan akun transaksi mandiri, penasehat umum dan layanan eksekusi transaksi yang diberikan melalui platform trading online via penyedia likuiditas.  ",
         "es": "TigerWit ofrece cuentas de trading, general advisory y servicios de ejecución de trading proporcionados vía los proveedores de liquidez de la plataforma online. Los servicios financieros y actividades comerciales autorizadas específicamente incluyen: ",
         "pt-BR": "A TigerWit oferece contas auto dirigidas, assessoria geral e serviços de execução de negócios feitsa através da plataforma online através de provedores de liquidez. Atividades autorizadas de serviços específicos financeiros da TigerWit incluem:",
-        "ar": "توفر TigerWit حسابات التداول التي يديرها العملاء أنفسهم بالإضافة إلى تقديم خدمات الاستشارات العامة وخدمات تنفيذ أوامر التداول من خلال مصتها للتداول عبر الإنترنت عبر مزودي السيولة.  وتتضمن الخدمات المالية والأنشطة التجارية المصرح لشركة TigerWit بممارستها ما يلي:"
+        "ar": "توفر TigerWit حسابات التداول التي يديرها العملاء أنفسهم بالإضافة إلى تقديم خدمات الاستشارات العامة وخدمات تنفيذ أوامر التداول من خلال مع مزودي السيولة من خلال منصة التداول الخاصة بها. وتتضمن الخدمات المالية والأنشطة التجارية المصرح لشركة TigerWit بممارستها ما يلي:"
     },
     "about_7": {
         "zh": "1.作为代理人或委托人处理外汇、差价合约、指数、大宗商品和衍生品；",
@@ -2387,7 +2399,7 @@ module.exports = {
         "id": "Berdagang sebagai agen atau prinsipal di Valas, CFD, indeks, komoditas dan turunannya;",
         "es": "Actuar como agente o principal en Forex, CFDs, indices, commodities y derivados;",
         "pt-BR": "Negociando como agente ou subordinante, em Forex, CFDs, índices, commodities e derivados;",
-        "ar": "التعامل بوصفها وكيلاً أو طرفًا رئيسيًا، في عمليات تداول  الفوركس وعقود الفروقات والمؤشرات والسلع والمشتقات؛"
+        "ar": "التعامل بوصفها وكيلاً أو طرفًا رئيسيًا، في عمليات تداول العملات الأجنبية (فوركس) والعقود مقابل الفروقات والمؤشرات والسلع والمشتقات؛"
     },
     "about_8": {
         "zh": "2.安排包含外汇、差价合约、指数、大宗商品和衍生品在内的证券交易；",
@@ -2397,7 +2409,7 @@ module.exports = {
         "id": "Atur transaksi di dalam sekuritas termasuk Valas, CFD, indeks, komoditas dan turunannya; ",
         "es": "Contratos para securities incluyendo Forex, CFDs, indices, commodities y derivados;",
         "pt-BR": "Fechando acordos em títulos incluindo Forex, CFDs, índices, commodities e derivados;",
-        "ar": "ترتيب التداول في الأوراق المالية، بما في ذلك الفوركس وعقود الفروقات والمؤشرات والسلع والمشتقات؛"
+        "ar": "ترتيب التداول في الأوراق المالية، بما في ذلك العملات الأجنبية (فوركس) والعقود مقابل الفروقات والمؤشرات والسلع والمشتقات؛"
     },
     "about_9": {
         "zh": "3.酌情管理证券；",
@@ -2417,7 +2429,7 @@ module.exports = {
         "id": "Memberikan nasihat di sekuritas",
         "es": "Advising securities.",
         "pt-BR": "Assessoria em títulos.",
-        "ar": "إعطاء المشورة ذات الصلة بالأوراق المالية"
+        "ar": "استشارات الأوراق المالية"
     },
     "about_11": {
         "zh": "外汇、衍生品和差价合约交易的一般建议",
@@ -2427,7 +2439,7 @@ module.exports = {
         "id": "Nasihat umum di Valas, Derivatif dan Contracts for Difference (CFD)",
         "es": "Información genérica Forex, Derivados y Contratos por Diferencias (CFDs)",
         "pt-BR": "Assessoria geral em Forex, Derivados e Contratos por Diferença (CFD)",
-        "ar": "إسداء المشورة العامة بشأن الفوركس والمشتقات وعقود الفروقات (CFDs)."
+        "ar": "استشارات العملات الأجنبية (فوركس) والمشتقات المالية والعقود مقابل الفروقات (CFDs)"
     },
     "about_12": {
         "zh": "TigerWit在非个性化的基础上为专业和零售客户提供一般建议。活动包括一般产品信息，研讨会/网络研讨会，通讯，一般知识和教育。",
@@ -2437,7 +2449,7 @@ module.exports = {
         "id": "TigerWit menyediakan rekomendasi atau saran umum kepada para klien pribadi atau klien besar dalam bentuk laporan informasi produk, seminar, webinar, buletin, pengetahuan umum dan edukasi",
         "es": "TigerWit proporciona asesoramiento general a clientes retail y mayoristas de modo no personalizado. Las actividades incluyen información general de producto, seminarios, webinarios, newsletters, información genérica y educación. ",
         "pt-BR": "A TigerWit providencia assessoria geral para clientes atacadistas e varejistas em uma base não personalizada. Atividades incluem informação geral de produtos, seminários, webinários, newsletters, conhecimento geral e educação.",
-        "ar": "تقدم TigerWit المشورة العامة لعملاء الجملة والتجزئة على أساس غير شخصي. وتشمل الأنشطة التي تقوم بها الشركة توفير المعلومات العامة عن المنتجات، وعقد الحلقات التعليمية والندوات الإلكترونية، وتقديم الرسائل الإخبارية والمعلومات العامة والتعليم."
+        "ar": "تقدم TigerWit الاستشارات العامة لعملاء الجملة والتجزئة على أساس غير شخصي. وتشمل الأنشطة التي تقوم بها الشركة توفير المعلومات العامة عن المنتجات، وعقد الحلقات التعليمية والندوات الإلكترونية، وتقديم الرسائل الإخبارية والمعلومات العامة والتعليم."
     },
     "about_13": {
         "zh": "外汇、衍生品和差价合约的安排和交易",
@@ -2447,7 +2459,7 @@ module.exports = {
         "id": "Atur dan transaksi di Valas, Derivatif, dan Contracts for Difference (CFD)",
         "es": "Contratar y Operar Forex, Derivados y Contratos por Diferencias (CFDs)",
         "pt-BR": "Manuseando e negociando em Forex, Derivados e Contratos por Diferença (CFD)",
-        "ar": "الترتيب والتداول في الفوركس والمشتقات وعقود الفروقات (CFDs)."
+        "ar": "ترتيب وتداول العملات الأجنبية (فوركس) والمشتقات والعقود مقابل الفروقات (CFDs)"
     },
     "about_14": {
         "zh": "TigerWit的在线交易平台通过场外交易代表客户执行交易。差价合约是使用交易平台提供买入和卖出价格的基础资产的金融工具。差价合约以主要货币，指数，贵金属和商品交易。",
@@ -2457,7 +2469,7 @@ module.exports = {
         "id": "Platform perdagangan online TigerWit akan melakukan transaksi perdagangan klien dengan atas nama klien melalui transaksi di pasar OTC. CFD adalah instrumen keuangan yang menawarkan harga beli dan harga jual melalui platform perdagangan. CFD ditransaksikan dalam bentuk Mata Uang utama, indeks, logam mulia dan komoditas",
         "es": "La plataforma online de TigerWit ejecuta los trades de los clientes en su nombre a través de una transacción en los mercados over-the-counter. Los CFDs son productos que replican activos subyacentes, donde los precios de compra y venta son ofrecidos a través de la plataforma online. Los CFDs son operados en los pares majors, indices, metales preciosos y commodities. \n\n",
         "pt-BR": "A plataforma de negócios online da TigerWit executa um negócio de um cliente em nome dele, através de uma transação de mercado às claras. CFDs são instrumento financeiros que utilizam ativos subjacentes com valores de compra e venda oferecidos através da plataforma online. CFDs são negociadas nas maiores moedas, índices, metais preciosos e commodities.",
-        "ar": "تقوم منصة التداول عبر الإنترنت التي توفرها TigerWit بتنفيذ صفقات العميل بالنيابة عن العميل من خلال معاملات السوق المتداولة خارج البورصة.  عقود الفروقات هي أدوات مالية تستخدم الأصول المعنية مع سعر للشراء وسعر للبيع يتم تقديمهما من خلال منصة التداول.  يتم التعامل في عقود الفروقات على العملات الرئيسية والمؤشرات والمعادن النفيسة والسلع."
+        "ar": "تقوم منصة TigerWit للتداول عبر الانترنت بتنفيذ صفقات التداول نيابة عن العميل من خلال أسواق التداول خارج مقصورة البورصة. العقود مقابل الفروقات هي أدوات مالية تستخدم الأصل ذو اصلة بأسعار للبيع والشراء يتم تقديمها من خلال منصة التداول، العقود مقابل الفروقات تتيح التداول على العملات الرئيسية والمؤشرات والمعادن الثمينة والسلع."
     },
     "about_15": {
         "zh": "当市场开放时，每天24小时提供交易，并提供客户支持，语言，电话，聊天和电子邮件。",
@@ -2497,7 +2509,7 @@ module.exports = {
         "id": "Ketika klien diterima, maka informasi rahasia akan dikirimkan kepada klien dan akun akan dibuat secara otomatis.",
         "es": "Una vez el cliente es aceptado, la cuenta del cliente se establece y se proporcionan las credenciales para ingresar. ",
         "pt-BR": "Quando um cliente é aceito, sua conta é estabelecida e credenciais de logins são providenciadas ao cliente.",
-        "ar": "عندما يتم قبول العميل، يتم إنشاء حساب العميل وتقديم بيانات اعتماد تسجيل الدخول إلى العميل."
+        "ar": "عند قبول العميل، يتم إنشاء حساب للعميل وتزويده بيانات تسجيل الدخول."
     },
     "about_18": {
         "zh": "客户资金安全",
@@ -2527,7 +2539,7 @@ module.exports = {
         "id": "Mengapa kami mengerjakannya",
         "es": "Por qué lo hacemos ",
         "pt-BR": "Por que o fazemos",
-        "ar": "لماذا نفعل ذلك"
+        "ar": "مهمتنا"
     },
     "about_21": {
         "zh": "由于交易者有机会获利，自主交易者欣赏投机者对基础资产价格的变动。开户时，客户对账户内的所有资产保留合法和实益的所有权，并自行结算账户。TigerWit的交易平台允许客户访问与传统投资相比相关性较低的工具。",
@@ -2537,7 +2549,7 @@ module.exports = {
         "id": "Biasanya seorang pedagang pribadi senang berspekulasi dengan pergerakan harga. Oleh karena itu, ketika mereka membuka sebuah akun, klien akan langsung memiliki semua produk untuk ditransaksikan di dalam sehingga klien bebas bertransaksi sesuai keinginannya. Platform perdagangan TigerWit memungkinkan klien untuk mengakses instrumen dengan korelasi yang rendah dibandingkan dengan investasi tradisional",
         "es": "Los traders aprecian la especulación en los movimientos en el precio de los activos subyacentes. Al abrirse una cuenta el cliente es el proprietario beneficiario legal de todos los activos de la cuenta y opera bajo su propia discreción. Las plataformas de TigerWit permiten al cliente acceder a instrumentos con baja correlación si lo comparamos con la inversión tradicional. ",
         "pt-BR": "Comerciantes auto dirigidos apreciam especular em movimentos de preços dos ativos subjacentes. Quando abre uma conta, o cliente retem propriedades legais e beneficiárias sobre todos os ativos dentro da conta e negociam os mesmos sob suas próprias bases discritivas. As plataformas de negócios da TigerWit permite que o cliente acesse instrumentos de baixa correlação em comparação aos investimentos tradicionais.",
-        "ar": "المتداولون الذين يقومون بالتداول بأنفسهم يعشقون المضاربة على التحركات في سعر الأصول المعنية.  ومن أجل ذلك، فعند فتح حساب، يحصل العملاء على الملكية القانونية والانتفاعية لجميع الأصول الموجودة في الحساب ويقومون بالتداول على الحساب بأنفسهم بناء على ما يرونه مناسبًا وفقًا لتقديرهم وحدهم دون غيرهم.  وتتيح منصات التداول التي توفرها TigerWit للعملاء الوصول إلى الأدوات المالية ذات الارتباط الضعيف مع بعضها البعض مقارنة مع الاستثمار التقليدي."
+        "ar": "المتداولون الذين يقومون بالتداول بأنفسهم يعشقون المضاربة على التحركات في سعر الأصول ذات الصلة.  ولذلك، عند فتح حساب تداول، يحصل العملاء على الملكية القانونية والانتفاعية لجميع الأصول الموجودة في الحساب ويقومون بالتداول على الحساب بأنفسهم بناء على ما يرونه مناسبًا وفقًا لتقديرهم الخاص بهم.  وتتيح منصات التداول التي توفرها TigerWit للعملاء الوصول إلى الأدوات المالية ذات الارتباط الضعيف مع بعضها البعض مقارنة مع الاستثمار التقليدي."
     },
     "about_22": {
         "zh": "TigerWit提供的主要功能包括：",
@@ -2547,7 +2559,7 @@ module.exports = {
         "id": "Fitur utama dari TigerWIt menawarkan :",
         "es": "Características principales TigerWit incluyen: ",
         "pt-BR": "Aspectos chave oferecidos pela TigerWit incluem:",
-        "ar": "تشمل المزايا الرئيسية لعرض TigerWit ما يلي:"
+        "ar": "المزايا الرئيسية لعروض TigetWit:"
     },
     "about_23": {
         "zh": "波动性风险",
@@ -2557,7 +2569,7 @@ module.exports = {
         "id": "Risiko Volatilitas",
         "es": "Exposición a la volatilidad",
         "pt-BR": "Exposição a volatidade",
-        "ar": "التعرض للتقلبات"
+        "ar": "الانكشاف على تقلبات الأسعار"
     },
     "about_24": {
         "zh": "在当今的市场投资波动性是很重要的。",
@@ -2567,7 +2579,7 @@ module.exports = {
         "id": "Investasi yang dapat mengikuti volatilitas sangat penting dalam kondisi pasar saat ini",
         "es": "Inversiones que puedan navegar entornos de volatilidad son importantes en los mercados hoy en día.",
         "pt-BR": "Investimentos que podem navegar volatilmente são importantes nos mercados de hoje em dia.",
-        "ar": "الاستثمارات التي يمكنها الاستمرار في بيئات تتسم بالتقلب تحظى بأهمية كبيرة في أسواق اليوم."
+        "ar": "تعتبر الأدوات المالية التي تحقق تقلبات سالبة مهمة في أسواق اليوم."
     },
     "about_25": {
         "zh": "金融工具",
@@ -2577,7 +2589,7 @@ module.exports = {
         "id": "Instrumen Keuangan",
         "es": "Exposición a instrumentos financieros",
         "pt-BR": "Exposição a instrumentos financeiros",
-        "ar": "التعرض للأدوات المالية"
+        "ar": "الانكشاف على الأدوات المالية"
     },
     "about_26": {
         "zh": "货币，商品和指数享有高流动性，低成本，能在在上涨和下跌的市场中获利。",
@@ -2617,7 +2629,7 @@ module.exports = {
         "id": "Berbagai jenis pendekatan",
         "es": "Aproximación diversificada ",
         "pt-BR": "Abordagem diversificada",
-        "ar": "إتباع نهج قائم على التنوع"
+        "ar": "تنويع الاستثمار"
     },
     "about_30": {
         "zh": "广泛的交易方式和策略。",
@@ -2627,7 +2639,7 @@ module.exports = {
         "id": "Berbagai pilihan Metode dan strategi",
         "es": "Una amplia gama de métodos de trading y estrategias. ",
         "pt-BR": "Larga gama de métodos e estratégias comerciais.",
-        "ar": "مجموعة واسعة من طرق وإستراتيجيات التداول."
+        "ar": "مجموعة واسعة من أساليب واستراتيجيات التداول"
     },
     "about_31": {
         "zh": "一般市场风险因素的相关性较低",
@@ -2637,7 +2649,7 @@ module.exports = {
         "id": "Korelasi yang rendah dengan faktor risiko pasar",
         "es": "Baja correlación frente a factores de riesgo de mercado ",
         "pt-BR": "Baixa correlação de fatores gerais de riscos de mercado",
-        "ar": "ارتباط ضعيف مع عوامل مخاطر السوق العامة."
+        "ar": "ارتباط ضعيف مع عوامل المخاطر العامة للسوق."
     },
     "about_32": {
         "zh": "与传统资产类别（如股票和债券）相比绝对回报。",
@@ -3097,7 +3109,7 @@ module.exports = {
         "id": "FAQ",
         "es": "PP.FF",
         "pt-BR": "FAQ",
-        "ar": "الأسئلة المتكررة"
+        "ar": "أسئلة شائعة"
     },
     "sidebar5": {
         "en": "Open an account",
@@ -4157,7 +4169,7 @@ module.exports = {
         "id": "Contract for Difference (CFD) - shall mean a CFD on: spot foreign exchange (‘FX’), shares, indices, spot metals, futures or any other CFD related instrument that is available for trading through the TigerWit trading platform(s). A full list of the financial instruments is available online at http://global.tigerwit.com.",
         "es": "Contrato por Diferencias (CFD) - un CFD en: divisas al contado ('FX'), acciones, índices, metales al contado, futuros o cualquier otro instrumento relacionado con el CFD que esté disponible para operar a través de la(s) plataforma(s) de trading de TigerWit. Puede consultar una lista completa de los instrumentos financieros disponibles online en http://global.tigerwit.com.",
         "pt-BR": "Contrato por Diferença (CFD) - significará um CFD sobre: câmbio à vista (“FX”), ações, índices, metais spot, futuros ou qualquer outro instrumento relacionado a CFD que esteja disponível para negociação através da (s) plataforma (s) de negociação TigerWit. Uma lista completa dos instrumentos financeiros está disponível online em http://global.tigerwit.com.",
-        "ar": "عقد الفروقات - يعني عقد فروقات على: العملات الأجنبية الفورية (‘الفوركس’)، أو الأسهم، أو المعادن الفورية، أو أي عقد فروقات آخر متعلق بأداة مالية متاحة للتداول عبر منصة (منصات) التداول التي توفرها TigerWit. ويمكن الإطلاع على القائمة الكاملة للأدوات المالية المتاحة عبر الإنترنت على http://global.tigerwit.com."
+        "ar": "العقد مقابل الفروقات CFD- يعني العقد مقابل الفروقات على: العملات الأجنبية الفورية (‘الفوركس’)، أو الأسهم، أو المعادن الفورية، أو أي عقد فروقات آخر متعلق بأداة مالية متاحة للتداول عبر منصة (منصات) التداول التي توفرها TigerWit. ويمكن الإطلاع على القائمة الكاملة للأدوات المالية المتاحة عبر الإنترنت على http://global.tigerwit.com."
     },
     "amtClient26": {
         "zh": "账户净值 - 表示余额加/减任何未平仓头寸的利润/损失。",
@@ -4167,7 +4179,7 @@ module.exports = {
         "id": "Equity - shall mean the balance plus/minus any profit/loss that derives from any open positions.",
         "es": "Equity - significa el balance más/menos cualquier ganancia/pérdida que se derive de cualquier posición abierta.",
         "pt-BR": "Equidade - significa o saldo mais / menos qualquer lucro / perda que deriva de qualquer posição aberta.",
-        "ar": "الرصيد الإجمالي - يعني الرصيد مضاف إليه/ مطروح منه أي ربح/ خسارة ناشئة عن أي مراكز مفتوحة"
+        "ar": "الرصيد الحقيقي - يعني الرصيد مضاف إليه/ مطروح منه أي ربح/ خسارة ناشئة عن أي مراكز مفتوحة"
     },
     "amtClient27": {
         "zh": "自由保证金 - 指可用于开立头寸的资金。计算方法如下：自由保证金=账户净值-保证金",
@@ -4177,7 +4189,7 @@ module.exports = {
         "id": "Free Margin - shall mean funds that are available for opening a position. It is calculated as: Free Margin = Equity – Margin.",
         "es": "Margen Libre  - representa los fondos disponibles para abrir una posición. Se calcula como: Margen Libre = Equidad – Margen.",
         "pt-BR": "Margem Livre - significa fundos que estão disponíveis para abrir uma posição. É calculado como: Margem Livre = Capital - Margem.",
-        "ar": "الهامش الحر - يعني الأموال المتاحة لفتح مركز.  ويتم حسابه كما يلي: الهامش الحر = الرصيد الإجمالي – الهامش."
+        "ar": "الهامش الحر - يعني الأموال المتاحة لفتح مركز.  ويتم حسابه كما يلي: الهامش الحر = الرصيد الحقيقي – الهامش."
     },
     "amtClient28": {
         "zh": "SCB - 指巴哈马证券监察委员会及其运作的立法框架和规章制度。",
@@ -4217,7 +4229,7 @@ module.exports = {
         "id": "Margin Level - shall mean the Equity to Margin ratio calculated as: Margin Level = Equity / Margin",
         "es": "Nivel de Margen -  representa el ratio Equity- Margen calculado como: Nivel de Margen = Equity / Margen",
         "pt-BR": "Nível de Margem - significa o quociente Patrimônio Líquido até Margem calculado como: Nível de Margem = Patrimônio Líquido / Margem",
-        "ar": "مستوى الهامش - يعني نسبة الرصيد الإجمالي إلى الهامش، ويتم حسابه كما يلي:  مستوى الهامش = الرصيد الإجمالي / الهامش"
+        "ar": "مستوى الهامش - يعني نسبة الرصيد الإجمالي إلى الهامش، ويتم حسابه كما يلي:  مستوى الهامش = الرصيد الحقيقي / الهامش"
     },
     "amtClient32": {
         "zh": "匹配的主要经纪商- 匹配的主要经纪商指获准以做市商身份进行投资交易的投资公司，相关投资是 IFPRU 的指定投资，其自身介入买家和卖家的交易，从而让双边交易同时执行，并确保其作为做市商交易时仅执行客户的订单。",
@@ -4247,7 +4259,7 @@ module.exports = {
         "id": "Over-the-Counter (OTC) - shall mean the execution venue for any financial instruments whose trading is governed by the relevant Terms and Conditions of Business for the trading platforms.",
         "es": "Over-the-Counter (OTC) - representa el lugar de ejecución para cualquier instrumento financiero cuya operativa se rija por los Términos y Condiciones de Negocio relevantes para las plataformas de trading.",
         "pt-BR": "Às claras (OTC) - significa o local de execução para quaisquer instrumentos financeiros cuja negociação seja regida pelos Termos e Condições de Negócios relevantes para as plataformas de negociação.",
-        "ar": "خارج البورصة (OTC) - يعني مكان التنفيذ لأي أدوات مالية والتي يخضع تداولها لشروط وأحكام العمل لمنصات التداول."
+        "ar": "التداول خارج المقصورة (OTC) - يعني مكان التنفيذ لأي أدوات مالية والتي يخضع تداولها لشروط وأحكام العمل لمنصات التداول."
     },
     "amtClient35": {
         "zh": "意向客户- 指完成‘TigerWit 交易账户开户’部分申请表格的自然人和法人，开户表格可以在http://global.tigerwit.com.获取",
@@ -4297,7 +4309,7 @@ module.exports = {
         "id": "Vault - shall mean the account, which has a unique number, maintained by the client for the purposes of depositing and withdrawing funds to and from the client’s Trading Account.",
         "es": "Vault - la cuenta, que tiene un número único, mantenido por el cliente con el fin de depositar y retirar fondos hacia y desde la cuenta de trading del cliente.",
         "pt-BR": "Cofre - significa a conta, que tem um número exclusivo, mantida pelo cliente para fins de depósito e retirada de fundos para e da Conta de Negociação do cliente.",
-        "ar": "الخزانة - يعني الحساب الذي يحتفظ به العميل لأغراض إيداع وسحب الأموال إلى ومن حساب التداول الخاص بالعميل،  ويحتوي الحساب على رقم فريد."
+        "ar": "الخزنة - يعني الحساب الذي يحتفظ به العميل لأغراض إيداع وسحب الأموال إلى ومن حساب التداول الخاص بالعميل،  ويحتوي الحساب على رقم فريد."
     },
     "amtClient40": {
         "zh": "服务的提供",
@@ -4377,7 +4389,7 @@ module.exports = {
         "id": "6.The client understands that no physical delivery of a CFD’s underlying instrument (or reference instrument) that he/she traded through his/her trading account shall occur.",
         "es": "6.El cliente entiende que no se realizará ninguna entrega física del instrumento subyacente de un CFD (o instrumento de referencia) que negoció a través de su cuenta de trading.",
         "pt-BR": "6.O cliente entende que não deve ocorrer entrega física do instrumento subjacente de um CFD (ou instrumento de referência) que ele / ela negociou através de sua conta de negociação.",
-        "ar": "6- يفهم العميل أنه لن يتم إجراء أي تسليم فعلي للأداة المعنية في عقد الفروقات (أو الأداة المرجعية) التي يقوم بالتداول عليها باستخدام حساب التداول الخاص به."
+        "ar": "6- يفهم العميل أنه لن يتم إجراء أي تسليم فعلي للأداة المعنية في العقد مقابل الفروقات (أو الأداة ذات الصلة) التي يقوم بالتداول عليها باستخدام حساب التداول الخاص به."
     },
     "amtClient48": {
         "zh": "7.客户同意，TigerWit 仅仅是一个执行场所，是场外市场。",
@@ -4387,7 +4399,7 @@ module.exports = {
         "id": "7.The client accepts that TigerWit is the only execution venue, which is a Over-The-Counter market.",
         "es": "7.El cliente acepta que TigerWit es el único lugar de ejecución, el cual es  Over-The-Counter.",
         "pt-BR": "7.O cliente aceita que TigerWit é o único local de execução, que é um mercado de balcão.",
-        "ar": "7- يقبل العميل أن TigerWit هي مكان التنفيذ الوحيد، وهو سوق خارج البورصة."
+        "ar": "7- يقبل العميل أن TigerWit هي مكان التنفيذ الوحيد، وهو سوق تداول خارج مقصورة البورصة."
     },
     "amtClient49": {
         "zh": "8.客户可以从星期日 12:00:01(GMT+0)至星期五 22:00:00(GMT+0)通过其交易账户交易。请留意，某些金融工具只能在特定的时段交易。客户在交易之前有责任查看相关工具的合约规范了解更多详情。本公司应通过内部电子邮件系统通知客户任何假期。",
@@ -4637,7 +4649,7 @@ module.exports = {
         "id": "6.The client accepts that the Funds shall be credited in his/her vault on value date on which the Funds are received by the Institution. The Funds deposited in a client's trading account shall be net of any transfer fees or other charges incurred by or charged to TigerWit that are imposed by the Institution (or intermediary involved in the process) that holds the Funds.",
         "es": "6. El cliente acepta que los Fondos se acreditarán en su depósito en la fecha de valor en que la Institución recibe los Fondos. Los Fondos depositados en la cuenta comercial de un cliente serán netos de cualquier comisión de transferencia u otros cargos incurridos por o cargados a TigerWit que son impuestos por la Institución (o intermediario involucrado en el proceso) que posee los Fondos.",
         "pt-BR": "6.O cliente aceita que os Fundos sejam creditados no seu cofre na data de valor em que os Fundos são recebidos pela Instituição. Os Fundos depositados na conta de negociação de um cliente devem ser líquidos de quaisquer taxas de transferência ou outros encargos incorridos ou cobrados à TigerWit que sejam impostos pela Instituição (ou intermediário envolvido no processo) que detém os Fundos.",
-        "ar": "6- يقبل العميل أن يتم إيداع الأموال في خزانته في تاريخ الاستحقاق الذي يتم فيه تسلم الأموال من المؤسسة.  وستكون الأموال المودعة في حساب التداول الخاص بالعميل بعد خصم أي رسوم تحويل أو غيرها من الرسوم التي تتكبدها أو تتحملها TigerWit والتي تفرضها المؤسسة (أو الطرف الوسيط المشارك في  العملية) التي تحتفظ بالأموال."
+        "ar": "6- يقبل العميل أن يتم إيداع الأموال في خزنته في تاريخ الاستحقاق الذي يتم فيه تسلم الأموال من المؤسسة.  وستكون الأموال المودعة في حساب التداول الخاص بالعميل بعد خصم أي رسوم تحويل أو غيرها من الرسوم التي تتكبدها أو تتحملها TigerWit والتي تفرضها المؤسسة (أو الطرف الوسيط المشارك في  العملية) التي تحتفظ بالأموال."
     },
     "amtClient74": {
         "zh": "7.客户同意，只有当公司信纳资金已经由客户或其授权代表转出时，资金才能计入客户的资金库中。倘若本公司有合理理由相信资金由授权代表以外的第三方转出，则本公司有权拒收该资金并退还至汇款人处，需要扣除任何手续费或产生的其他费用。",
@@ -4647,7 +4659,7 @@ module.exports = {
         "id": "7.The client accepts that the Funds shall be credited in his/her vault only if the Firm is satisfied that the Funds have been sent by the client or his/her authorised representative. Where the Firm has reasonable grounds to believe that the Funds have been sent by a third party other than an authorised representative, the Firm has the right to reject the Funds and return them to the remitter’s source, net of any fees or other charges incurred.",
         "es": "7.El cliente acepta que los Fondos se acreditarán en su Vault sólo si la Firma está convencida de que los Fondos han sido enviados por el cliente o su representante autorizado. Cuando la Firma tuviera motivos razonables para creer que los Fondos han sido enviados por un tercero que no sea un representante autorizado, la Firma tiene el derecho de rechazar los Fondos y devolverlos al remitente, una vez deducidos los costes u otros cargos incurridos.",
         "pt-BR": "7.O cliente aceita que os Fundos serão creditados no seu cofre somente se a Empresa estiver convencida de que os Fundos foram enviados pelo cliente ou seu representante autorizado. Quando a Empresa tiver motivos razoáveis para acreditar que os Fundos foram enviados por terceiros que não sejam representantes autorizados, a Empresa tem o direito de rejeitar os Fundos e devolvê-los à fonte do remetente, sem quaisquer taxas ou outros encargos incorridos.",
-        "ar": "7- يقبل العميل أن الأموال لن يتم إضافتها إلى خزانته إلا إذا كانت الشركة مقتنعة بأن الأموال قد تم إرسالها بواسطة العميل أو ممثله المفوض.  عندما يكون لدى الشركة أسبابًا معقولة للاعتقاد بأن الأموال قد تم إرسالها بواسطة طرف ثالث غير ممثله المفوض، يحق للشركة رفض الأموال وإعادتها إلى مصدر إرسال الأموال بعد خصم أي رسوم أو تكاليف أخرى تكبدتها  الشركة."
+        "ar": "7- يقبل العميل أن الأموال لن يتم إضافتها إلى خزنته إلا إذا كانت الشركة مقتنعة بأن الأموال قد تم إرسالها بواسطة العميل أو ممثله المفوض.  عندما يكون لدى الشركة أسبابًا معقولة للاعتقاد بأن الأموال قد تم إرسالها بواسطة طرف ثالث غير ممثله المفوض، يحق للشركة رفض الأموال وإعادتها إلى مصدر إرسال الأموال بعد خصم أي رسوم أو تكاليف أخرى تكبدتها  الشركة."
     },
     "amtClient75": {
         "zh": "8.客户同意，任何资金的提取应按照本公司最初接收资金所使用的同一汇款人和相同转账方式完成。在此情况下，TigerWit 应按要求退还扣除任何转账费用或其他扣费的资金。",
@@ -4797,7 +4809,7 @@ module.exports = {
         "id": "2.Prior to trading CFDs the client needs to consider any applicable charges such as spreads, commissions and swaps. The client is solely responsible for requiring clarifications from the Firm in relation to the above, if necessary.",
         "es": "2. Antes de operar CFDs, el cliente debe tener en cuenta los cargos aplicables, como los spreads, las comisiones y los swaps. El cliente es el único responsable de requerir aclaraciones de la Firma en relación con lo anterior, si fuera necesario.",
         "pt-BR": "2. Antes de negociar CFDs, o cliente precisa considerar quaisquer encargos aplicáveis, como spreads, comissões e swaps. O cliente é o único responsável por exigir esclarecimentos da Firma em relação ao acima, se necessário.",
-        "ar": "2- يجب على العميل قبل تداول عقود الفروقات أن يأخذ في الاعتبار أي تكاليف معمول بها مثل فروق الأسعار والعمولات وفوائد التمديد.  ويتحمل العميل بمفرده مسؤولية طلب إيضاحات من الشركة فيما يتعلق بما تقدم، إذا لزم الأمر."
+        "ar": "2- يجب على العميل قبل تداول العقود مقابل الفروقات أن يأخذ في الاعتبار أي تكاليف معمول بها مثل فروق الأسعار والعمولات وفوائد التمديد.  ويتحمل العميل بمفرده مسؤولية طلب إيضاحات من الشركة فيما يتعلق بما تقدم، إذا لزم الأمر."
     },
     "amtClient90": {
         "zh": "3.客户应留意，并非所有费用均以货币形式表示（例如，费用可能以差价合约价值的百分比表示）；因此，客户需要确保其理解百分比等同的金额。",
@@ -4807,7 +4819,7 @@ module.exports = {
         "id": "3.The client should note that not all charges are represented in monetary terms (for example, charges may appear as a percentage of the value of a CFD); therefore, the client needs to ensure that he/ she understands the amount that the percentage amounts to.",
         "es": "3.El cliente debe tener en cuenta que no todos los cargos están representados en términos monetarios (por ejemplo, los cargos pueden aparecer como un porcentaje del valor de un CFD); por lo tanto, el cliente debe asegurarse de que entiende la cantidad a la que asciende el porcentaje.",
         "pt-BR": "3.O cliente deve observar que nem todas as cobranças são representadas em termos monetários (por exemplo, cobranças podem aparecer como uma porcentagem do valor de um CFD); portanto, o cliente precisa garantir que ele entenda o valor que a porcentagem representa.",
-        "ar": "3- يجب على العميل الأخذ في الاعتبار أنه لا يتم تمثيل جميع التكاليف من الناحية النقدية (فعلى سبيل المثال، قد تظهر التكاليف في صورة نسبة مئوية من قيمة عقد الفروقات)؛ وبناء على ذلك، يتعين على العميل التأكد من فهمه للمقدار الذي تبلغه النسبة المئوية."
+        "ar": "3- يجب على العميل الأخذ في الاعتبار أنه لا يتم تمثيل جميع التكاليف من الناحية النقدية (فعلى سبيل المثال، قد تظهر التكاليف في صورة نسبة مئوية من قيمة العقد مقابل الفروقات)؛ وبناء على ذلك، يتعين على العميل التأكد من فهمه للمقدار الذي تبلغه النسبة المئوية."
     },
     "amtClient91": {
         "zh": "4.TigerWit 保留随时更改适用于客户的任何费用的权利，无须另行通知客户。最新信息可在线查询，网址：http://global.tigerwit.com。",
@@ -4857,7 +4869,7 @@ module.exports = {
         "id": "8.Depending on the position held and the interest rates of the currency pair involved in a transaction the client may either be credited debited with financing; the operation is conducted at 23:59 server time and the resulting amount is automatically converted into the client’s balance currency.",
         "es": "8. Dependiendo de la posición mantenida y las tasas de interés del par de divisas involucrado en una transacción, al cliente se le puede acreditar el débito con financiamiento; la operación se realiza a las 23:59 hora del servidor y el importe resultante se convierte automáticamente a la moneda del  balance del cliente.",
         "pt-BR": "8.Dependendo da posição detida e das taxas de juro do par de moedas envolvidas numa transação, o cliente pode ser creditado debitado com financiamento; a operação é realizada às 23:59 horas do servidor e o valor resultante é convertido automaticamente na moeda do saldo do cliente.",
-        "ar": "8- اعتمادًا عى المركز الذي يحتفظ به العميل لليوم التالي وأسعار فائدة زوج العملة المستخدم في أي صفقة، يتم إما إضافة فائدة التمديد إلى حساب العميل أو خصمها منه؛ ويتم إجراء هذه العملية في الساعة 23:59 بتوقيت الخادم ويتم تحويل المبلغ الناتج بشكل تلقائي إلى عملة رصيد العميل."
+        "ar": "8- اعتمادًا على المركز الذي يحتفظ به العميل لليوم التالي وأسعار فائدة زوج العملة المستخدم في أي صفقة، يتم إما إضافة فائدة التمديد إلى حساب العميل أو خصمها منه؛ ويتم إجراء هذه العملية في الساعة 23:59 بتوقيت الخادم ويتم تحويل المبلغ الناتج بشكل تلقائي إلى عملة رصيد العميل."
     },
     "amtClient96": {
         "zh": "9.星期五至星期一收取掉期费用一次，星期三至星期四掉期费用按三倍收取。应当注意的 是 ， TigerWit 按 自 己 的 利 率 收 取 费 用 ；TigerWit 的转仓利率是以彭博(Bloomberg)提供的隔夜利率计算。本公司会按照其认为必要的频率更新此类利率。",
@@ -4927,7 +4939,7 @@ module.exports = {
         "id": "4.TigerWit bears no responsibility for any loss incurred as a result of the acts or omissions of the Institution or its employees, including but not limited to instances of false or misleading information provided by the client.",
         "es": "4.TigerWit no asume ninguna responsabilidad por cualquier pérdida incurrida como resultado de los actos u omisiones de la Institución o sus empleados, incluidos, entre otros, los casos de información falsa o engañosa proporcionada por el cliente.",
         "pt-BR": "4. A TigerWit não se responsabiliza por qualquer perda incorrida como resultado de atos ou omissões da Instituição ou de seus funcionários, incluindo, mas não se limitando a, casos de informações falsas ou enganosas fornecidas pelo cliente.",
-        "ar": "4- لا تتحمل TigerWit أي مسؤولية عن أي خسارة تتكبدها نتيجة أي تصرف أو امتناع عن التصرف من جانب المؤسسة أو موظفيها، بما في ذلك على سبيل المثال وليس الحصر حالات المعلومات الكاذبة أو المضللة المقدمة من العميل."
+        "ar": "4- لا تتحمل TigerWit أي مسؤولية عن أي خسارة نتيجة أي تصرف أو امتناع عن التصرف من جانب المؤسسة أو موظفيها، بما في ذلك على سبيل المثال وليس الحصر حالات المعلومات الكاذبة أو المضللة المقدمة من العميل."
     },
     "amtClient103": {
         "zh": "补偿计划",
@@ -5127,7 +5139,7 @@ module.exports = {
         "id": "6.A termination of the Client Agreement shall not imply that any of the client’s responsibilities cease to exist; the latter shall still be liable to pay to the Firm: ",
         "es": "6.La termination del Acuerdo de Cliente no implicará que las responsabilidades del clientes cesen de existir; el último será todavía resposable de pagar a la Firma: ",
         "pt-BR": "6. A rescisão do Contrato de Cliente não implica que qualquer uma das responsabilidades do cliente deixe de existir; este último ainda será obrigado a pagar à Empresa:",
-        "ar": "6- لا يعني إنهاء اتفاقية العميل انتهاء سريات أي من مسؤوليات العميل؛ سيظل العميل مسؤولاً عن أن يدفع للشركة ما يلي:"
+        "ar": "6- لا يعني إنهاء اتفاقية العميل انتهاء سريان أي من مسؤوليات العميل؛ سيظل العميل مسؤولاً عن أن يدفع للشركة ما يلي:"
     },
     "amtClient123": {
         "zh": "应付给 TigerWit 的任何金额；",
@@ -5637,7 +5649,7 @@ module.exports = {
         "id": "12.The client consents that if his/ her trading account is inactive for six months and its balance is less than USD15 (fifteen), or currency equivalent, then TigerWit may at its discretion disable the trading account. The client may enable his/ her trading account, at any time; the status of a trading account can be viewed through TigerWit’s app or website (http://global.tigerwit.com).",
         "es": "12.El cliente acepta que si su cuenta de trading está inactiva durante seis meses y su saldo es inferior a USD15 (quince), o su equivalente en moneda, entonces TigerWit puede, a su discreción, desactivar la cuenta de trading. El cliente puede habilitar su cuenta de trading, en cualquier momento; El estado de una cuenta de trading se puede ver a través de la aplicación o sitio web de TigerWit (http://global.tigerwit.com).",
         "pt-BR": "12. O cliente consente que, se sua conta de negociação estiver inativa por seis meses e seu saldo for menor que USD15 (quinze), ou moeda equivalente, a TigerWit poderá, a seu critério, desabilitar a conta de negociação. O cliente pode ativar sua conta de negociação a qualquer momento; o status de uma conta de negociação pode ser visualizado através do aplicativo ou site da TigerWit (http://global.tigerwit.com).",
-        "ar": "12- يوافق العميل على أنه إذا ظل حساب التداول الخاص به غير مفعل لمدة ستة أشهر وكان رصيده أقل من 15  (خمسة عشر) دولارًا أمريكيًا، أو ما يعادله بعملة أخرى، يجوز لشركة TigerWit تعطيل حساب التداول الخاص بالعميل وفقًا لتقديرها وحدها دون غيرها. ويمكن للعميل في أي وقت تنشيط حساب التداول الخاص به؛ ويمكن الاطلاع على حالة حساب التداول عن طريق تطبيق TigerWit أو باستخدام الموقع الإلكتروني (http://global.tigerwit.com)."
+        "ar": "12- يوافق العميل على أنه إذا مضت مدة ستة أشهر دون تفعيل لحساب التداول الخاص به وكان رصيده أقل من 15  (خمسة عشر) دولارًا أمريكيًا، أو ما يعادله بعملة أخرى، يجوز لشركة TigerWit تعطيل حساب التداول الخاص بالعميل وفقًا لتقديرها وحدها دون غيرها. ويمكن للعميل في أي وقت تنشيط حساب التداول الخاص به؛ ويمكن الاطلاع على حالة حساب التداول عن طريق تطبيق TigerWit أو باستخدام الموقع الإلكتروني (http://global.tigerwit.com)."
     },
     "amtClient174": {
         "zh": "不可抗力事件",
@@ -5657,7 +5669,7 @@ module.exports = {
         "id": "1.TigerWit shall, in its reasonable opinion, determine that a force majeure event occurred; under such circumstances the Firm shall take all reasonable steps in order to inform the client.",
         "es": "1. TigerWit deberá  determinar razonablemente lo que ocurrió en una evento de fuerza mayor; en tales circunstancias, la Firma tomará todas las medidas razonables para informar al cliente.",
         "pt-BR": "1.TigerWit deve, em seu parecer razoável, determinar que um evento de força maior ocorreu; Sob tais circunstâncias, a Empresa deverá tomar todas as medidas razoáveis para informar o cliente.",
-        "ar": "1- تحدد TigerWit حسب تقديرها المعقول أن أحد أحداث القوة القاهرة قد حدث، وفي مثل هذه الظروف فإن الشركة ستتخذ جميع التدابير المعقولة لإبلاغ العميل."
+        "ar": "1- تحدد TigerWit حسب تقديرها المعقول بحدوث أحد أحداث القوة القاهرة، وفي مثل هذه الظروف فإن الشركة ستتخذ جميع التدابير المعقولة لإبلاغ العميل."
     },
     "amtClient176": {
         "zh": "2.不可抗力事件包括但不限于金融工具交易之后发生的任何自然、技术、政治、政府、社会、经济（包括但不限于暂停货币）等方面的事件或情况，而且交易进行当日无法预料到此类事件或情况的发生。除上述情况外，不可抗力事件还包括针对 TigerWit 服务器的非法操作事件，并且不在客户或 TigerWit 的控制范围内。",
@@ -5857,7 +5869,7 @@ module.exports = {
         "id": "FAQs",
         "es": "PP.FF",
         "pt-BR": "FAQs",
-        "ar": "الأسئلة المتكررة"
+        "ar": "أسئلة شائعة"
     },
     "amtClient196": {
         "zh": "1.涉及本客户协议或 TigerWit 条款与条件的问题首先应向客户服务部咨询。",
@@ -6827,7 +6839,7 @@ module.exports = {
         "id": "Ask - shall mean the price at which TigerWit is willing to sell a CFD.",
         "es": "Ask - representa el precio al que TigerWit está dispuesto a vender un CFD.",
         "pt-BR": "Ask - deve significar o preço pelo qual a TigerWit está disposta a vender um CFD.",
-        "ar": "سعر الطلب - يعني السعر الذي تريد TigerWit أن تبيع به عقد الفروقات"
+        "ar": "سعر الطلب - يعني السعر الذي ترغب TigerWit أن تبيع به العقد مقابل الفروقات"
     },
     "amtBusiness13": {
         "zh": "授权代表 - 指经由客户明确授权、代表他/她行动的人员。通过授权委托书记录上述关系，其副本由本公司持有。",
@@ -6877,7 +6889,7 @@ module.exports = {
         "id": "Bid - shall mean the price at which TigerWit is willing to buy a CFD.",
         "es": "Oferta: significará el precio al que TigerWit está dispuesto a comprar un CFD.",
         "pt-BR": "Bid - significa o preço pelo qual a TigerWit está disposta a comprar um CFD.",
-        "ar": "العطاء - يعني السعر الذي تريد TigerWit أن تشتري به عقد الفروقات"
+        "ar": "سعر العرض - يعني السعر الذي ترغب TigerWit أن تشتري به العقد مقابل الفروقات"
     },
     "amtBusiness18": {
         "zh": "客户 - 指收到客户协议第 4.1 款中所述电子邮件的人士。",
@@ -6907,7 +6919,7 @@ module.exports = {
         "id": "Contract for Difference (CFD) - shall mean a CFD on: spot foreign exchange (‘FX’), shares, spot metals, futures or any other CFD related instrument that is available for trading through the TigerWit trading platform(s); a full list of the financial instruments which is available online at http://global.tigerwit.com.",
         "es": "Contrato por Diferencias (CFD) - un CFD en: spot foreign exchange ('FX'), acciones, metales al contado, futuros o cualquier otro instrumento relacionado con CFDs que esté disponible para su negociación a través de la(s) plataforma(s) de trading de TigerWit; una lista completa de los instrumentos financieros está disponible online en http://global.tigerwit.com.",
         "pt-BR": "Contrato por Diferença (CFD) - significará um CFD sobre: câmbio à vista (“FX”), ações, metais à vista, futuros ou qualquer outro instrumento relacionado a CFD que esteja disponível para negociação através da (s) plataforma (s) de negociação da TigerWit; uma lista completa dos instrumentos financeiros que estão disponíveis online em http://global.tigerwit.com.",
-        "ar": "عقد الفروقات - يعني عقد فروقات على: العملات الأجنبية الفورية (‘الفوركس’)، أو الأسهم، أو المعادن الفورية، أو أي عقد فروقات آخر متعلق بأداة مالية متاحة للتداول عبر منصة (منصات) التداول التي توفرها TigerWit؛ ويمكن الإطلاع على القائمة الكاملة للأدوات المالية المتاحة عبر الإنترنت على http://global.tigerwit.com."
+        "ar": "العقد مقابل الفروقات (CFD) - يعني العقد مقابل الفروقات على: العملات الأجنبية الفورية (‘الفوركس’)، أو الأسهم، أو المعادن الفورية، أو أي عقد مقابل فروقات آخر متعلق بأداة مالية متاحة للتداول عبر منصة (منصات) التداول التي توفرها TigerWit؛ ويمكن الإطلاع على القائمة الكاملة للأدوات المالية المتاحة عبر الإنترنت على http://global.tigerwit.com."
     },
     "amtBusiness21": {
         "zh": "公司行为 - 指证券发行者采取的任何行动，其上市证券与通过 TigerWit 交易平台交易的金融工具相关，包括但不限于以下情况：(i) 股票分拆，(ii) 合并，(iii) 配股，(iv) 兼并和收购以及 (v) 股利。",
@@ -6937,7 +6949,7 @@ module.exports = {
         "id": "Equity - shall mean the balance plus/minus any profit/loss that derives from any open positions.",
         "es": "Equity - significará el saldo más/menos cualquier beneficio/pérdida que se derive de cualquier posición abierta.",
         "pt-BR": "Equidade - significa o saldo mais / menos qualquer lucro / perda que deriva de qualquer posição aberta.",
-        "ar": "الرصيد الإجمالي - يعني الرصيد مضاف إليه/ مطروح منه أي ربح/ خسارة ناشئة عن أي مراكز مفتوحة"
+        "ar": "الرصيد الحقيقي - يعني الرصيد مضاف إليه/ مطروح منه أي ربح/ خسارة ناشئة عن أي مراكز مفتوحة"
     },
     "amtBusiness24": {
         "zh": "智能止损离场 - 指在保证金水平低于所需最低限度的情况下平掉具有最高保证金的头寸。",
@@ -6967,7 +6979,7 @@ module.exports = {
         "id": "Free Margin - shall mean funds that are available for opening a position and it is calculated as: Free Margin = Equity - Margin",
         "es": "Margen Libre - significará los fondos que están disponibles para abrir una posición y se calcula como: Margen libre = Capital - Margen",
         "pt-BR": "Margem Livre - significa fundos que estão disponíveis para a abertura de uma posição e são calculados como: Margem Livre = Capital Próprio - Margem",
-        "ar": "الهامش الحر - يعني الأموال المتاحة لفتح مركز، ويتم حسابه كما يلي:  الهامش الحر = الرصيد الإجمالي - الهامش"
+        "ar": "الهامش الحر - يعني الأموال المتاحة لفتح مركز، ويتم حسابه كما يلي:  الهامش الحر = الرصيد الحقيقي - الهامش"
     },
     "amtBusiness27": {
         "zh": "取消前有效 (GTC) - 指客户未指定到期日期和时间的挂单，该订单将在无限期内保持有效状态，直至完全或部分执行或被取消。",
@@ -7017,7 +7029,7 @@ module.exports = {
         "id": "Margin Level - shall mean the Equity to Margin ratio.",
         "es": "Nivel de Margen - significará la razón de Equidad a Margen.",
         "pt-BR": "Nível de Margem - significa o quociente Equidade para Margem.",
-        "ar": "مستوى الهامش - يعني نسبة الرصيد الإجمالي إلى الهامش"
+        "ar": "مستوى الهامش - يعني نسبة الرصيد الحقيقي إلى الهامش"
     },
     "amtBusiness32": {
         "zh": "做市商 - 指在金融工具中报出买入价和卖出价的公司或个人。",
@@ -7027,7 +7039,7 @@ module.exports = {
         "id": "Market Maker - shall mean the company, or the individual, that quotes both a buy and a sell price in a financial instrument.",
         "es": "Market Maker - la compañía, o el individuo, que cotiza un precio de compra y un precio de venta en un instrumento financiero.",
         "pt-BR": "Nível de Margem - significa o quociente de Equidade para Margem.",
-        "ar": "صانع السوق - يعني الشركة، أو الشخص، الذي يحسب الأسعار، كل من سعري الشراء والبيع في أداة مالية."
+        "ar": "صانع السوق - يعني الشركة، أو الشخص، الذي يوفر التسعير لكل من سعري الشراء والبيع لأداة مالية."
     },
     "amtBusiness33": {
         "zh": "未平仓头寸 - 指任何尚未平仓的头寸。例如，一个未被相反空头头寸覆盖的未平仓多头头寸，反之亦然。",
@@ -7047,7 +7059,7 @@ module.exports = {
         "id": "Over-The-Counter (OTC) - shall mean the execution venue for any financial instruments whose trading is governed by the Service Agreement.",
         "es": "Over-The-Counter (OTC) - significará el lugar de ejecución para cualquier instrumento financiero cuyo comercio esté regido por el Contrato de Servicio.",
         "pt-BR": "Às Claras (OTC) - significa o local de execução para quaisquer instrumentos financeiros cuja negociação seja regida pelo Contrato de Serviço.",
-        "ar": "خارج البورصة (OTC) - يعني مكان التنفيذ لأي أدوات مالية والتي يخضع تداولها لاتفاقية الخدمة."
+        "ar": "التداول خارج المقصورة (OTC) - يعني مكان التنفيذ لأي أدوات مالية والتي يخضع تداولها لاتفاقية الخدمة."
     },
     "amtBusiness35": {
         "zh": "挂单 - 指买入止损或卖出止损、买入限价或卖出限价或止损限价单。",
@@ -7057,7 +7069,7 @@ module.exports = {
         "id": "Pending Order - shall mean either a buy stop, or sell stop, or buy limit, or sell limit order or a stop-limit order.",
         "es": "Orden Pendiente:  será o bien una buy stop, o sell stop, o buy limit, o sell limit order o una orden stop-limit.",
         "pt-BR": "Ordem pendente - significará uma parada de compra ou parada de venda, ou um limite de compra ou uma ordem de limite de venda ou de parada limitada.",
-        "ar": "أمر معلق - يعني إما أمر الشراء الموقوف \"buy stop\" أو أمر البيع الموقوف \"sell stop\" أو أمر الشراء عند الحد \"buy limit\" أو أمر البيع عند الحد \"Sell Limit\" أو أمر التوقف عند سعر محدد \" stop-limit \"."
+        "ar": "أمر معلق - يعني إما أمر الشراء بإيقاف \"buy stop\" أو أمر البيع بايقاف \"sell stop\" أو أمر محدد للشراء \"buy limit\" أو أمر محدد للبيع  \"Sell Limit\" أو أمر إيقاف خسارة عند سعر محدد \" stop-limit \"."
     },
     "amtBusiness36": {
         "zh": "报价 - TigerWit 通过交易平台发送的任何买价和卖价，这些价格受到本公司无法控制的情况的影响。",
@@ -7127,7 +7139,7 @@ module.exports = {
         "id": "Variable Currency - shall mean the second currency represented in a currency pair, for example in the EURUSD currency pair the variable currency is the USD.",
         "es": "Divisa variable - la segunda moneda representada en una par de divisas, por ejemplo, en el par de divisas EURUSD, la moneda variable es el USD.",
         "pt-BR": "Moeda Variável - significa a segunda moeda representada em um par de moedas, por exemplo, no par de moedas EURUSD, a moeda variável é o USD.",
-        "ar": "العملة المتغيرة - تعني العملة الثانية المحسوبة في زوج العملة، على سبيل المثال ففي زوج اليورو/دولار EURUSD يكون الدولار الأمريكي هو العملة المتغيرة."
+        "ar": "العملة المتغيرة - تعني العملة الثانية المحسوبة في زوج العملة، على سبيل المثال في زوج اليورو/دولار EURUSD يكون الدولار الأمريكي هو العملة المتغيرة."
     },
     "amtBusiness43": {
         "zh": "电子交易",
@@ -7197,7 +7209,7 @@ module.exports = {
         "id": "4.The client shall ensure that his/her Access Codes remain confidential at all times. If, under any circumstances, the client reveals the Access Codes to a person other than his/her authorised representative, or that any person obtains (illegally or otherwise) a client's Access Codes, the Firm shall bear no responsibility for any loss that arises, including but not limited to financial loss, as a result of the client’s actions.",
         "es": "4.El cliente se asegurará de que sus Códigos de Acceso permanezcan confidenciales en todo momento. Si, bajo cualquier circunstancia, el cliente revela los Códigos de acceso a una persona que no sea su representante autorizado, o si alguna persona obtiene (ilegalmente o de otra manera) los Códigos de acceso de un cliente, la Firma no será responsable de ninguna pérdida que surja, incluyendo, pero no limitado a, la pérdida financiera, como resultado de las acciones del cliente.",
         "pt-BR": "4. O cliente deve assegurar que seus códigos de acesso permaneçam confidenciais em todos os momentos. Se, em qualquer circunstância, o cliente revelar os Códigos de Acesso a uma pessoa que não seja seu representante autorizado, ou se qualquer pessoa obtiver (ilegalmente ou de outra forma) Códigos de Acesso do cliente, a Empresa não será responsável por qualquer perda que surja, incluindo mas não limitado a perdas financeiras, como resultado das ações do cliente.",
-        "ar": "4- يجب على العميل التأكد من رموز الوصول الخاصة به/بها تظل سرية في جميع الأوقات.  وإذا قام العميل، تحت أي ظرف من الظروف، بالكشف عن رموز الوصول إلى شخص آخر غير ممثله المفوض، أو إذا حصل أي شخص على رموز الوصول الخاصة بالعميل (بطريقة غير قانونية أو خلاف ذلك)، لا تتحمل الشركة أي مسؤولية عن أي خسارة تنشأ، بما في ذلك على سبيل المثال وليس الحصر الخسارة المالية، كنتيجة لأفعال العميل."
+        "ar": "4- يجب على العميل التأكد أن رموز الوصول الخاصة به/بها تظل سرية في جميع الأوقات.  وإذا قام العميل، تحت أي ظرف من الظروف، بالكشف عن رموز الوصول إلى شخص آخر غير ممثله المفوض، أو إذا حصل أي شخص على رموز الوصول الخاصة بالعميل (بطريقة غير قانونية أو خلاف ذلك)، لا تتحمل الشركة أي مسؤولية عن أي خسارة تنشأ، بما في ذلك على سبيل المثال وليس الحصر الخسارة المالية، كنتيجة لأفعال العميل."
     },
     "amtBusiness50": {
         "zh": "5.如果客户已经注意到有人因为交易或其他目的，在未经他/她明确同意的情况下使用访问代码，客户应立即通知 TigerWit。客户接受，如果有人登录到交易平台，TigerWit 无法识别其身份。",
@@ -7207,7 +7219,7 @@ module.exports = {
         "id": "5.The client shall immediately inform TigerWit if it comes to his/her attention that the Access Codes have been used, either for trading or other purposes, without his/her express consent. The client accepts that TigerWit is unable to identify any instances when a person is logging-in to the trading platform(s).",
         "es": "5. El cliente informará inmediatamente a TigerWit si descubre que los Códigos de acceso se han utilizado, ya sea para fines de trading u otros, sin su consentimiento expreso. El cliente acepta que TigerWit no puede identificar ninguna instancia cuando una persona está iniciando sesión en la(s) plataforma(s) de trading.",
         "pt-BR": "5. O cliente informará imediatamente a TigerWit, caso esteja ciente de que os códigos de acesso foram utilizados, seja para negociação ou para outros fins, sem o seu consentimento expresso. O cliente aceita que TigerWit é incapaz de identificar quaisquer instâncias quando uma pessoa está logando na (s) plataforma (s) de negociação.",
-        "ar": "5- يجب على العميل إبلاغ TigerWit على الفور إذا اكتشف أن رموز الوصول الخاصة بها قد تم استخدامها بدون موافقته الصريحة، سواء في أغراض التداول أو في غيرها.  ويقبل العميل أن TigerWit ليس بمقدورها تحديد أي حالات عندما يقوم شخص بتسجيل الدخول إلى منصة (منصات) التداول."
+        "ar": "5- يجب على العميل إبلاغ TigerWit على الفور إذا اكتشف أن رموز الوصول الخاصة به/بها قد تم استخدامها بدون موافقته الصريحة، سواء في أغراض التداول أو في غيرها.  ويقبل العميل أن TigerWit ليس بمقدورها تحديد أي حالات عندما يقوم شخص بتسجيل الدخول إلى منصة (منصات) التداول."
     },
     "amtBusiness51": {
         "zh": "6.客户接受，为确保和/或恢复交易平台的有序运行，TigerWit 保留终止客户访问交易平台的权利，在这种情况下 TigerWit可以根据客户协议第 17.5 款酌情关闭客户的任何交易账户。",
@@ -7547,7 +7559,7 @@ module.exports = {
         "id": "6.In the event a client maintains a short position on the ex-div date and has insufficient free equity in their trading account to cover the reverse cash adjustment, TigerWit reserves the right to close the open position. Under such circumstances, the reverse cash adjustment shall be deducted from the trading account’s balance.",
         "es": "6. En caso de que un cliente mantenga una posición corta en la fecha ex div y no tenga suficiente capital disponible en su cuenta de operaciones para cubrir el ajuste de efectivo inverso, TigerWit se reserva el derecho de cerrar la posición abierta. En tales circunstancias, el ajuste de efectivo inverso se deducirá del saldo de la cuenta de trading.",
         "pt-BR": "6.No caso de um cliente manter uma posição vendida na data da ex-div e não possuir patrimônio líquido suficiente em sua conta de negociação para cobrir o ajuste de caixa reverso, a TigerWit reserva-se o direito de fechar a posição em aberto. Nessas circunstâncias, o ajuste de caixa reverso será deduzido do saldo da conta de negociação.",
-        "ar": "6- في حال أن كان لدى العميل مركز بيع بحلول تاريخ انتهاء الحق في الحصول على توزيعات الأرباح ولم يكن لديه رصيد حر كاف في حساب التداول الخاص به لتغطية التعديل النقدي العكسي، تحتفظ TigerWit لنفيها بالحق في إغلاق المركز المفتوح.  وفي ظل هذه الظروف، سيتم خصم التعديل النقدي العكسي من رصيد حساب التداول."
+        "ar": "6- في حال كان لدى العميل مركز بيع بحلول تاريخ انتهاء الحق في الحصول على توزيعات الأرباح ولم يكن لديه رصيد حر كاف في حساب التداول الخاص به لتغطية التعديل النقدي العكسي، تحتفظ TigerWit لنفيها بالحق في إغلاق المركز المفتوح.  وفي ظل هذه الظروف، سيتم خصم التعديل النقدي العكسي من رصيد حساب التداول."
     },
     "amtBusiness85": {
         "zh": "7.客户接受，如果在交易账户中没有保持足够的自由账户净值来覆盖空头头寸的反向现金调整，TigerWit 有权无需通知客户。",
@@ -7807,7 +7819,7 @@ module.exports = {
         "id": "FAQs",
         "es": "PP.FF",
         "pt-BR": "FAQs",
-        "ar": "الأسئلة المتكررة"
+        "ar": "أسئلة شائعة"
     },
     "amtBusiness111": {
         "zh": "1.关于条款和条件的问题，首先应该提交给客服部门。",
@@ -7967,7 +7979,7 @@ module.exports = {
         "id": "Provision of a certain functions (such as ‘stop loss’, or ‘stop loss-buy limit’) is to control the losses within a specific range. However, it may fail to produce the desired result given market situations or technical restrictions. In case of trade through (gap), the resting order (including stop loss, take profit, buy stop, sell stop, buy limit and sell limit) will become market order. ",
         "es": "Determinadas funciones (como el  ‘stop loss’, o ‘stop loss-buy limit’) sirven para controlar las pérdidas dentro de un rango específico. Sin embargo, pudieran no producir el resultado deseado debido a la situación del mercado o a restricciones técnicas. En caso de que el precio salte (gap) la orden a la espera de ser activada (incluyendo stop loss, take profit, buy stop, sell stop, buy limit y sell limit) se convierte en orden a mercado. ",
         "pt-BR": "O fornecimento de certas funções (como 'parar perda' ou 'stop loss-buy limit') é controlar as perdas dentro de um intervalo específico. No entanto, pode não produzir o resultado desejado, dadas as situações de mercado ou restrições técnicas. Em caso de comércio através de (gap), a ordem de repouso (incluindo stop loss, take profit, stop de compra, stop de venda, limite de compra e limite de venda) se tornará ordem de mercado.",
-        "ar": "يتم استخدام بعض الوظائف (مثل \"إيقاف الخسارة\" أو \"إيقاف الخسارة - حد الشراء\") للسيطرة على الخسائر وإبقاؤها في نطاق معين. ومع ذلك، قد لا تنجح هذه الوظائف في تحقيق النتيجة المرغوبة بسبب ظروف السوق أو القيود الفنية.  وفي حالة التداول عبر قفزة في السعر (فجوة)، فإن الأمر الذي ينتظر التفعيل (ويشمل ذلك أوامر إيقاف الخسارة، وجني الربح، وإيقاف الشراء، وإيقاف البيع، وحد الشراء، وحد البيع) سيصبح أمر سوق."
+        "ar": "يتم استخدام بعض الوظائف (مثل \"إيقاف الخسارة\" أو \"الشراء بأمر ايقاف\") للسيطرة على الخسائر وإبقاؤها في نطاق معين. ومع ذلك، قد لا تنجح هذه الوظائف في تحقيق النتيجة المرغوبة بسبب ظروف السوق أو القيود الفنية.  وفي حالة التداول عبر قفزة في السعر (فجوة)، فإن الأمر الذي ينتظر التفعيل (ويشمل ذلك أوامر إيقاف الخسارة، وجني الربح، والشراء بأمر ايقاف، والبيع بأمر ايقاف، أمر محدد للشراء، وأمر محدد للبيع) سيصبح أمر  يتم تنفيذه مباشرة في السوق."
     },
     "amtConditions5": {
         "zh": "当穿价 (跳空) 时，挂单(含 stop loss、take profit、buy stop、sell stop、buy limit、sell limit) 将会变为市价单；穿价 (跳空)在快市（重大数据公布前后）或是市场清淡时都有可能发生，虽然设置了挂单，但仍有可能因为市场流通量的不同而成交在市场价。",
@@ -7997,7 +8009,7 @@ module.exports = {
         "id": "Clients should give prudent consideration to potential risks thereof before important data are released.",
         "es": "Los Clientes deben ser cautelosos en su consideración sobre los riesgos potenciales antes de publicaciones importantes de datos. ",
         "pt-BR": "Os clientes devem considerar com prudência os riscos potenciais dos mesmos antes que dados importantes sejam divulgados.",
-        "ar": "يتعين على العملاء المراعاة الحصيفة للمخاطر المحتملة قبل نشر البيانات المهمة."
+        "ar": "يتعين على العملاء المراعاة الحكيمة للمخاطر المحتملة قبل نشر البيانات المهمة."
     },
     "amtConditions8": {
         "zh": "价格",
@@ -8067,7 +8079,7 @@ module.exports = {
         "id": "Slippage",
         "es": "Slippage",
         "pt-BR": "Deslizamento",
-        "ar": "الانزلاق"
+        "ar": "الانزلاق السعري"
     },
     "amtConditions15": {
         "zh": "TigerWit 为客户提供最佳报价并依要求的价格成交。但有时因市场激烈震荡或交易量变化，可能造成滑点而难以成交，这种状况尤其在重大数据公布期间最为常见。",
@@ -8077,7 +8089,7 @@ module.exports = {
         "id": "TigerWit provides customers with the best price and make the deals at requested prices, but sometimes because of dramatic fluctuation in market or changes of trading volumes, it may result in slippage and difficulties to complete a deal, which is quite common during the announcement periods of industry data.",
         "es": "TigerWit proporciona a los clientes el mejor precio y ejecuta los deals a los precios solicitados, aunque, en ocasiones, debido a fluctuaciones dramáticas de mercado o cambios en los volúmenes de trading, pudiera darse un deslizamiento o slippage y dificultades para completar la operación, lo cual es común durante períodos de publicaciones de datos",
         "pt-BR": "TigerWit oferece aos clientes o melhor preço e fazer as ofertas a preços solicitados, mas às vezes por causa da flutuação dramática no mercado ou mudanças nos volumes de negociação, pode resultar em derrapagens e dificuldades para concluir um acordo, o que é bastante comum durante os períodos de anúncio dados da indústria.",
-        "ar": "تقدم TigerWit لعملائها أفضل سعر وتقوم بتنفيذ الصفقات وفقًا للأسعار المطلوبة، ولكن يمكن في بعض الأحيان أن تؤدي التقلبات الشديدة في السوق أو التغيرات في أحجام التداول إلى حدوث انزلاق وصعوبات في إتمام الصفقة، وهذا أمر شائع خلال فترات الإعلان عن البيانات المهمة."
+        "ar": "تقدم TigerWit لعملائها أفضل سعر وتقوم بتنفيذ الصفقات وفقًا للأسعار المطلوبة، ولكن يمكن في بعض الأحيان أن تؤدي التقلبات الشديدة في السوق أو التغيرات في أحجام التداول إلى حدوث انزلاق سعري وصعوبات في إتمام الصفقة، وهذا أمر شائع خلال فترات الإعلان عن البيانات المهمة."
     },
     "amtConditions16": {
         "zh": "汇价跳空",
@@ -8097,7 +8109,7 @@ module.exports = {
         "id": "It happens that the opening price on the first trading day in a week may be different with the closing price on the last trading day in last week. The following causes may contribute to substantial gaps: The announcement periods of industry data, force majeure and economic index number events that may change how participants of the market consider the value of some certain currencies. Traders with positions or pending orders should be aware that gaps are likely to emerge during weekends.",
         "es": "Sucede que el precio de apertura en el primer día de trading en una semana puede ser diferente con el precio de cierre en el último día de negociación en la semana pasada. Las siguientes causas pueden contribuir a gaps sustanciales: períodos de publicaciones de datos de la industria, fuerza mayor y eventos económicos que pueden cambiar la forma en que los participantes del mercado consideran el valor de algunas divisas o activos. Los traders con posiciones u órdenes pendientes deben ser conscientes de que pudieran aparecer gaps durante los fines de semana.",
         "pt-BR": "Acontece que o preço de abertura no primeiro dia de negociação em uma semana pode ser diferente com o preço de fechamento no último dia de negociação na semana passada. As seguintes causas podem contribuir para lacunas substanciais: Os períodos de anúncio de dados da indústria, força maior e eventos de número de índice econômico que podem alterar a forma como os participantes do mercado consideram o valor de algumas moedas. Os comerciantes com posições ou ordens pendentes devem estar cientes de que as brechas provavelmente surgirão durante os finais de semana.",
-        "ar": "يحدث في بعض الأحيان أن يختلف سعر الفتح في أول يوم تداول في الأسبوع عن سعر الإغلاق في آخر يوم تداول في الأسبوع السابق. ويمكن أن تساهم الأسباب التالية في حدوث فجوات كبيرة في الأسعار:  فترات الإعلان عن بيانات مهمة والقوة القاهرة والأحداث الاقتصادية التي يمكن أن تغير الطريقة التي ينظر بها المشاركون في السوق إلى قيمة بعض العملات.  يجب أن يكون المتداولون الذين لديهم مراكز أو أوامر معلقة على علم بأن الفجوات من المحتمل أن تحدث خلال عطلات نهاية الأسبوع."
+        "ar": "يحدث في بعض الأحيان أن يختلف سعر الافتتاح في أول يوم تداول في الأسبوع عن سعر الإغلاق في آخر يوم تداول في الأسبوع السابق. ويمكن أن تساهم الأسباب التالية في حدوث فجوات كبيرة في الأسعار:  فترات الإعلان عن بيانات مهمة والقوة القاهرة والأحداث الاقتصادية التي يمكن أن تغير الطريقة التي ينظر بها المشاركون في السوق إلى قيمة بعض العملات.  يجب أن يكون المتداولون الذين لديهم مراكز أو أوامر معلقة على علم بأن الفجوات من المحتمل أن تحدث خلال عطلات نهاية الأسبوع."
     },
     "amtConditions18": {
         "zh": "系统报价风险(错价)",
@@ -8257,7 +8269,7 @@ module.exports = {
         "id": "The quotations in TigerWit platform are offered by banks and financial institutions, thus, the hours of opening or closing quotations might start early or extend, because banks and financial institutions to do so. The opening quotations might be adjusted or affected due to the market quotations. TigerWit usually opens quotations under a stable market.",
         "es": "Las cotizaciones en la plataforma TigerWit son ofrecidas por bancos e instituciones financiera; por lo tanto, las horas de apertura o cierre de cotizaciones pueden comenzar antes o extenderse, debido a que los bancos y las instituciones financieras lo hacen. Las cotizaciones de apertura podrían ser ajustadas o afectadas debido a las cotizaciones del mercado. TigerWit generalmente abre las cotizaciones bajo un mercado estable.",
         "pt-BR": "As cotações na plataforma TigerWit são oferecidas por bancos e instituições financeiras, assim, as horas de abertura ou fechamento das cotações podem começar cedo ou estender, porque bancos e instituições financeiras o fazem. As cotações de abertura podem ser ajustadas ou afetadas devido às cotações de mercado. A TigerWit geralmente abre cotações em um mercado estável.",
-        "ar": "يتم تقديم الأسعار في منصة TigerWit بواسطة البنوك والمؤسسات المالية، وبالتالي فإن وقت الفتح والإغلاق يكون عرضة للفتح المبكر أو الإغلاق المتأخر لأن البنوك والمؤسسات المالية التي تقدم الأسعار تفعل ذلك.  وقد يتم تعديل أسعار الفتح أو تتأثر نتيجة لأسعار السوق. وعادة ما يتم تقديم أسعار الفتح في TigerWit بعد استقرار السوق."
+        "ar": "يتم تقديم الأسعار في منصة TigerWit بواسطة البنوك والمؤسسات المالية، وبالتالي فإن وقت الافتتاح والإغلاق يكون عرضة للافتتاح المبكر أو الإغلاق المتأخر لأن البنوك والمؤسسات المالية التي تقدم الأسعار تفعل ذلك.  وقد يتم تعديل أسعار الافتتاح أو تتأثر نتيجة لأسعار السوق. وعادة ما يتم تقديم أسعار الافتتاح في TigerWit بعد استقرار السوق."
     },
     "amtConditions34": {
         "zh": "流通量",
@@ -8287,7 +8299,7 @@ module.exports = {
         "id": "Margin call",
         "es": "Margen llamada",
         "pt-BR": "Chamada de margem",
-        "ar": "طلب تغطية الهامش"
+        "ar": "المطالبة بالهامش"
     },
     "amtConditions37": {
         "zh": "保证金减少的情势可能会因买卖差价的变动而扩大，导致账户内可用保证金余额减少。假如保证金不足以维持任何开仓部位，账户可能会因为保证金不足而强制平仓。虽然持有长短仓令交易者觉得受市场变动的影响有限，实际上在任何时间买卖差价扩大而可用保证金不足，都可能出现全部仓位被强制平仓。",
@@ -8297,7 +8309,7 @@ module.exports = {
         "id": "Margin decreases may widen as the result of spreads and lead to the reduction of free margin left in the account. If the margin is insufficient to maintain all open positions, the account may need to close the position due to insufficient margin. Although traders who held both long and short positions may feel the impact is limited from the market changes, in fact, a margin call on all open positions may occur at any time when spreads are widening and the free margin is insufficient.",
         "es": "El descenso en el margen se pudiera ampliar como consecuencia de los spreads y conllevar una reducción del margen libre disponible en la cuenta. Si el margen es insuficiente para mantener todas las posiciones, la cuenta puede tener que cerrar la posición debido a un margen insuficiente. Aunque los traders que mantienen posiciones largas y cortas puedan sentir que el impacto es limitado en relación a los cambios de mercado, en realidad una llamada de margen puede suceder en todas las posiciones abiertas en una momento en el que los spreads se amplíen y el margen libre sea insuficiente.",
         "pt-BR": "As reduções de margem podem aumentar como resultado de spreads e levar à redução da margem livre deixada na conta. Se a margem é insuficiente para manter todas as posições abertas, a conta pode precisar fechar a posição devido a margem insuficiente. Embora os operadores que detêm posições longas e curtas possam sentir que o impacto é limitado pelas mudanças do mercado, de fato, uma chamada de margem em todas as posições abertas pode ocorrer a qualquer momento quando os spreads estão aumentando e a margem livre é insuficiente.",
-        "ar": "قد يرتفع الهامش المنخفض بسبب فروق الأسعار مما يؤدي إلى خفض الهامش الحر المتبقي في الحساب.  وإذا كان الهامش غير كاف للمحافظة على جميع المراكز المفتوحة، قد يتعين على الحساب إغلاق المراكز بسبب عدم كفاية الهامش.  وعلى الرغم من أن المتداولين الذين لديهم صفقات شراء وبيع على السواء قد يشعرون أن التأثير محدود بالنسبة لتغيرات السوق، ولكن في الحقيقة فإن قد يتم إصدار طلب تغطية الهامش على جميع المراكز المفتوحة في أي وقت عندما تزيد فروق الأسعار ويصبح الهامش الحر غير كاف."
+        "ar": "تراجع الهامش قد يزداد نتيجة فروق الأسعار مما يتسبب بخفض الهامش المتاح المتبقي في الحساب.  وإذا كان الهامش غير كاف للمحافظة على جميع المراكز المفتوحة، قد يتعين على الحساب إغلاق المراكز بسبب عدم كفاية الهامش.  وعلى الرغم من أن المتداولين الذين لديهم صفقات شراء وبيع على السواء قد يشعرون أن التأثير محدود بالنسبة لتغيرات السوق، ولكن في الحقيقة فإن قد يتم إصدار مطالبة باضافة هامش على جميع المراكز المفتوحة في أي وقت عندما تزيد فروق الأسعار ويصبح الهامش الحر غير كاف. "
     },
     "amtConditions38": {
         "zh": "周末风险",
@@ -8317,7 +8329,7 @@ module.exports = {
         "id": "When the markets are closed over the weekends and holidays all kinds of situations, developments, changes or big events may occur, which may lead to large gaps between the opening quotations and the closing quotations of Friday afternoon of the previous week.",
         "es": "Cuando los mercados se cierran durante el fin de semana y/o durante las vacaciones, distintas situaciones, acontecimientos, cambios o eventos relevantes pudieran ocurrir y provocar gaps o huecos entre las cotizaciones de apertura y las cotizaciones del cierre el Viernes anterior. ",
         "pt-BR": "Quando os mercados estão fechados durante os fins de semana e feriados, todos os tipos de situações, desenvolvimentos, mudanças ou grandes eventos podem ocorrer, o que pode levar a grandes lacunas entre as cotações de abertura e as cotações de fechamento da tarde de sexta-feira da semana anterior.",
-        "ar": "عندما تكون الأسواق مغلقة خلال عطلات نهاية الأسبوع و/أو خلال العطلات، قد تحدث مواقف أو تطورات أو تغييرات أو أحداث مهمة والتي قد تؤدي إلى حدوث فجوات أو فجوات بين أسعار الفتح يوم الاثنين في بداية أسبوع التداول وأسعار الإغلاق يوم الجمعة في نهاية الأسبوع السابق."
+        "ar": "عندما تكون الأسواق مغلقة خلال عطلات نهاية الأسبوع و/أو خلال العطلات، قد تحدث مواقف أو تطورات أو تغييرات أو أحداث مهمة والتي قد تؤدي إلى حدوث فجوات أو فجوات بين أسعار الافتتاح يوم الاثنين في بداية أسبوع التداول وأسعار الإغلاق يوم الجمعة في نهاية الأسبوع السابق."
     },
     "amtConditions40": {
         "zh": "本公司的客户不能在周末以及市场关闭的其他时间内使用在线系统来设定或更改指令。客户持有的仓位经过周末，为保护该持有的仓位所设置的止损指令，可能会在比停损指令指定的价格更糟的位置执行。",
@@ -8347,7 +8359,7 @@ module.exports = {
         "id": "Trades placed in TigerWit platform on Over The Counter (OTC) contracts differ from that in other electronic trading platforms on traditional trading market",
         "es": "Los trades colocados en la plataforma TW con contratos Over The Counter (OTC) difieren de otras plataformas de trading en mercados de trading tradicionales. ",
         "pt-BR": "Os negócios realizados na plataforma TigerWit nos contratos Over The Counter (OTC) diferem dos de outras plataformas de negociação eletrônica no mercado de negociação tradicional",
-        "ar": "يختلف التداول على منصة TigerWit في سوق خارج البورصة عن التداول على منصات التداول الإلكترونية الأخرى التي يتم فيها التداول في أسواق التداول التقليدية."
+        "ar": "يختلف التداول على منصة TigerWit في سوق التداول خارج مقصورة البورصة عن التداول على منصات التداول الإلكترونية الأخرى التي يتم فيها التداول في أسواق التداول التقليدية."
     },
     "amtConditions43": {
         "zh": "在网络交易系统中进行交易的客户，将暴露在与该系统有关的风险之中，包括硬件和软件故障和系统故障，就网络工具来说，包括单独的客户系统故障，以及连接平台和客户的通信基础设施（例如互联网）故障。",
@@ -8447,7 +8459,7 @@ module.exports = {
         "id": "FAQs",
         "es": "PP.FF",
         "pt-BR": "FAQs",
-        "ar": "الأسئلة المتكررة"
+        "ar": "أسئلة شائعة"
     },
     "amtConditions53": {
         "zh": "关于交易条件的问题首先传达给客户服务部。",
@@ -9307,7 +9319,7 @@ module.exports = {
         "id": "A firm may treat a client as an elective eligible counterparty if: ",
         "es": "Una firma puede tratar a un cliente como contraparte elegible si: ",
         "pt-BR": "Uma empresa pode tratar um cliente como uma contraparte elegível elegível se:",
-        "ar": "يجوز أ، تقوم الشركة بمعاملة العميل باعتباره طرفًا مقابلاً مؤهلاً اختياريًا إذا:"
+        "ar": "يجوز أن تقوم الشركة بمعاملة العميل باعتباره طرفًا مقابلاً مؤهلاً اختياريًا إذا:"
     },
     "amtCategorization52": {
         "zh": "(1)客户是一家企业而且：",
@@ -9777,7 +9789,7 @@ module.exports = {
         "id": "FAQs",
         "es": "PP.FF",
         "pt-BR": "FAQs",
-        "ar": "الأسئلة المتكررة"
+        "ar": "أسئلة شائعة"
     },
     "amtCategorization99": {
         "zh": "1.关于此工作程序的问题首先传达给客户服务部。",
@@ -10017,7 +10029,7 @@ module.exports = {
         "id": "Slippage",
         "es": "Slippage",
         "pt-BR": "Deslizamento",
-        "ar": "الانزلاق"
+        "ar": "الانزلاق السعري"
     },
     "amtExecution13": {
         "zh": "在订单被提交用于执行之时，客户申请的指定价格可能无法使用，所以订单的执行价将与客户申请的价格接近，或者存在几个点的差距。如果执行价格优于客户申请的价格，这被称为“正滑点”。相反，如果执行价格差于客户申请的价格，这被称为“负滑点”。请注意，“滑点”是正常的市场操作，也是外汇交易市场和股市在类似流动性和波动性因新闻发布、经济事件和市场开盘而发生变化的情况下的常规特征*。TigerWit 的自动执行软件不会根据与通过任何特定客户账户执行订单有关的个人参数操作。",
@@ -11367,7 +11379,7 @@ module.exports = {
         "id": "FAQs",
         "es": "PP.FF",
         "pt-BR": "FAQs",
-        "ar": "الأسئلة المتكررة"
+        "ar": "أسئلة شائعة"
     },
     "amtExecution148": {
         "zh": "1.关于政策问题首先传达给客户服务部。",
@@ -11897,7 +11909,7 @@ module.exports = {
         "id": "Frequently Asked Questions",
         "es": "Preguntas Frecuentes",
         "pt-BR": "perguntas frequentes",
-        "ar": "الأسئلة المتكررة"
+        "ar": "أسئلة شائعة"
     },
     "amtConflicts48": {
         "zh": "1.有关利益冲突政策的问题首先应向客户服务部咨询。",
@@ -12297,7 +12309,7 @@ module.exports = {
         "id": "FAQs",
         "es": "PP.FF",
         "pt-BR": "FAQs",
-        "ar": "الأسئلة المتكررة"
+        "ar": "أسئلة شائعة"
     },
     "amtComplaint36": {
         "zh": "1.关于此程序的问题首先传达给客户服务部。",
@@ -12944,7 +12956,7 @@ module.exports = {
             "id": "Dengan menggunakan teknologi yang kuat dan dirancang atas dasar keterbukaan, kredibilitas dan Integritas, TigerWIt menawarkan pengalaman transaksi di pasar dengan kemampuan yang berbeda dengan yang lainnya.",
             "es": "Con una infraestructura tecnológica robusta apoyada en una filosofía de transparencia, credibilidad e integridad, TigerWit ofrece a sus clientes innovadoras herramientas para operar los mercados.",
             "pt-BR": "Com um forte núcleo tecnológico contruído com a filosofia de transparência, credibilidade e integridade, TigerWit oferece aos seus clientes capacidades excepcionais de negociar nos mercados.",
-            "ar": "توفر TigerWit لعملائها قدرات هائلة للتداول في الأسواق من خلال بنية تحتية تكنولوجية قوية قائمة على فلسفة الشفافية والمصداقية والنزاهة."
+            "ar": "توفر TigerWit لعملائها إمكانيات غير اعتيادية للتداول في الأسواق من خلال بنية تكنولوجية قوية قائمة على فلسفة الشفافية والمصداقية والنزاهة."
         },
         "whatOffer": {
             "zh": "我们提供什么？",
@@ -15861,7 +15873,7 @@ module.exports = {
         "id": "Terkirim",
         "es": "Enviado",
         "pt-BR": "Enviado",
-        "ar": "تم الإرسال"
+        "ar": "تم الارسال"
     },
     "third_verify1_1": {
         "zh": "正在审核中",
@@ -16121,7 +16133,7 @@ module.exports = {
         "id": "Kami telah memperbarui perjanjian layanan yang mengatur tentang hak dan kewajiban anda dalam hukum. Silahkan",
         "es": "Hemos actualizado el Acuerdo de Servicios, que contiene términos relevantes que detallan sus derechos y la jusrisdicción aplicable. Por favor,",
         "pt-BR": "Atualizamos o Contrato de Serviço, que tem termos importantes que implicam especialmente em seu direito e outros termos jurisdicionais.",
-        "ar": " قد قمنا بتحديث اتفاقية الخدمة والتي تحتوي على شروط مهمة مثل أحكام خاصة متعلقة بحقوقك والتزاماتك وشروط أخرى حاكمة. يرجى"
+        "ar": " قد قمنا بتحديث اتفاقية الخدمة والتي تحتوي على شروط مهمة مثل أحكام خاصة متعلقة بحقوقك والتزاماتك وشروط الاختصاص القضائي الأخرى. يرجى"
     },
     "agment_subTitle6": {
         "zh": "点击此处",
@@ -16331,7 +16343,7 @@ module.exports = {
         "id": "Trading dipasar manapun",
         "es": "Opere los mercados que busca",
         "pt-BR": "Negocie nos mercados que você quiser",
-        "ar": "تمتع بالتداول بتقنية بلوكتشاين"
+        "ar": "تمتع بالتداول بتقنية  بلوكشين  "
     },
     "newhome_1_1": {
         "zh": "你需要的交易方式",
@@ -16351,7 +16363,7 @@ module.exports = {
         "id": "Didukung oleh teknologi blockchain",
         "es": "Powered by blockchain",
         "pt-BR": "Powered by blockchain",
-        "ar": "تداول بثقة وشفافية على أسواقك المفضلة"
+        "ar": "تداول بثقة وشفافية "
     },
     "newhome_2": {
         "zh": "打开官网或APP，开始交易。",
@@ -16661,7 +16673,7 @@ module.exports = {
         "id": "Pelajari lebih lanjut",
         "es": "Descubrir más",
         "pt-BR": "Descubra mais",
-        "ar": "اكتشف المزيد"
+        "ar": "تعرف أكثر"
     },
     "newhome_30": {
         "zh": "区块链助力",
@@ -16922,7 +16934,7 @@ module.exports = {
             "id": "TigerWit didirikan dengan 1 tujuan yang jelas; yaitu memberikan solusi teknologi yang baru dalam industri yang masih kurang berinovasi dan memerlukan imaginasi dan visi yang baru.",
             "es": "TigerWit fue fundado con un claro propósito; aportar soluciones tecnológicas frescas a una industria anquilosada y necesitada de nuevas visiones con las que reinventarse. ",
             "pt-BR": "TigerWit foi fundada com um propósito claro; para trazer novas soluções tecnológicas para uma indústria presa em seus caminhos e necessitada de reimaginação e nova visão.",
-            "ar": "تأسست TigerWit بهدف واحد واضح وهو توفير حلول تكنولوجية جديدة إلى صناعة ما تزال تفتقر إلى الابتكار وفي أشد الاحتياج إلى رؤى جديدة لإعادة اختراع نفسها."
+            "ar": "تأسست TigerWit بهدف واحد واضح وهو توفير حلول تكنولوجية جديدة إلى مجال ما يزال يفتقر إلى الابتكار وفي أشد الاحتياج إلى رؤى جديدة وتخيل جديد."
         },
         "about4": {
             "zh": " ",
@@ -16932,7 +16944,7 @@ module.exports = {
             "id": "Kami memfokuskan semua energi kami pada rancangan, sistem dan proses yang diperbarui dan diciptakan kembali untuk memberikan manfaat untuk para trader hari ini dan hari esok.",
             "es": "Concentramos nuestra energía en oportunidades donde el diseño, los sistemas y procesos puedan ser mejorados o rediseñados para el beneficio de los traders de hoy y de mañana. ",
             "pt-BR": "Concentramos toda a nossa energia em oportunidades onde o design, sistemas e processos podem ser atualizados e reinventados para o benefício dos traders hoje e no futuro.",
-            "ar": "نحن نركز بكل طاقتنا على الفرص التي يمكن من خلالها تحديث وتطوير وتحسين التصميم والأنظمة والعمليات من أجل مصلحة المتداولين اليوم وغدًا."
+            "ar": "نركز كل طاقتنا على الفرص التي يمكن من خلالها تحديث وتطوير وتحسين التصميم والأنظمة والعمليات من أجل مصلحة المتداولين اليوم وغدًا."
         },
         "about6": {
             "zh": " ",
@@ -16942,7 +16954,7 @@ module.exports = {
             "id": "Tentang Aplikasi",
             "es": "Sobre nuestra app",
             "pt-BR": "Sobre o nosso aplicativo",
-            "ar": "نبذة عن تطبيقنا"
+            "ar": "تطبيقنا"
         },
         "about7": {
             "zh": " ",
@@ -16962,7 +16974,7 @@ module.exports = {
             "id": "Bekerja bersama kami",
             "es": "Trabajar con nosotros",
             "pt-BR": "Sobre trabalhar conosco",
-            "ar": "نبذة عن العمل معنا"
+            "ar": "العمل معنا"
         },
         "about9": {
             "zh": " ",
@@ -16972,7 +16984,7 @@ module.exports = {
             "id": "Filosofi Kami",
             "es": "Sobre nuestra filosofía",
             "pt-BR": "Sobre a nossa filosofia",
-            "ar": "نبذة عن فلسفتنا"
+            "ar": "فلسفتنا"
         },
         "about10": {
             "zh": " ",
@@ -16982,7 +16994,7 @@ module.exports = {
             "id": "Kemitraan kami dengan LFC",
             "es": "Sobre nuestro patrocinio con LFC",
             "pt-BR": "Sobre nossa parceria com a LFC",
-            "ar": "نبذة عن شراكتنا مع نادي ليفربول لكرة القدم"
+            "ar": "شراكتنا مع نادي ليفربول"
         },
         "about11": {
             "zh": " ",
@@ -16992,7 +17004,7 @@ module.exports = {
             "id": "Visi kami",
             "es": "Sobre nuestra Visión",
             "pt-BR": "Sobre a nossa visão",
-            "ar": "نبذة عن رؤيتنا"
+            "ar": "رؤيتنا"
         },
         "about12": {
             "zh": " ",
@@ -17002,7 +17014,7 @@ module.exports = {
             "id": "Tentang Blockchain",
             "es": "Sobre blockchain",
             "pt-BR": "Sobre blockchain",
-            "ar": "نبذة عن البلوك تشين"
+            "ar": "ما هو Blockchain"
         },
         "about13": {
             "zh": " ",
@@ -17012,7 +17024,7 @@ module.exports = {
             "id": "Produk Kami",
             "es": "Sobre nuestros productos",
             "pt-BR": "Sobre nossos produtos",
-            "ar": "نبذة عن منتجاتنا"
+            "ar": "منتجاتنا"
         },
         "about14": {
             "zh": " ",
@@ -17022,7 +17034,7 @@ module.exports = {
             "id": "Tentang Trading. Perubahan",
             "es": "Sobre el Trading. Evolucionado",
             "pt-BR": "Sobre a negociação. Evoluído",
-            "ar": "نبذة عن التداول المتطور"
+            "ar": "تطور التداول"
         },
         "about15": {
             "zh": " ",
@@ -17032,7 +17044,7 @@ module.exports = {
             "id": "Teknologi Kami",
             "es": "Sobre nuestra tecnología",
             "pt-BR": "Sobre a nossa tecnologia",
-            "ar": "نبذة عن تكنولوجيتنا"
+            "ar": "بيئتنا التكنولوجية"
         },
         "about16": {
             "zh": " ",
@@ -17042,7 +17054,7 @@ module.exports = {
             "id": "Aplikasi TigerWit selain canggih dan mudah digunakan juga dapat diatur sesuai dengan keinginan. Semua kebutuhan anda tersedia dalam satu aplikasi ini saja sehingga anda tidak perlu repot dan dapat fokus pada strategi trading anda.",
             "es": "Construida alrededor de funcionalidades intuitivas. Sofisticada y robusta pero a la vez fácil de usar. La posibilidad de personalizar y editar la interfaz reemplaza el modelo único y cerrado de otras apps de trading. Con una mejor experiencia de usuario en sus manos, los traders pueden concentrarse en sus estrategias, tácticas y beneficiarse de las oportunidades.",
             "pt-BR": "A funcionalidade intuitiva está no coração do nosso aplicativo. Sofisticado e ágil na capacidade, mas também fácil de usar. A capacidade de personalizar e editar a interface substitui a abordagem de tamanho único de todos os outros aplicativos comerciais. Com uma melhor experiência do usuário, os investidores agora podem se concentrar em estratégias, táticas e aproveitar oportunidades.",
-            "ar": "تكمن الخواص الوظيفية القوية والبديهية في صميم تطبيقنا.  إنه تطبيق ذكي ذو قدرات شديدة التطور ولكنه في الوقت نفسه سهل الاستخدام للغاية. فالقدرة على تخصيص وتعديل واجهة التطبيق تحل محل النموذج المستخدم في تطبيقات التداول الأخرى والقائم على واجهة ذات حجم واحد للجميع والتي لا يمكن تعديلها.  وبفضل تحسين تجربة المستخدم، أصبح بمقدور المتداولين الآن التركيز على الإستراتيجيات والتكتيكات واغتنام الفرص السانحة."
+            "ar": "تعتبر الوظائف القوية والبديهية صميم تطبيقنا.  إنه تطبيق ذكي ذو قدرات شديدة التطور وفي الوقت نفسه سهل الاستخدام للغاية. فالقدرة على تخصيص وتعديل واجهة التطبيق تحل محل النموذج المستخدم في تطبيقات التداول الأخرى والقائم على واجهة ذات حجم واحد للجميع والتي لا يمكن تعديلها.  وبفضل تحسين تجربة المستخدم، أصبح بمقدور المتداولين الآن التركيز على الإستراتيجيات والتكتيكات واغتنام الفرص السانحة."
         },
         "about17": {
             "zh": " ",
@@ -17062,7 +17074,7 @@ module.exports = {
             "id": "Kami ingin bekerja dengan dengan orang yang memiliki pemikiran, ide-ide dan nilai yang sama untuk mengubah dunia trading ini menjadi lebih baik dengan cara membawa pemikiran, imajinasi dan terobosan yang baru untuk perubahan.",
             "es": "Queremos trabajar con gente que comparta nuestros valores y espíritu visionario a medida que avanzamos en nuestro camino disruptivo rediseñando el trading, aportando nuevas perspectivas, ideas e innovación en una industria anquilosada y necesitada de cambios. ",
             "pt-BR": "Queremos trabalhar com pessoas que compartilham nossos valores e espírito de imaginação enquanto continuamos em uma jornada para interromper e reimaginar o comércio, trazendo novas idéias, idéias e inovação para uma indústria pronta para a mudança.",
-            "ar": "نحن نريد العمل مع أشخاص يشاركوننا نفس القيم وروح الخيال ونحن نواصل رحلتنا التي نمضى فيها قدمًا نحو تغيير عالم التداول وإعادة تخيله من جديد من خلال تقديم رؤى وأفكار وابتكارات جديدة إلى مجال في أمس الحاجة إلى التغيير."
+            "ar": "نسعى إلى العمل مع أشخاص يشاركوننا نفس القيم وروح الخيال ونحن نواصل رحلتنا التي نمضى فيها قدمًا نحو تغيير عالم التداول وإعادة تخيله من جديد من خلال تقديم رؤى وأفكار وابتكارات جديدة إلى مجال في أمس الحاجة إلى التغيير."
         },
         "about19": {
             "zh": " ",
@@ -17072,7 +17084,7 @@ module.exports = {
             "id": "Teknologi seharusnya digunakan untuk mempermudah penggunanya, oleh karena itu tidak boleh ada perbedaan perlakuan terhadap trader baik itu trader kecil atau trader besar, pemula ataupun berpengalaman. Agar perdagangan di pasar berjalan dengan efektif dan efisien, keterbukaan dan kepercayaan antara kedua belah pihak sangatlah penting. TigerWit percaya bahwa saat ini dunia trading masih tertinggal dalam hal inovasi dan teknologi dan kami akan mewujudkan visi itu saat ini juga.",
             "es": "La tecnología debe empoderar a sus usuarios. Ningún trader, grande o pequeño, novato o experimentado debería ser tratado de modo diferente a otro. Las relaciones mutuamente beneficiosas deben ser abiertas. Para que cualquier mercado opere eficientemente y efectivamente debe ser transparente y la confianza es un pilar central. La imaginación es la madre de la innovación. En el actual mundo del trading, la innovación se encuentra por detrás de las expectativas y TigerWit aporta su visión para reimaginar el trading. A día de Hoy. ",
             "pt-BR": "A tecnologia deve capacitar seus usuários. Nenhum comerciante, grande ou pequeno, novo ou experiente, deve ser tratado de forma diferente de qualquer outro. Relacionamentos mutuamente benéficos exigem abertura. Para que qualquer mercado possa operar de forma eficiente e eficaz, deve haver transparência e confiança em seu coração. A imaginação é a mãe da inovação. O atual mundo comercial é aquele em que a inovação está aquém das expectativas e a TigerWit tem a visão de reimaginar as negociações. Hoje.",
-            "ar": "يجب أن تمنح التكنولوجيا لمستخدميها القوة والتمكين.  وسواء كان أي متداول كبيرًا أو صغيرًا أو جديدًا أو مبتدئًا أو خبيرًا، لا يجب على الإطلاق أن تتم معاملته بشكل مختلف عن أي متداول آخر.  ويجب أن تتسم علاقات المنفعة المتبادلة بالصراحة. فحتى تعمل أي سوق بكفاءة وفعالية، يجب أن تكون هذه السوق شفافة وأن تكون الثقة في جوهرها وركيزة أساسية فيها.  فالابتكار يولد من رحم الخيال.  ومع الأسف فإن الابتكار أقل بكثير من المتوقع في عالم التداول في الوقت الراهن وشركة TigerWit لديها الرؤية لإعادة تخيل التداول  اليوم"
+            "ar": "يجب أن تمنح التكنولوجيا لمستخدميها القوة والتمكين.  وسواء كان أي متداول كبيرًا أو صغيرًا أو جديدًا أو مبتدئًا أو خبيرًا، لا يجب على الإطلاق أن تتم معاملته بشكل مختلف عن أي متداول آخر.  ويجب أن تتسم علاقات المنفعة المتبادلة بالصراحة. حتى تعمل أي سوق بكفاءة وفعالية، يجب أن تكون هذه السوق شفافة وأن تكون الثقة في جوهرها وركيزة أساسية فيها.  فالابتكار يولد من رحم الخيال.  ومع الأسف فإن الابتكار أقل بكثير من المتوقع في عالم التداول في الوقت الراهن وشركة TigerWit لديها الرؤية لإعادة تخيل التداول  اليوم"
         },
         "about20": {
             "zh": " ",
@@ -17082,7 +17094,7 @@ module.exports = {
             "id": "Kami bangga menjadi",
             "es": "Estamos orgullosos de ser ",
             "pt-BR": "Estamos orgulhosos de ser o",
-            "ar": "نحن نفخر أن نكون"
+            "ar": "نفخر بأننا"
         },
         "about21": {
             "zh": " ",
@@ -17112,7 +17124,7 @@ module.exports = {
             "id": "Perspektif TigerWit di masa depan adalah lingkungan trading yang kredibel, dan dapat dipercaya oleh para trader, pialang dan investor. Karena itu kami telah mengembangkan dan menerapkan teknologi tersebut di TigerWit agar masa depan itu dapat terwujud pada saat ini.",
             "es": "La visión de futuro de TigerWit es la de un entorno de trading de confianza, innovador y seguro, que beneficie a los traders, brokers y reguladores. Estamos desarrollando e implementando la tecnología que lo posibilita a día de hoy. ",
             "pt-BR": "A visão do futuro da TigerWit é de um ambiente comercial confiável, confiável e estimulante que beneficia traders, corretores e reguladores. Estamos desenvolvendo e implantando a tecnologia para que isso aconteça hoje.",
-            "ar": "ترى TigerWit المستقبل في صورة بيئة تداول مثيرة وموثوق فيها وجديرة بالاعتماد عليها والتي تحقق النفع والفائدة لكل من المتداولين والوسطاء والجهات الرقابية والتنظيمية.  ونحن نعمل على تطوير ونشر التكنولوجيا من أجل تحقيق ذلك اليوم."
+            "ar": "تنظر TigerWit إلى مستقبل يتميز ببيئة تداول مثيرة وموثوقة ويمكن الاعتماد عليها تحقق الفائدة للمتداولين والوسطاء والجهات الرقابية. نعمل على تطوير ونشر التكنولوجيا لجعل هذا الأمر يتحقق اليوم."
         },
         "about24": {
             "zh": " ",
@@ -17122,7 +17134,7 @@ module.exports = {
             "id": "Dengan memanfaatkan teknologi blockchain, kita dapat membuat dunia trading ini menjadi lebih baik dan adil. Teknologi blockchain yang terdapat pada setiap akun Live klien kami mampu mencatat semua transaksi secara transparan, tidak dapat diubah dan bersifat abadi (tidak dapat dihapus oleh siapapun). Sehingga klien dapat dengan mudah mengakses dan melihat semua transaksi yang telah terjadi dengan sangat transparan.",
             "es": "Desarrollar y cabalgar el potencial de blockchain es un paso esencial hacia un mundo del trading mejor, más justo y transparente. Su inmutabilidad y posibilidad de verificación instantánea, comprobable para cualquier cliente en Real, permite que, vía una liquidación powered por blockchain, se devuelva la transparencia y la confianza perdidas hoy en día en los mercados. ",
             "pt-BR": "Aproveitar o potencial do blockchain é o primeiro passo essencial para um mundo comercial melhor e mais justo. Como é imutável e instantaneamente verificável para qualquer cliente Live, o acordo com blockchain permite retornar a confiança e a transparência ausentes do mercado atual.",
-            "ar": "تمثل الاستفادة من الإمكانات الهائلة لتكنولوجيا بلوك تشين الخطوة الأساسية الأولى لجعل عالم التداول أفضل وأكثر عدلاً وإنصافًا.  وذلك لأن المعاملات التي تتم باستخدام تكنولوجيا بلوك تشين تتميز بكونها غير قابلة للتغيير ومن الممكن التحقق منها على الفور من جانب أي عميل لديه حساب حقيقي، وتتيح التسوية المدعومة من بلوك تشين لنا استعادة الثقة والشفافية الغائبة عن أسواق اليوم."
+            "ar": "تمثل الاستفادة من الإمكانات الهائلة لتكنولوجيا Blockchain الخطوة الأساسية الأولى لجعل عالم التداول أفضل وأكثر عدلاً وإنصافًا.  وذلك لأن المعاملات التي تتم باستخدام تكنولوجيا Blockchain تتميز بكونها غير قابلة للتغيير ومن الممكن التحقق منها على الفور من جانب أي عميل لديه حساب حقيقي، وتتيح التسوية المدعومة من Blockchain لنا استعادة الثقة والشفافية الغائبة عن أسواق اليوم."
         },
         "about25": {
             "zh": " ",
@@ -17132,7 +17144,7 @@ module.exports = {
             "id": "Teknologi blockchain TigerWit yang bernama ",
             "es": "Blockchain sustancia los cimientos sobre los que ",
             "pt-BR": "Blockchain é a base essencial sobre a qual a TigerWit foi fundada com um propósito claro; para trazer novas soluções tecnológicas para uma indústria presa em seus caminhos e necessitada de reimaginação e nova visão.",
-            "ar": "تعتبر بلوك تشين هي الأساس الجوهري الذي تأسس عليه"
+            "ar": "تعتبر Blockchain هي الأساس الجوهري الذي تأسس عليه"
         },
         "about26": {
             "zh": " ",
@@ -17152,7 +17164,7 @@ module.exports = {
             "id": "TigerWit menyediakan berbagai produk keuangan yang dapat diperdagangkan seperti Valuta asing, logam mulia, komoditas dan indeks. Semuanya ada di CFD.Trading dipasar manapun, dengan strategi apapun.",
             "es": "Opera los mercados que quiere, del modo que desea. TigerWit ofrece los principales majors globales – FX, metales preciosos, commodities e indices, todo vía CFDs.",
             "pt-BR": "Sobre o nosso aplicativo",
-            "ar": "استمتع بالتداول في الأسواق التي تريدها، بالطريقة التي تريدها. توفر TigerWit الأصول العالمية الرئيسية التي يحتاجها المتداولون والتي تشمل - الفوركس والمعادن النفيسة والسلع، وجميعها في صورة عقود فروقات."
+            "ar": "تمتع بالتداول على أسواقك المفضلة، بطريقتك المفضلة. توفر TigerWit الأدوات المالية الرئيسية التي يحتاجها المتداول - العملات الأجنبية (الفوركس) والمعادن الثمينة والسلع ولامؤشرات والتي يتم تداولها بنظام العقود مقابل الفروقات CFDs"
         },
         "about28": {
             "zh": " ",
@@ -17162,7 +17174,7 @@ module.exports = {
             "id": "Menjadi yang terbaik di dunia trading dengan didukung oleh blockchain.Trading dipasar manapun, dengan strategi apapun. Valas, logam mulia, komoditas dan indeks. Dengan menggunakan aplikasi yang cepat dan gampang digunakan, serta didukung oleh teknologi distributed trading ledger.",
             "es": "Estas dos palabras significan mucho. Es simplemente lo mejor en el trading. Powered by blockchain. Opere los mercados que busca, del modo que desea; FX, metales preciosos, commodities e indices. En unA app tan ágil que es un placer usarla, basada en TigerWit distributed trading ledger.",
             "pt-BR": "Sobre a TigerWit Group",
-            "ar": "كلمتان تعنيان الكثير. إنها ببساطة التداول في أفصل صوره مدعومة من تقنية بلوك تشين استمتع بالتداول في الأسواق التي تريدها بالطريقة التي تريدها؛ الفوركس والمعادن النفيسة والسلع والمؤشرات.  على تطبيق ذكي من الممتع استخدامه، والذي يعتمد على السجل الموزع للتداول لشركة TigerWit."
+            "ar": "كلمتان تعنيان الكثير. ببساطة هي أفضل التداولات. مدعومة بتقنية Blockchain. تداول أسواقك المفضلة بطريقتك المفضلة، العملات الأجنبية والمعادن الثمينة والسلع والمؤشرات. من خلال تطبيق ذكي من الممتع استخدامه، ويعتمد على تقنية السجل الموزع للتداول من شركة TigerWit."
         },
         "about29": {
             "zh": " ",
@@ -17172,7 +17184,7 @@ module.exports = {
             "id": "Dibutuhkan terobosan teknologi untuk dapat mempercepat perkembangan dan membangun kembali industri ini menjadi lebih baik. Oleh karena itu TIgerWit memanfaatkan kekuatan teknologi blockchain untuk mendefinisikan ulang sistem dan proses-proses yang mendukung perdagangan. Teknologi “Distributed Trading Ledger” ini memberikan efisiensi dan keamanan yang lebih tinggi serta sangat transparan dan terpercaya.",
             "es": "Reconstruir una industria en su totalidad no puede suceder sin una tecnología disruptiva que potencie la evolución. Es por esto que TigerWit está apoyándose en el potencial de blockchain y redifiniendo los sistemas y procesos que sustentan el trading. La tecnología de registros distribuidos de TigerWit se basa en una liquidación de los trades basada en blockchain que proporciona una mayor transparencia, confianza, seguridad y eficiencia. ",
             "pt-BR": "Sobre trabalhar conosco",
-            "ar": "من المستحيل حدوث إعادة الهيكلة في أي صناعة بشكل كامل بدون الاستعانة بالتكنولوجيا الماحية لما قبلها من أجل إحداث هذا التطور وقيادته.  ولهذا السبب فإن TigerWit تستفيد من قوة تكنولوجيا بلوك تشين وتعيد تشكيل الأنظمة والعمليات على نحو يدعم ويحسن التداول بشكل كبير.  يعتمد السجل الموزع للتداول لشركة TigerWit على تسوية لعمليات التداول قائمة على تكنولوجيا بلوك تشين، مما يوفر كفاءة عالية وقدرًا أكبر من الأمن والشفافية والثقة."
+            "ar": "من المستحيل حدوث إعادة الهيكلة في أي مجال بشكل كامل بدون الاستعانة بتكنولوجيا تلغي ما سبق من أجل إحداث التطور وقيادته.  ولهذا السبب فإن TigerWit تستفيد من قوة تكنولوجيا Blockchain وتعيد تشكيل الأنظمة والعمليات على نحو يدعم ويحسن التداول بشكل كبير.  يعتمد السجل الموزع للتداول لشركة TigerWit على تسوية لعمليات التداول قائمة على تكنولوجيا Blockchain، مما يوفر كفاءة عالية وقدرًا أكبر من الأمن والشفافية والثقة."
         },
         "about30": {
             "zh": " ",
@@ -17182,7 +17194,7 @@ module.exports = {
             "id": "Pelajari lebih lanjut",
             "es": "Descubrir más",
             "pt-BR": "Descubra mais",
-            "ar": "اكتشف المزيد"
+            "ar": "تعرف أكثر"
         }
     },
     "_comment_thirdH5": {
@@ -18584,7 +18596,7 @@ module.exports = {
             "id": "Akun Master",
             "es": "Cuenta Master",
             "pt-BR": "Conta Princ",
-            "ar": "حساب الأستاذ"
+            "ar": "حساب المتداول الموهوب"
         },
         "withdrawAccountJ": {
             "zh": "提现账户",
@@ -18784,7 +18796,7 @@ module.exports = {
             "id": "Tambah rekening pengiriman uang",
             "es": "Añadir cuenta de transferencia bancaria",
             "pt-BR": "Adicionar conta para transferência bancária",
-            "ar": "أضف حساب التحويل المصرفي"
+            "ar": "إضافة حساب التحويل المصرفي"
         },
         "bicSwiftCode": {
             "zh": "BIC/Swift code",
