@@ -9,6 +9,7 @@
 // 上传最新代码时需要先清空语言数据库表；
 // 转成excel时需要重新上传最新的语言数据；
 // 上传excel时需要重新上传最新的语言数据（excel是覆盖）；
+// 语言翻译途中翻译的当前语言若修改需记录（防止被翻译好的excel覆盖）
 module.exports = {
     "_comment_data": {
         "en": "this is comments, No translation required",
