@@ -246,8 +246,11 @@
     if (user_id) {
         setGtagUserId(user_id, true)
     } else {
+        // 谷歌埋点
         gtag('config', 'UA-142852435-1');
     }
+    // google Ads再营销代码
+    gtag('config', 'AW-750596788');
     // 传递事件
     function toGtagEvent(action, obj) {
         sendEvent(action, obj)
