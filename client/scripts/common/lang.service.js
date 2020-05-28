@@ -22,6 +22,12 @@
             d.setTime(d.getTime() + (-1 * 24 * 60 * 60 * 1000));
             document.cookie = 'lang=' + lang + '; path=/; expires=' + d.toUTCString();
             document.cookie = 'lang=' + lang + '; path=/; domain=' + domain;
+            // dp第三方不需要添加语言参数
+            if(location.hostname.indexOf('dp') != -1){
+            // if(location.hostname.indexOf('w.dev.tigerwit.com') != -1){
+                location.reload();
+                return;
+            }
             // 重定向需要判断链接上语言参数
             location.href = fun.switchParam((lang == 'cn' ? 'zh' : lang), language);
         }

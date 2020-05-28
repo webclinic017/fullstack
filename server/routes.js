@@ -84,6 +84,50 @@ module.exports = function (app) {
     //     res.sendFile(path.resolve(app.get('appPath') + '/index.html'));
     // });
 
+    /*
+     * 三方相关页面 end
+     */
+    app.use('/', function (req, res, next) {
+        // console.log('-----2---', req.url)
+        // console.log('-----2---', req.baseUrl)
+        var allowPaths = ['/payment/login', '/payment/asset', '/payment/evidence', '/payment/cse_usage', '/waiting', '/napi']
+        if (req.hostname.indexOf('dp') != -1) {
+        // if (req.hostname.indexOf('w.dev.tigerwit.com') != -1) {
+            // console.log(req)
+            if (allowPaths.indexOf(req.url) != -1) {
+                var pageId = ''
+                if (req.url == allowPaths[0]) {
+                    pageId = 'login'
+                }
+                else if (req.url == allowPaths[1]) {
+                    pageId = 'asset'
+                }
+                else if (req.url == allowPaths[3]) {
+                    pageId = 'cse_usage'
+                }
+                else if (req.url == allowPaths[2]) {
+                    pageId = 'evidence'
+                }
+                else if (req.url == allowPaths[4]) {
+                    res.render('waiting');
+                    return
+                }
+                res.render('third/index', {
+                    pageInfo: {
+                        id: pageId
+                    }
+                });
+                return
+            } else if (req.url.indexOf(allowPaths[5]) != -1) {
+                next()
+            } else {
+                res.redirect('/payment/login');
+                return
+            }
+        } else {
+            next()
+        }
+    })
 
 
     // :params为语言或者空
