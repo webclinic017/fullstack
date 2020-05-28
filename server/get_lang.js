@@ -1,11 +1,23 @@
-module.exports = function (req, res) {
+module.exports = function (req) {
     var langArr = ['zh', 'cn', 'en', 'vi', 'zh-Hant', 'id', 'es', 'pt-BR', 'ar'];
     var querystring = require("querystring");
     var defaultLang = {
+        langArr: langArr,
+        paramsLang: paramsLang,
         browserLang: browserLang,
         cookieLang: cookieLang,
         urlLang: urlLang,
         decideLang: decideLang
+    }
+    // 获取链接中语言参数
+    function paramsLang() {
+        // console.log('-----------lang------', req.params.lang)
+        var lang = ''
+        var paramsLang = req.params.lang;
+        if (paramsLang && langArr.indexOf(paramsLang) !== -1) {
+            lang = paramsLang;
+        }
+        return lang;
     }
     function browserLang() {
         var acceptLang = req.headers["accept-language"];
@@ -36,49 +48,46 @@ module.exports = function (req, res) {
         // ['zh', 'en', 'vi', 'zh', 'id', 'ar']
         return browserLang;
     }
+    // TODO req.cookies
     function cookieLang() {
         var lang = '';
-        var cookieLang;
-        var cookieList = querystring.parse(req.headers.cookie, '; ');
-
-        for (var name in cookieList) {
-            // console.info(name);
-            // 获取cookie中的lang
-            if (name === 'lang') {
-                if(cookieList[name] instanceof Array){
-                    cookieLang = cookieList[name][0];
-                } else {
-                    cookieLang = cookieList[name];
-                }
-                break;
-            }
-        }
-        if(cookieLang && langArr.indexOf(cookieLang) !== -1){
+        var cookieLang = req.cookies.lang;
+        // var cookieList = querystring.parse(req.headers.cookie, '; ');
+        // // 多个域名存在lang时为数组
+        // if (cookieList['lang'] instanceof Array) {
+        //     cookieLang = cookieList['lang'][0];
+        // } else {
+        //     cookieLang = cookieList['lang'];
+        // }
+        // console.log('---cookieLang---', cookieList)
+        if (cookieLang && langArr.indexOf(cookieLang) !== -1) {
             lang = cookieLang;
         }
         // ['zh', cn', 'en', 'vi', 'zh-Hant', 'id', 'pt-BR', 'ar']
         return lang;
     }
-    function urlLang(){
+    function urlLang() {
         var url = require('url');
         var lang = ''
         var urlLang = url.parse(req.url, true).query.lang;
-        if(urlLang && langArr.indexOf(urlLang) !== -1){
+        if (urlLang && langArr.indexOf(urlLang) !== -1) {
             lang = urlLang;
         }
         // ['zh', cn', 'en', 'vi', 'zh-Hant', 'id', 'pt-BR', 'ar']
         return lang;
     }
-    function decideLang(){
+    function decideLang() {
         var lang = 'en';
-        var urlL, cookieL, browserL;
-        if(urlL = urlLang()){
+        var paramsL, urlL, cookieL, browserL;
+        if (paramsL = paramsLang()) {
+            return paramsL;
+        } else if (urlL = urlLang()) {
             return urlL;
-        }else if(cookieL = cookieLang()){
+        } else if (cookieL = cookieLang()) {
             return cookieL
-        }else if(browserL = browserLang()){
+        } else if (browserL = browserLang()) {
             return browserL
-        }else {
+        } else {
             return lang
         }
     }

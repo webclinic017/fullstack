@@ -4,9 +4,9 @@
 
     angular.module('fullstackApp').factory('lang', lang);
 
-    lang.$inject = ['langData', '$location', '$timeout', '$cookies'];
+    lang.$inject = ['langData', '$location', '$timeout', '$cookies', 'fun'];
 
-    function lang(langData, $location, $timeout, $cookies) {
+    function lang(langData, $location, $timeout, $cookies, fun) {
 
         var language = 'en';
         var domain = '.' + location.hostname.split('.').slice(-2).join('.');
@@ -16,11 +16,20 @@
         }
         langData["language"] = language;
         function setCookieLang(lang) {
+            if (lang === cookieLang) { return }
+            sessionStorage.removeItem("sysMessage");    //切换语言需要重新获取邮箱电话
             var d = new Date();
             d.setTime(d.getTime() + (-1 * 24 * 60 * 60 * 1000));
             document.cookie = 'lang=' + lang + '; path=/; expires=' + d.toUTCString();
             document.cookie = 'lang=' + lang + '; path=/; domain=' + domain;
-            location.reload();
+            // dp第三方不需要添加语言参数
+            if(location.hostname.indexOf('dp') != -1){
+            // if(location.hostname.indexOf('w.dev.tigerwit.com') != -1){
+                location.reload();
+                return;
+            }
+            // 重定向需要判断链接上语言参数
+            location.href = fun.switchParam((lang == 'cn' ? 'zh' : lang), language);
         }
         var lang = {
             isEnglishArea: function () {
@@ -43,10 +52,10 @@
                  * 判断阿拉伯种类语言 ar。
                  *  */
                 var bol = false;
-                if(langData["language"] === 'ar'){
-                    if(con){
+                if (langData["language"] === 'ar') {
+                    if (con) {
                         bol = con;
-                    }else{
+                    } else {
                         bol = true;
                     }
                 }

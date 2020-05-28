@@ -7,27 +7,18 @@ module.exports = function () {
         var company_name = envConfig.company_name;
         var clonedBaidu = envConfig.isCloned;
         var data = require('./lang_data.js')();
-        var decideLang = require('./get_lang')(req).decideLang();
+
+        // var decideLang = require('./get_lang')(req).decideLang();
+        var decideLang = req.lang;
+        // console.log('-----------lang5------', decideLang)
         var language = decideLang === 'cn' ? 'zh' : decideLang;
-        function parseCookie(cookie){
-            var cookies = {};
-            if(!cookie){
-                return cookies;
-            };
-            var list = cookie.split(';');
-            for(let i = 0; i < list.length; i++){
-                var pair = list[i].split('=');
-                cookies[pair[0].trim()] = pair[1];
-            }
-            return cookies;
-        }
         this.language = language;
         this.data = data;
         this.req = req;
         this.company_name = company_name;
         this.clonedBaidu = clonedBaidu;
         // 根据areaId大区显示({"key": "中国区","value": 1},{"key": "国际区","value": 2},{"key": "英国区","value": 3})
-        this.areaId = parseCookie(req.headers.cookie).area_id;
+        this.areaId = req.cookies.area_id;
         // console.log(this.areaId, 'areaId')
         // return this;         
     }
@@ -52,10 +43,10 @@ module.exports = function () {
              * 判断阿拉伯种类语言 ar。
              *  */
             var bol = false;
-            if(this.language === 'ar'){
-                if(con){
+            if (this.language === 'ar') {
+                if (con) {
                     bol = con;
-                }else{
+                } else {
                     bol = true;
                 }
             }
@@ -86,7 +77,7 @@ module.exports = function () {
             var key = _this.data;
             var keys = name.split('.');
             for (var index = 0; index < keys.length; index++) {
-                key = key[keys[index]]       
+                key = key[keys[index]]
             }
             if (key) {
                 //console.info('langData load successful!',data[name][this.language])
@@ -116,7 +107,7 @@ module.exports = function () {
                 return false;
             }
         }, //没用
-        isVersion: function(version){
+        isVersion: function (version) {
             var vMap = {
                 global: 'tigerwell_global',
                 special: 'tiger_special',
@@ -125,7 +116,7 @@ module.exports = function () {
             }
             return this.req.headers['user-agent'].indexOf(vMap[version]) != -1;
         },
-        isTigerSpecial: function(){
+        isTigerSpecial: function () {
             // console.log("this.req.headers['user-agent']", this.req.headers['user-agent'])
             return this.req.headers['user-agent'].indexOf('tiger_special') != -1;
         },
@@ -137,7 +128,7 @@ module.exports = function () {
                 return false;
             }
         },
-        isCloned: function(){  //此方法废弃 2018.11.20
+        isCloned: function () {  //此方法废弃 2018.11.20
             return this.clonedBaidu;
         },
         background: function () {  //此方法废弃 2018.11.20 (背景图使用image方法)
@@ -167,7 +158,7 @@ module.exports = function () {
             }
         },
         // 中文或者英文
-        cnOrEn: function(cn, en) {  //此方法废弃 2018.11.20
+        cnOrEn: function (cn, en) {  //此方法废弃 2018.11.20
             var _this = this;
             if (_this.language === 'en') {
                 return en;
