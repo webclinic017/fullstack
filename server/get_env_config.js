@@ -40,6 +40,7 @@
             envConfig.cdn_url = process.env.CDN_URL;
         // }
         // console.log(envConfig);
+        return envConfig;
     }
 
     module.exports = {
