@@ -277,6 +277,7 @@
      * 后期考虑改为接口
      * live： https://global.tigerwitex.com/files/pub_v1.json
      * demo： https://globaldemo.r62g.cn/files/pub_v1.json
+     * 
      */
     var login_key_dev = '-----BEGIN PUBLIC KEY-----MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCwyjx6cQ4AHOnmeIU15A+EvLk3V3oHv2YLp8nZBNqeg+uLPn2HyYF1/s/Mi2EZE2ypIFuvKiCX3ACrZuM55nJSTTjJzOfohh2tLMClLlbfHxdNyg8cotza4+iutrru2vy+kUWp0UuydNrjDJoVJwPXOkToLXjtOEofPmdzjLbE4QIDAQAB-----END PUBLIC KEY-----';
     var login_key_live = '-----BEGIN PUBLIC KEY-----MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDN67wAcj1WL/scb9TuvawbqMABg2sYXdmLkzXYUK/qbZI168gpM1t4SqS2qxYuEy+a/rOQ/YokJy0Q+dwQBEUmRWd4//64D3shkMMPZ0VuQ67LmVbFzbaly9dEYbAkoKvd4qcVxG1qAYlPGAKVZjRbf3q6d1CGeUGQqoynofTZNwIDAQAB-----END PUBLIC KEY-----';
