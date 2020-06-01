@@ -35,7 +35,6 @@
                     return url + '&'
                 }
             },
-<<<<<<< HEAD
 
             // 删除url?后某个参数
             delQuery: function (queryKey) {
@@ -78,7 +77,6 @@
             },
 
 
-=======
             /**
             *防抖函数
             *@param fn 事件触发的操作
@@ -96,7 +94,6 @@
                     }, delay);
                 }
             },
->>>>>>> patch
             // 复制text到剪切板
             copyText: function (text) {
                 var textArea = document.createElement("textarea");
