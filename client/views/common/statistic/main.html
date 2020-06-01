@@ -5,14 +5,66 @@
     _czc.push(["_setAccount", "1260394016"]);
 </script>
 <script>
+    // function getCookie(name) {
+    //     var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+    //     if (arr = document.cookie.match(reg)) {
+    //         return unescape(arr[2]);
+    //     }
+    //     else {
+    //         return null;
+    //     }
+    // }
+    function setCookie({ name, value, expires, domain, path, secure }) {
+        path = path || '/';
+        expires = expires || 30;
+        domain = domain || getDomain();
+        var cookieText = "";
+        cookieText += encodeURIComponent(name) + "=" + encodeURIComponent(value);
+
+        // expires
+        var oDate = new Date();
+        oDate.setTime(oDate.getTime() + (expires * 24 * 60 * 60 * 1000));
+        cookieText += "; expires=" + oDate.toGMTString();
+
+        // path
+        cookieText += "; path=" + path;
+        cookieText += "; domain=" + domain;
+        if (secure) {
+            cookieText += "; secure";
+        }
+        document.cookie = cookieText;
+    }
+    // 获取cookies
     function getCookie(name) {
-        var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
-        if (arr = document.cookie.match(reg)) {
-            return unescape(arr[2]);
+        var cookieName = encodeURIComponent(name) + "=",
+            cookieStart = document.cookie.indexOf(cookieName),
+            cookieValue = "";
+        if (cookieStart > -1) {
+            var cookieEnd = document.cookie.indexOf(";", cookieStart);
+            if (cookieEnd == -1) {
+                cookieEnd = document.cookie.length;
+            }
+            cookieValue = decodeURIComponent(document.cookie.substring(cookieStart + cookieName.length, cookieEnd));
         }
-        else {
-            return null;
+        return cookieValue;
+    }
+    // 删除cookie
+    function delCookie({ name, domain, path, secure }) {
+        var value = '';
+        var expires = Date(0)
+        setCookie({ name, value, expires, domain, path, secure });
+    }
+
+    // 截取域名
+    function getDomain() {
+        var domain;
+        if (location.hostname === 'localhost') {
+            domain = 'localhost';
+        } else {
+            domain = '.' + location.hostname.split('.').slice(-2).join('.');
         }
+        // console.log(url.match(/\.\w+\.com/)[0]);
+        return domain;
     }
     // var allowPath = [
     //     'global.tigerwit.com',
@@ -104,12 +156,42 @@
     }
 </script>
 <script>
+    function getSoleID(length) {
+        return Number(Math.random().toString().substr(3, length) + Date.now()).toString(36);
+    }
+    /**
+     * 设置浏览器id
+     * bol  重新设置
+    */
+    setBrowserID(); // 初始化执行一次
+    function setBrowserID(bol) {
+        if (bol || !getCookie('BROWSER_ID')) {
+            setCookie({ name: 'BROWSER_ID', value: getSoleID(), expires: 365 });
+        }
+    }
+    /**
+    * 发送事件
+    * eventName  事件
+    * obj  其他参数
+   */
+    function sendEvent(eventName, obj) {
+        // 埋点事件，不需要处理
+        $.ajax({
+            type: "POST",
+            url: "/api/v3/appsflyer/event/add",
+            data: Object.assign({ browser_id: getCookie('BROWSER_ID'), event_name: eventName }, obj),
+            dataType: "json"
+        })
+    }
+
     // 避免掉不必要的try catch
     function setGtagUserId(userId) {
+        setBrowserID(true);
         console.log('国内不需要google Analytics统计', userId)
     }
 
-    function toGtagEvent(action) {
+    function toGtagEvent(action, obj) {
+        sendEvent(action, obj)
         console.log('国内不需要google Analytics统计')
         console.log('国内不需要facebook统计')
     };
@@ -152,19 +234,29 @@
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     // 设置用户名
-    function setGtagUserId(userId) {
+    function setGtagUserId(userId, init) {
+        if (!init) {
+            setBrowserID(true);
+        }
         gtag('config', 'UA-142852435-1', {
             'user_id': userId
         });
     }
     var user_id = getCookie('user_code');
     if (user_id) {
-        setGtagUserId(user_id)
+        setGtagUserId(user_id, true)
     } else {
+        // 谷歌埋点
         gtag('config', 'UA-142852435-1');
     }
+    // google Ads再营销代码
+    gtag('config', 'AW-750596788');
     // 传递事件
-    function toGtagEvent(action) {
+    function toGtagEvent(action, obj) {
+        sendEvent(action, obj)
+        if (obj && obj.belong == 'tigerwit') {
+            return
+        }
         gtag('event', action, {
             'event_category': 'action',
             'event_label': 'catalogory'

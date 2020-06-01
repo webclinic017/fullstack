@@ -306,6 +306,7 @@
                 },    
                 controller: function ($scope, passedScope, $modalInstance, lang) {
                     $scope.lang = lang;
+                    $scope.toGtagEvent = toGtagEvent;
                     $scope.closeModal = closeModal;
                     function closeModal() {
                         $modalInstance.dismiss();

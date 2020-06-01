@@ -29,6 +29,7 @@
         }
 
         $rootScope.writeCookie = writeCookie;
+        $scope.writeCookie = writeCookie;
         function writeCookie(params) {
             console.log(params);
             params.expires = params.expires || 30;
@@ -62,21 +63,6 @@
             _czc.push(["_trackEvent", category, action]);
         };
 
-        $scope.writeCookie = writeCookie;
-        function writeCookie(params) {
-            params.expires = params.expires || 30;
-            params.path = params.path || '/';
-            /**
-             * params
-             *      nameKey: 名字
-             *      nameValue: 
-             *      expires: 过期时间 单位天
-             *      path
-             *  */
-            var oDate = new Date();
-            oDate.setTime(oDate.getTime() + (params.expires * 24 * 60 * 60 * 1000));
-            document.cookie = params.nameKey + '=' + params.nameValue + ';path=' + params.path + ';domain=' + $scope.getDomain() + ';expires=' + oDate.toUTCString();
-        }
 
         function thirdLogout() {
             account.logout().then(function (data) {

@@ -15,7 +15,7 @@
             <a class="link" target="_blank" href="/web/copy/rules">{{ lang.text("tigerWitID.dataStatistics.copyRegulations") }}</a>
 
             <p class="mg-tp-20 space-between text-center">
-                <span class="agreement-btn agree_button flex1" ng-click="agreeProtocol()">
+                <span class="agreement-btn agree_button flex1" ng-click="[agreeProtocol(), toGtagEvent('click_agree_copy_web', {belong: 'tigerwit'})]">
                     {{ lang.text("tigerWitID.commission.accept") }}
                 </span>
                 <span class="agree_button cancle flex1 mg-lf-0" ng-click="closeModal()">

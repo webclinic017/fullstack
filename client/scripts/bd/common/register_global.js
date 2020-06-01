@@ -80,10 +80,10 @@ $(document).ready(function () {
 
 
     if (oReg.search_arr.unit) {
-        $.cookie('unit', oReg.search_arr.unit, { path: '/', domain: getDomain(), expires: 7 });
+      $.cookie('unit', oReg.search_arr.unit, { path: '/', domain: getDomain(), expires: 7 });
     }
     if (oReg.search_arr.key) {
-        $.cookie('key', oReg.search_arr.key, { path: '/', domain: getDomain(), expires: 7 });
+      $.cookie('key', oReg.search_arr.key, { path: '/', domain: getDomain(), expires: 7 });
     }
   }
   // 客户推广
@@ -138,6 +138,7 @@ $(document).ready(function () {
     publicRequest('regOrLogin', 'POST', {
       ib_pid: oReg.search_arr.ib_pid || $.cookie('ib_pid') || null,
       invite_status: $.cookie('invite_status') || null,
+      browser_id: $.cookie('BROWSER_ID') || null,
       account: $("#email").val(),
       account_type: 2,
       world_code: $("#country").val(),
@@ -159,6 +160,7 @@ $(document).ready(function () {
       if (data.is_succ) {
         layer.closeAll();
         openLayer(lang.text('registerJs.registerSucc'));
+        setGtagUserId(data.data.user_code)
         if (!isMobile()) {
           $.cookie('token', data.data.token, { expires: 30, path: '/', domain: getDomain() });
           $.cookie('user_code', data.data.user_code, { expires: 30, path: '/', domain: getDomain() });
@@ -166,8 +168,8 @@ $(document).ready(function () {
           $.cookie('username_en', data.data.username_en, { expires: 30, path: '/', domain: getDomain() });
           $.cookie('world_code', $("#country").val(), { expires: 30, path: '/', domain: getDomain() });
 
-          setGtagUserId(data.data.user_code)
           setTimeout(function () {
+            toGtagEvent('email_register_success_web');
             window.location.href = '/space/#/center?type=new';
           }, 100);
         } else {

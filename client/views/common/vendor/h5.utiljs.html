@@ -125,12 +125,12 @@
     /*
         获取domain
     */
-    function getDomain() {
-        // var domain = location.hostname.match(/\.\w+\.com/) ? location.hostname.match(/\.\w+\.com/)[0] : '.tigerwit.com';
-        var domain = '.' + location.hostname.split('.').slice(-2).join('.');
-        // console.log(url.match(/\.\w+\.com/)[0]);
-        return domain;
-    }
+    // function getDomain() {
+    //     // var domain = location.hostname.match(/\.\w+\.com/) ? location.hostname.match(/\.\w+\.com/)[0] : '.tigerwit.com';
+    //     var domain = '.' + location.hostname.split('.').slice(-2).join('.');
+    //     // console.log(url.match(/\.\w+\.com/)[0]);
+    //     return domain;
+    // }
     // console.log(getDomain());
 
     //设置邮箱
@@ -345,12 +345,17 @@
     function checkUserSource() {
         var sourceReg = /^DW_|^D_|^R_/i;
         var search_arr = getSearch();
+        var bol = false;
         search_source = {};
         $.each(search_arr, function (index, value) {
             if (sourceReg.test(index)) {
+                bol = true;
                 search_source[index] = value;
             }
         });
+        if (bol) {
+            setBrowserID(true);
+        }
         search_source = Object.keys(search_source).length ? search_source : undefined;
         return search_source;
     }
