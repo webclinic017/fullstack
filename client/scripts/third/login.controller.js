@@ -42,7 +42,8 @@
 
             account.loginByMt4({
                 mt4: $scope.account.mt4,
-                password: $scope.account.password
+                password: $scope.account.password,
+                browser_id: $cookies['BROWSER_ID'] || null,
             }).then(function (data) {
                 layer.closeAll();
                 $scope.account.loading = true;
@@ -54,6 +55,7 @@
 
                     setGtagUserId(data.data.user_code)
                     $timeout(function () {
+                        $scope.toGtagEvent('login_success_web');
                         account.hasChecked = false;
                         $window.location.href = '/payment/asset';
                     }, 100);

@@ -52,7 +52,7 @@
             // phoneVePhone: '', //---|--合为phonePhone
             // forgetPhone: '',  //---|
             phonePhone: '',
-            phoneVeCode: '', 
+            phoneVeCode: '',
             // emailVeEmail: '', //-----|
             // emailPwEmail: '', //-----|---合为emailEmail
             // forgetEmail: '',  //-----|
@@ -82,8 +82,8 @@
             localStorage['phone_code'] = target.phone_code;
         }
         // 使用缓存的phone_code
-        if(localStorage['phone_code']){
-            selectArea({phone_code: localStorage['phone_code']})
+        if (localStorage['phone_code']) {
+            selectArea({ phone_code: localStorage['phone_code'] })
         }
         var token;
         // console.log(lang.text("actLogin1"));
@@ -125,14 +125,14 @@
             //     return;
             // }
             // 手机登录
-            if($scope.loginStep3 == 2){
-                if(!showPhoneVel()){ return };
+            if ($scope.loginStep3 == 2) {
+                if (!showPhoneVel()) { return };
                 phone_code = $scope.account.phoneArea.value;
                 account_num = $scope.account.phonePhone;
                 account_type = 1;
                 msg = lang.text('tigerWitID.login.tip6_21')
-            }else if($scope.loginStep3 == 1){
-                if(!showEmaliVel()){ return };
+            } else if ($scope.loginStep3 == 1) {
+                if (!showEmaliVel()) { return };
                 phone_code = '';
                 account_num = $scope.account.emailEmali;
                 account_type = 2;
@@ -164,7 +164,7 @@
                         btns: {},
                         btnsClass: 'account_login__layer-btns'
                     }
-                    obj.btns[lang.text("tigerWitID.confirm2")] = function(){};
+                    obj.btns[lang.text("tigerWitID.confirm2")] = function () { };
                     $layer(obj);
                 } else {
                     layer.msg(data.message);
@@ -183,6 +183,7 @@
             var para = {
                 ib_pid: search_arr.ib_pid || $cookies['ib_pid'] || null,  // 代理推广
                 invite_status: $cookies['invite_status'] || null,
+                browser_id: $cookies['BROWSER_ID'] || null,
                 // TODO 暂时
                 referrer: document.referrer,
                 href: location.href,
@@ -193,8 +194,8 @@
             if ($scope.loginType == 'code') {
                 para.login_type = 2;
                 // 邮箱登录
-                if ($scope.loginStep3 == 1){
-                    if(!showEmaliVel()){ return };
+                if ($scope.loginStep3 == 1) {
+                    if (!showEmaliVel()) { return };
                     if (!($scope.account.emailVeCode)) {
                         layer.msg(lang.text('tigerWitID.login.verificationCode'));     //请填写验证码
                         return;
@@ -207,7 +208,7 @@
                     msg = lang.text('tigerWitID.login.tip7_21');
                 } else {
                     // 手机
-                    if(!showPhoneVel()){ return };
+                    if (!showPhoneVel()) { return };
                     if (!($scope.account.phoneVeCode)) {
                         layer.msg(lang.text('tigerWitID.login.verificationCode'));     //请填写验证码
                         return;
@@ -224,8 +225,8 @@
                 }
             } else {
                 para.login_type = 1;
-                if ($scope.loginStep3 == 1){
-                    if(!showEmaliVel()){ return };
+                if ($scope.loginStep3 == 1) {
+                    if (!showEmaliVel()) { return };
                     if (!($scope.account.step1Password)) {
                         layer.msg(lang.text('register11'));     //请填写密码
                         return;
@@ -238,7 +239,7 @@
                     msg = lang.text('tigerWitID.login.tip7_21');
                 } else {
                     // 手机
-                    if(!showPhoneVel()){ return };
+                    if (!showPhoneVel()) { return };
                     if (!($scope.account.step2Password)) {
                         layer.msg(lang.text('register11'));     //请填写密码
                         return;
@@ -263,10 +264,10 @@
 
                 if (data.is_succ) {
                     sessionStorage.removeItem("passErrThree");
-                    $scope.writeCookie({nameKey: 'token', nameValue: data.data.token});
-                    $scope.writeCookie({nameKey: 'user_code', nameValue: data.data.user_code});
-                    $scope.writeCookie({nameKey: 'username', nameValue: data.data.username});
-                    $scope.writeCookie({nameKey: 'username_en', nameValue: data.data.username_en});
+                    $scope.writeCookie({ nameKey: 'token', nameValue: data.data.token });
+                    $scope.writeCookie({ nameKey: 'user_code', nameValue: data.data.user_code });
+                    $scope.writeCookie({ nameKey: 'username', nameValue: data.data.username });
+                    $scope.writeCookie({ nameKey: 'username_en', nameValue: data.data.username_en });
                     // $scope.writeCookie({nameKey: 'user_code', nameValue: '1234'});
                     // $scope.writeCookie({nameKey: 'username', nameValue: '123k'});
                     // $scope.writeCookie({nameKey: 'username_en', nameValue: '22asd'});
@@ -276,8 +277,8 @@
                      * 登录用户进入这两个页面统计一次，退出后在进入才重新统计一次
                      * */
                     var ran = Math.ceil(Math.random() * 1000) * Math.ceil(Math.random() * 1000);
-                    $scope.writeCookie({nameKey: 'd&w_czc', nameValue: ran});
-                    
+                    $scope.writeCookie({ nameKey: 'd&w_czc', nameValue: ran });
+
                     $timeout(function () {
                         $scope.getEmailPhone(true);
                     }, 100);
@@ -288,7 +289,7 @@
                     //     return;
                     // }
                     // 三个月定期修改密码
-                    if(data.data.pwd_tip == 1){
+                    if (data.data.pwd_tip == 1) {
                         var obj = {
                             title: null,
                             titleClass: 'account_login__layer-title',
@@ -297,10 +298,10 @@
                             btns: {},
                             btnsClass: 'account_login__layer-btns'
                         }
-                        obj.btns[lang.text('tigerWitID.login.resetPassword')] = function(){
-                            $state.go('space.setting.subpage', {subpage: 'secure'});
+                        obj.btns[lang.text('tigerWitID.login.resetPassword')] = function () {
+                            $state.go('space.setting.subpage', { subpage: 'secure' });
                         }
-                        obj.btns[lang.text("tigerWitID.cancel")] = function(){};
+                        obj.btns[lang.text("tigerWitID.cancel")] = function () { };
                         $layer(obj)
                     }
                     $timeout(function () {
@@ -313,7 +314,7 @@
                     }, 150);
                 } else {
                     // 登录时，用户不存在，返回 code 为 100504
-                    if(data.code == 100504) {
+                    if (data.code == 100504) {
                         var obj = {
                             title: lang.text('tigerWitID.login.tip7_1') + msg + lang.text('tigerWitID.login.tip7_3'),
                             titleClass: 'account_login__layer-title',
@@ -322,48 +323,48 @@
                             btns: {},
                             btnsClass: 'account_login__layer-btns'
                         }
-                        obj.btns[lang.text('tigerWitID.login.goRegister')] = function(){
-                            $state.go('account.subpage', {subpage: 'register'});
+                        obj.btns[lang.text('tigerWitID.login.goRegister')] = function () {
+                            $state.go('account.subpage', { subpage: 'register' });
                         }
-                        obj.btns[lang.text("tigerWitID.cancel")] = function(){};
+                        obj.btns[lang.text("tigerWitID.cancel")] = function () { };
                         $layer(obj)
                     } else if ((data.code == 100402) || (data.code == 100403)) {  // 未确认注册协议
-                        openWebAgmentModal(data.code, function(resolve, e){
+                        openWebAgmentModal(data.code, function (resolve, e) {
                             $scope.login(formName, 'is_agree');
                             layer.close(resolve.layIndex)
                         })
-                    } else if(data.code == 100505){
-                            // 密码输错三次验证
-                            // 邮箱
-                            var passErrThree = JSON.parse(sessionStorage['passErrThree'] || '{}');
-                            var passErrThreeKey;
-                            var passErrThreeVal;
-                            if($scope.loginStep3 == 1) {
-                                passErrThreeKey = $scope.account.emailEmali;
-                            }else {
-                                passErrThreeKey = $scope.account.phoneArea.value + '' + $scope.account.phonePhone
+                    } else if (data.code == 100505) {
+                        // 密码输错三次验证
+                        // 邮箱
+                        var passErrThree = JSON.parse(sessionStorage['passErrThree'] || '{}');
+                        var passErrThreeKey;
+                        var passErrThreeVal;
+                        if ($scope.loginStep3 == 1) {
+                            passErrThreeKey = $scope.account.emailEmali;
+                        } else {
+                            passErrThreeKey = $scope.account.phoneArea.value + '' + $scope.account.phonePhone
+                        }
+                        passErrThreeVal = parseInt(passErrThree[passErrThreeKey]) || 0;
+                        passErrThree[passErrThreeKey] = passErrThreeVal + 1;
+                        sessionStorage['passErrThree'] = JSON.stringify(passErrThree)
+                        if ((passErrThreeVal + 1) == 3) {
+                            var obj = {
+                                title: null,
+                                titleClass: 'account_login__layer-title',
+                                msg: lang.text('tigerWitID.login.doResetPassword'),
+                                msgClass: 'account_login__layer-msg',
+                                btns: {},
+                                btnsClass: 'account_login__layer-btns'
                             }
-                            passErrThreeVal = parseInt(passErrThree[passErrThreeKey]) || 0;
-                            passErrThree[passErrThreeKey] = passErrThreeVal + 1;
-                            sessionStorage['passErrThree'] = JSON.stringify(passErrThree)
-                            if((passErrThreeVal + 1) == 3){
-                                var obj = {
-                                    title: null,
-                                    titleClass: 'account_login__layer-title',
-                                    msg: lang.text('tigerWitID.login.doResetPassword'),
-                                    msgClass: 'account_login__layer-msg',
-                                    btns: {},
-                                    btnsClass: 'account_login__layer-btns'
-                                }
-                                obj.btns[lang.text('tigerWitID.yes')] = function(){
-                                    $scope.loginStep2 = 2;
-                                    sessionStorage.removeItem("passErrThree");
-                                };
-                                obj.btns[lang.text('tigerWitID.no')] = function(){}
-                                $layer(obj)
-                            }else {
-                                layer.msg(data.message);
-                            }
+                            obj.btns[lang.text('tigerWitID.yes')] = function () {
+                                $scope.loginStep2 = 2;
+                                sessionStorage.removeItem("passErrThree");
+                            };
+                            obj.btns[lang.text('tigerWitID.no')] = function () { }
+                            $layer(obj)
+                        } else {
+                            layer.msg(data.message);
+                        }
                     } else {
                         layer.msg(data.message);
                     }
@@ -390,7 +391,7 @@
         //                 $scope.$emit('global.openDredgeMdl', {position: 'register'});
         //                 $state.go('space.center.index', {reload: true});
         //             }, 100);
-                    
+
         //         } else {
         //             layer.msg(data.message);
         //         }
@@ -413,9 +414,9 @@
             // }
             var phone_code = null;
             var account_type = 0;
-            if($scope.loginStep3 == 1){
+            if ($scope.loginStep3 == 1) {
                 // 邮箱登录
-                if(!showEmaliVel()){ return };
+                if (!showEmaliVel()) { return };
                 if (!($scope.account.forgetEmailCode)) {
                     layer.msg(lang.text('tigerWitID.login.verificationCode'));     //请填写验证码
                     return;
@@ -424,7 +425,7 @@
                 account_type = 2;
             } else {
                 // 手机登录
-                if(!showPhoneVel()){ return };
+                if (!showPhoneVel()) { return };
                 if (!($scope.account.forgetPhoneCode)) {
                     layer.msg(lang.text('tigerWitID.login.verificationCode'));     //请填写验证码
                     return;
@@ -452,7 +453,7 @@
                 layer.msg(lang.text("register11"));     //请输入密码
                 return;
             }
-            if($scope.account.forgetPassword !== $scope.account.forgetPassword2) {
+            if ($scope.account.forgetPassword !== $scope.account.forgetPassword2) {
                 layer.msg(lang.text('tigerWitID.login.passwordsEnteredDoNotMatch'));     //两次输入的密码不一致
                 return;
             }
@@ -460,10 +461,10 @@
             $scope.loginBtnStatus = false;
             var forgetPhone, forgetCode;
             // 邮箱登录
-            if($scope.loginStep3 == 1){
+            if ($scope.loginStep3 == 1) {
                 forgetPhone = $scope.account.emailEmali;
                 forgetCode = $scope.account.forgetEmailCode;
-            }else{
+            } else {
                 forgetPhone = $scope.account.phonePhone;
                 forgetCode = $scope.account.forgetPhoneCode;
             }
@@ -481,10 +482,10 @@
                         btns: {},
                         btnsClass: 'account_login__layer-btns'
                     }
-                    obj.btns[lang.text('tigerWitID.login.goLogin')] = function(){
+                    obj.btns[lang.text('tigerWitID.login.goLogin')] = function () {
                         $scope.loginStep2 = 1;
                     }
-                    obj.btns[lang.text("tigerWitID.cancel")] = function(){};
+                    obj.btns[lang.text("tigerWitID.cancel")] = function () { };
                     $layer(obj)
                 } else {
                     layer.msg(data.message);
@@ -498,13 +499,13 @@
 
 
         // 获取验证码倒计时
-        function countDown (codeType) {
+        function countDown(codeType) {
             $scope.codeBtnStatus[codeType].count = true;
             $scope.codeBtnStatus[codeType].msg = 60;
 
             $interval.cancel($scope.codeBtnStatus[codeType].timer);
             $scope.codeBtnStatus[codeType].timer = $interval(function () {
-                $scope.codeBtnStatus[codeType].msg --;
+                $scope.codeBtnStatus[codeType].msg--;
 
                 if ($scope.codeBtnStatus[codeType].msg <= 0) {
                     $scope.codeBtnStatus[codeType].count = false;
@@ -514,8 +515,8 @@
             }, 1000);
         }
         // 验证手机号与区号
-        function showPhoneVel () {
-            if(!($scope.account.phoneArea.value)){
+        function showPhoneVel() {
+            if (!($scope.account.phoneArea.value)) {
                 layer.msg(lang.text("tigerWitID.login.selectAreaCode")) // 请选择区号
                 return false;
             }
@@ -527,7 +528,7 @@
         }
 
         // 验证邮箱
-        function showEmaliVel () {
+        function showEmaliVel() {
             if (!($scope.account.emailEmali)) {
                 layer.msg(lang.text("tigerWitID.login.enterEmail"));     //请输入邮箱
                 return false;

@@ -77,6 +77,23 @@
             },
 
 
+            /**
+            *防抖函数
+            *@param fn 事件触发的操作
+            *@param delay 多少毫秒内连续触发事件，不会执行
+            *@returns {Function}
+            */
+           debounce: function (fn, delay) {
+                var timer = null;
+                return function () {
+                    var self = this,
+                        args = arguments;
+                    timer && clearTimeout(timer);
+                    timer = setTimeout(function () {
+                        fn.apply(self, args);
+                    }, delay);
+                }
+            },
             // 复制text到剪切板
             copyText: function (text) {
                 var textArea = document.createElement("textarea");

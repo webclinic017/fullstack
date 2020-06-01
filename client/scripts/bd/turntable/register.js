@@ -238,6 +238,7 @@
                     password: $(".registerLayer .password").val() || null,
                     activity: activity,
                     register_rule: JSON.stringify(search_source),
+                    browser_id: $.cookie('BROWSER_ID') || null,
                     login_type: 3, // 登录验证方式，1-密码登录，2-验证码登录 3-验证码密码都有
                     is_agree: is_agree == 'is_agree' ? 1 : 0
                 }).then(function (data) {
@@ -246,6 +247,7 @@
                     if (data.is_succ) {
                         $.cookie('token', data.data.token, {domain: getDomain()});
                         setGtagUserId(data.data.user_code)
+                        toGtagEvent('phone_register_success_web');
                         layer.closeAll();
                         layer.open({
                             type: 1,

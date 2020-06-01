@@ -1,4 +1,4 @@
-;(function (w) {
+; (function (w) {
     'use strict';
 
     var origin = ($.cookie && $.cookie("access_origin2")) ? $.cookie("access_origin2") : '/api';
@@ -34,7 +34,7 @@
         getAvodaPay: origin + '/avoda/pay', // post
         getAvodaCodeApp: origin_app + '/avoda/code', // post
         getAvodaPayApp: origin_app + '/avoda/pay', // post
-        
+
         setUserSource: origin + '/user/source', //post
         getLcpagOrderInfo: origin + '/wallet/order_info', //get
         postLcpagPay: origin + '/lcpag/pay', //post
@@ -53,9 +53,9 @@
         getSymbols: origin_app + '/symbol/list', //get
         // 荣耀王者活动
         checkLogined: origin_app + '/auth/check', // get
-            // 获取红包的状态
+        // 获取红包的状态
         getRedBagPool: origin_app + '/bonus/index', // get
-            // 领取红包
+        // 领取红包
         receiveRedbag: origin_app + '/bonus/receive', // put GET
         checkHonorStatus: origin_app + '/king/show', // get
         receiveHonor: origin_app + '/king/receive', // post
@@ -104,7 +104,7 @@
         startLottery: origin_app + '/activity/scratch', //get
         shareLottery: origin_app + '/activity/share', //get
         //获取邮箱电话等信息
-        getEmailPhone: origin + '/sys/messages',   
+        getEmailPhone: origin + '/sys/messages',
 
         //第三方充值提现相关页面
         loginThird: origin + '/login/mt4_account',
@@ -144,20 +144,20 @@
     w.publicUploadFile = publicUploadFile;
     w.encryptPassword = encryptPassword;
 
-    function publicRequest ($url, $method, $params) {
+    function publicRequest($url, $method, $params) {
         var t = '';
         try {
             t = getSearch().token;
-        } catch (e) {}
+        } catch (e) { }
         var token = $.cookie("token") || t;
-        $url = apiUrl[$url] + '?token='+token;
+        $url = apiUrl[$url] + '?token=' + token;
         $params = $params ? $params : {};
 
         var user_code = $.cookie["user_code"] || '';
-        if(!$params.user_code){
+        if (!$params.user_code) {
             $params.user_code = user_code;
         }
-        
+
         if ($method.toUpperCase() === 'GET') {
             return $.get($url, $params).then(function (data) {
                 return checkTokenCode(data);
@@ -191,7 +191,7 @@
         }
 
         // 检查返回的token code确定是不是要重新登陆
-        function checkTokenCode (data) {
+        function checkTokenCode(data) {
             // 100100,  // 令牌错误
             // 100101,  // 令牌已被列入黑名单   
             // 100102,  // 令牌过期    
@@ -210,22 +210,22 @@
             }
         }
 
-        function toLogin () {
+        function toLogin() {
             setTimeout(function () {
                 try {
                     callNative({
                         type: "login"
                     });
-                } catch (e) {}
+                } catch (e) { }
                 try {
                     openThirdNative({
                         type: "login"
                     });
-                } catch (e) {}
+                } catch (e) { }
             }, 1000);
         }
 
-        function errFunc (error) {
+        function errFunc(error) {
             console.log(error);
             layer.open({
                 skin: 'msg',
@@ -236,16 +236,16 @@
         }
     }
     // 上传文件 form提交
-    function publicUploadFile ($url, $method, oForm) {
+    function publicUploadFile($url, $method, oForm) {
         var token = $.cookie("token") || '';
-        $url = apiUrl[$url] + '?token='+token;
-        
+        $url = apiUrl[$url] + '?token=' + token;
+
         return $.ajax({
             url: $url,
             type: $method.toUpperCase(),
             xhrFields: {
                 withCredentials: true
-　　　　　　  },
+            },
             data: oForm,
             processData: false,
             contentType: false,
@@ -272,10 +272,17 @@
             }
         });
     }
+
+    /**
+     * 后期考虑改为接口
+     * live： https://global.tigerwitex.com/files/pub_v1.json
+     * demo： https://globaldemo.beihaiwang123.com/files/pub_v1.json
+     * 
+     */
     var login_key_dev = '-----BEGIN PUBLIC KEY-----MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCwyjx6cQ4AHOnmeIU15A+EvLk3V3oHv2YLp8nZBNqeg+uLPn2HyYF1/s/Mi2EZE2ypIFuvKiCX3ACrZuM55nJSTTjJzOfohh2tLMClLlbfHxdNyg8cotza4+iutrru2vy+kUWp0UuydNrjDJoVJwPXOkToLXjtOEofPmdzjLbE4QIDAQAB-----END PUBLIC KEY-----';
     var login_key_live = '-----BEGIN PUBLIC KEY-----MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDN67wAcj1WL/scb9TuvawbqMABg2sYXdmLkzXYUK/qbZI168gpM1t4SqS2qxYuEy+a/rOQ/YokJy0Q+dwQBEUmRWd4//64D3shkMMPZ0VuQ67LmVbFzbaly9dEYbAkoKvd4qcVxG1qAYlPGAKVZjRbf3q6d1CGeUGQqoynofTZNwIDAQAB-----END PUBLIC KEY-----';
     function encryptPassword(text) {
-        var login_key = /\.dev|\.r62g/.test(location.host) ? login_key_dev : login_key_live;
+        var login_key = /\.dev|\.beihaiwang123/.test(location.host) ? login_key_dev : login_key_live;
         var crypt = new JSEncrypt();
         crypt.setKey(login_key);
         var textEnc = crypt.encrypt(text);

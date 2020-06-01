@@ -47,128 +47,6 @@ var langArrFilter = langArr.join('|');
 module.exports = function (app) {
 
     app.use('/api', require('./api'));
-    app.use(function (req, res, next) {
-        // 重写render方法，避免子路由在引入extendPublic方法
-        var _render = res.render;
-        res.render = function (view, obj, callback) {
-            obj = obj || {}
-            _render.call(this, view, extendPublic(obj, req), callback)
-        };
-
-        next()
-    })
-
-    //添加百度验证  --徐萌
-    // app.route('/baidu_verify_qTHsV5cQAY.html').get(function (req, res) {
-    //     res.render('crawler/baidu_verify_FTypqEgrcU.html');
-    // });
-    //添加微信验证(没有)
-    // app.route('/MP_verify_lcsRW9jGPf32n5Ka.txt').get(function (req, res) {
-    //     res.render('../../client/MP_verify_lcsRW9jGPf32n5Ka.html');
-    // });
-    //爬虫配置
-    app.route('/robots.txt').get(function (req, res) {
-        res.set('Content-Type', 'text/plain');
-        res.send('User-agent: *\nDisallow:\nAllow:/');
-    });
-    //google爬虫配置
-    // app.route('/sitemap.xml').get(function (req, res) {
-    //     res.set('Content-Type', 'text/xml');
-    //     res.render('crawler/sitemap.xml');
-    // });
-    // All undefined asset or api routes should return a 404
-    // app.route('/:url(api|auth|components|app|bower_components|assets)/*').get(errors[404]);
-
-    // All other routes should redirect to the index.html
-    // app.route('/*').get((req, res) => {
-    //     res.sendFile(path.resolve(app.get('appPath') + '/index.html'));
-    // });
-
-    /*
-     * 三方相关页面 end
-     */
-    app.use('/', function (req, res, next) {
-        // console.log('-----2---', req.url)
-        // console.log('-----2---', req.baseUrl)
-        var allowPaths = ['/payment/login', '/payment/asset', '/payment/evidence', '/payment/cse_usage', '/waiting', '/napi']
-        if (req.hostname.indexOf('dp') != -1) {
-        // if (req.hostname.indexOf('w.dev.tigerwit.com') != -1) {
-            // console.log(req)
-            if (allowPaths.indexOf(req.url) != -1) {
-                var pageId = ''
-                if (req.url == allowPaths[0]) {
-                    pageId = 'login'
-                }
-                else if (req.url == allowPaths[1]) {
-                    pageId = 'asset'
-                }
-                else if (req.url == allowPaths[3]) {
-                    pageId = 'cse_usage'
-                }
-                else if (req.url == allowPaths[2]) {
-                    pageId = 'evidence'
-                }
-                else if (req.url == allowPaths[4]) {
-                    res.render('waiting');
-                    return
-                }
-                res.render('third/index', {
-                    pageInfo: {
-                        id: pageId
-                    }
-                });
-                return
-            } else if (req.url.indexOf(allowPaths[5]) != -1) {
-                next()
-            } else {
-                res.redirect('/payment/login');
-                return
-            }
-        } else {
-            next()
-        }
-    })
-
-
-    // :params为语言或者空
-    app.use('/:lang(' + langArrFilter + ')?', function (req, res, next) {
-        // console.log('-----------host------', req.originalUrl)
-        // console.log('-----------lang------', req.params.lang)
-        // console.log('----referer-----', req.headers.referer)
-
-        // console.log('-----1---', req.url)
-        // console.log('-----1---', req.baseUrl)
-        var paramsLang = req.params.lang;  // 重定向时req已经不是当前params
-        // 如果上一个url是带params参数的就重定向
-        if (!paramsLang) {
-            if (req.headers.referer) {
-                var pathname = url.parse(req.headers.referer).pathname;
-                if (pathname) {
-                    var firstPath = pathname.split(path.sep)[1];
-                    // console.log('-----firstPath-----',firstPath)
-                    if (firstPath && langArr.indexOf(firstPath) !== -1) {
-                        var redirectUrl = path.sep + firstPath + req.originalUrl;
-                        return res.redirect(redirectUrl);
-
-                    }
-                }
-            }
-        }
-        // 重写重定向方法，添加lang参数
-        if (paramsLang) {
-            var _redirect = res.redirect;
-            res.redirect = function (url) {
-                url = path.sep + paramsLang + url;
-                return _redirect.call(this, url)
-            }
-        };
-
-        // 设置所有的cookie
-        require('./set_company_cookie')(req, res);
-        next()
-    }, require('./routers'));
-
-
     // nodeAPI
     app.route('/napi').get(function (req, res) {
         req.query.action = Array.isArray(req.query.action) ? req.query.action[1] : req.query.action;
@@ -440,6 +318,126 @@ module.exports = function (app) {
         }
         res.json(rs);
     });
+    app.use(function (req, res, next) {
+        // 重写render方法，避免子路由在引入extendPublic方法
+        var _render = res.render;
+        res.render = function (view, obj, callback) {
+            obj = obj || {}
+            _render.call(this, view, extendPublic(obj, req), callback)
+        };
+
+        next()
+    })
+
+    //添加百度验证  --徐萌
+    // app.route('/baidu_verify_qTHsV5cQAY.html').get(function (req, res) {
+    //     res.render('crawler/baidu_verify_FTypqEgrcU.html');
+    // });
+    //添加微信验证(没有)
+    // app.route('/MP_verify_lcsRW9jGPf32n5Ka.txt').get(function (req, res) {
+    //     res.render('../../client/MP_verify_lcsRW9jGPf32n5Ka.html');
+    // });
+    //爬虫配置
+    app.route('/robots.txt').get(function (req, res) {
+        res.set('Content-Type', 'text/plain');
+        res.send('User-agent: *\nDisallow:\nAllow:/');
+    });
+    //google爬虫配置
+    // app.route('/sitemap.xml').get(function (req, res) {
+    //     res.set('Content-Type', 'text/xml');
+    //     res.render('crawler/sitemap.xml');
+    // });
+    // All undefined asset or api routes should return a 404
+    // app.route('/:url(api|auth|components|app|bower_components|assets)/*').get(errors[404]);
+
+    // All other routes should redirect to the index.html
+    // app.route('/*').get((req, res) => {
+    //     res.sendFile(path.resolve(app.get('appPath') + '/index.html'));
+    // });
+
+    /*
+     * 三方相关页面 end
+     */
+    app.use('/', function (req, res, next) {
+        // console.log('-----2---', req.url)
+        // console.log('-----2---', req.baseUrl)
+        var allowPaths = ['/payment/login', '/payment/asset', '/payment/evidence', '/payment/cse_usage', '/waiting', '/napi']
+        if (req.hostname.indexOf('dp') != -1) {
+            // if (req.hostname.indexOf('w.dev.tigerwit.com') != -1) {
+            // console.log(req)
+            if (allowPaths.indexOf(req.url) != -1) {
+                var pageId = ''
+                if (req.url == allowPaths[0]) {
+                    pageId = 'login'
+                }
+                else if (req.url == allowPaths[1]) {
+                    pageId = 'asset'
+                }
+                else if (req.url == allowPaths[3]) {
+                    pageId = 'cse_usage'
+                }
+                else if (req.url == allowPaths[2]) {
+                    pageId = 'evidence'
+                }
+                else if (req.url == allowPaths[4]) {
+                    res.render('waiting');
+                    return
+                }
+                res.render('third/index', {
+                    pageInfo: {
+                        id: pageId
+                    }
+                });
+                return
+            } else if (req.url.indexOf(allowPaths[5]) != -1) {
+                next()
+            } else {
+                res.redirect('/payment/login');
+                return
+            }
+        } else {
+            next()
+        }
+    })
+
+
+    // :params为语言或者空
+    app.use('/:lang(' + langArrFilter + ')?', function (req, res, next) {
+        // console.log('-----------host------', req.originalUrl)
+        // console.log('-----------lang------', req.params.lang)
+        // console.log('----referer-----', req.headers.referer)
+
+        // console.log('-----1---', req.url)
+        // console.log('-----1---', req.baseUrl)
+        var paramsLang = req.params.lang;  // 重定向时req已经不是当前params
+        // 如果上一个url是带params参数的就重定向
+        if (!paramsLang) {
+            if (req.headers.referer) {
+                var pathname = url.parse(req.headers.referer).pathname;
+                if (pathname) {
+                    var firstPath = pathname.split(path.sep)[1];
+                    // console.log('-----firstPath-----',firstPath)
+                    if (firstPath && langArr.indexOf(firstPath) !== -1) {
+                        var redirectUrl = path.sep + firstPath + req.originalUrl;
+                        return res.redirect(redirectUrl);
+
+                    }
+                }
+            }
+        }
+        // 重写重定向方法，添加lang参数
+        if (paramsLang) {
+            var _redirect = res.redirect;
+            res.redirect = function (url) {
+                url = path.sep + paramsLang + url;
+                return _redirect.call(this, url)
+            }
+        };
+
+        // 设置所有的cookie
+        require('./set_company_cookie')(req, res);
+        next()
+    }, require('./routers'));
 
     app.route('/:url(404|*)').get(function (req, res) {
         // var viewFilePath = '404';

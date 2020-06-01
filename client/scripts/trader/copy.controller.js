@@ -7,13 +7,14 @@
         .controller('TraderCopyController', TraderCopyController);
 
     TraderCopyController.$inject = ['$scope', '$timeout', '$modalInstance', 'trader',
-        'validator', 'passedScope', 'lang'];
+        'validator', 'passedScope', 'lang', 'fun'];
 
-    function TraderCopyController($scope, $timeout, $modalInstance, trader, validator, passedScope, lang) {
+    function TraderCopyController($scope, $timeout, $modalInstance, trader, validator, passedScope, lang, fun) {
         var copiedTrader = passedScope.copiedTrader;
         var avaCopyInfo = passedScope.AvaCopyInfo || undefined;
         // console.log(copiedTrader,avaCopyInfo);
         $scope.lang = lang;
+        $scope.toGtagEvent = toGtagEvent;
         $scope.copyTrade = {
             title: passedScope.title || '',
             username: copiedTrader.username,          // 高手 username
@@ -126,8 +127,11 @@
         //     parseInt($scope.copyTrade.amount) < $scope.copyTrade.minCopyAmount) {
         //     setAmount(1000)
         // }
-
+        var calAmountDebounce = fun.debounce(function () {
+            $scope.toGtagEvent('inp_copy_amount', { belong: 'tigerwit' })
+        }, 300);
         function calAmount() {
+            calAmountDebounce && calAmountDebounce();
             var usableAmount = Number($scope.copyTrade.avaCopyAmount);
             var amount = Number($scope.copyTrade.amount);
             if (amount > usableAmount || usableAmount < $scope.copyTrade.minCopyAmount) {
@@ -196,7 +200,7 @@
                         btn_page: copiedTrader.usercode,
                         btn_name: '复制'
                     });
-
+                    $scope.toGtagEvent('copy_star_success_web', { key: copiedTrader.usercode, belong: 'tigerwit' })
                 } else if (data.code == 100603) {
                     $scope.copyTrade.title = 'tip';
                     $scope.copyTrade.evidenceMsg = data.message;
