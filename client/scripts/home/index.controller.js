@@ -5,9 +5,9 @@
     angular.module('fullstackApp')
         .controller('HomeIndexController', HomeIndexController);
 
-    HomeIndexController.$inject = ['$scope', 'invite', 'ranklist', '$cookies', '$location', 'account', '$timeout'];
+    HomeIndexController.$inject = ['$scope', 'invite', 'ranklist', '$cookies', '$timeout'];
 
-    function HomeIndexController($scope, invite, ranklist, $cookies, $location, account, $timeout) {
+    function HomeIndexController($scope, invite, ranklist, $cookies, $timeout) {
         var company = $cookies["company_name"];
         var userCode = $cookies["user_code"];
 
@@ -23,7 +23,7 @@
         //    });
         // }
         if (!userCode && company && company === 'tigerwit') {
-            account.getAdvertiseRecords('popup').then(function (data) {
+            invite.getAdvertiseRecords('popup').then(function (data) {
                 // console.log(data);
                 if (data.is_succ && data.data.length) {
                     data = data.data[0];
@@ -50,14 +50,6 @@
                 source: JSON.stringify(source)
             });
         }
-
-        // 此为index2 首页的高手信息
-        // ranklist.getIndexMasters().then(function (data) {
-        //     // console.info(data);
-        //     $scope.indexMasters[0] = data.data.profit[0];
-        //     $scope.indexMasters[1] = data.data.retract[0];
-        //     $scope.indexMasters[2] = data.data.win[0];
-        // });
         
         function getUserParam() {
             var href = window.location.href;
@@ -111,7 +103,7 @@
 
         // getAdvertiseRecords();
         function getAdvertiseRecords() {
-            account.getAdvertiseRecords('wheel').then(function (data) {
+            invite.getAdvertiseRecords('wheel').then(function (data) {
                 // console.log(data);
                 if (data.is_succ) {
                     $scope.getBannerSucc = true;
@@ -125,24 +117,8 @@
             });
         }
 
-        //获取android下载包地址
-        // $scope.appVersionInfo = {};
-        // $scope.appVersionInfo.android = 'http://dltw.oss-cn-beijing.aliyuncs.com/apk/tigerwit_v4.3.1.apk';
-        // getVersionCheck();
-        // function getVersionCheck() {
-        //     account.getVersionCheck({
-        //         type: 3,
-        //         version: '1.0.0',
-        //         lang: 'cn'
-        //     }).then(function (data) {
-        //         if (data.is_succ) {
-        //             $scope.appVersionInfo.android = data.data.url;
-        //         }
-        //     });
-        // }
-
         function getSymbolQuoteStatus (symbols) {
-            account.getSymbolQuoteStatus(symbols).then(function (rs) {
+            invite.getSymbolQuoteStatus(symbols).then(function (rs) {
                 if (rs.is_succ) {
                     $scope.quoteStatus = rs.data;
                 }
@@ -221,32 +197,6 @@
                 $scope.quoteSymbols.push(symbol);
             });
             connectSocket();
-        }
-
-        // function getSpreadInfo() {
-        //     account.getSpreadInfo().then(function (data) {
-        //         // console.log(data);
-        //         $scope.spreadInfo = data.data;
-        //         getUserGroup();
-        //     });
-        // }
-
-        function getUserGroup() {
-            account.checkLogined().then(function (logined) {
-                if (logined) {
-                    account.getUserGroup().then(function (data) {
-                        // console.log(data);
-                        angular.forEach($scope.spreadInfo.spread_special_offset, function (value, key) {
-                            if (data.data.group === key) {
-                                $scope.userGroup = data.data.group;
-                            }
-                        });
-                        connectSocket();
-                    });
-                } else {
-                    connectSocket();
-                }
-            });
         }
 
         function connectSocket() {

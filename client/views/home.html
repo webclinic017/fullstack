@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
     <% include /common/meta/web.html %>
-    <% include /common/vendor/web.css.html %>
 
-    <!-- build:css(.tmp) /styles/web.css -->
-    <link rel="stylesheet" href="/styles/web.css">
+    <!-- build:css(.tmp) /styles/web_home.css -->
+    <link rel="stylesheet" href="/styles/web_home.css">
     <!-- endbuild -->
     <meta name="viewport" content="width=device-width,initial-scale=0.5">
 
@@ -53,20 +52,37 @@
     <div class="body">
         <% include /web/home/index_new.html %>
     </div>
+    <!-- build:js(client) /scripts/vendor_home.js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-resource/angular-resource.js"></script>
+    <script src="/bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="/bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 
-    <% include /common/vendor/web.js.html %>
+    <script src="/scripts/app.js"></script>
+    <script src="/scripts/public.js"></script>
+    <script src="/scripts/common/fun.service.js"></script>
+    <script src="/scripts/common/api.service.js"></script>
+    <script src="/scripts/common/$layer.service.js"></script>
+    <script src="/scripts/common/whiteLabel.service.js"></script>
+    <script src="/scripts/plugins/base64code.js"></script>
+    <script src="/scripts/plugins/layer.js"></script>
+    <script src="/scripts/common/transition.service.js"></script>
+    <script src="/scripts/common/modal.js"></script>
+    <script src="/scripts/plugins/qr-code-with-logo.js"></script>
+    <script src="/scripts/common/uploadFileBase64.directive.js"></script>
+    <script src="/scripts/common/uploadFileBase64Two.directive.js"></script>
+    <!-- endbuild -->
 
     <!-- build:js(client) /scripts/home.js -->
     <script src="/scripts/plugins/sha1.js"></script>
     <script src="/scripts/common/config.service.js"></script>
     <script src="/scripts/common/account.service.js"></script>
-    <script src="/scripts/common/authorization.service.js"></script>
+    <script src="/scripts/common/invite.service.js"></script>
     <script src="/scripts/common/ranklist.service.js"></script>
-    <script src="/scripts/common/product.service.js"></script>
     <script src="/scripts/common/lang.service.js"></script>
     <script src="/scripts/common/lang_data.service.js"></script>
-    <script src="/scripts/common/redbag.service.js"></script>
-    <script src="/scripts/common/invite.service.js"></script>
 
     <script src="/scripts/common/global.controller.js"></script>
 

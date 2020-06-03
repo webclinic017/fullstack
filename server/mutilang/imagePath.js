@@ -94,7 +94,7 @@
             ar: indexBasePath + "/home/focus-icon-google-en-1.0.png"
         }, // 
         homeToolsBgCn: {
-            en: indexBasePath + "/home/tools-bg-cnEn.png",
+            en: indexBasePath + "/home/tools-bg-cnEn.jpg",
             id: indexBasePath + "/home/tools-bg-cnId.png",
             zh: indexBasePath + "/home/tools-bg-cnCn.png",
             vi: indexBasePath + "/home/tools-bg-cnVi.png",
@@ -104,7 +104,7 @@
             ar: indexBasePath + "/home/tools-bg-ar.png"
         }, //
         homeToolsBgGlobal: {
-            en: indexBasePath + "/home/tools-bg-globalEn.png",
+            en: indexBasePath + "/home/tools-bg-globalEn.jpg",
             id: indexBasePath + "/home/tools-bg-globalId.png",
             zh: indexBasePath + "/home/tools-bg-globalCn.png",
             vi: indexBasePath + "/home/tools-bg-globalVi.png",

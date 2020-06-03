@@ -11,84 +11,84 @@
       <div class="pd-tp-110 justify-center flex1">
         <div>
           <h3 class="index_new__focus-title pd-tp-30"><%= lang.text("newhome_1")%></h3>
-        <h3 class="index_new__focus-title"><%= lang.text("newhome_1_1")%></h3>
-        <h3 class="index_new__focus-title"><%= lang.text("newhome_1_2")%></h3>
-        <p class="index_new__focus-sub_tit"><%= lang.text("newhome_2")%></p>
-        <ul class="index_new__focus-icon_box">
-          <li>
-            <img ng-src="/white_label/home/focus-icon-new1.png" alt="">
-            <p><%= lang.text("newhome_4")%></p>
-          </li>
-          <li>
-            <img ng-src="/white_label/home/focus-icon-new2.png" alt="">
-            <p><%= lang.text("newhome_5")%></p>
-          </li>
-          <li>
-            <img ng-src="/white_label/home/focus-icon-new3.png" alt="">
-            <p><%= lang.text("newhome_6")%></p>
-          </li>
-          <li>
-            <img ng-src="/white_label/home/focus-icon-new4.png" alt="">
-            <p><%= lang.text("newhome_7")%></p>
-          </li>
-          <li>
-            <img ng-src="/white_label/home/focus-icon-new5.png" alt="">
-            <p><%= lang.text("newhome_8")%></p>
-          </li>
-          <li>
-            <img ng-src="/white_label/home/focus-icon-new6.png" alt="">
-            <p><%= lang.text("newhome_stock")%></p>
-          </li>
-        </ul>
-        <div class="index_new__focus-btn_box">
-          <a href="/space/#/account/register" class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient focus_btn"
-            ng-click="[toTrackEvent('home page', 'global_home_first_open_account'), toGtagEvent('click_register_button_web')]"><%= lang.text("link_register")%></a>
-        </div>
-        <div class="index_new__focus-btn_box pd-tp-50">
-          <%if (lang.currentLanguage() === 'zh' || lang.areaId == 1) {%>
-          <div class="market-h5">
-            <div class="mg-bt-20"><%= lang.text("scanCodeOpenAccount")%></div>
-            <img ng-src="/white_label/home/market-h5-1.0.png" alt=""></a>
+          <h3 class="index_new__focus-title"><%= lang.text("newhome_1_1")%></h3>
+          <h3 class="index_new__focus-title"><%= lang.text("newhome_1_2")%></h3>
+          <p class="index_new__focus-sub_tit"><%= lang.text("newhome_2")%></p>
+          <ul class="index_new__focus-icon_box">
+            <li>
+              <img ng-src="/white_label/home/focus-icon-new1.png" alt="">
+              <p><%= lang.text("newhome_4")%></p>
+            </li>
+            <li>
+              <img ng-src="/white_label/home/focus-icon-new2.png" alt="">
+              <p><%= lang.text("newhome_5")%></p>
+            </li>
+            <li>
+              <img ng-src="/white_label/home/focus-icon-new3.png" alt="">
+              <p><%= lang.text("newhome_6")%></p>
+            </li>
+            <li>
+              <img ng-src="/white_label/home/focus-icon-new4.png" alt="">
+              <p><%= lang.text("newhome_7")%></p>
+            </li>
+            <li>
+              <img ng-src="/white_label/home/focus-icon-new5.png" alt="">
+              <p><%= lang.text("newhome_8")%></p>
+            </li>
+            <li>
+              <img ng-src="/white_label/home/focus-icon-new6.png" alt="">
+              <p><%= lang.text("newhome_stock")%></p>
+            </li>
+          </ul>
+          <div class="index_new__focus-btn_box">
+            <a href="/space/#/account/register" class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient focus_btn"
+              ng-click="[toTrackEvent('home page', 'global_home_first_open_account'), toGtagEvent('click_register_button_web')]"><%= lang.text("link_register")%></a>
           </div>
-          <div class="mg-rg-80"></div>
-          <%}%>
-          <div class="download-btn">
-            <div class="title">
-              <%= lang.text("newhome_9_1")%>
-        </div>
-        <ul class="praise">
-          <li class="mg-bt-15">
-            <a class="inline-block" href="/m/blank?platform=ios"
-              ng-click="[toTrackEvent('home page', 'global_home_click_appstore'), toGtagEvent('click_ios_download_web')]"><img
-                ng-src="<%= lang.image('homeAppIos')%>" alt=""></a>
-          </li>
-          <%if (lang.areaId != 1) {%>
-          <li class="mg-bt-15">
-            <a class="inline-block" href="/m/blank?platform=android"
-              ng-click="[toTrackEvent('home page', 'global_home_click_googleplay'), toGtagEvent('click_android_download_web')]"><img
-                ng-src="<%= lang.image('homeAppAndroidGlobal')%>" alt=""></a>
-          </li>
-          <%} else {%>
-          <li class="mg-bt-15">
-            <a class="inline-block" href="/m/blank?platform=android&system=cn"><img
-                ng-src="<%= lang.image('homeAppAndroidCn')%>" alt=""></a>
-          </li>
-          <%}%>
-        </ul>
-            <ul class="praise">
-              <li>
-                <img class="praise-img" src="/white_label/home/Best-Global-Forex-Trading-Innovation_WHITE.png" alt="">
-              </li>
-              <li>
-                <img class="praise-img" src="/white_label/home/Best-Asian-Forex-Trading-App-WHITE.png" alt="">
-              </li>
-              <li>
-                <img class="praise-img" src="/white_label/home/Most-Transparent-Global-Forex-Broker_WHITE.png" alt="">
-              </li>
-            </ul>
+          <div class="index_new__focus-btn_box pd-tp-50">
+            <%if (lang.currentLanguage() === 'zh' || lang.areaId == 1) {%>
+            <div class="market-h5">
+              <div class="mg-bt-20"><%= lang.text("scanCodeOpenAccount")%></div>
+              <img ng-src="/white_label/home/market-h5-1.0.png" alt=""></a>
+            </div>
+            <div class="mg-rg-80"></div>
+            <%}%>
+            <div class="download-btn">
+              <div class="title">
+                <%= lang.text("newhome_9_1")%>
+              </div>
+              <ul class="praise">
+                <li class="mg-bt-15">
+                  <a class="inline-block" href="/m/blank?platform=ios"
+                    ng-click="[toTrackEvent('home page', 'global_home_click_appstore'), toGtagEvent('click_ios_download_web')]"><img
+                      ng-src="<%= lang.image('homeAppIos')%>" alt=""></a>
+                </li>
+                <%if (lang.areaId != 1) {%>
+                <li class="mg-bt-15">
+                  <a class="inline-block" href="/m/blank?platform=android"
+                    ng-click="[toTrackEvent('home page', 'global_home_click_googleplay'), toGtagEvent('click_android_download_web')]"><img
+                      ng-src="<%= lang.image('homeAppAndroidGlobal')%>" alt=""></a>
+                </li>
+                <%} else {%>
+                <li class="mg-bt-15">
+                  <a class="inline-block" href="/m/blank?platform=android&system=cn"><img
+                      ng-src="<%= lang.image('homeAppAndroidCn')%>" alt=""></a>
+                </li>
+                <%}%>
+              </ul>
+              <ul class="praise">
+                <li>
+                  <img class="praise-img" src="/white_label/home/Best-Global-Forex-Trading-Innovation_WHITE.png" alt="">
+                </li>
+                <li>
+                  <img class="praise-img" src="/white_label/home/Best-Asian-Forex-Trading-App-WHITE.png" alt="">
+                </li>
+                <li>
+                  <img class="praise-img" src="/white_label/home/Most-Transparent-Global-Forex-Broker_WHITE.png" alt="">
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
       </div>
     </div>
   </div>
@@ -97,290 +97,266 @@
   <div class="index_new__container" ng-if="masterStarList.records.length > 0">
     <div class="index_new__copy">
       <h3 class="index_new__copy-title"><%= lang.text("newhome_10")%></h3>
-          <p class="index_new__copy-sub_tit"><%= lang.text("newhome_11")%></p>
-          <div class="ranklist_cont pd-tp-20">
-            <div class="ranklist_cont__master space-between-center"
-              ng-repeat="masterStar in masterStarList.records track by $index">
-              <div class="space-between-center mg-lf-20 mg-rg-20 flex1">
-                <div class="flex1">
-                  <div class="space-between-center">
-
-                    <div class="ranklist_cont__master-info item-center">
-                      <a class="avatar" ng-href="/trader/{{masterStar.user_code}}/#/trader/summary"
-                        ng-click="toQuickPageviewSensorsdata(masterStar.username)" target="_blank">
-                        <img ng-src="/avatar/{{ masterStar.user_code }}_150.jpg" alt="avatar">
-                      </a>
-                      <div class="user flex1">
-                        <a class="name" ng-href="/trader/{{masterStar.user_code}}/#/trader/summary"
-                          ng-click="toQuickPageviewSensorsdata(masterStar.username)" target="_blank"
-                          title="{{ masterStar.username || '-' }}">
-                          {{ masterStar.username || '-' }}
-                        </a>
-                        <p>
-                          <span ng-repeat="tag in masterStar.tags track by $index">
-                            #{{tag}}
-                          </span>
-                        </p>
-                      </div>
-                    </div>
-                    <a class="ranklist_cont__master-tip" ng-href="/trader/{{masterStar.user_code}}/#/trader/summary"
-                      ng-click="toQuickPageviewSensorsdata(masterStar.username)" target="_blank">
-                      <p>{{masterStar.describe}}
-                      </p>
+      <p class="index_new__copy-sub_tit"><%= lang.text("newhome_11")%></p>
+      <div class="ranklist_cont pd-tp-20">
+        <div class="ranklist_cont__master space-between-center"
+          ng-repeat="masterStar in masterStarList.records track by $index">
+          <div class="space-between-center mg-lf-20 mg-rg-20 flex1">
+            <div class="flex1">
+              <div class="space-between-center">
+                <div class="ranklist_cont__master-info item-center">
+                  <a class="avatar" ng-href="/trader/{{masterStar.user_code}}/#/trader/summary"
+                    ng-click="toQuickPageviewSensorsdata(masterStar.username)" target="_blank">
+                    <img ng-src="/avatar/{{ masterStar.user_code }}_150.jpg" alt="avatar">
+                  </a>
+                  <div class="user flex1">
+                    <a class="name" ng-href="/trader/{{masterStar.user_code}}/#/trader/summary"
+                      ng-click="toQuickPageviewSensorsdata(masterStar.username)" target="_blank"
+                      title="{{ masterStar.username || '-' }}">
+                      {{ masterStar.username || '-' }}
                     </a>
-                  </div>
-                  <div class="ranklist_cont__master-trade space-between-center bd-tp">
-                    <div class="dropdown">
-                      <div class="num"
-                        ng-class="{'font-danger': (masterStar.thirty_win_rate + '').indexOf('-') < 0, 'font-success': (masterStar.thirty_win_rate + '').indexOf('-') != -1}"
-                        ng-if="lang.hostIsCn()">
-                        {{ masterStar.thirty_win_rate }}<span>%</span>
-                      </div>
-                      <div class="num"
-                        ng-class="{'font-success': (masterStar.thirty_win_rate + '').indexOf('-') < 0, 'font-danger': (masterStar.thirty_win_rate + '').indexOf('-') != -1}"
-                        ng-if="!lang.hostIsCn()">
-                        {{ masterStar.thirty_win_rate }}<span>%</span>
-                      </div>
-                      <div class="tip">
-                        {{ lang.text("tigerWitID.master.exact") }}
-                      </div>
-                    </div>
-                    <!-- <div class="dividing"></div> -->
-                    <div class="dropdown">
-                      <div class="num"
-                        ng-class="{'font-danger': (masterStar.thirty_profit_rate + '').indexOf('-') < 0, 'font-success': (masterStar.thirty_profit_rate + '').indexOf('-') != -1}"
-                        ng-if="lang.hostIsCn()">
-                        {{ masterStar.thirty_profit_rate }}%
-                      </div>
-                      <div class="num"
-                        ng-class="{'font-success': (masterStar.thirty_profit_rate + '').indexOf('-') < 0, 'font-danger': (masterStar.thirty_profit_rate + '').indexOf('-') != -1}"
-                        ng-if="!lang.hostIsCn()">
-                        {{ masterStar.thirty_profit_rate }}%
-                      </div>
-                      <div class="tip">
-                        {{ lang.text("tigerWitID.master.last30AaysYield") }}
-                      </div>
-                    </div>
-                    <div class="dropdown" ng-if="masterStar.follow_profit >= 1000">
-                      <div class="num">
-                        ${{ masterStar.follow_profit }}
-                      </div>
-                      <div class="tip">
-                        {{ lang.text("tigerWitID.master.profitCopiers") }}
-                      </div>
-                    </div>
-                    <div class="dropdown" ng-if="masterStar.follow_profit < 1000">
-                      <div class="num">
-                        {{ masterStar.history_copy_count || '0' }}
-                      </div>
-                      <div class="tip">
-                        {{ lang.text("tigerWitID.master.copiers") }}
-                      </div>
-                    </div>
+                    <p>
+                      <span ng-repeat="tag in masterStar.tags track by $index">
+                        #{{tag}}
+                      </span>
+                    </p>
                   </div>
                 </div>
-                <div class="dividing">
-
-                </div>
+                <a class="ranklist_cont__master-tip" ng-href="/trader/{{masterStar.user_code}}/#/trader/summary"
+                  ng-click="toQuickPageviewSensorsdata(masterStar.username)" target="_blank">
+                  <p>{{masterStar.describe}}
+                  </p>
+                </a>
               </div>
-              <div class="ranklist_cont__master-copy">
-                <div class="copy_btn_wrapper" ng-if="!masterStar.is_copy">
-                  <a target="_blank" ng-href="/trader/{{masterStar.user_code}}/#/trader/summary"
-                    class="copy_btn tw-btn tw-btn-sm130 tw-btn-capsule-gradient">{{ masterStar.bonus_amount ? (lang.text("tigerWitID.master.copyGet1") + masterStar.bonus_amount + lang.text("tigerWitID.master.copyGet2")) : lang.text('tigerWitID.copy') }}</a>
+              <div class="ranklist_cont__master-trade space-between-center bd-tp">
+                <div class="dropdown">
+                  <div class="num"
+                    ng-class="{'font-danger': (masterStar.thirty_win_rate + '').indexOf('-') < 0, 'font-success': (masterStar.thirty_win_rate + '').indexOf('-') != -1}"
+                    ng-if="lang.hostIsCn()">
+                    {{ masterStar.thirty_win_rate }}<span>%</span>
+                  </div>
+                  <div class="num"
+                    ng-class="{'font-success': (masterStar.thirty_win_rate + '').indexOf('-') < 0, 'font-danger': (masterStar.thirty_win_rate + '').indexOf('-') != -1}"
+                    ng-if="!lang.hostIsCn()">
+                    {{ masterStar.thirty_win_rate }}<span>%</span>
+                  </div>
+                  <div class="tip">
+                    {{ lang.text("tigerWitID.master.exact") }}
+                  </div>
                 </div>
-                <div class="copy_btn_wrapper" ng-if="masterStar.is_copy">
-                  <a target="_blank"
-                    class="copy_btn tw-btn tw-btn-sm130 tw-btn-capsule-bordered">{{ lang.text("tigerWitID.copied") }}</a>
+                <!-- <div class="dividing"></div> -->
+                <div class="dropdown">
+                  <div class="num"
+                    ng-class="{'font-danger': (masterStar.thirty_profit_rate + '').indexOf('-') < 0, 'font-success': (masterStar.thirty_profit_rate + '').indexOf('-') != -1}"
+                    ng-if="lang.hostIsCn()">
+                    {{ masterStar.thirty_profit_rate }}%
+                  </div>
+                  <div class="num"
+                    ng-class="{'font-success': (masterStar.thirty_profit_rate + '').indexOf('-') < 0, 'font-danger': (masterStar.thirty_profit_rate + '').indexOf('-') != -1}"
+                    ng-if="!lang.hostIsCn()">
+                    {{ masterStar.thirty_profit_rate }}%
+                  </div>
+                  <div class="tip">
+                    {{ lang.text("tigerWitID.master.last30AaysYield") }}
+                  </div>
+                </div>
+                <div class="dropdown" ng-if="masterStar.follow_profit >= 1000">
+                  <div class="num">
+                    ${{ masterStar.follow_profit }}
+                  </div>
+                  <div class="tip">
+                    {{ lang.text("tigerWitID.master.profitCopiers") }}
+                  </div>
+                </div>
+                <div class="dropdown" ng-if="masterStar.follow_profit < 1000">
+                  <div class="num">
+                    {{ masterStar.history_copy_count || '0' }}
+                  </div>
+                  <div class="tip">
+                    {{ lang.text("tigerWitID.master.copiers") }}
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="text-center mg-tp-40">
-              <a href="/ranklist/#/ranklist/masters"
-                class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient"><%= lang.text("more")%></a>
+            <div class="dividing">
+
             </div>
           </div>
-          <!-- <ul class="index_new__copy-lst">
-            <li>
-              <img ng-src="/white_label/home/copy-icon-1.png" alt="">
-              <p class="num">1</p>
-              <p class="tip"><%= lang.text("newhome_12")%></p>
-            </li>
-            <li>
-              <img ng-src="/white_label/home/copy-icon-2.png" alt="">
-              <p class="num">2</p>
-              <p class="tip"><%= lang.text("newhome_13")%></p>
-            </li>
-            <li>
-              <img ng-src="/white_label/home/copy-icon-3.png" alt="">
-              <p class="num">3</p>
-              <p class="tip"><%= lang.text("newhome_14")%></p>
-            </li>
-            <li>
-              <img ng-src="/white_label/home/copy-icon-4.png" alt="">
-              <p class="num">4</p>
-              <p class="tip"><%= lang.text("newhome_15")%></p>
-            </li>
-          </ul> -->
-          <!-- <div class="index_new__copy-btn_box">
-            <a href="/ranklist/#/ranklist/masters" class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient"
-              style="width: 220px"
-              ng-click="toTrackEvent('home page', 'global_home_click_select_master')"><%= lang.text("newhome_16")%></a>
-          </div> -->
+          <div class="ranklist_cont__master-copy">
+            <div class="copy_btn_wrapper" ng-if="!masterStar.is_copy">
+              <a target="_blank" ng-href="/trader/{{masterStar.user_code}}/#/trader/summary"
+                class="copy_btn tw-btn tw-btn-sm130 tw-btn-capsule-gradient">{{ masterStar.bonus_amount ? (lang.text("tigerWitID.master.copyGet1") + masterStar.bonus_amount + lang.text("tigerWitID.master.copyGet2")) : lang.text('tigerWitID.copy') }}</a>
+            </div>
+            <div class="copy_btn_wrapper" ng-if="masterStar.is_copy">
+              <a target="_blank"
+                class="copy_btn tw-btn tw-btn-sm130 tw-btn-capsule-bordered">{{ lang.text("tigerWitID.copied") }}</a>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mg-tp-40">
+          <a href="/ranklist/#/ranklist/masters"
+            class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient"><%= lang.text("more")%></a>
+        </div>
       </div>
     </div>
-    <div class="index_new__invite">
-      <h3 class="index_new__invite-title"><%= lang.text("mInviteNew6")%></h3>
-      <p class="index_new__invite-sub_tit"><%= lang.text("mInviteNew7")%></p>
-      <ul>
+  </div>
+  <div class="index_new__invite">
+    <h3 class="index_new__invite-title"><%= lang.text("mInviteNew6")%></h3>
+    <p class="index_new__invite-sub_tit"><%= lang.text("mInviteNew7")%></p>
+    <ul>
+      <li>
+        <p class="icon"><img src="/white_label/invite/invite_icon_1.png" alt=""></p>
+        <p class="tip"><%= lang.text("mInviteNew8")%></p>
+      </li>
+      <li>
+        <p class="icon"><img src="/white_label/invite/invite_icon_2.png" alt=""></p>
+        <p class="tip"><%= lang.text("mInviteNew9")%></p>
+      </li>
+      <li>
+        <p class="icon"><img src="/white_label/invite/invite_icon_3.png" alt=""></p>
+        <p class="tip"><%= lang.text("mInviteNew10")%></p>
+      </li>
+      <li>
+        <p class="icon"><img src="/white_label/invite/invite_icon_4.png" alt=""></p>
+        <p class="tip"><%= lang.text("mInviteNew11")%></p>
+      </li>
+    </ul>
+    <div class="text-center mg-tp-40">
+      <a href="/space/#/space/invite"
+        class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient"><%= lang.text("mInviteNew12")%></a>
+    </div>
+  </div>
+  <div class="index_new__flexible">
+    <div class="index_new__container">
+      <h3 class="index_new__flexible-title"><%= lang.text("newhome_17")%></h3>
+      <p class="index_new__flexible-sub_tit"><%= lang.text("newhome_17_1")%></p>
+      <p class="index_new__flexible-sub_tit"><%= lang.text("newhome_17_2")%></p>
+      <div class="">
+        <div class="index_new__flexible-box">
+          <div class="content">
+            <div class="item-center">
+              <ul class="index_new_qupte__title item-center h_border">
+                <li class="pro">
+                  <%= lang.text("home64")%>
+                </li>
+                <li class="sell">
+                  <%= lang.text("home65")%>
+                </li>
+                <li class="buy">
+                  <%= lang.text("home66")%>
+                </li>
+              </ul>
+              <ul class="index_new_qupte__title item-center">
+                <li class="pro">
+                  <%= lang.text("home64")%>
+                </li>
+                <li class="sell">
+                  <%= lang.text("home65")%>
+                </li>
+                <li class="buy">
+                  <%= lang.text("home66")%>
+                </li>
+              </ul>
+            </div>
+            <div class="item-center flex-wrap">
+              <ul ng-repeat="quoteSymbol in quoteSymbols" class="index_new_qupte__content"
+                ng-class="{h_border: $index%2 === 0}">
+                <li class="pro">
+                  <%if (!lang.isEnglishArea()){%>
+                  {{ quoteSymbol.symbol_zh }}<br>({{ quoteSymbol.symbol }})
+                  <%}else {%>
+                  {{ quoteSymbol.symbol }}
+                  <%}%>
+                  </li>
+                  <%if (lang.areaId != 1) {%>
+                <li class="sell"
+                  ng-class="{down: quoteSymbol.type === 'up', up: quoteSymbol.type === 'down', gray: !quoteStatus[quoteSymbol.symbol]}">
+                  <span>
+                    {{ quoteSymbol.sell }}
+                  </span>
+                </li>
+                <li class="buy"
+                  ng-class="{down: quoteSymbol.type === 'up', up: quoteSymbol.type === 'down', gray: !quoteStatus[quoteSymbol.symbol]}">
+                  <span>
+                    {{ quoteSymbol.buy }}
+                  </span>
+                </li>
+                <%} else {%>
+                <li class="sell"
+                  ng-class="{up: quoteSymbol.type === 'up', down: quoteSymbol.type === 'down', gray: !quoteStatus[quoteSymbol.symbol]}">
+                  <span>
+                    {{ quoteSymbol.sell }}
+                  </span>
+                </li>
+                <li class="buy"
+                  ng-class="{up: quoteSymbol.type === 'up', down: quoteSymbol.type === 'down', gray: !quoteStatus[quoteSymbol.symbol]}">
+                  <span>
+                    {{ quoteSymbol.buy }}
+                  </span>
+                </li>
+                <%}%>
+              </ul>
+          </div>
+          <div class="index_new_qupte__tip">
+              *<%= lang.text("home67")%>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ul class="index_new__flexible-lst">
         <li>
-          <p class="icon"><img src="/white_label/invite/invite_icon_1.png" alt=""></p>
-          <p class="tip"><%= lang.text("mInviteNew8")%></p>
+          <img ng-src="/white_label/home/flex-icon-1.png" alt="">
+          <h5><%= lang.text("newhome_18")%></h5>
+          <p><%= lang.text("newhome_20")%></p>
         </li>
         <li>
-          <p class="icon"><img src="/white_label/invite/invite_icon_2.png" alt=""></p>
-          <p class="tip"><%= lang.text("mInviteNew9")%></p>
+          <img ng-src="/white_label/home/flex-icon-2.png" alt="">
+          <h5><%= lang.text("newhome_21")%></h5>
+          <p><%= lang.text("newhome_22")%></p>
+          <p><%= lang.text("newhome_23")%></p>
         </li>
         <li>
-          <p class="icon"><img src="/white_label/invite/invite_icon_3.png" alt=""></p>
-          <p class="tip"><%= lang.text("mInviteNew10")%></p>
+          <img ng-src="/white_label/home/flex-icon-3.png" alt="">
+          <h5><%= lang.text("newhome_27")%></h5>
+          <p><%= lang.text("newhome_24")%></p>
         </li>
         <li>
-          <p class="icon"><img src="/white_label/invite/invite_icon_4.png" alt=""></p>
-          <p class="tip"><%= lang.text("mInviteNew11")%></p>
+          <img ng-src="/white_label/home/flex-icon-4.png" alt="">
+          <h5><%= lang.text("newhome_28")%></h5>
+          <p><%= lang.text("newhome_25")%></p>
+          <p><%= lang.text("newhome_26")%></p>
         </li>
       </ul>
-      <div class="text-center mg-tp-40">
-        <a href="/space/#/space/invite"
-          class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient"><%= lang.text("mInviteNew12")%></a>
+      <div class="index_new__flexible-btn_box">
+        <a href="/web/product/forex" class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient"
+          ng-click="toTrackEvent('home page', 'global_home_click_find_out_more')"><%= lang.text("newhome_29")%></a>
       </div>
     </div>
-    <div class="index_new__flexible">
-      <div class="index_new__container">
-        <h3 class="index_new__flexible-title"><%= lang.text("newhome_17")%></h3>
-        <p class="index_new__flexible-sub_tit"><%= lang.text("newhome_17_1")%></p>
-        <p class="index_new__flexible-sub_tit"><%= lang.text("newhome_17_2")%></p>
-        <div class="">
-          <div class="index_new__flexible-box">
-            <div class="content">
-              <div class="item-center">
-                <ul class="index_new_qupte__title item-center h_border">
-                  <li class="pro">
-                    <%= lang.text("home64")%>
-                  </li>
-                  <li class="sell">
-                    <%= lang.text("home65")%>
-                  </li>
-                  <li class="buy">
-                    <%= lang.text("home66")%>
-                  </li>
-                </ul>
-                <ul class="index_new_qupte__title item-center">
-                  <li class="pro">
-                    <%= lang.text("home64")%>
-                  </li>
-                  <li class="sell">
-                    <%= lang.text("home65")%>
-                  </li>
-                  <li class="buy">
-                    <%= lang.text("home66")%>
-                  </li>
-                </ul>
-              </div>
-              <div class="item-center flex-wrap">
-                <ul ng-repeat="quoteSymbol in quoteSymbols" class="index_new_qupte__content"
-                  ng-class="{h_border: $index%2 === 0}">
-                  <li class="pro">
-                    <%if (!lang.isEnglishArea()){%>
-                    {{ quoteSymbol.symbol_zh }}<br>({{ quoteSymbol.symbol }})
-                    <%}else {%>
-                    {{ quoteSymbol.symbol }}
-                    <%}%>
-                    </li>
-                    <%if (lang.areaId != 1) {%>
-                  <li class="sell" ng-class="{down: quoteSymbol.type === 'up', up: quoteSymbol.type === 'down', gray: !quoteStatus[quoteSymbol.symbol]}">
-                    <span>
-                      {{ quoteSymbol.sell }}
-                    </span>
-                  </li>
-                  <li class="buy" ng-class="{down: quoteSymbol.type === 'up', up: quoteSymbol.type === 'down', gray: !quoteStatus[quoteSymbol.symbol]}">
-                    <span>
-                      {{ quoteSymbol.buy }}
-                    </span>
-                  </li>
-                  <%} else {%>
-                  <li class="sell" ng-class="{up: quoteSymbol.type === 'up', down: quoteSymbol.type === 'down', gray: !quoteStatus[quoteSymbol.symbol]}">
-                    <span>
-                      {{ quoteSymbol.sell }}
-                    </span>
-                  </li>
-                  <li class="buy" ng-class="{up: quoteSymbol.type === 'up', down: quoteSymbol.type === 'down', gray: !quoteStatus[quoteSymbol.symbol]}">
-                    <span>
-                      {{ quoteSymbol.buy }}
-                    </span>
-                  </li>
-                  <%}%>
-                </ul>
-            </div>
-            <div class="index_new_qupte__tip">
-                *<%= lang.text("home67")%>
-              </div>
-            </div>
-          </div>
-        </div>
-        <ul class="index_new__flexible-lst">
-          <li>
-            <img ng-src="/white_label/home/flex-icon-1.png" alt="">
-            <h5><%= lang.text("newhome_18")%></h5>
-            <p><%= lang.text("newhome_20")%></p>
-          </li>
-          <li>
-            <img ng-src="/white_label/home/flex-icon-2.png" alt="">
-            <h5><%= lang.text("newhome_21")%></h5>
-            <p><%= lang.text("newhome_22")%></p>
-            <p><%= lang.text("newhome_23")%></p>
-          </li>
-          <li>
-            <img ng-src="/white_label/home/flex-icon-3.png" alt="">
-            <h5><%= lang.text("newhome_27")%></h5>
-            <p><%= lang.text("newhome_24")%></p>
-          </li>
-          <li>
-            <img ng-src="/white_label/home/flex-icon-4.png" alt="">
-            <h5><%= lang.text("newhome_28")%></h5>
-            <p><%= lang.text("newhome_25")%></p>
-            <p><%= lang.text("newhome_26")%></p>
-          </li>
-        </ul>
-        <div class="index_new__flexible-btn_box">
-          <a href="/web/product/forex" class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient"
-            ng-click="toTrackEvent('home page', 'global_home_click_find_out_more')"><%= lang.text("newhome_29")%></a>
-        </div>
+  </div>
+  <div class="index_new__container">
+    <div class="index_new__block">
+      <h3 class="index_new__block-title"><%= lang.text("newhome_30")%></h3>
+      <p class="index_new__block-sub_tit"><%= lang.text("newhome_31")%></p>
+      <div class="index_new__block-content">
+        <video height="500" controls autobuffer poster="/white_label/home/block-poster.png">
+          <source src="https://static.tigerwitfx.com/downloads/static/video/TigerWit_Final_v4.mp4" type="video/mp4" />
+          <!-- <source src="my_video.ogv" type="video/ogg" />
+        <source src="my_video.webm" type="video/webm" /> -->
+          你浏览器不支持 video 功能，点击这里下载视频：<a
+            href="https://static.tigerwitfx.com/downloads/static/video/TigerWit_Final_v4.mp4">下载视频</a>
+        </video>
+      </div>
+      <div class="index_new__flexible-btn_box">
+        <a href="https://tech.tigerwit.com" class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient flexible_btn"
+          ng-click="toTrackEvent('home page', 'global_home_click_blockchain')"><%= lang.text("newhome_31_1")%></a>
       </div>
     </div>
-    <div class="index_new__container">
-      <div class="index_new__block">
-        <h3 class="index_new__block-title"><%= lang.text("newhome_30")%></h3>
-        <p class="index_new__block-sub_tit"><%= lang.text("newhome_31")%></p>
-        <div class="index_new__block-content">
-          <video height="500" controls autobuffer poster="/white_label/home/block-poster.png">
-            <source src="https://static.tigerwitfx.com/downloads/static/video/TigerWit_Final_v4.mp4" type="video/mp4" />
-            <!-- <source src="my_video.ogv" type="video/ogg" />
-          <source src="my_video.webm" type="video/webm" /> -->
-            你浏览器不支持 video 功能，点击这里下载视频：<a
-              href="https://static.tigerwitfx.com/downloads/static/video/TigerWit_Final_v4.mp4">下载视频</a>
-          </video>
-        </div>
-        <div class="index_new__flexible-btn_box">
-          <a href="https://tech.tigerwit.com" class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient flexible_btn"
-            ng-click="toTrackEvent('home page', 'global_home_click_blockchain')"><%= lang.text("newhome_31_1")%></a>
-        </div>
-      </div>
-    </div>
-    <%if (lang.areaId != 1) {%>
-    <div class="index_new__tools" style='background-image: url("<%= lang.image('homeToolsBgGlobal')%>")'>
-      <%} else {%>
-      <div class="index_new__tools" style='background-image: url("<%= lang.image('homeToolsBgCn')%>")'>
-        <%}%>
+  </div>
+  <%if (lang.areaId != 1) {%>
+  <div class="index_new__tools" style='background-image: url("<%= lang.image('homeToolsBgGlobal')%>")'>
+  <%} else {%>
+  <div class="index_new__tools" style='background-image: url("<%= lang.image('homeToolsBgCn')%>")'>
+  <%}%>
     <div class="index_new__container">
       <h3 class="index_new__tools-title"><%= lang.text("newhome_32")%></h3>
         <p class="index_new__tools-sub_tit"><%= lang.text("newhome_33")%></p>
@@ -407,49 +383,39 @@
   <div class="index_new__container">
     <div class="index_new__reliable">
       <h3 class="index_new__reliable-title"><%= lang.text("newhome_36")%></h3>
-          <ul class="index_new__reliable-lst">
-            <li>
-              <h5 class="f"><%= lang.text("newhome_37_1")%></h5>
-              <p><%= lang.text("newhome_37_2")%></p>
-            </li>
-            <li>
-              <h5 class="s"><%= lang.text("newhome_37")%></h5>
-              <p><%= lang.text("newhome_38")%></p>
-            </li>
-            <li>
-              <h5 class="t"><%= lang.text("newhome_39")%></h5>
-              <p><%= lang.text("newhome_40")%></p>
-              <p><%= lang.text("newhome_41")%></p>
-            </li>
-          </ul>
-          <!-- <div class="index_new__reliable-btn_box">
-        <a href="/space/#/account/register" class="tw-btn tw-btn-lg200 tw-btn-capsule-bordered"><%= lang.text("newhome_29")%></a>
-      </div> -->
+      <ul class="index_new__reliable-lst">
+        <li>
+          <h5 class="f"><%= lang.text("newhome_37_1")%></h5>
+          <p><%= lang.text("newhome_37_2")%></p>
+        </li>
+        <li>
+          <h5 class="s"><%= lang.text("newhome_37")%></h5>
+          <p><%= lang.text("newhome_38")%></p>
+        </li>
+        <li>
+          <h5 class="t"><%= lang.text("newhome_39")%></h5>
+          <p><%= lang.text("newhome_40")%></p>
+          <p><%= lang.text("newhome_41")%></p>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="index_new__container">
+    <div class="index_new__float_box">
+      <div class="index_new__float space-between-center">
+        <div class="">
+          <h3><%= lang.text("newhome_43")%></h3>
+          <p><%= lang.text("newhome_44")%></p>
+          <p><%= lang.text("newhome_45")%></p>
         </div>
-      </div>
-      <!-- <div class="index_new__container">
-          <div class="index_new__client">
-            <h3 class="index_new__client-title"><%= lang.text("newhome_42")%></h3>
-            <p class="index_new__client-sub_tit"><%= lang.text("newhome_42_1")%></p>
-            <img ng-src="<%= lang.image('homeMap')%>" alt="">
-          </div>
-        </div> -->
-      <div class="index_new__container">
-        <div class="index_new__float_box">
-          <div class="index_new__float space-between-center">
-            <div class="">
-              <h3><%= lang.text("newhome_43")%></h3>
-              <p><%= lang.text("newhome_44")%></p>
-              <p><%= lang.text("newhome_45")%></p>
-            </div>
-            <div class="flex1 text-center pd-lf-35 pd-rg-35">
-              <a href="/space/#/account/register" class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient"
-                ng-click="[toTrackEvent('home page', 'global_home_last_open_account'), toGtagEvent('click_register_bottom_web')]"><%= lang.text("newhome_46")%></a>
-            </div>
-          </div>
+        <div class="flex1 text-center pd-lf-35 pd-rg-35">
+          <a href="/space/#/account/register" class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient"
+            ng-click="[toTrackEvent('home page', 'global_home_last_open_account'), toGtagEvent('click_register_bottom_web')]"><%= lang.text("newhome_46")%></a>
         </div>
-      </div>
-      <div class="index_new__camber">
-
       </div>
     </div>
+  </div>
+  <div class="index_new__camber">
+
+  </div>
+</div>
