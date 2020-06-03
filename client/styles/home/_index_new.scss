@@ -14,7 +14,7 @@
   }
   @include e(focus) {
     height: 1099px !important;
-    background-image: url("/white_label/home/home-focus-bg.png");
+    background-image: url("/white_label/home/home-focus-bg.jpg");
     background-position: center center;
     background-size: auto 100%;
     color: #fff;
@@ -92,7 +92,7 @@
     color: #fff;
     position: relative;
     z-index: 10;
-    margin: 50px auto;
+    margin: 0 auto 50px;
     padding: 50px 0px;
     @include m(title) {
       font-size: 56px;
@@ -323,7 +323,7 @@
 }
 .ar-lang{
   .index_new__focus{
-    background-image: url("/white_label/home/home-focus-bg-ar.png");
+    background-image: url("/white_label/home/home-focus-bg-ar.jpg");
   }
 }
 // 报价

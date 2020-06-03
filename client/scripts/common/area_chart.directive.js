@@ -3,11 +3,21 @@
 
     angular.module('fullstackApp').directive('twAreaChart', twAreaChart);
 
-    twAreaChart.$inject = ['whiteLabel'];
+    twAreaChart.$inject = [];
 
-    function twAreaChart(whiteLabel) {
+    function twAreaChart() {
         /*获取区域图颜色*/
-        var area_color = whiteLabel.areaChart;
+        var area_color = {
+            /*渐变色*/
+            colors: ['#74b9fd'],
+            fillColor: {
+                linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1 },
+                stops: [
+                    [0, Highcharts.getOptions().colors[0]],
+                    [1, Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
+                ]
+            },
+        };
         Highcharts.setOptions({
             lang:{
                 resetZoom:'恢复缩放',

@@ -13,7 +13,9 @@
             setInviteFriendsLink: setInviteFriendsLink,
             setUserSource: setUserSource,
             getInviteRules: getInviteRules,
-            getModuleManagerment: getModuleManagerment
+            getModuleManagerment: getModuleManagerment,
+            getAdvertiseRecords: getAdvertiseRecords,
+            getSymbolQuoteStatus: getSymbolQuoteStatus
         };
         return service;
 
@@ -53,6 +55,26 @@
             return publicHttp.dealPublicRequest(o.getModuleManagermentApi, 'GET', {
                 direction: direction
             });
+        }
+
+        /**
+         * Account Service 获取首页轮播图信息
+         *
+         * @method getAdvertiseRecords
+         *      @params identifier    wheel 首页轮播图，popup 首页弹窗
+         *
+         */
+        function getAdvertiseRecords(identifier) {
+            return publicHttp.dealPublicRequest(o.getAdvertiseRecords, 'GET', {
+                identifier: identifier
+            });
+        }
+
+        // 首页报价开／停盘状态
+        function getSymbolQuoteStatus (symbols) {
+            return publicHttp.dealPublicRequest(o.getSymbolQuoteStatusApi, 'GET', {
+                symbols: symbols
+            })
         }
 
     }
