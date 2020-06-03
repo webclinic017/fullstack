@@ -23,64 +23,11 @@
     var login_public_key = 'publicKey';
 
     function whiteLabel() {
-        setChart();
         setLoginKey();
         return oWhiteLabel;
     }
     function setLoginKey() {
         var key = login_public_key;
         oWhiteLabel.loginKey = key;
-    }
-    function setChart() {
-        switch (companyName) {
-            case 'tigerwit':
-                /*条形图*/
-                oWhiteLabel.columnChart = {
-                    /*正值的颜色*/
-                    positive: '#f23244',
-                    /*负值的颜色*/
-                    negative: '#61cb28',
-                    /*正值的背景颜色*/
-                    positiveBg: '#fdf5f5',
-                    /*负值的背景颜色*/
-                    negativeBg: '#f9fbf4',
-                    /*气泡框字体*/
-                    toolTip: '#188afa',
-                };
-                /*区域图*/
-                oWhiteLabel.areaChart = {
-                    /*渐变色*/
-                    colors: ['#74b9fd'],
-                    fillColor: {
-                        linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1 },
-                        stops: [
-                            [0, Highcharts.getOptions().colors[0]],
-                            [1, Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
-                        ]
-                    },
-                };
-                /*饼图*/
-                oWhiteLabel.pieChart = {
-                    /*渐变色*/
-                    colors: ['#fff000', '#ebebeb'],
-                    colors2: ['#BC6FFF', '#44BCFF', '#C5EF9B', '#7DF4DA', '#FFC86F']
-                };
-                break;
-            default:
-                /*条形图*/
-                oWhiteLabel.columnChart = {
-                    /*正值的颜色*/
-                    positive: '#f23244',
-                    /*负值的颜色*/
-                    negative: '#61cb28',
-                    /*正值的背景颜色*/
-                    positiveBg: '#fdf5f5',
-                    /*负值的背景颜色*/
-                    negativeBg: '#f9fbf4',
-                    /*气泡框字体*/
-                    toolTip: '#188afa',
-                };
-                break;
-        }
     }
 }());

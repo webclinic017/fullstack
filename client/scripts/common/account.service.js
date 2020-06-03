@@ -55,7 +55,6 @@
             hasChecked: false,
             getAuthStatus: getAuthStatus, //获取认证状态
             setAuthenAddress: setAuthenAddress,
-            getAdvertiseRecords: getAdvertiseRecords,
             // sendEmailCode: sendEmailCode,
             // getRCaptcha: getRCaptcha,
             sendCode: sendCode,
@@ -77,8 +76,7 @@
             getVersionCheck: getVersionCheck,
             getAddressUrl: getAddressUrl,
             competitionList: competitionList,
-            competitionOpenAccount: competitionOpenAccount,
-            getSymbolQuoteStatus: getSymbolQuoteStatus
+            competitionOpenAccount: competitionOpenAccount
         };
         var resolveValue;
         return service;
@@ -667,19 +665,6 @@
             return publicHttp.dealPublicRequest(o.getUserGroupApi, 'GET');
         }
 
-        /**
-         * Account Service 获取首页轮播图信息
-         *
-         * @method getAdvertiseRecords
-         *      @params identifier    wheel 首页轮播图，popup 首页弹窗
-         *
-         */
-        function getAdvertiseRecords(identifier) {
-            return publicHttp.dealPublicRequest(o.getAdvertiseRecords, 'GET', {
-                identifier: identifier
-            });
-        }
-
         function updataIdCard(params) {
             return publicHttp.dealPublicRequest(o.updataIdCard, 'POST', params);
         }
@@ -755,12 +740,6 @@
         function competitionOpenAccount(params) {
             
             return publicHttp.dealPublicRequest(o.competitionOpenAccountApi, 'POST', params)
-        }
-
-        function getSymbolQuoteStatus (symbols) {
-            return publicHttp.dealPublicRequest(o.getSymbolQuoteStatusApi, 'GET', {
-                symbols: symbols
-            })
         }
     }
 })();

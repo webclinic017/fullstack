@@ -73,16 +73,13 @@
             setBindEmailApi: urlOrigin2 + '/user/email',
             getSpreadInfoApi: urlOrigin2 + '/spread_info',
             getUserGroupApi: urlOrigin2 + '/user/group',
-            getAdvertiseRecords: urlOrigin2 + '/position/records',
             getFunctionSwitch: '/napi?action=get_function_switch',
             getIdcardApi: urlOrigin2 + '/user/idcard',
             getEmailPhone: urlOrigin2 + '/sys/messages',
             setIslamicStatusApi: urlOrigin3 + '/user/set_islamic_status',
             transferIslamicApi: urlOrigin2 + '/user/transfer_islamic',
             getVersionCheckApi: urlOrigin2 + '/system/version_check',
-            getAddressUrlApi: 'https://services.postcodeanywhere.co.uk/Capture/Interactive/Find/v1.00/json3ex.ws',
-            // 报价开／停盘状态
-            getSymbolQuoteStatusApi: urlOrigin2 + '/symbol/quote_status',
+            getAddressUrlApi: 'https://services.postcodeanywhere.co.uk/Capture/Interactive/Find/v1.00/json3ex.ws'
         };
         var asset = {
             withdrawApi: urlOrigin2 + '/payment/withdraw',
@@ -143,7 +140,10 @@
             setInviteFriendsLinkApi: urlOrigin2 + '/invite_code',
             setUserSourceApi: urlOrigin2 + '/user/source', //post
             getInviteRulesApi: urlOrigin2 + '/bonus/invite_rule',
-            getModuleManagermentApi: urlOrigin2 + '/module/invite_user'
+            getModuleManagermentApi: urlOrigin2 + '/module/invite_user',
+            getAdvertiseRecords: urlOrigin2 + '/position/records',
+            // 报价开／停盘状态
+            getSymbolQuoteStatusApi: urlOrigin2 + '/symbol/quote_status'
         };
         var market = {
             getVideoListApi: o + '/data/video_list.json',

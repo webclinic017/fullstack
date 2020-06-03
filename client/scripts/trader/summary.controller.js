@@ -5,9 +5,9 @@
     angular.module('fullstackApp')
         .controller('TraderSummaryController', TraderSummaryController);
 
-    TraderSummaryController.$inject = ['$scope', '$location', 'whiteLabel', 'trader', '$timeout', 'fun', 'lang'];
+    TraderSummaryController.$inject = ['$scope', '$location', 'trader', '$timeout', 'fun', 'lang'];
 
-    function TraderSummaryController($scope, $location, whiteLabel, trader, $timeout, fun, lang) {
+    function TraderSummaryController($scope, $location, trader, $timeout, fun, lang) {
         // $scope.summary = {};
         // $scope.bars = [];
         // $scope.isFirstLoad = true;
@@ -27,7 +27,11 @@
                 if (data && data.is_succ) {
                     $scope.masterTradProfile = data.data;
 
-                    var col_color = whiteLabel.pieChart;
+                    var col_color = {
+                        /*渐变色*/
+                        colors: ['#fff000', '#ebebeb'],
+                        colors2: ['#BC6FFF', '#44BCFF', '#C5EF9B', '#7DF4DA', '#FFC86F']
+                    };
                     $scope.masterPieArr = [
                         {
                             name: lang.text("tigerWitID.symbolPage.forex"),

@@ -4,10 +4,21 @@
 
     angular.module('fullstackApp').directive('twColumnChart', twColumnChart);
 
-    twColumnChart.$inject = ['config','whiteLabel', 'lang'];
+    twColumnChart.$inject = ['config', 'lang'];
 
-    function twColumnChart(config, whiteLabel, lang) {
-        var col_color = whiteLabel.columnChart;
+    function twColumnChart(config, lang) {
+        var col_color = {
+            /*正值的颜色*/
+            positive: '#f23244',
+            /*负值的颜色*/
+            negative: '#61cb28',
+            /*正值的背景颜色*/
+            positiveBg: '#fdf5f5',
+            /*负值的背景颜色*/
+            negativeBg: '#f9fbf4',
+            /*气泡框字体*/
+            toolTip: '#188afa',
+        };
         var noData = config.highchartNoDataOptions;
         var options = {
             chart: {

@@ -6,10 +6,14 @@
         .module('fullstackApp')
         .directive('twPieChart', twPieChart);
 
-    twPieChart.$inject = ['whiteLabel', 'lang'];
+    twPieChart.$inject = ['lang'];
 
-    function twPieChart(whiteLabel, lang) {
-        var col_color = whiteLabel.pieChart;
+    function twPieChart(lang) {
+        var col_color = {
+            /*渐变色*/
+            colors: ['#fff000', '#ebebeb'],
+            colors2: ['#BC6FFF', '#44BCFF', '#C5EF9B', '#7DF4DA', '#FFC86F']
+        };
         var options = {
             chart: {
                 type: 'pie',

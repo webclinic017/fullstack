@@ -124,19 +124,6 @@
                                 </span>
                             </li>
                         </ul>
-                        <!-- <ul class="pd-tp-20 item-center">
-                            <li class="footer-weibo">
-                                <a href="" target="_blank">
-                                    <img class="img-20" src="/white_label/footer/footer-icon-face-book.png">
-                                </a>
-                            </li>
-                            <li class="footer-weixin">
-                                <img class="img-20" src="/white_label/footer/footer-icon-twitter.png">
-                                <span>
-                                    <img src="/images/footer-weixin-code.png">
-                                </span>
-                            </li>
-                        </ul> -->
                         <div class="footer-follow-tip pd-tp-10" >
                             <p>
                                 <%= lang.text("footer.subscribeArticle")%>
@@ -164,12 +151,6 @@
                 <span><%= lang.text("foot_39_2")%></span>
             </p>
         </div>
-        <!-- <div class="scb-fca">
-            <div>
-                <p><%= lang.text("footer.scb")%></p>
-                <p><%= lang.text("footer.fca")%></p>
-            </div>
-        </div> -->
     </div>
 </div>
 <div id="footer-service-wrapper" style="display:none;">
@@ -181,87 +162,9 @@
 <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=45a3b87d-f9e0-42f0-b1f6-d4348ca7bc54"> </script>
 <script>
 zE(function() {
-  zE.setLocale('<%= lang.currentLanguage()%>');
+    zE.setLocale('<%= lang.currentLanguage()%>');
 });
 </script>
 <!-- End of tigerwitglobal Zendesk Widget script -->
 
-<!-- Live800下线 2018.12.10 -->
-<!-- Live800Online operator icon:online service(in use)[Floating icon] Start-->
-<!-- <script language="javascript">
-    window.OpenChat = function () {
-        var chatUrl = "";
-        layer.open({
-            type: 1,
-            skin: 'footer-service-layer',
-            title: false,
-            area: ['600px', '300px'],
-            shadeClose: true,
-            content: $("#footer-service-wrapper")
-        });
-        var $ordinary_serv = $(".footer-service-layer .ordinary_serv");
-        var $agent_serv = $(".footer-service-layer .agent_serv");
-        $ordinary_serv.on('click', function () {
-            openTarget(0);
-        });
-        $agent_serv.on('click', function () {
-            openTarget(1);
-        });
-        function openTarget (type) {
-            if (type) { // 代理商
-                chatUrl = "http://chat8.live800.com/live800/chatClient/chatbox.jsp?companyID=371437&configID=151374&jid=2997261242&skillId=8663";
-            } else {
-                chatUrl = "http://chat8.live800.com/live800/chatClient/chatbox.jsp?companyID=371437&jid=2997261242&configID=144016&skillId=8662";
-            }
-            layer.closeAll();
-            chatUrl += "&enterurl=" + encodeURIComponent(document.referrer || document.URL);
-            chatUrl += "&t=" + new Date().getTime();
-            try {
-                window.open(chatUrl, "chatbox79482", "toolbar=0,scrollbars=0,location=0,menubar=0,resizable=1,width=570,height=424");
-            } catch (e) {}
-        }
-    }
-    window.setPositioningQRCode = function () {
-        sessionStorage.setItem('positioningQRCode', true)
-        document.getElementById('positioningQRCode').style.display='none';
-    }
-    window.getPositioningQRCode = function () {
-        var positioningQRCode;
-        positioningQRCode = sessionStorage.getItem('positioningQRCode')
-        if(!positioningQRCode){
-            document.getElementById('positioningQRCode').style.display='block';
-        }
-    }
-    window.onload = function (){
-        window.getPositioningQRCode();
-    }
 
-</script>
-<div style="position: fixed; padding: 5px; line-height: 20px; color: #fff; bottom: 40px; right: 10px;z-index: 8888; display: none;" id="positioningQRCode">
-     <span style="position: absolute; top: -2px; left: -10px; width: 25px; height: 25px; cursor: pointer;" onclick="setPositioningQRCode()">
-         <img src="/images/footer-customer-close-icon.png">
-     </span>
-     <%if (lang.areaId != 1) {%>
-        <img style="cursor: pointer;" src="<%= lang.image('footerCustomerGloabal')%>" onclick="OpenChat();">
-     <%} else {%>
-        <img style="cursor: pointer;" src="<%= lang.image('footerCustomerCn')%>" onclick="OpenChat();">
-     <%}%>
-</div> -->
-<!-- Online operator icon:online service(in use) End-->
-<!-- 友盟统计 2016.09.21 -->
-<!-- <div style="display:none">
-    <script type="text/javascript">
-        var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-        document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1260394016'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1260394016' type='text/javascript'%3E%3C/script%3E"));
-    </script>
-</div> -->
-<script>
-    var _hmt = _hmt || [];
-    (function () {
-        var hm = document.createElement("script");
-        hm.src = "//hm.baidu.com/hm.js?e2d8c88ce38a79186b7acc81d614806c";
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(hm, s);
-    })();
-</script>
-<noscript><img src="//stats.ipinyou.com/adv.gif?a=Hms..ZDXo82LhzxK1JTfTHaiAX0&e=" style="display:none;"/></noscript>

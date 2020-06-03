@@ -5,13 +5,13 @@
     angular.module('fullstackApp')
         .controller('GlobalController', GlobalController);
 
-    GlobalController.$inject = ['$rootScope', '$scope', '$state', '$window', 'config', 'account', 'authorization', 'lang', '$cookies', '$timeout', 'redbag', '$cookieStore', '$modal', '$layer', 'fun'];
+    GlobalController.$inject = ['$rootScope', '$scope', '$state', '$window', 'config', 'account', 'lang', '$cookies', '$timeout', '$modal', '$layer', 'fun'];
 
     /**
      * @name GlobalController
      * @desc
      */
-    function GlobalController($rootScope, $scope, $state, $window, config, account, authorization, lang, $cookies, $timeout, redbag, $cookieStore, $modal, $layer, fun) {
+    function GlobalController($rootScope, $scope, $state, $window, config, account, lang, $cookies, $timeout, $modal, $layer, fun) {
         $rootScope.personalCookiesInfo = {
             userCode: $cookies["user_code"],
             userName: decodeURIComponent($cookies["username"] || ''),
