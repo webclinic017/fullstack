@@ -103,7 +103,7 @@
         // 埋点事件，不需要处理
         $.ajax({
             type: "POST",
-            url: "/api/v3/appsflyer/event/add",
+            url: "/api/v3/appsflyer/event/add?token=" + getCookie('token'),
             data: Object.assign({ appsflyer_id: getCookie('APPSFLYER_ID'), event_name: eventName }, obj),
             dataType: "json"
         })
