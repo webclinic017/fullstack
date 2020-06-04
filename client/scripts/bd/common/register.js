@@ -282,7 +282,7 @@
                 publicRequest('regOrLogin', 'POST', {
                     ib_pid: oReg.search_arr.ib_pid || $.cookie('ib_pid') || null,
                     invite_status: $.cookie('invite_status') || null,
-                    browser_id: $.cookie('BROWSER_ID') || null,
+                    appsflyer_id: $.cookie('APPSFLYER_ID') || null,
                     account: $("#telephone").val() || null,
                     account_type: 1,
                     phone_code: '86',
