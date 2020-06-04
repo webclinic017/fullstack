@@ -43,7 +43,7 @@
             account.loginByMt4({
                 mt4: $scope.account.mt4,
                 password: $scope.account.password,
-                browser_id: $cookies['BROWSER_ID'] || null,
+                appsflyer_id: $cookies['APPSFLYER_ID'] || null,
             }).then(function (data) {
                 layer.closeAll();
                 $scope.account.loading = true;
