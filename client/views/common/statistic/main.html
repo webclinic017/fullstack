@@ -90,8 +90,8 @@
     */
     setBrowserID(); // 初始化执行一次
     function setBrowserID(bol) {
-        if (bol || !getCookie('BROWSER_ID')) {
-            setCookie({ name: 'BROWSER_ID', value: getSoleID(), expires: 365 });
+        if (bol || !getCookie('APPSFLYER_ID')) {
+            setCookie({ name: 'APPSFLYER_ID', value: getSoleID(), expires: 365 });
         }
     }
     /**
@@ -103,8 +103,8 @@
         // 埋点事件，不需要处理
         $.ajax({
             type: "POST",
-            url: "/api/v3/appsflyer/event/add",
-            data: Object.assign({ browser_id: getCookie('BROWSER_ID'), event_name: eventName }, obj),
+            url: "/api/v3/appsflyer/event/add?token=" + getCookie('token'),
+            data: Object.assign({ appsflyer_id: getCookie('APPSFLYER_ID'), event_name: eventName }, obj),
             dataType: "json"
         })
     }

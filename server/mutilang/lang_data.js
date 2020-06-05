@@ -722,7 +722,7 @@ module.exports = {
         "ar": "الأسعار هي للاسترشاد بها فقط. لا يتم تحديث الأسعار في أيام السبت والأحد."
     },
     "forex1": {
-        "en": "The Foreign Exchange Market is one of the world’s largest single markets. In 2018, trading volumes reached $2.04 trillion dollars. It is mostly affected by international trade, national economy, and the policy and influence of investment flows. As a result of this, information for this market is more transparent, prices are fairer, and liquidity is better.",
+        "en": "The Foreign Exchange Market, or Forex market, is the largest in the world. In 2019, trading volumes reached $5.1 trillion dollars. People all over the world start trading Forex to benefit from fluctuation in exchange rates between a currency pair and do this via online trading platforms. It is mostly affected by international trade, national economy, and the policy and influence of investment flows. As a result of this information, the Forex market is more transparent, prices are fairer, and liquidity is better. ",
         "zh": "外汇市场是全球最大的单一市场之一。2013年交易量达5.3万亿美元。由于外汇汇率主要受国际间贸易、各国经济和政策以及投资流向的影响，所以外汇市场的信息更透明、流通性更好、价格更公平。其具有在工作日的所有24小时内双向交易的特点，深受大型投资机构和投资者的喜爱。",
         "vi": "Thị trường ngoại hối là một trong những thị trường đơn lẻ lớn nhất thế giới. Trong năm 2013, khối lượng giao dịch đạt 5,3 nghìn tỷ đô la. Tỷ giá hối đoái chủ yếu bị ảnh hưởng bởi tình hình thương mại quốc tế, nền kinh tế quốc dân và chính sách và ảnh hưởng của dòng vốn đầu tư. Kết quả là, thông tin thị trường ngoại hối minh bạch hơn, thanh khoản tốt hơn và có giá hợp lý hơn. Thực hiện mua hoặc bán các giao dịch có thể được hoàn thành trong 24 giờ vào các ngày trong tuần. Tất cả những lợi thế trên làm cho giao dịch ngoại hối bị ảnh hưởng sâu sắc bởi các tổ chức đầu tư lớn và các nhà đầu tư.",
         "zh-Hant": "外匯市場是全球最大的單壹市場之壹。2013年交易量達5.3萬億美元。由於外匯匯率主要受國際間貿易、各國經濟和政策以及投資流向的影響，所以外匯市場的信息更透明、流通性更好、價格更公平。其具有在工作日的所有24小時內雙向交易的特點，深受大型投資機構和投資者的喜愛。",
@@ -732,7 +732,7 @@ module.exports = {
         "ar": "سوق العملات الأجنبية هي أضخم سوق مالية في العالم.  ففي عام 2013، وصل حجم التداول إلى 5.3 تريليون دولار أمريكي.  ويتأثر سعر صرف العملات الأجنبية إلى حد كبير بالتجارة الدولية وبالاقتصاد الوطني وبالسياسة وباتجاه تأثير تدفقات الاستثمار.  وبناء على ذلك، تكون المعلومات في سوق العملات الأجنبية أكثر شفافية وأفضل سيولة وهناك قدر أكبر من الأسعار العادلة.  ويمكن إتمام معاملات الشراء أو البيع على مدار 24 ساعة في كل يوم من أيام العمل في الأسبوع.   وجميع هذه المزايا سالفة الذكر تجعل سوق العملات يتأثر تأثرًا شديدًا بكبار مؤسسات الاستثمار والمستثمرين."
     },
     "forex3": {
-        "en": "Why trade Foreign Exchange in TigerWit?",
+        "en": "Why trade Foreign Exchange with TigerWit?",
         "zh": "为什么选择TigerWit？",
         "vi": "Tại sao giao dịch ngoại hối trong TigerWit?",
         "zh-Hant": "為什麽選擇TigerWit？",
@@ -742,7 +742,7 @@ module.exports = {
         "ar": "لماذا يجب أن تتداول العملات الأجنبية مع TigerWit؟"
     },
     "forex4": {
-        "en": "TigerWit’s methods of depositing and withdrawing all major currency pairs are processed through simple, quick and safe cash modes. Our Foreign Exchange agreement is flexible, transparent and competitive. We provide a creative order following mode, serving as a bond to link investment master and common investors.",
+        "en": "TigerWit understands that transparency is one of the key factors that people look for when they trade Forex. Our platform is based on blockchain technology that ensures all trades are undisputable and can be checked via our online ledger. In addition to this, TigerWit puts Forex trading in the palm of your hand via our multi award-winning app and you can also use MT4 with full support for EAs. We offer a wide range of payment options that make depositing and withdrawing funds in a simple, quick and secure manner. Our Forex trading market conditions are highly competitive and we offer a range of account types to support individual traders needs. For institutional traders and those with their own client base, we also offer a wide range of IB, affiliate and white label solutions to help promote your business.",
         "zh": "出入金模式简单、快捷、效力高、保险，涵盖所有主流货币对及交叉货币对。我们提供更灵活、更透明、更具竞争力的外汇合约，同时您还可以享受到TigerWit所提供的创新性的跟单交易模式，是连接高手和普通投资者的纽带。",
         "vi": "TigerWit với chế độ rút tiền và kí quỹ đơn giản, nhanh chóng, hiệu quả và an toàn, TigerWit hiển thị các dịch vụ của tất cả các cặp tiền tệ chính và cặp tiền tệ chéo. Với việc cung cấp thỏa thuận ngoại hối linh hoạt, minh bạch và cạnh tranh hơn, TigerWit cũng mang đến bước đột phá khi đặt lệnh một cách sáng tạo theo trạng thái và đóng vai trò như một sợi dây để kết nối các bậc thầy và các nhà đầu tư phổ biến.",
         "zh-Hant": "出入金模式簡單、快捷、效力高、保險，涵蓋所有主流貨幣對及交叉貨幣對。我們提供更靈活、更透明、更具競爭力的外匯合約，同時您還可以享受到TigerWit所提供的創新性的跟單交易模式，是連接高手和普通投資者的紐帶。",
@@ -752,17 +752,17 @@ module.exports = {
         "ar": "توفر TigerWit طرق دفع بسيطة وسريعة وآمنة وفعالة للإيداع والسحب، وتقدم TigerWit خدماتها لتداول جميع أزواج العملات الرئيسية وأزواج العملات التقاطعية.  وبالإضافة إلى تقديم شروط تداول للعملات الأجنبية تتميز بقدر كبير من المرونة والشفافية والتنافسية، توفر TigerWit أيضًا طريقة مبتكرة لمتابعة ونسخ الأوامر والتي تعمل بوصفها رابطًا يربط بين أساتذة الاستثمار والمستثمرين العاديين."
     },
     "forex5": {
-        "en": "TigerWit's advantages in foreign exchange trading",
-        "zh": "在TigerWit交易外汇的优势",
-        "vi": "Lợi thế của TigerWit trong giao dịch ngoại hối",
-        "zh-Hant": "在TigerWit交易外匯的優勢",
-        "id": "Keunggulan bertransaksi valuta asing di TigerWit",
-        "es": "\nVentajas Trading Foreign Exchange con TigerWit\n",
-        "pt-BR": "Vantagens da TigerWit em negócios do mercado de câmbio",
-        "ar": "مزايا تداول العملات الأجنبية مع TigerWit"
+        "en": "Benefits of Forex Trading with TigerWit",
+        "zh": " ",
+        "vi": " ",
+        "zh-Hant": " ",
+        "id": " ",
+        "es": " ",
+        "pt-BR": " ",
+        "ar": " ",
     },
     "forex6": {
-        "en": "3 kinds of leverage are offered.",
+        "en": "Customizable leverage",
         "zh": "同时享受 3 种杠杆",
         "vi": "3 loại đòn bẩy chúng tôi cung cấp.",
         "zh-Hant": "同時享受 3 種杠桿",
@@ -772,7 +772,7 @@ module.exports = {
         "ar": "3- أنواع الروافع المالية المقدمة."
     },
     "forex7": {
-        "en": "We provide three different kinds of leverage, 100 times, 200 times, 400 times, allowing more flexibility for risk control and cash management requirements.",
+        "en": "We provide a range of different leverage on certain instruments to allow more flexibility for risk management and to fit your trading strategies.",
         "zh": "我们同时提供100倍，200倍，400倍三种不同的杠杆，更灵活的满足您对于风险把控，资金管理的需求。",
         "vi": "Chúng tôi hỗ trợ 3 mức đòn bẩy như sau: 100 lần, 200 lần và 400 lần, cho phép tính linh hoạt hơn khi có các yêu cầu quản lý rủi ro và quản lý tiền mặt.",
         "zh-Hant": "我們同時提供100倍，200倍，400倍三種不同的槓桿，更靈活的滿足您對於風險把控，資金管理的需求。",
@@ -782,7 +782,7 @@ module.exports = {
         "ar": "نحن نقدم ثلاثة أنواع من الروافع المالية وهي 100 ضعف و 200 ضعف و 400 ضعف، مما يوفر قدرًا أكبر من المرونة في السيطرة على المخاطر ومتطلبات إدارة الأموال."
     },
     "forex9": {
-        "en": "Follow masters' move",
+        "en": "Copy Trading Feature",
         "zh": "复制跟单交易",
         "vi": "Sao chép hành động của bậc thầy",
         "zh-Hant": "復制跟單交易",
@@ -792,7 +792,7 @@ module.exports = {
         "ar": "متابعة تحركات الأساتذة"
     },
     "forex10": {
-        "en": "TigerWit provides advanced and creative full-automatic order following system and gathers numerous investment masters with great profit-making capabilities. The investors have the ability to gain the earnings of the same proportion with the masters through following them. Masters can also gain more earnings through increasing their followers continuously.",
+        "en": "TigerWit offers an innovative Copy Trading feature that allows you to pick a Master Trader that fits your Forex trading strategy and has a risk/reward ratio that matches your needs. Once you have selected a Master, you can use our system to automatically follow their trades. In addition, if you would like to become a Master Trader, you can earn commission for each follower you gain.",
         "zh": "TigerWit提供业内超先进，具有创新性的全自动复制跟单系统，并且汇聚众多颇具盈利能力的投资高手，投资者可通过复制高手交易获得同比例投资收益。高手也可通过不断增加跟随者而获得更多收益。",
         "vi": "TigerWit cung cấp hệ thống theo thứ tự hoàn toàn tiên tiến, đầy sáng tạo và tập hợp nhiều nhà đầu tư chuyên nghiệp với khả năng tạo lợi nhuận lớn. Các nhà đầu tư có khả năng để đạt được thu nhập của cùng một tỷ lệ với các nhà đầu tư chính thông qua việc Sao chép họ. Các nhà đầu tư chính cũng có thể có được nhiều thu nhập hơn thông qua việc tăng số lượng người Sao chép của họ liên tục.",
         "zh-Hant": "TigerWit提供業內超先進，具有創新性的全自動複製跟單系統，並且匯聚眾多頗具盈利能力的投資高手，投資者可通過復制高手交易獲得同比例投資收益。高手也可通過不斷增加跟隨者而獲得更多收益。",
@@ -802,7 +802,7 @@ module.exports = {
         "ar": "تقدم TigerWit نظامًا مبتكرًا وآليًا بالكامل لمتابعة الأوامر ويجمع الكثيرين من أساتذة الاستثمار الذين يتمتعون بقدرات كبيرة لتحقيق الأرباح. ومن خلال متابعة الأساتذة، يتمتع المستثمرون بنفس القدرة على تحقيق دخل مماثل للدخل الذي يحققه الأساتذة. ويستطيع الأساتذة أيضًا كسب المزيد من الدخل من خلال زيادة عدد المتابعين لهم باستمرار."
     },
     "forex13": {
-        "en": "Trading time",
+        "en": "Webinars and 1-on-1 Tutorials",
         "zh": "交易时间段",
         "vi": "Thời gian giao dịch",
         "zh-Hant": "交易時間段",
@@ -812,7 +812,7 @@ module.exports = {
         "ar": "وقت التداول"
     },
     "forex14": {
-        "en": "TigerWit offers global trading and also provides financial services for clients continuously except the necessary inter-bank maintenance period per day.",
+        "en": "For those that are new to Forex trading or would like to develop their trading strategies, TigerWit offers a wide range of educational webinars and personal training sessions with your own account manager.",
         "zh": "TigerWit提供全球交易，除去每日必要的银行间维护时段，不间断的为我们的客户提供金融服务。",
         "vi": "TigerWit cung cấp giao dịch toàn cầu và cũng cung cấp các dịch vụ tài chính cho khách hàng liên tục trừ thời gian bảo trì liên ngân hàng cần thiết mỗi ngày.",
         "zh-Hant": "TigerWit提供全球交易，除去每日必要的銀行間維護時段，不間斷的為我們的客戶提供金融服務。",
@@ -822,7 +822,7 @@ module.exports = {
         "ar": "توفر TigerWit لعملائها الوصول إلى أسواق التداول العالمية كما توفر لهم الخدمات المالية دون انقطاع إلا خلال فترة الصيانة اليومية الضرورية بين البنوك."
     },
     "forex15": {
-        "en": "How to achieve foreign exchange trade in TigerWit?",
+        "en": " ",
         "zh": "在TigerWit怎么做外汇交易?",
         "vi": "Làm thế nào để đạt được giao dịch ngoại hối trong TigerWit?",
         "zh-Hant": "在TigerWit怎麽做外匯交易?",
@@ -832,7 +832,7 @@ module.exports = {
         "ar": "كيف تتداول العملات الأجنبية في TigerWit؟"
     },
     "forex16": {
-        "en": "An investor of TigerWit sold one lot (eur/usd) around 10:00 on October 22, platform time of TigerWit at the position of 1.13450 by USD1000. ",
+        "en": " ",
         "zh": "某位TigerWit的投资者在TigerWit的平台时间 10 月 22 号 10 点左右，于 1.13450 位置左右动用 1000 美金卖出 1 手欧美（eur/usd）。",
         "vi": "Một nhà đầu tư của TigerWit đã bán một lot (€ / usd) vào khoảng 10:00 ngày 22 tháng 10, thời gian nền tảng của TigerWit ở lệnh 1.13450 USD1000.",
         "zh-Hant": "某位TigerWit的投資者在TigerWit的平臺時間 10 月 22 號 10 點左右，於 1.13450 位置左右動用 1000 美金賣出 1 手歐美（eur/usd）。",
@@ -842,7 +842,7 @@ module.exports = {
         "ar": "باع المستثمر مع TigerWit عقد واحد من زوج يورو/دولار أمريكي (eur/usd) عند الساعة 10:00 ص يوم 22 أكتوبر بتوقيت منصة TigerWit وكان سعر المركز في ذلك الوقت هو 1.13450 دولار مقابل 1000دولار."
     },
     "forex17": {
-        "en": "On the second day, the trade was closed at the position of 1.1100 around 10:00 on October 23. ",
+        "en": " ",
         "zh": "到了次日，10 月 23 日 10 点左右，于 1.1100 位置平仓了结，",
         "vi": "Vào ngày thứ hai, giao dịch đóng cửa ở mức 1.1100 vào khoảng 10:00 ngày 23 tháng 10.",
         "zh-Hant": "到了次日，10 月 23 日 10 點左右，於 1.1100 位置平倉了結，",
@@ -852,7 +852,7 @@ module.exports = {
         "ar": "وفي اليوم التالي، تم إغلاق الصفقة وكان السعر هو 1.1100 دولار عند الساعة 10:00 ص يوم 23 أكتوبر."
     },
     "forex18": {
-        "en": "The earnings obtained by the client is (1.13450-1.1100)*100000=USD2450, ",
+        "en": " ",
         "zh": "客户收益（1.13450-1.1100）*100000=2450 美元，",
         "vi": " Thu nhập của khách hàng là (1.13450-1.1100) * 100000 = USD2450,",
         "zh-Hant": "客戶收益（1.13450-1.1100）*100000=2450 美元，",
@@ -862,7 +862,7 @@ module.exports = {
         "ar": "الربح الذي حققه العميل هو (1.13450 - 1.1100) * 100000 = 2450 دولار"
     },
     "forex19": {
-        "en": "the yield rate of which is 245%.",
+        "en": " ",
         "zh": "收益率 245%。",
         "vi": " tỷ lệ lợi nhuận là 245%.",
         "zh-Hant": "收益率 245%。",
@@ -14213,6 +14213,16 @@ module.exports = {
             "es": "Visite Liverpool FC",
             "pt-BR": "Visite o Liverpool FC",
             "ar": "تفضل بزيارة نادي ليفربول لكرة القدم"
+        },
+        "liverpool13": {
+            "zh": " ",
+            "en": "Forex Trading By Tigerwit",
+            "vi": " ",
+            "zh-Hant": " ",
+            "id": " ",
+            "es": " ",
+            "pt-BR": " ",
+            "ar": " "
         },
         "bannerTit": {
             "zh": "全球交易者联赛",
