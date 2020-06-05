@@ -12847,6 +12847,208 @@ module.exports = {
             "ar": "شركة TigerWit هي شركة مرخصة وخاضعة للرقابة والإشراف من جانب هيئة السلوك المالي (FCA)، رقم الترخيص 679941"
         }
     },
+    "global_bonus": {
+        "title": {
+            "en": "Join a Winning Team",
+            "zh": "Join a Winning Team",
+            "zh-Hant": "Join a Winning Team",
+            "vi": "Tham gia cùng ĐỘI CHIẾN THẮNG!",
+            "id": "Bergabunglah dengan Tim Pemenang",
+            "es": "Únete a un equipo ganador",
+            "pt-BR": "Junte-se a uma equipe vencedora",
+            "ar": " انضم إلى فريق فائز"
+        },
+        "sub_title": {
+            "en": "Teamwork is the key to successful partnership, now we invite you to join the best team in the world.",
+            "zh": "Teamwork is the key to successful partnership, now we invite you to join the best team in the world.",
+            "zh-Hant": "Teamwork is the key to successful partnership, now we invite you to join the best team in the world.",
+            "vi": "\"Muốn đi nhanh thì đi một mình. Muốn đi xa phải đi cùng nhau\", hãy mời bạn bè tham gia cùng chúng tôi.",
+            "id": "Kerjasama Tim adalah kunci sukses dalam kemitraan, kini kami mengundangmu untuk bergabung dengan tim terbaik di dunia.",
+            "es": "El trabajo en equipo es la clave para una asociación exitosa, ahora lo invitamos a unirse al mejor equipo del mundo.",
+            "pt-BR": "O trabalho em equipe é a chave para uma parceria de excelência, agora o convidamos para se unir à melhor equipe de mundo.",
+            "ar": "يدًا بيد نعزز روح الفريق من أجل شراكة ناجحة، انضم الآن إلى الفريق الأفضل في العالم."
+        },
+        "reg_title": {
+            "en": "Enter your details below and become a partner of a winning team",
+            "zh": "Enter your details below and become a partner of a winning team",
+            "zh-Hant": "Enter your details below and become a partner of a winning team",
+            "vi": "Đăng ký thông tin chi tiết để trở thành đối tác của TigerWit",
+            "id": "Masukkan detail Anda di bawah ini dan menjadi bagian dari tim pemenang.",
+            "es": "Ingrese sus datos a continuación y conviértase en socio de un equipo ganador.",
+            "pt-BR": "Insira seus dados a seguir e convirta-se em sócio de uma equipe ganhadora.",
+            "ar": "أدخل بياناتك في النموذج أدناه وانضم إلى الفريق الفائز"
+        },
+        "reg_policy": {
+            "en": "I consent to the collection, storage and processing of my personal data by TigerWit in accordance with its",
+            "zh": "I consent to the collection, storage and processing of my personal data by TigerWit in accordance with its",
+            "zh-Hant": "I consent to the collection, storage and processing of my personal data by TigerWit in accordance with its",
+            "vi": "Tôi đồng ý với việc thu thập, lưu trữ và xử lý dữ liệu cá nhân của tôi bởi TigerWit theo ",
+            "id": "Saya menyetujui pengumpulan, penyimpanan, dan pemrosesan data pribadi saya oleh TigerWit sesuai dengan ",
+            "es": "Doy mi consentimiento para que TigerWit recopile, almacene y procese mis datos personales de acuerdo con su ",
+            "pt-BR": "Dou o meu consentimento para que a TigerWit recompile, armazene e processe meus dados pessoais de acordo com seus ",
+            "ar": "أوافق على جمع وتخزين ومعالجة بياناتي الشخصية بواسطة TigerWit  الخصوصية الخاصة بها "
+        },
+        "reg_policy2": {
+            "en": "Privacy Policy",
+            "zh": "Privacy Policy",
+            "zh-Hant": "Privacy Policy",
+            "vi": "Chính sách bảo mật",
+            "id": "Kebijakan Privasi",
+            "es": "Política de privacidad",
+            "pt-BR": "térmos e condições",
+            "ar": "وفقًا لسياسة"
+        },
+        "submit_btn": {
+            "en": "SUBMIT",
+            "zh": "SUBMIT",
+            "zh-Hant": "SUBMIT",
+            "vi": "Đăng ký",
+            "id": "Kirimkan",
+            "es": "ENVIAR",
+            "pt-BR": "ENVIAR",
+            "ar": "إرسال"
+        },
+        "content_title": {
+            "en": "Our state-of-the-art trading technology, powered by blockchain, is supported by an unparalleled squad of features",
+            "zh": "Our state-of-the-art trading technology, powered by blockchain, is supported by an unparalleled squad of features",
+            "zh-Hant": "Our state-of-the-art trading technology, powered by blockchain, is supported by an unparalleled squad of features",
+            "vi": "Với công nghệ giao dịch tiên tiến, được cung cấp bởi nền tảng BlockChain đa tính năng",
+            "id": "Teknologi perdagangan kami yang canggih, ditenagai oleh blockchain, didukung oleh serangkaian fitur yang tak tertandingi",
+            "es": "Nuestra tecnología comercial de vanguardia, impulsada por blockchain, está respaldada por un equipo de características inigualables",
+            "pt-BR": "Nossa tecnología comercial de vanguarda, impulsionada por blockchain, está apoiada por uma equipe de características incomparaveis",
+            "ar": "تقنيات تداول حديثة ومتميزة مدعومة بتقنية البلوك تشين تساندها مجموعة لا مثيل لها من المميزات"
+        },
+        "content_list_t1": {
+            "en": "Active Copy Trading",
+            "zh": "Active Copy Trading",
+            "zh-Hant": "Active Copy Trading",
+            "vi": "Kích hoạt nền tảng Copy Trading",
+            "id": "copy-trading yang aktif",
+            "es": "Copy Trading Activo",
+            "pt-BR": "Copy trading ativo",
+            "ar": "تنشيط التداول بنسخ الصفقات "
+        },
+        "content_list_p1": {
+            "en": "Clients can choose to copy a wide range of traders offering multiple strategies",
+            "zh": "Clients can choose to copy a wide range of traders offering multiple strategies",
+            "zh-Hant": "Clients can choose to copy a wide range of traders offering multiple strategies",
+            "vi": "Cho phép các nhà đầu tư lựa chọn nhiều chuyên gia giao dịch",
+            "id": "Klien dapat memilih untuk menyalin berbagai transaksi trader yang menawarkan beberapa strategi.",
+            "es": "Los clientes pueden optar por copiar una amplia gama de operadores que ofrecen múltiples estrategias",
+            "pt-BR": "Os clientes podem escolher copiar uma ampla variedade de traders que oferecem múltiplas estrategias",
+            "ar": "يمكن للعملاء نسخ الصفقات من مجموعة كبيرة من المتداولين الموهوبين الذين يتبعون استراتيجيات تداول متعددة."
+        },
+        "content_list_t2": {
+            "en": "Transparent Payments",
+            "zh": "Transparent Payments",
+            "zh-Hant": "Transparent Payments",
+            "vi": "Thanh toán minh bạch",
+            "id": "Pembayaran yang transparan.",
+            "es": "Transparencia en Pagos",
+            "pt-BR": "Transparência em pagamentos",
+            "ar": "شفافية الدفع"
+        },
+        "content_list_p2": {
+            "en": "Our payment plans are clear and tailored to suit our partners needs",
+            "zh": "Our payment plans are clear and tailored to suit our partners needs",
+            "zh-Hant": "Our payment plans are clear and tailored to suit our partners needs",
+            "vi": "Phương thức thanh toán rõ ràng và phù hợp với nhu cầu của bạn",
+            "id": "Perencanaan pembayaran kami jelas dan disesuaikan dengan kebutuhan mitra kami.",
+            "es": "Nuestros planes de pago son claros y se adaptan a las necesidades de nuestros socios.",
+            "pt-BR": "Nossos planos de pagamentos são claros e se ajustam as necessidades dos nossos sócios",
+            "ar": "خطط الدفع لدينا واضحة ومصممة لتناسب احتياجات شركائنا."
+        },
+        "content_list_t3": {
+            "en": "Multi Award Winning App",
+            "zh": "Multi Award Winning App",
+            "zh-Hant": "Multi Award Winning App",
+            "vi": "Ứng dụng dành được nhiều giải thưởng uy tín",
+            "id": "Aplikasi Pemenang Multi Award",
+            "es": "Aplicación ganadora de múltiples premios",
+            "pt-BR": "Aplicativo ganhador de de múltiplos prêmios",
+            "ar": "تطبيق حائز على جوائز عالمية"
+        },
+        "content_list_p3": {
+            "en": "Our unique platform has been recognized by the industry with multiple awards",
+            "zh": "Our unique platform has been recognized by the industry with multiple awards",
+            "zh-Hant": "Our unique platform has been recognized by the industry with multiple awards",
+            "vi": "Nền tảng hiện đại đã được công nhận với nhiều giải thưởng.",
+            "id": "Platform kami yang unik telah diakui oleh industri dengan banyak penghargaan.",
+            "es": "Nuestra plataforma única ha sido reconocida por la industria con múltiples premios.",
+            "pt-BR": "Nossa plataforma única tem sido reconhecida pela industria com mútiplos prêmios",
+            "ar": "منصة تداول فريدة حائزة على العديد من الجواائز المرموقة."
+        },
+        "content_list_t4": {
+            "en": "Converting Marketing Material",
+            "zh": "Converting Marketing Material",
+            "zh-Hant": "Converting Marketing Material",
+            "vi": "Cung cấp tài liệu truyền thông",
+            "id": "Mengubah Materi Pemasaran",
+            "es": "Material de Marketing para captura de clientes",
+            "pt-BR": "Material de Marketing para captura de clientes",
+            "ar": "مواد تسويق جذابة"
+        },
+        "content_list_p4": {
+            "en": "Our experienced marketing team can provide you with unique and converting materials",
+            "zh": "Our experienced marketing team can provide you with unique and converting materials",
+            "zh-Hant": "Our experienced marketing team can provide you with unique and converting materials",
+            "vi": "Đội ngũ Marketing chuyên nghiệp của chúng tôi sẽ cung cấp tài liệu và những thông tin minh bạch",
+            "id": "Tim pemasaran kami yang berpengalaman dapat menyediakan materi yang unik dan menarik bagi Anda.",
+            "es": "Nuestro experimentado equipo de marketing puede proporcionarle materiales únicos para captura de clientes.",
+            "pt-BR": "Nossa experiente equipe de Marketing pode lhe fornecer materiais únicos para captura de clientes.",
+            "ar": "يوفر لك فريق التسويق لدينا موادًا تسويقية متميزة وذات عائد مميز"
+        },
+        "content_list_t5": {
+            "en": "1-on-1 Account Support",
+            "zh": "1-on-1 Account Support",
+            "zh-Hant": "1-on-1 Account Support",
+            "vi": "Hỗ trợ tài khoản 1-1",
+            "id": "Dukungan Akun 1-on-1",
+            "es": "Soporte al cliente 1 a 1",
+            "pt-BR": "Suporte ao cliente 1 a 1",
+            "ar": "دعم شخصي"
+        },
+        "content_list_p5": {
+            "en": "Our global offices provide local support to both you and your clients",
+            "zh": "Our global offices provide local support to both you and your clients",
+            "zh-Hant": "Our global offices provide local support to both you and your clients",
+            "vi": "Đối tác và khách hàng luôn được đội ngũ tại quốc gia của bạn hỗ trợ",
+            "id": "Kantor global kami menyediakan dukungan lokal untuk Anda dan klien Anda.",
+            "es": "Nuestras oficinas globales brindan apoyo local tanto a usted como a sus clientes.",
+            "pt-BR": "Nossas oficinas brindam apoio tanto a você quanto a seus clientes.",
+            "ar": "توفر مكاتبنا حول العالم دعمًا محليًا لك ولعملائك."
+        },
+        "content_list_t6": {
+            "en": "Live Webinars and Education Centre",
+            "zh": "Live Webinars and Education Centre",
+            "zh-Hant": "Live Webinars and Education Centre",
+            "vi": "Hội thảo trực tuyến Webinar và",
+            "id": "Webinar dan Pusat Pendidikan",
+            "es": "Webinarios en vivo y Centro de Educación",
+            "pt-BR": "Seminários Web ao vivo e Centro de Educação",
+            "ar": "ندوات الكترونية ومركز تعليمي"
+        },
+        "content_list_p6": {
+            "en": "Exclusive training and educational services are provided at no extra cost",
+            "zh": "Exclusive training and educational services are provided at no extra cost",
+            "zh-Hant": "Exclusive training and educational services are provided at no extra cost",
+            "vi": "Đào tạo và cung cấp những dịch vụ cần thiết miễn phí",
+            "id": "Pelatihan eksklusif dan layanan pendidikan telah disediakan tanpa biaya tambahan.",
+            "es": "Se brindan servicios de capacitación y educación exclusivos sin costo adicional",
+            "pt-BR": "Brindam-se serviços de capacitação e educação exclusivos sem custo adicional",
+            "ar": "تدريب حصري وخدمات تعليمية يتم توفيرها مجانًا وبدون تكلفة إضافية"
+        },
+        "payment_title": {
+            "en": "Payment methods include",
+            "zh": "Payment methods include",
+            "zh-Hant": "Payment methods include",
+            "vi": "Phương thức thanh toán bao gồm",
+            "id": "Metode pembayaran meliputi",
+            "es": "Incluye Métodos de Pago como",
+            "pt-BR": "Inclui métodos de pagamento como",
+            "ar": "طرق الدفع تشمل"
+        }
+    },
     "partner": {
         "becomePartner": {
             "zh": "诚招合作伙伴",
