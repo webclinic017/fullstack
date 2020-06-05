@@ -14012,6 +14012,16 @@ module.exports = {
             "pt-BR": "Visite o Liverpool FC",
             "ar": "تفضل بزيارة نادي ليفربول لكرة القدم"
         },
+        "liverpool13": {
+            "zh": " ",
+            "en": "Forex Trading By Tigerwit",
+            "vi": " ",
+            "zh-Hant": " ",
+            "id": " ",
+            "es": " ",
+            "pt-BR": " ",
+            "ar": " "
+        },
         "bannerTit": {
             "zh": "全球交易者联赛",
             "en": "Global Traders League",
