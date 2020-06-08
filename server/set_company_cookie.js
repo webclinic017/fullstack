@@ -11,7 +11,7 @@
         // console.log(req.host)
         var domain = require('./utils').getDomain(req);
 
-
+        console.log('-------res.cookie----------',req.headers.cookie)
         res.cookie('company_name', company_name, { path: '/', domain: domain })
         res.cookie('access_origin', access_origin, { path: '/', domain: domain })
         res.cookie('access_origin2', access_origin2, { path: '/', domain: domain })
@@ -26,5 +26,7 @@
             req.lang = lang;
             res.cookie('lang', lang, { path: '/', domain: domain })
         }
+        console.log('------domain------',domain)
+        console.log('-------res.cookie----------',req.headers.cookie)
     };
 })();
