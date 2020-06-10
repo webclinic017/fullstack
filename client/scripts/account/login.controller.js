@@ -185,9 +185,9 @@
                 invite_status: $cookies['invite_status'] || null,
                 appsflyer_id: $cookies['APPSFLYER_ID'] || null,
                 // TODO 暂时
-                referrer: document.referrer,
-                href: location.href,
-                cookie: document.cookie
+                // referrer: document.referrer,
+                // href: location.href,
+                // cookie: document.cookie
             };
             para.remember = $scope.rememberLoginStatus ? 1 : 0;
             // 验证码登录

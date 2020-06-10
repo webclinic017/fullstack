@@ -152,9 +152,9 @@ $(document).ready(function () {
       is_agree: is_agree == 'is_agree' ? 1 : 0,
       register_rule: JSON.stringify(oReg.search_source),
       // TODO 暂时
-      referrer: document.referrer,
-      href: location.href,
-      cookie: document.cookie
+      // referrer: document.referrer,
+      // href: location.href,
+      // cookie: document.cookie
     }).then(function (data) {
       if (!data) return;
       if (data.is_succ) {

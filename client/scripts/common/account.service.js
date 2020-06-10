@@ -606,9 +606,9 @@
             return publicHttp.dealPublicRequest(o.setAgentPromotionApi, 'POST', {
                 ib_pid: ib_pid,
                 // TODO 暂时
-                referrer: document.referrer,
-                href: location.href,
-                cookie: document.cookie
+                // referrer: document.referrer,
+                // href: location.href,
+                // cookie: document.cookie
             });
         }
 
