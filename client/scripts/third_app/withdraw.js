@@ -6,6 +6,8 @@ var withdrawBankList;   //当前选择提现到银行卡列表
 var withdrawBankId;   //当前选择提现到银行卡ID
 var withdrawBtnStatus = false; //提现按钮状态
 var canWithdrawAmount = 0; //可提现金额
+var min_amount = 20; // 最小提现金额（来自接口）
+var minAmount = min_amount;   // 最小提现金额(用于项目)
 var withdrawNotice = ''; //提现提示语
 var thirdThirdType = '';  // 第三方平台ID-出金接口的third_type参数
 var thirdThirdAccount = '';  // 完整账号-出金接口的third_account参数
@@ -51,15 +53,15 @@ $(document).on("tap", eleWithdraw.payWithdrawSubmitBtn, function () {
   return false;
 });
 
-function confirmWithdraw () {
+function confirmWithdraw() {
   if (withdrawType === 'bank_account') {
-    if(!checkCardPhone(withdrawBankId)){ return }
+    if (!checkCardPhone(withdrawBankId)) { return }
   }
-  if(withdrawType === 'third_account' && thirdThirdWithdrawType == 1){
-    if(!checkCardPhone(thirdThirdWithdrawBankId)){ return }
+  if (withdrawType === 'third_account' && thirdThirdWithdrawType == 1) {
+    if (!checkCardPhone(thirdThirdWithdrawBankId)) { return }
   }
   var amount = Number($(eleWithdraw.payWithdrawAmount).val()).toFixed(2);
-  var amountCur = (amount*selectKeyFromTypeForWithdraw('currency')[0].rate_out).toFixed(2);
+  var amountCur = (amount * selectKeyFromTypeForWithdraw('currency')[0].rate_out).toFixed(2);
   var depositTemplate = {
     data: {
       type: 'withdraw',
@@ -72,30 +74,30 @@ function confirmWithdraw () {
       amountTotal: amountCur
     }
   }
-  var html=bt('template_asset_confirm',depositTemplate);
+  var html = bt('template_asset_confirm', depositTemplate);
   $("#third_app_bottom_template").html(html);
   openBottomMdl();
 }
-function submitWithdraw () {
+function submitWithdraw() {
   openLoadingMdl();
   var params = {
     amount: Number($(eleWithdraw.payWithdrawAmount).val()),
     currency: selectKeyFromTypeForWithdraw('currency')[0].currency,
     mt4_id: withdrawAccount !== 'wallet' ? withdrawAccount : undefined,
   }
-  if(withdrawType === 'wallet') {
+  if (withdrawType === 'wallet') {
     params.third_type = selectKeyFromTypeForWithdraw('platform');
-  } else if(withdrawType === 'bank_account') {
+  } else if (withdrawType === 'bank_account') {
     params.bank_card_id = withdrawBankId;
 
-  } else if(withdrawType === 'third_account'){
+  } else if (withdrawType === 'third_account') {
     params.third_type = thirdThirdType;
     params.third_account = thirdThirdAccount;
-    if(thirdThirdWithdrawType == 1){
+    if (thirdThirdWithdrawType == 1) {
       params.bank_card_id = thirdThirdWithdrawBankId;
     }
 
-  }else if(withdrawType === 'transfer'){
+  } else if (withdrawType === 'transfer') {
     params.third_type = selectKeyFromTypeForWithdraw('platform');
     params.bank_card_id = withdrawBankId;
   }
@@ -143,6 +145,8 @@ $(eleWithdraw.payAccountLst).on("tap", "li", function () {
     withdrawBankId = undefined;
     $(eleWithdraw.payAccountLst).find("li[data-select=bank_chosen]").remove();
     $(eleWithdraw.payAccountLstBankAdd).empty();
+    minAmount = 0.01;
+    $(eleWithdraw.payWithdrawAmount).prop('placeholder', lang.text('thirdH5.minimum') + minAmount + '$');
     setWithdrawBtnStatus();
   } else {
     openLoadingMdl();
@@ -177,7 +181,7 @@ $(eleWithdraw.payWithdrawAmount).on("input propertychange", function () {
   setWithdrawBtnStatus();
 });
 
-function checkWithdrawLimit () {
+function checkWithdrawLimit() {
   $(eleWithdraw.payWithdrawLLimit).removeClass('active');
   publicRequest('checkThirdWithdrawLimit', 'GET', {
     mt4_id: withdrawAccount !== 'wallet' ? withdrawAccount : undefined
@@ -191,6 +195,7 @@ function checkWithdrawLimit () {
         openMessageMdl(data.data.status_message)
         withdrawLimit = true;
       } else {
+        min_amount = data.data.min_amount;
         withdrawNotice = data.data.notice;
         withdrawLimit = false;
       }
@@ -209,17 +214,17 @@ function checkCardPhone(card) {
     }
   });
   if (cardInfo.country_code === 'CN' && !cardInfo.phone) {
-      var html=bt('template_withdraw_bind_bank_phone', {
-        data: {
-          bankName: cardInfo.bank_name,
-          bankCard: cardInfo.card_no
-        }
-      });
-      $("#third_app_bottom_template").html(html);
-      openBottomMdl();
-      return false;
+    var html = bt('template_withdraw_bind_bank_phone', {
+      data: {
+        bankName: cardInfo.bank_name,
+        bankCard: cardInfo.card_no
+      }
+    });
+    $("#third_app_bottom_template").html(html);
+    openBottomMdl();
+    return false;
   } else {
-      return true
+    return true
   }
 }
 $(document).on('tap', '#bind_bank_phone_card', function () {
@@ -259,7 +264,7 @@ $(document).on('tap', '#bind_bank_phone_btn', function () {
  *
  * 由于切换提现账号后，提现到账号要清空，所以切换提现账号时不用设置，在渲染列表后需要调用一次
  */
-function setWithdrawBtnStatus () {
+function setWithdrawBtnStatus() {
   var amount = Number($(eleWithdraw.payWithdrawAmount).val());
   // console.log(amount, canWithdrawAmount, withdrawType, withdrawAccount);
   if (withdrawLimit) {
@@ -273,15 +278,15 @@ function setWithdrawBtnStatus () {
     $(eleWithdraw.payWithdrawBtn).addClass('disabled');
     return;
   }
-  if(withdrawType === 'third_account' && thirdThirdWithdrawType == 1){
-    if(!thirdThirdWithdrawBankId){
+  if (withdrawType === 'third_account' && thirdThirdWithdrawType == 1) {
+    if (!thirdThirdWithdrawBankId) {
       withdrawBtnStatus = false;
       $(eleWithdraw.payWithdrawBtn).addClass('disabled');
       return;
     }
   }
   //1.监听amout变化
-  if (!amount || amount < 20 || amount > canWithdrawAmount) {
+  if (!amount || amount < minAmount || amount > canWithdrawAmount) {
     depositBtnStatus = false;
     $(eleWithdraw.payWithdrawBtn).addClass('disabled');
     return;
@@ -291,7 +296,7 @@ function setWithdrawBtnStatus () {
   $(eleWithdraw.payWithdrawBtn).removeClass('disabled');
 }
 
-function getWithdrawPlatform () {
+function getWithdrawPlatform() {
   if (pageLoadStatus.withdraw) return;
   publicRequest('getThirdWithdrawPlatform', 'GET').then(function (data) {
     // console.log(data);
@@ -308,14 +313,14 @@ function getWithdrawPlatform () {
 }
 
 //添加提现列表
-function addWithdrawAccount () {
+function addWithdrawAccount() {
   var withdrawTemplate = {
     data: {
       isToWallet: withdrawAccount === 'wallet' ? true : false,
       lst: withdrawTypeLst
     }
   }
-  var html=bt('template_withdraw_account_type',withdrawTemplate);
+  var html = bt('template_withdraw_account_type', withdrawTemplate);
   $(eleWithdraw.payAccountLst).html(html);
   //重新渲染提现到列表时，已选择的提现到账号一律清空重置
   withdrawType = undefined;
@@ -328,7 +333,7 @@ function addWithdrawAccount () {
   setWithdrawBtnStatus();
 }
 //根据当前充值方式找到对应字段
-function selectKeyFromTypeForWithdraw (name) {
+function selectKeyFromTypeForWithdraw(name) {
   var result = null;
   $.each(withdrawTypeLst, function (index, value) {
     if (value.key === withdrawType) {
