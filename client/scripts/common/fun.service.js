@@ -12,7 +12,10 @@
             /*获取Url查询字段 返回Object*/
             getSearch: function (type) {
                 // console.log($location.search())
-                var url = location.search || location.href.slice(location.href.indexOf('?'));
+                var search = function () {
+                    return location.href.indexOf('?') === -1 ? '' : location.href.slice(location.href.indexOf('?'))
+                }
+                var url = location.search || search();
                 if (type === 'string') {
                     return url;
                 }
@@ -83,7 +86,7 @@
             *@param delay 多少毫秒内连续触发事件，不会执行
             *@returns {Function}
             */
-           debounce: function (fn, delay) {
+            debounce: function (fn, delay) {
                 var timer = null;
                 return function () {
                     var self = this,

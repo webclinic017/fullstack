@@ -14014,7 +14014,17 @@ module.exports = {
         },
         "liverpool13": {
             "zh": " ",
-            "en": "Forex Trading By Tigerwit",
+            "en": "Forex Trading",
+            "vi": " ",
+            "zh-Hant": " ",
+            "id": " ",
+            "es": " ",
+            "pt-BR": " ",
+            "ar": " "
+        },
+        "liverpool14": {
+            "zh": " ",
+            "en": "By Tigerwit",
             "vi": " ",
             "zh-Hant": " ",
             "id": " ",
