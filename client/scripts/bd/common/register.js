@@ -297,9 +297,9 @@
                     email: oReg.search_arr.email || null,
                     is_agree: is_agree == 'is_agree' ? 1 : 0,
                     // TODO 暂时
-                    referrer: document.referrer,
-                    href: location.href,
-                    cookie: document.cookie
+                    // referrer: document.referrer,
+                    // href: location.href,
+                    // cookie: document.cookie
                 }).then(function (data) {
                     if (!data) return;
                     layer.closeAll();

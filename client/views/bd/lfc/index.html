@@ -3,6 +3,9 @@
 
 <head>
   <meta charset="UTF-8">
+  <%if(req.host.indexOf('.tigerwit.com') === -1) {%>
+    <meta name="robots" content="noindex">
+    <%}%>
   <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="description" content="With a strong technological core, TigerWit offers its clients exceptional capabilities to trade in the markets. Forex margin trading system.Forex analysis software,Forex demo trading platform,Forex strategy, Forex financing,forex trading master.">

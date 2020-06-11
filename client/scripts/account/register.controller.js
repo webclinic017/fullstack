@@ -180,9 +180,9 @@
                 appsflyer_id: $cookies['APPSFLYER_ID'] || null,
                 register_rule: JSON.stringify(source),
                 // TODO 暂时
-                referrer: document.referrer,
-                href: location.href,
-                cookie: document.cookie
+                // referrer: document.referrer,
+                // href: location.href,
+                // cookie: document.cookie
             };
             if ($scope.registerStep3 == '2') {
                 // 邮箱注册

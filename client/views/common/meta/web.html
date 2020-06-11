@@ -1,6 +1,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
+<%if(req.host.indexOf('.tigerwit.com') === -1) {%>
+<meta name="robots" content="noindex">
+<%}%>
+
 <% if (!lang.isZhTDK().isZhArea) {%>
 <%if(req.path == "/") {%>
 <meta name="description"
@@ -47,18 +51,18 @@
 <title>TigerWit| About TigerWit</title>
 
 <% } else if(req.path == "/web/aboutus/liverpool") {%>
-  <meta name="description"
-    content="TigerWit has a professional management team with rich experience in FX trading, indices CFD, regulatory compliance, investment management, online  R & D, and global marketing.">
-  <meta name="keywords"
-    content="TigerWit, Foreign Exchange Investment and Financing, Gold and Silver Trading Platform, Forex Trading Platform, Forex Trading Master, Forex Inducing Broker, Electronic Finance.">
-  <title>Liverpool Football Club | Official Online Foreign Exchange Trading Partner </title>
+<meta name="description"
+  content="TigerWit has a professional management team with rich experience in FX trading, indices CFD, regulatory compliance, investment management, online  R & D, and global marketing.">
+<meta name="keywords"
+  content="TigerWit, Foreign Exchange Investment and Financing, Gold and Silver Trading Platform, Forex Trading Platform, Forex Trading Master, Forex Inducing Broker, Electronic Finance.">
+<title>Liverpool Football Club | Official Online Foreign Exchange Trading Partner </title>
 
 <% } else if(req.path == "/web/aboutus/medianewsandcontact") {%>
-  <meta name="description"
-    content="TigerWit has a professional management team with rich experience in FX trading, indices CFD, regulatory compliance, investment management, online  R & D, and global marketing.">
-  <meta name="keywords"
-    content="TigerWit, Foreign Exchange Investment and Financing, Gold and Silver Trading Platform, Forex Trading Platform, Forex Trading Master, Forex Inducing Broker, Electronic Finance.">
-  <title>Press Releases & Media enquiries | TigerWit Global</title>
+<meta name="description"
+  content="TigerWit has a professional management team with rich experience in FX trading, indices CFD, regulatory compliance, investment management, online  R & D, and global marketing.">
+<meta name="keywords"
+  content="TigerWit, Foreign Exchange Investment and Financing, Gold and Silver Trading Platform, Forex Trading Platform, Forex Trading Master, Forex Inducing Broker, Electronic Finance.">
+<title>Press Releases & Media enquiries | TigerWit Global</title>
 
 <% } else if(req.path == "/web/mt4") {%>
 <meta name="description"
@@ -148,10 +152,10 @@
 <title>TigerWit | Fast Login | Password login</title>
 
 <% } else if(req.path == "/download") {%>
-  <meta name="description"
-    content="With a strong technological core, TigerWit offers its clients exceptional capabilities to trade in the markets. Forex margin trading system.Forex analysis software,Forex demo trading platform,Forex strategy, Forex financing,forex trading master.">
-  <meta name="keywords"
-    content="TigerWit, Foreign Exchange Investment and Financing, Gold and Silver Trading Platform, Forex Trading Platform, Forex Trading Master, Forex Inducing Broker,Electronic Finance.">
+<meta name="description"
+  content="With a strong technological core, TigerWit offers its clients exceptional capabilities to trade in the markets. Forex margin trading system.Forex analysis software,Forex demo trading platform,Forex strategy, Forex financing,forex trading master.">
+<meta name="keywords"
+  content="TigerWit, Foreign Exchange Investment and Financing, Gold and Silver Trading Platform, Forex Trading Platform, Forex Trading Master, Forex Inducing Broker,Electronic Finance.">
 <title>Open An Account | Web Or App | TigerWit Global</title>
 
 <% } else {%>

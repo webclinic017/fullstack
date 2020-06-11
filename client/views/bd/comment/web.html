@@ -3,8 +3,10 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>
-    <%=lang.text("companyZhName")%>｜每日汇评</title>
+    <%if(req.host.indexOf('.tigerwit.com') === -1) {%>
+        <meta name="robots" content="noindex">
+        <%}%>
+  <title><%=lang.text("companyZhName")%>｜每日汇评</title>
   <% include /common/vendor/web.css.html %>
     <!-- build:css(.tmp) /styles/web.css -->
     <link rel="stylesheet" href="/styles/web.css">
