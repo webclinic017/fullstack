@@ -30,11 +30,12 @@
                     layer.open({
                         type: 1,
                         skin: 'home_redbag_layer', //加上边框
-                        closeBtn: 0,
+                        closeBtn: true,
                         title: '',
                         shade: 0.6,
+                        shadeClose: true,
                         area: ['960px', '560px'], //宽高
-                        content: '<div class="content"><a href="'+data.target_url+'" onclick="toTrackBannerSensorsdata(\'modal\', \''+data.name+'\')"><img src="' + data.image_url + '"></a><div class="close" onclick="layer.closeAll();"></div></div>'
+                        content: '<div class="content"><a href="'+data.target_url+'" onclick="toTrackBannerSensorsdata(\'modal\', \''+data.name+'\')"><img src="' + data.image_url + '"></a></div>'
                     });
                 }
             });
