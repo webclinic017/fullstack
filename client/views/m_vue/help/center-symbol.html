@@ -67,7 +67,7 @@
                     <tbody>
                         <tr v-for="item in forex" v-cloak>
                             <td>{{ item.symbol }}</td>
-                            <td>{{ item.symbol_cn }}</td>
+                            <td>{{ item.symbol_name }}</td>
                             <td>{{ item.spread_tiger }}</td>
                             <td>{{ item.leverage.join(' ') }}</td>
                             <td>{{ item.digits }}</td>
@@ -162,7 +162,7 @@
                         <tbody>
                             <tr v-for="item in oil" v-cloak>
                                 <td>{{ item.symbol }}</td>
-                                <td>{{ item.symbol_cn }}</td>
+                                <td>{{ item.symbol_name }}</td>
                                 <td>{{ item.contract_size }}</td>
                                 <td>{{ item.lot_step }}</td>
                                 <td>{{ item.lot_min }}</td>
@@ -378,7 +378,7 @@
                     <tbody>
                         <tr v-for="item in cfd" v-cloak>
                             <td>{{ item.symbol }}</td>
-                            <td>{{ item.symbol_cn }}</td>
+                            <td>{{ item.symbol_name }}</td>
                             <td>{{ item.contract_size }}</td>
                             <td>{{ item.lot_min }}</td>
                         </tr>
