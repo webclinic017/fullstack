@@ -117,23 +117,23 @@
             },
             "common_confirm": {
                 "zh": "确认",
-                "en": "",
-                "vi": "",
-                "zh-Hant": "",
-                "id": "",
+                "en": "Submit",
+                "vi": "Gửi đi",
+                "zh-Hant": "確認",
+                "id": "Kirim",
                 "es": "Enviar",
-                "pt-BR": "",
-                "ar": ""
+                "pt-BR": "Enviar",
+                "ar": "إرسال"
             },
             "common_checkOrders": {
                 "zh": "查看订单",
-                "en": "",
-                "vi": "",
-                "zh-Hant": "",
-                "id": "",
-                "es": "Enviar",
-                "pt-BR": "",
-                "ar": ""
+                "en": "View",
+                "vi": "Hiển thị",
+                "zh-Hant": "查看訂單",
+                "id": "Lihat",
+                "es": "Ver",
+                "pt-BR": "Veja",
+                "ar": "عرض"
             },
             "common_pending": {
                 "zh": "待处理",
@@ -141,7 +141,7 @@
                 "vi": "",
                 "zh-Hant": "",
                 "id": "",
-                "es": "Enviar",
+                "es": "",
                 "pt-BR": "",
                 "ar": ""
             },
