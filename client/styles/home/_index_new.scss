@@ -179,6 +179,9 @@
       font-size: 18px;
       position: relative;
       z-index: 100;
+      > a{
+        color: $main-char-color-50;
+      }
     }
     @include m(box) {
       position: relative;
