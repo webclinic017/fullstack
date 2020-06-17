@@ -9,7 +9,7 @@
 
     function HomeIndexController($scope, invite, ranklist, $cookies, $timeout) {
         var company = $cookies["company_name"];
-        var userCode = $cookies["user_code"];
+        // var userCode = $cookies["user_code"];
 
         // if (company && company === 'tigerwit') {
         //    layer.open({
@@ -22,7 +22,7 @@
         //        content: $('#home-layer-model')
         //    });
         // }
-        if (!userCode && company && company === 'tigerwit') {
+        if (company && company === 'tigerwit') {
             invite.getAdvertiseRecords('popup').then(function (data) {
                 // console.log(data);
                 if (data.is_succ && data.data.length) {

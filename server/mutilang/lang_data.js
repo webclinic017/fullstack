@@ -16779,7 +16779,27 @@ module.exports = {
     },
     "newhome_17_2": {
         "zh": " ",
-        "en": "FX, precious metals, commodities and indices, all by CFD.",
+        "en": "FX, ",
+        "vi": " ",
+        "zh-Hant": " ",
+        "id": " ",
+        "es": " ",
+        "pt-BR": " ",
+        "ar": " "
+    },
+    "newhome_17_3": {
+        "zh": " ",
+        "en": "precious metals, ",
+        "vi": " ",
+        "zh-Hant": " ",
+        "id": " ",
+        "es": " ",
+        "pt-BR": " ",
+        "ar": " "
+    },
+    "newhome_17_4": {
+        "zh": " ",
+        "en": "commodities and indices, all by CFD.",
         "vi": "FX, kim loại quý, các loại hàng hóa và chỉ số, tất cả đều được giao dịch với CFD.",
         "zh-Hant": " ",
         "id": "Valas, Logam Mulia, Komoditas, dan indeks. Semuanya tersedia di CFD.",
@@ -20304,5 +20324,47 @@ module.exports = {
         "es": "Cupones esperando por ti",
         "pt-BR": "Cupons esperando por você",
         "ar": "كوبونات في انتظارك"
+    },
+    "stray": {
+        "youStray": {
+            "en": "You get lost…",
+            "zh": "你迷路了…",
+            "zh-Hant": "你迷路了…",
+            "vi": "Truy cập sai địa chỉ…",
+            "id": "Anda tersesat…",
+            "es": "¿Se ha perdido?…",
+            "pt-BR": "Está perdido?…",
+            "ar": "لا يمكن تحميل الصفحة"
+        },
+        "click": {
+            "en": "Don’t worry, Click ",
+            "zh": "别着急，点击",
+            "zh-Hant": "別著急，點擊",
+            "vi": "Đừng lo, click vào ",
+            "id": "Jangan khawatir, klik ",
+            "es": "No se preocupe, dé clic ",
+            "pt-BR": "Não se preocupe, clique ",
+            "ar": "الرجاء "
+        },
+        "here": {
+            "en": "here",
+            "zh": "这里",
+            "zh-Hant": "這裡",
+            "vi": "đây",
+            "id": "disini",
+            "es": "aquí",
+            "pt-BR": "aqui",
+            "ar": "هنا"
+        },
+        "findWay": {
+            "en": " to find your way out",
+            "zh": "就可以找到出路",
+            "zh-Hant": "就可以找到出路",
+            "vi": " để quay lại",
+            "id": " untuk jalan keluarnya",
+            "es": " para encontrar su camino",
+            "pt-BR": " para encontrar o seu caminho",
+            "ar": " للعودة الى الصفحة  الرئيسية"
+        }
     }
 };

@@ -23,10 +23,14 @@
             <div class="body">
                 <div class="layout-2">
                     <div class="layout-2__404">
-                        <p>
-                            别着急，点击
-                            <a href="/">这里</a>
-                            就可以找到出路
+                        <div><%=lang.text("stray.youStray")%></div>
+                        <p class="click">
+                            <%=lang.text("stray.click")%>
+                            <a href="/"><%=lang.text("stray.here")%></a>
+                            <%=lang.text("stray.findWay")%>
+                        </p>
+                        <p class="link" ng-if="lang.currentLanguage() === 'en'" ng-cloak>
+                            <a href="/download">Download Our Trading App</a> | <a href="/ranklist/#/ranklist/masters">Copy Trading</a> | <a href="/web/product/forex">Forex Trading</a> | <a href="/web/aboutus/abouttigerwit">About Us</a> | <a href="/blog">Blog</a>
                         </p>
                     </div>
                 </div>
