@@ -248,6 +248,8 @@ $(document).on("tap", "#third_app_bottom_template .bank_item", function () {
   $(this).addClass('active');
   closeAllMdl();
   if (cPageType == 'withdraw') {
+    minAmount = min_amount;
+    $(eleWithdraw.payWithdrawAmount).prop('placeholder', lang.text('thirdH5.minimum') + minAmount + '$');
     if (cSource === 'withdraw_type') {
       thirdThirdWithdrawBankId = cId;
       $(eleWithdraw.payAccountLstBankAdd).empty();

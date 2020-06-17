@@ -151,16 +151,27 @@
   }
   @include e(404) {
     height: 575px;
-    background: url("/images/404.png") no-repeat;
+    background: url($white_label_image + "404.png") no-repeat;
     background-position: center center;
     margin-top: 50px;
     margin-bottom: 50px;
-    p {
-      text-align: center;
+    padding-top: 268px;
+    padding-left: 154px;
+    text-align: center;
+    color: #666;
+    div {
+      font-size: 45px;
+      font-weight: 800;
+    }
+    .click {
       font-size: 24px;
-      padding-top: 360px;
-      padding-left: 154px;
-      color: #666;
+      padding-top: 30px;
+      a {
+        color: #fe5f5f;
+      }
+    }
+    .link {
+      margin-top: 10px;
       a {
         color: #fe5f5f;
       }

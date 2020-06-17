@@ -22,11 +22,11 @@
                 }
                 var min = 0;
                 attrs.$observe('twformMin', function (value) {
-                    console.log(value)
+                    console.log('----twformMin---', value)
                     var floatVal = parseFloat(value, 10);
                     min = isNaN(floatVal) ? 0 : floatVal;
+                    setData(ctrl.$viewValue, min)
                 });
-
                 ctrl.$parsers.push(function (viewVal) {
                     return setData(viewVal, min)
                 });
@@ -34,6 +34,7 @@
                     return setData(viewVal, min)
                 });
                 function setData(cur, min){
+                    console.log(cur, min)
                     if (cur < min) {
                         ctrl.$setValidity('twformMin', false);
                         return undefined;

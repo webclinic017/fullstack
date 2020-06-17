@@ -7406,14 +7406,24 @@
                         "ar": "يجب أن تتم مصادقة اسمك الحقيقي وبعد ذلك سحب أموالك"
                     },
                     "tip8": {
-                        "zh": "提现金额最少为20美金。",
-                        "en": "At least $20 for the withdrawal.",
-                        "vi": "Ít nhất 20 đô-la cho 1 lần rút tiền",
-                        "zh-Hant": "提現金額最少為20美金。",
-                        "id": "Minimal penarikan adalah 20$",
-                        "es": "Al menos $20 para reembolsos.",
-                        "pt-BR": "Pelo menos US $ 20 para a retirada.",
-                        "ar": "على الأقل 20 دولار للسحب"
+                        "zh": "提现金额最少为",
+                        "en": "At least $",
+                        "vi": "Ít nhất ",
+                        "zh-Hant": "提現金額最少為",
+                        "id": "Minimal penarikan adalah ",
+                        "es": "Al menos $",
+                        "pt-BR": "Pelo menos US $ ",
+                        "ar": "على الأقل "
+                    },
+                    "tip8_1": {
+                        "zh": "美金。",
+                        "en": " for the withdrawal.",
+                        "vi": " đô-la cho 1 lần rút tiền",
+                        "zh-Hant": "美金。",
+                        "id": "$",
+                        "es": " para reembolsos.",
+                        "pt-BR": " para a retirada.",
+                        "ar": " دولار للسحب"
                     },
                     "tip9": {
                         "zh": "出金金额最多为0.00美金",
