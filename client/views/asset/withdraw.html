@@ -9,8 +9,10 @@
             <div class="deposit__way" ng-click="openChangeWithTypeMdl()">
                 <label>{{ withdrawTypeLst[withdraw.accountType].name }}</label>
             </div>
-            <p class="deposit__way-tip" ng-show="withdraw.accountType === 'cse'">{{lang.text('tigerWitID.depositWithdrawal.tip43')}}</p>
-            <p class="deposit__way-tip" ng-show="withdraw.accountType === 'paypal'">{{lang.text('tigerWitID.depositWithdrawal.tip44')}}</p>
+            <p class="deposit__way-tip" ng-show="withdraw.accountType === 'cse'">
+                {{lang.text('tigerWitID.depositWithdrawal.tip43')}}</p>
+            <p class="deposit__way-tip" ng-show="withdraw.accountType === 'paypal'">
+                {{lang.text('tigerWitID.depositWithdrawal.tip44')}}</p>
             <!-- <p class="deposit__way-tip" ng-show="withdraw.accountType === 'third_account'">提示</p> -->
         </div>
     </div>
@@ -19,7 +21,8 @@
         <div class="col-xs-2 justify-flex-end deposit__title-money"></div>
 
         <div class="col-xs-10 pd-bt-10" ng-show="!withdraw.third.platform">
-            <span class="deposit__pointer font-info" ng-click="openThirdMdl()">{{lang.text('tigerWitID.wallet.addThirdAccount')}} ></span>
+            <span class="deposit__pointer font-info"
+                ng-click="openThirdMdl()">{{lang.text('tigerWitID.wallet.addThirdAccount')}} ></span>
         </div>
 
         <div class="col-xs-9 withdraw__card_handler" ng-show="withdraw.third.platform">
@@ -29,20 +32,24 @@
             </div>
             <span class="card_number">
                 <span>
-                    {{withdraw.third.account}} 
+                    {{withdraw.third.account}}
                 </span>
-                <span class="deposit__pointer font-info btn-text card_switch" ng-click="openManageThirdMdl('switch')">{{lang.text('tigerWitID.wallet.switchThird')}} ></span>
+                <span class="deposit__pointer font-info btn-text card_switch"
+                    ng-click="openManageThirdMdl('switch')">{{lang.text('tigerWitID.wallet.switchThird')}} ></span>
             </span>
-            <span class="tw-btn tw-btn-md tw-btn-capsule-bordered card_manage" ng-click="openManageThirdMdl('manage')">{{lang.text('tigerWitID.wallet.manageThird')}}</span>
+            <span class="tw-btn tw-btn-md tw-btn-capsule-bordered card_manage"
+                ng-click="openManageThirdMdl('manage')">{{lang.text('tigerWitID.wallet.manageThird')}}</span>
         </div>
     </div>
-    <div class="display-flex mg-bt-30" ng-show="withdraw.accountType === 'bank' || withdraw.third.withdraw_type === 1" ng-controller="ManageCardController">
+    <div class="display-flex mg-bt-30" ng-show="withdraw.accountType === 'bank' || withdraw.third.withdraw_type === 1"
+        ng-controller="ManageCardController">
         <div class="col-xs-2 justify-flex-end deposit__title-money">
             {{lang.text('tigerWitID.depositWithdrawal.bankCard')}}
         </div>
 
         <div class="col-xs-10 pd-tp-10" ng-show="!withdraw.card.id">
-            <span class="deposit__pointer font-info" ng-click="openCardMdl('withdraw', parentScope)">{{lang.text('tigerWitID.wallet.bindBankCard')}} ></span>
+            <span class="deposit__pointer font-info"
+                ng-click="openCardMdl('withdraw', parentScope)">{{lang.text('tigerWitID.wallet.bindBankCard')}} ></span>
         </div>
 
         <div class="col-xs-9 withdraw__card_handler" ng-show="withdraw.card.id">
@@ -52,18 +59,23 @@
             </div>
             <span class="card_number">
                 <span>
-                    {{withdraw.card.number}} 
+                    {{withdraw.card.number}}
                 </span>
-                <span class="deposit__pointer font-info btn-text card_switch" ng-click="openManageCardMdl({type: 'switch', page: 'withdraw', parentScope: parentScope, getCard: getCard})">{{lang.text('tigerWitID.wallet.switchBankCard')}} ></span>
+                <span class="deposit__pointer font-info btn-text card_switch"
+                    ng-click="openManageCardMdl({type: 'switch', page: 'withdraw', parentScope: parentScope, getCard: getCard})">{{lang.text('tigerWitID.wallet.switchBankCard')}}
+                    ></span>
             </span>
-            <span class="tw-btn tw-btn-md tw-btn-capsule-bordered card_manage" ng-click="openManageCardMdl({type: 'manage', page: 'withdraw', parentScope: parentScope, getCard: getCard})" ng-style="{width: lang.isEnglishArea() ? '170px' : ''}">{{lang.text('tigerWitID.wallet.manageBankCards')}}</span>
+            <span class="tw-btn tw-btn-md tw-btn-capsule-bordered card_manage"
+                ng-click="openManageCardMdl({type: 'manage', page: 'withdraw', parentScope: parentScope, getCard: getCard})"
+                ng-style="{width: lang.isEnglishArea() ? '170px' : ''}">{{lang.text('tigerWitID.wallet.manageBankCards')}}</span>
         </div>
     </div>
     <div class="display-flex mg-bt-30" ng-show="withdraw.accountType === 'transfer'">
         <div class="col-xs-2 justify-flex-end deposit__title-money"></div>
 
         <div class="col-xs-10 pd-bt-10" ng-show="!withdraw.transfer.id">
-            <span class="deposit__pointer font-info" ng-click="openTransferMdl()">{{lang.text('tigerWitID.transfer.clickAddWireTransfer')}} ></span>
+            <span class="deposit__pointer font-info"
+                ng-click="openTransferMdl()">{{lang.text('tigerWitID.transfer.clickAddWireTransfer')}} ></span>
         </div>
 
         <div class="col-xs-9 withdraw__card_handler" ng-show="withdraw.transfer.id">
@@ -73,51 +85,51 @@
             </div>
             <span class="card_number">
                 <span>
-                    {{withdraw.transfer.card_no}} 
+                    {{withdraw.transfer.card_no}}
                 </span>
-                <span class="deposit__pointer font-info btn-text card_switch" ng-click="openManageTransferMdl('switch')">{{lang.text('tigerWitID.transfer.switchTransferAccount')}} ></span>
+                <span class="deposit__pointer font-info btn-text card_switch"
+                    ng-click="openManageTransferMdl('switch')">{{lang.text('tigerWitID.transfer.switchTransferAccount')}}
+                    ></span>
             </span>
-            <span class="tw-btn tw-btn-md tw-btn-capsule-bordered card_manage" ng-click="openManageTransferMdl('manage')">{{lang.text('tigerWitID.transfer.manageWireTransfer')}}</span>
+            <span class="tw-btn tw-btn-md tw-btn-capsule-bordered card_manage"
+                ng-click="openManageTransferMdl('manage')">{{lang.text('tigerWitID.transfer.manageWireTransfer')}}</span>
         </div>
     </div>
-    <div class="display-flex" ng-show="withdraw.accountType !== 'bank' && withdraw.accountType !== 'wallet' && withdraw.accountType !== 'third_account' && withdraw.accountType !== 'transfer'">
+    <div class="display-flex"
+        ng-show="withdraw.accountType !== 'bank' && withdraw.accountType !== 'wallet' && withdraw.accountType !== 'third_account' && withdraw.accountType !== 'transfer'">
         <div class="col-xs-2 justify-flex-end deposit__title-money">
             {{lang.text('tigerWitID.depositWithdrawal.name')}}
         </div>
 
         <div class="col-xs-6">
             <div class="form-control-wrapper">
-                <input class="form-control form-control-size-lg form-control-shape-capsule disabled"
-                    name="account"
-                    type="text"
-                    ng-model="main.realname"
-                    disabled ng-if="lang.isThird()">
-                <input class="form-control form-control-size-lg form-control-shape-capsule disabled"
-                    name="account"
-                    type="text"
-                    ng-model="personal.realname"
-                    disabled ng-if="!lang.isThird()">
-            </div>  
-        </div>      
+                <input class="form-control form-control-size-lg form-control-shape-capsule disabled" name="account"
+                    type="text" ng-model="main.realname" disabled ng-if="lang.isThird()">
+                <input class="form-control form-control-size-lg form-control-shape-capsule disabled" name="account"
+                    type="text" ng-model="personal.realname" disabled ng-if="!lang.isThird()">
+            </div>
+        </div>
     </div>
-    <div class="display-flex" ng-show="withdraw.accountType !== 'bank' && withdraw.accountType !== 'wallet' && withdraw.accountType !== 'third_account' && withdraw.accountType !== 'transfer'">
+    <div class="display-flex"
+        ng-show="withdraw.accountType !== 'bank' && withdraw.accountType !== 'wallet' && withdraw.accountType !== 'third_account' && withdraw.accountType !== 'transfer'">
         <div class="col-xs-2 justify-flex-end deposit__title-money">
             {{lang.text('tigerWitID.myAccount.accountNumber')}}
         </div>
 
         <div class="col-xs-6">
             <div class="form-control-wrapper">
-                <input class="form-control form-control-size-lg form-control-shape-capsule"
-                    name="account"
-                    type="text"
+                <input class="form-control form-control-size-lg form-control-shape-capsule" name="account" type="text"
                     ng-model="withdraw.thirdAccount">
-            </div>  
-        </div>      
+            </div>
+        </div>
     </div>
-    <div class="display-flex mg-bt-30 deposit__pay_method" ng-if="withdrawTypeLst[withdraw.accountType].currency.length > 1">
-        <div class="col-xs-2 justify-flex-end deposit__title-money">{{lang.text('tigerWitID.depositWithdrawal.selectCurrency')}}</div>
+    <div class="display-flex mg-bt-30 deposit__pay_method"
+        ng-if="withdrawTypeLst[withdraw.accountType].currency.length > 1">
+        <div class="col-xs-2 justify-flex-end deposit__title-money">
+            {{lang.text('tigerWitID.depositWithdrawal.selectCurrency')}}</div>
         <div class="col-xs-2 relative">
-            <div class="deposit__currency-tit" ng-click="openCurrency($event)"><span>{{withdraw.currency.currency_name}}</span></div>
+            <div class="deposit__currency-tit" ng-click="openCurrency($event)">
+                <span>{{withdraw.currency.currency_name}}</span></div>
             <ul class="deposit__currency-lst" ng-show="currencyStatus">
                 <li ng-repeat="item in withdrawTypeLst[withdraw.accountType].currency" ng-click="selcetCurrency(item)">
                     {{item.currency_name}}
@@ -150,24 +162,21 @@
             </div>
         </div> -->
     </div>
-    
+
     <div ng-show="(withdrawMessageSucc && message.is_succ)">
         <div class="display-flex">
-            <div class="col-xs-2 justify-flex-end deposit__title-money">{{lang.text('tigerWitID.depositWithdrawal.withdrawalAmountJ')}}</div>
+            <div class="col-xs-2 justify-flex-end deposit__title-money">
+                {{lang.text('tigerWitID.depositWithdrawal.withdrawalAmountJ')}}</div>
             <div class="col-xs-6 deposit__input">
                 <form name="withdrawForm" novalidate>
                     <div class="form-control-wrapper">
-                        <input class="form-control form-control-size-lg form-control-shape-capsule"
-                               name="amount"
-                               type="text"
-                               required
-                               ng-class="{'form-control-error': frontErr.amount.show && withdrawForm.amount.$invalid}"
-                               ng-model="withdraw.amount"
-                               ng-pattern="frontErr.amount.reg"
-                               twform-max="{{withdraw.maxAmount || 0}}"
-                               twform-min="{{withdraw.minAmount}}"
-                               ng-focus="hideErr('amount')"
-                               ng-blur="showErr('amount')">
+                        <input class="form-control form-control-size-lg form-control-shape-capsule" name="amount"
+                            type="text" required
+                            ng-class="{'form-control-error': frontErr.amount.show && withdrawForm.amount.$invalid}"
+                            ng-model="withdraw.amount" ng-pattern="frontErr.amount.reg"
+                            twform-max="{{withdraw.maxAmount || 0}}"
+                            twform-min="{{withdraw.accountType === 'wallet' ? 0.01 : withdraw.minAmount}}"
+                            ng-focus="hideErr('amount')" ng-blur="showErr('amount')">
 
                         <span class="form-control-icon form-control-icon-size-lg">$</span>
 
@@ -185,7 +194,7 @@
                             </p>
 
                             <p class="alert alert-arrow_tp_lf" ng-show="withdrawForm.amount.$error.twformMin">
-                                {{lang.text('tigerWitID.depositWithdrawal.tip65_1')}}{{withdraw.minAmount}}{{lang.text('tigerWitID.depositWithdrawal.tip65_2')}}
+                                {{lang.text('tigerWitID.depositWithdrawal.tip65_1')}}{{withdraw.accountType === 'wallet' ? 0.01 : withdraw.minAmount}}{{lang.text('tigerWitID.depositWithdrawal.tip65_2')}}
                             </p>
                         </div>
                     </div>
@@ -210,7 +219,8 @@
         <br>
         <div class="">
             <div class="text-center">
-                <button class="tw-btn tw-btn-capsule-gradient tw-btn-lg" ng-show="clickable" ng-click="toWithdraw()">{{lang.text('tigerWitID.depositWithdrawal.withdrawal')}}</button>
+                <button class="tw-btn tw-btn-capsule-gradient tw-btn-lg" ng-show="clickable"
+                    ng-click="toWithdraw()">{{lang.text('tigerWitID.depositWithdrawal.withdrawal')}}</button>
                 <button class="tw-btn tw-btn-capsule-gradient tw-btn-lg" disabled ng-show="!clickable">
                     <i class="loading_spinner fa fa-spinner"></i>
                     {{lang.text('tigerWitID.depositWithdrawal.withdrawing')}}
@@ -227,7 +237,9 @@
                 </div>
                 <div class="warn_content" style="font-family: initial;">
                     <p class="sys_tip2">1. {{lang.text('tigerWitID.depositWithdrawal.tip53')}}</p>
-                    <p class="sys_tip2">2. {{lang.text('tigerWitID.depositWithdrawal.tip8')}}</p>
+                    <p class="sys_tip2">2.
+                        {{lang.text('tigerWitID.depositWithdrawal.tip8') + withdraw.minAmount + lang.text('tigerWitID.depositWithdrawal.tip8_1')}}
+                    </p>
                     <p class="sys_tip2">3. {{lang.text('tigerWitID.depositWithdrawal.tip10')}}</p>
                     <p class="sys_tip2">4. {{lang.text('tigerWitID.depositWithdrawal.tip54')}}</p>
                     <p class="sys_tip2">5. {{lang.text('tigerWitID.depositWithdrawal.tip55')}}</p>

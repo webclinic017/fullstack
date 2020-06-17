@@ -186,6 +186,7 @@
                         $scope.message = {
                             is_succ: true
                         };
+                        $scope.withdraw.minAmount = data.data.min_amount;
                         $scope.withdrawNotice = data.data.notice;
                         $scope.maxAmountInvest = data.data.amount < 0 ? 0 : data.data.amount;
                         $scope.withdraw.maxAmount = $scope.maxAmountInvest;
