@@ -19,7 +19,7 @@
                     margin: 1
                 },
                 logo: {
-                    src: './white_label/logo@2x.png',
+                    src: '/white_label/logo@2x.png',
                     radius: 8,
                     logoSize: 0.22
                 }
