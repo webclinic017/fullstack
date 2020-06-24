@@ -12848,6 +12848,16 @@ module.exports = {
         }
     },
     "global_bonus": {
+        "register_now": {
+            "en": "Register now",
+            "zh": "Register now",
+            "zh-Hant": "Register now",
+            "vi": "Register now",
+            "id": "Register now",
+            "es": "Register now",
+            "pt-BR": "Register now",
+            "ar": "تسجيل فوري"
+        },
         "title": {
             "en": "Join a Winning Team",
             "zh": "Join a Winning Team",

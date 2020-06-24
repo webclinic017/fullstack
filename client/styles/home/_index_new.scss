@@ -51,7 +51,7 @@
   }
   @include e(focus) {
     height: 1099px !important;
-    background-image: url("/white_label/home/home-focus-bg.jpg");
+    background-image: url("/white_label/home/home-focus-left.png");
     background-position: center center;
     background-size: auto 100%;
     color: #fff;
@@ -363,7 +363,7 @@
 }
 .ar-lang{
   .index_new__focus{
-    background-image: url("/white_label/home/home-focus-bg-ar.jpg");
+    background-image: url("/white_label/home/home-focus-right.png");
   }
 }
 // 报价
