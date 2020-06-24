@@ -10,17 +10,13 @@
     if (system === 'download_mt4') {
         window.location.href = "https://download.mql5.com/cdn/web/metaquotes.software.corp/mt4/metatrader4.apk?utm_campaign=www.metatrader4.com";
     } else {
-        var search_source = checkUserSource();
-        // console.log(search_source);
-        publicRequest('setUserSource', 'POST', {
-            source: JSON.stringify(search_source)
-        }).then(function () {
+        setTimeout(function () {
             if (platform) {
                 if (platform == 'android') {
                     downloadAndroid()
                 } else if (platform == 'ios') {
                     downloadIos()
-                }else{
+                } else {
                     alert('未知的平台')
                 }
             } else if (isAndriod() || isWindows()) {
@@ -28,7 +24,7 @@
             } else {
                 downloadIos()
             }
-        });
+        }, 100)
     }
     function downloadAndroid() {
         if (isDemo() || isCn) {

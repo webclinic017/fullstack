@@ -284,45 +284,14 @@
             //     return theRequest;
             // }
 
+
             oReg.search_arr = getSearch();
             // 代理商推广
             if (oReg.search_arr.origin === 'proxy') {
                 $('#password').parent().remove();
                 $('#confirmPassword').parent().remove();
             }
-            var unit = oReg.search_arr.unit ? oReg.search_arr.unit : "";
-            var key = oReg.search_arr.key ? oReg.search_arr.key : "";
-            if (oReg.search_arr.pid) {
-                // 清空重写
-                $.cookie('ib_pid', '', { path: '/', domain: getDomain(), expires: -1 });
-                $.cookie('unit', '', { path: '/', domain: getDomain(), expires: -1 });
-                $.cookie('key', '', { path: '/', domain: getDomain(), expires: -1 });
-                $.cookie('pid', oReg.search_arr.pid, { path: '/', domain: getDomain(), expires: 7 });
-                $.cookie('invite_status', 3, { path: '/', domain: getDomain(), expires: 7 });
-
-
-                if (unit) {
-                    $.cookie('unit', unit, { path: '/', domain: getDomain(), expires: 7 });
-                }
-                if (key) {
-                    $.cookie('key', key, { path: '/', domain: getDomain(), expires: 7 });
-                }
-            }
-
-            // 客户推广(有proxy参数为代理商推广)
-            if (oReg.search_arr.ib_pid) {
-                $.cookie('pid', '', { path: '/', domain: getDomain(), expires: -1 });
-                $.cookie('ib_pid', oReg.search_arr.ib_pid, { expires: 1, path: '/', domain: getDomain() });
-                if (oReg.search_arr.origin !== 'proxy') {
-                    $.cookie('invite_status', 1, { expires: 1, path: '/', domain: getDomain() });
-                }
-            }
-
-            /*获取lp*/
-            if (!oReg.search_arr.lp) {
-                oReg.search_arr.lp = window.location.pathname.replace(/[\/:]/g, "").toLowerCase();
-            }
-
+            setSource();
             /*电话*/
             if (oReg.search_arr.telephone) {
                 $("#telephone").val(oReg.search_arr.telephone)
@@ -332,18 +301,7 @@
                 $(".h5_float_footer").fadeOut(50);
             }
 
-            /*设置邀请源INVITE_CODE*/
-            if (oReg.search_arr.user_code) {
-                $.cookie('invite_code', oReg.search_arr.user_code, { expires: 1, path: '/', domain: getDomain() });
-                $.cookie('invite_status', 2, { expires: 1, path: '/', domain: getDomain() });
-            }
 
-            // if (window.location.hostname === 'lonfx.tigerwit.com') {
-            //     oReg.search_arr.pid = 'lonfx';
-            // }
-            // if (window.location.hostname === 'pandafx.tigerwit.com') {
-            //     oReg.search_arr.pid = 'pandafx';
-            // }
 
             // console.log(oReg);
         }());
@@ -428,23 +386,21 @@
                     _taq.push({ convert_id: "81431259366", event_type: "form" })
                 }
                 var params = {
-                    ib_pid: oReg.search_arr.ib_pid || $.cookie('ib_pid') || null,
-                    invite_status: $.cookie('invite_status') || null,
                     appsflyer_id: $.cookie('APPSFLYER_ID') || null,
                     account: $("#telephone").val() || null,
                     account_type: 1,
                     phone_code: areaCode || '86',
                     world_code: world_code || 'CN',
-                    pid: $.cookie('pid') || null,
-                    unit: oReg.search_arr.unit || null,
-                    lp: oReg.search_arr.lp || null,
-                    key: oReg.search_arr.key || null,
                     email: oReg.search_arr.email || null,
                     is_agree: is_agree == 'is_agree' ? 1 : 0,
                     // TODO 暂时
                     // referrer: document.referrer,
                     // href: location.href,
                     // cookie: document.cookie
+                }
+                var all_sources = $.cookie('all_sources');
+                if (all_sources) {
+                    params = $.extend(params, JSON.parse(all_sources));
                 }
                 if ($('#password').length > 0) {
                     params = $.extend(params, {

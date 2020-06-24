@@ -34,18 +34,7 @@
         //     console.log(this, resolve, e)
         //     layer.close(resolve.layIndex)
         // })
-        var source = $scope.checkUserSource();
-        if (lang.currentLanguage() === 'es') {
-            source ? source["R_SPANISH"] = "001" : source = { "R_SPANISH": "001" };
-        }
-        if (lang.currentLanguage() === 'pt-BR') {
-            source ? source["R_PTG"] = "001" : source = { "R_PTG": "001" };
-        }
-        if (source) {
-            invite.setUserSource({
-                source: JSON.stringify(source)
-            });
-        }
+
         $scope.account = {
             country: {
                 key: '',
@@ -166,24 +155,20 @@
             //     layer.msg(lang.text("actLogin19"));       //请填写完整信息
             //     return;
             // }
-            var search_arr = fun.getSearch();
             var msg;
             var para = {
                 login_type: 2,
-                lp: $state.params.lp,
-                pid: $state.params.pid,
-                unit: $state.params.unit,
-                key: $state.params.key,
                 world_code: $scope.account.country.value,
-                ib_pid: search_arr.ib_pid || $cookies['ib_pid'] || null,  // 代理推广
-                invite_status: $cookies['invite_status'] || null,
                 appsflyer_id: $cookies['APPSFLYER_ID'] || null,
-                register_rule: JSON.stringify(source),
                 // TODO 暂时
                 // referrer: document.referrer,
                 // href: location.href,
                 // cookie: document.cookie
             };
+            var all_sources = $cookies['all_sources'];
+            if (all_sources) {
+                para = angular.extend(para, JSON.parse(all_sources))
+            }
             if ($scope.registerStep3 == '2') {
                 // 邮箱注册
                 if (!showEmaliVel()) { return };
@@ -221,11 +206,11 @@
                 $scope.registerBtnStatus = true;
 
                 if (data.is_succ) {
-                    $scope.writeCookie({ nameKey: 'token', nameValue: data.data.token });
-                    $scope.writeCookie({ nameKey: 'user_code', nameValue: data.data.user_code });
-                    $scope.writeCookie({ nameKey: 'username', nameValue: data.data.username });
-                    $scope.writeCookie({ nameKey: 'username_en', nameValue: data.data.username_en });
-                    $scope.writeCookie({ nameKey: 'world_code', nameValue: para.world_code });
+                    $scope.writeCookie({ name: 'token', value: data.data.token });
+                    $scope.writeCookie({ name: 'user_code', value: data.data.user_code });
+                    $scope.writeCookie({ name: 'username', value: data.data.username });
+                    $scope.writeCookie({ name: 'username_en', value: data.data.username_en });
+                    $scope.writeCookie({ name: 'world_code', value: para.world_code });
 
                     setGtagUserId(data.data.user_code)
                     // 新用户

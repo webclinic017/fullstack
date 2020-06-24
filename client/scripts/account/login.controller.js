@@ -178,17 +178,18 @@
             //     layer.msg(lang.text("actLogin19"));       //请填写完整信息
             //     return;
             // }
-            var search_arr = fun.getSearch();
             var msg;
             var para = {
-                ib_pid: search_arr.ib_pid || $cookies['ib_pid'] || null,  // 代理推广
-                invite_status: $cookies['invite_status'] || null,
                 appsflyer_id: $cookies['APPSFLYER_ID'] || null,
                 // TODO 暂时
                 // referrer: document.referrer,
                 // href: location.href,
                 // cookie: document.cookie
             };
+            var all_sources = $cookies['all_sources'];
+            if (all_sources) {
+                para = angular.extend(para, JSON.parse(all_sources))
+            }
             para.remember = $scope.rememberLoginStatus ? 1 : 0;
             // 验证码登录
             if ($scope.loginType == 'code') {
@@ -264,20 +265,20 @@
 
                 if (data.is_succ) {
                     sessionStorage.removeItem("passErrThree");
-                    $scope.writeCookie({ nameKey: 'token', nameValue: data.data.token });
-                    $scope.writeCookie({ nameKey: 'user_code', nameValue: data.data.user_code });
-                    $scope.writeCookie({ nameKey: 'username', nameValue: data.data.username });
-                    $scope.writeCookie({ nameKey: 'username_en', nameValue: data.data.username_en });
-                    // $scope.writeCookie({nameKey: 'user_code', nameValue: '1234'});
-                    // $scope.writeCookie({nameKey: 'username', nameValue: '123k'});
-                    // $scope.writeCookie({nameKey: 'username_en', nameValue: '22asd'});
+                    $scope.writeCookie({ name: 'token', value: data.data.token });
+                    $scope.writeCookie({ name: 'user_code', value: data.data.user_code });
+                    $scope.writeCookie({ name: 'username', value: data.data.username });
+                    $scope.writeCookie({ name: 'username_en', value: data.data.username_en });
+                    // $scope.writeCookie({name: 'user_code', value: '1234'});
+                    // $scope.writeCookie({name: 'username', value: '123k'});
+                    // $scope.writeCookie({name: 'username_en', value: '22asd'});
                     setGtagUserId(data.data.user_code)
                     /**
                      * 为了deposit&withdraw页面的友盟统计
                      * 登录用户进入这两个页面统计一次，退出后在进入才重新统计一次
                      * */
                     var ran = Math.ceil(Math.random() * 1000) * Math.ceil(Math.random() * 1000);
-                    $scope.writeCookie({ nameKey: 'd&w_czc', nameValue: ran });
+                    $scope.writeCookie({ name: 'd&w_czc', value: ran });
 
                     $timeout(function () {
                         $scope.getEmailPhone(true);

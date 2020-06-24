@@ -45,13 +45,6 @@
         //     $scope.becomeAgent.country.name_cn = '中国';
         // }
 
-        var source = $scope.checkUserSource();
-
-        if (source) {
-            invite.setUserSource({
-                source: JSON.stringify(source)
-            });
-        }
 
         function submitForm () {
             $scope.error = {

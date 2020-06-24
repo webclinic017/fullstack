@@ -2,11 +2,7 @@
     'use strict';
 
     /*设置邀请源INVITE_CODE*/
-    var searcInfo = getSearch();
-    if (searcInfo.user_code) {
-        $.cookie('invite_code', searcInfo.user_code, { expires: 1, path: '/', domain: getDomain() });
-        $.cookie('invite_status', 2, { expires: 1, path: '/', domain: getDomain() });
-    }
+    setSource()
     // 选择区号
     var areaCode = '86';
     var world_code = 'CN';
@@ -140,9 +136,7 @@
         if (!checkTel()) return;
         if (!checkVerifyCode()) return;
         layer.open({ type: 2, shadeClose: false });
-        publicRequest('regOrLogin', 'POST', {
-            invite_code: searcInfo.user_code,
-            invite_status: 2,
+        var params = {
             account: $("#telephone").val(),
             account_type: 1,
             phone_code: areaCode || '86',
@@ -150,7 +144,12 @@
             password: $("#verify_code").val(),
             login_type: 2, // 登录验证方式，1-密码登录，2-验证码登录 3-密码登录有验证码
             is_agree: is_agree == 'is_agree' ? 1 : 0
-        }).then(function (data) {
+        }
+        var all_sources = $.cookie('all_sources');
+        if (all_sources) {
+            params = $.extend(params, JSON.parse(all_sources));
+        }
+        publicRequest('regOrLogin', 'POST', params).then(function (data) {
             // console.log(data);
             if (!data) return;
             if (data.is_succ) {
@@ -175,6 +174,6 @@
         });
     }
     var $inviteBox = $(".m_invite_box_wrapper");
-    var originalHeight=document.documentElement.clientHeight ||document.body.clientHeight;
-    $inviteBox.css('height', (originalHeight - $inviteBox.offset().top)+'px');
+    var originalHeight = document.documentElement.clientHeight || document.body.clientHeight;
+    $inviteBox.css('height', (originalHeight - $inviteBox.offset().top) + 'px');
 }(jQuery));

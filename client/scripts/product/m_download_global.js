@@ -19,13 +19,6 @@
         //     }
         // }());
 
-        var search_source = checkUserSource();
-        /* 客户推广参数写入 */
-        if (search_source) {
-            publicRequest('setUserSource', 'POST', {
-                source: JSON.stringify(search_source)
-            });
-        }
         
         (function () {
             $(".download_btn").on('touchend', function (e) {

@@ -13,10 +13,15 @@
      */
     function CenterHomeController($rootScope,$scope, $location, $interval, $state, account, invite, $timeout, config, redbag, trader, $modal, $cookies, fun) {
         var summaryId, competitionListId;
-        var search_arr = fun.getSearch();
+        // var search_arr = fun.getSearch();
+        var _all_sources = $cookies['all_sources'], all_sources = {};
+        if (_all_sources) {
+            all_sources = JSON.parse(_all_sources)
+        }
         $scope.cookiesParams = {
-            ib_pid: search_arr.ib_pid || $cookies['ib_pid'],
-            invite_status: $cookies['invite_status']
+            ib_pid: all_sources['ib_pid'],
+            // ib_pid: search_arr.ib_pid || all_sources['ib_pid'],
+            invite_status: all_sources['invite_status']
         }
         $scope.$on('$destroy',function(){  
             $interval.cancel(summaryId);  

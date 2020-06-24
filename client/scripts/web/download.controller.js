@@ -39,11 +39,5 @@
             $scope.client = num;
         };
 
-        var source = $scope.checkUserSource();
-        if (source) {
-            invite.setUserSource({
-                source: JSON.stringify(source)
-            });
-        }
     }
 })();

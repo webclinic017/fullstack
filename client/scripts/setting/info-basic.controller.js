@@ -298,7 +298,7 @@
                         // $city: $scope.basicInfo.locationCity.key,
                         trade_feature: $scope.basicInfo.special.value
                     });
-                    $scope.writeCookie({nameKey: 'username', nameValue: $scope.basicInfo.username});
+                    $scope.writeCookie({name: 'username', value: $scope.basicInfo.username});
                     window.location.reload();
 
                     $timeout(function () {
@@ -358,7 +358,7 @@
                     //     // $city: $scope.basicInfo.locationCity.key,
                     //     trade_feature: $scope.basicInfo.special.value
                     // });
-                    $scope.writeCookie({nameKey: 'username_en', nameValue: $scope.basicInfo.username_en});
+                    $scope.writeCookie({name: 'username_en', value: $scope.basicInfo.username_en});
                     window.location.reload();
 
                     $timeout(function () {

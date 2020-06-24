@@ -18,14 +18,7 @@
         var link = '/space/#/account/register' + searchString;
         if (ib_pid) {
             $scope.spread = true;
-            // var d = new Date();
-            // d.setTime(d.getTime() + (1*24*60*60*1000));
-            // document.cookie = 'ib_pid=' + ib_pid + '; path=/; domain='+$scope.getDomain()+'; expires=' + d.toUTCString();
-            // document.cookie = 'invite_status=0; path=/; domain='+$scope.getDomain()+'; expires=' + d.toUTCString();
-
-            $scope.writeCookie({ nameKey: 'pid', nameValue: '', expires: -1 });
-            $scope.writeCookie({ nameKey: 'ib_pid', nameValue: ib_pid, expires: 1 });
-            $scope.writeCookie({ nameKey: 'invite_status', nameValue: 0, expires: 1 });
+            setSource('IB');
 
             account.checkLogined().then(function (logined) {
                 if (logined) {

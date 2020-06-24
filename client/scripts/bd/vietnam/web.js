@@ -1,14 +1,9 @@
-;(function () {
+; (function () {
   var reg = {
     email: /^\w+@\w+\.+\w+$/,
     phone: /^[\d+|+]?\d+?-?\d+$/
   };
-  //lp unit key pid
-  var pid = getUrlParam('pid') || '';
-  var unit = getUrlParam('unit') || '';
-  var key = getUrlParam('key') || '';
-  var lp = getUrlParam('lp') || '';
-
+  setSource();
   $("#btn-form").on("click", function () {
     var type = $(this).attr("data-type") || 'vi';
     var name = $(".form-item input[data-name=name]").val();
@@ -51,18 +46,19 @@
       return;
     }
     layer.load(2);
-    $.post('/api/v3/auth/page_signup', {
+    var params = {
       username: name,
       phone: phone,
       phone_code: phone_code,
       email: email,
       lang: type,
-      pid: pid,
-      unit: unit,
-      key: key,
-      lp: lp,
       world_code: type == 'vi' ? 'VN' : 'ID'
-    }).then(function (data) {
+    }
+    var all_sources = $.cookie('all_sources');
+    if (all_sources) {
+      params = $.extend(params, JSON.parse(all_sources));
+    }
+    $.post('/api/v3/auth/page_signup', params).then(function (data) {
       // console.log(data);
       layer.closeAll();
       if (data.is_succ) {
@@ -75,21 +71,14 @@
   });
 
   // 获取区号列表
-  publicRequest('getCountries', 'GET', {type: 1}).then(function (data) {
+  publicRequest('getCountries', 'GET', { type: 1 }).then(function (data) {
     // console.log(data);
     if (data.is_succ) {
-        var optionStr = ''
-        for (var i=0; i<data.data.length;i++) {
-            optionStr += '<option value="'+data.data[i].phone_code+'">+'+data.data[i].phone_code+'</option>';
-        }
-        $(".form-item select[data-name='phone_code']").append(optionStr);
+      var optionStr = ''
+      for (var i = 0; i < data.data.length; i++) {
+        optionStr += '<option value="' + data.data[i].phone_code + '">+' + data.data[i].phone_code + '</option>';
+      }
+      $(".form-item select[data-name='phone_code']").append(optionStr);
     }
   });
-
-  //获取url中的参数
-  function getUrlParam(name) {
-    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
-    var r = window.location.search.substr(1).match(reg);  //匹配目标参数
-    if (r != null) return unescape(r[2]); return null; //返回参数值
-  }
 })();

@@ -44,60 +44,7 @@
         $scope.indexMasters = [];// 首页 第二模块的高手
         $scope.advertiseLst = [];
 
-        $scope.saveUserSourceToSession();
-        var source = $scope.checkUserSource();
-        if (source) {
-            invite.setUserSource({
-                source: JSON.stringify(source)
-            });
-        }
-        
-        function getUserParam() {
-            var href = window.location.href;
-            var originUrl = window.location.origin;
-            var pid = '', lp = 'sy', unit = '', key = '', aGET = {};
-            // var lp = window.location.pathname.replace(/[\/:]/g, "").toLowerCase();
-            var oDate = new Date();
-            var overdueDate = new Date();
-            oDate.setTime(oDate.getTime() + (7 * 24 * 60 * 60 * 1000));
-            overdueDate.setTime(oDate.getTime() - (7 * 24 * 60 * 60 * 1000));
-            var expTime = ';expires=' + oDate.toUTCString();
-            var overdueExpTime = ';expires=' + overdueDate.toUTCString();
-
-            document.cookie = 'lp=' + lp + ';path=/;domain=' + $scope.getDomain() + expTime;
-
-            if (href.indexOf('?') != -1) {
-                var aQuery = href.split('?')[1];
-                if (aQuery.length > 0) {
-                    var aBuf = aQuery.split("&");
-                    for (var i = 0, iLoop = aBuf.length; i < iLoop; i++) {
-                        var aTmp = aBuf[i].split("=");
-                        aGET[aTmp[0]] = aTmp[1];
-                    }
-                };
-                pid = aGET['pid'] ? aGET['pid'] : "";
-                unit = aGET['unit'] ? aGET['unit'] : "";
-                key = aGET['key'] ? aGET['key'] : "";
-
-                if (pid != '') {
-                    // 清空重写
-                    document.cookie = 'ib_pid=' + null + ';path=/;domain=' + $scope.getDomain() + overdueExpTime;
-                    document.cookie = 'unit=' + null + ';path=/;domain=' + $scope.getDomain() + overdueExpTime;
-                    document.cookie = 'key=' + null + ';path=/;domain=' + $scope.getDomain() + overdueExpTime;
-
-                    document.cookie = 'pid=' + pid + ';path=/;domain=' + $scope.getDomain() + expTime;
-                    document.cookie = 'invite_status=3;path=/;domain=' + $scope.getDomain() + expTime;
-
-                    if (unit) {
-                        document.cookie = 'unit=' + unit + ';path=/;domain=' + $scope.getDomain() + expTime;
-                    }
-                    if (key) {
-                        document.cookie = 'key=' + key + ';path=/;domain=' + $scope.getDomain() + expTime;
-                    }
-                }
-            }
-        };
-        getUserParam();
+        setSource();
 
         // 轮播图信息
         $scope.getBannerSucc = false;
