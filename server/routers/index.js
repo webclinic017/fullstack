@@ -836,6 +836,13 @@ router.get('/:subpage(global|uk)/LFC_TigerWit_Partnership', function (req, res) 
         pageInfo: subpage
     });
 });
+// 阿拉伯语25美金活动 - 市场部 2020.6.30
+router.get('/get-a-25-trading-bonus', function (req, res) {
+    res.render('bd/25Bonus/trading.html');
+});
+router.get('/25bonus', function (req, res) {
+    res.render('bd/25Bonus/rules.html');
+});
 
 
 module.exports = router;
