@@ -12856,7 +12856,7 @@ module.exports = {
             "id": "Register now",
             "es": "Register now",
             "pt-BR": "Register now",
-            "ar": "تسجيل فوري"
+            "ar": "سجل ألان"
         },
         "title": {
             "en": "Join a Winning Team",
