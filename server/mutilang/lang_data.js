@@ -16705,7 +16705,7 @@ module.exports = {
         "id": "Saham",
         "es": "Acciones",
         "pt-BR": "Ações",
-        "ar": "Stocks"
+        "ar": "الأسهم"
     },
     "newhome_9_1": {
         "zh": "下载注册交易账户",
