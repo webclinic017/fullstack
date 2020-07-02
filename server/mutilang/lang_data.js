@@ -16567,6 +16567,46 @@ module.exports = {
         "pt-BR": "isto é comentários, nenhuma tradução exigida",
         "ar": "this is comments, No translation required"
     },
+    "newhome_liverpool1": {
+        "zh": "Congratulations",
+        "en": "Congratulations",
+        "vi": "TigerWit Chúc mừng",
+        "zh-Hant": "",
+        "id": "TigerWit mengucapkan",
+        "es": "Felicitaciones de TigerWit",
+        "pt-BR": "Parabéns da TigerWit",
+        "ar": "Congratulations"
+    },
+    "newhome_liverpool2": {
+        "zh": "to Liverpool FC",
+        "en": "to Liverpool FC",
+        "vi": "CLB Liverpool",
+        "zh-Hant": "",
+        "id": "selamat Liverpool FC",
+        "es": "Liverpool FC",
+        "pt-BR": "Liverpool FC",
+        "ar": "to Liverpool FC"
+    },
+    "newhome_liverpool3": {
+        "zh": "Premier League",
+        "en": "Premier League",
+        "vi": "Nhà Vô Địch Giải Ngoại",
+        "zh-Hant": "",
+        "id": "Juara Liga Premier ",
+        "es": "Campeones de la",
+        "pt-BR": "Campeões da",
+        "ar": "Premier League"
+    },
+    "newhome_liverpool4": {
+        "zh": "Champions",
+        "en": "Champions",
+        "vi": "Hạng Anh mùa giải",
+        "zh-Hant": "",
+        "id": " ",
+        "es": "Liga Premier",
+        "pt-BR": "Premier League",
+        "ar": "Champions"
+    },
     "newhome_1": {
         "zh": "你需要的交易市场",
         "en": "Trade the markets you want",

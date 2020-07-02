@@ -51,34 +51,86 @@
   }
   @include e(focus) {
     height: 1099px !important;
-    background-image: url("/white_label/home/home-focus-left.png");
+    background-image: url("/white_label/home/home-focus-left-0701.png");
     background-position: center center;
     background-size: auto 100%;
     color: #fff;
     padding-top: 150px;
+    .focus-liverpool-wrapper {
+      width: 360px;
+      text-align: center;
+      margin-left: -40px;
+      margin-top: 20px;
+      &.id {
+        width: 486px;
+        padding-bottom: 30px;
+      }
+      &.vi {
+        width: 450px;
+      }
+      &.es {
+        width: 510px;
+        h3 {
+          font-size: 40px;
+        }
+      }
+      &.pt-BR {
+        width: 456px;
+      }
+    }
+    .phone_wrapper {
+      img {
+        width: 360px;
+      }
+    }
     @include m(title) {
       margin: 0;
       font-size: 45px;
       line-height: 52px;
     }
+    @include m(date) {
+      font-size: 18px;
+      width: 320px;
+      text-align: center;
+      position: relative;
+      margin: 10px auto 0px;
+      opacity: .8;
+      &::before {
+        content: '';
+        display: block;
+        border-bottom: 1px solid #fff;
+        position: absolute;
+        top: 50%;
+        width: 30%;
+        left: 0;
+      }
+      &::after {
+        content: '';
+        display: block;
+        border-bottom: 1px solid #fff;
+        position: absolute;
+        top: 50%;
+        width: 30%;
+        left: 70%;
+      }
+    }
     @include m(sub_tit) {
-      margin-top: 15px;
-      margin-bottom: 50px;
+      font-size: 40px;
     }
     @include m(icon_box) {
       @include displayFlex();
       margin-bottom: 34px;
+      margin-top: 80px;
       li {
         text-align: center;
-        padding: 0 22px;
+        padding: 0 18px;
         img {
-          height: 58px;
+          height: 48px;
         }
       }
     }
     @include m(btn_box) {
       @include displayFlex();
-      font-size: 20px;
       .focus_btn {
         width: 310px;
       }
@@ -363,7 +415,7 @@
 }
 .ar-lang{
   .index_new__focus{
-    background-image: url("/white_label/home/home-focus-right.png");
+    background-image: url("/white_label/home/home-focus-right-0701.png");
   }
 }
 // 报价
