@@ -1,0 +1,94 @@
+.bonus25-layout {
+  direction: rtl;
+  .bonus25-focus-wrapper {
+    height: 703px;
+    background-image: url('/white_label/bd/bonus25/focus.png');
+    background-position: center top;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    .bonus25-focus {
+      width: 56%;
+      text-align: center;
+      color: #fff;
+      font-size: 16px;
+      padding-top: 30px;
+      h2 {
+        color: #fee900;
+        font-size: 36px;
+        line-height: 40px;
+        margin-bottom: 20px;
+      }
+      .tips {
+        padding: 0 10%;
+      }
+      img {
+        width: 260px;
+      }
+      a.reg {
+        color: #333;
+        background: #fee900;
+        padding: 12px 30px;
+        border-radius: 4px;
+        display: inline-block;
+        margin-top: 20px;
+      }
+      .download img {
+        width: 200px;
+        margin: 20px 10px;
+      }
+    }
+  }
+  .bonus25-rules-wrapper {
+    background-color: #d0d2d4;
+    padding: 100px 16vw 60px;
+    h1 {
+      img {
+        width: 200px;
+      }
+    }
+    h2 {
+      font-size: 40px;
+    }
+    .sub-title {
+      font-size: 20px;
+    }
+    .tips {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    ul {
+      font-size: 18px;
+    }
+    > a {
+      color: #fff;
+      background: #252e3b;
+      padding: 12px 30px;
+      border-radius: 4px;
+      display: inline-block;
+      margin-top: 30px;
+    }
+  }
+  .bonus25-footer-wrapper {
+    background-color: #d0d2d4;
+    padding: 20px 6vw 30px;
+    h1 {
+      margin: 0;
+      text-align: center;
+    }
+    h4 {
+      font-size: 18px;
+      font-weight: bold;
+    }
+    a {
+      color: #333;
+    }
+    .doc {
+      text-align: center;
+      a {
+        margin: 0 10px;
+      }
+    }
+  }
+}
