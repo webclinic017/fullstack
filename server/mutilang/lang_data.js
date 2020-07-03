@@ -16568,40 +16568,40 @@ module.exports = {
         "ar": "this is comments, No translation required"
     },
     "newhome_liverpool1": {
-        "zh": "Congratulations",
+        "zh": "热烈庆祝",
         "en": "Congratulations",
         "vi": "TigerWit Chúc mừng",
-        "zh-Hant": "",
+        "zh-Hant": "熱烈慶祝",
         "id": "TigerWit mengucapkan",
         "es": "Felicitaciones de TigerWit",
         "pt-BR": "Parabéns da TigerWit",
         "ar": "Congratulations"
     },
     "newhome_liverpool2": {
-        "zh": "to Liverpool FC",
+        "zh": "利物浦足球俱乐部",
         "en": "to Liverpool FC",
         "vi": "CLB Liverpool",
-        "zh-Hant": "",
+        "zh-Hant": "利物浦足球俱樂部",
         "id": "selamat Liverpool FC",
         "es": "Liverpool FC",
         "pt-BR": "Liverpool FC",
         "ar": "to Liverpool FC"
     },
     "newhome_liverpool3": {
-        "zh": "Premier League",
+        "zh": "加冕英超联赛冠军",
         "en": "Premier League",
         "vi": "Nhà Vô Địch Giải Ngoại",
-        "zh-Hant": "",
+        "zh-Hant": "加冕英超聯賽冠軍",
         "id": "Juara Liga Premier ",
         "es": "Campeones de la",
         "pt-BR": "Campeões da",
         "ar": "Premier League"
     },
     "newhome_liverpool4": {
-        "zh": "Champions",
+        "zh": " ",
         "en": "Champions",
         "vi": "Hạng Anh mùa giải",
-        "zh-Hant": "",
+        "zh-Hant": " ",
         "id": " ",
         "es": "Liga Premier",
         "pt-BR": "Premier League",

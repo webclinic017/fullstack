@@ -61,6 +61,13 @@
       text-align: center;
       margin-left: -40px;
       margin-top: 20px;
+      &.zh, &.zh-Hant {
+        width: 400px;
+        padding-bottom: 30px;
+        .index_new__focus-date {
+          margin: 15px auto;
+        }
+      }
       &.id {
         width: 486px;
         padding-bottom: 30px;

@@ -11,12 +11,7 @@
       </div> 
       <div class="justify-center flex1" style="justify-content:left; <%= lang.currentLanguage() === 'ar' ? 'padding-right: 70px;' : 'padding-left: 100px;' %>">
         <div>
-          <%if (!lang.isEnglishArea()) {%>
-            <div style="margin: 90px 0px;">
-              <h3 class="index_new__focus-title" style="color: #ffd521;">热烈庆祝利物浦足球俱乐部</h3>
-              <h3 class="index_new__focus-title">加冕英超联赛19/20赛季冠军</h3>
-            </div>
-          <%} else if (lang.currentLanguage() === 'ar'){%>
+          <%if (lang.currentLanguage() === 'ar'){%>
             <div class="mg-tp-20 text-center" style="width: 400px;">
               <h3 class="index_new__focus-title" style="color: #ffd521;">TigerWit تهنئ</h3>
               <h3 class="index_new__focus-title">ليفربول - بطل الدوري</h3>
