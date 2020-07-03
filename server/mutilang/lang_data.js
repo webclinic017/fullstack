@@ -12848,6 +12848,16 @@ module.exports = {
         }
     },
     "global_bonus": {
+        "register_now": {
+            "en": "Register now",
+            "zh": "Register now",
+            "zh-Hant": "Register now",
+            "vi": "Register now",
+            "id": "Register now",
+            "es": "Register now",
+            "pt-BR": "Register now",
+            "ar": "سجل ألان"
+        },
         "title": {
             "en": "Join a Winning Team",
             "zh": "Join a Winning Team",
@@ -16557,6 +16567,46 @@ module.exports = {
         "pt-BR": "isto é comentários, nenhuma tradução exigida",
         "ar": "this is comments, No translation required"
     },
+    "newhome_liverpool1": {
+        "zh": "热烈庆祝",
+        "en": "Congratulations",
+        "vi": "TigerWit Chúc mừng",
+        "zh-Hant": "熱烈慶祝",
+        "id": "TigerWit mengucapkan",
+        "es": "Felicitaciones de TigerWit",
+        "pt-BR": "Parabéns da TigerWit",
+        "ar": "Congratulations"
+    },
+    "newhome_liverpool2": {
+        "zh": "利物浦足球俱乐部",
+        "en": "to Liverpool FC",
+        "vi": "CLB Liverpool",
+        "zh-Hant": "利物浦足球俱樂部",
+        "id": "selamat Liverpool FC",
+        "es": "Liverpool FC",
+        "pt-BR": "Liverpool FC",
+        "ar": "to Liverpool FC"
+    },
+    "newhome_liverpool3": {
+        "zh": "加冕英超联赛冠军",
+        "en": "Premier League",
+        "vi": "Nhà Vô Địch Giải Ngoại",
+        "zh-Hant": "加冕英超聯賽冠軍",
+        "id": "Juara Liga Premier ",
+        "es": "Campeones de la",
+        "pt-BR": "Campeões da",
+        "ar": "Premier League"
+    },
+    "newhome_liverpool4": {
+        "zh": " ",
+        "en": "Champions",
+        "vi": "Hạng Anh mùa giải",
+        "zh-Hant": " ",
+        "id": " ",
+        "es": "Liga Premier",
+        "pt-BR": "Premier League",
+        "ar": "Champions"
+    },
     "newhome_1": {
         "zh": "你需要的交易市场",
         "en": "Trade the markets you want",
@@ -16655,7 +16705,7 @@ module.exports = {
         "id": "Saham",
         "es": "Acciones",
         "pt-BR": "Ações",
-        "ar": "Stocks"
+        "ar": "الأسهم"
     },
     "newhome_9_1": {
         "zh": "下载注册交易账户",

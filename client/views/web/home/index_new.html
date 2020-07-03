@@ -1,19 +1,31 @@
 <div class="index_new" ng-controller="HomeIndexController" ng-cloak>
   <div class="index_new__focus">
+    <div class="index_new__container logo-liverpool mg-bt-15 <%= lang.currentLanguage() === 'ar' ? 'pd-rg-20' : 'pd-lf-20' %>"><img src="/white_label/logo-liverpool.png" alt=""></div>
     <div class="index_new__container space-between">
-      <div class="">
+      <div class="phone_wrapper">
         <%if (lang.areaId != 1) {%>
         <img ng-src="<%= lang.image('homeFocusGlobal')%>" alt="">
         <%} else {%>
         <img ng-src="<%= lang.image('homeFocusCn')%>" alt="">
         <%}%>
       </div> 
-      <div class="pd-tp-110 justify-center flex1">
+      <div class="justify-center flex1" style="justify-content:left; <%= lang.currentLanguage() === 'ar' ? 'padding-right: 70px;' : 'padding-left: 100px;' %>">
         <div>
-          <h3 class="index_new__focus-title pd-tp-30"><%= lang.text("newhome_1")%></h3>
-          <h3 class="index_new__focus-title"><%= lang.text("newhome_1_1")%></h3>
-          <h3 class="index_new__focus-title"><%= lang.text("newhome_1_2")%></h3>
-          <p class="index_new__focus-sub_tit"><%= lang.text("newhome_2")%></p>
+          <%if (lang.currentLanguage() === 'ar'){%>
+            <div class="mg-tp-20 text-center" style="width: 400px;">
+              <h3 class="index_new__focus-title" style="color: #ffd521;">TigerWit تهنئ</h3>
+              <h3 class="index_new__focus-title">ليفربول - بطل الدوري</h3>
+              <h3 class="index_new__focus-title"> الممتاز 19/20</h3>
+            </div>
+          <%} else {%>
+            <div class="focus-liverpool-wrapper <%= lang.currentLanguage()%>">
+              <h3 class="index_new__focus-title" style="color: #ffd521;"><%= lang.text("newhome_liverpool1")%></h3>
+              <h3 class="index_new__focus-title"><%= lang.text("newhome_liverpool2")%></h3>
+              <p class="index_new__focus-date"><span>2019/2020</span></p>
+              <p class="index_new__focus-sub_tit"><%= lang.text("newhome_liverpool3")%></p>
+              <p class="index_new__focus-sub_tit"><%= lang.text("newhome_liverpool4")%></p>
+            </div>
+          <%}%>
           <ul class="index_new__focus-icon_box">
             <li>
               <img ng-src="/white_label/home/focus-icon-new1.png" alt="">
@@ -44,7 +56,7 @@
             <a href="/space/#/account/register" class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient focus_btn"
               ng-click="[toTrackEvent('home page', 'global_home_first_open_account'), toGtagEvent('click_register_button_web')]"><%= lang.text("link_register")%></a>
           </div>
-          <div class="index_new__focus-btn_box pd-tp-50">
+          <div class="index_new__focus-btn_box pd-tp-20">
             <%if (lang.currentLanguage() === 'zh' || lang.areaId == 1) {%>
             <div class="market-h5">
               <div class="mg-bt-20"><%= lang.text("scanCodeOpenAccount")%></div>

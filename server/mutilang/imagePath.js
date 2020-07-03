@@ -265,7 +265,17 @@
             es: indexBasePath + "/bd/g35/web-focus.png",
             'pt-BR': indexBasePath + "/bd/g35/web-focus.png",
             ar: indexBasePath + "/bd/g35/web-focus-ar.png"
-        }, //
+        },
+        bonusLogo: {
+            en: indexBasePath + "/bd/g35/logo.png",
+            id: indexBasePath + "/bd/g35/logo.png",
+            zh: indexBasePath + "/bd/g35/logo.png",
+            vi: indexBasePath + "/bd/g35/logo.png",
+            "zh-Hant": indexBasePath + "/bd/g35/logo.png",
+            es: indexBasePath + "/bd/g35/logo.png",
+            'pt-BR': indexBasePath + "/bd/g35/logo.png",
+            ar: indexBasePath + "/bd/g35/logo-ar.jpeg"
+        },
         // freesignTitle: {
         //     en: indexBasePath + "/bd/bonus/freesign-web-en.png",
         //     id: indexBasePath + "/bd/bonus/freesign-web-id.png",
