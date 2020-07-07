@@ -4,9 +4,9 @@
 
     angular.module('fullstackApp').factory('invite', invite);
 
-    invite.$inject = ['$http', 'api', 'publicHttp'];
+    invite.$inject = ['$rootScope', 'api', 'publicHttp'];
 
-    function invite($http, api, publicHttp) {
+    function invite($rootScope, api, publicHttp) {
         var o = api.invite;
         var service = {
             getInviteFriendsInfo: getInviteFriendsInfo,
@@ -64,9 +64,10 @@
          *      @params identifier    wheel 首页轮播图，popup 首页弹窗
          *
          */
-        function getAdvertiseRecords(identifier) {
+        function getAdvertiseRecords(identifier, world_code) {
             return publicHttp.dealPublicRequest(o.getAdvertiseRecords, 'GET', {
-                identifier: identifier
+                identifier: identifier,
+                world_code: world_code
             });
         }
 
