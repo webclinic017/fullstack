@@ -5,25 +5,29 @@
     angular.module('fullstackApp')
         .controller('HomeIndexController', HomeIndexController);
 
-    HomeIndexController.$inject = ['$scope', 'invite', 'ranklist', '$cookies', '$timeout'];
+    HomeIndexController.$inject = ['$rootScope', '$scope', 'invite', 'ranklist', '$cookies', '$timeout'];
 
-    function HomeIndexController($scope, invite, ranklist, $cookies, $timeout) {
-        var company = $cookies["company_name"];
-        // var userCode = $cookies["user_code"];
+    function HomeIndexController($rootScope, $scope, invite, ranklist, $cookies, $timeout) {
+        var world_code = $cookies["world_code"];
 
-        // if (company && company === 'tigerwit') {
-        //    layer.open({
-        //        type: 1,
-        //        skin: 'home_layer',
-        //        closeBtn: 0,
-        //        title: '',
-        //        shade: 0.6,
-        //        area: ['800px', '520px'], //宽高
-        //        content: $('#home-layer-model')
-        //    });
-        // }
-        if (company && company === 'tigerwit') {
-            invite.getAdvertiseRecords('popup').then(function (data) {
+        if (world_code) {
+            getAdvertisePopup()
+        } else {
+            if ($rootScope.sysMessage) {
+                world_code = $rootScope.sysMessage.ip_country_code;
+                getAdvertisePopup();
+            } else {
+                var unbindWatcher = $scope.$watch('sysMessage', function (newVal, oldVal) {
+                    if (newVal) {
+                        world_code = newVal.ip_country_code;
+                        getAdvertisePopup();
+                        unbindWatcher();
+                    }
+                })
+            }
+        }
+        function getAdvertisePopup () {
+            invite.getAdvertiseRecords('popup', world_code).then(function (data) {
                 // console.log(data);
                 if (data.is_succ && data.data.length) {
                     data = data.data[0];
