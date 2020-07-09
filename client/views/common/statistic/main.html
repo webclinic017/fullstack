@@ -235,7 +235,7 @@
                         register_rule: JSON.stringify(search_source),
                     }
                     ajax({
-                        url: "/api/v3/user/source",
+                        url: "/api/v3/user/source", // 记录BI点击记录
                         type: "POST",
                         data: { source: JSON.stringify(search_source) }
                     });
