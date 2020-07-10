@@ -778,10 +778,10 @@ module.exports = {
         id: "__id__"
     },
     faqAsset6: {
-        zh: "A：出金最低限额20美元；入金后需有交易行为；出金时跟单账号无复制关系，高手账号无持仓单，自主交易账号可持仓提现。",
-        en: "A: The minimum withdrawal limit of $20; needs to have a transaction record after the deposit; The account cannot have the open orders and follow relationship before withdrawal.",
+        zh: "A：只有通过审核的真实账户才能出金；只有真实入金的账户才能出金；入金后需有交易行为；出金最低限额30美元。",
+        en: "A: The minimum withdrawal limit of $30; needs to have a transaction record after the deposit; The account cannot have the open orders and follow relationship before withdrawal.",
         vi: "^^-^^",
-        "zh-Hant": "A：出金最低限額20美元；入金後需有交易行為；出金時跟單帳號無複製關係，高手帳號無持倉單，自主交易帳號可持倉提現。",
+        "zh-Hant": "A：只有通過審核的真實賬戶才能出金；只有真實入金的賬戶才能出金；入金後需有交易行為；出金最低限額30美元。",
         id: "__id__"
     },
     faqAsset6_uk: {
