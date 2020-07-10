@@ -13593,24 +13593,24 @@ module.exports = {
             "ar": "يبلغ مقدار الحد الأدنى للإيداع 50 دولار."
         },
         "wad5Q": {
-            "zh": "What is the minimum withdrawal?",
-            "en": "What is the minimum withdrawal?",
-            "vi": "Tiền rút tối thiểu là bao nhiêu?",
-            "zh-Hant": "What is the minimum withdrawal?",
-            "id": "Berapa minimal Penarikan?",
-            "es": "¿Cuál es el reembolso mínimo?",
-            "pt-BR": "Qual é a retirada mínima?",
-            "ar": "ما هو الحد الأدنى لمبلغ السحب؟"
+            "zh": "What are the restrictions on withdrawal?",
+            "en": "What are the restrictions on withdrawal?",
+            "vi": "Những hạn chế khi rút tiền là gì?",
+            "zh-Hant": "What are the restrictions on withdrawal?",
+            "id": "Apa saja syarat untuk penarikan?",
+            "es": "¿Cuáles son las restricciones en retiro?",
+            "pt-BR": "Quais são as restrições à retirada?",
+            "ar": "ما هي شروط السحب؟"
         },
         "wad5A": {
-            "zh": "The minimum withdrawal is USD20.",
-            "en": "The minimum withdrawal is USD20.",
-            "vi": "Tiền rút tối thiểu là 20 đô la Mỹ.",
-            "zh-Hant": "The minimum withdrawal is USD20.",
-            "id": "Minimal penarikan adalah 20 USD.",
-            "es": "El reembolso mínimo es de USD20.",
-            "pt-BR": "A retirada mínima é de US$20.",
-            "ar": "يبلغ مقدار الحد الأدنى للسحب 20 دولار."
+            "zh": "Only the approved live accounts can withdraw funds; The clients can only withdrawal after depositing; Trading behavior is required after depositing; The minimum withdrawal amount is USD30.",
+            "en": "Only the approved live accounts can withdraw funds; The clients can only withdrawal after depositing; Trading behavior is required after depositing; The minimum withdrawal amount is USD30.",
+            "vi": "Chỉ những tài khoản thực đã được phê duyệt mới có thể rút tiền; Khách hàng chỉ có thể rút tiền sau khi nạp tiền; Khách hàng cần phải giao dịch ít nhất một lệnh sau khi nạp tiền; Số tiền rút tối thiểu là 30 USD.",
+            "zh-Hant": "Only the approved live accounts can withdraw funds; The clients can only withdrawal after depositing; Trading behavior is required after depositing; The minimum withdrawal amount is USD30.",
+            "id": "Hanya akun live yang telah diterima yang dapat melakukan penarikan dana; Klien hanya dapat dapat menarik dana setelah melakukan deposit; Klien juga wajib melakukan transaksi setelah deposit; Penarikan minimum adalah $30.",
+            "es": "Solo cuentas aprobadas pueden realizar el retiro; Los clientes solo pueden retirar después de depositar; Se requiere operar luego de depositar; El monto mínimo de retiro son $30 dólares.",
+            "pt-BR": "Somente as contas aprovadas podem fazer um saque; Os clientes só podem se retirar após o depósito; É necessário transação após o depósito; O valor mínimo de retirada é de $30.",
+            "ar": "يمكن فقط للحسابات الحقيقية المعتمدة سحب الأموال ؛ يمكن للعملاء السحب فقط بعد الإيداع ؛ يمكنك القيام بعملية السحب بعد قيام بصفقة على الأقل ؛ الحد الأدنى لمبلغ السحب هو 30 دولارًا أمريكيًا."
         },
         "wad6Q": {
             "zh": "Are there any withdrawal fees?",
