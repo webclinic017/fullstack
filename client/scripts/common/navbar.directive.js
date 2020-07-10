@@ -4,13 +4,18 @@
 
     angular.module('fullstackApp').directive('twNavbar', twNavbar);
 
-    twNavbar.$inject = ['$window'];
+    twNavbar.$inject = ['$window', '$cookies'];
 
-    function twNavbar($window) {
+    function twNavbar($window, $cookies) {
         return {
             restrict: 'A',
             link: function (scope, element, attrs) {
-                var url = $window.location.pathname + $window.location.hash;   // 当前url
+                var pathname = $window.location.pathname
+                var cookLang = $cookies['lang'] === 'cn' ? 'zh' : ($cookies['lang'] || '');
+                if(pathname.split('/')[1] === cookLang){
+                    pathname = pathname.substr((cookLang.length + 1))
+                }
+                var url = pathname + $window.location.hash;   // 当前url
                 var triggers = element.find('a[data-navbar-trigger]');  // 所有菜单
                 
                 triggers.each(function () {
