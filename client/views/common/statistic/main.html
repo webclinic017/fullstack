@@ -220,26 +220,37 @@
             search_source = Object.keys(search_source).length ? search_source : undefined;
             return search_source;
         }
-        setSource('BI')
+        setSource('init')
+        /**
+        * @params
+        * src : init(初始化)，IB（代理商） 
+        */
         function setSource(src) {
             // var all_sources = getCookie('all_sources') || {};
             // var source = all_sources;
             var source = {};
             var isSet = false;  // 是否重置cookie
             var search_arr = getSearch();
-            if (src === 'BI') {
-                var search_source = checkUserSource(search_arr);
-                if (search_source) {
-                    // console.log(search_source)
+            if (src === 'init') {
+                if (search_arr.irclickid) {
                     source = {
-                        register_rule: JSON.stringify(search_source),
+                        irclickid: search_arr.irclickid,
                     }
-                    ajax({
-                        url: "/api/v3/user/source", // 记录BI点击记录
-                        type: "POST",
-                        data: { source: JSON.stringify(search_source) }
-                    });
                     isSet = true;
+                } else {
+                    var search_source = checkUserSource(search_arr);
+                    if (search_source) {
+                        // console.log(search_source)
+                        source = {
+                            register_rule: JSON.stringify(search_source),
+                        }
+                        ajax({
+                            url: "/api/v3/user/source", // 记录BI点击记录
+                            type: "POST",
+                            data: { source: JSON.stringify(search_source) }
+                        });
+                        isSet = true;
+                    }
                 }
             } else {
                 /* 运营关于pid等信息存储要求：
