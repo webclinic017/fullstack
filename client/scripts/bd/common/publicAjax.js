@@ -149,7 +149,7 @@
         try {
             t = getSearch().token;
         } catch (e) { }
-        var token = $.cookie("token") || t;
+        var token = t || $.cookie("token");
         $url = apiUrl[$url] + '?token=' + token;
         $params = $params ? $params : {};
 
@@ -205,9 +205,8 @@
                     time: 2
                 });
                 toLogin();
-            } else {
-                return data;
             }
+            return data;
         }
 
         function toLogin() {
