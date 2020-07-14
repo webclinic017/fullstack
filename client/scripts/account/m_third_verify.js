@@ -162,6 +162,12 @@ $(document).ready(function () {
                 key: lang.text('third.third_username13'),
                 value: 5
             }
+        ],
+        vi: [
+            {
+                key: lang.text('third.third_username13'),
+                value: 5
+            }
         ]
     };
     // 请求当前用户认证到哪一步
@@ -1051,6 +1057,8 @@ $(document).ready(function () {
                 identityType = 'cn'
             } else if (type === 'MO' || type === 'TW' || type === 'HK') {
                 identityType = 'hmt'
+            } else if (type === 'VN') {
+                identityType = 'vi'
             } else {
                 identityType = 'en'
             }
