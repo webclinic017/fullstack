@@ -160,6 +160,7 @@
                 login_type: 2,
                 world_code: $scope.account.country.value,
                 appsflyer_id: $cookies['APPSFLYER_ID'] || null,
+                lp: $state.params.lp
                 // TODO 暂时
                 // referrer: document.referrer,
                 // href: location.href,

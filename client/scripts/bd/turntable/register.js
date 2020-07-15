@@ -233,6 +233,7 @@
                     activity: activity,
                     appsflyer_id: $.cookie('APPSFLYER_ID') || null,
                     login_type: 3, // 登录验证方式，1-密码登录，2-验证码登录 3-验证码密码都有
+                    lp: urlSearch.lp || window.location.pathname.replace(/[\/:]/g, "").toLowerCase(),
                     is_agree: is_agree == 'is_agree' ? 1 : 0
                 };
                 var all_sources = $.cookie('all_sources');

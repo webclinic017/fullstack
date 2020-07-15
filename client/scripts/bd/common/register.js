@@ -216,6 +216,7 @@
                     code: $("#verify_code").val() || null,
                     login_type: 3, // 登录验证方式，1-密码登录，2-验证码登录 3-密码登录有验证码
                     email: oReg.search_arr.email || null,
+                    lp: oReg.search_arr.lp || window.location.pathname.replace(/[\/:]/g, "").toLowerCase(),
                     is_agree: is_agree == 'is_agree' ? 1 : 0,
                     // TODO 暂时
                     // referrer: document.referrer,

@@ -392,6 +392,7 @@
                     phone_code: areaCode || '86',
                     world_code: world_code || 'CN',
                     email: oReg.search_arr.email || null,
+                    lp: oReg.search_arr.lp || window.location.pathname.replace(/[\/:]/g, "").toLowerCase(),
                     is_agree: is_agree == 'is_agree' ? 1 : 0,
                     // TODO 暂时
                     // referrer: document.referrer,
