@@ -154,7 +154,7 @@
             });
         }
         $scope.checkSafetyCode = function (value) {
-            if (value != null) $scope.deposit.safetyCode = Number(value.toString().slice(0,6));
+            if (value != null) $scope.deposit.safetyCode = value.toString().slice(0,6);
         }
         // 获取入金限制
         // 此接口限制合并到入金方式列表中，不再单独获取 2018.7.20
