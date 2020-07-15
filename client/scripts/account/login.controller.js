@@ -181,7 +181,6 @@
             var msg;
             var para = {
                 appsflyer_id: $cookies['APPSFLYER_ID'] || null,
-                lp: $state.params.lp
                 // TODO 暂时
                 // referrer: document.referrer,
                 // href: location.href,
