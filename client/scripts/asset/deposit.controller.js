@@ -482,7 +482,7 @@
                                     $scope.isLoading = false;
                                     if (!data) return;
                                     if (data.is_succ) {
-                                        $scope.toGtagEvent('完成入金');
+                                        // $scope.toGtagEvent('完成入金');
                                         if ($scope.deposit.type === 'wallet') {
                                             $scope.$emit('asset.transfer')
                                             $scope.walletDepositSucc = true;
@@ -535,7 +535,7 @@
                                     console.log(data);
                                     $scope.isLoading = false;
                                     if (data.is_succ) {
-                                        $scope.toGtagEvent('完成入金');
+                                        // $scope.toGtagEvent('完成入金');
                                         $scope.$emit('asset.transfer')
                                         $scope.teleDepositSucc = true;
                                     } else {
