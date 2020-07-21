@@ -84,11 +84,11 @@
                     u='/space/#/account/login';
                     $rootScope.personalCookiesInfo.userCode = undefined;
                 }
-                $rootScope.writeCookie({nameKey: 'token', nameValue: '', expires: -1, path: path});
-                $rootScope.writeCookie({nameKey: 'user_code', nameValue: '', expires: -1, path: path});
-                $rootScope.writeCookie({nameKey: 'username', nameValue: '', expires: -1, path: path});
-                $rootScope.writeCookie({nameKey: 'username_en', nameValue: '', expires: -1, path: path});
-                $rootScope.writeCookie({nameKey: 'world_code', nameValue: '', expires: -1, path: path});
+                $rootScope.writeCookie({name: 'token', value: '', expires: -1, path: path});
+                $rootScope.writeCookie({name: 'user_code', value: '', expires: -1, path: path});
+                $rootScope.writeCookie({name: 'username', value: '', expires: -1, path: path});
+                $rootScope.writeCookie({name: 'username_en', value: '', expires: -1, path: path});
+                $rootScope.writeCookie({name: 'world_code', value: '', expires: -1, path: path});
                 $window.location.href=u;
                 
             } else {

@@ -48,7 +48,7 @@
         // 获取国家列表
         getWorlds('worldList');
         // 获取区号列表
-        getWorlds('areaCodeList', {type: 1});
+        getWorlds('areaCodeList', { type: 1 });
         function getWorlds(list, obj) {
             account.getWorlds(obj).then(function (data) {
                 if (!data) return;
@@ -59,6 +59,32 @@
                 $scope[list] = data.data;
             });
         }
+        //获取domain
+        $scope.getDomain = getDomain;
+        // function () {
+        //     // var domain = location.hostname.match(/\.\w+\.com/) ? location.hostname.match(/\.\w+\.com/)[0] : '.tigerwit.com';
+        //     var domain = '.' + location.hostname.split('.').slice(-2).join('.');
+        //     // console.log(url.match(/\.\w+\.com/)[0]);
+        //     return domain;
+        // }
+        //写入cookie
+        $rootScope.writeCookie = setCookie;
+        // function writeCookie(params) {
+        //     params.expires = params.expires || 30;
+        //     params.path = params.path || '/';
+        //     /**
+        //      * params
+        //      *      name: 名字
+        //      *      value: 
+        //      *      expires: 过期时间 单位天
+        //      *      path
+        //      *  */
+        //     var oDate = new Date();
+        //     oDate.setTime(oDate.getTime() + (params.expires * 24 * 60 * 60 * 1000));
+        //     document.cookie = params.name + '=' + params.value + ';path=' + params.path + ';domain=' + $scope.getDomain() + ';expires=' + oDate.toUTCString();
+        // }
+
+
         // $scope.setWorld = function(world){
         //     $scope.currentWorld = world;
         // }
@@ -86,7 +112,7 @@
                         });
                         getAuthStatus()
                         $scope.$broadcast('global_controller_has_get_info');
-                        $scope.writeCookie({nameKey: 'world_code', nameValue: $scope.personal.region.world_code});
+                        $scope.writeCookie({ name: 'world_code', value: $scope.personal.region.world_code });
                     });
                 }
             });
@@ -233,36 +259,6 @@
         //     }
         //     return theRequest;
         // }
-        $scope.saveUserSourceToSession = function () {
-            var source = dealUserSource();
-            if (source) {
-                sessionStorage.setItem('sessionSource', JSON.stringify(source));
-            }
-        }
-        $scope.checkUserSource = function () {
-            var session_source = sessionStorage.getItem('sessionSource');
-            var search_source = session_source ? dealUserSource(JSON.parse(session_source)) : dealUserSource();
-            return search_source;
-        }
-        var dealUserSourceOne = 1;   // 进入页面后只执行一次，，刷新后再执行
-        function dealUserSource (source) {
-            var sourceReg = /^DW_|^D_|^R_/i;
-            var search_arr = fun.getSearch();
-            var bol = false;
-            var search_source = source || {};
-            $.each(search_arr, function (index, value) {
-                if (sourceReg.test(index)) {
-                    bol = true;
-                    search_source[index] = value;
-                }
-            });
-            if(bol && dealUserSourceOne == 1){
-                setBrowserID(true);
-            }
-            dealUserSourceOne++;
-            search_source = Object.keys(search_source).length ? search_source : undefined;
-            return search_source;
-        }
 
         // 退出
         function logout() {
@@ -271,12 +267,12 @@
                 if (data.is_succ) {
                     // 神策数据统计
                     sa.logout(true);
-                    writeCookie({ nameKey: 'token', nameValue: '', expires: -1 });
-                    writeCookie({ nameKey: 'user_code', nameValue: '', expires: -1 });
-                    writeCookie({ nameKey: 'username', nameValue: '', expires: -1 });
-                    writeCookie({ nameKey: 'username_en', nameValue: '', expires: -1 });
-                    writeCookie({nameKey: 'area_id', nameValue: '', expires: -1 });
-                    writeCookie({nameKey: 'world_code', nameValue: '', expires: -1 });
+                    $scope.writeCookie({ name: 'token', value: '', expires: -1 });
+                    $scope.writeCookie({ name: 'user_code', value: '', expires: -1 });
+                    $scope.writeCookie({ name: 'username', value: '', expires: -1 });
+                    $scope.writeCookie({ name: 'username_en', value: '', expires: -1 });
+                    $scope.writeCookie({ name: 'area_id', value: '', expires: -1 });
+                    $scope.writeCookie({ name: 'world_code', value: '', expires: -1 });
                     account.hasChecked = false;
                     $window.location.href = '/space/#/account/login';
                     // $state.go('account.subpage', {params: 'login'});
@@ -310,13 +306,13 @@
             if (newVal && newVal != oldVal) {
                 getEmailPhone(true);
                 // 区分cn与其他，例如红涨绿跌
-                if(newVal == 'CN'){
-                    writeCookie({nameKey: 'area_id', nameValue: 1 });
-                }else{
-                    writeCookie({nameKey: 'area_id', nameValue: '', expires: -1 });
+                if (newVal == 'CN') {
+                    $scope.writeCookie({ name: 'area_id', value: 1 });
+                } else {
+                    $scope.writeCookie({ name: 'area_id', value: '', expires: -1 });
                 }
             }
-            
+
         })
         function getEmailPhone(force_update) {
             // force_update = true;    //上线时去掉
@@ -332,29 +328,6 @@
                     }
                 });
             }
-        }
-        //获取domain
-        $scope.getDomain = function () {
-            // var domain = location.hostname.match(/\.\w+\.com/) ? location.hostname.match(/\.\w+\.com/)[0] : '.tigerwit.com';
-            var domain = '.' + location.hostname.split('.').slice(-2).join('.');
-            // console.log(url.match(/\.\w+\.com/)[0]);
-            return domain;
-        }
-        //写入cookie
-        $rootScope.writeCookie = writeCookie;
-        function writeCookie(params) {
-            params.expires = params.expires || 30;
-            params.path = params.path || '/';
-            /**
-             * params
-             *      nameKey: 名字
-             *      nameValue: 
-             *      expires: 过期时间 单位天
-             *      path
-             *  */
-            var oDate = new Date();
-            oDate.setTime(oDate.getTime() + (params.expires * 24 * 60 * 60 * 1000));
-            document.cookie = params.nameKey + '=' + params.nameValue + ';path=' + params.path + ';domain=' + $scope.getDomain() + ';expires=' + oDate.toUTCString();
         }
 
         /**
@@ -459,7 +432,7 @@
                     $scope.position = passedScope.position;
                     $scope.lang = lang;
                     $scope.deleteDemo = globalScope.personal.verify_status == 10;
-                    
+
                     $scope.loading = {
                         demo: false
                     }
@@ -484,11 +457,11 @@
                                     $scope.lang = lang;
                                     $scope.loading = 0;
                                     $scope.modalType = 1;
-            
+
                                     $scope.closeModal = closeModal;
                                     $scope.submitConfrim = submitConfrim;
-            
-                                    function submitConfrim (type) {
+
+                                    function submitConfrim(type) {
                                         $modalInstance.dismiss();
                                         if (type === 'no') {
                                             confirmDemo();
@@ -505,7 +478,7 @@
                             confirmDemo();
                         }
 
-                        function confirmDemo (extra_type) {
+                        function confirmDemo(extra_type) {
                             globalScope.personal.is_live = '2'
                             $scope.loading.demo = true
                             getAuthStatus({
@@ -515,7 +488,7 @@
                                 // console.log(data);
                                 if (data.is_succ) {
                                     if (data.data.status == 0) {
-                                        account.openTrialAccount({extra_type: extra_type}).then(function (data) {
+                                        account.openTrialAccount({ extra_type: extra_type }).then(function (data) {
                                             if (!data) return;
                                             // console.log(data);
                                             if (data.is_succ) {
@@ -530,8 +503,8 @@
                                         $scope.loading.demo = false
                                     }
                                 }
-    
-    
+
+
                             })
                         }
 
@@ -542,7 +515,7 @@
                         if ($scope.isIslamic) {
                             confirmIslamic(true);
                         } else {
-                            $state.go('authen.subpage', {subpage: "realname"})
+                            $state.go('authen.subpage', { subpage: "realname" })
                         }
                         // $timeout(function () {
                         //     var obj = {
@@ -576,7 +549,7 @@
             });
         }
         $scope.confirmIslamic = confirmIslamic;
-        function confirmIslamic (islamic) {
+        function confirmIslamic(islamic) {
             if (islamic) {
                 confirmIsApply();
             } else {
@@ -593,13 +566,13 @@
                 if (isIslamic) {
                     confirmIsApply();
                 } else {
-                    $state.go('authen.subpage', {subpage: "realname"})
+                    $state.go('authen.subpage', { subpage: "realname" })
                 }
             }
         }
-        function confirmIsApply () {
+        function confirmIsApply() {
             if ($scope.personal.islamic_status) {
-                $state.go('authen.subpage', {subpage: "realname"})
+                $state.go('authen.subpage', { subpage: "realname" })
             } else {
                 $modal.open({
                     templateUrl: '/views/account/islamic_modal.html',
@@ -618,7 +591,7 @@
                         $scope.closeModal = closeModal;
                         $scope.submitConfrim = submitConfrim;
 
-                        function submitConfrim (type) {
+                        function submitConfrim(type) {
                             if (type === 'no') {
                                 $scope.loading = 1;
                                 account.setIslamicStatus(1).then(function (data) {
@@ -636,7 +609,7 @@
                                 });
                             } else {
                                 closeModal();
-                                $state.go('authen.subpage', {subpage: "realname"})
+                                $state.go('authen.subpage', { subpage: "realname" })
                             }
                         }
                         function closeModal() {
@@ -665,7 +638,7 @@
                     $scope.closeModal = closeModal;
                     $scope.submitConfrim = submitConfrim;
 
-                    function submitConfrim () {
+                    function submitConfrim() {
                         $scope.loading = 1;
                         account.transferIslamic().then(function (data) {
                             $scope.loading = 2;
@@ -742,7 +715,7 @@
                 if (data.is_succ) {
                     $scope.personal.agentAuthStatus = data.data;
                     resolve && resolve.callback()
-                }else{
+                } else {
                     layer.msg(data.message);
                 }
             });

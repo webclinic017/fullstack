@@ -5,30 +5,25 @@
     var areaCode;
     var world_code;
     var urlSearch = getSearch();
-    if(urlSearch.world_code == 'pt-br'){
+    if (urlSearch.world_code == 'pt-br') {
         world_code = 'PT';
         areaCode = '351';
-    }else if(urlSearch.world_code == 'id'){
+    } else if (urlSearch.world_code == 'id') {
         world_code = 'ID'
         areaCode = '62'
-    }else{
+    } else {
         world_code = 'VN'
         areaCode = '84'
     }
-    var search_source = checkUserSource();
-    if (search_source) {
-        publicRequest('setUserSource', 'POST', {
-            source: JSON.stringify(search_source)
-        });
-    }
+
     // 获取区号列表
     var areaCodes = [];
     getCountries();
-    function getCountries(){
-        publicRequest('getCountries', 'GET', {type: 1}).then(function (data) {
-            if(data.is_succ){
+    function getCountries() {
+        publicRequest('getCountries', 'GET', { type: 1 }).then(function (data) {
+            if (data.is_succ) {
                 areaCodes = data.data;
-                if($('.registerLayer .areaCode')[0]){
+                if ($('.registerLayer .areaCode')[0]) {
                     setAreaCode($('.registerLayer .areaCode'));
                 }
             }
@@ -36,23 +31,23 @@
     }
 
     $("#toRegister").on("click", function () {
-        setTimeout(function(){
-            if(areaCodes.length > 0){
+        setTimeout(function () {
+            if (areaCodes.length > 0) {
                 setAreaCode($('.registerLayer .areaCode'))
-            } 
+            }
             initRegister();
         }, 0)
-        
+
     })
-    function setAreaCode($html){
-        var temp = "<option value=''>"+lang.text('register.areaCode')+"</option>"
-        areaCodes.forEach(function(item){
+    function setAreaCode($html) {
+        var temp = "<option value=''>" + lang.text('register.areaCode') + "</option>"
+        areaCodes.forEach(function (item) {
             var selected = item.phone_code == areaCode ? 'selected' : ''
-            temp += "<option "+ selected +" value="+ item.phone_code  +" data-code="+ item.code +">"+ '+' + item.phone_code+ " ("+ (item.name) +")" +"</option>"
+            temp += "<option " + selected + " value=" + item.phone_code + " data-code=" + item.code + ">" + '+' + item.phone_code + " (" + (item.name) + ")" + "</option>"
         })
         $html.html(temp)
     }
-    function initRegister(){
+    function initRegister() {
         function sendVerifyCode() {
             var verifyCodeBtn = $(".registerLayer .verify_code_btn");
             function isDisabled() {
@@ -134,9 +129,9 @@
                     time: 1.2 /*1.2秒后自动关闭*/
                 });
                 return false;
-            } 
+            }
             // 如果本注册页包含areaCode那么提示错误
-            else if($('.registerLayer .areaCode')[0] && (!$('.registerLayer .areaCode').val())){
+            else if ($('.registerLayer .areaCode')[0] && (!$('.registerLayer .areaCode').val())) {
                 /*提示*/
                 layer.open({
                     content: lang.text('register.areaCodeErr'),
@@ -220,15 +215,14 @@
         ;
         (function () {
             $(".registerLayer").on('click', '.submit_form', toRegister);
-            function toRegister (e, is_agree) {
+            function toRegister(e, is_agree) {
                 // if (!checkTel()) return;
                 // if (!checkVerifyCode()) return;
                 // if (!checkPassword()) return;
 
                 /*loading层*/
                 var layer2 = layer.open({ type: 2, shadeClose: false });
-                
-                publicRequest('regOrLogin', 'POST', {
+                var params = {
                     action: 'register',
                     account: $(".registerLayer .telephone").val() || null,
                     account_type: 1,
@@ -237,15 +231,19 @@
                     code: $(".registerLayer .verify_code").val() || null,
                     password: $(".registerLayer .password").val() || null,
                     activity: activity,
-                    register_rule: JSON.stringify(search_source),
                     appsflyer_id: $.cookie('APPSFLYER_ID') || null,
                     login_type: 3, // 登录验证方式，1-密码登录，2-验证码登录 3-验证码密码都有
                     is_agree: is_agree == 'is_agree' ? 1 : 0
-                }).then(function (data) {
+                };
+                var all_sources = $.cookie('all_sources');
+                if (all_sources) {
+                    params = $.extend(params, JSON.parse(all_sources));
+                }
+                publicRequest('regOrLogin', 'POST', params).then(function (data) {
                     // console.log(data);
                     if (!data) return;
                     if (data.is_succ) {
-                        $.cookie('token', data.data.token, {domain: getDomain()});
+                        $.cookie('token', data.data.token, { domain: getDomain() });
                         setGtagUserId(data.data.user_code)
                         toGtagEvent('phone_register_success_web');
                         layer.closeAll();
@@ -258,7 +256,7 @@
                         checkReward()
                     } else {
                         if ((data.code == 100402) || (data.code == 100403)) {
-                            openH5AgmentModal(data.code, function(resolve, e){
+                            openH5AgmentModal(data.code, function (resolve, e) {
                                 toRegister(e, 'is_agree');
                                 layer.close(resolve.layIndex)
                             })
@@ -271,7 +269,7 @@
                                 time: 2 /*2秒后自动关闭*/
                             });
                         }
-                        
+
                     }
                 });
 

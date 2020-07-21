@@ -8,15 +8,13 @@
 
     InviteIndexBlankController.$inject = ['$scope', '$location', 'config', 'invite', '$window'];
 
-    function InviteIndexBlankController ($scope, $location, config, invite, $window) {
-        var usercode = $location.search().usercode;
+    function InviteIndexBlankController($scope, $location, config, invite, $window) {
 
         // alert(1);
         setInviteFriendsLink();
 
-        function setInviteFriendsLink () {
-            $scope.writeCookie({nameKey: 'invite_code', nameValue: usercode, expires: 1});
-            $scope.writeCookie({nameKey: 'invite_status', nameValue: 2, expires: 1});
+        function setInviteFriendsLink() {
+            setSource();
             if ($scope.userstatus.logined) {
                 $location.url("/space/invest/current");
             } else {

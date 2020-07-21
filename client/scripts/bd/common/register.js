@@ -17,12 +17,12 @@
     /*
         获取domain
     */
-    function getDomain() {
-        // var domain = location.hostname.match(/\.\w+\.com/) ? location.hostname.match(/\.\w+\.com/)[0] : '.tigerwit.com';
-        var domain = '.' + location.hostname.split('.').slice(-2).join('.');
-        // console.log(url.match(/\.\w+\.com/)[0]);
-        return domain;
-    }
+    // function getDomain() {
+    //     // var domain = location.hostname.match(/\.\w+\.com/) ? location.hostname.match(/\.\w+\.com/)[0] : '.tigerwit.com';
+    //     var domain = '.' + location.hostname.split('.').slice(-2).join('.');
+    //     // console.log(url.match(/\.\w+\.com/)[0]);
+    //     return domain;
+    // }
 
     // set_token();
 
@@ -121,69 +121,10 @@
             } else {
                 return true;
             }
-        }
-
-        /* 运营关于pid等信息存储要求：
-            1.若链接中带有pid，所有相关字段信息清空重写
-            2.若链接中未带有pid，则沿用原来信息
-            3.每次重写pid等信息，存储时间为7天
-            4.lp 每次都会更新到最新的页面来源（首页 lp=sy）
-        */
-        ;
+        };
         (function () {
-            var lp = '';
-            var pid = '';
-            var unit = '';
-            var key = '';
-
-            var href = window.location.href;
-            lp = window.location.pathname.replace(/[\/:]/g, "").toLowerCase();
-            if (lp != "") {
-                $.cookie('lp', lp, { path: '/', domain: getDomain(), expires: 7 });
-            }
-            /*获取查询字段*/
-            function getSearch() {
-                var aGET = {};
-                if (href.indexOf('?') != -1) {
-                    var aQuery = href.split('?')[1];
-                    if (aQuery.length > 0) {
-                        var aBuf = aQuery.split("&");
-                        for (var i = 0, iLoop = aBuf.length; i < iLoop; i++) {
-                            var aTmp = aBuf[i].split("=");
-                            aGET[aTmp[0]] = aTmp[1];
-                        }
-                    };
-                    pid = aGET['pid'] ? aGET['pid'] : "";
-                    unit = aGET['unit'] ? aGET['unit'] : "";
-                    key = aGET['key'] ? aGET['key'] : "";
-
-                    if (pid != '') {
-                        // 清空重写
-                        $.cookie('ib_pid', '', { path: '/', domain: getDomain(), expires: -1 });
-                        $.cookie('unit', '', { path: '/', domain: getDomain(), expires: -1 });
-                        $.cookie('key', '', { path: '/', domain: getDomain(), expires: -1 });
-                        $.cookie('pid', pid, { path: '/', domain: getDomain(), expires: 7 });
-                        $.cookie('invite_status', 3, { path: '/', domain: getDomain(), expires: 7 });
-
-
-                        if (unit) {
-                            $.cookie('unit', unit, { path: '/', domain: getDomain(), expires: 7 });
-                        }
-                        if (key) {
-                            $.cookie('key', key, { path: '/', domain: getDomain(), expires: 7 });
-                        }
-                    }
-                }
-                // console.log(aGET);
-                return aGET;
-            }
             oReg.search_arr = getSearch();
-
-            /*获取lp*/
-            if (!oReg.search_arr.lp) {
-                oReg.search_arr.lp = window.location.pathname.replace(/[\/:]/g, "").toLowerCase();
-            }
-
+            setSource();
             /*电话*/
             if (oReg.search_arr.telephone) {
                 $("#telephone").val(oReg.search_arr.telephone)
@@ -192,19 +133,6 @@
             if (oReg.search_arr.floatbox && oReg.search_arr.floatbox == 'hide') {
                 $(".h5_float_footer").fadeOut(50);
             }
-
-            /*设置邀请源INVITE_CODE*/
-            if (oReg.search_arr.user_code) {
-                $.cookie('invite_code', oReg.search_arr.user_code, { expires: 1, path: '/', domain: getDomain() });
-                $.cookie('invite_status', 2, { expires: 1, path: '/', domain: getDomain() });
-            }
-
-            // if (window.location.hostname === 'lonfx.tigerwit.com') {
-            //     oReg.search_arr.pid = 'lonfx';
-            // }
-            // if (window.location.hostname === 'pandafx.tigerwit.com') {
-            //     oReg.search_arr.pid = 'pandafx';
-            // }
 
             // console.log(oReg);
         }());
@@ -278,10 +206,7 @@
 
                 /*loading层*/
                 layer.load(1, { shade: false });
-
-                publicRequest('regOrLogin', 'POST', {
-                    ib_pid: oReg.search_arr.ib_pid || $.cookie('ib_pid') || null,
-                    invite_status: $.cookie('invite_status') || null,
+                var params = {
                     appsflyer_id: $.cookie('APPSFLYER_ID') || null,
                     account: $("#telephone").val() || null,
                     account_type: 1,
@@ -290,17 +215,19 @@
                     password: password,
                     code: $("#verify_code").val() || null,
                     login_type: 3, // 登录验证方式，1-密码登录，2-验证码登录 3-密码登录有验证码
-                    pid: oReg.search_arr.pid || $.cookie('pid') || null,
-                    unit: oReg.search_arr.unit || null,
-                    lp: oReg.search_arr.lp || null,
-                    key: oReg.search_arr.key || null,
                     email: oReg.search_arr.email || null,
+                    lp: oReg.search_arr.lp || window.location.pathname.replace(/[\/:]/g, "").toLowerCase(),
                     is_agree: is_agree == 'is_agree' ? 1 : 0,
                     // TODO 暂时
                     // referrer: document.referrer,
                     // href: location.href,
                     // cookie: document.cookie
-                }).then(function (data) {
+                }
+                var all_sources = $.cookie('all_sources');
+                if (all_sources) {
+                    params = $.extend(params, JSON.parse(all_sources));
+                }
+                publicRequest('regOrLogin', 'POST', params).then(function (data) {
                     if (!data) return;
                     layer.closeAll();
                     if (data.is_succ) {
@@ -311,7 +238,7 @@
                         $.cookie('username', data.data.username, { expires: 30, path: '/', domain: getDomain() });
                         $.cookie('username_en', data.data.username_en, { expires: 30, path: '/', domain: getDomain() });
                         $.cookie('world_code', 'CN', { expires: 30, path: '/', domain: getDomain() });
-                        
+
                         setGtagUserId(data.data.user_code)
                         setTimeout(function () {
                             toGtagEvent('phone_register_success_web');
@@ -328,14 +255,6 @@
                         }
                     }
                 });
-            }
-            // 客户推广
-            if (oReg.search_arr.ib_pid) {
-                $.cookie("pid", "", { path: '/', domain: getDomain(), expires: -1 });
-                $.cookie('ib_pid', oReg.search_arr.ib_pid, { expires: 1, path: '/', domain: getDomain() });
-                if (oReg.search_arr.origin !== 'proxy') { // 应该是成立的，web端不会来自proxy
-                    $.cookie('invite_status', 1, { expires: 1, path: '/', domain: getDomain() });
-                }
             }
             $("#submit_form").on("click", toLogin);
 
