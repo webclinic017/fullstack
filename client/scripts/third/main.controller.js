@@ -21,30 +21,31 @@
         main.thirdLogout = thirdLogout;
 
         //获取domain
-        $scope.getDomain = function () {
-            // var domain = location.hostname.match(/\.\w+\.com/) ? location.hostname.match(/\.\w+\.com/)[0] : '.tigerwit.com';
-            var domain = '.' + location.hostname.split('.').slice(-2).join('.');
-            // console.log(url.match(/\.\w+\.com/)[0]);
-            return domain;
-        }
+        $scope.getDomain = getDomain;
+        // function () {
+        //     // var domain = location.hostname.match(/\.\w+\.com/) ? location.hostname.match(/\.\w+\.com/)[0] : '.tigerwit.com';
+        //     var domain = '.' + location.hostname.split('.').slice(-2).join('.');
+        //     // console.log(url.match(/\.\w+\.com/)[0]);
+        //     return domain;
+        // }
 
-        $rootScope.writeCookie = writeCookie;
-        $scope.writeCookie = writeCookie;
-        function writeCookie(params) {
-            console.log(params);
-            params.expires = params.expires || 30;
-            params.path = params.path || '/';
-            /**
-             * params
-             *      nameKey: 名字
-             *      nameValue: 
-             *      expires: 过期时间 单位天
-             *      path
-             *  */
-            var oDate = new Date();
-            oDate.setTime(oDate.getTime() + (params.expires * 24 * 60 * 60 * 1000));
-            document.cookie = params.nameKey + '=' + params.nameValue + ';path=' + params.path + ';domain=' + $scope.getDomain() + ';expires=' + oDate.toUTCString();
-        }
+        $rootScope.writeCookie = setCookie;
+        // $scope.writeCookie = setCookie;
+        // function writeCookie(params) {
+        //     console.log(params);
+        //     params.expires = params.expires || 30;
+        //     params.path = params.path || '/';
+        //     /**
+        //      * params
+        //      *      name: 名字
+        //      *      value: 
+        //      *      expires: 过期时间 单位天
+        //      *      path
+        //      *  */
+        //     var oDate = new Date();
+        //     oDate.setTime(oDate.getTime() + (params.expires * 24 * 60 * 60 * 1000));
+        //     document.cookie = params.name + '=' + params.value + ';path=' + params.path + ';domain=' + $scope.getDomain() + ';expires=' + oDate.toUTCString();
+        // }
 
         /**
          * google Analytics统计
@@ -69,10 +70,10 @@
                 if (!data) return;
                 if (data.is_succ) {
                     account.hasChecked = false;
-                    writeCookie({ nameKey: 'token', nameValue: '', expires: -1, path: '/payment' });
-                    writeCookie({ nameKey: 'user_code', nameValue: '', expires: -1, path: '/payment' });
-                    writeCookie({ nameKey: 'username', nameValue: '', expires: -1, path: '/payment' });
-                    writeCookie({ nameKey: 'username_en', nameValue: '', expires: -1, path: '/payment' });
+                    $scope.writeCookie({ name: 'token', value: '', expires: -1, path: '/payment' });
+                    $scope.writeCookie({ name: 'user_code', value: '', expires: -1, path: '/payment' });
+                    $scope.writeCookie({ name: 'username', value: '', expires: -1, path: '/payment' });
+                    $scope.writeCookie({ name: 'username_en', value: '', expires: -1, path: '/payment' });
                     $window.location.href = '/payment/login';
                 }
             });

@@ -48,10 +48,10 @@
                 layer.closeAll();
                 $scope.account.loading = true;
                 if (data.is_succ) {
-                    $scope.writeCookie({nameKey: 'token', nameValue: data.data.token, path: '/payment'});
-                    $scope.writeCookie({nameKey: 'user_code', nameValue: data.data.user_code, path: '/payment'});
-                    $scope.writeCookie({nameKey: 'username', nameValue: data.data.username, path: '/payment'});
-                    $scope.writeCookie({nameKey: 'username_en', nameValue: data.data.username_en, path: '/payment'});
+                    $scope.writeCookie({name: 'token', value: data.data.token, path: '/payment'});
+                    $scope.writeCookie({name: 'user_code', value: data.data.user_code, path: '/payment'});
+                    $scope.writeCookie({name: 'username', value: data.data.username, path: '/payment'});
+                    $scope.writeCookie({name: 'username_en', value: data.data.username_en, path: '/payment'});
 
                     setGtagUserId(data.data.user_code)
                     $timeout(function () {

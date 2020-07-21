@@ -7,33 +7,9 @@ $(document).ready(function () {
     count: 60,
     unable: false
   };
-  /*获取查询字段*/
-  // function getSearch() {
-  //   var url = location.href;
-  //   /*获取url中"?"符后的字串*/
-  //   var theRequest = new Object();
-  //   if (url.indexOf("?") != -1) {
-  //       var str = url.split('?')[1];
-  //       strs = str.split("&");
-  //       for (var i = 0; i < strs.length; i++) {
-  //           theRequest[strs[i].split("=")[0]] = (strs[i].split("=")[1]);
-  //       }
-  //   }
-  //   return theRequest;
-  // }
 
   oReg.search_arr = getSearch();
-  oReg.search_source = checkUserSource();
-  /* 客户推广参数写入 */
-  if (oReg.search_source) {
-    publicRequest('setUserSource', 'POST', {
-      source: JSON.stringify(search_source)
-    });
-  }
-  /*获取lp*/
-  if (!oReg.search_arr.lp) {
-    oReg.search_arr.lp = window.location.pathname.replace(/[\/:]/g, "").toLowerCase();
-  }
+  setSource();
 
   /*电话*/
   if (oReg.search_arr.email) {
@@ -69,29 +45,6 @@ $(document).ready(function () {
       openLayer(lang.text('thirdH5.fill_ver_code'));
       return false;
     }
-  }
-  if (oReg.search_arr.pid) {
-    $.cookie('pid', oReg.search_arr.pid, { path: '/', domain: getDomain(), expires: 7 });
-    // 清空重写
-    $.cookie('ib_pid', '', { path: '/', domain: getDomain(), expires: -1 });
-    $.cookie('unit', '', { path: '/', domain: getDomain(), expires: -1 });
-    $.cookie('key', '', { path: '/', domain: getDomain(), expires: -1 });
-    $.cookie('invite_status', 3, { path: '/', domain: getDomain(), expires: 7 });
-
-
-    if (oReg.search_arr.unit) {
-      $.cookie('unit', oReg.search_arr.unit, { path: '/', domain: getDomain(), expires: 7 });
-    }
-    if (oReg.search_arr.key) {
-      $.cookie('key', oReg.search_arr.key, { path: '/', domain: getDomain(), expires: 7 });
-    }
-  }
-  // 客户推广
-  if (oReg.search_arr.ib_pid) {
-    oReg.search_arr.pid = undefined;
-    $.cookie("pid", "", { path: '/', domain: getDomain(), expires: -1 });
-    $.cookie('ib_pid', oReg.search_arr.ib_pid, { expires: 1, path: '/', domain: getDomain() });
-    $.cookie('invite_status', 1, { expires: 1, path: '/', domain: getDomain() });
   }
 
   publicRequest('getCountries', 'GET').then(function (data) {
@@ -135,9 +88,7 @@ $(document).ready(function () {
     if (is_agree) {
       sa.track('click_register');
     }
-    publicRequest('regOrLogin', 'POST', {
-      ib_pid: oReg.search_arr.ib_pid || $.cookie('ib_pid') || null,
-      invite_status: $.cookie('invite_status') || null,
+    var params = {
       appsflyer_id: $.cookie('APPSFLYER_ID') || null,
       account: $("#email").val(),
       account_type: 2,
@@ -145,17 +96,18 @@ $(document).ready(function () {
       password: password,
       code: $("#verify_code").val(),
       login_type: 3,
-      pid: oReg.search_arr.pid || null,
-      unit: oReg.search_arr.unit || null,
-      lp: oReg.search_arr.lp || null,
-      key: oReg.search_arr.key || null,
+      lp: oReg.search_arr.lp || window.location.pathname.replace(/[\/:]/g, "").toLowerCase(),
       is_agree: is_agree == 'is_agree' ? 1 : 0,
-      register_rule: JSON.stringify(oReg.search_source),
       // TODO 暂时
       // referrer: document.referrer,
       // href: location.href,
       // cookie: document.cookie
-    }).then(function (data) {
+    }
+    var all_sources = $.cookie('all_sources');
+    if (all_sources) {
+      params = $.extend(params, JSON.parse(all_sources));
+    }
+    publicRequest('regOrLogin', 'POST', params).then(function (data) {
       if (!data) return;
       if (data.is_succ) {
         layer.closeAll();
