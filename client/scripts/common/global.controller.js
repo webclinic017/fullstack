@@ -14,7 +14,7 @@
     function GlobalController($rootScope, $scope, $state, $window, config, account, lang, $cookies, $timeout, $modal, $layer, fun) {
         $rootScope.personalCookiesInfo = {
             userCode: $cookies["user_code"],
-            userName: decodeURIComponent($cookies["username"] || ''),
+            userName: getCookie("username") || '',
             userNameEn: $cookies["username_en"] || '',
             userAvatar: config.avatarCfg.path + $cookies["user_code"] + config.avatarCfg.md + '?timestamp=' + (+new Date())
         };
@@ -139,7 +139,7 @@
             if (is_login) {
                 $rootScope.personalCookiesInfo = {
                     userCode: $cookies["user_code"],
-                    userName: decodeURIComponent($cookies["username"] || ''),
+                    userName: getCookie("username") || '',
                     userNameEn: $cookies["username_en"] || '',
                     userAvatar: config.avatarCfg.path + $cookies["user_code"] + config.avatarCfg.md + '?timestamp=' + (+new Date())
                 };
@@ -153,7 +153,7 @@
                 $timeout(function () {
                     $rootScope.personalCookiesInfo = {
                         userCode: $cookies["user_code"],
-                        userName: decodeURIComponent($cookies["username"] || ''),
+                        userName: getCookie("username") || '',
                         userNameEn: $cookies["username_en"] || '',
                         userAvatar: config.avatarCfg.path + 'male' + config.avatarCfg.md
                     };
