@@ -61,8 +61,8 @@
         // .config(['$compileProvider', function ($compileProvider) {
         //     $compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|local|data):/);
         // }])
-        .run(['$rootScope', '$state', '$window', 'account', '$cookies', 
-                function ($rootScope, $state, $window, account, $cookies) {
+        .run(['$rootScope', '$state', '$window', 'account', 
+                function ($rootScope, $state, $window, account) {
             $rootScope.$on('$stateChangeStart', function (event, toState, toParams) {
                 
                 // 未匹配的跳转到 404

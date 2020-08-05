@@ -24,14 +24,14 @@
             if (!data) return;
             if (data.is_succ) {
                 var list;
-                list = data.data.filter(function(item, index, self){
-                    return item.status && item.account_type === 1 
+                list = data.data.filter(function (item, index, self) {
+                    return item.status && item.account_type === 1
                 })
-                $scope.accountList = list; 
-            } 
+                $scope.accountList = list;
+            }
         });
         $scope.getMasterCondition = getMasterCondition;
-        if($scope.investSelect.id !== ""){
+        if ($scope.investSelect.id !== "") {
             getMasterCondition($scope.investSelect.id)
         }
         function getMasterCondition(mt4_id) {
@@ -45,8 +45,8 @@
                     // 判断申请资格
                     if ($scope.applyInfo.data.status == -1) {
                         $scope.applyInfo.condition = true;
-                        for(var condit in $scope.applyInfo.data.condition){
-                            if($scope.applyInfo.data.condition[condit].status  == 0){
+                        for (var condit in $scope.applyInfo.data.condition) {
+                            if ($scope.applyInfo.data.condition[condit].status == 0) {
                                 $scope.applyInfo.condition = false;
                                 return;
                             }
@@ -90,12 +90,12 @@
                     msg: $scope.lang.text("tigerWitID.master.sureAboutApply1"),
                     btns: {}
                 };
-                obj.btns[$scope.lang.text("tigerWitID.confirm")] = function(){};
+                obj.btns[$scope.lang.text("tigerWitID.confirm")] = function () { };
                 $layer(obj)
             }
         }
         // 申请高手确认成功
-        function comfirmApplyMaster(){
+        function comfirmApplyMaster() {
             $scope.applyInfo.loading2 = true
             trader.applyMaster($scope.selectAccount).then(function (data) {
                 $scope.applyInfo.loading2 = false
@@ -107,7 +107,7 @@
                     msg: data.is_succ ? $scope.lang.text("tigerWitID.master.applicationSubmitted") : data.message,
                     btns: {}
                 }
-                obj.btns[$scope.lang.text("tigerWitID.confirm")] = function () {};
+                obj.btns[$scope.lang.text("tigerWitID.confirm")] = function () { };
                 $layer(obj)
             });
         }
@@ -122,7 +122,7 @@
             loading: false
         }
 
-        $scope.hideErr = function(){
+        $scope.hideErr = function () {
             $scope.masterInfo.error.invalid = false;
         }
         $scope.editUsername = function () {
@@ -131,7 +131,7 @@
         // 取消修改
         $scope.cancelEdit = function () {
             $scope.masterInfo.edit = false;
-            $scope.personal.username = decodeURIComponent($cookies["username"] || '')
+            $scope.personal.username = getCookie("username") || ''
         }
         $scope.comfirmEdit = function () {
             if (!validator.regType.username.reg.test($scope.personal.username)) {
@@ -145,9 +145,9 @@
 
             account.setUsername({
                 username: $scope.masterInfo.username
-            }).then(function(data){
+            }).then(function (data) {
                 $scope.masterInfo.loading = false
-                if(!data.is_succ){
+                if (!data.is_succ) {
                     var obj = {
                         title: $scope.lang.text("tigerWitID.settings.error"),
                         size: 'sm',
@@ -155,7 +155,7 @@
                         msg: data.message || $scope.lang.text("tigerWitID.settings.failModifyUsername"),
                         btns: {}
                     }
-                    obj.btns[$scope.lang.text("tigerWitID.confirm")] = function () {}
+                    obj.btns[$scope.lang.text("tigerWitID.confirm")] = function () { }
                     $layer(obj)
                 } else {
                     $scope.masterInfo.edit = false;
