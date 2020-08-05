@@ -13,7 +13,7 @@
 
         main.thirdInfo = {
             userCode: $cookies["user_code"],
-            userName: decodeURIComponent($cookies["username"] || ''),
+            userName: getCookie("username") || '',
             userAvatar: config.avatarCfg.path + $cookies["user_code"] + config.avatarCfg.md + '?timestamp=' + (+new Date()),
             third_mt4: $cookies["third_mt4"]
         };
