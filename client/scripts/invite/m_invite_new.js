@@ -83,13 +83,19 @@
         var interval = null;
         /*loading层*/
         layer.open({ type: 2, shadeClose: false });
-        publicRequest('getPhoneCode', 'POST', {
+
+        var params = {
             account: $("#telephone").val(),
             account_type: 1,
             phone_code: areaCode,
             code_token: $.cookie("code_token"),
             type: 1
-        }).then(function (data) {
+        }
+        var all_sources = $.cookie('all_sources');
+        if (all_sources) {
+            params = $.extend(params, JSON.parse(all_sources));
+        }
+        publicRequest('getPhoneCode', 'POST', params).then(function (data) {
             layer.closeAll();
             if (!data) return;
             if (data.is_succ) {

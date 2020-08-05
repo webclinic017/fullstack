@@ -69,12 +69,18 @@
 
             /*loading层*/
             var layer2 = layer.open({ type: 2, shadeClose: false });
-            publicRequest('getPhoneCode', 'POST', {
+
+            var params = {
                 account: $(".registerLayer .telephone").val(),
                 account_type: 1,
                 phone_code: $('.registerLayer .areaCode').val(),
                 type: 1
-            }).then(function (data) {
+            }
+            var all_sources = $.cookie('all_sources');
+            if (all_sources) {
+                params = $.extend(params, JSON.parse(all_sources));
+            }
+            publicRequest('getPhoneCode', 'POST', params).then(function (data) {
                 layer.close(layer2);
                 if (!data) return;
                 if (data.is_succ) {

@@ -172,10 +172,16 @@ $(document).ready(function () {
     if (!checkEmail()) return;
     sendInfo.unable = true;
     sa.track('email_code');
-    publicRequest('sendCode', 'POST', {
+
+    var params = {
       account: $("#email").val(),
       type: 1
-    }).then(function (data) {
+    }
+    var all_sources = $.cookie('all_sources');
+    if (all_sources) {
+      params = $.extend(params, JSON.parse(all_sources));
+    }
+    publicRequest('sendCode', 'POST', params).then(function (data) {
       if (!data) return;
       if (data.is_succ) {
         $("#verify_code_btn").addClass("unable");
