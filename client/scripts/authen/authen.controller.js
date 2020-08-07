@@ -494,13 +494,14 @@
                 $scope.showErr(type);
                 return
             }
-            account.sendCode(
-                $scope.completeInfo[type],
-                $cookies['code_token'],
-                1,
-                $scope.completeInfo.areaCode.value.replace(/\+/gi, '') || null,
-                type == 'phone' ? 1 : 2
-            ).then(function (data) {
+            var params = {
+                account: $scope.completeInfo[type],
+                code_token: $cookies['code_token'],
+                type: 1,
+                phone_code: $scope.completeInfo.areaCode.value.replace(/\+/gi, '') || null,
+                account_type: type == 'phone' ? 1 : 2,
+            }
+            account.sendCode(params).then(function (data) {
                 $scope.completeInfo.hasSendCode = data.is_succ
                 $scope.codeErr[type] = {
                     show: !data.is_succ,

@@ -62,7 +62,14 @@
             }
             console.log(email)
             var token = $cookies['code_token'];
-            account.sendCode(email || '', token, type === 'new' ? 3 : 4, undefined, 2).then(function (data) {
+            var params = {
+                account: email || '',
+                code_token: token,
+                type: type === 'new' ? 3 : 4,
+                phone_code: undefined,
+                account_type: 2
+            }
+            account.sendCode(params).then(function (data) {
                 if (!data) return;
                 // console.info(data);
                 if (data.is_succ) {
