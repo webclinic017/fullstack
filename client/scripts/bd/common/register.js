@@ -49,12 +49,18 @@
 
             /*loading层*/
             layer.load(1, { shade: false });
-            publicRequest('getPhoneCode', 'POST', {
+            var params = {
                 account: $("#telephone").val(),
                 account_type: 1,
                 code_token: $.cookie("code_token"),
                 type: type || 1
-            }).then(function (data) {
+            }
+
+            var all_sources = $.cookie('all_sources');
+            if (all_sources) {
+                params = $.extend(params, JSON.parse(all_sources));
+            }
+            publicRequest('getPhoneCode', 'POST', params).then(function (data) {
                 layer.closeAll();
                 if (!data) return;
                 if (data.is_succ) {

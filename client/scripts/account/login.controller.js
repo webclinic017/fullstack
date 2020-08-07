@@ -151,8 +151,14 @@
                     type = 0;
                     break;
             }
-
-            account.sendCode(account_num, token, type, phone_code, account_type).then(function (data) {
+            var para = {
+                account: account_num,
+                code_token: token,
+                type: type,
+                phone_code: phone_code,
+                account_type: account_type
+            };
+            account.sendCode(para).then(function (data) {
                 // console.log(data);
                 if (data.is_succ) {
                     countDown(name);

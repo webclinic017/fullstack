@@ -80,8 +80,14 @@
 
             var token = $cookies['code_token'];
             type = 1;
-
-            account.sendCode(account_num, token, type, phone_code, account_type).then(function (data) {
+            var params = {
+                account: account_num,
+                code_token: token,
+                type: type,
+                phone_code: phone_code,
+                account_type: account_type || 0,
+            }
+            account.sendCode(params).then(function (data) {
                 // console.log(data);
                 if (data.is_succ) {
                     countDown(name);
