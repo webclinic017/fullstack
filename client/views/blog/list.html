@@ -16,7 +16,7 @@
             
             <div class="body">
               <div class="real_blog" ng-controller="BlogController" ng-cloak>
-                <h3 class="real_blog__title"><span>Blog</span></h3>
+                <h1 class="real_blog__title"><span>Blog</span></h1>
                 <div class="real_blog__content_wrapper" ng-if="blogList.length">
                     <ul class="clearfix">
                         <li ng-repeat="item in blogList" ng-click="goDetails(item.key)">
@@ -29,9 +29,9 @@
                                         <span class="label-name" ng-style="{'background-color': item.label_color}">{{item.label_name}}</span>
                                         <span class="time">{{item.release_time}}</span>
                                     </div>
-                                    <h4 class="tit-wrapper">
+                                    <div class="tit-wrapper">
                                         {{item.title}}
-                                    </h4>
+                                    </div>
                                     <p class="desc-wrapper">
                                         {{item.abstract}}
                                     </p>

@@ -64,7 +64,7 @@ router.get('/m/third/add_transfer', function (req, res) {
     res.render('third_app/add_transfer.html');
 });
 //邀请好友 定制活动 H5 - 2020.05.07 (pandafx)
-router.get('/m/customize/invite',function (req, res) {
+router.get('/m/customize/invite', function (req, res) {
     res.render('invite/m_customize');
 });
 router.get('/m/customize/invite_come', function (req, res) {
@@ -435,7 +435,17 @@ router.get('/blog/:subpage(*)', function (req, res) {
 
     res.render('blog/details.html');
 });
+// 交易品种简拼
+router.get('/:subpage(forex_trading|metal_trading|oil_trading|cfd_trading|stock_trading)', function (req, res) {
+    var subpage = req.params.subpage.substring(0, (req.params.subpage.length - 8)) || 'forex';
+    var pageInfo = {
+        id: subpage
+    };
 
+    res.render('web/product.html', {
+        pageInfo: pageInfo
+    });
+});
 // 交易品种
 router.get('/web/product/:subpage(forex|metal|oil|cfd|stock)', function (req, res) {
     var subpage = req.params.subpage || 'forex';

@@ -282,9 +282,9 @@
     padding-bottom: 80px;
     width: 1070px;
     margin: 0 auto;
-
     @include e(title) {
-        font-size: 28px;
+        // font-size: 28px;
+        word-break: break-word;
     }
     @include e(desc) {
         margin-bottom: 20px;

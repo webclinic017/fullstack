@@ -15,7 +15,7 @@
         position: relative;
         display: block;
 
-        > h2 > a {
+        > .h2 > a {
             position: relative;
             display: block;
 
@@ -36,22 +36,20 @@
     // min-height: $navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
     border-radius: 0;
     background-color: #141414;
-
 }
 .navbar-2 {
     position: relative;
     // min-height: $navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
     border-radius: 0;
     @include img-normal($image-path-base + "navbar-bg.png");
-
 }
 .navbar-lang {
     position: relative;
     height: $navbar-height;
     margin: 0 9px;
-    &:before{
-       content: '|';
-       color: #fff;
+    &:before {
+        content: "|";
+        color: #fff;
     }
     &:hover {
         .lang-menu {
@@ -80,7 +78,7 @@
         border-bottom-left-radius: 4px;
         border-bottom-right-radius: 4px;
         overflow: hidden;
-    
+
         li {
             background-color: rgb(36, 42, 54);
             padding: 8px 10px;
@@ -100,23 +98,27 @@
     }
 }
 
-.navbar-fixed-top-cookies{
-    position: fixed; 
+.navbar-fixed-top-cookies {
+    position: fixed;
     background: #eee;
     width: 100%;
     z-index: 1060;
-    padding: 20px 0px; 
-    display: none; 
+    padding: 20px 0px;
+    display: none;
     left: 0;
     top: 0;
-    transition: all .4s;
+    transition: all 0.4s;
     .navbar-lang {
-        &:before{
+        &:before {
             color: #333;
         }
-        .lang-toggle{
+        .lang-toggle {
             color: #333;
         }
+    }
+    .h3 {
+        margin-top: 20px;
+        margin-bottom: 10px;
     }
 }
 // Fix the top/bottom navbars when screen real estate supports it
@@ -166,7 +168,7 @@
 //                 border-left: 8px solid transparent;
 //                 border-right: 8px solid transparent;
 //                 border-bottom: 16px solid #fff;
-                
+
 //             }
 //         }
 //         @include m(entry){
@@ -174,14 +176,14 @@
 //             line-height: 44px;
 //             padding: 0 14px;
 //             position: relative;
-//             color: rgba(31, 40, 51, 0.5);                
+//             color: rgba(31, 40, 51, 0.5);
 //             input{
 //                 height: 20px;
 //                 width: 100%;
 //                 padding: 0 10px 0 30px;
 //                 border-radius:15px;
 //                 border:1px solid rgba(74,74,74,0.3);
-                
+
 //             }
 //             .search{
 //                 position: absolute;
@@ -189,7 +191,6 @@
 //                 left: 24px;
 //             }
 //         }
-
 
 //         @include m(list){
 //             max-height: 320px;
@@ -205,7 +206,7 @@
 //                 @include alignItems(center);
 //                 border-top: 1px solid rgba(235,235,235,0.5);
 //                 > a{
-                    
+
 //                 }
 //                 > span{
 //                     width: 14px;
@@ -242,7 +243,7 @@
     padding-right: 15px;
     width: 1360px;
 
-    h1, h2, h3 {
+    .h1, .h2, .h3 {
         margin: 0px;
         font-weight: normal;
     }
@@ -250,7 +251,6 @@
 
 // Navbar heading
 .navbar-header {
-
     .logo {
         margin: 15px 0 0 0;
         height: 39px;
@@ -265,20 +265,18 @@
         background-size: 100%;
         background-repeat: no-repeat;
         background-position-y: center;
-        
+
         &.en {
             @include img-normal($image-path-base + "logo-con-en.png");
         }
-
     }
 
     .logo-cctv {
-        display:none;
+        display: none;
         //display: inline-block;
         width: 99px;
         height: 45px;
         @include img-normal($image-path-base + "logo-cctv.png");
-
     }
 
     // .cctv_con {
@@ -312,7 +310,6 @@
 //     }
 // }
 
-
 .navbar-nav {
     margin: 0;
     @include displayFlex();
@@ -321,8 +318,7 @@
     @include flex(1);
 
     > li {
-
-        > h2 > a {
+        > .h2 > a {
             margin: 0 16px;
             padding: 28px 0 25px;
             border-bottom: 2px solid transparent;
@@ -339,7 +335,7 @@
         }
     }
 
-    > li.active > h2 > a {
+    > li.active > .h2 > a {
         &,
         &:hover,
         &:active,
@@ -357,13 +353,13 @@
 #lang {
     margin: 26px 25px 0 0;
     color: #fff;
-    float:right;
+    float: right;
 }
 #lang a {
-    color:#fff;
+    color: #fff;
 }
 #lang a:hover {
-    color:#fedd0a;
+    color: #fedd0a;
 }
 
 //== nav-tabs
@@ -395,7 +391,7 @@
             width: 100%;
             height: 2px;
             background-color: transparent;
-            content: '';
+            content: "";
         }
 
         > a {
@@ -446,7 +442,6 @@
     border: 1px solid $gray;
 }
 
-
 //== 未登录时候 显示 注册登录 块
 .navbar-login {
     margin: 0px;
@@ -467,14 +462,14 @@
             padding: 7px 12px;
             // width: 120px;
             line-height: 14px;
-            background: #F8E71C;
+            background: #f8e71c;
             text-decoration: none;
             text-align: center;
             font-size: 14px;
             color: $main-char-color-100;
             display: block;
         }
-        .signup2{
+        .signup2 {
             padding: 7px 12px;
             // width: 120px;
             line-height: 14px;
@@ -493,7 +488,7 @@
     @include justifyContent(flex-end);
 
     @include e(psl) {
-        text-overflow:ellipsis;
+        text-overflow: ellipsis;
         text-align: center;
     }
 
@@ -513,7 +508,7 @@
         display: inline-block;
         vertical-align: middle;
         color: $white-100;
-        font-size:14px;
+        font-size: 14px;
     }
 
     @include e(logout) {
@@ -549,13 +544,12 @@
     }
 }
 
-
 //== 侧边导航栏
 @include b(side_navbar) {
     background-color: $gray-base;
     border-radius: $border-radius-base;
     overflow: hidden;
-    margin-bottom:20px;
+    margin-bottom: 20px;
 
     @include e(title) {
         margin: 0;
@@ -566,7 +560,7 @@
     }
 
     @include e(menu) {
-        h2 {
+        .h2 {
             margin: 0px;
             font-weight: normal;
             font-size: 14px;
@@ -578,29 +572,29 @@
         & > li.active {
             background-color: $brand-primary;
 
-            > h2 > a {
+            > .h2 > a {
                 color: $gray-base;
                 border-bottom-color: transparent;
                 cursor: default;
             }
 
-            > h2 > a:hover {
+            > .h2 > a:hover {
                 color: $gray-base;
             }
         }
 
-        & > li > h2 > a {
+        & > li > .h2 > a {
             display: block;
             padding: 10px 0;
             color: $gray-dark;
             border-bottom: 1px solid $gray-darkest;
         }
 
-        & > li > h2 > a:hover {
+        & > li > .h2 > a:hover {
             color: $brand-primary;
         }
 
-        & > li:last-child > h2 > a {
+        & > li:last-child > .h2 > a {
             border-color: transparent;
         }
     }

@@ -56,7 +56,7 @@
           // console.log(rs);
           if (rs.is_succ) {
             $scope.details = rs.data;
-
+            document.title = rs.data.title + ' | TigerWit Global'
             product.opBlogNums({
               id: $scope.details.id,
               type: 0

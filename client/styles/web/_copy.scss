@@ -46,10 +46,10 @@
 // 选择高手
 @include b(copy_select) {
 
-    h3 {
+    .h3 {
         font-size: 22px;
     }
-    h4 {
+    .h4 {
         font-size: 14px;
     }
 
@@ -168,14 +168,14 @@
     //     }
     // }
 
-    @include e(content) {
-        border-bottom: 1px solid $gray;
-        padding-bottom: 30px;
+    // @include e(content) {
+    //     border-bottom: 1px solid $gray;
+    //     padding-bottom: 30px;
 
-        h5 {
-            margin-bottom: 0;
-        }
-    }
+    //     h5 {
+    //         margin-bottom: 0;
+    //     }
+    // }
 
     // @include e(star) {
     //     display: inline-block;
@@ -353,7 +353,7 @@
         @include m(title) {
             margin-bottom: 15px;
             
-            h4 {
+            .title {
                 margin: 0;
                 font-size: 20px;
                 font-weight: 500;

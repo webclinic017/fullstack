@@ -11,6 +11,8 @@
   function WebProductController($scope, $cookies, $location, product) {
     var location = $location.$$absUrl.split('/');
     var curProduct = location[location.length - 1] || '';
+    curProduct = curProduct.substring(0, (curProduct.length - 8))
+    console.log(location, curProduct)
     var symbolList;
 
     $scope.showFolder = true;  // 是否显示folder

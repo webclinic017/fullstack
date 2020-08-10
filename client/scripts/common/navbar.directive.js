@@ -24,7 +24,7 @@
                     var level = parseInt(trigger.attr('data-navbar-level'), 10) || 1;
                     var defaultNav = trigger.attr('data-default');
                     var href = trigger.attr('href');
-                    var parent = trigger.parent('h2').parent('li');
+                    var parent = trigger.parent('.h2').parent('li');
                     var tmpUrl = url;
                     if(defaultNav) {
                         parent.removeClass('active');

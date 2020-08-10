@@ -2,13 +2,13 @@
     <button class="close" ng-click="closeModal()">&times;</button>
 
     <div>
-        <h5 class="sys_modal_v2__title">
+        <div class="sys_modal_v2__title">
             {{lang.text(type === 'Noire'?'tigerWitID.wallet.addCards':'tigerWitID.wallet.addBankCards')}}
             <br>
             <span class="desp">
                 {{lang.text(type === 'Noire'?'tigerWitID.depositWithdrawal.bindUserBankCard2':'tigerWitID.depositWithdrawal.bindUserBankCard')}}
             </span>
-        </h5>
+        </div>
         <div class="sys_modal_v2__content" ng-show="!card.binding">
             <form name="cardForm" novalidate autocomplete="off">
                 <div class="item-center">

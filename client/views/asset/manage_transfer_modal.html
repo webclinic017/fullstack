@@ -3,8 +3,8 @@
 
     <!-- 选择电汇列表/管理电汇列表 -->
     <div class="sys_modal_v2__content" ng-if="manageType == 'switch' || manageType == 'manage'">
-        <h3 class="sys_modal_v2__title" ng-if="manageType == 'switch'">{{lang.text('tigerWitID.transfer.switchTransferAccount')}}</h3>
-        <h3 class="sys_modal_v2__title" ng-if="manageType == 'manage'">{{lang.text('tigerWitID.transfer.manageWireTransfer')}}</h3>
+        <div class="sys_modal_v2__title" ng-if="manageType == 'switch'">{{lang.text('tigerWitID.transfer.switchTransferAccount')}}</div>
+        <div class="sys_modal_v2__title" ng-if="manageType == 'manage'">{{lang.text('tigerWitID.transfer.manageWireTransfer')}}</div>
         <div tw-loading-img></div>
         <table class="manage_card_list">
             <colgroup>
@@ -41,7 +41,7 @@
 
     <!-- 删除电汇列表 -->
     <div class="sys_modal_v2__content" ng-if="manageType == 'delete'">
-        <h3 class="sys_modal_v2__title">{{lang.text('tigerWitID.transfer.deleteWireTransfer')}}</h3>
+        <div class="sys_modal_v2__title">{{lang.text('tigerWitID.transfer.deleteWireTransfer')}}</div>
         <p class="sys_modal_v2__desp mg-tp-20">{{lang.text('tigerWitID.transfer.deleteThisAccount')}}</p>
         <div class="mg-tp-30 justify-flex-end">
             <a class="btn-text" ng-click="deleteTransfer()">{{lang.text('tigerWitID.delete')}}</a>

@@ -10,7 +10,7 @@
         font-weight:600;
         color:rgba(255,255,255,1);
         text-align: center;
-        h3 {
+        .h3 {
             padding-top: 170px;
             font-size:56px;
             line-height:78px;
@@ -84,6 +84,8 @@
                 font-weight:600;
                 color:rgba(33,44,63,1);
                 line-height:42px;
+                margin-top: 20px;
+                margin-bottom: 10px;
             }
             .tit1 {
                 font-size:20px;
@@ -139,14 +141,14 @@
 
 
 
-    @include e(content) {
+    // @include e(content) {
 
-        > h4 {
+    //     > h4 {
             // border-bottom: 1px solid $gray;
             // margin-top: 35px;
             // margin-bottom: 20px;
-        }
-    }
+        // }
+    // }
 
     @include e(tip) {
         color: $gray-darker;

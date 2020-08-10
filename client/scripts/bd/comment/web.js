@@ -22,6 +22,7 @@
                 // console.log(data);
                 if (data.is_succ) {
                     $scope.commentDetails = data.data;
+                    document.title = data.data.main_title + ' | TigerWit Global'
                     
                     angular.forEach($scope.commentDetails.comment_field, function (value, index) {
                         value.image && (value.image = JSON.parse(value.image));

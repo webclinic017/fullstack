@@ -3,8 +3,8 @@
 
     <!-- 选择银行卡/管理银行卡 -->
     <div class="sys_modal_v2__content" ng-if="manageType == 'switch' || manageType == 'manage'">
-        <h3 class="sys_modal_v2__title" ng-if="manageType == 'switch'">{{lang.text('tigerWitID.wallet.switchBankCard')}}</h3>
-        <h3 class="sys_modal_v2__title" ng-if="manageType == 'manage'">{{lang.text('tigerWitID.wallet.manageBankCards')}}</h3>
+        <div class="sys_modal_v2__title" ng-if="manageType == 'switch'">{{lang.text('tigerWitID.wallet.switchBankCard')}}</div>
+        <div class="sys_modal_v2__title" ng-if="manageType == 'manage'">{{lang.text('tigerWitID.wallet.manageBankCards')}}</div>
         <div tw-loading-img></div>
         <table class="manage_card_list">
             <colgroup>
@@ -47,7 +47,7 @@
 
     <!-- 删除银行卡 -->
     <div class="sys_modal_v2__content" ng-if="manageType == 'delete'">
-        <h3 class="sys_modal_v2__title">{{lang.text('tigerWitID.wallet.deleteBankCard')}}</h3>
+        <div class="sys_modal_v2__title">{{lang.text('tigerWitID.wallet.deleteBankCard')}}</div>
         <p class="sys_modal_v2__desp mg-tp-20">{{lang.text('tigerWitID.wallet.tip3')}}</p>
         <div class="mg-tp-30 justify-flex-end">
             <a class="btn-text" ng-click="deleteCard()">{{lang.text('tigerWitID.delete')}}</a>

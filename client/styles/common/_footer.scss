@@ -7,14 +7,14 @@
         margin-left: auto;
         overflow: hidden;
     }
-    h2, h3 {
+    .h2, .h3 {
         margin: 0px;
         font-weight: normal;
     }
 
     .contact-us {
         // float: right;
-        h2 {
+        .h2 {
             p {
                 font-size:14px;
                 line-height:27px;
@@ -48,14 +48,13 @@
         .link-list__item {
             margin-left: $margin;
             margin-right: $margin;
-            h2 {
+            .h2 {
                 p {
                     font-size:20px;
-                    font-weight:500;
                     line-height:27px;
                 }
             }
-            h3 {
+            .h3 {
                 a{
                     color: $white-50;
                     font-size: 14px;

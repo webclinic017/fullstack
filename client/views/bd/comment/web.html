@@ -2,12 +2,12 @@
 <html lang="en" class="bd_redbag">
 
 <head>
-  <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <%if(req.host.indexOf('.tigerwit.com') === -1) {%>
-        <meta name="robots" content="noindex">
-        <%}%>
+    <meta name="robots" content="noindex">
+    <%}%>
   <title><%=lang.text("companyZhName")%>｜每日汇评</title>
-  <% include /common/vendor/web.css.html %>
+    <% include /common/vendor/web.css.html %>
     <!-- build:css(.tmp) /styles/web.css -->
     <link rel="stylesheet" href="/styles/web.css">
     <!-- endbuild -->
@@ -20,14 +20,14 @@
         <% include /common/nav/web.header.html %>
         <div class="comment" ng-controller="ProductCommentDetailsController" ng-cloak>
             <div class="container">
-                <div class="comment__title">
+                <h1 class="comment__title">
                     {{ commentDetails.main_title || '--' }}
-                </div>
+                </h1>
                 <div class="comment__date">
                     <span>{{ commentDetails.issue_date }}</span>
                     <span style="padding-left: 10px;">分析师{{ commentDetails.analyst }}专栏</span>
                 </div>
-                 <div class="comment__focus">
+                <div class="comment__focus">
                     <img ng-src="{{commentDetails.banner_image}}">
                 </div>
                 <ul class="comment__lst">
@@ -49,12 +49,14 @@
                 <div class="comment__other">
                     <p>
                         上一篇：
-                        <a ng-if="commentDetails.prev_comment" ng-href="/bd/comment/{{commentDetails.prev_comment.id}}?type={{commentDetails.prev_comment.id}}">{{commentDetails.prev_comment.title}}</a>
+                        <a ng-if="commentDetails.prev_comment"
+                            ng-href="/bd/comment/{{commentDetails.prev_comment.id}}?type={{commentDetails.prev_comment.id}}">{{commentDetails.prev_comment.title}}</a>
                         <span ng-show="!commentDetails.prev_comment">没有更多了</span>
                     </p>
                     <p>
                         下一篇：
-                        <a ng-if="commentDetails.next_comment" ng-href="/bd/comment/{{commentDetails.next_comment.id}}?type={{commentDetails.next_comment.id}}">{{commentDetails.next_comment.title}}</a>
+                        <a ng-if="commentDetails.next_comment"
+                            ng-href="/bd/comment/{{commentDetails.next_comment.id}}?type={{commentDetails.next_comment.id}}">{{commentDetails.next_comment.title}}</a>
                         <span ng-show="!commentDetails.next_comment">没有更多了</span>
                     </p>
                 </div>
@@ -86,4 +88,5 @@
 <script src="/scripts/bd/common/publicAjax.js"></script>
 <script src="/scripts/bd/comment/web.js"></script>
 <!-- endbuild -->
+
 </html>

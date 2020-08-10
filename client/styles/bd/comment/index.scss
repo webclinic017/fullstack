@@ -13,7 +13,7 @@
         .title {
             margin-bottom: px2rem(40);
 
-            h4 {
+            .h4 {
                 float: left;
                 margin: 0;
                 font-size: px2rem(44);
@@ -263,9 +263,9 @@
 
     @include e(title) {
         font-size: 20px;
-        font-weight: 500;
+        // font-weight: 500;
         color: #4a4a4a;
-        padding: 50px 0px 20px;
+        padding: 30px 0px 10px;
     }
     @include e(date) {
         color: #b5b5b5;

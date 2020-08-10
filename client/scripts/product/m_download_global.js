@@ -85,29 +85,29 @@
                     activePage1();
                 }
                 if (index == 2) {
-                    $('.section2 h5').addClass("active");
+                    $('.section2 .tit').addClass("active");
                     $('.section2 .line1').addClass("active");
                 }
                 if (index == 3) {
-                    $('.section3 h5').addClass("active");
+                    $('.section3 .tit').addClass("active");
                     $('.section3 .line1').addClass("active");
                 }
                 if (index == 4) {
                     $('.section4 .line1').addClass("active");
                     $('.section4 .line2').addClass("active");
-                    $('.section4 h5').addClass("active");
+                    $('.section4 .tit').addClass("active");
                 }
                 if (index == 5) {
-                    $('.section5 h5').addClass("active");
+                    $('.section5 .tit').addClass("active");
                 }
                 if (index == 6) {
                     $('.section6').addClass("_active");
                     $('.section6 .line1').addClass("active");
-                    $('.section6 h5').addClass("active");
+                    $('.section6 .tit').addClass("active");
                 }
                 if (index == 7) {
                     $('.section7 .line1').addClass("active");
-                    $('.section7 h5').addClass("active");
+                    $('.section7 .tit').addClass("active");
                 }
             },
             onLeave: function (index, direction) {
@@ -118,13 +118,13 @@
                 }
                 if (index == '2') {
                     setTimeout(function () {
-                        $('.section2 h5').removeClass("active");
+                        $('.section2 .tit').removeClass("active");
                         $('.section2 .line1').removeClass("active");
                     }, 1000)
                 }
                 if (index == '3') {
                     setTimeout(function () {
-                        $('.section3 h5').removeClass("active");
+                        $('.section3 .tit').removeClass("active");
                         $('.section3 .line1').removeClass("active");
                     }, 1000)
                 }
@@ -132,25 +132,25 @@
                     setTimeout(function () {
                         $('.section4 .line1').removeClass("active");
                         $('.section4 .line2').removeClass("active");
-                        $('.section4 h5').removeClass("active");
+                        $('.section4 .tit').removeClass("active");
                     }, 1000)
                 }
                 if (index == 5) {
                     setTimeout(function () {
-                        $('.section5 h5').removeClass("active");
+                        $('.section5 .tit').removeClass("active");
                     }, 1000);
                 }
                 if (index == '6') {
                     setTimeout(function () {
                         $('.section6').removeClass("_active");
                         $('.section6 .line1').removeClass("active");
-                        $('.section6 h5').removeClass("active");
+                        $('.section6 .tit').removeClass("active");
                     }, 1000)
                 }
                 if (index == '7') {
                     setTimeout(function () {
                         $('.section7 .line1').removeClass("active");
-                        $('.section7 h5').removeClass("active");
+                        $('.section7 .tit').removeClass("active");
                     }, 1000)
                 }
             }

@@ -3,8 +3,8 @@
 
     <!-- 选择银行卡/管理银行卡 -->
     <div class="sys_modal_v2__content" ng-if="manageType == 'switch' || manageType == 'manage'">
-        <h3 class="sys_modal_v2__title" ng-if="manageType == 'switch'">切换银行卡</h3>
-        <h3 class="sys_modal_v2__title" ng-if="manageType == 'manage'">管理银行卡</h3>
+        <div class="sys_modal_v2__title" ng-if="manageType == 'switch'">切换银行卡</div>
+        <div class="sys_modal_v2__title" ng-if="manageType == 'manage'">管理银行卡</div>
         <div tw-loading-img></div>
         <table class="manage_card_list">
             <colgroup>
@@ -41,7 +41,7 @@
 
     <!-- 删除银行卡 -->
     <div class="sys_modal_v2__content" ng-if="manageType == 'delete'">
-        <h3 class="sys_modal_v2__title">删除银行卡</h3>
+        <div class="sys_modal_v2__title">删除银行卡</div>
         <p class="sys_modal_v2__desp mg-tp-20">确认删除本银行卡，如需再次使用需重新验证</p>
         <div class="mg-tp-30 justify-flex-end">
             <a class="btn-text" ng-click="deleteCard()">删除</a>
