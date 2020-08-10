@@ -51,6 +51,7 @@
     $(function () {
         /*定义全局变量*/
         var oReg = {};
+        oReg.search_arr = getSearch();
 
         function isPC() {
             var userAgentInfo = navigator.userAgent;
@@ -120,7 +121,8 @@
                 account_type: 1,
                 phone_code: areaCode,
                 code_token: $.cookie("code_token"),
-                type: type || 1
+                type: type || 1,
+                lp: getLp(oReg.search_arr.lp)
             }
             var all_sources = $.cookie('all_sources');
             if (all_sources) {
@@ -289,8 +291,6 @@
             //     return theRequest;
             // }
 
-
-            oReg.search_arr = getSearch();
             // 代理商推广
             if (oReg.search_arr.origin === 'proxy') {
                 $('#password').parent().remove();
@@ -397,7 +397,7 @@
                     phone_code: areaCode || '86',
                     world_code: world_code || 'CN',
                     email: oReg.search_arr.email || null,
-                    lp: oReg.search_arr.lp || window.location.pathname.replace(/[\/:]/g, "").toLowerCase(),
+                    lp: getLp(oReg.search_arr.lp),
                     is_agree: is_agree == 'is_agree' ? 1 : 0,
                     // TODO 暂时
                     // referrer: document.referrer,

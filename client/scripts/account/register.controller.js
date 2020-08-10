@@ -130,7 +130,8 @@
                 type: type,
                 phone_code: phone_code,
                 account_type: account_type,
-                world_code: $scope.account.country.value || undefined
+                world_code: $scope.account.country.value || undefined,
+                lp: getLp($state.params.lp)
             }
             var all_sources = $cookies['all_sources'];
             if (all_sources) {
@@ -171,7 +172,7 @@
                 login_type: 2,
                 world_code: $scope.account.country.value,
                 appsflyer_id: $cookies['APPSFLYER_ID'] || null,
-                lp: $state.params.lp
+                lp: getLp($state.params.lp)
                 // TODO 暂时
                 // referrer: document.referrer,
                 // href: location.href,

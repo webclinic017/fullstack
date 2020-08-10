@@ -96,7 +96,7 @@ $(document).ready(function () {
       password: password,
       code: $("#verify_code").val(),
       login_type: 3,
-      lp: oReg.search_arr.lp || window.location.pathname.replace(/[\/:]/g, "").toLowerCase(),
+      lp: getLp(oReg.search_arr.lp),
       is_agree: is_agree == 'is_agree' ? 1 : 0,
       // TODO 暂时
       // referrer: document.referrer,
@@ -175,7 +175,8 @@ $(document).ready(function () {
 
     var params = {
       account: $("#email").val(),
-      type: 1
+      type: 1,
+      lp: getLp(oReg.search_arr.lp)
     }
     var all_sources = $.cookie('all_sources');
     if (all_sources) {
