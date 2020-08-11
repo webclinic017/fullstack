@@ -68,6 +68,7 @@
 
         // 三方接口
         thirdGetStatus: origin_third2 + '/user/auth_status', // get
+        getIdTypeApi: origin_third2 + '/user/auth/id_type', // get
         thirdRegister: origin_third + '/auth/register', //post
         thirdGetKycList: origin_third2 + '/user/kyc_map', // get
         thirdSetKyc: origin_third2 + '/user/kyc', //post

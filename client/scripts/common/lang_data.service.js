@@ -11693,36 +11693,6 @@
                         "pt-BR": "Selecione o tipo de documento",
                         "ar": "حدد نوع المستند"
                     },
-                    "openAccountNewTip20": {
-                        "zh": "电费单（水，煤气，电）",
-                        "en": "Utility Bill(Water,Gas,Electriity)",
-                        "vi": "Hóa đơn tiện ích (Nước, gas, điện,…)",
-                        "zh-Hant": "電費單（水，煤氣，電）",
-                        "id": "Tagihan Utilitas (Air, Listrik, Gas)",
-                        "es": "Cuenta de servicios ( Agua, gas, electricidad)",
-                        "pt-BR": "Conta de serviços (Água, gás, eletricidade)",
-                        "ar": "فاتورة مرافق (مياه، غاز، كهرباء)"
-                    },
-                    "openAccountNewTip21": {
-                        "zh": "固定电话费",
-                        "en": "Landline Telephone Bill",
-                        "vi": "Hóa đơn điện thoại bàn",
-                        "zh-Hant": "固定電話費",
-                        "id": "Tagihan telepon kabel",
-                        "es": "Cuenta de teléfono fijo",
-                        "pt-BR": "Conta de telefone fixo",
-                        "ar": "فاتورة الهاتف الأرضي"
-                    },
-                    "openAccountNewTip22": {
-                        "zh": "银行对账单",
-                        "en": "Bank Statement",
-                        "vi": "Bản sao kê ngân hàng",
-                        "zh-Hant": "銀行對帳單",
-                        "id": "Tagihan Bank",
-                        "es": "Extracto bancario",
-                        "pt-BR": "Extrato bancário",
-                        "ar": "كشف حساب مصرفي"
-                    },
                     "openAccountNewTip23": {
                         "zh": "差价合约是复杂的产品，存在高额亏损的风险。 只有在您通过应用风险控制（包括止损和止盈订单）来寻求最小化损失时，才应该继续使用该产品。",
                         "en": "CFDs are complex products which involve a high risk of losing your money. You should proceed only if you will seek to minimize losses by applying risk controls, including stop loss and take profit orders.",
@@ -12402,66 +12372,6 @@
                         "es": " información verificación ha sido enviada con éxito",
                         "pt-BR": " as informações de verificação foram enviadas com sucesso",
                         "ar": "تم إرسال معلومات التحقق بنجاح"
-                    },
-                    "mainlandResidentIdentityCard": {
-                        "zh": "大陆居民身份证",
-                        "en": "Mainland resident identity card",
-                        "vi": "Chứng minh nhân dân đại lục",
-                        "zh-Hant": "大陸居民身份證",
-                        "id": "KTP",
-                        "es": "Tarjeta identidad residente País",
-                        "pt-BR": "Cartão de identidade de residente do continente",
-                        "ar": "بطاقة هوية المقيم في البر الرئيسي"
-                    },
-                    "gAPermit": {
-                        "zh": "港澳居民来往内地通行证",
-                        "en": "Mainland Travel Permit for Hong Kong and Macao Residents",
-                        "vi": "Giấy phép du lịch đại lục cho cư dân Hồng Kông và Macao",
-                        "zh-Hant": "港澳居民來往內地通行證",
-                        "id": " Izin wisata ke Hongkong dan Macao ",
-                        "es": "Tarjeta identidad residente País",
-                        "pt-BR": "Licença de viagem para residentes de Hong Kong e Macao",
-                        "ar": "تصريح سفر بر الصين الرئيسي بالنسبة للمقيمين في هونج كونج وماكاو"
-                    },
-                    "tPermit": {
-                        "zh": "台湾居民来往大陆通行证 ",
-                        "en": "Mainland travel permit for Taiwan residents",
-                        "vi": "Giấy phép du lịch đại lục cho cư dân Đài Loan ",
-                        "zh-Hant": "臺灣居民來往大陸通行證 ",
-                        "id": " Izin wisata ke Taiwan ",
-                        "es": "Tarjeta identidad residente País",
-                        "pt-BR": "Licença de viagem para residentes de Taiwan",
-                        "ar": "تصريح سفر بر الصين الرئيسي للمقيمين في تايوان"
-                    },
-                    "passport": {
-                        "zh": "护照",
-                        "en": "Passport",
-                        "vi": "Hộ chiếu",
-                        "zh-Hant": "護照",
-                        "id": "Paspor",
-                        "es": "Pasaporte",
-                        "pt-BR": "Passaporte",
-                        "ar": "جواز السفر"
-                    },
-                    "driverLicense": {
-                        "zh": "驾驶证",
-                        "en": "Driver license",
-                        "vi": "Bằng lái xe",
-                        "zh-Hant": "駕駛證",
-                        "id": "SIM",
-                        "es": "Licencia conducir",
-                        "pt-BR": "Carteira de motorista",
-                        "ar": "رخصة القيادة"
-                    },
-                    "iDCard": {
-                        "zh": "身份证",
-                        "en": "ID card",
-                        "vi": "Chứng Minh Nhân Dân",
-                        "zh-Hant": "身份證",
-                        "id": "KTP",
-                        "es": "Tarjeta ID",
-                        "pt-BR": "Cartão de identificação",
-                        "ar": "بطاقة الهوية"
                     },
                     "tip13": {
                         "zh": "您的年龄未满18周岁，不建议您进行外汇交易。",
