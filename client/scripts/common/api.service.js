@@ -50,6 +50,7 @@
             getKycApi: urlOrigin3 + '/user/kyc_map',
             getAuthStatus: urlOrigin3 + '/user/auth_status',
             setKycApi: urlOrigin3 + '/user/kyc',
+            getIdTypeApi: urlOrigin3 + '/user/auth/id_type',
             checkAgentApi: urlOrigin2 + '/agent/valid',
             getAgentAuthStatusApi: urlOrigin2 + '/agent/auth_status',
             setAgentPromotionApi: urlOrigin2 + '/agent/invite',
