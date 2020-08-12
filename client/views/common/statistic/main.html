@@ -52,12 +52,14 @@
                 var token = getCookie('token');
                 if (token) {
                     url = this.buildUrlParam(url, this.param({
-                        token: getCookie('token')
+                        token: token
                     }))
                 }
                 var user_code = getCookie('user_code');
                 if (user_code) {
-                    data.user_code = user_code;
+                    url = this.buildUrlParam(url, this.param({
+                        user_id: user_code
+                    }))
                 }
 
                 if (!isPost) {
@@ -302,10 +304,12 @@
                     }
                     isSet = true;
                 }
-                if (search_arr.user_code) {
+                // 历史原因，usercode写法pc与h5不统一
+                var usercode = search_arr.usercode || search_arr.user_code
+                if (usercode) {
                     /*设置邀请源INVITE_CODE*/
                     source = {
-                        invite_code: search_arr.user_code,
+                        invite_code: usercode,
                         invite_status: 2
                     }
                     isSet = true;

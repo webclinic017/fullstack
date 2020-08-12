@@ -145,18 +145,21 @@
     w.encryptPassword = encryptPassword;
 
     function publicRequest($url, $method, $params) {
+        $url = apiUrl[$url];
         var t = '';
         try {
             t = getSearch().token;
         } catch (e) { }
         var token = t || $.cookie("token");
-        $url = apiUrl[$url] + '?token=' + token;
-        $params = $params ? $params : {};
-
-        var user_code = $.cookie["user_code"] || '';
-        if (!$params.user_code) {
-            $params.user_code = user_code;
+        if (token) {
+            $url = setUrlParam($url) + 'token=' + token;
         }
+        var user_code = $.cookie["user_code"] || '';
+        if (user_code) {
+            $url = setUrlParam($url) + 'user_id=' + user_code;
+        }
+
+        $params = $params ? $params : {};
 
         if ($method.toUpperCase() === 'GET') {
             return $.get($url, $params).then(function (data) {
