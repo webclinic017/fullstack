@@ -3,6 +3,7 @@
 
     var origin = ($.cookie && $.cookie("access_origin2")) ? $.cookie("access_origin2") : '/api';
     var origin_app = '/api/app/v3';
+    var origin_app2 = '/api/app/v4';
     var origin_third = '/api/third/v3';
     var origin_third2 = '/api/third/v4';
     origin = origin + '/v3';
@@ -68,7 +69,7 @@
 
         // 三方接口
         thirdGetStatus: origin_third2 + '/user/auth_status', // get
-        getIdTypeApi: origin_third2 + '/user/auth/id_type', // get
+        getIdTypeApi: origin_app2 + '/user/auth/id_type', // get
         thirdRegister: origin_third + '/auth/register', //post
         thirdGetKycList: origin_third2 + '/user/kyc_map', // get
         thirdSetKyc: origin_third2 + '/user/kyc', //post
