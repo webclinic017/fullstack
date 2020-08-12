@@ -122,7 +122,7 @@
                 phone_code: areaCode,
                 code_token: $.cookie("code_token"),
                 type: type || 1,
-                lp: getLp(oReg.search_arr.lp)
+                referer: location.href
             }
             var all_sources = $.cookie('all_sources');
             if (all_sources) {

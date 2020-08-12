@@ -176,7 +176,7 @@ $(document).ready(function () {
     var params = {
       account: $("#email").val(),
       type: 1,
-      lp: getLp(oReg.search_arr.lp)
+      referer: location.href
     }
     var all_sources = $.cookie('all_sources');
     if (all_sources) {

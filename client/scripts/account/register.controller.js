@@ -131,7 +131,7 @@
                 phone_code: phone_code,
                 account_type: account_type,
                 world_code: $scope.account.country.value || undefined,
-                lp: getLp($state.params.lp)
+                referer: location.href
             }
             var all_sources = $cookies['all_sources'];
             if (all_sources) {

@@ -55,7 +55,7 @@
                 account_type: 1,
                 code_token: $.cookie("code_token"),
                 type: type || 1,
-                lp: getLp(oReg.search_arr.lp)
+                referer: location.href
             }
 
             var all_sources = $.cookie('all_sources');
