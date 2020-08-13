@@ -52,7 +52,7 @@
       phone_code: phone_code,
       email: email,
       lang: type,
-      lp: getSearch().lp || window.location.pathname.replace(/[\/:]/g, "").toLowerCase(),
+      lp: getLp(getSearch().lp),
       world_code: type == 'vi' ? 'VN' : 'ID'
     }
     var all_sources = $.cookie('all_sources');

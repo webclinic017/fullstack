@@ -140,13 +140,20 @@
 
             $scope.clickable.captcha = false;
             token = $cookies['code_token'];
-            var tmp;
-            if ($scope.voiceCaptcha) {
-                tmp = account.sendCode($scope.account.phone, token, 2, '', 1);
-            } else {
-                tmp = account.sendCode($scope.account.phone, token, 2, '', 1);
+            // var tmp;
+            // if ($scope.voiceCaptcha) {
+            //     tmp = account.sendCode($scope.account.phone, token, 2, '', 1);
+            // } else {
+            //     tmp = account.sendCode($scope.account.phone, token, 2, '', 1);
+            // }
+            var params = {
+                account: $scope.account.phone,
+                code_token: token,
+                type: 2,
+                phone_code: '',
+                account_type: 1,
             }
-            tmp.then(function (data) {
+            account.sendCode(params).then(function (data) {
                 if (!data) return;
                 if (data.is_succ) {
                     $scope.startTimer();

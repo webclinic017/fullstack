@@ -106,8 +106,14 @@
                 }
 
                 $scope.clickable.captcha = false;
-                var tmp = account.sendCode($scope.phone.phoneNew, token, 3, $scope.phone.phone_code.value, 1);
-                tmp.then(function (data) {
+                var params = {
+                    account: $scope.phone.phoneNew,
+                    code_token: token,
+                    type: 3,
+                    phone_code: $scope.phone.phone_code.value,
+                    account_type: 1
+                }
+                account.sendCode(params).then(function (data) {
                     if (!data) return;
                     if (data.is_succ) {
                         $scope.startTimer();
@@ -126,9 +132,15 @@
             }
             if (type == 'old') {
                 $scope.clickable.oldCaptcha = false;
-                var tmp = account.sendCode('', token, 3, '', 1);
 
-                tmp.then(function (data) {
+                var params = {
+                    account: '',
+                    code_token: token,
+                    type: 3,
+                    phone_code: '',
+                    account_type: 1
+                }
+                account.sendCode(params).then(function (data) {
                     if (!data) return;
                     if (data.is_succ) {
                         $scope.oldStartTimer();

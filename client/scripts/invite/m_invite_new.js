@@ -83,13 +83,20 @@
         var interval = null;
         /*loading层*/
         layer.open({ type: 2, shadeClose: false });
-        publicRequest('getPhoneCode', 'POST', {
+
+        var params = {
             account: $("#telephone").val(),
             account_type: 1,
             phone_code: areaCode,
             code_token: $.cookie("code_token"),
-            type: 1
-        }).then(function (data) {
+            type: 1,
+            referer: location.href
+        }
+        var all_sources = $.cookie('all_sources');
+        if (all_sources) {
+            params = $.extend(params, JSON.parse(all_sources));
+        }
+        publicRequest('getPhoneCode', 'POST', params).then(function (data) {
             layer.closeAll();
             if (!data) return;
             if (data.is_succ) {
@@ -143,7 +150,8 @@
             world_code: world_code || 'CN',
             password: $("#verify_code").val(),
             login_type: 2, // 登录验证方式，1-密码登录，2-验证码登录 3-密码登录有验证码
-            is_agree: is_agree == 'is_agree' ? 1 : 0
+            is_agree: is_agree == 'is_agree' ? 1 : 0,
+            lp: getLp(getSearch().lp)
         }
         var all_sources = $.cookie('all_sources');
         if (all_sources) {

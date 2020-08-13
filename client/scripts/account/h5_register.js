@@ -51,6 +51,7 @@
     $(function () {
         /*定义全局变量*/
         var oReg = {};
+        oReg.search_arr = getSearch();
 
         function isPC() {
             var userAgentInfo = navigator.userAgent;
@@ -115,13 +116,19 @@
 
             /*loading层*/
             layer.open({ type: 2, shadeClose: false });
-            publicRequest('getPhoneCode', 'POST', {
+            var params = {
                 account: $("#telephone").val(),
                 account_type: 1,
                 phone_code: areaCode,
                 code_token: $.cookie("code_token"),
-                type: type || 1
-            }).then(function (data) {
+                type: type || 1,
+                referer: location.href
+            }
+            var all_sources = $.cookie('all_sources');
+            if (all_sources) {
+                params = $.extend(params, JSON.parse(all_sources));
+            }
+            publicRequest('getPhoneCode', 'POST', params).then(function (data) {
                 layer.closeAll();
                 if (!data) return;
                 if (data.is_succ) {
@@ -284,8 +291,6 @@
             //     return theRequest;
             // }
 
-
-            oReg.search_arr = getSearch();
             // 代理商推广
             if (oReg.search_arr.origin === 'proxy') {
                 $('#password').parent().remove();
@@ -392,7 +397,7 @@
                     phone_code: areaCode || '86',
                     world_code: world_code || 'CN',
                     email: oReg.search_arr.email || null,
-                    lp: oReg.search_arr.lp || window.location.pathname.replace(/[\/:]/g, "").toLowerCase(),
+                    lp: getLp(oReg.search_arr.lp),
                     is_agree: is_agree == 'is_agree' ? 1 : 0,
                     // TODO 暂时
                     // referrer: document.referrer,

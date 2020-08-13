@@ -124,8 +124,20 @@
             }
 
             token = $cookies['code_token'];
-
-            account.sendCode(account_num, token, type, phone_code, account_type, $scope.account.country.value).then(function (data) {
+            var params = {
+                account: account_num,
+                code_token: token,
+                type: type,
+                phone_code: phone_code,
+                account_type: account_type,
+                world_code: $scope.account.country.value || undefined,
+                referer: location.href
+            }
+            var all_sources = $cookies['all_sources'];
+            if (all_sources) {
+                params = angular.extend(params, JSON.parse(all_sources))
+            }
+            account.sendCode(params).then(function (data) {
                 // console.log(data);
                 if (data.is_succ) {
                     countDown(name);
@@ -160,7 +172,7 @@
                 login_type: 2,
                 world_code: $scope.account.country.value,
                 appsflyer_id: $cookies['APPSFLYER_ID'] || null,
-                lp: $state.params.lp
+                lp: getLp($state.params.lp)
                 // TODO 暂时
                 // referrer: document.referrer,
                 // href: location.href,

@@ -69,12 +69,19 @@
 
             /*loading层*/
             var layer2 = layer.open({ type: 2, shadeClose: false });
-            publicRequest('getPhoneCode', 'POST', {
+
+            var params = {
                 account: $(".registerLayer .telephone").val(),
                 account_type: 1,
                 phone_code: $('.registerLayer .areaCode').val(),
-                type: 1
-            }).then(function (data) {
+                type: 1,
+                referer: location.href
+            }
+            var all_sources = $.cookie('all_sources');
+            if (all_sources) {
+                params = $.extend(params, JSON.parse(all_sources));
+            }
+            publicRequest('getPhoneCode', 'POST', params).then(function (data) {
                 layer.close(layer2);
                 if (!data) return;
                 if (data.is_succ) {
@@ -233,7 +240,8 @@
                     activity: activity,
                     appsflyer_id: $.cookie('APPSFLYER_ID') || null,
                     login_type: 3, // 登录验证方式，1-密码登录，2-验证码登录 3-验证码密码都有
-                    is_agree: is_agree == 'is_agree' ? 1 : 0
+                    is_agree: is_agree == 'is_agree' ? 1 : 0,
+                    lp: getLp(urlSearch.lp),
                 };
                 var all_sources = $.cookie('all_sources');
                 if (all_sources) {
