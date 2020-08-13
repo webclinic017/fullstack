@@ -1,5 +1,5 @@
 <%if(!lang.isEnglishArea()){%>
-    <%- include('./companyinformation.html') %>
+<%- include('./companyinformation.html') %>
 <%}%>  
 <%if(lang.isEnglishArea()){%>
 <div class="about mg-200__bg">
@@ -70,7 +70,7 @@
             </div>
             <div class="CirItem CirItem6">
                 <p>
-                    <%= lang.text("abouttiger.about23")%>    
+                    <%= lang.text("abouttiger.about23")%>
                 </p>
             </div>
             <div class="CirItem CirItem7">
@@ -100,5 +100,40 @@
             </div>
         </div>
     </div>
+    <%if (lang.currentLanguage() == 'en'){%>
+        <div>
+            <div class="mg-200__two-title">Forex Trading</div>
+            <p>Trade a wide range of the most popular and exotic currency pairs from around the world with supreme market conditions. <a href="/forex-trading">Read more</a></p>
+        </div>
+        <div>
+            <div class="mg-200__two-title">Commodities Trading</div>
+            <p>Enjoy the benefits of trading commodities including precious metals like gold and silver and other popular instruments including oil and natural gas.<a>Read more</a></p>
+        </div>
+        <div>
+            <div class="mg-200__two-title">Index Trading</div>
+            <p>From Asia to Europe to the US, trade the worlds largest indices with ease and benefit from fluctuations whatever your time zone.</p>
+        </div>
+        <div>
+            <div class="mg-200__two-title">Cryptocurrencies</div>
+            <p>If you prefer to speculate on cryptocurrencies, we offer a range of crypto’s to our global client base to trade. <a>Read more</a></p>
+        </div>
+        <div>
+            <div class="mg-200__two-title">Equity CFD Trading</div>
+            <p>Trade share CFDs on some of the world’s largest companies, spread from indices around the world, and benefit from their fluctuations.</p>
+            <p class="mg-tp-10">TigerWit also offer its clients a unique and innovative features and account types to suit their trading needs.</p>
+        </div>
+        <div>
+            <div class="mg-200__two-title">Copy Trading</div>
+            <p>Our purpose-built technology allows you to choose a Master Trader based on factors including their success rate and trading strategies and automatically copy their trades.<a>Read more</a></p>
+        </div>
+        <div>
+            <div class="mg-200__two-title">Account Types</div>
+            <p>We offer a wide range of account types to suit your trading needs and designed for all types of traders. </p>
+        </div>
+        <div>
+            <div class="mg-200__two-title"></div>
+            <p></p>
+        </div>
+    <% } %>
 </div>
 <%}%>  

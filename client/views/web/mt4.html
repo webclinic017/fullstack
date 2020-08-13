@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <% include /common/meta/web.html %>
     <!-- build:css(.tmp) /styles/web.css -->
@@ -8,6 +9,7 @@
 
     <% include /common/statistic/main.html %>
 </head>
+
 <body ng-app="fullstackApp" class="<%= lang_class%> <%= lang.isAr('ar-lang')%>">
     <div ng-controller="GlobalController">
         <div class="header">
@@ -16,16 +18,72 @@
         <div class="body mg-tp-84" style="background-color: #fafafa;">
             <div class="container">
                 <div class="mt4">
-                    <h1 class="mt4__title mg-tp-100 font-normal"><%= lang.text("mt4-1")%></h1>
+                    <%if (lang.currentLanguage() != 'en'){%>
+                    <h1 class="mt4__title mg-tp-50 font-normal"><%= lang.text("mt4-1")%></h1>
                     <div class="h3 font-info text-center font-normal"><%= lang.text("mt4-2")%></div>
-                    <p class="mt4__con1 mg-tp-30">
+                    <div class="mt4__con1 mg-tp-30">
                         <%= lang.text("mt4-3")%>
-                    </p>
-                    <div class="space-between mg-tp-100">
+                    </div>
+                    <% } %>
+                    <%if (lang.currentLanguage() == 'en'){%>
+                    <div class="mt4__con2">
+                        <h1 class="mg-200__two-title mg-tp-50">The MetaTrader 4 Platform and Expert Advisors</h1>
+                        <p>As well as our own multi award-winning trading platform, TigerWit clients can also trade
+                            using MT4. The MetaTrader 4 platform, most commonly known as MT4, is one of the most popular
+                            trading platforms and is trusted by traders all over the world. <br>
+                            Originally launched in 2005 by the Metaquotes Software Corp., MT4’s popularity has never
+                            waned and is still more commonly used than its successor MT5. This is partly due to its ease
+                            of use and customizability, as well as its integration of Expert Advisors (EAs). <br>
+                            Traders can place orders using the MetaTrader 4 platform or use its live rates to place
+                            instant market execution orders. The MetaTrader 4 software is available to use in mobile and
+                            desktop versions, allowing traders the flexibility to monitor the market and place trades
+                            and orders the way that suits them. <br>
+                            MT4 also allows users to access charts, indicators, and other helpful trading tools, many of
+                            which have been created by other users of the trading platform. This interaction and user
+                            generated tools are key factors in the platform’s popularity. EAs are an example of this and
+                            are commonly used to automate trading according to the users’ risk/reward appetite and
+                            market condition preference.
+                        </p>
+                        <div class="mg-200__two-title">Automated Trading with Expert Advisors on MT4</div>
+                        <p>EAs, or Expert Advisors, are often referred to as Forex Trading Robots that can allow users
+                            to predetermine the conditions and levels that they would like trade in and allow the system
+                            to do the work for them. Many consider the decision-making part of trading to be one of the
+                            most difficult factors as emotion can often take control. But by having a clear trading
+                            strategy in mind before starting to trade, EAs can be programmed to open and close deals on
+                            your behalf, taking emotion and human error out of the equation. These are just some of the
+                            reasons that make traders download MetaTrader 4.<br>
+                            When looking to use the automated trading feature of EA software, you can pre-set the
+                            parameters that you would like to trade under. If these market conditions align, the
+                            computerized system will place or close trades according to your needs. By setting EAs into
+                            action, traders can save time and let the system do the work for them… However, it is
+                            strongly recommended that all Expert Advisors are back tested before being used. Back
+                            testing allows you to see how a certain EA or trading strategies would have performed under
+                            historical financial data. Whilst this is recommended, it is also worth noting that past
+                            performance is not a reliable indication of the future of any given financial market.
+                        </p>
+                        <div class="mg-200__two-title ">
+                            Key Advantages of using EAs on MetaTrader 4
+                        </div>
+                        <p class="mg-200__circle"><span>Remove the need for instant decision making with predetermined
+                                software.</span></p>
+                        <p class="mg-200__circle"><span>Trades can be set to open and close without the need for you to
+                                be monitoring the market.</span></p>
+                        <p class="mg-200__circle"><span>EAs can instantly compute rules that enable you to operate
+                                complicated trading strategies.</span></p>
+                        <div class="mg-200__two-title ">
+                            Ready to Get Start with MT4 and TigerWit?
+                        </div>
+                        <p>You can easily download MetaTrader 4 via the button below and you can also download our
+                            dynamic app too.</p>
+                    </div>
+                    <% } %>
+                    <div class="space-between mg-tp-50">
                         <div class="">
                             <img src="/images/web/mt4-ios.png">
                             <div class="font-normal pd-tp-50 pd-bt-50">
-                                <a class="mt4__info" href="https://itunes.apple.com/cn/app/metatrader-4/id496212596?l=en&mt=8" target="_blank">
+                                <a class="mt4__info"
+                                    href="https://itunes.apple.com/cn/app/metatrader-4/id496212596?l=en&mt=8"
+                                    target="_blank">
                                     <img src="/images/web/mt4-ios-s.png">
                                     <span><%= lang.text("mt4-4")%></span>
                                     <span class="qr_code"><img src="/images/web/ios.png"></span>
@@ -35,7 +93,9 @@
                         <div class="">
                             <img src="/images/web/mt4-and.png">
                             <div class="font-normal pd-tp-50 pd-bt-50">
-                                <a class="mt4__info" href="https://download.mql5.com/cdn/web/metaquotes.software.corp/mt4/metatrader4.apk?utm_campaign=www.metatrader4.com" target="_blank">
+                                <a class="mt4__info"
+                                    href="https://download.mql5.com/cdn/web/metaquotes.software.corp/mt4/metatrader4.apk?utm_campaign=www.metatrader4.com"
+                                    target="_blank">
                                     <img src="/images/web/mt4-and-s.png">
                                     <span><%= lang.text("mt4-5")%></span>
                                     <span class="qr_code"><img src="/images/web/android-20191014-live.png"></span>
@@ -47,7 +107,7 @@
                             <div class="font-normal pd-tp-50 pd-bt-50">
                                 <a class="mt4__info" href="<%= lang.text('webMt4Download')%>" target="_blank">
                                     <img src="/images/web/mt4-com-s.png">
-                                     <span><%= lang.text("mt4-6")%></span>
+                                    <span><%= lang.text("mt4-6")%></span>
                                 </a>
                             </div>
                         </div>
@@ -56,27 +116,28 @@
             </div>
         </div>
 
-    <% include /common/vendor/web.js.html %>
+        <% include /common/vendor/web.js.html %>
 
-    <!-- build:js(client) /scripts/web.js -->
-    <script src="/scripts/common/config.service.js"></script>        
-    <script src="/scripts/common/account.service.js"></script>
-    <script src="/scripts/common/authorization.service.js"></script>
-    <script src="/scripts/common/ranklist.service.js"></script>
-    <script src="/scripts/common/product.service.js"></script>
-    <script src="/scripts/common/lang.service.js"></script>
-    <script src="/scripts/common/lang_data.service.js"></script>
-    <script src="/scripts/common/redbag.service.js"></script>
+        <!-- build:js(client) /scripts/web.js -->
+        <script src="/scripts/common/config.service.js"></script>
+        <script src="/scripts/common/account.service.js"></script>
+        <script src="/scripts/common/authorization.service.js"></script>
+        <script src="/scripts/common/ranklist.service.js"></script>
+        <script src="/scripts/common/product.service.js"></script>
+        <script src="/scripts/common/lang.service.js"></script>
+        <script src="/scripts/common/lang_data.service.js"></script>
+        <script src="/scripts/common/redbag.service.js"></script>
 
-    <script src="/scripts/common/global.controller.js"></script>
-        
-    <script src="/scripts/common/navbar.directive.js"></script>
-    <script src="/scripts/common/dropdown.directive.js"></script>
-    <!-- endbuild -->
+        <script src="/scripts/common/global.controller.js"></script>
+
+        <script src="/scripts/common/navbar.directive.js"></script>
+        <script src="/scripts/common/dropdown.directive.js"></script>
+        <!-- endbuild -->
 
         <div class="footer">
             <% include /common/nav/web.footer.html %>
         </div>
     </div>
 </body>
+
 </html>
