@@ -115,7 +115,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr ng-if="oil" ng-cloak ng-repeat="item in oil">
+                    <tr ng-if="energy" ng-cloak ng-repeat="item in energy">
                         <td>{{ item.symbol }}</td>
                         <td ng-if="!lang.isEnglishArea()">{{ item.symbol_cn }}</td>
                         <td class="pro-public__no-padding">{{ item.contract_size }}</td>
@@ -138,13 +138,13 @@
                 </tbody>
             </table>
             <div ng-show="showFolder">
-                <div ng-show="oil.length >= 6 && !unfold" class="text-center" ng-cloak>
+                <div ng-show="energy.length >= 6 && !unfold" class="text-center" ng-cloak>
                     <a class="btn btn-text font-size-14" ng-click="unfoldFun()">
                         <%=lang.text('more')%>
                         <i class="fa fa-angle-down"></i>
                     </a>
                 </div>
-                <div ng-show="oil.length >= 6 && unfold" class="text-center">
+                <div ng-show="energy.length >= 6 && unfold" class="text-center">
                     <a class="btn btn-text font-size-14" ng-click="foldFun()" ng-cloak>
                         <%=lang.text('fold')%>
                         <i class="fa fa-angle-up"></i>
