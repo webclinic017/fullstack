@@ -12,15 +12,17 @@
         };
         return service;
 
-        function dealPublicRequest ($url, $method, $params) {
+        function dealPublicRequest($url, $method, $params) {
             $params = $params ? $params : {};
             var user_code = $cookies["user_code"] || '';
-            // if(!$params.user_code){
-            //     $params.user_code = user_code;
-            // }
+            if (user_code) {
+                $url = fun.setUrlParam($url) + "user_id=" + user_code;
+            }
             var token = $cookies["token"] || '';
-            $url = fun.setUrlParam($url) + "token=" + token + "&user_id=" + user_code;
-            
+            if (token) {
+                $url = fun.setUrlParam($url) + "token=" + token;
+            }
+
             if ($method.toUpperCase() === 'GET') {
                 return $http.get($url, {
                     params: $params
@@ -53,7 +55,7 @@
             }
         }
 
-        function errFunc (error) {
+        function errFunc(error) {
             console.log(error);
             console.log("服务器异常");
             // layer.msg("服务器异常");
@@ -61,7 +63,7 @@
         }
 
         // 检查返回的token code确定是不是要重新登陆
-        function checkTokenCode (data) {
+        function checkTokenCode(data) {
             // 100100,  // 令牌错误
             // 100101,  // 令牌已被列入黑名单   
             // 100102,  // 令牌过期    
@@ -70,27 +72,28 @@
             // debugger;
             if (data.code >= 100100 && data.code <= 100199) {
                 var path, u;
-                if($window.location.host.indexOf('ibonline') != -1){
+                if ($window.location.host.indexOf('ibonline') != -1) {
                     path = '/payment';
-                    u='/payment/login';
+                    u = '/payment/login';
                 }
-                else if($window.location.host.indexOf('dp') != -1){
+                else if ($window.location.host.indexOf('dp') != -1) {
                     path = '/payment';
-                    u='/payment/login';
+                    u = '/payment/login';
                 }
                 else {
                     // $state.go('account.subpage', {params: 'login'});
                     path = '/';
-                    u='/space/#/account/login';
+                    u = '/space/#/account/login';
                     $rootScope.personalCookiesInfo.userCode = undefined;
                 }
-                $rootScope.writeCookie({name: 'token', value: '', expires: -1, path: path});
-                $rootScope.writeCookie({name: 'user_code', value: '', expires: -1, path: path});
-                $rootScope.writeCookie({name: 'username', value: '', expires: -1, path: path});
-                $rootScope.writeCookie({name: 'username_en', value: '', expires: -1, path: path});
-                $rootScope.writeCookie({name: 'world_code', value: '', expires: -1, path: path});
-                $window.location.href=u;
-                
+                $rootScope.writeCookie({ name: 'token', value: '', expires: -1, path: path });
+                $rootScope.writeCookie({ name: 'user_code', value: '', expires: -1, path: path });
+                $rootScope.writeCookie({ name: 'username', value: '', expires: -1, path: path });
+                $rootScope.writeCookie({ name: 'username_en', value: '', expires: -1, path: path });
+                $rootScope.writeCookie({ name: 'world_code', value: '', expires: -1, path: path });
+                if((location.pathname + location.hash) !== u){
+                    $window.location.href = u;
+                }
             } else {
                 return data;
             }
