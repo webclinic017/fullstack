@@ -15,7 +15,7 @@
       'forex-trading': 'forex',
       'oil-trading': 'energy',
       'cfd-trading': 'cfd',
-      'glod-trading': 'metal',
+      'precious-metal-trading': 'metal',
       'stock-trading': 'stock'
     }
     var curProduct = compatibility[curUrlKey];

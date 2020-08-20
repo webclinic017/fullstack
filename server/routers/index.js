@@ -436,7 +436,7 @@ router.get('/blog/:subpage(*)', function (req, res) {
     res.render('blog/details.html');
 });
 // 交易品种简拼
-router.get('/:subpage(forex-trading|glod-trading|oil-trading|cfd-trading|stock-trading)', function (req, res) {
+router.get('/:subpage(forex-trading|precious-metal-trading|oil-trading|cfd-trading|stock-trading)', function (req, res) {
     var subpage = req.params.subpage.substring(0, (req.params.subpage.length - 8)) || 'forex';
     var pageInfo = {
         id: subpage
