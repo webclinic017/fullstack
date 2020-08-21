@@ -177,7 +177,7 @@
                         $(".layui-m-layer-comment .m_comment_modal .btn_box span").removeClass("active");
                         $(".layui-m-layer-comment .m_comment_modal .btn_box .record_btn").addClass("active");
 
-                        $(".layui-m-layer-comment .m_comment_modal .title h4").html("挂单成功");
+                        $(".layui-m-layer-comment .m_comment_modal .title .h4").html("挂单成功");
                         $(".layui-m-layer-comment .m_comment_modal .volume .volume_num").removeClass("active");
                         $(".layui-m-layer-comment .m_comment_modal .volume .info").html($(".layui-m-layer-comment .m_comment_modal .volume .volume_num input").val());
                         $(".layui-m-layer-comment .m_comment_modal .volume .info").addClass("active");

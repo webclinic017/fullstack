@@ -3,95 +3,95 @@
         <div class="pd-tp-50">
             <div class="link-list <%= lang.currentLanguage()%>">
                 <div class="link-list__item">
-                    <h2>
+                    <div class="h2">
                         <p class="mg-bt-20">
                             <span><%= lang.text("foot1")%></span>
                         </p>
-                    </h2>
+                    </div>
                     <ul>
                         <li class="mg-bt-15">
-                            <h3>
+                            <div class="h3">
                                 <a href="/web/mt4" ng-click="toTrackEvent('bottom navigation', 'global_bottom_navigation_mt4download')">
                                     &nbsp;<%= lang.text("foot2")%>
                                 </a>
-                            </h3>
+                            </div>
                         </li>
                         <li>
-                            <h3>
+                            <div class="h3">
                                 <a href="/web/product/trade" ng-click="toTrackEvent('bottom navigation', 'global_bottom_navigation_mt4web')">
                                     &nbsp;<%= lang.text("foot3")%>
                                 </a>
-                            </h3>
+                            </div>
                         </li>
                     </ul>
                 </div>
                 <div class="link-list__item">
-                    <h2>
+                    <div class="h2">
                         <p class="mg-bt-20">
                             <span><%= lang.text("foot4")%></span>
                         </p>
-                    </h2>
+                    </div>
                     <ul>
                         <li class="mg-bt-15">
-                            <h3>
+                            <div class="h3">
                                 <a href="/web/faq/real" ng-click="toTrackEvent('bottom navigation', 'global_bottom_navigation_faq')">
                                     &nbsp;<%= lang.text("faq")%>
                                 </a>
-                            </h3>
+                            </div>
                         </li>
                         <%if(!lang.isEnglishArea()){%>
                         <li>
-                            <h3>
+                            <div class="h3">
                                 <a href="/web/help/introduce">
                                     &nbsp;<%= lang.text("foot14")%>
                                 </a>
-                            </h3>
+                            </div>
                         </li>
                         <%}%>
                     </ul>
                 </div>
                 <div class="link-list__item">
-                    <h2>
+                    <div class="h2">
                         <p class="mg-bt-20">
                             <span><%= lang.text("foot7")%></span>
                         </p>
-                    </h2>
+                    </div>
                     <ul>
                         <li class="mg-bt-15">
-                            <h3>
+                            <div class="h3">
                                 <a href="/web/blog/agreement" ng-click="toTrackEvent('bottom navigation', 'global_bottom_navigation_information')">
                                     &nbsp;<%= lang.text("foot7")%>
                                 </a>
-                            </h3>
+                            </div>
                         </li>
                         <li>
-                            <h3>
+                            <div class="h3">
                                 <a href="/web/blog/trade_fee" ng-click="toTrackEvent('bottom navigation', 'global_navigation_trade_fees')">
                                     &nbsp;<%= lang.text("foot15")%>
                                 </a>
-                            </h3>
+                            </div>
                         </li>
                     </ul>
                 </div>
                 <div class="link-list__item">
-                    <h2>
+                    <div class="h2">
                         <p class="mg-bt-20">
                             <span><%= lang.text("foot11")%></span>
                         </p>
-                    </h2>
+                    </div>
                 <%if (lang.areaId != 1) {%>
                     <ul>
                         <li class="mg-bt-15">
-                            <h3>
+                            <div class="h3">
                                 <a class="font-dark" ng-href='mailto:{{sysMessage.email}}' ng-click="toTrackEvent('bottom navigation', 'global_navigation_email')">
                                     &nbsp;{{sysMessage.email}}
                                 </a>
-                            </h3>
-                            <h3>
+                            </div>
+                            <div class="h3">
                                 <a class="font-dark" ng-href='tel:{{sysMessage.phone}}'>
                                     {{sysMessage.phone}}
                                 </a>
-                            </h3>
+                            </div>
                         </li>
                     </ul>
                 <%}%>
@@ -154,7 +154,7 @@
     </div>
 </div>
 <div id="footer-service-wrapper" style="display:none;">
-    <h4><%= lang.text("foot_42")%></h4><ul class="clearfix"><li class="ordinary_serv"><span><img src="/images/footer-service-1.png"></span><%= lang.text("foot_43")%></li><li class="agent_serv"><span><img src="/images/footer-service-2.png"></span><%= lang.text("foot_45")%></li></ul><div class="tip clearfix"><p><%= lang.text("foot_44")%><br><%= lang.text("foot_44_2")%></p><p> <%= lang.text("foot_46")%><br><%= lang.text("foot_47")%></p></div>
+    <div class="h4"><%= lang.text("foot_42")%></div><ul class="clearfix"><li class="ordinary_serv"><span><img src="/images/footer-service-1.png"></span><%= lang.text("foot_43")%></li><li class="agent_serv"><span><img src="/images/footer-service-2.png"></span><%= lang.text("foot_45")%></li></ul><div class="tip clearfix"><p><%= lang.text("foot_44")%><br><%= lang.text("foot_44_2")%></p><p> <%= lang.text("foot_46")%><br><%= lang.text("foot_47")%></p></div>
 </div>
 
 <!-- global客服系统接入 2018.11.12 -->

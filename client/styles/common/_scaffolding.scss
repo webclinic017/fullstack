@@ -2,7 +2,6 @@
 // Scaffolding
 // --------------------------------------------------
 
-
 // Reset the box-sizing
 //
 // Heads up! This reset may cause conflicts with some third-party widgets.
@@ -26,8 +25,8 @@ input:focus,
 
 // Body reset
 html {
-  font-size: 10px;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+    font-size: 10px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 body {
@@ -40,30 +39,40 @@ body {
 
 //Title reset
 h1,
+.h1,
 h2,
+.h2,
 h3,
+.h3,
 h4,
-h5 {
+.h4,
+h5,
+.h5 {
     margin-top: 20px;
     margin-bottom: 10px;
     font-family: $font-family-base;
-    font-weight:500;
+    font-weight: 500;
 }
 
-h1 {
-    font-size:$font-size-h1;
+h1,
+.h1 {
+    font-size: $font-size-h1;
 }
-h2 {
-    font-size:$font-size-h2;
+h2,
+.h2 {
+    font-size: $font-size-h2;
 }
-h3 {
-    font-size:$font-size-h3;
+h3,
+.h3 {
+    font-size: $font-size-h3;
 }
-h4 {
-    font-size:$font-size-h4;
+h4,
+.h4 {
+    font-size: $font-size-h4;
 }
-h5 {
-    font-size:$font-size-h5;
+h5,
+.h5 {
+    font-size: $font-size-h5;
 }
 
 p {

@@ -5,7 +5,7 @@
         <!-- build:css(.tmp) /styles/web.css -->
         <link rel="stylesheet" href="/styles/web.css">
         <!-- endbuild -->
-
+        <!-- <title>{{details.title}}</title> -->
         <% include /common/statistic/main.html %>
     </head>
     <body ng-app="fullstackApp" class="<%= lang_class%> <%= lang.isAr('ar-lang')%>">
@@ -16,7 +16,7 @@
             
             <div class="body">
               <div class="real_blog_details" ng-controller="BlogDetailsController" ng-cloak>
-                <h3 class="real_blog_details__title">{{details.title}}</h3>
+                <h1 class="real_blog_details__title">{{details.title}}</h1>
                 <div class="real_blog_details__desc space-between-center">
                   <div class="">
                     <span class="label_name" ng-style="{'background-color': details.label_color}">{{details.label_name}}</span>

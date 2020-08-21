@@ -1,5 +1,5 @@
 <div class="pro-comment mg-200__bg" ng-controller="ProductCommentController" ng-cloak>
-    <h3 class="mg-200__circle-title pd-bt-20"><span>每日汇评</span></h3>
+    <h1 class="mg-200__circle-title pd-bt-20"><span>每日汇评</span></h1>
     <div class="pro-comment__loading" ng-show="loading">
         <img src="/ngsrc/loading.gif">
     </div>
@@ -7,7 +7,7 @@
         <li class="pro-comment__details" ng-repeat="comment in commentList">
             <a ng-href="/bd/comment/{{comment.id}}?type={{comment.id}}" target="_blank">
                 <div class="pro-comment__details-title item-center">
-                    <h4>{{comment.title}}</h4>
+                    <div class="title">{{comment.title}}</div>
                     <span class="morning" ng-show="comment.morning_night == 1">早评</span>
                     <span class="night" ng-show="comment.morning_night == 2">晚评</span>
                 </div>

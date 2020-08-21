@@ -722,7 +722,7 @@ module.exports = {
         "ar": "الأسعار هي للاسترشاد بها فقط. لا يتم تحديث الأسعار في أيام السبت والأحد."
     },
     "forex1": {
-        "en": "The Foreign Exchange Market, or Forex market, is the largest in the world. In 2019, trading volumes reached $5.1 trillion dollars. People all over the world start trading Forex to benefit from fluctuation in exchange rates between a currency pair and do this via online trading platforms. It is mostly affected by international trade, national economy, and the policy and influence of investment flows. As a result of this information, the Forex market is more transparent, prices are fairer, and liquidity is better. ",
+        "en": "The Foreign Exchange Market, or Forex market, is the largest in the world. In 2019, trading volumes reached more than US$5.0 trillion per day.",
         "zh": "外汇市场是全球最大的单一市场之一。2013年交易量达5.3万亿美元。由于外汇汇率主要受国际间贸易、各国经济和政策以及投资流向的影响，所以外汇市场的信息更透明、流通性更好、价格更公平。其具有在工作日的所有24小时内双向交易的特点，深受大型投资机构和投资者的喜爱。",
         "vi": "Thị trường ngoại hối là một trong những thị trường đơn lẻ lớn nhất thế giới. Trong năm 2013, khối lượng giao dịch đạt 5,3 nghìn tỷ đô la. Tỷ giá hối đoái chủ yếu bị ảnh hưởng bởi tình hình thương mại quốc tế, nền kinh tế quốc dân và chính sách và ảnh hưởng của dòng vốn đầu tư. Kết quả là, thông tin thị trường ngoại hối minh bạch hơn, thanh khoản tốt hơn và có giá hợp lý hơn. Thực hiện mua hoặc bán các giao dịch có thể được hoàn thành trong 24 giờ vào các ngày trong tuần. Tất cả những lợi thế trên làm cho giao dịch ngoại hối bị ảnh hưởng sâu sắc bởi các tổ chức đầu tư lớn và các nhà đầu tư.",
         "zh-Hant": "外匯市場是全球最大的單壹市場之壹。2013年交易量達5.3萬億美元。由於外匯匯率主要受國際間貿易、各國經濟和政策以及投資流向的影響，所以外匯市場的信息更透明、流通性更好、價格更公平。其具有在工作日的所有24小時內雙向交易的特點，深受大型投資機構和投資者的喜愛。",
@@ -730,6 +730,16 @@ module.exports = {
         "es": "El Mercado de Foreign Exchange es uno de los mercados mundiales más extensos. En 2013, los volúmenes de trading alcanzaron ya los $5.3 trillion de dólares. Las tasas en Foreign Exchange se ven afectadas principalmente por el comercio internacional, las economías nacionales y la política, los bancos centrales y están expuestos a la influencia de los flujos inversores. Como resultado, la información del mercado Foreign Exchange es más transparente, la liquidez es mejor y existen unos precios más justos. Las transacciones de compra o venta pueden completarse durante las 24 horas todos los días laborables de la semana. Dentro del mercado de Foreign Exchange un flujo importante del volumen está en manos de inversores institucionales. ",
         "pt-BR": "O Mercado de Câmbio é um dos maiores mercados únicos do mundo. Em 2013, os volumes de negociação chegaram a US$5,3 trilhões de dólares. A taxa de câmbio é, em sua maioria, afetada pelos comércio internacional, economia nacional e a política e influência dos fluxos de investimento. Como resultado, o mercado de câmbio é mais transparente, a liquidez é melhor e os preços são bem mais cabíveis. Transações de compra e venda podem ser completadas em 24 horas em dias de semana. Todas as vantagens citadas fazem o Mercado de Câmbio profundamente afetado porgrandes instituições de investimento e investidores.",
         "ar": "سوق العملات الأجنبية هي أضخم سوق مالية في العالم.  ففي عام 2013، وصل حجم التداول إلى 5.3 تريليون دولار أمريكي.  ويتأثر سعر صرف العملات الأجنبية إلى حد كبير بالتجارة الدولية وبالاقتصاد الوطني وبالسياسة وباتجاه تأثير تدفقات الاستثمار.  وبناء على ذلك، تكون المعلومات في سوق العملات الأجنبية أكثر شفافية وأفضل سيولة وهناك قدر أكبر من الأسعار العادلة.  ويمكن إتمام معاملات الشراء أو البيع على مدار 24 ساعة في كل يوم من أيام العمل في الأسبوع.   وجميع هذه المزايا سالفة الذكر تجعل سوق العملات يتأثر تأثرًا شديدًا بكبار مؤسسات الاستثمار والمستثمرين."
+    },
+    "forex2": {
+        "en": "People all over the world start trading Forex to benefit from fluctuations in exchange rates between a currency pair and do this via online trading platforms. Forex is mostly affected by international trade, national economy, and the policy and influence of investment flows. As a result of this information, the Forex market is more transparent, prices are fairer, and liquidity is better.",
+        "zh": " ",
+        "vi": " ",
+        "zh-Hant": " ",
+        "id": " ",
+        "es": " ",
+        "pt-BR": " ",
+        "ar": " "
     },
     "forex3": {
         "en": "Why trade Foreign Exchange with TigerWit?",
@@ -742,7 +752,7 @@ module.exports = {
         "ar": "لماذا يجب أن تتداول العملات الأجنبية مع TigerWit؟"
     },
     "forex4": {
-        "en": "TigerWit understands that transparency is one of the key factors that people look for when they trade Forex. Our platform is based on blockchain technology that ensures all trades are undisputable and can be checked via our online ledger. In addition to this, TigerWit puts Forex trading in the palm of your hand via our multi award-winning app and you can also use MT4 with full support for EAs. We offer a wide range of payment options that make depositing and withdrawing funds in a simple, quick and secure manner. Our Forex trading market conditions are highly competitive and we offer a range of account types to support individual traders needs. For institutional traders and those with their own client base, we also offer a wide range of IB, affiliate and white label solutions to help promote your business.",
+        "en": "TigerWit understands that transparency is one of the key factors that people look for when they trade Forex. Our platform is based on blockchain technology that ensures all trades are indisputable and can be checked via our online ledger. In addition to this, TigerWit puts Forex trading in the palm of your hand via our multi-award-winning app. You can also use MT4 with full support for Electronic Advisors (EAs).",
         "zh": "出入金模式简单、快捷、效力高、保险，涵盖所有主流货币对及交叉货币对。我们提供更灵活、更透明、更具竞争力的外汇合约，同时您还可以享受到TigerWit所提供的创新性的跟单交易模式，是连接高手和普通投资者的纽带。",
         "vi": "TigerWit với chế độ rút tiền và kí quỹ đơn giản, nhanh chóng, hiệu quả và an toàn, TigerWit hiển thị các dịch vụ của tất cả các cặp tiền tệ chính và cặp tiền tệ chéo. Với việc cung cấp thỏa thuận ngoại hối linh hoạt, minh bạch và cạnh tranh hơn, TigerWit cũng mang đến bước đột phá khi đặt lệnh một cách sáng tạo theo trạng thái và đóng vai trò như một sợi dây để kết nối các bậc thầy và các nhà đầu tư phổ biến.",
         "zh-Hant": "出入金模式簡單、快捷、效力高、保險，涵蓋所有主流貨幣對及交叉貨幣對。我們提供更靈活、更透明、更具競爭力的外匯合約，同時您還可以享受到TigerWit所提供的創新性的跟單交易模式，是連接高手和普通投資者的紐帶。",
@@ -792,7 +802,7 @@ module.exports = {
         "ar": "متابعة تحركات الأساتذة"
     },
     "forex10": {
-        "en": "TigerWit offers an innovative Copy Trading feature that allows you to pick a Master Trader that fits your Forex trading strategy and has a risk/reward ratio that matches your needs. Once you have selected a Master, you can use our system to automatically follow their trades. In addition, if you would like to become a Master Trader, you can earn commission for each follower you gain.",
+        "en": "TigerWit offers an innovative Copy Trading feature that allows you to pick a Master Trader that fits your Forex trading strategy and has a risk/reward ratio that matches your needs. Once you have selected a Master, you can use our system to automatically follow their trades. In addition, if you would like to become a Master Trader, you can earn a commission for each follower you gain. ",
         "zh": "TigerWit提供业内超先进，具有创新性的全自动复制跟单系统，并且汇聚众多颇具盈利能力的投资高手，投资者可通过复制高手交易获得同比例投资收益。高手也可通过不断增加跟随者而获得更多收益。",
         "vi": "TigerWit cung cấp hệ thống theo thứ tự hoàn toàn tiên tiến, đầy sáng tạo và tập hợp nhiều nhà đầu tư chuyên nghiệp với khả năng tạo lợi nhuận lớn. Các nhà đầu tư có khả năng để đạt được thu nhập của cùng một tỷ lệ với các nhà đầu tư chính thông qua việc Sao chép họ. Các nhà đầu tư chính cũng có thể có được nhiều thu nhập hơn thông qua việc tăng số lượng người Sao chép của họ liên tục.",
         "zh-Hant": "TigerWit提供業內超先進，具有創新性的全自動複製跟單系統，並且匯聚眾多頗具盈利能力的投資高手，投資者可通過復制高手交易獲得同比例投資收益。高手也可通過不斷增加跟隨者而獲得更多收益。",
@@ -17170,7 +17180,7 @@ module.exports = {
         },
         "about2": {
             "zh": " ",
-            "en": "TigerWit was founded with one clear purpose; to bring fresh technological solutions to an industry stuck in its ways and in need of reimagination and new vision.",
+            "en": "TigerWit prides itself in providing clients the most popular instruments for online trading. For this reason, we offer a wide range of Forex, Commodities, Indices, Cryptocurrencies and Equity CFDs that can all be traded via our multi award-winning app.",
             "vi": "TigerWit được thành lập với một mục đích rõ ràng; để mang lại các giải pháp công nghệ mới cho các nhà giao dịch đang bị kẹt lại và đang cần một sự đổi mới và một phiên bản mới.",
             "zh-Hant": " ",
             "id": "TigerWit didirikan dengan 1 tujuan yang jelas; yaitu memberikan solusi teknologi yang baru dalam industri yang masih kurang berinovasi dan memerlukan imaginasi dan visi yang baru.",
@@ -17180,7 +17190,7 @@ module.exports = {
         },
         "about4": {
             "zh": " ",
-            "en": "We focus all our energy on opportunities where design, systems and processes can be upgraded and reinvented for the benefit of traders today and tomorrow.",
+            "en": " ",
             "vi": "Chúng tôi tập trung tất cả năng lượng của mình vào các cơ hội mà các khâu thiết kế, hệ thống và quy trình có thể được nâng cấp và tái cấu trúc nhằm mục đích tạo ra lợi ích của các nhà giao dịch ngày hôm nay và tương lai.",
             "zh-Hant": " ",
             "id": "Kami memfokuskan semua energi kami pada rancangan, sistem dan proses yang diperbarui dan diciptakan kembali untuk memberikan manfaat untuk para trader hari ini dan hari esok.",

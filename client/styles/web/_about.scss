@@ -213,7 +213,7 @@
     margin: 0 auto;
     padding-top: 150px;
     @include m(introduce) {
-      > h3 {
+      > .tit {
         color: #ffffff;
         margin-bottom: 32px;
         margin-top: 0;
@@ -332,7 +332,7 @@
     background: #ffffff;
     text-align: center;
     overflow: hidden;
-    h4{
+    .h4{
       margin-bottom: 0;
       a{
         color: #000;
@@ -359,7 +359,7 @@
 }
 // media
 @include b(media-content) {
-  h3 {
+  .tit {
     font-size: 34px;
     color: #ffffff;
     span {
@@ -393,7 +393,7 @@
   .abouts_conter {
     .center {
       width: 100%;
-      h3 {
+      .tit {
         font-size: 34px;
         color: #ffffff;
         span {
