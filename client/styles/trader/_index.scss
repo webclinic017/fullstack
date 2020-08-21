@@ -216,7 +216,7 @@ $font-trader-gray-color: $gray-dark;
   //     margin : 20px 0 20px 0;
   // }
   @include e(list) {
-    h5 {
+    .h5 {
       font-size: 20px;
       color: rgba(30, 32, 36, 1);
       line-height: 28px;

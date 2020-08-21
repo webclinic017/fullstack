@@ -13,14 +13,14 @@
         <div>
           <%if (lang.currentLanguage() === 'ar'){%>
             <div class="mg-tp-20 text-center" style="width: 400px;">
-              <h3 class="index_new__focus-title" style="color: #ffd521;">TigerWit تهنئ</h3>
-              <h3 class="index_new__focus-title">ليفربول - بطل الدوري</h3>
-              <h3 class="index_new__focus-title"> الممتاز 19/20</h3>
+              <div class="index_new__focus-title h3" style="color: #ffd521;">TigerWit تهنئ</div>
+              <div class="index_new__focus-title h3">ليفربول - بطل الدوري</div>
+              <div class="index_new__focus-title h3"> الممتاز 19/20</div>
             </div>
           <%} else {%>
             <div class="focus-liverpool-wrapper <%= lang.currentLanguage()%>">
-              <h3 class="index_new__focus-title" style="color: #ffd521;"><%= lang.text("newhome_liverpool1")%></h3>
-              <h3 class="index_new__focus-title"><%= lang.text("newhome_liverpool2")%></h3>
+              <div class="index_new__focus-title h3" style="color: #ffd521;"><%= lang.text("newhome_liverpool1")%></div>
+              <div class="index_new__focus-title h3"><%= lang.text("newhome_liverpool2")%></div>
               <p class="index_new__focus-date"><span>2019/2020</span></p>
               <p class="index_new__focus-sub_tit"><%= lang.text("newhome_liverpool3")%></p>
               <p class="index_new__focus-sub_tit"><%= lang.text("newhome_liverpool4")%></p>
@@ -108,7 +108,7 @@
   <!-- 与高手列表页明星高手列表一样 -->
   <div class="index_new__container" ng-if="masterStarList.records.length > 0">
     <div class="index_new__copy">
-      <h3 class="index_new__copy-title"><%= lang.text("newhome_10")%></h3>
+      <div class="index_new__copy-title h3"><%= lang.text("newhome_10")%></div>
       <p class="index_new__copy-sub_tit"><%= lang.text("newhome_11")%></p>
       <div class="ranklist_cont pd-tp-20">
         <div class="ranklist_cont__master space-between-center"
@@ -213,7 +213,7 @@
     </div>
   </div>
   <div class="index_new__invite">
-    <h3 class="index_new__invite-title"><%= lang.text("mInviteNew6")%></h3>
+    <div class="index_new__invite-title h3"><%= lang.text("mInviteNew6")%></div>
     <p class="index_new__invite-sub_tit"><%= lang.text("mInviteNew7")%></p>
     <ul>
       <li>
@@ -240,9 +240,9 @@
   </div>
   <div class="index_new__flexible">
     <div class="index_new__container">
-      <h3 class="index_new__flexible-title"><%= lang.text("newhome_17")%></h3>
+      <div class="index_new__flexible-title h3"><%= lang.text("newhome_17")%></div>
       <p class="index_new__flexible-sub_tit"><%= lang.text("newhome_17_1")%></p>
-      <p class="index_new__flexible-sub_tit"><a href="/web/product/forex"><%= lang.text("newhome_17_2")%></a><a href="/web/product/metal"><%= lang.text("newhome_17_3")%></a><%= lang.text("newhome_17_4")%></p>
+      <p class="index_new__flexible-sub_tit"><a href="/forex-trading"><%= lang.text("newhome_17_2")%></a><a href="/precious-metal-trading"><%= lang.text("newhome_17_3")%></a><%= lang.text("newhome_17_4")%></p>
       <div class="">
         <div class="index_new__flexible-box">
           <div class="content">
@@ -318,36 +318,36 @@
       <ul class="index_new__flexible-lst">
         <li>
           <img ng-src="/white_label/home/flex-icon-1.png" alt="">
-          <h5><%= lang.text("newhome_18")%></h5>
+          <div class="h5"><%= lang.text("newhome_18")%></div>
           <p><%= lang.text("newhome_20")%></p>
         </li>
         <li>
           <img ng-src="/white_label/home/flex-icon-2.png" alt="">
-          <h5><%= lang.text("newhome_21")%></h5>
+          <div class="h5"><%= lang.text("newhome_21")%></div>
           <p><%= lang.text("newhome_22")%></p>
           <p><%= lang.text("newhome_23")%></p>
         </li>
         <li>
           <img ng-src="/white_label/home/flex-icon-3.png" alt="">
-          <h5><%= lang.text("newhome_27")%></h5>
+          <div class="h5"><%= lang.text("newhome_27")%></div>
           <p><%= lang.text("newhome_24")%></p>
         </li>
         <li>
           <img ng-src="/white_label/home/flex-icon-4.png" alt="">
-          <h5><%= lang.text("newhome_28")%></h5>
+          <div class="h5"><%= lang.text("newhome_28")%></div>
           <p><%= lang.text("newhome_25")%></p>
           <p><%= lang.text("newhome_26")%></p>
         </li>
       </ul>
       <div class="index_new__flexible-btn_box">
-        <a href="/web/product/forex" class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient"
+        <a href="/forex-trading" class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient"
           ng-click="toTrackEvent('home page', 'global_home_click_find_out_more')"><%= lang.text("newhome_29")%></a>
       </div>
     </div>
   </div>
   <div class="index_new__container">
     <div class="index_new__block">
-      <h3 class="index_new__block-title"><%= lang.text("newhome_30")%></h3>
+      <div class="index_new__block-title h3"><%= lang.text("newhome_30")%></div>
       <p class="index_new__block-sub_tit"><%= lang.text("newhome_31")%></p>
       <div class="index_new__block-content">
         <video height="500" controls autobuffer poster="/white_label/home/block-poster.png">
@@ -370,7 +370,7 @@
   <div class="index_new__tools" style='background-image: url("<%= lang.image('homeToolsBgCn')%>")'>
   <%}%>
     <div class="index_new__container">
-      <h3 class="index_new__tools-title"><%= lang.text("newhome_32")%></h3>
+      <div class="index_new__tools-title h3"><%= lang.text("newhome_32")%></div>
         <p class="index_new__tools-sub_tit"><%= lang.text("newhome_33")%></p>
         <p class="index_new__tools-sub_tit"><%= lang.text("newhome_34")%></p>
         <p class="index_new__tools-sub_tit"><%= lang.text("newhome_35")%></p>
@@ -394,18 +394,18 @@
   </div>
   <div class="index_new__container">
     <div class="index_new__reliable">
-      <h3 class="index_new__reliable-title"><%= lang.text("newhome_36")%></h3>
+      <div class="index_new__reliable-title h3"><%= lang.text("newhome_36")%></div>
       <ul class="index_new__reliable-lst">
         <li>
-          <h5 class="f"><%= lang.text("newhome_37_1")%></h5>
+          <div class="h5" class="f"><%= lang.text("newhome_37_1")%></div>
           <p><%= lang.text("newhome_37_2")%></p>
         </li>
         <li>
-          <h5 class="s"><%= lang.text("newhome_37")%></h5>
+          <div class="h5" class="s"><%= lang.text("newhome_37")%></div>
           <p><%= lang.text("newhome_38")%></p>
         </li>
         <li>
-          <h5 class="t"><%= lang.text("newhome_39")%></h5>
+          <div class="h5" class="t"><%= lang.text("newhome_39")%></div>
           <p><%= lang.text("newhome_40")%></p>
           <p><%= lang.text("newhome_41")%></p>
         </li>
@@ -416,7 +416,7 @@
     <div class="index_new__float_box">
       <div class="index_new__float space-between-center">
         <div class="">
-          <h3><%= lang.text("newhome_43")%></h3>
+          <div class="h3"><%= lang.text("newhome_43")%></div>
           <p><%= lang.text("newhome_44")%></p>
           <p><%= lang.text("newhome_45")%></p>
         </div>

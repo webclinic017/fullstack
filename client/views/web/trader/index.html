@@ -12,13 +12,13 @@
                     </div>
                     <div class="trader_info">
                         <div class="trader_user">
-                            <h3 class="trader_user__username">{{master.username}}</h3>
+                            <div class="trader_user__username">{{master.username}}</div>
                         </div>
-                        <h4 class="trader_tags" ng-if="master.tags">
+                        <div class="trader_tags" ng-if="master.tags">
                             <span ng-repeat="tag in master.tags track by $index">
                                 #{{tag}}
                             </span>
-                        </h4>
+                        </div>
                     </div>
                 </div>
                 <div class="" ng-if="!master.is_copy">
@@ -51,8 +51,8 @@
                         ng-if="!lang.hostIsCn()">
                         <span class="big-num-font">{{ (master.thirty_win_rate || '0.00') + '%' }}</span>
                     </div>
-                    <h4 class="trader_gray_color">{{ lang.text("tigerWitID.master.exact") }}
-                    </h4>
+                    <div class="trader_gray_color">{{ lang.text("tigerWitID.master.exact") }}
+                    </div>
                 </li>
                 <!-- <li></li> -->
                 <li class="trader_profit">
@@ -66,20 +66,20 @@
                         ng-if="!lang.hostIsCn()">
                         <span class="big-num-font ">{{ (master.thirty_profit_rate || '0.00') + '%' }}</span>
                     </div>
-                    <h4 class="trader_gray_color">{{ lang.text("tigerWitID.master.last30AaysYield") }}</h4>
+                    <div class="trader_gray_color">{{ lang.text("tigerWitID.master.last30AaysYield") }}</div>
                 </li>
                 <!-- <li></li> -->
                 <li class="trader_profit" ng-if="master.master_type == 1 && master.follow_profit >= 1000">
                     <div class="trader_profit__item">
                         <span class="big-num-font">${{ master.follow_profit }}</span>
                     </div>
-                    <h4 class="trader_gray_color">{{ lang.text("tigerWitID.master.profitCopiers") }}</h4>
+                    <div class="trader_gray_color">{{ lang.text("tigerWitID.master.profitCopiers") }}</div>
                 </li>
                 <li class="trader_profit" ng-if="!(master.master_type == 1 && master.follow_profit >= 1000)">
                     <div class="trader_profit__item">
                         <span class="big-num-font">{{ master.history_copy_count || '0' }}</span>
                     </div>
-                    <h4 class="trader_gray_color">{{ lang.text("tigerWitID.master.copiers") }}</h4>
+                    <div class="trader_gray_color">{{ lang.text("tigerWitID.master.copiers") }}</div>
                 </li>
             </ul>
         </div>

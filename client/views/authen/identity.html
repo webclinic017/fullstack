@@ -49,8 +49,8 @@
 
                             <ul class="select__dropdown" twform-select data-bind-model="realnameInfo.id_type">
                                 <li ng-repeat="id_type in idType"
-                                    ng-class="{'selected': id_type.value === realnameInfo.id_type.value}">
-                                    <span data-value="{{id_type.value}}">{{ id_type.key }}</span>
+                                    ng-class="{'selected': id_type.id === realnameInfo.id_type.value}">
+                                    <span data-value="{{id_type.id}}">{{ id_type.name }}</span>
                                 </li>
                             </ul>
                         </div>

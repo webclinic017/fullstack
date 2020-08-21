@@ -23,8 +23,8 @@
 
                     <ul class="select__dropdown" twform-select data-bind-model="addressInfo.type">
                         
-                        <li ng-repeat="type in addressType" ng-class="{'selected': type.value === addressInfo.type.value}">
-                            <span data-value="{{type.value}}">{{ type.key }}</span>
+                        <li ng-repeat="type in addressType" ng-class="{'selected': type.id === addressInfo.type.value}">
+                            <span data-value="{{type.id}}">{{ type.name }}</span>
                         </li>
                     </ul>
 

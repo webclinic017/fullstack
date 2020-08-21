@@ -1,6 +1,5 @@
 @include b(mt4) {
-
-    @include e (title) {
+    @include e(title) {
         text-align: center;
         font-size: 35px;
         color: $gray-base;
@@ -10,7 +9,13 @@
         padding: 0 50px;
         line-height: 22px;
     }
-
+    @include e(con2) {
+        p {
+            color: #90959f;
+            font-size: 18px;
+            line-height: 30px;
+        }
+    }
     @include e(img-com) {
         margin-top: 175px;
     }
@@ -26,7 +31,8 @@
         color: #222;
         padding: 0 10px;
 
-        &:hover, &:active {
+        &:hover,
+        &:active {
             color: #222;
             border: 1px solid $brand-primary;
 
@@ -57,5 +63,4 @@
         color: $brand-info;
         border-bottom: 1px solid $brand-info;
     }
-
 }
