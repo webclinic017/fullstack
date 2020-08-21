@@ -92,84 +92,6 @@ $(document).ready(function () {
         addressOne: false,
         addressTwo: false
     };
-    var addressTypeList = {
-        data: [
-            {
-                key: lang.text('third.third_username14'),
-                value: 1
-            },
-            {
-                key: lang.text('third.third_username15'),
-                value: 2
-            },
-            {
-                key: lang.text('third.third_username16'),
-                value: 3
-            }
-        ]
-    };
-    var cardTypeList = {
-        cn: [
-            {
-                key: lang.text('third.third_username8'),
-                value: 2
-            },
-            {
-                key: lang.text('third.third_username9'),
-                value: 0
-            },
-            {
-                key: lang.text('third.third_username10'),
-                value: 1
-            },
-            {
-                key: lang.text('third.third_username11'),
-                value: 3
-            },
-            // {
-            //     key: lang.text('third.third_username12'),
-            //     value: 4
-            // }
-        ],
-        en: [
-            {
-                key: lang.text('third.third_username11'),
-                value: 3
-            },
-            {
-                key: lang.text('third.third_username12'),
-                value: 4
-            },
-            {
-                key: lang.text('third.third_username13'),
-                value: 5
-            }
-        ],
-        hmt: [
-            {
-                key: lang.text('third.third_username10'),
-                value: 1
-            },
-            {
-                key: lang.text('third.third_username8'),
-                value: 2
-            },
-            {
-                key: lang.text('third.third_username11'),
-                value: 3
-            },
-            {
-                key: lang.text('third.third_username13'),
-                value: 5
-            }
-        ],
-        vi: [
-            {
-                key: lang.text('third.third_username13'),
-                value: 5
-            }
-        ]
-    };
     // 请求当前用户认证到哪一步
     setUserCookie();
 
@@ -290,7 +212,6 @@ $(document).ready(function () {
                 initStateInfo();
                 getKycList('0');
                 getKycList('1');
-                updateFilesType('address');
                 updateFilesType(userCacheInfo.world_code);
             }
         });
@@ -1047,35 +968,39 @@ $(document).ready(function () {
         previewBase64(file, $(e.target).attr("data-page"));
     });
 
-    function updateFilesType(type) {
-        if (type === 'address') {
-            var list = addressTypeList;
-            var id = 'address_type_list';
-        } else {
-            var identityType;
-            if (type === 'CN') {
-                identityType = 'cn'
-            } else if (type === 'MO' || type === 'TW' || type === 'HK') {
-                identityType = 'hmt'
-            } else if (type === 'VN') {
-                identityType = 'vi'
-            } else {
-                identityType = 'en'
+    function updateFilesType(worldCode) {
+        realnameSwitch(worldCode)
+        // 证件类型
+        publicRequest('getIdTypeApi', 'GET', {
+            world_code: worldCode
+        }).then(function (data) {
+            if (!data) return;
+            if (data.is_succ) {
+                //使用template模版
+                var html = bt('template_card_info', data);
+                //渲染
+                $("#identity_type_list").html(html);
+                
             }
-            var list = {
-                data: cardTypeList[identityType]
-            };
-            var id = 'identity_type_list';
-            realnameSwitch(type)
-        }
-        //使用template模版
-        var html = bt('template_card_info', list);
-        //渲染
-        $("#" + id).html(html);
+        });
+        // 地址证明
+        publicRequest('getIdTypeApi', 'GET', {
+            type: 1,
+            world_code: worldCode
+        }).then(function (data) {
+            if (!data) return;
+            if (data.is_succ) {
+                //使用template模版
+                var html = bt('template_card_info', data);
+                //渲染
+                $("#address_type_list").html(html);
+    
+            }
+        });
     }
     // 国家切换时cn填写真实姓名，global显示姓 + 名
-    function realnameSwitch(type) {
-        if (type === 'CN' || type === 'VN') {
+    function realnameSwitch(worldCode) {
+        if (worldCode === 'CN' || worldCode === 'VN') {
             $(ele.identity + ' .global').removeClass('active');
             $(ele.identity + ' .cn').addClass('active');
         } else {

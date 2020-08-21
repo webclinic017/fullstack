@@ -47,6 +47,7 @@
             getVerifyStatus: getVerifyStatus,
             setKyc: setKyc,
             getKyc: getKyc,
+            getIdType: getIdType,
             getAgentAuthStatus: getAgentAuthStatus,
             logout: logout,
             setBindEmail: setBindEmail,
@@ -596,6 +597,17 @@
          */
         function setKyc(json) {
             return publicHttp.dealPublicRequest(o.setKycApi, 'POST', json);
+        }
+        
+        /**
+         * @name getIdType
+         * @desc 获取认证证件类型
+         * @params
+         * type 0身份证明，1地址证明 默认0
+         * world_code: 开户国家 默认CN
+         */
+        function getIdType(params) {
+            return publicHttp.dealPublicRequest(o.getIdTypeApi, 'GET', params);
         }
 
         /**

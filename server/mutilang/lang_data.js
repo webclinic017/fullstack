@@ -15827,56 +15827,6 @@ module.exports = {
         "pt-BR": "Selecione data de nascimento",
         "ar": "حدد تاريخ الميلاد"
     },
-    "third_username8": {
-        "zh": "台湾居民来往大陆通行证",
-        "en": "Mainland travel permit for Taiwan residents, (MTP)",
-        "vi": "Giấy phép du lịch đại lục cho cư dân Đài Loan, (MTP)",
-        "zh-Hant": "臺灣居民來往大陸通行證",
-        "id": "Izin wisata untuk penduduk Taiwan",
-        "es": "Permiso de viaje continental para residentes de Taiwan, (MTP)",
-        "pt-BR": "Licença de viagem para residentes de Taiwan, (MTP)",
-        "ar": "تصريح سفر بر الصين الرئيسي بالنسبة للمقيمين في تايوان (MTP)"
-    },
-    "third_username9": {
-        "zh": "大陆居民身份证",
-        "en": "Chinese ID Card",
-        "vi": "Thẻ ID Trung Quốc",
-        "zh-Hant": "大陸居民身份證",
-        "id": "KTP (Kartu Tanda Penduduk)",
-        "es": "Tarjeta de identificación china",
-        "pt-BR": "Cartão de identificação chinesa",
-        "ar": "بطاقة هوية صينية"
-    },
-    "third_username10": {
-        "zh": "港澳居民来往内地通行证",
-        "en": "Mainland Travel Permit for Hong Kong and Macao Residents",
-        "vi": "Giấy phép du lịch đại lục cho cư dân Hồng Kông và Macao",
-        "zh-Hant": "港澳居民來往內地通行證",
-        "id": "Izin wisata untuk penduduk Hong Kong dan Macao",
-        "es": "Permiso de viaje continental para los residentes de Hong Kong y Macao",
-        "pt-BR": "Licença de viagem para residentes de Hong Kong e Macao",
-        "ar": "تصريح سفر بر الصين الرئيسي بالنسبة للمقيمين في هونج كونج وماكاو"
-    },
-    "third_username11": {
-        "zh": "护照",
-        "en": "Passport",
-        "vi": "Hộ chiếu",
-        "zh-Hant": "護照",
-        "id": "Paspor",
-        "es": "Pasaporte",
-        "pt-BR": "Passaporte",
-        "ar": "جواز السفر"
-    },
-    "third_username12": {
-        "zh": "驾驶证",
-        "en": "Driver License",
-        "vi": "Giấy phép Lái Xe",
-        "zh-Hant": "駕駛證",
-        "id": "SIM (Surat Izin Mengemudi)",
-        "es": "Licencia de conducir",
-        "pt-BR": "Carteira de motorista",
-        "ar": "رخصة القيادة"
-    },
     "third_username13": {
         "zh": "身份证",
         "en": "ID Card",

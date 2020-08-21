@@ -396,6 +396,6 @@
 <script id="template_card_info" type="text/html">
     <option value=""><%=lang.text('third_select')%></option>
     <$for (var i=0;i<data.length;i++){$>
-        <option value="<$= data[i].value$>"><$= data[i].key$></option>
+        <option value="<$= data[i].id$>"><$= data[i].name$></option>
     <$}$>
 </script>
