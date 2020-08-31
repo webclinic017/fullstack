@@ -460,3 +460,44 @@
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+// kl-当前交易-分红
+.table-hover > tbody > .tr-divident:hover {
+   background: none;
+}
+@include b(wrap) {
+  height: 50px;
+  width: calc(100% - 40px);
+  margin: 0 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // text-align: left;
+  text-align: initial;
+  border-bottom: 1px solid #d2d2d2;
+  padding: 0 20px;
+  @include m(flex) {
+    display: flex;
+    flex-direction: column;
+    .created {
+      color: #d2d2d2;
+    }
+  }
+  .list-right {
+    text-align: center;
+    width: 13%;
+  }
+  .list-right-hostory {
+    text-align: center;
+    width: 17%;
+  }
+  &:hover {
+   background-color: #ebebeb;
+  }
+}
+.right-empty {
+  width: calc(13% - 20px)
+}
+.right-empty-hostory {
+  width: calc(15% - 20px)
+}

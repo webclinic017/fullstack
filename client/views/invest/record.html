@@ -2,11 +2,11 @@
 <div class="invest_content history" ng-if="historyList.length > 0">
     <table class="table table-traffic table-hover">
         <colgroup>
-            <col width="25%">
-            <col width="25%">
-            <col width="25%">
-            <col width="25%">
-            <!-- <col width="35%"> -->
+            <col width="20%">
+            <col width="20%">
+            <col width="20%">
+            <col width="20%">
+            <col width="20%">
         </colgroup>
         <thead>
         <tr>
@@ -14,21 +14,40 @@
             <th>{{lang.text('tigerWitID.types')}}</th>
             <th>{{lang.text('tigerWitID.amount')}}</th>
             <th>{{lang.text('tigerWitID.state')}}</th>
+            <th></th>
         </tr>
         <!-- <th>备注</th> -->
         </thead>
-        <tbody>
-        <tr ng-repeat="history in historyList">
+        <tbody ng-repeat="history in historyList">
+        <tr>
             <td>{{ history.order_date | dateFormatter }}</td>
-            <td>{{ history.status_type }}</td> 
+            <td>{{ history.status_type }}</td>
             <td ng-class="{'font-danger': history.status === 2, 'font-success': history.status === 1, 'font-base': history.status=== 0}">
                 ${{ history.amount }}
             </td>
             <td>
                 <span>{{ history.status_explain }}</span>
             </td>
-            <!-- <td></td> -->
-        </tr>
+            <td>
+              <p ng-if="history.comment.trade_account_id" class="font-info" ng-click="showdetails(history)">
+                <a href="javascript:void(0);">{{ lang.text('tigerWitID.tradingAccount.details') }}</a>
+              </p>
+            </td>
+            <!-- <td class="invest_orders__btn">
+                <button href="" class="btn font-info font-size-16" ng-click="openInvestOwnDetailMdl('own', $event)">{{lang.text('tigerWitID.details.title')}}</button>
+            </td> -->
+          </tr>
+          <tr ng-if="history.details_type">
+            <td colspan="5" class="text-initial">
+              <p class="mg-bt-10">{{ lang.text('tigerWitID.details.orderNumber') }}: {{ history.comment.trade_account_id }}</p>
+              <p class="mg-bt-10">{{ lang.text('tigerWitID.symbolPage.products') }}: {{ history.comment.symbol }}</p>
+              <p class="mg-bt-10">{{ lang.text('tigerWitID.details.buySell') }} :
+              <span ng-if="history.comment.cmd === 0">{{ lang.text('tigerWitID.depositWithdrawal.buy') }}</span>
+              <span ng-if="history.comment.cmd === 1">{{ lang.text('tigerWitID.depositWithdrawal.sell') }}</span>
+              </p>
+              <p>{{ lang.text('tigerWitID.details.settledTo') }} : {{ lang.text('tigerWitID.tradingAccount.tradingAccountg') }}-{{ history.comment.account_name }}</p>
+            </td>
+          </tr>
         </tbody>
     </table>
 
@@ -38,5 +57,5 @@
 </div>
 <div ng-if="historyList.length <= 0" class="text-center mg-tp-50">
     <img src="/images/no_data.png" alt="" class="mg-bt-40">
-    <p>{{ lang.text('tigerWitID.noData') }}</p> 
+    <p>{{ lang.text('tigerWitID.noData') }}</p>
 </div>

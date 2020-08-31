@@ -11,6 +11,7 @@
         $scope.records = [];
         $scope.historyList = [];
         var mt4Id = '';
+        $scope.showdetails = showdetails
         $scope.pagebar = {
             config: {
                 // total: , 总页数
@@ -51,6 +52,15 @@
                 }
             });
 
+        }
+
+        // 查看详情
+        function showdetails(item) {
+          if (item.details_type) {
+            item.details_type = false;
+          } else {
+            item.details_type = true;
+          }
         }
 
         // function cancelWithdraw(code) {

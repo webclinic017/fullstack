@@ -2,10 +2,11 @@
 <div class="history">
     <table class="table table-hover table-bordered" ng-class="{'table-personal': lang.isThird(), 'table-personalF': !lang.isThird()}">
         <colgroup>
-            <col width="25%">
-            <col width="35%">
-            <col width="20%">
-            <col width="20%">
+            <col width="22%">
+            <col width="33%">
+            <col width="15%">
+            <col width="15%">
+            <col width="15%">
         </colgroup>
         <thead>
         <tr>
@@ -13,10 +14,11 @@
             <th>{{lang.text('tigerWitID.type')}}</th>
             <th>{{lang.text('tigerWitID.amount')}}</th>
             <th>{{lang.text('tigerWitID.balance')}}</th>
+            <th></th>
         </tr>
         </thead>
-        <tbody>
-        <tr ng-repeat="history in historyList" ng-if="historyList.length > 0">
+        <tbody ng-repeat="history in historyList" ng-if="historyList.length > 0">
+        <tr>
             <td>{{ history.created_at | dateFormatter }}</td>
             <td>
                 <span>{{ history.type }}</span>
@@ -29,6 +31,22 @@
                 ${{ history.amount }}
             </td>
             <td>${{ history.wallet_balance }}</td>
+            <td>
+              <p ng-if="history.comment.trade_account_id" class="font-info" ng-click="showdetails(history)">
+                <a href="javascript:void(0);">{{ lang.text('tigerWitID.tradingAccount.details') }}</a>
+              </p>
+            </td>
+        </tr>
+        <tr ng-if="history.details_type">
+          <td colspan="5" class="text-initial">
+            <p class="mg-bt-10">{{ lang.text('tigerWitID.details.orderNumber') }}: {{ history.comment.trade_account_id }}</p>
+            <p class="mg-bt-10">{{ lang.text('tigerWitID.symbolPage.products') }}: {{ history.comment.symbol }}</p>
+            <p class="mg-bt-10">{{ lang.text('tigerWitID.details.buySell') }} :
+            <span ng-if="history.comment.cmd === 'BUY'">{{ lang.text('tigerWitID.depositWithdrawal.buy') }}</span>
+            <span ng-if="history.comment.cmd === 'SELL'">{{ lang.text('tigerWitID.depositWithdrawal.sell') }}</span>
+            </p>
+            <p>{{ lang.text('tigerWitID.details.settledTo') }} : {{ lang.text('tigerWitID.tradingAccount.tradingAccountg') }}-{{ history.comment.trade_account_name }}</p>
+          </td>
         </tr>
         </tbody>
     </table>
@@ -38,6 +56,6 @@
     </div>
     <div ng-if="historyList.length <= 0" class="text-center mg-bt-20">
         <img src="/images/no_data.png" alt="" class="mg-bt-40">
-        <p>{{ lang.text('tigerWitID.noData') }}</p> 
+        <p>{{ lang.text('tigerWitID.noData') }}</p>
     </div>
 </div>

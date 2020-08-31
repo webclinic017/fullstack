@@ -13,7 +13,9 @@
         $scope.from_data = [];  // 复制持仓单
         $scope.traders = [];   // 复制交易持仓订单
         $scope.modal = {};
+        $scope.divident_amount_type = false;
         $scope.showOrders = showOrders;
+        $scope.showDividents = showDividents;
         $scope.showDetails = showDetails;
         $scope.openCopyMdl = openCopyMdl;
         $scope.openCancelCopyMdl = openCancelCopyMdl;
@@ -45,6 +47,11 @@
                 if (!data) return;
                 if (data.is_succ) {
                     data = data.data;
+                    if (data.divident_amount == '0.00' || data.divident_amount == 0) {
+                      $scope.divident_amount_type = false;
+                    } else {
+                      $scope.divident_amount_type = true;
+                    }
                     $scope.orders = data.records;
                     angular.extend($scope.orderCurrent, data);
 
@@ -77,6 +84,15 @@
                 $scope.orderCurrent.detailsShow = false;
             } else {
                 $scope.orderCurrent.detailsShow = true;
+            }
+        }
+
+        // 分红详情展示
+        function showDividents(order) {
+            if (order.dividentShow) {
+                order.dividentShow = false;
+            } else {
+                order.dividentShow = true;
             }
         }
 
@@ -238,7 +254,7 @@
                     $scope.message = '';
                     $scope.lang = lang;
                     $scope.closeModal = closeModal;
-                    
+
                     invest.invalidStockTrade(id, ticket).then(function (rs) {
                         if (rs.is_succ) {
                             $scope.message = rs.message || 'none!';

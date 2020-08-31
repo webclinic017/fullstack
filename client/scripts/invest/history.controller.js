@@ -12,6 +12,8 @@
         $scope.orders = [];             // 自主交易历史订单
         $scope.traders = [];            // copied traders 列表
         $scope.showOrders = showOrders;
+        $scope.showDividents = showDividents;
+        $scope.divident_amount_type = false;
         $scope.showDetails = showDetails;
         $scope.openInvestOwnDetailMdl = openInvestOwnDetailMdl;
         $scope.openInvestCopyDetailMdl = openInvestCopyDetailMdl;
@@ -31,12 +33,12 @@
         $scope.pagebar = {
             config: {
                 // total: , // 总页数
-                page: 1    
+                page: 1
             },
             pages: [],
             pagesBtn: [],
             // selectPage: , bind to pagination.selectPage
-            getList: getInvestHistoryDetails          
+            getList: getInvestHistoryDetails
         };
 
         var pagesize = 10;
@@ -46,12 +48,17 @@
         function getInvestHistoryData () {
             invest.getInvestHistoryData($scope.investSelect.id).then(function (data) {
                 // console.log(data);
+                if (data.data.divident_amount == '0.00' || data.data.divident_amount == 0) {
+                  $scope.divident_amount_type = false;
+                } else {
+                  $scope.divident_amount_type = true;
+                }
                 $scope.orderHistory = data.data;
                 $scope.orders = data.data.records;
 
                 $scope.$broadcast('hideLoadingImg');
             });
-            
+
         }
 
         // 显示/隐藏自主交易历史订单
@@ -60,6 +67,15 @@
                 $scope.orderHistory.detailsShow = false;
             } else {
                 $scope.orderHistory.detailsShow = true;
+            }
+        }
+
+        // 分红详情展示
+        function showDividents(order) {
+            if (order.dividentShow) {
+                order.dividentShow = false;
+            } else {
+                order.dividentShow = true;
             }
         }
 
@@ -106,7 +122,7 @@
                     total: getTotal(data.data.record_count, pagesize),
                     page: page
                 });
-            }); 
+            });
         }
 
         function getTotal(sum, pagesize) {
@@ -134,7 +150,7 @@
                     mt4_id: function() { return $scope.investSelect.id }
                 },
                 controller: function ($scope, invest, $modalInstance, mt4_id, lang) {
-                    
+
                     $scope.lang = lang;
                     $scope.details = [];        // 交易详情 弹窗数据
                     $scope.modal = {
@@ -143,14 +159,14 @@
                         usage : "history", //历史要做一些细节修改：平仓类型，时间
                     };
                     $scope.closeModal = closeModal;
-                    
+
                     invest.getInvestHistoryData(mt4_id).then(function (data) {
                         // console.info(data);
                         $scope.$broadcast('hideLoadingImg');
                         $scope.details = data.data.records;
                         $scope.modal.show = true;
                     });
-                    
+
                     function closeModal() {
                         $modalInstance.dismiss();
                     }
@@ -185,18 +201,18 @@
                     $scope.pagebar = {
                         config: {
                             total: 1, // 总页数
-                            page: 1    
+                            page: 1
                         },
                         pages: [],
                         pagesBtn: [],
                         // selectPage: , bind to pagination.selectPage
-                        getList: getInvestHistoryDetailsMdl          
+                        getList: getInvestHistoryDetailsMdl
                     };
 
                     $scope.closeModal = closeModal;
 
                     getInvestHistoryDetailsMdl();
-                    
+
                     function getInvestHistoryDetailsMdl (page) {
                         page = page ? page : 1;
                         var offset = (page-1)*pagesize;
@@ -212,7 +228,7 @@
                                 total: getTotal(data.data.record_count, pagesize),
                                 page: page
                             });
-                        }); 
+                        });
                     }
 
                     function closeModal() {

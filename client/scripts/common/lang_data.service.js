@@ -4237,6 +4237,36 @@
                     }
                 },
                 "details": {
+                    "buySell": {
+                        "zh": "交易方向",
+                        "en": "BUY/SELL",
+                        "vi": "MUA/BÁN",
+                        "zh-Hant": "交易方向",
+                        "id": "Beli/Jual",
+                        "es": "COMPRA/VENTA",
+                        "pt-BR": "COMPRA/VENDA",
+                        "ar": "شراء/ بيع"
+                    },
+                    "settledTo": {
+                        "zh": "结算到",
+                        "en": "Settled to",
+                        "vi": "Thanh toán cho",
+                        "zh-Hant": "結算到",
+                        "id": "Perhitungan",
+                        "es": "Asentado para",
+                        "pt-BR": "Estabelecido para",
+                        "ar": "تم تسوية إلى"
+                    },
+                    "Dividend": {
+                        "zh": "分红",
+                        "en": "Dividend",
+                        "vi": "Cổ tức",
+                        "zh-Hant": "分紅",
+                        "id": "Dividen",
+                        "es": "Dividendo",
+                        "pt-BR": "Dividendo",
+                        "ar": "توزيع الأرباح"
+                    },
                     "title": {
                         "zh": "详情",
                         "en": "Details",
