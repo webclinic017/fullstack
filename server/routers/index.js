@@ -447,16 +447,17 @@ router.get('/:subpage(forex-trading|precious-metal-trading|oil-trading|cfd-tradi
     });
 });
 // 交易品种
-// router.get('/web/product/:subpage(forex|metal|oil|cfd|stock)', function (req, res) {
-//     var subpage = req.params.subpage || 'forex';
-//     var pageInfo = {
-//         id: subpage
-//     };
-
-//     res.render('web/product.html', {
-//         pageInfo: pageInfo
-//     });
-// });
+router.get('/web/product/:subpage(forex|metal|oil|cfd|stock)', function (req, res) {
+    var subpage = req.params.subpage || 'forex';
+    var compatibly = {
+        forex: 'forex-trading',
+        metal: 'precious-metal-trading',
+        oil: 'oil-trading',
+        cfd: 'cfd-trading',
+        stock: 'stock-trading'
+    };
+    res.redirect('/' + compatibly[subpage]);
+});
 
 router.get('/web/product/trade', function (req, res) {
 
@@ -785,6 +786,7 @@ router.get('/bd/commentlist', function (req, res) {
     if (isMobile(req)) {
         res.render('bd/commentlist/h5.html');
     } else {
+        res.status(404);
         res.render('404.html');
     }
 });
@@ -815,6 +817,7 @@ router.get('/bd/calendarlist', function (req, res) {
     if (isMobile(req)) {
         res.render('bd/calendar/list.html');
     } else {
+        res.status(404);
         res.render('404.html');
     }
 });
@@ -825,6 +828,7 @@ router.get('/bd/calendar/:subpage', function (req, res) {
             id: req.params.subpage
         });
     } else {
+        res.status(404);
         res.render('404.html');
     }
 });

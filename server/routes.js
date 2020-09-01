@@ -442,7 +442,7 @@ module.exports = function (app) {
     app.route('/:url(404|*)').get(function (req, res) {
         // var viewFilePath = '404';
         // var statusCode = 404;
-        // res.status(statusCode);
+        res.status(404);
         // res.render(viewFilePath, {}, function(err, html) {
         //     if (err) {
         //         return res.json(statusCode);
