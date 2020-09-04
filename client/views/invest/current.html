@@ -5,7 +5,7 @@
         <a ng-href="{{ lang.text('companyCopyRules') }}" target="_blank">{{ lang.text("companyCopyRules") }}</a>
     </div>
     <table class="table table-traffic">
-        <colgroup>
+        <colgroup ng-if="divident_amount_type">
             <col width="32%">
             <col width="14%">
             <col width="14%">
@@ -13,6 +13,13 @@
             <col width="13%">
             <col width="13%">
         </colgroup>
+        <colgroup ng-if="!divident_amount_type">
+          <col width="35%">
+          <col width="17%">
+          <col width="17%">
+          <col width="16%">
+          <col width="15%">
+        <colgroup>
         <thead>
             <tr>
                 <th>{{lang.text('tigerWitID.details.operation')}}</th>
@@ -30,7 +37,7 @@
 
         <!-- 自主交易持仓订单 -->
         <table class="invest_table table table-striped table-hover">
-            <colgroup>
+            <colgroup ng-if="divident_amount_type">
                 <col width="32%">
                 <col width="14%">
                 <col width="14%">
@@ -38,6 +45,13 @@
                 <col width="13%">
                 <col width="13%">
             </colgroup>
+            <colgroup ng-if="!divident_amount_type">
+              <col width="35%">
+              <col width="17%">
+              <col width="17%">
+              <col width="16%">
+              <col width="15%">
+            <colgroup>
             <!-- 自主交易持仓订单概况 -->
             <thead>
                 <tr class="invest_orders" ng-if="orders.length > 0" ng-click="showOrders()">
@@ -82,12 +96,7 @@
         </table>
         <div class="invest_table_wrapper__tbody" ng-show="orderCurrent.detailsShow">
             <table class="invest_table table table-striped table-hover">
-                <colgroup>
-                    <!-- <col width="35%">
-                    <col width="17%">
-                    <col width="17%">
-                    <col width="16%">
-                    <col width="15%"> -->
+                <colgroup ng-if="divident_amount_type">
                     <col width="32%">
                     <col width="14%">
                     <col width="14%">
@@ -95,6 +104,13 @@
                     <col width="13%">
                     <col width="13%">
                 </colgroup>
+                <colgroup ng-if="!divident_amount_type">
+                  <col width="35%">
+                  <col width="17%">
+                  <col width="17%">
+                  <col width="16%">
+                  <col width="15%">
+                <colgroup>
                 <!-- 自主交易持仓订单详情 -->
                 <tbody ng-repeat="order in orders">
                     <tr class="" >
@@ -124,15 +140,15 @@
                             <i class="fa fa-dollar"></i>{{ order.gross_profit }}
                         </td>
                         <!-- 分红 -->
-                        <td ng-class="{'font-success': order.divident_amount.indexOf('-') != -1, 'font-danger': order.divident_amount.indexOf('-') < 0}" ng-if="lang.hostIsCn()">
+                        <td ng-class="{'font-success': order.divident_amount.indexOf('-') != -1, 'font-danger': order.divident_amount > 0}" ng-if="lang.hostIsCn()">
                             <i class="fa fa-dollar"></i>{{ order.divident_amount }}
-                            <p ng-if="order.divident_amount !== 0" class="font-info" ng-click="showDividents(order)">
+                            <p ng-if="order.divident_amount !== 0 && order.divident_amount !== '0.00'" class="font-info" ng-click="showDividents(order)">
                               <a href="javascript:void(0);">{{ lang.text('tigerWitID.details.title') }}</a>
                             </p>
                         </td>
-                        <td ng-class="{'font-danger': order.divident_amount.indexOf('-') != -1, 'font-success': order.divident_amount.indexOf('-') < 0}" ng-if="!lang.hostIsCn()">
+                        <td ng-class="{'font-danger': order.divident_amount.indexOf('-') != -1, 'font-success': order.divident_amount > 0}" ng-if="!lang.hostIsCn()">
                             <i class="fa fa-dollar"></i>{{ order.divident_amount }}
-                            <p ng-if="order.divident_amount !== 0" class="font-info" ng-click="showDividents(order)">
+                            <p ng-if="order.divident_amount !== 0 && order.divident_amount !== '0.00'" class="font-info" ng-click="showDividents(order)">
                               <a href="javascript:void(0);">{{ lang.text('tigerWitID.details.title') }}</a>
                             </p>
                         </td>
@@ -141,7 +157,7 @@
                             <button ng-if="order.is_pending === 1" href="" class="btn tw-btn-capsule-gradient tw-btn-sm" style="padding: 0px;" ng-click="invalidStockTrade(investSelect.id, order.ticket)">{{ lang.text('common_pending') }}</button>
                         </td>
                     </tr>
-                    <tr class="tr-divident" ng-if="order.divident_amount !== 0" ng-show="order.dividentShow">
+                    <tr class="tr-divident" ng-if="order.divident_amount !== 0 || order.divident_amount !== '0.00'" ng-show="order.dividentShow">
                       <td colspan="6">
                         <span class="invest_orders__trunk"></span>
                         <span class="invest_orders__branch"></span>
@@ -155,10 +171,10 @@
                             <p class="created">{{ i.created_at }}</p>
                           </div>
                             <div class="list-right">
-                              <span ng-class="{'font-success': i.amount.indexOf('-') != -1, 'font-danger': i.amount.indexOf('-') < 0}" ng-if="lang.hostIsCn()">
+                              <span ng-class="{'font-success': i.amount.indexOf('-') != -1, 'font-danger': i.amount > 0}" ng-if="lang.hostIsCn()">
                                   <i class="fa fa-dollar"></i>{{ i.amount }}
                               </span>
-                              <span ng-class="{'font-danger': i.amount.indexOf('-') != -1, 'font-success': i.amount.indexOf('-') < 0}" ng-if="!lang.hostIsCn()">
+                              <span ng-class="{'font-danger': i.amount.indexOf('-') != -1, 'font-success': i.amount > 0}" ng-if="!lang.hostIsCn()">
                                   <i class="fa fa-dollar"></i>{{ i.amount }}
                               </span>
                             </div>
@@ -179,12 +195,21 @@
         <!-- 复制交易持仓订单 -->
         <div ng-if="traders.length > 0" ng-repeat="trader in traders">
             <table class="invest_table table table-striped table-hover">
+                <colgroup ng-if="divident_amount_type">
+                    <col width="32%">
+                    <col width="14%">
+                    <col width="14%">
+                    <col width="14%">
+                    <col width="13%">
+                    <col width="13%">
+                </colgroup>
+                <colgroup ng-if="!divident_amount_type">
+                  <col width="35%">
+                  <col width="17%">
+                  <col width="17%">
+                  <col width="16%">
+                  <col width="15%">
                 <colgroup>
-                    <col width="35%">
-                    <col width="17%">
-                    <col width="17%">
-                    <col width="16%">
-                    <col width="15%">
                 </colgroup>
                 <!-- 复制交易持仓订单概况 -->
                 <thead>
@@ -216,6 +241,14 @@
                         <th ng-class="{'font-danger': trader.profit.indexOf('-') != -1, 'font-success':  trader.profit.indexOf('-') < 0}" ng-if="!lang.hostIsCn()">
                             <i class="fa fa-dollar"></i>{{ trader.floating_profit }}
                         </th>
+                        <!-- 分红 -->
+                        <th ng-class="{'font-success': trader.divident_amount.indexOf('-') != -1, 'font-danger':  trader.divident_amount.indexOf('-') < 0}" ng-if="lang.hostIsCn() && divident_amount_type">
+                            <i class="fa fa-dollar"></i>{{ trader.divident_amount }}
+                        </th>
+                        <th ng-class="{'font-danger': trader.divident_amount.indexOf('-') != -1, 'font-success':  trader.divident_amount.indexOf('-') < 0}" ng-if="!lang.hostIsCn() && divident_amount_type">
+                            <i class="fa fa-dollar"></i>{{ trader.divident_amount }}
+                        </th>
+                        <!--  分红end -->
                         <th class="invest_orders__btn">
                             <button class="btn font-info font-size-16" ng-click="openInvestCopyDetailMdl(trader, $event)">{{lang.text('tigerWitID.details.title')}}</button>
                             <button class="btn tw-btn-capsule-gradient tw-btn-sm" ng-click="openCancelCopyMdl(trader, $event)">{{lang.text('tigerWitID.details.cancel')}}</button>
@@ -225,17 +258,25 @@
             </table>
             <div class="invest_table_wrapper__tbody" ng-show="trader.detailsShow">
 
-                <table class="invest_table table table-striped table-hover">
-                    <colgroup>
-                        <col width="35%">
-                        <col width="17%">
-                        <col width="17%">
-                        <col width="16%">
-                        <col width="15%">
+                <table class="invest_table table table-striped table-hover" ng-repeat="order in trader.orders">
+                    <colgroup ng-if="divident_amount_type">
+                        <col width="32%">
+                        <col width="14%">
+                        <col width="14%">
+                        <col width="14%">
+                        <col width="13%">
+                        <col width="13%">
                     </colgroup>
+                    <colgroup ng-if="!divident_amount_type">
+                      <col width="35%">
+                      <col width="17%">
+                      <col width="17%">
+                      <col width="16%">
+                      <col width="15%">
+                    <colgroup>
                     <!-- 复制交易持仓订单详情 -->
                     <tbody>
-                        <tr class="" ng-repeat="order in trader.orders">
+                        <tr class="">
                             <td class="invest_orders__detail">
                                 <span class="invest_orders__trunk"></span>
                                 <span class="invest_orders__branch"></span>
@@ -261,19 +302,59 @@
                             <td ng-class="{'font-danger': order.gross_profit.indexOf('-') != -1, 'font-success': order.gross_profit.indexOf('-') < 0}" ng-if="!lang.hostIsCn()">
                                 <i class="fa fa-dollar"></i>{{ order.gross_profit }}
                             </td>
-                            <td>
-                                <span ng-if="!order.cancel_control" class="font-size-12">{{lang.text('tigerWitID.tradingAccount.tip13')}}</span>
-                                <span ng-if="!!order.cancel_control" class="font-size-12">{{lang.text('tigerWitID.tradingAccount.tip14')}}</span>
+                            <!-- 分红 -->
+                            <td ng-class="{'font-success': order.divident_amount.indexOf('-') != -1, 'font-danger': order.divident_amount > 0}" ng-if="lang.hostIsCn()">
+                                <i class="fa fa-dollar"></i>{{ order.divident_amount }}
+                                <p ng-if="order.divident_amount !== 0 && order.divident_amount !== '0.00'" class="font-info" ng-click="showDividents(order)">
+                                  <a href="javascript:void(0);">{{ lang.text('tigerWitID.details.title') }}</a>
+                                </p>
                             </td>
+                            <td ng-class="{'font-danger': order.divident_amount.indexOf('-') != -1, 'font-success': order.divident_amount > 0}" ng-if="!lang.hostIsCn()">
+                                <i class="fa fa-dollar"></i>{{ order.divident_amount }}
+                                <p ng-if="order.divident_amount !== 0 && order.divident_amount !== '0.00'" class="font-info" ng-click="showDividents(order)">
+                                  <a href="javascript:void(0);">{{ lang.text('tigerWitID.details.title') }}</a>
+                                </p>
+                            </td>
+                            <!-- 分红end -->
                             <td>
+                              <span ng-if="!order.cancel_control" class="font-size-12">{{lang.text('tigerWitID.tradingAccount.tip13')}}</span>
+                              <span ng-if="!!order.cancel_control" class="font-size-12">{{lang.text('tigerWitID.tradingAccount.tip14')}}</span>
                                 <button ng-if="order.is_pending === 1" href="" class="btn tw-btn-capsule-gradient tw-btn-sm" style="padding: 0px;" ng-click="invalidStockTrade(investSelect.id, order.ticket)">{{ lang.text('common_pending') }}</button>
                             </td>
                         </tr>
-                        <tr ng-if="trader.orders.length <= 0 && trader.detailsShow">
-                            <td colspan="5">{{lang.text('tigerWitID.tradingAccount.tip15')}}</td>
+                        <tr class="tr-divident" ng-if="order.divident_amount !== 0 && order.divident_amount !== '0.00'" ng-show="order.dividentShow">
+                          <td colspan="6">
+                            <span class="invest_orders__trunk"></span>
+                            <span class="invest_orders__branch"></span>
+                            <div class="space-between" ng-repeat="i in order.dividents">
+                            <div class="wrap" >
+                              <div class="wrap-flex">
+                                <p>
+                                {{lang.text('tigerWitID.details.Dividend')}}:{{i.comment}}
+
+                                </p>
+                                <p class="created">{{ i.created_at }}</p>
+                              </div>
+                                <div class="list-right">
+                                  <span ng-class="{'font-success': i.amount.indexOf('-') != -1, 'font-danger': i.amount > 0}" ng-if="lang.hostIsCn()">
+                                      <i class="fa fa-dollar"></i>{{ i.amount }}
+                                  </span>
+                                  <span ng-class="{'font-danger': i.amount.indexOf('-') != -1, 'font-success': i.amount > 0}" ng-if="!lang.hostIsCn()">
+                                      <i class="fa fa-dollar"></i>{{ i.amount }}
+                                  </span>
+                                </div>
+                              </div>
+                              <div class="right-empty"></div>
+                            </div>
+
+                          </td>
                         </tr>
+
                     </tbody>
                 </table>
+                <div class="text-center mg-tp-20" ng-if="trader.orders.length <= 0 && trader.detailsShow">
+                   {{lang.text('tigerWitID.tradingAccount.tip15')}}
+                </div>
                 <div ng-show="trader.notFirstLoad != true">
                     <div class="loading_img active">
                         <img src="/ngsrc/loading.gif">
@@ -284,13 +365,21 @@
         <!-- 复制持仓单 详情  - 取消跟单但不强平的单子 -->
         <div ng-if="from_data.length > 0" ng-repeat="data in from_data">
             <table class="invest_table table table-striped table-hover">
-                <colgroup>
-                    <col width="35%">
-                    <col width="17%">
-                    <col width="17%">
-                    <col width="16%">
-                    <col width="15%">
+                <colgroup ng-if="divident_amount_type">
+                    <col width="32%">
+                    <col width="14%">
+                    <col width="14%">
+                    <col width="14%">
+                    <col width="13%">
+                    <col width="13%">
                 </colgroup>
+                <colgroup ng-if="!divident_amount_type">
+                  <col width="35%">
+                  <col width="17%">
+                  <col width="17%">
+                  <col width="16%">
+                  <col width="15%">
+                <colgroup>
                 <!-- 复制交易持仓订单概况 -->
                 <thead>
                     <tr class="invest_orders" ng-click="showDetails(data)">
@@ -321,6 +410,15 @@
                         <th ng-class="{'font-danger': data.profit.indexOf('-') != -1, 'font-success':  data.profit.indexOf('-') < 0}" ng-if="!lang.hostIsCn()">
                             <i class="fa fa-dollar"></i>{{ data.floating_profit }}
                         </th>
+
+                        <!-- 分红 -->
+                        <th ng-class="{'font-success': data.divident_amount.indexOf('-') != -1, 'font-danger': data.divident_amount.indexOf('-') < 0}" ng-if="lang.hostIsCn() && divident_amount_type">
+                            <i class="fa fa-dollar"></i>{{ data.divident_amount }}
+                        </th>
+                        <th ng-class="{'font-danger': data.divident_amount.indexOf('-') != -1, 'font-success': data.divident_amount.indexOf('-') < 0}" ng-if="!lang.hostIsCn() && divident_amount_type">
+                            <i class="fa fa-dollar"></i>{{ data.divident_amount }}
+                        </th>
+                        <!--  分红end -->
                         <th class="invest_orders__btn">
                             <button href="" class="btn font-info font-size-16" ng-click="openInvestCopyDetailMdl(data, $event)">{{lang.text('tigerWitID.details.title')}}</button>
                             <p class="btn tw-btn-capsule-gradient tw-btn-disabled tw-btn-sm">{{lang.text('tigerWitID.details.canceledCopy')}}</p>
@@ -330,17 +428,25 @@
             </table>
             <div class="invest_table_wrapper__tbody" ng-show="data.detailsShow">
 
-                <table class="invest_table table table-striped table-hover">
-                    <colgroup>
-                        <col width="35%">
-                        <col width="17%">
-                        <col width="17%">
-                        <col width="16%">
-                        <col width="15%">
+                <table class="invest_table table table-striped table-hover" ng-repeat="order in data.orders">
+                    <colgroup ng-if="divident_amount_type">
+                        <col width="32%">
+                        <col width="14%">
+                        <col width="14%">
+                        <col width="14%">
+                        <col width="13%">
+                        <col width="13%">
                     </colgroup>
+                    <colgroup ng-if="!divident_amount_type">
+                      <col width="35%">
+                      <col width="17%">
+                      <col width="17%">
+                      <col width="16%">
+                      <col width="15%">
+                    <colgroup>
                     <!-- 复制交易持仓订单详情 -->
                     <tbody>
-                        <tr class="" ng-repeat="order in data.orders">
+                        <tr class="">
                             <td class="invest_orders__detail">
                                 <span class="invest_orders__trunk"></span>
                                 <span class="invest_orders__branch"></span>
@@ -366,17 +472,57 @@
                             <td ng-class="{'font-danger': order.gross_profit.indexOf('-') != -1, 'font-success': order.gross_profit.indexOf('-') < 0}" ng-if="!lang.hostIsCn()">
                                 <i class="fa fa-dollar"></i>{{ order.gross_profit }}
                             </td>
-
+                            <!-- 分红 -->
+                            <td ng-class="{'font-success': order.divident_amount.indexOf('-') != -1, 'font-danger': order.divident_amount > 0}" ng-if="lang.hostIsCn()">
+                                <i class="fa fa-dollar"></i>{{ order.divident_amount }}
+                                <p ng-if="order.divident_amount !== 0 && order.divident_amount !== '0.00'" class="font-info" ng-click="showDividents(order)">
+                                  <a href="javascript:void(0);">{{ lang.text('tigerWitID.details.title') }}</a>
+                                </p>
+                            </td>
+                            <td ng-class="{'font-danger': order.divident_amount.indexOf('-') != -1, 'font-success': order.divident_amount > 0}" ng-if="!lang.hostIsCn()">
+                                <i class="fa fa-dollar"></i>{{ order.divident_amount }}
+                                <p ng-if="order.divident_amount !== 0 && order.divident_amount !== '0.00'" class="font-info" ng-click="showDividents(order)">
+                                  <a href="javascript:void(0);">{{ lang.text('tigerWitID.details.title') }}</a>
+                                </p>
+                            </td>
+                            <!-- 分红end -->
                             <td>
                                 <span ng-if="!order.cancel_control" class="font-size-12">{{lang.text('tigerWitID.tradingAccount.tip13')}}</span>
                                 <span ng-if="!!order.cancel_control" class="font-size-12">{{lang.text('tigerWitID.tradingAccount.tip14')}}</span>
                             </td>
                         </tr>
-                        <tr ng-if="data.orders.length <= 0 && data.detailsShow">
-                            <td colspan="5">{{lang.text('tigerWitID.tradingAccount.tip15')}}</td>
+                        <tr class="tr-divident" ng-if="order.divident_amount !== 0 && order.divident_amount !== '0.00'" ng-show="order.dividentShow">
+                          <td colspan="6">
+                            <span class="invest_orders__trunk"></span>
+                            <span class="invest_orders__branch"></span>
+                            <div class="space-between" ng-repeat="i in order.dividents">
+                            <div class="wrap" >
+                              <div class="wrap-flex">
+                                <p>
+                                {{lang.text('tigerWitID.details.Dividend')}}:{{i.comment}}
+
+                                </p>
+                                <p class="created">{{ i.created_at }}</p>
+                              </div>
+                                <div class="list-right">
+                                  <span ng-class="{'font-success': i.amount.indexOf('-') != -1, 'font-danger': i.amount > 0}" ng-if="lang.hostIsCn()">
+                                      <i class="fa fa-dollar"></i>{{ i.amount }}
+                                  </span>
+                                  <span ng-class="{'font-danger': i.amount.indexOf('-') != -1, 'font-success': i.amount > 0}" ng-if="!lang.hostIsCn()">
+                                      <i class="fa fa-dollar"></i>{{ i.amount }}
+                                  </span>
+                                </div>
+                              </div>
+                              <div class="right-empty"></div>
+                            </div>
+
+                          </td>
                         </tr>
                     </tbody>
                 </table>
+                <div ng-if="data.orders.length <= 0 && data.detailsShow">
+                    {{lang.text('tigerWitID.tradingAccount.tip15')}}
+                </div>
                 <div ng-show="data.notFirstLoad != true">
                     <div class="loading_img active">
                         <img src="/ngsrc/loading.gif">

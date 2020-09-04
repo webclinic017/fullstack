@@ -47,12 +47,13 @@
 
         function getInvestHistoryData () {
             invest.getInvestHistoryData($scope.investSelect.id).then(function (data) {
-                // console.log(data);
-                if (data.data.divident_amount == '0.00' || data.data.divident_amount == 0) {
-                  $scope.divident_amount_type = false;
-                } else {
-                  $scope.divident_amount_type = true;
-                }
+                // console.log(90, data);
+                data.data.records.forEach(function (item) {
+                  if (item.divident_amount !== '0.00' && item.divident_amount !== 0) {
+                    $scope.divident_amount_type = true;
+                    return;
+                  }
+                })
                 $scope.orderHistory = data.data;
                 $scope.orders = data.data.records;
 
@@ -153,6 +154,7 @@
 
                     $scope.lang = lang;
                     $scope.details = [];        // 交易详情 弹窗数据
+                    $scope.isDivident = false;
                     $scope.modal = {
                         price: lang.text("tigerWitID.historyTransactions.closePrice"),
                         asset: lang.text("tigerWitID.historyTransactions.margin"),
@@ -163,6 +165,12 @@
                     invest.getInvestHistoryData(mt4_id).then(function (data) {
                         // console.info(data);
                         $scope.$broadcast('hideLoadingImg');
+                        data.data.records.forEach(function (item) {
+                          if (item.divident_amount !== 0 && item.divident_amount !== '0.00') {
+                            $scope.isDivident = true;
+                            return;
+                          }
+                        })
                         $scope.details = data.data.records;
                         $scope.modal.show = true;
                     });
@@ -192,6 +200,7 @@
 
                     $scope.lang = lang;
                     $scope.details = [];        // 交易详情 弹窗数据
+                    $scope.isDivident = false;
                     $scope.modal = {
                         price: lang.text("tigerWitID.historyTransactions.closePrice"),
                         asset: lang.text("tigerWitID.historyTransactions.margin"),
@@ -221,6 +230,12 @@
                         invest.getInvestHistoryDetails(trader.account_code, offset, pagesize, mt4_id).then(function (data) {
                             // console.info(data);
                             $scope.$broadcast('hideLoadingImg');
+                            data.data.records.forEach(function (item) {
+                              if (item.divident_amount !== 0 && item.divident_amount !== '0.00') {
+                                $scope.isDivident = true;
+                                return;
+                              }
+                            })
                             $scope.details = data.data.records;
                             $scope.modal.show = true;
 
