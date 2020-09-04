@@ -456,7 +456,7 @@ router.get('/web/product/:subpage(forex|metal|oil|cfd|stock)', function (req, re
         cfd: 'cfd-trading',
         stock: 'stock-trading'
     };
-    res.redirect('/' + compatibly[subpage]);
+    res.redirect(301, ('/' + compatibly[subpage]));
 });
 
 router.get('/web/product/trade', function (req, res) {

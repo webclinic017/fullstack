@@ -428,9 +428,12 @@ module.exports = function (app) {
         // 重写重定向方法，添加lang参数
         if (paramsLang) {
             var _redirect = res.redirect;
-            res.redirect = function (url) {
+            res.redirect = function (status, url) {
+                if (!url) {
+                    url = status;
+                }
                 url = path.sep + paramsLang + url;
-                return _redirect.call(this, url)
+                return _redirect.call(this, status, url)
             }
         };
 
