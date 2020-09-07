@@ -140,13 +140,13 @@
                             <i class="fa fa-dollar"></i>{{ order.gross_profit }}
                         </td>
                         <!-- 分红 -->
-                        <td ng-class="{'font-success': order.divident_amount.indexOf('-') != -1, 'font-danger': order.divident_amount > 0}" ng-if="lang.hostIsCn()">
+                        <td ng-class="{'font-success': order.divident_amount.indexOf('-') != -1, 'font-danger': order.divident_amount > 0}" ng-if="lang.hostIsCn() && divident_amount_type">
                             <i class="fa fa-dollar"></i>{{ order.divident_amount }}
                             <p ng-if="order.divident_amount !== 0 && order.divident_amount !== '0.00'" class="font-info" ng-click="showDividents(order)">
                               <a href="javascript:void(0);">{{ lang.text('tigerWitID.details.title') }}</a>
                             </p>
                         </td>
-                        <td ng-class="{'font-danger': order.divident_amount.indexOf('-') != -1, 'font-success': order.divident_amount > 0}" ng-if="!lang.hostIsCn()">
+                        <td ng-class="{'font-danger': order.divident_amount.indexOf('-') != -1, 'font-success': order.divident_amount > 0}" ng-if="!lang.hostIsCn() && divident_amount_type">
                             <i class="fa fa-dollar"></i>{{ order.divident_amount }}
                             <p ng-if="order.divident_amount !== 0 && order.divident_amount !== '0.00'" class="font-info" ng-click="showDividents(order)">
                               <a href="javascript:void(0);">{{ lang.text('tigerWitID.details.title') }}</a>
@@ -303,13 +303,13 @@
                                 <i class="fa fa-dollar"></i>{{ order.gross_profit }}
                             </td>
                             <!-- 分红 -->
-                            <td ng-class="{'font-success': order.divident_amount.indexOf('-') != -1, 'font-danger': order.divident_amount > 0}" ng-if="lang.hostIsCn()">
+                            <td ng-class="{'font-success': order.divident_amount.indexOf('-') != -1, 'font-danger': order.divident_amount > 0}" ng-if="lang.hostIsCn() && divident_amount_type">
                                 <i class="fa fa-dollar"></i>{{ order.divident_amount }}
                                 <p ng-if="order.divident_amount !== 0 && order.divident_amount !== '0.00'" class="font-info" ng-click="showDividents(order)">
                                   <a href="javascript:void(0);">{{ lang.text('tigerWitID.details.title') }}</a>
                                 </p>
                             </td>
-                            <td ng-class="{'font-danger': order.divident_amount.indexOf('-') != -1, 'font-success': order.divident_amount > 0}" ng-if="!lang.hostIsCn()">
+                            <td ng-class="{'font-danger': order.divident_amount.indexOf('-') != -1, 'font-success': order.divident_amount > 0}" ng-if="!lang.hostIsCn() && divident_amount_type">
                                 <i class="fa fa-dollar"></i>{{ order.divident_amount }}
                                 <p ng-if="order.divident_amount !== 0 && order.divident_amount !== '0.00'" class="font-info" ng-click="showDividents(order)">
                                   <a href="javascript:void(0);">{{ lang.text('tigerWitID.details.title') }}</a>
@@ -473,13 +473,13 @@
                                 <i class="fa fa-dollar"></i>{{ order.gross_profit }}
                             </td>
                             <!-- 分红 -->
-                            <td ng-class="{'font-success': order.divident_amount.indexOf('-') != -1, 'font-danger': order.divident_amount > 0}" ng-if="lang.hostIsCn()">
+                            <td ng-class="{'font-success': order.divident_amount.indexOf('-') != -1, 'font-danger': order.divident_amount > 0}" ng-if="lang.hostIsCn() && divident_amount_type">
                                 <i class="fa fa-dollar"></i>{{ order.divident_amount }}
                                 <p ng-if="order.divident_amount !== 0 && order.divident_amount !== '0.00'" class="font-info" ng-click="showDividents(order)">
                                   <a href="javascript:void(0);">{{ lang.text('tigerWitID.details.title') }}</a>
                                 </p>
                             </td>
-                            <td ng-class="{'font-danger': order.divident_amount.indexOf('-') != -1, 'font-success': order.divident_amount > 0}" ng-if="!lang.hostIsCn()">
+                            <td ng-class="{'font-danger': order.divident_amount.indexOf('-') != -1, 'font-success': order.divident_amount > 0}" ng-if="!lang.hostIsCn() && divident_amount_type">
                                 <i class="fa fa-dollar"></i>{{ order.divident_amount }}
                                 <p ng-if="order.divident_amount !== 0 && order.divident_amount !== '0.00'" class="font-info" ng-click="showDividents(order)">
                                   <a href="javascript:void(0);">{{ lang.text('tigerWitID.details.title') }}</a>
