@@ -39,7 +39,7 @@
         </tr>
         <tr ng-if="history.details_type">
           <td colspan="5" class="text-initial">
-            <p class="mg-bt-10">{{ lang.text('tigerWitID.details.orderNumber') }}: {{ history.comment.trade_account_id }}</p>
+            <p class="mg-bt-10">{{ lang.text('tigerWitID.details.orderNumber') }}: {{ history.comment.ticket }}</p>
             <p class="mg-bt-10">{{ lang.text('tigerWitID.symbolPage.products') }}: {{ history.comment.symbol }}</p>
             <p class="mg-bt-10">{{ lang.text('tigerWitID.details.buySell') }} :
             <span ng-if="history.comment.cmd === 'BUY'">{{ lang.text('tigerWitID.depositWithdrawal.buy') }}</span>
