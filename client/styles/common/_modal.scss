@@ -82,6 +82,10 @@
   width: $modal-lt;
 }
 
+.modal-xl {
+  width: $modal-xl;
+}
+
 //== 系统弹窗
 @include b(system_modal) {
   label {

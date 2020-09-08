@@ -194,7 +194,7 @@
 
             $modal.open({
                 templateUrl: '/views/invest/invest_detail_modal.html',
-                size: 'lg',
+                size: 'xl',
                 backdrop: true,
                 controller: function ($scope, invest, $modalInstance, lang) {
                     $scope.lang = lang;

@@ -22,7 +22,6 @@
             <td>{{ history.created_at | dateFormatter }}</td>
             <td>
                 <span>{{ history.type }}</span>
-                <span class="tw-btn font-info font-size-14" ng-click="backout(history.id)" ng-if="history.is_cancel === 1">{{lang.text('tigerWitID.revocation')}}</span>
             </td>
             <td ng-class="{'font-danger': history.amount.indexOf('-') < 0, 'font-success': history.amount.indexOf('-') >= 0}" ng-if="lang.hostIsCn()">
                 ${{ history.amount }}
@@ -33,8 +32,9 @@
             <td>${{ history.wallet_balance }}</td>
             <td>
               <p ng-if="history.comment.trade_account_id" class="font-info" ng-click="showdetails(history)">
-                <a href="javascript:void(0);">{{ lang.text('tigerWitID.tradingAccount.details') }}</a>
+                <a href="javascript:void(0);" class="font-info">{{ lang.text('tigerWitID.tradingAccount.details') }}</a>
               </p>
+              <span class="tw-btn font-info font-size-14" ng-click="backout(history.id)" ng-if="history.is_cancel === 1">{{lang.text('tigerWitID.revocation')}}</span>
             </td>
         </tr>
         <tr ng-if="history.details_type">
