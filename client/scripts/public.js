@@ -91,7 +91,8 @@
                 $rootScope.writeCookie({ name: 'username', value: '', expires: -1, path: path });
                 $rootScope.writeCookie({ name: 'username_en', value: '', expires: -1, path: path });
                 $rootScope.writeCookie({ name: 'world_code', value: '', expires: -1, path: path });
-                if((location.pathname + location.hash) !== u){
+                var pathname = fun.getPathName();
+                if ((pathname + location.hash) !== u) {
                     $window.location.href = u;
                 }
             } else {
