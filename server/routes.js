@@ -428,9 +428,12 @@ module.exports = function (app) {
         // 重写重定向方法，添加lang参数
         if (paramsLang) {
             var _redirect = res.redirect;
-            res.redirect = function (url) {
+            res.redirect = function (status, url) {
+                if (!url) {
+                    url = status;
+                }
                 url = path.sep + paramsLang + url;
-                return _redirect.call(this, url)
+                return _redirect.call(this, status, url)
             }
         };
 
@@ -442,7 +445,7 @@ module.exports = function (app) {
     app.route('/:url(404|*)').get(function (req, res) {
         // var viewFilePath = '404';
         // var statusCode = 404;
-        // res.status(statusCode);
+        res.status(404);
         // res.render(viewFilePath, {}, function(err, html) {
         //     if (err) {
         //         return res.json(statusCode);
