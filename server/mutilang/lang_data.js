@@ -20376,5 +20376,518 @@ module.exports = {
             "pt-BR": " para encontrar o seu caminho",
             "ar": " للعودة الى الصفحة  الرئيسية"
         }
+    },
+
+    "cashback": {
+        "title": {
+            "zh": "TigerWit现金返利",
+            "en": "Cash Back from TigerWit",
+            "vi": "Hoàn Tiền từ TigerWit",
+            "zh-Hant": "TigerWit現金返利",
+            "id": "Cashback dari TigerWit",
+            "es": "Cash Back en TigerWit",
+            "pt-BR": "Retorno de dinheiro da TigerWit",
+            "ar": "كاش باك مع TigerWit"
+        },
+        "tradeMake": {
+            "zh": "交易越多 - 返利越多！",
+            "en": "The More You Trade – The More You Make!",
+            "vi": "Giao Dịch Càng Nhiều - Nhận Càng Nhiều!",
+            "zh-Hant": "交易越多 - 返利越多！",
+            "id": "Makin banyak yang anda transaksikan - Makin banyak yang anda dapatkan!",
+            "es": "Cuanto más opera, más gana!",
+            "pt-BR": "Quanto mais você opera - mais você ganha!",
+            "ar": "كلما تداولت أكثر ... زادت أرباحك!"
+        },
+        "tradeMakeTip": {
+            "zh": "我们始终致力于为客户提供最好的服务，产品功能和客户活动，我们很高兴宣布我们有史以来最大金额的回馈活动…每月可获得高达$4675现金返利！",
+            "en": "We always strive to provide our clients with the best service, features and promotions, and we are delighted to announce our biggest offer ever… up to $4675 cashback every month!",
+            "vi": "Chúng tôi luôn cố gắng cung cấp cho khách hàng dịch vụ, các tính năng và chương trình ưu đãi tốt nhất. Và chúng tôi rất vui mừng thông báo về chương trình ưu đãi lớn nhất từ trước đến nay… hoàn tiền lên đến 4675 USD mỗi tháng!",
+            "zh-Hant": "我們始終致力於為客戶提供最好的服務，產品功能和客戶活動，我們很高興宣布我們有史以來最大金額的回饋活動…每月可獲得高達$4675現金返利！",
+            "id": "Kami akan selalu berusaha memberikan klien kami pelayanan, fitur, dan promo yang terbaik , dan kami dengan senang hati mengumumkan penawaran terbaik kami.. Cashback hingga $4,675 setiap bulan!",
+            "es": "Siempre nos esforzamos por brindar a nuestros clientes el mejor servicio, características y promociones, estamos encantados de anunciar nuestra oferta más grande ... ¡hasta $4,675 de reembolso cada mes!",
+            "pt-BR": "Sempre nos esforçamos para oferecer aos nossos clientes o melhor serviço, recursos e promoções, e temos o prazer de anunciar nossa maior oferta de todos os tempos ... até $ 4675 em devolução todo mês!",
+            "ar": "نحن نسعى دائمًا لتزويد عملائنا بأفضل الخدمات والميزات والعروض، ويسعدنا الإعلان عن أكبر عرض نقدمه حتى الآن ... كاش باك يصل إلى 4675$ شهريًا!",
+        },
+        "wayParticipation": {
+            "zh": "现有客户的参与方式如下：",
+            "en": "Here’s how it works for existing clients:",
+            "vi": "Thông tin chương trình dành cho khách hàng hiện tại:",
+            "zh-Hant": "現有客戶的參與方式如下：",
+            "id": "Berikut ketentuan untuk Klien TigerWit :",
+            "es": "Así es como funciona para los clientes existentes:",
+            "pt-BR": "É assim que funciona para clientes que já tem conta registrada:",
+            "ar": "آلية العمل للعملاء الحاليين:"
+        },
+        "over": {
+            "zh": "活动期间完成一笔入金后，您将在TigerWit账户的个人中心收到新的红包。收到红包后，您的每笔交易都将自动被计入现金返利活动。",
+            "en": "Following your next deposit, you will receive a new coupon in the ME section of your TigerWit account.  you will automatically start receiving cashback for every trade you make.",
+            "vi": "Với mỗi lần kí quỹ tiếp theo, bạn sẽ nhận được một coupon mới trong phần ME trong tài khoản TigerWit của bạn. Tài khoản của bạn sẽ tự động nhận được hoàn tiền với mỗi giao dịch bạn thực hiện",
+            "zh-Hant": "活動期間完成壹筆入金後，您將在TigerWit賬戶的個人中心收到新的紅包。收到紅包後，您的每筆交易都將自動被計入現金返利活動。",
+            "id": "Di  deposit anda yang selanjutnya, anda akan mendapatkan kupon baru di bagian Me/Saya akun TigerWit anda. Setelah anda menukar kupon ini, anda akan secara otomatis mendapatkan cashback dari setiap trade yang anda buat",
+            "es": "Después de su próximo depósito, recibirá un nuevo cupón en la sección YO de su cuenta de TigerWit. Automáticamente comenzará a recibir un reembolso por cada operación que realice",
+            "pt-BR": "Após seu próximo depósito, você receberá um novo cupom na seção EU da sua conta TigerWit. Você começará a receber automaticamente o reembolso por cada negociação que fizer.",
+            "ar": "بعد إيداعك التالي، ستتلقى قسيمة جديدة في قسم “ME” بحساب TigerWit الخاص بك. ستبدأ تلقائيًا في الحصول على الكاش باك لكل صفقة تقوم بها."
+        },
+        "trade5": {
+            "zh": "交易5手",
+            "en": "Trade 5 lots",
+            "vi": "Giao dịch 5 lots",
+            "zh-Hant": "交易5手",
+            "id": "Trade 5 lot",
+            "es": "Opere 5 Lotes",
+            "pt-BR": "Opere 5 lotes",
+            "ar": "تداول 5 عقود"
+        },
+        "get25": {
+            "zh": "赚取 $25",
+            "en": "Get $25",
+            "vi": "Nhận 25 USD",
+            "zh-Hant": "賺取 $25",
+            "id": "Dapatkan $25",
+            "es": "Obtenga $25",
+            "pt-BR": "Receba $25",
+            "ar": "احصل على 25$"
+        },
+        "trade10": {
+            "zh": "再交易10手",
+            "en": "Trade another 10 lots",
+            "vi": "Giao dịch thêm 10 lots",
+            "zh-Hant": "再交易10手",
+            "id": "Trade 10 lot lagi",
+            "es": "Opere otros 10 Lotes",
+            "pt-BR": "Opere outros 10 lotes",
+            "ar": "تداول 10 عقود أخرى"
+        },
+        "get50": {
+            "zh": "赚取 $50",
+            "en": "Get $50",
+            "vi": "Nhận 50 USD",
+            "zh-Hant": "赚取 $50",
+            "id": "Dapatkan $50",
+            "es": "Obtenga $50",
+            "pt-BR": "Receba $50",
+            "ar": "احصل على 50$"
+        },
+        "trade20": {
+            "zh": "再交易20手",
+            "en": "Trade another 20 lots",
+            "vi": "Giao dịch thêm 20 lots",
+            "zh-Hant": "再交易20手",
+            "id": "Trade 20 lot lagi",
+            "es": "Opere otros 20 Lotes",
+            "pt-BR": "Opere outros 20 lotes",
+            "ar": "تداول 20 عقد آخر"
+        },
+        "get100": {
+            "zh": "赚取 $100",
+            "en": "Get $100",
+            "vi": "Nhận 100 USD",
+            "zh-Hant": "赚取 $100",
+            "id": "Dapatkan $100",
+            "es": "Obtenga $100",
+            "pt-BR": "Receba $100",
+            "ar": "احصل على 100$"
+        },
+        "trade250": {
+            "zh": "再交易250手",
+            "en": "Trade another 250 lots",
+            "vi": "Giao dịch thêm 250 lots",
+            "zh-Hant": "再交易250手",
+            "id": "Trade 250 lot lagi",
+            "es": "Opere otros 250 Lotes",
+            "pt-BR": "Opere outros 250 lotes",
+            "ar": "تداول 250 عقد آخر"
+        },
+        "get1500": {
+            "zh": "赚取 $1500",
+            "en": "Get $1500",
+            "vi": "Nhận 1500 USD",
+            "zh-Hant": "赚取 $1500",
+            "id": "Dapatkan $1500",
+            "es": "Obtenga $1,500",
+            "pt-BR": "Receba $1500",
+            "ar": "احصل على 1500$"
+        },
+        "trade500": {
+            "zh": "再交易500手",
+            "en": "Trade another 500 lots",
+            "vi": "Giao dịch thêm 500 lots",
+            "zh-Hant": "再交易500手",
+            "id": "Trade 500 lot lagi",
+            "es": "Opere otros 500 Lotes",
+            "pt-BR": "Opere outros 500 lotes",
+            "ar": "تداول 500 عقد آخر"
+        },
+        "get3000": {
+            "zh": "赚取 $3000",
+            "en": "Get $3000",
+            "vi": "Nhận 3000 USD",
+            "zh-Hant": "赚取 $3000",
+            "id": "Dapatkan $3000",
+            "es": "Obtenga $3,000",
+            "pt-BR": "Receba $3000",
+            "ar": "احصل على 3000$"
+        },
+        "total": {
+            "zh": "累计",
+            "en": "Grand total",
+            "vi": "Tổng cộng",
+            "zh-Hant": "累計",
+            "id": "Total Keseluruhan",
+            "es": "Gran total",
+            "pt-BR": "Total geral",
+            "ar": "المبلغ الإجمالي"
+        },
+        "money": {
+            "zh": "$4,675",
+            "en": "$4,675",
+            "vi": "4675 USD",
+            "zh-Hant": "$4,675",
+            "id": "$4,675",
+            "es": "$4,675",
+            "pt-BR": "$4,675",
+            "ar": "$4,675"
+        },
+        "conditions": {
+            "zh": " *请参阅下面完整的条款和条件",
+            "en": "*See below for full terms and conditions",
+            "vi": "*Vui lòng chọn bên dưới để đọc thêm các điều khoản và điều kiện của chương trình.",
+            "zh-Hant": "*請參閱下面完整的條款和條件",
+            "id": "*Cek Syarat & Ketentuan selengkapnya dibawah ini",
+            "es": "*Consulte a continuación los términos y condiciones completos",
+            "pt-BR": "* Veja embaixo os termos e condições completos",
+            "ar": "* انظر أدناه للإطلاع على الشروط والأحكام الكاملة"
+        },
+        'clickHere': {
+            "zh": "此处",
+            "en": "here",
+            "vi": "đây",
+            "zh-Hant": "此處",
+            "id": "Klik disini",
+            "es": "aquí",
+            "pt-BR": "Clique aqui",
+            "ar": "هنا",
+        },
+        "login": {
+            "zh": "立即点击",
+            "en": "Click ",
+            "vi": "Chọn ",
+            "zh-Hant": "立即點擊",
+            "id": " ",
+            "es": "Haga clic ",
+            "pt-BR": " ",
+            "ar": "اضغط "
+        },
+        "login2": {
+            "zh": "登录您的帐户。",
+            "en": " to log into your account now.",
+            "vi": " để đăng nhập vào tài khoản của bạn ngay bây giờ.",
+            "zh-Hant": "登錄您的帳戶。",
+            "id": " untuk Login ke akun anda sekarang",
+            "es": " para iniciar sesión en su cuenta ahora.",
+            "pt-BR": " para entrar em sua conta agora.",
+            "ar": " لتسجيل الدخول الآن إلى حسابك."
+        },
+        "getMesg": {
+            "zh": "如果您是TigerWit的新注册用户，开设真实交易帐户并成功入金后，您将收到以下信息：",
+            "en": "If you are new to TigerWit, once you have opened and funded your live trading account you will receive all of the following:",
+            "vi": "Nếu bạn là khách hàng mới, sau khi đăng ký tài khoản và ký quỹ thành công bạn sẽ nhận được:",
+            "zh-Hant": "如果您是TigerWit的新註冊用戶，開設真實交易帳戶並成功入金後，您將收到以下信息：",
+            "id": "Jika anda masih baru di TigerWit, ketika anda telah membuka dan mendanai akun trading live anda , anda akan mendapatkan fasilitas sebagai berikut :",
+            "es": "Si es nuevo en TigerWit, una vez que haya abierto y financiado su cuenta de operaciones real, recibirá todo lo siguiente:",
+            "pt-BR": "Se você for novo na TigerWit, depois de abrir uma conta real de trading e depositar nela, receberá:",
+            "ar": "عند فتح حساب تداول حقيقي وتمويله مع TigerWit، ستحصل على الميَزات التالية:"
+        },
+        "educational": {
+            "zh": "免费一对一个人培训和教学资料",
+            "en": "Free 1-on-1 Personal Training and Educational Materials",
+            "vi": "Tài liệu đào tạo cá nhân 1-1 miễn phí",
+            "zh-Hant": "免費壹對壹個人培訓和教學資料",
+            "id": "Free 1 on 1 Personal Training dan Materi Edukatif",
+            "es": "Materiales educativos y de capacitación personal uno a uno gratis",
+            "pt-BR": "Treinamento pessoal individual e materiais educacionais gratuitos",
+            "ar": "مواد تعليمية وتدريب شخصي مجاني"
+        },
+        "seminar": {
+            "zh": "免费受邀参加现场活动和网络研讨会",
+            "en": "Free Invitations to Live Events and Webinars",
+            "vi": "Lời mời đến các sự kiện và hội thảo (nếu có)",
+            "zh-Hant": "免費受邀參加現場活動和網絡研討會",
+            "id": "Undangan Gratis untuk Live Events dan Webinar",
+            "es": "Invitaciones gratuitas a eventos en vivo y seminarios web",
+            "pt-BR": "Convites grátis para eventos ao vivo e seminarios web",
+            "ar": "ندوات إلكترونية تعليمية مجانية "
+        },
+        "simulated": {
+            "zh": "免费开通模拟账户零风险体验交易",
+            "en": "Free Demo Account to Practice Trading Risk Free",
+            "vi": "Tài khoản Demo miễn phí để trải nghiệm giao dịch với rủi ro bằng 0.",
+            "zh-Hant": " 免費開通模擬賬戶零風險體驗交易",
+            "id": "Free Akun Demo untuk melatih ilmu trading anda tanpa risiko",
+            "es": "Cuenta demo gratuita para practicar el trading sin riesgos",
+            "pt-BR": "Conta de demonstração gratuita para praticar trading sem risco",
+            "ar": "حساب تجريبي مجاني"
+        },
+        "rebate": {
+            "zh": "活动期间再完成一笔入金后，您将有资格参与赚取高达 $4675的现金返利活动！",
+            "en": "You will then be eligible to start earning up to $4675 Cashback following your next deposit!",
+            "vi": "Bạn sẽ có đủ điều kiện để bắt đầu nhận Phiếu Thưởng lên đến 4675 USD kể từ lần ký quỹ kế tiếp!",
+            "zh-Hant": "活動期間再完成壹筆入金後，您將有資格參與賺取高達 $4675的現金返利活動！",
+            "id": "Anda akan berhak mendapatkan cashback hingga $4,675 pada deposit anda yang berikutnya!",
+            "es": "¡Entonces será elegible para comenzar a ganar hasta $4,675 Cashback después de su próximo depósito!",
+            "pt-BR": "Você então estará qualificado para começar a ganhar até $ 4675 em devoluções após o seu próximo depósito!",
+            "ar": "ستكون بعد ذلك مؤهلاً للحصول على كاش باك يصل إلى 4675$ كاش باك بعد الإيداع التالي!"
+        },
+        "openAccount": {
+            "zh": "点击",
+            "en": "Click ",
+            "vi": "Chọn ",
+            "zh-Hant": "點擊",
+            "id": " ",
+            "es": "Haga clic ",
+            "pt-BR": " ",
+            "ar": "اضغط "
+        },
+        "openAccount2": {
+            "zh": "立即开设帐户",
+            "en": " to open an account now.",
+            "vi": " để mở một tài khoản nhay bây giờ.",
+            "zh-Hant": "立即開設帳戶",
+            "id": " untuk membuka akun sekarang",
+            "es": " para abrir una cuenta ahora.",
+            "pt-BR": " para abrir uma conta agora.",
+            "ar": " لفتح الآن حساب تداول."
+        },
+        "termsConditions": {
+            "zh": "条款和条件",
+            "en": "Terms and Conditions:",
+            "vi": "Điều khoản và điệu kiện:",
+            "zh-Hant": "條款和條件",
+            "id": "Syarat & Ketentuan : ",
+            "es": "Terminos y condiciones:",
+            "pt-BR": "Termos e Condições:",
+            "ar": "الأحكام والشروط:"
+        },
+        "one": {
+            "zh": " 1）该活动仅适用于已经成功入金的TigerWit现有客户。",
+            "en": "1)     This offer is only available to existing TigerWit clients that make a new, successful deposit to their account.",
+            "vi": "1) Ưu đãi này chỉ áp dụng cho khách hàng hiện tại của TigerWit khi họ ký quỹ thành công vào tài khoản của mình từ lần kế tiếp.",
+            "zh-Hant": " 1）該活動僅適用於已經成功入金的TigerWit現有客戶。",
+            "id": "1. Penawaran ini hanya tersedia bagi klien lama TigerWit yang melakukan deposit yang baru dan sukses di akun mereka",
+            "es": "1) Esta oferta solo está disponible para los clientes existentes de TigerWit que realicen un depósito nuevo y exitoso en su cuenta.",
+            "pt-BR": "1) Esta oferta está disponível apenas para clientes reais da TigerWit que façam um depósito novo e bem-sucedido na sua conta.",
+            "ar": "1) هذا العرض متاح فقط لعملاء TigerWit الحاليين الذين يقومون بإيداع جديد وناجح في حسابهم."
+        },
+        "two": {
+            "zh": "2）该活动中“现有客户”定义：已通过开户审核并且在活动之前已成功入金的客户。",
+            "en": "2)     An existing client for this promotion is defined as one that has completed the full onboarding process and has previously made a successful deposit into their account.",
+            "vi": "2) Một khách hàng hiện tại được tham gia chương trình khuyến mãi này là khách hàng đã xác minh tài khoản thành công và trước đó đã ký quỹ thành công vào tài khoản của mình.",
+            "zh-Hant": "2）該活動中“現有客戶”定義：已通過開戶審核並且在活動之前已成功入金的客戶。",
+            "id": "2. Klien lama untuk promosi ini dimaksudkan sebagai klien yang telah menyelesaikan proses verifikasi  dan sebelumnya berhasil melakukan deposit ke akun mereka.",
+            "es": "2) Un cliente existente para esta promoción se define como aquel que ha completado el proceso de incorporación completo y ha realizado previamente un depósito exitoso en su cuenta.",
+            "pt-BR": "2) Um cliente real para esta promoção é definido como aquele que concluiu todo o processo de inscrição e já fez um depósito com sucesso na sua conta.",
+            "ar": "2) يتم تعريف العميل الحالي لهذا العرض على أنه عميل أكمل عملية الإعداد والإيداع الناجح في حسابه مسبقاً."
+        },
+        "three": {
+            "zh": "3）每个客户/ IP 只能参与一次该活动。",
+            "en": "3)     This promotion is limited to one entry per client/IP/household.",
+            "vi": "3) Chương trình ưu đãi này được giới hạn cho mỗi khách hàng với 1 địa chỉ và 1 IP.",
+            "zh-Hant": "3）每個客戶/ IP 只能參與壹次該活動。",
+            "id": "3. Promo ini terbatas untuk satu kali per klik /per IP/ per keluarga",
+            "es": "3) Esta promoción está limitada a una entrada por cliente/IP/hogar.",
+            "pt-BR": "3) Esta promoção é limitada a uma entrada por cliente / IP / família.",
+            "ar": "3) يُسمح للتسجيل لهذا العرض عميل واحد لكل منزل أو  / IP Address."
+        },
+        "four": {
+            "zh": " 4）客户必须在第5点中指定的时间内完成所需的交易量。",
+            "en": "4)     The client must complete the trading volume required within the specified period in point 5. ",
+            "vi": "4) Khách hàng phải hoàn thành khối lượng giao dịch được yêu cầu trong khoảng thời gian yêu cầu tại mức 5.",
+            "zh-Hant": " 4）客戶必須在第5點中指定的時間內完成所需的交易量。",
+            "id": "4. Klien harus menyelesaikan volume trading yang dibutuhkan dalam jangka waktu seperti pada poin 5",
+            "es": "4) El cliente debe completar el volumen de negociación requerido dentro del período especificado en el punto 5.",
+            "pt-BR": "4) O cliente deve completar o volume operacional exigido dentro do período especificado no ponto 5.",
+            "ar": "4) يجب على العميل إكمال حجم التداول المطلوب خلال الفترة المحددة في النقطة 5."
+        },
+        "five": {
+            "zh": " 5）活动有效期（格林尼治标准时间）：2020年09月24日 00:00 -  2020年10月23日 24:00",
+            "en": "5)     This promotion runs from 00:00 GMT 24/09/20 through 00:00 GMT 21/09/20.",
+            "vi": "5) Chương trình ưu đãi này áp dụng từ 00:00h ngày 24/09/2020 đến 00:00h ngày 21/09/2020",
+            "zh-Hant": " 5）活動有效期（格林尼治標準時間）：2020年09月24日 00:00 -  2020年10月23日 24:00",
+            "id": "5. Promo ini berlangsung pada 24 september 2020 pukul 00.00 GMT hingga 21 september 2020 pukul 00.00 GMT",
+            "es": "5) Esta promoción se extiende desde las 00:00 GMT 24/09/20 hasta las 00:00 GMT 21/09/20.",
+            "pt-BR": "5) Esta promoção vai de 00:00 GMT de 21/09/20 a 00:00 GMT de 24/09/20.",
+            "ar": "5) هذا العرض يبدأ من 00:00 GMT 24/09/20 حتى 00:00 GMT 21/09/20."
+        },
+        "six": {
+            "zh": " 6）在活动期间以外产生的交易量将不被计入总交易量。",
+            "en": "6)     Trading volume accrued outside of this period will not be counted towards the clients total volume.",
+            "vi": "6) Khối lượng giao dịch tích lũy ngoài thời gian này sẽ không được tính vào tổng khối lượng yêu cầu bởi chương trình.",
+            "zh-Hant": " 6）在活動期間以外產生的交易量將不被計入總交易量。",
+            "id": "6. Volume transaksi diluar periode ini tidak dihitung ke total volume klien",
+            "es": "6) El volumen de operaciones acumulado fuera de este período no se contará para el volumen total de los clientes.",
+            "pt-BR": "6) O volume operado acumulado fora deste período não será contabilizado no volume total do cliente.",
+            "ar": "6) لن يتم احتساب حجم التداول المستحق خارج هذه الفترة من إجمالي حجم تداول العميل."
+        },
+        "seven": {
+            "zh": " 7）达到该活动要求的交易手数后，可分阶段获得现金返利，具体如下：",
+            "en": "7)     Cashback is earned in stages upon passing the threshold of volume required is as follows:",
+            "vi": "7) Khách hàng có thể  nhận phiếu thưởng theo từng giai đoạn khi vượt qua mức yêu cầu như sau:",
+            "zh-Hant": "7）達到該活動要求的交易手數後，可分階段獲得現金返利，具體如下：",
+            "id": "7. Cashback diperoleh secara bertahap setelah melewati ambang volume yang dibutuhkan sebagai berikut:",
+            "es": "7) La devolución de dinero se obtiene en etapas al pasar el umbral de volumen requerido de la siguiente manera:",
+            "pt-BR": "7) A devolução é obtida em etapas ao ultrapassar o limite de volume necessário, conforme este quadro:",
+            "ar": "7) يتم الحصول على الكاش باك على مراحل، عند تجاوز حجم التداول المطلوب كما موضَح أدناه يلي:"
+        },
+        "tier": {
+            "zh": "阶梯 ",
+            "en": "Tier ",
+            "vi": "Bậc",
+            "zh-Hant": "階梯",
+            "id": "Tier",
+            "es": "Nivel",
+            "pt-BR": "Nivel",
+            "ar": "المستوى"
+        },
+        "lots": {
+            "zh": "交易手数",
+            "en": "Lots",
+            "vi": "Lots",
+            "zh-Hant": "交易手數",
+            "id": "Lot",
+            "es": "Lotes",
+            "pt-BR": "Lotes",
+            "ar": "العقود"
+        },
+        "bonus": {
+            "zh": "返利金额",
+            "en": "Bonus",
+            "vi": "Thưởng",
+            "zh-Hant": "返利金額",
+            "id": "Bonus",
+            "es": "Bonificación",
+            "pt-BR": "Bônus",
+            "ar": "البونص"
+        },
+        "eight": {
+            "zh": " 8）该活动的现金返利和需要满足的交易量如下：",
+            "en": "8)     The accrued Cashback in this promotion and the accrued trading volume required is as follows:",
+            "vi": "8) Hoàn tiền tích lũy trong chương trình khuyến mãi này và khối lượng giao dịch tích lũy được yêu cầu như sau:",
+            "zh-Hant": " 8）該活動的現金返利和需要滿足的交易量如下：",
+            "id": "8. Cashback yang tersedia pada promo ini dan volume trading yang diperlukan adalah sebagai berikut :",
+            "es": "8) El Cashback acumulado en esta promoción y el volumen de negociación acumulado requerido es el siguiente:",
+            "pt-BR": "8) A devolução acumulada nesta promoção e o volume de operação acumulado necessário é o seguinte:",
+            "ar": "8) يكون الكاش باك المستحق في هذا العرض وحجم التداول المستحق كما يلي:"
+        },
+        "nine": {
+            "zh": " 9）在活动期间完成785手交易后，每个客户/ IP 可以收到的现金返还总额为 $4675。",
+            "en": "9)     The total amount of Cashback that any client/IP/household can receive is $4675, and this upon the completion of a total trading volume of 785 lots. ",
+            "vi": "9) Tổng số tiền Hoàn Tiền mà bất kỳ khách hàng / IP / địa chỉ nào có thể nhận được là 4675 USD và tương ứng với con số này, tổng khối lượng giao dịch sau khi hoàn thành là 785 lots.",
+            "zh-Hant": " 9）在活動期間完成785手交易後，每個客戶/ IP 可以收到的現金返還總額為 $4675。",
+            "id": "9. Total Cashback per klien/ per IP/ per keluarga adalah sebesar $4,675, dengan total penyelesaian total trading volume sebesar 785 lot",
+            "es": "9) La cantidad total de Cashback que cualquier cliente/ IP/hogar puede recibir es de $ 4675, y esto al completar un volumen total de operación de 785 lotes.",
+            "pt-BR": "9) O valor total de devolução que qualquer cliente / IP / família pode receber é de $ 4.675, e isso após a conclusão de um volume total de operação de 785 lotes.",
+            "ar": "9) المبلغ الإجمالي للكاش باك الذي يمكن لأي عميل الحصول عليه هو 4675$، وذلك عند اكتمال إجمالي حجم التداول 785 عقد."
+        },
+        "ten": {
+            "zh": " 10）该活动的交易手数统计范围不包含美元/人民币、股指类产品、虚拟货币以及股票产品。",
+            "en": "10)     Trades on CNY pairs, Cryptocurrencies, Indices and Equity CFDs are not eligible towards the required trading volume.",
+            "vi": "10) Các giao dịch từ các cặp CNY, Tiền điện tử, Chỉ số và CFDs sẽ không được tính vào khối lượng giao dịch tham gia chương trình.",
+            "zh-Hant": " 10）該活動的交易手數統計範圍不包含美元/人民幣、股指類產品、虛擬貨幣以及股票產品。",
+            "id": "10. Trading pada pasangan mata uang CNY, Cryptocurrencies, Index, dan Equity CFD tidak dihitung",
+            "es": "10) Las operaciones en pares CNY, criptomonedas, índices y CFD de acciones no son elegibles para el volumen de operaciones requerido.",
+            "pt-BR": "10) As operações em pares CNY, criptomoedas, índices e CFDs de ações não são elegíveis para o volume de operação requerido.",
+            "ar": "10) ان التداول على أزواج اليوان الصيني والعملات الرقمية والمؤشرات وعقود الفروقات على الأسهم لا تُحسب لحجم التداول المطلوب."
+        },
+        "eleven": {
+            "zh": "11）该活动不支持代理商，资金经理（及其客户），ECN客户持有人参加。",
+            "en": "11)     IBs, Money Managers (and their clients), ECN accountholders are prohibited from entering this promotion. ",
+            "vi": "11) IB, Bâc Thầy quản lý tài chính (và khách hàng của họ), chủ tài khoản ECN không được phép tham gia chương trình ưu đãi này.",
+            "zh-Hant": "11）該活動不支持代理商，資金經理（及其客戶），ECN客戶持有人參加。",
+            "id": "11. IB, Manager keuangan (dan para kliennya), pemegang akun ECN tidak diperkenankan untuk mendapatkan promo ini",
+            "es": "11) Los IB, los Gestores de fondos (y sus clientes), los titulares de cuentas ECN tienen prohibido participar en esta promoción.",
+            "pt-BR": "11) IBs, Money Managers (e seus clientes), contas ECN estão proibidos de entrar nesta promoção.",
+            "ar": "11) لا يمكن على الوسطاء المعرفين ومديري الأموال (وعملائهم) وحاملي حسابات ECN الدخول في هذا العرض."
+        },
+        "twelve": {
+            "zh": "12）该活动不支持使用EA，机器人和高频剥头皮/对冲交易。",
+            "en": "12)     The use of EAs, bots and HFT Scalping/Hedging techniques are prohibited from use in this promotion.",
+            "vi": "12) Việc sử dụng EAs, bots và kỹ thuật HFT Scalping/Hedging được coi là không hợp lệ. ",
+            "zh-Hant": "12）該活動不支持使用EA，機器人和高頻剝頭皮/對沖交易。",
+            "id": "12. Penggunaan EA, bot, dan HFT Scalping atau teknik Hedging tidak diperkenankan untuk mendapatkan promo ini",
+            "es": "12) Está prohibido el uso de EA, bots y técnicas de HFT Scalping/Hedging en esta promoción.",
+            "pt-BR": "12) O uso de EAs, bots e técnicas de HFT Scalping / Hedging são proibidos nesta promoção.",
+            "ar": "12) لا يمكن استخدام التداول الآلي والروبوتات / التداول السريع (سكالبينغ) / هيدجينغ في هذا العرض."
+        },
+        "thirteen": {
+            "zh": " 13）该活动不支持第三方平台参与。",
+            "en": "13)     3rd party platforms are blocked from entry to this promotion.",
+            "vi": "13) Không được sử dụng nền tảng từ bên thứ 3 để tham gia chương trình.",
+            "zh-Hant": "13）該活動不支持第三方平臺參與。",
+            "id": "13. Platform pihak ketiga TigerWit tidak dapat mengikuti event ini",
+            "es": "13) Las plataformas de terceros no pueden acceder a esta promoción.",
+            "pt-BR": "13) As plataformas de terceiros estão bloqueadas para entrar nesta promoção.",
+            "ar": "13) يتم حظر منصات الطرف الثالث من الدخول إلى هذا العرض."
+        },
+        "fourteen": {
+            "zh": " 14）开仓后必须保持60秒以上，才会被认定为符合要求的合格交易量。",
+            "en": "14)     All eligible trades towards the required trading volume must be open for a minimum of 60 seconds.",
+            "vi": "14) Tất cả các giao dịch đủ điều kiện đối với khối lượng giao dịch yêu cầu phải mở trong tối thiểu 60 giây.",
+            "zh-Hant": " 14）開倉後必須保持60秒以上，才會被認定為符合要求的合格交易量。",
+            "id": "14. semua transaksi yang dilakukan harus dibuka paling cepat selama 60 detik pertama",
+            "es": "14) Todas las operaciones elegibles para el volumen de operaciones requerido deben estar abiertas durante un mínimo de 60 segundos.",
+            "pt-BR": "14) Todas as operações elegíveis para o volume de operação requerido devem ser abertas por um mínimo de 60 segundos.",
+            "ar": "14) يجب ابقاء الصفقات مفتوحة لمدة لا تقل عن 60 ثانية لاحتسابها في هذا العرض."
+        },
+        "fifteen": {
+            "zh": "15）赚取现金返利后，客户必须在TigerWit帐户的“个人中心”中兑换红包。",
+            "en": "15)     When Cashback is earned, clients must exchange their coupon within the ‘Me’ section of the TigerWit account to redeem.",
+            "vi": "15) Khi nhận được Hoàn Tiền khách hàng phải đổi phiếu thưởng trong mục \"Tôi\" của tài khoản TigerWit để nhận thưởng.",
+            "zh-Hant": "15）賺取現金返利後，客戶必須在TigerWit帳戶的“個人中心”中兌換紅包。",
+            "id": "15. Ketika cashback diperoleh, klien harus menukar kupon mereka di dalam bagian Me/Saya akun anda untuk di cairkan ",
+            "es": "15) Cuando se gana Cashback, los clientes deben intercambiar su cupón dentro de la sección \"Yo\" de la cuenta de TigerWit para canjear.",
+            "pt-BR": "15) Quando a devolução é ganha, os clientes devem trocar seus cupons na seção “Cupom” na conta da TigerWit para resgata-la.",
+            "ar": "15) عندما يتم الحصول على الكاش باك، يجب على العملاء استبدال قسيمتهم داخل قسم \"ME\" في حساب TigerWit لاستردادها."
+        },
+        'clickAgreement': {
+            "zh": "《 TigerWit客户协议》",
+            "en": "Client Agreement",
+            "vi": "Hợp Đồng Khách Hàng",
+            "zh-Hant": "《 TigerWit客戶協議》",
+            "id": "Perjanjian Klien",
+            "es": "Acuerdo del Cliente",
+            "pt-BR": "Contrato de Cliente",
+            "ar": "اتفاقية عمي",
+        },
+        "sixteen": {
+            "zh": "16）违反以上任何条款和条款，或",
+            "en": "16)     Any client found in breach of these terms and conditions listed here or the TigerWit ",
+            "vi": "16) Bất kỳ khách hàng nào bị phát hiện vi phạm các điều khoản và điều kiện được liệt kê ở đây hoặc có trong ",
+            "zh-Hant": "16）違反以上任何條款和條款，或",
+            "id": "16. Klien yang ditemukan melakukan pelanggaran yang tertera disini atau ",
+            "es": "16) Cualquier cliente que incumpla estos términos y condiciones enumerados aquí o el ",
+            "pt-BR": "16) Qualquer cliente que violar estes termos e condições listados aqui ou o ",
+            "ar": "16) أي عميل يخالف هذه الشروط والأحكام المدرجة هنا أو "
+        },
+        "sixteen2": {
+            "zh": "的用户将被从该活动中移除，并取消其参与该活动的资格，已获得的红包金额将从其账户中删除。",
+            "en": " will be removed from this promotion and they will lose eligibility to claim Cashback and bonus amounts paid will be removed from their accounts.",
+            "vi": " tại TigerWit sẽ bị xóa khỏi chương trình khuyến mãi này và họ sẽ mất tư cách nhận Hoàn tiền và số tiền thưởng đã nhận sẽ bị xóa khỏi tài khoản của họ.",
+            "zh-Hant": "的用戶將被從該活動中移除，並取消其參與該活動的資格，已獲得的紅包金額將從其賬戶中刪除。",
+            "id": " TigerWit akan dihapus dari promo ini dan mereka akan kehilangan kewenangan untuk mengklaim Cashback dan jumlah bonus yang dibayar akan dihapus dari akun mereka",
+            "es": " de TigerWit será eliminado de esta promoción y perderá la elegibilidad para reclamar el Reembolso y los montos de bonificación pagados se eliminarán de sus cuentas.",
+            "pt-BR": " da TigerWit será removido desta promoção e eles perderão a elegibilidade para reivindicar o saque e os valores de bônus pagos serão removidos de suas contas.",
+            "ar": " TigerWit ستتم إزالته من هذا العرض وسيفقد أهليته للمطالبة باسترداد النقود وستتم إزالة مبالغ المكافأة المدفوعة من حساباتهم"
+        },
+        "seventeen": {
+            "zh": "17）TigerWit保留随时取消本活动以及修改条件和条款的权利。在这些条款和条件内的任何更改将通知用户。",
+            "en": "17)     TigerWit reserves the right to cancel this promotion and/or modify the terms and conditions at any time. Users will be notified of any changes within these terms and conditions.",
+            "vi": "17) TigerWit có quyền hủy bỏ khuyến mãi này và/hoặc sửa đổi các điều khoản và điều kiện bất cứ lúc nào. Người dùng sẽ được thông báo về bất kỳ thay đổi nào trong các điều khoản và điều kiện này.",
+            "zh-Hant": "17）TigerWit保留隨時取消本活動以及修改條件和條款的權利。在這些條款和條件內的任何更改將通知用戶。",
+            "id": "17. TigerWit berhak untuk membatalkan promo ini atau mengubah syarat dan ketentuan kapanpun. Para pengguna akan diberitahukan jika ada perubahan yang terjadi terkait persyaratan",
+            "es": "17) TigerWit se reserva el derecho de cancelar esta promoción y/o modificar los términos y condiciones en cualquier momento. Los usuarios serán notificados de cualquier cambio dentro de estos términos y condiciones.",
+            "pt-BR": "17) A TigerWit reserva-se o direito de cancelar esta promoção e/ou modificar os termos e condições a qualquer momento. Os usuários serão notificados de qualquer alteração nestes termos e condições.",
+            "ar": "17) تحتفظ TigerWit بالحق في إلغاء هذا العرض و / أو تعديل الشروط والأحكام في أي وقت. سيتم إعلام المستخدمين بأي تغييرات ضمن هذه الشروط والأحكام."
+        }
     }
 };

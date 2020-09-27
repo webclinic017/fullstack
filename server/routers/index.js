@@ -446,6 +446,21 @@ router.get('/:subpage(forex-trading|precious-metal-trading|oil-trading|cfd-tradi
         pageInfo: pageInfo
     });
 });
+router.get('/:subpage(cashback)', function (req, res) {
+    var subpage = req.params.subpage;
+    var pageInfo = {
+        id: subpage
+    };
+    if (isMobile(req)) {
+        res.render('bd/cashback/h5.html', {
+            pageInfo: pageInfo
+        });
+    } else {
+        res.render('bd/cashback/web.html', {
+            pageInfo: pageInfo
+        });
+    }
+});
 // 交易品种
 router.get('/web/product/:subpage(forex|metal|oil|cfd|stock)', function (req, res) {
     var subpage = req.params.subpage || 'forex';

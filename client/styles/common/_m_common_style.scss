@@ -15,6 +15,7 @@
 @import "grid";
 @import "m_rem";
 @import "m_tabs";
+@import "table";   // h5表格，后期h5表格多了会进行替换
 @import "m_buttons";
 html,
 body {
@@ -24,54 +25,50 @@ body {
     max-width: 750px;
 }
 
-
 /*小字体*/
 
 .small_font {
-    font-size: 12px!important;
-    -webkit-transform-origin-x: 0!important;
-    -webkit-transform: scale(0.90)!important;
+    font-size: 12px !important;
+    -webkit-transform-origin-x: 0 !important;
+    -webkit-transform: scale(0.9) !important;
 }
-
 
 /*状态样式*/
 
 .warning {
-    color: #ff464f!important;
+    color: #ff464f !important;
 }
 
 .show {
-    display: inline-block!important;
+    display: inline-block !important;
 }
 
 .hide {
-    display: none!important;
+    display: none !important;
 }
 
 .disable {
-    color: #ccc!important;
-    border: 1px solid #ccc!important; //background: #ccc!important;
-    font-size: px2rem(10)!important;
-    cursor: wait!important;
+    color: #ccc !important;
+    border: 1px solid #ccc !important; //background: #ccc!important;
+    font-size: px2rem(10) !important;
+    cursor: wait !important;
 }
-
 
 /*文本标题*/
 
 .text_title {
-    font-weight: 500!important;
-    display: block!important;
-    margin: px2rem(17) 0!important;
+    font-weight: 500 !important;
+    display: block !important;
+    margin: px2rem(17) 0 !important;
     font-size: px2rem(34);
 }
 
 .text_sub_title {
-    font-weight: 500!important;
-    display: block!important;
-    margin: px2rem(17) 0!important;
+    font-weight: 500 !important;
+    display: block !important;
+    margin: px2rem(17) 0 !important;
     font-size: px2rem(32);
 }
-
 
 /*文本内容*/
 
@@ -100,16 +97,15 @@ body {
     }
 }
 
-
 /*重置select标签的样式*/
 
 select {
     /*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/
-    border: solid 1px #ccc!important;
+    border: solid 1px #ccc !important;
     /*很关键：将默认的select选择框样式清除*/
-    appearance: none!important;
-    -moz-appearance: none!important;
-    -webkit-appearance: none!important;
+    appearance: none !important;
+    -moz-appearance: none !important;
+    -webkit-appearance: none !important;
     /*将背景改为绿色*/
     background: #fff;
     /*留出一点位置，避免被文字覆盖*/
@@ -133,7 +129,6 @@ button[class*="btn"] {
     border-radius: px2rem(8);
 }
 
-
 /*h5导航条样式*/
 
 .h5_nav {
@@ -151,7 +146,6 @@ button[class*="btn"] {
         color: $brand-primary;
     }
 }
-
 
 /*h5footer样式*/
 
@@ -215,12 +209,11 @@ button[class*="btn"] {
     }
 }
 
-// m_footer 样式隐藏 
+// m_footer 样式隐藏
 .t30-footer-content {
     display: none;
     visibility: hidden;
 }
-
 
 /*h5注册框样式*/
 
@@ -299,51 +292,51 @@ button[class*="btn"] {
 }
 
 // 分享组件
-.h5_share_modal_box{
+.h5_share_modal_box {
     display: none;
 }
-@include b(share_modal){
+@include b(share_modal) {
     text-align: center;
-    font-size:px2rem(38);
+    font-size: px2rem(38);
     padding-left: 5%;
     padding-right: 5%;
-    h5{
-      font-size:px2rem(45);
-      font-weight: 300;
-      margin-bottom: 0.5rem;
-      margin-top: 1rem;
-      color: #555;
+    h5 {
+        font-size: px2rem(45);
+        font-weight: 300;
+        margin-bottom: 0.5rem;
+        margin-top: 1rem;
+        color: #555;
     }
-    span{
-      display: inline-block;
-      width: 25%;
-      float: left;
-      font-size: px2rem(25);
-      font-weight: 200;
-      margin-top:px2rem(25);
-      color: #222;
+    span {
+        display: inline-block;
+        width: 25%;
+        float: left;
+        font-size: px2rem(25);
+        font-weight: 200;
+        margin-top: px2rem(25);
+        color: #222;
 
-      img{
-        width: 75%;
-        vertical-align: middle;
-        margin-bottom: px2rem(10);
-      }
+        img {
+            width: 75%;
+            vertical-align: middle;
+            margin-bottom: px2rem(10);
+        }
     }
 
-    button{
-      width: 100%;
-      height: px2rem(100);
-      color: #99999c;
-      border-top: 1px solid #e6e6e6;
-      position: absolute;
-      bottom:0;
-      left: 0;
-      right: 0;
-      padding: 0;
-      background-color: transparent;
-      font-size: 1.2rem;
+    button {
+        width: 100%;
+        height: px2rem(100);
+        color: #99999c;
+        border-top: 1px solid #e6e6e6;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 0;
+        background-color: transparent;
+        font-size: 1.2rem;
     }
-  }
+}
 
 .slide_arrow {
     position: absolute;
@@ -398,7 +391,7 @@ button[class*="btn"] {
     }
     .chevron:before,
     .chevron:after {
-        content: ' ';
+        content: " ";
         position: absolute;
         top: 0;
         height: 100%;
@@ -440,7 +433,7 @@ button[class*="btn"] {
         color: #fff;
         text-transform: uppercase;
         white-space: nowrap;
-        opacity: .25;
+        opacity: 0.25;
         animation: pulse 2s linear alternate infinite;
     }
     @keyframes pulse {
@@ -457,4 +450,115 @@ button[class*="btn"] {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+.switch_lang {
+    color: #fff;
+    background: none;
+    border: none !important;
+    padding: 0;
+    height: px2rem(64);
+}
+// 通用样式
+@include b(m_mg-200) {
+    @include e(bg) {
+        min-height: px2rem(300);
+        background-color: #fff;
+        border-radius: px2rem(50);
+        @include box-shadow(0px 0px 10px 0px #ccc);
+        width: 90%;
+        margin: px2rem(-300) auto;
+        padding: px2rem(120) px2rem(100);
+        p {
+            color: $main-char-color-50;
+            font-size: px2rem(30);
+            line-height: px2rem(45);
+        }
+
+    }
+
+    //   @include e(circle-title) {
+    //     font-size: 32px;
+    //     color: $main-char-color-100;
+    //     line-height: 43px;
+    //     @include displayFlex();
+    //     @include alignItems(center);
+    //     &::before {
+    //       content: "";
+    //       width: 30px;
+    //       height: 30px;
+    //       border: 6px solid $primary-darker;
+    //       border-radius: 50px;
+    //       display: inline-block;
+    //     }
+    //     > span {
+    //       margin: 0 20px;
+    //       @include flex(1);
+    //     }
+    //   }
+      @include e(two-title) {
+        font-size: px2rem(44);
+        font-weight: 600;
+        color: rgba(33, 44, 63, 1);
+        line-height: px2rem(54);
+        margin-top: px2rem(90);
+        margin-bottom: px2rem(36);
+      }
+    //   @include e(three-title) {
+    //     font-size: 24px;
+    //     font-weight: 600;
+    //     color: rgba(33, 44, 63, 1);
+    //     line-height: 33px;
+    //     border-bottom: 1px solid #ebebeb;
+    //   }
+    //   @include e(list-bg) {
+    //     @include displayFlex();
+    //     @include justifyContent(space-between);
+    //     @include flexWrap(wrap);
+    //     &.none {
+    //       visibility: hidden;
+    //     }
+    //     @include m(item) {
+    //       width: 31%;
+    //       padding: 0;
+    //       > div {
+    //         @include img-normal($white_label_image + "semicircle.png");
+    //         margin-bottom: 30px;
+    //         background-position: 0 0;
+    //         background-repeat: no-repeat;
+    //         background-color: $primary-darker;
+    //         border-radius: 30px;
+    //         padding: 11px 29px 31px;
+    //         .title {
+    //           font-size: 18px;
+    //           font-weight: 600;
+    //           color: rgba(33, 44, 63, 1);
+    //           line-height: 22px;
+    //           height: 44px;
+    //           overflow: hidden;
+    //           margin-top: 20px;
+    //           margin-bottom: 10px;
+    //           display: -webkit-box;
+    //           -webkit-box-orient: vertical;
+    //           -webkit-line-clamp: 2;
+    //         }
+    //         .content {
+    //           font-size: 16px;
+    //           font-weight: 400;
+    //           color: rgba(33, 44, 63, 0.7);
+    //           line-height: 21px;
+    //           padding-top: 17px;
+    //         }
+    //       }
+    //     }
+    //   }
+      @include e(circle) {
+        @include displayFlex();
+        &::before {
+          content: "●";
+          margin: 0 px2rem(10);
+          font-size: px2rem(20);
+          display: inline-block;
+        }
+      }
 }
