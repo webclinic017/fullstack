@@ -65,7 +65,7 @@
 
             // getRCaptchaApi: urlOrigin2 + '/validation/send_phone_code',
             // sendEmailCodeApi: urlOrigin2 + '/validation/send_email_code',
-            sendCodeApi: urlOrigin2 + '/validation/send_code', 
+            sendCodeApi: urlOrigin2 + '/validation/send_code',
 
             // checkPhoneAndCaptchaApi: urlOrigin2 + '/validation/check_phone_code',
             // checkEmailCodeApi: urlOrigin2 + '/validation/check_email_code',
@@ -120,7 +120,7 @@
             destroyThirdAccountApi: urlOrigin2 + '/third/accounts/destroy'
         };
         var forex = {
-            
+
         };
         var invest = {
             getInvestSummaryApi: urlOrigin2  + '/centre/trading_profile',
@@ -169,7 +169,7 @@
             getOrderInfoApi: o + '/action/public/v3/closed_fund_leads' // 暂无 定期跟单预约
         };
         var trader = {
-            getMasterCurrentApi: urlOrigin2 + '/master/active/trades', 
+            getMasterCurrentApi: urlOrigin2 + '/master/active/trades',
             getMasterPastTradeApi: urlOrigin2 + '/master/past/trades', //替换getMasterHistoryApi
             copyApi: urlOrigin2 + '/copy/copy',
             cancelCopyApi: urlOrigin2 + '/copy/uncopy',

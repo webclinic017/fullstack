@@ -13,6 +13,8 @@
         $scope.registerStep1 = 1;      // 验证码注册进行到哪一步
         $scope.registerStep3 = 1;      // 2邮箱验证码注册1手机验证码注册
         $scope.step1PasswordStatus = true;  // 验证码登录密码显示or隐藏
+        // 滑动验证显示变量
+        // $scope.sliderShow = false;
         // $scope.rememberLoginStatus = true;  // 记住登录状态
         $scope.registerBtnStatus = true;       // 登录按钮状态
         $scope.codeBtnStatus = {            // 获取验证码按钮状态
@@ -56,6 +58,7 @@
             }, // 手机区号+国家(无用只为兼容指令)
         };
         $scope.selectArea = selectPhoneArea;
+
         function selectPhoneArea(target) {
             $scope.account.phoneArea = {
                 key: '+' + target.phone_code,
@@ -79,7 +82,7 @@
         }
         var token;
         // console.log(lang.text("actLogin1"));
-
+        $scope.is_send_voice = false;
         // 从 landing page 进入时
         $scope.account.step1Phone = $state.params.phone;
         // 验证码登录切换手机邮箱
@@ -151,6 +154,10 @@
                     }
                     obj.btns[lang.text("tigerWitID.confirm2")] = function () { };
                     $layer(obj);
+                    if (data.is_send_voice) {
+                      $scope.$scope = data.is_send_voice
+                      console.log($scope.is_send_voice)
+                    }
                 } else {
                     layer.msg(data.message);
                 }
@@ -198,11 +205,14 @@
             } else if ($scope.registerStep3 == '1') {
                 // 手机号注册
                 if (!showPhoneVel()) { return };
-                if (!($scope.account.step1Code)) {
-                    layer.msg(lang.text('tigerWitID.login.verificationCode'));     //请填写验证码
-                    return;
+                if (is_agree !== 1) {
+                  if (!($scope.account.step1Code)) {
+                      layer.msg(lang.text('tigerWitID.login.verificationCode'));     //请填写验证码
+                      return;
+                  }
                 }
                 para = angular.extend({
+                    skip_verify: is_agree === 1 ? 1 : 0,
                     account_type: 1,
                     account: $scope.account.step1Phone,
                     password: $scope.account.step1Code,

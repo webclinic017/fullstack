@@ -66,9 +66,9 @@
                             <div class="account-form-control-wrapper-new">
                                 <div class="select-left">
                                     <input class="select__input" name="phoneArea" readonly type="text" placeholder="{{lang.text('tigerWitID.areaCode')}}" required ng-model="account.phoneArea.key">
-    
+
                                     <ul class="select__dropdown" twform-select data-bind-model="account.phoneArea2">
-    
+
                                         <li class="first_li"><input type="text" placeholder="{{lang.text('tigerWitID.login.countryCode')}}" ng-model="placeholderArea"><i class="fa fa-search"></i></li>
                                         <li ng-repeat="world in areaCodeList | filter : placeholderArea" ng-class="{'selected': world.phone_code == account.phoneArea.value}">
                                             <span data-value="{{world.code}}" data-disabled='{"disabled": {{world.disabled}}, "msg": "{{lang.text("tigerWitID.myAccount.unableCountry")}}"}' ng-click="world.disabled || selectArea(world)" ng-class="{'font-light': world.disabled}">+{{world.phone_code}}({{world.name}})</span>
@@ -101,6 +101,10 @@
                                 </p>
                             </div>
                         </form>
+                        <!-- 语音验证 -->
+                        <div voice-verification-tab data-code-list="account" data-fn="register('registerForm1', 1)" data-cold-type="1" data-is-send-voice="is_send_voice"></div>
+                        <!-- 滑块验证 -->
+                        <!-- <div slider-verification-tab></div> -->
                         <div class="account_login__btn_wrapper pd-tp-15">
                             <button class="tw-btn-md tw-btn-capsule-gradient" ng-click="[register('registerForm1'), toTrackEvent('Login and register', 'click_register'), toGtagEvent('click_register_phone_web')]">{{lang.text("tigerWitID.login.register")}}</button>
                         </div>

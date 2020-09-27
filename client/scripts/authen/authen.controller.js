@@ -942,7 +942,7 @@
     function AuthenAddressController($scope, $state, $modal, validator, account, $timeout) {
         $scope.addressType = [
         ]
-    
+
         $scope.frontErr = {
             addressType: {
                 show: false
