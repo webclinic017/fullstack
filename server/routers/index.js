@@ -153,56 +153,56 @@ router.get('/alipay/temp', function (req, res) {
 });
 
 /*定期跟单开始*/
-router.get('/regular', function (req, res) {
+// router.get('/regular', function (req, res) {
 
 
-    res.render('web/regular/list.html', {
-        model: global_modelRegular
-    });
-});
-router.get('/regular/agree/:subpage', function (req, res) {
+//     res.render('web/regular/list.html', {
+//         model: global_modelRegular
+//     });
+// });
+// router.get('/regular/agree/:subpage', function (req, res) {
 
-    res.render('web/regular/agree.html', {
-        model: global_modelRegular,
-        detail_id: req.params.subpage || ""
-    });
-});
-router.get('/regular/detail/:subpage', function (req, res) {
-    res.render('web/regular/detail.html', {
-        model: gloal_modelRegularDetail(req.params.subpage || "")
-    });
-});
-router.get('/m/regular/agree/:subpage', function (req, res) {
+//     res.render('web/regular/agree.html', {
+//         model: global_modelRegular,
+//         detail_id: req.params.subpage || ""
+//     });
+// });
+// router.get('/regular/detail/:subpage', function (req, res) {
+//     res.render('web/regular/detail.html', {
+//         model: gloal_modelRegularDetail(req.params.subpage || "")
+//     });
+// });
+// router.get('/m/regular/agree/:subpage', function (req, res) {
 
-    res.render('m_vue/regular/agree.html', {
-        model: global_modelRegular,
-        detail_id: req.params.subpage || ""
-    });
-});
-router.get('/m/regular/detail/:subpage', function (req, res) {
+//     res.render('m_vue/regular/agree.html', {
+//         model: global_modelRegular,
+//         detail_id: req.params.subpage || ""
+//     });
+// });
+// router.get('/m/regular/detail/:subpage', function (req, res) {
 
-    res.render('m_vue/regular/detail.html', {
-        model: gloal_modelRegularDetail(req.params.subpage || "")
-    });
-});
-router.get('/m/regular/detail/team/:subpage', function (req, res) {
-    var subpage = req.params.subpage;
-    if (subpage.indexOf('_') != -1) {
-        subpage = subpage.split('_')[1];
-    }
-    // var team_html = global_modelRegular.getTeamHtmlName(req.params.subpage);
+//     res.render('m_vue/regular/detail.html', {
+//         model: gloal_modelRegularDetail(req.params.subpage || "")
+//     });
+// });
+// router.get('/m/regular/detail/team/:subpage', function (req, res) {
+//     var subpage = req.params.subpage;
+//     if (subpage.indexOf('_') != -1) {
+//         subpage = subpage.split('_')[1];
+//     }
+//     // var team_html = global_modelRegular.getTeamHtmlName(req.params.subpage);
 
-    res.render('m_vue/regular/detail.team.' + subpage + '.html');
-});
-router.get('/m/regular/detail/history/:subpage', function (req, res) {
-    var aImages = global_modelRegular.getTeamHistoryImages(req.params.subpage);
+//     res.render('m_vue/regular/detail.team.' + subpage + '.html');
+// });
+// router.get('/m/regular/detail/history/:subpage', function (req, res) {
+//     var aImages = global_modelRegular.getTeamHistoryImages(req.params.subpage);
 
-    res.render('m_vue/regular/detail.history.html', {
-        model: {
-            aImages: aImages
-        }
-    });
-});
+//     res.render('m_vue/regular/detail.history.html', {
+//         model: {
+//             aImages: aImages
+//         }
+//     });
+// });
 
 /*定期跟单结束开始*/
 
@@ -226,10 +226,10 @@ router.get('/m/agent/become', function (req, res) {
 });
 
 /*定期跟单*/
-router.get('/m/regular/how', function (req, res) {
+// router.get('/m/regular/how', function (req, res) {
 
-    res.render("m_vue/regular/how");
-});
+//     res.render("m_vue/regular/how");
+// });
 
 /*邀请好友*/
 router.get('/m/invite01', function (req, res) {
