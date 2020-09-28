@@ -466,12 +466,12 @@ button[class*="btn"] {
         background-color: #fff;
         border-radius: px2rem(50);
         @include box-shadow(0px 0px 10px 0px #ccc);
-        width: 90%;
-        margin: px2rem(-300) auto;
-        padding: px2rem(120) px2rem(100);
+        width: 93%;
+        margin: px2rem(-200) auto 0;
+        padding: px2rem(60) px2rem(50);
         p {
             color: $main-char-color-50;
-            font-size: px2rem(30);
+            font-size: px2rem(24);
             line-height: px2rem(45);
         }
 
@@ -497,7 +497,7 @@ button[class*="btn"] {
     //     }
     //   }
       @include e(two-title) {
-        font-size: px2rem(44);
+        font-size: px2rem(38);
         font-weight: 600;
         color: rgba(33, 44, 63, 1);
         line-height: px2rem(54);

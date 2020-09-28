@@ -1680,10 +1680,14 @@
     // h5设置语言
     function setLang() {
         var switchLang = document.getElementById('switchLang');
-        if(!switchLang) return;
-        switchLang.value = (language == 'zh' ? 'cn' : language);
-        switchLang.addEventListener('change', function () {
-            lang.reloadLanguage(switchLang.value)
-        })
+        console.log(language, switchLang)
+        if (!switchLang) return;
+        setTimeout(function () {
+            switchLang.value = (language == 'zh' ? 'cn' : language);
+            switchLang.addEventListener('change', function () {
+                lang.reloadLanguage(switchLang.value)
+            })
+
+        }, 0);
     }
 </script>

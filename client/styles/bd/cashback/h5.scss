@@ -2,15 +2,16 @@
   margin-bottom: px2rem(160);
   @include e(banner) {
     @include img-normal($white_label_new_bg + "product-bg.png");
-    height: px2rem(1000);
+    // height: px2rem(1000);
     background-size: auto 100%;
     background-position: center center;
-    padding: px2rem(90) px2rem(140) px2rem(300);
+    padding: px2rem(90) px2rem(70) px2rem(200);
     @include m(title) {
       text-align: center;
-      font-size: px2rem(90);
+      font-size: px2rem(70);
       font-weight: 500;
       margin-top: px2rem(170);
+      margin-bottom: px2rem(170);
       color: $brand-primary-darker;
     }
   }
