@@ -28,7 +28,7 @@
         getPhoneCode: origin + '/validation/send_code', // post
         sendCode: origin + '/validation/send_code', // post
         getInviteList: origin_app + '/user/invites', // get
-        setClueCustomer: origin + '/auth/page_signup', // post
+        // setClueCustomer: origin + '/auth/page_signup', // post
         setInviteCode: origin + '/invite_code', // post
         // setCustomerPromotion: origin + '/user/ib_agent', // post
         getAvodaCode: origin + '/avoda/code', // post

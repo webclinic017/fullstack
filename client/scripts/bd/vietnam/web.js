@@ -63,7 +63,7 @@
       // console.log(data);
       layer.closeAll();
       if (data.is_succ) {
-        layer.msg(data.data);
+        layer.msg(data.message);
       } else {
         layer.msg(data.message);
       }
