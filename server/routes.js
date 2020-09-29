@@ -318,6 +318,12 @@ module.exports = function (app) {
         }
         res.json(rs);
     });
+    // app.use(function (req, res, next) {
+    //     res.setHeader("Cache-Control", "no-cache");
+    //     res.setHeader("Pragma", "no-cache");
+    //     res.setHeader("Expires", 0);
+    //     next()
+    // })
     app.use(function (req, res, next) {
         // 重写render方法，避免子路由在引入extendPublic方法
         var _render = res.render;

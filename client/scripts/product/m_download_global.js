@@ -33,12 +33,6 @@
         function activePage1() {
             $('.section1 p').addClass("active");
         }
-        function setLang() {
-            $("#switchLang").val(language == 'zh' ? 'cn' : language);
-        }
-        $("#switchLang").on('change', function () {
-            lang.reloadLanguage($("#switchLang").val())
-        })
         $("#next").on("touchend", function () {
             $.fn.fullpage.moveSectionDown();
         });

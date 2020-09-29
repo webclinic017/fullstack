@@ -1,0 +1,270 @@
+<!doctype html>
+<html>
+
+<head>
+    <% include /common/meta/web.html %>
+    <!-- build:css(.tmp) /styles/web.css -->
+    <link rel="stylesheet" href="/styles/web.css">
+    <!-- endbuild -->
+
+    <% include /common/statistic/main.html %>
+</head>
+
+<body ng-app="fullstackApp" class="<%= lang_class%> <%= lang.isAr('ar-lang')%>">
+    <div ng-controller="GlobalController">
+        <div class="header">
+            <% include /common/nav/web.header.html %>
+        </div>
+
+        <div class="new_body pd-bt-50">
+            <div class="product_banner"></div>
+            <div>
+                <div class="mg-200__bg">
+                    <h1 class="mg-200__circle-title pd-bt-20"><span><%= lang.text("cashback.title")%></span></h1>
+                    <p class="">
+                        <%= lang.text("cashback.tradeMake")%>
+                    </p>
+                    <p class="">
+                        <%= lang.text("cashback.tradeMakeTip")%>
+                    </p>
+                    <div>
+                        <div class="mg-200__two-title mg-tp-40 pd-bt-10">
+                            <%= lang.text("cashback.wayParticipation")%>
+                        </div>
+                        <p class="">
+                            <%= lang.text("cashback.over")%>
+                        </p>
+
+                        <ul class="list-table-personal width500 font-size-12">
+                            <li>
+                                <span><%= lang.text("cashback.trade5")%></span>
+                                <span><%= lang.text("cashback.get25")%></span>
+                            </li>
+                            <li>
+                                <span><%= lang.text("cashback.trade10")%></span>
+                                <span><%= lang.text("cashback.get50")%></span>
+                            </li>
+                            <li>
+                                <span><%= lang.text("cashback.trade20")%></span>
+                                <span><%= lang.text("cashback.get100")%></span>
+                            </li>
+                            <li>
+                                <span><%= lang.text("cashback.trade250")%></span>
+                                <span><%= lang.text("cashback.get1500")%></span>
+                            </li>
+                            <li>
+                                <span><%= lang.text("cashback.trade500")%></span>
+                                <span><%= lang.text("cashback.get3000")%></span>
+                            </li>
+                            <li>
+                                <span><%= lang.text("cashback.total")%></span>
+                                <span><%= lang.text("cashback.money")%></span>
+                            </li>
+                        </ul>
+
+                        <p class="mg-tp-20">
+                            <%= lang.text("cashback.conditions")%>
+                        </p>
+                        <p class="">
+                            <%= lang.text("cashback.login")%><a href="/space/#/account/login"
+                                class="font-info"><%= lang.text("cashback.clickHere")%></a><%= lang.text("cashback.login2")%>
+                        </p>
+                        <p class="mg-tp-40">
+                            <%= lang.text("cashback.getMesg")%>
+                        </p>
+                        <p class="mg-200__circle"><span><%= lang.text("cashback.educational")%></span></p>
+                        <p class="mg-200__circle"><span><%= lang.text("cashback.seminar")%></span></p>
+                        <p class="mg-200__circle"><span><%= lang.text("cashback.simulated")%></span></p>
+                        <p class="">
+                            <%= lang.text("cashback.rebate")%>
+                        </p>
+                        <p class="">
+                            <%= lang.text("cashback.openAccount")%><a href="/space/#/account/register"
+                                class="font-info"><%= lang.text("cashback.clickHere")%></a><%= lang.text("cashback.openAccount2")%>
+                        </p>
+                        <p class="">
+                            <%= lang.text("cashback.conditions")%>
+                        </p>
+
+                        <div class="mg-200__two-title mg-tp-40 pd-bt-10">
+                            <%= lang.text("cashback.termsConditions")%>
+                        </div>
+                        <p class="">
+                            <%= lang.text("cashback.one")%>
+                        </p>
+                        <p class="">
+                            <%= lang.text("cashback.two")%>
+                        </p>
+                        <p class="">
+                            <%= lang.text("cashback.three")%>
+                        </p>
+                        <p class="">
+                            <%= lang.text("cashback.four")%>
+                        </p>
+                        <p class="">
+                            <%= lang.text("cashback.five")%>
+                        </p>
+                        <p class="">
+                            <%= lang.text("cashback.six")%>
+                        </p>
+                        <p class="">
+                            <%= lang.text("cashback.seven")%>
+                        </p>
+
+                        <table class="table table-personal table-hover table-bordered font-size-12">
+                            <colgroup>
+                                <col width="30%">
+                                <col width="30%">
+                                <col width="30%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th><%= lang.text("cashback.tier")%></th>
+                                    <th><%= lang.text("cashback.lots")%></th>
+                                    <th><%= lang.text("cashback.bonus")%></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>T1</td>
+                                    <td>5</td>
+                                    <td>25</td>
+                                </tr>
+                                <tr>
+                                    <td>T2</td>
+                                    <td>10</td>
+                                    <td>50</td>
+                                </tr>
+                                <tr>
+                                    <td>T3</td>
+                                    <td>20</td>
+                                    <td>100</td>
+                                </tr>
+                                <tr>
+                                    <td>T4</td>
+                                    <td>250</td>
+                                    <td>1500</td>
+                                </tr>
+                                <tr>
+                                    <td>T5</td>
+                                    <td>500</td>
+                                    <td>3000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <p class="mg-tp-10">
+                            <%= lang.text("cashback.eight")%>
+                        </p>
+
+                        <table class="table table-personal table-hover table-bordered font-size-12">
+                            <colgroup>
+                                <col width="30%">
+                                <col width="30%">
+                                <col width="30%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th><%= lang.text("cashback.tier")%></th>
+                                    <th><%= lang.text("cashback.lots")%></th>
+                                    <th><%= lang.text("cashback.bonus")%></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>T1</td>
+                                    <td>5</td>
+                                    <td>25</td>
+                                </tr>
+                                <tr>
+                                    <td>T2</td>
+                                    <td>15</td>
+                                    <td>75</td>
+                                </tr>
+                                <tr>
+                                    <td>T3</td>
+                                    <td>35</td>
+                                    <td>175</td>
+                                </tr>
+                                <tr>
+                                    <td>T4</td>
+                                    <td>285</td>
+                                    <td>1675</td>
+                                </tr>
+                                <tr>
+                                    <td>T5</td>
+                                    <td>785</td>
+                                    <td>4675</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <p class="mg-tp-10">
+                            <%= lang.text("cashback.nine")%>
+                        </p>
+                        <p class="">
+                            <%= lang.text("cashback.ten")%>
+                        </p>
+                        <p class="">
+                            <%= lang.text("cashback.eleven")%>
+                        </p>
+                        <p class="">
+                            <%= lang.text("cashback.twelve")%>
+                        </p>
+                        <p class="">
+                            <%= lang.text("cashback.thirteen")%>
+                        </p>
+                        <p class="">
+                            <%= lang.text("cashback.fourteen")%>
+                        </p>
+                        <p class="">
+                            <%= lang.text("cashback.fifteen")%>
+                        </p>
+
+                        <p class="">
+                            <%= lang.text("cashback.sixteen")%><a href="/agreement/client"
+                                class="font-info"><%= lang.text("cashback.clickAgreement")%></a><%= lang.text("cashback.sixteen2")%>
+                        </p>
+
+                        <p class="">
+                            <%= lang.text("cashback.seventeen")%>
+                        </p>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <% include /common/vendor/web.js.html %>
+
+        <!-- build:js(client) /scripts/web_cashback.js -->
+        <script src="/scripts/common/config.service.js"></script>
+        <script src="/scripts/common/account.service.js"></script>
+        <script src="/scripts/common/authorization.service.js"></script>
+        <!-- <script src="/scripts/common/product.service.js"></script> -->
+        <script src="/scripts/common/utils.service.js"></script>
+        <script src="/scripts/common/lang.service.js"></script>
+        <script src="/scripts/common/lang_data.service.js"></script>
+        <script src="/scripts/common/redbag.service.js"></script>
+
+        <script src="/scripts/common/navbar.directive.js"></script>
+        <script src="/scripts/common/dropdown.directive.js"></script>
+        <script src="/scripts/common/pagination.directive.js"></script>
+
+        <script src="/scripts/common/global.controller.js"></script>
+        <script src="/scripts/common/bind_html.filter.js"></script>
+        <script src="/scripts/common/highest-match.directive.js"></script>
+        <!-- <script src="/scripts/web/product.controller.js"></script> -->
+
+        <!-- endbuild -->
+
+        <div class="footer">
+            <% include /common/nav/web.footer.html %>
+        </div>
+    </div>
+</body>
+
+</html>
