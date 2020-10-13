@@ -437,9 +437,10 @@ module.exports = function (app) {
             res.redirect = function (status, url) {
                 if (!url) {
                     url = status;
+                    status = null;
                 }
                 url = path.sep + paramsLang + url;
-                return _redirect.call(this, status, url)
+                return (status ? _redirect.call(this, status, url) : _redirect.call(this, url))
             }
         };
 

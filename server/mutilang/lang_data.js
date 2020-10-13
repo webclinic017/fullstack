@@ -20714,7 +20714,7 @@ module.exports = {
             "en": "5)     This promotion runs from 15:00 GMT 2/10/20 through 14:59 GMT 1/11/20.",
             "vi": "5) Chương trình ưu đãi này áp dụng từ 15:00h ngày 2/10/2020 đến 14:59h ngày 1/11/2020",
             "zh-Hant": " 5）活動有效期（格林尼治標準時間）：2020年10月2日 15:00 -  2020年11月1日 14:59",
-            "id": "5. Promo ini berlangsung pada 2/10/2020 pukul 15:00 GMT hingga 1/11/2020 pukul 14:59 GMT",
+            "id": "5. Promo ini berlangsung pada 2/10/2020 pukul 15:00 GMT hingga 1/11/2020 pukul 14.59 GMT",
             "es": "5) Esta promoción se extiende desde las 15:00 GMT 2/10/20 hasta las 14:59 GMT 1/11/20.",
             "pt-BR": "5) Esta promoção vai de 15:00 GMT de 2/10/20 a 14:59 GMT de 1/11/20.",
             "ar": "5) هذا العرض يبدأ من 15:00 GMT 02/10/20 حتى 14:59 GMT 1/11/20."
