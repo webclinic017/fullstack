@@ -1,4 +1,4 @@
-;(function () {
+; (function () {
     // console.log(pageView);
     var $title = $(".m_comment .m_comment__title");
     var $date = $(".m_comment .m_comment__date .date");
@@ -13,12 +13,12 @@
 
     getSymbols();
     getCommentDetails();
-    function getCommentDetails () {
-        publicRequest('getCommentDetails', 'GET', {comment_id: pageView.id}).then(function (data) {
+    function getCommentDetails() {
+        publicRequest('getCommentDetails', 'GET', { comment_id: pageView.id }).then(function (data) {
             // console.log(pageView);
             if (data.is_succ) {
                 pageData = data.data;
-                visit = Number(pageView.num)+Number(pageData.visit);
+                visit = Number(pageView.num) + Number(pageData.visit);
 
                 $title.html(pageData.main_title);
                 $date.html(pageData.issue_date);
@@ -32,11 +32,11 @@
 
                 insertComment();
             }
-            
+
         });
     }
 
-    function getSymbols () {
+    function getSymbols() {
         publicRequest('getSymbols', 'GET').then(function (data) {
             // console.log(data);
             if (data.is_succ) {
@@ -45,12 +45,12 @@
         });
     }
 
-    function insertComment () {
+    function insertComment() {
         $.each(pageData.comment_field, function (index, value) {
             value.image && (value.image = JSON.parse(value.image));
         });
         //使用template模版
-        var html=baidu.template('template_comment_list',pageData);
+        var html = baidu.template('template_comment_list', pageData);
         //渲染
         $content.html(html);
     }
@@ -59,13 +59,13 @@
         var action = $(this).attr("data-action");
         info = pageData.comment_field[action];
         // console.log(action, info);
-        var symbolInfo = info.symbol; 
+        var symbolInfo = info.symbol;
         var buySell = info.buy_sell == 0 ? '买入' : '卖出';
 
         $.each(symbols, function (index, value) {
             $.each(value, function (index2, value2) {
                 if (info.symbol == index2) {
-                    symbolInfo = value2+' ('+index2+')';
+                    symbolInfo = value2 + ' (' + index2 + ')';
                 }
             });
         });
@@ -91,7 +91,7 @@
         // console.log($(this).attr("src"));
         callNative({
             type: "openImage",
-            url : $(this).attr("src")
+            url: $(this).attr("src")
         });
         return false;
     });
@@ -102,7 +102,7 @@
         return false;
     });
     $(document).on("tap", ".layui-m-layer-comment .m_comment_modal .volume .volume_num .b", function () {
-        
+
         var val = $(".layui-m-layer-comment .m_comment_modal .volume .volume_num input").val();
         if (val > 0.01) {
             val = (val - 0.01).toFixed(2);
@@ -112,7 +112,7 @@
         return false;
     });
     $(document).on("tap", ".layui-m-layer-comment .m_comment_modal .volume .volume_num .a", function () {
-        
+
         var val = $(".layui-m-layer-comment .m_comment_modal .volume .volume_num input").val();
         if (val < 50) {
             val = (Number(val) + 0.01).toFixed(2);
@@ -122,7 +122,7 @@
         return false;
     });
     $(document).on("blur", ".layui-m-layer-comment .m_comment_modal .volume .volume_num input", function () {
-        
+
         var val = $(this).val();
         if (val > 50) {
             $(this).val(50);
@@ -130,7 +130,7 @@
         return false;
     });
     $(document).on("tap", ".layui-m-layer-comment .m_comment_modal .submit_btn", function () {
-        
+
         $(".layui-m-layer-comment .m_comment_modal .btn_box span").removeClass("active");
         $(".layui-m-layer-comment .m_comment_modal .btn_box .loading_btn").addClass("active");
 
@@ -141,7 +141,7 @@
         if (sDate && sDate.indexOf('1970-01-01') == -1) {
             var nTime = new Date().getTime();
             var sTime = new Date(sDate).getTime();
-            cTime = parseInt((sTime - nTime)/1000);
+            cTime = parseInt((sTime - nTime) / 1000);
         }
         var params = {};
 
@@ -198,13 +198,13 @@
                     time: 3
                 });
             }
-            
+
         });
 
         return false;
     });
     $(document).on("tap", ".layui-m-layer-comment .m_comment_modal .record_btn", function () {
-        
+
         callNative({
             type: "back_pending_record"
         });
@@ -237,7 +237,7 @@
             type: type,
             title: '每日汇评',
             description: pageData.main_title || 'TigerWit 每日汇评，分析师李彭专栏',
-            url: "https://bd.tigerwitfx.com"+window.location.pathname
+            url: window.location.href
         };
         if (!isInTiger()) {
             console.log("当前不是APP环境");
@@ -248,13 +248,13 @@
     $(document).on('tap', '#send_invitation', function (e) {
         console.log(pageData.main_title);
         layIndex = layer.open({
-            type: 1, 
+            type: 1,
             content: $('#share02_box').html(),
             anim: 'up',
             style: 'position:fixed; bottom:0; left:0; width: 100%; height: 100px; padding:10px 0; border:none;'
         });
         setTimeout(function () {
-            $(".copy_link").val("https://bd.tigerwitfx.com"+window.location.pathname);
+            $(".copy_link").val(window.location.href);
         }, 10);
         return false;
     });
@@ -278,13 +278,13 @@
         // } 
         else if (id == id_arr[6]) {
             type = "twitter";
-        } 
+        }
         else if (id == id_arr[7]) {
             type = "linkin";
-        } 
+        }
         else if (id == id_arr[8]) {
             type = "tumblr";
-        } 
+        }
         else if (id == id_arr[9]) {
             layer.close(layIndex);
             return false;
