@@ -120,13 +120,13 @@
         }
         /*页面层*/
         layIndex = layer.open({
-            type: 1, 
+            type: 1,
             content: DOM['$share02_box'].html(),
             anim: 'up',
             style: 'position:fixed; bottom:0; left:0; width: 100%; height: 100px; padding:10px 0; border:none;'
         });
         setTimeout(function () {
-            $(".copy_link").val(window.location.origin+'/m/invite01?utm_source=invite_friends_app_cn&utm_campaign=share_invite_tigerwit&user_code='+$.cookie("user_code"));
+            $(".copy_link").val(window.location.origin + '/m/invite01?utm_source=invite_friends_app_cn&utm_campaign=share_invite_tigerwit&user_code=' + $.cookie("user_code"));
         }, 10);
     }
 
@@ -142,7 +142,8 @@
     }
 
     function nativeShare(type) {
-        var u = getCoName() === 'tigerwit' ? "https://bd.tigerwitfx.com" : window.location.origin;
+        // var u = getCoName() === 'tigerwit' ? "https://bd.tigerwitfx.com" : window.location.origin;
+        var u = window.location.origin;
         var callConfig = {
             type: type,
             title: lang.text('invite.share2'),
@@ -179,13 +180,13 @@
         // } 
         else if (id == id_arr[6]) {
             type = "twitter";
-        } 
+        }
         else if (id == id_arr[7]) {
             type = "linkin";
-        } 
+        }
         else if (id == id_arr[8]) {
             type = "tumblr";
-        } 
+        }
         else if (id == id_arr[9]) {
             layer.close(layIndex);
             return false;
