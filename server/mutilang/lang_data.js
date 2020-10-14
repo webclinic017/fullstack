@@ -472,7 +472,7 @@ module.exports = {
         "ar": "برنامج التداول"
     },
     "foot2": {
-        "en": "MT4 download",
+        "en": "MT4 software download",
         "zh": "MT4 下载",
         "vi": "Tải xuống MT4",
         "zh-Hant": "MT4 下載",
@@ -13973,10 +13973,10 @@ module.exports = {
             "ar": "لتحميل منصة TigerWit MT4، تفضل بزيارة صفحة"
         },
         "protect1A_2": {
-            "zh": "'MT4 download'",
-            "en": "'MT4 download'",
+            "zh": "'MT4 software download'",
+            "en": "'MT4 software download'",
             "vi": "‘Tải xuống MT4’",
-            "zh-Hant": "'MT4 download'",
+            "zh-Hant": "'MT4 software download'",
             "id": "“Unduh MT4”",
             "es": "‘MT4 descarga’ ",
             "pt-BR": "\"Download do MT4\"",
