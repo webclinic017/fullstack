@@ -21,46 +21,30 @@
                 fn: '&'
             },
             template:
-              `<p class="account_login__remenber-switch text-center cannot-get">{{lang.text('verificationArray.notReceive')}}</p>
-              <div class="verification-wrap">
-                <ul>
-                  <li>
-                    <img src="/white_label/icons/voice_phone.png" alt="">
-                    <span class="account_login__remenber-switch get-send-code" ng-show="codeBtnStatus.step1Phone.count">
-                      {{lang.text('verificationArray.getVoice')}}
-                    </span>
-                    <span class="ash-disposal" ng-show="!codeBtnStatus.step1Phone.count">
-                      {{lang.text('verificationArray.getVoice')}}
-                    </span>
-                    <span>
-                      {{lang.text('verificationArray.getVoice2')}}
-                    </span>
-                    <span class="notAllowed" ng-show="codeBtnStatus.step1Phone.count_down">
-                        {{lang.text('tigerWitID.myAccount.tip39_1')}}{{ codeBtnStatus.step1Phone.msg }}{{lang.text('tigerWitID.myAccount.tip39_2')}}
-                    </span>
-                  </li>
-                  <li>
-                    <img src="/white_label/icons/voice_live.png" alt="">
-                    <span class="account_login__remenber-switch contact-us">
-                      {{lang.text('verificationArray.ContactUs')}}
-                    </span>
-                    <span>
-                      {{lang.text('verificationArray.ContactUs2')}}
-                    </span>
-                  </li>
-                  <li ng-show="isSlider">
-                    <img src="/white_label/icons/voice_skip.png" alt="">
-                    <span class="account_login__remenber-switch set-slider-show" ng-click="setSliderShow()">
-                      {{lang.text('verificationArray.skipVoice')}}
-                    </span>
-                    <span>
-                      {{lang.text('verificationArray.skipVoice2')}}
-                    </span>
-                  </li>
-                </ul>
-              </div>
-              <div slider-verification-tab slider-succ-fn="fn()" data-register-set-password="registerSetPassword" data-register-step="registerStep" data-code-list="codeList" data-cold-type="coldType" data-slider-show="codeBtnStatus.step1Phone.isSliderShow" ng-show="codeBtnStatus.step1Phone.isSliderShow"></div>
-              `,
+              '<p class="account_login__remenber-switch text-center cannot-get">{{lang.text('verificationArray.notReceive')}}</p>' +
+              '<div class="verification-wrap">' +
+                '<ul>' +
+                  '<li>' +
+                    '<img src="/white_label/icons/voice_phone.png" alt="">' +
+                    '<span class="account_login__remenber-switch get-send-code" ng-show="codeBtnStatus.step1Phone.count">{{lang.text("verificationArray.getVoice")}}</span>' +
+                    '<span class="ash-disposal" ng-show="!codeBtnStatus.step1Phone.count">{{lang.text("verificationArray.getVoice")}}</span>' +
+                    '<span>{{lang.text("verificationArray.getVoice2")}}</span>' +
+                    '<span class="notAllowed" ng-show="codeBtnStatus.step1Phone.count_down">{{lang.text("tigerWitID.myAccount.tip39_1")}}{{ codeBtnStatus.step1Phone.msg }}{{lang.text("tigerWitID.myAccount.tip39_2")}}</span>' +
+                  '</li>' +
+                  '<li>' +
+                    '<img src="/white_label/icons/voice_live.png" alt="">' +
+                    '<span class="account_login__remenber-switch contact-us">{{lang.text("verificationArray.ContactUs")}}</span>' +
+                    '<span>{{lang.text("verificationArray.ContactUs2")}}</span>' +
+                  '</li>' +
+                  '<li ng-show="isSlider">' +
+                    '<img src="/white_label/icons/voice_skip.png" alt="">' +
+                    '<span class="account_login__remenber-switch set-slider-show" ng-click="setSliderShow()">{{lang.text("verificationArray.skipVoice")}}</span>' +
+                    '<span>{{lang.text("verificationArray.skipVoice2")}}</span>' +
+                  '</li>' +
+                '</ul>' +
+              '</div>' +
+              '<div slider-verification-tab slider-succ-fn="fn()" data-register-set-password="registerSetPassword" data-register-step="registerStep" data-code-list="codeList" data-cold-type="coldType" data-slider-show="codeBtnStatus.step1Phone.isSliderShow" ng-show="codeBtnStatus.step1Phone.isSliderShow"></div>'
+              ,
             link: function (scope, element, attrs) {
               scope.codeBtnStatus = {            // 获取验证码按钮状态
                   step1Phone: {
