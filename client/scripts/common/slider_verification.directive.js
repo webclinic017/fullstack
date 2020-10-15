@@ -28,9 +28,7 @@
                   '<div class="drag-box__drag-bg"></div>' +
                   '<div class="drag-box__drag-text slidetounlock" onselectstart="return false;">{{lang.text("verificationArray.slider2")}}</div>' +
                   '<div class="drag-box__drag-btn">&gt;&gt;</div>' +
-                '</div>' +
-                {{registerStep}} +
-                '<p ng-click="closeModal()">{{lang.text("verificationArray.slider4")}}<span ng-show="count">({{ msg }}S)</span></p>' +
+                '</div>{{registerStep}}<p ng-click="closeModal()">{{lang.text("verificationArray.slider4")}}<span ng-show="count">({{ msg }}S)</span></p>' +
               '</div>' +
               '<div class="drag-box__wrap" ng-show="!title">' +
               '<p class="title">{{lang.text("verificationArray.skipVoice3")}}</p>' +

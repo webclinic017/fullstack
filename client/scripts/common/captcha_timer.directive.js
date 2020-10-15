@@ -62,7 +62,7 @@
                         scope.voiceCaptcha = true;
                         return;
                     }
-                    scope.timer.seconds --;
+                    scope.timer.seconds--;
 
                     $timeout(function () {
                        updateTime();

@@ -21,7 +21,7 @@
                 fn: '&'
             },
             template:
-              '<p class="account_login__remenber-switch text-center cannot-get">{{lang.text('verificationArray.notReceive')}}</p>' +
+              '<p class="account_login__remenber-switch text-center cannot-get">{{lang.text("verificationArray.notReceive")}}</p>' +
               '<div class="verification-wrap">' +
                 '<ul>' +
                   '<li>' +
@@ -43,8 +43,7 @@
                   '</li>' +
                 '</ul>' +
               '</div>' +
-              '<div slider-verification-tab slider-succ-fn="fn()" data-register-set-password="registerSetPassword" data-register-step="registerStep" data-code-list="codeList" data-cold-type="coldType" data-slider-show="codeBtnStatus.step1Phone.isSliderShow" ng-show="codeBtnStatus.step1Phone.isSliderShow"></div>'
-              ,
+              '<div slider-verification-tab slider-succ-fn="fn()" data-register-set-password="registerSetPassword" data-register-step="registerStep" data-code-list="codeList" data-cold-type="coldType" data-slider-show="codeBtnStatus.step1Phone.isSliderShow" ng-show="codeBtnStatus.step1Phone.isSliderShow"></div>',
             link: function (scope, element, attrs) {
               scope.codeBtnStatus = {            // 获取验证码按钮状态
                   step1Phone: {
