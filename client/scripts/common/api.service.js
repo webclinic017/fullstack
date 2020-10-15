@@ -66,6 +66,7 @@
             // getRCaptchaApi: urlOrigin2 + '/validation/send_phone_code',
             // sendEmailCodeApi: urlOrigin2 + '/validation/send_email_code',
             sendCodeApi: urlOrigin2 + '/validation/send_code',
+            pageSignupApi: urlOrigin2 + '/auth/page_signup',
 
             // checkPhoneAndCaptchaApi: urlOrigin2 + '/validation/check_phone_code',
             // checkEmailCodeApi: urlOrigin2 + '/validation/check_email_code',

@@ -1,0 +1,42 @@
+<div class="authen_content ctn center">
+
+  <!-- 验证页面 -->
+  <div>
+    <div class="authen_content__title">
+        <h2>{{lang.text('verificationArray.skipVoice7')}} {{personal.phone}}</h2>
+        <p class="authen_content__tip">{{lang.text('verificationArray.skipVoice8')}}</p>
+    </div>
+    <div class="row mg-tp-40 kyc">
+        <div class="form-control-wrapper contact_way inputor">
+            <input class="form-control" name="verification" type="text" placeholder="{{lang.text('tigerWitID.settings.enterVerificationCode')}}"
+                required
+                ng-model="completeInfo.verification">
+            <span class="sender_btn" ng-show="!completeInfo.hasSendCode" ng-click="[sendCode('phone'), toTrackEvent('Open live account', 'your_details_getcode')]">{{lang.text('tigerWitID.login.sendCode')}}</span>
+            <span class="sender_btn" ng-show="completeInfo.hasSendCode">{{lang.text('tigerWitID.myAccount.tip39_1')}}{{
+                completeInfo.waitTime }}{{lang.text('tigerWitID.myAccount.tip39_2')}}</span>
+            <span class="account-form-control-tip-new" ng-if="account.step1Code">{{ lang.text('tigerWitID.login.verificationCodej') }}</span>
+
+            <div ng-show="frontErr.verification.show">
+                <p class="alert-arrow_tp_lf" ng-show="completeForm.verification.$error.required">
+                    {{lang.text('tigerWitID.settings.enterVerificationCode')}}
+                </p>
+            </div>
+
+            <div ng-show="codeErr.verification.show">
+                <p class="alert-arrow_tp_lf">
+                    {{ codeErr.verification.msg }}
+                </p>
+            </div>
+        </div>
+        <!-- 语音验证 -->
+        <div style="width: 60%;margin: 0 auto; display: flow-root;" class="mg-bt-20" ng-if="isSendVoice">
+          <div class="col-xs-12 text-center">
+            <div voice-verification-tab data-code-list="personal" data-setting-info-phone="personal.phone" data-register-step1="registerStep1" data-fn="register('registerForm1', 1)" data-cold-type="3" data-is-slider="false" data-is-send-voice="is_send_voice"></div>
+          </div>
+        </div>
+        <div class="text-center mg-tp-50 mg-bt-30">
+          <button class="tw-btn-md tw-btn-capsule-gradient ng-binding" ng-click="submitForm('phoneForm')">{{lang.text('tigerWitID.submit')}}</button>
+        </div>
+    </div>
+  </div>
+</div>

@@ -13,16 +13,16 @@
 
                 <div class="col-xs-3 text-center">
                     <div class="relative">
-                        <div class="captcha_btn" 
-                                tw-captcha-timer 
-                                start-timer="oldStartTimer" 
-                                voice-captcha="oldVoiceCaptcha" 
-                                captcha-btn-clickable="clickable.oldCaptcha" 
-                                ng-disabled="!clickable.oldCaptcha" 
+                        <div class="captcha_btn"
+                                tw-captcha-timer
+                                start-timer="oldStartTimer"
+                                voice-captcha="oldVoiceCaptcha"
+                                captcha-btn-clickable="clickable.oldCaptcha"
+                                ng-disabled="!clickable.oldCaptcha"
                                 ng-click="getCaptcha('old')">
                             {{lang.text('tigerWitID.settings.getVerificationCode')}}
                         </div>
-    
+
                         <div ng-show="backErr.oldCaptchaBtn.show">
                             <p class="alert-arrow_tp_lf">
                                 {{ backErr.oldCaptchaBtn.msg }}
@@ -30,11 +30,11 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="col-xs-3">
                     <div class="form-control-wrapper">
-                        <input class="form-control" 
-                               name="oldCaptcha" 
+                        <input class="form-control"
+                               name="oldCaptcha"
                                type="text"
                                placeholder="{{lang.text('tigerWitID.settings.verificationCode')}}"
                                required
@@ -42,13 +42,13 @@
                                ng-model="phone.oldCaptcha"
                                ng-focus="hideErr('oldPhoneForm', 'oldCaptcha')"
                                ng-blur="showErr('oldPhoneForm', 'oldCaptcha')">
-    
+
                         <div ng-show="frontErr.oldCaptcha.show">
                             <p class="alert-arrow_tp_lf" ng-show="oldPhoneForm.oldCaptcha.$error.required" ng-style="{padding: lang.isEnglishArea() ? '8px 7px' : ''}">
                                 {{lang.text('tigerWitID.settings.enterVerificationCode')}}
                             </p>
                         </div>
-    
+
                         <div ng-show="backErr.oldCaptcha.show">
                             <p class="alert-arrow_tp_lf" ng-show="backErr.oldCaptcha.status === 1">
                                 {{lang.text('tigerWitID.settings.verificationCodeNo')}}
@@ -56,18 +56,24 @@
                         </div>
                     </div>
                 </div>
-    
+                <!-- 语音验证 -->
+                <!-- <div class="flex1"> -->
+                  <div class="col-xs-4 text-center mg-tp-10" ng-if="isOldSendVoice">
+                    <div voice-verification-tab data-setting-info-phone="settingInfo.phone" data-code-list="phone" data-register-step1="registerStep1" data-fn="register('registerForm1', 1)" data-cold-type="3" data-is-slider="false" data-is-send-voice="is_send_voice"></div>
+                  </div>
+                <!-- </div> -->
                 <div class="flex1 justify-flex-end">
                     <button class="tw-btn tw-btn-md tw-btn-capsule-gradient" type="submit" ng-if="clickable.oldSubmit" ng-click="checkPhoneCode('oldPhoneForm')">
                         {{lang.text('tigerWitID.submit')}}
                     </button>
-    
+
                     <button class="tw-btn tw-btn-md tw-btn-capsule-gradient" ng-if="!clickable.oldSubmit">
                         <i class="loading_spinner fa fa-spinner"></i>
                         {{lang.text('tigerWitID.submitting')}}
                     </button>
                 </div>
             </form>
+
         </div>
 
     <div class="row setting_info_zero__list-input" ng-show="step === 2">
@@ -82,11 +88,11 @@
                                 required
                                 readonly
                                 ng-model="phone.phone_code.key">
-                        
+
                         <i class="select__icon fa fa-angle-down"></i>
 
                         <ul class="select__dropdown" twform-select data-bind-model="phone_test">
-                            
+
                             <li class="first_li"><input type="text" placeholder="{{lang.text('tigerWitID.login.countryCode')}}" ng-model="placeholderArea"><i class="fa fa-search"></i></li>
                             <li ng-repeat="world in worlds | filter : placeholderArea" ng-class="{'selected': world.phone_code == phone.phone_code.value}">
                                 <span data-value="{{world.code}}" data-disabled='{"disabled": {{world.disabled}}, "msg": "{{lang.text("tigerWitID.myAccount.unableCountry")}}"}' ng-click="world.disabled || selectWorld(world)" ng-class="{'font-light': world.disabled}">+{{world.phone_code}}({{world.name}})</span>
@@ -107,7 +113,7 @@
                            ng-pattern="frontErr.phoneNew.reg"
                            ng-focus="hideErr('phoneForm', 'phoneNew')"
                            ng-blur="showErr('phoneForm', 'phoneNew')">
-        
+
                     <div ng-show="frontErr.phoneNew.show">
                         <p class="alert-arrow_tp_lf" ng-show="phoneForm.phoneNew.$error.required">
                             {{lang.text('tigerWitID.settings.enterNewPhoneNum')}}
@@ -128,8 +134,8 @@
 
             <div class="col-xs-2">
                 <div class="form-control-wrapper">
-                    <input class="form-control" 
-                           name="captcha" 
+                    <input class="form-control"
+                           name="captcha"
                            type="text"
                            placeholder="{{lang.text('tigerWitID.settings.verificationCode')}}"
                            required
@@ -154,16 +160,15 @@
 
             <div class="col-xs-3 text-center">
                 <div class="relative">
-                    <div class="captcha_btn" 
-                            tw-captcha-timer 
-                            start-timer="startTimer" 
-                            voice-captcha="voiceCaptcha" 
-                            captcha-btn-clickable="clickable.captcha" 
-                            ng-disabled="!clickable.captcha" 
+                    <div class="captcha_btn"
+                            tw-captcha-timer
+                            start-timer="startTimer"
+                            voice-captcha="voiceCaptcha"
+                            captcha-btn-clickable="clickable.captcha"
+                            ng-disabled="!clickable.captcha"
                             ng-click="getCaptcha('new')">
                         {{lang.text('tigerWitID.settings.getVerificationCode')}}
                     </div>
-
                     <div ng-show="backErr.captchaBtn.show">
                         <p class="alert-arrow_tp_lf">
                             {{ backErr.captchaBtn.msg }}
@@ -171,7 +176,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="flex1 justify-flex-end">
                 <button class="tw-btn tw-btn-md tw-btn-capsule-gradient" type="submit" ng-if="clickable.submit" ng-click="submitForm('phoneForm')">
                     {{lang.text('tigerWitID.submit')}}
@@ -183,6 +187,13 @@
                 </button>
             </div>
         </form>
+        <!-- 语音验证 -->
+        <div class="flex1 justify-flex-end" ng-if="isSendVoice">
+          <div class="col-xs-7 text-center">
+            <div voice-verification-tab data-code-list="phone" data-register-step1="registerStep1" data-fn="register('registerForm1', 1)" data-cold-type="3" data-is-slider="false" data-is-send-voice="is_send_voice"></div>
+          </div>
+        </div>
+
     </div>
 
     <div class="text-center" ng-show="backErr.system.show">

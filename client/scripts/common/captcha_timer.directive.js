@@ -18,19 +18,19 @@
                 captchaBtnClickable: '=',
                 voiceCaptcha: '='
             },
-            template: 
-                '<div>' + 
+            template:
+                '<div>' +
                     '<span ng-show="timer.start">' + lang.text("register6") + '</span>' +
                     '<span ng-show="timer.running">' + '{{timer.seconds}}' + lang.text("tigerWitID.second") +'</span>' +
-                    '<span ng-show="timer.restart && voiceCaptcha">' + 
-                        '{{timer.voiceCaptchaTimes === 1 ? lang.text("tigerWitID.getCodeAgain") : lang.text("tigerWitID.getVoiceCodeAgain") }}' + 
+                    '<span ng-show="timer.restart && voiceCaptcha">' +
+                        '{{timer.voiceCaptchaTimes === 1 ? lang.text("tigerWitID.getCodeAgain") : lang.text("tigerWitID.getVoiceCodeAgain") }}' +
                     '</span>' +
                 '</div>',
             link: function (scope, element, attrs) {
                 var totalSeconds = 61;
 
                 scope.lang = lang;
-                
+
                 scope.timer = {
                     seconds: totalSeconds,
                     start: true,
@@ -47,7 +47,7 @@
                         scope.timer.start = false;
                         scope.timer.running = true;
                         scope.timer.restart = false;
-                        updateTime(); 
+                        updateTime();
                     }
                 }
 

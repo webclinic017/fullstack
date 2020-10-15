@@ -86,6 +86,8 @@
         };
         $scope.voiceCaptcha = false;  // 语音验证码
         $scope.oldVoiceCaptcha = false;  // 语音验证码
+        $scope.isSendVoice = false;
+        $scope.isOldSendVoice = false;
         $scope.hideErr = hideErr;
         $scope.showErr = showErr;
         $scope.getCaptcha = getCaptcha;
@@ -116,6 +118,7 @@
                 account.sendCode(params).then(function (data) {
                     if (!data) return;
                     if (data.is_succ) {
+                        $scope.isSendVoice = data.data.is_send_voice;
                         $scope.startTimer();
                     } else {
 
@@ -143,6 +146,7 @@
                 account.sendCode(params).then(function (data) {
                     if (!data) return;
                     if (data.is_succ) {
+                        $scope.isOldSendVoice = data.data.is_send_voice;
                         $scope.oldStartTimer();
                     } else {
 

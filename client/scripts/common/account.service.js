@@ -59,6 +59,7 @@
             // sendEmailCode: sendEmailCode,
             // getRCaptcha: getRCaptcha,
             sendCode: sendCode,
+            pageSignup: pageSignup,
 
             checkPhoneAndCaptcha: checkPhoneAndCaptcha,
             checkEmailCode: checkEmailCode,
@@ -641,6 +642,11 @@
          */
         function sendCode(params) {
             return publicHttp.dealPublicRequest(o.sendCodeApi, 'POST', params);
+        }
+
+        // 线索客户
+        function pageSignup(params) {
+            return publicHttp.dealPublicRequest(o.pageSignupApi, 'POST', params);
         }
 
         /**

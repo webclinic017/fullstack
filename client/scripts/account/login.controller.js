@@ -18,6 +18,7 @@
         // $scope.forgetPasswordStatus = true; // 忘记密码设置密码显示or隐藏
         $scope.rememberLoginStatus = true;  // 记住登录状态
         $scope.loginBtnStatus = true;       // 登录按钮状态
+        $scope.isSendVoice = false;
         $scope.codeBtnStatus = {            // 获取验证码按钮状态
             phoneVePhone: {
                 count: false,       // 点击状态 false 可点击；true 不可点击
@@ -162,6 +163,7 @@
                 // console.log(data);
                 if (data.is_succ) {
                     countDown(name);
+                    $scope.isSendVoice = data.data.is_send_voice;
                     var obj = {
                         title: lang.text('tigerWitID.login.verificationCodeSent'),
                         titleClass: 'account_login__layer-title',

@@ -202,6 +202,8 @@
                             </span>
                         </div>
                     </form>
+                    <!-- 语音验证 -->
+                    <div ng-if="loginType === 'pass' && isSendVoice" voice-verification-tab data-code-list="account" data-register-step1="registerStep1" data-fn="register('registerForm1', 1)" data-cold-type="2" data-is-slider="false" data-is-send-voice="is_send_voice"></div>
                     <div class="account_login__btn_wrapper pd-tp-15">
                         <button class="tw-btn-md tw-btn-capsule-gradient mg-rg-15 mg-lf-15" ng-click="backPassword()">{{ lang.text('actLogin29_1') }}</button>
                         <button class="tw-btn-md tw-btn-capsule-gradient mg-rg-15 mg-lf-15" ng-click="goForgetPassword2('loginFormforgetPhonePw', 'phonePhone', 'forgetPhoneCode')">{{ lang.text('actLogin29') }}</button>
@@ -327,14 +329,14 @@
                                 <input class="select__input"
                                         name="phoneArea"
                                         readonly
-                                        autocomplete="off" 
+                                        autocomplete="off"
                                         type="text"
                                         placeholder="{{lang.text('tigerWitID.areaCode')}}"
                                         required
                                         ng-model="account.phoneArea.key">
 
                                 <ul class="select__dropdown" twform-select data-bind-model="account.phoneArea2">
-                                    
+
                                     <li class="first_li"><input type="text" placeholder="{{lang.text('tigerWitID.login.countryCode')}}" ng-model="placeholderArea"><i class="fa fa-search"></i></li>
                                     <li ng-repeat="world in areaCodeList | filter : placeholderArea" ng-class="{'selected': world.phone_code == account.phoneArea.value}">
                                         <span data-value="{{world.code}}" data-disabled='{"disabled": {{world.disabled}}, "msg": "{{lang.text("tigerWitID.myAccount.unableCountry")}}"}' ng-click="world.disabled || selectArea(world)" ng-class="{'font-light': world.disabled}">+{{world.phone_code}}({{world.name}})</span>
@@ -353,7 +355,7 @@
                             <span class="account-form-control-tip-new" ng-show="account.phonePhone">{{ lang.text("actLogin17") }}</span>
                             <span class="account_login__close" ng-show="account.phonePhone" ng-click="clearPhone('phonePhone')">
                                 <i class="fa fa-times" aria-hidden="true"></i>
-                            </span>   
+                            </span>
                         </div>
                         <div class="account-form-control-wrapper-new">
                             <input class="account-form-control-new"
@@ -373,6 +375,7 @@
                                 {{lang.text('tigerWitID.myAccount.tip39_1')}}{{ codeBtnStatus.phoneVePhone.msg }}{{lang.text('tigerWitID.myAccount.tip39_2')}}
                             </span>
                         </div>
+
                         <div class="account_login__remenber space-between-center">
                             <span class="account_login__remenber-btn" ng-click="changeRememberLogin()">
                                 <i class="fa fa-square-o" ng-show="!rememberLoginStatus"></i>
@@ -384,10 +387,12 @@
                             </p>
                         </div>
                     </form>
+                    <!-- 语音验证 -->
+                    <div ng-if="loginType === 'code' && isSendVoice" voice-verification-tab data-code-list="account" data-register-step1="registerStep1" data-fn="register('registerForm1', 1)" data-cold-type="4" data-is-slider="false" data-is-send-voice="is_send_voice"></div>
                     <div class="account_login__btn_wrapper pd-tp-15">
                         <button class="tw-btn-md tw-btn-capsule-gradient" ng-click="[login('loginFormPhoneV'), toTrackEvent('Login and register', 'click_login')]">{{ lang.text('tigerWitID.login.login') }}</button>
                     </div>
-                </div> 
+                </div>
                 <!-- 邮箱登录    -->
                 <div ng-show="loginStep3 == 1">
                     <form name="loginFormEmailV" class="account_login__form" novalidate ng-style="{'margin-bottom': lang.isEnglishArea() ? '0px' : '20px'}">

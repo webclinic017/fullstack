@@ -102,9 +102,7 @@
                             </div>
                         </form>
                         <!-- 语音验证 -->
-                        <div voice-verification-tab data-code-list="account" data-fn="register('registerForm1', 1)" data-cold-type="1" data-is-send-voice="is_send_voice"></div>
-                        <!-- 滑块验证 -->
-                        <!-- <div slider-verification-tab></div> -->
+                        <div ng-show="isSendVoice" data-register-set-password="registerSetPassword" voice-verification-tab data-code-list="account" data-register-step="registerStep1" data-fn="register('registerForm1', 1)" data-cold-type="1" data-is-slider="isSkipVerify" data-is-send-voice="is_send_voice"></div>
                         <div class="account_login__btn_wrapper pd-tp-15">
                             <button class="tw-btn-md tw-btn-capsule-gradient" ng-click="[register('registerForm1'), toTrackEvent('Login and register', 'click_register'), toGtagEvent('click_register_phone_web')]">{{lang.text("tigerWitID.login.register")}}</button>
                         </div>
@@ -142,7 +140,8 @@
                         <!-- <p class="account_login__code-tip">{{ lang.text('actLogin23') }}</p> -->
                     </form>
                     <div class="account_login__btn_wrapper pd-tp-15">
-                        <button class="tw-btn-md tw-btn-capsule-gradient mg-rg-15 mg-lf-15" ng-click="setPassword('registerForm2')">{{ lang.text('actLogin33') }}</button>
+                        <button ng-show="!registerSetPassword" class="tw-btn-md tw-btn-capsule-gradient mg-rg-15 mg-lf-15" ng-click="setPassword('registerForm2')">{{ lang.text('actLogin33') }}</button>
+                        <button ng-show="registerSetPassword" class="tw-btn-md tw-btn-capsule-gradient mg-rg-15 mg-lf-15" ng-click="register('registerForm1', 1, 3)">{{ lang.text('actLogin33') }}</button>
                         <button class="tw-btn-md tw-btn-capsule-bordered mg-rg-15 mg-lf-15" ng-click="skipSetPass()">{{ lang.text('tigerWitID.login.skip') }}</button>
                     </div>
                 </div>

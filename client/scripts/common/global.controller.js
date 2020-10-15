@@ -172,7 +172,7 @@
             openDredgeMdl(resolve)
         })
         $scope.$on('global.getAuthStatus', function (e, resolve) {
-            console.log(resolve.ctrlName);
+            // console.log(resolve.ctrlName);
             /**
              * resolve { ctrlName: 'globalController'[, callback]} 
              */

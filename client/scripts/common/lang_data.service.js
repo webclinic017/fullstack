@@ -985,6 +985,178 @@
                 "pt-BR": "",
                 "ar": "this is comments, No translation required -- 通行证个人中心"
             },
+            "verificationArray": {
+              "notReceive": {
+                "zh": "无法获取验证码？您可以尝试",
+                "en": "Did not receive verification code？Try the following",
+                "vi": "Bạn không nhận được mã xác minh? Hãy thử cách dưới đây",
+                "zh-Hant": "無法獲取驗證碼？您可以嘗試",
+                "id": "Tidak menerima kode verifikasi? Silahkan coba ini",
+                "es": "¿No recibió su código de verificación? Intente lo siguiente",
+                "pt-BR": "Não recebi o código de verificação? Tente o seguinte",
+                "ar": "لم تستلم رمز التحقق؟ حاول ما يلي"
+              },
+              "getVoice": {
+                "zh": "获取语音验证",
+                "en": "Send the voice verification code",
+                "vi": "Gửi mã xác minh qua tin nhắn thoại",
+                "zh-Hant": "獲取語音驗證碼",
+                "id": "Kirim Kode verifikasi suara",
+                "es": "Envíe código de verificación de voz",
+                "pt-BR": "Envie o código de verificação por chamada de voz",
+                "ar": "أرسل رمز التحقق الصوتي"
+               },
+               "getVoice2": {
+                 "zh": "未接收到短信？试试接听来电获取验证码",
+                 "en": "Did not receive the SMS? Try to get the verification code via answering a call.",
+                 "vi": "Bạn không nhận được SMS? Nhận mã xác minh bằng cách trả lời cuộc gọi",
+                 "zh-Hant": "未接收到短信？試試接聽來電獲取驗證碼",
+                 "id": "Tidak menerima SMS? Silahkan coba menerima kode verifikasi melalui telepon",
+                 "es": "¿No recibió el SMS? Intente obtener el código de verificación respondiendo una llamada de voz",
+                 "pt-BR": "Não recebeu o SMS? Tente obter o código de verificação atendendo a uma chamada.",
+                 "ar": "لم تستلم الرسالة؟ل الحصول على رمز التحقق من خلال الرد على المكالمة."
+              },
+              "ContactUs": {
+                 "zh": "联系我们",
+                 "en": "Contact us",
+                 "vi": "Liên hệ với chúng tôi",
+                 "zh-Hant": "聯系我們",
+                 "id": "Hubungi Kami",
+                 "es": "Contáctenos",
+                 "pt-BR": "Contate-Nos",
+                 "ar": "تواصل معنا"
+              },
+              "ContactUs2": {
+                 "zh": "需要帮助？联系我们",
+                 "en": "Need help? Contact us",
+                 "vi": "Cần sự hỗ trợ? Liên hệ với chúng tôi",
+                 "zh-Hant": "需要幫助？聯系我們",
+                 "id": "Butuh bantuan? Hubungi kami",
+                 "es": "¿Necesita ayuda? Contáctenos",
+                 "pt-BR": "Preciso de ajuda? Contate nos",
+                 "ar": "هل تريد المساعدة؟ تواصل معنا"
+              },
+              "skipVoice": {
+                 "zh": "跳过验证",
+                 "en": "Skip verification",
+                 "vi": "Bỏ qua xác minh",
+                 "zh-Hant": "跳過驗證",
+                 "id": "Lewati verifikasi",
+                 "es": "Proceda sin verificación",
+                 "pt-BR": "Pular verificação",
+                 "ar": "تجاوز التحقق"
+              },
+              "skipVoice2": {
+                 "zh": "开始真实交易之前必须完成验证",
+                 "en": "Verification must be completed before you start a live transaction.",
+                 "vi": "Quá trình xác minh cần được hoàn thành trước khi bạn bắt đầu giao dịch thực",
+                 "zh-Hant": "開始真實交易之前必須完成驗證",
+                 "id": "Verifikasi harus diselesaikan sebelum anda mulai transaksi live",
+                 "es": "La verificación debe completarse antes de iniciar una transacción en vivo.",
+                 "pt-BR": "A verificação deve ser concluída antes de você iniciar uma transação real",
+                 "ar": "يجب إكمال التحقق قبل البدء لأي عملية تداول."
+              },
+              "skipVoice3": {
+                 "zh": "确认跳过验证？",
+                 "en": "Are you sure to skip verification?",
+                 "vi": "Bạn có chắc sẽ bỏ qua việc xác minh?",
+                 "zh-Hant": "確認跳過驗證？",
+                 "id": "Apakah anda yakin akan melewati verifikasi?",
+                 "es": "¿Está seguro de omitir la verificación?",
+                 "pt-BR": "Tem certeza que deseja ignorar a verificação?",
+                 "ar": "هل أنت متأكد من تجاوز التحقق؟"
+              },
+              "skipVoice4": {
+                 "zh": "跳过验证会导致您的账户存在风险。在您开始真实交易之前必须完成验证。确认要跳过验证？",
+                 "en": "Skipping verification will put your account at risk. Verification must be completed before you start a live transaction. Are you sure you want to skip verification?",
+                 "vi": "Bỏ qua việc xác minh sẽ khiến tài khoản của bạn gặp rủi ro. Việc xác minh phải được hoàn thành trước khi bạn bắt đầu giao dịch thực. Bạn có chắc muốn bỏ qua bước xác minh?",
+                 "zh-Hant": "跳過驗證會導致您的賬戶存在風險。在您開始真實交易之前必須完成驗證。確認要跳過驗證？",
+                 "id": "Untuk dapat melakukan transaksi live, anda tidak bisa melewati proses verifikasi data. Apakah anda yakin?",
+                 "es": "Omitir la verificación pondrá en riesgo su cuenta. La verificación debe completarse antes de iniciar una transacción en Real. ¿Está seguro de que desea omitir la verificación?",
+                 "pt-BR": "Ignorar a verificação colocará sua conta em risco. A verificação deve ser concluída antes de você iniciar uma transação real. Tem certeza de que deseja pular a verificação?",
+                 "ar": "يجب إكمال التحقق قبل البدء لأي عملية تداول. هل أنت متأكد أنك تريد تجاوز التحقق؟"
+              },
+              "skipVoice5": {
+                "zh": "验证手机号码提醒",
+                "en": "Verify mobile phone number reminder",
+                "vi": "Lời nhắc xác minh số điện thoại",
+                "zh-Hant": "驗證手機號碼提醒",
+                "id": "Peringatan verifikasi nomor ponsel anda",
+                "es": "Verificar recordatorio de número de teléfono móvil",
+                "pt-BR": "Verificar lembrete de número de celular",
+                "ar": " تذكير: تحقق من رقم الهاتف المحمول"
+              },
+              "skipVoice6": {
+                "zh": "去验证",
+                "en": "To verify",
+                "vi": "Xác minh",
+                "zh-Hant": "去驗證",
+                "id": "verifikasi",
+                "es": "Para verificar",
+                "pt-BR": "Verificar",
+                "ar": "للتحقق"
+              },
+              "skipVoice7": {
+                "zh": "验证",
+                "en": "To verify",
+                "vi": "Xác minh",
+                "zh-Hant": "去驗證",
+                "id": "verifikasi",
+                "es": "Para verificar",
+                "pt-BR": "Verificar",
+                "ar": "للتحقق"
+              },
+              "skipVoice8": {
+                "zh": "您还未验证手机号码，为了您的账户安全，请尽快验证您的注册手机号码。",
+                "en": "You have not verified your mobile phone number. For your account security, please verify your registered mobile phone number as soon as possible.",
+                "vi": "Bạn chưa xác minh số điện thoại. Để bảo mật tài khoản của bạn, vui lòng xác minh số điện thoại của bạn nhanh nhất có thể.",
+                "zh-Hant": "您還未驗證手機號碼，為了您的賬戶安全，請盡快驗證您的註冊手機號碼。",
+                "id": "Anda belum melakukan verifikasi nomor ponsel anda. Demi keamanan akun anda, silahkan verifikasi nomor telepon anda yang telah terdaftar sesegera mungkin",
+                "es": "No ha verificado su número de teléfono móvil. Para la seguridad de su cuenta, verifique su número de teléfono móvil registrado lo antes posible.",
+                "pt-BR": "Você não verificou o seu número de celular. Para a segurança da sua conta, verifique o seu número de celular registrado o mais rápido possível.",
+                "ar": "لم تقم بالتحقق من رقم هاتفك المحمول. لأمان حسابك، يرجى التحقق من رقم هاتفك المحمول المسجل في أقرب وقت ممكن."
+              },
+              "slider": {
+                 "zh": "滑动校验",
+                 "en": "Slider verification",
+                 "vi": "Xác minh thanh trượt",
+                 "zh-Hant": "滑動校驗",
+                 "id": "Verifikasi Slider",
+                 "es": "Verificación del control deslizante",
+                 "pt-BR": "Verificação de controle deslizante",
+                 "ar": "اسحب للتحقق"
+              },
+              "slider2": {
+                 "zh": "拖动滑块至最右侧",
+                 "en": "Drag the slider to the far right",
+                 "vi": "Kéo thanh trượt sang bên phải",
+                 "zh-Hant": "拖動滑塊至最右側",
+                 "id": "Geser slider ke kanan",
+                 "es": "Arrastre el deslizador a la extrema derecha",
+                 "pt-BR": "Arraste o controle para extrema direita",
+                 "ar": "اسحب السهم الى اقصى اليسار"
+              },
+              "slider3": {
+                 "zh": "验证通过！",
+                 "en": "Verified！",
+                 "vi": "Đã xác minh!",
+                 "zh-Hant": "驗證通過！",
+                 "id": "Verifikasi berhasil!",
+                 "es": "Verificado！",
+                 "pt-BR": "Verificado!",
+                 "ar": "تم التحقق!"
+              },
+              "slider4": {
+                 "zh": "关闭",
+                 "en": "Close",
+                 "vi": "Đóng",
+                 "zh-Hant": "關閉",
+                 "id": "Tutup!",
+                 "es": "Cerrar ",
+                 "pt-BR": "Fechar",
+                 "ar": "اغلاق"
+              }
+            },
             "tigerWitID": {
                 "title": {
                     "zh": "通行证账号",

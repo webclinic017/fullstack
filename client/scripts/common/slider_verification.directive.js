@@ -11,6 +11,8 @@
             // require:'?^voiceVerificationTab',
             // replace: true,
             scope: {
+                registerSetPassword: '=',
+                registerStep: '=',
                 codeList: '=',
                 coldType: '=',
                 isSendVoice: '=',
@@ -22,20 +24,21 @@
               <div class="drag-box">
               <div class="drag-box__wrap" ng-show="title">
               <button class="close" ng-click="closeModal()">&times;</button>
-              <p class="title">滑动校验</p>
+              <p class="title">{{lang.text('verificationArray.slider')}}</p>
               <div class="drag-box__drag">
                   <div class="drag-box__drag-bg"></div>
-                  <div class="drag-box__drag-text slidetounlock" onselectstart="return false;">请拖动滑块解锁</div>
+                  <div class="drag-box__drag-text slidetounlock" onselectstart="return false;">{{lang.text('verificationArray.slider2')}}</div>
                   <div class="drag-box__drag-btn">&gt;&gt;</div>
                 </div>
-                <p ng-click="closeModal()">关闭<span ng-show="count">({{ msg }}S)</span></p>
+                {{registerStep}}
+                <p ng-click="closeModal()">{{lang.text('verificationArray.slider4')}}<span ng-show="count">({{ msg }}S)</span></p>
               </div>
               <div class="drag-box__wrap" ng-show="!title">
-              <p class="title">确定跳过验证吗？</p>
-              <p class="content">We provide you with multiple ways to obtain verification codes to ensure the security of your account. Skipping verification may cause security risks to your account. Are you sure you want to skip verification?</p>
+              <p class="title">{{lang.text('verificationArray.skipVoice3')}}</p>
+              <p class="content">{{lang.text('verificationArray.skipVoice4')}}</p>
               <div>
-              <button class="tw-btn-md mg-rg-15 mg-lf-15" ng-click="setSliderShow()">确认</button>
-              <button class="tw-btn-md tw-btn-capsule-gradient mg-rg-15 mg-lf-15" ng-click="closeModal()">取消</button>
+              <button class="tw-btn-md mg-rg-15 mg-lf-15" ng-click="setSliderShow()">{{ lang.text("tigerWitID.confirm2") }}</button>
+              <button class="tw-btn-md tw-btn-capsule-gradient mg-rg-15 mg-lf-15" ng-click="closeModal()">{{ lang.text("tigerWitID.cancel") }}</button>
               </div>
 
               </div>
@@ -48,6 +51,7 @@
               scope.title = false;
               scope.closeModal = closeModal;
               scope.setSliderShow = setSliderShow;
+              scope.getPageSignup = getPageSignup;
               function countDown() {
                 // scope.codeBtnStatus[codeType].count = false;
                 // scope.codeBtnStatus[codeType].count_down = true;
@@ -63,7 +67,12 @@
                     $interval.cancel(scope.timer);
                   }
                 }, 1000);
-              }
+              };
+              // 线索客户接口判断是否展示跳过验证
+              function getPageSignup () {
+                scope.registerSetPassword = true;
+                scope.registerStep = 2;
+              };
               //一、定义一个获取DOM元素的方法
               var $ = function(selector){
                 return  document.querySelector(selector);
@@ -102,7 +111,6 @@
                   }else if( offsetX < 2){
                       offsetX = 2;//如果滑到了起点的左侧，就将它重置为起点位置
                   }
-                  console.log(offsetX, distance)
                   //4.根据鼠标移动的距离来动态设置滑块的偏移量和背景颜色的宽度
                   if (scope.lang.isAr()) {
                     btn.style.right = offsetX + "px";
@@ -113,7 +121,7 @@
                   //如果鼠标的水平移动距离 = 滑动成功的宽度
                   if( offsetX == distance){
                     //1.设置滑动成功后的样式
-                    text.innerHTML = "验证通过";
+                    text.innerHTML = lang.text('verificationArray.slider3');
                     text.style.color = "#fff";
                     btn.innerHTML = "<div class='check-style-unequal-width'></div>";
                     btn.style.color = "#11C971";
@@ -130,6 +138,7 @@
                         // alert('解锁成功！');
                         countDown();
                         // scope.sliderSuccFn();
+                        scope.getPageSignup();
                         scope.$apply();
                         // register('registerForm1');
                         // toTrackEvent('Login and register', 'click_register');
