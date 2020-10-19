@@ -24,9 +24,10 @@
     window.onload = function () {
         (function () {
             var $dom = document.createElement('div');
-            $dom.style = 'font-size:10px;';
+            $dom.style = 'font-size:12px;';
             document.body.appendChild($dom);
             // 计算出放大后的字体
+            debugger
             var scaledFontSize = parseInt(window.getComputedStyle($dom, null).getPropertyValue('font-size'));
             document.body.removeChild($dom);
             // 计算原字体和放大后字体的比例
@@ -38,6 +39,7 @@
             // 再次 *scaledFontSize才是我们要设置的大小
             var originRootFontSize = parseInt(window.getComputedStyle(document.documentElement, null).getPropertyValue('font-size'));
             document.documentElement.style.fontSize = originRootFontSize * scaleFactor * scaleFactor + 'px';
+                console.log(document.documentElement.style.fontSize)
         })();
     }
 
