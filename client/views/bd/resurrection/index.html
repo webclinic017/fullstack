@@ -1,38 +1,14 @@
 <!DOCTYPE html>
 <html style="height: 100%;">
-  <%if(req.host.indexOf('.tigerwit.com') === -1) {%>
-    <meta name="robots" content="noindex">
-    <%}%>
-<meta name="description" content="Tigerwit get access for The global capital market。">
-<meta name="keywords" content="tigerwit，老虎外汇，Duplicate transaction，Forex，Metal，CFD">
-<meta name="apple-mobile-web-app-title">
-<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
-<meta name="format-detection" content="telephone=no">
 
-<!--禁用缓存-->
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="Cache-Control" content="no-cache">
-<meta http-equiv="Expires" content="0">
-<!-- 删除默认的苹果工具栏和菜单栏 -->
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<!-- 苹果状态栏颜色 -->
-<meta name="apple-mobile-web-app-status-bar-style" content="black" />
-<!-- 启用360浏览器的极速模式(webkit) -->
-<meta name="renderer" content="webkit">
-<!-- uc强制竖屏 -->
-<meta name="screen-orientation" content="portrait">
-<!-- QQ强制竖屏 -->
-<meta name="x5-orientation" content="portrait">
-<!-- UC强制全屏 -->
-<meta name="full-screen" content="yes">
-<!-- QQ强制全屏 -->
-<meta name="x5-fullscreen" content="true">
-<!-- UC应用模式 -->
-<meta name="browsermode" content="application">
-<!-- QQ应用模式 -->
-<meta name="x5-page-mode" content="app">
+<head>
+  <% include /common/meta/h5n.html %>
+
+  <meta name="description" content="Tigerwit get access for The global capital market。">
+  <meta name="keywords" content="tigerwit，老虎外汇，Duplicate transaction，Forex，Metal，CFD">
+
+</head>
+
 <!-- 引入H5 CSS -->
 <!-- build:css(.tmp) /styles/h5_common.css -->
 <link rel="stylesheet" href="/styles/h5_common.css">
@@ -40,6 +16,7 @@
 
 <!--引入公用头部-->
 <% include /common/vendor/h5.utiljs.html %>
+
 <body>
   <div id="bd_resurrection" class="bd_resurrection <%= lang.isEnglishArea() ? 'en' : 'cn' %>" data-page-id="<%= id%>">
     <div class="bd_resurrection_form_wrapper">
@@ -49,10 +26,12 @@
             <span>+<i id="phone_code"><%= lang.isEnglishArea() ? '0' : '86' %></i></span>
             <select name="" id="phone_code_select"></select>
           </div>
-          <input id="phone" class="bd_resurrection_control phone" type="text" placeholder="<%= lang.text('resAccount')%>">
+          <input id="phone" class="bd_resurrection_control phone" type="text"
+            placeholder="<%= lang.text('resAccount')%>">
         </div>
         <div class="bd_resurrection_control_wrapper">
-          <input id="password" class="bd_resurrection_control" type="password" placeholder="<%= lang.text('resPassword')%>">
+          <input id="password" class="bd_resurrection_control" type="password"
+            placeholder="<%= lang.text('resPassword')%>">
         </div>
         <div class="bd_resurrection_btn" id="login"><%= lang.text('resLogin')%></div>
       </form>
@@ -63,4 +42,5 @@
 <!-- build:js(client) /scripts/bd_resurrection.js -->
 <script src="/scripts/bd/bd_resurrection/index.js"></script>
 <!-- endbuild -->
+
 </html>

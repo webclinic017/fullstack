@@ -1,0 +1,205 @@
+// 外层样式
+@include b(lfc-advert) {
+    background-color: $gray-base;
+    color: $gray-fff;
+    @include e(bc) {
+        width: 1200px;
+        margin: 0 auto;
+        padding: 50px 0;
+        // margin: 0 auto;
+        @include m(con) {
+            background-image: url($image-white + "/bd/advert/circle.png");
+            background-repeat: no-repeat;
+            background-size: 100%;
+            // width: 1200px;
+            //   height: 100%;
+            // margin: 0 auto;
+            // padding: 65px 30px 0;
+            padding: 160px 65px 0;
+        }
+        @include m(logo) {
+            height: 154px;
+            img{
+                height: 100%;
+            }
+        }
+        @include m(article) {
+            margin-top: 30px;
+            .title {
+                color: $main-color;
+                font-size: 60px;
+                padding-top: 50px;
+                padding-bottom: 40px;
+            }
+        }
+        @include m(txt) {
+            font-size: 32px;
+            line-height: 36px;
+        }
+        @include m(main) {
+            font-size: 29px;
+            line-height: 35px;
+            display: flex;
+            // margin-top: 20px;
+            justify-content: space-between;
+        }
+        @include m(introduction) {
+            //   font-size: 29px;
+            margin-top: 45px;
+            margin-bottom: 35px;
+        }
+        @include m(details) {
+            //   font-size: 29px;
+            //   line-height: 35px;
+        }
+        @include m(footer) {
+            font-size: 23px;
+            margin-top: 70px;
+            a {
+                color: $main-color;
+            }
+        }
+        @include m(phone) {
+            width: 315px;
+            min-width: 315px;
+            img{
+                width: 100%;
+            }
+
+        }
+        @include m(person) {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            // width: 1200px;
+            margin-top: -400px;
+            margin-bottom: 123px;
+            // margin: -400px auto 123px;
+            // padding-bottom: 3px;
+            // :first-child img{
+            //   width: 310px;
+            //   height: 255px;
+            // }
+        }
+        @include m(people) {
+            width: 700px;
+            a {
+                width: 770px;
+            }
+            //   margin-top: -530px;
+        }
+        @include m(imgs) {
+            display: flex;
+            img {
+                width: 202px;
+                margin: 0 25px;
+            }
+        }
+        @include m(download) {
+            margin-bottom: 58px;
+            p {
+                color: $gray;
+                font-weight: bold;
+                font-size: 33px;
+                line-height: 35px;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+        }
+        @include m(cfds) {
+            font-size: 20px;
+            line-height: 32px;
+            .text1 {
+                font-weight: 600;
+            }
+        }
+    }
+
+    @include responsive(phone-screens) {
+        @include e(bc) {
+            width: auto;
+            padding: px2rem(50);
+            @include m(con) {
+                padding: px2rem(110) px2rem(60);
+            }
+            @include m(logo) {
+                // width: px2rem(178);
+                height: px2rem(160);
+            }
+            @include m(article) {
+                margin-top: 0;
+                .title {
+                    font-weight: bold;
+                    font-size: px2rem(44);
+                    padding-top: px2rem(45);
+                    padding-bottom: px2rem(25);
+                }
+            }
+            @include m(txt) {
+                font-size: px2rem(24);
+                line-height: px2rem(37);
+            }
+            @include m(main) {
+                font-size: px2rem(24);
+                line-height: px2rem(37);
+                // margin-top: px2rem(20);
+            }
+            @include m(introduction) {
+                margin-top: px2rem(30);
+                margin-bottom: px2rem(30);
+            }
+            @include m(details) {
+            }
+            @include m(footer) {
+                font-size: px2rem(20);
+                line-height: px2rem(37);
+                margin-top: px2rem(70);
+            }
+            @include m(phone) {
+                margin: px2rem(10) px2rem(20);
+                width: px2rem(197);
+                min-width: px2rem(197);
+            }
+            @include m(person) {
+                display: flex;
+                flex-direction: column;
+                margin: 0 auto;
+                // :first-child img {
+                //     width: initial;
+                //     height: initial;
+                // }
+            }
+            @include m(people) {
+                margin-top: px2rem(-370);
+                width: px2rem(662);
+                height: px2rem(500);
+                margin-top: px2rem(-349);
+                margin-left: px2rem(35);
+            }
+            @include m(imgs) {
+                display: flex;
+                img {
+                    width: px2rem(255);
+                    margin-right: px2rem(50);
+                }
+            }
+            @include m(download) {
+                padding: px2rem(60);
+                p {
+                    font-weight: bold;
+                    text-indent: px2rem(175);
+                    line-height: px2rem(63);
+                    font-size: px2rem(26);
+                }
+            }
+            @include m(CFDS) {
+                display: flex;
+                justify-content: center;
+                font-size: px2rem(10);
+                .text1 {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
