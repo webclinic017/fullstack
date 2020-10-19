@@ -118,41 +118,39 @@
     @include responsive(phone-screens) {
         @include e(bc) {
             width: auto;
-            padding: px2rem(50);
+            padding: px2rem(33);
             @include m(con) {
-                padding: px2rem(110) px2rem(60);
+                padding: px2rem(88) px2rem(45);
             }
             @include m(logo) {
-                // width: px2rem(178);
-                height: px2rem(160);
+                height: px2rem(106);
             }
             @include m(article) {
                 margin-top: 0;
                 .title {
                     font-weight: bold;
-                    font-size: px2rem(44);
-                    padding-top: px2rem(45);
+                    font-size: px2rem(40);
+                    padding-top: px2rem(40);
                     padding-bottom: px2rem(25);
                 }
             }
             @include m(txt) {
                 font-size: px2rem(24);
-                line-height: px2rem(37);
+                line-height: px2rem(28);
             }
             @include m(main) {
                 font-size: px2rem(24);
-                line-height: px2rem(37);
-                // margin-top: px2rem(20);
+                line-height: px2rem(28);
             }
             @include m(introduction) {
-                margin-top: px2rem(30);
-                margin-bottom: px2rem(30);
+                margin-top: px2rem(34);
+                margin-bottom: px2rem(25);
             }
             @include m(details) {
             }
             @include m(footer) {
-                font-size: px2rem(20);
-                line-height: px2rem(37);
+                font-size: px2rem(13);
+                line-height: px2rem(20);
                 margin-top: px2rem(70);
             }
             @include m(phone) {
