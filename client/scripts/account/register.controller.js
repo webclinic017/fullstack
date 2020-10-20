@@ -170,7 +170,7 @@
             });
         };
         // 注册
-        $scope.register = function (formName, is_agree, registerType) {
+        $scope.register = function (formName, is_agree) {
             if (!$scope.registerBtnStatus) return;
             if (!($scope.account.country.value)) {
                 layer.msg(lang.text("tigerWitID.login.selectCountry"));
@@ -182,7 +182,7 @@
             // }
             var msg;
             var para = {
-                login_type: $scope.registerSetPassword ? 3 : 2,
+                login_type: 2,
                 world_code: $scope.account.country.value,
                 appsflyer_id: $cookies['APPSFLYER_ID'] || null,
                 lp: getLp($state.params.lp)
@@ -219,30 +219,31 @@
                     layer.msg(lang.text('tigerWitID.login.verificationCode'));     //请填写验证码
                     return;
                 }
-                para = angular.extend({
+                para = angular.extend(para, {
                     account_type: 2,
                     account: $scope.account.emailText,
                     password: $scope.account.emailCode,
-                }, para);
+                });
                 msg = lang.text('tigerWitID.login.tip8_21');
             } else if ($scope.registerStep3 == '1') {
                 // 手机号注册
                 if (!showPhoneVel()) { return };
-                para = angular.extend({
+                para = angular.extend(para, {
                     // skip_verify: is_agree === 1 ? 1 : 0,
                     account_type: 1,
                     account: $scope.account.step1Phone,
                     phone_code: $scope.account.phoneArea.value,
-                }, para);
+                });
                 if ($scope.registerSetPassword) {
                   if ($scope.account.step1Password !== $scope.account.step2Password) {
                     layer.msg(lang.text('tigerWitID.login.passwordsEnteredDoNotMatch'));     //两次输入的密码不一致
                     return;
                   }
-                  para = angular.extend({
+                  para = angular.extend(para, {
                       skip_verify: 1,
+                      login_type: 3,
                       password: $scope.account.step1Password,
-                  }, para);
+                  });
                 } else {
                   // if (is_agree !== 1) {
                     if (!($scope.account.step1Code)) {
@@ -250,13 +251,13 @@
                         return;
                     }
                   // }
-                  para = angular.extend({
+                  para = angular.extend(para, {
                       // skip_verify: is_agree === 1 ? 1 : 0,
                       // account_type: 1,
                       // account: $scope.account.step1Phone,
                       password: $scope.account.step1Code,
                       // phone_code: $scope.account.phoneArea.value,
-                  }, para);
+                  });
                 }
 
                 msg = lang.text('tigerWitID.login.tip8_2');
@@ -324,46 +325,6 @@
                     }
                 }
             });
-        };
-        $scope.registerAccounts = function () {
-          if (!$scope.account.step1Password) {
-            layer.msg(lang.text('register11'));
-            return
-          }
-          if ($scope.account.step1Password !== $scope.account.step2Password) {
-            layer.msg(lang.text('tigerWitID.login.passwordsEnteredDoNotMatch'));     //两次输入的密码不一致
-            return;
-          }
-          var para = {
-              type: 1,
-              phone: $scope.account.step1Phone,
-              phone_code: $scope.account.phoneArea.value,
-              password: $scope.account.step1Password,
-              // world_code: $scope.account.country.value,
-              // appsflyer_id: $cookies['APPSFLYER_ID'] || null,
-              lp: getLp($state.params.lp)
-              // TODO 暂时
-              // referrer: document.referrer,
-              // href: location.href,
-              // cookie: document.cookie
-          };
-          var all_sources = $cookies['all_sources'];
-          if (all_sources) {
-              para = angular.extend(para, JSON.parse(all_sources))
-          }
-          account.pageSignup(para).then(function(data) {
-            if (data.is_succ) {
-                // $timeout(function () {
-                //     $scope.$emit('global.openDredgeMdl', { position: 'register' });
-                //     // lang.globalOrCn($scope.area_id);
-                //     // $state.go('space.center');
-                //     window.location.href = "/space/#/center";
-                // }, 100);
-
-            } else {
-                layer.msg(data.message);
-            }
-          })
         };
         // 验证码登录 新用户设置密码
         $scope.setPassword = function (formName) {
