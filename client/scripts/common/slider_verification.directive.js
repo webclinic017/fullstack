@@ -164,7 +164,7 @@
               function closeModal() {
                 scope.sliderShow = false;
                 scope.title = false;
-                scope.getPageSignup();
+                // scope.getPageSignup();
               };
               function setSliderShow() {
                 scope.title = true;
