@@ -279,12 +279,10 @@
                     setGtagUserId(data.data.user_code)
                     // 新用户
                     if ($scope.registerSetPassword) {
-                      $scope.toGtagEvent('phone_register_success_web');
-                      $scope.toTrackEvent('Login and register', 'login_success');
                       $scope.skipSetPass();
-                      return
+                    }else{
+                      $scope.registerStep1 = 2;
                     }
-                    $scope.registerStep1 = 2;
                     // $scope.area_id = data.data.area_id;
                     $scope.$emit('relogin_info', 'is_register');
                     // 神策统计 - 注册
@@ -387,7 +385,7 @@
 
                 if (data.is_succ) {
                     $timeout(function () {
-                        $scope.$emit('global.openDredgeMdl', { position: 'register' });
+                        // $scope.$emit('global.openDredgeMdl', { position: 'register' });
                         // lang.globalOrCn($scope.area_id);
                         // $state.go('space.center');
                         window.location.href = "/space/#/center";
@@ -399,7 +397,7 @@
             });
         };
         $scope.skipSetPass = function () {
-            $scope.$emit('global.openDredgeMdl', { position: 'register' });
+            // $scope.$emit('global.openDredgeMdl', { position: 'register' });
             // lang.globalOrCn($scope.area_id);
             // $state.go('space.center');
             window.location.href = "/space/#/center";

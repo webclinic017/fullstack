@@ -75,7 +75,7 @@
         //     /**
         //      * params
         //      *      name: 名字
-        //      *      value: 
+        //      *      value:
         //      *      expires: 过期时间 单位天
         //      *      path
         //      *  */
@@ -174,7 +174,7 @@
         $scope.$on('global.getAuthStatus', function (e, resolve) {
             // console.log(resolve.ctrlName);
             /**
-             * resolve { ctrlName: 'globalController'[, callback]} 
+             * resolve { ctrlName: 'globalController'[, callback]}
              */
             if (resolve && resolve.ctrlName) {
                 // console.log('global.getAuthStatus called by ' + resolve.ctrlName)
@@ -187,7 +187,7 @@
         })
         $scope.$on('global.checkAuthenFlow', function (e, resolve) {
             /**
-             * resolve { ctrlName: 'globalController'[, callback]} 
+             * resolve { ctrlName: 'globalController'[, callback]}
              */
             if (resolve && resolve.ctrlName) {
                 // console.log('global.checkAuthenFlow called by ' + resolve.ctrlName)
@@ -403,7 +403,7 @@
         // 开户弹窗
         /**
          * openDredgeMdl
-         * @param {*Object} resolve 
+         * @param {*Object} resolve
          * position redbag copy payment
          * userInfo personal
          */
