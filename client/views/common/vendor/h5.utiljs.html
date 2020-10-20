@@ -145,7 +145,7 @@
                     $(ele).html(JSON.parse(sessionStorage["systemMessage"]).email);
                 }
             }
-            callback && callback();
+            callback && callback(JSON.parse(sessionStorage["systemMessage"]));
         } else {
             var d = new Date();
             d.setTime(d.getTime() + (1 * 24 * 60 * 60 * 1000));
@@ -161,7 +161,7 @@
                         }
                     }
                     sessionStorage["systemMessage"] = JSON.stringify(data.data);
-                    callback && callback();
+                    callback && callback(data.data);
                 }
             });
         }

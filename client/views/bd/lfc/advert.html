@@ -32,21 +32,20 @@
                     <img src="/white_label/bd/advert/title.png" alt="">
                 </div>
                 <div class="lfc-advert__bc-article">
-                    <p class="title">Be a Part of Our Winning Team</p>
+                    <h1 class="title"><%= lang.text('advertLfc.title')%></h1>
                     <p class="lfc-advert__bc-txt">
-                        <span>As a proud partner of Liverpool FC,we are delighted to offer instant access to financial markets for the fans.</span>
+                        <span><%= lang.text('advertLfc.titleTip')%></span>
                     </p>
                 </div>
                 <div class="lfc-advert__bc-main">
                     <div class="">
-                        <p class="lfc-advert__bc-introduction">Join TigerWit for free today and get:</p>
-                        <p class="lfc-advert__bc-details">● Access to extensive training meterials</p>
-                        <p class="lfc-advert__bc-details">● Invitations to webinars and events</p>
-                        <p class="lfc-advert__bc-details">● A demo account to trade risk-free</p>
+                        <p class="lfc-advert__bc-introduction"><%= lang.text('advertLfc.joinFree')%></p>
+                        <p class="lfc-advert__bc-details">● <%= lang.text('advertLfc.joinFree1')%></p>
+                        <p class="lfc-advert__bc-details">● <%= lang.text('advertLfc.joinFree2')%></p>
+                        <p class="lfc-advert__bc-details">● <%= lang.text('advertLfc.joinFree3')%></p>
                         <p class="lfc-advert__bc-footer">
-                            Visit
-                            <a href="">uk.tigerwit.com</a>
-                            to claim your educaional paclage today.
+                            <a href="/space/#/account/register?R_271=73386c5d3757b90fa91052547d6c1719"><%= lang.text('advertLfc.registerNow1')%></a>
+                            <%= lang.text('advertLfc.registerNow2')%>
                         </p>
                     </div>
                     <div class="lfc-advert__bc-phone">
@@ -59,12 +58,15 @@
                     <img src="/white_label/bd/advert/playersFaded.png" alt="">
                 </div>
                 <div class="lfc-advert__bc-download">
-                    <p>Dowload the app</p>
+                    <p><%= lang.text('advertLfc.downloadApp')%></p>
                     <div class="lfc-advert__bc-imgs">
-                        <a href="inline-block">
+                        <a href="/m/blank?system=global&platform=android&D_A_250=82b3085e4ebb5c335f4c5233cf33abe2" id="downloadAndroidGlobal" style="display: none;">
+                            <img src="<%= lang.image('homeAppAndroidGlobal')%>" alt="">
+                        </a>
+                        <a href="/m/blank?system=cn&platform=android&D_A_282=5133dde116ed7887de01f47fbc579a41" id="downloadAndroidCn" style="display: none;">
                             <img src="<%= lang.image('homeAppAndroidCn')%>" alt="">
                         </a>
-                        <a href="inline-block">
+                        <a href="/m/blank?system=global&platform=ios&D_I_251=be612f9e761f1b1f777c7d7ec6baf229">
                             <img src="<%= lang.image('homeAppIos')%>" alt="">
                         </a>
                     </div>
@@ -73,9 +75,7 @@
             <div class="lfc-advert__bc-cfds">
                 <p>
                     <span>
-                        CFDS are complex instruments and come with a high risk of losing money rapidly due to leverage.
-                        <span class="text1">66% of retail investor accounts lose money when trading with this provider.</span>
-                        You should consider whether you understand how CFDS work and whether you can afford to take the High risk of losing your money.
+                        <%= lang.text('advertLfc.footerTip')%>
                     </span>
                 </p>
             </div>
@@ -83,5 +83,11 @@
     </div>
 
 </body>
+<% include /common/vendor/h5.js.html %>
+
+<!-- build:js(client) /scripts/bd_lfc_advert.js -->
+<script src="/scripts/bd/lfc/advert.js"></script>
+<!-- endbuild -->
+
 
 </html>

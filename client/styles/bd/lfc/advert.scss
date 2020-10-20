@@ -19,7 +19,7 @@
         }
         @include m(logo) {
             height: 154px;
-            img{
+            img {
                 height: 100%;
             }
         }
@@ -59,13 +59,15 @@
                 color: $main-color;
             }
         }
+        // @include m(footer2) {
+        //     display: none;
+        // }
         @include m(phone) {
             width: 315px;
             min-width: 315px;
-            img{
+            img {
                 width: 100%;
             }
-
         }
         @include m(person) {
             display: flex;
@@ -83,7 +85,7 @@
         }
         @include m(people) {
             width: 700px;
-            a {
+            img {
                 width: 770px;
             }
             //   margin-top: -530px;
@@ -109,9 +111,9 @@
         @include m(cfds) {
             font-size: 20px;
             line-height: 32px;
-            .text1 {
-                font-weight: 600;
-            }
+            // .text1 {
+            //     font-weight: 600;
+            // }
         }
     }
 
@@ -120,83 +122,89 @@
             width: auto;
             padding: px2rem(33);
             @include m(con) {
-                padding: px2rem(88) px2rem(45);
+                background-image: none;
+                border: px2rem(20) solid $main-color;
+                border-radius: px2rem(150);
+                text-align: center;
+                padding: px2rem(66) px2rem(40);
             }
             @include m(logo) {
-                height: px2rem(106);
+                height: px2rem(126);
             }
             @include m(article) {
                 margin-top: 0;
                 .title {
-                    font-weight: bold;
-                    font-size: px2rem(40);
+                    font-size: px2rem(44);
                     padding-top: px2rem(40);
-                    padding-bottom: px2rem(25);
+                    padding-bottom: px2rem(40);
                 }
             }
             @include m(txt) {
-                font-size: px2rem(24);
-                line-height: px2rem(28);
+                font-weight: 500;
+                font-size: px2rem(33);
+                line-height: px2rem(37);
             }
             @include m(main) {
-                font-size: px2rem(24);
-                line-height: px2rem(28);
+                font-size: px2rem(33);
+                line-height: px2rem(37);
             }
             @include m(introduction) {
-                margin-top: px2rem(34);
-                margin-bottom: px2rem(25);
+                margin-top: px2rem(40);
+                margin-bottom: px2rem(20);
             }
             @include m(details) {
             }
             @include m(footer) {
-                font-size: px2rem(13);
-                line-height: px2rem(20);
-                margin-top: px2rem(70);
+                display: none;
             }
+            // @include m(footer2) {
+            //     display: block;
+            //     text-align: center;
+            //     font-size: px2rem(25);
+            //     line-height: px2rem(32);
+            //     margin-top: px2rem(20);
+            //     padding: px2rem(20) px2rem(50) 0;
+            //     a {
+            //         color: $main-color;
+            //     }
+            // }
             @include m(phone) {
-                margin: px2rem(10) px2rem(20);
-                width: px2rem(197);
-                min-width: px2rem(197);
+                display: none;
+                // margin: px2rem(10) px2rem(20);
+                // width: px2rem(197);
+                // min-width: px2rem(197);
             }
             @include m(person) {
-                display: flex;
-                flex-direction: column;
-                margin: 0 auto;
-                // :first-child img {
-                //     width: initial;
-                //     height: initial;
-                // }
+                display: block;
+
+                margin-top: px2rem(-70);
+                margin-bottom: 0;
             }
             @include m(people) {
-                margin-top: px2rem(-370);
-                width: px2rem(662);
-                height: px2rem(500);
-                margin-top: px2rem(-349);
-                margin-left: px2rem(35);
+                width: 100%;
+                img {
+                    width: 100%;
+                }
             }
             @include m(imgs) {
-                display: flex;
+                justify-content: center;
                 img {
-                    width: px2rem(255);
-                    margin-right: px2rem(50);
+                    width: px2rem(202);
+                    margin: 0 px2rem(25);
                 }
             }
             @include m(download) {
-                padding: px2rem(60);
+                padding: px2rem(38) 0;
+                margin-bottom: 0;
                 p {
-                    font-weight: bold;
-                    text-indent: px2rem(175);
-                    line-height: px2rem(63);
-                    font-size: px2rem(26);
+                    margin-bottom: px2rem(20);
+                    font-size: px2rem(35);
+                    line-height: px2rem(37);
                 }
             }
-            @include m(CFDS) {
-                display: flex;
-                justify-content: center;
-                font-size: px2rem(10);
-                .text1 {
-                    font-weight: 600;
-                }
+            @include m(cfds) {
+                font-size: px2rem(24);
+                line-height: px2rem(32);
             }
         }
     }
