@@ -28,7 +28,7 @@
                   '<div class="drag-box__drag-bg"></div>' +
                   '<div class="drag-box__drag-text slidetounlock" onselectstart="return false;">{{lang.text("verificationArray.slider2")}}</div>' +
                   '<div class="drag-box__drag-btn">&gt;&gt;</div>' +
-                '</div>{{registerStep}}<p ng-click="closeModal()">{{lang.text("verificationArray.slider4")}}<span ng-show="count">({{ msg }}S)</span></p>' +
+                '</div><p ng-click="closeModal()">{{lang.text("verificationArray.slider4")}}<span ng-show="count">({{ msg }}S)</span></p>' +
               '</div>' +
               '<div class="drag-box__wrap" ng-show="!title">' +
               '<p class="title">{{lang.text("verificationArray.skipVoice3")}}</p>' +
@@ -37,7 +37,7 @@
               '<button class="tw-btn-md mg-rg-15 mg-lf-15" ng-click="setSliderShow()">{{ lang.text("tigerWitID.confirm2") }}</button>' +
               '<button class="tw-btn-md tw-btn-capsule-gradient mg-rg-15 mg-lf-15" ng-click="closeModal()">{{ lang.text("tigerWitID.cancel") }}</button>' +
               '</div>' +
-              
+
               '</div>',
             link: function (scope, element, attrs) {
               scope.lang = lang;
@@ -61,6 +61,7 @@
                     // scope.codeBtnStatus[codeType].count_down = false;
                     scope.count = false;
                     $interval.cancel(scope.timer);
+                    scope.getPageSignup();
                   }
                 }, 1000);
               };
@@ -134,7 +135,7 @@
                         // alert('解锁成功！');
                         countDown();
                         // scope.sliderSuccFn();
-                        scope.getPageSignup();
+                        // scope.getPageSignup();
                         scope.$apply();
                         // register('registerForm1');
                         // toTrackEvent('Login and register', 'click_register');
@@ -163,6 +164,7 @@
               function closeModal() {
                 scope.sliderShow = false;
                 scope.title = false;
+                scope.getPageSignup();
               };
               function setSliderShow() {
                 scope.title = true;

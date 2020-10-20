@@ -142,7 +142,7 @@
                     <div class="account_login__btn_wrapper pd-tp-15">
                         <button ng-show="!registerSetPassword" class="tw-btn-md tw-btn-capsule-gradient mg-rg-15 mg-lf-15" ng-click="setPassword('registerForm2')">{{ lang.text('actLogin33') }}</button>
                         <button ng-show="registerSetPassword" class="tw-btn-md tw-btn-capsule-gradient mg-rg-15 mg-lf-15" ng-click="register('registerForm1', 1, 3)">{{ lang.text('actLogin33') }}</button>
-                        <button class="tw-btn-md tw-btn-capsule-bordered mg-rg-15 mg-lf-15" ng-click="skipSetPass()">{{ lang.text('tigerWitID.login.skip') }}</button>
+                        <button ng-show="!registerSetPassword" class="tw-btn-md tw-btn-capsule-bordered mg-rg-15 mg-lf-15" ng-click="skipSetPass()">{{ lang.text('tigerWitID.login.skip') }}</button>
                     </div>
                 </div>
                 <div class="account_login__docs mg-tp-20" ng-show="registerStep1 == 1">
