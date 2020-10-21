@@ -28,8 +28,20 @@
             <img src="./images/circle.png')}" alt="">
         </div> -->
             <div class="lfc-advert__bc-con">
-                <div class="lfc-advert__bc-logo">
-                    <img src="/white_label/bd/advert/title.png" alt="">
+                <div class="space-between-center">
+                    <div class="lfc-advert__bc-logo">
+                        <img src="/white_label/bd/advert/title.png" alt="">
+                    </div>
+                    <select name="" id="switchLang" class="switch_lang">
+                        <option value="en">English</option>
+                        <option value="cn">简体中文</option>
+                        <option value="vi">Tiếng Việt</option>
+                        <option value="zh-Hant">繁體中文</option>
+                        <option value="id">Indonesia</option>
+                        <option value="es">Español</option>
+                        <option value="pt-BR">Português</option>
+                        <option value="ar">العربية</option>
+                    </select>
                 </div>
                 <div class="lfc-advert__bc-article">
                     <h1 class="title"><%= lang.text('advertLfc.title')%></h1>
@@ -43,10 +55,11 @@
                         <p class="lfc-advert__bc-details">● <%= lang.text('advertLfc.joinFree1')%></p>
                         <p class="lfc-advert__bc-details">● <%= lang.text('advertLfc.joinFree2')%></p>
                         <p class="lfc-advert__bc-details">● <%= lang.text('advertLfc.joinFree3')%></p>
-                        <p class="lfc-advert__bc-footer">
-                            <a href="/space/#/account/register?R_271=73386c5d3757b90fa91052547d6c1719"><%= lang.text('advertLfc.registerNow1')%></a>
-                            <%= lang.text('advertLfc.registerNow2')%>
-                        </p>
+                        <div class="lfc-advert__bc-footer">
+                            <a class="btn"
+                                href="/space/#/account/register?R_271=73386c5d3757b90fa91052547d6c1719"><%= lang.text('advertLfc.registerNow1')%></a>
+                            <p class="mg-tp-10"><%= lang.text('advertLfc.registerNow2')%></p>
+                        </div>
                     </div>
                     <div class="lfc-advert__bc-phone">
                         <img src="/white_label/bd/advert/phone.png" alt="">
@@ -60,10 +73,12 @@
                 <div class="lfc-advert__bc-download">
                     <p><%= lang.text('advertLfc.downloadApp')%></p>
                     <div class="lfc-advert__bc-imgs">
-                        <a href="/m/blank?system=global&platform=android&D_A_250=82b3085e4ebb5c335f4c5233cf33abe2" id="downloadAndroidGlobal" style="display: none;">
+                        <a href="/m/blank?system=global&platform=android&D_A_250=82b3085e4ebb5c335f4c5233cf33abe2"
+                            id="downloadAndroidGlobal" style="display: none;">
                             <img src="<%= lang.image('homeAppAndroidGlobal')%>" alt="">
                         </a>
-                        <a href="/m/blank?system=cn&platform=android&D_A_282=5133dde116ed7887de01f47fbc579a41" id="downloadAndroidCn" style="display: none;">
+                        <a href="/m/blank?system=cn&platform=android&D_A_282=5133dde116ed7887de01f47fbc579a41"
+                            id="downloadAndroidCn" style="display: none;">
                             <img src="<%= lang.image('homeAppAndroidCn')%>" alt="">
                         </a>
                         <a href="/m/blank?system=global&platform=ios&D_I_251=be612f9e761f1b1f777c7d7ec6baf229">
@@ -72,13 +87,13 @@
                     </div>
                 </div>
             </div>
-            <div class="lfc-advert__bc-cfds">
+            <!-- <div class="lfc-advert__bc-cfds">
                 <p>
                     <span>
                         <%= lang.text('advertLfc.footerTip')%>
                     </span>
                 </p>
-            </div>
+            </div> -->
         </div>
     </div>
 

@@ -54,9 +54,16 @@
         }
         @include m(footer) {
             font-size: 23px;
-            margin-top: 70px;
+            margin-top: 30px;
             a {
-                color: $main-color;
+                border-radius: 100px;
+                color: $gray-base;
+                background-color: $main-color;
+                min-width: 180px;
+                height: 45px;
+                font-size: 18px;
+                line-height: 45px;
+                padding: 0;
             }
         }
         // @include m(footer2) {
@@ -75,7 +82,7 @@
             align-items: flex-end;
             // width: 1200px;
             margin-top: -400px;
-            margin-bottom: 123px;
+            // margin-bottom: 123px;
             // margin: -400px auto 123px;
             // padding-bottom: 3px;
             // :first-child img{
@@ -108,13 +115,13 @@
                 text-align: center;
             }
         }
-        @include m(cfds) {
-            font-size: 20px;
-            line-height: 32px;
-            // .text1 {
-            //     font-weight: 600;
-            // }
-        }
+        // @include m(cfds) {
+        //     font-size: 20px;
+        //     line-height: 32px;
+        //     // .text1 {
+        //     //     font-weight: 600;
+        //     // }
+        // }
     }
 
     @include responsive(phone-screens) {
