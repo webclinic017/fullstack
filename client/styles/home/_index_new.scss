@@ -1,4 +1,3 @@
-
 // @include responsive(wide-screens){
 //   .index_new__container, .index_new__reliable-lst {
 //     width: 1100px!important;
@@ -9,36 +8,35 @@
   box-shadow: none !important;
 
   .layui-layer-content {
-      width: 100%;
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+    overflow: inherit !important;
+
+    .content {
       height: 100%;
-      border-radius: 2px;
-      overflow: inherit !important;
+      position: relative;
 
-      .content {
-          height: 100%;
-          position: relative;
-          
-          a {
-              display: block;
-              vertical-align: top;
+      a {
+        display: block;
+        vertical-align: top;
 
-              img {
-                  width: 100%;
-              }
-          }
-          .close {
-              position: absolute;
-              top: -33px;
-              right: -40px;
-              width: 40px;
-              height: 40px;
-
-              @include img-normal($image-path-home + "layer_redbag_close.png");
-              background-repeat: no-repeat;
-              background-size: 100% 100%;
-          }
+        img {
+          width: 100%;
+        }
       }
+      .close {
+        position: absolute;
+        top: -33px;
+        right: -40px;
+        width: 40px;
+        height: 40px;
 
+        @include img-normal($image-path-home + "layer_redbag_close.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+      }
+    }
   }
 }
 
@@ -50,115 +48,135 @@
     position: relative;
   }
   @include e(focus) {
-    height: 1099px !important;
-    background-image: url("/white_label/home/home-focus-left-0701.png");
+    // height: 900px !important;
+    background-image: url("/white_label/home/home-bg.png");
     background-position: center center;
     background-size: auto 100%;
     color: #fff;
     padding-top: 150px;
-    .focus-liverpool-wrapper {
-      width: 360px;
-      text-align: center;
-      margin-left: -40px;
-      margin-top: 20px;
-      &.zh, &.zh-Hant {
-        width: 400px;
-        padding-bottom: 30px;
-        .index_new__focus-date {
-          margin: 15px auto;
-        }
-      }
-      &.id {
-        width: 486px;
-        padding-bottom: 30px;
-      }
-      &.vi {
-        width: 450px;
-      }
-      &.es {
-        width: 510px;
-        .h3 {
-          font-size: 40px;
-        }
-      }
-      &.pt-BR {
-        width: 456px;
-      }
-    }
-    .phone_wrapper {
-      img {
-        width: 360px;
-      }
-    }
+    padding-bottom: 100px;
+    // .focus-liverpool-wrapper {
+    //   width: 360px;
+    //   text-align: center;
+    //   margin-left: -40px;
+    //   margin-top: 20px;
+    //   &.zh, &.zh-Hant {
+    //     width: 400px;
+    //     padding-bottom: 30px;
+    //     .index_new__focus-date {
+    //       margin: 15px auto;
+    //     }
+    //   }
+    //   &.id {
+    //     width: 486px;
+    //     padding-bottom: 30px;
+    //   }
+    //   &.vi {
+    //     width: 450px;
+    //   }
+    //   &.es {
+    //     width: 510px;
+    //     .h3 {
+    //       font-size: 40px;
+    //     }
+    //   }
+    //   &.pt-BR {
+    //     width: 456px;
+    //   }
+    // }
     @include m(title) {
-      margin: 0;
-      font-size: 45px;
-      line-height: 52px;
-    }
-    @include m(date) {
-      font-size: 18px;
-      width: 320px;
-      text-align: center;
-      position: relative;
-      margin: 10px auto 0px;
-      opacity: .8;
-      &::before {
-        content: '';
-        display: block;
-        border-bottom: 1px solid #fff;
-        position: absolute;
-        top: 50%;
-        width: 30%;
-        left: 0;
-      }
-      &::after {
-        content: '';
-        display: block;
-        border-bottom: 1px solid #fff;
-        position: absolute;
-        top: 50%;
-        width: 30%;
-        left: 70%;
+      color: $main-color;
+      margin: 30px 0 0;
+      height: 225px;
+      font-size: 87px;
+      line-height: 100px;
+      &.vi, &.es, &.pt-BR {
+        font-size: 68px;
       }
     }
+    // @include m(date) {
+    //   font-size: 18px;
+    //   width: 320px;
+    //   text-align: center;
+    //   position: relative;
+    //   margin: 10px auto 0px;
+    //   opacity: .8;
+    //   &::before {
+    //     content: '';
+    //     display: block;
+    //     border-bottom: 1px solid #fff;
+    //     position: absolute;
+    //     top: 50%;
+    //     width: 30%;
+    //     left: 0;
+    //   }
+    //   &::after {
+    //     content: '';
+    //     display: block;
+    //     border-bottom: 1px solid #fff;
+    //     position: absolute;
+    //     top: 50%;
+    //     width: 30%;
+    //     left: 70%;
+    //   }
+    // }
     @include m(sub_tit) {
-      font-size: 40px;
+      font-size: 32px;
+      line-height: 40px;
+      &.vi {
+        font-size: 25px;
+      }
     }
     @include m(icon_box) {
-      @include displayFlex();
-      margin-bottom: 34px;
-      margin-top: 80px;
+      margin: 50px -10px 32px;
       li {
         text-align: center;
-        padding: 0 18px;
+        padding: 0 14px;
         img {
-          height: 48px;
+          height: 60px;
         }
       }
     }
-    @include m(btn_box) {
-      @include displayFlex();
-      .focus_btn {
-        width: 310px;
-      }
-      .market-h5{
-        img{
-          width: 118px;
-        }
-      }
-      .download-btn{
-        .title{
-          margin-bottom: 30px;
-        }
-        .praise{
-          @include displayFlex();
-          @include alignItems(center);
-          > li{
-            padding: 0 10px;
-          }
-        }
-        .praise-img{
+    @include m(praise) {
+      margin-left: -10px;
+      margin-right: -10px;
+      > li {
+        padding: 0 10px;
+        img {
           height: 65px;
+        }
+      }
+      // .market-h5 {
+      //   img {
+      //     width: 118px;
+      //   }
+      // }
+    }
+    @include m(right) {
+      .phone_wrapper {
+        img {
+          width: 630px;
+        }
+      }
+      .download-btn {
+        text-align: center;
+        margin-top: -131px;
+        .focus_btn {
+          min-width: 220px;
+          width: auto;
+        }
+        .title {
+          font-size: 18px;
+          margin-top: 32px;
+          margin-bottom: 20px;
+        }
+        .praise {
+          > li {
+            padding: 0 10px;
+            img {
+              height: 50px;
+            }
+          }
         }
       }
     }
@@ -171,7 +189,7 @@
     @include m(title) {
       font-size: 56px;
       text-align: center;
-      color: rgb(36,42,54);
+      color: rgb(36, 42, 54);
       margin: 100px 0px 26px;
     }
     @include m(sub_tit) {
@@ -184,7 +202,7 @@
     // }
   }
   @include e(invite) {
-    background-color: #242A36;
+    background-color: #242a36;
     color: #fff;
     position: relative;
     z-index: 10;
@@ -196,7 +214,7 @@
       margin-bottom: 26px;
     }
     @include m(sub_tit) {
-      opacity: .5;
+      opacity: 0.5;
       text-align: center;
       font-size: 18px;
     }
@@ -221,13 +239,13 @@
   }
   @include e(flexible) {
     padding-top: 100px;
-    background-image: url('/white_label/home/curcle-1.png');
+    background-image: url("/white_label/home/curcle-1.png");
     background-repeat: no-repeat;
     background-position: -580px -318px;
     @include m(title) {
       font-size: 56px;
       text-align: center;
-      color: rgb(36,42,54);
+      color: rgb(36, 42, 54);
       margin: 0px 0px 26px;
       position: relative;
       z-index: 100;
@@ -238,7 +256,7 @@
       font-size: 18px;
       position: relative;
       z-index: 100;
-      > a{
+      > a {
         color: $main-char-color-50;
       }
     }
@@ -269,7 +287,7 @@
           height: 32px;
         }
         .h5 {
-          color: rgb(36,42,54);
+          color: rgb(36, 42, 54);
           font-size: 20px;
         }
         p {
@@ -291,7 +309,7 @@
     @include m(title) {
       font-size: 56px;
       text-align: center;
-      color: rgb(36,42,54);
+      color: rgb(36, 42, 54);
     }
     @include m(sub_tit) {
       color: $main-char-color-50;
@@ -313,12 +331,12 @@
     margin-top: 100px;
     @include m(title) {
       font-size: 56px;
-      color: rgb(11,11,11);
+      color: rgb(11, 11, 11);
       padding: 300px 0px 30px;
       width: 62%;
     }
     @include m(sub_tit) {
-      color: rgba(11,11,11,0.7);
+      color: rgba(11, 11, 11, 0.7);
     }
     @include m(download) {
       margin-top: 35px;
@@ -329,7 +347,7 @@
     @include m(title) {
       text-align: center;
       font-size: 56px;
-      color: rgb(11,11,11);
+      color: rgb(11, 11, 11);
       margin-bottom: 65px;
     }
     @include m(lst) {
@@ -346,7 +364,7 @@
         padding: 0 20px;
         .h5 {
           font-size: 24px;
-          color: rgb(36,42,54);
+          color: rgb(36, 42, 54);
           margin-top: 55px;
         }
         p {
@@ -378,21 +396,21 @@
     margin-top: 70px;
     &:before {
       display: block;
-      content: '';
+      content: "";
       position: absolute;
       top: -4px;
       left: 1.5%;
       width: 97%;
       height: 8px;
       border-radius: 4px;
-      background: rgb(253,216,53);
+      background: rgb(253, 216, 53);
     }
   }
   @include e(float) {
     position: relative;
     border-radius: 30px;
     padding: 40px 70px;
-    box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.06);
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.06);
     z-index: 100;
     background: #fff;
     .h3 {
@@ -404,13 +422,13 @@
       color: $main-char-color-50;
     }
   }
-  @include e(camber){
+  @include e(camber) {
     overflow: hidden;
     margin-top: -200px;
     width: 100%;
     will-change: scroll-position;
-    &::after{
-      content:'';
+    &::after {
+      content: "";
       height: 200px;
       background-color: #222;
       border-top-right-radius: 100%;
@@ -420,101 +438,96 @@
     }
   }
 }
-.ar-lang{
-  .index_new__focus{
-    background-image: url("/white_label/home/home-focus-right-0701.png");
-  }
-}
 // 报价
 @include b(index_new_qupte) {
   @include e(title) {
-      width: 48%;
-      padding-bottom: 20px;
-      color: #393939;
-      &.h_border {
-        width: 52%;
-      }
+    width: 48%;
+    padding-bottom: 20px;
+    color: #393939;
+    &.h_border {
+      width: 52%;
+    }
 
-      li {
-          text-align: center;
+    li {
+      text-align: center;
 
-          &.pro {
-              width: 40%;
-          }
-          &.sell {
-              width: 30%;
-          }
-          &.buy {
-              width: 30%;
-          }
+      &.pro {
+        width: 40%;
       }
+      &.sell {
+        width: 30%;
+      }
+      &.buy {
+        width: 30%;
+      }
+    }
   }
   @include e(tip) {
-      padding-top: 35px;
-      text-align: center;
-      color: $main-char-color-50;
+    padding-top: 35px;
+    text-align: center;
+    color: $main-char-color-50;
   }
   @include e(content) {
-      width: 48%;
-      padding: 17px 0;
-      color: #393939;
+    width: 48%;
+    padding: 17px 0;
+    color: #393939;
 
-      &.h_border {
-          width: 52%;
+    &.h_border {
+      width: 52%;
+    }
+
+    li {
+      text-align: center;
+      display: inline-block;
+      vertical-align: middle;
+      span {
+        padding: 1px 0px;
+        display: inline-block;
+        border-radius: 4px;
+        width: 65px;
+        font-size: 14px;
       }
 
-      li {
-          text-align: center;
-          display: inline-block;
-          vertical-align: middle;
+      &.pro {
+        width: 40%;
+      }
+      &.gray {
+        span {
+          background-color: #ccc !important;
+        }
+      }
+      &.sell {
+        width: 28%;
+
+        &.up {
           span {
-              padding: 1px 0px;
-              display: inline-block;
-              border-radius: 4px;
-              width: 65px;
-              font-size: 14px;
+            background-color: #f05452;
+            color: #fff;
           }
-
-          &.pro {
-              width: 40%;
+        }
+        &.down {
+          span {
+            background-color: #25c875;
+            color: #fff;
           }
-          &.gray {
-            span {
-              background-color: #ccc !important;
-            }
-          }
-          &.sell {
-              width: 28%;
-
-              &.up {
-                  span {
-                      background-color: #f05452;
-                      color: #fff;
-                  }
-              }
-              &.down {
-                  span {
-                      background-color: #25c875;
-                      color: #fff;
-                  }
-              }
-          }
-          &.buy {
-              width: 28%;
-
-              &.up {
-                  span {
-                      background-color: #f05452;
-                      color: #fff;
-                  }
-              }
-              &.down {
-                  span {
-                      background-color: #25c875;
-                      color: #fff;
-                  }
-              }
-          }
+        }
       }
+      &.buy {
+        width: 28%;
+
+        &.up {
+          span {
+            background-color: #f05452;
+            color: #fff;
+          }
+        }
+        &.down {
+          span {
+            background-color: #25c875;
+            color: #fff;
+          }
+        }
+      }
+    }
   }
 }
