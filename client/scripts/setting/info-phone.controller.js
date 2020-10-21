@@ -102,12 +102,9 @@
 
             if (type == 'new') {
                 showErr('phoneForm', 'phoneNew');
-
                 if ($scope['phoneForm']['phoneNew'].$invalid) {
                     return;
                 }
-
-                $scope.clickable.captcha = false;
                 var params = {
                     account: $scope.phone.phoneNew,
                     code_token: token,
@@ -196,7 +193,11 @@
                 $scope.clickable.oldSubmit = true;
                 if (!data) return;
                 if (data.is_succ) {
+                  if ($scope.settingInfo.phone_verify == 0) {
+                    window.location.reload();
+                  } else {
                     $scope.step++;
+                  }
                 } else {
                     layer.msg(data.message, {
                         time: 2000
