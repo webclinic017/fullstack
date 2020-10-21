@@ -318,6 +318,12 @@ module.exports = function (app) {
         }
         res.json(rs);
     });
+    // app.use(function (req, res, next) {
+    //     res.setHeader("Cache-Control", "no-cache");
+    //     res.setHeader("Pragma", "no-cache");
+    //     res.setHeader("Expires", 0);
+    //     next()
+    // })
     app.use(function (req, res, next) {
         // 重写render方法，避免子路由在引入extendPublic方法
         var _render = res.render;
@@ -428,9 +434,13 @@ module.exports = function (app) {
         // 重写重定向方法，添加lang参数
         if (paramsLang) {
             var _redirect = res.redirect;
-            res.redirect = function (url) {
+            res.redirect = function (status, url) {
+                if (!url) {
+                    url = status;
+                    status = null;
+                }
                 url = path.sep + paramsLang + url;
-                return _redirect.call(this, url)
+                return (status ? _redirect.call(this, status, url) : _redirect.call(this, url))
             }
         };
 
@@ -442,7 +452,7 @@ module.exports = function (app) {
     app.route('/:url(404|*)').get(function (req, res) {
         // var viewFilePath = '404';
         // var statusCode = 404;
-        // res.status(statusCode);
+        res.status(404);
         // res.render(viewFilePath, {}, function(err, html) {
         //     if (err) {
         //         return res.json(statusCode);

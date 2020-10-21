@@ -4,11 +4,19 @@
 
     angular.module('fullstackApp').factory('fun', fun);
 
-    fun.$inject = ['$location'];
+    fun.$inject = ['$window', '$cookies'];
 
-    function fun($location) {
+    function fun($window, $cookies) {
 
         var fun = {
+            getPathName: function(){
+                var pathname = $window.location.pathname;
+                var cookLang = $cookies['lang'] === 'cn' ? 'zh' : ($cookies['lang'] || '');
+                if (pathname.split('/')[1] === cookLang) {
+                    pathname = pathname.substr((cookLang.length + 1))
+                }
+                return pathname;
+            },
             /*获取Url查询字段 返回Object*/
             getSearch: getSearch,
             // 判断url是否含有参数
@@ -22,7 +30,7 @@
 
             // 删除url?后某个参数
             delQuery: function (queryKey) {
-                var url = window.location.href;    //页面url
+                var url = $window.location.href;    //页面url
                 var beforeUrl;   //页面主地址（参数之前地址）
                 if (url.indexOf("?") !== -1) {
                     beforeUrl = url.substr(0, url.indexOf("?"))
@@ -55,7 +63,7 @@
                 if (reg.test(url)) {
                     return url.replace(reg, replaceStr)
                 } else {
-                    var length = location.origin.length;
+                    var length = $window.location.origin.length;
                     return url.slice(0, length) + replaceStr + url.slice(length + 1)
                 }
             },

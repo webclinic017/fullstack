@@ -9,6 +9,7 @@
 
     function HomeIndexController($rootScope, $scope, invite, ranklist, $cookies, $timeout) {
         var world_code = $cookies["world_code"];
+        $scope.inviteModuleStatus = false;
 
         if (world_code) {
             getAdvertisePopup()
@@ -45,6 +46,7 @@
             });
         }
 
+
         $scope.indexMasters = [];// 首页 第二模块的高手
         $scope.advertiseLst = [];
 
@@ -52,6 +54,16 @@
 
         // 轮播图信息
         $scope.getBannerSucc = false;
+
+        getModuleManagerment();
+        //获取邀请好友模块权限
+        function getModuleManagerment () {
+            invite.getModuleManagerment().then(function (rs) {
+                if (rs.is_succ) {
+                    $scope.inviteModuleStatus = rs.data.is_show;
+                }
+            })
+        }
 
         // getAdvertiseRecords();
         function getAdvertiseRecords() {
