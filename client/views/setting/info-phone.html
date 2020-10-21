@@ -1,10 +1,10 @@
 <div ng-controller="SettingInfoPhoneController">
-    <p ng-if="settingInfo.phone" class="pd-tp-20 pd-bt-30 setting_info_zero__list-title">
+    <p ng-if="settingInfo.phone && settingInfo.phone_verify == 1" class="pd-tp-20 pd-bt-30 setting_info_zero__list-title">
         <span class="line">{{lang.text('tigerWitID.settings.phoneNumberSettings')}}</span>
         <span>{{lang.text('tigerWitID.settings.boundPhoneXXX')}}</span>
         <span class="font-info">{{settingInfo.phone}}</span>
     </p>
-    <p ng-if="!settingInfo.phone" class="pd-tp-20 pd-bt-10 setting_info_zero__list-title">
+    <p ng-if="!settingInfo.phone || (settingInfo.phone && settingInfo.phone_verify == 0)" class="pd-tp-20 pd-bt-10 setting_info_zero__list-title">
         <span class="line">{{lang.text('tigerWitID.settings.phoneNumberSettings')}}</span>
         <span>你暂没有绑定手机号</span>
     </p>
