@@ -16534,7 +16534,7 @@ module.exports = {
         "zh-Hant": "加入冠軍團隊",
         "id": "Ayo Ikuti Tim Pemenang",
         "es": "Únase a nuestro equipo ganador",
-        "pt-BR": "Junte-se à nossa equipe vencedora",
+        "pt-BR": "Una-se à nossa equipe vencedora",
         "ar": "إنضم إلى الفريق الفائز "
     },
     "newhome_liverpool2": {
@@ -16543,7 +16543,7 @@ module.exports = {
         "vi": "Truy cập nhanh chóng vào các thị trường tài chính bằng ứng dụng đạt giải thưởng của chúng tôi",
         "zh-Hant": "使用我們屢獲殊榮的交易APP，即刻進入全球金融市場",
         "id": "Dapatkan akses langsung ke pasar keuangan melalui aplikasi kami",
-        "es": "Obtenga acceso instantáneo a los mercados financieros con nuestra galardonada aplicación de operaciones.",
+        "es": "Acceda instantáneamente a los mercados financieros con nuestra premiada aplicación de trading.",
         "pt-BR": "Obtenha acesso instantâneo aos mercados financeiros com nosso aplicativo de trading premiado.",
         "ar": "احصل على فرصة الوصول إلى الأسواق المالية من خلال تطبيق التداول الحائز على جوائز متعددة."
     },
@@ -16653,8 +16653,8 @@ module.exports = {
         "vi": "Tải app để mở một tài khoản",
         "zh-Hant": "下載註冊交易賬戶",
         "id": "Unduh aplikasi untuk membuka akun",
-        "es": "Descargue la app para abrir una cuenta",
-        "pt-BR": "Baixar APP para abrir uma conta",
+        "es": "Descargue la aplicación para abrir una cuenta",
+        "pt-BR": "Baixe o aplicativo para abrir uma conta",
         "ar": "تفضل بتحميل التطبيق لتفتح حسابك"
     },
     "link_register": {
