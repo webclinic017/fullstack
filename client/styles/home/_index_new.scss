@@ -90,7 +90,9 @@
       height: 225px;
       font-size: 87px;
       line-height: 100px;
-      &.vi, &.es, &.pt-BR {
+      &.vi,
+      &.es,
+      &.pt-BR {
         font-size: 68px;
       }
     }
@@ -135,6 +137,9 @@
         img {
           height: 60px;
         }
+        p {
+          margin-top: 10px;
+        }
       }
     }
     @include m(praise) {
@@ -160,7 +165,7 @@
       }
       .download-btn {
         text-align: center;
-        margin-top: -131px;
+        margin-top: -110px;
         .focus_btn {
           min-width: 220px;
           width: auto;

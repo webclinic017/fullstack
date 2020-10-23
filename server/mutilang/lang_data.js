@@ -16650,12 +16650,12 @@ module.exports = {
     "newhome_9_1": {
         "zh": "下载注册交易账户",
         "en": "Download the app to open an account",
-        "vi": "Tải app để mở một tài khoản",
+        "vi": "Tải ứng dụng để mở một tài khoản",
         "zh-Hant": "下載註冊交易賬戶",
-        "id": "Unduh aplikasi untuk membuka akun",
+        "id": "Unduh aplikasinya untuk membuka akun",
         "es": "Descargue la aplicación para abrir una cuenta",
         "pt-BR": "Baixe o aplicativo para abrir uma conta",
-        "ar": "تفضل بتحميل التطبيق لتفتح حسابك"
+        "ar": "قم بتحميل التطبيق لفتح حساب تداول"
     },
     "link_register": {
         "zh": "注册交易账户",
