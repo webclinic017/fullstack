@@ -16535,7 +16535,7 @@ module.exports = {
         "id": "Ayo Ikuti Tim Pemenang",
         "es": "Únase a nuestro equipo ganador",
         "pt-BR": "Junte-se à nossa equipe vencedora",
-        "ar": ""
+        "ar": "إنضم إلى الفريق الفائز "
     },
     "newhome_liverpool2": {
         "zh": "使用我们屡获殊荣的交易APP，即刻进入全球金融市场",
@@ -16545,7 +16545,7 @@ module.exports = {
         "id": "Dapatkan akses langsung ke pasar keuangan melalui aplikasi kami",
         "es": "Obtenga acceso instantáneo a los mercados financieros con nuestra galardonada aplicación de operaciones.",
         "pt-BR": "Obtenha acesso instantâneo aos mercados financeiros com nosso aplicativo de trading premiado.",
-        "ar": ""
+        "ar": "احصل على فرصة الوصول إلى الأسواق المالية من خلال تطبيق التداول الحائز على جوائز متعددة."
     },
     "newhome_1": {
         "zh": "你需要的交易市场",
