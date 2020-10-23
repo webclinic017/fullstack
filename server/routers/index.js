@@ -446,19 +446,19 @@ router.get('/:subpage(forex-trading|precious-metal-trading|oil-trading|cfd-tradi
         pageInfo: pageInfo
     });
 });
-router.get('/:subpage(cashback)', function (req, res) {
-    var subpage = req.params.subpage;
-    var pageInfo = {
-        id: subpage
-    };
+router.get('/cashback', function (req, res) {
     if (isMobile(req)) {
-        res.render('bd/cashback/h5.html', {
-            pageInfo: pageInfo
-        });
+        res.render('bd/cashback/h5.html');
     } else {
-        res.render('bd/cashback/web.html', {
-            pageInfo: pageInfo
-        });
+        res.render('bd/cashback/web.html');
+    }
+});
+// 因为当前邀请好友活动规则只有注册后的用户才能看到，因此，市场部需要开发一个针对邀请好友活动进行规则描述的页面，让未注册的用户也能看到邀请好友活动以及相关的活动规则，包括web页面和H5页面。
+router.get('/refer', function (req, res) {
+    if (isMobile(req)) {
+        res.render('bd/refer/h5.html');
+    } else {
+        res.render('bd/refer/web.html');
     }
 });
 // 交易品种
@@ -864,6 +864,10 @@ router.get('/:subpage(global|uk)/LFC_TigerWit_Partnership', function (req, res) 
     res.render('bd/lfc/index.html', {
         pageInfo: subpage
     });
+});
+// 利物浦向其支持机构发送数千本杂志，我们在其中有一则广告，我们需要开发这个广告页面。
+router.get('/lfc', function (req, res) {
+    res.render('bd/lfc/advert.html')
 });
 // 阿拉伯语25美金活动 - 市场部 2020.6.30
 router.get('/get-a-25-trading-bonus', function (req, res) {

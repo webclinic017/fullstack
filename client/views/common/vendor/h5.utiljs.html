@@ -24,13 +24,13 @@
     window.onload = function () {
         (function () {
             var $dom = document.createElement('div');
-            $dom.style = 'font-size:10px;';
+            $dom.style = 'font-size:12px;';
             document.body.appendChild($dom);
             // 计算出放大后的字体
             var scaledFontSize = parseInt(window.getComputedStyle($dom, null).getPropertyValue('font-size'));
             document.body.removeChild($dom);
             // 计算原字体和放大后字体的比例
-            var scaleFactor = 10 / scaledFontSize;
+            var scaleFactor = 12 / scaledFontSize;
 
             // 取html元素的字体大小
             // 注意，这个大小也经过缩放了
@@ -145,7 +145,7 @@
                     $(ele).html(JSON.parse(sessionStorage["systemMessage"]).email);
                 }
             }
-            callback && callback();
+            callback && callback(JSON.parse(sessionStorage["systemMessage"]));
         } else {
             var d = new Date();
             d.setTime(d.getTime() + (1 * 24 * 60 * 60 * 1000));
@@ -161,7 +161,7 @@
                         }
                     }
                     sessionStorage["systemMessage"] = JSON.stringify(data.data);
-                    callback && callback();
+                    callback && callback(data.data);
                 }
             });
         }
