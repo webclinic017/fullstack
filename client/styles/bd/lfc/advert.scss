@@ -1,0 +1,218 @@
+// 外层样式
+@include b(lfc-advert) {
+    background-color: $gray-base;
+    color: $gray-fff;
+    @include e(bc) {
+        width: 1200px;
+        margin: 0 auto;
+        padding: 50px 0;
+        // margin: 0 auto;
+        @include m(con) {
+            background-image: url($image-white + "/bd/advert/circle.png");
+            background-repeat: no-repeat;
+            background-size: 100%;
+            // width: 1200px;
+            //   height: 100%;
+            // margin: 0 auto;
+            // padding: 65px 30px 0;
+            padding: 160px 65px 0;
+        }
+        @include m(logo) {
+            height: 154px;
+            img {
+                height: 100%;
+            }
+        }
+        @include m(article) {
+            margin-top: 30px;
+            .title {
+                color: $main-color;
+                font-size: 60px;
+                padding-top: 50px;
+                padding-bottom: 40px;
+            }
+        }
+        @include m(txt) {
+            font-size: 32px;
+            line-height: 36px;
+        }
+        @include m(main) {
+            font-size: 29px;
+            line-height: 35px;
+            display: flex;
+            // margin-top: 20px;
+            justify-content: space-between;
+        }
+        @include m(introduction) {
+            //   font-size: 29px;
+            margin-top: 45px;
+            margin-bottom: 35px;
+        }
+        @include m(details) {
+            //   font-size: 29px;
+            //   line-height: 35px;
+        }
+        @include m(footer) {
+            font-size: 23px;
+            margin-top: 30px;
+            a {
+                border-radius: 100px;
+                color: $gray-base;
+                background-color: $main-color;
+                min-width: 180px;
+                height: 45px;
+                font-size: 18px;
+                line-height: 45px;
+                padding: 0;
+            }
+        }
+        // @include m(footer2) {
+        //     display: none;
+        // }
+        @include m(phone) {
+            width: 315px;
+            min-width: 315px;
+            img {
+                width: 100%;
+            }
+        }
+        @include m(person) {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            // width: 1200px;
+            margin-top: -400px;
+            // margin-bottom: 123px;
+            // margin: -400px auto 123px;
+            // padding-bottom: 3px;
+            // :first-child img{
+            //   width: 310px;
+            //   height: 255px;
+            // }
+        }
+        @include m(people) {
+            width: 700px;
+            img {
+                width: 770px;
+            }
+            //   margin-top: -530px;
+        }
+        @include m(imgs) {
+            display: flex;
+            img {
+                width: 202px;
+                margin: 0 25px;
+            }
+        }
+        @include m(download) {
+            margin-bottom: 58px;
+            p {
+                color: $gray;
+                font-weight: bold;
+                font-size: 33px;
+                line-height: 35px;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+        }
+        // @include m(cfds) {
+        //     font-size: 20px;
+        //     line-height: 32px;
+        //     // .text1 {
+        //     //     font-weight: 600;
+        //     // }
+        // }
+    }
+
+    @include responsive(phone-screens) {
+        @include e(bc) {
+            width: auto;
+            padding: px2rem(33);
+            @include m(con) {
+                background-image: none;
+                border: px2rem(20) solid $main-color;
+                border-radius: px2rem(150);
+                text-align: center;
+                padding: px2rem(66) px2rem(40);
+            }
+            @include m(logo) {
+                height: px2rem(126);
+            }
+            @include m(article) {
+                margin-top: 0;
+                .title {
+                    font-size: px2rem(44);
+                    padding-top: px2rem(40);
+                    padding-bottom: px2rem(40);
+                }
+            }
+            @include m(txt) {
+                font-weight: 500;
+                font-size: px2rem(33);
+                line-height: px2rem(37);
+            }
+            @include m(main) {
+                font-size: px2rem(33);
+                line-height: px2rem(37);
+            }
+            @include m(introduction) {
+                margin-top: px2rem(40);
+                margin-bottom: px2rem(20);
+            }
+            @include m(details) {
+            }
+            @include m(footer) {
+                display: none;
+            }
+            // @include m(footer2) {
+            //     display: block;
+            //     text-align: center;
+            //     font-size: px2rem(25);
+            //     line-height: px2rem(32);
+            //     margin-top: px2rem(20);
+            //     padding: px2rem(20) px2rem(50) 0;
+            //     a {
+            //         color: $main-color;
+            //     }
+            // }
+            @include m(phone) {
+                display: none;
+                // margin: px2rem(10) px2rem(20);
+                // width: px2rem(197);
+                // min-width: px2rem(197);
+            }
+            @include m(person) {
+                display: block;
+
+                margin-top: px2rem(-70);
+                margin-bottom: 0;
+            }
+            @include m(people) {
+                width: 100%;
+                img {
+                    width: 100%;
+                }
+            }
+            @include m(imgs) {
+                justify-content: center;
+                img {
+                    width: px2rem(202);
+                    margin: 0 px2rem(25);
+                }
+            }
+            @include m(download) {
+                padding: px2rem(38) 0;
+                margin-bottom: 0;
+                p {
+                    margin-bottom: px2rem(20);
+                    font-size: px2rem(35);
+                    line-height: px2rem(37);
+                }
+            }
+            @include m(cfds) {
+                font-size: px2rem(24);
+                line-height: px2rem(32);
+            }
+        }
+    }
+}

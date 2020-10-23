@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <% include /common/meta/h5n.html %>
+
+    <meta name="keywords"
+        content="TigerWit, Foreign Exchange Investment and Financing, Gold and Silver Trading Platform, Forex Trading Platform, Forex Trading Master, Forex Inducing Broker,Electronic Finance.">
+    <meta name="description"
+        content="With a strong technological core, TigerWit offers its clients exceptional capabilities to trade in the markets. Forex margin trading system.Forex analysis software,Forex demo trading platform,Forex strategy, Forex financing,forex trading master.">
+
+    <title>
+        <%= lang.text('companyZhName')%>
+    </title>
+</head>
+<!-- 引入H5 CSS -->
+<!-- build:css(.tmp) /styles/h5_common.css -->
+<link rel="stylesheet" href="/styles/h5_common.css">
+<!-- endbuild -->
+
+<% include /common/vendor/h5.utiljs.html %>
+<% include /common/statistic/main.html %>
+
+<body>
+    <div class="lfc-advert <%= lang.isAr('ar-lang')%>">
+        <div class="lfc-advert__bc">
+            <!-- <div class="lfc-advert__bc-img">
+            <img src="./images/circle.png')}" alt="">
+        </div> -->
+            <div class="lfc-advert__bc-con">
+                <div class="space-between-center">
+                    <div class="lfc-advert__bc-logo">
+                        <img src="/white_label/bd/advert/title.png" alt="">
+                    </div>
+                    <select name="" id="switchLang" class="switch_lang">
+                        <option value="en">English</option>
+                        <option value="cn">简体中文</option>
+                        <option value="vi">Tiếng Việt</option>
+                        <option value="zh-Hant">繁體中文</option>
+                        <option value="id">Indonesia</option>
+                        <option value="es">Español</option>
+                        <option value="pt-BR">Português</option>
+                        <option value="ar">العربية</option>
+                    </select>
+                </div>
+                <div class="lfc-advert__bc-article">
+                    <h1 class="title"><%= lang.text('advertLfc.title')%></h1>
+                    <p class="lfc-advert__bc-txt">
+                        <span><%= lang.text('advertLfc.titleTip')%></span>
+                    </p>
+                </div>
+                <div class="lfc-advert__bc-main">
+                    <div class="">
+                        <p class="lfc-advert__bc-introduction"><%= lang.text('advertLfc.joinFree')%></p>
+                        <p class="lfc-advert__bc-details">● <%= lang.text('advertLfc.joinFree1')%></p>
+                        <p class="lfc-advert__bc-details">● <%= lang.text('advertLfc.joinFree2')%></p>
+                        <p class="lfc-advert__bc-details">● <%= lang.text('advertLfc.joinFree3')%></p>
+                        <div class="lfc-advert__bc-footer">
+                            <a class="btn"
+                                href="/space/#/account/register?R_271=73386c5d3757b90fa91052547d6c1719"><%= lang.text('advertLfc.registerNow1')%></a>
+                            <p class="mg-tp-10"><%= lang.text('advertLfc.registerNow2')%></p>
+                        </div>
+                    </div>
+                    <div class="lfc-advert__bc-phone">
+                        <img src="/white_label/bd/advert/phone.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="lfc-advert__bc-person">
+                <div class="lfc-advert__bc-people">
+                    <img src="/white_label/bd/advert/playersFaded.png" alt="">
+                </div>
+                <div class="lfc-advert__bc-download">
+                    <p><%= lang.text('advertLfc.downloadApp')%></p>
+                    <div class="lfc-advert__bc-imgs">
+                        <a href="/m/blank?system=global&platform=android&D_A_250=82b3085e4ebb5c335f4c5233cf33abe2"
+                            id="downloadAndroidGlobal" style="display: none;">
+                            <img src="<%= lang.image('homeAppAndroidGlobal')%>" alt="">
+                        </a>
+                        <a href="/m/blank?system=cn&platform=android&D_A_282=5133dde116ed7887de01f47fbc579a41"
+                            id="downloadAndroidCn" style="display: none;">
+                            <img src="<%= lang.image('homeAppAndroidCn')%>" alt="">
+                        </a>
+                        <a href="/m/blank?system=global&platform=ios&D_I_251=be612f9e761f1b1f777c7d7ec6baf229">
+                            <img src="<%= lang.image('homeAppIos')%>" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="lfc-advert__bc-cfds">
+                <p>
+                    <span>
+                        <%= lang.text('advertLfc.footerTip')%>
+                    </span>
+                </p>
+            </div> -->
+        </div>
+    </div>
+
+</body>
+<% include /common/vendor/h5.js.html %>
+
+<!-- build:js(client) /scripts/bd_lfc_advert.js -->
+<script src="/scripts/bd/lfc/advert.js"></script>
+<!-- endbuild -->
+
+
+</html>

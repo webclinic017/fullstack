@@ -47,8 +47,8 @@
     }
     var isCn;
     function getIpHandle() {
-        getEmailPhone('', '', function () {
-            isCn = JSON.parse(sessionStorage["systemMessage"]).ip_country_code === 'CN' || language == 'zh'; // ip || language
+        getEmailPhone('', '', function (systemMessage) {
+            isCn = systemMessage.ip_country_code === 'CN' || language == 'zh'; // ip || language
             if (isCn) {
                 $('#competitionList li  div:nth-child(2)').remove();
             }
