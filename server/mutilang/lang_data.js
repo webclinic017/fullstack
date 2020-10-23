@@ -21285,7 +21285,7 @@ module.exports = {
         },
         "joinFree1": {
             "zh": "免费领取丰富的培训资料",
-            "en": "Access to extensive training materials",
+            "en": "Access to training materials",
             "vi": "Tài liệu đào tạo đa dạng và phong phú",
             "zh-Hant": "免費領取豐富的培訓資料",
             "id": "Materi pelatihan yang ekstensif",
