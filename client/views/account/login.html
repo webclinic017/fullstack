@@ -349,6 +349,7 @@
                                    type="text"
                                    placeholder="{{lang.text('tigerWitID.login.enterPhoneNumber')}}"
                                    on-enter="getCaptcha('loginFormPhoneV', 'phoneVePhone')"
+                                   ng-change="validateInputPhone()"
                                    required
                                    ng-click="toTrackEvent('Login and register', 'inp_account')"
                                    ng-model="account.phonePhone">
@@ -364,6 +365,7 @@
                                    type="text"
                                    placeholder="{{ lang.text('actLogin4') }}"
                                    on-enter="login('loginFormPhoneV')"
+                                   ng-change="validateIInputCode()"
                                    required
                                    ng-click="toTrackEvent('Login and register', 'inp_code')"
                                    ng-model="account.phoneVeCode">

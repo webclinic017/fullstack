@@ -6,9 +6,9 @@
         .module('fullstackApp')
         .controller('SettingInfoPhoneController', SettingInfoPhoneController);
 
-    SettingInfoPhoneController.$inject = ['$scope', '$timeout', '$cookies', 'validator', 'account'];
+    SettingInfoPhoneController.$inject = ['$scope', '$timeout', '$cookies', 'validator', 'account', 'fun'];
 
-    function SettingInfoPhoneController($scope, $timeout, $cookies, validator, account) {
+    function SettingInfoPhoneController($scope, $timeout, $cookies, validator, account, fun) {
         // step1 => binding old Phone , step2 => binding new Phone
         $scope.step = 1;
 
@@ -96,7 +96,21 @@
         $scope.selectWorld = selectWorld;
         var token;
         getWorlds();
+        $scope.validateInputCode = validateInputCode;
+        $scope.validateInputPhone = validateInputPhone;
 
+        var InputPhone = fun.debounce(function () {
+            $scope.toGtagEvent('inp_change_phone_live_web', { belong: 'tigerwit' })
+        }, 300);
+        var InputVoicCode = fun.debounce(function () {
+            $scope.toGtagEvent('inp_code_phone_change_web', { belong: 'tigerwit' })
+        }, 300);
+        function validateInputCode() {
+          InputVoicCode && InputVoicCode()
+        }
+        function validateInputPhone() {
+          InputPhone && InputPhone()
+        }
         function getCaptcha(type) {
             token = $cookies['code_token'];
 
@@ -115,10 +129,11 @@
                 account.sendCode(params).then(function (data) {
                     if (!data) return;
                     if (data.is_succ) {
+                        $scope.toGtagEvent('click_get code_account_phone_web', { belong: 'tigerwit', get_code_account: 'Y' })
                         $scope.isSendVoice = data.data.is_send_voice;
                         $scope.startTimer();
                     } else {
-
+                        $scope.toGtagEvent('click_get code_account_phone_web', { belong: 'tigerwit', get_code_account: 'N' })
                         $scope.backErr.captchaBtn.show = true;
                         $scope.backErr.captchaBtn.msg = data.message;
 
@@ -132,7 +147,6 @@
             }
             if (type == 'old') {
                 $scope.clickable.oldCaptcha = false;
-
                 var params = {
                     account: '',
                     code_token: token,
@@ -143,10 +157,11 @@
                 account.sendCode(params).then(function (data) {
                     if (!data) return;
                     if (data.is_succ) {
+                        $scope.toGtagEvent('click_get code_phone_change_web', { belong: 'tigerwit', get_code_change: 'Y' })
                         $scope.isOldSendVoice = data.data.is_send_voice;
                         $scope.oldStartTimer();
                     } else {
-
+                        $scope.toGtagEvent('click_get code_phone_change_web', { belong: 'tigerwit', get_code_change: 'N' })
                         $scope.backErr.oldCaptchaBtn.show = true;
                         $scope.backErr.oldCaptchaBtn.msg = data.message;
 
@@ -218,6 +233,7 @@
             account.setPhone($scope.phone.phone_code.value, $scope.phone.phoneNew, $scope.phone.captcha).then(function (data) {
                 $scope.backErr.system.show = true;
                 if (data.is_succ) {
+                    $scope.toGtagEvent('click_submit_change_phone_web', { belong: 'tigerwit' })
                     $scope.backErr.system.status = 1;
 
                     // 神策数据统计

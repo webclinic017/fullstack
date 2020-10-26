@@ -30,7 +30,7 @@
   AuthenAgreementController.$inject = ['$scope', 'account'];
   AuthenAddressInfoController.$inject = ['$scope', 'account', '$modal', '$timeout', '$document'];
   AuthenVerificationController.$inject = ['$scope', '$layer', 'validator', 'account', '$timeout', '$interval',
-    '$location', '$modal', '$cookies'
+    '$location', '$modal', '$cookies', 'fun'
   ];
 
   // 主控制器
@@ -665,7 +665,7 @@
   }
   // verification
   function AuthenVerificationController($scope, $layer, validator, account, $timeout, $interval, $location, $modal,
-    $cookies) {
+    $cookies, fun) {
     // console.log('$scope.personal', $scope.personal)
     $scope.isSendVoice = false;
     $scope.submitForm = submitForm;
@@ -758,6 +758,13 @@
     //     })
     //   }
     // });
+    $scope.validateIInputCode = validateIInputCode;
+    var InputCode = fun.debounce(function () {
+        $scope.toGtagEvent('inp_phone_code_live_web', { belong: 'tigerwit' })
+    }, 300);
+    function validateIInputCode(type) {
+      InputCode && InputCode()
+    }
     $scope.sendCode = function(type) {
       //  && !$scope.completeInfo.areaCode.value
       if (type == 'phone') {
@@ -777,6 +784,7 @@
       }
       account.sendCode(params).then(function(data) {
         if (data.is_succ) {
+          $scope.toGtagEvent('inp_copy_amount', { belong: 'tigerwit', get_code_live: 'Y' })
           $scope.completeInfo.hasSendCode = data.is_succ
           $scope.isSendVoice = data.data.is_send_voice;
           $scope.codeErr[type] = {
@@ -793,6 +801,7 @@
             }, 1000, 59)
           }
         } else {
+          $scope.toGtagEvent('inp_copy_amount', { belong: 'tigerwit', get_code_live: 'N' })
           layer.msg(data.message)
         }
       })
@@ -807,6 +816,7 @@
       ).then(function(data) {
         if (!data) return;
         if (data.is_succ) {
+          $scope.toGtagEvent('click_submit_live_phone_web', { belong: 'tigerwit'})
           window.location.href = "/space/#/center";
         }
       });

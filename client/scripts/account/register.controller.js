@@ -72,6 +72,7 @@
         }
         // 选择国家
         $scope.selectWorld = function (target) {
+            $scope.toGtagEvent('select_country_register_web', { belong: 'tigerwit' })
             // $scope.toGtagEvent('click_country_register_web');
             if (target.code === 'CN') {
                 $scope.registerStep3 = 1;
@@ -147,6 +148,7 @@
             account.sendCode(params).then(function (data) {
                 // console.log(data);
                 if (data.is_succ) {
+                    $scope.toGtagEvent('click_get code_phone_web', { belong: 'tigerwit', get_code: 'Y' })
                     countDown(name);
                     $scope.isSendVoice = data.data.is_send_voice;
                     $scope.isSkipVerify = data.data.is_skip_verify;
@@ -165,6 +167,7 @@
                     //   // console.log($scope.is_send_voice)
                     // }
                 } else {
+                    $scope.toGtagEvent('click_get code_phone_web', { belong: 'tigerwit', get_code: 'N' })
                     layer.msg(data.message);
                 }
             });

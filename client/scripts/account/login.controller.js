@@ -16,6 +16,8 @@
         // $scope.step1PasswordStatus = true;  // 验证码登录密码显示or隐藏
         // $scope.step2PasswordStatus = true;  // 密码登录密码显示or隐藏
         // $scope.forgetPasswordStatus = true; // 忘记密码设置密码显示or隐藏
+        $scope.validateInputPhone = validateInputPhone;
+        $scope.validateIInputCode = validateIInputCode;
         $scope.rememberLoginStatus = true;  // 记住登录状态
         $scope.loginBtnStatus = true;       // 登录按钮状态
         $scope.isSendVoice = false;
@@ -81,6 +83,18 @@
                 value: target.phone_code
             }
             localStorage['phone_code'] = target.phone_code;
+        }
+        var InputPhone = fun.debounce(function () {
+            $scope.toGtagEvent('inp_phone_login_web', { belong: 'tigerwit' })
+        }, 300);
+        var InputCode = fun.debounce(function () {
+            $scope.toGtagEvent('inp_code_phone_login_web', { belong: 'tigerwit' })
+        }, 300);
+        function validateInputPhone() {
+          InputPhone && InputPhone()
+        }
+        function validateIInputCode() {
+          InputCode && InputCode()
         }
         // 使用缓存的phone_code
         if (localStorage['phone_code']) {
@@ -162,6 +176,12 @@
             account.sendCode(para).then(function (data) {
                 // console.log(data);
                 if (data.is_succ) {
+                    if (para.type === 4) {
+                      $scope.toGtagEvent('click_get code_phone_login_web', { belong: 'tigerwit', get_code_login: 'Y' })
+                    }
+                    if (para.type === 2) {
+                      $scope.toGtagEvent('click_get code_retrieve_web', { belong: 'tigerwit', get_code_retrieve: 'Y' })
+                    }
                     countDown(name);
                     $scope.isSendVoice = data.data.is_send_voice;
                     var obj = {
@@ -175,6 +195,13 @@
                     obj.btns[lang.text("tigerWitID.confirm2")] = function () { };
                     $layer(obj);
                 } else {
+                    if (para.type === 4) {
+                      $scope.toGtagEvent('click_get code_phone_login_web', { belong: 'tigerwit', get_code_login: 'N' })
+                    }
+                    if (para.type === 2) {
+                      $scope.toGtagEvent('click_get code_retrieve_web', { belong: 'tigerwit', get_code_retrieve: 'N' })
+                    }
+
                     layer.msg(data.message);
                 }
             });
@@ -272,6 +299,7 @@
                 $scope.loginBtnStatus = true;
 
                 if (data.is_succ) {
+                    $scope.toGtagEvent('click_login_button_login_web', { belong: 'tigerwit' })
                     sessionStorage.removeItem("passErrThree");
                     $scope.writeCookie({ name: 'token', value: data.data.token });
                     $scope.writeCookie({ name: 'user_code', value: data.data.user_code });

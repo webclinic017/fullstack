@@ -112,7 +112,8 @@
                            ng-model="phone.phoneNew"
                            ng-pattern="frontErr.phoneNew.reg"
                            ng-focus="hideErr('phoneForm', 'phoneNew')"
-                           ng-blur="showErr('phoneForm', 'phoneNew')">
+                           ng-blur="showErr('phoneForm', 'phoneNew')"
+                           ng-change="validateInputPhone()">
 
                     <div ng-show="frontErr.phoneNew.show">
                         <p class="alert-arrow_tp_lf" ng-show="phoneForm.phoneNew.$error.required">
@@ -142,7 +143,8 @@
                            ng-class="{'form-control-error': (frontErr.captcha.show && phoneForm.captcha.$invalid) || (backErr.captcha.show && backErr.captcha.status > 0)}"
                            ng-model="phone.captcha"
                            ng-focus="hideErr('phoneForm', 'captcha')"
-                           ng-blur="showErr('phoneForm', 'captcha')">
+                           ng-blur="showErr('phoneForm', 'captcha')"
+                           ng-change="validateInputCode()">
 
                     <div ng-show="frontErr.captcha.show">
                         <p class="alert-arrow_tp_lf" ng-show="phoneForm.captcha.$error.required" ng-style="{padding: lang.isEnglishArea() ? '8px 7px' : ''}">
@@ -190,7 +192,7 @@
         <!-- 语音验证 -->
         <div class="flex1 justify-flex-end" ng-if="isSendVoice">
           <div class="col-xs-7 text-center">
-            <div voice-verification-tab data-code-list="phone" data-register-step1="registerStep1" data-fn="register('registerForm1', 1)" data-cold-type="3" data-is-slider="false" data-is-send-voice="is_send_voice"></div>
+            <div voice-verification-tab data-code-list="phone" data-register-step1="registerStep1" data-fn="register('registerForm1', 1)" data-cold-type="3" data-account-type="true" data-is-slider="false" data-is-send-voice="is_send_voice"></div>
           </div>
         </div>
 

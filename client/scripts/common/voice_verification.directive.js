@@ -11,6 +11,7 @@
             // require:'?^sliderVerificationTab',
             // replace: true,
             scope: {
+                accountType: '=',
                 registerSetPassword: '=',
                 settingInfoPhone: '=',
                 isSlider: '=',
@@ -58,6 +59,15 @@
               scope.lang = lang;
               scope.setSliderShow =setSliderShow;
               function setSliderShow () {
+                if (scope.accountType) {
+                  $scope.toGtagEvent('click_contact_account_web', { belong: 'tigerwit' })
+                }
+                if (scope.coldType === 1 && !scope.accountType) {
+                  $scope.toGtagEvent('click_contact_phone_web', { belong: 'tigerwit' })
+                }
+                if (scope.coldType === 3 && !scope.accountType) {
+                  $scope.toGtagEvent('click_contact_change_web', { belong: 'tigerwit' })
+                }
                 scope.codeBtnStatus.step1Phone.isSliderShow = true;
               }
               // 获取验证码倒计时
@@ -81,13 +91,52 @@
               // });
               $(".contact-us").on('click', function () {
                 // getPageSignup()
+                if (scope.accountType) {
+                  $scope.toGtagEvent('click_contact_account_web', { belong: 'tigerwit' })
+                }
+                if (scope.coldType === 1) {
+                  $scope.toGtagEvent('click_contact_phone_web', { belong: 'tigerwit' })
+                }
+                if (scope.coldType === 2 && !scope.accountType) {
+                  $scope.toGtagEvent('click_contact_retrieve_web', { belong: 'tigerwit' })
+                }
+                if (scope.coldType === 4 && !scope.accountType) {
+                  $scope.toGtagEvent('click_contact_login_web', { belong: 'tigerwit' })
+                }
                 zE.activate()
               });
               $(".cannot-get").on('click', function (e) {
+                  if (scope.accountType) {
+                    $scope.toGtagEvent('click_get code_failure_account_web', { belong: 'tigerwit' })
+                  }
+                  if (scope.coldType === 1 && !scope.accountType) {
+                    $scope.toGtagEvent('click_get code_failure_phone_web', { belong: 'tigerwit' })
+                  }
+                  if (scope.coldType === 2 && !scope.accountType) {
+                    $scope.toGtagEvent('click_get code_failure_retrieve_web', { belong: 'tigerwit' })
+                  }
+                  if (scope.coldType === 3 && !scope.accountType) {
+                    $scope.toGtagEvent('click_voice code_live_phone_web', { belong: 'tigerwit' })
+                  }
                   e.stopPropagation();
                   $(".verification-wrap").slideToggle(200);
               });
               $(".get-send-code").on('click', function () {
+                if (scope.accountType) {
+                  $scope.toGtagEvent('click_voice code_account_phone_web', { belong: 'tigerwit' })
+                }
+                if (scope.coldType === 1 && !scope.accountType) {
+                  $scope.toGtagEvent('click_voice code_phone_web', { belong: 'tigerwit' })
+                }
+                if (scope.coldType === 2 && !scope.accountType) {
+                  $scope.toGtagEvent('click_voice code_retrieve_web', { belong: 'tigerwit' })
+                }
+                if (scope.coldType === 3 && !scope.accountType) {
+                  $scope.toGtagEvent('click_voice code_change_web', { belong: 'tigerwit' })
+                }
+                if (scope.coldType === 4 && !scope.accountType) {
+                  $scope.toGtagEvent('click_voice code_login_web', { belong: 'tigerwit' })
+                }
                 if (!scope.codeList.step1Phone && scope.codeList.phonePhone) {
                   scope.codeList.step1Phone = scope.codeList.phonePhone
                 }

@@ -132,6 +132,9 @@
 
                     //3.成功解锁后的回调函数
                     setTimeout(function(){
+                        if (scope.coldType === 1) {
+                          $scope.toGtagEvent('slide_verification_success', { belong: 'tigerwit' })
+                        }
                         // alert('解锁成功！');
                         countDown();
                         // scope.sliderSuccFn();
@@ -162,11 +165,17 @@
               }
               // scope.sliderSuccFn();
               function closeModal() {
+                if (scope.coldType === 1) {
+                  $scope.toGtagEvent('click_cancel_jump_phone_web', { belong: 'tigerwit' })
+                }
                 scope.sliderShow = false;
                 scope.title = false;
                 // scope.getPageSignup();
               };
               function setSliderShow() {
+                if (scope.coldType === 1) {
+                  $scope.toGtagEvent('click_confirm_jump_phone_web', { belong: 'tigerwit' })
+                }
                 scope.title = true;
               };
             }
