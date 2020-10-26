@@ -22,8 +22,12 @@
                 '<div>' +
                     '<span ng-show="timer.start">' + lang.text("register6") + '</span>' +
                     '<span ng-show="timer.running">' + '{{timer.seconds}}' + lang.text("tigerWitID.second") +'</span>' +
+                    /*
+                    // 之前的获取语音验证
                     '<span ng-show="timer.restart && voiceCaptcha">' +
                         '{{timer.voiceCaptchaTimes === 1 ? lang.text("tigerWitID.getCodeAgain") : lang.text("tigerWitID.getVoiceCodeAgain") }}' +
+                        */
+                       '<span ng-show="timer.restart && voiceCaptcha">' + lang.text("register6") +
                     '</span>' +
                 '</div>',
             link: function (scope, element, attrs) {
