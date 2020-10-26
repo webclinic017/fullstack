@@ -94,6 +94,12 @@
         $scope.toggleLoginMethod = function (n) {
             $scope.registerStep3 = n;
         }
+        var InputPhone = fun.debounce(function () {
+            $scope.toGtagEvent('inp_phone_register_web', { belong: 'tigerwit' })
+        }, 300);
+        $scope.validateInputPhone = function() {
+          InputPhone && InputPhone()
+        }
 
         // 清除registerStep1 手机号
         $scope.clearPhone = function (phone) {

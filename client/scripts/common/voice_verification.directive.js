@@ -59,15 +59,15 @@
               scope.lang = lang;
               scope.setSliderShow =setSliderShow;
               function setSliderShow () {
-                if (scope.accountType) {
-                  $scope.toGtagEvent('click_contact_account_web', { belong: 'tigerwit' })
-                }
+                // if (scope.accountType) {
+                //   $scope.toGtagEvent('click_contact_account_web', { belong: 'tigerwit' })
+                // }
                 if (scope.coldType === 1 && !scope.accountType) {
-                  $scope.toGtagEvent('click_contact_phone_web', { belong: 'tigerwit' })
+                  $scope.toGtagEvent('click_jump_phone_web', { belong: 'tigerwit' })
                 }
-                if (scope.coldType === 3 && !scope.accountType) {
-                  $scope.toGtagEvent('click_contact_change_web', { belong: 'tigerwit' })
-                }
+                // if (scope.coldType === 3 && !scope.accountType) {
+                //   $scope.toGtagEvent('click_contact_change_web', { belong: 'tigerwit' })
+                // }
                 scope.codeBtnStatus.step1Phone.isSliderShow = true;
               }
               // 获取验证码倒计时
@@ -132,7 +132,8 @@
                   $scope.toGtagEvent('click_voice code_retrieve_web', { belong: 'tigerwit' })
                 }
                 if (scope.coldType === 3 && !scope.accountType) {
-                  $scope.toGtagEvent('click_voice code_change_web', { belong: 'tigerwit' })
+                  // $scope.toGtagEvent('click_voice code_change_web', { belong: 'tigerwit' })
+                  $scope.toGtagEvent('click_voice code_live_phone_web', { belong: 'tigerwit' })
                 }
                 if (scope.coldType === 4 && !scope.accountType) {
                   $scope.toGtagEvent('click_voice code_login_web', { belong: 'tigerwit' })

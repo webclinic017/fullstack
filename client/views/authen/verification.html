@@ -12,7 +12,7 @@
                 required
                 ng-change="validateIInputCode()"
                 ng-model="completeInfo.verification">
-            <span class="sender_btn" ng-show="!completeInfo.hasSendCode" ng-click="[sendCode('phone'), toTrackEvent('Open live account', 'your_details_getcode'), toGtagEvent('inp_phone_code_live_web')]">{{lang.text('tigerWitID.login.sendCode')}}</span>
+            <span class="sender_btn" ng-show="!completeInfo.hasSendCode" ng-click="[sendCode('phone'), toTrackEvent('Open live account', 'your_details_getcode'), toGtagEvent('click_get code_live_phone_web')]">{{lang.text('tigerWitID.login.sendCode')}}</span>
             <span class="sender_btn" ng-show="completeInfo.hasSendCode">{{lang.text('tigerWitID.myAccount.tip39_1')}}{{
                 completeInfo.waitTime }}{{lang.text('tigerWitID.myAccount.tip39_2')}}</span>
             <span class="account-form-control-tip-new" ng-if="account.step1Code">{{ lang.text('tigerWitID.login.verificationCodej') }}</span>
