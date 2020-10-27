@@ -16528,44 +16528,24 @@ module.exports = {
         "ar": "this is comments, No translation required"
     },
     "newhome_liverpool1": {
-        "zh": "热烈庆祝",
-        "en": "Congratulations",
-        "vi": "TigerWit Chúc mừng",
-        "zh-Hant": "熱烈慶祝",
-        "id": "TigerWit mengucapkan",
-        "es": "Felicitaciones de TigerWit",
-        "pt-BR": "Parabéns da TigerWit",
-        "ar": "Congratulations"
+        "zh": "加入冠军团队",
+        "en": "Join Our Winning Team",
+        "vi": "Đồng Hành Cùng Đội Bóng Vô Địch ",
+        "zh-Hant": "加入冠軍團隊",
+        "id": "Ayo Ikuti Tim Pemenang",
+        "es": "Únase a nuestro equipo ganador",
+        "pt-BR": "Una-se à nossa equipe vencedora",
+        "ar": "إنضم إلى الفريق الفائز "
     },
     "newhome_liverpool2": {
-        "zh": "利物浦足球俱乐部",
-        "en": "to Liverpool FC",
-        "vi": "CLB Liverpool",
-        "zh-Hant": "利物浦足球俱樂部",
-        "id": "selamat Liverpool FC",
-        "es": "Liverpool FC",
-        "pt-BR": "Liverpool FC",
-        "ar": "to Liverpool FC"
-    },
-    "newhome_liverpool3": {
-        "zh": "加冕英超联赛冠军",
-        "en": "Premier League",
-        "vi": "Nhà Vô Địch Giải Ngoại",
-        "zh-Hant": "加冕英超聯賽冠軍",
-        "id": "Juara Liga Premier ",
-        "es": "Campeones de la",
-        "pt-BR": "Campeões da",
-        "ar": "Premier League"
-    },
-    "newhome_liverpool4": {
-        "zh": " ",
-        "en": "Champions",
-        "vi": "Hạng Anh mùa giải",
-        "zh-Hant": " ",
-        "id": " ",
-        "es": "Liga Premier",
-        "pt-BR": "Premier League",
-        "ar": "Champions"
+        "zh": "使用我们屡获殊荣的交易APP，即刻进入全球金融市场",
+        "en": "Get instant access to financial markets with our award-winning trading app.",
+        "vi": "Truy cập nhanh chóng vào các thị trường tài chính bằng ứng dụng đạt giải thưởng của chúng tôi",
+        "zh-Hant": "使用我們屢獲殊榮的交易APP，即刻進入全球金融市場",
+        "id": "Dapatkan akses langsung ke pasar keuangan melalui aplikasi kami",
+        "es": "Acceda instantáneamente a los mercados financieros con nuestra premiada aplicación de trading.",
+        "pt-BR": "Obtenha acesso instantâneo aos mercados financeiros com nosso aplicativo de trading premiado.",
+        "ar": "احصل على فرصة الوصول إلى الأسواق المالية من خلال تطبيق التداول الحائز على جوائز متعددة."
     },
     "newhome_1": {
         "zh": "你需要的交易市场",
@@ -16670,12 +16650,12 @@ module.exports = {
     "newhome_9_1": {
         "zh": "下载注册交易账户",
         "en": "Download the app to open an account",
-        "vi": "Tải app để mở một tài khoản",
+        "vi": "Tải ứng dụng để mở một tài khoản",
         "zh-Hant": "下載註冊交易賬戶",
-        "id": "Unduh aplikasi untuk membuka akun",
-        "es": "Descargue la app para abrir una cuenta",
-        "pt-BR": "Baixar APP para abrir uma conta",
-        "ar": "تفضل بتحميل التطبيق لتفتح حسابك"
+        "id": "Unduh aplikasinya untuk membuka akun",
+        "es": "Descargue la aplicación para abrir una cuenta",
+        "pt-BR": "Baixe o aplicativo para abrir uma conta",
+        "ar": "قم بتحميل التطبيق لفتح حساب تداول"
     },
     "link_register": {
         "zh": "注册交易账户",
