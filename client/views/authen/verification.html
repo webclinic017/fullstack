@@ -8,22 +8,22 @@
     </div>
     <div class="row mg-tp-40 kyc">
         <div class="form-control-wrapper contact_way inputor">
-            <input class="form-control" name="verification" type="text" placeholder="{{lang.text('tigerWitID.settings.enterVerificationCode')}}"
+            <input class="form-control" name="verificationCode" type="text" placeholder="{{lang.text('tigerWitID.settings.enterVerificationCode')}}"
                 required
                 ng-change="validateIInputCode()"
-                ng-model="completeInfo.verification">
+                ng-model="completeInfo.verificationCode">
             <span class="sender_btn" ng-show="!completeInfo.hasSendCode" ng-click="[sendCode('phone'), toTrackEvent('Open live account', 'your_details_getcode'), toGtagEvent('click_get code_live_phone_web')]">{{lang.text('tigerWitID.login.sendCode')}}</span>
             <span class="sender_btn" ng-show="completeInfo.hasSendCode">{{lang.text('tigerWitID.myAccount.tip39_1')}}{{
                 completeInfo.waitTime }}{{lang.text('tigerWitID.myAccount.tip39_2')}}</span>
             <span class="account-form-control-tip-new" ng-if="account.step1Code">{{ lang.text('tigerWitID.login.verificationCodej') }}</span>
 
-            <div ng-show="frontErr.verification.show">
-                <p class="alert-arrow_tp_lf" ng-show="completeForm.verification.$error.required">
+            <div ng-show="frontErr.verificationCode.show">
+                <p class="alert-arrow_tp_lf" ng-show="completeForm.verificationCode.$error.required">
                     {{lang.text('tigerWitID.settings.enterVerificationCode')}}
                 </p>
             </div>
 
-            <div ng-show="codeErr.verification.show">
+            <div ng-show="codeErr.verificationCode.show">
                 <p class="alert-arrow_tp_lf">
                     {{ codeErr.verification.msg }}
                 </p>
