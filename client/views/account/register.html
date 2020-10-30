@@ -114,8 +114,8 @@
                     <div class="account_login__title">{{ lang.text('actLogin20') }}</div>
                     <form name="registerForm2" class="account_login__form" novalidate ng-style="{'margin-bottom': lang.isEnglishArea() ? '5px' : '25px'}">
                         <div class="account-form-control-wrapper-new">
-                            <input class="account-form-control-new" autocomplete="off" name="step1Password" type="password" placeholder="{{ lang.text('tigerWitID.login.enterPassword') }}"
-                                on-enter="setPassword('registerForm2')" required ng-click="toTrackEvent('Login and register', 'inp_password')" ng-model="account.step1Password">
+                            <!-- on-enter="setPassword('registerForm2')" -->
+                            <input class="account-form-control-new" autocomplete="off" name="step1Password" type="password" placeholder="{{ lang.text('tigerWitID.login.enterPassword') }}" required ng-click="toTrackEvent('Login and register', 'inp_password')" ng-model="account.step1Password">
                             <span class="account-form-control-tip-new" ng-show="account.step1Password">{{ lang.text('actLogin22') }}</span>
                             <!-- <span class="account_login__close" ng-click="changePasswordStatus('step1PasswordStatus')">
                                 <i class="fa fa-eye" aria-hidden="true"></i>
@@ -130,8 +130,8 @@
                             </span>
                         </div> -->
                         <div class="account-form-control-wrapper-new">
-                            <input class="account-form-control-new" autocomplete="off" name="step2Password" type="password" placeholder="{{ lang.text('tigerWitID.login.confirmPassword') }}"
-                                on-enter="setPassword('registerForm2')" required ng-click="toTrackEvent('Login and register', 'confirm_password')" ng-model="account.step2Password">
+                            <!-- on-enter="setPassword('registerForm2')"  -->
+                            <input class="account-form-control-new" autocomplete="off" name="step2Password" type="password" placeholder="{{ lang.text('tigerWitID.login.confirmPassword') }}" required ng-click="toTrackEvent('Login and register', 'confirm_password')" ng-model="account.step2Password">
                             <span class="account-form-control-tip-new" ng-show="account.step2Password">{{ lang.text('tigerWitID.login.confirmPasswordj') }}</span>
                             <!-- <span class="account_login__close" ng-click="changePasswordStatus('step1PasswordStatus')">
                                 <i class="fa fa-eye" aria-hidden="true"></i>

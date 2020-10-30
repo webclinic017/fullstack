@@ -1699,6 +1699,26 @@
                         "pt-BR": "Mandamos o código de verificação para",
                         "ar": "قد أرسلت رمز التحقق إلى"
                     },
+                    "tip6_1_y": {
+                        "zh": "我们将致电至以下手机号",
+                        "en": "We will call the following mobile phone number ",
+                        "vi": "Chúng tôi se gọi số điện thoại sau ",
+                        "zh-Hant": "我們將致電至以下手機號",
+                        "id": "Kami akan menelepon nomor ponsel anda ",
+                        "es": "Llamaremos al siguiente número de teléfono móvil  ",
+                        "pt-BR": "Ligaremos para o seguinte número de celular ",
+                        "ar": "سيتم الاتصال على رقم الهاتف المحمول التالي"
+                    },
+                    "tip6_3_y": {
+                        "zh": " 请留意电话。",
+                        "en": "Please pay attention to the phone call",
+                        "vi": "Vui lòng chú ý đến cuộc gọi điện thoại",
+                        "zh-Hant": " 請留意電話。",
+                        "id": "Mohon jawab panggilan tersebut",
+                        "es": "Preste atención a la llamada telefónica",
+                        "pt-BR": "Fique atento ao telefonema.",
+                        "ar": "سيتم الاتصال بك هاتفياً"
+                    },
                     "tip6_2": {
                         "zh": "邮箱",
                         "en": " ",

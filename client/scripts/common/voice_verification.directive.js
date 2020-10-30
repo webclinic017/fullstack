@@ -168,7 +168,7 @@
                     var obj = {
                         title: lang.text('tigerWitID.login.verificationCodeSent'),
                         titleClass: 'account_login__layer-title',
-                        msg: lang.text('tigerWitID.login.tip6_1') + lang.text('tigerWitID.login.tip6_21') + scope.codeList.step1Phone + lang.text('tigerWitID.login.tip6_3'),
+                        msg: lang.text('tigerWitID.login.tip6_1_y') + scope.codeList.step1Phone + lang.text('tigerWitID.login.tip6_3_y'),
                         msgClass: 'account_login__layer-msg',
                         btns: {},
                         btnsClass: 'account_login__layer-btns'

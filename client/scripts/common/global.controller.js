@@ -512,10 +512,12 @@
                     $scope.confirmLive = function () {
                         toGtagEvent('click_open_live_account_web');
                         $modalInstance.dismiss();
+                        console.log($scope)
                         if ($scope.isIslamic) {
                             confirmIslamic(true);
                         } else {
-                            $state.go('authen.subpage', { subpage: "realname" })
+                            //$state.go('authen.subpage', { subpage: "realname" })
+                            $state.go('authen.subpage', { subpage: "verification" })
                         }
                         // $timeout(function () {
                         //     var obj = {
