@@ -370,7 +370,9 @@
             // $scope.$emit('global.openDredgeMdl', { position: 'register' });
             // lang.globalOrCn($scope.area_id);
             // $state.go('space.center');
-            window.location.href = "/space/#/center";
+            setTimeout(function() {
+              window.location.href = "/space/#/center";
+            },300)
         }
 
         // 获取验证码倒计时

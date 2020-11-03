@@ -60,7 +60,7 @@
             });
         }
         function submitForm() {
-            console.log($scope.card);
+            // console.log($scope.card);
             showErr('world');
             showErr('realname');
             showErr('number');

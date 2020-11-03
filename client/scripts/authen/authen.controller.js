@@ -808,6 +808,7 @@
     }
 
     function submitForm(formName) {
+      console.log(111)
       account.checkCode(
         '',
         $scope.completeInfo.verificationCode,
@@ -818,6 +819,10 @@
         if (data.is_succ) {
           $scope.toGtagEvent('click_submit_live_phone_web', { belong: 'tigerwit'})
           window.location.href = "/space/#/center";
+        } else {
+          layer.msg(data.message, {
+              time: 2000
+          });
         }
       });
     }

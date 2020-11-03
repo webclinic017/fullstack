@@ -92,7 +92,7 @@
                       size: 'lx',
                       backdrop: 'static',
                       controller: ['$scope', '$modalInstance', 'lang', function ($scope, $modalInstance, lang) {
-                          $scope.message = "您还未验证手机号，为了您的账户安全，请尽快验证您注册的手机号。";
+                          $scope.message = lang.text("verificationArray.skipVoice8");
                           $scope.lang = lang;
                           $scope.closeModal = closeModal;
                           $scope.goVerify = goVerify;

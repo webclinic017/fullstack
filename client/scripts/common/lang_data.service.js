@@ -1116,6 +1116,16 @@
                 "pt-BR": "Você não verificou o seu número de celular. Para a segurança da sua conta, verifique o seu número de celular registrado o mais rápido possível.",
                 "ar": "لم تقم بالتحقق من رقم هاتفك المحمول. لأمان حسابك، يرجى التحقق من رقم هاتفك المحمول المسجل في أقرب وقت ممكن."
               },
+              "skipVoice9": {
+                "zh": "您未绑定任何手机号",
+                "en": "You have not bound your phone number",
+                "vi": "Bạn không liên kết với số điện thoại",
+                "zh-Hant": "您未綁定任何手機號",
+                "id": "Anda belum memasukkan nomor telepon anda",
+                "es": "No ha vinculado su número de teléfono",
+                "pt-BR": "Você não vinculou seu número de telefone",
+                "ar": "لم يتم التحقق من رقم هاتفك"
+              },
               "slider": {
                  "zh": "滑动校验",
                  "en": "Slider verification",

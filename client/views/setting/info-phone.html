@@ -6,7 +6,7 @@
     </p>
     <p ng-if="!settingInfo.phone || (settingInfo.phone && settingInfo.phone_verify == 0)" class="pd-tp-20 pd-bt-10 setting_info_zero__list-title">
         <span class="line">{{lang.text('tigerWitID.settings.phoneNumberSettings')}}</span>
-        <span>你暂没有绑定手机号</span>
+        <span>{{lang.text('verificationArray.skipVoice9')}}</span>
     </p>
     <div class="row setting_info_zero__list-input" ng-show="step === 1">
             <form name="oldPhoneForm" novalidate autocomplete="off" class="display-flex">
