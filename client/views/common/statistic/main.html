@@ -51,19 +51,18 @@
                 // 添加必要参数
                 var token = getCookie('token');
                 if (token) {
-                    url = this.buildUrlParam(url, this.param({
+                    url = this.buildUrlParam(url, {
                         token: token
-                    }))
+                    })
                 }
                 var user_code = getCookie('user_code');
                 if (user_code) {
-                    url = this.buildUrlParam(url, this.param({
+                    url = this.buildUrlParam(url, {
                         user_id: user_code
-                    }))
+                    })
                 }
 
                 if (!isPost) {
-                    data = this.param(data);
                     url = this.buildUrlParam(url, data);
                 }
                 xhr.open(ajaxMethod, url, opts.async == undefined ? true : opts.async);
@@ -79,13 +78,15 @@
                 }
                 xhr.send(isPost ? JSON.stringify(data) : null);
             },
-            buildUrlParam: function (url, data, isPost) {
+            buildUrlParam: function (url, data) {
+                if (url.indexOf("?") < 0) {
+                    url += "?";
+                } else {
+                    url += "&";
+                }
                 if (data) {
-                    if (url.indexOf("?") < 0) {
-                        url += "?" + data;
-                    } else {
-                        url += "&" + data;
-                    }
+                    var dataStr = this.param(data)
+                    url += dataStr
                 }
                 return url;
             },
@@ -124,7 +125,8 @@
         w.getCookie = getCookie;
         w.getDomain = getDomain;
         w.setSource = setSource;
-        w.getLp = getLp; 
+        w.setUrlParam = XHR.buildUrlParam;
+        w.getLp = getLp;
         function getSearch(type) {
             // console.log($location.search())
             var search = function () {

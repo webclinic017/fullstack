@@ -61,7 +61,8 @@
               </div>
               <div class="select-wrapper">
                 <span>
-                  <%= lang.text('global_bonus.reg_policy')%> <a style="color: #049ee9;" href="/agreement/cookie" target="_blank"><%= lang.text('global_bonus.reg_policy2')%></a>.
+                  <%= lang.text('global_bonus.reg_policy')%> <a style="color: #049ee9;" href="/agreement/cookie"
+                    target="_blank"><%= lang.text('global_bonus.reg_policy2')%></a>.
                 </span>
               </div>
             </div>
@@ -136,13 +137,17 @@
         <p>
           <%= lang.text('bonusBd.eventDetails8')%>
         </p>
+        <% if (lang.currentLanguage() == 'en') {%>
+        <p class="mg-tp-20"><a href="/forex-trading" class="font-info">Forex Trading</a> | <a
+            href="/web/mt4" class="font-info">MetaTrader 4 Software Download</a></p>
+        <%}%>
       </div>
     </div>
     <% include /common/nav/web.footer.html %>
 
-  </div>
-  <!-- 注册协议相关弹窗 -->
-  <%include /common/component/agment_mdl.html %>
+      </div>
+      <!-- 注册协议相关弹窗 -->
+      <%include /common/component/agment_mdl.html %>
 </body>
 
 <!-- build:js(client) /scripts/bd_g35.js -->
