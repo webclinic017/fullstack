@@ -15,7 +15,7 @@
 @import "grid";
 @import "m_rem";
 @import "m_tabs";
-@import "table";   // h5表格，后期h5表格多了会进行替换
+@import "table"; // h5表格，后期h5表格多了会进行替换
 @import "m_buttons";
 html,
 body {
@@ -458,6 +458,9 @@ button[class*="btn"] {
     border: none !important;
     padding: 0;
     height: px2rem(64);
+    option {
+        color: #000;
+    }
 }
 // 通用样式
 @include b(m_mg-200) {
@@ -474,7 +477,6 @@ button[class*="btn"] {
             font-size: px2rem(24);
             line-height: px2rem(45);
         }
-
     }
 
     //   @include e(circle-title) {
@@ -496,14 +498,14 @@ button[class*="btn"] {
     //       @include flex(1);
     //     }
     //   }
-      @include e(two-title) {
+    @include e(two-title) {
         font-size: px2rem(38);
         font-weight: 600;
         color: rgba(33, 44, 63, 1);
         line-height: px2rem(54);
-        margin-top: px2rem(90);
+        margin-top: px2rem(60);
         margin-bottom: px2rem(36);
-      }
+    }
     //   @include e(three-title) {
     //     font-size: 24px;
     //     font-weight: 600;
@@ -552,13 +554,13 @@ button[class*="btn"] {
     //       }
     //     }
     //   }
-      @include e(circle) {
+    @include e(circle) {
         @include displayFlex();
         &::before {
-          content: "●";
-          margin: 0 px2rem(10);
-          font-size: px2rem(20);
-          display: inline-block;
+            content: "●";
+            margin: 0 px2rem(10);
+            font-size: px2rem(20);
+            display: inline-block;
         }
-      }
+    }
 }
