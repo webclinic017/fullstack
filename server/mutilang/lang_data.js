@@ -21219,7 +21219,7 @@ module.exports = {
             "id": "Perjanjian Klien",
             "es": "Acuerdo del Cliente",
             "pt-BR": "Contrato de Cliente",
-            "ar": "اتفاقية عمي",
+            "ar": "اتفاقية عميل",
         },
         "termsConditions6_3": {
             "zh": "的用户将被从该活动中移除，并取消其参与该活动的资格，已获得的红包金额将从其账户中删除。",
@@ -21229,7 +21229,7 @@ module.exports = {
             "id": " TigerWit akan dihapus dari promo ini dan mereka akan kehilangan kewenangan untuk mengklaim Cashback dan jumlah bonus yang dibayar akan dihapus dari akun mereka",
             "es": " de TigerWit será eliminado de esta promoción y perderá la elegibilidad para reclamar el Reembolso y los montos de bonificación pagados se eliminarán de sus cuentas.",
             "pt-BR": " da TigerWit será removido desta promoção e eles perderão a elegibilidade para reivindicar o saque e os valores de bônus pagos serão removidos de suas contas.",
-            "ar": "TigerWit ستتم إزالته من هذا العرض وسيفقد أهليته للمطالبة باسترداد النقود وستتم إزالة مبالغ المكافأة المدفوعة من حساباتهم",
+            "ar": "  TigerWit ستتم إزالته من هذا العرض وسيفقد أهليته للمطالبة باسترداد النقود وستتم إزالة مبالغ المكافأة المدفوعة من حساباتهم",
         }
     },
     "advertLfc": {

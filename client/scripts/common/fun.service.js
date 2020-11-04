@@ -20,13 +20,7 @@
             /*获取Url查询字段 返回Object*/
             getSearch: getSearch,
             // 判断url是否含有参数
-            setUrlParam: function (url) {
-                if (url.split('?').length == 1) {
-                    return url + '?'
-                } else {
-                    return url + '&'
-                }
-            },
+            setUrlParam: setUrlParam,
 
             // 删除url?后某个参数
             delQuery: function (queryKey) {
