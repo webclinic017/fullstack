@@ -20,7 +20,7 @@
             },
             template:
                 '<div>' +
-                    '<span ng-show="timer.start">' + lang.text("register6") + '</span>' +
+                    '<span ng-show="timer.start" style="color: #4A90E2">' + lang.text("register6") + '</span>' +
                     '<span ng-show="timer.running">' + '{{timer.seconds}}' + lang.text("tigerWitID.second") +'</span>' +
                     /*
                     // 之前的获取语音验证

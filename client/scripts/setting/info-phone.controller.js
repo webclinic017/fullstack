@@ -221,7 +221,8 @@
             });
         }
 
-        function submitForm(formName) {
+        function submitForm(formName, is_info) {
+          console.log(1234, $scope.phone)
             showErr(formName, 'phoneNew');
             showErr(formName, 'captcha');
 
@@ -229,11 +230,18 @@
                 return;
             }
 
-            $scope.clickable.submit = false;
+            // $scope.clickable.submit = false;
             account.setPhone($scope.phone.phone_code.value, $scope.phone.phoneNew, $scope.phone.captcha).then(function (data) {
                 $scope.backErr.system.show = true;
                 if (data.is_succ) {
                     $scope.toGtagEvent('click_submit_change_phone_web', { belong: 'tigerwit' })
+                    if (is_info) {
+                      $scope.clickable.submit = true;
+                      $timeout(function () {
+                          window.location.reload();
+                      }, 1000);
+                      return;
+                    }
                     $scope.backErr.system.status = 1;
 
                     // 神策数据统计

@@ -31,7 +31,14 @@
 //         }
 //     }
 // }
-
+.account_bind {
+      position: absolute;
+      top: 12px;
+      height: 22px;
+      line-height: 22px;
+      right: 0;
+      cursor: pointer;
+    }
 @include b(authen_content) {
     input, .contact_way {
         border: none;
