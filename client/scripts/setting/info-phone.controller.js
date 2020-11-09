@@ -149,6 +149,7 @@
             if (type == 'old') {
                 $scope.clickable.oldCaptcha = false;
                 var params = {
+                    world_code: $scope.personal.region.world_code,
                     account: '',
                     code_token: token,
                     type: 3,
