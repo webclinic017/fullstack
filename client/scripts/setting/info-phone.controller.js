@@ -13,6 +13,10 @@
         $scope.step = 1;
 
         $scope.phone = {
+            country: {
+                key: '',
+                value: ''
+            },
             oldCaptcha: '',
             phone_code: {
                 key: '+86',
@@ -120,6 +124,7 @@
                     return;
                 }
                 var params = {
+                    world_code: $scope.phone.country.value ? $scope.phone.country.value : undefined,
                     account: $scope.phone.phoneNew,
                     code_token: token,
                     type: 3,
@@ -222,7 +227,6 @@
         }
 
         function submitForm(formName, is_info) {
-          console.log(1234, $scope.phone)
             showErr(formName, 'phoneNew');
             showErr(formName, 'captcha');
 
