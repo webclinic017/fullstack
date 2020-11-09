@@ -776,6 +776,7 @@
       //   return
       // }
       var params = {
+        world_code: $scope.personal.region.world_code,
         account: '',
         code_token: $cookies['code_token'],
         type: 1,
