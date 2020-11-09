@@ -144,6 +144,9 @@
                 if (!scope.codeList.step1Phone && !scope.codeList.phonePhone && scope.codeList.phoneNew) {
                   scope.codeList.step1Phone = scope.codeList.phoneNew
                 }
+                if (scope.codeList.step1Phone && scope.codeList.phoneNew) {
+                  scope.codeList.step1Phone = scope.codeList.phoneNew
+                }
                 if (!scope.codeList.phoneArea && scope.codeList.phone_code) {
                   scope.codeList.phoneArea = scope.codeList.phone_code
                 }
