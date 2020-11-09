@@ -54,20 +54,6 @@
     <!-- <div class="row"> -->
         <form name="phoneForm" novalidate autocomplete="off">
           <div class="account-form-control-wrapper-new">
-              <span class="account-form-control-tip-new" ng-show="phone.country.value">{{lang.text("tigerWitID.login.countryRegion")}}</span>
-              <input class="account-form-control-new select__input" readonly name="country" type="text" placeholder="{{lang.text('tigerWitID.login.countryRegion')}}" required ng-model="phone.country.key">
-
-              <i class="select__icon fa fa-angle-down"></i>
-
-              <ul class="select__dropdown" twform-select data-bind-model="phone.country">
-
-                  <li class="first_li"><input type="text" placeholder="{{lang.text('tigerWitID.login.countryCode')}}" ng-model="placeholderCountry"><i class="fa fa-search"></i></li>
-                  <li ng-repeat="world in worldList | filter : placeholderCountry" ng-class="{'selected': world.code == phone.country.value}">
-                      <span data-value="{{world.code}}" data-disabled='{"disabled": {{world.disabled}}, "msg": "{{lang.text("tigerWitID.myAccount.unableCountry")}}"}' ng-click="world.disabled || selectWorld(world)" ng-class="{'font-light': world.disabled}">{{world.name}}</span>
-                  </li>
-              </ul>
-          </div>
-          <div class="account-form-control-wrapper-new">
               <div class="select-left">
                   <!-- <input class="select__input" name="phoneArea" readonly type="text" placeholder="{{lang.text('tigerWitID.areaCode')}}" required ng-model="account.phoneArea.key"> -->
                   <input class="select__input form-control"

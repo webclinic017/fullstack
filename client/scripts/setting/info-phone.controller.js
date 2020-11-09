@@ -13,10 +13,6 @@
         $scope.step = 1;
 
         $scope.phone = {
-            country: {
-                key: '',
-                value: ''
-            },
             oldCaptcha: '',
             phone_code: {
                 key: '+86',
@@ -124,7 +120,7 @@
                     return;
                 }
                 var params = {
-                    world_code: $scope.phone.country.value ? $scope.phone.country.value : undefined,
+                    world_code: $scope.personal.region.world_code,
                     account: $scope.phone.phoneNew,
                     code_token: token,
                     type: 3,
