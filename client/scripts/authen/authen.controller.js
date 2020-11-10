@@ -59,6 +59,7 @@
         '6': 'address', //上传地址证明
         '7': 'identity', //上传身份证明
         '8': 'verification', //未验证手机
+        '12': 'verification', //未验证手机
         '10': 'submit', //待审核
         '11': 'success', //审核通过
         "10001": 'agreement', //上传协议 (代理商)
@@ -809,7 +810,6 @@
     }
 
     function submitForm(formName) {
-      console.log(111)
       account.checkCode(
         '',
         $scope.completeInfo.verificationCode,
@@ -819,7 +819,10 @@
         if (!data) return;
         if (data.is_succ) {
           $scope.toGtagEvent('click_submit_live_phone_web', { belong: 'tigerwit'})
-          window.location.href = "/space/#/center";
+          $timeout(function () {
+              window.location.reload();
+          }, 1000);
+          // window.location.href = "/space/#/center";
         } else {
           layer.msg(data.message, {
               time: 2000
