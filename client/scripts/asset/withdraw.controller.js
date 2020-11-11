@@ -8,7 +8,7 @@
     AssetWithdrawController.$inject = ['$rootScope', '$scope', '$modal', '$state', 'asset', 'validator', '$cookies', 'invest', 'trader', '$document'];
 
     function AssetWithdrawController($rootScope, $scope, $modal, $state, asset, validator, $cookies, invest, trader, $document) {
-        
+
         if ($cookies["d&w_czc"] && (!localStorage["withdraw_czc"] || localStorage["withdraw_czc"] !== $cookies["d&w_czc"])) {
             $scope.toTrackEvent('Deposit/withdrawal', 'withdrawal');
             localStorage["withdraw_czc"] = $cookies["d&w_czc"];
@@ -52,7 +52,7 @@
                 // withdraw_type: 1   // 是否需要添加银行卡1需要0不需要
             },
             transfer: {
-                // id	
+                // id
                 // country	国家代码
                 // bank_name	银行名称
                 // cardholder_name	持卡人
@@ -128,19 +128,19 @@
 
         //绑定银行卡后获取银行卡信息
         $rootScope.$on('bindCardSuccess', function () {
-            // 通知所有子控器 
+            // 通知所有子控器
             if (!parentScope.hasChooseedCard) {
                 getCard()
             }
         });
         //绑定第三方账户后获取账号信息
         $rootScope.$on('bindThirdSuccess', function () {
-            // 通知所有子控器 
+            // 通知所有子控器
             getThird()
         });
         //绑定电汇获取账号信息
         $rootScope.$on('bindTransferSuccess', function () {
-            // 通知所有子控器 
+            // 通知所有子控器
             getTransfer()
         });
         function noIsWalletId() {
@@ -452,7 +452,7 @@
                     $scope.lang = lang;
                     $scope.openAddThirdModal = openThirdMdl
                     // $scope.errorTipStatus = false;
-                    //刷新列表 
+                    //刷新列表
                     getThirdList($scope).then(function () {
                         $scope.thirdList = parentScope.thirdList
                     })
@@ -520,7 +520,7 @@
                 parentScope.thirdList = data.data.records;
             })
         }
-        
+
         // 管理电汇账号
         function openManageTransferMdl(type, transfer) {
             $modal.open({
@@ -537,7 +537,7 @@
                     $scope.lang = lang;
                     $scope.openAddTransferModal = openTransferMdl
                     // $scope.errorTipStatus = false;
-                    //刷新列表 
+                    //刷新列表
                     getTransferList($scope).then(function () {
                         $scope.transferList = parentScope.transferList
                     })
@@ -665,10 +665,10 @@
                     }
 
                     $scope.clickable = false;
-
+                    console.log($scope.withdraw)
                     var paramsAsset = {
                         amount: Number($scope.withdraw.amount).toFixed(2),
-                        currency: $scope.withdraw.currency ? $scope.withdraw.currency.currency : undefined
+                        currency: $scope.withdraw.currency ? $scope.withdraw.currency.currency : undefined,
                     };
                     if ($scope.withdraw.accountType === 'bank') {
                         paramsAsset.bank_card_id = $scope.withdraw.card.id;
@@ -696,6 +696,7 @@
         function withdrawInvest(paramsAsset) {
             asset.getIsWithdraw($scope.withdraw.amount, noIsWalletId()).then(function (data) {
                 if (data.is_succ) {
+                  console.log(data)
                     if (data.code !== 0) {
                         if (codeRage.indexOf(data.code) == -1) data.code = 0;
                         openWithdrawMdl({
@@ -714,11 +715,13 @@
                         copy_account = data.data.copy_account;
                         free_amount = data.data.free_amount;
                         if (data.data.bonus == 0) {
+                          withdraw();
+                          /*
                             var amount = Number($scope.withdraw.amount).toFixed(2);
                             var amountRMB = Number(amount * $scope.withdraw.currency.rate_out).toFixed(2);
                             openWithdrawMdl({
                                 type: 'withdrawReady',
-                                message: '',
+                                message: data.data.status_message,
                                 amountDollar: amount,
                                 amountRMB: amountRMB,
                                 desc: $scope.withdrawNotice,
@@ -727,6 +730,7 @@
                                 callback: withdraw,
                                 callbackPara: data.data.status_message
                             });
+                            */
                         } else {
                             $scope.clickable = true;
                             openWithdrawTip($scope.lang.text("tigerWitID.depositWithdrawal.tip5"));
@@ -746,7 +750,7 @@
                         callback: withdraw
                     });
                 }
-                
+
                 function withdraw() {
                     paramsAsset.mt4_id = noIsWalletId();
                     asset.withdraw(paramsAsset).then(function (data) {
@@ -904,7 +908,7 @@
                 }
             });
         }
-        
+
         // function withdrawWallet(paramsAsset) {
 
         //     var amount = Number($scope.withdraw.amount).toFixed(2);

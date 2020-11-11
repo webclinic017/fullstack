@@ -42,7 +42,7 @@
                 </a>
             </p>
         </div>
-       
+
     </div>
 
     <div class="sys_modal_v2__content" ng-if="params.type == 'withdrawSucc'">
@@ -109,7 +109,8 @@
                     <span class="" style="font-family: initial;">{{params.currency.currency_symbol}} {{params.amountRMB}}</span>
                 </li>
             </ul>
-            <pre class="deposit_modal__tip" style="font-family: initial;" ng-bind="delSpace(params.desc)"></pre>
+            <pre class="deposit_modal__tip">{{ lang.text('tigerWitID.depositWithdrawal.depositTips') }}</pre>
+            <!-- <pre class="deposit_modal__tip" style="font-family: initial;" ng-bind="delSpace(params.desc)"></pre> -->
         </div>
 
         <p class="btn_wrapper mg-bt-15">
@@ -122,4 +123,3 @@
         </p>
     </div>
 </div>
-    

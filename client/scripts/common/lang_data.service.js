@@ -7205,6 +7205,16 @@
                         "pt-BR": "Conta",
                         "ar": "الحساب"
                     },
+                    "depositTips": {
+                      "zh": "提示：此金额为预估金额，受汇率影响，实际到账金额将会有差异。",
+                      "en": "",
+                      "vi": "",
+                      "zh-Hant": "",
+                      "id": "",
+                      "es": "",
+                      "pt-BR": "",
+                      "ar": ""
+                    },
                     "switchAccount": {
                         "zh": "点击切换子账号",
                         "en": "Switch account",
