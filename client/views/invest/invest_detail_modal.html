@@ -9,6 +9,19 @@
         <div tw-loading-img></div>
         <table class="table table-header">
             <colgroup ng-if="follow_master">
+                <col width="20%">
+                <col width="8%">
+                <col width="8%">
+                <col width="8%">
+                <col width="8%">
+                <col width="8%">
+                <col width="8%">
+                <col width="8%">
+                <col width="8%">
+                <col width="8%">
+                <col width="8%">
+            </colgroup>
+             <colgroup ng-if="!follow_master">
                 <col width="19%">
                 <col width="9%">
                 <col width="9%">
@@ -19,17 +32,6 @@
                 <col width="9%">
                 <col width="9%">
                 <col width="9%">
-            </colgroup>
-             <colgroup ng-if="!follow_master">
-                <col width="20%">
-                <col width="10%">
-                <col width="10%">
-                <col width="10%">
-                <col width="10%">
-                <col width="10%">
-                <col width="10%">
-                <col width="10%">
-                <col width="10%">
             </colgroup>
 
             <thead>
@@ -44,36 +46,39 @@
                     <th>{{lang.text('tigerWitID.details.commission')}}</th>
                     <th>{{lang.text('tigerWitID.details.profitRate')}}</th>
                     <th ng-if="follow_master">{{lang.text('tigerWitID.tradingAccount.followedMaster')}}</th>
+                    <th ng-if="isDivident">{{lang.text('tigerWitID.details.Dividend')}}</th>
                 </tr>
             </thead>
         </table>
 
         <div class="invest_detail_modal__content">
-            
+
             <table class="table table-hover table-striped table-bordered">
                 <colgroup ng-if="follow_master">
-                <col width="22%">
-                <col width="9%">
-                <col width="9%">
-                <col width="9%">
-                <col width="9%">
-                <col width="9%">
-                <col width="9%">
-                <col width="9%">
-                <col width="9%">
-                <col width="9%">
-            </colgroup>
-             <colgroup ng-if="!follow_master">
-                <col width="20%">
-                <col width="10%">
-                <col width="10%">
-                <col width="10%">
-                <col width="10%">
-                <col width="10%">
-                <col width="10%">
-                <col width="10%">
-                <col width="10%">
-            </colgroup>
+                    <col width="20%">
+                    <col width="8%">
+                    <col width="8%">
+                    <col width="8%">
+                    <col width="8%">
+                    <col width="8%">
+                    <col width="8%">
+                    <col width="8%">
+                    <col width="8%">
+                    <col width="8%">
+                    <col width="8%">
+                </colgroup>
+                 <colgroup ng-if="!follow_master">
+                    <col width="19%">
+                    <col width="9%">
+                    <col width="9%">
+                    <col width="9%">
+                    <col width="9%">
+                    <col width="9%">
+                    <col width="9%">
+                    <col width="9%">
+                    <col width="9%">
+                    <col width="9%">
+                </colgroup>
 
                 <tbody>
                     <tr ng-repeat="detail in details" ng-if="details.length > 0">
@@ -87,13 +92,13 @@
                                     </span>
                                     <a class="invest_orders__symbol" href="">
                                         {{lang.isEnglishArea() ? detail.symbol : detail.symbol_cn + ' (' + detail.symbol + ')' }}
-                                    </a>        
+                                    </a>
                                 </p>
 
                                 <p class="font-size-12" ng-if="modal.usage =='history'" >
                                     <span class="history-operation-way">{{detail.close_type_name}}</span><br>
                                     <span>{{ lang.text('tigerWitID.before') }} {{detail.passed_time | duration}}</span>
-                                </p>  
+                                </p>
                             </div>
                         </td>
                         <td>{{ detail.open_price }}</td>
@@ -107,13 +112,17 @@
                         <td ng-class="{'font-success': detail.profit_rate.indexOf('-') != -1, 'font-danger': detail.profit_rate.indexOf('-') < 0}" ng-if="lang.hostIsCn()">{{ detail.profit_rate }}%</td>
                         <td ng-class="{'font-danger': detail.profit_rate.indexOf('-') != -1, 'font-success': detail.profit_rate.indexOf('-') < 0}" ng-if="!lang.hostIsCn()">{{ detail.profit_rate }}%</td>
                         <td ng-if="follow_master">{{ detail.master_name }}</td>
+                        <!-- 分红 -->
+                        <td ng-class="{'font-success': detail.divident_amount.indexOf('-') != -1, 'font-danger': detail.divident_amount.indexOf('-') < 0}" ng-if="lang.hostIsCn() && isDivident"><i class="fa fa-dollar"></i>{{ detail.divident_amount }}</td>
+                        <td ng-class="{'font-danger': detail.divident_amount.indexOf('-') != -1, 'font-success': detail.divident_amount.indexOf('-') < 0}" ng-if="!lang.hostIsCn() && isDivident"><i class="fa fa-dollar"></i>{{ detail.divident_amount }}</td>
+                        <!-- 分红end -->
                     </tr>
                 </tbody>
             </table>
 
             <div class="text-center mg-tp-30" ng-if="details.length <= 0 && modal.show">
                 <img src="/images/no_data.png" alt="" class="mg-bt-40">
-                <p>{{ lang.text('tigerWitID.noData') }}</p> 
+                <p>{{ lang.text('tigerWitID.noData') }}</p>
             </div>
         </div>
     </div>

@@ -13,7 +13,9 @@
         $scope.from_data = [];  // 复制持仓单
         $scope.traders = [];   // 复制交易持仓订单
         $scope.modal = {};
+        $scope.divident_amount_type = false;
         $scope.showOrders = showOrders;
+        $scope.showDividents = showDividents;
         $scope.showDetails = showDetails;
         $scope.openCopyMdl = openCopyMdl;
         $scope.openCancelCopyMdl = openCancelCopyMdl;
@@ -41,10 +43,16 @@
         // 获取自主交易持仓订单和订单概况
         function getData() {
             invest.getInvestCurrentData($scope.investSelect.id).then(function (data) {
-                // console.log(data);
+                // console.log(22, data);
                 if (!data) return;
                 if (data.is_succ) {
                     data = data.data;
+                    data.records.forEach(function (item) {
+                      if (item.divident_amount !== '0.00' && item.divident_amount !== 0) {
+                        $scope.divident_amount_type = true;
+                        return;
+                      }
+                    })
                     $scope.orders = data.records;
                     angular.extend($scope.orderCurrent, data);
 
@@ -57,13 +65,24 @@
             invest.getInvestCurrentTraders($scope.investSelect.id).then(function (data) {
                 $scope.$broadcast('hideLoadingImg');
                 if (!data) return;
-                // console.info(data);
+                // console.info(111, data.data.copying_masters);
                 if (data.is_succ) {
                     if (data.data.length <= 0) {
                         $scope.traders = [];
                         return;
                     }
-
+                    data.data.copying_masters.forEach(function (item) {
+                      if (item.divident_amount !== '0.00' && item.divident_amount !== 0) {
+                        $scope.divident_amount_type = true;
+                        return;
+                      }
+                    })
+                    data.data.uncopy_masters.forEach(function (item) {
+                      if (item.divident_amount !== '0.00' && item.divident_amount !== 0) {
+                        $scope.divident_amount_type = true;
+                        return;
+                      }
+                    })
                     $scope.from_data = data.data.uncopy_masters;
                     $scope.traders = data.data.copying_masters;
                     // console.log($scope.traders);
@@ -77,6 +96,15 @@
                 $scope.orderCurrent.detailsShow = false;
             } else {
                 $scope.orderCurrent.detailsShow = true;
+            }
+        }
+
+        // 分红详情展示
+        function showDividents(order) {
+            if (order.dividentShow) {
+                order.dividentShow = false;
+            } else {
+                order.dividentShow = true;
             }
         }
 
@@ -166,12 +194,13 @@
 
             $modal.open({
                 templateUrl: '/views/invest/invest_detail_modal.html',
-                size: 'lg',
+                size: 'xl',
                 backdrop: true,
                 controller: function ($scope, invest, $modalInstance, lang) {
                     $scope.lang = lang;
 
                     $scope.details = [];        // 交易详情 弹窗数据
+                    $scope.isDivident = false;
                     $scope.modal = {
                         price: lang.text("tigerWitID.details.currentPrice"),
                         asset: lang.text("tigerWitID.details.fundsOccupying")
@@ -180,8 +209,14 @@
                     $scope.closeModal = closeModal;
 
                     invest.getInvestCurrentData(mt4_id).then(function (data) {
-                        console.info(data);
+                        // console.info(121, data);
                         $scope.$broadcast('hideLoadingImg');
+                        data.data.records.forEach(function (item) {
+                          if (item.divident_amount !== 0 && item.divident_amount !== '0.00') {
+                            $scope.isDivident = true;
+                            return;
+                          }
+                        })
                         $scope.details = data.data.records;
                         $scope.modal.show = true;
                     });
@@ -207,6 +242,7 @@
                     $scope.lang = lang;
 
                     $scope.details = [];        // 交易详情 弹窗数据
+                    $scope.isDivident = false;
                     $scope.modal = {
                         price: lang.text("tigerWitID.details.currentPrice"),
                         asset: lang.text("tigerWitID.details.fundsOccupying")
@@ -216,6 +252,12 @@
                     invest.getInvestCurrentDetails(account_code, mt4_id).then(function (data) {
                         // console.info(data);
                         $scope.$broadcast('hideLoadingImg');
+                        data.data.forEach(function (item) {
+                          if (item.divident_amount !== 0 && item.divident_amount !== '0.00') {
+                            $scope.isDivident = true;
+                            return;
+                          }
+                        })
                         $scope.details = data.data;
                         $scope.modal.show = true;
                     });
@@ -238,7 +280,7 @@
                     $scope.message = '';
                     $scope.lang = lang;
                     $scope.closeModal = closeModal;
-                    
+
                     invest.invalidStockTrade(id, ticket).then(function (rs) {
                         if (rs.is_succ) {
                             $scope.message = rs.message || 'none!';

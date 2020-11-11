@@ -1,0 +1,137 @@
+<div class="authen_content ctn center">
+
+  <!-- 验证页面 -->
+  <div ng-if="personal.phone">
+    <div class="authen_content__title">
+        <h2>{{lang.text('verificationArray.skipVoice7')}} {{personal.phone}}</h2>
+        <p class="authen_content__tip">{{lang.text('verificationArray.skipVoice8')}}</p>
+    </div>
+    <div class="row mg-tp-40 kyc">
+        <div class="form-control-wrapper contact_way inputor">
+            <input class="form-control" name="verificationCode" type="text" placeholder="{{lang.text('tigerWitID.settings.enterVerificationCode')}}"
+                required
+                ng-change="validateIInputCode()"
+                ng-model="completeInfo.verificationCode">
+            <span class="sender_btn" ng-show="!completeInfo.hasSendCode" ng-click="[sendCode('phone'), toTrackEvent('Open live account', 'your_details_getcode'), toGtagEvent('click_get code_live_phone_web')]">{{lang.text('tigerWitID.login.sendCode')}}</span>
+            <span class="sender_btn" ng-show="completeInfo.hasSendCode">{{lang.text('tigerWitID.myAccount.tip39_1')}}{{
+                completeInfo.waitTime }}{{lang.text('tigerWitID.myAccount.tip39_2')}}</span>
+            <span class="account-form-control-tip-new" ng-if="account.step1Code">{{ lang.text('tigerWitID.login.verificationCodej') }}</span>
+
+            <div ng-show="frontErr.verificationCode.show">
+                <p class="alert-arrow_tp_lf" ng-show="completeForm.verificationCode.$error.required">
+                    {{lang.text('tigerWitID.settings.enterVerificationCode')}}
+                </p>
+            </div>
+
+            <div ng-show="codeErr.verificationCode.show">
+                <p class="alert-arrow_tp_lf">
+                    {{ codeErr.verification.msg }}
+                </p>
+            </div>
+        </div>
+        <!-- 语音验证 -->
+        <div style="width: 60%;margin: 0 auto; display: flow-root;" class="mg-bt-20" ng-if="isSendVoice">
+          <div class="col-xs-12 text-center">
+            <div voice-verification-tab data-code-list="personal" data-setting-info-phone="personal.phone" data-register-step1="registerStep1" data-fn="register('registerForm1', 1)" data-cold-type="3" data-is-slider="false" data-is-send-voice="is_send_voice"></div>
+          </div>
+        </div>
+        <div class="text-center mg-tp-50 mg-bt-30">
+          <button class="tw-btn-md tw-btn-capsule-gradient ng-binding" ng-click="submitForm('phoneForm')">{{lang.text('tigerWitID.submit')}}</button>
+        </div>
+    </div>
+  </div>
+
+
+
+
+  <div ng-if="!personal.phone" ng-controller="SettingInfoPhoneController">
+    <div class="authen_content__title">
+        <h2>{{lang.text('tigerWitID.settings.verifyPhone')}}</h2>
+    </div>
+    <div class="row mg-tp-40 kyc">
+
+
+    <!-- <div class="row"> -->
+        <form name="phoneForm" novalidate autocomplete="off">
+          <div class="account-form-control-wrapper-new">
+              <div class="select-left">
+                  <!-- <input class="select__input" name="phoneArea" readonly type="text" placeholder="{{lang.text('tigerWitID.areaCode')}}" required ng-model="account.phoneArea.key"> -->
+                  <input class="select__input form-control"
+                          name="location"
+                          type="text"
+                          placeholder="{{lang.text('tigerWitID.areaCode')}}"
+                          required
+                          readonly
+                          ng-model="phone.phone_code.key">
+                  <i class="select__icon fa fa-angle-down"></i>
+
+                  <ul class="select__dropdown" twform-select data-bind-model="phone_test">
+
+                      <li class="first_li"><input type="text" placeholder="{{lang.text('tigerWitID.login.countryCode')}}" ng-model="placeholderArea"><i class="fa fa-search"></i></li>
+                      <li ng-repeat="world in worlds | filter : placeholderArea" ng-class="{'selected': world.phone_code == phone.phone_code.value}">
+                          <span data-value="{{world.code}}" data-disabled='{"disabled": {{world.disabled}}, "msg": "{{lang.text("tigerWitID.myAccount.unableCountry")}}"}' ng-click="world.disabled || selectWorld(world)" ng-class="{'font-light': world.disabled}">+{{world.phone_code}}({{world.name}})</span>
+                      </li>
+                  </ul>
+              </div>
+              <input class="account-form-control-new select-right form-control"
+                     name="phoneNew"
+                     type="text"
+                     placeholder="{{lang.text('tigerWitID.settings.enterPhoneNum')}}"
+                     required
+                     ng-class="{'form-control-error': (frontErr.phoneNew.show && phoneForm.phoneNew.$invalid) || (backErr.phoneNew.show && backErr.phoneNew.status > 0)}"
+                     ng-model="phone.phoneNew"
+                     ng-pattern="frontErr.phoneNew.reg"
+                     ng-focus="hideErr('phoneForm', 'phoneNew')"
+                     ng-blur="showErr('phoneForm', 'phoneNew')"
+                     ng-change="validateInputPhone()">
+              <span class="account-form-control-tip-new" ng-show="account.step1Phone">{{ lang.text("actLogin17") }}</span>
+              <span class="account_login__close" ng-show="account.step1Phone" ng-click="clearPhone('step1Phone')">
+                  <i class="fa fa-times" aria-hidden="true"></i>
+              </span>
+          </div>
+          <div class="account-form-control-wrapper-new">
+              <input class="form-control"
+                     name="captcha"
+                     type="text"
+                     placeholder="{{lang.text('tigerWitID.settings.verificationCode')}}"
+                     required
+                     ng-class="{'form-control-error': (frontErr.captcha.show && phoneForm.captcha.$invalid) || (backErr.captcha.show && backErr.captcha.status > 0)}"
+                     ng-model="phone.captcha"
+                     ng-focus="hideErr('phoneForm', 'captcha')"
+                     ng-blur="showErr('phoneForm', 'captcha')"
+                     ng-change="validateInputCode()">
+               <span class="account_bind"
+                       tw-captcha-timer
+                       start-timer="startTimer"
+                       voice-captcha="voiceCaptcha"
+                       captcha-btn-clickable="clickable.captcha"
+                       ng-disabled="!clickable.captcha"
+                       ng-click="getCaptcha('new')">
+                   {{lang.text('tigerWitID.settings.getVerificationCode')}}
+               </span>
+              <div ng-show="backErr.captchaBtn.show">
+                  <p class="alert-arrow_tp_lf">
+                      {{ backErr.captchaBtn.msg }}
+                  </p>
+              </div>
+          </div>
+          <!-- 语音验证 -->
+          <div class="justify-center" ng-if="isSendVoice">
+            <div class="col-xs-8 text-center">
+              <div voice-verification-tab data-code-list="phone" data-register-step1="registerStep1" data-fn="register('registerForm1', 1)" data-cold-type="3" data-account-type="true" data-is-slider="false" data-is-send-voice="is_send_voice"></div>
+            </div>
+          </div>
+            <div class="text-center mg-tp-50 mg-bt-30">
+                <button class="tw-btn tw-btn-md tw-btn-capsule-gradient" type="submit" ng-if="clickable.submit" ng-click="submitForm('phoneForm', true)">
+                    {{lang.text('tigerWitID.submit')}}
+                </button>
+
+                <button class="tw-btn tw-btn-md tw-btn-capsule-gradient" ng-if="!clickable.submit">
+                    <i class="loading_spinner fa fa-spinner"></i>
+                    {{lang.text('tigerWitID.submitting')}}
+                </button>
+            </div>
+        </form>
+  </div>
+  </div>
+</div>

@@ -6,9 +6,9 @@
         .module('fullstackApp')
         .controller('SettingInfoPhoneController', SettingInfoPhoneController);
 
-    SettingInfoPhoneController.$inject = ['$scope', '$timeout', '$cookies', 'validator', 'account'];
+    SettingInfoPhoneController.$inject = ['$scope', '$timeout', '$cookies', 'validator', 'account', 'fun'];
 
-    function SettingInfoPhoneController($scope, $timeout, $cookies, validator, account) {
+    function SettingInfoPhoneController($scope, $timeout, $cookies, validator, account, fun) {
         // step1 => binding old Phone , step2 => binding new Phone
         $scope.step = 1;
 
@@ -86,6 +86,8 @@
         };
         $scope.voiceCaptcha = false;  // 语音验证码
         $scope.oldVoiceCaptcha = false;  // 语音验证码
+        $scope.isSendVoice = false;
+        $scope.isOldSendVoice = false;
         $scope.hideErr = hideErr;
         $scope.showErr = showErr;
         $scope.getCaptcha = getCaptcha;
@@ -94,19 +96,31 @@
         $scope.selectWorld = selectWorld;
         var token;
         getWorlds();
+        $scope.validateInputCode = validateInputCode;
+        $scope.validateInputPhone = validateInputPhone;
 
+        var InputPhone = fun.debounce(function () {
+            $scope.toGtagEvent('inp_change_phone_live_web', { belong: 'tigerwit' })
+        }, 300);
+        var InputVoicCode = fun.debounce(function () {
+            $scope.toGtagEvent('inp_code_phone_change_web', { belong: 'tigerwit' })
+        }, 300);
+        function validateInputCode() {
+          InputVoicCode && InputVoicCode()
+        }
+        function validateInputPhone() {
+          InputPhone && InputPhone()
+        }
         function getCaptcha(type) {
             token = $cookies['code_token'];
 
             if (type == 'new') {
                 showErr('phoneForm', 'phoneNew');
-
                 if ($scope['phoneForm']['phoneNew'].$invalid) {
                     return;
                 }
-
-                $scope.clickable.captcha = false;
                 var params = {
+                    world_code: $scope.personal.region.world_code,
                     account: $scope.phone.phoneNew,
                     code_token: token,
                     type: 3,
@@ -116,9 +130,11 @@
                 account.sendCode(params).then(function (data) {
                     if (!data) return;
                     if (data.is_succ) {
+                        $scope.toGtagEvent('click_get code_account_phone_web', { belong: 'tigerwit', get_code_account: 'Y' })
+                        $scope.isSendVoice = data.data.is_send_voice;
                         $scope.startTimer();
                     } else {
-
+                        $scope.toGtagEvent('click_get code_account_phone_web', { belong: 'tigerwit', get_code_account: 'N' })
                         $scope.backErr.captchaBtn.show = true;
                         $scope.backErr.captchaBtn.msg = data.message;
 
@@ -132,8 +148,8 @@
             }
             if (type == 'old') {
                 $scope.clickable.oldCaptcha = false;
-
                 var params = {
+                    world_code: $scope.personal.region.world_code,
                     account: '',
                     code_token: token,
                     type: 3,
@@ -143,9 +159,11 @@
                 account.sendCode(params).then(function (data) {
                     if (!data) return;
                     if (data.is_succ) {
+                        $scope.toGtagEvent('click_get code_phone_change_web', { belong: 'tigerwit', get_code_change: 'Y' })
+                        $scope.isOldSendVoice = data.data.is_send_voice;
                         $scope.oldStartTimer();
                     } else {
-
+                        $scope.toGtagEvent('click_get code_phone_change_web', { belong: 'tigerwit', get_code_change: 'N' })
                         $scope.backErr.oldCaptchaBtn.show = true;
                         $scope.backErr.oldCaptchaBtn.msg = data.message;
 
@@ -192,7 +210,11 @@
                 $scope.clickable.oldSubmit = true;
                 if (!data) return;
                 if (data.is_succ) {
+                  if ($scope.settingInfo.phone_verify == 0) {
+                    window.location.reload();
+                  } else {
                     $scope.step++;
+                  }
                 } else {
                     layer.msg(data.message, {
                         time: 2000
@@ -201,7 +223,7 @@
             });
         }
 
-        function submitForm(formName) {
+        function submitForm(formName, is_info) {
             showErr(formName, 'phoneNew');
             showErr(formName, 'captcha');
 
@@ -209,10 +231,18 @@
                 return;
             }
 
-            $scope.clickable.submit = false;
+            // $scope.clickable.submit = false;
             account.setPhone($scope.phone.phone_code.value, $scope.phone.phoneNew, $scope.phone.captcha).then(function (data) {
                 $scope.backErr.system.show = true;
                 if (data.is_succ) {
+                    $scope.toGtagEvent('click_submit_change_phone_web', { belong: 'tigerwit' })
+                    if (is_info) {
+                      $scope.clickable.submit = true;
+                      $timeout(function () {
+                          window.location.reload();
+                      }, 1000);
+                      return;
+                    }
                     $scope.backErr.system.status = 1;
 
                     // 神策数据统计

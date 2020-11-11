@@ -25,7 +25,7 @@
                 basic: toState.name.substring(6)
             });
         });
-        
+
         function getOnceInfo(){
             getVerifyStatus();
             getRedBagNum();
@@ -34,7 +34,7 @@
         }
 
         var url = $location.search();
-        
+
         if (url.type && (url.type == 'new')) {
             $scope.$emit('global.openDredgeMdl', {position: 'register'});
         }
@@ -72,7 +72,7 @@
                             $scope.message = rs.message;
                             $scope.lang = lang;
                             $scope.closeModal = closeModal;
-                            
+
                             function closeModal() {
                                 $modalInstance.dismiss();
                             }
@@ -86,6 +86,29 @@
         function initialize() {
             account.getPersonalInfo().then(function (data) {
                 if (!data) return;
+                if (data.phone_verify === 0) {
+                  $modal.open({
+                      templateUrl: '/views/space/phoneVerify_modal.html',
+                      size: 'lx',
+                      backdrop: 'static',
+                      controller: ['$scope', '$modalInstance', 'lang', function ($scope, $modalInstance, lang) {
+                          $scope.message = lang.text("verificationArray.skipVoice8");
+                          $scope.lang = lang;
+                          $scope.closeModal = closeModal;
+                          $scope.goVerify = goVerify;
+
+                          function closeModal() {
+                            $modalInstance.dismiss();
+                          }
+
+                          function goVerify(data) {
+                            // authen.subpage
+                            $state.go('authen.subpage', { subpage: "verification" })
+                            $modalInstance.dismiss();
+                          }
+                      }]
+                  });
+                }
                 //当前 默认登录的 MT4 信息，不主动切换一直是用这个
                 $scope.investSelect.id = data.trade_account.mt4_id;
                 $scope.investSelect.type = data.trade_account.account_type;
@@ -163,15 +186,15 @@
                             $scope.message = msg;
                             $scope.lang = lang;
                             $scope.closeModal = closeModal;
-                            
+
                             function closeModal() {
                                 $modalInstance.dismiss();
                             }
-        
+
                         }
                     });
                 }
-                
+
             });
         }
         // function updatePaper() {

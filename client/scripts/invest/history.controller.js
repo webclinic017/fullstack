@@ -12,6 +12,8 @@
         $scope.orders = [];             // 自主交易历史订单
         $scope.traders = [];            // copied traders 列表
         $scope.showOrders = showOrders;
+        $scope.showDividents = showDividents;
+        $scope.divident_amount_type = false;
         $scope.showDetails = showDetails;
         $scope.openInvestOwnDetailMdl = openInvestOwnDetailMdl;
         $scope.openInvestCopyDetailMdl = openInvestCopyDetailMdl;
@@ -31,12 +33,12 @@
         $scope.pagebar = {
             config: {
                 // total: , // 总页数
-                page: 1    
+                page: 1
             },
             pages: [],
             pagesBtn: [],
             // selectPage: , bind to pagination.selectPage
-            getList: getInvestHistoryDetails          
+            getList: getInvestHistoryDetails
         };
 
         var pagesize = 10;
@@ -45,13 +47,19 @@
 
         function getInvestHistoryData () {
             invest.getInvestHistoryData($scope.investSelect.id).then(function (data) {
-                // console.log(data);
+                // console.log(90, data);
+                data.data.records.forEach(function (item) {
+                  if (item.divident_amount !== '0.00' && item.divident_amount !== 0) {
+                    $scope.divident_amount_type = true;
+                    return;
+                  }
+                })
                 $scope.orderHistory = data.data;
                 $scope.orders = data.data.records;
 
                 $scope.$broadcast('hideLoadingImg');
             });
-            
+
         }
 
         // 显示/隐藏自主交易历史订单
@@ -60,6 +68,15 @@
                 $scope.orderHistory.detailsShow = false;
             } else {
                 $scope.orderHistory.detailsShow = true;
+            }
+        }
+
+        // 分红详情展示
+        function showDividents(order) {
+            if (order.dividentShow) {
+                order.dividentShow = false;
+            } else {
+                order.dividentShow = true;
             }
         }
 
@@ -106,7 +123,7 @@
                     total: getTotal(data.data.record_count, pagesize),
                     page: page
                 });
-            }); 
+            });
         }
 
         function getTotal(sum, pagesize) {
@@ -128,29 +145,36 @@
 
             $modal.open({
                 templateUrl: '/views/invest/invest_detail_modal.html',
-                size: 'lg',
+                size: 'xl',
                 backdrop: true,
                 resolve: {
                     mt4_id: function() { return $scope.investSelect.id }
                 },
                 controller: function ($scope, invest, $modalInstance, mt4_id, lang) {
-                    
+
                     $scope.lang = lang;
                     $scope.details = [];        // 交易详情 弹窗数据
+                    $scope.isDivident = false;
                     $scope.modal = {
                         price: lang.text("tigerWitID.historyTransactions.closePrice"),
                         asset: lang.text("tigerWitID.historyTransactions.margin"),
                         usage : "history", //历史要做一些细节修改：平仓类型，时间
                     };
                     $scope.closeModal = closeModal;
-                    
+
                     invest.getInvestHistoryData(mt4_id).then(function (data) {
                         // console.info(data);
                         $scope.$broadcast('hideLoadingImg');
+                        data.data.records.forEach(function (item) {
+                          if (item.divident_amount !== 0 && item.divident_amount !== '0.00') {
+                            $scope.isDivident = true;
+                            return;
+                          }
+                        })
                         $scope.details = data.data.records;
                         $scope.modal.show = true;
                     });
-                    
+
                     function closeModal() {
                         $modalInstance.dismiss();
                     }
@@ -176,6 +200,7 @@
 
                     $scope.lang = lang;
                     $scope.details = [];        // 交易详情 弹窗数据
+                    $scope.isDivident = false;
                     $scope.modal = {
                         price: lang.text("tigerWitID.historyTransactions.closePrice"),
                         asset: lang.text("tigerWitID.historyTransactions.margin"),
@@ -185,18 +210,18 @@
                     $scope.pagebar = {
                         config: {
                             total: 1, // 总页数
-                            page: 1    
+                            page: 1
                         },
                         pages: [],
                         pagesBtn: [],
                         // selectPage: , bind to pagination.selectPage
-                        getList: getInvestHistoryDetailsMdl          
+                        getList: getInvestHistoryDetailsMdl
                     };
 
                     $scope.closeModal = closeModal;
 
                     getInvestHistoryDetailsMdl();
-                    
+
                     function getInvestHistoryDetailsMdl (page) {
                         page = page ? page : 1;
                         var offset = (page-1)*pagesize;
@@ -205,6 +230,12 @@
                         invest.getInvestHistoryDetails(trader.account_code, offset, pagesize, mt4_id).then(function (data) {
                             // console.info(data);
                             $scope.$broadcast('hideLoadingImg');
+                            data.data.records.forEach(function (item) {
+                              if (item.divident_amount !== 0 && item.divident_amount !== '0.00') {
+                                $scope.isDivident = true;
+                                return;
+                              }
+                            })
                             $scope.details = data.data.records;
                             $scope.modal.show = true;
 
@@ -212,7 +243,7 @@
                                 total: getTotal(data.data.record_count, pagesize),
                                 page: page
                             });
-                        }); 
+                        });
                     }
 
                     function closeModal() {

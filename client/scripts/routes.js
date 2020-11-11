@@ -123,7 +123,7 @@
                 .state('space.center.index', {
                     url: '/center',
                     views: {
-                        
+
                     }
                 })
                 .state('space.center.invest', {
@@ -211,7 +211,7 @@
                     toCenter: true,
                     url: '/space/invest/:subpage',
                     views: {
-                        
+
                     }
                 })
                 // 邀请好友
@@ -534,11 +534,11 @@
                     // });
                 }
                 if (toState.toCenter) {
-                    
+
                     $timeout(function () {
                         $state.go('space.center.index');
                     });
-                    
+
                 }
             });
         }]);

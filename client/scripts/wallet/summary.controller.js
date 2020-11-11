@@ -11,6 +11,7 @@
 
         $scope.historyList = [];
         $scope.backout = backout;
+        $scope.showdetails = showdetails;
 
         $scope.pagebar = {
             config: {
@@ -45,7 +46,16 @@
                 }
             });
         }
-
+        
+        // 查看详情
+        function showdetails(item) {
+          if (item.details_type) {
+            item.details_type = false;
+          } else {
+            item.details_type = true;
+          }
+        }
+        
         function backout(id){
             asset.cancelWithdraw(id).then(function (data) {
                 if (!data) return;

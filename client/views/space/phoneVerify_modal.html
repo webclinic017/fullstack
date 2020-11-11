@@ -1,0 +1,17 @@
+<div class="sys_modal_v2 slim_case">
+    <button class="close" ng-click="closeModal()">&times;</button>
+
+    <div class="h2 line-height-30">
+        {{lang.text('verificationArray.skipVoice5')}}
+    </div>
+
+    <div class="sys_modal_v2__content">
+        <p class="sys_modal_v2__info mg-bt-15">
+            {{message}}
+        </p>
+        <p class="btn_wrapper mg-bt-15">
+          <button class="btn btn-sm" style="border-radius: 200px;" ng-click="closeModal()">{{ lang.text("tigerWitID.cancel") }}</button>
+          <button class="btn btn-sm tw-btn-capsule-gradient mg-rg-15 mg-lf-15" ng-click="goVerify()">{{lang.text('verificationArray.skipVoice7')}}</button>
+        </p>
+    </div>
+</div>

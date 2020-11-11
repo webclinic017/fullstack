@@ -33,12 +33,13 @@
                     //$scope.loading = 0;   0 未loading；1 正在loading；2 loading完毕
                     $scope.loading = 0;
                     $scope.handler = function (value) {
+                        toGtagEvent('click_confirm_voice code_phone_web', { belong: 'tigerwit' })
                         var evaled = eval(value)
                         angular.isFunction(evaled) && evaled($scope)
                         if (!params.autoClose) {
                             closeModal()
                         }
-                        
+
                     }
 
                     $scope.closeModal = closeModal
