@@ -13,8 +13,14 @@
         $scope.registerStep1 = 1;      // 验证码注册进行到哪一步
         $scope.registerStep3 = 1;      // 2邮箱验证码注册1手机验证码注册
         $scope.step1PasswordStatus = true;  // 验证码登录密码显示or隐藏
+        // 滑动验证显示变量
+        // $scope.sliderShow = false;
         // $scope.rememberLoginStatus = true;  // 记住登录状态
         $scope.registerBtnStatus = true;       // 登录按钮状态
+        // 注册跳过验证
+        $scope.registerSetPassword = false;
+        $scope.isSendVoice = false;
+        $scope.isSkipVerify = false;
         $scope.codeBtnStatus = {            // 获取验证码按钮状态
             step1Phone: {
                 count: false,       // 点击状态 false 可点击；true 不可点击
@@ -56,6 +62,7 @@
             }, // 手机区号+国家(无用只为兼容指令)
         };
         $scope.selectArea = selectPhoneArea;
+
         function selectPhoneArea(target) {
             $scope.account.phoneArea = {
                 key: '+' + target.phone_code,
@@ -65,6 +72,7 @@
         }
         // 选择国家
         $scope.selectWorld = function (target) {
+            $scope.toGtagEvent('select_country_register_web', { belong: 'tigerwit' })
             // $scope.toGtagEvent('click_country_register_web');
             if (target.code === 'CN') {
                 $scope.registerStep3 = 1;
@@ -79,12 +87,18 @@
         }
         var token;
         // console.log(lang.text("actLogin1"));
-
+        $scope.is_send_voice = false;
         // 从 landing page 进入时
         $scope.account.step1Phone = $state.params.phone;
         // 验证码登录切换手机邮箱
         $scope.toggleLoginMethod = function (n) {
             $scope.registerStep3 = n;
+        }
+        var InputPhone = fun.debounce(function () {
+            $scope.toGtagEvent('inp_phone_register_web', { belong: 'tigerwit' })
+        }, 300);
+        $scope.validateInputPhone = function() {
+          InputPhone && InputPhone()
         }
 
         // 清除registerStep1 手机号
@@ -140,7 +154,10 @@
             account.sendCode(params).then(function (data) {
                 // console.log(data);
                 if (data.is_succ) {
+                    $scope.toGtagEvent('click_get code_phone_web', { belong: 'tigerwit', get_code: 'Y' })
                     countDown(name);
+                    $scope.isSendVoice = data.data.is_send_voice;
+                    $scope.isSkipVerify = data.data.is_skip_verify;
                     var obj = {
                         title: lang.text('tigerWitID.login.verificationCodeSent'),
                         titleClass: 'account_login__layer-title',
@@ -151,7 +168,12 @@
                     }
                     obj.btns[lang.text("tigerWitID.confirm2")] = function () { };
                     $layer(obj);
+                    // if (data.is_send_voice) {
+                    //   $scope.isSendVoice = data.is_send_voice
+                    //   // console.log($scope.is_send_voice)
+                    // }
                 } else {
+                    $scope.toGtagEvent('click_get code_phone_web', { belong: 'tigerwit', get_code: 'N' })
                     layer.msg(data.message);
                 }
             });
@@ -177,11 +199,28 @@
                 // referrer: document.referrer,
                 // href: location.href,
                 // cookie: document.cookie
+                // step1Password
             };
             var all_sources = $cookies['all_sources'];
             if (all_sources) {
                 para = angular.extend(para, JSON.parse(all_sources))
             }
+            // if (registerType === 3) {
+            //   // 密码注册
+            //   if (!showPhoneVel()) { return };
+            //   if ($scope.account.step1Password !== $scope.account.step2Password) {
+            //     layer.msg(lang.text('tigerWitID.login.passwordsEnteredDoNotMatch'));     //两次输入的密码不一致
+            //     return;
+            //   }
+            //   para = angular.extend({
+            //       skip_verify: 1,
+            //       account_type: 1,
+            //       account: $scope.account.step1Phone,
+            //       password: $scope.account.step1Password,
+            //       phone_code: $scope.account.phoneArea.value,
+            //   }, para);
+            //   msg = lang.text('tigerWitID.login.tip8_2');
+            // } else {
             if ($scope.registerStep3 == '2') {
                 // 邮箱注册
                 if (!showEmaliVel()) { return };
@@ -189,25 +228,47 @@
                     layer.msg(lang.text('tigerWitID.login.verificationCode'));     //请填写验证码
                     return;
                 }
-                para = angular.extend({
+                para = angular.extend(para, {
                     account_type: 2,
                     account: $scope.account.emailText,
                     password: $scope.account.emailCode,
-                }, para);
+                });
                 msg = lang.text('tigerWitID.login.tip8_21');
             } else if ($scope.registerStep3 == '1') {
                 // 手机号注册
                 if (!showPhoneVel()) { return };
-                if (!($scope.account.step1Code)) {
-                    layer.msg(lang.text('tigerWitID.login.verificationCode'));     //请填写验证码
-                    return;
-                }
-                para = angular.extend({
+                para = angular.extend(para, {
+                    // skip_verify: is_agree === 1 ? 1 : 0,
                     account_type: 1,
                     account: $scope.account.step1Phone,
-                    password: $scope.account.step1Code,
                     phone_code: $scope.account.phoneArea.value,
-                }, para);
+                });
+                if ($scope.registerSetPassword) {
+                  if ($scope.account.step1Password !== $scope.account.step2Password) {
+                    layer.msg(lang.text('tigerWitID.login.passwordsEnteredDoNotMatch'));     //两次输入的密码不一致
+                    return;
+                  }
+                  para = angular.extend(para, {
+                      skip_verify: 1,
+                      login_type: 3,
+                      password: $scope.account.step1Password,
+                  });
+                } else {
+                  // if (is_agree !== 1) {
+                    if (!($scope.account.step1Code)) {
+                        layer.msg(lang.text('tigerWitID.login.verificationCode'));     //请填写验证码
+                        return;
+                    }
+                  // }
+                  para = angular.extend(para, {
+                      // skip_verify: is_agree === 1 ? 1 : 0,
+                      // account_type: 1,
+                      // account: $scope.account.step1Phone,
+                      password: $scope.account.step1Code,
+                      // phone_code: $scope.account.phoneArea.value,
+                  });
+                }
+
                 msg = lang.text('tigerWitID.login.tip8_2');
             }
             (is_agree == "is_agree") && (para.is_agree = 1);
@@ -227,7 +288,11 @@
 
                     setGtagUserId(data.data.user_code)
                     // 新用户
-                    $scope.registerStep1 = 2;
+                    if ($scope.registerSetPassword) {
+                      $scope.skipSetPass();
+                    }else{
+                      $scope.registerStep1 = 2;
+                    }
                     // $scope.area_id = data.data.area_id;
                     $scope.$emit('relogin_info', 'is_register');
                     // 神策统计 - 注册
@@ -285,13 +350,12 @@
             $scope.registerBtnStatus = false;
 
             account.setPwdFirst($scope.account.step1Password).then(function (data) {
-                // console.log(data);
                 layer.closeAll();
                 $scope.registerBtnStatus = true;
 
                 if (data.is_succ) {
                     $timeout(function () {
-                        $scope.$emit('global.openDredgeMdl', { position: 'register' });
+                        // $scope.$emit('global.openDredgeMdl', { position: 'register' });
                         // lang.globalOrCn($scope.area_id);
                         // $state.go('space.center');
                         window.location.href = "/space/#/center";
@@ -303,10 +367,12 @@
             });
         };
         $scope.skipSetPass = function () {
-            $scope.$emit('global.openDredgeMdl', { position: 'register' });
+            // $scope.$emit('global.openDredgeMdl', { position: 'register' });
             // lang.globalOrCn($scope.area_id);
             // $state.go('space.center');
-            window.location.href = "/space/#/center";
+            setTimeout(function() {
+              window.location.href = "/space/#/center";
+            },300)
         }
 
         // 获取验证码倒计时

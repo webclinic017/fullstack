@@ -59,6 +59,7 @@
             // sendEmailCode: sendEmailCode,
             // getRCaptcha: getRCaptcha,
             sendCode: sendCode,
+            pageSignup: pageSignup,
 
             checkPhoneAndCaptcha: checkPhoneAndCaptcha,
             checkEmailCode: checkEmailCode,
@@ -83,7 +84,7 @@
         return service;
 
         /*
-         * 控制某些功能开关接口   
+         * 控制某些功能开关接口
          */
         function getFunctionSwitch() {
             return $http.get(o.getFunctionSwitch);
@@ -109,7 +110,7 @@
          * @param {int} login_type 登录验证方式，1-密码登录，2-验证码登录
          * @param {int} remember 是否记住登录状态，1：是，0：否
          * @param {int} action 可选值：quick_login, register, login，默认值：quick_login
-         * 
+         *
          */
         function login(params) {
 
@@ -250,8 +251,8 @@
 
         /**
          * 检测验证码是否正确
-         * @param {String} account 
-         * @param {Number} code 
+         * @param {String} account
+         * @param {Number} code
          * @param {Number} account_type 1 手机号 2 邮箱 0 自动识别
          */
         function checkCode(account, code, account_type, phone_code) {
@@ -598,7 +599,7 @@
         function setKyc(json) {
             return publicHttp.dealPublicRequest(o.setKycApi, 'POST', json);
         }
-        
+
         /**
          * @name getIdType
          * @desc 获取认证证件类型
@@ -627,7 +628,7 @@
         /**
          * 发送验证码合并接口
          * @param {String} account 手机号
-         * @param {String} code_token 
+         * @param {String} code_token
          * @param {Number} type 1-注册/绑定,2-忘记密码,3-修改绑定,4-登录,5-代理商申请
          * @param {Number} account_type 1-手机号,2-邮箱 0 自动识别
          * {
@@ -641,6 +642,11 @@
          */
         function sendCode(params) {
             return publicHttp.dealPublicRequest(o.sendCodeApi, 'POST', params);
+        }
+
+        // 线索客户
+        function pageSignup(params) {
+            return publicHttp.dealPublicRequest(o.pageSignupApi, 'POST', params);
         }
 
         /**
@@ -741,17 +747,17 @@
             //         resolve(data)
             //     })
             // })
-            
+
             return publicHttp.dealPublicRequest(o.getAddressUrlApi, 'GET', params)
         }
         // liverpool比赛列表
         function competitionList(params) {
-            
+
             return publicHttp.dealPublicRequest(o.competitionListApi, 'GET', params)
         }
         // liverpool开通比赛账号
         function competitionOpenAccount(params) {
-            
+
             return publicHttp.dealPublicRequest(o.competitionOpenAccountApi, 'POST', params)
         }
     }
