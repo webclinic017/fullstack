@@ -942,7 +942,7 @@
     function AuthenAddressController($scope, $state, $modal, validator, account, $timeout) {
         $scope.addressType = [
         ]
-    
+
         $scope.frontErr = {
             addressType: {
                 show: false
@@ -988,7 +988,7 @@
                 var oParams = {
                     cert_type: $scope.addressInfo.type.value,
                     front: $scope.addressImgFront
-                };
+                }
                 $scope.addressImgBack && (oParams.back = $scope.addressImgBack);
                 $scope.clickable = false;
                 account.setUploadAddressProve(oParams).then(function (data) {

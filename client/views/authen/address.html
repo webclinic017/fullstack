@@ -18,11 +18,11 @@
                         ng-class="{'form-control-error': frontErr.addressType.show && addressForm.addressType.$invalid}"
                         ng-blur="showErr('addressType')"
                         ng-focus="hideErr('addressType')">
-                    
+
                     <i class="select__icon fa fa-angle-down"></i>
 
                     <ul class="select__dropdown" twform-select data-bind-model="addressInfo.type">
-                        
+
                         <li ng-repeat="type in addressType" ng-class="{'selected': type.id === addressInfo.type.value}">
                             <span data-value="{{type.id}}">{{ type.name }}</span>
                         </li>
@@ -96,7 +96,7 @@
                     <i class="loading_spinner fa fa-spinner"></i>
                     {{lang.text('tigerWitID.submitting')}}
                 </a>
-            </div>    
+            </div>
         </div>
     </div>
 </div>

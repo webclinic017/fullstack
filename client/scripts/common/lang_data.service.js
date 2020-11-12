@@ -5591,6 +5591,16 @@
                         "pt-BR": "Atenção, não podemos fornecer qualquer garantia do desempenho de qualquer investimento, conta, portfólio ou estratégia específica.",
                         "ar": "تنبيه، نحن لا نستطيع تقديم أي ضمان بشأن أي حساب استثمار أو محفظة أو إستراتيجية محددة."
                     },
+                    "tigerWitCopyAgreements6_1": {
+                      "zh": "TigerWit 的复制跟单系统可实现高手账号与跟单者账号实时同步，但可能因网络波动或连接异常等不可控因素导致信号传输中断、丢失，造成跟随开仓或平仓产生延迟或失败，上述情况造成的损失 TigerWit 将不负责。",
+                      "en": "TigerWit’s Copy Trading system can realize real-time synchronization between master account and copy account. However, signal transmission may be interrupted or lost due to external factors such as internet speed or abnormal connection, resulting in delay or failure in following the opening or closing of positions. TigerWit will not be responsible for the losses caused by the above circumstances.",
+                      "vi": "TigerWit có thể thực hiện đồng bộ hóa thời gian thực giữa tài khoản chính và tài khoản sao chép. Tuy nhiên, việc truyền tín hiệu có thể bị gián đoạn hoặc bị mất do các yếu tố bên ngoài như tốc độ internet hoặc kết nối bất thường, dẫn đến việc mở hoặc đóng các vị thế bị chậm hoặc không thể mở. TigerWit sẽ không chịu trách nhiệm về những tổn thất do các trường hợp trên gây ra.",
+                      "zh-Hant": "TigerWit的複製跟單系統可實現高手帳號與跟單者帳號實时同步，但可能因網絡波動或連接异常等不可控因素導致訊號傳輸中斷、遺失，造成跟隨開倉或平倉產生延遲或失敗，上述情况造成的損失TigerWit將不負責。",
+                      "id": "Sistem Copy Trading TigerWit dapat menghubungkan transaksi secara langsung (real-time) antara akun Master dengan para pengikutnya. Akan tetapi, transimisi sinyal terkadang bisa terputus atau hilang dikarenakan faktor luar seperti kecepatan internet, koneksi yang tidak stabil sehingga dapat mengakibatkan perlambatan, penundaan atau kegagalan pembukaan, atau penutupan posissi. TigerWit tidak bertanggung jawab pada kerugian yang diakibatkan dari masalah yang disebutkan diatas",
+                      "es": "El sistema Copy Trading de TigerWit puede realizar una sincronización en tiempo real entre la cuenta maestra y la cuenta copy. Sin embargo, la transmisión de la señal puede interrumpirse o perderse debido a factores externos, como la velocidad de Internet o la conexión anormal, lo que puede ocasionar demoras o fallas en el seguimiento de la apertura o cierre de posiciones. TigerWit no será responsable de las pérdidas causadas por las circunstancias anteriores.",
+                      "pt-BR": "O sistema de operação de cópias da TigerWit pode realizar a sincronização em tempo real entre a conta master e a conta de cópia. No entanto, a transmissão do sinal pode ser interrompida ou perdida devido a fatores externos, como velocidade de internet ou conexão anormal, resultando em atraso ou falha no acompanhamento da abertura ou fechamento de posições. A TigerWit não será responsável pelas perdas causadas pelas circunstâncias mencionadas acima.",
+                      "ar": "تنفذ الصفقات على ميزة نسخ التداول في TigerWit فورا ومن غير اي تاخير بين الحساب الرئيسي وحساب النسخ. ومع ذلك، قد يتم ملاحظة وجود تاخير لاحظي بين الحساب الرئيسي وحساب النسخ، بسبب سرعة الإنترنت او نوع الشبكة المستخدم، مما يؤدي إلى تأخير متابعة فتح أو إغلاق الصفقات. لن تكون TigerWit مسؤولة عن الخسائر الناجمة عن الظروف المذكورة أعلاه."
+                    },
                     "tigerWitCopyAgreements7_1": {
                         "zh": "如您对协议有任何疑问，可拨打客服热线",
                         "en": "If you have any question about the copy regulations, please contact the service center ",
@@ -5610,6 +5620,16 @@
                         "es": ".",
                         "pt-BR": ".",
                         "ar": "."
+                    },
+                    "tigerWitCopyAgreements7_3": {
+                        "zh": "注：如因网络波动或连接异常等不可控因素导致信号传输中断、跟随开仓或平仓产生延迟或失败，造成的损失 TigerWit 将不负责。",
+                        "en": "Note: TigerWit will not be responsible for any loss caused by signal transmission interruption, delay or failure in following the opening or closing of positions due to external factors such as network fluctuation or abnormal connection.",
+                        "vi": "Lưu ý: TigerWit sẽ không chịu trách nhiệm đối với bất kỳ tổn thất nào gây ra do việc truyền tín hiệu bị gián đoạn, chậm trễ hoặc không thực hiện được việc mở hoặc đóng các vị thế do các yếu tố bên ngoài như biến động mạng hoặc kết nối bất thường.",
+                        "zh-Hant": "注：如因網絡波動或連接异常等不可控因素導致訊號傳輸中斷、跟隨開倉或平倉產生延遲或失敗，造成的損失TigerWit將不負責。",
+                        "id": "Catatan : TigerWit tidak bertanggung jawab terhadap segala kerugian yang diakibatkan oleh ketidakstabilan transmisi sinyal, perlambatan, atau kegagalan dalam membuka atau menutup posisi yang dikarenakan faktor luar seperti fluktuasi jaringan atau koneksi yang tidak stabil",
+                        "es": "Nota: TigerWit no será responsable de ninguna pérdida causada por la interrupción de la transmisión de la señal, retraso o falla en el seguimiento de la apertura o cierre de posiciones debido a factores externos como fluctuación de la red o conexión anormal.",
+                        "pt-BR": "Nota: TigerWit não será responsável por qualquer perda causada por interrupção de transmissão de sinal, atraso ou falha em seguir a abertura ou fechamento de posições devido a fatores externos, como interrupção de rede ou conexão anormal.",
+                        "ar": "ملاحظة: لن تكون TigerWit مسؤولة عن أي خسارة ناتجة عن انقطاع نقل الإشارة أو التأخير أو الفشل في متابعة فتح أو إغلاق الصفقات بسبب عوامل خارجية مثل تقلب الشبكة أو الاتصال غير الطبيعي."
                     },
                     "copyRegulations": {
                         "zh": "《复制规则》",
@@ -7207,13 +7227,13 @@
                     },
                     "depositTips": {
                       "zh": "提示：此金额为预估金额，受汇率影响，实际到账金额将会有差异。",
-                      "en": "",
-                      "vi": "",
-                      "zh-Hant": "",
-                      "id": "",
-                      "es": "",
-                      "pt-BR": "",
-                      "ar": ""
+                      "en": "Note: this amount is an estimated amount. Affected by the exchange rate, the actual amount received will be different.",
+                      "vi": "Chú ý: số tiền này là một con số ước lượng. Số tiền này ảnh hưởng theo tỷ giá, số tiền bạn nhận được sẽ thay đổi.",
+                      "zh-Hant": "提示：此金額為預估金額，受匯率影響，實際到賬金額將會有差异。",
+                      "id": "Perhatian : Angka ini merupakan perkiraan saja. Jumlah yang diterima mungkin berbeda tergantung pada nilai tukar.",
+                      "es": "Nota: esta cantidad es una cantidad estimada. Afectada por el tipo de cambio, la cantidad real recibida será diferente.",
+                      "pt-BR": "Nota: Esta é uma estimativa.Afectado pela taxa de câmbio, o montante real recebido será diferente.",
+                      "ar": "ملاحظة: هذا المبلغ هو مبلغ تقديري ويتأثر بسعر الصرف، المبلغ الفعلي المستلم ربما يكون مختلفًا."
                     },
                     "switchAccount": {
                         "zh": "点击切换子账号",

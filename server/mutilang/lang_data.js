@@ -17440,6 +17440,16 @@ module.exports = {
         "ar": "this is comments, No translation required"
     },
     "thirdH5": {
+        "depositTips": {
+          "zh": "提示：此金额为预估金额，受汇率影响，实际到账金额将会有差异。",
+          "en": "Note: this amount is an estimated amount. Affected by the exchange rate, the actual amount received will be different.",
+          "vi": "Chú ý: số tiền này là một con số ước lượng. Số tiền này ảnh hưởng theo tỷ giá, số tiền bạn nhận được sẽ thay đổi.",
+          "zh-Hant": "提示：此金額為預估金額，受匯率影響，實際到賬金額將會有差异。",
+          "id": "Perhatian : Angka ini merupakan perkiraan saja. Jumlah yang diterima mungkin berbeda tergantung pada nilai tukar.",
+          "es": "Nota: esta cantidad es una cantidad estimada. Afectada por el tipo de cambio, la cantidad real recibida será diferente.",
+          "pt-BR": "Nota: Esta é uma estimativa.Afectado pela taxa de câmbio, o montante real recebido será diferente.",
+          "ar": "ملاحظة: هذا المبلغ هو مبلغ تقديري ويتأثر بسعر الصرف، المبلغ الفعلي المستلم ربما يكون مختلفًا."
+        },
         "rechargeTo": {
             "zh": "充值到",
             "en": "Deposit to",

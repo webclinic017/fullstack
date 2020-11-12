@@ -665,7 +665,6 @@
                     }
 
                     $scope.clickable = false;
-                    console.log($scope.withdraw)
                     var paramsAsset = {
                         amount: Number($scope.withdraw.amount).toFixed(2),
                         currency: $scope.withdraw.currency ? $scope.withdraw.currency.currency : undefined,
@@ -694,9 +693,8 @@
         }
         var copy_account = 0, free_amount = 0; //跟随高手数、空闲资金
         function withdrawInvest(paramsAsset) {
-            asset.getIsWithdraw($scope.withdraw.amount, noIsWalletId()).then(function (data) {
+            asset.getIsWithdraw($scope.withdraw.amount, noIsWalletId(), paramsAsset.bank_card_id, paramsAsset.third_account).then(function (data) {
                 if (data.is_succ) {
-                  console.log(data)
                     if (data.code !== 0) {
                         if (codeRage.indexOf(data.code) == -1) data.code = 0;
                         openWithdrawMdl({
@@ -715,8 +713,10 @@
                         copy_account = data.data.copy_account;
                         free_amount = data.data.free_amount;
                         if (data.data.bonus == 0) {
-                          withdraw();
-                          /*
+                          if (!paramsAsset.bank_card_id && !paramsAsset.third_account) {
+                            withdraw()
+                            return
+                          }
                             var amount = Number($scope.withdraw.amount).toFixed(2);
                             var amountRMB = Number(amount * $scope.withdraw.currency.rate_out).toFixed(2);
                             openWithdrawMdl({
@@ -730,7 +730,7 @@
                                 callback: withdraw,
                                 callbackPara: data.data.status_message
                             });
-                            */
+
                         } else {
                             $scope.clickable = true;
                             openWithdrawTip($scope.lang.text("tigerWitID.depositWithdrawal.tip5"));
@@ -846,7 +846,6 @@
                             $scope.needAmount = Number(paramsAsset.amount - free_amount).toFixed(2);
 
                             function initCopyList () {
-                                console.log(params.message);
                                 angular.forEach(params.message, function (value, index) {
                                     if (value.copy_amount - value.min_follow < $scope.needAmount) {
                                         value.status = false;

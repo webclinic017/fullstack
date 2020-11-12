@@ -16,12 +16,12 @@
             scope: {
                 fileName: '='
             },
-            template: 
+            template:
                 '<input type="file"'+
                         'accept="image/*"'+
                         'style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;opacity: 0;cursor:pointer;z-index:20">',
             link: function (scope, element, attrs) {
-                
+
                 $(element).on('change', function (e) {
                     var file = e.target.files[0];
                     renderImage(file, this);
@@ -32,7 +32,7 @@
 
                     reader.onload = function(e) {
                         // console.log(e.target.result);
-                        
+
                         scope.$apply(function () {
                             scope.fileName = e.target.result.split(',')[1];
                         });
@@ -43,14 +43,14 @@
                         });
                         $(target).nextAll().remove();
                         $(target).parent().append($img);
-                        
+
                     };
                     if(file){
                         reader.readAsDataURL(file);
                     }
-                    
+
                 }
-                
+
             }
         };
     }
