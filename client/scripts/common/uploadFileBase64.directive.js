@@ -32,13 +32,16 @@
                 });
 
                 function renderImage (file, target) {
-                    var reader = new FileReader();
 
+                    var reader = new FileReader();
+                    var spark = new SparkMD5.ArrayBuffer()
                     reader.onload = function(e) {
                         // console.log(e.target.result);
-
+                        spark.append(e.target.result);
+                        console.log(777, spark)
                         scope.$apply(function () {
                             scope.fileName = e.target.result.split(',')[1];
+                            console.log(877, scope.fileName)
                         });
                         var $img = $('<img>').attr({
                             src: file.type == 'application/pdf' ? '/white_label/pdf/pdf_icons.png' : e.target.result,
@@ -54,28 +57,38 @@
                         //   bucket: 'gloal-image-node2',
                         //   method: 'POST'
                         // }).then(function(data) {
-                          // 调用签名接口
+                          // 调用签名接口 + '&file_name=u3ld_' + file.name
                           // var ufile = new UCloudUFile('global-image-node2', 'https://global-image-node2.hk.ufileos.com', '/api/v3/ucloud_oss/sign'+ '?token=' + $cookies['token'] + '&file_name=u3ld_' + file.name);
                           // 调用本地公钥
                           var ufile = new UCloudUFile(
                             'global-image-node2',//存储空间名称
                             'https://global-image-node2.hk.ufileos.com',//存储空间域名
-                            'TOKEN_6cd82940-b90f-48c7-ac96-9ac5da6e72b0',//令牌公钥
-                            '3607e1f9-4bfa-4f3e-93fb-f54398c08190',//令牌私钥
-                            false,//是否服务端签名(直接输入服务端域名为是服务端签名)
-                            'u3ld_'//令牌配置的前缀
+                            'TOKEN_43eb789c-30d3-4db9-806a-6d78f0100b73',//令牌公钥
+                            '',//令牌私钥
+                            '/api/v3/ufile/sign'+ '?token=' + $cookies['token'] + '&file_name=u3ld_' + file.name,//是否服务端签名(直接输入服务端域名为是服务端签名)
+                            ''//令牌配置的前缀
                           )
+                          // var requestToken = {
+                          //     method: method,
+                          //     file: file,
+                          //     fileName: fileName,
+                          //     putPolicy: putPolicy
+                          // };
                           var ufileData = {
-                              // prefix: 'global-image-node2',
-                              // marker: '',
-                              // limit: 20
-                            file: e.target.result,
-                            fileRename: 'u3ld_' + file.name
+                            // prefix: 'global-image-node2',
+                            // marker: '',
+                            // limit: 20,
+                            // method: 'POST',
+                            // putPolicy: '',
+                            file: scope.fileName,
+                            // fileRename: 'u3ld_' + file.name
                           };
-                          ufile.getFileList(ufileData, function(data) {
+                          ufile.uploadFile(ufileData, function(data) {
                             console.log('succ', data)
                           }, function(data) {
                             console.log('err', data)
+                          }, function(data) {
+                            console.log('progress', data)
                           });
 
                         //   console.log(data)
