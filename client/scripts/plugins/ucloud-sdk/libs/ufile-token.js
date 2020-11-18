@@ -164,6 +164,7 @@ UCloudUFile.prototype.getUFileToken = function(options, success, error) {
             "&content_type=" + content_type +
             "&date=" + date +
             "&put_policy=" + Base64.encode(put_policy);
+        // 更改了请求方式 原来是GET
         ajax.open("GET", url, true);
 
         var onreadystatechange = function() {
@@ -263,8 +264,8 @@ UCloudUFile.prototype.getFileList = function(options, success, error) {
         var url = that.getBucketUrl() + "?list" +
             "&prefix=" + prefix +
             "&marker=" + marker +
-            "&limit=" + limit + 
-            "&file=" + file + 
+            "&limit=" + limit +
+            "&file=" + file +
             "&fileRename=" + fileRename;
         ajax.open(method, url, true);
         ajax.setRequestHeader("Authorization", token);
@@ -343,7 +344,6 @@ UCloudUFile.prototype.uploadFile = function(options, success, error, progress) {
         fileName: fileName,
         putPolicy: putPolicy
     };
-
     this.getUFileToken(requestToken, function(token) {
 
         var ajax = that.createAjax();

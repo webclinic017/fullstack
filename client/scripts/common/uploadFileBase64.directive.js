@@ -65,7 +65,7 @@
                             'https://global-image-node2.hk.ufileos.com',//存储空间域名
                             'TOKEN_43eb789c-30d3-4db9-806a-6d78f0100b73',//令牌公钥
                             '',//令牌私钥
-                            '/api/v3/ufile/sign'+ '?token=' + $cookies['token'] + '&file_name=u3ld_' + file.name,//是否服务端签名(直接输入服务端域名为是服务端签名)
+                            '/api/v3/ufile/sign'+ '?token=' + $cookies['token'],//是否服务端签名(直接输入服务端域名为是服务端签名)
                             ''//令牌配置的前缀
                           )
                           // var requestToken = {
@@ -75,20 +75,20 @@
                           //     putPolicy: putPolicy
                           // };
                           var ufileData = {
+                            method: 'PUT',
+                            putPolicy: '',
                             // prefix: 'global-image-node2',
                             // marker: '',
                             // limit: 20,
                             // method: 'POST',
                             // putPolicy: '',
                             file: scope.fileName,
-                            // fileRename: 'u3ld_' + file.name
+                            fileRename: 'u3ld_' + file.name
                           };
                           ufile.uploadFile(ufileData, function(data) {
                             console.log('succ', data)
                           }, function(data) {
                             console.log('err', data)
-                          }, function(data) {
-                            console.log('progress', data)
                           });
 
                         //   console.log(data)
