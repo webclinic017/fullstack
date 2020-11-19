@@ -10,14 +10,16 @@
 <% include /common/statistic/main.html %>
 <script>
     var nodeResponseInfo = {
-        android: "<%= lang.text('androidApp')%>",
+        pc: "/space/#/account/register",
+        // android: "<%= lang.text('androidApp')%>",
         androidGlobal: "<%= lang.text('downloadGlobalAndroid')%>",
         ios: "<%= lang.text('downloadGlobalIos')%>",
         iosCn: "<%= lang.text('downloadCnIos')%>"
     };
 </script>
+
 <body>
-    <p class="weixinTip" style="margin: 10px auto; text-align: center; display: none;">请用浏览器打开页面下载</p>    
+    <p class="weixinTip" style="margin: 10px auto; text-align: center; display: none;">请用浏览器打开页面下载</p>
 
 </body>
 <% include /common/vendor/h5.js.html %>
@@ -26,4 +28,5 @@
 <!-- endbuild -->
 
 <%- include('/common/statistic/all.html') %>
+
 </html>

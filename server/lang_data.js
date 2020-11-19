@@ -8,7 +8,7 @@ module.exports = function () {
     var companyConfig = {};
     var date = require('./tools').date;
     var app_version = company_name == 'tigerwit' ? 'global' : 'pandafx';
-    var versionAndroidApp = require('./app_ctrl.config').getAppInfo(app_version)['cn'].android.app_info.url;
+    // var versionAndroidApp = require('./app_ctrl.config').getAppInfo(app_version)['cn'].android.app_info.url;
     var imagePath = require('./mutilang/imagePath');
 
     var data = {
@@ -75,16 +75,16 @@ module.exports = function () {
             'pt-BR': 'https://download.mql5.com/cdn/web/tiger.wit.group/mt4/tigerwit4setup.exe',
             'ar': 'https://download.mql5.com/cdn/web/tiger.wit.group/mt4/tigerwit4setup.exe'
         },
-        androidApp: {
-            zh: versionAndroidApp,
-            en: versionAndroidApp,
-            vi: versionAndroidApp,
-            "zh-Hant": versionAndroidApp,
-            id: versionAndroidApp,
-            es: versionAndroidApp,
-            'pt-BR': versionAndroidApp,
-            'ar': versionAndroidApp
-        },
+        // androidApp: {
+        //     zh: versionAndroidApp,
+        //     en: versionAndroidApp,
+        //     vi: versionAndroidApp,
+        //     "zh-Hant": versionAndroidApp,
+        //     id: versionAndroidApp,
+        //     es: versionAndroidApp,
+        //     'pt-BR': versionAndroidApp,
+        //     'ar': versionAndroidApp
+        // },
         download:{
             zh:"http://android.myapp.com/myapp/detail.htm?apkName=com.tigerwit.forex",
             en:"http://android.myapp.com/myapp/detail.htm?apkName=com.tigerwit.forex",
@@ -106,15 +106,25 @@ module.exports = function () {
             'pt-BR': 'https://apps.apple.com/us/app/tigerwit/id1448002193?l=zh&ls=1',
             'ar': 'https://apps.apple.com/us/app/tigerwit/id1448002193?l=zh&ls=1'
         },
+        // downloadCnIos:{
+        //     zh:"https://itunes.apple.com/cn/app/id1091437876",
+        //     en:"https://itunes.apple.com/cn/app/id1091437876",
+        //     vi:"https://itunes.apple.com/cn/app/id1091437876",
+        //     "zh-Hant":"https://itunes.apple.com/cn/app/id1091437876",
+        //     id:"https://itunes.apple.com/cn/app/id1091437876",
+        //     es:"https://itunes.apple.com/cn/app/id1091437876",
+        //     'pt-BR': 'https://itunes.apple.com/cn/app/id1091437876',
+        //     'ar': 'https://itunes.apple.com/cn/app/id1091437876'
+        // },
         downloadCnIos:{
-            zh:"https://itunes.apple.com/cn/app/id1091437876",
-            en:"https://itunes.apple.com/cn/app/id1091437876",
-            vi:"https://itunes.apple.com/cn/app/id1091437876",
-            "zh-Hant":"https://itunes.apple.com/cn/app/id1091437876",
-            id:"https://itunes.apple.com/cn/app/id1091437876",
-            es:"https://itunes.apple.com/cn/app/id1091437876",
-            'pt-BR': 'https://itunes.apple.com/cn/app/id1091437876',
-            'ar': 'https://itunes.apple.com/cn/app/id1091437876'
+            zh:"https://testflight.apple.com/join/7f18qRXE",
+            en:"https://testflight.apple.com/join/7f18qRXE",
+            vi:"https://testflight.apple.com/join/7f18qRXE",
+            "zh-Hant":"https://testflight.apple.com/join/7f18qRXE",
+            id:"https://testflight.apple.com/join/7f18qRXE",
+            es:"https://testflight.apple.com/join/7f18qRXE",
+            'pt-BR': 'https://testflight.apple.com/join/7f18qRXE',
+            'ar': 'https://testflight.apple.com/join/7f18qRXE'
         },
         downloadGlobalAndroid:{
             //http://20805458p.rfihub.com/ca.gif?rb=36314&ca=20805458&_o=36314&_t=20805458&rd=https://play.google.com/store/apps/details?id=com.tigerwit.forex

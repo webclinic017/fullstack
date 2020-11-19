@@ -1,12 +1,15 @@
 ; $(document).ready(function () {
-    var system = getQueryString('system');
-    var platform = getQueryString('platform');
-    var isCn = system === 'cn' ? true : false;
     if (isWX()) {
         // 微信浏览器中
         $(".weixinTip").css("display", "block");
         return;
     }
+    var system = getQueryString('system');
+    var platform = getQueryString('platform');
+
+
+
+
     if (system === 'download_mt4') {
         window.location.href = "https://download.mql5.com/cdn/web/metaquotes.software.corp/mt4/metatrader4.apk?utm_campaign=www.metatrader4.com";
     } else {
@@ -16,19 +19,49 @@
                     downloadAndroid()
                 } else if (platform == 'ios') {
                     downloadIos()
+                } else if (platform == 'pc') {
+                    window.location.href = nodeResponseInfo.pc;
                 } else {
                     alert('未知的平台')
                 }
-            } else if (isAndriod() || isWindows()) {
-                downloadAndroid()
             } else {
-                downloadIos()
+                if (isAndriod()) {
+                    downloadAndroid()
+                } else if (isIOS()) {
+                    downloadIos()
+                } else {
+                    // pc
+                    window.location.href = nodeResponseInfo.pc;
+                }
             }
         }, 100)
     }
+
+
+    function isCnFun(trueFun, falseFun) {
+        // var isCn = false;
+        if (system) {
+            if (system === 'cn') {
+                // isCn = true;
+                trueFun();
+            } else {
+                falseFun();
+            }
+            // system === 'global'
+        } else {
+            getEmailPhone('', '', function (data) {
+                if (data.ip_country_code === 'CN') {
+                    // isCn = true;
+                    trueFun();
+                } else {
+                    falseFun();
+                }
+            })
+        }
+    }
     function downloadAndroid() {
-        if (isCn) {
-        // if (isDemo() || isCn) {
+        isCnFun(function () {
+            // if (isDemo() || isCn) {
             // window.location.href = 'http://dltw.oss-cn-beijing.aliyuncs.com/apk/tigerwit_v4.3.1.apk';
             publicRequest('getVersionCheck', 'GET', {
                 type: 3,
@@ -40,15 +73,15 @@
                     window.location.href = data.data.url;
                 }
             });
-        } else {
+        }, function () {
             window.location.href = nodeResponseInfo.androidGlobal;
-        }
+        })
     }
     function downloadIos() {
-        if (isCn) {
+        isCnFun(function () {
             window.location.href = nodeResponseInfo.iosCn;
-        } else {
+        }, function () {
             window.location.href = nodeResponseInfo.ios;
-        }
+        })
     }
 });
