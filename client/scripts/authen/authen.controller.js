@@ -852,7 +852,11 @@
   }
   // id_card
   function AuthenIdentityController($scope, $state, $modal, validator, account, $location, $layer, $timeout) {
-    $scope.is_live = $scope.personal.is_live
+    $scope.is_live = $scope.personal.is_live;
+    $scope.progressIsSucc = false;
+    $scope.progressNumber = 0;
+    $scope.progressIsSucc2 = false;
+    $scope.progressNumber2 = 0;
     // $scope.verification = {
     //     id: {
     //         number: undefined,
@@ -1141,7 +1145,10 @@
   // Address
   function AuthenAddressController($scope, $state, $modal, validator, account, $timeout) {
     $scope.addressType = []
-
+    $scope.progressIsSucc = false;
+    $scope.progressNumber = 0;
+    $scope.progressIsSucc2 = false;
+    $scope.progressNumber2 = 0;
     $scope.frontErr = {
       addressType: {
         show: false

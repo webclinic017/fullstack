@@ -18,11 +18,11 @@
                         ng-class="{'form-control-error': frontErr.addressType.show && addressForm.addressType.$invalid}"
                         ng-blur="showErr('addressType')"
                         ng-focus="hideErr('addressType')">
-                    
+
                     <i class="select__icon fa fa-angle-down"></i>
 
                     <ul class="select__dropdown" twform-select data-bind-model="addressInfo.type">
-                        
+
                         <li ng-repeat="type in addressType" ng-class="{'selected': type.id === addressInfo.type.value}">
                             <span data-value="{{type.id}}">{{ type.name }}</span>
                         </li>
@@ -43,7 +43,11 @@
                     <h2 class="upload_id_card__title">
                         {{lang.text('tigerWitID.authen.uploadAddress')}}
                     </h2>
-                    <div tw-upload-file-base64 data-file-name="addressImgFront"></div>
+                    <div class="progress" ng-if="progressIsSucc">
+                      <img src="/images/layer/loading-2.gif" alt="">
+                      <span>{{progressNumber}}%</span>
+                    </div>
+                    <div progress-is-succ="progressIsSucc" progress-number="progressNumber" tw-upload-file-base64-three data-file-name="addressImgFront"></div>
                 </div>
             </div>
             <div class="col-xs-6">
@@ -52,7 +56,11 @@
                     <h2 class="upload_id_card__title">
                         {{lang.text('tigerWitID.authen.uploadAddress')}}
                     </h2>
-                    <div tw-upload-file-base64 data-file-name="addressImgBack"></div>
+                    <div class="progress" ng-if="progressIsSucc2">
+                      <img src="/images/layer/loading-2.gif" alt="">
+                      <span>{{progressNumber2}}%</span>
+                    </div>
+                    <div progress-is-succ="progressIsSucc2" progress-number="progressNumber2" tw-upload-file-base64-three data-file-name="addressImgBack"></div>
                 </div>
             </div>
         </div>
@@ -96,7 +104,7 @@
                     <i class="loading_spinner fa fa-spinner"></i>
                     {{lang.text('tigerWitID.submitting')}}
                 </a>
-            </div>    
+            </div>
         </div>
     </div>
 </div>

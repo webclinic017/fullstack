@@ -157,7 +157,8 @@ UCloudUFile.prototype.getUFileToken = function(options, success, error) {
     // 服务端签名计算
     function getSignatureToken(tokenServerUrl, method, bucket, key, content_md5, content_type, date, put_policy) {
         var ajax = that.createAjax();
-        var url = tokenServerUrl + "?method=" + method +
+        var url = tokenServerUrl + (tokenServerUrl.indexOf('?')!==-1 ? '&' : '?') + "method=" + method +
+        // var url = tokenServerUrl + "?method=" + method +
             "&bucket=" + bucket +
             "&key=" + key +
             "&content_md5=" + content_md5 +

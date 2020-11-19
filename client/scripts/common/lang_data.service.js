@@ -2047,7 +2047,7 @@
                         "vi": "Tài liệu không quá 3 tháng. Chúng tôi không chấp nhận hóa đơn điện thoại, hoá đơn thẻ tín dụng, hóa đơn hoặc biên nhận.",
                         "zh-Hant": "該文件不應超過3個月。我們不接受手機賬單，信用卡賬單，發票或收據。",
                         "id": "Dokumen tidak boleh lebih dari 3 bulan. Kami tidak menerima tagihan telepon seluler, tagihan kartu kredit, faktur atau tanda terima.",
-                        "es": "El documento no debe tener más de 3 meses de antigüedad. No podemos aceptar facturas de teléfonos móviles, facturas de tarjetas de crédito, facturas o recibos.",
+                        "es": "Este documento no debe superar los 3 meses desde que fue emitido. No aceptamos facturas móviles, facturas de tarjetas de crédito, facturas o recibos que no pueden comprobar el nombre del usuario, la dirección o que no tengan fecha de emisión.",
                         "pt-BR": "O documento não deve ter mais de 3 meses da data atual. Não podemos aceitar contas de telefone celular, faturas de cartão de crédito, faturas ou recibos.",
                         "ar": "يجب ألا يكون قد مر على تاريخ صدور الوثيقة أكثر من 3 أشهر. نحن لا نقبل فواتير الهاتف المحمول أو فواتير أو إيصالات البطاقة الائتمانية"
                     },
@@ -2559,7 +2559,7 @@
                         "vi": "Chúng tôi yêu cầu bản sao màu giấy phép lái xe cấp bởi chính phủ, hộ chiếu và thẻ ID. Với thẻ ID và bằng lái xe, chúng tôi yêu cầu bản sao mặt trước và mặt sau.",
                         "zh-Hant": "請確保證件邊框完整、大小適中、字迹清晰、亮度均衡、證件資訊與填寫資訊一致、證件未過期、已滿18周歲。",
                         "id": " Mohon masukkan informasi yang relevan. Pastikan bahwa ini adalah anda karena informasi ini tidak dapat diubah lagi apabila sudah masuk ke status peninjauan. ",
-                        "es": "Requerimos copias a color emitidas por el gobierno de una licencia de conducir, pasaporte y/o tarjeta ID. Para las tarjetas ID y la licencia de conducir, requerimos copias de la parte delantera y trasera de la tarjeta.",
+                        "es": "Para completar su solicitud, necesitaremos la siguiente información, y copias de su documento.",
                         "pt-BR": "Nós exigimos cópias coloridas de uma carteira de motorista emitida pelo governo, passaporte e carteira de identidade. Para cartões de identificação e licença de unidade, exigimos cópias da frente e verso do cartão.",
                         "ar": "نحن نحتاج إلى صور ملونة لرخصة قيادة أو جواز سفر أو بطاقة هوية صادرة من جهة حكومية. بالنسبة لبطاقة الهوية ورخصة القيادة، نحن نحتاج إلى صور للوجهين الأمامي والخلفي للبطاقة."
                     },
@@ -11911,7 +11911,7 @@
                         "vi": "Tải lên xác minh địa chỉ",
                         "zh-Hant": "上傳地址證明",
                         "id": "Unggah bukti alamat",
-                        "es": "Cargar Comprobante de Dirección",
+                        "es": "Comprobante de Domicilio",
                         "pt-BR": "Carregar Comprovante de Residência",
                         "ar": "تحميل إثبات العنوان"
                     },
