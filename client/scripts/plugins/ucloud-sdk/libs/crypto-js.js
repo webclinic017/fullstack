@@ -3867,7 +3867,7 @@
 	         */
 	        parse: function (openSSLStr) {
 	            // Parse base64
-	            var ciphertext = Base64.parse(openSSLStr);
+	            var ciphertext = Base64Clound.parse(openSSLStr);
 
 	            // Shortcut
 	            var ciphertextWords = ciphertext.words;

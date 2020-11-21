@@ -147,7 +147,7 @@ UCloudUFile.prototype.getUFileToken = function(options, success, error) {
         put_policy_base64 =""
         if (put_policy) {
             var putPolicyStr = put_policy; //JSON.stringify(put_policy).replace(/\"/g, '\\"');
-            put_policy_base64 = Base64.encode(putPolicyStr);
+            put_policy_base64 = Base64Clound.encode(putPolicyStr);
             data += put_policy_base64;
         }
 
@@ -163,8 +163,8 @@ UCloudUFile.prototype.getUFileToken = function(options, success, error) {
             "&key=" + key +
             "&content_md5=" + content_md5 +
             "&content_type=" + content_type +
-            "&date=" + date +
-            "&put_policy=" + Base64.encode(put_policy);
+            "&date=" + date + 
+            "&put_policy=" + Base64Clound.encode(put_policy);
         // 更改了请求方式 原来是GET
         ajax.open("GET", url, true);
 
