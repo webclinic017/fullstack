@@ -4,6 +4,7 @@
 <div class="authen_content ctn center" ng-class="{'update': toState.name.indexOf('space.update') != -1}">
     <div class="authen_content__title" ng-if="toState.name.indexOf('space.update') == -1">
         <h2>{{lang.text('tigerWitID.wallet.uploadIdentification')}}</h2>
+        <p class="authen_content__tip mg-tp-30">{{lang.text('tigerWitID.myAccount.tip24')}}</p>
     </div>
     <div class="kyc"
         ng-class="{'mg-tp-40': toState.name.indexOf('space.update') == -1, 'update': toState.name.indexOf('space.update') != -1}">
@@ -97,6 +98,7 @@
                 </div>
             </div>
         </form>
+        <p class="authen_content__tip mg-tp-30">{{lang.text('tigerWitID.myAccount.tip24-2')}}</p>
         <div class="row mg-tp-30">
             <div class="col-xs-6">
                 <div class="upload_id_card">
@@ -131,7 +133,6 @@
         <!-- <p class="text-left mg-tp-15 font-dark">
             {{lang.text('tigerWitID.myAccount.tip26')}}
         </p> -->
-        <p class="authen_content__tip mg-tp-30">{{lang.text('tigerWitID.myAccount.tip24')}}</p>
         <div class="authen_card_eg">
             <p class="tit">{{lang.text('tigerWitID.myAccount.cardEgTitle')}}</p>
             <ul class="item-center">

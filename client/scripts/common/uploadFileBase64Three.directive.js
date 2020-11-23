@@ -66,6 +66,7 @@
                         ufile.uploadFile(ufileData, function(data) {
                           // console.log('succ', data)
                           scope.progressIsSucc = false;
+                          scope.progressNumber = 0;
                           $scope.$apply();
                         }, function(data) {
                           console.log('err', data)

@@ -663,7 +663,6 @@
                     if ($scope.clickable == false) {
                         return;
                     }
-
                     $scope.clickable = false;
                     var paramsAsset = {
                         amount: Number($scope.withdraw.amount).toFixed(2),
@@ -702,6 +701,7 @@
                             code: data.code,
                             message: data.data.status_message
                         });
+                        $scope.clickable = true;
                         return;
                     }
                     if (data.data.status == 0) {
@@ -715,7 +715,6 @@
                         if (data.data.bonus == 0) {
                           if (!paramsAsset.bank_card_id && !paramsAsset.third_account) {
                             withdraw()
-                            return
                           }
                             var amount = Number($scope.withdraw.amount).toFixed(2);
                             var amountRMB = Number(amount * $scope.withdraw.currency.rate_out).toFixed(2);

@@ -2559,9 +2559,19 @@
                         "vi": "Chúng tôi yêu cầu bản sao màu giấy phép lái xe cấp bởi chính phủ, hộ chiếu và thẻ ID. Với thẻ ID và bằng lái xe, chúng tôi yêu cầu bản sao mặt trước và mặt sau.",
                         "zh-Hant": "請確保證件邊框完整、大小適中、字迹清晰、亮度均衡、證件資訊與填寫資訊一致、證件未過期、已滿18周歲。",
                         "id": " Mohon masukkan informasi yang relevan. Pastikan bahwa ini adalah anda karena informasi ini tidak dapat diubah lagi apabila sudah masuk ke status peninjauan. ",
-                        "es": "Para completar su solicitud, necesitaremos la siguiente información, y copias de su documento.",
+                        "es": "Requerimos copias a color emitidas por el gobierno de una licencia de conducir, pasaporte y/o tarjeta ID. Para las tarjetas ID y la licencia de conducir, requerimos copias de la parte delantera y trasera de la tarjeta.",
                         "pt-BR": "Nós exigimos cópias coloridas de uma carteira de motorista emitida pelo governo, passaporte e carteira de identidade. Para cartões de identificação e licença de unidade, exigimos cópias da frente e verso do cartão.",
                         "ar": "نحن نحتاج إلى صور ملونة لرخصة قيادة أو جواز سفر أو بطاقة هوية صادرة من جهة حكومية. بالنسبة لبطاقة الهوية ورخصة القيادة، نحن نحتاج إلى صور للوجهين الأمامي والخلفي للبطاقة."
+                    },
+                    "tip24-2": {
+                        "zh": "我们需要您上传以下信息来完成申请",
+                        "en": "To complete your application,we will require the following information and uploads.",
+                        "vi": "Để hoàn thành đơn đăng kí của bạn, chúng tôi sẽ yêu cầu các thông tin và tải lên các tài liệu sau đây",
+                        "zh-Hant": "我們需要您上傳以下信息來完成申請",
+                        "id": "Untuk dapat menyelesaikan pendaftaran, anda harus mengisi informasi berikut dan mengunggah dokumen yang diperlukan",
+                        "es": "Para completar su solicitud, necesitaremos la siguiente información, y copias de su documento",
+                        "pt-BR": "Para completar sua inscrição, nós solicitaremos as seguintes informações e uploads",
+                        "ar": "",
                     },
                     "realName": {
                         "zh": "真实姓名",
