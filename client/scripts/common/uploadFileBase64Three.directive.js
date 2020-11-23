@@ -40,7 +40,8 @@
                     reader.onload = function(e) {
                         spark.append(e.target.result);
                         scope.$apply(function () {
-                            scope.fileName = e.target.result.split(',')[1];
+                            // scope.fileName = e.target.result.split(',')[1];
+                            scope.fileName = 'u3ld_' + file.name
                         });
                         var $img = $('<img>').attr({
                             src: file.type == 'application/pdf' ? '/white_label/pdf/pdf_icons.png' : e.target.result,

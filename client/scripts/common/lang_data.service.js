@@ -2571,7 +2571,7 @@
                         "id": "Untuk dapat menyelesaikan pendaftaran, anda harus mengisi informasi berikut dan mengunggah dokumen yang diperlukan",
                         "es": "Para completar su solicitud, necesitaremos la siguiente información, y copias de su documento",
                         "pt-BR": "Para completar sua inscrição, nós solicitaremos as seguintes informações e uploads",
-                        "ar": "",
+                        "ar": "لإكمال طلبك، سنطلب تحميل البيانات التالية"
                     },
                     "realName": {
                         "zh": "真实姓名",

@@ -1038,8 +1038,8 @@
           last_name: $scope.realnameInfo.lastname,
           id_no: $scope.realnameInfo.id_num,
           cert_type: $scope.realnameInfo.id_type.value,
-          front: $scope.identityImgFront,
-          back: $scope.identityImgBack ? $scope.identityImgBack : undefined
+          front_file_name: $scope.identityImgFront,
+          back_file_name: $scope.identityImgBack ? $scope.identityImgBack : undefined
         }).then(function(data) {
           $scope.clickable = true;
           if (data.is_succ) {
@@ -1195,9 +1195,9 @@
       if ($scope.addressImgFront) {
         var oParams = {
           cert_type: $scope.addressInfo.type.value,
-          front: $scope.addressImgFront
+          front_file_name: $scope.addressImgFront
         };
-        $scope.addressImgBack && (oParams.back = $scope.addressImgBack);
+        $scope.addressImgBack && (oParams.back_file_name = $scope.addressImgBack);
         $scope.clickable = false;
         account.setUploadAddressProve(oParams).then(function(data) {
           $scope.clickable = true;
