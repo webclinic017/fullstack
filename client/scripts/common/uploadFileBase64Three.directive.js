@@ -56,7 +56,7 @@
                           'https://global-image-node2.hk.ufileos.com',//存储空间域名
                           'TOKEN_43eb789c-30d3-4db9-806a-6d78f0100b73',//令牌公钥
                           '',//令牌私钥
-                          '/api/v3/web/ufile/sign'+ '?token=' + $cookies['token'],//是否服务端签名(直接输入服务端域名为是服务端签名)
+                          '/api/v3/ufile/sign'+ '?token=' + $cookies['token'],//是否服务端签名(直接输入服务端域名为是服务端签名)
                           ''//令牌配置的前缀
                         )
                         var ufileData = {
