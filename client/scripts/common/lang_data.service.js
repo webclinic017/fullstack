@@ -9389,13 +9389,13 @@
                     },
                     "tip64_1": {
                         "zh": "出金金额最多为 ",
-                        "en": "The maximum deposit amount is USD ",
-                        "vi": "Số tiền gửi cao nhất là USD ",
+                        "en": "The maximum withdrawal amount is USD ",
+                        "vi": "Số tiền rút tối đa là USD ",
                         "zh-Hant": "出金金額最多為 ",
-                        "id": "Jumlah maksimum pengisian dana adalah $ ",
-                        "es": "El importe máximo de depósitos es de USD ",
-                        "pt-BR": "O valor máximo do depósito é US$ ",
-                        "ar": "الحد الأقصى لمبلغ الإيداع هو    USD"
+                        "id": "Jumlah penarikan maksimal adalah USD ",
+                        "es": "El monto de retiro máximo es ",
+                        "pt-BR": "O valor máximo de retirada é ",
+                        "ar": "الحد الأقصى لمبلغ السحب هو "
                     },
                     "tip64_2": {
                         "zh": " 美金",
@@ -9403,9 +9403,9 @@
                         "vi": " ",
                         "zh-Hant": " 美金",
                         "id": " ",
-                        "es": " ",
-                        "pt-BR": " ",
-                        "ar": " "
+                        "es": " USD",
+                        "pt-BR": " USD",
+                        "ar": " دولار أمريكي "
                     },
                     "tip65_1": {
                         "zh": "出金金额最少为 ",
