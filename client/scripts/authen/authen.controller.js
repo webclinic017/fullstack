@@ -285,7 +285,8 @@
 
     function submitForm() {
       mapMuiltiSelectToKycInfo();
-
+      console.log($scope.progressIsSucc, $scope.progressIsSucc2)
+      return
       if ($scope.tip.questions.msg) {
         return;
       }
@@ -1026,6 +1027,9 @@
       showErr('firstname');
       showErr('id_num');
       showErr('id_type');
+      if ($scope.progressIsSucc || $scope.progressIsSucc2) {
+        return
+      }
       if ($scope.realnameForm.$invalid) {
         return
       }
@@ -1189,6 +1193,9 @@
 
     function uploadAddress() {
       showErr('addressType');
+      if ($scope.progressIsSucc || $scope.progressIsSucc2) {
+        return
+      }
       if ($scope.addressForm.$invalid) {
         return
       }

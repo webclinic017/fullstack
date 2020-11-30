@@ -31,6 +31,7 @@
                     // }
                     scope.progressIsSucc = true;
                     renderImage(file, this);
+                    e.target.value=''
                 });
 
                 function renderImage (file, target) {
@@ -77,6 +78,11 @@
                               msg: '上传失败',
                               msgClass: 'font-danger'
                             });
+                            scope.progressNumber = 0;
+                            scope.progressIsSucc = false;
+                            // scope.fileName = '';
+                            // $(target).parent().children('img').remove();
+                            $scope.$apply();
                           }
                           $scope.$apply();
                         }, function(data) {
