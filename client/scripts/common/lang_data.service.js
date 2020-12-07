@@ -8477,6 +8477,16 @@
                         "pt-BR": "Aviso",
                         "ar": "ملحوظة"
                     },
+                    "failure": {
+                        "zh": "上传失败",
+                        "en": "Failure",
+                        "vi": "Không thành công",
+                        "zh-Hant": "上傳失敗",
+                        "id": "Gagal",
+                        "es": "No exitoso",
+                        "pt-BR": "Falha",
+                        "ar":"فشل التحميل"
+                    },
                     "paymentMethod": {
                         "zh": "选择支付方式",
                         "en": "Select payment method",

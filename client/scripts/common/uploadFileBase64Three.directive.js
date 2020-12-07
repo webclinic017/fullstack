@@ -75,7 +75,7 @@
                           if (data) {
                             $layer({
                               title: lang.text('tigerWitID.depositWithdrawal.notice'),
-                              msg: '上传失败',
+                              msg: lang.text('tigerWitID.depositWithdrawal.failure'),
                               msgClass: 'font-danger'
                             });
                             scope.progressNumber = 0;

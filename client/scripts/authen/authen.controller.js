@@ -285,8 +285,6 @@
 
     function submitForm() {
       mapMuiltiSelectToKycInfo();
-      console.log($scope.progressIsSucc, $scope.progressIsSucc2)
-      return
       if ($scope.tip.questions.msg) {
         return;
       }
