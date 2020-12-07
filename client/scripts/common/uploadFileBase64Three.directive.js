@@ -38,10 +38,10 @@
 
                     var reader = new FileReader();
                     reader.onload = function(e) {
-                        let fileDateTime = new Date().getTime();
-                        let randomString = fileDateTime.toString() + Math.floor(Math.random()*100000);
-                        let fileType = file.name.split(".");
-                        let fileTypeIndex = fileType.length -1;
+                        var fileDateTime = new Date().getTime();
+                        var randomString = fileDateTime.toString() + Math.floor(Math.random()*100000);
+                        var fileType = file.name.split(".");
+                        var fileTypeIndex = fileType.length -1;
                         // scope.$apply(function () {
                         //     // scope.fileName = e.target.result.split(',')[1];
                         //     scope.fileName = 'u3ld_' + file.name + '.' + fileType[fileTypeIndex]
