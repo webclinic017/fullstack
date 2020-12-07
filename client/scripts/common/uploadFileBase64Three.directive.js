@@ -38,8 +38,8 @@
 
                     var reader = new FileReader();
                     reader.onload = function(e) {
-                        let dateTime = new Date().getTime();
-                        let randomString = dateTime.toString() + Math.floor(Math.random()*100000);
+                        let fileDateTime = new Date().getTime();
+                        let randomString = fileDateTime.toString() + Math.floor(Math.random()*100000);
                         let fileType = file.name.split(".");
                         let fileTypeIndex = fileType.length -1;
                         // scope.$apply(function () {
