@@ -37,13 +37,15 @@
                 function renderImage (file, target) {
 
                     var reader = new FileReader();
-                    var spark = new SparkMD5.ArrayBuffer()
                     reader.onload = function(e) {
-                        spark.append(e.target.result);
-                        scope.$apply(function () {
-                            // scope.fileName = e.target.result.split(',')[1];
-                            scope.fileName = 'u3ld_' + file.name
-                        });
+                        let dateTime = new Date().getTime();
+                        let randomString = dateTime.toString() + Math.floor(Math.random()*100000);
+                        let fileType = file.name.split(".");
+                        let fileTypeIndex = fileType.length -1;
+                        // scope.$apply(function () {
+                        //     // scope.fileName = e.target.result.split(',')[1];
+                        //     scope.fileName = 'u3ld_' + file.name + '.' + fileType[fileTypeIndex]
+                        // });
                         var $img = $('<img>').attr({
                             src: file.type == 'application/pdf' ? '/white_label/pdf/pdf_icons.png' : e.target.result,
                             style: "width:100%;height:100%;position:absolute;top:0;left:0;z-index:10;"
@@ -63,7 +65,7 @@
                         var ufileData = {
                           method: 'PUT',
                           file: file,
-                          fileRename: 'u3ld_' + file.name
+                          fileRename: 'u3ld_' + SparkMD5.hash(randomString) + '.' + fileType[fileTypeIndex]
                         };
                         ufile.uploadFile(ufileData, function(data) {
                           // console.log('succ', data)
