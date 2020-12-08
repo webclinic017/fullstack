@@ -211,11 +211,13 @@
          *
          */
 
-        function getIsWithdraw (amount, mt4_id) {
+        function getIsWithdraw (amount, mt4_id, bank_card_id, third_account) {
             // console.info('getIsWithdraw is sending', amount);
             return publicHttp.dealPublicRequest(o.getIsWithdrawApi, 'GET', {
                 amount: amount,
                 mt4_id: mt4_id,
+                bank_card_id: bank_card_id,
+                third_account: third_account
             });
         }
 

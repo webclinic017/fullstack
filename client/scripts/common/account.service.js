@@ -69,6 +69,8 @@
             getIdcard: getIdcard,
             setAgentPromotion: setAgentPromotion,
             setUploadAddressProve: setUploadAddressProve,
+            getUcloudOss: getUcloudOss,
+            uploadOssFile: uploadOssFile,
             getEmailPhone: getEmailPhone,
             openTrialAccount: openTrialAccount,
             setIslamicStatus: setIslamicStatus,
@@ -709,33 +711,41 @@
         function setUploadAddressProve(params) {
             return publicHttp.dealPublicRequest(o.setUploadAddressProveApi, 'post', params);
         }
+        //获取ucloud-oss签名
+        function getUcloudOss(params) {
+            return publicHttp.dealPublicRequest(o.getUcloudOssApi, 'GET', params);
+        };
+        // 上传ucloud-oss
+        function uploadOssFile(params) {
+            return publicHttp.dealPublicRequest(o.uploadOssFileApi, 'post', params);
+        }
         //获取邮箱电话等信息
         function getEmailPhone(params) {
             return publicHttp.dealPublicRequest(o.getEmailPhone, 'GET', params);
-        }
+        };
         // 开通体验金账户
         function openTrialAccount(params) {
             return publicHttp.dealPublicRequest(o.openTrialAccountApi, 'POST', params);
-        }
+        };
         //伊斯兰账号
         function setIslamicStatus(islamicStatus) {
             return publicHttp.dealPublicRequest(o.setIslamicStatusApi, 'PUT', {
                 islamic_status: islamicStatus
             });
-        }
+        };
         function transferIslamic() {
             return publicHttp.dealPublicRequest(o.transferIslamicApi, 'PUT');
-        }
+        };
 
         // 代理商上传协议
         function uploadAgentProtocol(params) {
             return publicHttp.dealPublicRequest(o.uploadAgentProtocolApi, 'POST', params);
-        }
+        };
 
         // 代理商下载协议
         function agentProtocol() {
             return publicHttp.dealPublicRequest(o.agentProtocolApi, 'GET');
-        }
+        };
         // APP版本更新信息
         function getVersionCheck(params) {
             return publicHttp.dealPublicRequest(o.getVersionCheckApi, 'GET', params);

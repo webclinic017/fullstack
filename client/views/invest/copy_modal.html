@@ -122,11 +122,13 @@
         <div class="copy_modal__tip mg-tp-15 font-dark">
             {{lang.text('tigerWitID.tradingAccount.tip10')}}
         </div> -->
-        <!-- 
+        <!--
         <div class="font-danger mg-tp-20">
             <p ng-if="frontErr.insufficient.show">{{lang.text('tigerWitID.tradingAccount.tip11')}}</p>
         </div> -->
-
+        <div class="copy_modal__tip mg-tp-15 font-dark">
+            {{lang.text("tigerWitID.dataStatistics.tigerWitCopyAgreements7_3")}}
+        </div>
         <div class="sys_modal__btn_wrapper">
             <div ng-if="backErr.system.show">
                 <p class="alert-system">
@@ -164,8 +166,8 @@
 
             <!--返回修改按钮-->
             <!-- <div class="" ng-if="hasCanceled">
-                <button ng-if="!frontErr.insufficient.show && clickable.copy" 
-                    class="btn btn-lt btn-dark" 
+                <button ng-if="!frontErr.insufficient.show && clickable.copy"
+                    class="btn btn-lt btn-dark"
                     ng-class="{ 'btn-disabled' : copyTrade.amount < copyTrade.minCopyAmount, 'btn-primary' : copyTrade.amount >= copyTrade.minCopyAmount }"
                     ng-click="submitStep1()">
                     {{lang.text('tigerWitID.tradingAccount.confirm')}}
@@ -217,7 +219,7 @@
             <button class="btn btn-primary btn-lt mg-lf-15" ng-click="cancleSubmit()" ng-if="clickable.copy">
                 {{lang.text('tigerWitID.cancel')}}
             </button>
-            
+
             <button class="btn btn-primary btn-lt active" disabled ng-if="!clickable.copy">
                 <i class="loading_spinner fa fa-spinner"></i>
                 {{lang.text('tigerWitID.submitting')}}

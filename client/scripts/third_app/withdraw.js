@@ -9,6 +9,7 @@ var canWithdrawAmount = 0; //可提现金额
 var min_amount = 20; // 最小提现金额（来自接口）
 var minAmount = min_amount;   // 最小提现金额(用于项目)
 var withdrawNotice = ''; //提现提示语
+var isCashIn = -1; //是否入金
 var thirdThirdType = '';  // 第三方平台ID-出金接口的third_type参数
 var thirdThirdAccount = '';  // 完整账号-出金接口的third_account参数
 var thirdThirdWithdrawType = '';  // 第三方出金时withdraw_type参数 为1时需要银行卡
@@ -55,7 +56,9 @@ $(document).on("tap", eleWithdraw.payWithdrawSubmitBtn, function () {
 
 function confirmWithdraw() {
   if (withdrawType === 'bank_account') {
-    if (!checkCardPhone(withdrawBankId)) { return }
+    if (!checkCardPhone(withdrawBankId)) {
+      return
+    }
   }
   if (withdrawType === 'third_account' && thirdThirdWithdrawType == 1) {
     if (!checkCardPhone(thirdThirdWithdrawBankId)) { return }
@@ -101,9 +104,8 @@ function submitWithdraw() {
     params.third_type = selectKeyFromTypeForWithdraw('platform');
     params.bank_card_id = withdrawBankId;
   }
-  console.log(params)
+
   publicRequest('withdrawThird', 'POST', params).then(function (data) {
-    // console.log(data);
     closeAllMdl();
     if (!data) return;
     if (data.is_succ) {
@@ -164,7 +166,7 @@ $(eleWithdraw.payAccountLst).on("tap", "li", function () {
 // 当第三方账号withdraw_type为1时需要添加银行卡
 $(eleWithdraw.payAccountLstBankAdd).on("tap", ".bank-account", function () {
   var cType = $(this).attr("data-type");
-  console.log(cType)
+  // console.log(cType)
   openLoadingMdl();
   getBankLst({
     listType: cType,
@@ -184,7 +186,7 @@ $(eleWithdraw.payWithdrawAmount).on("input propertychange", function () {
 function checkWithdrawLimit() {
   $(eleWithdraw.payWithdrawLLimit).removeClass('active');
   publicRequest('checkThirdWithdrawLimit', 'GET', {
-    mt4_id: withdrawAccount !== 'wallet' ? withdrawAccount : undefined
+    mt4_id: withdrawAccount !== 'wallet' ? withdrawAccount : undefined,
   }).then(function (data) {
     if (!data) return;
     if (data.is_succ) {
@@ -197,6 +199,7 @@ function checkWithdrawLimit() {
       } else {
         min_amount = data.data.min_amount;
         withdrawNotice = data.data.notice;
+        isCashIn = data.data.bonus
         withdrawLimit = false;
       }
       setWithdrawBtnStatus();
@@ -303,7 +306,6 @@ function getWithdrawPlatform() {
     pageLoadStatus.withdraw = true;
     if (!data) return;
     if (data.is_succ) {
-      // console.log(data);
       withdrawTypeLst = data.data;
       addWithdrawAccount();
     } else {
