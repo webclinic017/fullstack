@@ -172,7 +172,7 @@ function getBankLst(params) {
    *  notInsertTemp 是否加载弹窗 true、false
    *  */
   var listType = params.listType || '';
-  console.log(selectKeyFromType('need_card'), selectKeyFromType('channel_type'));
+  // console.log(selectKeyFromType('need_card'), selectKeyFromType('channel_type'));
 
   var bankAccountParams;
   if (params.source === 'withdraw_type') {

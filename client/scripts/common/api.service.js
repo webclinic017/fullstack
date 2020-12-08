@@ -55,6 +55,8 @@
             getAgentAuthStatusApi: urlOrigin2 + '/agent/auth_status',
             setAgentPromotionApi: urlOrigin2 + '/agent/invite',
             setUploadAddressProveApi: urlOrigin3 + '/user/upload_address_prove',
+            getUcloudOssApi: urlOrigin2 + '/ucloud_oss/sign',
+            uploadOssFileApi: 'http://global-image-node2.hk.ufileos.com',
             openTrialAccountApi: urlOrigin2 + '/user/account/trial',
             uploadAgentProtocolApi: urlOrigin2 + '/agent/upload/protocol',
             agentProtocolApi: urlOrigin2 + '/agent/protocol',

@@ -285,7 +285,6 @@
 
     function submitForm() {
       mapMuiltiSelectToKycInfo();
-
       if ($scope.tip.questions.msg) {
         return;
       }
@@ -852,7 +851,11 @@
   }
   // id_card
   function AuthenIdentityController($scope, $state, $modal, validator, account, $location, $layer, $timeout) {
-    $scope.is_live = $scope.personal.is_live
+    $scope.is_live = $scope.personal.is_live;
+    $scope.progressIsSucc = false;
+    $scope.progressNumber = 0;
+    $scope.progressIsSucc2 = false;
+    $scope.progressNumber2 = 0;
     // $scope.verification = {
     //     id: {
     //         number: undefined,
@@ -1022,6 +1025,9 @@
       showErr('firstname');
       showErr('id_num');
       showErr('id_type');
+      if ($scope.progressIsSucc || $scope.progressIsSucc2) {
+        return
+      }
       if ($scope.realnameForm.$invalid) {
         return
       }
@@ -1034,8 +1040,8 @@
           last_name: $scope.realnameInfo.lastname,
           id_no: $scope.realnameInfo.id_num,
           cert_type: $scope.realnameInfo.id_type.value,
-          front: $scope.identityImgFront,
-          back: $scope.identityImgBack ? $scope.identityImgBack : undefined
+          front_file_name: $scope.identityImgFront,
+          back_file_name: $scope.identityImgBack ? $scope.identityImgBack : undefined
         }).then(function(data) {
           $scope.clickable = true;
           if (data.is_succ) {
@@ -1141,7 +1147,10 @@
   // Address
   function AuthenAddressController($scope, $state, $modal, validator, account, $timeout) {
     $scope.addressType = []
-
+    $scope.progressIsSucc = false;
+    $scope.progressNumber = 0;
+    $scope.progressIsSucc2 = false;
+    $scope.progressNumber2 = 0;
     $scope.frontErr = {
       addressType: {
         show: false
@@ -1182,15 +1191,18 @@
 
     function uploadAddress() {
       showErr('addressType');
+      if ($scope.progressIsSucc || $scope.progressIsSucc2) {
+        return
+      }
       if ($scope.addressForm.$invalid) {
         return
       }
       if ($scope.addressImgFront) {
         var oParams = {
           cert_type: $scope.addressInfo.type.value,
-          front: $scope.addressImgFront
+          front_file_name: $scope.addressImgFront
         };
-        $scope.addressImgBack && (oParams.back = $scope.addressImgBack);
+        $scope.addressImgBack && (oParams.back_file_name = $scope.addressImgBack);
         $scope.clickable = false;
         account.setUploadAddressProve(oParams).then(function(data) {
           $scope.clickable = true;
@@ -1604,7 +1616,7 @@
       // $scope.showErr('type');
 
       if ($scope.addressInfoForm.$invalid) {
-        console.log($scope.addressInfoForm);
+        // console.log($scope.addressInfoForm);
         return
       }
 

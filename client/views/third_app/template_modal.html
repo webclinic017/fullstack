@@ -152,9 +152,9 @@
         <span class="common_confirm_fee"><code><$= data.currencySymbol$></code><$= data.amountFee || '0.00'$></span>
       </p>
     <$}$>
-    <pre class="common_confirm_desc">
-      <$= data.desc || ''$>
-    </pre>
+    <$if (data.type === 'withdraw') {$>
+      <pre class="common_confirm_desc"><%=lang.text('thirdH5.depositTips')%></pre>
+    <$}$>
     <div class="common_confirm_btn_wrapper">
       <$if (data.type === 'deposit') {$>
         <$if (data.depositType === 'payment_1') {$>
