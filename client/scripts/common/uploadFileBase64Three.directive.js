@@ -42,10 +42,10 @@
                         var randomString = fileDateTime.toString() + Math.floor(Math.random()*100000);
                         var fileType = file.name.split(".");
                         var fileTypeIndex = fileType.length -1;
-                        // scope.$apply(function () {
-                        //     // scope.fileName = e.target.result.split(',')[1];
-                        //     scope.fileName = 'u3ld_' + file.name + '.' + fileType[fileTypeIndex]
-                        // });
+                        scope.$apply(function () {
+                            // scope.fileName = e.target.result.split(',')[1];
+                            scope.fileName = 'u3ld_' + SparkMD5.hash(randomString) + '.' + fileType[fileTypeIndex]
+                        });
                         var $img = $('<img>').attr({
                             src: file.type == 'application/pdf' ? '/white_label/pdf/pdf_icons.png' : e.target.result,
                             style: "width:100%;height:100%;position:absolute;top:0;left:0;z-index:10;"

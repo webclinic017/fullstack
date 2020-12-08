@@ -1616,7 +1616,7 @@
       // $scope.showErr('type');
 
       if ($scope.addressInfoForm.$invalid) {
-        console.log($scope.addressInfoForm);
+        // console.log($scope.addressInfoForm);
         return
       }
 
