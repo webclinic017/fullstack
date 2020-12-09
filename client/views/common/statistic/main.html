@@ -1,418 +1,476 @@
 <script>
-    //声明_czc对象:
-    var _czc = _czc || [];
-    //绑定siteid
-    _czc.push(["_setAccount", "1260394016"]);
+  //声明_czc对象:
+  var _czc = _czc || [];
+  //绑定siteid
+  _czc.push(["_setAccount", "1260394016"]);
 </script>
 <script>
-    // function getCookie(name) {
-    //     var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
-    //     if (arr = document.cookie.match(reg)) {
-    //         return unescape(arr[2]);
-    //     }
-    //     else {
-    //         return null;
-    //     }
-    // }
-    (function (w) {
-        var XHR = {
-            createStandardXHR: function () {
-                return new XMLHttpRequest();
-            },
-            createIEXHR: function () {
-                return new ActiveXObject("Microsoft.XMLHTTP");
-            },
-            createErrorXHR: function () {
-                alert("Your browser does not support XMLHTTP.");
-                return null;
-            },
-            createXHR: function () { //创建XMLHttpRequest对象
-                var xhr = null;
-                if (window.XMLHttpRequest) {
-                    this.createXHR = this.createStandardXHR; // Firefox, Opera 8.0+,Safari，IE7+
-                } else {
-                    this.createXHR = this.createIEXHR; // IE5、IE6
-                }
-                try {
-                    xhr = this.createXHR();
-                } catch (e) {
-                    this.createXHR = this.createErrorXHR;
-                    xhr = this.createXHR();
-                }
-                return xhr;
-            },
-            ajax: function (opts) {
-                var xhr = this.createXHR(),
-                    ajaxMethod = (opts.type || "GET").toUpperCase(),
-                    isPost = ajaxMethod == "POST",
-                    data = opts.data ? opts.data : {},
-                    url = opts.url;
+  // function getCookie(name) {
+  //     var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+  //     if (arr = document.cookie.match(reg)) {
+  //         return unescape(arr[2]);
+  //     }
+  //     else {
+  //         return null;
+  //     }
+  // }
+  (function (w) {
+    var XHR = {
+      createStandardXHR: function () {
+        return new XMLHttpRequest();
+      },
+      createIEXHR: function () {
+        return new ActiveXObject("Microsoft.XMLHTTP");
+      },
+      createErrorXHR: function () {
+        alert("Your browser does not support XMLHTTP.");
+        return null;
+      },
+      createXHR: function () {
+        //创建XMLHttpRequest对象
+        var xhr = null;
+        if (window.XMLHttpRequest) {
+          this.createXHR = this.createStandardXHR; // Firefox, Opera 8.0+,Safari，IE7+
+        } else {
+          this.createXHR = this.createIEXHR; // IE5、IE6
+        }
+        try {
+          xhr = this.createXHR();
+        } catch (e) {
+          this.createXHR = this.createErrorXHR;
+          xhr = this.createXHR();
+        }
+        return xhr;
+      },
+      ajax: function (opts) {
+        var xhr = this.createXHR(),
+          ajaxMethod = (opts.type || "GET").toUpperCase(),
+          isPost = ajaxMethod == "POST",
+          data = opts.data ? opts.data : {},
+          url = opts.url;
 
-                // 添加必要参数
-                var token = getCookie('token');
-                if (token) {
-                    url = this.buildUrlParam(url, {
-                        token: token
-                    })
-                }
-                var user_code = getCookie('user_code');
-                if (user_code) {
-                    url = this.buildUrlParam(url, {
-                        user_id: user_code
-                    })
-                }
+        // 添加必要参数
+        var token = getCookie("token");
+        if (token) {
+          url = this.buildUrlParam(url, {
+            token: token,
+          });
+        }
+        var user_code = getCookie("user_code");
+        if (user_code) {
+          url = this.buildUrlParam(url, {
+            user_id: user_code,
+          });
+        }
 
-                if (!isPost) {
-                    url = this.buildUrlParam(url, data);
-                }
-                xhr.open(ajaxMethod, url, opts.async == undefined ? true : opts.async);
-                if (isPost) {
-                    xhr.setRequestHeader("Content-type", "application/json;charset=UTF-8");
-                }
-                // if (opts.contentType) {
-                //     xhr.setRequestHeader("Content-type", opts.contentType);
-                // }
-                var stateChange = this.xhrStateChange;
-                xhr.onreadystatechange = function () {
-                    stateChange(xhr, opts.success, opts.error);
-                }
-                xhr.send(isPost ? JSON.stringify(data) : null);
-            },
-            buildUrlParam: function (url, data) {
-                if (url.indexOf("?") < 0) {
-                    url += "?";
-                } else {
-                    url += "&";
-                }
-                if (data) {
-                    var dataStr = this.param(data)
-                    url += dataStr
-                }
-                return url;
-            },
-            param: function (data) {
-                if (!data) {
-                    return null;
-                }
-
-                if (typeof data !== "object") {
-                    return data;
-                }
-                var postData = [];
-                for (var key in data) {
-                    postData.push(key + "=" + data[key]);
-                }
-
-                return postData.join("&");
-            },
-            xhrStateChange: function (xhr, successFn, failFn) {
-                if (xhr.readyState == 4) { // 4 = "loaded"
-                    if (xhr.status == 200) { // 200 = OK
-                        successFn && successFn(xhr.responseText);
-                    } else {
-                        failFn && failFn.call(xhr, xhr.statusText, xhr.status);
-                    }
-                } else {
-                    failFn && failFn.call(xhr, xhr.statusText, xhr.status);
-                }
-            }
+        if (!isPost) {
+          url = this.buildUrlParam(url, data);
+        }
+        xhr.open(ajaxMethod, url, opts.async == undefined ? true : opts.async);
+        if (isPost) {
+          xhr.setRequestHeader(
+            "Content-type",
+            "application/json;charset=UTF-8"
+          );
+        }
+        // if (opts.contentType) {
+        //     xhr.setRequestHeader("Content-type", opts.contentType);
+        // }
+        var stateChange = this.xhrStateChange;
+        xhr.onreadystatechange = function () {
+          stateChange(xhr, opts.success, opts.error);
         };
-        w.ajax = function (opts) {
-            XHR.ajax.call(XHR, opts);
-        };
-        w.getSearch = getSearch;
-        w.setCookie = setCookie;
-        w.getCookie = getCookie;
-        w.getDomain = getDomain;
-        w.setSource = setSource;
-        w.setUrlParam = XHR.buildUrlParam;
-        w.getLp = getLp;
-        function getSearch(type) {
-            // console.log($location.search())
-            var search = function () {
-                return location.href.indexOf('?') === -1 ? '' : location.href.slice(location.href.indexOf('?'))
-            }
-            var url = location.search || search();
-            if (type === 'string') {
-                return url;
-            }
-            /*获取url中"?"符后的字串*/
-            var theRequest = new Object();
-            if (url.indexOf("?") != -1) {
-                var str = url.substr(1);
-                var strs = str.split("&");
-                for (var i = 0; i < strs.length; i++) {
-                    theRequest[strs[i].split("=")[0]] = (strs[i].split("=")[1]);
-                }
-            }
-            return theRequest;
+        xhr.send(isPost ? JSON.stringify(data) : null);
+      },
+      buildUrlParam: function (url, data) {
+        if (url.indexOf("?") < 0) {
+          url += "?";
+        } else {
+          url += "&";
         }
-        function setCookie({ name, value, expires, domain, path, secure }) {
-            path = path || '/';
-            expires = expires || 30;
-            domain = domain || getDomain();
-            var cookieText = "";
-            cookieText += encodeURIComponent(name) + "=" + encodeURIComponent(value);
-
-            // expires
-            var oDate = new Date();
-            oDate.setTime(oDate.getTime() + (expires * 24 * 60 * 60 * 1000));
-            cookieText += "; expires=" + oDate.toGMTString();
-
-            // path
-            cookieText += "; path=" + path;
-            cookieText += "; domain=" + domain;
-            if (secure) {
-                cookieText += "; secure";
-            }
-            document.cookie = cookieText;
+        if (data) {
+          var dataStr = this.param(data);
+          url += dataStr;
         }
-        // 获取cookies
-        function getCookie(name) {
-            var cookieName = encodeURIComponent(name) + "=",
-                cookieStart = document.cookie.indexOf(cookieName),
-                cookieValue = "";
-            if (cookieStart > -1) {
-                var cookieEnd = document.cookie.indexOf(";", cookieStart);
-                if (cookieEnd == -1) {
-                    cookieEnd = document.cookie.length;
-                }
-                cookieValue = decodeURIComponent(document.cookie.substring(cookieStart + cookieName.length, cookieEnd));
-            }
-            return cookieValue;
-        }
-        // 删除cookie
-        function delCookie({ name, domain, path, secure }) {
-            var value = '';
-            var expires = Date(0)
-            setCookie({ name, value, expires, domain, path, secure });
+        return url;
+      },
+      param: function (data) {
+        if (!data) {
+          return null;
         }
 
-        // 截取域名
-        function getDomain() {
-            var domain;
-            if (location.hostname === 'localhost') {
-                domain = 'localhost';
-            } else {
-                domain = '.' + location.hostname.split('.').slice(-2).join('.');
-            }
-            // console.log(url.match(/\.\w+\.com/)[0]);
-            return domain;
+        if (typeof data !== "object") {
+          return data;
+        }
+        var postData = [];
+        for (var key in data) {
+          postData.push(key + "=" + data[key]);
         }
 
-        //为BI推广参数做筛选
-        var dealUserSourceOne = 1;   // 进入页面后只执行一次，，刷新后再执行
-        function checkUserSource(search_arr) {
-            var sourceReg = /^DW_|^D_|^R_/i;
-            var bol = false;
-            search_source = {};
-            // $.each(search_arr, function (index, value) {
-            //     if (sourceReg.test(index)) {
-            //         bol = true;
-            //         search_source[index] = value;
-            //     }
-            // });
-            for (var key in search_arr) {
-                if (sourceReg.test(key)) {
-                    bol = true;
-                    search_source[key] = search_arr[key];
-                }
-            }
-            if (bol && dealUserSourceOne == 1) {
-                setBrowserID(true);
-            }
-            dealUserSourceOne++;
-            search_source = Object.keys(search_source).length ? search_source : undefined;
-            return search_source;
+        return postData.join("&");
+      },
+      xhrStateChange: function (xhr, successFn, failFn) {
+        if (xhr.readyState == 4) {
+          // 4 = "loaded"
+          if (xhr.status == 200) {
+            // 200 = OK
+            successFn && successFn(xhr.responseText);
+          } else {
+            failFn && failFn.call(xhr, xhr.statusText, xhr.status);
+          }
+        } else {
+          failFn && failFn.call(xhr, xhr.statusText, xhr.status);
         }
-        function getLp(seachLp) {
-            return seachLp || (window.location.pathname + window.location.hash).replace(/[\/:]/g, "").toLowerCase() || 'sy';
+      },
+    };
+    w.ajax = function (opts) {
+      XHR.ajax.call(XHR, opts);
+    };
+    w.getSearch = getSearch;
+    w.setCookie = setCookie;
+    w.getCookie = getCookie;
+    w.getDomain = getDomain;
+    w.setSource = setSource;
+    w.setUrlParam = XHR.buildUrlParam;
+    w.getLp = getLp;
+    function getSearch(type) {
+      // console.log($location.search())
+      var search = function () {
+        return location.href.indexOf("?") === -1
+          ? ""
+          : location.href.slice(location.href.indexOf("?"));
+      };
+      var url = location.search || search();
+      if (type === "string") {
+        return url;
+      }
+      /*获取url中"?"符后的字串*/
+      var theRequest = new Object();
+      if (url.indexOf("?") != -1) {
+        var str = url.substr(1);
+        var strs = str.split("&");
+        for (var i = 0; i < strs.length; i++) {
+          theRequest[strs[i].split("=")[0]] = strs[i].split("=")[1];
         }
-        setSource('init')
-        /**
-        * @params
-        * src : init(初始化)，IB（代理商） 
-        */
-        function setSource(src) {
-            // var all_sources = getCookie('all_sources') || {};
-            // var source = all_sources;
-            var source = {};
-            var isSet = false;  // 是否重置cookie
-            var search_arr = getSearch();
-            if (src === 'init') {
-                if (search_arr.irclickid) {
-                    source = {
-                        irclickid: search_arr.irclickid,
-                    }
-                    isSet = true;
-                } else {
-                    var search_source = checkUserSource(search_arr);
-                    if (search_source) {
-                        // console.log(search_source)
-                        source = {
-                            register_rule: JSON.stringify(search_source),
-                        }
-                        ajax({
-                            url: "/api/v3/user/source", // 记录BI点击记录
-                            type: "POST",
-                            data: { source: JSON.stringify(search_source) }
-                        });
-                        isSet = true;
-                    }
-                }
-            } else {
-                /* 运营关于pid等信息存储要求：
+      }
+      return theRequest;
+    }
+    function setCookie({ name, value, expires, domain, path, secure }) {
+      path = path || "/";
+      expires = expires || 30;
+      domain = domain || getDomain();
+      var cookieText = "";
+      cookieText += encodeURIComponent(name) + "=" + encodeURIComponent(value);
+
+      // expires
+      var oDate = new Date();
+      oDate.setTime(oDate.getTime() + expires * 24 * 60 * 60 * 1000);
+      cookieText += "; expires=" + oDate.toGMTString();
+
+      // path
+      cookieText += "; path=" + path;
+      cookieText += "; domain=" + domain;
+      if (secure) {
+        cookieText += "; secure";
+      }
+      document.cookie = cookieText;
+    }
+    // 获取cookies
+    function getCookie(name) {
+      var cookieName = encodeURIComponent(name) + "=",
+        cookieStart = document.cookie.indexOf(cookieName),
+        cookieValue = "";
+      if (cookieStart > -1) {
+        var cookieEnd = document.cookie.indexOf(";", cookieStart);
+        if (cookieEnd == -1) {
+          cookieEnd = document.cookie.length;
+        }
+        cookieValue = decodeURIComponent(
+          document.cookie.substring(cookieStart + cookieName.length, cookieEnd)
+        );
+      }
+      return cookieValue;
+    }
+    // 删除cookie
+    function delCookie({ name, domain, path, secure }) {
+      var value = "";
+      var expires = Date(0);
+      setCookie({ name, value, expires, domain, path, secure });
+    }
+
+    // 截取域名
+    function getDomain() {
+      var domain;
+      if (location.hostname === "localhost") {
+        domain = "localhost";
+      } else {
+        domain = "." + location.hostname.split(".").slice(-2).join(".");
+      }
+      // console.log(url.match(/\.\w+\.com/)[0]);
+      return domain;
+    }
+
+    //为BI推广参数做筛选
+    var dealUserSourceOne = 1; // 进入页面后只执行一次，，刷新后再执行
+    function checkUserSource(search_arr) {
+      var sourceReg = /^DW_|^D_|^R_/i;
+      var bol = false;
+      search_source = {};
+      // $.each(search_arr, function (index, value) {
+      //     if (sourceReg.test(index)) {
+      //         bol = true;
+      //         search_source[index] = value;
+      //     }
+      // });
+      for (var key in search_arr) {
+        if (sourceReg.test(key)) {
+          bol = true;
+          search_source[key] = search_arr[key];
+        }
+      }
+      if (bol && dealUserSourceOne == 1) {
+        setBrowserID(true);
+      }
+      dealUserSourceOne++;
+      search_source = Object.keys(search_source).length
+        ? search_source
+        : undefined;
+      return search_source;
+    }
+    function getLp(seachLp) {
+      return (
+        seachLp ||
+        (window.location.pathname + window.location.hash)
+          .replace(/[\/:]/g, "")
+          .toLowerCase() ||
+        "sy"
+      );
+    }
+    setSource("init");
+    /**
+     * @params
+     * src : init(初始化)，IB（代理商）
+     */
+    function setSource(src) {
+      // var all_sources = getCookie('all_sources') || {};
+      // var source = all_sources;
+      var source = {};
+      var isSet = false; // 是否重置cookie
+      var search_arr = getSearch();
+      if (src === "init") {
+        if (search_arr.irclickid) {
+          source = {
+            irclickid: search_arr.irclickid,
+          };
+          isSet = true;
+        } else {
+          var search_source = checkUserSource(search_arr);
+          if (search_source) {
+            // console.log(search_source)
+            source = {
+              register_rule: JSON.stringify(search_source),
+            };
+            ajax({
+              url: "/api/v3/user/source", // 记录BI点击记录
+              type: "POST",
+              data: { source: JSON.stringify(search_source) },
+            });
+            isSet = true;
+          }
+        }
+      } else {
+        /* 运营关于pid等信息存储要求：
                     1.若链接中带有pid，所有相关字段信息清空重写
                     2.若链接中未带有pid，则沿用原来信息
                     3.每次重写pid等信息，存储时间为1天
                     // 4.lp 每次都会更新到最新的页面来源（首页 lp=sy）
                     invite_status 0：代理商推广 1：客户推广
                 */
-                if (search_arr.pid) {
-                    source = {
-                        pid: search_arr.pid,
-                        invite_status: 3
-                    }
-                    // 清空重写
-                    // $.cookie('ib_pid', '', { path: '/', domain: getDomain(), expires: -1 });
-                    // $.cookie('unit', '', { path: '/', domain: getDomain(), expires: -1 });
-                    // $.cookie('key', '', { path: '/', domain: getDomain(), expires: -1 });
-                    // $.cookie('pid', search_arr.pid, { path: '/', domain: getDomain(), expires: 7 });
-                    // $.cookie('invite_status', 3, { path: '/', domain: getDomain(), expires: 7 });
+        if (search_arr.pid) {
+          source = {
+            pid: search_arr.pid,
+            invite_status: 3,
+          };
+          // 清空重写
+          // $.cookie('ib_pid', '', { path: '/', domain: getDomain(), expires: -1 });
+          // $.cookie('unit', '', { path: '/', domain: getDomain(), expires: -1 });
+          // $.cookie('key', '', { path: '/', domain: getDomain(), expires: -1 });
+          // $.cookie('pid', search_arr.pid, { path: '/', domain: getDomain(), expires: 7 });
+          // $.cookie('invite_status', 3, { path: '/', domain: getDomain(), expires: 7 });
 
+          if (search_arr.unit) {
+            source.unit = search_arr.unit;
+            // $.cookie('unit', unit, { path: '/', domain: getDomain(), expires: 7 });
+          }
+          if (search_arr.key) {
+            source.key = search_arr.key;
 
-                    if (search_arr.unit) {
-                        source.unit = search_arr.unit;
-                        // $.cookie('unit', unit, { path: '/', domain: getDomain(), expires: 7 });
-                    }
-                    if (search_arr.key) {
-                        source.key = search_arr.key;
-
-                        // $.cookie('key', key, { path: '/', domain: getDomain(), expires: 7 });
-                    }
-                    isSet = true;
-                }
-                if (search_arr.ib_pid) {
-                    // 客户推广(有proxy参数为代理商推广)
-                    source = {
-                        ib_pid: search_arr.ib_pid,
-
-                    }
-                    // 代理商推广
-                    if (src === 'IB' || search_arr.origin === 'proxy') {  // 代理推广和来自代理推广的页面
-                        source.invite_status = 0;
-                    } else {// 应该是成立的，web端不会来自proxy
-                        source.invite_status = 1;
-                    }
-                    isSet = true;
-                }
-                // 历史原因，usercode写法pc与h5不统一
-                var usercode = search_arr.usercode || search_arr.user_code
-                if (usercode) {
-                    /*设置邀请源INVITE_CODE*/
-                    source = {
-                        invite_code: usercode,
-                        invite_status: 2
-                    }
-                    isSet = true;
-                    // $.cookie('invite_code', search_arr.user_code, { expires: 1, path: '/', domain: getDomain() });
-                    // $.cookie('invite_status', 2, { expires: 1, path: '/', domain: getDomain() });
-                }
-            }
-            if (!isSet) return;
-
-            /*获取lp*/
-            // if (!search_arr.lp) {
-            //     search_arr.lp = w.location.pathname.replace(/[\/:]/g, "").toLowerCase() || 'sy';
-            // }
-            // source.lp = search_arr.lp;
-
-            setCookie({
-                name: 'all_sources',
-                value: JSON.stringify(source),
-                path: '/',
-                domain: getDomain(),
-                expires: 1
-            })
+            // $.cookie('key', key, { path: '/', domain: getDomain(), expires: 7 });
+          }
+          isSet = true;
         }
-    })(window);
-    // 神策统计已下线，这里保持事件，兼容未清理的统计代码
-    (function (w) {
-        var ifs = ['track', 'quick', 'register', 'registerPage', 'registerOnce', 'clearAllRegister', 'trackSignup', 'trackAbtest', 'setProfile', 'setOnceProfile', 'appendProfile', 'incrementProfile', 'deleteProfile', 'unsetProfile', 'identify', 'login', 'logout', 'trackLink', 'clearAllRegister', 'getAppStatus'];
-        w.sa = {};
-        for (var i = 0; i < ifs.length; i++) {
-            // console.info(ifs[i]);
-            w["sa"][ifs[i]] = publicFunc;
+        if (search_arr.ib_pid) {
+          // 客户推广(有proxy参数为代理商推广)
+          source = {
+            ib_pid: search_arr.ib_pid,
+          };
+          // 代理商推广
+          if (src === "IB" || search_arr.origin === "proxy") {
+            // 代理推广和来自代理推广的页面
+            source.invite_status = 0;
+          } else {
+            // 应该是成立的，web端不会来自proxy
+            source.invite_status = 1;
+          }
+          isSet = true;
         }
-        function publicFunc(param) {
-            // 只有tigerwit计算到神策统计中
-            // console.info("not tiger", param);
+        // 历史原因，usercode写法pc与h5不统一
+        var usercode = search_arr.usercode || search_arr.user_code;
+        if (usercode) {
+          /*设置邀请源INVITE_CODE*/
+          source = {
+            invite_code: usercode,
+            invite_status: 2,
+          };
+          isSet = true;
+          // $.cookie('invite_code', search_arr.user_code, { expires: 1, path: '/', domain: getDomain() });
+          // $.cookie('invite_status', 2, { expires: 1, path: '/', domain: getDomain() });
         }
-    })(window);
+      }
+      if (!isSet) return;
 
+      /*获取lp*/
+      // if (!search_arr.lp) {
+      //     search_arr.lp = w.location.pathname.replace(/[\/:]/g, "").toLowerCase() || 'sy';
+      // }
+      // source.lp = search_arr.lp;
 
-    /**
-     * 埋点相关
-    */
-    // 获取随机数
-    function getSoleID(length) {
-        return Number(Math.random().toString().substr(3, length) + Date.now()).toString(36);
+      setCookie({
+        name: "all_sources",
+        value: JSON.stringify(source),
+        path: "/",
+        domain: getDomain(),
+        expires: 1,
+      });
     }
-    /**
-     * 设置浏览器id
-     * bol  重新设置
-    */
-    setBrowserID(); // 初始化执行一次
-    function setBrowserID(bol) {
-        if (bol || !getCookie('APPSFLYER_ID')) {
-            setCookie({ name: 'APPSFLYER_ID', value: getSoleID(), expires: 365 });
-        }
+  })(window);
+  // 神策统计已下线，这里保持事件，兼容未清理的统计代码
+  (function (w) {
+    var ifs = [
+      "track",
+      "quick",
+      "register",
+      "registerPage",
+      "registerOnce",
+      "clearAllRegister",
+      "trackSignup",
+      "trackAbtest",
+      "setProfile",
+      "setOnceProfile",
+      "appendProfile",
+      "incrementProfile",
+      "deleteProfile",
+      "unsetProfile",
+      "identify",
+      "login",
+      "logout",
+      "trackLink",
+      "clearAllRegister",
+      "getAppStatus",
+    ];
+    w.sa = {};
+    for (var i = 0; i < ifs.length; i++) {
+      // console.info(ifs[i]);
+      w["sa"][ifs[i]] = publicFunc;
     }
-    /**
-    * 发送事件
-    * eventName  事件
-    * obj  其他参数
+    function publicFunc(param) {
+      // 只有tigerwit计算到神策统计中
+      // console.info("not tiger", param);
+    }
+  })(window);
+
+  /**
+   * 埋点相关
    */
-    function sendEvent(eventName, obj) {
-        // 埋点事件，不需要处理
-        ajax({
-            url: "/api/v3/appsflyer/event/add",
-            type: "POST",
-            data: Object.assign({ appsflyer_id: getCookie('APPSFLYER_ID'), event_name: eventName }, obj)
-        });
+  // 获取随机数
+  function getSoleID(length) {
+    return Number(
+      Math.random().toString().substr(3, length) + Date.now()
+    ).toString(36);
+  }
+  /**
+   * 设置浏览器id
+   * bol  重新设置
+   */
+  setBrowserID(); // 初始化执行一次
+  function setBrowserID(bol) {
+    if (bol || !getCookie("APPSFLYER_ID")) {
+      setCookie({ name: "APPSFLYER_ID", value: getSoleID(), expires: 365 });
     }
+  }
+  /**
+   * 发送事件
+   * eventName  事件
+   * obj  其他参数
+   */
+  function sendEvent(eventName, obj) {
+    // 埋点事件，不需要处理
+    ajax({
+      url: "/api/v3/appsflyer/event/add",
+      type: "POST",
+      data: Object.assign(
+        { appsflyer_id: getCookie("APPSFLYER_ID"), event_name: eventName },
+        obj
+      ),
+    });
+  }
 
-    // 避免掉不必要的try catch
-    function setGtagUserId(userId) {
-        setBrowserID(true);
-        console.log('国内不需要google Analytics统计', userId)
-    }
+  // 避免掉不必要的try catch
+  function setGtagUserId(userId) {
+    setBrowserID(true);
+    console.log("国内不需要google Analytics统计", userId);
+  }
 
-    function toGtagEvent(action, obj) {
-        sendEvent(action, obj)
-        console.log('国内不需要google Analytics统计')
-        console.log('国内不需要facebook统计')
-    };
+  function toGtagEvent(action, obj) {
+    sendEvent(action, obj);
+    console.log("国内不需要google Analytics统计");
+    console.log("国内不需要facebook统计");
+  }
 </script>
 <%if (lang.areaId != 1) {%>
 <!-- Facebook Pixel Code -->
-<!-- <script>
-    !function (f, b, e, v, n, t, s) {
-        if (f.fbq) return; n = f.fbq = function () {
-            n.callMethod ?
-                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-        };
-        if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
-        n.queue = []; t = b.createElement(e); t.async = !0;
-        t.src = v; s = b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t, s)
-    }(window, document, 'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '246588836047542');
-    fbq('track', 'PageView');
+<script>
+  !(function (f, b, e, v, n, t, s) {
+    if (f.fbq) return;
+    n = f.fbq = function () {
+      n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+    };
+    if (!f._fbq) f._fbq = n;
+    n.push = n;
+    n.loaded = !0;
+    n.version = "2.0";
+    n.queue = [];
+    t = b.createElement(e);
+    t.async = !0;
+    t.src = v;
+    s = b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t, s);
+  })(
+    window,
+    document,
+    "script",
+    "https://connect.facebook.net/en_US/fbevents.js"
+  );
+  fbq("init", "2761141200791831");
+  fbq("track", "PageView");
 </script>
-<noscript><img height="1" width="1" style="display:none"
-        src="https://www.facebook.com/tr?id=246588836047542&ev=PageView&noscript=1" /></noscript> -->
+<noscript
+  ><img
+    height="1"
+    width="1"
+    style="display: none"
+    src="https://www.facebook.com/tr?id=2761141200791831&ev=PageView&noscript=1"
+/></noscript>
 <!-- End Facebook Pixel Code -->
 <!-- 2019.01.03 -->
 <!-- Facebook Pixel Code-->
@@ -426,45 +484,50 @@
 <!--here is the tracking code for the global website, we need to make sure this is implemented across every page.-->
 <!-- Global site tag (gtag.js) - Google Analytics - added at 2019.06.28 -->
 <!-- 接口文档 https://developers.google.com/analytics/devguides/collection/gtagjs/events -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-142852435-1"></script>
+<script
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=UA-142852435-1"
+></script>
 <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    // 设置用户名
-    function setGtagUserId(userId, init) {
-        if (!init) {
-            setBrowserID(true);
-        }
-        gtag('config', 'UA-142852435-1', {
-            'user_id': userId
-        });
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+  // 设置用户名
+  function setGtagUserId(userId, init) {
+    if (!init) {
+      setBrowserID(true);
     }
-    var user_id = getCookie('user_code');
-    if (user_id) {
-        setGtagUserId(user_id, true)
-    } else {
-        // 谷歌埋点
-        gtag('config', 'UA-142852435-1');
+    gtag("config", "UA-142852435-1", {
+      user_id: userId,
+    });
+  }
+  var user_id = getCookie("user_code");
+  if (user_id) {
+    setGtagUserId(user_id, true);
+  } else {
+    // 谷歌埋点
+    gtag("config", "UA-142852435-1");
+  }
+  // google Ads再营销代码
+  gtag("config", "AW-750596788");
+  // 传递事件
+  function toGtagEvent(action, obj) {
+    sendEvent(action, obj);
+    if (obj && obj.belong == "tigerwit") {
+      return;
     }
-    // google Ads再营销代码
-    gtag('config', 'AW-750596788');
-    // 传递事件
-    function toGtagEvent(action, obj) {
-        sendEvent(action, obj)
-        if (obj && obj.belong == 'tigerwit') {
-            return
-        }
-        gtag('event', action, {
-            'event_category': 'action',
-            'event_label': 'catalogory'
-        });
-        // goog_report_conversion(action)
+    gtag("event", action, {
+      event_category: "action",
+      event_label: "catalogory",
+    });
+    // goog_report_conversion(action)
 
-        // Add this to a button's onclick handler
-        // FB.AppEvents.logEvent(action);
-        // fbq('trackCustom', action)
-    };
+    // Add this to a button's onclick handler
+    // FB.AppEvents.logEvent(action);
+    // fbq('trackCustom', action)
+  }
 </script>
 <!-- facebook事件埋点 https://developers.facebook.com/docs/app-events/getting-started-app-events-web -->
 <!-- <script>
