@@ -55,4 +55,21 @@
     @include m(tip) {
         position: relative;
     }
+    @include e(progress) {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1002;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgba(0,0,0,0.3);
+        & > span {
+          color: #FFFFFF;
+          margin-top: 6px;
+        }
+    }
 }
