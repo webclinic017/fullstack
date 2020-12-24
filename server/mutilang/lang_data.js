@@ -3466,7 +3466,7 @@ module.exports = {
         "en": "Trading Conditions Notice",
         "vi": "Điều kiện giao dịch",
         "zh-Hant": "交易條件聲明",
-        "id": "Peringatan Ketentuan Trading",
+        "id": "Pemberitahuan Ketentuan Trading",
         "es": "Notificaciones Condiciones Trading",
         "pt-BR": "Aviso de Condições Comerciais",
         "ar": "بيان شروط التداول"
@@ -3502,10 +3502,10 @@ module.exports = {
         "ar": "اقرأ وافهم تذكير TigerWit بمخاطر التداول وبنود الإعفاءات"
     },
     "amtIndex20": {
-        "zh": "客户分类通知",
+        "zh": "客户分类",
         "en": "Client Categorization Notice",
         "vi": "Thông báo Phân loại Khách hàng",
-        "zh-Hant": "客戶分類通知",
+        "zh-Hant": "客戶分類",
         "id": "Pemberitahuan Klasifikasi Klien",
         "es": "Notificación de Categorización del Cliente",
         "pt-BR": "Aviso de Categorização de Cliente",
@@ -3526,7 +3526,7 @@ module.exports = {
         "en": "Protecting Client Funds",
         "vi": "Bảo vệ quỹ khách hàng",
         "zh-Hant": "保護客戶資金",
-        "id": "Perlindungan Dana Klien",
+        "id": "Melindungi Dana Klien",
         "es": "Protegiendo los Fondos de los Clientes",
         "pt-BR": "Protegendo os Fundos do Cliente",
         "ar": "حماية أموال العميل"
@@ -3936,7 +3936,7 @@ module.exports = {
         "en": "Introduction",
         "vi": "Giới thiệu",
         "zh-Hant": "序言",
-        "id": "Introduction",
+        "id": "Pengantar",
         "es": "Introducción",
         "pt-BR": "Introdução",
         "ar": "مقدمة"
@@ -3946,7 +3946,7 @@ module.exports = {
         "en": "1.TigerWit Limited (hereinafter referred to as ‘TigerWit’, the ‘Firm’ or the 'Company') is incorporated (Certificate of Incorporation No. 198255B) in The Commonwealth of The Bahamas. Our registered office is Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. TigerWit is authorised and regulated by the Securities Commission of The Bahamas (licence No. SIA-F185).",
         "vi": "1.1 TigerWit Limited (sau đây gọi tắt là TigerWit, Công ty hoặc 'Công ty') được thành lập (Giấy chứng nhận thành lập số 198255B) trong Khối thịnh vượng chung Bahamas. Văn phòng đăng ký của chúng tôi là Sea Sky Lane, Sandyport, P. O. Box SP64368. Nassau, Bahamas. TigerWit được ủy quyền và quản lý bởi Ủy ban Chứng khoán Bahamas (giấy phép số SIA-F185).",
         "zh-Hant": "1.TigerWit Limited（以下統稱為“TigerWit”、“公司”或”本公司”）在巴哈馬國註冊成立（註冊證書編號 198255B）。我們 的 註 冊 辦 事 處 位 於 Sea Sky Lane, Sandyport, P. O. Box SP 64368.Nassau, TheBahamas。TigerWit 受巴哈馬證券監察委員會授權和監管（註冊編號 SIA-F185）。",
-        "id": "1.TigerWit Limited (hereinafter referred to as ‘TigerWit’, the ‘Firm’ or the 'Company') is incorporated (Certificate of Incorporation No. 198255B) in The Commonwealth of The Bahamas. Our registered office is Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. TigerWit is authorised and regulated by the Securities Commission of The Bahamas (licence No. SIA-F185).",
+        "id": "1. TigerWit Limited (selanjutnya disebut sebagai 'TigerWit', 'Firm' atau 'Company') didirikan (Certificate of Incorporation No. 198255B) di The Commonwealth of The Bahamas. Kantor terdaftar kami adalah Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. TigerWit disahkan dan diatur oleh Securities Commission of The Bahamas (lisensi No. SIA-F185).",
         "es": "TigerWit Limited (a partir de ahora referido como ‘TigerWit’ o la ‘Firma’ o la ‘Empresa’) está incorporada (Certificado de Incorporación No. 198255B) en La Commonwealth of The Bahamas. Nuestra oficina registrada es Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. TigerWit está autorizada y regulada por la Securities Commission of The Bahamas (licencia No. SIA-F185).",
         "pt-BR": "1.TigerWit Limited (doravante referida como \"TigerWit\", a \"Firma\" ou a \"Empresa\") é incorporada (Certificado de Incorporação No. 198255B) na Comunidade das Bahamas. Nossa sede é Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, Bahamas. A TigerWit é autorizada e regulamentada pela Comissão de Valores Mobiliários das Bahamas (licença No. SIA-F185).",
         "ar": "1- إن شركة TigerWit Limited (المشار إليها فيما بعد بلفظ ‘TigerWit’ أو ‘المؤسسة’ أو 'الشركة') هي شركة مؤسسة في كومنولث جزر البهاما (شهادة التأسيس رقم 198255B). ويقع عنوان مكتبنا المسجل في Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. شركة TigerWit هي شركة مرخصة وخاضعة للرقابة من جانب هيئة الأوراق المالية بجزر البهاما (ترخيص رقم SIA-F185)."
@@ -3956,28 +3956,28 @@ module.exports = {
         "en": "Acknowledgement",
         "vi": "Thừa nhận",
         "zh-Hant": "確認書",
-        "id": "Acknowledgement",
+        "id": "Pengakuan",
         "es": "Reconocimientos",
         "pt-BR": "Reconhecimento",
         "ar": "إقرار"
     },
     "amtClient4": {
-        "zh": "1.这是我们计划依赖的标准客户协议。客户承认，他/她已经阅读、理解并接受客户协议，包 括 附 件 A （ “ 风 险 披 露 声 明 ” ） 和 附 件 B（“TigerWit Vault”）。",
-        "en": "1.This is our standard Client Agreement which we intend to rely on. The client acknowledges that he/she has read, understood and accepted the Client Agreement including the Annex A (‘Risk Disclosure Notice’) and Annex B (‘TigerWit Vault’).",
+        "zh": "1.这是我们计划依赖的标准客户协议。客户承认，他/她已经阅读、理解并接受客户协议，包 括 附 件 A （ “ 风 险 披 露 声 明 ” ）。",
+        "en": "1.This is our standard Client Agreement which we intend to rely on. The client acknowledges that he/she has read, understood and accepted the Client Agreement including the Annex A (‘Risk Disclosure Notice’).",
         "vi": "1.Đây là Hợp đồng (Thỏa thuận) khách hàng chuẩn mà chúng tôi áp dụng làm tiêu chuẩn căn cứ. Khách hàng thừa nhận rằng họ đã đọc, hiểu và chấp nhận Hợp đồng Khách Hàng bao gồm Phụ lục A (Thông báo Tiết lộ Rủi ro).",
-        "zh-Hant": "1.這是我們計劃依賴的標準客戶協議。客戶承認，他/她已經閱讀、理解並接受客戶協議，包 括 附 件 A （ “ 風 險 披 露 聲 明 ” ） 和 附 件 B（“TigerWit Vault”）。",
-        "id": "1.This is our standard Client Agreement which we intend to rely on. The client acknowledges that he/she has read, understood and accepted the Client Agreement including the Annex A (‘Risk Disclosure Notice’) and Annex B (‘TigerWit Vault’).",
-        "es": "1.Este es el Acuerdo de Cliente estándar en el que se sustenta la relación. El cliente, él/ella, afirma que ha leído, comprendido y aceptado el Acuerdo de Cliente incluyendo el Anexo A (‘Notificación Divulgación del Riesgo’) y el Anexo B (‘TigerWit Vault’).",
+        "zh-Hant": "1.這是我們計劃依賴的標準客戶協議。客戶承認，他/她已經閱讀、理解並接受客戶協議，包 括 附 件 A （ “ 風 險 披 露 聲 明 ” ）。",
+        "id": "1. Ini adalah Perjanjian Klien standar kami yang ingin kami andalkan. Klien mengakui bahwa dia telah membaca, memahami dan menerima Perjanjian Klien termasuk Lampiran A ('Pemberitahuan Pengungkapan Risiko'). dan Annex B ('TigerWit Vault').",
+        "es": "1.Este es el Acuerdo de Cliente estándar en el que se sustenta la relación. El cliente, él/ella, afirma que ha leído, comprendido y aceptado el Acuerdo de Cliente incluyendo el Anexo A (‘Notificación Divulgación del Riesgo’).",
         "pt-BR": "1. Este é o nosso Contrato de Cliente padrão no qual pretendemos confiar. O cliente reconhece que leu, compreendeu e aceitou o Contrato do Cliente, incluindo o Anexo A (\"Aviso de Divulgação de Risco\") e o Anexo B (\"TigerWit Vault\").",
         "ar": "1- هذه هي اتفاقية العميل الموحدة للشركة والتي نعتزم الاعتماد عليها.  ويقر العميل بأنه قد قرأ ويفهم ويوافق على اتفاقية العميل بما في ذلك الملحق أ (\"بيان الإفصاح عن المخاطر\") والملحق ب (\"خزانة TigerWit \")."
     },
     "amtClient5": {
-        "zh": "签订本协议，即代表客户接受 TigerWit 的条款和条件、客户分类通知、订单执行政策条款以及利益冲突政策，和本公司网站发布的任何（法律或其他）信息（可由 TigerWit 不时修订）。",
-        "en": "By entering into this Agreement, the client accepts TigerWit's Terms and Conditions, the Client Categorisation Notice, the terms of the Order Execution Policy and Conflicts of Interest Policy, as well as any information (legal or otherwise) posted on the Firm's website, as may be amended by TigerWit from time to time.",
-        "vi": "Đây là Hợp đồng (Thỏa thuận) khách hàng chuẩn mà chúng tôi áp dụng làm tiêu chuẩn căn cứ. Khách hàng thừa nhận rằng họ đã đọc, hiểu và chấp nhận Hợp đồng Khách Hàng bao gồm Phụ lục A (Thông báo Tiết lộ Rủi ro).",
-        "zh-Hant": "簽訂本協議，即代表客戶接受 TigerWit 的條款和條件、客戶分類通知、訂單執行政策條款以及利益沖突政策，和本公司網站發布的任何（法律或其他）信息（可由 TigerWit 不時修訂）。",
-        "id": "By entering into this Agreement, the client accepts TigerWit's Terms and Conditions, the Client Categorisation Notice, the terms of the Order Execution Policy and Conflicts of Interest Policy, as well as any information (legal or otherwise) posted on the Firm's website, as may be amended by TigerWit from time to time.",
-        "es": "Al aceptar este Acuerdo, el cliente acepta los Términos y Condiciones de TigerWit, la Notificación Categorización del Cliente, los términos de la Política de Ejecución de Órdenes y la Política de Conflictos de Interés, así como cualquier información (legal o no) expuesta en la web de la Firma, ya que ésta pudiera ser modificada por TigerWit en el tiempo.",
+        "zh": "此外，签订本协议，即代表客户接受 TigerWit 的条款和条件、客户分类通知、订单执行政策条款以及利益冲突政策，和本公司网站发布的任何（法律或其他）信息（可由 TigerWit 不时修订）。",
+        "en": "Additionally, by entering into this Agreement, the client accepts TigerWit's Terms and Conditions, the Client Categorisation Notice, the terms of the Order Execution Policy and Conflicts of Interest Policy, as well as any information (legal or otherwise) posted on the Firm's website, as may be amended by TigerWit from time to time.",
+        "vi": "Đồng thời, bằng cách đồng ý vào Hợp đồng này, khách hàng đống ý với các Điều Khiển và Điều khoản của TigerWit, Thông báo Phân Loại Khách Hàng, các điều khoản của Chính sách Khớp Lệnh và Chính sách Mâu Thuẫn và Lợi Ích, cũng như bất kì thông tin nào ( hợp pháp hoặc không) được đăng tải trên website, cũng như có thể được sửa chửa bởi TigerWit tùy thời điểm.",
+        "zh-Hant": "此外，簽訂本協議，即代表客戶接受 TigerWit 的條款和條件、客戶分類通知、訂單執行政策條款以及利益沖突政策，和本公司網站發布的任何（法律或其他）信息（可由 TigerWit 不時修訂）。",
+        "id": "Selain itu, dengan menandatangani Perjanjian ini, klien menerima Syarat dan Ketentuan TigerWit, Pemberitahuan Kategorisasi Klien, ketentuan Kebijakan Eksekusi Pesanan dan Kebijakan Konflik Kepentingan, serta informasi apa pun (legal atau sebaliknya) yang diposting di situs web Perusahaan, sebagaimana mungkin diubah oleh TigerWit dari waktu ke waktu.",
+        "es": "Adicionalmente al entrar en este acuerdo, Al aceptar este Acuerdo, el cliente acepta los Términos y Condiciones de TigerWit, la Notificación Categorización del Cliente, los términos de la Política de Ejecución de Órdenes y la Política de Conflictos de Interés, así como cualquier información (legal o no) expuesta en la web de la Firma, ya que ésta pudiera ser modificada por TigerWit en el tiempo.",
         "pt-BR": "Ao concordar com este Contrato, o cliente aceita os Termos e Condições da TigerWit, o Aviso de Categorização do Cliente, os termos da Política de Execução de Ordens e Política de Conflitos de Interesse, bem como quaisquer informações (legais ou outras) publicadas no site da Empresa. ser alterado pela TigerWit de tempos em tempos.",
         "ar": "بموجب إبرام هذه الاتفاقية، يقبل العميل شروط وأحكام TigerWit، وبيان تصنيف العميل، وشروط سياسة تنفيذ الأوامر وسياسة تضارب المصالح، بالإضافة إلى أي معلومات (قانونية أو غيرها) منشورة على الموقع الإلكتروني للشركة، والتي يجوز أن تقوم TigerWit بتعديلها من وقت لآخر."
     },
@@ -3986,7 +3986,7 @@ module.exports = {
         "en": "2.By accepting the Client Agreement the client enters into a binding legal agreement with the Firm.",
         "vi": "2.Bằng cách chấp nhận Hợp đồng khách hàng, khách hàng ký một thỏa thuận pháp lý ràng buộc với Công ty.",
         "zh-Hant": "2.通過接受客戶協議，客戶即與本公司訂立具有約束力的法律協議。",
-        "id": "2.By accepting the Client Agreement the client enters into a binding legal agreement with the Firm.",
+        "id": "2. Dengan menerima Perjanjian Klien, klien membuat perjanjian hukum yang mengikat dengan Perusahaan.",
         "es": "2.Al aceptar el Acuerdo de Cliente, el cliente entra en una acuerdo legal con la Firma.",
         "pt-BR": "2.Ao aceitar o Contrato do Cliente, o cliente celebra um contrato legal vinculativo com a Empresa.",
         "ar": "2- بموجب قبول اتفاقية العميل، يبرم العميل اتفاقية قانونية ملزمة مع الشركة."
@@ -3996,7 +3996,7 @@ module.exports = {
         "en": "3.The client acknowledges that the Firm’s official language is the English language.",
         "vi": "3.Bằng cách chấp nhận Hợp đồng khách hàng, khách hàng ký một thỏa thuận pháp lý ràng buộc với Công ty.",
         "zh-Hant": "3.客戶承認本公司的官方語言是英語。",
-        "id": "3.The client acknowledges that the Firm’s official language is the English language.",
+        "id": "3. Klien mengakui bahwa bahasa resmi Perusahaan adalah bahasa Inggris.",
         "es": "3.El cliente entiende que el lenguaje oficial de la Firma es el idioma Inglés.",
         "pt-BR": "3.O cliente reconhece que o idioma oficial da Firma é inglês.",
         "ar": "3- يقر العميل أن اللغة الرسمية للشركة هي اللغة الإنجليزية."
@@ -4006,7 +4006,7 @@ module.exports = {
         "en": "Scope of Client Agreement",
         "vi": "Phạm vi Hợp đồng khách hàng",
         "zh-Hant": "客戶協議範圍",
-        "id": "Scope of Client Agreement",
+        "id": "Cakupan Perjanjian Klie",
         "es": "Alcance Acuerdo Cliente",
         "pt-BR": "Âmbito do Contrato do Cliente",
         "ar": "نطاق اتفاقية العميل"
@@ -4016,7 +4016,7 @@ module.exports = {
         "en": "1.The Client Agreement forms the basis on which TigerWit provides investment and ancillary services to the client.",
         "vi": "1.Hợp đồng khách hàng là cơ sở để TigerWit cung cấp các dịch vụ đầu tư và hỗ trợ cho khách hàng.",
         "zh-Hant": "1.客戶協議構成 TigerWit 向客戶提供投資和輔助服務的基礎。",
-        "id": "1.The Client Agreement forms the basis on which TigerWit provides investment and ancillary services to the client.",
+        "id": "1. Perjanjian Klien membentuk dasar dimana TigerWit menyediakan investasi dan layanan tambahan kepada klien.",
         "es": "1.El Acuerdo de Cliente conforma la base sobre la que TigerWit proporciona servicios de inversión y accesorios al cliente.",
         "pt-BR": "1. O Acordo de Cliente constitui a base sobre a qual a TigerWit fornece serviços de investimento e auxiliares ao cliente.",
         "ar": "1- تشكل اتفاقية العميل الأساس الذي يعتمد عليه تقديم TigerWit للخدمات الاستثمارية والخدمات التكميلية إلى العميل."
@@ -4026,7 +4026,7 @@ module.exports = {
         "en": "2.The Client Agreement is non-negotiable and overrides any other agreements,arrangements, express or implied statements made by TigerWit unless the Firm, in its sole discretion, determines otherwise. If the Client Agreement were to be materially amended, reasonable notice shall be given to the client.",
         "vi": "2. Hợp đồng khách hàng không thể thương lượng và ghi đè bất kỳ thỏa thuận, sự sắp xếp, tuyên bố rõ ràng hoặc ẩn dụ nào khác được thực hiện bởi TigerWit trừ khi Công ty trong khả năng thẩm quyền của mình quyết định các điều khoản khác. Nếu các tài liệu Hợp đồng khách hàng được sửa đổi, thông báo hợp lý sẽ được gửi đến khách hàng.",
         "zh-Hant": "2.除非本公司自行裁量做出其他決定，否則客戶協議是不可協商的，並且其效力高於 TigerWit 任何其他協議、約定、明示或暗示的聲明。如果客戶協議需要作出重大修訂，應當向客戶發出合理的通知。",
-        "id": "2.The Client Agreement is non-negotiable and overrides any other agreements,arrangements, express or implied statements made by TigerWit unless the Firm, in its sole discretion, determines otherwise. If the Client Agreement were to be materially amended, reasonable notice shall be given to the client.",
+        "id": "2. Perjanjian Klien tidak dapat dinegosiasikan dan mengesampingkan perjanjian, pengaturan, pernyataan tersurat maupun tersirat yang dibuat oleh TigerWit kecuali Perusahaan, atas kebijakannya sendiri, menentukan sebaliknya. Jika Perjanjian Klien diubah secara material, pemberitahuan yang wajar harus diberikan kepada klien.",
         "es": "2.Es un acuerdo no-negociable y se sobrepone a cualquier otro acuerdo, negociaciones, expreso o implícito hechos por TigerWit; a no ser que la Firma, a su discreción, determine lo contrario. Si el Acuerdo de Cliente fuera modificado, se proporcionará al cliente un período de notificación razonable.",
         "pt-BR": "2. O Contrato de Cliente não é negociável e substitui quaisquer outros acordos, acordos, declarações expressas ou implícitas feitas pela TigerWit, a menos que a Empresa, a seu exclusivo critério, determine o contrário. Se o Contrato de Cliente tiver que ser materialmente alterado, uma notificação razoável será dada ao cliente.",
         "ar": "2- إن اتفاقية العميل غير قابلة للتفاوض وتلغي أي اتفاقيات أو ترتيبات أو بيانات صريحة أو ضمنية تم تقديمها من TigerWit ما لم تقرر الشركة خلاف ذلك وفقًا لتقديرها المطلق وحدها دون غيرها. وإذا طرأ أي تعديل جوهري على اتفاقية العميل، سيتم إبلاغ العميل بذلك قبل وقت مناسب."
@@ -4036,7 +4036,7 @@ module.exports = {
         "en": "3.Laws and regulations of The Bahamas does not require the Client Agreement to be signed by either the client or the Firm in order for both the client and the Firm to be legally bound by it.",
         "vi": "3.Luật và quy định của Bahamas không yêu cầu Hợp đồng khách hàng phải được ký bởi khách hàng hoặc Công ty để cả khách hàng và Công ty bị ràng buộc về mặt pháp lý bởi hợp đồng này.",
         "zh-Hant": "3.巴哈馬法律及法規無需客戶或本公司簽字，才能對客戶和本公司產生法律效力。",
-        "id": "3.Laws and regulations of The Bahamas does not require the Client Agreement to be signed by either the client or the Firm in order for both the client and the Firm to be legally bound by it.",
+        "id": "3. Hukum dan peraturan Bahama tidak mengharuskan Perjanjian Klien ditandatangani oleh klien atau Firma agar klien dan Firma terikat secara hukum olehnya.",
         "es": "3.Las leyes y regulaciones de Las Bahamas no requiere que el Acuerdo de Cliente sea firmado ni por parte del Cliente ni por la Firma, para que ambas partes estén obligadas contractualmente por éste.",
         "pt-BR": "3. As leis e regulamentos das Bahamas não exigem que o Contrato do Cliente seja assinado pelo cliente ou pela Empresa para que o cliente e a Empresa estejam legalmente vinculados a ele.",
         "ar": "3- لا  تشترط القوانين واللوائح المعمول بها في جزر البهاما أن يتم توقيع اتفاقية العميل سواء بواسطة العميل أو الشركة، حتى يكون كل من العميل والشركة ملتزمين بالاتفاقية."
@@ -4046,17 +4046,17 @@ module.exports = {
         "en": "Commencement of the Client Agreement",
         "vi": "Bắt đầu của Hợp đồng khách hàng",
         "zh-Hant": "客戶協議開始",
-        "id": "Commencement of the Client Agreement",
+        "id": "Dimulainya Perjanjian Klien",
         "es": "Inicio Acuerdo de Cliente",
         "pt-BR": "Início do Contrato de Cliente",
         "ar": "بدء اتفاقية العميل"
     },
     "amtClient13": {
         "zh": "1.一旦意向客户收到包含他的/她的个人交易账号和部分文件的电子邮件，则客户协议开始。相关文件包括条款和条件、订单执行政策、客户分类通知和利益冲突政策。",
-        "en": "1.The Client Agreement shall commence once the prospective client receives an e-mail that contains his/her personal trading account number and certain documents including the Terms and Conditions, the Order Execution Policy, the Client Categorization Notice and the Conflicts of Interest Policy. ",
+        "en": "1.The Client Agreement shall commence once the prospective client receives an e-mail that contains his/her personal trading account number and certain documents including the Terms and Conditions, the Order Execution Policy, the Client Categorisation Notice and the Conflicts of Interest Policy. ",
         "vi": "1.Hợp đồng khách hàng sẽ bắt đầu khi khách hàng tiềm năng nhận được e-mail chứa số tài khoản giao dịch cá nhân của anh / cô ấy và các tài liệu nhất định bao gồm các Điều khoản và Điều kiện, Chính sách thực thi lệnh, Thông báo phân loại khách hàng và Chính sách xung đột lợi ích.",
         "zh-Hant": "1.壹旦意向客戶收到包含他的/她的個人交易賬號和部分文件的電子郵件，則客戶協議開始。相關文件包括條款和條件、訂單執行政策、客戶分類通知和利益沖突政策。",
-        "id": "1.The Client Agreement shall commence once the prospective client receives an e-mail that contains his/her personal trading account number and certain documents including the Terms and Conditions, the Order Execution Policy, the Client Categorization Notice and the Conflicts of Interest Policy. ",
+        "id": "1.1.	Perjanjian Klien akan dimulai setelah calon klien menerima email yang berisi nomor akun trading pribadinya dan dokumen tertentu termasuk Syarat dan Ketentuan, Kebijakan Eksekusi Order, Pemberitahuan Kategorisasi Klien dan Kebijakan Konflik Kepentingan.",
         "es": "1.El Acuerdo de Cliente comienza una vez que el cliente prospectivo recibe un email que contiene su número de cuenta de trading y ciertos documentos incluyendo los Términos y Condiciones, la Notificación Categorización del Cliente, la Política de Ejecución de Órdenes y la Política de Conflictos de Interés. ",
         "pt-BR": "1. O Contrato de Cliente terá início assim que o cliente em potencial receber um e-mail contendo seu número de conta de negociação pessoal e determinados documentos, incluindo os Termos e Condições, a Política de Execução de Ordens, o Aviso de Categorização do Cliente e a Política de Conflitos de Interesse.",
         "ar": "1- تبدأ اتفاقية العميل بمجرد أن يتلقى العميل المحتمل رسالة بريد إلكتروني تحتوي على رقم حساب التداول الخاص به وعدد من الوثائق التي تشمل الشروط والأحكام وسياسة تنفيذ الأوامر وبيان تصنيف العميل وسياسة تضارب المصالح."
@@ -4066,7 +4066,7 @@ module.exports = {
         "en": "Interpretation of Terms",
         "vi": "Diễn giải các Điều khoản",
         "zh-Hant": "條款解釋",
-        "id": "Interpretation of Terms",
+        "id": "Interpretasi Persyarata",
         "es": "Interpretación de los Términos",
         "pt-BR": "Interpretação dos Termos",
         "ar": "تفسير المصطلحات"
@@ -4076,7 +4076,7 @@ module.exports = {
         "en": "1.Unless indicated to the contrary, the defined terms included in the Client Agreement shall have a specific meaning and may be used in the singular or plural as appropriate.",
         "vi": "1.Trừ khi được chỉ định điều khoản ngược lại, các điều khoản được xác định trong Hợp đồng khách hàng sẽ có một ý nghĩa cụ thể và có thể được sử dụng dưới dạng số ít hay số nhiều một cách thích hợp.",
         "zh-Hant": "1.除非有相反的說明，客戶協議中包含的術語應具有特定含義，並可酌情以單數或復數使用。",
-        "id": "1.Unless indicated to the contrary, the defined terms included in the Client Agreement shall have a specific meaning and may be used in the singular or plural as appropriate.",
+        "id": "1. Kecuali diindikasikan sebaliknya, istilah yang didefinisikan yang termasuk dalam Perjanjian Klien akan memiliki arti khusus dan dapat digunakan dalam bentuk tunggal atau jamak yang sesuai.",
         "es": "1.A no ser que se indique lo contrario, los términos definidos incluidos en el Acuerdo de Cliente deben tener un significado específico y se emplearán en singular o plural según sea apropiado. ",
         "pt-BR": "1. Salvo indicação do contrário, os termos definidos incluídos no Contrato de Cliente terão um significado específico e poderão ser usados ​conforme apropriado.",
         "ar": "ما لم يذكر خلاف ذلك، يكون للألفاظ الواردة في اتفاقية العميل معنى محدد ويتم استخدامها في صيغة المفرد أو الجمع حسب الاقتضاء."
@@ -4086,7 +4086,7 @@ module.exports = {
         "en": "Unless otherwise defined the terms used in this Client Agreement shall have the same meaning given under SCB Rules and Regulations.",
         "vi": "Trừ khi được định nghĩa khác, các điều khoản được sử dụng trong Hợp đồng khách hàng này sẽ có cùng ý nghĩa theo các Quy tắc và Quy định của SCB.",
         "zh-Hant": "除非另有規定，本客戶協議中使用的術語應具有 SCB 規則和條例賦予的相同含義。",
-        "id": "Unless otherwise defined the terms used in this Client Agreement shall have the same meaning given under SCB Rules and Regulations.",
+        "id": "Kecuali ditentukan lain, istilah yang digunakan dalam Perjanjian Klien ini akan memiliki arti yang sama yang diberikan berdasarkan Peraturan dan Regulasi SCB.",
         "es": "A no ser que se definan de otro modo; todo término definido en esta Política tendrá el mismo significado dado por la regulación SCB.",
         "pt-BR": "A menos que definido de outra forma, os termos usados neste Contrato de Cliente terão o mesmo significado dado nas Regras e Regulamentos da SCB.",
         "ar": "ما لم ينص على خلاف ذلك، يكون للمصطلحات الواردة في اتفاقية العميل هذه نفس المعنى المحدد في قواعد ولوائح هيئة الأوراق المالية في جزر البهاما (SCB)."
@@ -4096,7 +4096,7 @@ module.exports = {
         "en": "Authorised Representative - shall mean either the natural or legal person who is expressly authorised by the client to act on his/ her behalf. The above- mentioned relationship is documented through a Power of Attorney, a copy of which is held by the Firm.",
         "vi": "Đại diện được ủy quyền - có nghĩa là người hoặc pháp nhân tự nhiên được khách hàng ủy quyền rõ ràng để hành động thay mặt họ. Mối quan hệ nói trên được ghi nhận thông qua Giấy ủy quyền, với một bản sao được công ty nắm giữ.",
         "zh-Hant": "授權代表- 指客戶明確授權，代表他/她行事的自然人或法人。通過授權委托書記錄上述關系，其副本由本公司持有。",
-        "id": "Authorised Representative - shall mean either the natural or legal person who is expressly authorised by the client to act on his/ her behalf. The above- mentioned relationship is documented through a Power of Attorney, a copy of which is held by the Firm.",
+        "id": "Perwakilan Resmi - berarti orang perseorangan atau badan hukum yang secara tegas diberi wewenang oleh klien untuk bertindak atas namanya. Hubungan yang disebutkan di atas didokumentasikan melalui Surat Kuasa, yang salinannya dipegang oleh Firma.",
         "es": "Representante Autorizado - una persona física o jurídica que está expresamente autorizada por el cliente para actuar en su nombre. La relación mencionada anteriormente es documentada vía un Power of Attorney, un poder, del que la Firma guardará copia. ",
         "pt-BR": "Representante Autorizado - significa a pessoa física ou jurídica que é expressamente autorizada pelo cliente para agir em seu nome. A relação acima mencionada é documentada por meio de uma procuração, uma cópia da qual é mantida pela firma.",
         "ar": "الممثل المفوض - يعني الشخص الطبيعي أو الاعتباري الذي يفوضه العميل بشكل صريح للتصرف نيابة عنه/عنها. ويتم توثيق العلاقة السالف ذكرها من خلال توكيل رسمي، وتحتفظ الشركة بصورة من هذا التوكيل."
@@ -4106,7 +4106,7 @@ module.exports = {
         "en": "Balance - shall mean the funds available in a trading account that may be used for trading financial instruments.",
         "vi": "Số dư - nghĩa là số tiền có sẵn trong tài khoản giao dịch có thể được sử dụng để giao dịch công cụ tài chính.",
         "zh-Hant": "余額 - 指交易賬戶中可用於交易金融工具的資金。",
-        "id": "Balance - shall mean the funds available in a trading account that may be used for trading financial instruments.",
+        "id": "Balance - berarti dana yang tersedia di akun trading yang dapat digunakan untuk trading instrumen keuangan.",
         "es": "Balance - los fondos disponibles en una cuenta de trading que pudieran ser empleados para hacer trading de instrumentos financieros. ",
         "pt-BR": "Saldo - fundos disponíveis em uma conta de negociação que podem ser usados ​​para negociação de outros produtos.",
         "ar": "الرصيد - يعني الأموال الموجودة في حساب التداول والتي يجوز استخدامها في تداول الأدوات المالية."
@@ -4116,7 +4116,7 @@ module.exports = {
         "en": "Balance Currency - shall mean the currency thatthe trading account is denominated in. It should be noted that all charges including spreads, commissions and swaps, are calculated in that currency.",
         "vi": " Tiền Tệ của Số Dư- nghĩa là đơn vị tiền tệ mà tài khoản giao dịch sử dụng. Cần lưu ý rằng tất cả các khoản phí bao gồm spread, hoa hồng và swap, được tính bằng loại tiền tệ đó.",
         "zh-Hant": "余額貨幣 - 指交易賬戶用來計價的貨幣。應該註意的是，所有費用（包括差價、傭金和掉期）都是以該貨幣進行計算的。",
-        "id": "Balance Currency - shall mean the currency thatthe trading account is denominated in. It should be noted that all charges including spreads, commissions and swaps, are calculated in that currency.",
+        "id": "Balance Currency - berarti mata uang yang digunakan dalam akun trading. Perlu dicatat bahwa semua biaya termasuk spread, komisi, dan swap, dihitung dalam mata uang itu.",
         "es": "Balance Divisa -la divisa en la que la cuenta está denominada. Debe tenerse presente que todos los cargos incluidos spreads, comisiones y swaps serán calculados en esa divisa.",
         "pt-BR": "Moeda do Saldo - significa a moeda em que a conta de negociação está denominada. Deve-se observar que todos os encargos, incluindo spreads, comissões e swaps, são calculados nessa moeda.",
         "ar": "عملة الرصيد - تعني العملة المقوم بها حساب التداول. وينبغي ملاحظة أنه سيتم حساب جميع التكاليف، بما في ذلك فروق الأسعار والعمولات وفوائد التمديد، بهذه العملة."
@@ -4126,7 +4126,7 @@ module.exports = {
         "en": "Business Day - shall mean a day on which the Firm is open for business.",
         "vi": "Ngày Làm Việc - nghĩa là ngày Công ty mở cửa làm việc.",
         "zh-Hant": "營業日- 指本公司開門營業的日子。",
-        "id": "Business Day - shall mean a day on which the Firm is open for business.",
+        "id": "Hari Kerja - berarti hari di mana Perusahaan buka untuk bisnis.",
         "es": "Día Laborable - un día en el que la Firma está abierta para operar.",
         "pt-BR": "Dia Útil - significa um dia no qual a Empresa está aberta para negócios.",
         "ar": "يوم العمل - يعني يوم تكون فيه الشركة مفتوحة للعمل."
@@ -4136,7 +4136,7 @@ module.exports = {
         "en": "Client - shall mean either the natural or legal person who received the e-mail referred to in clause 4.1, above.",
         "vi": "Khách hàng - nghĩa là đại diện tự nhiên hoặc hợp pháp nhận được e-mail được đề cập trong điều 4.1, ở trên.",
         "zh-Hant": "客戶- 指接受上述第 4.1 條所提到電子郵件的自然人或法人。",
-        "id": "Client - shall mean either the natural or legal person who received the e-mail referred to in clause 4.1, above.",
+        "id": "Klien - berarti orang perseorangan atau badan hukum yang menerima email sebagaimana dimaksud dalam klausul 4.1, di atas.",
         "es": "Cliente - la persona física o jurídica que recibió el correo electrónico mencionado en la cláusula 4.1, más arriba.",
         "pt-BR": "Cliente - significa a pessoa física ou jurídica que recebeu o e-mail mencionado na cláusula 4.1 acima.",
         "ar": "العميل - يعني إما شخص طبيعي أو شخص اعتباري والذي يتلقى رسالة البريد الإلكتروني المشار إليها في البند 4.1 المذكور أعلاه."
@@ -4146,17 +4146,17 @@ module.exports = {
         "en": "Client Agreement - shall mean this agreement including the Terms and Conditions, Order Execution Policy, Client Categorisation Notice and Conflicts of Interest Policy, as well as any information (legal or otherwise) published on the Firm's website, as may be amended by TigerWit from time to time.",
         "vi": "Hợp đồng khách hàng - có nghĩa là hợp đồng này bao gồm các Điều khoản và Điều kiện, Chính sách thực thi lệnh, Thông báo phân loại khách hàng và Chính sách xung đột lợi ích, cũng như bất kỳ thông tin nào (hợp pháp hoặc khác) được công bố trên trang web của Công ty. theo thời gian.",
         "zh-Hant": "客戶協議 - 指本協議，其中包括條款和條件、訂單執行政策、客戶分類通知和利益沖突政策，以及發布在本公司網站上的任何信息（法律或其他），可能由 TigerWit 不時進行修改。",
-        "id": "Client Agreement - shall mean this agreement including the Terms and Conditions, Order Execution Policy, Client Categorisation Notice and Conflicts of Interest Policy, as well as any information (legal or otherwise) published on the Firm's website, as may be amended by TigerWit from time to time.",
+        "id": "Perjanjian Klien - berarti perjanjian ini termasuk Syarat dan Ketentuan, Kebijakan Eksekusi Pesanan, Pemberitahuan Kategorisasi Klien dan Kebijakan Konflik Kepentingan, serta informasi apa pun (legal atau sebaliknya) yang dipublikasikan di situs web Perusahaan, sebagaimana dapat diubah oleh TigerWit dari waktu ke waktu. untuk waktu.",
         "es": "Acuerdo del Cliente  -  representa este acuerdo, incluidos los Términos y Condiciones, la Política de Ejecución de Órdenes, el Aviso de Categorización del Cliente y la Política de Conflictos de Intereses, así como cualquier información (legal o de otro tipo) publicada en el sitio web de la Firma, que pudiera ser modificada por TigerWit en algún momento.",
         "pt-BR": "Contrato de Cliente - significará este contrato incluindo os Termos e Condições, Política de Execução de Pedidos, Notificação de Categorização de Clientes e Política de Conflitos de Interesse, bem como qualquer informação (legal ou outra) publicada no site da Empresa, conforme alterada pela TigerWit. ao tempo.",
         "ar": "اتفاقية العميل - تعني هذه الاتفاقية، بما في ذلك الشروط والأحكام، وسياسة تنفيذ الأوامر، وبيان تصنيف العميل، وسياسة تضارب المصالح، بالإضافة إلى أي معلومات (قانونية أو غيرها) منشورة على الموقع الإلكتروني للشركة، والتي يجوز أن تقوم TigerWit بتعديلها من وقت لآخر."
     },
     "amtClient23": {
-        "zh": "客户资金- 指根据 SCB 规则向 TigerWit 支付的资金，由 TigerWit 为客户持有。计算为客户在他/她的交易账户所存入资金，加上/减去任何未变现或已变现的盈亏，加上/减去任何客户应当向本公司支付的款项（反之亦然）。",
-        "en": "Client Money - shall mean money that is paid into TigerWit pursuant to the SCB’s rules and is held for the Client. It is calculated as money deposited by the Client in his/her Trading Account, plus/minus any unrealised or realised profit/loss, plus/minus any amount that is due by the Client to the Firm and vice versa.",
-        "vi": "Tiền của Khách hàng - có nghĩa là tiền được trả cho TigerWit theo quy định của SCB và được giữ cho khách hàng. Nó được tính như tiền gửi của Khách hàng trong Tài khoản giao dịch của mình, cộng / trừ bất kỳ khoản lãi / lỗ chưa được ghi vào hoặc được thực hiện, cộng / trừ bất kỳ số tiền nào do Khách hàng gửi đến Công ty và ngược lại.",
-        "zh-Hant": "客戶資金- 指根據 SCB 規則向 TigerWit 支付的資金，由 TigerWit 為客戶持有。計算為客戶在他/她的交易賬戶所存入資金，加上/減去任何未變現或已變現的盈虧，加上/減去任何客戶應當向本公司支付的款項（反之亦然）。",
-        "id": "Client Money - shall mean money that is paid into TigerWit pursuant to the SCB’s rules and is held for the Client. It is calculated as money deposited by the Client in his/her Trading Account, plus/minus any unrealised or realised profit/loss, plus/minus any amount that is due by the Client to the Firm and vice versa.",
+        "zh": "客户资金- 指根据 SCB 规章和制度向 TigerWit 支付的资金，由 TigerWit 为客户持有。计算为客户在他/她的交易账户所存入资金，加上/减去任何未变现或已变现的盈亏，加上/减去任何客户应当向本公司支付的款项（反之亦然）。",
+        "en": "Client Money - shall mean money that is paid into TigerWit pursuant to the SCB’s Regulations and Rules and is held for the Client. It is calculated as money deposited by the Client in his/her Trading Account, plus/minus any unrealised or realised profit/loss, plus/minus any amount that is due by the Client to the Firm and vice versa.",
+        "vi": "Tiền của Khách hàng - có nghĩa là tiền được trả cho TigerWit theo Quy Định và Luật của SCB và được giữ cho khách hàng. Nó được tính như tiền gửi của Khách hàng trong Tài khoản giao dịch của mình, cộng / trừ bất kỳ khoản lãi / lỗ chưa được ghi vào hoặc được thực hiện, cộng / trừ bất kỳ số tiền nào do Khách hàng gửi đến Công ty và ngược lại.",
+        "zh-Hant": "客戶資金- 指根據 SCB 規章和製度向 TigerWit 支付的資金，由 TigerWit 為客戶持有。計算為客戶在他/她的交易賬戶所存入資金，加上/減去任何未變現或已變現的盈虧，加上/減去任何客戶應當向本公司支付的款項（反之亦然）。",
+        "id": "Uang Klien - berarti uang yang dibayarkan ke TigerWit sesuai dengan Regulasi dan Aturan SCB dan disimpan untuk Klien. Ini dihitung sebagai uang yang disimpan oleh Klien di Akun Tradingnya, ditambah / dikurangi keuntungan / kerugian yang belum direalisasi atau direalisasikan, ditambah / dikurangi jumlah apa pun yang harus dibayarkan oleh Klien kepada Perusahaan dan sebaliknya.",
         "es": "Dinero del Cliente - el dinero que se abona a TigerWit de acuerdo con las reglas de la SCB y se mantiene por el Cliente. Se calcula como el dinero depositado por el Cliente en su Cuenta de Trading, más/menos cualquier ganancia/pérdida no realizada o realizada, más/menos cualquier cantidad que el Cliente deba a la Firma y viceversa.",
         "pt-BR": "Dinheiro do Cliente - significa o dinheiro que é pago na TigerWit de acordo com as regras do SCB e é mantido para o Cliente. É calculado como dinheiro depositado pelo Cliente na sua Conta de Negociação, mais / menos qualquer lucro / perda não realizado ou realizado, mais / menos qualquer quantia que é devida pelo Cliente à Empresa e vice-versa.",
         "ar": "أموال العميل - تعني الأموال التي يتم دفعها إلى TigerWit بموجب قواعد ولوائح هيئة الأوراق المالية في جزر البهاما (SCB) ويتم الاحتفاظ بها للعميل. وينم حسابها على أنها الأموال المودعة من العميل في حساب التداول الخاص به، زائد/ ناقص أي أرباح أو خسائر غير محققة، زائد/ ناقص أي مبلغ يدين به العميل للشركة وبالعكس."
@@ -4166,27 +4166,27 @@ module.exports = {
         "en": "Closed Position - shall mean the opposite of an open position.",
         "vi": "Vị thế đóng - có nghĩa là trạng thái đối lập của một vị thế mở.",
         "zh-Hant": "關閉頭寸- 指與開設頭寸相反的操作。",
-        "id": "Closed Position - shall mean the opposite of an open position.",
+        "id": "Posisi Tertutup - berarti kebalikan dari posisi terbuka.",
         "es": "Posición Cerrada - significa lo contrario a una posición abierta.",
         "pt-BR": "Posição Fechada - significa o oposto de uma posição aberta.",
         "ar": "المركز المغلق - يعني عكس المركز المفتوح."
     },
     "amtClient25": {
-        "zh": "差价合约 (CFD) - 指涉及以下内容的 CFD：现货外汇（“外汇”）、股票、现货金属、期货或任何可通过 TigerWit 交易平台进行交易的 CFD相关工具；可在 http://global.tigerwit.com.获得金融工具的完整列表。",
-        "en": "Contract for Difference (CFD) - shall mean a CFD on: spot foreign exchange (‘FX’), shares, indices, spot metals, futures or any other CFD related instrument that is available for trading through the TigerWit trading platform(s). A full list of the financial instruments is available online at http://global.tigerwit.com.",
-        "vi": "Hợp đồng Chênh Lệch (CFD)-có nghĩa là một Hợp Đồng CFD trên: thị trường ngoại hối giao ngay (FX), cổ phiếu, chỉ số, kim loại giao ngay, kì hạn và các sản phẩm liên quan đến CFD khác có thể được tìm thấy tại phần Mở Tài Khoản của TigerWit, có sẵn trên website tại địa chỉ http://global.tigerwit.com.",
-        "zh-Hant": "差價合約 (CFD) - 指涉及以下內容的 CFD：現貨外匯（“外匯”）、股票、現貨金屬、期貨或任何可通過 TigerWit 交易平臺進行交易的 CFD相關工具；可在 http://global.tigerwit.com.獲得金融工具的完整列表。",
-        "id": "Contract for Difference (CFD) - shall mean a CFD on: spot foreign exchange (‘FX’), shares, indices, spot metals, futures or any other CFD related instrument that is available for trading through the TigerWit trading platform(s). A full list of the financial instruments is available online at http://global.tigerwit.com.",
-        "es": "Contrato por Diferencias (CFD) - un CFD en: divisas al contado ('FX'), acciones, índices, metales al contado, futuros o cualquier otro instrumento relacionado con el CFD que esté disponible para operar a través de la(s) plataforma(s) de trading de TigerWit. Puede consultar una lista completa de los instrumentos financieros disponibles online en http://global.tigerwit.com.",
-        "pt-BR": "Contrato por Diferença (CFD) - significará um CFD sobre: câmbio à vista (“FX”), ações, índices, metais spot, futuros ou qualquer outro instrumento relacionado a CFD que esteja disponível para negociação através da (s) plataforma (s) de negociação TigerWit. Uma lista completa dos instrumentos financeiros está disponível online em http://global.tigerwit.com.",
-        "ar": "العقد مقابل الفروقات CFD- يعني العقد مقابل الفروقات على: العملات الأجنبية الفورية (‘الفوركس’)، أو الأسهم، أو المعادن الفورية، أو أي عقد فروقات آخر متعلق بأداة مالية متاحة للتداول عبر منصة (منصات) التداول التي توفرها TigerWit. ويمكن الإطلاع على القائمة الكاملة للأدوات المالية المتاحة عبر الإنترنت على http://global.tigerwit.com."
+        "zh": "差价合约 (CFD) - 指涉及以下内容的 CFD：现货外汇（“外汇”）、股票、现货金属、期货或任何可通过 TigerWit 交易平台进行交易的 CFD相关工具；可在 https://global.TigerWit.com.获得金融工具的完整列表。",
+        "en": "Contract for Difference (CFD) - shall mean a CFD on: spot foreign exchange (‘FX’), shares, indices, spot metals, futures or any other CFD related instrument that is available for trading through the TigerWit trading platform(s). A full list of the financial instruments is available online at https://global.TigerWit.com.",
+        "vi": "Hợp đồng Chênh Lệch (CFD)-có nghĩa là một Hợp Đồng CFD trên: thị trường ngoại hối giao ngay (FX), cổ phiếu, chỉ số, kim loại giao ngay, kì hạn và các sản phẩm liên quan đến CFD khác có thể được tìm thấy tại phần Mở Tài Khoản của TigerWit, có sẵn trên website tại địa chỉ https://global.TigerWit.com.",
+        "zh-Hant": "差價合約 (CFD) - 指涉及以下內容的 CFD：現貨外匯（“外匯”）、股票、現貨金屬、期貨或任何可通過 TigerWit 交易平臺進行交易的 CFD相關工具；可在 https://global.TigerWit.com.獲得金融工具的完整列表。",
+        "id": "Contract for Difference (CFD) - berarti CFD pada: valuta asing spot ('FX'), saham, indeks, logam spot, futures atau instrumen terkait CFD lainnya yang tersedia untuk diperdagangkan melalui platform trading   TigerWit. Daftar lengkap instrumen keuangan tersedia online di https://global.TigerWit.com.",
+        "es": "Contrato por Diferencias (CFD) - un CFD en: divisas al contado ('FX'), acciones, índices, metales al contado, futuros o cualquier otro instrumento relacionado con el CFD que esté disponible para operar a través de la(s) plataforma(s) de trading de TigerWit. Puede consultar una lista completa de los instrumentos financieros disponibles online en https://global.TigerWit.com.",
+        "pt-BR": "Contrato por Diferença (CFD) - significará um CFD sobre: câmbio à vista (“FX”), ações, índices, metais spot, futuros ou qualquer outro instrumento relacionado a CFD que esteja disponível para negociação através da (s) plataforma (s) de negociação TigerWit. Uma lista completa dos instrumentos financeiros está disponível online em https://global.TigerWit.com.",
+        "ar": "العقد مقابل الفروقات CFD- يعني العقد مقابل الفروقات على: العملات الأجنبية الفورية (‘الفوركس’)، أو الأسهم، أو المعادن الفورية، أو أي عقد فروقات آخر متعلق بأداة مالية متاحة للتداول عبر منصة (منصات) التداول التي توفرها TigerWit. ويمكن الإطلاع على القائمة الكاملة للأدوات المالية المتاحة عبر الإنترنت على https://global.TigerWit.com."
     },
     "amtClient26": {
         "zh": "账户净值 - 表示余额加/减任何未平仓头寸的利润/损失。",
         "en": "Equity - shall mean the balance plus/minus any profit/loss that derives from any open positions.",
         "vi": "Vốn thực hiện có- có nghĩa là số dư cộng / trừ bất kỳ khoản lãi / lỗ nào phát sinh từ bất kỳ vị thế mở nào.",
         "zh-Hant": "賬戶凈值 - 表示余額加/減任何未平倉頭寸的利潤/損失。",
-        "id": "Equity - shall mean the balance plus/minus any profit/loss that derives from any open positions.",
+        "id": "Ekuitas - berarti saldo plus / minus untung / rugi yang diperoleh dari posisi terbuka apa pun.",
         "es": "Equity - significa el balance más/menos cualquier ganancia/pérdida que se derive de cualquier posición abierta.",
         "pt-BR": "Equidade - significa o saldo mais / menos qualquer lucro / perda que deriva de qualquer posição aberta.",
         "ar": "الرصيد الحقيقي - يعني الرصيد مضاف إليه/ مطروح منه أي ربح/ خسارة ناشئة عن أي مراكز مفتوحة"
@@ -4196,7 +4196,7 @@ module.exports = {
         "en": "Free Margin - shall mean funds that are available for opening a position. It is calculated as: Free Margin = Equity – Margin.",
         "vi": "Số tiền có thể giao dịch tiếp (free-margin) (số tiền kí quỹ - nghĩa là số tiền có sẵn để mở một vị thế. Nó được tính như sau: Số tiền có thể giao dịch tiếp (Free margin) = Số dư thực (Equity) - tiền đặt lệnh (Margin).",
         "zh-Hant": "自由保證金 - 指可用於開立頭寸的資金。計算方法如下：自由保證金=賬戶凈值-保證金",
-        "id": "Free Margin - shall mean funds that are available for opening a position. It is calculated as: Free Margin = Equity – Margin.",
+        "id": "Margin Bebas - berarti dana yang tersedia untuk membuka posisi. Ini dihitung sebagai: Margin Bebas = Ekuitas - Margin.",
         "es": "Margen Libre  - representa los fondos disponibles para abrir una posición. Se calcula como: Margen Libre = Equidad – Margen.",
         "pt-BR": "Margem Livre - significa fundos que estão disponíveis para abrir uma posição. É calculado como: Margem Livre = Capital - Margem.",
         "ar": "الهامش الحر - يعني الأموال المتاحة لفتح مركز.  ويتم حسابه كما يلي: الهامش الحر = الرصيد الحقيقي – الهامش."
@@ -4206,17 +4206,17 @@ module.exports = {
         "en": "SCB - shall mean the Securities Commission of The Bahamas and the legislative framework from which it operates, it Rules and Regulations.",
         "vi": "SCB - có nghĩa là Ủy ban Chứng khoán Bahamas và khung pháp lý mà nó điều hành, đó là Quy tắc và Quy định.",
         "zh-Hant": "SCB - 指巴哈馬證券監察委員會及其運作的立法框架和規章制度。",
-        "id": "SCB - shall mean the Securities Commission of The Bahamas and the legislative framework from which it operates, it Rules and Regulations.",
+        "id": "SCB - berarti Komisi Sekuritas Bahama dan kerangka legislatif dari mana ia beroperasi, Peraturan dan Regulasi.",
         "es": "SCB - significa La Comisión de Valores de Las Bahamas y el marco legislativo desde el cual opera, sus Reglas y Regulaciones.",
         "pt-BR": "SCB - significa a Comissão de Valores Mobiliários das Bahamas e o quadro legislativo a partir do qual ela opera, suas Regras e Regulamentos.",
         "ar": "هيئة SCB - تعني هيئة الأوراق المالية في جزر البهاما وإطار العمل التشريعي الذي تعمل منه وقواعدها ولوائحها."
     },
     "amtClient29": {
-        "zh": "法律- 指英国或其他地区任何适用的法例、法律、监管、规则和操守。",
+        "zh": "法律- 指巴哈马或其他地区任何适用的法例、法律、监管、规则和操守。",
         "en": "Law - shall mean any applicable statutes, laws, regulations, rules and codes of practice, whether in the United Kingdom or elsewhere.",
-        "vi": "Pháp luật - có nghĩa là bất kỳ điều luật, quy định, quy định, quy tắc và quy tắc có hiệu lực nào được áp dụng, cho dù ở Vương quốc Anh hay ở nơi khác.",
-        "zh-Hant": "法律- 指英國或其他地區任何適用的法例、法律、監管、規則和操守。",
-        "id": "Law - shall mean any applicable statutes, laws, regulations, rules and codes of practice, whether in the United Kingdom or elsewhere.",
+        "vi": "Pháp luật - có nghĩa là bất kỳ điều luật, quy định, quy định, quy tắc và quy tắc có hiệu lực nào được áp dụng, cho dù ở Bahamas hay ở nơi khác.",
+        "zh-Hant": "法律- 指巴哈馬或其他地區任何適用的法例、法律、監管、規則和操守。",
+        "id": "Hukum - berarti undang-undang, undang-undang, regulasi, aturan, dan kode praktik yang berlaku, baik di Bahamas United Kingdom atau di tempat lain.",
         "es": "Ley - significa los estatutos, leyes, reglamentos, normas y códigos de usos, ya sea en el Reino Unido o en otro lugar.",
         "pt-BR": "Lei - deve significar quaisquer estatutos, leis, regulamentos, regras e códigos de prática aplicáveis, seja no Reino Unido ou em outro lugar.",
         "ar": "القانون - يعني أي نظم أساسية وقوانين ولوائح وقواعد ومدونات ممارسة معمول بها، سواء في المملكة المتحدة أو في أي مكان آخر."
@@ -4226,7 +4226,7 @@ module.exports = {
         "en": "Margin - shall mean the required funds available in a trading account for the purposes of maintaining an open position.",
         "vi": "Margin - nghĩa là các khoản tiền cần thiết có sẵn trong tài khoản giao dịch nhằm mục đích duy trì một vị trí mở.",
         "zh-Hant": "保證金 - 指為維持未平倉頭寸而應在交易賬戶中保留的可用資金。",
-        "id": "Margin - shall mean the required funds available in a trading account for the purposes of maintaining an open position.",
+        "id": "Margin - berarti dana yang diperlukan tersedia di akun trading untuk tujuan mempertahankan posisi terbuka.",
         "es": "Margen - son los fondos disponibles requeridos en una cuenta de trading con el propósito de mantener una posición abierta.",
         "pt-BR": "Margem - significa os fundos necessários disponíveis em uma conta de negociação para manter uma posição aberta.",
         "ar": "الهامش - يعني الأموال المتوفرة في حساب التداول والمطلوبة من أجل المحافظة على المراكز المفتوحة."
@@ -4236,17 +4236,17 @@ module.exports = {
         "en": "Margin Level - shall mean the Equity to Margin ratio calculated as: Margin Level = Equity / Margin",
         "vi": "Mức ký quỹ (margin level) - có nghĩa là tỷ lệ vốn thực sở hữu (equity) so với số tiền đặt lệnh (margin) được tính như sau: Mức ký quỹ (Margin Level) = Vốn thực sở hữu (Equity)/ Số tiền đặt lệnh",
         "zh-Hant": "保證金水平- 指賬戶凈值與保證金比率，計算如下：保證金水平= 賬戶凈值/保證金",
-        "id": "Margin Level - shall mean the Equity to Margin ratio calculated as: Margin Level = Equity / Margin",
+        "id": "Tingkat Margin - berarti rasio Ekuitas terhadap Margin yang dihitung sebagai: Tingkat Margin = Ekuitas / Margin",
         "es": "Nivel de Margen -  representa el ratio Equity- Margen calculado como: Nivel de Margen = Equity / Margen",
         "pt-BR": "Nível de Margem - significa o quociente Patrimônio Líquido até Margem calculado como: Nível de Margem = Patrimônio Líquido / Margem",
         "ar": "مستوى الهامش - يعني نسبة الرصيد الإجمالي إلى الهامش، ويتم حسابه كما يلي:  مستوى الهامش = الرصيد الحقيقي / الهامش"
     },
     "amtClient32": {
         "zh": "匹配的主要经纪商- 匹配的主要经纪商指获准以做市商身份进行投资交易的投资公司，相关投资是 IFPRU 的指定投资，其自身介入买家和卖家的交易，从而让双边交易同时执行，并确保其作为做市商交易时仅执行客户的订单。",
-        "en": "Matched Principal Broker - A matched principal broker means an investment firm with permission to deal in investments as principal with respect to investments that are IFPRU designated investments, by interposing itself between the buyer and the seller to the transaction in such way that both sides are executed simultaneously, and ensures it deals as principal only to fulfil customer orders.",
-        "vi": "Nhà Môi Giới Chính Tương Ứng- Nhà môi giới Tương Ứng có nghĩa là một công ty đầu tư được phép giao dịch với các khoản vốn đầu tư được chỉ định bởi IFPRU, bằng cách can thiệp giữa người mua và người bán với giao dịch theo cách mà cả hai bên được thực hiện đồng thời, và đảm bảo nó giao dịch dưới dạng người đứng đầu chỉ để thực hiện các lệnh của khách hàng.",
+        "en": " ",
+        "vi": " ",
         "zh-Hant": "匹配的主要經紀商- 匹配的主要經紀商指獲準以做市商身份進行投資交易的投資公司，相關投資是 IFPRU 的指定投資，其自身介入買家和賣家的交易，從而讓雙邊交易同時執行，並確保其作為做市商交易時僅執行客戶的訂單。",
-        "id": "Matched Principal Broker - A matched principal broker means an investment firm with permission to deal in investments as principal with respect to investments that are IFPRU designated investments, by interposing itself between the buyer and the seller to the transaction in such way that both sides are executed simultaneously, and ensures it deals as principal only to fulfil customer orders.",
+        "id": " ",
         "es": "Matched Principal Broker - Un \"matched principal broker\" es una firma de inversión con permiso para negociar inversiones como principal con respecto a inversiones denominadas IFPRU, situándose entre el comprador y el vendedor en la transacción para que ambas partes ejecuten simultáneamente, y garantizar el cumplimiento de las órdenes de los clientes.",
         "pt-BR": "Corretora Principal Correspondente - Uma corretora principal combinada significa uma firma de investimento com permissão para negociar investimentos como principal com relação a investimentos que sejam investimentos designados por IFPRU, interpondo-se entre o comprador e o vendedor à transação de tal forma que ambos os lados sejam executados simultaneamente, e garante que lida como principal apenas para atender aos pedidos dos clientes.",
         "ar": "وسيط طرف رئيسي مطابق - الوسيط الطرف الرئيسي المطابق يعني شركة استثمارية مسموح لها بالتداول في الاستثمارات بصفتها طرف رئيسي فيما يتعلق بالاستثمارات المحددة من IFPRU، من خلال إدخال نفسها بين المشتري والبائع في صفقات التداول على نحو يجعل تنفيذ أوامر كلا الطرفين يتم في نفس الوقت، وضمان أنها تتعامل باعتبارها طرفًا رئيسيًا فقط في تنفيذ أوامر العملاء."
@@ -4256,7 +4256,7 @@ module.exports = {
         "en": "Open Position - shall mean any position that has not been closed. For example, an open long position not covered by the opposite short position and vice versa.",
         "vi": "Vị thế mở - nghĩa là bất kỳ vị thế nào chưa bị đóng. Ví dụ, một vị thế mua không được bao gồm bởi vị thế bán đối lập và ngược lại.",
         "zh-Hant": "未平倉頭寸- 指任何尚未關閉的頭寸。例如，壹個未被相反空頭頭寸對沖的未平倉多頭頭寸，反之亦然。",
-        "id": "Open Position - shall mean any position that has not been closed. For example, an open long position not covered by the opposite short position and vice versa.",
+        "id": "Posisi Terbuka - berarti setiap posisi yang belum ditutup. Misalnya, posisi open long tidak tercakup oleh posisi short yang berlawanan dan sebaliknya.",
         "es": "Posición Abierta - cualquier posición que no haya sido cerrada. Por ejemplo, una posición larga abierta no cubierta por un posición corta contraria y viceversa.",
         "pt-BR": "Posição Aberta - significa qualquer posição que não tenha sido fechada. Por exemplo, uma posição longa aberta não coberta pela posição curta oposta e vice-versa.",
         "ar": "مركز مفتوح - يعني أي مركز لم يتم إغلاقه. على سبيل المثال، مركز شراء مفتوح لا يغطيه مركز بيع معاكس والعكس صحيح."
@@ -4266,47 +4266,47 @@ module.exports = {
         "en": "Over-the-Counter (OTC) - shall mean the execution venue for any financial instruments whose trading is governed by the relevant Terms and Conditions of Business for the trading platforms.",
         "vi": "Vị thế mở - nghĩa là bất kỳ vị thế nào chưa bị đóng. Ví dụ, một vị thế mua không được bao gồm bởi vị thế bán đối lập và ngược lại. được điều chỉnh bởi các Điều khoản và Điều kiện kinh doanh có liên quan cho các nền tảng giao dịch.",
         "zh-Hant": "場外交易 (OTC) - 指其交易受交易平臺的商業條款和條件約束的所有金融工具的執行場所。",
-        "id": "Over-the-Counter (OTC) - shall mean the execution venue for any financial instruments whose trading is governed by the relevant Terms and Conditions of Business for the trading platforms.",
+        "id": "Over-the-Counter (OTC) - berarti tempat eksekusi untuk setiap instrumen keuangan yang perdagangannya diatur oleh Syarat dan Ketentuan Bisnis yang relevan untuk platform trading.",
         "es": "Over-the-Counter (OTC) - representa el lugar de ejecución para cualquier instrumento financiero cuya operativa se rija por los Términos y Condiciones de Negocio relevantes para las plataformas de trading.",
         "pt-BR": "Às claras (OTC) - significa o local de execução para quaisquer instrumentos financeiros cuja negociação seja regida pelos Termos e Condições de Negócios relevantes para as plataformas de negociação.",
         "ar": "التداول خارج المقصورة (OTC) - يعني مكان التنفيذ لأي أدوات مالية والتي يخضع تداولها لشروط وأحكام العمل لمنصات التداول."
     },
     "amtClient35": {
-        "zh": "意向客户- 指完成‘TigerWit 交易账户开户’部分申请表格的自然人和法人，开户表格可以在http://global.tigerwit.com.获取",
-        "en": "Prospective Client - shall mean either a natural or legal person who completed the application form that can be found under the ‘TigerWit Trading Account Opening’ section, available online at http://global.tigerwit.com.",
-        "vi": "Khách hàng tiềm năng - nghĩa là người tự nhiên hoặc pháp nhân đã hoàn thành mẫu đơn trong phần Mở tài khoản giao dịch TigerWit, có sẵn trực tuyến tại http://global.tigerwit.com.",
-        "zh-Hant": "意向客戶- 指完成‘TigerWit 交易賬戶開戶’部分申請表格的自然人和法人，開戶表格可以在http://global.tigerwit.com.獲取",
-        "id": "Prospective Client - shall mean either a natural or legal person who completed the application form that can be found under the ‘TigerWit Trading Account Opening’ section, available online at http://global.tigerwit.com.",
-        "es": "Cliente Potencial -  una persona física o jurídica que ha completado el formulario de solicitud disponible en la sección ‘Apertura Cuenta Trading TigerWit\", disponible online en http://global.tigerwit.com.",
-        "pt-BR": "Cliente em perspectiva - deve significar uma pessoa física ou jurídica que tenha preenchido o formulário de inscrição que pode ser encontrado na seção \"Abertura da Conta de Negociação TigerWit\", disponível online em http://global.tigerwit.com.",
-        "ar": "عميل محتمل - يعني إما شخص طبيعي أو اعتباري والذي أكمل نموذج الطلب المتوفر في قسم \"فتح حساب تداول مع TigerWit \"، على موقعنا الإلكتروني http://global.tigerwit.com."
+        "zh": "意向客户- 指完成‘TigerWit 交易账户开户’部分申请表格的自然人和法人，开户表格可以在https://global.TigerWit.com.获取",
+        "en": "Prospective Client - shall mean either a natural or legal person who completed the application form that can be found under the ‘TigerWit Trading Account Opening’ section, available online at https://global.TigerWit.com.",
+        "vi": "Khách hàng tiềm năng - nghĩa là người tự nhiên hoặc pháp nhân đã hoàn thành mẫu đơn trong phần Mở tài khoản giao dịch TigerWit, có sẵn trực tuyến tại https://global.TigerWit.com.",
+        "zh-Hant": "意向客戶- 指完成‘TigerWit 交易賬戶開戶’部分申請表格的自然人和法人，開戶表格可以在https://global.TigerWit.com.獲取",
+        "id": "Calon Klien - berarti orang perseorangan atau badan hukum yang melengkapi formulir aplikasi yang dapat ditemukan di bawah bagian 'Pembukaan Akun Trading TigerWit', tersedia online di https://global.TigerWit.com.",
+        "es": "Cliente Potencial -  una persona física o jurídica que ha completado el formulario de solicitud disponible en la sección ‘Apertura Cuenta Trading TigerWit\", disponible online en https://global.TigerWit.com.",
+        "pt-BR": "Cliente em perspectiva - deve significar uma pessoa física ou jurídica que tenha preenchido o formulário de inscrição que pode ser encontrado na seção \"Abertura da Conta de Negociação TigerWit\", disponível online em https://global.TigerWit.com.",
+        "ar": "عميل محتمل - يعني إما شخص طبيعي أو اعتباري والذي أكمل نموذج الطلب المتوفر في قسم \"فتح حساب تداول مع TigerWit \"، على موقعنا الإلكتروني https://global.TigerWit.com."
     },
     "amtClient36": {
         "zh": "交易账户 - 指客户为通过 TigerWit 交易平台交易金融工具而维护的、具有唯一编号的账户。",
         "en": "Trading Account - shall mean the account, which has a unique number, maintained by a client for the purposes of trading financial instruments through the TigerWit trading platform(s).",
-        "vi": "Khách hàng tiềm năng - nghĩa là người tự nhiên hoặc pháp nhân đã hoàn thành mẫu đơn trong phần Mở tài khoản giao dịch TigerWit, có sẵn trực tuyến tại http://global.tigerwit.com.",
+        "vi": "Khách hàng tiềm năng - nghĩa là người tự nhiên hoặc pháp nhân đã hoàn thành mẫu đơn trong phần Mở tài khoản giao dịch TigerWit, có sẵn trực tuyến tại https://global.TigerWit.com.",
         "zh-Hant": "交易賬戶 - 指客戶為通過 TigerWit 交易平臺交易金融工具而維護的、具有唯壹編號的賬戶。",
-        "id": "Trading Account - shall mean the account, which has a unique number, maintained by a client for the purposes of trading financial instruments through the TigerWit trading platform(s).",
+        "id": "Akun Trading - berarti akun, yang memiliki nomor unik, yang dikelola oleh klien untuk tujuan trading   instrumen keuangan melalui platform trading TigerWit.",
         "es": "Cuenta de trading - la cuenta, que tiene un número único, mantenida por un cliente para operar instrumentos financieros a través de la(s) plataforma(s) de trading de TigerWit.",
         "pt-BR": "Conta de Negociação - significa a conta, que tem um número único, mantida por um cliente para fins de negociação de instrumentos financeiros através da (s) plataforma (s) de negociação TigerWit.",
         "ar": "حساب التداول - يعني الحساب الذي يحتفظ به العميل لأغراض تداول الأدوات المالية عبر منصة (منصات) التداول التي تقدمها TigerWit، ويحتوي الحساب على رقم فريد."
     },
     "amtClient37": {
-        "zh": "条款和条件- 指“TigerWit 商业条款和条件”，管辖客户订单执行相关的行动；条款和条件可以在 http://global.tigerwit.com.获取",
-        "en": "Terms and Conditions - shall mean the ‘TigerWit Terms and Conditions of Business’ governing the actions that relate to the execution of the client’s orders; available online at http://global.tigerwit.com.",
-        "vi": "Khách hàng tiềm năng - nghĩa là người tự nhiên hoặc pháp nhân đã hoàn thành mẫu đơn trong phần Mở tài khoản giao dịch TigerWit, có sẵn trực tuyến tại http://global.tigerwit.com.",
-        "zh-Hant": "條款和條件- 指“TigerWit 商業條款和條件”，管轄客戶訂單執行相關的行動；條款和條件可以在 http://global.tigerwit.com.獲取",
-        "id": "Terms and Conditions - shall mean the ‘TigerWit Terms and Conditions of Business’ governing the actions that relate to the execution of the client’s orders; available online at http://global.tigerwit.com.",
-        "es": "Términos y Condiciones -  son los ‘Términos y Condiciones Comerciales de TigerWit’ que rigen las acciones relacionadas con la ejecución de las órdenes del cliente; disponible online en http://global.tigerwit.com.",
-        "pt-BR": "Termos e Condições - significa os Termos e Condições de Negócios da TigerWit que regem as ações relacionadas à execução dos pedidos do cliente; disponível online em http://global.tigerwit.com.",
-        "ar": "الشروط والأحكام - تعني\"شروط وأحكام العمل لشركة TigerWit\" والتي تحكم الإجراءات المتعلقة بتنفيذ أوامر العميل؛ وتتوفر هذه الشروط والأحكام على موقعنا الإلكتروني http://global.tigerwit.com."
+        "zh": "条款和条件- 指“TigerWit 商业条款和条件”，管辖客户订单执行相关的行动；条款和条件可以在 https://global.TigerWit.com.获取",
+        "en": "Terms and Conditions - shall mean the ‘TigerWit Terms and Conditions of Business’ governing the actions that relate to the execution of the client’s orders; available online at https://global.TigerWit.com.",
+        "vi": "Khách hàng tiềm năng - nghĩa là người tự nhiên hoặc pháp nhân đã hoàn thành mẫu đơn trong phần Mở tài khoản giao dịch TigerWit, có sẵn trực tuyến tại https://global.TigerWit.com.",
+        "zh-Hant": "條款和條件- 指“TigerWit 商業條款和條件”，管轄客戶訂單執行相關的行動；條款和條件可以在 https://global.TigerWit.com.獲取",
+        "id": "Syarat dan Ketentuan - berarti 'Syarat dan Ketentuan Bisnis TigerWit' yang mengatur tindakan yang berkaitan dengan pelaksanaan pesanan klien; tersedia online di https://global.TigerWit.com.",
+        "es": "Términos y Condiciones -  son los ‘Términos y Condiciones Comerciales de TigerWit’ que rigen las acciones relacionadas con la ejecución de las órdenes del cliente; disponible online en https://global.TigerWit.com.",
+        "pt-BR": "Termos e Condições - significa os Termos e Condições de Negócios da TigerWit que regem as ações relacionadas à execução dos pedidos do cliente; disponível online em https://global.TigerWit.com.",
+        "ar": "الشروط والأحكام - تعني\"شروط وأحكام العمل لشركة TigerWit\" والتي تحكم الإجراءات المتعلقة بتنفيذ أوامر العميل؛ وتتوفر هذه الشروط والأحكام على موقعنا الإلكتروني https://global.TigerWit.com."
     },
     "amtClient38": {
         "zh": "估值日 - 指资金的交付日期。",
         "en": "Value Date - shall mean the delivery date of funds",
         "vi": "Ngày Giá trị - có nghĩa là ngày chuyển tiền.",
         "zh-Hant": "估值日 - 指資金的交付日期。",
-        "id": "Value Date - shall mean the delivery date of funds",
+        "id": "Tanggal Nilai - berarti tanggal pengiriman dana",
         "es": "Fecha  Valor - significa la fecha de entrega de los fondos",
         "pt-BR": "Data do Valor - significa a data de entrega dos fundos",
         "ar": "تاريخ الاستحقاق - يعني تاريخ تسليم الأموال"
@@ -4316,7 +4316,7 @@ module.exports = {
         "en": "Vault - shall mean the account, which has a unique number, maintained by the client for the purposes of depositing and withdrawing funds to and from the client’s Trading Account.",
         "vi": "Vault - nghĩa là tài khoản có số duy nhất, được khách hàng duy trì cho mục đích gửi và rút tiền đến và từ Tài khoản giao dịch của khách hàng.",
         "zh-Hant": "Vault 錢包- 指賬戶，擁有壹個獨壹無二的號碼，由客戶保管用於從客戶的交易賬戶存取資金。",
-        "id": "Vault - shall mean the account, which has a unique number, maintained by the client for the purposes of depositing and withdrawing funds to and from the client’s Trading Account.",
+        "id": "Vault - berarti akun, yang memiliki nomor unik, yang dikelola oleh klien untuk tujuan penyetoran dan penarikan dana ke dan dari Akun Trading klien.",
         "es": "Vault - la cuenta, que tiene un número único, mantenido por el cliente con el fin de depositar y retirar fondos hacia y desde la cuenta de trading del cliente.",
         "pt-BR": "Cofre - significa a conta, que tem um número exclusivo, mantida pelo cliente para fins de depósito e retirada de fundos para e da Conta de Negociação do cliente.",
         "ar": "الخزنة - يعني الحساب الذي يحتفظ به العميل لأغراض إيداع وسحب الأموال إلى ومن حساب التداول الخاص بالعميل،  ويحتوي الحساب على رقم فريد."
@@ -4326,7 +4326,7 @@ module.exports = {
         "en": "Provision of Services",
         "vi": "Điều khoản Cung Cấp Dịch vụ",
         "zh-Hant": "服務的提供",
-        "id": "Provision of Services",
+        "id": "Penyediaan Layanan",
         "es": "Provisión de Servicios",
         "pt-BR": "Fornecimento de serviços",
         "ar": "تقديم الخدمات"
@@ -4336,37 +4336,37 @@ module.exports = {
         "en": "1.TigerWit is authorised by the SCB to act as Principle. Details of our authorised designated investment business and ancillary services can be found on the SCB register.",
         "vi": "1.TigerWit được SCB cho phép hoạt động theo Nguyên tắc của nó. Thông tin chi tiết về hoạt động kinh doanh đầu tư được chỉ định của chúng tôi và các dịch vụ phụ trợ có thể được trình bằng trong sổ đăng ký của SCB.",
         "zh-Hant": "1.TigerWit 由 SCB 授權擔任做市商。已授權的指定投資業務及其輔助服務的詳情可以在SCB 登記簿中找到。",
-        "id": "1.TigerWit is authorised by the SCB to act as Principle. Details of our authorised designated investment business and ancillary services can be found on the SCB register.",
+        "id": "1. TigerWit diberi wewenang oleh SCB untuk bertindak sebagai Prinsip. Rincian bisnis investasi resmi yang ditunjuk dan layanan tambahan dapat ditemukan di register SCB.",
         "es": "1. La SCB autoriza a TigerWit a actuar como Principal. Los detalles de nuestros negocios de inversión autorizados junto con los servicios auxiliares se pueden encontrar en el registro de SCB.",
         "pt-BR": "1.A TigerWit está autorizado pela SCB a atuar como Princípio. Detalhes do nosso negócio de investimento designado autorizado e serviços auxiliares podem ser encontrados no registro da SCB.",
         "ar": "1- شركة TigerWit مرخصة من هيئة الأوراق المالية في جزر البهاما (SCB) للعمل بوصفها طرفًا رئيسيًا.  ويمكن الاطلاع على تفاصيل أعمالنا الاستثمارية المحددة المصرح بها وخدماتنا التكميلية في سجل هيئة الأوراق المالية في جزر البهاما (SCB)."
     },
     "amtClient42": {
-        "zh": "2.TigerWit 只在执行基础上向客户提供多种金融工具，相关合约规范可在线查询，网址：http://global.tigerwit.com。",
-        "en": "2.TigerWit offers, on an execution-only basis, a number of financial instruments to the client the contract specifications of which are available online at http://global.tigerwit.com.",
-        "vi": "2.TigerWit cung cấp, trên cơ sở thực thi lệnh, một số công cụ tài chính cho khách hàng các thông số kỹ thuật hợp đồng trong đó có sẵn trực tuyến tại http://global.tigerwit.com.",
-        "zh-Hant": "2.TigerWit 只在執行基礎上向客戶提供多種金融工具，相關合約規範可在線查詢，網址：http://global.tigerwit.com。",
-        "id": "2.TigerWit offers, on an execution-only basis, a number of financial instruments to the client the contract specifications of which are available online at http://global.tigerwit.com.",
-        "es": "2.TigerWit ofrece,  únicamente su ejecución, una serie de instrumentos financieros al cliente cuyas especificaciones de contrato están disponibles en línea en http://global.tigerwit.com.",
-        "pt-BR": "2.A TigerWit oferece, numa base de execução única, uma série de instrumentos financeiros para o cliente cujas especificações do contrato estão disponíveis online em http://global.tigerwit.com.",
-        "ar": "2- تقدم TigerWit، على أساس التنفيذ فقط، عددًا من الأدوات المالية والتي تتوفر تفاصيل عقودها على موقعنا الإلكتروني http://global.tigerwit.com."
+        "zh": "2.TigerWit 只在执行基础上向客户提供多种金融工具，相关合约规范可在线查询，网址：https://global.TigerWit.com。",
+        "en": "2.TigerWit offers, on an execution-only basis, a number of financial instruments to the client the contract specifications of which are available online at https://global.TigerWit.com.",
+        "vi": "2.TigerWit cung cấp, trên cơ sở thực thi lệnh, một số công cụ tài chính cho khách hàng các thông số kỹ thuật hợp đồng trong đó có sẵn trực tuyến tại https://global.TigerWit.com.",
+        "zh-Hant": "2.TigerWit 只在執行基礎上向客戶提供多種金融工具，相關合約規範可在線查詢，網址：https://global.TigerWit.com。",
+        "id": "2. TigerWit menawarkan, berdasarkan eksekusi saja, sejumlah instrumen keuangan kepada klien dengan spesifikasi kontrak yang tersedia secara online di https://global.TigerWit.com.",
+        "es": "2.TigerWit ofrece,  únicamente su ejecución, una serie de instrumentos financieros al cliente cuyas especificaciones de contrato están disponibles en línea en https://global.TigerWit.com.",
+        "pt-BR": "2.A TigerWit oferece, numa base de execução única, uma série de instrumentos financeiros para o cliente cujas especificações do contrato estão disponíveis online em https://global.TigerWit.com.",
+        "ar": "2- تقدم TigerWit، على أساس التنفيذ فقط، عددًا من الأدوات المالية والتي تتوفر تفاصيل عقودها على موقعنا الإلكتروني https://global.TigerWit.com."
     },
     "amtClient43": {
-        "zh": "3.本公司提供的金融工具的交易条件与执行 规 则 可 在 任 何 特 定 时 间 通 过 网 址http://global.tigerwit.com 在线查询。TigerWit 只限于执行委托运行，除非另有约定外，否则没有义务就客户交易决策的适当性进行监督或提出建议，因此即使在交易不适用于客户的情况下，本公司仍可按照客户接收的指令执行。",
-        "en": "3.The trading conditions and execution rules of the financial instruments on offer by the Firm can be found online at http://global.tigerwit.com at any given time. TigerWit operates on an execution only mandate and unless agreed otherwise is under no obligation to monitor or advise the client on the suitability of their trading decision, therefore, the Firm may execute an instruction received by the client even if such transaction is not suitable for the client.",
-        "vi": "3.Các điều kiện giao dịch và các quy tắc thực hiện của các công cụ tài chính được cung cấp bởi Công ty có thể được truy cập trực tuyến tại địa chỉ http://global.tigerwit.com tại bất kỳ thời điểm nào. TigerWit hoạt động trên một thực thi chỉ có nhiệm vụ và trừ khi có thoả thuận khác không có nghĩa vụ giám sát hoặc tư vấn cho khách hàng về sự phù hợp của quyết định giao dịch của họ, do đó, Công ty có thể thực hiện lệnh mà khách hàng nhận được ngay cả khi giao dịch đó không phù hợp với khách hàng. ",
-        "zh-Hant": "3.本公司提供的金融工具的交易條件與執行 規 則 可 在 任 何 特 定 時 間 通 過 網 址http://global.tigerwit.com 在線查詢。TigerWit 只限於執行委托運行，除非另有約定外，否則沒有義務就客戶交易決策的適當性進行監督或提出建議，因此即使在交易不適用於客戶的情況下，本公司仍可按照客戶接收的指令執行。",
-        "id": "3.The trading conditions and execution rules of the financial instruments on offer by the Firm can be found online at http://global.tigerwit.com at any given time. TigerWit operates on an execution only mandate and unless agreed otherwise is under no obligation to monitor or advise the client on the suitability of their trading decision, therefore, the Firm may execute an instruction received by the client even if such transaction is not suitable for the client.",
-        "es": "3.Las condiciones de trading y las reglas de ejecución de los instrumentos financieros ofrecidos por la Firma se pueden encontrar en línea en http://global.tigerwit.com en todo momento. TigerWit opera bajo un mandato de ejecución única y, a menos que se acuerde lo contrario, no tiene la obligación de monitorear o asesorar al cliente sobre la idoneidad de su decisión de trading; por lo tanto, la Firma puede ejecutar una instrucción recibida por el cliente incluso si dicha transacción no fuera adecuada para el cliente.\n",
-        "pt-BR": "3.As condições comerciais e as regras de execução dos instrumentos financeiros oferecidos pela Firma podem ser encontradas online em http://global.tigerwit.com a qualquer momento. A TigerWit opera em um mandato de execução única e salvo acordo em contrário, não tem nenhuma obrigação de monitorar ou aconselhar o cliente sobre a adequação de sua decisão comercial, portanto, a Empresa pode executar uma instrução recebida pelo cliente mesmo se tal transação não for adequada para o cliente. cliente.",
-        "ar": "3- يمكن الإطلاع على شروط التداول وقواعد التنفيذ للأدوات المالية التي تقدمها الشركة  على موقعنا الإلكتروني http://global.tigerwit.com في أي وقت.  ويقتصر عمل TigerWit على تنفيذ أوامر التداول فقط والشركة ليست ملزمة، ما لم يتم الاتفاق على خلاف ذلك، بمتابعة العميل أو تقديم المشورة له بشأن مدى سلامة وملاءمة قرار التداول الذي يتخذه، وبناء على ذلك فإنه يجوز للشركة تنفيذ التعليمات التي تلقاها من العميل حتى إذا كانت المعاملة المذكورة غير مناسبة للعميل."
+        "zh": "3.本公司提供的金融工具的交易条件与执行 规 则 可 在 任 何 特 定 时 间 通 过 网 址https://global.TigerWit.com 在线查询。TigerWit 只限于执行委托运行，除非另有约定外，否则没有义务就客户交易决策的适当性进行监督或提出建议，因此即使在交易不适用于客户的情况下，本公司仍可按照客户接收的指令执行。",
+        "en": "3.The trading conditions and execution rules of the financial instruments on offer by the Firm can be found online at https://global.TigerWit.com at any given time. TigerWit operates on an execution only mandate and unless agreed otherwise is under no obligation to monitor or advise the client on the suitability of their trading decision, therefore, the Firm may execute an instruction received by the client even if such transaction is not suitable for the client.",
+        "vi": "3.Các điều kiện giao dịch và các quy tắc thực hiện của các công cụ tài chính được cung cấp bởi Công ty có thể được truy cập trực tuyến tại địa chỉ https://global.TigerWit.com tại bất kỳ thời điểm nào. TigerWit hoạt động trên một thực thi chỉ có nhiệm vụ và trừ khi có thoả thuận khác không có nghĩa vụ giám sát hoặc tư vấn cho khách hàng về sự phù hợp của quyết định giao dịch của họ, do đó, Công ty có thể thực hiện lệnh mà khách hàng nhận được ngay cả khi giao dịch đó không phù hợp với khách hàng. ",
+        "zh-Hant": "3.本公司提供的金融工具的交易條件與執行 規 則 可 在 任 何 特 定 時 間 通 過 網 址https://global.TigerWit.com 在線查詢。TigerWit 只限於執行委托運行，除非另有約定外，否則沒有義務就客戶交易決策的適當性進行監督或提出建議，因此即使在交易不適用於客戶的情況下，本公司仍可按照客戶接收的指令執行。",
+        "id": "3. Ketentuan trading dan aturan pelaksanaan dari instrumen keuangan yang ditawarkan oleh Perusahaan dapat ditemukan secara online di https://global.TigerWit.com pada waktu tertentu. TigerWit beroperasi pada mandat hanya eksekusi dan kecuali jika disetujui sebaliknya tidak berkewajiban untuk memantau atau memberi tahu klien tentang kesesuaian keputusan trading  mereka, oleh karena itu, Perusahaan dapat melaksanakan instruksi yang diterima oleh klien bahkan jika transaksi tersebut tidak sesuai untuk klien.",
+        "es": "3.Las condiciones de trading y las reglas de ejecución de los instrumentos financieros ofrecidos por la Firma se pueden encontrar en línea en https://global.TigerWit.com en todo momento. TigerWit opera bajo un mandato de ejecución única y, a menos que se acuerde lo contrario, no tiene la obligación de monitorear o asesorar al cliente sobre la idoneidad de su decisión de trading; por lo tanto, la Firma puede ejecutar una instrucción recibida por el cliente incluso si dicha transacción no fuera adecuada para el cliente.\n",
+        "pt-BR": "3.As condições comerciais e as regras de execução dos instrumentos financeiros oferecidos pela Firma podem ser encontradas online em https://global.TigerWit.com a qualquer momento. A TigerWit opera em um mandato de execução única e salvo acordo em contrário, não tem nenhuma obrigação de monitorar ou aconselhar o cliente sobre a adequação de sua decisão comercial, portanto, a Empresa pode executar uma instrução recebida pelo cliente mesmo se tal transação não for adequada para o cliente. cliente.",
+        "ar": "3- يمكن الإطلاع على شروط التداول وقواعد التنفيذ للأدوات المالية التي تقدمها الشركة  على موقعنا الإلكتروني https://global.TigerWit.com في أي وقت.  ويقتصر عمل TigerWit على تنفيذ أوامر التداول فقط والشركة ليست ملزمة، ما لم يتم الاتفاق على خلاف ذلك، بمتابعة العميل أو تقديم المشورة له بشأن مدى سلامة وملاءمة قرار التداول الذي يتخذه، وبناء على ذلك فإنه يجوز للشركة تنفيذ التعليمات التي تلقاها من العميل حتى إذا كانت المعاملة المذكورة غير مناسبة للعميل."
     },
     "amtClient44": {
         "zh": "向客户发出通知，TigerWit 保留随时修订交易条件及执行规则的权利。即便公司对交易条件和/或执行规则的任何部分作出修订，客户仍然受到客户协议，包括但不限于已经实施的任何修订的约束。",
         "en": "Upon notice to the client, TigerWit reserves the right to amend, from time to time, both the trading conditions and execution rules. Even if the Firm amends any part of the trading conditions and/or execution rules the client continues to be bound by the Client Agreement, including but not limited to any amendments that have been implemented.",
         "vi": "Theo thông báo cho khách hàng, TigerWit bảo lưu quyền sửa đổi, theo thời gian, cả hai điều kiện giao dịch và các quy tắc thực hiện. Ngay cả khi Công ty sửa đổi bất kỳ phần nào của các điều kiện giao dịch và / hoặc quy tắc thực thi, khách hàng vẫn tiếp tục bị ràng buộc bởi Hợp đồng khách hàng, bao gồm nhưng không giới hạn ở bất kỳ sửa đổi nào đã được thực hiện.",
         "zh-Hant": "向客戶發出通知，TigerWit 保留隨時修訂交易條件及執行規則的權利。即便公司對交易條件和/或執行規則的任何部分作出修訂，客戶仍然受到客戶協議，包括但不限於已經實施的任何修訂的約束。",
-        "id": "Upon notice to the client, TigerWit reserves the right to amend, from time to time, both the trading conditions and execution rules. Even if the Firm amends any part of the trading conditions and/or execution rules the client continues to be bound by the Client Agreement, including but not limited to any amendments that have been implemented.",
+        "id": "Dengan pemberitahuan kepada klien, TigerWit berhak untuk mengubah, dari waktu ke waktu, baik ketentuan trading dan aturan pelaksanaan. Bahkan jika Perusahaan mengubah bagian mana pun dari ketentuan trading dan / atau aturan pelaksanaan, klien tetap terikat oleh Perjanjian Klien, termasuk namun tidak terbatas pada amandemen apa pun yang telah diterapkan.",
         "es": "Tras notificar al cliente, TigerWit se reserva el derecho a modificar, de vez en cuando, las condiciones de trading y las reglas de ejecución. Incluso si la Firma modificara alguna parte de las condiciones comerciales y/o las reglas de ejecución, el cliente sigue estando obligado por el Acuerdo del Cliente, incluidas, entre otras, las modificaciones implementadas.\n",
         "pt-BR": "Mediante notificação ao cliente, a TigerWit reserva-se o direito de alterar, de tempos em tempos, tanto as condições de negociação quanto as regras de execução. Mesmo que a Empresa altere qualquer parte das condições de negociação e / ou regras de execução, o cliente continua vinculado ao Contrato do Cliente, incluindo, mas não se limitando a, quaisquer alterações que tenham sido implementadas.",
         "ar": "بعد إرسال إخطار إلى العميل، تحتفظ TigerWit لنفسها بالحق في تعديل شروط التداول وقواعد التنفيذ من وقت لآخر.  وحتى إذا قامت الشركة بتعديل أي جزء من شروط التداول و/أو قواعد التنفيذ، يظل العميل ملتزمًا باتفاقية العميل، بما في ذلك على سبيل المثال وليس الحصر التعديلات التي طبقتها الشركة."
@@ -4376,7 +4376,7 @@ module.exports = {
         "en": "4.Under no circumstances, TigerWit shall provide investment advice or recommendation to the client or state an opinion in relation to a transaction. The client understands that if necessary, independent advice should be sought in relation to trading financial instruments, including but not limited to trading specific financial instruments, investment strategies pursued, charges and tax implications.",
         "vi": "4.Theo thông báo cho khách hàng, TigerWit bảo lưu quyền sửa đổi, theo thời gian, cả hai điều kiện giao dịch và các quy tắc thực hiện. Ngay cả khi Công ty sửa đổi bất kỳ phần nào của các điều kiện giao dịch và / hoặc quy tắc thực thi, khách hàng vẫn tiếp tục bị ràng buộc bởi Hợp đồng khách hàng, bao gồm nhưng không giới hạn ở bất kỳ sửa đổi nào đã được thực hiện.",
         "zh-Hant": "4.在任何情況下，TigerWit 都不應向客戶提供投資意見或投資建議，或就交易發表意見。客戶理解，如有必要應尋求與交易金融工具有關的獨立意見，包括但不限於特定金融工具的交易、客戶追求的投資策略、費用及稅務影響。",
-        "id": "4.Under no circumstances, TigerWit shall provide investment advice or recommendation to the client or state an opinion in relation to a transaction. The client understands that if necessary, independent advice should be sought in relation to trading financial instruments, including but not limited to trading specific financial instruments, investment strategies pursued, charges and tax implications.",
+        "id": "4. Dalam keadaan apa pun, TigerWit tidak akan memberikan nasihat atau rekomendasi investasi kepada klien atau menyatakan pendapat terkait dengan transaksi. Klien memahami bahwa jika perlu, nasihat independen harus dicari sehubungan dengan perdagangan instrumen keuangan, termasuk tetapi tidak terbatas pada trading instrumen keuangan tertentu, strategi investasi yang dilakukan, biaya dan implikasi pajak.",
         "es": "4.Bajo ninguna circunstancia, TigerWit proporcionará consejos o recomendaciones de inversión al cliente o emitirá una opinión en relación con una transacción. El cliente entiende que, de ser necesario, debe buscar asesoramiento independiente en relación con los instrumentos financieros de negociación, incluidos, entre otros, instrumentos financieros específicos de negociación, estrategias de trading, cargos e implicaciones fiscales.",
         "pt-BR": "4. Sob nenhuma circunstância, a TigerWit deve fornecer consultoria ou recomendação de investimento para o cliente ou declarar uma opinião em relação a uma transação. O cliente entende que, se necessário, deve-se procurar aconselhamento independente em relação à negociação de instrumentos financeiros, incluindo, mas não se limitando, à negociação de instrumentos financeiros específicos, estratégias de investimento perseguidas, encargos e implicações fiscais.",
         "ar": "4- تحت أي ظرف من الظروف، تقوم TigerWit بتقديم المشورة أو التوصيات الاستثمارية إلى العميل أو إبداء الرأي حول إحدى الصفقات.  يفهم العميل أنه يجب عليه الاستعانة بمشورة مستقلة إذا لزم الأمر فيما يتعلق بأدوات التداول المالية، بما في ذلك على سبيل المثال وليس الحصر تداول أدوات مالية محددة واستراتيجيات التداول المنشودة والرسوم والتبعات الضريبية."
@@ -4386,7 +4386,7 @@ module.exports = {
         "en": "5.TigerWit, from time to time and as often as it deems appropriate, may issue material (‘the Information Material’), which contains information including but not limited to the conditions of the financial market, published via its website and other media. It should be noted the Information Material is considered to be marketingcommunication only and does not contain, and should not be construed as containing investment advice or an investment recommendation or, an offer of or solicitation for any transactions in financial instruments. TigerWit makes no representation and assumes no liability as to the accuracy or completeness of the information provided, nor any loss arising from any investment based on a statement, forecast or other information supplied by any employee of TigerWit, a third party or otherwise. The Information Material is not prepared in accordance with legal requirements promoting the independence of investment research and it is not subject to any prohibition on dealing ahead of the dissemination of investment research. All expressions of opinion included in the Information Material are subject to change without notice. Any opinions made may be personal to the author and may not reflect the opinions of TigerWit.",
         "vi": "5. TigerWit, tùy từng thời điểm và thấy phù hợp, có thể phát hành tài liệu (Tài liệu Thông tin), chứa thông tin bao gồm nhưng không giới hạn ở các điều kiện của thị trường tài chính, được xuất bản qua trang web và các phương tiện khác. Cần lưu ý rằng Tài liệu Thông tin được coi là chỉ tiếp thị và không chứa và không được hiểu là có chứa lời khuyên đầu tư hoặc khuyến nghị đầu tư hoặc đề nghị hoặc chào mời bất kỳ giao dịch nào trong các công cụ tài chính. TigerWit không đại diện và không chịu trách nhiệm về tính chính xác hoặc đầy đủ của thông tin được cung cấp, cũng như bất kỳ tổn thất nào phát sinh từ bất kỳ khoản đầu tư nào dựa trên tuyên bố, dự báo hoặc thông tin khác được cung cấp bởi bất kỳ nhân viên nào của TigerWit hay bất kì một bên thứ ba hay bên nào khác. Thông Tin Tài Liệu không được chuẩn bị theo các điều kiện pháp luật cho biết sự độc lập của việc nghiên cứu và không thay đổi bất kì điều khoản nào của sự phổ biến nghiên cứu đầu tư. Tất cả các việc thể hiện ý kiến được bao gồm trong Tài Liệu Thông Tin có thể được thay đổi mà không cần có thông báo. Bất kì ý kiến nào được đưa có thể mang tính cá nhân từ tác giả và không thể hiện ý kiến của TigerWit.",
         "zh-Hant": "5.TigerWit 可以不時及按其認為適當的頻率，通過其網站或其他媒體發布包含金融市場狀況等信息的資料（以下簡稱“信息資料”）。請留意，該信息資料僅視作營銷傳播，並不包含且不得解釋為包含投資意見或投資建議，或任何金融工具交易的邀約或邀請。TigerWit 對於所提供信息的準確性或完整性不作任何聲明或承擔任何責任，也不對基於 TigerWit 的任何雇員、第三方等提供的聲明、預測或其他信息所作任何投資產生的任何損失承擔責任。該信息資料並未按照提倡投資研究獨立性的法律要求編制，且在投資研究傳播前不受任何交易禁止。信息資料中包含的所有意見表述如有更改恕不另行通知。任何意見都可能出自作者個人觀點，不壹定反映TigerWit 的意見。",
-        "id": "5.TigerWit, from time to time and as often as it deems appropriate, may issue material (‘the Information Material’), which contains information including but not limited to the conditions of the financial market, published via its website and other media. It should be noted the Information Material is considered to be marketingcommunication only and does not contain, and should not be construed as containing investment advice or an investment recommendation or, an offer of or solicitation for any transactions in financial instruments. TigerWit makes no representation and assumes no liability as to the accuracy or completeness of the information provided, nor any loss arising from any investment based on a statement, forecast or other information supplied by any employee of TigerWit, a third party or otherwise. The Information Material is not prepared in accordance with legal requirements promoting the independence of investment research and it is not subject to any prohibition on dealing ahead of the dissemination of investment research. All expressions of opinion included in the Information Material are subject to change without notice. Any opinions made may be personal to the author and may not reflect the opinions of TigerWit.",
+        "id": "5. TigerWit, dari waktu ke waktu dan sesering yang dianggap perlu, dapat mengeluarkan materi ('Materi Informasi'), yang berisi informasi termasuk namun tidak terbatas pada kondisi pasar keuangan, yang dipublikasikan melalui situs webnya dan media lainnya. Perlu dicatat bahwa Materi Informasi dianggap hanya komunikasi pemasaran dan tidak mengandung, dan tidak boleh ditafsirkan sebagai berisi nasihat investasi atau rekomendasi investasi atau, tawaran atau ajakan untuk setiap transaksi dalam instrumen keuangan. TigerWit tidak membuat pernyataan dan tidak bertanggung jawab atas keakuratan atau kelengkapan informasi yang diberikan, atau kerugian apa pun yang timbul dari investasi apa pun berdasarkan pernyataan, perkiraan, atau informasi lain yang diberikan oleh karyawan TigerWit, pihak ketiga, atau lainnya. Materi Informasi tidak disiapkan sesuai dengan persyaratan hukum yang mendorong kemandirian penelitian investasi dan tidak tunduk pada larangan berurusan sebelum diseminasi penelitian investasi. Semua ekspresi pendapat yang termasuk dalam Materi Informasi dapat berubah tanpa pemberitahuan. Setiap pendapat yang dibuat mungkin bersifat pribadi bagi penulis dan mungkin tidak mencerminkan pendapat TigerWit.",
         "es": "5.TigerWit pudiera, de vez en cuando y con la frecuencia que considere apropiada, emitir contenido (‘Material de información’), con información sobre, entre otras, las condiciones de los mercados financieros, publicado a través de su sitio web y otros medios. Debe tenerse presente que el Material informativo se considera sólo una comunicación de marketing y no contiene, y no debe interpretarse como tal, consejos de inversión o una recomendaciones de inversión, o suponen una oferta o solicitud sobre cualquier transacción con instrumentos financieros. TigerWit no hace ninguna representación y no asume ninguna responsabilidad en cuanto a la exactitud o integridad de la información proporcionada, ni sobre cualquier pérdida que pudiera derivar de una inversión basada en una declaración, pronóstico u otra información suministrada por cualquier empleado de TigerWit, un tercero o de otra manera. El material de información no está preparado de acuerdo con los requisitos legales que promueven la independencia de la investigación de inversión y no está sujeto a ninguna prohibición de negociar antes de la difusión de la investigación de inversión. Todas las expresiones de opinión incluidas en el Material de Información están sujetas a cambios sin previo aviso. Cualquier opinión declarada es personal del autor y pudiera no reflejar las opiniones de TigerWit.",
         "pt-BR": "5. A TigerWit, de tempos em tempos e quantas vezes julgar apropriado, poderá emitir material (‘Material de Informação’), que contém informações incluindo mas não limitadas às condições do mercado financeiro, publicadas através de seu website e outras mídias. Deve-se notar que o Material de Informação é considerado como marketing apenas e não contém, e não deve ser interpretado como contendo conselho de investimento ou uma recomendação de investimento ou, uma oferta ou solicitação para quaisquer transações em instrumentos financeiros. A TigerWit não faz representação e não assume qualquer responsabilidade quanto à exatidão ou integridade das informações fornecidas, nem qualquer perda decorrente de qualquer investimento com base em uma declaração, previsão ou outras informações fornecidas por qualquer funcionário da TigerWit, terceiros ou de outra forma. O Material de Informação não é preparado de acordo com os requisitos legais que promovem a independência da pesquisa de investimento e não está sujeito a qualquer proibição de lidar antes da disseminação da pesquisa de investimento. Todas as expressões de opinião incluídas no Material Informativo estão sujeitas a alterações sem aviso prévio. Quaisquer opiniões feitas podem ser pessoais para o autor e podem não refletir as opiniões da TigerWit.",
         "ar": "5- يجوز أن تقوم TigerWit، من حين لآخر ومتى ارتأت ذلك مناسبًا، بإصدار مادة (\"المادة الإعلامية\")، والتي تحتوي على معلومات تتضمن على سبيل المثال وليس الحصر أحوال الأسواق المالية، ويتم نشرها على موقعنا الإلكتروني وغيره من الوسائل الأخرى. ويجب الأخذ في الاعتبار أن المادة الإعلامية تعتبر مجرد اتصال تسويقي ولا تحتوي، ولا ينبغي تفسيرها على أنها تحتوي، على أي مشورة استثمارية أو توصية استثمارية أو عرض أو حث على أي معاملة في الأدوات المالية.  لا تقدم TigerWit أي تعهدات ولا تتحمل أي مسؤولية بشأن دقة المعلومات المقدمة أو اكتمالها، وكذلك  أي خسارة ناجمة عن أي استثمار قائم على أي بيانات أو توقعات أو معلومات أخرى يقدمها أحد العاملين في TigerWit أو طرف ثالث أو غير ذلك. لم يتم إعداد المادة الإعلامية وفقًا للشروط القانونية التي تدعم استقلالية أبحاث الاستثمار  ولا تخضع المادة لأي حظر على التداول قبل نشر أبحاث الاستثمار. . وتكون جميع التعبيرات عن الرأي الواردة في المادة الإعلامية قابلة للتغيير بدون إخطار. ويجوز أن تكون أي من هذه الآراء شخصية للمؤلف وقد لا يعكس آراء TigerWit."
@@ -4396,7 +4396,7 @@ module.exports = {
         "en": "6.The client understands that no physical delivery of a CFD’s underlying instrument (or reference instrument) that he/she traded through his/her trading account shall occur.",
         "vi": "6.Khách hàng hiểu rằng sẽ không có việc giao hàng về mặt vật lý của một hợp đồng CFD tài sản cơ bản (hoặc công cụ tham chiếu) mà họ giao dịch thông qua tài khoản giao dịch của mình.",
         "zh-Hant": "6.客戶理解不得通過其交易賬戶進行相關差價合約標的工具（或參考工具）的實際交割。",
-        "id": "6.The client understands that no physical delivery of a CFD’s underlying instrument (or reference instrument) that he/she traded through his/her trading account shall occur.",
+        "id": "6. Klien memahami bahwa pengiriman fisik dari instrumen yang mendasari CFD (atau instrumen referensi) yang ia perdagangkan melalui akun tradingnya tidak akan terjadi.",
         "es": "6.El cliente entiende que no se realizará ninguna entrega física del instrumento subyacente de un CFD (o instrumento de referencia) que negoció a través de su cuenta de trading.",
         "pt-BR": "6.O cliente entende que não deve ocorrer entrega física do instrumento subjacente de um CFD (ou instrumento de referência) que ele / ela negociou através de sua conta de negociação.",
         "ar": "6- يفهم العميل أنه لن يتم إجراء أي تسليم فعلي للأداة المعنية في العقد مقابل الفروقات (أو الأداة ذات الصلة) التي يقوم بالتداول عليها باستخدام حساب التداول الخاص به."
@@ -4406,7 +4406,7 @@ module.exports = {
         "en": "7.The client accepts that TigerWit is the only execution venue, which is a Over-The-Counter market.",
         "vi": "7.Khách hàng chấp nhận rằng TigerWit là địa điểm khớp lệnh duy nhất, là một thị trường Over-the Counter (giao dịch không qua sàn chứng khoán).",
         "zh-Hant": "7.客戶同意，TigerWit 僅僅是壹個執行場所，是場外市場。",
-        "id": "7.The client accepts that TigerWit is the only execution venue, which is a Over-The-Counter market.",
+        "id": "7. Klien menerima bahwa TigerWit adalah satu-satunya tempat eksekusi, yang merupakan pasar Over-The-Counter.",
         "es": "7.El cliente acepta que TigerWit es el único lugar de ejecución, el cual es  Over-The-Counter.",
         "pt-BR": "7.O cliente aceita que TigerWit é o único local de execução, que é um mercado de balcão.",
         "ar": "7- يقبل العميل أن TigerWit هي مكان التنفيذ الوحيد، وهو سوق تداول خارج مقصورة البورصة."
@@ -4416,7 +4416,7 @@ module.exports = {
         "en": "8.The client may trade through his/her trading account from 12:00:01 (GMT+0) on a Sunday until 22:00:00 (GMT+0) on a Friday. It should be noted that trading of certain financial instruments occurs during specific timeframes; the client is responsible for looking at the contract specifications of such instruments for further details, prior to trading. The client shall be notified of any Firm holidays through the internal e-mailing system.",
         "vi": "8. Khách hàng có thể giao dịch thông qua tài khoản giao dịch từ 12:00:01 (GMT+0) vào ngày Chủ Nhật đến 22:00:00 (GMT+0) vào Thứ 6. Lưu ý rằng giao dịch với một vài sản phẩm tài chính cụ thể diễn ra trong các khung thời gian cụ thể; khách hàng có trách nhiệm nghiên cứu điều kiện hợp đồng của các sản phẩm để biết thêm chi tiết, trước khi thực hiện giao dịch. Khách hàng sẽ được thông báo nếu có bất kì kì nghỉ nào của Công ty thông qua hệ thống email nội bộ.",
         "zh-Hant": "8.客戶可以從星期日 12:00:01(GMT+0)至星期五 22:00:00(GMT+0)通過其交易賬戶交易。請留意，某些金融工具只能在特定的時段交易。客戶在交易之前有責任查看相關工具的合約規範了解更多詳情。本公司應通過內部電子郵件系統通知客戶任何假期。",
-        "id": "8.The client may trade through his/her trading account from 12:00:01 (GMT+0) on a Sunday until 22:00:00 (GMT+0) on a Friday. It should be noted that trading of certain financial instruments occurs during specific timeframes; the client is responsible for looking at the contract specifications of such instruments for further details, prior to trading. The client shall be notified of any Firm holidays through the internal e-mailing system.",
+        "id": "8. Klien dapat trading melalui akun tradingnya dari 12:00:01 (GMT + 0) pada hari Minggu hingga 22:00:00 (GMT + 0) pada hari Jumat. Perlu dicatat bahwa trading instrumen keuangan tertentu terjadi selama jangka waktu tertentu; klien bertanggung jawab untuk melihat spesifikasi kontrak dari instrumen tersebut untuk rincian lebih lanjut, sebelum melakukan trade. Klien akan diberitahu tentang hari libur Perusahaan melalui sistem email internal.",
         "es": "8.El cliente puede realizar transacciones a través de su cuenta de trading desde las 12:00:01 (GMT + 0) de un domingo hasta las 22:00:00 (GMT + 0) de un viernes. Cabe señalar que el trading de ciertos instrumentos financieros se produce durante horarios específicos; El cliente es responsable de consultar las especificaciones contractuales de dichos instrumentos para obtener más detalles, antes de la negociación. El cliente deberá ser notificado de cualquier festivo de la empresa a través del sistema interno de correo electrónico.",
         "pt-BR": "8.O cliente pode negociar através de sua conta de negociação a partir de 12:00:01 (GMT + 0) em um domingo até 22:00:00 (GMT + 0) em uma sexta-feira. Deve-se notar que a negociação de certos instrumentos financeiros ocorre durante prazos específicos; O cliente é responsável por examinar as especificações do contrato de tais instrumentos para obter mais detalhes, antes de negociar. O cliente será notificado de qualquer feriado da empresa através do sistema interno de e-mail.",
         "ar": "8- بمقدور العميل التداول باستخدام حساب التداول الخاص به من الساعة 12:00:01 (بتوقيت جرينتش +0) يوم الأحد إلى الساعة 22:00:00 (بتوقيت جرينتش +0) يوم الجمعة.  ويجب ملاحظة أن هناك ساعات محددة لتداول أدوات مالية معينة؛ ويتحمل العميل مسؤولية الرجوع إلى مواصفات العقد الخاصة بتلك الأدوات للحصول على مزيد من التفاصيل قبل التداول.  وسيتم إبلاغ العميل بأي عطلات للشركة عن طريق نظام البريد الإلكتروني الداخلي."
@@ -4426,7 +4426,7 @@ module.exports = {
         "en": "9.TigerWit in entitled to refuse the provision of any investment or ancillary service to the client, at any time, without being obliged to inform the client of the reasons to do so in order to protect the legitimate interests of both the client and the Firm.",
         "vi": "9.TigerWit có quyền từ chối cung cấp bất kì sản phẩm hoặc dịch vụ hỗ trợ cho khách hàng, bất cứ lúc nào, không có nghĩa vụ thông báo cho khách hàng về lý do của việc này để bảo vệ lợi ích hợp pháp của cả khách hàng và Công ty.",
         "zh-Hant": "9.為保護客戶和本公司雙方的正當利益，TigerWit 有權在任何時候拒絕向客戶提供任何投資或輔助服務，而無需告知客戶拒絕緣由。",
-        "id": "9.TigerWit in entitled to refuse the provision of any investment or ancillary service to the client, at any time, without being obliged to inform the client of the reasons to do so in order to protect the legitimate interests of both the client and the Firm.",
+        "id": "9. TigerWit berhak untuk menolak penyediaan investasi atau layanan tambahan apa pun kepada klien, kapan saja, tanpa berkewajiban untuk memberi tahu klien tentang alasan untuk melakukannya untuk melindungi kepentingan yang sah baik dari klien dan Perusahaan.",
         "es": "9.TigerWit tiene derecho a rechazar la prestación de cualquier servicio de inversión o auxiliares al cliente, en cualquier momento, sin estar obligado a informar al cliente de las razones, con el fin de proteger los intereses legítimos tanto del cliente como de la Firma. .",
         "pt-BR": "9.TigerWit tem o direito de recusar a prestação de qualquer investimento ou serviço auxiliar ao cliente, a qualquer momento, sem ser obrigado a informar o cliente das razões para fazê-lo, a fim de proteger os interesses legítimos do cliente e da empresa. .",
         "ar": "9- يحق لشركة TigerWit أن ترفض تقديم أي خدمة استثمارية أو تكميلية للعميل، في أي وقت، بدون أن تكون ملزمة بإبلاغ العميل بأسباب الرفض من أجل حماية المصالح المشروعة لكل من العميل والشركة."
@@ -4436,7 +4436,7 @@ module.exports = {
         "en": "Client Classification",
         "vi": "Phân loại Khách Hàng",
         "zh-Hant": "客戶分類",
-        "id": "Client Classification",
+        "id": "Klasifikasi Klien",
         "es": "Clasificación Clientes",
         "pt-BR": "Classificação de clientes",
         "ar": "تصنيف العميل"
@@ -4446,7 +4446,7 @@ module.exports = {
         "en": "1.Unless the Firm agrees otherwise, the client shall be treated as a Retail Client.",
         "vi": "1.Nếu Công ty không đồng ý, khách hàng được phân loại như là một Khách Hàng Đơn Lẻ.",
         "zh-Hant": "1.除非本公司另有約定，客戶應被視為零售客戶。",
-        "id": "1.Unless the Firm agrees otherwise, the client shall be treated as a Retail Client.",
+        "id": "1.Kecuali Perusahaan menyetujui sebaliknya, klien akan diperlakukan sebagai Klien Ritel.",
         "es": "1.A menos que la Firma acuerde lo contrario, el cliente será tratado como un Cliente Minorista.",
         "pt-BR": "1. A menos que a Empresa concorde de outra forma, o cliente será tratado como um Cliente de Varejo.",
         "ar": "1- ما لم توافق الشركة على خلاف ذلك، سيتم التعامل مع العميل باعتباره عميل تجزئة."
@@ -4456,7 +4456,7 @@ module.exports = {
         "en": "If a client desires to be re-classified as either a Professional Client or an Eligible Counterparty then the client needs to send the Firm a written request. The Firm shall consider such requests at its discretion after reviewing the client’s circumstances, including the quantitative and qualitative assessments. The client is responsible for notifying the Firm of his/her change of personal circumstances.",
         "vi": "Nếu khách hàng muốn được phân loại lại là Khách hàng Chuyên nghiệp hoặc Đối tác Đủ điều kiện thì khách hàng cần gửi cho Công ty một yêu cầu bằng văn bản. Công ty sẽ xem xét các yêu cầu đó theo quyết định của mình sau khi xem xét hoàn cảnh của khách hàng, bao gồm các đánh giá định tính và định lượng. Khách hàng chịu trách nhiệm thông báo cho Công ty về việc thay đổi hoàn cảnh cá nhân của mình.",
         "zh-Hant": "如果客戶希望被重新分類為專業客戶或合格對手方，則客戶需要向本公司發出書面申請。公司在對客戶作出定量及定性評估等情況審核後，應酌情考量上述申請。如客人個人情況發生變化，客戶有責任告知公司。",
-        "id": "If a client desires to be re-classified as either a Professional Client or an Eligible Counterparty then the client needs to send the Firm a written request. The Firm shall consider such requests at its discretion after reviewing the client’s circumstances, including the quantitative and qualitative assessments. The client is responsible for notifying the Firm of his/her change of personal circumstances.",
+        "id": "Jika klien ingin diklasifikasikan kembali sebagai Klien Profesional atau Mitra yang Memenuhi Syarat, maka klien perlu mengirimkan permintaan tertulis kepada Perusahaan. Perusahaan akan mempertimbangkan permintaan tersebut atas kebijakannya sendiri setelah meninjau keadaan klien, termasuk penilaian kuantitatif dan kualitatif. Klien bertanggung jawab untuk memberi tahu Firma tentang perubahan keadaan pribadinya.",
         "es": "Si un cliente desea ser reclasificado como un Cliente Profesional o una Contraparte Elegible, entonces el cliente debe enviar una solicitud por escrito a la Firma. La Firma considerará tales solicitudes a su discreción después de revisar las circunstancias del cliente, incluidas las evaluaciones cuantitativas y cualitativas. El cliente es responsable de notificar a la Firma su cambio de circunstancias personales.\n\n",
         "pt-BR": "Se um cliente desejar ser reclassificado como Cliente Profissional ou Contraparte Elegível, o cliente precisa enviar uma solicitação por escrito à Empresa. A Firma deverá considerar tais solicitações a seu critério após analisar as circunstâncias do cliente, incluindo as avaliações quantitativa e qualitativa. O cliente é responsável por notificar a Empresa sobre sua mudança de circunstâncias pessoais.",
         "ar": "وإذا أراد العميل أن تتم إعادة تصنيفه باعتباره عميلاً محترفًا أو طرفًا مقابلاً مؤهلاً، يجب على العميل إرسال طلب مكتوب إلى الشركة.  وسوف تنظر الشركة في هذه الطلبات وفقًا لتقديرها وحدها دون غيرها بعد مراجعة ظروف العميل، بما في ذلك التقييمات الكمية والنوعية. ويتحمل العميل مسؤولية إبلاغ الشركة بأي تغيير يطرأ على ظروفه الشخصية."
@@ -4466,27 +4466,27 @@ module.exports = {
         "en": "The type of client category will determine the level of protection afforded to the client under SCB Rule and Regulations. The Firm will notify the Client in writing to inform them of their loss of certain regulatory protections prior to agreeing a re- categorisation request.",
         "vi": "Loại danh mục khách hàng sẽ xác định mức độ bảo vệ dành cho khách hàng theo Quy tắc và Quy định của SCB. Công ty sẽ thông báo cho Khách hàng bằng văn bản để thông báo cho họ về việc họ bị mất một số quy định bảo vệ trước khi đồng ý yêu cầu phân loại lại.",
         "zh-Hant": "根據 SCB 規則與條例，客戶類別將確定提供給客戶的保護級別。本公司將在同意重新分類申請之前，以書面方式通知客戶他們喪失的某些監管保護。",
-        "id": "The type of client category will determine the level of protection afforded to the client under SCB Rule and Regulations. The Firm will notify the Client in writing to inform them of their loss of certain regulatory protections prior to agreeing a re- categorisation request.",
+        "id": "Jenis kategori klien akan menentukan tingkat perlindungan yang diberikan kepada klien menurut Peraturan dan Regulasi SCB. Perusahaan akan memberi tahu Klien secara tertulis untuk memberi tahu mereka tentang hilangnya perlindungan peraturan tertentu sebelum menyetujui permintaan kategorisasi ulang.",
         "es": "El tipo de categoría de cliente determinará el nivel de protección otorgado al cliente bajo la Regla y Reglamentos de SCB. La Firma notificará al Cliente por escrito para informarles de la pérdida de ciertas protecciones reglamentarias antes de aceptar una solicitud de reclasificación.",
         "pt-BR": "O tipo de categoria do cliente determinará o nível de proteção oferecido ao cliente de acordo com a Regra e os Regulamentos do SCB. A Empresa notificará o Cliente, por escrito, para informá-lo sobre a perda de certas proteções regulatórias antes de concordar com uma solicitação de recategorização.",
         "ar": "وسيحدد نوع فئة العميل مستوى الحماية التي يحصل عليها العميل بموجب قواعد ولوائح هيئة الأوراق المالية في جزر البهاما (SCB).  وستتواصل الشركة مع العميل كتابيًا لإبلاغه بفقدان بعض وسائل الحماية الرقابية والتنظيمية قبل الموافقة على طلبه الخاص بإعادة التصنيف."
     },
     "amtClient55": {
-        "zh": "2.客户受到客户分类通知的约束。更多详情可在线查询，网址：http://global.tigerwit.com。",
-        "en": "2.The client is bound by the Client Categorization Notice. Further details are available online at http://global.tigerwit.com.",
-        "vi": "2.Khách hàng bị ràng buộc bởi Thông báo Phân loại Khách hàng. Thông tin chi tiết có được trình bày trực tuyến tại http://global.tigerwit.com.",
-        "zh-Hant": "2.客戶受到客戶分類通知的約束。更多詳情可在線查詢，網址：http://global.tigerwit.com。",
-        "id": "2.The client is bound by the Client Categorization Notice. Further details are available online at http://global.tigerwit.com.",
-        "es": "2.El cliente está obligado por el Aviso de Categorización del Cliente. Más detalles disponibles online en http://global.tigerwit.com.",
-        "pt-BR": "2.O cliente está vinculado ao Aviso de Categorização do Cliente. Mais detalhes estão disponíveis online em http://global.tigerwit.com.",
-        "ar": "2- يلتزم العميل ببيان تصنيف العميل. تتوفر المزيد من التفاصيل على شبكة الإنترنت على http://global.tigerwit.com"
+        "zh": "2.客户受到客户分类通知的约束。更多详情可在线查询，网址：https://global.TigerWit.com。",
+        "en": "2.The client is bound by the Client Categorisation Notice. Further details are available online at https://global.TigerWit.com.",
+        "vi": "2.Khách hàng bị ràng buộc bởi Thông báo Phân loại Khách hàng. Thông tin chi tiết có được trình bày trực tuyến tại https://global.TigerWit.com.",
+        "zh-Hant": "2.客戶受到客戶分類通知的約束。更多詳情可在線查詢，網址：https://global.TigerWit.com。",
+        "id": "2. Klien terikat oleh Pemberitahuan Kategorisisasi Klien. Rincian lebih lanjut tersedia online di https://global.TigerWit.com.",
+        "es": "2.El cliente está obligado por el Aviso de Categorización del Cliente. Más detalles disponibles online en https://global.TigerWit.com.",
+        "pt-BR": "2.O cliente está vinculado ao Aviso de Categorização do Cliente. Mais detalhes estão disponíveis online em https://global.TigerWit.com.",
+        "ar": "2- يلتزم العميل ببيان تصنيف العميل. تتوفر المزيد من التفاصيل على شبكة الإنترنت على https://global.TigerWit.com"
     },
     "amtClient56": {
         "zh": "身份",
         "en": "Capacity",
         "vi": "Khả năng",
         "zh-Hant": "身份",
-        "id": "Capacity",
+        "id": "Kapasita",
         "es": "Capacidad",
         "pt-BR": "Capacidade",
         "ar": "الصفة"
@@ -4496,7 +4496,7 @@ module.exports = {
         "en": "1.TigerWit shall act, at all times, as principal for all trades entered into by a client.",
         "vi": "1.TigerWit sẽ hành động, tại mọi thời điểm, như là một nhà điều hành cho tất cả các giao dịch được khách hàng tham gia vào.",
         "zh-Hant": "1.TigerWit 將壹直擔任客戶參與所有交易的做市商。",
-        "id": "1.TigerWit shall act, at all times, as principal for all trades entered into by a client.",
+        "id": "1. TigerWit akan bertindak, setiap saat, sebagai prinsipal untuk semua trading yang dilakukan oleh klien.",
         "es": "1.TigerWit actuará, en todo momento, como principal de todas las operaciones realizadas por un cliente.",
         "pt-BR": "1.TigerWit deve agir, em todos os momentos, como principal para todas as negociações realizadas por um cliente.",
         "ar": "1- سوف تتعامل TigerWit، في جميع الأوقات، بصفتها طرفًا رئيسيًا في جميع الصفقات التي يدخلها العميل."
@@ -4506,7 +4506,7 @@ module.exports = {
         "en": "Any instruction received online through a client's personal trading account or by telephone confirming a client's personal trading account number, will be deemed to be communicated by the client. The Firm is not required to confirm the authenticity of the instruction or the identity of the person communicating the instruction. The Firm shall not be liable for any loss arising from an instruction sent by a third party unauthorised to act on the client's behalf.",
         "vi": "Bất kỳ hướng dẫn nào nhận được qua internet từ tài khoản giao dịch cá nhân của khách hàng hoặc qua điện thoại xác nhận số tài khoản giao dịch cá nhân của khách hàng, sẽ được coi là được giao tiếp bởi khách hàng. Công ty không bắt buộc phải xác nhận tính xác thực của hướng dẫn hoặc danh tính của người truyền đạt hướng dẫn. Công ty sẽ không chịu trách nhiệm pháp lý đối với bất kỳ tổn thất nào phát sinh từ lệnh được gửi bởi bên thứ ba trái phép để hành động thay mặt khách hàng.",
         "zh-Hant": "任何通過客戶個人交易賬戶在線接收或通過電話接收、確認客戶個人交易賬號的指令都將被視為由客戶傳達。本公司無需確認該指令的真實性或傳達該指令之人士的身份。由於第三方未經授權以客戶名義發出的指令所造成的任何損失，本公司對此概不負責。",
-        "id": "Any instruction received online through a client's personal trading account or by telephone confirming a client's personal trading account number, will be deemed to be communicated by the client. The Firm is not required to confirm the authenticity of the instruction or the identity of the person communicating the instruction. The Firm shall not be liable for any loss arising from an instruction sent by a third party unauthorised to act on the client's behalf.",
+        "id": "Setiap instruksi yang diterima secara online melalui akun trading pribadi klien atau melalui telepon yang mengonfirmasi nomor akun trade pribadi klien, akan dianggap telah dikomunikasikan oleh klien. Perusahaan tidak diharuskan untuk mengkonfirmasi keaslian instruksi atau identitas orang yang mengkomunikasikan instruksi tersebut. Perusahaan tidak akan bertanggung jawab atas kerugian yang timbul dari instruksi yang dikirim oleh pihak ketiga yang tidak berwenang untuk bertindak atas nama klien.",
         "es": "Cualquier instrucción recibida online a través de la cuenta de trading personal de un cliente o por teléfono confirmando el número de cuenta de trading personal de un cliente, se considerará una instrucción comunicada por el cliente. No se requiere que la Firma confirme la autenticidad de la instrucción o la identidad de la persona que comunica la instrucción. La Firma no será responsable por cualquier pérdida que surja de una instrucción enviada por un tercero no autorizado para actuar en nombre del cliente.",
         "pt-BR": "Qualquer instrução recebida on-line através da conta de negociação pessoal de um cliente ou por telefone confirmando o número da conta de negociação pessoal de um cliente, será considerada como sendo comunicada pelo cliente. A Empresa não é obrigada a confirmar a autenticidade da instrução ou a identidade da pessoa que comunica a instrução. A Empresa não será responsável por qualquer perda decorrente de uma instrução enviada por terceiros, não autorizada a agir em nome do cliente.",
         "ar": "أي تعليمات يتم استلامها عبر شبكة الإنترنت من خلال حساب التداول الشخصي للعميل أو عبر الهاتف الذي يؤكد رقم حساب التداول الشخصي للعميل سيتم اعتبارها تعليمات مبلغة من العميل.  والشركة ليست ملزمة بالتأكد من صحة التعليمات أو هوية الشخص الذي يقوم بإبلاغ التعليمات.  ولا تتحمل الشركة المسؤولية عن أي خسارة ناشئة عن تعليمات مرسلة من طرف ثالث غير مصرح له بالتصرف نيابة عن العميل."
@@ -4516,7 +4516,7 @@ module.exports = {
         "en": "The Firm does not accept an authorised representative as a client, unless specifically agreed otherwise. However, the authorised representative may give trading instructions to the Firm on the client’s behalf.",
         "vi": "Công ty không chấp nhận người đại diện được ủy quyền làm khách hàng, trừ khi có thỏa thuận cụ thể khác. Tuy nhiên, đại diện được ủy quyền có thể cung cấp hướng dẫn giao dịch cho Công ty thay mặt khách hàng.",
         "zh-Hant": "除非另有特別約定，本公司不接受授權代表作為客戶。但授權代表可以代表客戶向本公司發出交易指令。",
-        "id": "The Firm does not accept an authorised representative as a client, unless specifically agreed otherwise. However, the authorised representative may give trading instructions to the Firm on the client’s behalf.",
+        "id": "Perusahaan tidak menerima perwakilan resmi sebagai klien, kecuali secara khusus disetujui sebaliknya. Namun, perwakilan resmi dapat memberikan instruksi trading kepada Perusahaan atas nama klien.",
         "es": "La Firma no acepta a un representante autorizado como cliente, a menos que se acuerde específicamente lo contrario. Sin embargo, el representante autorizado puede dar instrucciones de trading a la Firma en nombre del cliente.",
         "pt-BR": "A Empresa não aceita um representante autorizado como cliente, salvo acordo específico em contrário. No entanto, o representante autorizado pode fornecer instruções de negociação para a Empresa em nome do cliente.",
         "ar": "ولا تقبل لشركة أي ممثل مفوض باعتباره عميلاً، ما لم يتم الاتفاق على خلاف ذلك.  ومع ذلك، يجوز للممثل المفوض إعطاء تعليمات التداول للشركة نيابة عن العميل."
@@ -4526,7 +4526,7 @@ module.exports = {
         "en": "The client authorises TigerWit to rely and/ or act on any instructions sent by the former, without the need on the Firm’s part for confirming the authenticity of the instruction or the identity of the person communicating the instruction.",
         "vi": "Khách hàng ủy quyền cho TigerWit dựa vào và / hoặc hành động theo bất kỳ hướng dẫn nào được gửi bởi khách hàng, mà không cần Công ty xác nhận tính xác thực của hướng dẫn hoặc danh tính của người truyền đạt hướng dẫn.",
         "zh-Hant": "客戶授權 TigerWit 以客戶發出的任何指令為依據和/或按此行事，而無需本公司壹方確認該指令的真實性或確認傳達該指令人員的身份。",
-        "id": "The client authorises TigerWit to rely and/ or act on any instructions sent by the former, without the need on the Firm’s part for confirming the authenticity of the instruction or the identity of the person communicating the instruction.",
+        "id": "Klien memberi wewenang kepada TigerWit untuk mengandalkan dan / atau bertindak atas instruksi apa pun yang dikirim oleh sebelumnya, tanpa perlu pihak Perusahaan untuk mengonfirmasi keaslian instruksi atau identitas orang yang mengkomunikasikan instruksi tersebut.",
         "es": "El cliente autoriza a TigerWit a confiar y/o actuar sobre cualquier instrucción enviada por aquel, sin necesidad por parte de la Firma de confirmar la autenticidad de la instrucción o la identidad de la persona que la comunica.",
         "pt-BR": "O cliente autoriza a TigerWit a confiar e / ou agir em quaisquer instruções enviadas pelo primeiro, sem a necessidade, por parte da Empresa, de confirmar a autenticidade da instrução ou a identidade da pessoa que comunica a instrução.",
         "ar": "ويأذن العميل لشركة TigerWit بأن تعتمد و/أو تتصرف بناء على أي تعليمات مرسلة منه، بدون الحاجة إلى تأكد الشركة من صحة التعليمات أو هوية الشخص الذي يبلغها التعليمات."
@@ -4536,7 +4536,7 @@ module.exports = {
         "en": "Assurances and Guarantees",
         "vi": "Bảo đảm và Bảo vệ",
         "zh-Hant": "保證與擔保",
-        "id": "Assurances and Guarantees",
+        "id": "Asuransi dan Jaminan",
         "es": "Aseveraciones y Garantías",
         "pt-BR": "Garantias",
         "ar": "الكفالات والضمانات"
@@ -4546,7 +4546,7 @@ module.exports = {
         "en": "1.The client assures and guarantees that: ",
         "vi": "1.Khách hàng chắc chắn và đảm bảo rằng: ",
         "zh-Hant": "1.客戶保證並擔保：",
-        "id": "1.The client assures and guarantees that: ",
+        "id": "1. Klien menjamin bahwa : ",
         "es": "1.El cliente asegura y garantiza que: ",
         "pt-BR": "1.O cliente assegura e garante que:",
         "ar": "1- يكفل العميل ويضمن ما يلي:"
@@ -4556,7 +4556,7 @@ module.exports = {
         "en": "the Funds, according to clause 10.1 below, belong to the client and are free of any lien, charge, pledge or other encumbrance;",
         "vi": "các Quỹ, theo khoản 10.1 dưới đây, thuộc về khách hàng và không có bất kỳ khoản phí, khoản phí, cam kết hoặc các trường hợp nào khác;",
         "zh-Hant": "根據下文第 10.1 條，該資金屬於客戶本人，不存在任何留置權、抵押、質押或其他產權負擔；",
-        "id": "the Funds, according to clause 10.1 below, belong to the client and are free of any lien, charge, pledge or other encumbrance;",
+        "id": "Dana, sesuai dengan klausul 10.1 di bawah, adalah milik klien dan bebas dari hak gadai, biaya, gadai, atau beban lainnya;",
         "es": "Los Fondos, según la cláusula 10.1 a continuación, pertenecen al cliente y están libres de cualquier gravamen, cargo, prenda u otro impedimento;",
         "pt-BR": "os Fundos, de acordo com a cláusula 10.1 abaixo, pertencem ao cliente e estão livres de qualquer penhor, encargo, penhor ou outro ônus;",
         "ar": "أن الأموال الخاصة بالعميل، وفقًا للبند 10.1 أدناه، خالية من أي رهونات أو رسوم أو تعهدات أو غير ذلك من الأعباء؛"
@@ -4566,7 +4566,7 @@ module.exports = {
         "en": "the Funds, according to clause 10.1 below, are not the direct or indirect proceeds of any illegal act or omission or product of any criminal activity; and",
         "vi": "các Quỹ, theo khoản 10.1 dưới đây, không phải là tiền thu được trực tiếp hoặc gián tiếp của bất kỳ hành động hoặc thiếu sót bất hợp pháp hoặc sản phẩm của bất kỳ hoạt động tội phạm nào; và",
         "zh-Hant": "根據下文第 10.1 條，該資金並非任何非法作為或不作為的直接或間接收益，亦非任何犯罪活動的產物；以及",
-        "id": "the Funds, according to clause 10.1 below, are not the direct or indirect proceeds of any illegal act or omission or product of any criminal activity; and",
+        "id": "Dana, menurut klausul 10.1 di bawah, bukanlah hasil langsung atau tidak langsung dari tindakan ilegal atau kelalaian atau produk dari aktivitas kriminal apa pun;",
         "es": "Los Fondos, según la cláusula 10.1 a continuación, no son el producto directo o indirecto de ningún acto u omisión ilegal o el producto de cualquier actividad delictiva; y",
         "pt-BR": "os Fundos, de acordo com a cláusula 10.1 abaixo, não são o resultado direto ou indireto de qualquer ato ilegal ou omissão ou produto de qualquer atividade criminosa; e",
         "ar": "أن الأموال، وفقًا للبند 10.1 أدناه، ليست عوائد مباشرة أو غير مباشرة لأي عمل غير قانوني أو الامتناع عن عمل قانوني أو عائدات أي نشاط إجرامي؛ و"
@@ -4576,7 +4576,7 @@ module.exports = {
         "en": "he/she acts for his/herself and is not a representative or trustee of a third person, unless he/she produces to the satisfaction of the Firm documents to the contrary.",
         "vi": "anh ta / cô ta hành động cho chính mình và không phải là người đại diện hoặc người được ủy thác của một người thứ ba, trừ khi anh ta / cô ta đáp ứng các yêu cầu tài liệu Công ty và ngược lại.",
         "zh-Hant": "客戶代表其自身行事，並非第三方的代表或受托人，客戶向本公司出具其信納的文件規定相反的情況除外。",
-        "id": "he/she acts for his/herself and is not a representative or trustee of a third person, unless he/she produces to the satisfaction of the Firm documents to the contrary.",
+        "id": "dan dia bertindak untuk dirinya sendiri dan bukan merupakan perwakilan atau wali dari orang ketiga, kecuali jika dia menunjukkan sebaliknya sesuai dengan dokumen Firma.",
         "es": "actúa por sí mismo y no es representante o fiduciario de una tercera persona, a menos que demuestre lo contrario los documentos de la Firma.",
         "pt-BR": "age por conta própria e não é representante ou curador de uma terceira pessoa, a menos que produza a satisfação dos documentos firmes em contrário.",
         "ar": "أن العميل يتصرف بنفسه وليس ممثلا لشخص ثالث أو وصيًا عليه، ما لم تثبت وثائق الشركة خلاف ذلك."
@@ -4586,7 +4586,7 @@ module.exports = {
         "en": "The client guarantees the authenticity and validity of any document sent to TigerWit during (i) the account opening process and (ii) the life of the trading account.",
         "vi": "2.Khách hàng đảm bảo tính xác thực và hiệu lực của bất kỳ tài liệu nào được gửi đến TigerWit trong (i) quy trình mở tài khoản và (ii) thời hạn sử dụng tài khoản giao dịch.",
         "zh-Hant": "2.客戶保證在(i)開戶過程中以及(ii)交易賬戶存續期間發送給 TigerWit 的所有文件的真實性和有效性。",
-        "id": "The client guarantees the authenticity and validity of any document sent to TigerWit during (i) the account opening process and (ii) the life of the trading account.",
+        "id": "Klien menjamin keaslian dan validitas dokumen yang dikirim ke TigerWit selama (i) proses pembukaan akun dan (ii) masa pakai akun trading.",
         "es": "El cliente garantiza la autenticidad y validez de cualquier documento enviado a TigerWit durante (i) el proceso de apertura de la cuenta y (ii) la vida útil de la cuenta de trading.",
         "pt-BR": "O cliente garante a autenticidade e validade de qualquer documento enviado para a TigerWit durante (i) o processo de abertura de conta e (ii) a vida útil da conta de negociação.",
         "ar": "يضمن العميل صحة وصلاحية أي وثيقة يقوم بإرسالها إلى TigerWit خلال  (i) عملية فتح الحساب و  (ii) سريان حساب التداول."
@@ -4596,7 +4596,7 @@ module.exports = {
         "en": "Client Money",
         "vi": "Tiền của Khách hàng",
         "zh-Hant": "客戶資金",
-        "id": "Client Money",
+        "id": "Uang Klien",
         "es": "Dinero Clientes",
         "pt-BR": "Dinheiro do Cliente",
         "ar": "أموال العميل"
@@ -4606,7 +4606,7 @@ module.exports = {
         "en": "1.Unless otherwise indicated, TigerWit will deposit any Client Money in one or more segregated account(s) held with an institution within or outside The Bahamas, separated from the Firm’s money; this means that Client Money is treated as belonging to the Client and under no circumstances the Firm will use Client Money, at any time, to meet any of its obligations. The Client Money will be pooled with money belonging to other Clients so an individual Client will not have a claim against a specific sum in a specific account, in the event of insolvency. A Client’s claim will be against the Client Money pool in general. It should be noted, that segregated account(s) will be established, maintained and operated according to the applicable rules and regulations. TigerWit will give instructions to the banking institution(s) regarding the transfer and movement(s) of the Client Money. If the Client has an Open Position the Firm reserves the right, at any time and at the Firm’s sole discretion, to set-off any unrealised losses incurred in respect of an Open Position against any of the Client Money that is held by the Firm to the Client’s credit. In effect, this means that the Firm based on the conditions referred to above may transfer any part of any unrealised losses from an investment-grade institution to an account of TigerWit. At the same time, TigerWit may transfer any unrealised profit incurred as a result of an Open Position from a Firm account to a Client Money account held in an investment- grade institution.",
         "vi": "1.Trừ khi có quy định khác, TigerWit sẽ gửi bất kỳ khoản tiền nào của Khách hàng vào một hoặc nhiều (các) tài khoản tách biệt được tổ chức với một tổ chức trong hoặc ngoài Bahamas, tách biệt với tiền của Công ty; điều này có nghĩa là tiền của Khách hàng được coi là thuộc về Khách hàng và trong mọi trường hợp, Công ty sẽ sử dụng Tiền của Khách hàng, bất kỳ lúc nào, để đáp ứng mọi nghĩa vụ của mình.",
         "zh-Hant": "1.除非另有說明，TigerWit 將客戶資金存入巴哈馬群島境內或境外某壹機構持有的壹個或多個獨立賬戶中，與本公司資金區分；這意味著客戶資金將視為屬於客戶本人，在任何情況下本公司都不得在任何時候使用客戶資金以履行其任何義務。客戶資金將與屬於其他客戶的資金合並，因此壹旦發生破產，個人客戶無法就具體賬戶中的特定金額提出索賠。客戶將針對整個客戶資金池提出索賠。請留意，應根據適用的規則與條例開立、管理並運營獨立賬戶。TigerWit 將向銀行機構發出客戶資金轉賬及轉移的有關指令。如果客戶有未平倉頭寸，則本公司有權隨時且在本公司自由裁量決定下，抵消本公司所持任何客戶名下由於未平倉頭寸而對客戶資金產生的任何未變現虧損。實際上即表示，根據上述條件，本公司可以將未變現虧損的任何部分從投資級別機構轉至 TigerWit 的賬戶。與此同時，TigerWit 可能會將未平倉頭寸產生的任何未變現盈利從本公司賬戶轉至投資級別機構持有的客戶資金賬戶。",
-        "id": "1.Unless otherwise indicated, TigerWit will deposit any Client Money in one or more segregated account(s) held with an institution within or outside The Bahamas, separated from the Firm’s money; this means that Client Money is treated as belonging to the Client and under no circumstances the Firm will use Client Money, at any time, to meet any of its obligations. The Client Money will be pooled with money belonging to other Clients so an individual Client will not have a claim against a specific sum in a specific account, in the event of insolvency. A Client’s claim will be against the Client Money pool in general. It should be noted, that segregated account(s) will be established, maintained and operated according to the applicable rules and regulations. TigerWit will give instructions to the banking institution(s) regarding the transfer and movement(s) of the Client Money. If the Client has an Open Position the Firm reserves the right, at any time and at the Firm’s sole discretion, to set-off any unrealised losses incurred in respect of an Open Position against any of the Client Money that is held by the Firm to the Client’s credit. In effect, this means that the Firm based on the conditions referred to above may transfer any part of any unrealised losses from an investment-grade institution to an account of TigerWit. At the same time, TigerWit may transfer any unrealised profit incurred as a result of an Open Position from a Firm account to a Client Money account held in an investment- grade institution.",
+        "id": "1.Kecuali diindikasikan lain, TigerWit akan mendepositkan Uang Klien dalam satu atau lebih akun terpisah yang disimpan di institusi di dalam atau di luar Bahama, terpisah dari uang Perusahaan; ini berarti bahwa Uang Klien diperlakukan sebagai milik Klien dan dalam keadaan apa pun Perusahaan tidak akan menggunakan Uang Klien, kapan pun, untuk memenuhi kewajibannya. Uang Klien akan dikumpulkan dengan uang milik Klien lain sehingga Klien individu tidak akan memiliki klaim terhadap jumlah tertentu di akun tertentu, jika terjadi kebangkrutan. Klaim Klien akan bertentangan dengan kumpulan Uang Klien secara umum. Perlu dicatat, bahwa akun terpisah akan dibuat, dipelihara, dan dioperasikan sesuai dengan aturan dan regulasi yang berlaku. TigerWit akan memberikan instruksi kepada institusi perbankan mengenai transfer dan perpindahan Uang Klien. Jika Klien memiliki Posisi Terbuka, Perusahaan berhak, kapan saja dan atas kebijakan Perusahaan sendiri, untuk mengganti kerugian yang belum direalisasi yang terjadi sehubungan dengan Posisi Terbuka terhadap salah satu Uang Klien yang dipegang oleh Perusahaan untuk kredit klien. Akibatnya, ini berarti bahwa Perusahaan berdasarkan kondisi yang disebutkan di atas dapat mentransfer setiap bagian dari kerugian yang belum direalisasi dari institusi tingkat investasi ke akun TigerWit. Pada saat yang sama, TigerWit dapat mentransfer keuntungan yang belum direalisasi yang timbul sebagai akibat dari Posisi Terbuka dari akun Firma ke akun Uang Klien yang disimpan di institusi kelas investasi.",
         "es": "1.A menos que se indique lo contrario, TigerWit depositará el dinero del Cliente en una o más cuentas segregadas mantenidas en una institución dentro o fuera de las Bahamas, separadas del dinero de la Firma; esto significa que Dinero del Cliente se trata como parte del Cliente y en ningún caso la Firma utilizará el Dinero del Cliente en ningún momento para cumplir con cualquiera de sus obligaciones. El Dinero del Cliente se combinará con el dinero que pertenece a otros Clientes para que un Cliente individual no tenga un reclamo contra una suma específica en una cuenta específica, en caso de insolvencia. La reclamación de un Cliente será contra el conjunto de Dinero del Cliente en general. Cabe señalar que las cuentas segregadas se establecerán, mantendrán y operarán de acuerdo con las normas y regulaciones aplicables. TigerWit dará instrucciones a la(s) institución(es) bancaria(s) con respecto a la transferencia y el movimiento(s) del Dinero del Cliente. Si el Cliente tiene una Posición abierta, la Firma se reserva el derecho, en cualquier momento y a discreción exclusiva de la Firma, de compensar cualquier pérdida no realizada incurrida con respecto a una Posición abierta contra cualquier dinero del Cliente que la Firma retenga. En efecto, esto significa que la Firma basada en las condiciones mencionadas anteriormente puede transferir cualquier parte de cualquier pérdida no realizada de una institución con grado de inversión a una cuenta de TigerWit. Al mismo tiempo, TigerWit puede transferir cualquier beneficio no realizado en el que se incurra como resultado de una posición abierta de una cuenta de la empresa a una cuenta de dinero del cliente mantenida en una institución con grado de inversión.",
         "pt-BR": "1.A menos que seja indicado o contrário, a TigerWit depositará qualquer Dinheiro do Cliente em uma ou mais contas segregadas mantidas em uma instituição dentro ou fora das Bahamas, separadas do dinheiro da Empresa; isto significa que o Dinheiro do Cliente é tratado como pertencente ao Cliente e sob nenhuma circunstância a Empresa usará o Dinheiro do Cliente, a qualquer momento, para cumprir qualquer uma de suas obrigações. O Dinheiro do Cliente será agrupado com dinheiro pertencente a outros Clientes, para que um Cliente individual não tenha uma reivindicação contra uma quantia específica em uma conta específica, no caso de insolvência. A reivindicação de um cliente será contra o pool de dinheiro do cliente em geral. Deve-se observar que as contas segregadas serão estabelecidas, mantidas e operadas de acordo com as regras e regulamentos aplicáveis. O TigerWit dará instruções à (s) instituição (ões) bancária (s) sobre a transferência e movimento (s) do Dinheiro do Cliente. Se o Cliente tiver uma Posição Aberta, a Empresa reserva-se o direito, a qualquer momento e a critério exclusivo da Empresa, de compensar quaisquer perdas não realizadas incorridas em relação a uma Posição Aberta contra qualquer uma das Moedas do Cliente detidas pela Empresa. o crédito do cliente. Com efeito, isso significa que a Empresa, com base nas condições mencionadas acima, pode transferir qualquer parte de qualquer perda não realizada de uma instituição com grau de investimento para uma conta da TigerWit. Ao mesmo tempo, a TigerWit pode transferir qualquer lucro não realizado incorrido como resultado de uma Posição Aberta de uma conta da Firma para uma conta de Dinheiro do Cliente mantida em uma instituição com grau de investimento.",
         "ar": "1- ما لم يتم الإشارة إلى خلاف ذلك، ستقوم TigerWit بإيداع أموال العميل في حساب منفصل واحد أو أكثر ويتم الاحتفاظ بأموال العميل في مؤسسة داخل جزر البهاما أو خارجها، بشكل منفصل عن أموال الشركة؛ ويعني ذلك أنه تتم معاملة أموال العميل باعتبارها مملوكة للعميل ولن تستخدم الشركة تحت أي ظرف من الظروف أموال العميل في أي وقت للوفاء بأي من التزاماتها.  وسيتم دمج أموال العميل مع أموال العملاء الآخرين، وبناء على ذلك فإنه في حالة إعسار الشركة لا يمكن للعميل الفرد المطالبة بمبلغ معين في حساب معين. وستكون مطالبة العميل ضد مجمع أموال العملاء بشكل عام. ينبغي ملاحظة أن الحسابات المنفصلة سيتم إنشاءها وصيانتها وتشغيلها وفقًا للقواعد واللوائح المعمول بها.  وستعطي TigerWit تعليمات إلى المؤسسة (المؤسسات) المصرفية فيما يتعلق بتحويل وحركة (حركات) أموال العميل.  فإذا كان لدى العميل مركزًا مفتوحًا، تحتفظ الشركة لنفسها بالحق في أن تقوم، في أي وقت ووفقًا لتقدير الشركة وحدها دون غيرها، بتعويض أي خسائر غير محققة تتكبدها الشركة والتي تكون مرتبطة بمركز مفتوح من أي أموال للعميل والتي تحتفظ بها الشركة لائتمان العميل. ويعني هذا في الواقع أنه يجوز للشركة، بناء على الشروط سالفة الذكر، تحويل أي جزء من أي خسارة غير محققة من مؤسسة استثمارية إلى حساب TigerWit.  وفي الوقت نفسه، يجوز أن تقوم TigerWit بتحويل أي أرباح غير محققة جنتها بسبب المركز المفتوح من حساب الشركة إلى حساب أموال العميل الذي يتم الاحتفاظ به في مؤسسة استثمارية."
@@ -4617,7 +4617,7 @@ module.exports = {
         "vi": "2.Tiền Khách Hàng được giữ bên ngoài Bahamas có thể phải chịu sự quản lý của lãnh thổ đó và quyền của khách hàng có thể khác nhau theo đó. TigerWit sẽ không chịu trách nhiệm về khả năng thanh toán, hành động hoặc thiếu sót của bất kỳ tổ chức ngân hàng nào mà Khách hàng được giữ tiền. Tuy nhiên, TigerWit sẽ thực hiện tất cả các chức năng, chăm sóc và nỗ lực trong việc lựa chọn, bổ nhiệm và đánh giá định kỳ của tổ chức nơi mà tiền gửi của khách hàng được gửi.",
         "zh-Hant": "2.巴哈馬群島境外持有的客戶資金可能受該地區管轄，相應地，客戶權利有所不同。TigerWit 對持有客戶資金的任何銀行機構的償付能力、作為或不作為概不負責。但 TigerWit 將運用壹切適當技能、謹慎勤勉地對客戶資金存入機構進行選擇、任用和定期審核。",
         "id": "2.Client Money held outside The Bahamas may be subject to the jurisdiction of that territory and client rights may differ accordingly. TigerWit shall not be responsible for the solvency, act(s) or omission(s) of any banking institution with which Client Money is held. However, TigerWit will exercise all due skill, care and diligence in the selection, appointment and periodic review of the institution where the Client Money is deposited.",
-        "es": "2. El Dinero del cliente mantenido fuera de Las Bahamas puede estar sujeto a la jurisdicción de ese territorio y los derechos de los clientes pueden diferir en consecuencia. TigerWit no será responsable por la solvencia, el (los) acto(s) u omisión(es) de cualquier institución bancaria con la que se mantenga el Dinero del Cliente. Sin embargo, TigerWit ejercerá toda la diligencia necesaria y cuidado en la selección, nombramiento y revisión periódica de la institución donde se deposita el Dinero del Cliente.",
+        "es": "2. Uang Klien yang disimpan di luar Bahama mungkin tunduk pada yurisdiksi wilayah itu dan hak klien mungkin berbeda karenanya. TigerWit tidak bertanggung jawab atas solvabilitas, tindakan, atau kelalaian dari lembaga perbankan mana pun yang menyimpan Uang Klien. Namun, TigerWit akan menggunakan semua keahlian, kehati-hatian, dan ketekunan dalam pemilihan, pengangkatan, dan peninjauan berkala terhadap institusi tempat Uang Klien disimpan.",
         "pt-BR": "2. Dinheiro do cliente mantido fora As Bahamas podem estar sujeitas à jurisdição desse território e os direitos do cliente podem diferir de acordo. A TigerWit não se responsabiliza pela solvência, ato (s) ou omissão (ões) de qualquer instituição bancária com a qual o Client Money esteja retido. No entanto, a TigerWit exercerá toda a devida habilidade, cuidado e diligência na seleção, nomeação e revisão periódica da instituição onde o Dinheiro do Cliente é depositado.",
         "ar": "2- يجوز أن تخضع أموال العميل التي يتم الاحتفاظ بها خارج جزر البهاما للولاية القضائية لتلك المنطقة التي يتم الاحتفاظ فيها بالأموال، وقد تختلف حقوق العملاء وفقًا لذلك.  لن تتحمل TigerWit أي مسؤولية عن إعسار أي مؤسسة مصرفية يتم فيها الاحتفاظ بأموال العميل أو  تصرفات هذه المؤسسة المصرفية أو امتناعها عن التصرف. ومع ذلك، ستمارس TigerWit كل ما يلزم من مهارات واهتمام وعناية عند اختيار المؤسسة المالية وتعيينها فضلاً عن إجراء استعراض دوري للمؤسسة التي يتم فيها إيداع أموال العميل."
     },
@@ -4626,7 +4626,7 @@ module.exports = {
         "en": "3.TigerWit is not obliged to pay interest to the client for the Funds deposited.",
         "vi": "3.TigerWit không bắt buộc phải trả lãi cho khách hàng đối với các khoản Quỹ tiền gửi.",
         "zh-Hant": "3.TigerWit 沒有義務向客戶支付存入資金的利息。",
-        "id": "3.TigerWit is not obliged to pay interest to the client for the Funds deposited.",
+        "id": "3. TigerWit tidak berkewajiban untuk membayar bunga kepada klien untuk Dana yang disimpan.",
         "es": "3.TigerWit no está obligado a pagar intereses al cliente por los Fondos depositados.",
         "pt-BR": "3.A TigerWit não é obrigada a pagar juros ao cliente pelos Fundos depositados.",
         "ar": "3- شركة TigerWit ليست ملزمة بأن تدفع فائدة للعميل عن الأموال المودعة."
@@ -4636,7 +4636,7 @@ module.exports = {
         "en": "4.TigerWit may, from time to time, without the client’s permission merge the Funds held in different trading accounts under the client’s name. Under no circumstances does this imply that the client has the right to a credit facility.",
         "vi": "4.TigerWit có thể, bất cứ khi nào mà không có sự cho phép của khách hàng, cho phép việc sát nhập các Quỹ được giữ trong các tài khoản giao dịch khác nhau dưới tên của khách hàng. Trong mọi trường hợp, điều này có nghĩa là khách hàng có quyền có một cơ sở tín dụng.",
         "zh-Hant": "4.未經客戶許可，TigerWit 可以不時地對客戶名下不同交易賬戶持有的資金進行合並。在任何情況下都不表示客戶有權享有信貸融通。",
-        "id": "4.TigerWit may, from time to time, without the client’s permission merge the Funds held in different trading accounts under the client’s name. Under no circumstances does this imply that the client has the right to a credit facility.",
+        "id": "4. TigerWit dapat, dari waktu ke waktu, tanpa izin klien menggabungkan Dana yang disimpan di akun trading yang berbeda di bawah nama klien. Dalam situasi apa pun, hal ini tidak menyiratkan bahwa klien memiliki hak atas fasilitas kredit",
         "es": "4. De vez en cuando, TigerWit puede, sin el permiso del cliente, fusionar los Fondos mantenidos en diferentes cuentas comerciales a nombre del cliente. Bajo ninguna circunstancia esto implica que el cliente tenga derecho a una línea de crédito.",
         "pt-BR": "4.A TigerWit pode, de tempos em tempos, sem a permissão do cliente, mesclar os Fundos mantidos em diferentes contas de negociação sob o nome do cliente. Em nenhuma circunstância isso implica que o cliente tenha direito a uma linha de crédito.",
         "ar": "4- يجوز لشركة TigerWit أن تقوم، من وقت لآخر وبدون إذن العميل، بدمج الأموال الموجودة في حسابات التداول المختلفة المفتوحة تحت اسم العميل. و لا يعني هذا تحت أي ظرف من الظروف أنه يحق للعميل الحصول على تسهيلات ائتمانية."
@@ -4646,7 +4646,7 @@ module.exports = {
         "en": "5.The client has the right to withdraw to their vault, any part of the Funds equal to the free margin that is available in the relevant trading account, at any time, provided that there are Funds available.",
         "vi": "5.Khách hàng có quyền rút tiền vào kho (vault) của họ, bất kỳ phần nào của Quỹ bằng với số tiền có thể đặt lệnh (free margin) có sẵn trong tài khoản giao dịch liên quan, bất kỳ lúc nào, miễn là trong Quỹ có sẵn.",
         "zh-Hant": "5.在有可用資金的前提下，客戶有權隨時提取相關交易賬戶當中等於自由保證金資金的任何部分。",
-        "id": "5.The client has the right to withdraw to their vault, any part of the Funds equal to the free margin that is available in the relevant trading account, at any time, provided that there are Funds available.",
+        "id": "5. Klien memiliki hak untuk menarik ke brankas mereka, bagian mana pun dari Dana yang sama dengan margin bebas yang tersedia di akun trading yang relevan, kapan saja, asalkan ada Dana yang tersedia.",
         "es": "5.El cliente tiene derecho a retirar a su depósito, cualquier parte de los Fondos igual al margen libre que está disponible en la cuenta de negociación correspondiente, en cualquier momento, siempre que haya Fondos disponibles.",
         "pt-BR": "5.O cliente tem o direito de retirar para o seu cofre, qualquer parte dos Fundos igual à margem livre que está disponível na conta de negociação relevante, a qualquer momento, desde que haja Fundos disponíveis.",
         "ar": "5- يحق للعميل أن يسحب لخزانته أي جزء من الأموال يساوي الهامش الحر المتاح متوفر في حساب التداول المعني، في أي وقت، شريطة توافر الأموال."
@@ -4656,7 +4656,7 @@ module.exports = {
         "en": "6.The client accepts that the Funds shall be credited in his/her vault on value date on which the Funds are received by the Institution. The Funds deposited in a client's trading account shall be net of any transfer fees or other charges incurred by or charged to TigerWit that are imposed by the Institution (or intermediary involved in the process) that holds the Funds.",
         "vi": "6.Khách hàng chấp nhận rằng Quỹ sẽ được ghi có vào kho tiền của mình vào ngày giá trị mà Quỹ nhận được từ Tổ chức.",
         "zh-Hant": "6.客戶同意，資金應在機構收到資金的起息日當天記入客戶的資金庫。存入客戶交易賬戶的資金應扣除資金持有機構（或涉及該過程的中間人）向 TigerWit征收的或由 TigerWit 產生的任何轉賬費用或其他費用。",
-        "id": "6.The client accepts that the Funds shall be credited in his/her vault on value date on which the Funds are received by the Institution. The Funds deposited in a client's trading account shall be net of any transfer fees or other charges incurred by or charged to TigerWit that are imposed by the Institution (or intermediary involved in the process) that holds the Funds.",
+        "id": "6. Klien menerima bahwa Dana akan dikreditkan di brankasnya pada tanggal nilai di mana Dana diterima oleh Lembaga. Dana yang disimpan dalam akun trading klien harus bersih dari biaya transfer atau biaya lain yang dikeluarkan oleh atau dibebankan kepada TigerWit yang dibebankan oleh Institusi (atau perantara yang terlibat dalam proses) yang menyimpan Dana.",
         "es": "6. El cliente acepta que los Fondos se acreditarán en su depósito en la fecha de valor en que la Institución recibe los Fondos. Los Fondos depositados en la cuenta comercial de un cliente serán netos de cualquier comisión de transferencia u otros cargos incurridos por o cargados a TigerWit que son impuestos por la Institución (o intermediario involucrado en el proceso) que posee los Fondos.",
         "pt-BR": "6.O cliente aceita que os Fundos sejam creditados no seu cofre na data de valor em que os Fundos são recebidos pela Instituição. Os Fundos depositados na conta de negociação de um cliente devem ser líquidos de quaisquer taxas de transferência ou outros encargos incorridos ou cobrados à TigerWit que sejam impostos pela Instituição (ou intermediário envolvido no processo) que detém os Fundos.",
         "ar": "6- يقبل العميل أن يتم إيداع الأموال في خزنته في تاريخ الاستحقاق الذي يتم فيه تسلم الأموال من المؤسسة.  وستكون الأموال المودعة في حساب التداول الخاص بالعميل بعد خصم أي رسوم تحويل أو غيرها من الرسوم التي تتكبدها أو تتحملها TigerWit والتي تفرضها المؤسسة (أو الطرف الوسيط المشارك في  العملية) التي تحتفظ بالأموال."
@@ -4666,7 +4666,7 @@ module.exports = {
         "en": "7.The client accepts that the Funds shall be credited in his/her vault only if the Firm is satisfied that the Funds have been sent by the client or his/her authorised representative. Where the Firm has reasonable grounds to believe that the Funds have been sent by a third party other than an authorised representative, the Firm has the right to reject the Funds and return them to the remitter’s source, net of any fees or other charges incurred.",
         "vi": "7.Khách hàng chấp nhận rằng Quỹ chỉ được ghi có trong kho tiền của mình nếu Công ty hài lòng rằng Quỹ đã được khách hàng hoặc đại diện được ủy quyền của họ gửi. Trường hợp Công ty có cơ sở hợp lý để tin rằng Quỹ đã được gửi bởi bên thứ ba không phải là đại diện được ủy quyền, Công ty có quyền từ chối Quỹ và trả lại cho nguồn của người gửi, và bất kỳ khoản phí nào hoặc các khoản phí khác phát sinh.",
         "zh-Hant": "7.客戶同意，只有當公司信納資金已經由客戶或其授權代表轉出時，資金才能計入客戶的資金庫中。倘若本公司有合理理由相信資金由授權代表以外的第三方轉出，則本公司有權拒收該資金並退還至匯款人處，需要扣除任何手續費或產生的其他費用。",
-        "id": "7.The client accepts that the Funds shall be credited in his/her vault only if the Firm is satisfied that the Funds have been sent by the client or his/her authorised representative. Where the Firm has reasonable grounds to believe that the Funds have been sent by a third party other than an authorised representative, the Firm has the right to reject the Funds and return them to the remitter’s source, net of any fees or other charges incurred.",
+        "id": "7. Klien menerima bahwa Dana akan dikreditkan di brankasnya hanya jika Perusahaan yakin bahwa Dana telah dikirim oleh klien atau perwakilan resminya. Jika Perusahaan memiliki alasan yang masuk akal untuk meyakini bahwa Dana telah dikirim oleh pihak ketiga selain perwakilan resmi, Perusahaan memiliki hak untuk menolak Dana dan mengembalikannya ke sumber pengirim, setelah dikurangi biaya atau biaya lain yang timbul.",
         "es": "7.El cliente acepta que los Fondos se acreditarán en su Vault sólo si la Firma está convencida de que los Fondos han sido enviados por el cliente o su representante autorizado. Cuando la Firma tuviera motivos razonables para creer que los Fondos han sido enviados por un tercero que no sea un representante autorizado, la Firma tiene el derecho de rechazar los Fondos y devolverlos al remitente, una vez deducidos los costes u otros cargos incurridos.",
         "pt-BR": "7.O cliente aceita que os Fundos serão creditados no seu cofre somente se a Empresa estiver convencida de que os Fundos foram enviados pelo cliente ou seu representante autorizado. Quando a Empresa tiver motivos razoáveis para acreditar que os Fundos foram enviados por terceiros que não sejam representantes autorizados, a Empresa tem o direito de rejeitar os Fundos e devolvê-los à fonte do remetente, sem quaisquer taxas ou outros encargos incorridos.",
         "ar": "7- يقبل العميل أن الأموال لن يتم إضافتها إلى خزنته إلا إذا كانت الشركة مقتنعة بأن الأموال قد تم إرسالها بواسطة العميل أو ممثله المفوض.  عندما يكون لدى الشركة أسبابًا معقولة للاعتقاد بأن الأموال قد تم إرسالها بواسطة طرف ثالث غير ممثله المفوض، يحق للشركة رفض الأموال وإعادتها إلى مصدر إرسال الأموال بعد خصم أي رسوم أو تكاليف أخرى تكبدتها  الشركة."
@@ -4676,7 +4676,7 @@ module.exports = {
         "en": "8.The client accepts that withdrawal of any part of the Funds shall be concluded using the same transfer method and the same remitter as the one from which the Firm originally received the Funds. Under such circumstances, TigerWit shall return the Funds requested net of any transfer fees or other charges incurred.",
         "vi": "8.Khách hàng chấp nhận việc rút tiền của bất kỳ phần nào của Quỹ sẽ được hoàn thành bằng cách sử dụng cùng một phương thức chuyển tiền và cùng một người gửi tiền như công ty mà Công ty đã nhận được khoản tiền ban đầu. Trong những trường hợp như vậy, TigerWit sẽ trả lại cho các Quỹ số tiền đã được yêu cầu cho bất kỳ khoản phí chuyển khoản nào hoặc các khoản phí khác phát sinh.",
         "zh-Hant": "8.客戶同意，任何資金的提取應按照本公司最初接收資金所使用的同壹匯款人和相同轉賬方式完成。在此情況下，TigerWit 應按要求退還扣除任何轉賬費用或其他扣費的資金。",
-        "id": "8.The client accepts that withdrawal of any part of the Funds shall be concluded using the same transfer method and the same remitter as the one from which the Firm originally received the Funds. Under such circumstances, TigerWit shall return the Funds requested net of any transfer fees or other charges incurred.",
+        "id": "8. Klien menerima bahwa penarikan bagian manapun dari Dana akan dilakukan dengan menggunakan metode transfer yang sama dan pengirim yang sama dengan yang pertama kali menerima Dana oleh Perusahaan. Dalam keadaan seperti itu, TigerWit akan mengembalikan Dana yang diminta setelah dikurangi biaya transfer atau biaya lain yang timbul.",
         "es": "8.El cliente acepta que el reembolso de cualquier parte de los Fondos se realizará utilizando el mismo método de transferencia y el mismo remitente del que la Firma recibió originalmente los Fondos. Bajo tales circunstancias, TigerWit devolverá los Fondos solicitados netos de cualquier tarifa de transferencia u otros cargos incurridos.",
         "pt-BR": "8.O cliente aceita que a retirada de qualquer parte dos Fundos seja concluída usando o mesmo método de transferência e o mesmo remetente daquele a partir do qual a Empresa originalmente recebeu os Fundos. Nestas circunstâncias, a TigerWit devolverá os Fundos solicitados, líquidos de quaisquer taxas de transferência ou outros encargos incorridos.",
         "ar": "8- يقبل العميل أنه سيتم إجراء السحب لأي جزء من الأموال باستخدام نفس طريقة التحويل ونفس المصدر المرسل للأموال الذي تلقت منه الشركة الأموال في الأصل. وفي ظل هذه الظروف، ستقوم TigerWit بإعادة الأموال المطلوبة بعد خصم أي رسوم تحويل أو رسوم أخرى تكبدتها الشركة."
@@ -4686,7 +4686,7 @@ module.exports = {
         "en": "9.TigerWit reserves the right to decline a withdrawal that the client requested using a specific transfer method and has the right to suggest an alternative.",
         "vi": "9.TigerWit có quyền từ chối lệnh rút tiền mà khách hàng đã yêu cầu sử dụng một phương thức chuyển khoản cụ thể và có quyền đề xuất phương án thay thế.",
         "zh-Hant": "9.TigerWit 有權拒絕客戶要求的使用特定轉賬方式的提款並有權提出替代方案。",
-        "id": "9.TigerWit reserves the right to decline a withdrawal that the client requested using a specific transfer method and has the right to suggest an alternative.",
+        "id": "9. TigerWit berhak untuk menolak penarikan yang diminta klien menggunakan metode transfer tertentu dan berhak menyarankan alternatif.",
         "es": "9.TigerWit se reserva el derecho de rechazar un retiro que el cliente solicitó mediante un método de transferencia específico y tiene el derecho de sugerir una alternativa.",
         "pt-BR": "9.TigerWit reserva o direito de recusar uma retirada que o cliente solicitou usando um método de transferência específico e tem o direito de sugerir uma alternativa.",
         "ar": "9- تحتفظ TigerWit لنفسها بالحق في رفض إتمام السحب الذي طلبه العميل باستخدام طريقة تحويل محددة ويحق لها اقتراح طريقة بديلة."
@@ -4696,7 +4696,7 @@ module.exports = {
         "en": "10.If, at any time, TigerWit is not satisfied with the documentation provided by the client in relation to a withdrawal/deposit, the Firm reserves the right to reverse the Funds to the source from where the funds where sent, net of any fees or other charges incurred.",
         "vi": "10.Nếu bất kỳ lúc nào, TigerWit không chấp nhận tài liệu được khách hàng cung cấp liên quan đến việc rút tiền / gửi tiền, Công ty bảo lưu quyền chuyển ngược tiền trong Quỹ, các khoản phí và lệ phí khác có thể phát sinh về nguồn tiền gửi.",
         "zh-Hant": "10.如果 TigerWit 在任何時候對客戶由於提款/存款所提供的文件不滿意，則本公司有權將資金按原路退回，並扣除任何手續費或產生的其他費用。",
-        "id": "10.If, at any time, TigerWit is not satisfied with the documentation provided by the client in relation to a withdrawal/deposit, the Firm reserves the right to reverse the Funds to the source from where the funds where sent, net of any fees or other charges incurred.",
+        "id": "10. Jika, kapan saja, TigerWit tidak puas dengan dokumentasi yang diberikan oleh klien sehubungan dengan penarikan / setoran, Perusahaan berhak untuk mengembalikan Dana ke sumber dari mana dana dikirim, setelah dikurangi biaya apa pun. atau biaya lain yang timbul.",
         "es": "10. Si, en cualquier momento, TigerWit no está satisfecho con la documentación proporcionada por el cliente en relación con un reembolso/depósito, la Firma se reserva el derecho de revertir los Fondos a la fuente desde donde se enviaron los fondos, sin pagar ninguna comisión u otros cargos incurridos.",
         "pt-BR": "10. Se, a qualquer momento, a TigerWit não estiver satisfeita com a documentação fornecida pelo cliente em relação a um levantamento / depósito, a Empresa reserva-se o direito de reverter os Fundos para a fonte de onde os fundos foram enviados, líquidos de quaisquer taxas. ou outros encargos incorridos.",
         "ar": "10- إذا حدث في أي وقت أن TigerWit لم تكن مقتنعة بأن الوثائق التي قدمها العميل فيما يتعلق بالإيداع/ السحب، تحتفظ الشركة لنفسها بالحق في إعادة الأموال إلى المصدر الذي تم إرسال الأموال منه، بعد خصم أي رسوم أو تكاليف أخرى تكبدتها الشركة."
@@ -4706,27 +4706,27 @@ module.exports = {
         "en": "11.The client accepts that the Institution may reverse the Funds for any reason. As a result, the Firm shall immediately reverse the respective amount from the trading account to the source from where the Funds were sent, net of any fees or other charges incurred. The client accepts that this may result to a negative balance in the trading account. Under such circumstances, the Firm may merge the Funds held in different trading accounts as described in clause 10.4 above.",
         "vi": "11.Khách hàng chấp nhận rằng Tổ chức có thể đảo ngược Quỹ vì bất kỳ lý do gì. Do đó, Công ty sẽ ngay lập tức đảo ngược số tiền tương ứng từ tài khoản giao dịch đến nguồn từ nơi mà các khoản tiền đã được gửi đi, bất kỳ khoản phí nào hoặc các khoản phí khác phát sinh. Khách hàng chấp nhận rằng điều này có thể dẫn đến số dư trở thành âm trong tài khoản giao dịch. Trong những trường hợp như vậy, Công ty có thể hợp nhất các Quỹ được nắm giữ trong các tài khoản giao dịch khác nhau như được mô tả trong điều 10.4 nêu trên.",
         "zh-Hant": "11.客戶同意，機構可能出於任何原因退回資金。因此，本公司應立即將相應金額從交易賬戶中按原路退回，並扣除任何手續費或產生的其他費用。客戶同意，這可能導致交易賬戶余額為負數。在此情況下，本公司可以如前文第 10.4 條所述合並不同交易賬戶中所持的資金。",
-        "id": "11.The client accepts that the Institution may reverse the Funds for any reason. As a result, the Firm shall immediately reverse the respective amount from the trading account to the source from where the Funds were sent, net of any fees or other charges incurred. The client accepts that this may result to a negative balance in the trading account. Under such circumstances, the Firm may merge the Funds held in different trading accounts as described in clause 10.4 above.",
+        "id": "11. Klien menerima bahwa Institusi dapat menarik kembali Dana untuk alasan apapun. Akibatnya, Perusahaan akan segera mengembalikan jumlah masing-masing dari akun trading ke sumber dari mana Dana dikirim, setelah dikurangi biaya atau biaya lain yang timbul. Klien menerima bahwa ini dapat mengakibatkan saldo negatif di akun trading. Dalam keadaan seperti itu, Perusahaan dapat menggabungkan Dana yang disimpan di akun trading yang berbeda seperti yang dijelaskan dalam klausul 10.4 di atas.",
         "es": "11.El cliente acepta que la Institución puede revertir los Fondos por cualquier motivo. Como resultado, la Firma revertirá inmediatamente el importe respectivo de la cuenta de trading a la fuente desde donde se enviaron los Fondos, netos de cualquier comisión u otros cargos incurridos. El cliente acepta que esto puede resultar en una saldo negativo en la cuenta de trading. En tales circunstancias, la Firma puede juntar los Fondos mantenidos en diferentes cuentas de trading como se describe en la cláusula 10.4 anterior.",
         "pt-BR": "11.O cliente aceita que a Instituição possa reverter os Fundos por qualquer motivo. Como resultado, a Empresa deverá reverter imediatamente o respectivo valor da conta de negociação para a fonte de onde os Fundos foram enviados, líquido de quaisquer taxas ou outros encargos incorridos. O cliente aceita que isso pode resultar em um saldo negativo na conta de negociação. Em tais circunstâncias, a Firma poderá fundir os Fundos detidos em diferentes contas de negociação, conforme descrito na cláusula 10.4 acima.",
         "ar": "11- يقبل العميل أنه يجوز للمؤسسة إعادة الأموال لأي سبب من الأسباب.  وبناء على ذلك، ستقوم الشركة على الفور بإعادة المبلغ المعني من حساب التداول إلى المصدر الذي تم إرسال الأموال منه بعد خصم أي رسوم أو تكاليف أخرى تكبدتها الشركة.  ويقبل العميل أن هذا الإجراء قد يؤدي إلى أن يكون رصيد حساب التداول سلبيًا. وفي مثل هذه الظروف، يجوز للشركة دمج الأموال الموجودة في حسابات التداول المختلفة كما هو موضح في البند 10.4 أعلاه."
     },
     "amtClient79": {
-        "zh": "12.客户同意，有关交易账户管理的任何申请 应 通 过 TigerWit 的 应 用 程 序 或 网 站(http://global.tigerwit.com)提出。",
-        "en": "12.The client accepts that any requests in relation to the administration of the trading account shall be made through TigerWit’s app or website (http://global.tigerwit.com).",
-        "vi": "12. Khách hàng chấp nhận rằng bất kỳ yêu cầu nào liên quan đến việc quản lý tài khoản giao dịch sẽ được thực hiện thông qua ứng dụng hoặc trang web của TigerWit (http://global.tigerwit.com).",
-        "zh-Hant": "12.客戶同意，有關交易賬戶管理的任何申請 應 通 過 TigerWit 的 應 用 程 序 或 網 站(http://global.tigerwit.com)提出。",
-        "id": "12.The client accepts that any requests in relation to the administration of the trading account shall be made through TigerWit’s app or website (http://global.tigerwit.com).",
-        "es": "12.El cliente acepta que cualquier solicitud relacionada con la administración de la cuenta de trading se realizará a través de la aplicación o sitio web de TigerWit (http://global.tigerwit.com).",
-        "pt-BR": "12. O cliente aceita que quaisquer pedidos em relação à administração da conta de negociação devem ser feitos através do aplicativo ou site da TigerWit (http://global.tigerwit.com).",
-        "ar": "12- يقبل العميل أن يتم تقديم أي طلب يتعلق بإدارة حساب التداول عبر تطبيق TigerWit أو موقع TigerWit الإلكتروني (http://global.tigerwit.com)."
+        "zh": "12.客户同意，有关交易账户管理的任何申请 应 通 过 TigerWit 的 应 用 程 序 或 网 站(https://global.TigerWit.com)提出。",
+        "en": "12.The client accepts that any requests in relation to the administration of the trading account shall be made through TigerWit’s app or website (https://global.TigerWit.com).",
+        "vi": "12. Khách hàng chấp nhận rằng bất kỳ yêu cầu nào liên quan đến việc quản lý tài khoản giao dịch sẽ được thực hiện thông qua ứng dụng hoặc trang web của TigerWit (https://global.TigerWit.com).",
+        "zh-Hant": "12.客戶同意，有關交易賬戶管理的任何申請 應 通 過 TigerWit 的 應 用 程 序 或 網 站(https://global.TigerWit.com)提出。",
+        "id": "12. Klien menerima bahwa setiap permintaan yang berhubungan dengan administrasi akun trading harus dilakukan melalui aplikasi atau situs web TigerWit (https://global.TigerWit.com).",
+        "es": "12.El cliente acepta que cualquier solicitud relacionada con la administración de la cuenta de trading se realizará a través de la aplicación o sitio web de TigerWit (https://global.TigerWit.com).",
+        "pt-BR": "12. O cliente aceita que quaisquer pedidos em relação à administração da conta de negociação devem ser feitos através do aplicativo ou site da TigerWit (https://global.TigerWit.com).",
+        "ar": "12- يقبل العميل أن يتم تقديم أي طلب يتعلق بإدارة حساب التداول عبر تطبيق TigerWit أو موقع TigerWit الإلكتروني (https://global.TigerWit.com)."
     },
     "amtClient80": {
         "zh": "13.TigerWit 应采取一切合理措施，确保客户已知晓“客户资金”章节中提及的任何申请进度，尤其是预期的处理时间以及是否需要任何或更多的文件（如缺少文件可能会延长处理时间）。",
         "en": "13.TigerWit shall take all reasonable steps to ensure that the client is informed regarding the progress of any requests referred to in the ‘Client Money’ section, specifically in relation to the expected processing time and the need for any, or any further, documentation that if not in place may delay the processing.",
         "vi": "13.TigerWit sẽ thực hiện tất cả các bước hợp lý để đảm bảo rằng khách hàng được thông báo về tiến độ của bất kỳ yêu cầu nào được đề cập trong phần Tiền Khách hàng , cụ thể liên quan đến thời gian xử lý dự kiến và nhu cầu cho bất kỳ hoặc bất kỳ tài liệu nào khác tại chỗ có thể trì hoãn việc xử lý.",
         "zh-Hant": "13.TigerWit 應采取壹切合理措施，確保客戶已知曉“客戶資金”章節中提及的任何申請進度，尤其是預期的處理時間以及是否需要任何或更多的文件（如缺少文件可能會延長處理時間）。",
-        "id": "13.TigerWit shall take all reasonable steps to ensure that the client is informed regarding the progress of any requests referred to in the ‘Client Money’ section, specifically in relation to the expected processing time and the need for any, or any further, documentation that if not in place may delay the processing.",
+        "id": "13. TigerWit akan mengambil semua langkah yang wajar untuk memastikan bahwa klien diberi tahu mengenai kemajuan setiap permintaan yang dirujuk di bagian 'Uang Klien', khususnya dalam kaitannya dengan waktu pemrosesan yang diharapkan dan kebutuhan untuk setiap, atau lebih lanjut, dokumentasi yang jika tidak di tempat dapat menunda pemrosesan.",
         "es": "13. TigerWit tomará todas las medidas razonables para garantizar que el cliente esté informado sobre el progreso de las solicitudes a las que se hace referencia en la sección \"Dinero del cliente\", específicamente en relación con el tiempo de procesamiento esperado y la necesidad de cualquier documentación, o cualquier otra. eso si no está en su lugar puede retrasar el procesamiento.",
         "pt-BR": "13. A TigerWit tomará todas as medidas razoáveis para garantir que o cliente seja informado sobre o andamento de quaisquer solicitações referidas na seção 'Dinheiro do Cliente', especificamente em relação ao tempo de processamento esperado e à necessidade de qualquer documentação, ou de qualquer outra documentação adicional. que, se não estiver no local, pode atrasar o processamento.",
         "ar": "13- سوف تتخذ TigerWit جميع التدابير المعقولة لضمان معرفة العميل بالتقدم المحرز في أي طلبات والمشار إليها في قسم \"أموال العميل\"، وبشكل محدد ما يتعلق بالوقت المتوقع لمعالجة الطلبات، والحاجة إلى تقديم وثائق أو تقديم وثائق إضافية، والتي قد يؤدي عدم تقديمها إلى تأخير وقت المعالجة."
@@ -4736,7 +4736,7 @@ module.exports = {
         "en": "14.If at any time the client’s trading account has Funds of less than USD 15 (or currency equivalent), TigerWit reserves the right to close the trading account, after notifying the client accordingly.",
         "vi": "14.Nếu bất kỳ lúc nào tài khoản giao dịch của khách hàng có Quỹ dưới 15 USD (hoặc số tiền tương đương), TigerWit có quyền đóng tài khoản giao dịch, sau khi thông báo cho khách hàng tương ứng.",
         "zh-Hant": "14.無論何時，壹旦客戶交易賬戶中的資金不足 15 美元（或等值外幣），則 TigerWit 有權在通知相關客戶後關閉該交易賬戶。",
-        "id": "14.If at any time the client’s trading account has Funds of less than USD 15 (or currency equivalent), TigerWit reserves the right to close the trading account, after notifying the client accordingly.",
+        "id": "14. Jika suatu saat akun trading klien memiliki Dana kurang dari USD 15 (atau setara dengan mata uang), TigerWit berhak untuk menutup akun trading, setelah memberi tahu klien sebagaimana mestinya.",
         "es": "14. Si en cualquier momento la cuenta de operaciones del cliente tiene Fondos de menos de USD 15 (o su equivalente en divisa), TigerWit se reserva el derecho de cerrar la cuenta de trading, luego de notificar al cliente en consecuencia.",
         "pt-BR": "14. Se, a qualquer momento, a conta de negociação do cliente tiver Fundos inferiores a USD 15 (ou moeda equivalente), a TigerWit reserva-se o direito de fechar a conta de negociação, após notificar o cliente em conformidade.",
         "ar": "14- إذا حدث في أي وقت أن كانت الأموال الموجودة في حساب التداول الخاص بالعميل أقل من 15 دولار أمريكي (أو ما يعادل ذلك بعملة أخرى)، تحتفظ TigerWit لنفسها بالحق في إغلاق حساب التداول، بعد إخطار العميل بذلك."
@@ -4746,7 +4746,7 @@ module.exports = {
         "en": "15.The Firm reserves the right to close an account in connection with an unclaimed client money balance and releasing any client money balances from segregated client bank accounts if: ",
         "vi": "15.Công ty có quyền đóng tài khoản liên quan đến số dư tiền của khách hàng chưa được xác nhận và giải phóng số dư tiền của khách hàng từ các tài khoản ngân hàng khách hàng tách biệt nếu: ",
         "zh-Hant": "15.在以下情況下，本公司有權關閉客戶資金余額無人提取的賬戶以及從獨立客戶銀行賬戶中釋放任何客戶資金余額的賬戶：",
-        "id": "15.The Firm reserves the right to close an account in connection with an unclaimed client money balance and releasing any client money balances from segregated client bank accounts if: ",
+        "id": "15. Perusahaan berhak untuk menutup akun sehubungan dengan saldo uang klien yang tidak diklaim dan melepaskan saldo uang klien dari rekening bank klien terpisah jika: ",
         "es": "15.La Firma se reserva el derecho de cerrar una cuenta en relación con un saldo de dinero de un cliente no reclamado y liberar cualquier saldo de dinero de clientes de cuentas bancarias de clientes segregadas si: ",
         "pt-BR": "15.A Empresa se reserva o direito de fechar uma conta em conexão com um saldo de dinheiro de cliente não reivindicado e liberar saldos monetários de clientes de contas bancárias de clientes segregados se:",
         "ar": "15- تحتفظ الشركة لنفسها بالحق في إغلاق أي حساب فيما يتعلق بالرصيد غير المطالب به من أموال العميل والإفراج عن أي أرصدة من أموال العميل من الحسابات المصرفية المنفصلة للعميل إذا:"
@@ -4756,7 +4756,7 @@ module.exports = {
         "en": "there has been no movement on the client's balance for a period of six years; and",
         "vi": "không có biến động trên số dư của khách hàng trong khoảng thời gian sáu năm; và",
         "zh-Hant": "客戶賬戶中的余額六年內未發生變化；以及",
-        "id": "there has been no movement on the client's balance for a period of six years; and",
+        "id": "tidak ada pergerakan pada saldo klien selama enam tahun;",
         "es": "no ha habido movimiento en el saldo del cliente durante un período de seis años; y",
         "pt-BR": "não houve movimento no saldo do cliente por um período de seis anos; e",
         "ar": "لم تكن هناك حركة في رصيد العميل لمدة ست سنوات؛ و"
@@ -4766,7 +4766,7 @@ module.exports = {
         "en": "the Firm has sent written notice to the client at the last known address informing the client of the Firm's intention of no longer treating that balance as client money, and giving the client 28 days to make a claim.",
         "vi": "Công ty đã gửi thông báo bằng văn bản cho khách hàng tại địa chỉ được biết mới nhất để thông báo cho khách hàng về ý định của Công ty không còn xử lý số dư đó làm tiền của khách hàng và cho phép 28 ngày để khách hàng gửi yêu cầu rút tiền.",
         "zh-Hant": "本公司已發送書面通知至客戶的最後所知地址，告知客戶本公司不再將賬戶余額視為客戶資金的意圖，並給予客戶 28 天時間提出索賠。",
-        "id": "the Firm has sent written notice to the client at the last known address informing the client of the Firm's intention of no longer treating that balance as client money, and giving the client 28 days to make a claim.",
+        "id": "dan firma telah mengirimkan pemberitahuan tertulis kepada klien di alamat terakhir yang diketahui menginformasikan kepada klien tentang niat Firma untuk tidak lagi memperlakukan saldo itu sebagai uang klien, dan memberikan klien 28 hari untuk membuat klaim.",
         "es": "La Firma ha enviado una notificación por escrito al cliente a la última dirección conocida informando al cliente de la intención de la Firma de no tratar ese saldo como dinero del cliente, y le otorga al cliente 28 días para hacer una reclamación.",
         "pt-BR": "A Empresa enviou uma notificação por escrito ao cliente no último endereço conhecido informando ao cliente sobre a intenção da Empresa de não mais tratar esse saldo como dinheiro do cliente e dando ao cliente 28 dias para fazer uma reivindicação.",
         "ar": "قامت الشركة بإرسال إخطار مكتوب إلى العميل إلى آخر عنوان معروف للعميل لتبلغ العميل أن الشركة تعتزم عدم التعامل مع هذا الرصيد باعتباره أموال للعميل ومنح العميل 28 يومًا للتقدم بشكوى للمطالبة بهذا الرصيد."
@@ -4776,7 +4776,7 @@ module.exports = {
         "en": "16.The client can be informed about the processing times for deposit/withdrawals through the Firm’s official website.",
         "vi": "16.Khách hàng có thể được thông báo về thời gian xử lý để gửi / rút tiền thông qua trang web chính thức của Công ty.",
         "zh-Hant": "16.客戶可以通過公司官方網站了解入金/出金的處理時間。",
-        "id": "16.The client can be informed about the processing times for deposit/withdrawals through the Firm’s official website.",
+        "id": "16. Klien dapat diinformasikan tentang waktu pemrosesan untuk setoran / penarikan melalui situs web resmi Perusahaan.",
         "es": "16. El cliente puede ser informado sobre los tiempos de procesamiento para depósitos/reembolsar a través del sitio web oficial de la Firma.",
         "pt-BR": "16.O cliente pode ser informado sobre os tempos de processamento para depósito / saque através do site oficial da Firma.",
         "ar": "16- يمكن للعميل الإطلاع على أوقات معالجة طلبات الإيداع/ السحب من خلال الموقع الإلكتروني الرسمي للشركة."
@@ -4786,7 +4786,7 @@ module.exports = {
         "en": "17.TigerWit reserves the right to request additional information and/or documentation to satisfy itself that the client’s requests concerning his/her deposits/withdrawals are legitimate, and reserves the right to reject such requests if it deems it illegitimate. Furthermore, the client accepts that under such circumstances there may be a delay in processing these requests.",
         "vi": "17.TigerWit có quyền yêu cầu thông tin và / hoặc tài liệu bổ sung để đáp ứng yêu cầu của khách hàng liên quan đến tiền gửi / rút tiền của mình là hợp pháp và có quyền từ chối các yêu cầu đó nếu có dấu hiệu bất hợp pháp. Hơn nữa, khách hàng chấp nhận rằng trong những trường hợp như vậy có thể có sự chậm trễ trong việc xử lý các yêu cầu này.",
         "zh-Hant": "17.TigerWit 保留要求客戶提供額外信息和/或文件的權利，以確定客戶自己的入金/出金申請合法，並且有權拒絕其視為不合法的此類申請。此外客戶認同，在此情況下此類申請的處理可能會有延遲。",
-        "id": "17.TigerWit reserves the right to request additional information and/or documentation to satisfy itself that the client’s requests concerning his/her deposits/withdrawals are legitimate, and reserves the right to reject such requests if it deems it illegitimate. Furthermore, the client accepts that under such circumstances there may be a delay in processing these requests.",
+        "id": "17. TigerWit berhak untuk meminta informasi tambahan dan / atau dokumentasi untuk meyakinkan dirinya sendiri bahwa permintaan klien mengenai / penarikan / depositnya adalah sah, dan berhak untuk menolak permintaan tersebut jika dianggap tidak sah. Lebih lanjut, klien menerima bahwa dalam keadaan seperti itu mungkin ada penundaan dalam memproses permintaan ini.",
         "es": "17.TigerWit se reserva el derecho de solicitar información y/o documentación adicional para asegurarse de que las solicitudes del cliente con respecto a sus depósitos/reembolsos son legítimas, y se reserva el derecho de rechazar dichas solicitudes si lo considera ilegítimo. Además, el cliente acepta que en tales circunstancias puede haber un retraso en el procesamiento de estas solicitudes.",
         "pt-BR": "17.TigerWit reserva-se o direito de solicitar informações adicionais e / ou documentação para se certificar de que os pedidos do cliente referentes a seus depósitos / levantamentos são legítimos, e se reserva o direito de rejeitar tais pedidos se julgar ilegítimo. Além disso, o cliente aceita que, em tais circunstâncias, pode haver um atraso no processamento dessas solicitações.",
         "ar": "17- تحتفظ TigerWit لنفسها بالحق في أن تطلب معلومات و/أو وثائق إضافية لضمان أن طلبات العميل المتعلقة بعمليات الإيداع والسحب هي طلبات مشروعة، كما تحتفظ لنفسها بالحق في رفض هذه الطلبات إذا رأت أنها غير مشروعة.  وعلاوة على ذلك، يقبل العميل أنه في مثل هذه الظروف قد يحدث تأخير في معالجة هذه الطلبات."
@@ -4796,7 +4796,7 @@ module.exports = {
         "en": "Charges",
         "vi": "Phí",
         "zh-Hant": "費用",
-        "id": "Charges",
+        "id": "Biaya",
         "es": "Cargos",
         "pt-BR": "Cobranças",
         "ar": "التكاليف"
@@ -4806,7 +4806,7 @@ module.exports = {
         "en": "1.If the client’s trading account is inactive for a calendar year, TigerWit reserves the right to charge an annual account maintenance fee of USD 15 (or currency equivalent) in order to maintain the trading account open.",
         "vi": "1.Nếu tài khoản giao dịch của khách hàng không hoạt động trong một năm theo dương lịch, TigerWit có quyền tính phí duy trì tài khoản hàng năm là 15 USD (hoặc số tiền tương đương) để duy trì tài khoản giao dịch được thực hiện.",
         "zh-Hant": "1.如果客戶的交易賬戶在壹個日歷年內都處於不活躍狀態，TigerWit 有權收取 15 美元（或等值外幣）的賬戶管理年費，以便保持該交易賬戶的開放狀態。",
-        "id": "1.If the client’s trading account is inactive for a calendar year, TigerWit reserves the right to charge an annual account maintenance fee of USD 15 (or currency equivalent) in order to maintain the trading account open.",
+        "id": "1. Jika akun trading klien tidak aktif selama satu tahun kalender, TigerWit berhak untuk membebankan biaya pemeliharaan akun tahunan sebesar USD 15 (atau setara dengan mata uang) untuk menjaga akun trading  tetap terbuka.",
         "es": "1. Si la cuenta de trading del cliente está inactiva durante un año del calendario, TigerWit se reserva el derecho de cobrar una tasa de mantenimiento anual de la cuenta de USD 15 (o su equivalente en divisa) para mantener abierta la cuenta de trading.",
         "pt-BR": "1.Se a conta de negociação do cliente estiver inativa por um ano civil, a TigerWit reserva-se o direito de cobrar uma taxa anual de manutenção de conta de US $ 15 (ou moeda equivalente) para manter a conta de negociação aberta.",
         "ar": "1- إذا كان حساب التداول الخاص بالعميل غير مفعل لمدة سنة ميلادية، تحتفظ TigerWit لنفسها بالحق في فرض رسوم صيانة سنوية للحساب مقدارها 15 دولارًا أمريكيًا سنويًا (أو ما يعادله بعملة أخرى) من أجل إبقاء حساب التداول مفتوحًا."
@@ -4816,7 +4816,7 @@ module.exports = {
         "en": "2.Prior to trading CFDs the client needs to consider any applicable charges such as spreads, commissions and swaps. The client is solely responsible for requiring clarifications from the Firm in relation to the above, if necessary.",
         "vi": "2.Trước khi giao dịch CFD, khách hàng cần cân nhắc mọi khoản phí áp dụng như spread, hoa hồng và swap. Khách hàng tự chịu trách nhiệm về việc yêu cầu làm rõ Công ty liên quan đến các điều trên, nếu cần.",
         "zh-Hant": "2.客戶在進行差價合約交易之前須先考慮任何適用的費用，如點差、傭金及掉期。客戶應自行要求本公司提供有關上述費用的解釋說明（如需要）。",
-        "id": "2.Prior to trading CFDs the client needs to consider any applicable charges such as spreads, commissions and swaps. The client is solely responsible for requiring clarifications from the Firm in relation to the above, if necessary.",
+        "id": "2. Sebelum trading CFD, klien perlu mempertimbangkan biaya yang berlaku seperti spread, komisi, dan swap. Klien sepenuhnya bertanggung jawab untuk meminta klarifikasi dari Perusahaan sehubungan dengan hal di atas, jika perlu.",
         "es": "2. Antes de operar CFDs, el cliente debe tener en cuenta los cargos aplicables, como los spreads, las comisiones y los swaps. El cliente es el único responsable de requerir aclaraciones de la Firma en relación con lo anterior, si fuera necesario.",
         "pt-BR": "2. Antes de negociar CFDs, o cliente precisa considerar quaisquer encargos aplicáveis, como spreads, comissões e swaps. O cliente é o único responsável por exigir esclarecimentos da Firma em relação ao acima, se necessário.",
         "ar": "2- يجب على العميل قبل تداول العقود مقابل الفروقات أن يأخذ في الاعتبار أي تكاليف معمول بها مثل فروق الأسعار والعمولات وفوائد التمديد.  ويتحمل العميل بمفرده مسؤولية طلب إيضاحات من الشركة فيما يتعلق بما تقدم، إذا لزم الأمر."
@@ -4826,47 +4826,47 @@ module.exports = {
         "en": "3.The client should note that not all charges are represented in monetary terms (for example, charges may appear as a percentage of the value of a CFD); therefore, the client needs to ensure that he/ she understands the amount that the percentage amounts to.",
         "vi": "3.Khách hàng nên lưu ý rằng không phải tất cả các khoản phí đều được thể hiện bằng các điều khoản tiền tệ (ví dụ: các khoản phí có thể xuất hiện dưới dạng phần trăm giá trị của CFD); do đó, khách hàng cần đảm bảo rằng họ hiểu số tiền mà số phần tram thể hiện.",
         "zh-Hant": "3.客戶應留意，並非所有費用均以貨幣形式表示（例如，費用可能以差價合約價值的百分比表示）；因此，客戶需要確保其理解百分比等同的金額。",
-        "id": "3.The client should note that not all charges are represented in monetary terms (for example, charges may appear as a percentage of the value of a CFD); therefore, the client needs to ensure that he/ she understands the amount that the percentage amounts to.",
+        "id": "3. Klien harus memperhatikan bahwa tidak semua biaya diwakili dalam istilah moneter (misalnya, biaya mungkin muncul sebagai persentase dari nilai CFD); oleh karena itu, klien perlu memastikan bahwa dia memahami jumlah persentase tersebut.",
         "es": "3.El cliente debe tener en cuenta que no todos los cargos están representados en términos monetarios (por ejemplo, los cargos pueden aparecer como un porcentaje del valor de un CFD); por lo tanto, el cliente debe asegurarse de que entiende la cantidad a la que asciende el porcentaje.",
         "pt-BR": "3.O cliente deve observar que nem todas as cobranças são representadas em termos monetários (por exemplo, cobranças podem aparecer como uma porcentagem do valor de um CFD); portanto, o cliente precisa garantir que ele entenda o valor que a porcentagem representa.",
         "ar": "3- يجب على العميل الأخذ في الاعتبار أنه لا يتم تمثيل جميع التكاليف من الناحية النقدية (فعلى سبيل المثال، قد تظهر التكاليف في صورة نسبة مئوية من قيمة العقد مقابل الفروقات)؛ وبناء على ذلك، يتعين على العميل التأكد من فهمه للمقدار الذي تبلغه النسبة المئوية."
     },
     "amtClient91": {
-        "zh": "4.TigerWit 保留随时更改适用于客户的任何费用的权利，无须另行通知客户。最新信息可在线查询，网址：http://global.tigerwit.com。",
-        "en": "4.TigerWit reserves the right to change, from time to time, any of the charges applicable to the client without prior written notice. The latest information shall be found online at http://global.tigerwit.com.",
-        "vi": "4.TigerWit có quyền thay đổi, theo thời gian, bất kỳ khoản phí nào áp dụng cho khách hàng mà không cần thông báo trước bằng văn bản. Thông tin mới nhất sẽ được trình bày trên internet tại http://global.tigerwit.com.",
-        "zh-Hant": "4.TigerWit 保留隨時更改適用於客戶的任何費用的權利，無須另行通知客戶。最新信息可在線查詢，網址：http://global.tigerwit.com。",
-        "id": "4.TigerWit reserves the right to change, from time to time, any of the charges applicable to the client without prior written notice. The latest information shall be found online at http://global.tigerwit.com.",
-        "es": "4.TigerWit se reserva el derecho de cambiar, de vez en cuando, cualquiera de los cargos aplicables al cliente sin previo aviso por escrito. La información más reciente se puede encontrar online en http://global.tigerwit.com.",
-        "pt-BR": "4.A TigerWit reserva o direito de alterar, de tempos em tempos, quaisquer encargos aplicáveis ao cliente sem aviso prévio por escrito. As informações mais recentes devem ser encontradas online em http://global.tigerwit.com.",
-        "ar": "4- تحتفظ TigerWit لنفسها بالحق في أن تقوم، من وقت لآخر، بتغيير أي من التكاليف المعمول بها على العميل بدون إخطار خطي مسبق. ويمكن الإطلاع على أحدث المعلومات على موقعنا الإلكتروني  http://global.tigerwit.com."
+        "zh": "4.TigerWit 保留随时更改适用于客户的任何费用的权利，无须另行通知客户。最新信息可在线查询，网址：https://global.TigerWit.com。",
+        "en": "4.TigerWit reserves the right to change, from time to time, any of the charges applicable to the client without prior written notice. The latest information shall be found online at https://global.TigerWit.com.",
+        "vi": "4.TigerWit có quyền thay đổi, theo thời gian, bất kỳ khoản phí nào áp dụng cho khách hàng mà không cần thông báo trước bằng văn bản. Thông tin mới nhất sẽ được trình bày trên internet tại https://global.TigerWit.com.",
+        "zh-Hant": "4.TigerWit 保留隨時更改適用於客戶的任何費用的權利，無須另行通知客戶。最新信息可在線查詢，網址：https://global.TigerWit.com。",
+        "id": "4. TigerWit berhak untuk mengubah, dari waktu ke waktu, semua biaya yang berlaku untuk klien tanpa pemberitahuan tertulis sebelumnya. Informasi terbaru dapat ditemukan online di https://global.TigerWit.com.",
+        "es": "4.TigerWit se reserva el derecho de cambiar, de vez en cuando, cualquiera de los cargos aplicables al cliente sin previo aviso por escrito. La información más reciente se puede encontrar online en https://global.TigerWit.com.",
+        "pt-BR": "4.A TigerWit reserva o direito de alterar, de tempos em tempos, quaisquer encargos aplicáveis ao cliente sem aviso prévio por escrito. As informações mais recentes devem ser encontradas online em https://global.TigerWit.com.",
+        "ar": "4- تحتفظ TigerWit لنفسها بالحق في أن تقوم، من وقت لآخر، بتغيير أي من التكاليف المعمول بها على العميل بدون إخطار خطي مسبق. ويمكن الإطلاع على أحدث المعلومات على موقعنا الإلكتروني  https://global.TigerWit.com."
     },
     "amtClient92": {
         "zh": "5.客户应留意，所有适用的费用将即时从其交易账户当中扣划。",
         "en": "5.The client should note that any applicable charges shall be instantly deducted from his/her trading account.",
         "vi": "5.Khách hàng cần lưu ý rằng mọi khoản phí áp dụng sẽ được khấu trừ ngay lập tức từ tài khoản giao dịch của họ.",
         "zh-Hant": "5.客戶應留意，所有適用的費用將即時從其交易賬戶當中扣劃。",
-        "id": "5.The client should note that any applicable charges shall be instantly deducted from his/her trading account.",
+        "id": "5. Klien harus memperhatikan bahwa setiap biaya yang berlaku akan langsung dikurangkan dari akun tradingnya.",
         "es": "5. El cliente debe tener en cuenta que cualquier cargo aplicable se deducirá instantáneamente de su cuenta de trading.",
         "pt-BR": "5. O cliente deve notar que quaisquer encargos aplicáveis devem ser imediatamente deduzidos da sua conta de negociação.",
         "ar": "5- يجب على العميل ملاحظة أن أي تكاليف معمول بها سيتم خصمها على الفور من حساب التداول الخاص به."
     },
     "amtClient93": {
-        "zh": "6.可在线了解适用的点差，包含 TigerWit的溢价（如适用），以及进行交易时收取的佣金，网址：http://global.tigerwit.com。",
-        "en": "6.The applicable spreads, including TigerWit’s mark-up, if applicable, and commissions charged when placing a trade are available online at http://global.tigerwit.com.",
-        "vi": "6.Các khoản spread áp dụng bao gồm lợi nhuận gộp (mark-up) của TigerWit, nếu có, và hoa hồng được tính khi đặt giao dịch được trình bày tại http://global.tigerwit.com.",
-        "zh-Hant": "6.可在線了解適用的點差，包含 TigerWit的溢價（如適用），以及進行交易時收取的傭金，網址：http://global.tigerwit.com。",
-        "id": "6.The applicable spreads, including TigerWit’s mark-up, if applicable, and commissions charged when placing a trade are available online at http://global.tigerwit.com.",
-        "es": "6. Los spreads aplicables, incluido el mark-up de TigerWit, si correspondiera, y las comisiones cobradas al realizar una transacción están disponibles online en http://global.tigerwit.com.",
-        "pt-BR": "6. Os spreads aplicáveis, incluindo a margem de lucro da TigerWit, se aplicável, e as comissões cobradas ao fazer uma negociação estão disponíveis online em http://global.tigerwit.com.",
-        "ar": "6- يتوفر على موقعنا الإلكتروني http://global.tigerwit.com فروق الأسعار المعمول بها، بما في ذلك هامش ربح TigerWit، إن وجد، والعملات التي يتم تحصيلها عند الدخول في صفقة."
+        "zh": "6.可在线了解适用的点差，包含 TigerWit的溢价（如适用），以及进行交易时收取的佣金，网址：https://global.TigerWit.com。",
+        "en": "6.The applicable spreads, including TigerWit’s mark-up, if applicable, and commissions charged when placing a trade are available online at https://global.TigerWit.com.",
+        "vi": "6.Các khoản spread áp dụng bao gồm lợi nhuận gộp (mark-up) của TigerWit, nếu có, và hoa hồng được tính khi đặt giao dịch được trình bày tại https://global.TigerWit.com.",
+        "zh-Hant": "6.可在線了解適用的點差，包含 TigerWit的溢價（如適用），以及進行交易時收取的傭金，網址：https://global.TigerWit.com。",
+        "id": "6. Spread yang berlaku, termasuk mark-up TigerWit, jika berlaku, dan komisi yang dikenakan saat melakukan trading tersedia secara online di https://global.TigerWit.com.",
+        "es": "6. Los spreads aplicables, incluido el mark-up de TigerWit, si correspondiera, y las comisiones cobradas al realizar una transacción están disponibles online en https://global.TigerWit.com.",
+        "pt-BR": "6. Os spreads aplicáveis, incluindo a margem de lucro da TigerWit, se aplicável, e as comissões cobradas ao fazer uma negociação estão disponíveis online em https://global.TigerWit.com.",
+        "ar": "6- يتوفر على موقعنا الإلكتروني https://global.TigerWit.com فروق الأسعار المعمول بها، بما في ذلك هامش ربح TigerWit، إن وجد، والعملات التي يتم تحصيلها عند الدخول في صفقة."
     },
     "amtClient94": {
         "zh": "7.掉期是指因持有的未平仓头寸过夜而增加或扣除的利息。",
         "en": "7.The swap is the interest added or deducted for holding an open position overnight.",
         "vi": "7.Swap là lãi suất được cộng hoặc được khấu trừ để giữ một vị thế mở qua đêm.",
         "zh-Hant": "7.掉期是指因持有的未平倉頭寸過夜而增加或扣除的利息。",
-        "id": "7.The swap is the interest added or deducted for holding an open position overnight.",
+        "id": "7. Swap adalah bunga yang ditambahkan atau dikurangi untuk memegang posisi terbuka semalam.",
         "es": "7.El swap es el interés agregado o deducido por mantener una posición abierta durante la noche.",
         "pt-BR": "7. O swap é o juro adicionado ou deduzido para manter uma posição aberta durante a noite.",
         "ar": "7- فائدة التمديد هي الفائدة التي يتم إضافتها أو خصمها من أجل الاحتفاظ بالمركز مفتوحًا لليوم التالي."
@@ -4876,7 +4876,7 @@ module.exports = {
         "en": "8.Depending on the position held and the interest rates of the currency pair involved in a transaction the client may either be credited debited with financing; the operation is conducted at 23:59 server time and the resulting amount is automatically converted into the client’s balance currency.",
         "vi": "8.Tùy thuộc vào vị thế được giữ và lãi suất của cặp tiền tệ liên quan đến giao dịch mà khách hàng có thể được ghi có ghi nợ bằng tài chính; hoạt động được tiến hành vào lúc 23:59 thời gian máy chủ và số tiền kết quả được tự động chuyển đổi thành tiền tệ cân bằng của khách hàng.",
         "zh-Hant": "8.根據持倉量和交易中所涉及的貨幣對利率，客戶可能被計入或扣除融資；在服務器時間 23:59 收取掉期費用，產生的金額自動轉換為客戶余額的貨幣。",
-        "id": "8.Depending on the position held and the interest rates of the currency pair involved in a transaction the client may either be credited debited with financing; the operation is conducted at 23:59 server time and the resulting amount is automatically converted into the client’s balance currency.",
+        "id": "8. Bergantung pada posisi yang dipegang dan suku bunga pasangan mata uang yang terlibat dalam transaksi, klien dapat dikreditkan dengan pembiayaan; operasi dilakukan pada pukul 23:59 waktu server dan jumlah yang dihasilkan secara otomatis diubah menjadi mata uang saldo klien.",
         "es": "8. Dependiendo de la posición mantenida y las tasas de interés del par de divisas involucrado en una transacción, al cliente se le puede acreditar el débito con financiamiento; la operación se realiza a las 23:59 hora del servidor y el importe resultante se convierte automáticamente a la moneda del  balance del cliente.",
         "pt-BR": "8.Dependendo da posição detida e das taxas de juro do par de moedas envolvidas numa transação, o cliente pode ser creditado debitado com financiamento; a operação é realizada às 23:59 horas do servidor e o valor resultante é convertido automaticamente na moeda do saldo do cliente.",
         "ar": "8- اعتمادًا على المركز الذي يحتفظ به العميل لليوم التالي وأسعار فائدة زوج العملة المستخدم في أي صفقة، يتم إما إضافة فائدة التمديد إلى حساب العميل أو خصمها منه؛ ويتم إجراء هذه العملية في الساعة 23:59 بتوقيت الخادم ويتم تحويل المبلغ الناتج بشكل تلقائي إلى عملة رصيد العميل."
@@ -4886,27 +4886,27 @@ module.exports = {
         "en": "9.From Friday to Monday swap is charged once and from Wednesday to Thursday swap is charged in triple size. It should be noted that TigerWit charges its own interest; the rollover interest rates of TigerWit are based on the overnight rate provided by Bloomberg. The Firm updates such rate as often as it deems necessary.",
         "vi": "9.Tùy thuộc vào vị thế được giữ và lãi suất của cặp tiền tệ liên quan đến giao dịch mà khách hàng có thể được ghi có ghi nợ bằng tài chính; hoạt động được tiến hành vào lúc 23:59 thời gian máy chủ và số tiền kết quả được tự động chuyển đổi thành tiền tệ cân bằng của khách hàng.",
         "zh-Hant": "9.星期五至星期壹收取掉期費用壹次，星期三至星期四掉期費用按三倍收取。應當註意的 是 ， TigerWit 按 自 己 的 利 率 收 取 費 用 ；TigerWit 的轉倉利率是以彭博(Bloomberg)提供的隔夜利率計算。本公司會按照其認為必要的頻率更新此類利率。",
-        "id": "9.From Friday to Monday swap is charged once and from Wednesday to Thursday swap is charged in triple size. It should be noted that TigerWit charges its own interest; the rollover interest rates of TigerWit are based on the overnight rate provided by Bloomberg. The Firm updates such rate as often as it deems necessary.",
+        "id": "9. Dari Jumat hingga Senin swap dikenakan satu kali dan dari Rabu hingga Kamis swap dikenakan dalam ukuran tiga kali lipat. Perlu dicatat bahwa TigerWit membebankan kepentingannya sendiri; suku bunga rollover TigerWit didasarkan pada suku bunga overnight yang disediakan oleh Bloomberg. Perusahaan memperbarui tarif tersebut sesering yang dianggap perlu.",
         "es": "9. De viernes a lunes, el swap se cobra una vez y de miércoles a jueves el swap se cobra tres veces. Cabe señalar que TigerWit cobra su propio interés; Las tasas de interés de TigerWit se basan en la tasa a un día proporcionada por Bloomberg. La Firma actualiza dicha tarifa con la frecuencia que considere necesaria.",
         "pt-BR": "9.De sexta a segunda-feira, o swap é cobrado uma vez e de quarta a quinta, o swap é cobrado em tamanho triplo. Deve-se notar que a TigerWit cobra seu próprio interesse; as taxas de juros de rolagem da TigerWit baseiam-se na taxa overnight fornecida pela Bloomberg. A Firma atualiza essa taxa quantas vezes julgar necessário.",
         "ar": "9- من يوم الجمعة إلى يوم الاثنين، يتم فرض فائدة التمديد مرة واحدة، بينما يتم فرض فائدة التمديد بمقدار ثلاثة أضعاف من الأربعاء إلى الخميس.  وينبغي ملاحظة أن TigerWit تتقاضى الفوائد الخاصة بها؛ وتعتمد فائدة التمديد لشركة TigerWit على أسعار الفائدة لليلة واحدة والتي تقدمها بلومبرغ.  وتقوم الشركة بتحديث أسعار الفائدة هذه كلما كان ذلك ضروريًا."
     },
     "amtClient97": {
-        "zh": "10.有关掉期的更多详情可在以下网站查询http://global.tigerwit.com， 或联络公司的客户服务部。",
-        "en": "10.Further information regarding swaps can be found on http://global.tigerwit.com, or by contacting the firm’s Customer Support Department.",
-        "vi": "10.Bạn có thể tìm thêm thông tin về các phí swap giao dịch trên http://global.tigerwit.com hoặc bằng cách liên hệ với Bộ phận hỗ trợ khách hàng của công ty.",
-        "zh-Hant": "10.有關掉期的更多詳情可在以下網站查詢http://global.tigerwit.com， 或聯絡公司的客戶服務部。",
-        "id": "10.Further information regarding swaps can be found on http://global.tigerwit.com, or by contacting the firm’s Customer Support Department.",
-        "es": "10. Se puede encontrar más información sobre los swaps en http://global.tigerwit.com, o contactando al Departamento de Atención al Cliente de la empresa.",
-        "pt-BR": "10. Mais informações sobre swaps podem ser encontradas em http://global.tigerwit.com, ou entrando em contato com o Departamento de Suporte ao Cliente da empresa.",
-        "ar": "10- يمكن الإطلاع على معلومات إضافية عن فوائد التمديد على موقعنا الإلكتروني http://global.tigerwit.com، أو من خلال الاتصال بإدارة دعم العملاء في الشركة."
+        "zh": "10.有关掉期的更多详情可在以下网站查询https://global.TigerWit.com， 或联络公司的客户服务部。",
+        "en": "10.Further information regarding swaps can be found on https://global.TigerWit.com, or by contacting the firm’s Customer Support Department.",
+        "vi": "10.Bạn có thể tìm thêm thông tin về các phí swap giao dịch trên https://global.TigerWit.com hoặc bằng cách liên hệ với Bộ phận hỗ trợ khách hàng của công ty.",
+        "zh-Hant": "10.有關掉期的更多詳情可在以下網站查詢https://global.TigerWit.com， 或聯絡公司的客戶服務部。",
+        "id": "10. Informasi lebih lanjut mengenai swap dapat ditemukan di https://global.TigerWit.com, atau dengan menghubungi Departemen Dukungan Pelanggan perusahaan.",
+        "es": "10. Se puede encontrar más información sobre los swaps en https://global.TigerWit.com, o contactando al Departamento de Atención al Cliente de la empresa.",
+        "pt-BR": "10. Mais informações sobre swaps podem ser encontradas em https://global.TigerWit.com, ou entrando em contato com o Departamento de Suporte ao Cliente da empresa.",
+        "ar": "10- يمكن الإطلاع على معلومات إضافية عن فوائد التمديد على موقعنا الإلكتروني https://global.TigerWit.com، أو من خلال الاتصال بإدارة دعم العملاء في الشركة."
     },
     "amtClient98": {
         "zh": "责任",
         "en": "Liability",
         "vi": "Trách nhiệm pháp lý",
         "zh-Hant": "責任",
-        "id": "Liability",
+        "id": "Kewajiban",
         "es": "Responsabilidad",
         "pt-BR": "Responsabilidade",
         "ar": "المسؤولية"
@@ -4916,7 +4916,7 @@ module.exports = {
         "en": "1.TigerWit shall, at all times, conclude client’s transactions in good faith.",
         "vi": "1.TigerWit sẽ luôn luôn quyết định giao dịch của khách hàng với thiện chí.",
         "zh-Hant": "1.TigerWit 在所有時候均應真誠執行客戶的交易。",
-        "id": "1.TigerWit shall, at all times, conclude client’s transactions in good faith.",
+        "id": "1. TigerWit akan, setiap saat, menyimpulkan transaksi klien dengan itikad baik.",
         "es": "1. TigerWit deberá, en todo momento, concluir las transacciones del cliente de buena fe.",
         "pt-BR": "1.A TigerWit deve, em todos os momentos, concluir as transações do cliente de boa fé.",
         "ar": "1- تقوم TigerWit في جميع الأوقات بتنفيذ معاملات العميل بحسن نية."
@@ -4926,7 +4926,7 @@ module.exports = {
         "en": "2.TigerWit bears no responsibility for any acts or omissions concluded by either a natural or legal person that provides the Firm with information in relation to the execution of the client’s transactions in financial instruments, unless such acts or omissions were the result of negligence or fraud on behalf of TigerWit.",
         "vi": "2.TigerWit không chịu trách nhiệm đối với bất kỳ hành vi hoặc thiếu sót nào được đưa ra bởi một người tự nhiên hoặc pháp nhân cung cấp cho Công ty thông tin liên quan đến việc thực hiện giao dịch của khách hàng trong các công cụ tài chính, trừ khi hành động hoặc thiếu sót đó là kết quả của sự sơ suất hoặc gian lận thay mặt cho TigerWit.",
         "zh-Hant": "2.對於某自然人或法人向本公司提供有關客戶金融工具交易的執行信息時的任何作為或不作為，TigerWit 概不負責，除非該作為或不作為是 TigerWit 方面的疏忽或欺詐造成的。",
-        "id": "2.TigerWit bears no responsibility for any acts or omissions concluded by either a natural or legal person that provides the Firm with information in relation to the execution of the client’s transactions in financial instruments, unless such acts or omissions were the result of negligence or fraud on behalf of TigerWit.",
+        "id": "2. TigerWit tidak bertanggung jawab atas tindakan atau kelalaian yang dilakukan oleh orang perseorangan atau badan hukum yang memberikan informasi kepada Perusahaan sehubungan dengan pelaksanaan transaksi klien dalam instrumen keuangan, kecuali tindakan atau kelalaian tersebut merupakan akibat dari kelalaian atau penipuan atas nama TigerWit.",
         "es": "2. TigerWit no asume ninguna responsabilidad por los actos u omisiones concluidas por una persona física o jurídica que proporcione información a la Firma en relación con la ejecución de las transacciones del cliente en instrumentos financieros, a menos que dichos actos u omisiones sean resultado de negligencia o fraude. en nombre de TigerWit.",
         "pt-BR": "2. A TigerWit não se responsabiliza por quaisquer atos ou omissões concluídos por uma pessoa física ou jurídica que forneça à Empresa informações relacionadas à execução das transações do cliente em instrumentos financeiros, a menos que tais atos ou omissões tenham resultado de negligência ou fraude. em nome da TigerWit.",
         "ar": "2- لا تتحمل TigerWit أي مسؤولية عن أي تصرف أو امتناع عن التصرف من جانب أي شخص طبيعي أو اعتباري يقوم بتقديم معلومات للشركة فيما يتعلق بتنفيذ معاملات العميل في الأدوات المالية، ما لم يكن ذلك التصرف أو الامتناع عن التصرف ناتجًا عن الإهمال أو الاحتيال نيابة عن TigerWit."
@@ -4936,7 +4936,7 @@ module.exports = {
         "en": "3.TigerWit bears no responsibility for any loss of opportunity that results in reduction in the value of the client’s transactions in financial instruments, regardless of the cause of such reduction, except to the extent that reduction occurred as a direct consequence of the Firm’s deliberate actions or omissions.",
         "vi": "3.TigerWit không chịu trách nhiệm cho bất kỳ việc mất cơ hội nào dẫn đến giảm giá trị giao dịch của khách hàng với các sản phẩm tài chính, bất kể nguyên nhân của việc giảm là gì, ngoại trừ mức độ giảm xảy ra do hậu quả trực tiếp của các hành động có chủ ý của Công ty hoặc thiếu sót.",
         "zh-Hant": "3.對於任何機會損失導致客戶金融工具交易價值的下跌，不論其原因是什麽，TigerWit 概不負責，但由於公司的蓄意作為或不作為直接導致的下跌除外。",
-        "id": "3.TigerWit bears no responsibility for any loss of opportunity that results in reduction in the value of the client’s transactions in financial instruments, regardless of the cause of such reduction, except to the extent that reduction occurred as a direct consequence of the Firm’s deliberate actions or omissions.",
+        "id": "3. TigerWit tidak bertanggung jawab atas hilangnya peluang yang mengakibatkan penurunan nilai transaksi klien dalam instrumen keuangan, terlepas dari penyebab penurunan tersebut, kecuali sejauh penurunan tersebut terjadi sebagai konsekuensi langsung dari tindakan sengaja Perusahaan atau kelalaian.",
         "es": "3. TigerWit no asume ninguna responsabilidad por cualquier pérdida de oportunidad que resulte en la reducción del valor de las transacciones del cliente en instrumentos financieros, independientemente de la causa de dicha reducción, excepto en la medida en que dicha reducción se produjera como consecuencia directa de las acciones deliberadas de la Firma. u omisiones.",
         "pt-BR": "3.A TigerWit não se responsabiliza por qualquer perda de oportunidade que resulte em redução no valor das transações do cliente em instrumentos financeiros, independentemente da causa de tal redução, exceto na medida em que a redução tenha ocorrido como conseqüência direta das ações deliberadas da Empresa. ou omissões.",
         "ar": "3- لا تتحمل TigerWit أي مسؤولية عن أي ضياع للفرصة والذي يؤدي إلى خفض قيمة معاملات العميل في الأدوات المالية؛ بغض النظر عن سبب هذا الخفض إلا إذا كان هذا الخفض قد حدث كنتيجة مباشرة للتصرف أو الامتناع عن التصرف بشكل متعمد من جانب الشركة."
@@ -4946,7 +4946,7 @@ module.exports = {
         "en": "4.TigerWit bears no responsibility for any loss incurred as a result of the acts or omissions of the Institution or its employees, including but not limited to instances of false or misleading information provided by the client.",
         "vi": "4.TigerWit không chịu trách nhiệm cho bất kỳ tổn thất nào phát sinh do hành vi hoặc thiếu sót của Tổ chức hoặc nhân viên, bao gồm nhưng không giới hạn trong các trường hợp thông tin sai lệch hoặc gây hiểu nhầm do khách hàng cung cấp.",
         "zh-Hant": "4.對於機構或其雇員的作為或不作為導致的任何損失，包括但不限於客戶提供虛假或誤導性信息的情況，TigerWit 概不負責。",
-        "id": "4.TigerWit bears no responsibility for any loss incurred as a result of the acts or omissions of the Institution or its employees, including but not limited to instances of false or misleading information provided by the client.",
+        "id": "4. TigerWit tidak bertanggung jawab atas kerugian yang timbul sebagai akibat dari tindakan atau kelalaian Institusi atau karyawannya, termasuk tetapi tidak terbatas pada contoh informasi palsu atau menyesatkan yang diberikan oleh klien.",
         "es": "4.TigerWit no asume ninguna responsabilidad por cualquier pérdida incurrida como resultado de los actos u omisiones de la Institución o sus empleados, incluidos, entre otros, los casos de información falsa o engañosa proporcionada por el cliente.",
         "pt-BR": "4. A TigerWit não se responsabiliza por qualquer perda incorrida como resultado de atos ou omissões da Instituição ou de seus funcionários, incluindo, mas não se limitando a, casos de informações falsas ou enganosas fornecidas pelo cliente.",
         "ar": "4- لا تتحمل TigerWit أي مسؤولية عن أي خسارة نتيجة أي تصرف أو امتناع عن التصرف من جانب المؤسسة أو موظفيها، بما في ذلك على سبيل المثال وليس الحصر حالات المعلومات الكاذبة أو المضللة المقدمة من العميل."
@@ -4956,7 +4956,7 @@ module.exports = {
         "en": "Compensation Scheme",
         "vi": "Khung Bồi thường",
         "zh-Hant": "補償計劃",
-        "id": "Compensation Scheme",
+        "id": "Skema Kompensasi",
         "es": "Esquema de Compensacion",
         "pt-BR": "Esquema de compensação",
         "ar": "برنامج التعويضات"
@@ -4966,7 +4966,7 @@ module.exports = {
         "en": "1.A client may request the Firm to provide information about the conditions governing compensation and the formalities which to be satisfied to obtain compensation.",
         "vi": "1.Khách hàng có thể yêu cầu Công ty cung cấp thông tin về các điều kiện chi phối bồi thường và các thủ tục được thỏa mãn để được bồi thường.",
         "zh-Hant": "1.客戶可以要求本公司提供規定補償條件以及獲得補償所需手續的相關信息。",
-        "id": "1.A client may request the Firm to provide information about the conditions governing compensation and the formalities which to be satisfied to obtain compensation.",
+        "id": "1. Klien dapat meminta Perusahaan untuk memberikan informasi tentang kondisi yang mengatur kompensasi dan formalitas yang harus dipenuhi untuk mendapatkan kompensasi.",
         "es": "1. Un cliente puede solicitar a la Firma que proporcione información sobre las condiciones que rigen la compensación y los trámites que deben cumplirse para obtener la compensación.",
         "pt-BR": "1. Um cliente pode solicitar à Empresa que forneça informações sobre as condições que regem a compensação e as formalidades que devem ser satisfeitas para obter uma compensação.",
         "ar": "1- يجوز للعميل أن يطلب من الشركة إمداده بمعلومات عن الشروط التي تحكم التعويضات والإجراءات التي يجب استيفاءها من أجل الحصول على التعويضات."
@@ -4976,7 +4976,7 @@ module.exports = {
         "en": "Indemnity",
         "vi": "Bồi thường",
         "zh-Hant": "賠償",
-        "id": "Indemnity",
+        "id": "Ganti rugi",
         "es": "Indemnización",
         "pt-BR": "Indenização",
         "ar": "التعويضات"
@@ -4986,7 +4986,7 @@ module.exports = {
         "en": "1.The client shall indemnify, or indemnify on demand, the Firm for any costs incurred under the provision of investment or ancillary services by the latter, including but not limited to (i) the client’s breach of the Client Agreement or (ii) false or misleading information provided by the client to TigerWit. ",
         "vi": "1.Khách hàng sẽ bồi thường, hoặc bồi thường theo yêu cầu, Công ty về bất kỳ chi phí nào phát sinh từ việc cung cấp dịch vụ đầu tư hoặc phụ trợ, bao gồm nhưng không giới hạn (i) vi phạm Hợp đồng khách hàng hoặc (ii) sai hoặc thông tin gây hiểu lầm do khách hàng cung cấp cho TigerWit.",
         "zh-Hant": "1.如本公司在提供投資或輔助服務時因為(i)客 戶 違 反 本 客 戶 協 議 的 規 定 ， 或(ii) 客 戶 向TigerWit 提供虛假或誤導性信息等原因，給本公司招致任何費用，客戶將向本公司作出賠償或按要求作出賠償。",
-        "id": "1.The client shall indemnify, or indemnify on demand, the Firm for any costs incurred under the provision of investment or ancillary services by the latter, including but not limited to (i) the client’s breach of the Client Agreement or (ii) false or misleading information provided by the client to TigerWit. ",
+        "id": "1. Klien harus mengganti rugi, atau mengganti kerugian atas permintaan, Perusahaan untuk setiap biaya yang timbul di bawah penyediaan investasi atau layanan tambahan oleh yang terakhir, termasuk tetapi tidak terbatas pada (i) pelanggaran klien terhadap Perjanjian Klien atau (ii) palsu atau informasi menyesatkan yang diberikan oleh klien kepada TigerWit.",
         "es": "1.1.El cliente deberá indemnizar, o indemnizar según se solicite, a la Firma por cualquier costo incurrido por la prestación de servicios de inversión o servicios auxiliares por parte de este último, incluidos, entre otros, (i) el incumplimiento por parte del cliente del Acuerdo del Cliente o (ii) falsedades o informaciones engañosas proporcionadas por el cliente a TigerWit. ",
         "pt-BR": "1. O cliente deverá indenizar, ou indenizar a pedido, a Empresa por quaisquer custos incorridos sob a prestação de serviços de investimento ou auxiliares por este, incluindo, mas não limitado a (i) a violação do Contrato de Cliente pelo Cliente ou (ii) falsa ou informações enganosas fornecidas pelo cliente para a TigerWit.",
         "ar": "1- يعوض العميل الشركة، أو يعوض العميل الشركة عند الطلب، عن أي تكاليف تتكبدها الشركة بموجب تقديم خدمات الاستثمار أو الخدمات التكميلية، بما في ذلك على سبيل المثال وليس الحصر  (i) مخالفة العميل لاتفاقية العميل أو  (ii) تقديم العميل معلومات كاذبة أو مضللة إلى TigerWit."
@@ -4996,7 +4996,7 @@ module.exports = {
         "en": "Duration of the Client Agreement",
         "vi": "Thạn của Hợp đồng khách hàng",
         "zh-Hant": "客戶協議期限",
-        "id": "Duration of the Client Agreement",
+        "id": "Durasi Perjanjian Klie",
         "es": "Duración Acuerdo de Cliente",
         "pt-BR": "Duração do contrato do cliente",
         "ar": "مدة اتفاقية العميل"
@@ -5006,7 +5006,7 @@ module.exports = {
         "en": "1.The Client Agreement shall be effective from the day described in the ‘Commencement of the Client Agreement’ section, until its termination or default under clause (17.1) below.",
         "vi": "1.Hợp đồng khách hàng sẽ có hiệu lực từ ngày được mô tả trong phần Bắt đầu của Hợp đồng khách hàng, cho đến khi nó chấm dứt hoặc mặc định theo khoản (17.1) dưới đây.",
         "zh-Hant": "1.本客戶協議有效期自“客戶協議生效”章節規定的日期起，直至下文第(17.1)條規定的終止或違約為止。",
-        "id": "1.The Client Agreement shall be effective from the day described in the ‘Commencement of the Client Agreement’ section, until its termination or default under clause (17.1) below.",
+        "id": "1. Perjanjian Klien akan berlaku efektif sejak hari yang dijelaskan di bagian 'Dimulainya Perjanjian Klien', hingga pengakhiran atau kegagalannya berdasarkan klausul (17.1) di bawah ini.",
         "es": "1. El Acuerdo de Cliente entrará en vigencia desde el día descrito en la sección \"Comienzo del Acuerdo de Cliente\", hasta su finalización o incumplimiento conforme a la cláusula (17.1) a continuación.",
         "pt-BR": "1. O Contrato de Cliente entrará em vigor a partir do dia descrito na seção \"Início do Contrato de Cliente\", até a sua rescisão ou inadimplemento de acordo com a cláusula (17.1) abaixo.",
         "ar": "1- تسري اتفاقية العميل بدءًا من اليوم المنصوص عليه في قسم \"بدء اتفاقية العميل\" حتى يتم إنهاؤها أو حدوث حالة من حالات التقصير وفقًا للبند (17.1) المذكور أدناه."
@@ -5016,7 +5016,7 @@ module.exports = {
         "en": "Notifications and Amendments to the Client Agreement",
         "vi": "Thông báo và sửa đổi cho Hợp đồng khách hàng",
         "zh-Hant": "客戶協議的通知與修訂",
-        "id": "Notifications and Amendments to the Client Agreement",
+        "id": "Pemberitahuan dan Amandemen Perjanjian Klien",
         "es": "Notificaciones y modificaciones al acuerdo del cliente",
         "pt-BR": "Notificações e alterações ao contrato de cliente",
         "ar": "الإخطارات والتعديلات على اتفاقية العميل"
@@ -5026,27 +5026,27 @@ module.exports = {
         "en": "1.The Firm will notify the client in good time about any material change to the information provided under this section which is relevant to a service that the Firm is providing to that client.",
         "vi": "1.Công ty sẽ thông báo cho khách hàng vào thời điểm tốt về bất kỳ thay đổi quan trọng nào đối với thông tin được cung cấp trong phần này có liên quan đến dịch vụ mà Công ty đang cung cấp cho khách hàng đó.",
         "zh-Hant": "1.對於本章節規定的與本公司向客戶提供服務有關的信息，倘若出現任何重大的變更，本公司將及時通知客戶。",
-        "id": "1.The Firm will notify the client in good time about any material change to the information provided under this section which is relevant to a service that the Firm is providing to that client.",
+        "id": "1. Perusahaan akan memberi tahu klien pada waktu yang tepat tentang setiap perubahan material ke informasi yang diberikan di bawah bagian ini yang relevan dengan layanan yang diberikan Perusahaan kepada klien itu.",
         "es": "1. La Firma notificará al cliente a su debido tiempo acerca de cualquier cambio importante en la información provista en esta sección que sea relevante para un servicio que la Firma está brindando a ese cliente.",
         "pt-BR": "1. A Empresa notificará o cliente em tempo útil sobre qualquer alteração relevante nas informações fornecidas sob esta seção que seja relevante para um serviço que a Empresa está fornecendo a esse cliente.",
         "ar": "1- تخطر الشركة العميل في الوقت الملائم عن أي تغيير جوهري في المعلومات المقدمة في هذا القسم ذات الصلة بالخدمة التي تقدمها الشركة لذلك العميل."
     },
     "amtClient111": {
-        "zh": "2.TigerWit 保留随时修订客户协议中任何内容的权利，包括本公司认为根据有合法管辖权的监管机构发布的公告必须做出的修订。在此 情 况 下 ， 应 以 书 面 形 式 或 通 过 公 司 网 站(http://global.tigerwit.com)通知客户，客户保留接受或拒绝此类修订的权利。应当注意的是，客户的许可不适用于任何立即生效的修订。",
-        "en": "2.TigerWit reserves the right to amend, from time to time, any part of the Client Agreement, including where the Firm deems that such amendments are necessary given an announcement by a regulatory authority of a competent jurisdiction. Under such circumstances, the client shall be notified either in writing or through the Firm’s site (http://global.tigerwit.com) accordingly and shall reserve the right to accept or deny the amendments; it should be noted that the client’s consent is not required for any amendment to be effective immediately.",
-        "vi": "2.TigerWit có quyền sửa đổi, theo thời gian, bất kỳ phần nào của Hợp đồng khách hàng, bao gồm cả nơi Công ty cho rằng các sửa đổi đó là cần thiết do một cơ quan có thẩm quyền của một cơ quan có thẩm quyền công bố. Trong những trường hợp như vậy, khách hàng sẽ được thông báo bằng văn bản hoặc thông qua trang web của Công ty (http://global.tigerwit.com) cho phù hợp và sẽ bảo lưu quyền chấp nhận hoặc từ chối các sửa đổi; cần lưu ý rằng sự đồng ý của khách hàng là không cần thiết cho bất kỳ sửa đổi nào có hiệu lực ngay lập tức.",
-        "zh-Hant": "2.TigerWit 保留隨時修訂客戶協議中任何內容的權利，包括本公司認為根據有合法管轄權的監管機構發布的公告必須做出的修訂。在此 情 況 下 ， 應 以 書 面 形 式 或 通 過 公 司 網 站(http://global.tigerwit.com)通知客戶，客戶保留接受或拒絕此類修訂的權利。應當註意的是，客戶的許可不適用於任何立即生效的修訂。",
-        "id": "2.TigerWit reserves the right to amend, from time to time, any part of the Client Agreement, including where the Firm deems that such amendments are necessary given an announcement by a regulatory authority of a competent jurisdiction. Under such circumstances, the client shall be notified either in writing or through the Firm’s site (http://global.tigerwit.com) accordingly and shall reserve the right to accept or deny the amendments; it should be noted that the client’s consent is not required for any amendment to be effective immediately.",
-        "es": "2.TigerWit se reserva el derecho de enmendar, de vez en cuando, cualquier parte del Acuerdo con el Cliente, incluso cuando la Firma considere que dichas modificaciones son necesarias, dado que la autoridad reguladora ha anunciado una jurisdicción competente. En tales circunstancias, se notificará al cliente por escrito o a través del sitio de la Firma (http://global.tigerwit.com) en consecuencia y se reservará el derecho de aceptar o rechazar las enmiendas; debe tenerse en cuenta que no se requiere el consentimiento del cliente para que cualquier enmienda sea efectiva de inmediato.",
-        "pt-BR": "2.A TigerWit reserva-se o direito de alterar, de tempos em tempos, qualquer parte do Contrato de Cliente, inclusive quando a Empresa considerar que tais alterações são necessárias, mediante o anúncio por uma autoridade reguladora de uma jurisdição competente. Sob tais circunstâncias, o cliente deve ser notificado por escrito ou através do site da empresa (http://global.tigerwit.com) e reserva-se o direito de aceitar ou negar as alterações; Deve-se notar que o consentimento do cliente não é necessário para que qualquer alteração seja efetiva imediatamente.",
-        "ar": "2- تحتفظ TigerWit لنفسها بالحق في أن تقوم، من وقت لآخر، بتعديل أي جزء من اتفاقية العميل عندما ترى الشركة أن هذه التعديلات ضرورية بمقتضى إعلان من هيئة رقابية وتنظيمية ذات ولاية قضائية مختصة.  وفي مثل هذه الظروف، سيتم إبلاغ العميل كتابيًا أو من خلال الموقع الإلكتروني للشركة (http://global.tigerwit.com) بذلك وسيحتفظ لنفسه بالحق في قبول التعديلات أو رفضها؛ ويجب ملاحظة أن موافقة العميل ليست إلزامية حتى يسري أي تعديل على الفور."
+        "zh": "2.TigerWit 保留随时修订客户协议中任何内容的权利，包括本公司认为根据有合法管辖权的监管机构发布的公告必须做出的修订。在此 情 况 下 ， 应 以 书 面 形 式 或 通 过 公 司 网 站(https://global.TigerWit.com)通知客户，客户保留接受或拒绝此类修订的权利。应当注意的是，客户的许可不适用于任何立即生效的修订。",
+        "en": "2.TigerWit reserves the right to amend, from time to time, any part of the Client Agreement, including where the Firm deems that such amendments are necessary given an announcement by a regulatory authority of a competent jurisdiction. Under such circumstances, the client shall be notified either in writing or through the Firm’s site (https://global.TigerWit.com) accordingly and shall reserve the right to accept or deny the amendments; it should be noted that the client’s consent is not required for any amendment to be effective immediately.",
+        "vi": "2.TigerWit có quyền sửa đổi, theo thời gian, bất kỳ phần nào của Hợp đồng khách hàng, bao gồm cả nơi Công ty cho rằng các sửa đổi đó là cần thiết do một cơ quan có thẩm quyền của một cơ quan có thẩm quyền công bố. Trong những trường hợp như vậy, khách hàng sẽ được thông báo bằng văn bản hoặc thông qua trang web của Công ty (https://global.TigerWit.com) cho phù hợp và sẽ bảo lưu quyền chấp nhận hoặc từ chối các sửa đổi; cần lưu ý rằng sự đồng ý của khách hàng là không cần thiết cho bất kỳ sửa đổi nào có hiệu lực ngay lập tức.",
+        "zh-Hant": "2.TigerWit 保留隨時修訂客戶協議中任何內容的權利，包括本公司認為根據有合法管轄權的監管機構發布的公告必須做出的修訂。在此 情 況 下 ， 應 以 書 面 形 式 或 通 過 公 司 網 站(https://global.TigerWit.com)通知客戶，客戶保留接受或拒絕此類修訂的權利。應當註意的是，客戶的許可不適用於任何立即生效的修訂。",
+        "id": "2. TigerWit berhak untuk mengubah, dari waktu ke waktu, setiap bagian dari Perjanjian Klien, termasuk di mana Perusahaan menganggap bahwa perubahan tersebut perlu diberikan pengumuman oleh otoritas pengatur dari yurisdiksi yang kompeten. Dalam keadaan seperti itu, klien akan diberitahu baik secara tertulis atau melalui situs Perusahaan (https://global.TigerWit.com) sebagaimana mestinya dan berhak untuk menerima atau menolak amandemen; perlu dicatat bahwa persetujuan klien tidak diperlukan agar amandemen apa pun dapat segera berlaku.",
+        "es": "2.TigerWit se reserva el derecho de enmendar, de vez en cuando, cualquier parte del Acuerdo con el Cliente, incluso cuando la Firma considere que dichas modificaciones son necesarias, dado que la autoridad reguladora ha anunciado una jurisdicción competente. En tales circunstancias, se notificará al cliente por escrito o a través del sitio de la Firma (https://global.TigerWit.com) en consecuencia y se reservará el derecho de aceptar o rechazar las enmiendas; debe tenerse en cuenta que no se requiere el consentimiento del cliente para que cualquier enmienda sea efectiva de inmediato.",
+        "pt-BR": "2.A TigerWit reserva-se o direito de alterar, de tempos em tempos, qualquer parte do Contrato de Cliente, inclusive quando a Empresa considerar que tais alterações são necessárias, mediante o anúncio por uma autoridade reguladora de uma jurisdição competente. Sob tais circunstâncias, o cliente deve ser notificado por escrito ou através do site da empresa (https://global.TigerWit.com) e reserva-se o direito de aceitar ou negar as alterações; Deve-se notar que o consentimento do cliente não é necessário para que qualquer alteração seja efetiva imediatamente.",
+        "ar": "2- تحتفظ TigerWit لنفسها بالحق في أن تقوم، من وقت لآخر، بتعديل أي جزء من اتفاقية العميل عندما ترى الشركة أن هذه التعديلات ضرورية بمقتضى إعلان من هيئة رقابية وتنظيمية ذات ولاية قضائية مختصة.  وفي مثل هذه الظروف، سيتم إبلاغ العميل كتابيًا أو من خلال الموقع الإلكتروني للشركة (https://global.TigerWit.com) بذلك وسيحتفظ لنفسه بالحق في قبول التعديلات أو رفضها؛ ويجب ملاحظة أن موافقة العميل ليست إلزامية حتى يسري أي تعديل على الفور."
     },
     "amtClient112": {
         "zh": "终止与违约",
         "en": "Termination and Default",
         "vi": "Chấm dứt và mặc định",
         "zh-Hant": "終止與違約",
-        "id": "Termination and Default",
+        "id": "Penghentian dan Wanprestasi",
         "es": "Terminación y Default",
         "pt-BR": "Rescisão e Default",
         "ar": "الإنهاء والتقصير"
@@ -5056,7 +5056,7 @@ module.exports = {
         "en": "1.The client may terminate the Client Agreement within 15 (fifteen) business days from the announcement of an amendment under the ‘Notification and Amendments to the Client Agreement section above, by sending a notification through registered post to the Firm’s Head Office, provided only that there are no open positions traded through the relevant trading account and the client has no outstanding obligations to TigerWit.",
         "vi": "1.Khách hàng có thể chấm dứt Hợp đồng khách hàng trong vòng 15 (mười lăm) ngày làm việc kể từ khi thông báo sửa đổi theo Thông báo và Sửa đổi cho phần Hợp đồng khách hàng ở trên, bằng cách gửi thông báo qua bài đăng đã đăng ký đến Trụ sở của Công ty, miễn là không có vị thế mở giao dịch thông qua tài khoản giao dịch liên quan và khách hàng không có nghĩa vụ nào đối với TigerWit.",
         "zh-Hant": "1.客戶可以在前文“客戶協議的通知與修訂”章節規定的修訂公告發出起十五(15)個營業日內，通過掛號郵寄方式向本公司總部發出通知終止本客戶協議，前提是相關交易賬戶不存在未平倉交易且客戶對 TigerWit 沒有未償還債務。",
-        "id": "1.The client may terminate the Client Agreement within 15 (fifteen) business days from the announcement of an amendment under the ‘Notification and Amendments to the Client Agreement section above, by sending a notification through registered post to the Firm’s Head Office, provided only that there are no open positions traded through the relevant trading account and the client has no outstanding obligations to TigerWit.",
+        "id": "1. Klien dapat mengakhiri Perjanjian Klien dalam waktu 15 (lima belas) hari kerja sejak pengumuman amandemen di bawah bagian 'Pemberitahuan dan Perubahan Perjanjian Klien di atas, dengan mengirimkan pemberitahuan melalui pos terdaftar ke Kantor Pusat Perusahaan, dengan ketentuan hanya bahwa tidak ada posisi terbuka yang diperdagangkan melalui akun trading yang relevan dan klien tidak memiliki kewajiban terutang kepada TigerWit.",
         "es": "1.El cliente puede rescindir el Acuerdo del cliente dentro de los 15 (quince) días hábiles a partir del anuncio de una modificación en la sección 'Notificación y enmiendas al Acuerdo de Cliente anterior, mediante el envío de una notificación por correo certificado a la Oficina central de la Firma, siempre no se negocien posiciones abiertas a través de la cuenta trading relevante y que el cliente no tuviera obligaciones pendientes con TigerWit.",
         "pt-BR": "1.O cliente poderá rescindir o Contrato de Cliente no prazo de 15 (quinze) dias úteis a partir do anúncio de uma alteração ao abrigo da secção Notificações e Emendas ao Contrato de Cliente acima, enviando uma notificação por correio registado para a Sede da Empresa, fornecida apenas que não há posições abertas negociadas através da conta de negociação relevante e o cliente não tem obrigações pendentes com a TigerWit.",
         "ar": "1- يجوز للعميل إنهاء اتفاقية العميل خلال 15 (خمسة عشر) يوم عمل من الإعلان عن أي تعديل بموجب قسم \"الإخطارات والتعديلات على اتفاقية العميل\" أعلاه، من خلال إرسال إخطار بالبريد المسجل إلى المقر الرئيسي للشركة، شريطة عدم وجود مراكز تداول مفتوحة على حساب التداول المعني وألا يكون لدى العميل أي التزامات معلقة تجاه TigerWit."
@@ -5066,7 +5066,7 @@ module.exports = {
         "en": "2.The client may terminate the Client Agreement, for any reason, having provided a 7 (seven) business days written notice by sending a notification specifying the termination date through registered post to the Firm’s Head Office, provided only that there are no open positions traded through the relevant trading account and the client has no amounts due for payment to TigerWit.",
         "vi": "2.Khách hàng có thể chấm dứt Hợp đồng khách hàng, vì bất kỳ lý do nào, miễn là gửi thông báo ngày chấm dứt cụ thể trước 7 ngày làm việc đến Trụ sở chính của Công ty đã nêu, miễn là không có các vị thế mở được giao dịch thông qua các tài khoản giao dịch liên quan và khách hàng không có khoản thanh toán nào đến hạn phải trả cho TigerWit.",
         "zh-Hant": "2.客戶出於任何原因，可以提前七個營業日通過掛號郵寄方式向本公司總部發送指定有終止日期的書面通知終止本客戶協議，前提是相 關 交 易 賬 戶 不 存 在 未 平 倉 交 易 且 客 戶對TigerWit 沒有未結清付款。",
-        "id": "2.The client may terminate the Client Agreement, for any reason, having provided a 7 (seven) business days written notice by sending a notification specifying the termination date through registered post to the Firm’s Head Office, provided only that there are no open positions traded through the relevant trading account and the client has no amounts due for payment to TigerWit.",
+        "id": "2. Klien dapat mengakhiri Perjanjian Klien, dengan alasan apapun, setelah memberikan pemberitahuan tertulis 7 (tujuh) hari kerja dengan mengirimkan pemberitahuan yang menyebutkan tanggal pengakhiran melalui pos terdaftar ke Kantor Pusat Perusahaan, asalkan tidak ada posisi terbuka diperdagangkan melalui akun trading yang relevan dan klien tidak memiliki jumlah yang harus dibayarkan ke TigerWit.",
         "es": "2. El cliente puede rescindir el Acuerdo del cliente, por cualquier motivo, habiendo proporcionado una notificación por escrito de 7(siete) días hábiles mediante el envío de una notificación que especifique la fecha de finalización por correo certificado a la Oficina Central de la Firma, siempre que no haya puestos vacantes. se negocian a través de la cuenta comercial correspondiente y el cliente no tiene cantidades debidas para el pago a TigerWit.",
         "pt-BR": "2.O cliente poderá rescindir o Contrato de Cliente, por qualquer motivo, tendo enviado um aviso prévio de 7 (sete) dias úteis enviando uma notificação especificando a data de rescisão por meio de um cargo registrado na sede da empresa, contanto que não haja posições abertas transaccionado através da conta de negociação relevante e o cliente não tem montantes a pagar pela TigerWit.",
         "ar": "2- يجوز للعميل إنهاء اتفاقية العميل، لأي سبب من الأسباب، بعد إرسال إخطار مكتوب بالبريد المسجل إلى المقر الرئيسي للشركة قبل فترة 7 (سبعة) أيام عمل يحدد فيه العميل تاريخ الإنهاء، شريطة عدم وجود مراكز تداول مفتوحة على حساب التداول المعني وألا يكون على العميل أي مبالغ مستحقة السداد إلى TigerWit."
@@ -5076,7 +5076,7 @@ module.exports = {
         "en": "3.TigerWit may terminate the Client Agreement by giving the client at least 7 (seven) business days written notice, specifying the termination date.",
         "vi": "3.TigerWit có thể chấm dứt Hợp đồng Khách hàng bằng cách gửi thông báo bằng văn bản cho khách hàng ít nhất 7 (bảy) ngày làm việc, nêu rõ ngày chấm dứt hợp đồng.",
         "zh-Hant": "3.TigerWit 應至少提前七個營業日向客戶發出指定有終止日期的書面通知，終止本客戶協議。",
-        "id": "3.TigerWit may terminate the Client Agreement by giving the client at least 7 (seven) business days written notice, specifying the termination date.",
+        "id": "3. TigerWit dapat mengakhiri Perjanjian Klien dengan memberikan pemberitahuan tertulis setidaknya 7 (tujuh) hari kerja kepada klien, dengan menyebutkan tanggal pengakhiran.",
         "es": "3.TigerWit puede rescindir el Acuerdo de Cliente mediante la notificación por escrito al menos 7(siete) días hábiles, especificando la fecha de finalización.",
         "pt-BR": "3.TigerWit pode rescindir o contrato de cliente, dando ao cliente pelo menos 7 (sete) dias úteis por escrito, especificando a data de rescisão.",
         "ar": "3- يجوز أن تقوم TigerWit بإنهاء اتفاقية العميل من خلال إرسال إخطار مكتوب إلى العميل قبل ما لا يقل عن 7 (سبعة) أيام عمل، تحدد فيه الشركة تاريخ الإنهاء."
@@ -5086,7 +5086,7 @@ module.exports = {
         "en": "4.The client accepts that TigerWit reserves the right to terminate the Client Agreement immediately by providing the former with a written notice, if clause 17.5, below, becomes effective.",
         "vi": "4.Khách hàng chấp nhận rằng TigerWit có quyền chấm dứt Hợp đồng khách hàng ngay lập tức bằng cách cung cấp cho họ thông báo trước bằng văn bản, nếu điều 17.5 dưới đây, có hiệu lực.",
         "zh-Hant": "4.客戶同意，壹旦下文第 17.5 條生效，TigerWit 保留通過向客戶提供書面通知立即終止本客戶協議的權利。",
-        "id": "4.The client accepts that TigerWit reserves the right to terminate the Client Agreement immediately by providing the former with a written notice, if clause 17.5, below, becomes effective.",
+        "id": "4. Klien menerima bahwa TigerWit berhak untuk segera mengakhiri Perjanjian Klien dengan memberikan pemberitahuan tertulis sebelumnya, jika klausul 17.5, di bawah, menjadi efektif.",
         "es": "4.El cliente acepta que TigerWit se reserva el derecho de rescindir el Contrato de Cliente de forma inmediata al proporcionar al primero un aviso por escrito, si la cláusula 17.5, a continuación, entra en vigencia.",
         "pt-BR": "4.O cliente aceita que a TigerWit se reserva o direito de rescindir o Contrato de Cliente imediatamente, fornecendo à primeira uma notificação por escrito, se a cláusula 17.5, abaixo, entrar em vigor.",
         "ar": "4- يقبل العميل أن TigerWit تحتفظ لنفسها بالحق في إنهاء اتفاقية العميل فورًا من خلال إرسال إخطار مكتوب إلى العميل، إذا أصبح البند 17.5 المذكورة أدناه ساريًا."
@@ -5096,7 +5096,7 @@ module.exports = {
         "en": "5.TigerWit may terminate the Client Agreement immediately, in the event of: ",
         "vi": "5.TigerWit có thể chấm dứt Hợp đồng Khách hang ngay lập tức, trong trường hợp: ",
         "zh-Hant": "5.在下列情況下，TigerWit 可以立即終止本客戶協議：",
-        "id": "5.TigerWit may terminate the Client Agreement immediately, in the event of: ",
+        "id": "5. TigerWit dapat segera mengakhiri Perjanjian Klien, jika: ",
         "es": "5.TigerWit pudiera terminar el Acuerdo de Cliente inmediatamente, en el evento de: ",
         "pt-BR": "5.TigerWit pode rescindir o contrato de cliente imediatamente, no caso de:",
         "ar": "5- يجوز أن تقوم TigerWit بإنهاء اتفاقية العميل فورًا في حالة حدوث ما يلي:"
@@ -5106,7 +5106,7 @@ module.exports = {
         "en": "a violation of any part of the Client Agreement on behalf of the client;",
         "vi": "vi phạm bất kỳ phần nào của Hợp đồng khách hàng thay mặt cho khách hàng;",
         "zh-Hant": "客戶方面違反本客戶協議的任何部分；",
-        "id": "a violation of any part of the Client Agreement on behalf of the client;",
+        "id": "pelanggaran bagian mana pun dari Perjanjian Klien atas nama klien;",
         "es": "una violación de cualquier parte del Acuerdo del Cliente en nombre del cliente;",
         "pt-BR": "uma violação de qualquer parte do Contrato do Cliente em nome do cliente;",
         "ar": "مخالفة أي جزء من اتفاقية العميل نيابة عن العميل؛"
@@ -5116,7 +5116,7 @@ module.exports = {
         "en": "an issuance of an application, order, resolution or other announcement in relation to bankruptcy or winding-up proceedings that involve the client;",
         "vi": "có đơn yêu cầu, lệnh, phán quyết hoặc thông báo khác liên quan đến việc phá sản hoặc thủ tục tố tụng liên quan đến khách hàng;",
         "zh-Hant": "與客戶有關的破產或清盤程序發出的申請、命令、決議或其他公告；",
-        "id": "an issuance of an application, order, resolution or other announcement in relation to bankruptcy or winding-up proceedings that involve the client;",
+        "id": "penerbitan aplikasi, perintah, resolusi atau pengumuman lain sehubungan dengan kebangkrutan atau proses penutupan yang melibatkan klien;",
         "es": "una emisión de una solicitud, orden, resolución u otro anuncio en relación con un procedimiento de quiebra o liquidación que involucre al cliente;",
         "pt-BR": "uma emissão de um pedido, ordem, resolução ou outro anúncio em relação a processos de falência ou liquidação que envolvam o cliente;",
         "ar": "تقديم طلب أو صدور أمر أو قرار أو أي إعلان آخر فيما يتعلق بإجراءات إفلاس العميل أو تصفيته؛"
@@ -5126,7 +5126,7 @@ module.exports = {
         "en": "a client’s death; and",
         "vi": "khách hàng qua đời; và",
         "zh-Hant": "客戶死亡；以及",
-        "id": "a client’s death; and",
+        "id": "kematian klien;",
         "es": "la muerte de un cliente; y",
         "pt-BR": "morte de um cliente; e",
         "ar": "وفاة العميل؛ و"
@@ -5134,9 +5134,9 @@ module.exports = {
     "amtClient121": {
         "zh": "基于本公司的合理怀疑，客户利用本公司参与任何类型的欺诈。",
         "en": "a client involving the Firm in any type of fraud based on the Firm's reasonable suspicion.",
-        "vi": "một khách hàng liên quan đến Công ty trong bất kỳ hình thức gian lận nào dựa trên nghi ngờ hợp lý của Công ty.",
+        "vi": "một khách hàng liên quan đến Công ty trong bất kỳ hình thức gian lận hoặc các loại tội phạm tài chính khác nào dựa trên nghi ngờ hợp lý của Công ty.",
         "zh-Hant": "基於本公司的合理懷疑，客戶利用本公司參與任何類型的欺詐。",
-        "id": "a client involving the Firm in any type of fraud based on the Firm's reasonable suspicion.",
+        "id": "dan klien yang melibatkan Perusahaan dalam segala jenis penipuan atau kejahatan keuangan lainnya berdasarkan kecurigaan yang wajar dari Perusahaan.",
         "es": "un cliente que involucre a la Firma en cualquier tipo de fraude basado en la sospecha razonable de la Firma.",
         "pt-BR": "um cliente envolvendo a Firma em qualquer tipo de fraude com base na suspeita razoável da Empresa.",
         "ar": "إشراك العميل الشركة في أي نوع من أنواع النصب والاحتيال إذا كان لدى الشركة شكًا معقولاً في ذلك."
@@ -5146,7 +5146,7 @@ module.exports = {
         "en": "6.A termination of the Client Agreement shall not imply that any of the client’s responsibilities cease to exist; the latter shall still be liable to pay to the Firm: ",
         "vi": "Việc chấm dứt Hợp đồng khách hàng sẽ không ẩn ý rằng bất kỳ trách nhiệm nào của khách hàng không còn tồn tại; sau này vẫn phải chịu trách nhiệm thanh toán cho Công ty: ",
         "zh-Hant": "6.客戶協議的終止並不代表客戶的所有責任不復存在；客戶對本公司仍承擔以下支付責任：",
-        "id": "6.A termination of the Client Agreement shall not imply that any of the client’s responsibilities cease to exist; the latter shall still be liable to pay to the Firm: ",
+        "id": "6. Pengakhiran Perjanjian Klien tidak akan menyiratkan bahwa tanggung jawab klien mana pun tidak ada lagi; yang terakhir masih berkewajiban untuk membayar ke Perusahaan:",
         "es": "6.La termination del Acuerdo de Cliente no implicará que las responsabilidades del clientes cesen de existir; el último será todavía resposable de pagar a la Firma: ",
         "pt-BR": "6. A rescisão do Contrato de Cliente não implica que qualquer uma das responsabilidades do cliente deixe de existir; este último ainda será obrigado a pagar à Empresa:",
         "ar": "6- لا يعني إنهاء اتفاقية العميل انتهاء سريان أي من مسؤوليات العميل؛ سيظل العميل مسؤولاً عن أن يدفع للشركة ما يلي:"
@@ -5156,7 +5156,7 @@ module.exports = {
         "en": "any amount that is due to TigerWit;",
         "vi": "bất kỳ số tiền nào đến hạn thanh toán cho TigerWit;",
         "zh-Hant": "應付給 TigerWit 的任何金額；",
-        "id": "any amount that is due to TigerWit;",
+        "id": "jumlah berapa pun yang menjadi hak TigerWit;",
         "es": "cualquier cantidad que se deba a TigerWit;",
         "pt-BR": "qualquer quantia devida à TigerWit;",
         "ar": "أي مبلغ مستحق إلى TigerWit؛"
@@ -5166,7 +5166,7 @@ module.exports = {
         "en": "any expenses that are incurred by or charged to TigerWit, as a result of the termination of the Client Agreement; and",
         "vi": "bất kỳ chi phí nào phát sinh hoặc tính phí cho TigerWit, là kết quả của việc chấm dứt Hợp đồng khách hàng; và",
         "zh-Hant": "由於客戶協議終止而向 TigerWit 收取的或由 TigerWit 產生的任何費用；以及",
-        "id": "any expenses that are incurred by or charged to TigerWit, as a result of the termination of the Client Agreement; and",
+        "id": "segala biaya yang dikeluarkan oleh atau dibebankan ke TigerWit, sebagai akibat dari pengakhiran Perjanjian Klien;",
         "es": "cualquier gasto en que haya incurrido o que se haya cargado a TigerWit, como resultado de la rescisión del Acuerdo de Cliente; y",
         "pt-BR": "quaisquer despesas que sejam incorridas ou cobradas da TigerWit, como resultado do término do Contrato do Cliente; e",
         "ar": "أي مصروفات تتكبدها أو تتحملها TigerWit نتيجة لإنهاء اتفاقية العميل؛ و"
@@ -5176,7 +5176,7 @@ module.exports = {
         "en": "any damage or loss that has arisen because of an arrangement or settlement.",
         "vi": "3.bất kỳ thiệt hại hoặc tổn thất nào phát sinh do sắp xếp hoặc giải quyết.",
         "zh-Hant": "由於安排或和解而產生的任何損害或損失。",
-        "id": "any damage or loss that has arisen because of an arrangement or settlement.",
+        "id": "dan setiap kerusakan atau kerugian yang timbul karena pengaturan atau penyelesaian.",
         "es": "cualquier daño o pérdida que haya surgido a causa de un acuerdo o acuerdo.",
         "pt-BR": "qualquer dano ou perda que tenha surgido devido a um acordo ou acordo.",
         "ar": "أي ضرر أو خسارة تنشأ بسبب ترتيب أو تسوية."
@@ -5186,7 +5186,7 @@ module.exports = {
         "en": "7.Upon termination of the Client Agreement under clause 17.1, above, TigerWit shall immediately transfer to the client any amount available in the relevant trading account minus any outstanding amount that is due to the Firm by the client.",
         "vi": "7.Khi khách hàng chấm dứt Thoả thuận theo điều khoản 17.1 ở trên, TigerWit sẽ chuyển ngay cho khách hàng bất kỳ số tiền nào có sẵn trong tài khoản giao dịch liên quan sau khi trừ đi số tiền chưa thanh toán mà Khách hàng còn nợ Công ty.",
         "zh-Hant": "7.根據上文第 17.1 條，客戶協議終止後，TigerWit 應立即將相關交易賬戶中的任何可用金額減去客戶應付給本公司的任何未償還金額後，轉賬至客戶。",
-        "id": "7.Upon termination of the Client Agreement under clause 17.1, above, TigerWit shall immediately transfer to the client any amount available in the relevant trading account minus any outstanding amount that is due to the Firm by the client.",
+        "id": "7. Setelah pengakhiran Perjanjian Klien berdasarkan klausul 17.1, di atas, TigerWit akan segera mentransfer ke klien berapa pun jumlah yang tersedia di akun trading yang relevan dikurangi jumlah terutang yang harus dibayarkan kepada Perusahaan oleh klien.",
         "es": "7.Después de la finalización del Acuerdo de Cliente en virtud de la cláusula 17.1, anterior, TigerWit transferirá de inmediato al cliente cualquier importe disponible en la cuenta de trading  relevante menos cualquier importe pendiente que deba el Cliente a la Firma.",
         "pt-BR": "7.Após a rescisão do Contrato de Cliente de acordo com a cláusula 17.1, acima, a TigerWit transferirá imediatamente ao cliente qualquer quantia disponível na conta de negociação relevante menos qualquer quantia pendente que seja devida à Empresa pelo cliente.",
         "ar": "7- بعد إنهاء اتفاقية العميل بموجب البند 17.1 المذكور أعلاه، تقوم TigerWit فورًا بتحويل أي مبلغ متاح في حساب التداول المعني إلى العميل مخصومًا منه أي مبلغ مستحق على العميل للشركة."
@@ -5196,7 +5196,7 @@ module.exports = {
         "en": "8.If clause 17.5, above, becomes effective TigerWit reserves the right to reverse any transactions that are deemed to be contrary to the Firm’s or the client’s interests.",
         "vi": "8.Nếu điều khoản 17.5 ở trên, có hiệu lực, TigerWit có quyền đảo ngược bất kỳ giao dịch nào được coi là trái với lợi ích của Công ty hoặc của khách hàng.",
         "zh-Hant": "8.如果上文第 17.5 條生效，針對任何被認為與本公司或客戶利益相悖的交易，TigerWit保留反向交易的權力。",
-        "id": "8.If clause 17.5, above, becomes effective TigerWit reserves the right to reverse any transactions that are deemed to be contrary to the Firm’s or the client’s interests.",
+        "id": "8. Jika klausul 17.5, di atas, menjadi efektif, TigerWit berhak untuk membalikkan transaksi apa pun yang dianggap bertentangan dengan kepentingan Perusahaan atau klien.",
         "es": "8. Si la cláusula 17.5, arriba, entra en vigencia, TigerWit se reserva el derecho de revertir cualquier transacción que se considere contraria a los intereses de la Firma o del cliente.",
         "pt-BR": "8.Se a cláusula 17.5, acima, se tornar efetiva, a TigerWit reserva-se o direito de reverter quaisquer transações que sejam consideradas contrárias aos interesses da Empresa ou do cliente.",
         "ar": "8- إذا أصبح البند 17.5 المذكور أعلاه ساريًا، تحتفظ TigerWit لنفسها بالحق في نقض أي معاملات تعتبر مخالفة لمصالح الشركة أو العميل."
@@ -5204,9 +5204,9 @@ module.exports = {
     "amtClient128": {
         "zh": "风险披露",
         "en": "Risk Disclosure",
-        "vi": "uyên bố Rủi ro",
+        "vi": "Tuyên bố Rủi ro",
         "zh-Hant": "風險披露",
-        "id": "Risk Disclosure",
+        "id": "Pengungkapan Resiko",
         "es": "Divulgación del Riesgo",
         "pt-BR": "Divulgação de Risco",
         "ar": "الإفصاح عن المخاطر"
@@ -5216,7 +5216,7 @@ module.exports = {
         "en": "1.Details relating to the risks involved in trading CFDs are contained in the Annex to this Agreement.",
         "vi": "1.Các chi tiết liên quan đến các rủi ro liên quan đến giao dịch CFD được nêu trong Phụ lục của Thỏa Thuận này.",
         "zh-Hant": "1.有關於差價合約交易所涉及的風險詳情載於本協議附件。",
-        "id": "1.Details relating to the risks involved in trading CFDs are contained in the Annex to this Agreement.",
+        "id": "1. Rincian terkait risiko yang terlibat dalam perdagangan CFD terdapat dalam Lampiran Perjanjian ini.",
         "es": "1. Los detalles relacionados con los riesgos involucrados en el trading de CFDs se encuentran en el Anexo de este Acuerdo.",
         "pt-BR": "1. Os detalhes relativos aos riscos envolvidos na negociação de CFDs estão contidos no Anexo deste Acordo.",
         "ar": "1- يحتوي الملحق (أ) بهذه الاتفاقية على تفاصيل حول المخاطر التي ينطوي عليها تداول عقود الفروقات."
@@ -5226,7 +5226,7 @@ module.exports = {
         "en": "Confidentiality and Personal Data Protection",
         "vi": "Bảo mật và Bảo vệ Dữ Liệu Khách Hàng",
         "zh-Hant": "保密與個人數據保護",
-        "id": "Confidentiality and Personal Data Protection",
+        "id": "Kerahasiaan dan Perlindungan Data Pribadi",
         "es": "Confidencialidad y Protección Datos Personales",
         "pt-BR": "Confidencialidade e Proteção de Dados Pessoais",
         "ar": "السرية وحماية البيانات الشخصية"
@@ -5234,9 +5234,9 @@ module.exports = {
     "amtClient131": {
         "zh": "1.TigerWit Limited 在 巴哈马国注册总局注册；因此，任何客户的个人数据均由 TigerWit 依据巴哈马国的法律法规进行保存。",
         "en": "1.TigerWit Limited is registered with the Registrar General's Department of The Bahamas; therefore, any clients’ personal data is kept by TigerWit according to the laws and regulations of The Bahamas.",
-        "vi": "1.Công ty TigerWit được đăng ký với Ủy ban Chứng khoán Bahamas; do đó, bất kỳ dữ liệu cá nhân của khách hàng được giữ bởi TigerWit tuân theo luật pháp và các quy định của Bahamas.",
+        "vi": "1.Công ty TigerWit được đăng ký với Ủy ban Chứng khoán Bahamas; do đó, bất kỳ dữ liệu cá nhân của khách hàng được giữ bởi TigerWit tuân theo luật pháp và các quy định của Bahamas bao gồm luật Bảo Mật Thông Tin Dữ Liệu (Bảo Mật Thông Tin Cá Nhân), 2003.",
         "zh-Hant": "1.TigerWit Limited 在 巴哈馬國註冊總局註冊；因此，任何客戶的個人數據均由 TigerWit 依據巴哈馬國的法律法規進行保存。",
-        "id": "1.TigerWit Limited is registered with the Registrar General's Department of The Bahamas; therefore, any clients’ personal data is kept by TigerWit according to the laws and regulations of The Bahamas.",
+        "id": "1. TigerWit Limited terdaftar di Departemen Registrar General di Bahamas; oleh karena itu, setiap data pribadi klien disimpan oleh TigerWit sesuai dengan hukum dan peraturan Bahamas untuk menyertakan Undang-Undang Perlindungan Data (Privasi Informasi Pribadi), 2003.",
         "es": "1. TigerWit Limited está registrado en el Registro General de las Bahamas; por lo tanto, los datos personales de cualquier cliente son guardados por TigerWit de acuerdo con las leyes y regulaciones de Bahamas.",
         "pt-BR": "1. A TigerWit Limited está registrada no Departamento Geral de Registradores das Bahamas; portanto, os dados pessoais de qualquer cliente são mantidos pela TigerWit de acordo com as leis e regulamentos das Bahamas.",
         "ar": "إن شركة TigerWit Limited مسجلة في إدارة السجل العام لجزر البهاما؛ وبناء على ذلك، تحتفظ TigerWit بالبيانات الشخصية لأي عميل وفقًا للقوانين واللوائح المعمول بها في جزر البهاما."
@@ -5246,7 +5246,7 @@ module.exports = {
         "en": "TigerWit shall not disclose to a third party, any of its clients’ confidential information unless required to do so by a regulatory authority of a competent jurisdiction; TigerWit will endeavour, to make such disclosures on a ‘need-to-know’ basis, unless otherwise instructed by a regulatory authority. Under such circumstances, the Firm shall expressly inform the third party regarding the confidential nature of the information.",
         "vi": "TigerWit không được tiết lộ cho bên thứ ba, bất kỳ thông tin bí mật nào của khách hàng trừ khi được yêu cầu bởi một cơ quan quản lý có thẩm quyền; TigerWit sẽ nỗ lực, để thực hiện việc tiết lộ trong các trường hợp như vậy trên cơ sở sự cần biết, trừ khi được chỉ dẫn bởi một cơ quan quản lý. Trong những trường hợp như vậy, Công ty phải thông báo rõ ràng cho bên thứ ba về bản chất bảo mật của thông tin.",
         "zh-Hant": "除了在有合法管轄權的監管機構要求的情況下，TigerWit 不得向第三方披露客戶的任何保密信息；除非監管機構另有指示，TigerWit 將盡力基於“需者方知”原則進行披露。在此情況下，公司應明確告知第三方該信息的保密性質。",
-        "id": "TigerWit shall not disclose to a third party, any of its clients’ confidential information unless required to do so by a regulatory authority of a competent jurisdiction; TigerWit will endeavour, to make such disclosures on a ‘need-to-know’ basis, unless otherwise instructed by a regulatory authority. Under such circumstances, the Firm shall expressly inform the third party regarding the confidential nature of the information.",
+        "id": "TigerWit tidak akan mengungkapkan kepada pihak ketiga, informasi rahasia klien mana pun kecuali diminta untuk melakukannya oleh otoritas regulasi dari yurisdiksi yang kompeten; TigerWit akan berusaha keras, untuk membuat pengungkapan tersebut atas dasar 'perlu mengetahui', kecuali diinstruksikan lain oleh otoritas regulasi. Dalam keadaan seperti itu, Perusahaan harus secara tegas memberi tahu pihak ketiga mengenai sifat rahasia informasi tersebut.",
         "es": "TigerWit no divulgará a un tercero, la información confidencial de sus clientes, a menos que sea requerido por una autoridad reguladora de una jurisdicción competente; TigerWit se esforzará por realizar dichas divulgaciones sobre una base de \"need to know\", a menos que una autoridad reguladora indique lo contrario. En tales circunstancias, la Firma informará expresamente al tercero sobre la naturaleza confidencial de la información.",
         "pt-BR": "A TigerWit não divulgará a terceiros, nenhuma informação confidencial de seus clientes, a menos que seja obrigada a fazê-lo por uma autoridade reguladora de uma jurisdição competente; A TigerWit se esforçará para fazer tais divulgações com base na \"necessidade de conhecimento\", a menos que instruído de outra forma por uma autoridade reguladora. Sob tais circunstâncias, a Empresa deverá informar expressamente a terceiros sobre a natureza confidencial das informações.",
         "ar": "لن تكشف TigerWit لأي أطراف ثالثة أي معلومات سرية خاصة بعملائها، ما لم تكن الشركة مطالبة بذلك من جانب هيئة رقابية وتنظيمية ذات ولاية قضائية مختصة؛ وسوف تسعى TigerWit إلى إجراء مثل هذه الإفصاحات على أساس \"الحاجة إلى المعرفة\"، ما لم تتلق الشركة تعليمات مخالفة لذلك من الهيئة الرقابية والتنظيمية. وفي مثل هذه الظروف، تقوم الشركة بإبلاغ الطرف الثالث صراحة بالطبيعة السرية للمعلومات."
@@ -5256,7 +5256,7 @@ module.exports = {
         "en": "Clients accept and consent that TigerWit may, from time to time, contractually engage companies for statistical and/or other purposes in order to improve the Firm’s business activities; as a result, some or all of the clients’ personal data may be disclosed.",
         "vi": "Khách hàng chấp nhận và đồng ý rằng TigerWit có thể, theo thời gian, cam kết về mặt hợp đồng với các công ty nhằm mục đích thống kê và / hoặc các mục đích khác để cải thiện hoạt động kinh doanh của Công ty; do đó, một số hoặc tất cả dữ liệu cá nhân của khách hàng có thể được tiết lộ.",
         "zh-Hant": "客戶同意並許可，TigerWit 可以不定期地以合約方式聘用相關公司進行統計或提供其他服務，從而改善本公司的業務活動；因而部分或全部的客戶個人數據可能會被披露。",
-        "id": "Clients accept and consent that TigerWit may, from time to time, contractually engage companies for statistical and/or other purposes in order to improve the Firm’s business activities; as a result, some or all of the clients’ personal data may be disclosed.",
+        "id": "Klien menerima dan menyetujui bahwa TigerWit dapat, dari waktu ke waktu, secara kontrak melibatkan perusahaan untuk tujuan statistik dan / atau tujuan lain untuk meningkatkan aktivitas bisnis Perusahaan; akibatnya, beberapa atau semua data pribadi klien mungkin terungkap.",
         "es": "Los clientes aceptan y dan su consentimiento para que TigerWit pueda, de vez en cuando, contratar empresas con fines estadísticos u otros para mejorar las actividades comerciales de la Firma; como resultado, algunos o todos los datos personales de los clientes pueden ser divulgados",
         "pt-BR": "Os clientes aceitam e consentem que a TigerWit possa, de tempos em tempos, contratar contratualmente empresas para fins estatísticos e / ou outros, a fim de melhorar as atividades de negócios da Empresa; Como resultado, alguns ou todos os dados pessoais dos clientes podem ser divulgados.",
         "ar": "يقبل العملاء ويوافقون على أنه يجوز أن تقوم TigerWit، من وقت لآخر، بالتعاقد مع شركات لأغراض إحصائية أو لأغراض أخرى من أجل تحسين الأنشطة التجارية للشركة؛ ونتيجة لذلك، قد يتم الكشف عن بعض أو كل البيانات الشخصية للعملاء."
@@ -5266,7 +5266,7 @@ module.exports = {
         "en": "Your personal information may be maintained on computer records and will not be disclosed to other parties except where we are expressly permitted to on a ‘need to know’ basis: ",
         "vi": "Thông tin cá nhân của bạn có thể được lưu giữ trên hồ sơ máy tính và sẽ không được tiết lộ cho các bên khác ngoại trừ nơi chúng tôi được cho phép rõ ràng trên cơ sở cần biết cơ sở: ",
         "zh-Hant": "您的個人信息可能保留在計算機記錄中，並不會向其他方披露，以下基於“需者方知”原則獲得明確允許的情況除外：",
-        "id": "Your personal information may be maintained on computer records and will not be disclosed to other parties except where we are expressly permitted to on a ‘need to know’ basis: ",
+        "id": "Informasi pribadi Anda dapat disimpan dalam catatan komputer dan tidak akan diungkapkan kepada pihak lain kecuali jika kami secara tegas diizinkan atas dasar 'perlu diketahui':",
         "es": "Su información personal se puede mantener en registros de computadora y no se divulgará a otras partes, excepto cuando se nos permita expresamente sobre la base de \"need to know\": ",
         "pt-BR": "Suas informações pessoais podem ser mantidas nos registros do computador e não serão divulgadas a terceiros, exceto quando for expressamente permitido que \"precisa-se saber\":",
         "ar": "يجوز أن يتم الاحتفاظ بمعلوماتك الشخصية على سجلات الكمبيوتر ولن يتم الإفصاح عنها لأطراف أخرى إلا إذا كان مسموحًا لنا القيام بذلك بشكل صريح على أساس \"الحاجة إلى المعرفة\":"
@@ -5276,7 +5276,7 @@ module.exports = {
         "en": "- Disclose information to the institution holding client assets, their successors in business, and other institutions with which agreements are entered in order to provide you our services.",
         "vi": "- Tiết lộ thông tin cho tổ chức nắm giữ tài sản của khách hàng, người kế nhiệm của họ trong kinh doanh và các tổ chức khác có thỏa thuận được nhập để cung cấp cho bạn các dịch vụ của chúng tôi.",
         "zh-Hant": "- 為了向您提供服務，向持有客戶資產的機構、其商業繼承者以及簽訂協議的其他機構披露信息。",
-        "id": "- Disclose information to the institution holding client assets, their successors in business, and other institutions with which agreements are entered in order to provide you our services.",
+        "id": "- Mengungkapkan informasi kepada lembaga yang memegang aset klien, penerus mereka dalam bisnis, dan lembaga lain yang perjanjiannya dibuat untuk memberikan layanan kami kepada Anda.",
         "es": "- Revelar información a la institución que posee los activos de los clientes, sus sucesores en los negocios y otras instituciones con las que se ingresan los acuerdos para brindarle nuestros servicios.",
         "pt-BR": "- Divulgar informações para a instituição detentora de ativos de clientes, seus sucessores nos negócios e outras instituições com as quais os contratos são inseridos para fornecer nossos serviços.",
         "ar": "- الإفصاح عن المعلومات للمؤسسة التي تحتفظ بأصول العملاء وخلفائها والمؤسسات الأخرى التي يتم إبرام اتفاقيات معها لتقديم خدماتنا."
@@ -5286,7 +5286,7 @@ module.exports = {
         "en": "- Disclose information as required by law or instructed by the SCB or other regulatory body.",
         "vi": "- Tiết lộ thông tin theo yêu cầu của pháp luật hoặc được chỉ định bởi SCB hoặc cơ quan quản lý khác.",
         "zh-Hant": "- 根據法律規定、或按 SCB 或其他監管機構的指示披露信息。",
-        "id": "- Disclose information as required by law or instructed by the SCB or other regulatory body.",
+        "id": "- Mengungkapkan informasi sebagaimana diwajibkan oleh hukum atau diinstruksikan oleh SCB atau badan pengatur lainnya.",
         "es": "- Revelar la información según lo exija la ley o lo indique la SCB u otro organismo regulador.",
         "pt-BR": "- Divulgar informações conforme exigido por lei ou instruído pelo SCB ou outro órgão regulador.",
         "ar": "- الإفصاح عن المعلومات بمقتضى القانون أو وفقًا لتعليمات من هيئة الأوراق المالية في جزر البهاما (SCB) أو هيئة رقابية أخرى."
@@ -5296,7 +5296,7 @@ module.exports = {
         "en": "- Disclose information to our compliance advisers, auditors and other such organisations.",
         "vi": "- Tiết lộ thông tin cho các cố vấn giám sát, kiểm toán viên của chúng tôi và các tổ chức khác như vậy.",
         "zh-Hant": "- 向我們的合規顧問、審計員以及其他此類人員披露信息。",
-        "id": "- Disclose information to our compliance advisers, auditors and other such organisations.",
+        "id": "- Mengungkapkan informasi kepada penasihat kepatuhan kita, auditor, dan organisasi serupa lainnya.",
         "es": "- Divulgar información a nuestros asesores de cumplimiento, auditores y otras organizaciones similares.",
         "pt-BR": "- Divulgar informações para nossos consultores de conformidade, auditores e outras organizações.",
         "ar": "- الإفصاح عن المعلومات لمستشاري الامتثال والمراجعين وغيرهم من المنظمات المماثلة."
@@ -5306,7 +5306,7 @@ module.exports = {
         "en": "Under such circumstances the Firm shall expressly inform the third party regarding the confidential nature of the information.",
         "vi": "Trong những trường hợp như vậy, Công ty phải thông báo rõ ràng cho bên thứ ba về tính chất bảo mật của thông tin.",
         "zh-Hant": "在此情況下，公司應明確告知第三方信息的保密性質。",
-        "id": "Under such circumstances the Firm shall expressly inform the third party regarding the confidential nature of the information.",
+        "id": "Dalam keadaan seperti itu, Perusahaan harus secara tegas memberi tahu pihak ketiga mengenai sifat kerahasiaan informasi.",
         "es": "En tales circunstancias, la Firma informará expresamente al tercero sobre la naturaleza confidencial de la información.",
         "pt-BR": "Sob tais circunstâncias, a Empresa deverá informar expressamente a terceiros sobre a natureza confidencial das informações.",
         "ar": "وفي مثل هذه الظروف، تقوم الشركة بإبلاغ الطرف الثالث صراحة بالطبيعة السرية للمعلومات."
@@ -5316,7 +5316,7 @@ module.exports = {
         "en": "We may also disclose your information to any other company within our Group.",
         "vi": "Chúng tôi cũng có thể tiết lộ thông tin của bạn cho bất kỳ công ty nào khác trong Tập đoàn của chúng tôi.",
         "zh-Hant": "我們也可能將您的信息披露至本集團內的任何其他公司。",
-        "id": "We may also disclose your information to any other company within our Group.",
+        "id": "Kami juga dapat mengungkapkan informasi Anda kepada perusahaan lain mana pun dalam Grup kami.",
         "es": "También podemos divulgar su información a cualquier otra compañía dentro de nuestro Grupo.",
         "pt-BR": "Também podemos divulgar suas informações a qualquer outra empresa do nosso Grupo.",
         "ar": "يجوز لنا أيضًا الإفصاح عن المعلومات الخاصة بك لأي شركة أخرى في مجموعتنا."
@@ -5326,7 +5326,7 @@ module.exports = {
         "en": "We use a card processing company for your deposits and withdrawals to and from your account. This company does not retain, share, store or use personally identifiable information for any other purposes.",
         "vi": "Chúng tôi sử dụng một công ty xử lý thẻ cho các khoản tiền gửi và rút tiền của bạn đến và từ tài khoản của bạn. Công ty này không giữ lại, chia sẻ, lưu trữ hoặc sử dụng thông tin nhận dạng cá nhân cho bất kỳ mục đích nào khác.",
         "zh-Hant": "我們通過銀行卡交易處理公司完成您賬戶內的存取款。該公司不得出於任何其他目的保留、分享、存儲或使用個人身份信息。",
-        "id": "We use a card processing company for your deposits and withdrawals to and from your account. This company does not retain, share, store or use personally identifiable information for any other purposes.",
+        "id": "Kami menggunakan perusahaan pemrosesan kartu untuk setoran dan penarikan Anda ke dan dari akun Anda. Perusahaan ini tidak menyimpan, membagikan, menyimpan, atau menggunakan informasi pengenal pribadi untuk tujuan lain apa pun.",
         "es": "Utilizamos una compañía de procesamiento de tarjetas para sus depósitos y retiros desde y hacia su cuenta. Esta empresa no retiene, comparte, almacena ni utiliza información de identificación personal para ningún otro propósito.",
         "pt-BR": "Usamos uma empresa de processamento de cartões para seus depósitos e retiradas de e para sua conta. Esta empresa não retém, compartilha, armazena ou usa informações pessoalmente identificáveis para quaisquer outros fins.",
         "ar": "نحن نتعامل مع شركة لمعالجة البطاقات من أجل إيداعاتك وسحوباتك من وإلى حسابك. ولا تقوم الشركة بحفظ أو مشاركة أو تخزين أو استخدام المعلومات المحددة للهوية لأي أغراض أخرى."
@@ -5336,7 +5336,7 @@ module.exports = {
         "en": "We may from time to time in the interests of proper administration of your account and for related purposes communicate an unsolicited real time financial promotion, as defined by SCB rules. We may from time to time engage companies for statistical purposes in order to improve the Firm’s marketing; as a result, some or all of the clients’ data may be disclosed on an anonymous and aggregated basis only.",
         "vi": "Đôi khi, chúng tôi có thể quan tâm đến việc quản lý thích hợp tài khoản của bạn và cho các mục đích liên quan liên lạc với chương trình thúc đẩy tài chính thời trong thời gian thực không được yêu cầu, theo quy định của SCB. Đôi khi, chúng tôi có thể thu hút các công ty nhằm mục đích thống kê nhằm cải thiện hoạt động tiếp thị của Công ty; do đó, một số hoặc tất cả dữ liệu của khách hàng chỉ có thể được tiết lộ trên cơ sở ẩn danh và tổng hợp.",
         "zh-Hant": "為了您賬戶的適當管理以及相關目的，我們可能不定期地傳播非應邀實時金融促銷（根據 SCB規則定義）。為了提升本公司的營銷，我們可能會出於統計目的不定期地聘用相關公司；因而部分或全部的客戶數據可能僅在匿名且匯總的基礎上被披露。",
-        "id": "We may from time to time in the interests of proper administration of your account and for related purposes communicate an unsolicited real time financial promotion, as defined by SCB rules. We may from time to time engage companies for statistical purposes in order to improve the Firm’s marketing; as a result, some or all of the clients’ data may be disclosed on an anonymous and aggregated basis only.",
+        "id": "Kami dapat dari waktu ke waktu untuk kepentingan administrasi yang tepat dari akun Anda dan untuk tujuan terkait mengkomunikasikan promosi keuangan waktu nyata yang tidak diminta, sebagaimana ditentukan oleh peraturan SCB. Kami dapat dari waktu ke waktu melibatkan perusahaan untuk tujuan statistik guna meningkatkan pemasaran Perusahaan; akibatnya, beberapa atau semua data klien dapat diungkapkan secara anonim dan gabungan saja.",
         "es": "Es posible que, de vez en cuando, sea conveniente para la administración adecuada de su cuenta y para fines relacionados, comunicarle una promoción financiera no solicitada en tiempo real, según lo definen las reglas de la SCB. De vez en cuando, podemos comprometer a las empresas con fines estadísticos para mejorar el marketing de la Firma; como resultado, algunos o todos los datos de los clientes pueden divulgarse de forma anónima y agregada solamente.",
         "pt-BR": "Podemos, de tempos em tempos, no interesse da administração adequada de sua conta e para fins relacionados, comunicar uma promoção financeira não solicitada em tempo real, conforme definido pelas regras da SCB. Podemos, de tempos em tempos, envolver empresas para fins estatísticos a fim de melhorar o marketing da Empresa; Como resultado, alguns ou todos os dados dos clientes podem ser divulgados apenas de forma anônima e agregada.",
         "ar": "يجوز للشركة أن تقوم، من وقت لآخر من أجل الإدارة السليمة لحسابك وللأغراض ذات الصلة، بإرسال عرض ترويجي مالي لك في الوقت الفعلي بدون طلبك، على النحو الذي تحدده قواعد هيئة الأوراق المالية في جزر البهاما (SCB). ويجوز أن تقوم الشركة من وقت لآخر التعاقد مع شركات خارجية لأغراض إحصائية من أجل تحسين إستراتيجيات التسويق في الشركة؛ ونتيجة لذلك قد تفصح الشركة عن بعض أو كل بيانات العميل على أساس مجهول الهوية ومجمع فقط."
@@ -5346,7 +5346,7 @@ module.exports = {
         "en": "We cannot be held responsible for the information held on your file becoming inaccurate due to your change of circumstances if you fail to inform us of those changes. We want to make sure your personal information is accurate and up to date.",
         "vi": "Chúng tôi không thể chịu trách nhiệm về thông tin được lưu giữ trong hồ sơ của bạn trở nên không chính xác do sự thay đổi hoàn cảnh của bạn nếu bạn không thông báo cho chúng tôi về những thay đổi đó. Chúng tôi muốn đảm bảo thông tin cá nhân của bạn chính xác và cập nhật. ",
         "zh-Hant": "壹旦您的情況發生變更，且如果您未能告知我們上述變更，我們不會為您檔案中所保留的不準確信息承擔責任。我們希望確保您的個人信息是準確且最新的。",
-        "id": "We cannot be held responsible for the information held on your file becoming inaccurate due to your change of circumstances if you fail to inform us of those changes. We want to make sure your personal information is accurate and up to date.",
+        "id": "Kami tidak dapat bertanggung jawab atas informasi yang disimpan dalam file Anda menjadi tidak akurat karena perubahan keadaan jika Anda gagal memberi tahu kami tentang perubahan tersebut. Kami ingin memastikan informasi pribadi Anda akurat dan mutakhir.",
         "es": "No podemos ser responsables de que la información contenida en su archivo se vuelva inexacta debido a su cambio de circunstancias si no nos informa sobre dichos cambios. Queremos asegurarnos de que su información personal sea precisa y actualizada.",
         "pt-BR": "Não podemos ser responsabilizados pela informação mantida em seu arquivo se tornar imprecisa devido à sua mudança de circunstâncias, se você não nos informar sobre essas mudanças. Queremos garantir que suas informações pessoais sejam precisas e atualizadas.",
         "ar": "نحن لا نتحمل أي مسؤولية عن عدم دقة المعلومات الموجودة في الملف الخاص بك بسبب حدوث تغيير في ظروفك إذا لم تقم بإبلاغنا بهذه التغييرات. نحن نريد التأكد من أن المعلومات الشخصية الخاصة بك دقيقة ومحدثة."
@@ -5356,7 +5356,7 @@ module.exports = {
         "en": "You may ask us to correct or remove information you think is inaccurate.",
         "vi": "Bạn có thể yêu cầu chúng tôi chỉnh sửa hoặc xóa thông tin bạn cho là không chính xác.",
         "zh-Hant": "您可以要求我們更正或刪除您認為不準確的信息。",
-        "id": "You may ask us to correct or remove information you think is inaccurate.",
+        "id": "Anda dapat meminta kami untuk memperbaiki atau menghapus informasi yang menurut Anda tidak akurat.",
         "es": "Puede solicitarnos que corrijamos o eliminemos la información que considere imprecisa.",
         "pt-BR": "Você pode nos pedir para corrigir ou remover informações que você acha que são imprecisas.",
         "ar": "ويجوز لك أن تطلب منا تصحيح أو حذف المعلومات التي تعتقد أنها غير دقيقة."
@@ -5366,7 +5366,7 @@ module.exports = {
         "en": "We keep records of our business transactions, clients’ categorisation and financial promotions, for at least five years.",
         "vi": "Chúng tôi lưu giữ hồ sơ về các giao dịch kinh doanh của chúng tôi, phân loại khách hàng và các chương trình thúc đẩy tài chính, trong ít nhất năm năm.",
         "zh-Hant": "我們會對我們的商業交易、客戶分類以及金融促銷記錄保存至少五年。",
-        "id": "We keep records of our business transactions, clients’ categorisation and financial promotions, for at least five years.",
+        "id": "Kami menyimpan catatan transaksi bisnis, kategorisasi klien, dan promosi keuangan kami, setidaknya selama lima tahun.",
         "es": "Mantenemos registros de nuestras transacciones comerciales, categorización de clientes y promociones financieras, durante al menos cinco años.",
         "pt-BR": "Mantemos registros de nossas transações comerciais, categorização de clientes e promoções financeiras por pelo menos cinco anos.",
         "ar": "ونحن نحتفظ بسجلات للمعاملات التجارية وتصنيف العملاء والعروض الترويجية المالية لفترة لا تقل عن خمس سنوات."
@@ -5376,7 +5376,7 @@ module.exports = {
         "en": "You may request a copy of the information that we hold about you. If you would like a copy of all or some of the information please write to: The Data Controller, Sea Sky Lane, Sandyport, PO Box SP 64368, Nassau, The Bahamas. We may make a small charge for this service.",
         "vi": "Bạn có thể yêu cầu một bản sao thông tin mà chúng tôi có về bạn. Nếu bạn muốn một bản sao của tất cả hoặc một số thông tin xin vui lòng viết thư cho: Bộ điều khiển dữ liệu, Sea Sky Lane, Sandyport, PO Box SP 64368, Nassau, Bahamas. Chúng tôi có thể tính một khoản phí nhỏ cho dịch vụ này.",
         "zh-Hant": "您可以申請壹份我們持有的您的相關信息的副本。如果您索要全部或部分信息的副本，請寫信 至 ： 收 件 人 ： 數 據 管 理 員 ， 地 址 為 201Church Street, Sandyport, PO Box SP 64368, Nassau, The Bahamas.我們可能會就此項服務收取少量費用。",
-        "id": "You may request a copy of the information that we hold about you. If you would like a copy of all or some of the information please write to: The Data Controller, Sea Sky Lane, Sandyport, PO Box SP 64368, Nassau, The Bahamas. We may make a small charge for this service.",
+        "id": "Anda dapat meminta salinan informasi yang kami miliki tentang Anda. Jika Anda menginginkan salinan dari semua atau sebagian informasi, silakan kirim surat ke: Pengontrol Data, Sea Sky Lane, Sandyport, PO Box SP 64368, Nassau, The Bahamas. Kami mungkin akan mengenakan sedikit biaya untuk layanan ini.",
         "es": "Puede solicitar una copia de la información que tenemos sobre usted. Si desea una copia de toda o parte de la información, escriba a: El controlador de datos, Sea Sky Lane, Sandyport, PO Box SP 64368, Nassau, Las Bahamas. Podemos hacer un pequeño cargo por este servicio.",
         "pt-BR": "Você pode solicitar uma cópia das informações que temos sobre você. Se você quiser uma cópia de todas ou algumas das informações, por favor escreva para: The Data Controller, Sea Sky Lane, Sandyport, PO Box SP 64368, Nassau, Bahamas. Podemos cobrar uma pequena taxa por este serviço.",
         "ar": "يجوز لك أن تطلب نسخة من المعلومات التي نحتفظ بها عنك. وإذا كنت تريد الحصول على نسخة من كل أو جزء من المعلومات، يرجى مراسلاتنا على :  The Data Controller, Sea Sky Lane, Sandyport, PO Box SP 64368, Nassau, The Bahamas. ويمكن أن نتقاضى رسومًا طفيفة عن هذه الخدمة."
@@ -5386,7 +5386,7 @@ module.exports = {
         "en": "2.TigerWit shall not disclose to a third party, any of the client’s confidential information unless required to do so by a regulatory authority of a competent jurisdiction; such disclosure shall occur on a ‘need-to-know’ basis, unless otherwise instructed by, inter alia, any governmental body, subject to the provisions of applicable legislation. Under such circumstances, the Firm shall expressly inform the third party regarding the confidential nature of the information.",
         "vi": "2.TigerWit không được tiết lộ cho bên thứ ba, bất kỳ thông tin mật nào của khách hàng trừ khi được yêu cầu bởi một cơ quan quản lý có thẩm quyền; việc tiết lộ như vậy sẽ xảy ra trên cơ sở cần biết, trừ khi có hướng dẫn khác, liên quan đến nhau, bất kỳ cơ quan chính phủ nào, tuân thủ các quy định của pháp luật hiện hành. Trong những trường hợp như vậy, Công ty phải thông báo rõ ràng cho bên thứ ba về bản chất bảo mật của thông tin.",
         "zh-Hant": "2.除了在有合法管轄權的監管機構要求的情況下，TigerWit 不得向第三方披露客戶的任何保密信息；除非政府機構及其他機構另有指示，此類信息將基於“需者方知”原則進行披露，但須符合適用法律的規定。在此情況下，公司應明確告知第三方信息的保密性質。",
-        "id": "2.TigerWit shall not disclose to a third party, any of the client’s confidential information unless required to do so by a regulatory authority of a competent jurisdiction; such disclosure shall occur on a ‘need-to-know’ basis, unless otherwise instructed by, inter alia, any governmental body, subject to the provisions of applicable legislation. Under such circumstances, the Firm shall expressly inform the third party regarding the confidential nature of the information.",
+        "id": "2. TigerWit tidak akan mengungkapkan kepada pihak ketiga, informasi rahasia klien apa pun kecuali diminta untuk melakukannya oleh otoritas regulasi dari yurisdiksi yang kompeten; pengungkapan tersebut harus dilakukan atas dasar 'perlu mengetahui', kecuali diinstruksikan lain oleh, antara lain, badan pemerintah mana pun, yang tunduk pada ketentuan perundang-undangan yang berlaku. Dalam keadaan seperti itu, Perusahaan harus secara tegas memberi tahu pihak ketiga mengenai sifat rahasia informasi tersebut.",
         "es": "2.TigerWit no divulgará a un tercero, ninguna información confidencial del cliente, a menos que sea requerido por una autoridad reguladora de una jurisdicción competente; dicha divulgación se producirá sobre la base de \"need to know\", a menos que se indique lo contrario, entre otros, cualquier organismo gubernamental, sujeto a las disposiciones de la legislación aplicable. En tales circunstancias, la Firma informará expresamente al tercero sobre la naturaleza confidencial de la información.",
         "pt-BR": "2. A TigerWit não divulgará a terceiros, nenhuma informação confidencial do cliente, a menos que seja obrigada a fazê-lo por uma autoridade reguladora de uma jurisdição competente; tal divulgação ocorrerá conforme a “necessidade de conhecimento”, a menos que instruído de outra forma por qualquer órgão governamental, sujeito às disposições da legislação aplicável. Sob tais circunstâncias, a Empresa deverá informar expressamente a terceiros sobre a natureza confidencial das informações.",
         "ar": "2- لن تكشف TigerWit لأي أطراف ثالثة أي معلومات سرية خاصة بالعميل، ما لم تكن الشركة مطالبة بذلك من جانب هيئة رقابية وتنظيمية ذات ولاية قضائية مختصة؛ وسيتم هذا الإفصاح على أساس \"الحاجة إلى المعرفة\"، ما لم تتلق الشركة تعليمات مخالفة لذلك من أي جهة حكومية، من بين جهات أخرى، مع مراعاة أحكام التشريعات المعمول بها.  وفي مثل هذه الظروف، تقوم الشركة بإبلاغ الطرف الثالث صراحة بالطبيعة السرية للمعلومات."
@@ -5396,7 +5396,7 @@ module.exports = {
         "en": "Recordings of Telephone Calls",
         "vi": "Ghi âm các cuộc gọi điện thoại",
         "zh-Hant": "電話錄音",
-        "id": "Recordings of Telephone Calls",
+        "id": "Rekaman Panggilan Telepon",
         "es": "Grabaciones de Llamadas Telefónicas",
         "pt-BR": "Gravações de Chamadas Telefônicas",
         "ar": "تسجيلات المكالمات الهاتفية"
@@ -5406,7 +5406,7 @@ module.exports = {
         "en": "1.The content of any telephone call (‘the Telephone Record’) between the client and the Firm may be recorded and saved as a magnetic or electronic record. The client agrees that the Firm has the right to use the Telephone Records as it deems necessary including but not limited to training or regulatory purposes or in connection with any dispute involving the Firm.",
         "vi": "1.Nội dung của bất kỳ cuộc gọi điện thoại nào (Ghi âm cuộc gọi) giữa khách hàng và Công ty có thể được ghi lại và lưu dưới dạng bản ghi âm từ tính hoặc điện tử. Khách hàng đồng ý rằng Công ty có quyền sử dụng Bản ghi âm điện thoại khi thấy cần thiết bao gồm nhưng không giới hạn mục đích đào tạo hoặc quy định hoặc liên quan đến bất kỳ tranh chấp nào liên quan đến Công ty.",
         "zh-Hant": "1.客戶與本公司之間的任何電話通話（以下簡稱“電話錄音”）內容可以被錄音並保存為磁帶錄音或電子錄音。客戶同意，本公司有權使用其認為必要的電話錄音，包括但不限於培訓或監管目的的錄音，或涉及到本公司、與任何爭議有關的錄音。",
-        "id": "1.The content of any telephone call (‘the Telephone Record’) between the client and the Firm may be recorded and saved as a magnetic or electronic record. The client agrees that the Firm has the right to use the Telephone Records as it deems necessary including but not limited to training or regulatory purposes or in connection with any dispute involving the Firm.",
+        "id": "1. Isi dari setiap panggilan telepon ('Catatan Telepon') antara klien dan Perusahaan dapat direkam dan disimpan sebagai catatan magnetik atau elektronik. Klien setuju bahwa Perusahaan memiliki hak untuk menggunakan Catatan Telepon sebagaimana dianggap perlu termasuk namun tidak terbatas pada tujuan pelatihan atau peraturan atau sehubungan dengan perselisihan yang melibatkan Perusahaan.",
         "es": "1. El contenido de cualquier llamada telefónica ('el Registro telefónico') entre el cliente y la Firma se puede grabar y guardar como un registro magnético o electrónico. El cliente acepta que la Firma tiene el derecho de usar los Registros Telefónicos según lo considere necesario, incluidos, entre otros, los propósitos de capacitación o reglamentarios o en relación con cualquier disputa relacionada con la Firma.",
         "pt-BR": "1.O conteúdo de qualquer chamada telefônica (\"Registro do Telefone\") entre o cliente e a Empresa pode ser gravado e salvo como um registro magnético ou eletrônico. O cliente concorda que a Empresa tem o direito de usar os Registros Telefônicos conforme julgar necessário, incluindo, mas não se limitando a, fins de treinamento ou regulatórios ou em conexão com qualquer disputa envolvendo a Empresa.",
         "ar": "1- يجوز تسجيل محتويات أي مكالمة هاتفية (\"التسجيل الهاتفي\") تتم بين العميل والشركة وحفظها في صورة تسجيل مغناطيسي أو إلكتروني. ويقبل العميل أنه يحق للشركة استخدام التسجيلات الهاتفية وفقًا لما تراه ضروريًا، بما في ذلك على سبيل المثال وليس الحصر للأغراض التدريبية والتنظيمية أو فيما يتعلق بأي نزاع يتعلق بالشركة."
@@ -5416,7 +5416,7 @@ module.exports = {
         "en": "2.All instructions received from the client, during a telephone call, in relation to trading financial instruments shall be conclusive and binding unless conditions described in clause 5.11 of the Terms and Conditions are triggered.",
         "vi": "2.Tất cả các hướng dẫn nhận được từ khách hàng, trong một cuộc gọi điện thoại, liên quan đến các công cụ tài chính giao dịch sẽ là kết luận và ràng buộc trừ khi các điều kiện được mô tả trong điều 5.11 của Điều khoản và Điều kiện được kích hoạt.",
         "zh-Hant": "2.客戶在電話通話期間發出的與金融工具交易相關的所有指示應具有決定性及約束力，但條款與條件第 5.11 條所述之條件被觸發的情況除外。",
-        "id": "2.All instructions received from the client, during a telephone call, in relation to trading financial instruments shall be conclusive and binding unless conditions described in clause 5.11 of the Terms and Conditions are triggered.",
+        "id": "2. Semua instruksi yang diterima dari klien, selama panggilan telepon, sehubungan dengan perdagangan instrumen keuangan harus meyakinkan dan mengikat kecuali kondisi yang dijelaskan dalam klausul 5.11 dari Syarat dan Ketentuan dipicu.",
         "es": "2. Todas las instrucciones recibidas del cliente, durante una llamada telefónica, en relación con la negociación de instrumentos financieros serán concluyentes y vinculantes, a menos que se activen las condiciones descritas en la cláusula 5.11 de los Términos y condiciones.",
         "pt-BR": "2. Todas as instruções recebidas do cliente, durante uma chamada telefônica, em relação à negociação de instrumentos financeiros serão conclusivas e vinculantes, a menos que as condições descritas na cláusula 5.11 dos Termos e Condições sejam acionadas.",
         "ar": "2- تكون جميع التعليمات الواردة من العميل، خلال مكالمة هاتفية، بشأن التداول على الأدوات المالية قاطعة وملزمة ما لم يتم تفعيل الشروط الموضحة في البند 5.11 من الشروط والأحكام."
@@ -5426,7 +5426,7 @@ module.exports = {
         "en": "3.TigerWit may provide copies of such recordings of telephone calls as required by Law or to a regulatory authority of a competent authority, without informing the client.",
         "vi": "3.TigerWit có thể cung cấp bản sao các bản ghi âm cuộc gọi điện thoại theo yêu cầu của Pháp luật hoặc cho cơ quan quản lý của cơ quan có thẩm quyền, mà không cần thông báo cho khách hàng.",
         "zh-Hant": "3.根據法律或主管當局的監管機構規定，TigerWit 可以在未告知客戶的情況下向主管當局的監管機構提供電話錄音的副本。",
-        "id": "3.TigerWit may provide copies of such recordings of telephone calls as required by Law or to a regulatory authority of a competent authority, without informing the client.",
+        "id": "3. TigerWit dapat memberikan salinan rekaman panggilan telepon seperti yang diwajibkan oleh Hukum atau kepada otoritas regulasi dari otoritas yang kompeten, tanpa memberi tahu klien.",
         "es": "3.TigerWit puede proporcionar copias de dichas grabaciones de llamadas telefónicas según lo exige la ley o una autoridad reguladora de una autoridad competente, sin informar al cliente.",
         "pt-BR": "3. A TigerWit pode fornecer cópias de tais gravações de chamadas telefônicas, conforme exigido por lei ou a uma autoridade reguladora de uma autoridade competente, sem informar o cliente.",
         "ar": "3- يجوز أن تقدم TigerWit نسخًا من تسجيلات المكالمات الهاتفية حسبما يقتضيه القانون أو أو هيئة رقابية ذات ولاية قضائية مختصة، بدون إبلاغ العميل."
@@ -5436,7 +5436,7 @@ module.exports = {
         "en": "Conflicts of Interest",
         "vi": "Xung đột lợi ích",
         "zh-Hant": "利益沖突",
-        "id": "Conflicts of Interest",
+        "id": "Konflik kepentingan",
         "es": "Conflictos de Interés",
         "pt-BR": "Conflitos de Interesse",
         "ar": "تضارب المصالح"
@@ -5446,7 +5446,7 @@ module.exports = {
         "en": "1.The client accepts that a conflict of interest may arise when the interest of TigerWit competes or interferes, or appear to compete or interfere, with the client’s interests under the Client Agreement.",
         "vi": "1.Khách hàng chấp nhận rằng xung đột lợi ích có thể phát sinh khi quyền lợi của TigerWit ảnh hưởng hoặc ngăn cản hoặc có vẻ ảnh hưởng hoặc ngăn cản, với lợi ích của khách hàng theo Hợp đồng khách hàng.",
         "zh-Hant": "1.客戶接受，根據客戶協議，當 TigerWit與客戶存在或似乎存在競爭關系或幹擾時，則可能產生利益沖突。",
-        "id": "1.The client accepts that a conflict of interest may arise when the interest of TigerWit competes or interferes, or appear to compete or interfere, with the client’s interests under the Client Agreement.",
+        "id": "1. Klien menerima bahwa konflik kepentingan dapat muncul ketika kepentingan TigerWit bersaing atau mengganggu, atau tampak bersaing atau mengganggu, dengan kepentingan klien berdasarkan Perjanjian Klien.",
         "es": "1.El cliente acepta que puede surgir un conflicto de intereses cuando TigerWit compite o interfiere, o parece competir o interferir, con los intereses del cliente en virtud del Acuerdo del Cliente.",
         "pt-BR": "1.O cliente aceita que um conflito de interesse pode surgir quando o interesse da TigerWit competir ou interferir, ou parecer competir ou interferir, com os interesses do cliente sob o Contrato do Cliente.",
         "ar": "1- يقبل العميل أنه قد ينشأ تضارب في المصالح عندما تكون مصالح TigerWit تتنافس أو تتعارض، أو يبدو أنها تتنافس أو تتعارض، مع مصالح العميل بموجب اتفاقية العميل."
@@ -5456,7 +5456,7 @@ module.exports = {
         "en": "2.Specifically, the client accepts that: ",
         "vi": "2.Cụ thể, khách hàng chấp nhận rằng: ",
         "zh-Hant": "2.具體而言，客戶接受以下情況：",
-        "id": "2.Specifically, the client accepts that: ",
+        "id": "2. Secara khusus, klien menerima bahwa: ",
         "es": "2.Específicamente, el cliente acepta que: ",
         "pt-BR": "2.Especificamente, o cliente aceita que:",
         "ar": "2- وعلى وجه التحديد، يقبل العميل أن:"
@@ -5466,7 +5466,7 @@ module.exports = {
         "en": "TigerWit may assign or transfer the execution of the client’s instruction to another member company of the TigerWit Group of Companies;",
         "vi": "TigerWit có thể chuyển nhượng hoặc chuyển giao việc thực hiện lệnh của khách hàng cho một công ty thành viên khác của Nhóm Công ty TigerWit;",
         "zh-Hant": "TigerWit 可以將客戶指令的執行轉讓或轉移至 TigerWit 公司集團的另壹成員公司；",
-        "id": "TigerWit may assign or transfer the execution of the client’s instruction to another member company of the TigerWit Group of Companies;",
+        "id": "TigerWit dapat mengalihkan atau mentransfer pelaksanaan instruksi klien ke perusahaan anggota lain dari Grup Perusahaan TigerWit;",
         "es": "TigerWit puede asignar o transferir la ejecución de las instrucciones del cliente a otra compañía miembro del Grupo de Empresas TigerWit;",
         "pt-BR": "A TigerWit pode atribuir ou transferir a execução da instrução do cliente para outra empresa membro da TigerWit Group of Companies;",
         "ar": "يجوز أن تقوم TigerWit التنازل عن تنفيذ تعليمات العميل أو نقل تنفيذ تعليمات العميل إلى شركة أخرى من الشركات الأعضاء في مجموعة شركات TigerWit."
@@ -5476,7 +5476,7 @@ module.exports = {
         "en": "the Firm may execute at the same time instructions by different clients that are opposite to one another;",
         "vi": "Công ty có thể thực thi cùng lúc với các hướng dẫn khác nhau của các khách hàng khác nhau;",
         "zh-Hant": "本公司可以同時執行不同客戶發出的相互沖突的指令；",
-        "id": "the Firm may execute at the same time instructions by different clients that are opposite to one another;",
+        "id": "Perusahaan dapat melaksanakan instruksi pada saat yang sama oleh klien yang berbeda yang berlawanan satu sama lain;",
         "es": "la Firma puede ejecutar al mismo tiempo las instrucciones de diferentes clientes con posiciones contrarias entre sí;",
         "pt-BR": "a Empresa pode executar ao mesmo tempo instruções de clientes diferentes que são opostos um ao outro;",
         "ar": "ويجوز للشركة أن تقوم في نفس الوقت بتنفيذ تعليمات العملاء المختلفين ذوي المراكز المقابلة لبعضهم البعض؛"
@@ -5486,7 +5486,7 @@ module.exports = {
         "en": "the Firm may establish business, including but not limited to trading relationships, with other issuers of financial instruments and the Firm may have a financial interest in such instruments;",
         "vi": "Công ty có thể thành lập doanh nghiệp, bao gồm nhưng không giới hạn trong các mối quan hệ kinh doanh, với các tổ chức phát hành công cụ tài chính khác và Công ty có thể có lợi ích tài chính đối với các công cụ đó;",
         "zh-Hant": "本公司可以和其他金融工具發行方建立業務關系，包括但不限於交易關系，且本公司可以對此類工具具有經濟利益；",
-        "id": "the Firm may establish business, including but not limited to trading relationships, with other issuers of financial instruments and the Firm may have a financial interest in such instruments;",
+        "id": "Perusahaan dapat mendirikan bisnis, termasuk tetapi tidak terbatas pada hubungan trading, dengan penerbit instrumen keuangan lainnya dan Perusahaan mungkin memiliki kepentingan keuangan dalam instrumen tersebut;",
         "es": "la Firma puede establecer negocios, incluyendo, entre otros, relaciones comerciales, con otros emisores de instrumentos financieros y la Firma puede tener un interés financiero en dichos instrumentos;",
         "pt-BR": "a Empresa pode estabelecer negócios, incluindo, mas não se limitando a relacionamentos comerciais, com outros emissores de instrumentos financeiros e a Empresa pode ter interesse financeiro em tais instrumentos;",
         "ar": "يجوز للشركة تأسيس أعمال تجارية، على سبيل المثال وليس الحصر إقامة علاقات تداول مع الجهات الأخرى المصدرة للأدوات المالية، ويجوز أن تكون للشركة مصلحة مالية في الأدوات المذكورة."
@@ -5496,27 +5496,27 @@ module.exports = {
         "en": "the Firm may pay commission -or any other related fee- to a third party as a result of introducing the client. Under such circumstances the client shall be notified accordingly.",
         "vi": "Công ty có thể trả tiền hoa hồng cho bất kỳ khoản phí liên quan nào khác - cho bên thứ ba như là kết quả của việc giới thiệu khách hàng. Trong những trường hợp như vậy, khách hàng sẽ được thông báo phù hợp.",
         "zh-Hant": "由於介紹客戶，本公司可以向第三方支付傭金或任何其他相關費用。在此情況下，應相應地通知客戶。",
-        "id": "the Firm may pay commission -or any other related fee- to a third party as a result of introducing the client. Under such circumstances the client shall be notified accordingly.",
+        "id": "Perusahaan dapat membayar komisi -atau biaya terkait lainnya- kepada pihak ketiga sebagai hasil dari memperkenalkan klien. Dalam keadaan seperti itu, klien akan diberi tahu.",
         "es": "La Firma puede pagar la comisión, o cualquier otra tarifa relacionada, a un tercero como resultado de la presentación del cliente. En tales circunstancias, el cliente será notificado en consecuencia.",
         "pt-BR": "a Empresa pode pagar comissão - ou qualquer outra taxa relacionada - a terceiros como resultado da apresentação do cliente. Em tais circunstâncias, o cliente será notificado em conformidade.",
         "ar": "ويجوز للشركة دفع عمولات - أو أي رسوم أخرى ذات صلة، إلى طرف ثالث مقابل تعريف العميل بالشركة وتقديمه للتداول معها.  وفي مثل هذه الظروف، سيتم إخطار العميل بذلك."
     },
     "amtClient158": {
-        "zh": "3.更多详情请参阅 TigerWit 利益冲突政策；可在线查询，网址：http://global.tigerwit.com。客户可随时申请有关利益冲突政策的更多详情。",
-        "en": "3.For further details, please read the TigerWit Conflicts of Interest Policy; available online at http://global.tigerwit.com. The client may at any time request further details of the Conflicts of Interest policy.",
-        "vi": "3.Để biết thêm chi tiết, vui lòng đọc Chính sách về xung đột lợi ích của TigerWit; được trình bày trực tuyến tại http://global.tigerwit.com. Khách hàng có thể yêu cầu thêm bất kỳ thông tin chi tiết nào về chính sách Xung đột lợi ích bất kỳ lúc nào.",
-        "zh-Hant": "3.更多詳情請參閱 TigerWit 利益沖突政策；可在線查詢，網址：http://global.tigerwit.com。客戶可隨時申請有關利益沖突政策的更多詳情。",
-        "id": "3.For further details, please read the TigerWit Conflicts of Interest Policy; available online at http://global.tigerwit.com. The client may at any time request further details of the Conflicts of Interest policy.",
-        "es": "3.Para más detalles, lea la Política de conflictos de intereses de TigerWit; disponible en línea en http://global.tigerwit.com. El cliente puede solicitar en cualquier momento más detalles de la política de Conflictos de intereses.",
-        "pt-BR": "3.Para mais detalhes, leia a Política de Conflitos de Interesse da TigerWit; disponível online em http://global.tigerwit.com. O cliente pode, a qualquer momento, solicitar mais detalhes sobre a política de Conflitos de Interesse.",
-        "ar": "3- لمعرفة المزيد من التفاصيل، يرجى قراءة سياسة تضارب المصالح في TigerWit، والمتوفرة على موقعنا الإلكتروني http://global.tigerwit.com.  ويجوز للعميل في أي وقت أن يطلب المزيد من التفاصيل عن سياسة تضارب المصالح."
+        "zh": "3.更多详情请参阅 TigerWit 利益冲突政策；可在线查询，网址：https://global.TigerWit.com。客户可随时申请有关利益冲突政策的更多详情。",
+        "en": "3.For further details, please read the TigerWit Conflicts of Interest Policy; available online at https://global.TigerWit.com. The client may at any time request further details of the Conflicts of Interest policy.",
+        "vi": "3.Để biết thêm chi tiết, vui lòng đọc Chính sách về xung đột lợi ích của TigerWit; được trình bày trực tuyến tại https://global.TigerWit.com. Khách hàng có thể yêu cầu thêm bất kỳ thông tin chi tiết nào về chính sách Xung đột lợi ích bất kỳ lúc nào.",
+        "zh-Hant": "3.更多詳情請參閱 TigerWit 利益沖突政策；可在線查詢，網址：https://global.TigerWit.com。客戶可隨時申請有關利益沖突政策的更多詳情。",
+        "id": "3. Untuk detail lebih lanjut, silakan baca Kebijakan Konflik Kepentingan TigerWit; tersedia online di https://global.TigerWit.com. Klien dapat setiap saat meminta rincian lebih lanjut dari kebijakan Konflik Kepentingan.",
+        "es": "3.Para más detalles, lea la Política de conflictos de intereses de TigerWit; disponible en línea en https://global.TigerWit.com. El cliente puede solicitar en cualquier momento más detalles de la política de Conflictos de intereses.",
+        "pt-BR": "3.Para mais detalhes, leia a Política de Conflitos de Interesse da TigerWit; disponível online em https://global.TigerWit.com. O cliente pode, a qualquer momento, solicitar mais detalhes sobre a política de Conflitos de Interesse.",
+        "ar": "3- لمعرفة المزيد من التفاصيل، يرجى قراءة سياسة تضارب المصالح في TigerWit، والمتوفرة على موقعنا الإلكتروني https://global.TigerWit.com.  ويجوز للعميل في أي وقت أن يطلب المزيد من التفاصيل عن سياسة تضارب المصالح."
     },
     "amtClient159": {
         "zh": "直接联系许可",
         "en": "Direct Contact Consent",
         "vi": "Đồng ý liên hệ trực tiếp ",
         "zh-Hant": "直接聯系許可",
-        "id": "Direct Contact Consent",
+        "id": "Persetujuan Kontak Langsung",
         "es": "Consentimiento Contacto Directo",
         "pt-BR": "Consentimento de Contato Direto",
         "ar": "الموافقة على الاتصال المباشر"
@@ -5526,7 +5526,7 @@ module.exports = {
         "en": "The client consents that any communication received by TigerWit, from time to time, in relation to the Client Agreement - or any other communication in relation to marketing (if applicable) - does not breach any of the client’s rights and obligations under the Client Agreement.",
         "vi": "1.Khách hàng đồng ý rằng bất kỳ việc giao tiếp nào nhận được bởi TigerWit, theo thời gian, liên quan đến Hợp đồng khách hàng - hoặc bất kỳ liên lạc nào khác liên quan đến tiếp thị (nếu có) - không vi phạm bất kỳ quyền và nghĩa vụ nào của khách hàng trong Hợp Đồng Khách Hàng.",
         "zh-Hant": "1.客戶同意，TigerWit 不時收到的與客戶協議有關或任何其他營銷相關的通訊（如適用），均不違反客戶根據客戶協議項下的任何權利和義務。",
-        "id": "The client consents that any communication received by TigerWit, from time to time, in relation to the Client Agreement - or any other communication in relation to marketing (if applicable) - does not breach any of the client’s rights and obligations under the Client Agreement.",
+        "id": "Klien menyetujui bahwa setiap komunikasi yang diterima oleh TigerWit, dari waktu ke waktu, dalam kaitannya dengan Perjanjian Klien - atau komunikasi lainnya dalam kaitannya dengan pemasaran (jika berlaku) - tidak melanggar hak dan kewajiban klien berdasarkan Perjanjian Klien.",
         "es": "El cliente acepta que cualquier comunicación recibida por TigerWit, de vez en cuando, en relación con el Acuerdo del Cliente, - o cualquier otra comunicación en relación con el marketing (si aplicable) -  no infringe ninguno de los derechos y obligaciones del Cliente en virtud del Acuerdo del Cliente.",
         "pt-BR": "O cliente consente que qualquer comunicação recebida pela TigerWit, de tempos em tempos, em relação ao Contrato do Cliente - ou qualquer outra comunicação em relação ao marketing (se aplicável) - não infringe nenhum dos direitos e obrigações do cliente sob o Contrato do Cliente.",
         "ar": "يوافق العميل على أن أي اتصال يتلقاه من TigerWit، من وقت لآخر، متعلق باتفاقية العميل - أو أي اتصال آخر متعلق بالتسويق (إن وجد) - لا يخالف أي من حقوق العميل والتزاماته بموجب من اتفاقية العميل."
@@ -5536,7 +5536,7 @@ module.exports = {
         "en": "Representations and Warranties",
         "vi": "Đại Diện và Bảo Đảm",
         "zh-Hant": "聲明與保證",
-        "id": "Representations and Warranties",
+        "id": "Pernyataan dan Jaminan",
         "es": "Representaciones y Garantías",
         "pt-BR": "Representações e Garantias",
         "ar": "الإقرارات والضمانات"
@@ -5546,7 +5546,7 @@ module.exports = {
         "en": "1.The client represents that he/ she has not been coerced or otherwise persuaded to enter into the Client Agreement.",
         "vi": "1.Khách hàng cam kết rằng họ không bị ép buộc hoặc bị thuyết phục tham gia vào Hợp đồng khách hàng.",
         "zh-Hant": "1.客戶聲明，客戶沒有被脅迫或以其他方式被說服訂立本客戶協議。",
-        "id": "1.The client represents that he/ she has not been coerced or otherwise persuaded to enter into the Client Agreement.",
+        "id": "1. Klien menyatakan bahwa dia tidak dipaksa atau dibujuk untuk masuk ke dalam Perjanjian Klien.",
         "es": "1.El cliente declara que no ha sido coaccionado o persuadido de ninguna otra manera para que entre en el Acuerdo de Cliente.",
         "pt-BR": "1. O cliente declara que ele não foi coagido ou persuadido a entrar no Contrato do Cliente.",
         "ar": "1- يقر العميل أنه لم يتعرض للإكراه أو الإقناع بأي طريقة أخرى من أجل إبرام اتفاقية العميل."
@@ -5556,7 +5556,7 @@ module.exports = {
         "en": "2.The client declares that he/ she is over 18 (eighteen) years of age (in case the client is a natural person) or has full capacity (in case the client is a legal person); therefore, the client may enter into the Client Agreement.",
         "vi": "2.Khách hàng tuyên bố rằng anh ta / cô ta trên 18 (mười tám) tuổi (trong trường hợp khách hàng là một cơ thể người tự nhiên) hoặc có đủ năng lực (trong trường hợp khách hàng là pháp nhân); do đó, khách hàng có thể tham gia vào Hợp đồng khách hàng.",
         "zh-Hant": "2.客戶聲明，客戶（如為自然人）年滿十八(18)周歲，或（如為法人）具有完全行為能力；因此，客戶可以訂立本客戶協議。",
-        "id": "2.The client declares that he/ she is over 18 (eighteen) years of age (in case the client is a natural person) or has full capacity (in case the client is a legal person); therefore, the client may enter into the Client Agreement.",
+        "id": "2. Klien menyatakan bahwa dia berusia di atas 18 (delapan belas) tahun (jika klien adalah orang perorangan) atau memiliki kapasitas penuh (jika klien adalah orang hukum); oleh karena itu, klien dapat menyetujui Perjanjian Klien.",
         "es": "2.El cliente declara que tiene más de 18 (dieciocho) años de edad (en caso de que el cliente sea una persona física) o que tenga plena capacidad (en caso de que el cliente sea una persona jurídica); por lo tanto, el cliente puede contraer el Acuerdo de Cliente.",
         "pt-BR": "2.O cliente declara ter mais de 18 (dezoito) anos de idade (caso o cliente seja uma pessoa física) ou tenha plena capacidade (caso o cliente seja uma pessoa jurídica); portanto, o cliente pode entrar no Contrato do Cliente.",
         "ar": "2- يقر العميل أن عمره يتجاوز 18 (ثمانية عشرة) عامًا (إذا كان شخصًا طبيعيًا) أو لديه الصلاحية الكاملة (إذا كان العميل شخصًا اعتباريًا)؛ وبناء على ذلك يمكن للعميل إبرام اتفاقية العميل."
@@ -5566,7 +5566,7 @@ module.exports = {
         "en": "3.The client accepts that TigerWit reserves the right to revoke at any time, without prior written notice, any power of attorney documents that govern the relationship of the client with his/ her authorised representative.",
         "vi": "3.Khách hàng chấp nhận rằng TigerWit có quyền thu hồi bất kỳ lúc nào mà không cần thông báo trước bằng văn bản, bất kỳ giấy ủy quyền nào điều chỉnh mối quan hệ của khách hàng với đại diện được ủy quyền của họ.",
         "zh-Hant": "3.客戶同意，TigerWit 保留不提前發出書面通知即隨時撤銷管轄客戶與其授權代表之間關系的任何授權書的權利。",
-        "id": "3.The client accepts that TigerWit reserves the right to revoke at any time, without prior written notice, any power of attorney documents that govern the relationship of the client with his/ her authorised representative.",
+        "id": "3. Klien menerima bahwa TigerWit berhak untuk mencabut setiap saat, tanpa pemberitahuan tertulis sebelumnya, dokumen surat kuasa yang mengatur hubungan klien dengan perwakilan resminya.",
         "es": "3.El cliente acepta que TigerWit se reserva el derecho de revocar en cualquier momento, sin previo aviso por escrito, cualquier documento de poder que rija la relación del cliente con su representante autorizado.",
         "pt-BR": "3.O cliente aceita que a TigerWit se reserva o direito de revogar a qualquer momento, sem aviso prévio por escrito, qualquer procuração que reger a relação do cliente com seu representante autorizado.",
         "ar": "3- يقبل العميل أن TigerWit تحتفظ لنفسها بالحق في أن تقوم في أي وقت وبدون إخطار خطي مسبق، بإلغاء أي وثائق توكيلات رسمية والتي تحكم العلاقة بين العميل وممثله المفوض."
@@ -5576,7 +5576,7 @@ module.exports = {
         "en": "4.TigerWit is not engaging in any action(s) which may be deemed to constitute a solicitation of financial services. The client declares that he/she is fully aware of any implications, including but not limited to any restrictions, reporting requirements, and any other requirement set by his/her local jurisdiction in relation to entering the Service Agreement and any trading activity he/she undertakes; and further undertakes to comply with all such applicable requirements.",
         "vi": "4.TigerWit không tham gia vào bất kỳ (các) hành động nào có thể được coi là cấu thành việc gây quỹ dịch vụ tài chính. Khách hàng tuyên bố rằng họ hoàn toàn nhận thức được mọi ý nghĩa, bao gồm nhưng không giới hạn bất kỳ hạn chế, yêu cầu báo cáo và bất kỳ yêu cầu nào khác do cơ quan thẩm quyền địa phương của mình đặt ra liên quan đến việc tham gia Thỏa thuận dịch vụ và bất kỳ hoạt động giao dịch nào cam kết; và tiếp tục cam kết tuân thủ tất cả các yêu cầu áp dụng như vậy.",
         "zh-Hant": "4.TigerWit 不從事任何可能被視為構成金融服務招攬的行為。客戶聲明，客戶完全知曉訂立本服務協議以及客戶從事的任何交易活動的任何影響，包括但不限於客戶所在的當地司法管轄區施加的任何限制、報告要求以及任何其他要求；且客戶進壹步保證遵守所有上述適用要求。",
-        "id": "4.TigerWit is not engaging in any action(s) which may be deemed to constitute a solicitation of financial services. The client declares that he/she is fully aware of any implications, including but not limited to any restrictions, reporting requirements, and any other requirement set by his/her local jurisdiction in relation to entering the Service Agreement and any trading activity he/she undertakes; and further undertakes to comply with all such applicable requirements.",
+        "id": "4. TigerWit tidak terlibat dalam tindakan apa pun yang dapat dianggap sebagai permintaan layanan keuangan. Klien menyatakan bahwa dia sepenuhnya menyadari implikasi apa pun, termasuk namun tidak terbatas pada batasan, persyaratan pelaporan, dan persyaratan lain yang ditetapkan oleh yurisdiksi lokalnya terkait dengan memasuki Perjanjian Layanan dan aktivitas trading apapun yang dia lakukan. melakukan; dan selanjutnya berjanji untuk mematuhi semua persyaratan yang berlaku tersebut.",
         "es": "4.TigerWit no está participando en ninguna acción que pueda considerarse como una solicitud de servicios financieros. El cliente declara que tiene plena conciencia de cualquier implicación, incluidas, entre otras, restricciones, requisitos de informes y cualquier otro requisito establecido por su jurisdicción local en relación con la suscripción del Acuerdo de Servicio y cualquier actividad de trading que realice. De igual modo, se compromete compromete a cumplir con todos los requisitos aplicables.",
         "pt-BR": "4. A TigerWit não está envolvida em qualquer ação que possa ser considerada uma solicitação de serviços financeiros. O cliente declara que está totalmente ciente de quaisquer implicações, incluindo, mas não se limitando a, quaisquer restrições, requisitos de relatório e qualquer outro requisito definido por sua jurisdição local em relação à inserção do Contrato de Serviço e qualquer atividade comercial que ele / ela tenha. compromete-se; e compromete-se ainda a cumprir todos os requisitos aplicáveis.",
         "ar": "4- لا تشارك TigerWit في أي إجراءات يمكن اعتبارها تشكل حثًا على استخدام خدمات مالية. ويقر العميل أنه يعلم تمام العلم أي عواقب، بما في ذلك على سبيل المثال وليس الحصر أي قيود ومتطلبات الإبلاغ وأي متطلبات أخرى تحددها ولايته القضائية المحلية فيما يتعلق بإبرام اتفاقية الخدمة وأي نشاط تداول يقوم به؛ ويتعهد العميل بالامتثال لجميع المتطلبات المعمول بها."
@@ -5586,7 +5586,7 @@ module.exports = {
         "en": "5.The client declares that any trading in financial instruments is proportional and/ or reasonable to his/ her specific financial situation and that independent financial advice has been sought, or will be if necessary.",
         "vi": "5.Khách hàng tuyên bố rằng bất kỳ giao dịch nào trong các công cụ tài chính đều cân xứng và / hoặc hợp lý đối với tình hình tài chính cụ thể của mình và tư vấn tài chính độc lập đã được khách hàng tìm đến, hoặc sẽ tìm đến nếu cần thiết.",
         "zh-Hant": "5.客戶聲明，任何金融工具交易相對於客戶的具體財務狀況而言均屬適當和/或合理，且客戶已經或（如有必要）將會尋求獨立的財務意見。",
-        "id": "5.The client declares that any trading in financial instruments is proportional and/ or reasonable to his/ her specific financial situation and that independent financial advice has been sought, or will be if necessary.",
+        "id": "5. Klien menyatakan bahwa setiap trading dalam instrumen keuangan proporsional dan / atau wajar dengan situasi keuangan spesifiknya dan bahwa nasihat keuangan independen telah dicari, atau akan dilakukan jika perlu.",
         "es": "5.El cliente declara que cualquier negociación en instrumentos financieros es proporcional y/o razonable considerando su situación financiera específica y que se ha buscado asesoramiento financiero independiente, o lo hará, si fuera necesario.",
         "pt-BR": "5.O cliente declara que qualquer negociação de instrumentos financeiros é proporcional e / ou razoável à sua situação financeira específica e que o aconselhamento financeiro independente foi solicitado, ou será, se necessário.",
         "ar": "5- يقر العميل أن أي تداول في الأدوات المالية مناسب و/أو معقول بالنظر إلى وضعه المالي المحدد وأنه استعان أو سوف يستعين عند الضرورة بمشورة مالية مستقلة."
@@ -5596,27 +5596,27 @@ module.exports = {
         "en": "6.The client accepts that the trading of any transactions in financial instruments shall occur only through the TigerWit trading platforms(s) or other platform available to TigerWit at any given time to the client.",
         "vi": "6.Khách hàng chấp nhận rằng giao dịch của bất kỳ giao dịch nào trong các công cụ tài chính chỉ xảy ra thông qua các sàn giao dịch TigerWit hoặc nền tảng khác có sẵn cho TigerWit tại bất kỳ thời điểm nào cho khách hàng.",
         "zh-Hant": "6.客戶同意，任何金融工具的交易只能通過 TigerWit 交易平臺或 TigerWit 在任何特定時間向客戶提供的其他平臺進行。",
-        "id": "6.The client accepts that the trading of any transactions in financial instruments shall occur only through the TigerWit trading platforms(s) or other platform available to TigerWit at any given time to the client.",
+        "id": "6. Klien menerima bahwa trading setiap transaksi dalam instrumen keuangan hanya akan terjadi melalui platform trading TigerWit atau platform lain yang tersedia untuk TigerWit pada waktu tertentu untuk klien.",
         "es": "6.El cliente acepta que la negociación de cualquier transacción en instrumentos financieros se realizará sólo a través de las plataformas de trading de TigerWit u otra plataforma disponibles para los clientes.",
         "pt-BR": "6.O cliente aceita que a negociação de quaisquer transações em instrumentos financeiros deve ocorrer somente através das plataformas de negociação TigerWit ou outra plataforma disponível para a TigerWit a qualquer momento para o cliente.",
         "ar": "6- يقبل العميل أن التداول في أي معاملات في الأدوات المالية لن يتم إلا من خلال منصة (منصات) TigerWit للتداول أو أو منصة أخرى توفرها TigerWit في أي وقت للعميل."
     },
     "amtClient168": {
-        "zh": "7.客户同意各金融工具的合同条款作为上述条款，可在以下网站查询 http://global.tigerwit.com。此外，客户同意本公司在未向客户发出事先书面通知情况下保留变更合同条款的权利。",
-        "en": "7.The client accepts the contract specifications for each financial instrument as such specifications, available online at http://global.tigerwit.com. In addition, the client accepts that the Firm reserves the right to change the contract specifications without giving him/ her prior written notice.",
-        "vi": "7.Khách hàng chấp nhận thông số kỹ thuật hợp đồng cho từng công cụ tài chính theo các thông số kỹ thuật như vậy, được trình bày tại http://global.tigerwit.com. Ngoài ra, khách hàng chấp nhận rằng Công ty bảo lưu quyền thay đổi các thông số hợp đồng mà không thông báo trước bằng văn bản cho anh ta / cô ta.",
-        "zh-Hant": "7.客戶同意各金融工具的合同條款作為上述條款，可在以下網站查詢 http://global.tigerwit.com。此外，客戶同意本公司在未向客戶發出事先書面通知情況下保留變更合同條款的權利。",
-        "id": "7.The client accepts the contract specifications for each financial instrument as such specifications, available online at http://global.tigerwit.com. In addition, the client accepts that the Firm reserves the right to change the contract specifications without giving him/ her prior written notice.",
-        "es": "7.El cliente acepta las especificaciones del contrato para cada instrumento financiero como tales especificaciones, disponibles en línea en http://global.tigerwit.com. Además, el cliente acepta que la Firma se reserva el derecho de cambiar las especificaciones del contrato sin darle previo aviso por escrito.",
-        "pt-BR": "7.O cliente aceita as especificações do contrato para cada instrumento financeiro como especificações, disponíveis online em http://global.tigerwit.com. Além disso, o cliente aceita que a empresa se reserva o direito de alterar as especificações do contrato sem lhe dar aviso prévio por escrito.",
-        "ar": "7- يقبل العميل أن مواصفات العقد لكل أداة مالية هي تلك المواصفات المتوفرة على الموقع الإلكتروني للشركة وهو http://global.tigerwit.com.  بالإضافة إلى ذلك، يقبل العميل أن الشركة تحتفظ لنفسها بالحق في تغيير مواصفات العقد بدون إرسال إخطار خطي مسبق إلى العميل."
+        "zh": "7.客户同意各金融工具的合同条款作为上述条款，可在以下网站查询 https://global.TigerWit.com。此外，客户同意本公司在未向客户发出事先书面通知情况下保留变更合同条款的权利。",
+        "en": "7.The client accepts the contract specifications for each financial instrument as such specifications, available online at https://global.TigerWit.com. In addition, the client accepts that the Firm reserves the right to change the contract specifications without giving him/ her prior written notice.",
+        "vi": "7.Khách hàng chấp nhận thông số kỹ thuật hợp đồng cho từng công cụ tài chính theo các thông số kỹ thuật như vậy, được trình bày tại https://global.TigerWit.com. Ngoài ra, khách hàng chấp nhận rằng Công ty bảo lưu quyền thay đổi các thông số hợp đồng mà không thông báo trước bằng văn bản cho anh ta / cô ta.",
+        "zh-Hant": "7.客戶同意各金融工具的合同條款作為上述條款，可在以下網站查詢 https://global.TigerWit.com。此外，客戶同意本公司在未向客戶發出事先書面通知情況下保留變更合同條款的權利。",
+        "id": "7. Klien menerima spesifikasi kontrak untuk setiap instrumen keuangan seperti spesifikasi tersebut, tersedia online di https://global.TigerWit.com. Selain itu, klien menerima bahwa Perusahaan berhak untuk mengubah spesifikasi kontrak tanpa memberikan pemberitahuan tertulis sebelumnya.",
+        "es": "7.El cliente acepta las especificaciones del contrato para cada instrumento financiero como tales especificaciones, disponibles en línea en https://global.TigerWit.com. Además, el cliente acepta que la Firma se reserva el derecho de cambiar las especificaciones del contrato sin darle previo aviso por escrito.",
+        "pt-BR": "7.O cliente aceita as especificações do contrato para cada instrumento financeiro como especificações, disponíveis online em https://global.TigerWit.com. Além disso, o cliente aceita que a empresa se reserva o direito de alterar as especificações do contrato sem lhe dar aviso prévio por escrito.",
+        "ar": "7- يقبل العميل أن مواصفات العقد لكل أداة مالية هي تلك المواصفات المتوفرة على الموقع الإلكتروني للشركة وهو https://global.TigerWit.com.  بالإضافة إلى ذلك، يقبل العميل أن الشركة تحتفظ لنفسها بالحق في تغيير مواصفات العقد بدون إرسال إخطار خطي مسبق إلى العميل."
     },
     "amtClient169": {
         "zh": "8.若客户由不止一个自然人或法人组成，客户在本客户协议项下的义务和责任应为共同和个别责任；在上述情况下，任何通讯包括但不限于通知或指令应解释为送达共同组成客户的全体自然人或法人。",
         "en": "8.If client is more than one natural or legal persons, the client’s obligations and liability under the Client Agreement shall be joint and several; under the above-mentioned circumstances any communication, including but not limited to a notice and order, shall be construed as delivered to all natural or legal persons that together form the client.",
         "vi": "8.Nếu một khách hàng là nhiều hơn một cá nhân tự nhiên hoặc pháp nhân, nghĩa vụ và trách nhiệm pháp lý của khách hàng theo Hợp đồng khách hàng sẽ là hợp đồng hợp tác của hai hay nhiều bên; trong các trường hợp nêu trên, bất kỳ thông tin nào, bao gồm nhưng không giới hạn trong một thông báo và trật tự, được hiểu là giao cho tất cả những người tự nhiên hoặc pháp nhân cùng nhau tạo thành khách hàng.",
         "zh-Hant": "8.若客戶由不止壹個自然人或法人組成，客戶在本客戶協議項下的義務和責任應為共同和個別責任；在上述情況下，任何通訊包括但不限於通知或指令應解釋為送達共同組成客戶的全體自然人或法人。",
-        "id": "8.If client is more than one natural or legal persons, the client’s obligations and liability under the Client Agreement shall be joint and several; under the above-mentioned circumstances any communication, including but not limited to a notice and order, shall be construed as delivered to all natural or legal persons that together form the client.",
+        "id": "8. Jika klien lebih dari satu orang perseorangan atau badan hukum, kewajiban dan tanggung jawab klien berdasarkan Perjanjian Klien akan menjadi gabungan dan beberapa; dalam keadaan yang disebutkan di atas setiap komunikasi, termasuk namun tidak terbatas pada pemberitahuan dan perintah, akan ditafsirkan sebagai dikirimkan ke semua badan hukum atau perseorangan yang bersama-sama membentuk klien.",
         "es": "8. Si el cliente es más de una persona física o jurídica, las obligaciones y la responsabilidad del cliente en virtud del Acuerdo de Cliente serán conjuntas y varias; bajo las circunstancias mencionadas anteriormente, cualquier comunicación, que incluye, entre otras cosas, una notificación y una orden, se interpretará como entregada a todas las personas físicas o jurídicas que forman el cliente.",
         "pt-BR": "8.Se cliente for mais de uma pessoa física ou jurídica, as obrigações e responsabilidades do cliente sob o Contrato de Cliente serão solidárias e diversas; nas circunstâncias acima mencionadas, qualquer comunicação, incluindo, mas não limitado a um aviso e pedido, deve ser interpretada como entregue a todas as pessoas singulares ou colectivas que, juntas, formam o cliente.",
         "ar": "8- إذا كان العميل أكثر من شخص واحد طبيعي أو اعتباري، ستكون التزامات ومسؤولية العميل المحددة بموجب اتفاقية العميل مشتركة وفردية في آن واحد؛ وفي ظل الظروف سالفة الذكر، سيتم تفسير أي اتصال، بما في ذلك على سبيل المثال وليس الحصر أي إخطار وأمر، على أنه تم تسليمه إلى جميع الأشخاص الطبيعيين والاعتباريين الذي يتكون العميل منهم."
@@ -5626,7 +5626,7 @@ module.exports = {
         "en": "9.The client accepts that the Firm shall take all reasonable steps to ensure compliance with the Law ; such reasonable steps shall be binding upon the client",
         "vi": "9.Khách hàng chấp nhận rằng Công ty sẽ thực hiện tất cả các bước hợp lý để đảm bảo tuân thủ Luật; các bước hợp lý như vậy sẽ ràng buộc khách hàng",
         "zh-Hant": "9.客戶接受，本公司應采取壹切合理措施確保法律的遵守；上述合理措施應對客戶具有約束力",
-        "id": "9.The client accepts that the Firm shall take all reasonable steps to ensure compliance with the Law ; such reasonable steps shall be binding upon the client",
+        "id": "9. Klien menerima bahwa Perusahaan harus mengambil semua langkah yang wajar untuk memastikan kepatuhan dengan Hukum; langkah-langkah yang masuk akal tersebut akan mengikat klien.",
         "es": "9. El cliente acepta que la Firma tomará todas las medidas razonables para garantizar el cumplimiento de la Ley; Tales pasos razonables serán vinculantes para el cliente",
         "pt-BR": "9.O cliente aceita que a Empresa tome todas as medidas razoáveis para assegurar o cumprimento da Lei; Tais medidas razoáveis serão vinculativas para o cliente",
         "ar": "9- يقبل العميل أن الشركة ستتخذ جميع التدابير المعقولة لضمان الامتثال للقانون؛ وتكون هذه التدابير المعقولة ملزمة للعميل."
@@ -5636,7 +5636,7 @@ module.exports = {
         "en": "10.The client accepts the fact that TigerWit shall have a lien on any amount that is deposited in his/ her trading account that is due for payment by the former to the latter. Although the Firm does not need the client’s consent in order to exercise the lien the former shall notify the latter of its intention, accordingly.",
         "vi": "10.Khách hàng chấp nhận điều thực tế là TigerWit sẽ có quyền nắm giữ bất kỳ khoản tiền nào được gửi vào tài khoản giao dịch của mình đến hạn thanh toán mà khách hàng nợ công ty. Mặc dù Công ty không cần sự đồng ý của khách hàng để thực hiện quyền thế chấp, nhưng theo đó, Công ty sẽ thông báo cho họ về ý định của mình.",
         "zh-Hant": "10.客戶接受以下事實：TigerWit 對存入客戶交易賬戶的客戶到期應付 TigerWit 的任何金額擁有留置權。盡管本公司無需客戶許可也能行使留置權，但本公司應相應地告知客戶其意圖。",
-        "id": "10.The client accepts the fact that TigerWit shall have a lien on any amount that is deposited in his/ her trading account that is due for payment by the former to the latter. Although the Firm does not need the client’s consent in order to exercise the lien the former shall notify the latter of its intention, accordingly.",
+        "id": "10. Klien menerima fakta bahwa TigerWit akan memiliki hak gadai pada jumlah berapa pun yang disimpan di akun perdagangannya yang harus dibayar oleh yang pertama ke yang terakhir. Meskipun Firma tidak membutuhkan persetujuan klien untuk melaksanakan hak gadai, maka firma tersebut harus memberitahu yang terakhir tentang maksudnya.",
         "es": "10.El cliente acepta el hecho de que TigerWit tendrá un gravamen sobre cualquier importe que se deposite en su cuenta de trading que deba ser pagada por el primero a este último. Aunque la Firma no necesita el consentimiento del cliente para ejercer el gravamen, la primera deberá notificar a este último su intención, en consecuencia.",
         "pt-BR": "10. O cliente aceita o fato de que a TigerWit terá um penhor sobre qualquer quantia depositada em sua conta de negociação que seja devida pelo pagamento da primeira à última. Embora o Escritório não precise do consentimento do cliente para exercer o ônus, o primeiro notificará o segundo de sua intenção, de acordo.",
         "ar": "10- يقبل العميل حقيقة أن TigerWit سيكون لها حق الرهن على أي مبلغ مودع في حساب التداول الخاص به يكون مستحق السداد من العميل إلى الشركة.  وعلى الرغم من أن الشركة لا تحتاج إلى موافقة العميل على ممارسة الشركة لحق الرهن، يجب على الشركة إبلاغ العميل باعتزامها القيام بذلك."
@@ -5646,28 +5646,28 @@ module.exports = {
         "en": "11.The client represents that if an amount is due for payment to TigerWit, the later shall be entitled to debit the relevant amount from the client’s trading account immediately.",
         "vi": "11.Khách hàng tuyên bố rằng nếu một số tiền đến hạn thanh toán cho TigerWit, thì sau này sẽ được ghi nợ số tiền có liên quan từ tài khoản giao dịch của khách hàng ngay lập tức.",
         "zh-Hant": "11.客戶聲明，如有到期應付給 TigerWit 的金額，則 TigerWit 有權從客戶的交易賬戶中立即扣除相關金額。",
-        "id": "11.The client represents that if an amount is due for payment to TigerWit, the later shall be entitled to debit the relevant amount from the client’s trading account immediately.",
+        "id": "11. Klien menyatakan bahwa jika suatu jumlah jatuh tempo untuk pembayaran ke TigerWit, kemudian berhak untuk mendebet jumlah yang relevan dari akun trading klien segera.",
         "es": "11.El cliente declara que si una cantidad debe pagarse a TigerWit, éste último tendrá derecho a debitar la cantidad correspondiente de la cuenta de trading del cliente inmediatamente.",
         "pt-BR": "11.O cliente declara que, se uma quantia for devida para pagamento à TigerWit, o último terá o direito de debitar imediatamente o montante relevante da conta de negociação do cliente.",
         "ar": "11- يقر العميل أنه إذا كان عليه مبلغ مستحق السداد إلى TigerWit، يحق للشركة خصم المبلغ المعني من حساب التداول الخاص بالعميل فورًا."
     },
     "amtClient173": {
-        "zh": "12.客户许可，如果客户的交易账户处于非活跃状态长达六个月且账户余额不足十五(15)美元或等值外币，则 TigerWit 可以单方面禁用该交易账户。客户可随时启用其交易账户；交易账户状态可以通过 TigerWit 的应用程序或网站(http://global.tigerwit.com)查看。",
-        "en": "12.The client consents that if his/ her trading account is inactive for six months and its balance is less than USD15 (fifteen), or currency equivalent, then TigerWit may at its discretion disable the trading account. The client may enable his/ her trading account, at any time; the status of a trading account can be viewed through TigerWit’s app or website (http://global.tigerwit.com).",
-        "vi": "12.Khách hàng đồng ý rằng nếu tài khoản giao dịch của họ không hoạt động trong sáu tháng và số dư của nó ít hơn 15 đô la (mười lăm) hoặc tương đương tiền, thì TigerWit có thể tùy ý vô hiệu hóa tài khoản giao dịch. Khách hàng có thể kích hoạt tài khoản giao dịch của mình, bất kỳ lúc nào; trạng thái của tài khoản giao dịch có thể được xem qua ứng dụng hoặc trang web của TigerWit (http://global.tigerwit.com).",
-        "zh-Hant": "12.客戶許可，如果客戶的交易賬戶處於非活躍狀態長達六個月且賬戶余額不足十五(15)美元或等值外幣，則 TigerWit 可以單方面禁用該交易賬戶。客戶可隨時啟用其交易賬戶；交易賬戶狀態可以通過 TigerWit 的應用程序或網站(http://global.tigerwit.com)查看。",
-        "id": "12.The client consents that if his/ her trading account is inactive for six months and its balance is less than USD15 (fifteen), or currency equivalent, then TigerWit may at its discretion disable the trading account. The client may enable his/ her trading account, at any time; the status of a trading account can be viewed through TigerWit’s app or website (http://global.tigerwit.com).",
-        "es": "12.El cliente acepta que si su cuenta de trading está inactiva durante seis meses y su saldo es inferior a USD15 (quince), o su equivalente en moneda, entonces TigerWit puede, a su discreción, desactivar la cuenta de trading. El cliente puede habilitar su cuenta de trading, en cualquier momento; El estado de una cuenta de trading se puede ver a través de la aplicación o sitio web de TigerWit (http://global.tigerwit.com).",
-        "pt-BR": "12. O cliente consente que, se sua conta de negociação estiver inativa por seis meses e seu saldo for menor que USD15 (quinze), ou moeda equivalente, a TigerWit poderá, a seu critério, desabilitar a conta de negociação. O cliente pode ativar sua conta de negociação a qualquer momento; o status de uma conta de negociação pode ser visualizado através do aplicativo ou site da TigerWit (http://global.tigerwit.com).",
-        "ar": "12- يوافق العميل على أنه إذا مضت مدة ستة أشهر دون تفعيل لحساب التداول الخاص به وكان رصيده أقل من 15  (خمسة عشر) دولارًا أمريكيًا، أو ما يعادله بعملة أخرى، يجوز لشركة TigerWit تعطيل حساب التداول الخاص بالعميل وفقًا لتقديرها وحدها دون غيرها. ويمكن للعميل في أي وقت تنشيط حساب التداول الخاص به؛ ويمكن الاطلاع على حالة حساب التداول عن طريق تطبيق TigerWit أو باستخدام الموقع الإلكتروني (http://global.tigerwit.com)."
+        "zh": "12.客户许可，如果客户的交易账户处于非活跃状态长达六个月且账户余额不足十五(15)美元或等值外币，则 TigerWit 可以单方面禁用该交易账户。客户可随时启用其交易账户；交易账户状态可以通过 TigerWit 的应用程序或网站(https://global.TigerWit.com)查看。",
+        "en": "12.The client consents that if his/ her trading account is inactive for six months and its balance is less than USD15 (fifteen), or currency equivalent, then TigerWit may at its discretion disable the trading account. The client may enable his/ her trading account, at any time; the status of a trading account can be viewed through TigerWit’s app or website (https://global.TigerWit.com).",
+        "vi": "12.Khách hàng đồng ý rằng nếu tài khoản giao dịch của họ không hoạt động trong sáu tháng và số dư của nó ít hơn 15 đô la (mười lăm) hoặc tương đương tiền, thì TigerWit có thể tùy ý vô hiệu hóa tài khoản giao dịch. Khách hàng có thể kích hoạt tài khoản giao dịch của mình, bất kỳ lúc nào; trạng thái của tài khoản giao dịch có thể được xem qua ứng dụng hoặc trang web của TigerWit (https://global.TigerWit.com).",
+        "zh-Hant": "12.客戶許可，如果客戶的交易賬戶處於非活躍狀態長達六個月且賬戶余額不足十五(15)美元或等值外幣，則 TigerWit 可以單方面禁用該交易賬戶。客戶可隨時啟用其交易賬戶；交易賬戶狀態可以通過 TigerWit 的應用程序或網站(https://global.TigerWit.com)查看。",
+        "id": "12. Klien menyetujui bahwa jika akun tradingnya tidak aktif selama enam bulan dan saldonya kurang dari USD15 (lima belas), maka TigerWit atas kebijakannya dapat menonaktifkan akun trading. Klien dapat mengaktifkan akun tradingnya, kapan saja; status akun trading dapat dilihat melalui aplikasi atau situs web TigerWit (https://global.TigerWit.com).",
+        "es": "12.El cliente acepta que si su cuenta de trading está inactiva durante seis meses y su saldo es inferior a USD15 (quince), o su equivalente en moneda, entonces TigerWit puede, a su discreción, desactivar la cuenta de trading. El cliente puede habilitar su cuenta de trading, en cualquier momento; El estado de una cuenta de trading se puede ver a través de la aplicación o sitio web de TigerWit (https://global.TigerWit.com).",
+        "pt-BR": "12. O cliente consente que, se sua conta de negociação estiver inativa por seis meses e seu saldo for menor que USD15 (quinze), ou moeda equivalente, a TigerWit poderá, a seu critério, desabilitar a conta de negociação. O cliente pode ativar sua conta de negociação a qualquer momento; o status de uma conta de negociação pode ser visualizado através do aplicativo ou site da TigerWit (https://global.TigerWit.com).",
+        "ar": "12- يوافق العميل على أنه إذا مضت مدة ستة أشهر دون تفعيل لحساب التداول الخاص به وكان رصيده أقل من 15  (خمسة عشر) دولارًا أمريكيًا، أو ما يعادله بعملة أخرى، يجوز لشركة TigerWit تعطيل حساب التداول الخاص بالعميل وفقًا لتقديرها وحدها دون غيرها. ويمكن للعميل في أي وقت تنشيط حساب التداول الخاص به؛ ويمكن الاطلاع على حالة حساب التداول عن طريق تطبيق TigerWit أو باستخدام الموقع الإلكتروني (https://global.TigerWit.com)."
     },
     "amtClient174": {
         "zh": "不可抗力事件",
-        "en": "Force Majeur Event",
-        "vi": "Sự kiện bất khả kháng",
+        "en": "Force Majeure Event",
+        "vi": "1.TigerWit, theo ý kiến hợp",
         "zh-Hant": "不可抗力事件",
-        "id": "Force Majeur Event",
-        "es": "Evento de Fuerza Mayor",
+        "id": "Peristiwa Force Meajure",
+        "es": "Evento de fuerza mayor",
         "pt-BR": "Evento de Força Maior",
         "ar": "أحداث القوة القاهرة"
     },
@@ -5676,7 +5676,7 @@ module.exports = {
         "en": "1.TigerWit shall, in its reasonable opinion, determine that a force majeure event occurred; under such circumstances the Firm shall take all reasonable steps in order to inform the client.",
         "vi": "1.TigerWit, theo ý kiến hợp lý của mình, xác định rằng một sự kiện bất khả kháng xảy ra; trong những trường hợp như vậy, Công ty sẽ thực hiện tất cả các bước hợp lý để thông báo cho khách hàng.",
         "zh-Hant": "1.TigerWit 應依據其合理意見，確定已發生不可抗力事件；在此情況下，本公司應采取壹切合理措施通知客戶。",
-        "id": "1.TigerWit shall, in its reasonable opinion, determine that a force majeure event occurred; under such circumstances the Firm shall take all reasonable steps in order to inform the client.",
+        "id": "1.TigerWit akan, dalam pendapatnya yang wajar, menentukan bahwa peristiwa force majeure telah terjadi; dalam keadaan seperti itu, Perusahaan harus mengambil semua langkah yang wajar untuk memberi tahu klien.",
         "es": "1. TigerWit deberá  determinar razonablemente lo que ocurrió en una evento de fuerza mayor; en tales circunstancias, la Firma tomará todas las medidas razonables para informar al cliente.",
         "pt-BR": "1.TigerWit deve, em seu parecer razoável, determinar que um evento de força maior ocorreu; Sob tais circunstâncias, a Empresa deverá tomar todas as medidas razoáveis para informar o cliente.",
         "ar": "1- تحدد TigerWit حسب تقديرها المعقول بحدوث أحد أحداث القوة القاهرة، وفي مثل هذه الظروف فإن الشركة ستتخذ جميع التدابير المعقولة لإبلاغ العميل."
@@ -5686,7 +5686,7 @@ module.exports = {
         "en": "2.A force majeure event is as an event or circumstance, including but not limited to any natural, technological, political, governmental, social, economic (including without limitation to the suspension of a currency) or similar event or circumstance that occurred after a transaction in a financial instrument occurred and such event or circumstance has not been anticipated at the date of entering into the transaction. In addition to the above, a force majeure event may include instances of illegitimate actions against the TigerWit servers that may be outside the control of with the client or TigerWit.",
         "vi": "2.Sự kiện bất khả kháng là một sự kiện hoặc hoàn cảnh, bao gồm nhưng không giới hạn với bất kỳ sự kiện tự nhiên, công nghệ, chính trị, chính trị, xã hội, kinh tế (bao gồm nhưng không giới hạn việc đình chỉ tiền tệ) hoặc sự kiện hoặc hoàn cảnh tương tự xảy ra sau giao dịch trong một công cụ tài chính đã xảy ra và sự kiện hoặc hoàn cảnh đó chưa được dự đoán tại ngày giao dịch. Ngoài ra, một sự kiện bất khả kháng có thể bao gồm các trường hợp hành động bất hợp pháp đối với các máy chủ TigerWit có thể nằm ngoài tầm kiểm soát của khách hàng hoặc TigerWit.",
         "zh-Hant": "2.不可抗力事件包括但不限於金融工具交易之後發生的任何自然、技術、政治、政府、社會、經濟（包括但不限於暫停貨幣）等方面的事件或情況，而且交易進行當日無法預料到此類事件或情況的發生。除上述情況外，不可抗力事件還包括針對 TigerWit 服務器的非法操作事件，並且不在客戶或 TigerWit 的控制範圍內。",
-        "id": "2.A force majeure event is as an event or circumstance, including but not limited to any natural, technological, political, governmental, social, economic (including without limitation to the suspension of a currency) or similar event or circumstance that occurred after a transaction in a financial instrument occurred and such event or circumstance has not been anticipated at the date of entering into the transaction. In addition to the above, a force majeure event may include instances of illegitimate actions against the TigerWit servers that may be outside the control of with the client or TigerWit.",
+        "id": "2. Peristiwa force majeure adalah sebagai peristiwa atau keadaan, termasuk tetapi tidak terbatas pada alam, teknologi, politik, pemerintahan, sosial, ekonomi (termasuk namun tidak terbatas pada penangguhan mata uang) atau peristiwa atau keadaan serupa yang terjadi setelah transaksi dalam instrumen keuangan terjadi dan peristiwa atau keadaan tersebut belum diantisipasi pada tanggal dimulainya transaksi. Selain hal tersebut di atas, peristiwa force majeure dapat mencakup tindakan tidak sah terhadap server TigerWit yang mungkin berada di luar kendali klien atau TigerWit.",
         "es": "2. Un evento de fuerza mayor es como un evento o circunstancia, incluyendo pero no limitado a cualquier evento natural, tecnológico, político, gubernamental, social, económico (incluyendo sin limitación a la suspensión de una divisa) o similar que ocurrió después de una la transacción en una instrumento financiero y no pudiera ser anticipado. Además de lo anterior, un evento de fuerza mayor pudiera incluir instancias de acciones ilegítimas contra los servidores TigerWit que pueden estar fuera del control del cliente o TigerWit.",
         "pt-BR": "2. Um evento de força maior é como um evento ou circunstância, incluindo mas não limitado a qualquer evento natural, tecnológico, político, governamental, social, econômico (incluindo, sem limitação, a suspensão de uma moeda) ou evento ou circunstância similar que ocorreu após uma Uma transação em um instrumento financeiro ocorreu e tal evento ou circunstância não foi antecipado na data de celebração da transação. Além do acima, um evento de força maior pode incluir instâncias de ações ilegítimas contra os servidores TigerWit que podem estar fora do controle do cliente ou do TigerWit.",
         "ar": "2- حدث القوة القاهرة هو حدث أو ظرف، يشمل على سبيل المثال وليس الحصر أي حدث طبيعي أو تقني أو سياسي أو حكومي أو اجتماعي أو اقتصادي (بما في ذلك على سبيل المثال وليس الحصر تعليق عملة) أو حدث أو ظرف مماثل وقع بعد حدوث معاملة في أداة مالية ولم يكن هذا الحدث أو الظرف متوقعًا في تاريخ الدخول في المعاملة. وعلاوة على ما سبق، قد يتضمن حدث القوة القاهرة حالات من الأفعال غير المشروعة ضد خوادم TigerWit والتي قد تكون خارجة عن سيطرة عميلTigerWit."
@@ -5696,7 +5696,7 @@ module.exports = {
         "en": "3.If TigerWit determines that a force majeure event occurred, without prejudice to any other rights of the client under the Client Agreement, the Firm may: ",
         "vi": "3.Nếu TigerWit xác định rằng một sự kiện bất khả kháng xảy ra, không ảnh hưởng đến bất kỳ quyền nào khác của khách hàng theo Hợp đồng khách hàng, Công ty có thể: ",
         "zh-Hant": "3.如果 TigerWit 確定已發生不可抗力事件，在不影響客戶根據客戶協議項下任何其他權利的情況下，本公司可以：",
-        "id": "3.If TigerWit determines that a force majeure event occurred, without prejudice to any other rights of the client under the Client Agreement, the Firm may: ",
+        "id": "3. Jika TigerWit menentukan bahwa peristiwa force majeure terjadi, tanpa mengurangi hak lain dari klien berdasarkan Perjanjian Klien, Perusahaan dapat:",
         "es": "3.Si TigerWit determina que un evento de \"force majeure\" ocurriera, sin perjuicio de cualquier otro derecho del cliente bajo el Acuerdo de Cliente, la Firma pudiera: ",
         "pt-BR": "3.Se a TigerWit determinar que ocorreu um evento de força maior, sem prejuízo de quaisquer outros direitos do cliente sob o Contrato do Cliente, a Empresa poderá:",
         "ar": "3- بدون المساس بأي حقوق أخرى للعميل محددة بموجب اتفاقية العميل، إذا قررت TigerWit أن حدث القوة القاهرة قد وقع، يجوز للشركة القيام بما يلي:"
@@ -5706,7 +5706,7 @@ module.exports = {
         "en": "increase margin requirements; and/ or",
         "vi": "tăng yêu cầu ký quỹ; và / hoặc",
         "zh-Hant": "提高保證金規定額；",
-        "id": "increase margin requirements; and/ or",
+        "id": "meningkatkan persyaratan margin; dan / atau",
         "es": "aumentar los requisitos de margen; y/o",
         "pt-BR": "aumentar os requisitos de margem; e/ou",
         "ar": "زيادة متطلبات الهامش؛ و/أو"
@@ -5716,7 +5716,7 @@ module.exports = {
         "en": "increase spreads; and/ or",
         "vi": "tăng spread; và / hoặc",
         "zh-Hant": "增加點差；",
-        "id": "increase spreads; and/ or",
+        "id": "meningkatkan spread; dan / atau",
         "es": "aumentar los spreads; y/o",
         "pt-BR": "aumentar spreads; e / ou",
         "ar": "زيادة فروق الأسعار؛ و/أو"
@@ -5726,7 +5726,7 @@ module.exports = {
         "en": "decrease leverage; and/ or",
         "vi": "tăng spread; và / hoặc",
         "zh-Hant": "降低杠桿；",
-        "id": "decrease leverage; and/ or",
+        "id": "mengurangi leverage; dan / atau",
         "es": "disminuir el apalancamiento; y/o",
         "pt-BR": "diminuir a alavancagem; e / ou",
         "ar": "خفض الرافعة المالية؛ و/أو"
@@ -5736,7 +5736,7 @@ module.exports = {
         "en": "close-out, in good faith, any open positions at a price that the Firm considers reasonable; and/ or",
         "vi": "sự khóa sổ, với thiện chí, bất kỳ vị thế mở nào với mức giá mà Công ty coi là hợp lý; và / hoặc",
         "zh-Hant": "以真誠的方式按照本公司認為合理的價格關閉任何未平倉頭寸；",
-        "id": "close-out, in good faith, any open positions at a price that the Firm considers reasonable; and/ or",
+        "id": "menutup, dengan itikad baik, setiap posisi terbuka dengan harga yang dianggap wajar oleh Perusahaan; dan / atau",
         "es": "cerrar, de buena fe, cualquier posición abierta a un precio que la Firma considere razonable; y/o",
         "pt-BR": "fechar de boa fé, quaisquer posições abertas a um preço que a Empresa considere razoável; e / ou",
         "ar": "الإغلاق الإجباري، بحسن نيه، لأي مركز مفتوح بسعر تعتبره الشركة معقولاً؛ و/أو"
@@ -5746,7 +5746,7 @@ module.exports = {
         "en": "request amendments to any closed positions; and/ or",
         "vi": "yêu cầu sửa đổi cho bất kỳ vị thế đóng cửa nào; và / hoặc",
         "zh-Hant": "申請對任何平倉的頭寸作出修正；",
-        "id": "request amendments to any closed positions; and/ or",
+        "id": "meminta amandemen untuk setiap posisi tertutup; dan / atau",
         "es": "solicitar enmiendas a cualquier posición cerrada; y/o",
         "pt-BR": "solicitar alterações a quaisquer posições fechadas; e / ou",
         "ar": "طلب تعديلات على أي مراكز مغلقة؛ و/أو"
@@ -5756,7 +5756,7 @@ module.exports = {
         "en": "suspend the provision of investment and/ or ancillary services to the client; and/ or",
         "vi": "đình chỉ việc cung cấp đầu tư và / hoặc dịch vụ hỗ trợ cho khách hàng; và / hoặc",
         "zh-Hant": "暫停向客戶提供投資和/或輔助服務；",
-        "id": "suspend the provision of investment and/ or ancillary services to the client; and/ or",
+        "id": "menangguhkan penyediaan investasi dan / atau layanan tambahan kepada klien; dan / atau",
         "es": "suspender la provisión de servicios de inversión y/o servicios auxiliares al cliente; y/o",
         "pt-BR": "suspender a prestação de serviços de investimento e / ou auxiliares ao cliente; e / ou",
         "ar": "تعليق تقديم خدمات الاستثمار و/أو الخدمات التكميلية للعميل؛ و/أو"
@@ -5766,7 +5766,7 @@ module.exports = {
         "en": "amend any of the content of the Client Agreement on the basis that it is impossible for TigerWit to comply with it.",
         "vi": "sửa đổi bất kỳ nội dung nào của Hợp đồng khách hàng trên cơ sở TigerWit không thể tuân thủ nó.",
         "zh-Hant": "對本客戶協議中 TigerWit 不可能遵守的任何內容進行修訂。",
-        "id": "amend any of the content of the Client Agreement on the basis that it is impossible for TigerWit to comply with it.",
+        "id": "mengubah salah satu konten Perjanjian Klien atas dasar bahwa TigerWit tidak mungkin mematuhinya.",
         "es": "enmendar cualquiera de los contenidos del Acuerdo de Cliente sobre la base de que es imposible que TigerWit lo cumpla.",
         "pt-BR": "alterar qualquer um dos conteúdos do Contrato de Cliente com base no fato de que é impossível para a TigerWit cumpri-lo.",
         "ar": "تعديل أي من محتويات اتفاقية العميل على أساس أنه من المستحيل على TigerWit الامتثال لها."
@@ -5776,7 +5776,7 @@ module.exports = {
         "en": "Unless required by Law, TigerWit in entitled to refuse the provision of any investment or ancillary service to the client, at any time, without being obliged to inform the client of the reasons to do so in order to protect the legitimate interests of the Firm.",
         "vi": "Trừ khi được luật pháp yêu cầu, TigerWit có quyền từ chối cung cấp bất kỳ khoản đầu tư hoặc dịch vụ hỗ trợ nào cho khách hàng, bất kỳ lúc nào mà không có nghĩa vụ thông báo cho khách hàng về lý do để làm như vậy để bảo vệ lợi ích hợp pháp của Công ty.",
         "zh-Hant": "除非是法律規定，為保護本公司的合法利益，TigerWit 有權隨時拒絕向客戶提供任何投資或輔助服務，而無需告知客戶原因。",
-        "id": "Unless required by Law, TigerWit in entitled to refuse the provision of any investment or ancillary service to the client, at any time, without being obliged to inform the client of the reasons to do so in order to protect the legitimate interests of the Firm.",
+        "id": "Kecuali diwajibkan oleh Hukum, TigerWit berhak untuk menolak penyediaan investasi atau layanan tambahan apa pun kepada klien, kapan pun, tanpa berkewajiban untuk memberi tahu klien tentang alasan melakukannya untuk melindungi kepentingan sah Perusahaan.",
         "es": "A menos que sea requerido por la Ley, TigerWit tiene derecho a rechazar la provisión de cualquier inversión o servicio auxiliar al cliente, en cualquier momento, sin estar obligado a informar al cliente de las razones para hacerlo con el fin de proteger los intereses legítimos de la Firma.",
         "pt-BR": "A menos que exigido por lei, TigerWit tem o direito de recusar a prestação de qualquer investimento ou serviço auxiliar ao cliente, a qualquer momento, sem ser obrigado a informar o cliente das razões para fazê-lo, a fim de proteger os interesses legítimos da empresa.",
         "ar": "ما لم يقتضي القانون ذلك، تمتلك TigerWit الحق في رفض تقديم أي خدمة استثمارية أو تكميلية للعميل، في أي وقت وبدون أن تكون ملزمة بإبلاغ العميل بأسباب الرفض من أجل حماية المصالح المشروعة للشركة."
@@ -5786,17 +5786,17 @@ module.exports = {
         "en": "Governing Law, Jurisdiction and Dispute Resolution",
         "vi": "Luật Quản lý, Thẩm Quyền và Giải Quyết Tranh Chấp",
         "zh-Hant": "適用法律、管轄權與爭議解決",
-        "id": "Governing Law, Jurisdiction and Dispute Resolution",
+        "id": "Hukum yang Mengatur, Yurisdiksi dan Penyelesaian Sengketa",
         "es": "Jurisdicción, Ley Gobierna y Resolución Disputas",
         "pt-BR": "Lei Aplicável, Jurisdição e Resolução de Conflitos",
         "ar": "القانون الحاكم والاختصاص القضائي وحل المنازعات"
     },
     "amtClient187": {
-        "zh": "1.客户可以向合规专员提出书面投诉，投诉地址为 Sea Sky Lane, Sandyport, PO BoxSP 64368, Nassau, The Bahamas。如果客户仍不满意于 TigerWit 随后开展的调查与回复，客户可以联系巴哈马证券监察委员会。完整详情载于我们的内部投诉程序，可随时根据要求向客户提供。",
-        "en": "1.The client may raise a complaint in writing to the Compliance Officer, Sea Sky Lane, Sandyport, PO Box SP 64368, Nassau, The Bahamas. If following TigerWit's subsequent investigation and response the client is still not satisfied he/she may contact the Securities Commission of The Bahamas. Full details are contained within our internal complaints procedure, which is available to the client on request at any time.",
-        "vi": "1.Khách hàng có thể khiếu nại bằng văn bản cho Cán bộ Kiểm Soát, Sea Sky Lane, Sandyport, PO Box SP 64368, Nassau, Bahamas. Nếu sau việc điều tra và phản hồi tiếp theo của TigerWit, khách hàng vẫn không hài lòng họ có thể liên lạc với Ủy ban Chứng khoán Bahamas. Chi tiết đầy đủ được trình bày trong phần thủ tục khiếu nại nội bộ của chúng tôi, có sẵn cho khách hàng theo yêu cầu bất cứ lúc nào.",
-        "zh-Hant": "1.客戶可以向合規專員提出書面投訴，投訴地址為 Sea Sky Lane, Sandyport, PO BoxSP 64368, Nassau, The Bahamas。如果客戶仍不滿意於 TigerWit 隨後開展的調查與回復，客戶可以聯系巴哈馬證券監察委員會。完整詳情載於我們的內部投訴程序，可隨時根據要求向客戶提供。",
-        "id": "1.The client may raise a complaint in writing to the Compliance Officer, Sea Sky Lane, Sandyport, PO Box SP 64368, Nassau, The Bahamas. If following TigerWit's subsequent investigation and response the client is still not satisfied he/she may contact the Securities Commission of The Bahamas. Full details are contained within our internal complaints procedure, which is available to the client on request at any time.",
+        "zh": "1.客户可以根据本网站上详细介绍的公司投诉处理程序以书面形式提出投诉。如果在 TigerWit 随后的调查和答复之后，客户仍然不满意，他/她可以通过投诉处理程序文件中提供的联系细节与巴哈马证券委员会联系。",
+        "en": "1.The client may raise a complaint in writing in accordance with the Firm’s Complaint Handling Procedure detailed on this website. If following TigerWit's subsequent investigation and response the client is still not satisfied he/she may contact the Securities Commission of The Bahamas via the contact details provided in the Complaints Handling Procedure document.",
+        "vi": "1.Khách hàng có thể khiếu nại bằng văn bản cho theo Quy Định Giải Quyết Phàn Nàn Của Công ty dựa trên chi tiết tại trang web. Nassau, Bahamas. Nếu sau việc điều tra và phản hồi tiếp theo của TigerWit, khách hàng vẫn không hài lòng họ có thể liên lạc với Ủy ban Chứng khoán Bahamas.thông tin liên lạc chi tiết được cung cấp trong tài liệu của Quy Trình Giải Quyết Phàn Nàn.",
+        "zh-Hant": "1.客戶可以根據本網站上的詳細介紹的公司投訴處理程序以書面形式提出投訴。如果在TigerWit隨後的調查和回復之後，客戶仍然不滿意，他/她可以通過投訴處理程序文件中提供的聯繫細節 與巴哈馬證券委員會聯繫。",
+        "id": "1. Klien dapat mengajukan keluhan secara tertulis. Jika mengikuti investigasi dan tanggapan TigerWit selanjutnya, klien masih belum puas, ia dapat menghubungi Komisi Sekuritas Bahama.",
         "es": "1.El cliente puede presentar una reclamación por escrito al Compliance Officer, dirección en Sea Sky Lane, Sandyport, PO Box SP 64368, Nassau, Las Bahamas. Si después de la investigación y respuestas posteriores de TigerWit, el cliente todavía no está satisfecho, puede comunicarse con la Comisión de Valores de las Bahamas. Los detalles completos se encuentran en nuestro procedimiento interno de reclamaciones, que está disponible para el cliente a petición en cualquier momento.",
         "pt-BR": "1. O cliente pode apresentar uma reclamação por escrito ao Diretor de Compliance, Sea Sky Lane, Sandyport, PO Box SP 64368, Nassau, Bahamas. Se após a investigação e resposta subseqüentes da TigerWit, o cliente ainda não estiver satisfeito, ele / ela pode entrar em contato com a Comissão de Valores Mobiliários das Bahamas. Todos os detalhes estão contidos em nosso procedimento interno de reclamações, que está disponível para o cliente, a pedido, a qualquer momento.",
         "ar": "1- يجوز للعميل تقديم شكوى مكتوبة إلى مسؤول الالتزام وإرسالها إلى العنوان التالي Sea Sky Lane, Sandyport, PO Box SP 64368, Nassau, The Bahamas. وإذا كان العميل ما يزال غير راض حتى بعد تحقيق TigerWit في شكواه وردها عليه، يجوز للعميل الاتصال بهيئة الأوراق المالية في جزر البهاما. وتوجد التفاصيل الكاملة في الإجراءات الداخلية للشكاوي والتي تتوفر للعميل عند الطلب في أي وقت."
@@ -5806,7 +5806,7 @@ module.exports = {
         "en": "The client accepts that the Client Agreement and any investment and/ or ancillary services provided under it by the Firm shall be governed by the Laws of The Bahamas.",
         "vi": "Khách hàng chấp nhận rằng Hợp đồng khách hàng và mọi dịch vụ đầu tư và / hoặc phụ trợ do Công ty cung cấp sẽ được điều chỉnh bởi Luật của Bahamas.",
         "zh-Hant": "客戶同意，本客戶協議及本公司根據本協議提供的任何投資和/或輔助服務均適用於巴哈馬國法律。",
-        "id": "The client accepts that the Client Agreement and any investment and/ or ancillary services provided under it by the Firm shall be governed by the Laws of The Bahamas.",
+        "id": "Klien menerima bahwa Perjanjian Klien dan setiap investasi dan / atau layanan tambahan yang disediakan di bawahnya oleh Perusahaan akan diatur oleh Hukum Bahama.",
         "es": "El cliente acepta que el Acuerdo de Cliente y cualquier inversión y/o servicios auxiliares provistos bajo la misma por la Firma se regirán por las Leyes de Las Bahamas.",
         "pt-BR": "O cliente aceita que o Contrato de Cliente e quaisquer investimentos e / ou serviços auxiliares fornecidos sob ele pela Empresa serão regidos pelas Leis das Bahamas.",
         "ar": "يقبل العميل أن اتفاقية العميل وأي استثمار و/أو خدمات تكميلية تقدمها الشركة ستكون خاضعة لقوانين جزر البهاما."
@@ -5816,7 +5816,7 @@ module.exports = {
         "en": "2.Any proceedings and their settlement that may involve TigerWit and the client shall take place in the competent courts of The Bahamas.",
         "vi": "2.Bất kỳ thủ tục tố tụng nào và phán quyết của chúng có thể liên quan đến TigerWit và khách hàng sẽ diễn ra tại các tòa án có thẩm quyền của Bahamas.",
         "zh-Hant": "2.可能涉及 TigerWit 和客戶的任何訴訟與和解都應提交至巴哈馬國的管轄法院解決。",
-        "id": "2.Any proceedings and their settlement that may involve TigerWit and the client shall take place in the competent courts of The Bahamas.",
+        "id": "2.Setiap proses dan penyelesaian yang mungkin melibatkan TigerWit dan klien harus dilakukan di pengadilan yang kompeten di Bahamas.",
         "es": "2. Cualquier procedimiento y su resolución que involucre a TigerWit y al cliente se llevarán a cabo en los tribunales competentes de Bahamas.",
         "pt-BR": "2. Qualquer processo e sua resolução que envolva a TigerWit e o cliente ocorrerão nos tribunais competentes das Bahamas.",
         "ar": "2- أي إجراءات قضائية وتسوياتها والتي قد تتعلق بشركة TigerWit والعميل يجب أن تتم في المحاكم المختصة في جزر البهاما."
@@ -5832,21 +5832,21 @@ module.exports = {
         "ar": "متفرقات"
     },
     "amtClient191": {
-        "zh": "1.除非另有明确指示，客户应以书面形式向公司发出任何通知、指令、申请或其他通讯，并应发送至 TigerWit 的办公室地址，见于网站“联系我们”页面(http://global.tigerwit.com)。向本公司发出的任何通知、指令、申请或其他通讯均自公司接收起生效。",
-        "en": "1.Unless specifically instructed otherwise any notice, instruction, request or other communication shall be given by the client to the Firm in writing and shall be sent to TigerWit’s office address, which appears on the ‘Contact Us’ page (http://global.tigerwit.com). Any notice, instruction, request or other communication sent to Firm shall be effective when received by the Firm.",
+        "zh": "1.除非另有明确指示，客户应以书面形式向公司发出任何通知、指令、申请或其他通讯，并应发送至 TigerWit 的办公室地址，见于网站“联系我们”页面(https://global.TigerWit.com)。向本公司发出的任何通知、指令、申请或其他通讯均自公司接收起生效。",
+        "en": "1.Unless specifically instructed otherwise any notice, instruction, request or other communication shall be given by the client to the Firm in writing and shall be sent to TigerWit’s office address, which appears on the ‘Contact Us’ page (https://global.TigerWit.com). Any notice, instruction, request or other communication sent to Firm shall be effective when received by the Firm.",
         "vi": "1.Trừ khi được hướng dẫn cụ thể, mọi thông báo, hướng dẫn, yêu cầu hoặc thông tin liên lạc khác sẽ được khách hàng gửi cho Công ty bằng văn bản và sẽ được gửi đến địa chỉ văn phòng của TigerWit, được ghi trên trang Liên hệ với chúng tôi tại (http: //global.tigerwit .com). Mọi thông báo, hướng dẫn, yêu cầu hoặc thông tin liên lạc khác gửi đến Công ty sẽ có hiệu lực khi Công ty nhận được.",
-        "zh-Hant": "1.除非另有明確指示，客戶應以書面形式向公司發出任何通知、指令、申請或其他通訊，並應發送至 TigerWit 的辦公室地址，見於網站“聯系我們”頁面(http://global.tigerwit.com)。向本公司發出的任何通知、指令、申請或其他通訊均自公司接收起生效。",
-        "id": "1.Unless specifically instructed otherwise any notice, instruction, request or other communication shall be given by the client to the Firm in writing and shall be sent to TigerWit’s office address, which appears on the ‘Contact Us’ page (http://global.tigerwit.com). Any notice, instruction, request or other communication sent to Firm shall be effective when received by the Firm.",
-        "es": "1. A menos que se indique específicamente de otro modo, cualquier notificación, instrucción, solicitud u otra comunicación será entregada por el cliente a la Firma por escrito y se enviará a la dirección de la oficina de TigerWit, que aparece en la página 'Contáctenos' (http://global.tigerwit.com). Cualquier aviso, instrucción, solicitud u otra comunicación enviada a la Firma será efectiva cuando la Firma la reciba.",
+        "zh-Hant": "1.除非另有明確指示，客戶應以書面形式向公司發出任何通知、指令、申請或其他通訊，並應發送至 TigerWit 的辦公室地址，見於網站“聯系我們”頁面(https://global.TigerWit.com)。向本公司發出的任何通知、指令、申請或其他通訊均自公司接收起生效。",
+        "id": "1.Kecuali diinstruksikan secara khusus, pemberitahuan, instruksi, permintaan atau komunikasi lainnya harus diberikan oleh klien ke Perusahaan secara tertulis dan akan dikirim ke alamat kantor TigerWit, yang muncul di halaman 'Hubungi Kami' (https: // global .TigerWit.com). Setiap pemberitahuan, instruksi, permintaan atau komunikasi lain yang dikirim ke Perusahaan akan efektif ketika diterima oleh Perusahaan.",
+        "es": "1. A menos que se indique específicamente de otro modo, cualquier notificación, instrucción, solicitud u otra comunicación será entregada por el cliente a la Firma por escrito y se enviará a la dirección de la oficina de TigerWit, que aparece en la página 'Contáctenos' (https://global.TigerWit.com). Cualquier aviso, instrucción, solicitud u otra comunicación enviada a la Firma será efectiva cuando la Firma la reciba.",
         "pt-BR": "1. A menos que especificamente instruído de outra forma, qualquer notificação, instrução, solicitação ou outra comunicação deve ser dada pelo cliente à Empresa por escrito e enviada para o endereço do escritório da TigerWit, que aparece na página 'Fale Conosco' (http: // global .tigerwit.com). Qualquer aviso, instrução, solicitação ou outra comunicação enviada à Empresa será efetivada quando recebida pela Empresa.",
-        "ar": "1- ما لم يتم إصدار تعليمات مخالفة لذلك تحديدًا، سيتم تسليم أي إخطار أو تعليمات أو طلب أو أي اتصال آخر من العميل إلى الشركة كتابيًا وسيتم إرساله إلى عنوان مكتب TigerWit، والذي يظهر في صفحة \"اتصل بنا\" على موقعنا الإلكتروني (http://global.tigerwit.com).  وأي إخطار أو تعليمات أو طلب أو أي اتصال آخر يتم إرساله إلى الشركة يصبح ساري المفعول عند استلام الشركة له."
+        "ar": "1- ما لم يتم إصدار تعليمات مخالفة لذلك تحديدًا، سيتم تسليم أي إخطار أو تعليمات أو طلب أو أي اتصال آخر من العميل إلى الشركة كتابيًا وسيتم إرساله إلى عنوان مكتب TigerWit، والذي يظهر في صفحة \"اتصل بنا\" على موقعنا الإلكتروني (https://global.TigerWit.com).  وأي إخطار أو تعليمات أو طلب أو أي اتصال آخر يتم إرساله إلى الشركة يصبح ساري المفعول عند استلام الشركة له."
     },
     "amtClient192": {
         "zh": "2.任何情况下客户都不得将其在本客户协议项下的任何权利和/或义务转让或转移至其他自然人或法人。",
         "en": "2.The client shall not, under any circumstance, assign or transfer any of his/ her rights and/ or obligations under the Client Agreement to another natural or legal person.",
         "vi": "2.Khách hàng sẽ không, trong bất kỳ trường hợp nào, chuyển nhượng hoặc chuyển giao bất kỳ quyền và / hoặc nghĩa vụ nào của mình theo Hợp đồng khách hàng cho một cá nhân tự nhiên hoặc pháp nhân khác.",
         "zh-Hant": "2.任何情況下客戶都不得將其在本客戶協議項下的任何權利和/或義務轉讓或轉移至其他自然人或法人。",
-        "id": "2.The client shall not, under any circumstance, assign or transfer any of his/ her rights and/ or obligations under the Client Agreement to another natural or legal person.",
+        "id": "2. Klien tidak boleh, dalam keadaan apa pun, mengalihkan atau mentransfer hak dan / atau kewajibannya berdasarkan Perjanjian Klien kepada orang perseorangan atau badan hukum lainnya.",
         "es": "2. El cliente no deberá, bajo ninguna circunstancia, ceder o transferir ninguno de sus derechos y/u obligaciones en virtud del Acuerdo del Cliente a otra persona física o jurídica.",
         "pt-BR": "2.O cliente não poderá, em circunstância alguma, ceder ou transferir quaisquer dos seus direitos e / ou obrigações decorrentes do Contrato de Cliente para outra pessoa singular ou coletiva.",
         "ar": "2- لا يجوز للعميل تحت أي ظرف من الظروف التنازل عن أي من حقوقه و/أو التزاماته المحددة بموجب اتفاقية العميل أو نقلها إلى أي شخص طبيعي أو اعتباري آخر."
@@ -5856,7 +5856,7 @@ module.exports = {
         "en": "3.The Firm may, by way of written notice to the client, assign or transfer any of its rights and/ or obligations under the Client Agreement to another natural or legal person, in whole or in part provided that such natural or legal person agrees to abide by the Client Agreement.",
         "vi": "3.Công ty có thể, bằng cách thông báo bằng văn bản cho khách hàng, chuyển nhượng hoặc chuyển giao bất kỳ quyền và / hoặc nghĩa vụ của mình theo Hợp đồng khách hàng cho một cá nhân hoặc pháp nhân khác, toàn bộ hoặc một phần với điều kiện là pháp nhân hoặc pháp nhân đó đồng ý tuân theo Hợp đồng khách hàng. ",
         "zh-Hant": "3.本公司可以通過書面形式通知客戶，將其在本客戶協議項下的任何權利和/或義務全部或部分轉讓或轉移至其他自然人或法人，前提是該自然人或法人同意遵守本客戶協議。",
-        "id": "3.The Firm may, by way of written notice to the client, assign or transfer any of its rights and/ or obligations under the Client Agreement to another natural or legal person, in whole or in part provided that such natural or legal person agrees to abide by the Client Agreement.",
+        "id": "3. Perusahaan dapat, melalui pemberitahuan tertulis kepada klien, mengalihkan atau mentransfer hak dan / atau kewajibannya berdasarkan Perjanjian Klien kepada orang perseorangan atau badan hukum lainnya, secara keseluruhan atau sebagian dengan ketentuan bahwa orang alami atau badan hukum tersebut setuju. untuk mematuhi Perjanjian Klien.",
         "es": "3. La Firma puede, mediante notificación por escrito al cliente, ceder o transferir cualquiera de sus derechos y/u obligaciones en virtud del Acuerdo de Cliente a otra persona física o jurídica, en su totalidad o en parte, siempre que dicha persona física o jurídica esté de acuerdo. para cumplir con el Acuerdo del Cliente.",
         "pt-BR": "3.A Empresa pode, mediante notificação escrita ao cliente, ceder ou transferir qualquer dos seus direitos e / ou obrigações ao abrigo do Contrato de Cliente para outra pessoa singular ou colectiva, no todo ou em parte, desde que essa pessoa singular ou colectiva aceite cumprir o Contrato de Cliente.",
         "ar": "3- يجوز للشركة، بموجب إخطار كتابي إلى العميل، التنازل عن أي من حقوقها و/أو التزاماتها المحددة بموجب اتفاقية العميل أو نقلها إلى أي شخص طبيعي أو اعتباري آخر، سواء بشكل كلي أو جزئي، شريطة موافقة هذا الشخص الطبيعي أو الاعتباري على الالتزام باتفاقية العميل."
@@ -5866,7 +5866,7 @@ module.exports = {
         "en": "4.If, for any reason, a part of the Client Agreement is deemed to be unenforceable by a court of a competent jurisdiction then such part shall be severed from the Client Agreement and the remainder of the Client Agreement shall remain unaffected.",
         "vi": "4.Nếu, vì bất kỳ lý do nào, một phần của Hợp đồng khách hàng được coi là không thể thi hành bởi một tòa án có thẩm quyền thì phần đó sẽ bị cắt đứt khỏi Hợp đồng khách hàng và phần còn lại của Hợp đồng khách hàng sẽ không bị ảnh hưởng.",
         "zh-Hant": "4.如果出於任何原因，客戶協議的壹部分被有管轄權的法院認定為不具執行力，則該部分應從客戶協議中分割出去，本客戶協議的其余條款不受影響。",
-        "id": "4.If, for any reason, a part of the Client Agreement is deemed to be unenforceable by a court of a competent jurisdiction then such part shall be severed from the Client Agreement and the remainder of the Client Agreement shall remain unaffected.",
+        "id": "4. Jika, karena alasan apa pun, bagian dari Perjanjian Klien dianggap tidak dapat diberlakukan oleh pengadilan dari yurisdiksi yang kompeten, maka bagian tersebut harus diputus dari Perjanjian Klien dan sisa Perjanjian Klien akan tetap tidak terpengaruh.",
         "es": "4. Si, por algún motivo, una parte del Acuerdo del Cliente se considera inaplicable por un tribunal de una jurisdicción competente, dicha parte se separará del Acuerdo del Cliente y el resto del Acuerdo del Cliente no se verá afectado.",
         "pt-BR": "4. Se, por qualquer motivo, uma parte do Contrato de Cliente for considerada inexeqüível por um tribunal de uma jurisdição competente, essa parte deverá ser removida do Contrato do Cliente e o restante do Contrato do Cliente permanecerá inalterado.",
         "ar": "4- إذا حدث لأي سبب من الأسباب أن اعتبرت محكمة ذات ولاية قضائية مختصة أن جزءًا من اتفاقية العميل غير قابل للتنفيذ فإن هذا الجزء ينفصل عن اتفاقية العميل ولا تتأثر بقية أحكام اتفاقية العميل."
@@ -5876,7 +5876,7 @@ module.exports = {
         "en": "FAQs",
         "vi": "FAQs",
         "zh-Hant": "常見問題解答",
-        "id": "FAQs",
+        "id": "FAQ",
         "es": "PP.FF",
         "pt-BR": "FAQs",
         "ar": "أسئلة شائعة"
@@ -5886,7 +5886,7 @@ module.exports = {
         "en": "1.Questions regarding this Client Agreement or TigerWit's Terms and Conditions should be addressed, in the first instance, to the Customer Support Department.",
         "vi": "1.Các câu hỏi liên quan đến Hợp đồng khách hàng này hoặc Điều khoản và Điều kiện của TigerWit cần được giải quyết, ban đầu, được gửi đến Bộ phận Hỗ trợ Khách hàng.",
         "zh-Hant": "1.涉及本客戶協議或 TigerWit 條款與條件的問題首先應向客戶服務部咨詢。",
-        "id": "1.Questions regarding this Client Agreement or TigerWit's Terms and Conditions should be addressed, in the first instance, to the Customer Support Department.",
+        "id": "1.Pertanyaan tentang Perjanjian Klien ini atau Syarat dan Ketentuan TigerWit harus dialamatkan, pertama-tama, ke Departemen Dukungan Pelanggan.",
         "es": "1. Las preguntas relacionadas con este Acuerdo del cliente o los Términos y condiciones de TigerWit deben dirigirse, en primera instancia, al Departamento de atención al cliente.",
         "pt-BR": "1. Perguntas relativas a este Contrato de Cliente ou aos Termos e Condições da TigerWit devem ser endereçadas, em primeira instância, ao Departamento de Suporte ao Cliente.",
         "ar": "1- يجب أن يتم تقديم جميع الأسئلة المتعلقة باتفاقية العميل أو شروط وأحكام TigerWit أولاً إلى إدارة دعم العملاء."
@@ -5896,7 +5896,7 @@ module.exports = {
         "en": "2.Customer Support Department",
         "vi": "2.Bộ Phận Hỗ Trợ Khách Hàng",
         "zh-Hant": "2.客戶服務部",
-        "id": "2.Customer Support Department",
+        "id": "2. Departemen Dukungan Pelanggan",
         "es": "2. Departamento de Atención al Cliente",
         "pt-BR": "2. Departamento de Suporte ao Cliente",
         "ar": "2- إدارة دعم العملاء:"
@@ -5916,7 +5916,7 @@ module.exports = {
         "en": "Additional Contacts",
         "vi": "Địa Chỉ Liên Hệ Bổ Sung",
         "zh-Hant": "其他聯系人",
-        "id": "Additional Contacts",
+        "id": "Kontak Tambaha",
         "es": "Adicional Contacts",
         "pt-BR": "Contatos Adicionais",
         "ar": "بيانات اتصال إضافية"
@@ -5926,7 +5926,7 @@ module.exports = {
         "en": "1.Dealing Department",
         "vi": "1.Phòng Xử Lý",
         "zh-Hant": "1.交易部門",
-        "id": "1.Dealing Department",
+        "id": "1. Departemen Transaksi",
         "es": "1.Dealing Departamento",
         "pt-BR": "1. Departamento Comercial",
         "ar": "1- إدارة التداول"
@@ -5946,7 +5946,7 @@ module.exports = {
         "en": "2.Compliance Department",
         "vi": "2.Phòng Giám Sát",
         "zh-Hant": "2.合規部門",
-        "id": "2.Compliance Department",
+        "id": "2. Compliance Department",
         "es": "2.Compliance Departamento",
         "pt-BR": "2. Departamento de Complacência",
         "ar": "2- إدارة الامتثال"
@@ -6376,7 +6376,7 @@ module.exports = {
         "en": "This Privacy Policy and Cookie Disclosure describes how TigerWit (‘the Firm’) collects and uses information through its site www.tigerwit.com and global.tigerwit.com and any other related sites and applications. This Privacy Policy and Cookie Disclosure does not apply to websites operated by other organisations and other third parties.",
         "vi": "Chính sách Riêng Tư và Tiết lộ Cookie này mô tả cách TigerWit (‘Công ty’) thu thập và sử dụng thông tin thông qua trang web www.tigerwit.com và global.tigerwit.com và mọi trang web và ứng dụng liên quan khác. Chính sách Bảo mật và Tiết lộ Cookie này không áp dụng cho các trang web do các tổ chức khác và các bên thứ ba khác điều hành.",
         "zh-Hant": "本隱私政策和 Cookie 披露聲明介紹 TigerWit（ 以 下 簡 稱 “ 本 公 司 ” ） 如 何 通 過www.tigerwit.com、global.tigerwit.com 以及其他相關網站和應用程序收集和使用信息。本隱私政策和 Cookie 披露聲明不適用於其他機構和其他第三方運作的網站。",
-        "id": "This Privacy Policy and Cookie Disclosure describes how TigerWit (‘the Firm’) collects and uses information through its site www.tigerwit.com and global.tigerwit.com and any other related sites and applications. This Privacy Policy and Cookie Disclosure does not apply to websites operated by other organisations and other third parties.",
+        "id": "Kebijakan Privasi dan Pengungkapan Cookie ini menjelaskan bagaimana TigerWit ('Perusahaan') mengumpulkan dan menggunakan informasi melalui situsnya www.TigerWit.com dan global.TigerWit.com serta situs dan aplikasi terkait lainnya. Kebijakan Privasi dan Pengungkapan Cookie ini tidak berlaku untuk situs web yang dioperasikan oleh organisasi lain dan pihak ketiga lainnya.",
         "es": "Esta Política de Privacidad y Divulgación de cookies describe cómo TigerWit (\"la Firma\") recopila y utiliza información a través de su sitio www.tigerwit.com y global.tigerwit.com y cualquier otro sitio y aplicación relacionados. Esta Política de Privacidad y Divulgación de cookies no se aplica a los sitios web operados por otras organizaciones y terceros.",
         "pt-BR": "Esta Política de Privacidade e Divulgação de Cookies descreve como a TigerWit (\"a Empresa\") coleta e usa informações através de seu site www.tigerwit.com e global.tigerwit.com e quaisquer outros sites e aplicativos relacionados. Esta Política de Privacidade e a Divulgação de Cookies não se aplicam a sites operados por outras organizações e outros terceiros.",
         "ar": "تصف سياسة الخصوصية هذه والإفصاح عن ملفات تعريف الارتباط كيفية قيام TigerWit (\"الشركة\") بجمع واستخدام المعلومات من خلال موقعها الإلكتروني www.tigerwit.com وموقعها الإلكتروني global.tigerwit.com وأي مواقع وتطبيقات أخرى ذات صلة.  إن سياسة الخصوصية هذه والإفصاح عن ملفات تعريف الارتباط لا تسري على المواقع الإلكترونية التي تديرها مؤسسات أخرى والأطراف الثالثة الأخرى."
@@ -6386,7 +6386,7 @@ module.exports = {
         "en": "Commitment",
         "vi": "Cam kết",
         "zh-Hant": "承諾",
-        "id": "Commitment",
+        "id": "Komitmen",
         "es": "Compromiso",
         "pt-BR": "Comprometimento",
         "ar": "التزام"
@@ -6396,7 +6396,7 @@ module.exports = {
         "en": "TigerWit respects the privacy of any user that accesses its sites; therefore, the Firm is committed in taking all reasonable steps in safeguarding any existing or prospective clients, applicants and visitors.",
         "vi": "TigerWit tôn trọng quyền riêng tư của bất kỳ người dùng nào truy cập vào các trang web của mình; do đó, Công ty cam kết thực hiện tất cả các bước hợp lý trong việc bảo vệ bất kỳ khách hàng hiện tại hoặc khách hàng tiềm năng, người đăng kí và khách truy cập.",
         "zh-Hant": "TigerWit 尊重其網站用戶的隱私，因此，本公司承諾會采取壹切合理措施為現有及未來客戶、申請者和訪客提供保障。",
-        "id": "TigerWit respects the privacy of any user that accesses its sites; therefore, the Firm is committed in taking all reasonable steps in safeguarding any existing or prospective clients, applicants and visitors.",
+        "id": "TigerWit menghormati privasi setiap pengguna yang mengakses situsnya; oleh karena itu, Firma berkomitmen dalam mengambil semua langkah yang wajar dalam melindungi klien, applicants, dan pengunjung yang ada atau calon klien.",
         "es": "TigerWit respeta la privacidad de cualquier usuario que acceda a sus sitios; por lo tanto, la Firma se compromete a tomar todas las medidas razonables para proteger a cualquier cliente, solicitante y visitante existente o potencial.",
         "pt-BR": "A TigerWit respeita a privacidade de qualquer usuário que acesse seus sites; Portanto, a Empresa está comprometida em tomar todas as medidas razoáveis para salvaguardar quaisquer clientes, solicitantes e visitantes existentes ou potenciais.",
         "ar": "تحترم TigerWit خصوصية أي مستخدم يصل إلى مواقعها الإلكترونية؛ وبناء على ذلك فإن الشركة تلتزم باتخاذ جميع التدابير المعقولة من أجل حماية أي عميل أو مقدم طلب أو زائر حالي أو محتمل."
@@ -6404,9 +6404,9 @@ module.exports = {
     "amtCookie4": {
         "zh": "申请",
         "en": "Application",
-        "vi": "Đăng Kí",
+        "vi": "Áp Dụng",
         "zh-Hant": "申請",
-        "id": "Application",
+        "id": "Aplikasi",
         "es": "Solicitud",
         "pt-BR": "Aplicativo",
         "ar": "الطلب"
@@ -6416,7 +6416,7 @@ module.exports = {
         "en": "In order to open an account with TigerWit, you must first complete and send an application form by completing the required information. By completing the application form you are requested to disclose private information in order to enable the Firm to evaluate your application and comply with relevant rules and regulations. This information may also be used by the Firm to inform you regarding its services. Moreover, information about you may also be collected by any correspondence made with us by phone, e-mail or otherwise; including information which you enter when you register to use our site, subscribe to our service or any other activities carried out on our website or any connected applications. ",
         "vi": "Để mở một tài khoản với TigerWit, trước tiên bạn phải điền và gửi mẫu đơn bằng cách điền đầy đủ các thông tin cần thiết. Bằng cách hoàn thành mẫu đơn, bạn được yêu cầu tiết lộ thông tin cá nhân để cho phép Công ty đánh giá đơn đăng ký của bạn và tuân thủ các quy tắc và quy định có liên quan. Thông tin này cũng có thể được Công ty sử dụng để thông báo cho bạn về các dịch vụ của nó. Hơn nữa, thông tin về bạn cũng có thể được thu thập bởi bất kỳ mối liên quan nào được thực hiện với chúng tôi qua điện thoại, e-mail hoặc bằng cách khác; bao gồm thông tin bạn nhập khi đăng ký sử dụng trang web của chúng tôi, đăng ký dịch vụ của chúng tôi hoặc bất kỳ hoạt động nào khác được thực hiện trên trang web của chúng tôi hoặc bất kỳ ứng dụng được kết nối nào.",
         "zh-Hant": "要在 TigerWit 開設賬戶，您首先必須完整填寫必要的資料，填妥申請表並將其發送給本公司。您需要在申請表上披露私人資料，以便本公司評估您的申請和遵守相關的法律法規。本公司也可能使用此類資料為您提供服務方面的信息。此外，我們可能通過電話、發送郵件或其他任何通信方式收集與您相關的資料；包括您註冊使用本公司網站、預訂本公司服務或在本公司網站或其他相關應用程序上開展活動時所輸入的信息。",
-        "id": "In order to open an account with TigerWit, you must first complete and send an application form by completing the required information. By completing the application form you are requested to disclose private information in order to enable the Firm to evaluate your application and comply with relevant rules and regulations. This information may also be used by the Firm to inform you regarding its services. Moreover, information about you may also be collected by any correspondence made with us by phone, e-mail or otherwise; including information which you enter when you register to use our site, subscribe to our service or any other activities carried out on our website or any connected applications. ",
+        "id": "Untuk membuka akun dengan TigerWit, Anda harus melengkapi dan mengirim formulir aplikasi dengan melengkapi informasi yang diperlukan. Dengan mengisi formulir aplikasi, Anda diminta untuk mengungkapkan informasi pribadi untuk memungkinkan Perusahaan mengevaluasi aplikasi Anda dan mematuhi aturan dan regulasi yang relevan. Informasi ini juga dapat digunakan oleh Perusahaan untuk memberi tahu Anda tentang layanannya. Selain itu, informasi tentang Anda juga dapat dikumpulkan melalui korespondensi apa pun yang dilakukan dengan kami melalui telepon, email, atau lainnya; termasuk informasi yang Anda masukkan ketika Anda mendaftar untuk menggunakan situs kami, berlangganan layanan kami atau aktivitas lain yang dilakukan di situs web kami atau aplikasi apa pun yang terhubung.",
         "es": "Para abrir una cuenta con TigerWit, primero debe completar y enviar un formulario de solicitud completando la información requerida. Al completar el formulario de solicitud, se le solicita que divulgue información privada para permitir que la Firma evalúe su solicitud y cumpla con las normas y regulaciones pertinentes. Esta información también puede ser utilizada por la Firma para informarle sobre sus servicios. Además, la información sobre usted también puede ser recopilada vía cualquier correspondencia hecha con nosotros por teléfono, email o de otra manera; incluida la información que ingresa cuando se registra para utilizar nuestro sitio, suscribirse a nuestro servicio o cualquier otra actividad que se realice en nuestro sitio web o en cualquier aplicación conectada. ",
         "pt-BR": "Um TigerWit respeita a privacidade de qualquer usuário que acesse seus sites; Portanto, a Empresa está comprometida a tomar todas as medidas necessárias para salvaguardar clientes, solicitantes e visitantes existentes ou potenciais.",
         "ar": "من أجل فتح حساب مع TigerWit، يجب عليك أولاً ملء نموذج الطلب وإرساله بعد استكمال المعلومات المطلوبة.  عند ملء نموذج الطلب، سوف يُطلب منك الكشف عن معلومات خاصة من أجل تمكين الشركة من تقييم طلبك والامتثال للقواعد واللوائح ذات الصلة.  وقد تقوم الشركة أيضًا باستخدام هذه المعلومات لإحاطتك علمًا بخدماتها.  وبالإضافة إلى ذلك، يمكن أيضًا جمع معلومات عنك عن طريق أي اتصالات أو مراسلات بيننا وبينك سواء عبر الهاتف أو البريد الإلكتروني أو غير ذلك؛ بما في ذلك المعلومات التي تقوم بإدخالها عند التسجيل لاستخدام موقعنا الإلكتروني أو الاشتراك في خدمتنا أو في أي أنشطة أخرى يتم تنفيذها على موقعنا الإلكتروني أو في أي تطبيقات متصلة."
@@ -6426,7 +6426,7 @@ module.exports = {
         "en": "Confidentiality and Client's Personal Data Protection",
         "vi": "Bảo Mật Và Bảo Vệ Dữ Liệu Cá Nhân Của Khách Hàng",
         "zh-Hant": "保密性和保護客戶個人數據",
-        "id": "Confidentiality and Client's Personal Data Protection",
+        "id": "Kerahasiaan dan Perlindungan Data Pribadi Klien",
         "es": "Confidencialidad y Protección Datos Personales Cliente",
         "pt-BR": "Confidencialidade e Proteção de Dados Pessoais do Cliente",
         "ar": "السرية وحماية البيانات الشخصية للعملاء"
@@ -6436,7 +6436,7 @@ module.exports = {
         "en": "TigerWit Limited is registered with the Registrar General's Department of The Bahamas; therefore, any clients’ personal data is kept by TigerWit according to the laws and regulations of The Bahamas.",
         "vi": "TigerWit Limited được đăng ký với Tổng cục đăng ký Bahamas; do đó, bất kỳ dữ liệu cá nhân của khách hàng nào được TigerWit lưu giữ theo luật pháp và quy định của Bahamas.",
         "zh-Hant": "TigerWit Limited 在巴哈馬國註冊總局註冊；因此，任何客戶的個人數據均由TigerWit 依據巴哈馬國的法律法規進行保存。",
-        "id": "TigerWit Limited is registered with the Registrar General's Department of The Bahamas; therefore, any clients’ personal data is kept by TigerWit according to the laws and regulations of The Bahamas.",
+        "id": "TigerWit Limited terdaftar di Departemen Panitera General Bahama; oleh karena itu, setiap data pribadi klien disimpan oleh TigerWit sesuai dengan hukum dan peraturan Bahamas.",
         "es": "TigerWit Limited está registrado en el Registro General de las Bahamas; por lo tanto, los datos personales de cualquier cliente son guardados por TigerWit de acuerdo con las leyes y regulaciones de Bahamas.",
         "pt-BR": "A TigerWit Limited está registrada no Departamento Geral de Registradores das Bahamas; portanto, os dados pessoais de qualquer cliente são mantidos pela TigerWit de acordo com as leis e regulamentos das Bahamas.",
         "ar": "إن شركة TigerWit Limited مسجلة في إدارة السجل العام لجزر البهاما؛ وبناء على ذلك، تحتفظ TigerWit بالبيانات الشخصية لأي عميل وفقًا للقوانين واللوائح المعمول بها في جزر البهاما."
@@ -6446,7 +6446,7 @@ module.exports = {
         "en": "TigerWit shall not disclose to a third party, any of its clients’ confidential information unless required to do so by a regulatory authority of a competent jurisdiction; TigerWit will endeavour, to make such disclosures on a ‘need-to-know’ basis, unless otherwise instructed by a regulatory authority. ",
         "vi": "TigerWit không được tiết lộ cho bên thứ ba, bất kỳ thông tin bí mật nào của khách hàng trừ khi được yêu cầu bởi một cơ quan quản lý có thẩm quyền; TigerWit sẽ nỗ lực, để thực hiện tiết lộ như vậy trên cơ sở 'cần biết', trừ khi được chỉ dẫn bởi một cơ quan quản lý.",
         "zh-Hant": "除了在有合法管轄權的監管機構要求的情況下，TigerWit 不得向第三方披露客戶的任何保密信息；除非監管機構另有指示，TigerWit 將盡力基於“需者方知”原則進行披露。",
-        "id": "TigerWit shall not disclose to a third party, any of its clients’ confidential information unless required to do so by a regulatory authority of a competent jurisdiction; TigerWit will endeavour, to make such disclosures on a ‘need-to-know’ basis, unless otherwise instructed by a regulatory authority. ",
+        "id": "TigerWit tidak akan mengungkapkan kepada pihak ketiga, informasi rahasia klien mana pun kecuali diminta untuk melakukannya oleh otoritas regulasi dari yurisdiksi yang kompeten; TigerWit akan berusaha keras, untuk membuat pengungkapan tersebut atas dasar 'perlu mengetahui', kecuali diinstruksikan lain oleh otoritas regulasi.",
         "es": "TigerWit no divulgará a terceros la información confidencial de sus clientes, a menos que sea requerido por una autoridad reguladora de una jurisdicción competente; TigerWit se esforzará por realizar dichas divulgaciones sobre una base de \"necesidad de saber\", a menos que una autoridad reguladora indique lo contrario. ",
         "pt-BR": "A TigerWit não divulgará a terceiros, nenhuma informação confidencial de seus clientes, a menos que seja obrigada a fazê-lo por uma autoridade reguladora de uma jurisdição competente; A TigerWit se esforçará para fazer tais divulgações com base na \"necessidade de conhecimento\", a menos que instruído de outra forma por uma autoridade reguladora.",
         "ar": "لن تكشف TigerWit لأي أطراف ثالثة أي معلومات سرية خاصة بعملائها، ما لم تكن الشركة مطالبة بذلك من جانب هيئة رقابية وتنظيمية ذات ولاية قضائية مختصة؛ وسوف تسعى TigerWit إلى إجراء مثل هذه الإفصاحات على أساس \"الحاجة إلى المعرفة\"، ما لم تتلق الشركة تعليمات مخالفة لذلك من الهيئة الرقابية والتنظيمية."
@@ -6456,7 +6456,7 @@ module.exports = {
         "en": "Under such circumstances, the Firm shall expressly inform the third party regarding the confidential nature of the information.",
         "vi": "Trong những trường hợp như vậy, Công ty phải thông báo rõ ràng cho bên thứ ba về bản chất bí mật của thông tin.",
         "zh-Hant": "在此情況下，公司應明確告知第三方信息的保密性質。",
-        "id": "Under such circumstances, the Firm shall expressly inform the third party regarding the confidential nature of the information.",
+        "id": "Dalam keadaan seperti itu, Perusahaan harus secara tegas memberi tahu pihak ketiga mengenai sifat rahasia informasi tersebut",
         "es": "En tales circunstancias, la Firma informará expresamente al tercero sobre la naturaleza confidencial de la información.",
         "pt-BR": "Sob tais circunstâncias, a Empresa deverá informar expressamente a terceiros sobre a natureza confidencial das informações.",
         "ar": "وفي مثل هذه الظروف، تقوم الشركة بإبلاغ الطرف الثالث صراحة بالطبيعة السرية للمعلومات."
@@ -6466,7 +6466,7 @@ module.exports = {
         "en": "Clients accept and consent that TigerWit may, from time to time, contractually engage companies for statistical and/or other purposes in order to improve the Firm’s business activities; as a result, some or all of the clients’ personal data may be disclosed.",
         "vi": "Khách hàng chấp nhận và đồng ý rằng TigerWit có thể, theo thời gian, tham gia vào hợp đồng với các công ty nhằm mục đích thống kê và / hoặc các mục đích khác để cải thiện hoạt động kinh doanh của Công ty; do đó, một số hoặc tất cả dữ liệu cá nhân của khách hàng có thể được tiết lộ.",
         "zh-Hant": "客戶同意並許可，TigerWit 可以不定期地出於統計或其他目的以合約方式聘用本公司，以提升本公司的業務活動；因而部分或全部的客戶個人數據可能會被披露。",
-        "id": "Clients accept and consent that TigerWit may, from time to time, contractually engage companies for statistical and/or other purposes in order to improve the Firm’s business activities; as a result, some or all of the clients’ personal data may be disclosed.",
+        "id": "Klien menerima dan menyetujui bahwa TigerWit dapat, dari waktu ke waktu, secara kontrak melibatkan perusahaan untuk tujuan statistik dan / atau tujuan lain untuk meningkatkan aktivitas bisnis Perusahaan; akibatnya, beberapa atau semua data pribadi klien mungkin terungkap.",
         "es": "Los clientes aceptan y dan su consentimiento para que TigerWit pueda, de vez en cuando, contratar empresas con fines estadísticos u otros para mejorar las actividades comerciales de la Firma; como resultado, algunos o todos los datos personales de los clientes pudieran ser divulgados.",
         "pt-BR": "Os clientes aceitam e consentem que a TigerWit possa, de tempos em tempos, contratar contratualmente empresas para fins estatísticos e / ou outros, a fim de melhorar as atividades de negócios da Empresa; Como resultado, alguns ou todos os dados pessoais dos clientes podem ser divulgados.",
         "ar": "يقبل العملاء ويوافقون على أنه يجوز أن تقوم TigerWit، من وقت لآخر، بالتعاقد مع شركات لأغراض إحصائية أو لأغراض أخرى من أجل تحسين الأنشطة التجارية للشركة؛ ونتيجة لذلك، قد يتم الكشف عن بعض أو كل البيانات الشخصية للعملاء."
@@ -6476,7 +6476,7 @@ module.exports = {
         "en": "Disclosure of your information",
         "vi": "Tiết lộ thông tin của bạn",
         "zh-Hant": "披露您的信息",
-        "id": "Disclosure of your information",
+        "id": "Pengungkapan informasi Anda",
         "es": "Divulgación de su información",
         "pt-BR": "Divulgação de sua informação",
         "ar": "الإفصاح عن المعلومات الخاصة بك"
@@ -6486,7 +6486,7 @@ module.exports = {
         "en": "We may share your personal information with any member of our group, which means any subsidiaries, ultimate holding companies and its respective subsidiaries may receive such information. We may also share your information with certain third parties including business partners, suppliers and sub-contractors and advertisers. In the event that TigerWit discloses information to business parties, for instance, card processing companies or banks, in order to effect the services requested by the clients; such third parties may store your information in order to comply with their legal and other obligations.",
         "vi": "Chúng tôi có thể chia sẻ thông tin cá nhân của bạn với bất kỳ thành viên nào trong nhóm của chúng tôi, có nghĩa là bất kỳ công ty con, công ty nắm giữ cuối cùng nào và các công ty con tương ứng đều có thể nhận được thông tin đó. Chúng tôi cũng có thể chia sẻ thông tin của bạn với một số bên thứ ba bao gồm đối tác kinh doanh, nhà cung cấp và nhà thầu phụ và nhà quảng cáo. Trong trường hợp TigerWit tiết lộ thông tin cho các bên kinh doanh, ví dụ, các công ty xử lý thẻ hoặc ngân hàng, để thực hiện các dịch vụ theo yêu cầu của khách hàng; các bên thứ ba đó có thể lưu trữ thông tin của bạn để tuân thủ các nghĩa vụ pháp lý và các nghĩa vụ khác của họ.",
         "zh-Hant": "我們可能與集團成員共享您的個人信息，這意味著任何子公司、最終控股公司及其各自的子公司都有可能收到這類信息。我們也可能將您的信息與若幹第三方共享，包括商業合作夥伴、供應商、分包商和廣告商。例如，為了提供客戶所要求的服務，TigerWit 向辦卡公司或銀行等業務合作夥伴披露您的信息；這類第三方為遵守法律及其他義務也許會保存您的信息。",
-        "id": "We may share your personal information with any member of our group, which means any subsidiaries, ultimate holding companies and its respective subsidiaries may receive such information. We may also share your information with certain third parties including business partners, suppliers and sub-contractors and advertisers. In the event that TigerWit discloses information to business parties, for instance, card processing companies or banks, in order to effect the services requested by the clients; such third parties may store your information in order to comply with their legal and other obligations.",
+        "id": "Kami dapat membagikan informasi pribadi Anda dengan anggota grup kami, yang berarti setiap anak perusahaan, perusahaan induk akhir, dan anak perusahaan masing-masing dapat menerima informasi tersebut. Kami juga dapat membagikan informasi Anda dengan pihak ketiga tertentu termasuk mitra bisnis, pemasok dan subkontraktor dan pengiklan. Dalam hal TigerWit mengungkapkan informasi kepada pihak bisnis, misalnya perusahaan pengolah kartu atau bank, untuk mempengaruhi layanan yang diminta oleh klien; pihak ketiga tersebut dapat menyimpan informasi Anda untuk mematuhi kewajiban hukum dan kewajiban lainnya.",
         "es": "Podemos compartir su información personal con cualquier miembro de nuestro grupo, lo que significa que cualquier subsidiaria, empresa controlada y sus respectivas subsidiarias pueden recibir dicha información. También podemos compartir su información con terceros, incluidos socios comerciales, proveedores y subcontratistas y anunciantes. En el caso de que TigerWit divulgue información a las partes comerciales, por ejemplo, compañías procesadoras de tarjetas o bancos, para efectuar los servicios solicitados por los clientes; dichos terceros pueden almacenar su información para cumplir con sus obligaciones legales y de otro tipo.",
         "pt-BR": "Podemos compartilhar suas informações pessoais com qualquer membro do nosso grupo, o que significa que qualquer subsidiária, holding e suas respectivas subsidiárias podem receber tais informações. Também podemos compartilhar suas informações com determinados terceiros, incluindo parceiros de negócios, fornecedores e subcontratados e anunciantes. No caso de a TigerWit divulgar informações a partes de negócios, por exemplo, empresas de processamento de cartões ou bancos, para efetuar os serviços solicitados pelos clientes; esses terceiros podem armazenar suas informações para cumprir suas obrigações legais e outras.",
         "ar": "يجوز لنا مشاركة المعلومات الشخصية الخاصة بك مع أي عضو في مجموعتنا، مما يعني أن أي شركات تابعة أو شركات قابضة وفروعها التابعة يمكن أن تحصل على هذه المعلومات. ويجوز لنا أيضًا مشاركة معلوماتك مع بعض الأطراف الثالثة، والتي تشمل شركاء الأعمال والموردين والمقاولين الفرعيين والمعلنين. وإذا قامت TigerWit بالإفصاح عن المعلومات للأطراف في الأعمال التجارية، على سبيل المثال لشركات معالجة البطاقات أو البنوك، من أجل أداء الخدمات التي يطلبها العملاء؛ يجوز لهذه الأطراف الثالثة تخزين المعلومات الخاصة بك من أجل الوفاء بالالتزامات القانونية وغيرها من الالتزامات."
@@ -6496,7 +6496,7 @@ module.exports = {
         "en": "Information we may collect about you",
         "vi": "Thông tin chúng tôi có thể thu thập về bạn",
         "zh-Hant": "收集的個人信息類型",
-        "id": "Information we may collect about you",
+        "id": "Informasi yang mungkin kami kumpulkan tentang Anda",
         "es": "Información que podemos recopilar sobre usted",
         "pt-BR": "Informações que podemos coletar sobre você",
         "ar": "المعلومات التي يمكن أن نجمعها عنك"
@@ -6506,7 +6506,7 @@ module.exports = {
         "en": "Tracking systems used on the Firm’s site(s) may collect data detailing the pages you have accessed, how you discovered this site, the frequency of visits etc; this information is obtained in order to improve the content of the Firm’s site(s) and may also be used by TigerWit to contact you, through an appropriate mean, and provide you with any information the Firm believes to be useful.",
         "vi": "Các hệ thống sao chép được sử dụng trên (các) trang web của Công ty có thể thu thập dữ liệu chi tiết các trang bạn đã truy cập, cách bạn khám phá trang web này, tần suất truy cập, v.v. thông tin này thu được để cải thiện nội dung của (các) trang web của Công ty và cũng có thể được TigerWit sử dụng để liên hệ với bạn, thông qua một phương tiện thích hợp và cung cấp cho bạn bất kỳ thông tin nào mà Công ty cho là hữu ích.",
         "zh-Hant": "本公司網站使用的追蹤系統會搜集您所訪問網頁、您如何發現此網站、網站訪問頻率等詳細資料；本公司獲取這類資料，是為了改善本公司網站的內容，TigerWit 也可能通過適當的方式與您聯系，為您提供本公司認為對您有用的信息。",
-        "id": "Tracking systems used on the Firm’s site(s) may collect data detailing the pages you have accessed, how you discovered this site, the frequency of visits etc; this information is obtained in order to improve the content of the Firm’s site(s) and may also be used by TigerWit to contact you, through an appropriate mean, and provide you with any information the Firm believes to be useful.",
+        "id": "Sistem pelacakan yang digunakan di situs Perusahaan dapat mengumpulkan data yang merinci halaman yang telah Anda akses, bagaimana Anda menemukan situs ini, frekuensi kunjungan, dll; informasi ini diperoleh untuk meningkatkan konten situs Perusahaan dan juga dapat digunakan oleh TigerWit untuk menghubungi Anda, melalui cara yang tepat, dan memberi Anda informasi yang diyakini berguna oleh Perusahaan.",
         "es": "Los sistemas de seguimiento utilizados en los sitios de la Firma pueden recopilar datos que detallan las páginas a las que ha accedido, cómo descubrió este sitio, la frecuencia de las visitas, etc. esta información se obtiene para mejorar el contenido de los sitios de la Firma y también puede ser utilizada por TigerWit para contactarlo, a través de un medio apropiado, y proporcionarle cualquier información que la Firma considere útil.",
         "pt-BR": "Os sistemas de rastreamento usados no (s) site (s) da empresa podem coletar dados detalhando as páginas acessadas, como você descobriu este site, a frequência das visitas, etc; Essas informações são obtidas para melhorar o conteúdo do (s) site (s) da Firma e também podem ser usadas pela TigerWit para contatá-lo, através de um meio apropriado, e fornecer a você qualquer informação que a Empresa acredita ser útil.",
         "ar": "يجوز لأنظمة التتبع المستخدمة في موقع (مواقع) الشركة أن تجمع بيانات توضح بالتفصيل الصفحات التي قمت بالوصول إليها، وكيفية اكتشافك لهذا الموقع، وتكرار الزيارات، الخ؛ ويتم الحصول على هذه المعلومات من أجل تحسين محتوى موقع (مواقع) الشركة، ويجوز أيضًا أن تستخدمها TigerWit للاتصال بك باستخدام وسيلة مناسبة، ولإمدادك بأي معلومات تعتقد الشركة أنها مفيدة لك."
@@ -6516,7 +6516,7 @@ module.exports = {
         "en": "With regards to each of your visits to our site, we may, automatically collect information including internet protocol (IP) address, login information, browser type and version, time zone, phone numbers used to call our customer service number. We may receive information about you from third parties, for instance business partners, subcontractors, advertising networks, analytics providers, search information providers, credit reference agencies.",
         "vi": "Đối với mỗi lượt truy cập vào trang web của chúng tôi, chúng tôi có thể tự động thu thập thông tin bao gồm địa chỉ giao thức internet (IP), thông tin đăng nhập, loại trình duyệt và phiên bản, múi giờ, số điện thoại được sử dụng để gọi đến số dịch vụ khách hàng của chúng tôi. Chúng tôi có thể nhận thông tin về bạn từ bên thứ ba, ví dụ như đối tác kinh doanh, nhà thầu phụ, mạng quảng cáo, nhà cung cấp phân tích, nhà cung cấp thông tin tìm kiếm, cơ quan tham chiếu tín dụng.",
         "zh-Hant": "當您每次訪問我們的網站，我們會自動收集互聯網協議(IP)地址、登錄信息、瀏覽器類型及版本、時區、撥打本公司服務熱線的電話號碼等信息。我們會通過第三方收集與您相關的信息，例如商業合作夥伴、分包商、廣告公司、分析服務供應商、調查信息供應商、信用調查機構等。",
-        "id": "With regards to each of your visits to our site, we may, automatically collect information including internet protocol (IP) address, login information, browser type and version, time zone, phone numbers used to call our customer service number. We may receive information about you from third parties, for instance business partners, subcontractors, advertising networks, analytics providers, search information providers, credit reference agencies.",
+        "id": "Berkenaan dengan setiap kunjungan Anda ke situs kami, kami dapat, secara otomatis mengumpulkan informasi termasuk alamat protokol internet (IP), informasi login, jenis dan versi browser, zona waktu, nomor telepon yang digunakan untuk menghubungi nomor layanan pelanggan kami. Kami dapat menerima informasi tentang Anda dari pihak ketiga, misalnya mitra bisnis, subkontraktor, jaringan periklanan, penyedia analitik, penyedia informasi pencarian, agen referensi kredit.",
         "es": "Con respecto a cada una de sus visitas a nuestro sitio, podemos recopilar automáticamente información que incluya la dirección del protocolo de Internet (IP), la información de inicio de sesión, el tipo y la versión del navegador, la zona horaria, los números de teléfono utilizados para llamar a nuestro número de Servicio al Cliente. Podemos recibir información sobre usted de terceros, por ejemplo, socios comerciales, subcontratistas, redes de publicidad, proveedores de análisis, proveedores de información de búsqueda, agencias de referencia de crédito.",
         "pt-BR": "Com relação a cada uma de suas visitas ao nosso site, podemos coletar automaticamente informações, incluindo endereço IP, informações de login, tipo e versão do navegador, fuso horário, números de telefone usados para ligar para o nosso número de atendimento ao cliente. Podemos receber informações sobre você de terceiros, por exemplo, parceiros de negócios, subcontratados, redes de publicidade, provedores de análises, provedores de informações de pesquisa, agências de referência de crédito.",
         "ar": "فيما يتعلق بكل زيارة من زياراتك لموقعنا، يجوز لنا أن نقوم بشكل آلي بجمع المعلومات التي تشمل عنوان بروتوكول الإنترنت ومعلومات تسجيل الدخول ونوع متصفح الإنترنت وإصداره والمنطقة الزمنية وأرقام الهاتف المستخدم للاتصال برقم خدمة العملاء. ويجوز أن نتلقى معلومات عنك من أطراف ثالثة، والتي تشمل على سبيل المثال شركاء الأعمال والمقاولين الفرعيين وشبكات الإعلان ومزودي التحليلات ومزودي معلومات البحث ووكالات المراجع الائتمانية."
@@ -6526,7 +6526,7 @@ module.exports = {
         "en": "Choice/Opt-out",
         "vi": "Chọn / Chọn không tham gia",
         "zh-Hant": "選擇/選擇退出",
-        "id": "Choice/Opt-out",
+        "id": "Pilihan / Keluar",
         "es": "Opción/Opt-out",
         "pt-BR": "Escolha/Opt-out",
         "ar": "الخيار/ إلغاء الاشتراك"
@@ -6536,7 +6536,7 @@ module.exports = {
         "en": "If you no longer wish to receive any communication from the Firm, you may opt-out of by following the relevant instructions included in each communication sent by TigerWit. TigerWit reserves the right to contact you, albeit the fact that you have opted out, in cases where TigerWit deems such contact as necessary.",
         "vi": "Nếu bạn không còn muốn nhận bất kỳ thông tin liên lạc nào từ Công ty, bạn có thể chọn không tham gia bằng cách làm theo các hướng dẫn có liên quan được bao gồm trong mỗi thông báo được gửi bởi TigerWit. TigerWit có quyền liên lạc với bạn, mặc dù thực tế là bạn đã chọn không tham gia, trong trường hợp TigerWit coi như liên hệ đó là cần thiết.",
         "zh-Hant": "若您不想繼續從本公司接收任何通訊，您可以根據 TigerWit 發送的每份通訊中的相關指示選擇退出。縱然事實上妳已經選擇退出，但是TigerWit 保留在 TigerWit 認為必要時與您聯系的權利。",
-        "id": "If you no longer wish to receive any communication from the Firm, you may opt-out of by following the relevant instructions included in each communication sent by TigerWit. TigerWit reserves the right to contact you, albeit the fact that you have opted out, in cases where TigerWit deems such contact as necessary.",
+        "id": "Jika Anda tidak lagi ingin menerima komunikasi apa pun dari Perusahaan, Anda dapat memilih keluar dengan mengikuti instruksi terkait yang disertakan dalam setiap komunikasi yang dikirim oleh TigerWit. TigerWit berhak untuk menghubungi Anda, meskipun Anda telah memilih keluar, dalam kasus di mana TigerWit menganggap kontak tersebut diperlukan.",
         "es": "Si ya no desea recibir ninguna comunicación de la Firma, puede optar por no seguirla siguiendo las instrucciones relevantes incluidas en cada comunicación enviada por TigerWit. TigerWit se reserva el derecho de contactarlo, aunque haya optado por no participar, en los casos en que TigerWit considere que dicho contacto es necesario.",
         "pt-BR": "Se você não deseja mais receber nenhuma comunicação da Empresa, você pode optar por não seguir as instruções relevantes incluídas em cada comunicação enviada pela TigerWit. A TigerWit reserva-se o direito de entrar em contato com você, ainda que tenha optado por não participar, nos casos em que a TigerWit considere tal contato como necessário.",
         "ar": "إذا لم تعد ترغب في تلقي أي اتصال من الشركة، يمكنك اختيار إلغاء الاشتراك في تلقي الاتصالات من خلال إتباع الإرشادات ذات الصلة الواردة في كل اتصال ترسله إليك TigerWit.  وتحتفظ TigerWit لنفسها بالحق في الاتصال بك ، حتى إذا اخترت إلغاء الاشتراك في تلقي الاتصالات، في الحالات التي تعتبر فيها TigerWit أن هذا الاتصال ضروري"
@@ -6546,7 +6546,7 @@ module.exports = {
         "en": "You shall be notified accordingly if your personal information is collected by any third party that is not our agent/ service provider, so you can make an informed decision as to whether or not you want to share your information with that party.",
         "vi": "Bạn sẽ được thông báo một cách phù hợp nếu thông tin cá nhân của bạn được thu thập bởi bất kỳ bên thứ ba nào không phải là đại lý / nhà cung cấp dịch vụ của chúng tôi, vì vậy bạn có thể đưa ra quyết định về việc có muốn chia sẻ thông tin của bạn với bên đó hay không.",
         "zh-Hant": "當本公司代理或服務供應商以外的第三方收集了您的個人信息，我們會向您告知此事，以便您在知情的情況下決定是否與該第三方分享您的信息。",
-        "id": "You shall be notified accordingly if your personal information is collected by any third party that is not our agent/ service provider, so you can make an informed decision as to whether or not you want to share your information with that party.",
+        "id": "Anda akan diberi tahu jika informasi pribadi Anda dikumpulkan oleh pihak ketiga mana pun yang bukan merupakan agen / penyedia layanan kami, sehingga Anda dapat membuat keputusan berdasarkan informasi apakah Anda ingin membagikan informasi Anda dengan pihak tersebut atau tidak.",
         "es": "Se le notificará en consecuencia si su información personal es recopilada por un tercero que no es nuestro agente/proveedor de servicios, por lo que puede tomar una decisión informada sobre si desea o no compartir su información con esa parte.",
         "pt-BR": "Você será notificado adequadamente se suas informações pessoais forem coletadas por terceiros que não sejam nossos agentes / prestadores de serviços, para que você possa tomar uma decisão informada sobre se deseja ou não compartilhar suas informações com essa parte.",
         "ar": "سيتم إحاطتك علمًا في حال جمع معلوماتك الشخصية بواسطة طرف ثالث غير وكيلنا/ مزود الخدمة لنا، حتى يمكنك اتخاذ قرار مستنير بشأن ما إذا كنت ترغب في مشاركة معلوماتك مع هذا الطرف أم لا."
@@ -6566,7 +6566,7 @@ module.exports = {
         "en": "A cookie is a small text file that is stored on a user's computer for record-keeping purposes. TigerWit uses cookies on its site(s).",
         "vi": "Cookie là một tệp văn bản nhỏ được lưu trữ trên máy tính của người dùng cho mục đích lưu giữ hồ sơ. TigerWit sử dụng cookie trên (các) trang web của nó.",
         "zh-Hant": "Cookie 是用於記錄信息而保存在用戶電腦中的小文本文件。TigerWit 在其網站上使用 cookie。",
-        "id": "A cookie is a small text file that is stored on a user's computer for record-keeping purposes. TigerWit uses cookies on its site(s).",
+        "id": "Cookie adalah file teks kecil yang disimpan di komputer pengguna untuk tujuan penyimpanan catatan. TigerWit menggunakan cookie di situsnya.",
         "es": "Una cookie es un pequeño archivo de texto que se almacena en la computadora de un usuario para fines de mantenimiento de registros. TigerWit utiliza cookies en su(s) sitio(s).",
         "pt-BR": "Um cookie é um pequeno arquivo de texto que é armazenado no computador de um usuário para fins de manutenção de registros. TigerWit usa cookies em seu (s) site (s).",
         "ar": "ملف تعريف الارتباط (cookie) هو ملف نصي صغير يتم تخزينه على جهاز الكمبيوتر الخاص بالمستخدم من أجل أغراض حفظ السجلات.  تستخدم TigerWit ملفات تعريف الارتباط على مواقعها الإلكترونية."
@@ -6576,7 +6576,7 @@ module.exports = {
         "en": "TigerWit uses both session ID cookies and persistent cookies. A session ID cookie does not expire when you close your browser. A persistent cookie remains on your hard drive for an extended period of time. You can remove persistent cookies by following directions provided in your Internet browser's ‘Help’ file.",
         "vi": "TigerWit sử dụng cả cookie ID và cookie liên tục- persistent (không bị xóa khi đóng trình duyệt). Cookie ID không hết hạn khi bạn đóng trình duyệt của mình. Một cookie liên tục (persistent) vẫn còn trên ổ cứng của bạn trong một khoảng thời gian dài. Bạn có thể xóa cookie liên tục bằng cách làm theo các hướng dẫn được cung cấp trong file 'Trợ giúp' của trình duyệt Internet của bạn.",
         "zh-Hant": "TigerWit 使用會話 ID cookie 和持久 cookie。關閉 瀏 覽 器 不 會 讓 會 話 ID cookie 結 束 。 持 久cookie 會在您的硬盤中保存壹段時間。您可以根據互聯網瀏覽器中“幫助”文件的指示刪除持久 cookie。",
-        "id": "TigerWit uses both session ID cookies and persistent cookies. A session ID cookie does not expire when you close your browser. A persistent cookie remains on your hard drive for an extended period of time. You can remove persistent cookies by following directions provided in your Internet browser's ‘Help’ file.",
+        "id": "TigerWit menggunakan cookie ID sesi dan cookie persisten. Cookie ID sesi tidak kedaluwarsa saat Anda menutup browser Anda. Cookie tetap ada di hard drive Anda untuk jangka waktu yang lama. Anda dapat menghapus cookie yang ada dengan mengikuti petunjuk yang diberikan di file 'Bantuan' browser Internet Anda.",
         "es": "TigerWit utiliza cookies de identificación de sesión y cookies persistentes. Una cookie de ID de sesión no caduca cuando cierra su navegador. Una cookie persistente permanece en su disco duro durante un período prolongado de tiempo. Puede eliminar las cookies persistentes siguiendo las instrucciones proporcionadas en el archivo de \"Ayuda\" de su navegador de Internet.",
         "pt-BR": "A TigerWit usa cookies de ID de sessão e cookies persistentes. Um cookie de ID de sessão não expira quando você fecha o navegador. Um cookie persistente permanece no seu disco rígido por um longo período de tempo. Você pode remover cookies persistentes seguindo as instruções fornecidas no arquivo \"Ajuda\" do navegador da Internet.",
         "ar": "تستخدم TigerWit كل من ملفات تعريف الارتباط المؤقتة وملفات تعريف الارتباط الدائمة.  فملف تعريف الارتباط المؤقت تنتهي صلاحيته عندما تقوم بإغلاق متصفح الإنترنت.  أما ملف تعريف الارتباط الدائم فيظل على القرص الصلب بجهازك لفترة طويلة من الزمن.  ويمكنك حذف ملفات تعريف الارتباط الدائمة عن طريق إتباع التعليمات الموجودة في ملف \"المساعدة\" بمتصفح الإنترنت الذي تستخدمه."
@@ -6586,7 +6586,7 @@ module.exports = {
         "en": "TigerWit sets a persistent cookie for statistical purposes. Persistent cookies also enable the Firm to track and target the location and the interests of users that access the TigerWit site(s) and to enhance the experience of services offered.",
         "vi": "TigerWit đặt một cookie liên tục cho các mục đích thống kê. Cookie liên tục cũng cho phép Công ty sao chép và nhắm mục tiêu vị trí và sở thích của người dùng truy cập (các) trang web TigerWit và để nâng cao trải nghiệm của các dịch vụ được cung cấp.",
         "zh-Hant": "TigerWit 出於統計的目的設置持久 cookie。持久cookie 可幫助本公司追蹤和確定位置以及訪問TigerWit 網站的用戶的偏好，從而提升我們的服務體驗。",
-        "id": "TigerWit sets a persistent cookie for statistical purposes. Persistent cookies also enable the Firm to track and target the location and the interests of users that access the TigerWit site(s) and to enhance the experience of services offered.",
+        "id": "TigerWit menetapkan cookie tetap untuk tujuan statistik. Cookie persisten juga memungkinkan Perusahaan untuk melacak dan menargetkan lokasi dan minat pengguna yang mengakses situs TigerWit dan untuk meningkatkan pengalaman layanan yang ditawarkan.",
         "es": "TigerWit establece una cookie persistente para fines estadísticos. Las cookies persistentes también permiten a la Firma rastrear y orientar la ubicación y los intereses de los usuarios que acceden al (los) sitio (s) de TigerWit y mejorar la experiencia de los servicios ofrecidos.",
         "pt-BR": "TigerWit define um cookie persistente para fins estatísticos. Os cookies persistentes também permitem que a Empresa rastreie e direcione a localização e os interesses dos usuários que acessam o (s) site (s) TigerWit e melhorem a experiência dos serviços oferecidos.",
         "ar": "تستخدم TigerWit ملفات تعريف الارتباط الدائمة لأغراض إحصائية.  وتفيد ملفات تعريف الارتباط الدائمة أيضًا في مساعدة الشركة في تتبع واستهداف مواقع ومصالح المستخدمين الذين يقومون بالوصول إلى مواقع TigerWit الإلكترونية فضلا عن فائدتها في تحسين تجربة الخدمات المقدمة."
@@ -6596,7 +6596,7 @@ module.exports = {
         "en": "If you reject cookies, you may still use the TigerWit sites, but you may not be able to use the online account opening website to submit your application form. ",
         "vi": "Nếu bạn từ chối cookie, bạn vẫn có thể sử dụng các trang TigerWit, nhưng bạn không thể sử dụng trang web mở tài khoản trực tuyến để gửi mẫu đơn đăng ký của bạn.",
         "zh-Hant": "若您拒絕 cookie，您依然可以使用 TigerWit 的網站，但是卻無法使用開戶網站提交您的申請表。",
-        "id": "If you reject cookies, you may still use the TigerWit sites, but you may not be able to use the online account opening website to submit your application form. ",
+        "id": "Jika Anda menolak cookie, Anda masih dapat menggunakan situs TigerWit, tetapi Anda mungkin tidak dapat menggunakan situs web pembukaan akun online untuk mengirimkan formulir aplikasi Anda.",
         "es": "Si rechaza las cookies, podrá continuar usando el sitio TigerWit, pero no podrá usar el procedimiento de apertura de cuenta online para enviar el formulario de su solicitud. ",
         "pt-BR": "Se você rejeitar cookies, ainda poderá usar os sites da TigerWit, mas poderá não conseguir usar o site de abertura de contas online para enviar seu formulário de inscrição.",
         "ar": "إذا قمت برفض ملفات تعريف الارتباط، يمكنك مواصلة استخدام مواقع TigerWit الإلكترونية، ولكن قد لا تستطيع استخدام الموقع الإلكتروني لفتح الحسابات على الإنترنت لتقديم نموذج الطلب الخاص بك."
@@ -6606,7 +6606,7 @@ module.exports = {
         "en": "Some of the TigerWit business partners use cookies on the Firm’s sites; TigerWit has no access or control over these cookies.",
         "vi": "Một số đối tác kinh doanh của TigerWit sử dụng cookie trên các trang web của Công ty; TigerWit không có quyền truy cập hoặc kiểm soát các cookie này.",
         "zh-Hant": "TigerWit 的部分商業合作夥伴也使用本公司網站的 cookie；TigerWit 無法訪問或控制這類 cookie。",
-        "id": "Some of the TigerWit business partners use cookies on the Firm’s sites; TigerWit has no access or control over these cookies.",
+        "id": "Beberapa mitra bisnis TigerWit menggunakan cookie di situs Perusahaan; TigerWit tidak memiliki akses atau kontrol atas cookie ini.",
         "es": "Algunos de los socios comerciales de TigerWit usan cookies en los sitios de la Firma; TigerWit no tiene acceso ni control sobre estas cookies.",
         "pt-BR": "Alguns dos parceiros comerciais da TigerWit usam cookies nos sites da Firma; TigerWit não tem acesso ou controle sobre esses cookies.",
         "ar": "يستخدم بعض شركاء الأعمال لشركة TigerWit ملفات تعريف الارتباط على المواقع الإلكترونية للشركة؛ وليس للشركة أي وصول أو تحكم على ملفات تعريف الارتباط هذه."
@@ -6616,7 +6616,7 @@ module.exports = {
         "en": "Security and Protection of your personal information",
         "vi": "Bảo Mật Và Bảo Vệ Thông Tin Cá Nhân Của Bạn",
         "zh-Hant": "個人信息的安全性和保護措施",
-        "id": "Security and Protection of your personal information",
+        "id": "Keamanan dan Perlindungan informasi pribadi Anda",
         "es": "Seguridad y Protección de su información personal.",
         "pt-BR": "Segurança e Proteção da sua informação pessoal",
         "ar": "أمن وحماية معلوماتك الشخصية"
@@ -6626,17 +6626,17 @@ module.exports = {
         "en": "The personal information that you provide in connection with registering yourself as a user of the sites or of the services is classified as ‘Registered Information. ‘Registered Information’ is protected in many ways. You can access your ‘Registered Information’ through a username and password selected by you. It is your responsibility to ensure that your password is encrypted and known only to you. Your password must not be revealed to anyone. ‘Registered Information’ is safely stored on secure servers that only authorised personnel have access to via a username and password. The Firm encrypts all personal information as it is transferred to TigerWit and thus makes all necessary effort to prevent unauthorised parties from viewing any such information. Personal information provided to TigerWit that is not ‘Registered Information’ also resides on secure servers and is again accessible only by authorised personnel via a username and password this information cannot be accessible by you, therefore no password shall be provided in order for you to modify this.",
         "vi": "Thông tin cá nhân mà bạn cung cấp liên quan đến việc đăng ký bản thân với tư cách là người dùng trang web hoặc dịch vụ được phân loại là 'Thông tin đã đăng ký. ‘Thông tin đã đăng ký’ được bảo vệ theo nhiều cách. Bạn có thể truy cập ‘Thông tin đã đăng ký’ của mình thông qua tên người dùng và mật khẩu do bạn chọn. Bạn có trách nhiệm đảm bảo rằng mật khẩu của bạn được mã hóa và chỉ bạn biết. Mật khẩu của bạn không được tiết lộ cho bất kỳ ai. ‘Thông tin đã đăng ký’ được lưu trữ an toàn trên các máy chủ bảo mật chỉ cho phép nhân viên có quyền truy cập thông qua tên người dùng và mật khẩu. Công ty mã hóa tất cả thông tin cá nhân khi nó được chuyển sang TigerWit và do đó thực hiện mọi nỗ lực cần thiết để ngăn các bên trái phép xem bất kỳ thông tin nào như vậy. Thông tin cá nhân cung cấp cho TigerWit không phải là 'Thông tin đăng ký' cũng nằm trên máy chủ bảo mật và chỉ có thể truy cập được bởi nhân viên được ủy quyền thông qua tên người dùng và mật khẩu thông tin này không thể được truy cập bởi bạn vì thế sẽ không có mật khẩu được cung cấp để cho bạn sửa đổi.",
         "zh-Hant": "您為註冊成為網站用戶或服務用戶而提供的個人信息被歸類為“註冊信息”，有多種保護“註冊信息”的方法。您可以通過您選擇的用戶名及密碼訪問您的“註冊信息”。確保密碼加密且僅本人知曉是您的個人責任。絕不能向他人泄露您的密碼。“註冊信息”被安全地存儲在安全服務器中，只有獲得授權的員工才能通過用戶名和密碼訪問這類信息。本公司在所有個人信息發送給 TigerWit 時對其進行加密，並會盡壹切努力防止未獲授權者查看這類信息。即使提供給 TigerWit 的個人信息並非“註冊信息”，也會將其存儲在安全的服務器中，只有獲得授權的員工才能通過用戶名和密碼訪問這類信息，您個人無法訪問這類信息，因此不會為了您修改這類信息而提供密碼。",
-        "id": "The personal information that you provide in connection with registering yourself as a user of the sites or of the services is classified as ‘Registered Information. ‘Registered Information’ is protected in many ways. You can access your ‘Registered Information’ through a username and password selected by you. It is your responsibility to ensure that your password is encrypted and known only to you. Your password must not be revealed to anyone. ‘Registered Information’ is safely stored on secure servers that only authorised personnel have access to via a username and password. The Firm encrypts all personal information as it is transferred to TigerWit and thus makes all necessary effort to prevent unauthorised parties from viewing any such information. Personal information provided to TigerWit that is not ‘Registered Information’ also resides on secure servers and is again accessible only by authorised personnel via a username and password this information cannot be accessible by you, therefore no password shall be provided in order for you to modify this.",
+        "id": "Informasi pribadi yang Anda berikan sehubungan dengan pendaftaran diri Anda sebagai pengguna situs atau layanan diklasifikasikan sebagai 'Informasi Terdaftar. 'Informasi Terdaftar' dilindungi dengan banyak cara. Anda dapat mengakses 'Informasi Terdaftar' Anda melalui nama pengguna dan kata sandi yang Anda pilih. Merupakan tanggung jawab Anda untuk memastikan bahwa kata sandi Anda dienkripsi dan hanya diketahui oleh Anda. Kata sandi Anda tidak boleh diungkapkan kepada siapa pun. 'Informasi Terdaftar' disimpan dengan aman di server aman yang hanya dapat diakses oleh personel yang berwenang melalui nama pengguna dan kata sandi. Perusahaan mengenkripsi semua informasi pribadi saat ditransfer ke TigerWit dan dengan demikian melakukan semua upaya yang diperlukan untuk mencegah pihak yang tidak berwenang melihat informasi tersebut. Informasi pribadi yang diberikan kepada TigerWit yang bukan 'Informasi Terdaftar' juga berada di server yang aman dan hanya dapat diakses oleh personel yang berwenang melalui nama pengguna dan kata sandi informasi ini tidak dapat diakses oleh Anda, oleh karena itu tidak ada kata sandi yang akan diberikan agar Anda dapat mengubahnya.",
         "es": "La información personal que proporciona en relación con su registro como usuario de los sitios o de los servicios se clasifica como ‘Información registrada’. La ‘Información registrada’ está protegida de muchas maneras. Puede acceder a su ‘Información registrada’ a través de un nombre de usuario y contraseña seleccionados por usted. Es su responsabilidad asegurarse de que su contraseña esté cifrada y sea conocida sólo por usted. Su contraseña no debe ser revelada a nadie. La ‘Información registrada’ se almacena de forma segura en servidores seguros a los que sólo el personal autorizado tiene acceso mediante un nombre de usuario y contraseña. La Firma encripta toda la información personal cuando se transfiere a TigerWit y, por lo tanto, adopta los esfuerzos necesarios para evitar que terceros no autorizados vean dicha información. La información personal proporcionada a TigerWit que no es 'Información registrada' también reside en servidores seguros y de igual modo sólo es accesible por personal autorizado a través de un nombre de usuario y contraseña. Esta información no puede ser accesible por usted, por lo tanto, no se proporcionará una contraseña para que usted pueda modificarla.",
         "pt-BR": "As informações pessoais fornecidas em conexão com o registro de você como usuário dos sites ou dos serviços são classificadas como \"Informações Registradas\". \"Informações Registradas\" é protegido de várias maneiras. Você pode acessar suas informações registradas por meio de um nome de usuário e senha selecionados por você. É sua responsabilidade garantir que sua senha seja criptografada e conhecida apenas por você. Sua senha não deve ser revelada para ninguém. As \"informações registradas\" são armazenadas com segurança em servidores seguros aos quais somente pessoas autorizadas têm acesso por meio de um nome de usuário e senha. A Empresa criptografa todas as informações pessoais à medida que são transferidas para a TigerWit e, portanto, faz todo o esforço necessário para evitar que partes não autorizadas visualizem tais informações. As informações pessoais fornecidas à TigerWit que não são 'Informações Registradas' também residem em servidores seguros e estão novamente acessíveis apenas por pessoal autorizado através de um nome de usuário e senha. Essas informações não podem ser acessadas por você, portanto nenhuma senha deve ser fornecida para você modificar isto.",
         "ar": "يتم تصنيف المعلومات الشخصية التي تقدمها والمتعلقة بتسجيلك كمستخدم للمواقع الإلكترونية أو الخدمات باعتبارها \"معلومات مسجلة\". ويتم حماية  \"المعلومات المسجلة\" بعدة طرق.  ويمكنك الوصول إلى معلوماتك المسجلة من خلال اسم المستخدم وكلمة المرور اللذان قمت باختيارهما.  وأنت تتحمل مسؤولية التأكد من أن كلمة مرورك مشفرة ولا يعرفها أحد سواك.  ويجب عدم الكشف عن كلمة المرور الخاصة بك لأي شخص على الإطلاق.  ويتم تخزين \"المعلومات المسجلة\" بشكل آمن على خوادم مؤمنة بحيث لا يمكن الوصول إليها إلا بواسطة الموظفين المصرح لهم فقط من خلال اسم مستخدم وكلمة مرور. وتقوم الشركة بتشفير جميع المعلومات الشخصية عندما يتم نقلها إلى TigerWit، وبالتالي فإنها تبذل جميع الجهود اللازمة لمنع الأطراف غير المصرح لها من مشاهدة هذه المعلومات.  ويتم أيضًا الاحتفاظ بالمعلومات الشخصية التي يتم تقديمها إلى TigerWit والغير مصنفة باعتبارها \"معلومات مسجلة\" على خوادم مؤمنة ولا يمكن الوصول إليها أيضًا إلا بواسطة الموظفين المصرح لهم فقط من خلال اسم المستخدم وكلمة المرور. ولا يمكن لك الوصول إلى هذه المعلومات، وبناء على ذلك لن يتم منحك كلمة مرور لتعديل هذه المعلومات."
     },
     "amtCookie27": {
-        "zh": "通过互联网传输信息并不总是 100%安全；我们将尽一切努力保护您的个人数据，但不能保证传输您的数据的安全性；您要自行承担传输数据的风险。一旦我们收到您的信息，我们会采用相应程序以及安全功能，尽量阻止未获授权的访问。另外，我们向您收集的数据可能会被传送到以及储存在巴哈马以外的地方。本公司或本公司供应商在巴哈马以外地区从事活动的员工也可处理这类信息。这类员工可能执行您的订单、处理您的支付情况以及提供支持服务（包括其他）。您提交个人数据，即表示您同意此类数据传送、储存及处理。本公司将采取一切可能的措施确保在安全并遵守此隐私政策的情况下处理您的数据。",
+        "zh": "通过互联网传输信息并不总是 100%安全；我们将尽一切努力保护您的个人数据，但不能保证传输您的数据的安全性；您要自行承担传输数据的风险。一旦我们收到您的信息，我们会采用相应程序以及安全功能，尽量阻止未获授权的访问。另外，我们向您收集的数据可能会被传送到以及储存在巴哈马以外的地方。本公司或本公司供应商在巴哈马以外地区从事活动的员工也可处理这类信息。这类员工可能执行您的订单、处理您的支付情况以及提供支持服务（包括其他）。您提交个人数据，即表示您同意此类数据传送、储存及处理。本公司将采取一切合理必要的措施确保在安全并遵守 2003 年数据保护（个人信息隐私）法和此隐私政策的情况下处理您的数据。",
         "en": "Transmission of information via the internet is not always completely secure; we will exercise all endeavours to protect your personal data yet we cannot guarantee the security of your data transmitted; any transmission is at your own risk. Once we have received your information we will use procedures and security features to try to prevent unauthorised access. Furthermore, the data we collect from you may be transferred to, and stored at, a destination outside The Bahamas. It may also be processed by staff operating outside The Bahamas who work for us or for one of our suppliers. Such staff maybe engaged in, among other things, the fulfilment of your order, the processing of your payment details and the provision of support services. By submitting your personal data, you agree to this transfer, storing and processing. The Firm will take all steps reasonably necessary to ensure that your data is treated securely and in accordance with this Privacy Policy.",
-        "vi": "Việc truyền tải thông tin qua internet không phải lúc nào cũng an toàn; chúng tôi sẽ thực hiện tất cả các nỗ lực để bảo vệ dữ liệu cá nhân của bạn nhưng chúng tôi không thể đảm bảo tính bảo mật của dữ liệu được truyền; bất kỳ sự truyền tải nào đều có nguy cơ đối với riêng bạn. Khi chúng tôi đã nhận được thông tin của bạn, chúng tôi sẽ sử dụng các thủ tục và tính năng bảo mật để cố gắng ngăn chặn truy cập trái phép. Hơn nữa, các dữ liệu chúng tôi thu thập từ bạn có thể được chuyển đến, và được lưu trữ tại, một điểm đến bên ngoài Bahamas. Thông tin cũng có thể được xử lý bởi nhân viên hoạt động bên ngoài The Bahamas, người làm việc cho chúng tôi hoặc cho một trong những nhà cung cấp của chúng tôi. Các nhân viên như vậy có thể tham gia, trong số những công việc khác, việc thực hiện các lệnh của bạn, xử lý các thông tin thanh toán của bạn và cung cấp các dịch vụ hỗ trợ. Bằng cách gửi dữ liệu cá nhân của bạn, bạn đồng ý với việc chuyển, lưu trữ và xử lý này. Công ty sẽ thực hiện tất cả các bước cần thiết một cách hợp lý để đảm bảo rằng dữ liệu của bạn được xử lý an toàn và tuân theo Chính sách bảo mật này.",
-        "zh-Hant": "通過互聯網傳輸信息並不總是 100%安全；我們將盡壹切努力保護您的個人數據，但不能保證傳輸您的數據的安全性；您要自行承擔傳輸數據的風險。壹旦我們收到您的信息，我們會采用相應程序以及安全功能，盡量阻止未獲授權的訪問。另外，我們向您收集的數據可能會被傳送到以及儲存在巴哈馬以外的地方。本公司或本公司供應商在巴哈馬以外地區從事活動的員工也可處理這類信息。這類員工可能執行您的訂單、處理您的支付情況以及提供支持服務（包括其他）。您提交個人數據，即表示您同意此類數據傳送、儲存及處理。本公司將采取壹切可能的措施確保在安全並遵守此隱私政策的情況下處理您的數據。",
-        "id": "Transmission of information via the internet is not always completely secure; we will exercise all endeavours to protect your personal data yet we cannot guarantee the security of your data transmitted; any transmission is at your own risk. Once we have received your information we will use procedures and security features to try to prevent unauthorised access. Furthermore, the data we collect from you may be transferred to, and stored at, a destination outside The Bahamas. It may also be processed by staff operating outside The Bahamas who work for us or for one of our suppliers. Such staff maybe engaged in, among other things, the fulfilment of your order, the processing of your payment details and the provision of support services. By submitting your personal data, you agree to this transfer, storing and processing. The Firm will take all steps reasonably necessary to ensure that your data is treated securely and in accordance with this Privacy Policy.",
+        "vi": "Việc truyền tải thông tin qua internet không phải lúc nào cũng an toàn; chúng tôi sẽ thực hiện tất cả các nỗ lực để bảo vệ dữ liệu cá nhân của bạn nhưng chúng tôi không thể đảm bảo tính bảo mật của dữ liệu được truyền; bất kỳ sự truyền tải nào đều có nguy cơ đối với riêng bạn. Khi chúng tôi đã nhận được thông tin của bạn, chúng tôi sẽ sử dụng các thủ tục và tính năng bảo mật để cố gắng ngăn chặn truy cập trái phép. Hơn nữa, các dữ liệu chúng tôi thu thập từ bạn có thể được chuyển đến, và được lưu trữ tại, một điểm đến bên ngoài Bahamas. Thông tin cũng có thể được xử lý bởi nhân viên hoạt động bên ngoài The Bahamas, người làm việc cho chúng tôi hoặc cho một trong những nhà cung cấp của chúng tôi. Các nhân viên như vậy có thể tham gia, trong số những công việc khác, việc thực hiện các lệnh của bạn, xử lý các thông tin thanh toán của bạn và cung cấp các dịch vụ hỗ trợ. Bằng cách gửi dữ liệu cá nhân của bạn, bạn đồng ý với việc chuyển, lưu trữ và xử lý này. Công ty sẽ thực hiện tất cả các bước cần thiết một cách hợp lý để đảm bảo rằng dữ liệu của bạn được xử lý an toàn và tuân theo Chính Sách Bộ Luật Bảo Mật Dữ Liệu (Bảo Mật Dữ Liệu Khách Hàng) 2003 và với Chính sách bảo mật này.",
+        "zh-Hant": "通過互聯網傳輸信息並不總是 100%安全；我們將盡壹切努力保護您的個人數據，但不能保證傳輸您的數據的安全性；您要自行承擔傳輸數據的風險。壹旦我們收到您的信息，我們會采用相應程序以及安全功能，盡量阻止未獲授權的訪問。另外，我們向您收集的數據可能會被傳送到以及儲存在巴哈馬以外的地方。本公司或本公司供應商在巴哈馬以外地區從事活動的員工也可處理這類信息。這類員工可能執行您的訂單、處理您的支付情況以及提供支持服務（包括其他）。您提交個人數據，即表示您同意此類數據傳送、儲存及處理。本公司將採取一切合理合理的必要措施確保在安全並遵守2003年數據保護（個人信息隱私）法和此隱私政策的情況下處理您的數據。",
+        "id": "Transmisi informasi melalui internet tidak selalu sepenuhnya aman; kami akan melakukan semua upaya untuk melindungi data pribadi Anda namun kami tidak dapat menjamin keamanan data Anda yang dikirimkan; semua transmisi menjadi risiko Anda sendiri. Setelah kami menerima informasi Anda, kami akan menggunakan prosedur dan fitur keamanan untuk mencoba mencegah akses yang tidak sah. Lebih lanjut, data yang kami kumpulkan dari Anda dapat ditransfer ke, dan disimpan di, tujuan di luar Bahama. Ini juga dapat diproses oleh staf yang beroperasi di luar Bahama yang bekerja untuk kita atau untuk salah satu pemasok kita. Staf tersebut mungkin terlibat dalam, antara lain, pemenuhan pesanan Anda, pemrosesan detail pembayaran Anda, dan penyediaan layanan dukungan. Dengan mengirimkan data pribadi Anda, Anda menyetujui transfer, penyimpanan, dan pemrosesan ini. Perusahaan akan mengambil semua langkah yang diperlukan secara wajar untuk memastikan bahwa data Anda diperlakukan dengan aman dan sesuai dengan Undang-Undang Perlindungan Data (Privasi Informasi Pribadi), 2003 dan Kebijakan Privasi ini.",
         "es": "La transmisión de información a través de Internet no siempre es completamente segura; haremos todo lo posible para proteger sus datos personales, pero no podemos garantizar la seguridad de sus datos transmitidos; Cualquier transmisión es bajo su propio riesgo. Una vez que hayamos recibido su información, utilizaremos procedimientos y funciones de seguridad para intentar evitar el acceso no autorizado. Además, los datos que recopilamos de usted pueden transferirse y almacenarse en un destino fuera de las Bahamas. También puede ser procesado por el personal que opera fuera de las Bahamas que trabaja para nosotros o para uno de nuestros proveedores. Dicho personal puede realizar, entre otras cosas, el cumplimiento de su orden, el procesamiento de sus datos de pago y la prestación de servicios de soporte. Al enviar sus datos personales, acepta esta transferencia, almacenamiento y procesamiento. La Firma adoptará todos los pasos razonablemente necesarios para garantizar que sus datos se traten de forma segura y de acuerdo con esta Política de privacidad.",
         "pt-BR": "A transmissão de informações pela internet nem sempre é completamente segura; Nós exerceremos todos os esforços para proteger seus dados pessoais, mas não podemos garantir a segurança de seus dados transmitidos; qualquer transmissão é por sua conta e risco. Assim que recebermos suas informações, usaremos procedimentos e recursos de segurança para tentar impedir o acesso não autorizado. Além disso, os dados que coletamos de você podem ser transferidos e armazenados em um destino fora das Bahamas. Também pode ser processado por funcionários que operam fora das Bahamas que trabalham para nós ou para um de nossos fornecedores. Essa equipe pode estar envolvida, entre outras coisas, no cumprimento de seu pedido, no processamento de seus detalhes de pagamento e na prestação de serviços de suporte. Ao enviar seus dados pessoais, você concorda com esta transferência, armazenamento e processamento. A Empresa tomará todas as medidas razoavelmente necessárias para garantir que seus dados sejam tratados com segurança e de acordo com esta Política de Privacidade.",
         "ar": "إن نقل المعلومات عبر الإنترنت ليس آمنًا بصورة كاملة دائمًا؛ ونحن سنبذل قصارى جهدنا لحماية بياناتك الشخصية، ولكننا مع ذلك لا يمكن أن نضمن أمان بياناتك المنقولة؛ وأي نقل للبيانات يكون على مسؤوليتك الشخصية.  وبعد استلامنا للمعلومات الخاصة بك، سوف نستخدم إجراءات وعوامل الأمان من أجل محاولة منع الوصول غير المصرح به لها. وبالإضافة إلى ذلك، قد يتم نقل البيانات التي نجمعها منك وتخزينها في مكان يقع خارج جزر البهاما.  كما يمكن أن تتم معالجة هذه البيانات بواسطة موظفين يعملون خارج جزر البهاما والذين يعملون معنا أو مع أحد الموردين المتعاونين معنا.  وقد يشارك هؤلاء الموظفين، من بين جملة أمور أخرى، في تنفيذ أوامرك ومعالجة تفاصيل الدفع الخاصة بك وتقديم خدمات الدعم. وبموجب قيامك بياناتك الشخصية، فأنت توافق على هذا النقل للبيانات وتخزينها ومعالجتها.  وسوف تتخذ الشركة جميع الإجراءات المعقولة لضمان التعامل مع بياناتك بشكل آمن ووفقًا لسياسة الخصوصية هذه."
@@ -6646,7 +6646,7 @@ module.exports = {
         "en": "Access to Personally Identifiable Information",
         "vi": "Truy cập thông tin nhận dạng cá nhân",
         "zh-Hant": "訪問個人身份信息",
-        "id": "Access to Personally Identifiable Information",
+        "id": "Akses ke Informasi Identitas Pribadi",
         "es": "Acceso a información de identificación personal",
         "pt-BR": "Acesso a informações pessoalmente identificáveis",
         "ar": "الوصول إلى المعلومات المحددة للهوية الشخصية"
@@ -6656,7 +6656,7 @@ module.exports = {
         "en": "If your personally identifiable information changes, you must inform us accordingly; please e-mail us ",
         "vi": "Nếu thông tin cá nhân của bạn thay đổi, bạn phải thông báo cho chúng tôi; xin vui lòng gửi e-mail cho chúng tôi đến địa chỉ ",
         "zh-Hant": "如果您的個人身份信息發生變更，您必須知會我們，請發送郵件至",
-        "id": "If your personally identifiable information changes, you must inform us accordingly; please e-mail us ",
+        "id": "Jika informasi pribadi Anda berubah, Anda harus memberi tahu kami sebagaimana mestinya; silakan e-mail kami ",
         "es": "Si su información personal de identificación cambiara, debe informarnos acordemente; por favor envíenos un e-mail ",
         "pt-BR": "Se suas informações pessoalmente identificáveis mudarem, você deve nos informar de acordo; por favor envie-nos um e-mail ",
         "ar": "إذا طرأ أي تغيير على المعلومات المحددة لهويتك الشخصية، يجب عليك إبلاغنا بذلك؛ يرجى مراسلاتنا على البريد الإلكتروني."
@@ -6666,7 +6666,7 @@ module.exports = {
         "en": "Legal Disclaimer",
         "vi": "Tuyên Bố Từ Chối Trách Nhiệm Pháp Lý",
         "zh-Hant": "法律免責聲明",
-        "id": "Legal Disclaimer",
+        "id": "Penafian Hukum",
         "es": "Notas Legales",
         "pt-BR": "Isenção Legal",
         "ar": "إخلاء المسؤولية القانونية"
@@ -6676,7 +6676,7 @@ module.exports = {
         "en": "TigerWit reserves the right to disclose your personally identifiable information as required by rules and regulations and when the Firm believes that disclosure is necessary to protect our rights and/or to comply with any judicial and/or other proceedings, court order, legal process served or pursuant to governmental, intergovernmental and/or other regulatory bodies. TigerWit shall not be liable for misuse or loss of personal information and/or otherwise on the Firm’s sites that TigerWit does not have access to or control over. TigerWit will not be liable for unlawful or unauthorised use of your personal information due to misuse or misplacement of your passwords, negligent or malicious intervention and/or otherwise.",
         "vi": "TigerWit bảo lưu quyền tiết lộ thông tin cá nhân của bạn theo yêu cầu của các quy tắc và quy định và khi Công ty tin rằng việc tiết lộ là cần thiết để bảo vệ quyền và / hoặc tuân thủ mọi thủ tục tố tụng và / hoặc thủ tục khác, lệnh của tòa, quy trình pháp lý được cung cấp hoặc theo cơ quan chính phủ, liên chính phủ và / hoặc các cơ quan quản lý khác. TigerWit sẽ không chịu trách nhiệm về việc lạm dụng hoặc mất thông tin cá nhân và / hoặc trên trang web của Công ty mà TigerWit không có quyền truy cập hoặc kiểm soát. TigerWit sẽ không chịu trách nhiệm về việc sử dụng trái phép hoặc trái phép thông tin cá nhân của bạn do lạm dụng hoặc đặt sai mật khẩu của bạn, sự can thiệp cẩu thả hoặc độc hại và / hoặc cách khác.",
         "zh-Hant": "TigerWit 有權根據規則及條例，以及在本公司為了保護本公司權利或為了遵守政府、政府間或其他監管機構頒布、或與之相關的司法和其他程序、法庭判令、法律流程而認為有必要披露的情況下披露您的個人身份信息。對於本公司網站上的私人信息或其他信息被濫用或損失的情況，由於 TigerWit 對這類信息沒有訪問權或控制權，故 TigerWit 不承擔任何責任。因為您的密碼使用不當或被遺忘、疏忽大意或惡意幹預等情況而導致您的個人信息被不法盜用或擅自使用，TigerWit 不承擔責任。",
-        "id": "TigerWit reserves the right to disclose your personally identifiable information as required by rules and regulations and when the Firm believes that disclosure is necessary to protect our rights and/or to comply with any judicial and/or other proceedings, court order, legal process served or pursuant to governmental, intergovernmental and/or other regulatory bodies. TigerWit shall not be liable for misuse or loss of personal information and/or otherwise on the Firm’s sites that TigerWit does not have access to or control over. TigerWit will not be liable for unlawful or unauthorised use of your personal information due to misuse or misplacement of your passwords, negligent or malicious intervention and/or otherwise.",
+        "id": "TigerWit berhak untuk mengungkapkan informasi pribadi Anda seperti yang dipersyaratkan oleh aturan dan peraturan dan ketika Perusahaan percaya bahwa pengungkapan diperlukan untuk melindungi hak kami dan / atau untuk mematuhi setiap proses peradilan dan / atau lainnya, perintah pengadilan, proses hukum yang dijalankan atau sesuai dengan badan pemerintah, antar pemerintah dan / atau badan pengatur lainnya. TigerWit tidak bertanggung jawab atas penyalahgunaan atau kehilangan informasi pribadi dan / atau sebaliknya di situs Perusahaan yang tidak dapat diakses atau dikendalikan oleh TigerWit. TigerWit tidak akan bertanggung jawab atas penggunaan informasi pribadi Anda yang melanggar hukum atau tidak sah karena penyalahgunaan atau kesalahan penempatan kata sandi Anda, intervensi yang lalai atau jahat dan / atau sebaliknya.",
         "es": "TigerWit se reserva el derecho de divulgar su información de identificación personal según lo exigen las normas y reglamentos, y cuando la Firma considere que dicha divulgación fuera necesaria para proteger nuestros derechos y/o para cumplir con cualquier procedimiento judicial y/o de otra índole, orden judicial, proceso legal o De conformidad con los organismos gubernamentales, intergubernamentales y/u otros organismos reguladores. TigerWit no será responsable por el mal uso o la pérdida de información personal y/o de otra manera en los sitios de la Firma a los que TigerWit no tiene acceso o control. TigerWit no será responsable por el uso ilegal o no autorizado de su información personal debido al mal uso o la mala colocación de sus contraseñas, la intervención negligente o maliciosa y/o de otra forma.",
         "pt-BR": "A TigerWit reserva-se o direito de divulgar suas informações pessoalmente identificáveis conforme exigido pelas regras e regulamentos e quando a Empresa acreditar que a divulgação é necessária para proteger nossos direitos e / ou para cumprir quaisquer processos judiciais e / ou outros, ordem judicial, processo legal servido ou de acordo com órgãos governamentais, intergovernamentais e / ou outros órgãos reguladores. A TigerWit não será responsável por mau uso ou perda de informações pessoais e / ou de outra forma nos sites da Empresa que a TigerWit não tenha acesso ou controle. A TigerWit não será responsável pelo uso ilegal ou não autorizado de suas informações pessoais devido ao uso indevido ou extravio de suas senhas, intervenção negligente ou maliciosa e / ou de outra forma.",
         "ar": "تحتفظ TigerWit لنفسها بالحق في الكشف عن المعلومات المحددة لهويتك الشخصية حسبما تقتضيه القواعد واللوائح وعندما تعتقد الشركة أن هذا الكشف عن المعلومات ضروري من أجل حماية حقوقنا و/أو الامتثال لأي إجراءات قضائية و/أو غيرها أو أمر محكمة أو الإجراءات القانونية أو وفقًا لما تقتضيه الهيئات الحكومية أو  الهيئات الحكومية الدولية و/أو الهيئات الرقابية والتنظيمية الأخرى.  ولا تتحمل TigerWit أي مسؤولية عن سوء استخدام أو فقدان المعلومات الشخصية و/أو غيرها على مواقع الشركة الإلكترونية أو على المواقع الإلكترونية التي ليس بمقدور TigerWit الوصول إليها أو التحكم فيها.  ولا تتحمل TigerWit أي مسؤولية عن الاستخدام غير القانوني أو غير المصرح به لمعلوماتك الشخصية الناجم عن إساءة استخدام كلمات المرور الخاصة بك أو الإهمال أو التدخل الضار و/أو خلاف ذلك."
@@ -6686,7 +6686,7 @@ module.exports = {
         "en": "Changes in this Privacy Statement",
         "vi": "Thay đổi trong Tuyên bố về quyền riêng tư này",
         "zh-Hant": "本隱私聲明的變更",
-        "id": "Changes in this Privacy Statement",
+        "id": "Perubahan dalam Pernyataan Privasi ini",
         "es": "Cambios en esta Declaración de Privacidad",
         "pt-BR": "Alterações nesta declaração de privacidade",
         "ar": "التغييرات التي تطرأ على بيان الخصوصية هذا"
@@ -6696,7 +6696,7 @@ module.exports = {
         "en": "If we decide to change our privacy policy, we will post those changes to this privacy statement, the page, and other places we deem appropriate so that you are aware of what information we collect, how we use it, and under what circumstances, if any, we disclose it.",
         "vi": "Nếu chúng tôi quyết định thay đổi chính sách bảo mật của mình, chúng tôi sẽ đăng những thay đổi đó lên tuyên bố về quyền riêng tư, trang và các địa điểm khác mà chúng tôi cho là phù hợp để bạn biết thông tin nào chúng tôi thu thập, cách chúng tôi sử dụng và trong hoàn cảnh nào bất kỳ, chúng tôi tiết lộ nó.",
         "zh-Hant": "如果我們決定修改隱私政策，我們會公布對此隱私聲明、頁數以及任何我們認為合適的地方所做的修改，以便您了解我們所收集的信息類型、使用方式以及進行披露的情況。",
-        "id": "If we decide to change our privacy policy, we will post those changes to this privacy statement, the page, and other places we deem appropriate so that you are aware of what information we collect, how we use it, and under what circumstances, if any, we disclose it.",
+        "id": "Jika kami memutuskan untuk mengubah kebijakan privasi kami, kami akan memposting perubahan tersebut ke pernyataan privasi ini, halaman, dan tempat lain yang kami anggap tepat sehingga Anda mengetahui informasi apa yang kami kumpulkan, bagaimana kami menggunakannya, dan dalam keadaan apa, jika apapun, kami mengungkapkannya.",
         "es": "Si decidimos cambiar nuestra política de privacidad, publicaremos esos cambios en esta declaración de privacidad, en la página y en otros lugares que consideremos apropiados para que esté al tanto de qué información recopilamos, cómo la usamos y bajo qué circunstancias, si las hubiera, nosotros lo compartiríamos.",
         "pt-BR": "Se decidirmos alterar nossa política de privacidade, publicaremos essas alterações nesta declaração de privacidade, na página e em outros locais que julgarmos apropriados, para que você saiba quais informações coletamos, como as usamos e em quais circunstâncias, se qualquer um, nós divulgamos isso.",
         "ar": "إذا قررنا تغيير سياسة الخصوصية، سنقوم بنشر هذه التغييرات في بيان الخصوصية هذا، وعلى الصفحة، وفي الأماكن الأخرى التي نراها مناسبة حتى تكون على علم بالمعلومات التي نجمعها وكيفية استخدامنا لها وفي أي ظروف، إن وجدت، نقوم بالكشف عنها."
@@ -6706,7 +6706,7 @@ module.exports = {
         "en": "We reserve the right to modify this privacy statement at any time, so please review it frequently. If we make material changes to this policy, we will notify you here, by email, or by means of a notice on our home page.",
         "vi": "Chúng tôi bảo lưu quyền sửa đổi tuyên bố về quyền riêng tư này bất kỳ lúc nào, vì vậy hãy thường xuyên xem xét nó. Nếu chúng tôi thực hiện các thay đổi quan trọng đối với chính sách này, chúng tôi sẽ thông báo cho bạn tại đây, qua email hoặc bằng thông báo trên trang chủ của chúng tôi.",
         "zh-Hant": "我們保留隨時修改此隱私聲明的權利，請經常瀏覽此聲明。如果我們對此政策做出重大調整，我們會以郵件或在網站首頁發出通知的形式通知您。",
-        "id": "We reserve the right to modify this privacy statement at any time, so please review it frequently. If we make material changes to this policy, we will notify you here, by email, or by means of a notice on our home page.",
+        "id": "Kami berhak mengubah pernyataan privasi ini kapan saja, jadi harap sering-sering memeriksanya. Jika kami membuat perubahan material pada kebijakan ini, kami akan memberi tahu Anda di sini, melalui email, atau melalui pemberitahuan di halaman beranda kami.",
         "es": "Nos reservamos el derecho de modificar esta declaración de privacidad en cualquier momento, así que revísela con frecuencia. Si realizamos cambios sustanciales a esta política, se lo notificaremos aquí, por correo electrónico o mediante un aviso en nuestra página de inicio.",
         "pt-BR": "Reservamo-nos o direito de modificar esta declaração de privacidade a qualquer momento, por isso, revise-a com frequência. Se fizermos alterações materiais a essa política, notificaremos você por e-mail ou por meio de um aviso em nossa página inicial.",
         "ar": "نحتفظ بالحق في تعديل بيان الخصوصية هذا في أي وقت، ولذلك يرجى مراجعته باستمرار.  وإذا قمنا بإجراء تغييرات جوهرية على هذه السياسة، سوف نبلغك بذلك هنا أو عن طريق البريد الإلكتروني أو عن طريق إشعار على صفحتنا الرئيسية."
@@ -6716,7 +6716,7 @@ module.exports = {
         "en": "Enquiries",
         "vi": "Thắc mắc",
         "zh-Hant": "查詢",
-        "id": "Enquiries",
+        "id": "Pertanyaan",
         "es": "Consultas",
         "pt-BR": "Inquéritos",
         "ar": "الاستفسارات"
@@ -6726,7 +6726,7 @@ module.exports = {
         "en": "If you have any enquiries regarding the ‘Privacy Policy’ please e-mail ",
         "vi": "Nếu bạn có bất kỳ câu hỏi nào liên quan đến ‘Chính sách bảo mật’, vui lòng gửi e-mail ",
         "zh-Hant": "如果您對隱私政策有何問題，請發送郵件至",
-        "id": "If you have any enquiries regarding the ‘Privacy Policy’ please e-mail ",
+        "id": "Jika Anda memiliki pertanyaan tentang 'Kebijakan Privasi', silakan kirim email ke ",
         "es": "Para cualquier consulta relacionada con la If you have any enquiries regarding the ‘Política de Privacidad’ por favor, envíe e-mail ",
         "pt-BR": "Se você tiver alguma dúvida sobre a \"Política de Privacidade\", envie um e-mail ",
         "ar": "إذا كان لديك أي استفسارات بشأن \"سياسة الخصوصية\"، يرجى إرسال رسالة بريد إلكتروني إلى"
@@ -6736,7 +6736,7 @@ module.exports = {
         "en": "Introduction",
         "vi": "Giới thiệu",
         "zh-Hant": "序言",
-        "id": "Introduction",
+        "id": "Pengantar",
         "es": "Introducción",
         "pt-BR": "Introdução",
         "ar": "مقدمة"
@@ -6922,14 +6922,14 @@ module.exports = {
         "ar": "اتفاقية العميل - تعني الاتفاقية المبرمة بين العميل والشركة، بما في ذلك الشروط والأحكام، وسياسة تنفيذ الأوامر، وبيان تصنيف العميل، وسياسة تضارب المصالح، بالإضافة إلى أي معلومات (قانونية أو غيرها) منشورة على الموقع الإلكتروني للشركة، والتي يجوز أن تقوم TigerWit بتعديلها من وقت لآخر."
     },
     "amtBusiness20": {
-        "zh": "差价合约 (CFD) - 指涉及以下内容的 CFD：现货外汇（“外汇”）、股票、现货金属、期货或任何可通过 TigerWit 交易平台进行交易的 CFD相关工具；可在 http://global.tigerwit.com.获得金融工具的完整列表。",
-        "en": "Contract for Difference (CFD) - shall mean a CFD on: spot foreign exchange (‘FX’), shares, spot metals, futures or any other CFD related instrument that is available for trading through the TigerWit trading platform(s); a full list of the financial instruments which is available online at http://global.tigerwit.com.",
+        "zh": "差价合约 (CFD) - 指涉及以下内容的 CFD：现货外汇（“外汇”）、股票、现货金属、期货或任何可通过 TigerWit 交易平台进行交易的 CFD相关工具；可在 https://global.TigerWit.com.获得金融工具的完整列表。",
+        "en": "Contract for Difference (CFD) - shall mean a CFD on: spot foreign exchange (‘FX’), shares, spot metals, futures or any other CFD related instrument that is available for trading through the TigerWit trading platform(s); a full list of the financial instruments which is available online at https://global.TigerWit.com.",
         "vi": "Hợp Đồng Chênh Lệch (CFD) – có nghĩa là CFD trên: ngoại hối giao dịch ngay (‘FX’), cổ phiếu, kim loại, tương lai hoặc bất kỳ công cụ liên quan CFD nào khác có sẵn để giao dịch thông qua các sàn giao dịch TigerWit; một danh sách đầy đủ các công cụ tài chính có sẵn trực tuyến tại website: http:/global.tigerwit.com.",
-        "zh-Hant": "差價合約 (CFD) - 指涉及以下內容的 CFD：現貨外匯（“外匯”）、股票、現貨金屬、期貨或任何可通過 TigerWit 交易平臺進行交易的 CFD相關工具；可在 http://global.tigerwit.com.獲得金融工具的完整列表。",
-        "id": "Contract for Difference (CFD) - shall mean a CFD on: spot foreign exchange (‘FX’), shares, spot metals, futures or any other CFD related instrument that is available for trading through the TigerWit trading platform(s); a full list of the financial instruments which is available online at http://global.tigerwit.com.",
-        "es": "Contrato por Diferencias (CFD) - un CFD en: spot foreign exchange ('FX'), acciones, metales al contado, futuros o cualquier otro instrumento relacionado con CFDs que esté disponible para su negociación a través de la(s) plataforma(s) de trading de TigerWit; una lista completa de los instrumentos financieros está disponible online en http://global.tigerwit.com.",
-        "pt-BR": "Contrato por Diferença (CFD) - significará um CFD sobre: câmbio à vista (“FX”), ações, metais à vista, futuros ou qualquer outro instrumento relacionado a CFD que esteja disponível para negociação através da (s) plataforma (s) de negociação da TigerWit; uma lista completa dos instrumentos financeiros que estão disponíveis online em http://global.tigerwit.com.",
-        "ar": "العقد مقابل الفروقات (CFD) - يعني العقد مقابل الفروقات على: العملات الأجنبية الفورية (‘الفوركس’)، أو الأسهم، أو المعادن الفورية، أو أي عقد مقابل فروقات آخر متعلق بأداة مالية متاحة للتداول عبر منصة (منصات) التداول التي توفرها TigerWit؛ ويمكن الإطلاع على القائمة الكاملة للأدوات المالية المتاحة عبر الإنترنت على http://global.tigerwit.com."
+        "zh-Hant": "差價合約 (CFD) - 指涉及以下內容的 CFD：現貨外匯（“外匯”）、股票、現貨金屬、期貨或任何可通過 TigerWit 交易平臺進行交易的 CFD相關工具；可在 https://global.TigerWit.com.獲得金融工具的完整列表。",
+        "id": "Contract for Difference (CFD) - shall mean a CFD on: spot foreign exchange (‘FX’), shares, spot metals, futures or any other CFD related instrument that is available for trading through the TigerWit trading platform(s); a full list of the financial instruments which is available online at https://global.TigerWit.com.",
+        "es": "Contrato por Diferencias (CFD) - un CFD en: spot foreign exchange ('FX'), acciones, metales al contado, futuros o cualquier otro instrumento relacionado con CFDs que esté disponible para su negociación a través de la(s) plataforma(s) de trading de TigerWit; una lista completa de los instrumentos financieros está disponible online en https://global.TigerWit.com.",
+        "pt-BR": "Contrato por Diferença (CFD) - significará um CFD sobre: câmbio à vista (“FX”), ações, metais à vista, futuros ou qualquer outro instrumento relacionado a CFD que esteja disponível para negociação através da (s) plataforma (s) de negociação da TigerWit; uma lista completa dos instrumentos financeiros que estão disponíveis online em https://global.TigerWit.com.",
+        "ar": "العقد مقابل الفروقات (CFD) - يعني العقد مقابل الفروقات على: العملات الأجنبية الفورية (‘الفوركس’)، أو الأسهم، أو المعادن الفورية، أو أي عقد مقابل فروقات آخر متعلق بأداة مالية متاحة للتداول عبر منصة (منصات) التداول التي توفرها TigerWit؛ ويمكن الإطلاع على القائمة الكاملة للأدوات المالية المتاحة عبر الإنترنت على https://global.TigerWit.com."
     },
     "amtBusiness21": {
         "zh": "公司行为 - 指证券发行者采取的任何行动，其上市证券与通过 TigerWit 交易平台交易的金融工具相关，包括但不限于以下情况：(i) 股票分拆，(ii) 合并，(iii) 配股，(iv) 兼并和收购以及 (v) 股利。",
@@ -7172,14 +7172,14 @@ module.exports = {
         "ar": "1- بعد بدء سريان اتفاقية الخدمة وفقًا للفقرة 4.1 من اتفاقية العميل، يجب على العميل ما يلي:"
     },
     "amtBusiness45": {
-        "zh": "下载并安装 http://global.tigerwit.com 在线提供的交易平台软件（“该软件”）；并",
-        "en": "download and install the trading platform(s) software (‘the Software’) available online at http://global.tigerwit.com; and,",
+        "zh": "下载并安装 https://global.TigerWit.com 在线提供的交易平台软件（“该软件”）；并",
+        "en": "download and install the trading platform(s) software (‘the Software’) available online at https://global.TigerWit.com; and,",
         "vi": "tải xuống và cài đặt phần mềm giao dịch (‘phần mềm’) có sẵn trực tuyến tại http:/global.tigerwit.com; ",
-        "zh-Hant": "下載並安裝 http://global.tigerwit.com 在線提供的交易平臺軟件（“該軟件”）；並",
-        "id": "download and install the trading platform(s) software (‘the Software’) available online at http://global.tigerwit.com; and,",
-        "es": "descargar e instalar el software de la plataforma de trading('el Software') disponible online en http://global.tigerwit.com; y,",
-        "pt-BR": "baixar e instalar o software da plataforma de negociação (\"o Software\") disponível on-line em http://global.tigerwit.com; e,",
-        "ar": "تحميل وتثبيت برنامج منصة (منصات) التداول (\"البرنامج\") المتوفر على شبكة الإنترنت على http://global.tigerwit.com؛ و،"
+        "zh-Hant": "下載並安裝 https://global.TigerWit.com 在線提供的交易平臺軟件（“該軟件”）；並",
+        "id": "download and install the trading platform(s) software (‘the Software’) available online at https://global.TigerWit.com; and,",
+        "es": "descargar e instalar el software de la plataforma de trading('el Software') disponible online en https://global.TigerWit.com; y,",
+        "pt-BR": "baixar e instalar o software da plataforma de negociação (\"o Software\") disponível on-line em https://global.TigerWit.com; e,",
+        "ar": "تحميل وتثبيت برنامج منصة (منصات) التداول (\"البرنامج\") المتوفر على شبكة الإنترنت على https://global.TigerWit.com؛ و،"
     },
     "amtBusiness46": {
         "zh": "通过电子邮件接收个人交易账户（“交易账户”），从而登录交易平台，以为交易金融工具而发送和/或修改指令。",
@@ -7372,14 +7372,14 @@ module.exports = {
         "ar": "يجوز للشركة، وفقًا لتقديرها وحدها دون غيرها، تعديل متطلبات الهامش، على أساس كل حالة على حدة، على أي أو جميع معاملات العميل، من خلال تقديم إخطار إلى العميل، حيثما كان ذلك معقولاً."
     },
     "amtBusiness65": {
-        "zh": "客户确认可以在 http://global.tigerwit.com 上找到有关固定差价账户的所有信息以及任何后续更新。此外，客户确认随时了解有关此事项的任何后续更新和/或修订由客户全权负责。",
-        "en": "The Client acknowledges that all information as well as any subsequent updates relating to Fixed Spread Accounts shall be found online at http://global.tigerwit.com. Further the Client acknowledges that it is their sole responsibility to remain informed of any subsequent updates and/or amendments on this matter.",
-        "vi": "Khách hàng thừa nhận rằng tất cả thông tin cũng như mọi cập nhật tiếp theo liên quan đến Tài khoản Spread cố định sẽ được tìm thấy trực tuyến tại http://global.tigerwit.com. Hơn nữa Khách hàng thừa nhận rằng đó là trách nhiệm duy nhất của họ để được thông báo về bất kỳ cập nhật tiếp theo và / hoặc sửa đổi về vấn đề này.",
-        "zh-Hant": "客戶確認可以在 http://global.tigerwit.com 上找到有關固定差價賬戶的所有信息以及任何後續更新。此外，客戶確認隨時了解有關此事項的任何後續更新和/或修訂由客戶全權負責。",
-        "id": "The Client acknowledges that all information as well as any subsequent updates relating to Fixed Spread Accounts shall be found online at http://global.tigerwit.com. Further the Client acknowledges that it is their sole responsibility to remain informed of any subsequent updates and/or amendments on this matter.",
-        "es": "El Cliente reconoce que toda la información, así como cualquier actualización posterior relacionada con las Cuentas Spreads Fijos, se puede encontrar online en http://global.tigerwit.com. Además, el Cliente reconoce que es su exclusiva responsabilidad mantenerse informado de cualquier actualización y/o modificación posterior sobre este asunto.",
-        "pt-BR": "O cliente reconhece que todas as informações, bem como quaisquer atualizações subseqüentes relacionadas a contas de spread fixo, devem ser encontradas on-line em http://global.tigerwit.com. Além disso, o Cliente reconhece que é de sua exclusiva responsabilidade manter-se informado de quaisquer atualizações e / ou alterações posteriores sobre este assunto.",
-        "ar": "يقر العميل أن جميع المعلومات وكذلك التحديثات اللاحقة المتعلقة بحسابات فرق السعر الثابت (Fixed Spread) تتوفر على الإنترنت في http://global.tigerwit.com.  بالإضافة إلى ذلك، يقر العميل أنه يتحمل وحده مسؤولية أن يظل على علم بأي تحديثات و/أو تعديلات لاحقة في هذه المسألة."
+        "zh": "客户确认可以在 https://global.TigerWit.com 上找到有关固定差价账户的所有信息以及任何后续更新。此外，客户确认随时了解有关此事项的任何后续更新和/或修订由客户全权负责。",
+        "en": "The Client acknowledges that all information as well as any subsequent updates relating to Fixed Spread Accounts shall be found online at https://global.TigerWit.com. Further the Client acknowledges that it is their sole responsibility to remain informed of any subsequent updates and/or amendments on this matter.",
+        "vi": "Khách hàng thừa nhận rằng tất cả thông tin cũng như mọi cập nhật tiếp theo liên quan đến Tài khoản Spread cố định sẽ được tìm thấy trực tuyến tại https://global.TigerWit.com. Hơn nữa Khách hàng thừa nhận rằng đó là trách nhiệm duy nhất của họ để được thông báo về bất kỳ cập nhật tiếp theo và / hoặc sửa đổi về vấn đề này.",
+        "zh-Hant": "客戶確認可以在 https://global.TigerWit.com 上找到有關固定差價賬戶的所有信息以及任何後續更新。此外，客戶確認隨時了解有關此事項的任何後續更新和/或修訂由客戶全權負責。",
+        "id": "The Client acknowledges that all information as well as any subsequent updates relating to Fixed Spread Accounts shall be found online at https://global.TigerWit.com. Further the Client acknowledges that it is their sole responsibility to remain informed of any subsequent updates and/or amendments on this matter.",
+        "es": "El Cliente reconoce que toda la información, así como cualquier actualización posterior relacionada con las Cuentas Spreads Fijos, se puede encontrar online en https://global.TigerWit.com. Además, el Cliente reconoce que es su exclusiva responsabilidad mantenerse informado de cualquier actualización y/o modificación posterior sobre este asunto.",
+        "pt-BR": "O cliente reconhece que todas as informações, bem como quaisquer atualizações subseqüentes relacionadas a contas de spread fixo, devem ser encontradas on-line em https://global.TigerWit.com. Além disso, o Cliente reconhece que é de sua exclusiva responsabilidade manter-se informado de quaisquer atualizações e / ou alterações posteriores sobre este assunto.",
+        "ar": "يقر العميل أن جميع المعلومات وكذلك التحديثات اللاحقة المتعلقة بحسابات فرق السعر الثابت (Fixed Spread) تتوفر على الإنترنت في https://global.TigerWit.com.  بالإضافة إلى ذلك، يقر العميل أنه يتحمل وحده مسؤولية أن يظل على علم بأي تحديثات و/أو تعديلات لاحقة في هذه المسألة."
     },
     "amtBusiness66": {
         "zh": "拒绝执行订单",
@@ -7532,14 +7532,14 @@ module.exports = {
         "ar": "2- إذا تحقق إجراء من إجراءات الشركات، يقبل العميل أن TigerWit ستتخذ جميع الخطوات المعقولة لتكرار ظروف السوق. وإذا اعتقدت TigerWit، وفقًا لتقديرها وحدها دون غيرها، أنها غير قادرة على تقدير القيمة العادلة لإجراء الشركات، تحتفظ الشركة لنفسها بالحق في إغلاق مركز العميل."
     },
     "amtBusiness81": {
-        "zh": "3.股利：在发放股票股利之前，TigerWit 将保留增加相关产品保证金水平的权利。客户应继续负责定期查询合同规范了解任何此类更改，相关内容请参见 http://global.tigerwit.com。",
-        "en": "3.Dividends: Prior to the release of a dividend for a share, TigerWit shall reserve the right to increase the Margin levels of the relevant symbol. The client shall remain responsible to regularly consult the contract specifications for any such changes, available at http://global.tigerwit.com",
-        "vi": "3.Chia cổ tức: Trước khi phát hành cổ tức cho một cổ phần, TigerWit sẽ bảo lưu quyền tăng mức ký quỹ của sản phẩm có liên quan. Khách hàng sẽ chịu trách nhiệm thường xuyên tham khảo các thông số hợp đồng cho bất kỳ thay đổi nào như vậy, có sẵn tại http://global.tigerwit.com",
-        "zh-Hant": "3.股利：在發放股票股利之前，TigerWit 將保留增加相關產品保證金水平的權利。客戶應繼續負責定期查詢合同規範了解任何此類更改，相關內容請參見 http://global.tigerwit.com。",
-        "id": "3.Dividends: Prior to the release of a dividend for a share, TigerWit shall reserve the right to increase the Margin levels of the relevant symbol. The client shall remain responsible to regularly consult the contract specifications for any such changes, available at http://global.tigerwit.com",
-        "es": "3.Dividendos: Antes de la presentación de un dividendo por acción, TigerWit se reserva el derecho de aumentar los niveles de Margen del símbolo relevante. El cliente será responsable de consultar regularmente las especificaciones del contrato para cualquier cambio de este tipo, disponible en http://global.tigerwit.com",
-        "pt-BR": "3.Dividendos: Antes da liberação de um dividendo para uma ação, a TigerWit reserva-se o direito de aumentar os níveis de Margem do símbolo relevante. O cliente permanecerá responsável por consultar regularmente as especificações do contrato para tais alterações, disponíveis em http://global.tigerwit.com.",
-        "ar": "3- توزيعات الأرباح: قبل صرف توزيعات الأرباح لأي سهم، تحتفظ TigerWit لنفسها بالحق في زيادة مستويات الهامش للرمز المعني.  وسيظل العميل مسؤولاً عن مراجعة \"مواصفات العقد\" باستمرار لمعرفة أي تغيير من هذا النوع، وتتوفر مواصفات العقد على http://global.tigerwit.com."
+        "zh": "3.股利：在发放股票股利之前，TigerWit 将保留增加相关产品保证金水平的权利。客户应继续负责定期查询合同规范了解任何此类更改，相关内容请参见 https://global.TigerWit.com。",
+        "en": "3.Dividends: Prior to the release of a dividend for a share, TigerWit shall reserve the right to increase the Margin levels of the relevant symbol. The client shall remain responsible to regularly consult the contract specifications for any such changes, available at https://global.TigerWit.com",
+        "vi": "3.Chia cổ tức: Trước khi phát hành cổ tức cho một cổ phần, TigerWit sẽ bảo lưu quyền tăng mức ký quỹ của sản phẩm có liên quan. Khách hàng sẽ chịu trách nhiệm thường xuyên tham khảo các thông số hợp đồng cho bất kỳ thay đổi nào như vậy, có sẵn tại https://global.TigerWit.com",
+        "zh-Hant": "3.股利：在發放股票股利之前，TigerWit 將保留增加相關產品保證金水平的權利。客戶應繼續負責定期查詢合同規範了解任何此類更改，相關內容請參見 https://global.TigerWit.com。",
+        "id": "3.Dividends: Prior to the release of a dividend for a share, TigerWit shall reserve the right to increase the Margin levels of the relevant symbol. The client shall remain responsible to regularly consult the contract specifications for any such changes, available at https://global.TigerWit.com",
+        "es": "3.Dividendos: Antes de la presentación de un dividendo por acción, TigerWit se reserva el derecho de aumentar los niveles de Margen del símbolo relevante. El cliente será responsable de consultar regularmente las especificaciones del contrato para cualquier cambio de este tipo, disponible en https://global.TigerWit.com",
+        "pt-BR": "3.Dividendos: Antes da liberação de um dividendo para uma ação, a TigerWit reserva-se o direito de aumentar os níveis de Margem do símbolo relevante. O cliente permanecerá responsável por consultar regularmente as especificações do contrato para tais alterações, disponíveis em https://global.TigerWit.com.",
+        "ar": "3- توزيعات الأرباح: قبل صرف توزيعات الأرباح لأي سهم، تحتفظ TigerWit لنفسها بالحق في زيادة مستويات الهامش للرمز المعني.  وسيظل العميل مسؤولاً عن مراجعة \"مواصفات العقد\" باستمرار لمعرفة أي تغيير من هذا النوع، وتتوفر مواصفات العقد على https://global.TigerWit.com."
     },
     "amtBusiness82": {
         "zh": "4.多头：在派息日前持有多头头寸的客户将以现金调整的形式收到适当的股利，记入相关交易账户。",
@@ -7956,7 +7956,7 @@ module.exports = {
         "en": "In accordance with the supervisory regulations, TigerWit reminds you to read these trading notes carefully. Unless you have learnt the nature of the contract concluded and the degree of potential risks to be confronted, it is not recommended to involve in trade of similar financial derivatives and clients are recommended to judge whether the product is suitable at his/her own discretion based on the conditions and financial status.",
         "vi": "Theo quy định giám sát, TigerWit nhắc bạn đọc kỹ các ghi chú giao dịch này. Trừ khi bạn đã học được bản chất của hợp đồng được ký kết và mức độ rủi ro có thể phải đối mặt, không nên tham gia vào việc giao dịch các sản phẩm tài chính phái sinh tương tự và khách hàng được khuyến cáo tự mình đánh giá xem sản phẩm có phù hợp với hay không về điều kiện và tình trạng tài chính.Các chiến lược đầu tư khác nhau kéo theo những rủi ro tiềm ẩn ở các mức độ khác nhau.",
         "zh-Hant": "依據監管規則，TigerWit 提醒您應詳細閱讀本交易須知。除非您了解所簽訂的合約性質以及所面臨之風險程度，否則不應冒然進行類似的衍生性金融商品交易，同時您應根據本身的條件和財務狀況，自行衡量該產品是否適合進行投資。",
-        "id": "In accordance with the supervisory regulations, TigerWit reminds you to read these trading notes carefully. Unless you have learnt the nature of the contract concluded and the degree of potential risks to be confronted, it is not recommended to involve in trade of similar financial derivatives and clients are recommended to judge whether the product is suitable at his/her own discretion based on the conditions and financial status.",
+        "id": "Sesuai dengan peraturan pengawasan, TigerWit mengingatkan Anda untuk membaca catatan trading ini dengan cermat. Kecuali jika Anda telah mempelajari sifat kontrak yang dibuat dan tingkat potensi risiko yang akan dihadapi, tidak disarankan untuk terlibat dalam trade derivatif keuangan yang serupa dan klien disarankan untuk menilai apakah produk tersebut sesuai atas kebijakannya sendiri. tentang kondisi dan status keuangan.",
         "es": "De acuerdo con las regulaciones,  TigerWit le recuerda que lea estas notificaciones de trading detenidamente.  A no ser que conozca la naturaleza del contrato concluido y el grado de riesgos potenciales a los que se confronta, no es recomendable incurrir en el trading de derivados financieros y se recomienda a los clientes analizar si los productos son adecuados siguiendo su libre raciocinio basado en sus condiciones y estado financiero.",
         "pt-BR": "De acordo com os regulamentos de supervisão, a TigerWit lembra-lhe para ler atentamente estas notas de negociação. A menos que você tenha aprendido a natureza do contrato celebrado e o grau de riscos potenciais a serem enfrentados, não é recomendável envolver no comércio de derivativos financeiros similares e recomenda-se aos clientes julgar se o produto é adequado a seu próprio critério sobre as condições e situação financeira.",
         "ar": "وفقًا للمتطلبات الرقابية، تذكرك TigerWit بضرورة قراءة بيانات التداول هذه بعناية.  ما لم تكن على علم بطبيعة العقد المبرم ودرجة المخاطر المحتملة التي ستواجهها، يكون من غير المستحسن المشاركة في تداول المشتقات المالية، ومن المستحسن أن يقوم العملاء بتقييم ما إذا كان المنتج مناسبًا لظروفهم وأوضاعهم المالية وفقًا لتقديرهم وحدهم دون غيرهم."
@@ -7966,7 +7966,7 @@ module.exports = {
         "en": "Different investment strategies would expect risks of different degrees. Thus, before deciding whether to apply the investment strategy, the client should learn the following information.",
         "vi": "Do đó, trước khi quyết định áp dụng chiến lược đầu tư, khách hàng nên tìm hiểu các thông tin sau.",
         "zh-Hant": "不同的投資策略涉及不同程度的風險，因此在決定是否使用該類投資策略時，客戶應了解以下各點：",
-        "id": "Different investment strategies would expect risks of different degrees. Thus, before deciding whether to apply the investment strategy, the client should learn the following information.",
+        "id": "Strategi investasi yang berbeda akan mengharapkan risiko dengan derajat yang berbeda pula. Jadi, sebelum memutuskan apakah akan menerapkan strategi investasi, klien harus mempelajari informasi berikut.",
         "es": "Las diferentes estrategias de inversión conllevan distintos grados de riesgo. Por lo tanto, antes de decidirse por una estrategia de inversión, el cliente debe conocer la siguiente información.",
         "pt-BR": "Diferentes estratégias de investimento esperariam riscos de diferentes graus. Assim, antes de decidir se aplica a estratégia de investimento, o cliente deve aprender as seguintes informações.",
         "ar": "تنطوي إستراتيجيات الاستثمار المختلفة على درجات مختلفة من المخاطر.  وبالتالي، فقبل اتخاذ قرار بشأن استخدام إستراتيجية الاستثمار، يجب على العميل معرفة المعلومات التالية."
@@ -7976,7 +7976,7 @@ module.exports = {
         "en": "Functions or strategies to mitigate risks",
         "vi": "Chức năng hoặc chiến lược để giảm thiểu rủi ro",
         "zh-Hant": "降低風險的指令或策略",
-        "id": "Functions or strategies to mitigate risks",
+        "id": "Fungsi atau strategi untuk memitigasi risiko",
         "es": "Funciones y estrategias para mitigar riesgos",
         "pt-BR": "Funções ou estratégias para mitigar riscos",
         "ar": "وظائف وإستراتيجيات لتقليل المخاطر"
@@ -7986,7 +7986,7 @@ module.exports = {
         "en": "Provision of a certain functions (such as ‘stop loss’, or ‘stop loss-buy limit’) is to control the losses within a specific range. However, it may fail to produce the desired result given market situations or technical restrictions. In case of trade through (gap), the resting order (including stop loss, take profit, buy stop, sell stop, buy limit and sell limit) will become market order. ",
         "vi": "Việc cung cấp một số chức năng nhất định (chẳng hạn như 'dừng lỗ' hoặc 'giới hạn mua- dừng lỗ') để kiểm soát các tổn thất trong một phạm vi cụ thể. Tuy nhiên, nó có thể không tạo ra kết quả mong muốn cho các tình huống thị trường hoặc các hạn chế kỹ thuật. Trong trường hợp giao dịch thông qua (khoảng cách), lệnh đặt lệnh (bao gồm dừng lỗ, chốt lời, dừng mua, dừng bán, mua giới hạn và bán giới hạn) sẽ trở thành lệnh thị trường.",
         "zh-Hant": "下達某些指令(例如“止損”或“止損-限價”)目的在將損失控制在特定金額範圍內，但有可能並不總是見效，因為市場情況或技術限制可能致使上述指令難以執行。",
-        "id": "Provision of a certain functions (such as ‘stop loss’, or ‘stop loss-buy limit’) is to control the losses within a specific range. However, it may fail to produce the desired result given market situations or technical restrictions. In case of trade through (gap), the resting order (including stop loss, take profit, buy stop, sell stop, buy limit and sell limit) will become market order. ",
+        "id": "Penyediaan fungsi tertentu (seperti 'stop loss', atau 'stop loss-buy limit') adalah untuk mengontrol kerugian dalam rentang tertentu. Namun, mungkin gagal memberikan hasil yang diinginkan mengingat situasi pasar atau batasan teknis. Dalam kasus trade through (gap), resting order (termasuk stop loss, take profit, buy stop, sell stop, buy limit dan sell limit) akan menjadi market order. ",
         "es": "Determinadas funciones (como el  ‘stop loss’, o ‘stop loss-buy limit’) sirven para controlar las pérdidas dentro de un rango específico. Sin embargo, pudieran no producir el resultado deseado debido a la situación del mercado o a restricciones técnicas. En caso de que el precio salte (gap) la orden a la espera de ser activada (incluyendo stop loss, take profit, buy stop, sell stop, buy limit y sell limit) se convierte en orden a mercado. ",
         "pt-BR": "O fornecimento de certas funções (como 'parar perda' ou 'stop loss-buy limit') é controlar as perdas dentro de um intervalo específico. No entanto, pode não produzir o resultado desejado, dadas as situações de mercado ou restrições técnicas. Em caso de comércio através de (gap), a ordem de repouso (incluindo stop loss, take profit, stop de compra, stop de venda, limite de compra e limite de venda) se tornará ordem de mercado.",
         "ar": "يتم استخدام بعض الوظائف (مثل \"إيقاف الخسارة\" أو \"الشراء بأمر ايقاف\") للسيطرة على الخسائر وإبقاؤها في نطاق معين. ومع ذلك، قد لا تنجح هذه الوظائف في تحقيق النتيجة المرغوبة بسبب ظروف السوق أو القيود الفنية.  وفي حالة التداول عبر قفزة في السعر (فجوة)، فإن الأمر الذي ينتظر التفعيل (ويشمل ذلك أوامر إيقاف الخسارة، وجني الربح، والشراء بأمر ايقاف، والبيع بأمر ايقاف، أمر محدد للشراء، وأمر محدد للبيع) سيصبح أمر  يتم تنفيذه مباشرة في السوق."
@@ -7996,7 +7996,7 @@ module.exports = {
         "en": "In case of fast market (before and after release of important data) or sluggish market, trade through (gap) may arise. Though resting order is set, a trade may be concluded at market price due to different market circulation.",
         "vi": "Trong trường hợp thị trường nhanh (trước và sau khi phát hành dữ liệu quan trọng) hoặc thị trường chậm chạp, giao dịch thông qua (khoảng cách) có thể phát sinh. Mặc dù lệnh được thiết lập, một giao dịch có thể được kết luận theo giá thị trường do lưu thông thị trường khác nhau.",
         "zh-Hant": "當穿價 (跳空) 時，掛單(含 stop loss、take profit、buy stop、sell stop、buy limit、sell limit) 將會變為市價單；穿價 (跳空)在快市（重大數據公布前後）或是市場清淡時都有可能發生，雖然設置了掛單，但仍有可能因為市場流通量的不同而成交在市場價。",
-        "id": "In case of fast market (before and after release of important data) or sluggish market, trade through (gap) may arise. Though resting order is set, a trade may be concluded at market price due to different market circulation.",
+        "id": "Dalam kasus pasar cepat (sebelum dan sesudah rilis data penting) atau pasar lemah, trading melalui (gap) mungkin muncul. Meskipun resting order telah ditetapkan, trade dapat diselesaikan pada harga pasar karena sirkulasi pasar yang berbeda.",
         "es": "Para supuesto en los que el mercado se mueve rápido (antes o después de la publicación de datos importantes) o mercados lentos, trade through (gap) pudiera suceder. A pesar de ser una orden a la espera de activarse, una circulación diferente de mercado pudiera desencadenar una orden a mercado.",
         "pt-BR": "Em caso de mercado rápido (antes e depois da divulgação de dados importantes) ou mercado lento, o comércio através de (gap) pode surgir. Embora a ordem de repouso esteja definida, uma negociação pode ser concluída a preço de mercado devido à diferente circulação no mercado.",
         "ar": "في حالة السوق ذات التحركات السريعة (قبل وبعد الإعلان عن بيانات مهمة) أو السوق ذات التحركات البطيئة، قد يتم التداول عبر قفزة في السعر (فجوة).  وعلى الرغم من وجود الأمر الذي ينتظر التفعيل، يجوز تنفيذ الصفقة بسعر السوق بسبب الحركة المختلفة في السوق."
@@ -8006,7 +8006,7 @@ module.exports = {
         "en": "During the period before and after important data or information is released, market [rice may encounter sharp fluctuation. In such a situation, the gap of listing price of commodities may also become greater accordingly.",
         "vi": "Trong khoảng thời gian trước và sau khi dữ liệu hoặc thông tin quan trọng được phát hành, thị trường [gạo có thể gặp phải sự dao động mạnh. Trong tình huống như vậy, khoảng cách giá niêm yết của hàng hóa cũng có thể trở nên lớn hơn.",
         "zh-Hant": "當重大數據或消息公布前後，市場價格常會出現大幅劇烈波動，在該情況下，各商品的掛價距離也會隨之變大 。",
-        "id": "During the period before and after important data or information is released, market [rice may encounter sharp fluctuation. In such a situation, the gap of listing price of commodities may also become greater accordingly.",
+        "id": "Selama periode sebelum dan sesudah data atau informasi penting dikeluarkan, pasar [beras mungkin mengalami fluktuasi yang tajam. Dalam situasi seperti itu, selisih harga pencatatan komoditas juga bisa semakin besar.",
         "es": "Durante períodos anteriores o posteriores a publicaciones de datos importantes el precio puede sufrir amplias fluctuaciones. En dichas situaciones el gap en el precio de ciertas commodities también ampliarse. ",
         "pt-BR": "Durante o período antes e depois de dados ou informações importantes serem divulgados, o mercado [arroz pode sofrer flutuações acentuadas. Em tal situação, a lacuna de cotação de commodities também pode se tornar maior em conformidade.",
         "ar": "خلال الفترات التي تسبق أو تلي الإعلان عن البيانات المهمة، قد يواجه سعر السوق تقلبات كبيرة.  وفي هذه الحالات فإن فجوة السعر المعلن للسلع قد تتسع أيضًا وفقًا لذلك."
@@ -8016,7 +8016,7 @@ module.exports = {
         "en": "Clients should give prudent consideration to potential risks thereof before important data are released.",
         "vi": "Khách hàng nên cân nhắc cẩn thận trước những rủi ro tiềm ẩn trước khi dữ liệu quan trọng được phát hành.",
         "zh-Hant": "建議客戶在重大數據公布前，慎重考量做單交易的風險。",
-        "id": "Clients should give prudent consideration to potential risks thereof before important data are released.",
+        "id": "Klien harus memberikan pertimbangan yang hati-hati terhadap potensi risikonya sebelum data penting dirilis.",
         "es": "Los Clientes deben ser cautelosos en su consideración sobre los riesgos potenciales antes de publicaciones importantes de datos. ",
         "pt-BR": "Os clientes devem considerar com prudência os riscos potenciais dos mesmos antes que dados importantes sejam divulgados.",
         "ar": "يتعين على العملاء المراعاة الحكيمة للمخاطر المحتملة قبل نشر البيانات المهمة."
@@ -8026,7 +8026,7 @@ module.exports = {
         "en": "Price",
         "vi": "Giá bán",
         "zh-Hant": "價格",
-        "id": "Price",
+        "id": "Harga",
         "es": "Precios",
         "pt-BR": "Preço",
         "ar": "السعر"
@@ -8036,7 +8036,7 @@ module.exports = {
         "en": "Prices published in our online system may not reflect the general market.Although TigerWit hopes that the prices could be reasonably relevant with bank valuation, prices published in our online system may not be exactly the same as prices from interbank markets as well as other participants",
         "vi": "Mặc dù TigerWit hy vọng rằng giá cả có thể có liên quan hợp lý với định giá ngân hàng, giá được công bố trong hệ thống trực tuyến của chúng tôi có thể không chính xác giống như giá thị trường liên ngân hàng cũng như những người tham gia khác",
         "zh-Hant": "在線系統中發布的價格不壹定能反映更廣大的市場。盡管本公司希望該價格與被俗稱為銀行間市場的價格合理相關，但本公司使用的價格可能與銀行以及銀行間市場的其他參與者的報價不同。",
-        "id": "Prices published in our online system may not reflect the general market.Although TigerWit hopes that the prices could be reasonably relevant with bank valuation, prices published in our online system may not be exactly the same as prices from interbank markets as well as other participants",
+        "id": "Harga yang dipublikasikan di sistem online kami mungkin tidak mencerminkan pasar secara umum, Meskipun TigerWit berharap harga dapat relevan dengan penilaian bank, harga yang dipublikasikan di sistem online kami mungkin tidak sama persis dengan harga dari pasar antar bank serta partisipan lain.",
         "es": "Los precios publicados en nuestro sistema online pudieran no reflejar el mercado general. Aunque TigerWit espera que los precios estén razonablemente alineados con los bancos, los precios publicados en nuestro sistema online pudiera no ser exactamente idéntico a los precios interbancarios u otros participantes de mercado. ",
         "pt-BR": "Os preços publicados em nosso sistema online podem não refletir o mercado em geral. Embora a TigerWit espere que os preços possam ser razoavelmente relevantes com a avaliação bancária, os preços publicados em nosso sistema on-line podem não ser exatamente iguais aos preços dos mercados interbancários e de outros participantes.",
         "ar": "قد تكون الأسعار المنشورة على نظامنا الإلكتروني لا تعكس السوق العامة. وعلى الرغم من أن TigerWit تأمل أن تكون الأسعار متلائمة بدرجة معقولة مع تقييم البنوك، ولكن الأسعار المنشورة على نظامنا الإلكتروني قد لا تكون مطابقة تمامًا لأسعار ما بين البنوك أو غيرهم من المشاركين في السوق."
@@ -8046,7 +8046,7 @@ module.exports = {
         "en": "Information delay",
         "vi": "Trì hoãn thông tin",
         "zh-Hant": "信息延遲",
-        "id": "Information delay",
+        "id": "Penundaan informasi",
         "es": "Retraso información",
         "pt-BR": "Atraso da informação",
         "ar": "تأخير المعلومات"
@@ -8056,7 +8056,7 @@ module.exports = {
         "en": "When clients place an order, the instructions may be delayed due to various reasons, such as: 1. When clients connect to TigerWit server, there might be web technology issues that delay the instructions of order placement. 2. Weak signal of wired and wireless networks. 3. Interruption of connection path. All these facts could result in abnormal function in trading platform, contributing to a delay of information transmission between clients and TigerWit server, which leads to orders could not be placed at desired prices. Please make sure the connection between clients and TigerWit server works well before place an order.",
         "vi": "Khi khách hang đặt lệnh, hướng dẫn của họ có thể bị trì hoãn vì nhiều lý do khác nhau, chẳng hạn như: 1. Khi khách hàng kết nối với máy chủ TigerWit, có thể có sự cố kĩ thuật của web làm chậm trễ hướng dẫn đặt lệnh. 2. Tín hiệu của mạng có dây và không dây yếu. 3. Gián đoạn đường dẫn kết nối. Tất cả những sự kiện này có thể dẫn đến chức năng bất thường trong nền tảng giao dịch, góp phần vào sự chậm trễ truyền tải thông tin giữa khách hàng và máy chủ TigerWit, dẫn đến các lệnh không thể được đặt ở mức giá mong muốn. Vui lòng đảm bảo kết nối giữa máy khách và máy chủ TigerWit hoạt động tốt trước khi đặt lệnh.",
         "zh-Hant": "下單指令可能基於不同原因而導致延遲執行，例如客戶端連接到 TigerWit 服務器間的網絡技術導致下單指令傳遞延遲；或因無線或有線網絡連接的信號較弱；或連接路徑的中斷等因素，均可能導致交易平臺不能正常運作，致使客戶端與本公司間的訊息傳遞延遲，未能以指定價位成交。交易前請確認與 TigerWit 服務器的鏈接是否正常。",
-        "id": "When clients place an order, the instructions may be delayed due to various reasons, such as: 1. When clients connect to TigerWit server, there might be web technology issues that delay the instructions of order placement. 2. Weak signal of wired and wireless networks. 3. Interruption of connection path. All these facts could result in abnormal function in trading platform, contributing to a delay of information transmission between clients and TigerWit server, which leads to orders could not be placed at desired prices. Please make sure the connection between clients and TigerWit server works well before place an order.",
+        "id": "Ketika klien melakukan pemesanan, instruksi mungkin tertunda karena berbagai alasan, seperti: 1. Ketika klien terhubung ke server TigerWit, mungkin ada masalah teknologi web yang menunda instruksi penempatan pesanan. 2. Sinyal jaringan kabel dan nirkabel yang lemah. 3. Gangguan jalur koneksi. Semua fakta ini dapat mengakibatkan fungsi abnormal pada platform trading, berkontribusi pada penundaan transmisi informasi antara klien dan server TigerWit, yang menyebabkan pesanan tidak dapat ditempatkan pada harga yang diinginkan. Harap pastikan koneksi antara klien dan server TigerWit berfungsi dengan baik sebelum melakukan pemesanan.",
         "es": "Cuando el cliente coloca una orden, las instrucciones pudieran retrasarse por diversos motivos, como por ejemplo: 1. Cuando el cliente se conecta al servidor de  TigerWit, y existieran errores tecnológicos en la web que retrasaran las instrucciones para colocar órdenes. 2. Señal débil de red wireless. 3. Interrupción del canal de conexión.  Todos estos hechos pudieran resultar en una funcionamiento anormal de la plataforma de trading, contribuyendo a un retraso  en la transmisión de la información entre los clientes y el servidor de TigerWit, lo cual pudiera derivar en que las órdenes no se ejecutaran al precio deseado. Por favor, asegúrese de que la conexión entre los servidores de TigerWit funciona correctamente antes de colocar una orden.",
         "pt-BR": "Quando os clientes fazem um pedido, as instruções podem ser atrasadas devido a vários motivos, como: 1. Quando os clientes se conectam ao servidor TigerWit, pode haver problemas de tecnologia da web que atrasam as instruções de colocação do pedido. 2. Sinal fraco de redes com e sem fio. 3. Interrupção do caminho de conexão. Todos esses fatos podem resultar em uma função anormal na plataforma de negociação, contribuindo para um atraso na transmissão de informações entre os clientes e o servidor TigerWit, o que leva a que os pedidos não sejam colocados a preços desejados. Por favor, certifique-se de que a conexão entre os clientes e o servidor TigerWit funcione bem antes de fazer um pedido.",
         "ar": "عندما يقوم العملاء بتقديم أوامر، قد تتأخر التعليمات لأسباب متعددة، مثل ما يلي: 1- عندما يكون العملاء متصلين بخادم TigerWit، قد تحدث مشاكل في تكنولوجيا شبكة الإنترنت والتي قد تؤخر تعليمات تقديم الطلب.  2- ضعف إشارة الشبكات اللاسلكية. 3-  انقطاع مسار الاتصال.  يمكن أن تؤدي كل هذه الحقائق إلى عمل منصة التداول بشكل غير طبيعي، مما يساهم في تأخير نقل المعلومات بين العملاء وخادم TigerWit مما يؤدي إلى عدم تقديم الأوامر بالسعر المطلوب.  يرجى التأكد من أن الاتصال بين خادم TigerWit يعمل بشكل جيد قبل تقديم أي صفقة."
@@ -8066,7 +8066,7 @@ module.exports = {
         "en": "Spread Fluctuations",
         "vi": "Biến độngSpread",
         "zh-Hant": "點差擴大",
-        "id": "Spread Fluctuations",
+        "id": "Fluktuasi Spread",
         "es": "Spread Fluctuaciones",
         "pt-BR": "Flutuações Spread",
         "ar": "تقلبات فروق الأسعار"
@@ -8076,7 +8076,7 @@ module.exports = {
         "en": "During the period of dramatic fluctuation in the market and slack season of trading, spreads among all types of commodities in TigerWit trading platform might vary in degree. During the announcement periods of industry data, spreads might be enlarged in order to align with actual market fluctuation. TigerWit strongly recommends that traders should be cautious in their trades during these periods, which could help them avoid unpredictable loss resulted from unstable market.",
         "vi": "Trong giai đoạn biến động mạnh trên thị trường và thời gian giao dịch chững lại, spread giữa tất cả các loại hàng hóa trong nền tảng giao dịch TigerWit có thể khác nhau về mức độ. Trong thời gian công bố dữ liệu ngành, spread có thể được mở rộng để phù hợp với biến động thị trường thực tế. TigerWit đặc biệt khuyến nghị các nhà đầu tư nên thận trọng trong các giao dịch trong thời gian này, điều này có thể giúp họ tránh được sự mất mát không lường trước được do thị trường không ổn định.",
         "zh-Hant": "TigerWit 交易平臺所有商品在市場劇烈波動或交易清淡時，點差將會隨市場而有所變動。在重大數據公布期間，買賣價差可能會大幅提高，以真實反映當時市場的波動。TigerWit 強烈建議交易者在重大數據公布期間應特別謹慎從事交易，避免因市場巨幅震蕩造成超出預期的損失。",
-        "id": "During the period of dramatic fluctuation in the market and slack season of trading, spreads among all types of commodities in TigerWit trading platform might vary in degree. During the announcement periods of industry data, spreads might be enlarged in order to align with actual market fluctuation. TigerWit strongly recommends that traders should be cautious in their trades during these periods, which could help them avoid unpredictable loss resulted from unstable market.",
+        "id": "Selama periode fluktuasi dramatis di pasar dan musim sepi trading, spread di antara semua jenis komoditas di platform trading TigerWit mungkin bervariasi dalam derajat. Selama periode pengumuman data industri, spread mungkin diperbesar agar selaras dengan fluktuasi pasar yang sebenarnya. TigerWit sangat merekomendasikan bahwa trader harus berhati-hati dalam trade mereka selama periode ini, yang dapat membantu mereka menghindari kerugian tak terduga akibat pasar yang tidak stabil.",
         "es": "Durante períodos con fluctuaciones dramáticas en el mercado y en momentos de poca actividad, los spreads en los distintos tipos de activos en la plataforma de trading de TigerWit pudieran variar considerablemente. Durante anuncios o publicaciones de datos, los spreads pueden ampliarse para ajustarse a las actuales fluctuaciones de mercado. TigerWit recomienda que los traders sean cautelosos durante esos períodos para ayudarles a evitar pérdidas impredecibles como resultado de movimientos del mercado abruptos.",
         "pt-BR": "Durante o período de flutuação dramática no mercado e a baixa temporada de negociações, os spreads entre todos os tipos de commodities na plataforma de negociação TigerWit podem variar em grau. Durante os períodos de anúncio de dados do setor, os spreads podem ser ampliados para se alinhar com a flutuação real do mercado. A TigerWit recomenda enfaticamente que os traders sejam cautelosos em suas operações durante esses períodos, o que poderia ajudá-los a evitar a perda imprevisível resultante do mercado instável.",
         "ar": "قد تختلف فروق الأسعار في الأنواع المختلفة من الأصول المتداولة على منصة تداول TigerWit خلال فترات التقلبات الشديدة في السوق وفي أوقات انخفاض نشاط التداول.  وقد تزداد فروق الأسعار خلال فترات الإعلان عن بيانات مهمة من أجل التكيف مع التقلبات الفعلية في السوق. وتوصي TigerWit بشدة بأن يتحلى المتداولون بالحذر خلال هذه الفترات لأن هذا الحذر يمكن أن يساعدهم في تجنب الخسائر غير المتوقعة والتي تحدث نتيجة لتحركات السوق غير المستقرة."
@@ -8086,7 +8086,7 @@ module.exports = {
         "en": "Slippage",
         "vi": "Slippage (Trượt giá)",
         "zh-Hant": "滑點",
-        "id": "Slippage",
+        "id": "Kelicinan",
         "es": "Slippage",
         "pt-BR": "Deslizamento",
         "ar": "الانزلاق السعري"
@@ -8096,7 +8096,7 @@ module.exports = {
         "en": "TigerWit provides customers with the best price and make the deals at requested prices, but sometimes because of dramatic fluctuation in market or changes of trading volumes, it may result in slippage and difficulties to complete a deal, which is quite common during the announcement periods of industry data.",
         "vi": "TigerWit cung cấp cho khách hàng mức giá tốt nhất và thực hiện giao dịch theo giá yêu cầu, nhưng đôi khi do sự biến động mạnh về thị trường hoặc thay đổi khối lượng giao dịch, điều này có thể dẫn đến tình trạng trượt giá và khó khăn trong việc hoàn thành giao dịch, điều khá phổ biến trong thời kì dữ liệu các ngành được công bố.",
         "zh-Hant": "TigerWit 為客戶提供最佳報價並依要求的價格成交。但有時因市場激烈震蕩或交易量變化，可能造成滑點而難以成交，這種狀況尤其在重大數據公布期間最為常見。",
-        "id": "TigerWit provides customers with the best price and make the deals at requested prices, but sometimes because of dramatic fluctuation in market or changes of trading volumes, it may result in slippage and difficulties to complete a deal, which is quite common during the announcement periods of industry data.",
+        "id": "TigerWit memberi pelanggan harga terbaik dan membuat kesepakatan dengan harga yang diminta, tetapi terkadang karena fluktuasi dramatis di pasar atau perubahan volume trading, hal itu dapat mengakibatkan selip dan kesulitan untuk menyelesaikan kesepakatan, yang cukup umum selama periode pengumuman data industri.",
         "es": "TigerWit proporciona a los clientes el mejor precio y ejecuta los deals a los precios solicitados, aunque, en ocasiones, debido a fluctuaciones dramáticas de mercado o cambios en los volúmenes de trading, pudiera darse un deslizamiento o slippage y dificultades para completar la operación, lo cual es común durante períodos de publicaciones de datos",
         "pt-BR": "TigerWit oferece aos clientes o melhor preço e fazer as ofertas a preços solicitados, mas às vezes por causa da flutuação dramática no mercado ou mudanças nos volumes de negociação, pode resultar em derrapagens e dificuldades para concluir um acordo, o que é bastante comum durante os períodos de anúncio dados da indústria.",
         "ar": "تقدم TigerWit لعملائها أفضل سعر وتقوم بتنفيذ الصفقات وفقًا للأسعار المطلوبة، ولكن يمكن في بعض الأحيان أن تؤدي التقلبات الشديدة في السوق أو التغيرات في أحجام التداول إلى حدوث انزلاق سعري وصعوبات في إتمام الصفقة، وهذا أمر شائع خلال فترات الإعلان عن البيانات المهمة."
@@ -8106,7 +8106,7 @@ module.exports = {
         "en": "Exchange rate gap",
         "vi": "Khoảng cách tỷ giá hối đoái",
         "zh-Hant": "匯價跳空",
-        "id": "Exchange rate gap",
+        "id": "Selisih kurs",
         "es": "Gap tipos de cambio",
         "pt-BR": "Diferença de taxa de câmbio",
         "ar": "فجوة سعر الصرف"
@@ -8116,7 +8116,7 @@ module.exports = {
         "en": "It happens that the opening price on the first trading day in a week may be different with the closing price on the last trading day in last week. The following causes may contribute to substantial gaps: The announcement periods of industry data, force majeure and economic index number events that may change how participants of the market consider the value of some certain currencies. Traders with positions or pending orders should be aware that gaps are likely to emerge during weekends.",
         "vi": "Điều đó xảy ra là giá mở cửa trong ngày giao dịch đầu tiên trong một tuần có thể khác với giá đóng cửa vào ngày giao dịch cuối cùng trong tuần trước. Những nguyên nhân sau đây có thể góp phần vào những khoảng cách giá đáng kể: Thời gian công bố dữ liệu ngành, bất khả kháng và các biến số chỉ số kinh tế có thể thay đổi cách thức người tham gia thị trường xem xét giá trị của một số loại tiền nhất định. Nhà đầu tư có vị thế hoặc lệnh chờ cần lưu ý rằng những khoảng cách giá có khả năng xuất hiện vào cuối tuần.",
         "zh-Hant": "每周的第壹個交易日開盤價有可能與上周的最後壹個交易日收盤價相同或不同。遇到重大數據公布期間或不可抗拒因素或經濟指數事件改變市場對於某種貨幣價值的看法時，可能會出現較大幅度的跳空。交易者持有倉位或掛單過周末應註意匯價可能有跳空的情況。",
-        "id": "It happens that the opening price on the first trading day in a week may be different with the closing price on the last trading day in last week. The following causes may contribute to substantial gaps: The announcement periods of industry data, force majeure and economic index number events that may change how participants of the market consider the value of some certain currencies. Traders with positions or pending orders should be aware that gaps are likely to emerge during weekends.",
+        "id": "Kebetulan harga pembukaan pada hari trading pertama dalam seminggu mungkin berbeda dengan harga penutupan pada hari trading terakhir minggu lalu. Penyebab berikut dapat berkontribusi pada kesenjangan yang substansial: Periode pengumuman data industri, peristiwa force majeure dan nomor indeks ekonomi yang dapat mengubah cara peserta pasar mempertimbangkan nilai beberapa mata uang tertentu. Trader dengan posisi atau pending order harus menyadari bahwa celah kemungkinan akan muncul selama akhir pekan.",
         "es": "Sucede que el precio de apertura en el primer día de trading en una semana puede ser diferente con el precio de cierre en el último día de negociación en la semana pasada. Las siguientes causas pueden contribuir a gaps sustanciales: períodos de publicaciones de datos de la industria, fuerza mayor y eventos económicos que pueden cambiar la forma en que los participantes del mercado consideran el valor de algunas divisas o activos. Los traders con posiciones u órdenes pendientes deben ser conscientes de que pudieran aparecer gaps durante los fines de semana.",
         "pt-BR": "Acontece que o preço de abertura no primeiro dia de negociação em uma semana pode ser diferente com o preço de fechamento no último dia de negociação na semana passada. As seguintes causas podem contribuir para lacunas substanciais: Os períodos de anúncio de dados da indústria, força maior e eventos de número de índice econômico que podem alterar a forma como os participantes do mercado consideram o valor de algumas moedas. Os comerciantes com posições ou ordens pendentes devem estar cientes de que as brechas provavelmente surgirão durante os finais de semana.",
         "ar": "يحدث في بعض الأحيان أن يختلف سعر الافتتاح في أول يوم تداول في الأسبوع عن سعر الإغلاق في آخر يوم تداول في الأسبوع السابق. ويمكن أن تساهم الأسباب التالية في حدوث فجوات كبيرة في الأسعار:  فترات الإعلان عن بيانات مهمة والقوة القاهرة والأحداث الاقتصادية التي يمكن أن تغير الطريقة التي ينظر بها المشاركون في السوق إلى قيمة بعض العملات.  يجب أن يكون المتداولون الذين لديهم مراكز أو أوامر معلقة على علم بأن الفجوات من المحتمل أن تحدث خلال عطلات نهاية الأسبوع."
@@ -8126,7 +8126,7 @@ module.exports = {
         "en": "Risk of System Quotation (Mispricing)",
         "vi": "Rủi ro hệ thống báo giá (Mispricing-Báo giá sai)",
         "zh-Hant": "系統報價風險(錯價)",
-        "id": "Risk of System Quotation (Mispricing)",
+        "id": "Risiko Penawaran Sistem (Mispricing)",
         "es": "Riesgos del Sistema Cotizaciones (Mispricing)",
         "pt-BR": "Risco de cotação do sistema (Mispricing)",
         "ar": "مخاطر أسعار النظام (سوء التسعير)"
@@ -8136,7 +8136,7 @@ module.exports = {
         "en": "In fact, when customers trade through TigerWit, they are trading according to quotations provided by major banks and financial institutions. In some cases, these quotations might be subject to interference and wrong quotations due to some temporary issues of trading technology. Usually, these problems may only occur a short time.",
         "vi": "Trên thực tế, khi khách hàng giao dịch qua TigerWit, họ đang giao dịch theo các báo giá do các ngân hàng và tổ chức tài chính lớn cung cấp. Trong một số trường hợp, các báo giá này có thể bị nhiễu và báo giá sai do một số vấn đề tạm thời của công nghệ giao dịch. Thông thường, những vấn đề này chỉ có thể xảy ra trong một thời gian ngắn.",
         "zh-Hant": "客戶與 TigerWit 進行交易，實際上是與不同的主要銀行及金融機構提供的匯價進行買賣。網上交易技術並非萬無壹失，某些情況下，報價可能會受到幹擾，導致報價錯誤。這種情況可能只持續很短時間。",
-        "id": "In fact, when customers trade through TigerWit, they are trading according to quotations provided by major banks and financial institutions. In some cases, these quotations might be subject to interference and wrong quotations due to some temporary issues of trading technology. Usually, these problems may only occur a short time.",
+        "id": "Faktanya, ketika pelanggan trading melalui TigerWit, mereka berdagang sesuai dengan kutipan yang diberikan oleh bank dan lembaga keuangan besar. Dalam beberapa kasus, kutipan ini mungkin mengalami gangguan dan kutipan yang salah karena beberapa masalah sementara teknologitrading . Biasanya masalah ini mungkin hanya terjadi dalam waktu yang singkat.",
         "es": "De facto, cuando los clientes operan a través de TigerWit están operando vía cotizaciones proporcionadas por bancos tier1 e instituciones financieras. En algunos casos, estas cotizaciones pueden estar sujetas a interferencias y cotizaciones incorrectas debido a determinados problemas temporales de la tecnología de trading. Por lo general, estos problemas ocurren en plazo corto de tiempo.",
         "pt-BR": "Na verdade, quando os clientes negociam através da TigerWit, eles estão negociando de acordo com cotações fornecidas por grandes bancos e instituições financeiras. Em alguns casos, essas cotações podem estar sujeitas a interferência e cotações erradas devido a alguns problemas temporários de tecnologia de negociação. Normalmente, esses problemas podem ocorrer apenas por um curto período de tempo.",
         "ar": "في حقيقة الأمر، عندما يقوم العملاء بالتداول مع TigerWit فإنهم يتداولون وفقًا لأسعار تقدمها كبرى البنوك والمؤسسات المالية.  وفي بعض الحالات، قد تكون هذه الأسعار عرضة للتدخل وعدم صحة الأسعار بسبب حدوث بعض المشكلات المؤقتة في تكنولوجيا التداول.  وتحدث هذه المشكلات في العادة لفترة زمنية قصيرة."
@@ -8146,7 +8146,7 @@ module.exports = {
         "en": "TigerWit recommends that if customers encounter these situations, please avoid dealing at best prices, because these exchange prices might be untrue resulting in considerable spreads with the actual market prices. If the exchange prices are not the actual prices offered by banks and financial institutions, TigerWit has the right to revoke these orders. Once the orders are revoked, these transactions will be regarded as invalid ones.",
         "vi": "TigerWit khuyến cáo rằng nếu khách hàng gặp phải những tình huống này, vui lòng tránh giao dịch ở mức giá tốt nhất, bởi vì giá hối đoái này có thể là không đúng sự thật dẫn đến chênh lệch đáng kể với giá thị trường thực tế. Nếu giá hối đoái không phải là giá thực tế được cung cấp bởi các ngân hàng và tổ chức tài chính, TigerWit có quyền thu hồi các lệnh này. Khi lệnh bị thu hồi, các giao dịch này sẽ bị coi là giao dịch không hợp lệ.",
         "zh-Hant": "TigerWit 建議客戶壹旦遇到上述情況，應該避免在最佳可成交價下單，此最佳可成交價之價格並不真實，成交價可能與實際市場價格相差頗大的點數。倘若成交價並非銀行及金融機構提供給 TigerWit 的實際匯價，TigerWit 將對有關交易保留撤銷的權利。交易壹經撤銷，視同未成交。",
-        "id": "TigerWit recommends that if customers encounter these situations, please avoid dealing at best prices, because these exchange prices might be untrue resulting in considerable spreads with the actual market prices. If the exchange prices are not the actual prices offered by banks and financial institutions, TigerWit has the right to revoke these orders. Once the orders are revoked, these transactions will be regarded as invalid ones.",
+        "id": "TigerWit merekomendasikan bahwa jika pelanggan menghadapi situasi ini, harap hindari transaksi dengan harga terbaik, karena harga pertukaran ini mungkin tidak benar sehingga menghasilkan spread yang cukup besar dengan harga pasar sebenarnya. Jika harga pertukaran bukan harga sebenarnya yang ditawarkan oleh bank dan lembaga keuangan, TigerWit berhak mencabut pesanan ini. Setelah pesanan dicabut, transaksi ini akan dianggap sebagai transaksi yang tidak valid.",
         "es": "TigerWit recomienda que si los clientes se encuentran en estas situaciones, evite operes al best price, ya que dichos precios  pudieran ser erróneos y dar lugar a considerables spreads con respecto a los precios reales del mercado. Si los precios de intercambio no son los precios reales ofrecidos por los bancos e instituciones financieras, TigerWit tiene el derecho de revocar estas órdenes. Una vez que se revocan las operaciones, estas transacciones se considerarán como no válidas.",
         "pt-BR": "A TigerWit recomenda que, se os clientes se depararem com essas situações, evitem negociar com os melhores preços, porque esses preços de câmbio podem não ser verdadeiros, resultando em spreads consideráveis ",
         "ar": "توصي TigerWit أنه إذا تعرض العملاء لهذه المشكلات، يرجى تجنب التداول بأفضل سعر لأن أسعار الصرف وقتئذ قد تكون غير حقيقية وتؤدي إلى فروق أسعار كبيرة.  وإذا لم تكن أسعار الصرف هي الأسعار الفعلية التي تقدمها البنوك والمؤسسات المالية، يحق لشركة TigerWit إلغاء هذه الأوامر.  وبعد إلغاء الأوامر، سيتم النظر إلى هذه المعاملات باعتبارها معاملات غير صالحة."
@@ -8156,7 +8156,7 @@ module.exports = {
         "en": "Please note: although the situations mentioned above are relatively rare, TigerWit advices customers to halt the transaction to avoid related risks.",
         "vi": "Xin lưu ý: mặc dù các tình huống nêu trên khá hiếm, TigerWit khuyên khách hàng phải tạm dừng giao dịch để tránh rủi ro liên quan.",
         "zh-Hant": "請註意，雖然上述情況不常見，但建議客戶在此情況下先暫停交易以避免相關的風險。",
-        "id": "Please note: although the situations mentioned above are relatively rare, TigerWit advices customers to halt the transaction to avoid related risks.",
+        "id": "Harap dicatat: meskipun situasi yang disebutkan di atas relatif jarang, TigerWit menyarankan pelanggan untuk menghentikan transaksi untuk menghindari risiko terkait.",
         "es": "Tenga en cuenta: aunque las situaciones mencionadas anteriormente son relativamente raras, TigerWit aconseja a los clientes que detengan la transacción para evitar riesgos relacionados.",
         "pt-BR": "Observe: embora as situações mencionadas acima sejam relativamente raras, a TigerWit aconselha os clientes a suspender a transação para evitar riscos relacionados.",
         "ar": "يرجى ملاحظة ما يلي: على الرغم من أن الحالات سالفة الذكر تعتبر نادرة نسبيًا، تنصح TigerWit العملاء بتعليق التداول من أجل تجنب المخاطر ذات الصلة."
@@ -8166,7 +8166,7 @@ module.exports = {
         "en": "When quotations of system are incorrect, customers sometimes cannot complete trading, TigerWit will inform all the customers via system announcement, email or text as soon as possible. Following the trading principles of fairness and equitability, TigerWit may revoke mispriced deals regardless of profit or loss.",
         "vi": "Khi các báo giá của hệ thống không chính xác, khách hàng đôi khi không thể hoàn tất giao dịch, TigerWit sẽ thông báo cho tất cả khách hàng thông qua hệ thống thông báo, email hoặc văn bản càng sớm càng tốt. Theo nguyên tắc sự công bằng và bình đẳng, TigerWit có thể thu hồi các giao dịch sai lệch bất kể lời hay thua lỗ.",
         "zh-Hant": "當系統報價發生錯誤時，客戶可能無法交易，TigerWit 將盡可能在最短時間內以站內通知或mail 或手機短信發送的方式通知客戶，並秉持著公平公正的交易原則，對錯價的成交單不論盈虧，均予以回復、撤銷或酌情處理。",
-        "id": "When quotations of system are incorrect, customers sometimes cannot complete trading, TigerWit will inform all the customers via system announcement, email or text as soon as possible. Following the trading principles of fairness and equitability, TigerWit may revoke mispriced deals regardless of profit or loss.",
+        "id": "Ketika kutipan sistem tidak benar, pelanggan terkadang tidak dapat menyelesaikan trading, TigerWit akan menginformasikan semua pelanggan melalui pengumuman sistem, email atau teks sesegera mungkin. Mengikuti prinsip keadilan dan kesetaraan trade, TigerWit dapat mencabut penawaran yang salah harga terlepas dari untung atau rugi.",
         "es": "Cuando las cotizaciones del sistema son incorrectas, los clientes a veces no pueden completar su trading, TigerWit informará a todos los clientes a través del anuncio del sistema, email o mensaje de texto a la mayor brevedad posible. Siguiendo los principios de trading de imparcialidad y equidad, TigerWit puede revocar deals mal cotizados independientemente de las ganancias o pérdidas.",
         "pt-BR": "Quando as cotações do sistema estão incorretas, os clientes às vezes não podem concluir a negociação, a TigerWit informará todos os clientes via anúncio do sistema, e-mail ou texto o mais rápido possível. Seguindo os princípios de negociação de justiça e eqüitabilidade, a TigerWit pode revogar acordos com preço incorreto, independentemente de lucro ou perda.",
         "ar": "عندما تكون أسعار النظام غير صحيحة، لن يتمكن العملاء في بعض الأحيان من إكمال التداول، وستقوم TigerWit بإخطار جميع العملاء عن طريق إعلانات النظام أو البريد الإلكتروني أو الرسائل النصية بذلك في أقرب وقت ممكن. وانطلاقًا من مبادئ الحيادية والنزاهة في التداول، يجوز أن تقوم TigerWit بإلغاء الصفقات التي تعرضت لإساءة التسعير بغض النظر عن الأرباح أو الخسائر."
@@ -8176,7 +8176,7 @@ module.exports = {
         "en": "Arbitrage and control",
         "vi": "Giao dịch chênh lệch giá và kiểm soát",
         "zh-Hant": "套匯和操控",
-        "id": "Arbitrage and control",
+        "id": "Arbitrase dan kontrol",
         "es": "Arbitraje y control",
         "pt-BR": "Arbitragem e controle",
         "ar": "المراجحة والتحكم"
@@ -8186,7 +8186,7 @@ module.exports = {
         "en": "The internet, connection delay and error of quotations may cause prices published in TigerWit trading platform cannot reflect actual market prices. Profit taking behaviors that take advantage of price spread, such as arbitrage, scalping or utilizing the internet delay, are not allowed in Over The Counter (OTC) market that basically trade directly between two parties, without the supervision of an exchange. TigerWit do not allow any clients get involved in these opportunistic practices such as arbitrage or utilizing internet delay and etc. These transactions that resulted from arbitrage behavior based on price lag are very likely to be canceled. TigerWit reserves the rights of settlement for accounts that engage in the opportunistic practices above. These rights include necessary adjustments and modifications. TigerWit may estimate these practices depending on specific conditions then require dealers to intervene and examine the related accounts or close them when it is necessary, which does not need to inform clients in advance. In terms of disputes due to arbitrage and manipulation, TigerWit will resolve these cases basing on specific conditions. TigerWit reserves deposit detention rights until these issues could be solved. Practices or decisions mentioned here would not impair or give up any rights or compensation to you, your companies and employees by TigerWit.",
         "vi": "Sự chậm trễ do kết nối Internet, và lỗi báo giá có thể khiến giá được công bố trên nền tảng giao dịch TigerWit không thể phản ánh giá thị trường thực tế. Hành vi kiếm lời từ lợi dụng chênh lệch giá, chẳng hạn như giao dịch chênh lệch giá (arbitrage, scalping hoặc lợi dụng sự chậm trễ internet, không được cho phép trong thị trường Over The Counter (OTC) trong đó cơ bản giao dịch trực tiếp giữa hai bên, mà không có sự giám sát của một cuộc trao đổi. TigerWit không cho phép bất kỳ khách hàng nào tham gia vào thủ thuật cơ hội như giao dịch chênh lệnh giá choặc sử dụng chậm trễ internet và vv. Các giao dịch có hành vi chênh lệch giá dựa trên chênh lệch giá rất có thể bị hủy bỏ. TigerWit có quyền giải quyết các tài khoản tham gia vào các hoạt động lợi dụng ở trên. Các quyền này bao gồm các điều chỉnh và sửa đổi cần thiết. TigerWit có thể ước tính các thực hành này tùy thuộc vào điều kiện cụ thể sau đó yêu cầu các đại lý can thiệp và kiểm tra các tài khoản liên quan hoặc đóng chúng khi cần thiết, không cần phải thông báo trước cho khách hàng. Về tranh chấp do chênh lệch và thao tác, TigerWit sẽ giải quyết những trường hợp này dựa trên các điều kiện cụ thể. TigerWit bảo lưu quyền tạm giữ tiền gửi cho đến khi những vấn đề này có thể được giải quyết. Các thao tác hoặc phán quyết được đề cập ở đây sẽ không ảnh hưởng hoặc từ bỏ bất kỳ quyền hoặc bồi thường nào cho bạn, các công ty và nhân viên của bạn bởi TigerWit.",
         "zh-Hant": "網絡、連接延遲及報價上的誤差有時會造成顯示在 TigerWit 交易平臺的報價無法準確地反映實時市場價格。“套匯(arbitrage)”及“剝頭皮(scalping)”或因網絡連接的延誤而利用差價獲利的行為，並不能存在於客戶直接向做市商進行交易的場外交易市場中(OTC)。TigerWit 不允許客戶在本公司的交易平臺上進行此等套匯或利用網絡連接延遲的投機行為。依靠因價格滯後帶來的套匯機會進行的交易有可能會被撤銷。對涉及上述交易的賬戶 TigerWit 保留處置權利，包含必要的修改和調整，TigerWit 可能依個別情況判斷，要求交易員進行幹預或對指令進行核準所有單據和/或終止有關客戶的賬戶，而無須事先通知客戶。對於因套匯及/或操控而產生的任何糾紛，TigerWit 將依據個別情況判斷進行解決。TigerWit 保留提款扣留的權利直至以上的問題能夠解決。於此陳述的任何行動或決議將不會損害或放棄 TigerWit 對閣下、閣下的公司和其職員的任何權利或賠償。",
-        "id": "The internet, connection delay and error of quotations may cause prices published in TigerWit trading platform cannot reflect actual market prices. Profit taking behaviors that take advantage of price spread, such as arbitrage, scalping or utilizing the internet delay, are not allowed in Over The Counter (OTC) market that basically trade directly between two parties, without the supervision of an exchange. TigerWit do not allow any clients get involved in these opportunistic practices such as arbitrage or utilizing internet delay and etc. These transactions that resulted from arbitrage behavior based on price lag are very likely to be canceled. TigerWit reserves the rights of settlement for accounts that engage in the opportunistic practices above. These rights include necessary adjustments and modifications. TigerWit may estimate these practices depending on specific conditions then require dealers to intervene and examine the related accounts or close them when it is necessary, which does not need to inform clients in advance. In terms of disputes due to arbitrage and manipulation, TigerWit will resolve these cases basing on specific conditions. TigerWit reserves deposit detention rights until these issues could be solved. Practices or decisions mentioned here would not impair or give up any rights or compensation to you, your companies and employees by TigerWit.",
+        "id": "Internet, keterlambatan koneksi dan kesalahan kutipan dapat menyebabkan harga yang dipublikasikan di platform trading TigerWit tidak dapat mencerminkan harga pasar yang sebenarnya. Perilaku profit taking yang memanfaatkan spread harga, seperti arbitrase, scalping, atau penundaan pemanfaatan internet, tidak diperbolehkan di pasar Over The Counter (OTC) yang pada dasarnya trading langsung antara dua pihak, tanpa pengawasan bursa. TigerWit tidak mengizinkan klien terlibat dalam praktik oportunistik seperti arbitrase atau memanfaatkan penundaan internet, dll. Transaksi yang dihasilkan dari perilaku arbitrase berdasarkan jeda harga sangat mungkin dibatalkan. TigerWit memiliki hak penyelesaian untuk akun yang terlibat dalam praktik oportunistik di atas. Hak-hak ini termasuk penyesuaian dan modifikasi yang diperlukan. TigerWit dapat memperkirakan praktik ini tergantung pada kondisi tertentu, kemudian meminta dealer untuk campur tangan dan memeriksa akun terkait atau menutupnya jika diperlukan, yang tidak perlu memberi tahu klien sebelumnya. Dalam hal sengketa karena arbitrase dan manipulasi, TigerWit akan menyelesaikan kasus-kasus ini berdasarkan kondisi tertentu. TigerWit menyimpan hak penahanan sampai masalah ini dapat diselesaikan. Praktik atau keputusan yang disebutkan di sini tidak akan mengganggu atau melepaskan hak atau kompensasi apa pun kepada Anda, perusahaan, dan karyawan Anda oleh TigerWit.",
         "es": "Internet, retrasos en la conexión y errores de cotizaciones pueden causar que los precios publicados en la plataforma TW pudieran no reflejar los precios actuales de mercado. Comportamientos orientados a beneficiarse del precio del spread, como ciertos arbitrajes, scalping o emplear el retraso de internet, no están permitidos en mercados Over The Counter (OTC) donde básicamente  se opera entre dos partes sin la supervisión de un mercado organizado. TW no permite que los clientes",
         "pt-BR": "A internet, o atraso de conexão e o erro de cotações podem fazer com que os preços publicados na plataforma de negociação TigerWit não reflitam os preços reais de mercado. Os comportamentos de obtenção de lucro que se aproveitam do spread de preços, como arbitragem, escalpelamento ou uso do atraso da Internet, não são permitidos no mercado de balcão que basicamente negoceia diretamente entre duas partes, sem a supervisão de uma bolsa. A TigerWit não permite que nenhum cliente se envolva nessas práticas oportunistas, como a arbitragem ou a utilização de atraso na Internet, etc. Essas transações que resultaram de um comportamento de arbitragem com base na defasagem de preço provavelmente serão canceladas. A TigerWit reserva os direitos de liquidação para contas que se envolvam nas práticas oportunistas acima. Esses direitos incluem ajustes e modificações necessários. A TigerWit pode estimar essas práticas dependendo das condições específicas e, em seguida, exigir que os revendedores intervenham e examinem as contas relacionadas ou fechem-nas quando for necessário, o que não precisa informar os clientes com antecedência. Em termos de disputas devido a arbitragem e manipulação, a TigerWit resolverá esses casos baseando-se em condições específicas. O TigerWit reserva os direitos de detenção até que esses problemas possam ser resolvidos. As práticas ou decisões aqui mencionadas não prejudicariam ou abririam mão de quaisquer direitos ou compensação para você, suas empresas e funcionários pela TigerWit.",
         "ar": "قد يتسبب الإنترنت وتأخير الاتصال وأخطاء التسعير في أن يكون السعر المنشور على منصة تداول TigerWit لا يعكس الأسعار الفعلية في السوق.  وفي سوق خارج البورصة التي يتم فيها التداول مباشرة بين طرفين بدون الإشراف من أي بورصة، لا يُسمح بسلوكيات جني الأرباح التي تستفيد من فروق الأسعار مثل المراجحة والاسكالبينج (التداول الخاطف) أو استخدام تأخير الإنترنت. ولا تسمح TigerWit لأي عميل بالمشاركة في هذه الممارسات الانتهازية مثل المراجحة أو استخدام تأخير الإنترنت ..الخ. ومن المرجح جدًا أن يتم إلغاء هذه المعاملات التي نتجت عن سلوك المراجحة القائم على الاستفادة من التأخير في عرض الأسعار.   وتحتفظ TigerWit لنفسها بالحقوق في إجراء تسوية للحسابات التي تشارك في الممارسات الانتهازية سالفة الذكر.  وتشمل هذه الحقوق القيام بالتعديلات والتغييرات الضرورية.  ويجوز أن تقوم TigerWit بتقدير هذه الممارسات وفقًا لشروط محددة ثم تطلب من التجار التدخل وفحص الحسابات ذات الصلة أو إغلاقها عندما يكون ذلك ضروريًا، وهو أمر لا يستلزم إبلاغ العملاء به مسبقًا.  وفيما يتعلق بالنزاعات الناشئة عن المراجحة والتلاعب، ستقوم TigerWit بحل هذه الحالات وفقًا لشروط محددة.  وتحتفظ TigerWit بحقوق احتجاز الإيداعات حتى يتم حل هذه المسائل.  ولا تضعف الممارسات والقرارات المذكورة هنا أو تتنازل عن أي حقوق أو تعويضات لك أو لشركاتك أو موظفيك من جانب TigerWit."
@@ -8196,7 +8196,7 @@ module.exports = {
         "en": "Price manipulation",
         "vi": "Thao túng giá",
         "zh-Hant": "價位操縱",
-        "id": "Price manipulation",
+        "id": "Manipulasi harga",
         "es": "Manipulación precios",
         "pt-BR": "Manipulação de preços",
         "ar": "التلاعب في الأسعار"
@@ -8206,7 +8206,7 @@ module.exports = {
         "en": "TigerWit absolutely forbids any kinds of manipulation for prices, execution and platform, and does not accept any illegal trading modes such as scalping.",
         "vi": "TigerWit hoàn toàn cấm bất kỳ loại thao tác nào thao túng giá, bàn khớp lệnh và nền tảng, và không chấp nhận bất kỳ chế độ giao dịch bất hợp pháp nào như scalping.",
         "zh-Hant": "TigerWit 絕對禁止對其價格、執行及平臺進行任何形式的操控，不接受客戶“剝頭皮”交易方式。",
-        "id": "TigerWit absolutely forbids any kinds of manipulation for prices, execution and platform, and does not accept any illegal trading modes such as scalping.",
+        "id": "TigerWit benar-benar melarang segala jenis manipulasi harga, eksekusi dan platform, dan tidak menerima mode trading ilegal seperti scalping.",
         "es": "\nTigerWit prohibe absolutmente la manipulación de los precios, de la ejecución y de la plataforma, y no aceta modo de trading ilegal como ciertos scalpings. \n",
         "pt-BR": "A TigerWit proíbe absolutamente qualquer tipo de manipulação de preços, execução e plataforma, e não aceita nenhum modo de negociação ilegal, como escalpelamento.",
         "ar": "تحظر TigerWit تمامًا أي شكل من أشكال التلاعب في الأسعار والتنفيذ والمنصة، ولا تقبل الشركة استخدام أي طرق تداول غير مشروعة مثل الاسكالبينج (التداول الخاطف)."
@@ -8216,7 +8216,7 @@ module.exports = {
         "en": "If TigerWit suspects any accounts are manipulating or doing unacceptable trading, we reserve related rights to investigate and audit these accounts and deduct profits earned in relevant transactions from accounts suspected. Especially, transactions of arbitrage resulted from price delay might be canceled investigated or frozen, TigerWit has the right to close open positions or accounts of these clients. For suspected accounts that manipulate prices, TigerWit has the rights to process necessary adjustment or modification.",
         "vi": "Nếu TigerWit nghi ngờ bất kỳ tài khoản nào đang thao túng hoặc giao dịch không được chấp nhận, chúng tôi bảo lưu quyền liên quan để điều tra và kiểm tra các tài khoản này và khấu trừ lợi nhuận kiếm được trong các giao dịch có liên quan từ các tài khoản bị nghi ngờ. Đặc biệt, các giao dịch chênh lệch do việc trì hoãn giá có thể bị hủy bỏ điều tra hoặc bị đóng băng, TigerWit có quyền đóng các vị thế mở hoặc các tài khoản của các khách hàng này. Đối với các tài khoản nghi ngờ thao túng giá, TigerWit có quyền xử lý các điều chỉnh hoặc sửa đổi cần thiết.",
         "zh-Hant": "若 TigerWit 懷疑任何賬戶從事操控或不接受的交易方式，TigerWit 保留相關權利，對賬戶進行調查及覆核，並從涉嫌賬戶中扣除由相關活動所賺取的盈利款項，尤其是價格滯後帶來的套匯機會進行的交易有可能會被撤銷，調查及覆核期間賬戶可能被凍結交易，TigerWit 保留了結此類客戶所有未平倉頭寸以及關閉其賬戶的權利。對於涉嫌從事操控的賬戶，TigerWit 保留對相關賬戶進行必要更正或調整的權利。",
-        "id": "If TigerWit suspects any accounts are manipulating or doing unacceptable trading, we reserve related rights to investigate and audit these accounts and deduct profits earned in relevant transactions from accounts suspected. Especially, transactions of arbitrage resulted from price delay might be canceled investigated or frozen, TigerWit has the right to close open positions or accounts of these clients. For suspected accounts that manipulate prices, TigerWit has the rights to process necessary adjustment or modification.",
+        "id": "Jika TigerWit mencurigai ada akun yang memanipulasi atau melakukan trading yang tidak dapat diterima, kami memiliki hak terkait untuk menyelidiki dan mengaudit akun ini dan mengurangi keuntungan yang diperoleh dalam transaksi relevan dari akun yang dicurigai. Khususnya, transaksi arbitrase yang disebabkan oleh penundaan harga dapat dibatalkan diselidiki atau dibekukan, TigerWit berhak untuk menutup posisi terbuka atau akun klien ini. Untuk akun yang dicurigai memanipulasi harga, TigerWit memiliki hak untuk memproses penyesuaian atau modifikasi yang diperlukan.",
         "es": "Si TigerWit tuviera sospechas sobre cualquier cuenta que estuviera manipulando o realizando trading no aceptable, nos reservamos el derecho a investigar y auditar dichas cuentas sospechosas y deducir los beneficios obtenidos en las transacciones relevantes.   Especialmente transacciones de arbitraje, resultantes de retrasos en el precio, pudieran ser canceladas, investigadas  y suspendidas. TigerWit tiene el derecho de cerrar posiciones abiertas y cuentas de esos clientes. Para cuentas sospechosas de manipular precios, TigerWit tiene el derecho de procesar los ajustes y modificaciones necesarias.  ",
         "pt-BR": "Se a TigerWit suspeitar que quaisquer contas estão manipulando ou fazendo negociações inaceitáveis, reservamos os direitos relacionados para investigar e auditar essas contas e deduzir os lucros obtidos em transações relevantes de contas suspeitas. Especialmente, transações de arbitragem resultantes do atraso de preço podem ser canceladas investigadas ou congeladas, a TigerWit tem o direito de fechar posições em aberto ou contas desses clientes. Para contas suspeitas que manipulam os preços, a TigerWit tem o direito de processar ajustes ou modificações necessárias.",
         "ar": "وإذا كان لدى TigerWit شكوك بأن أي حسابات تتلاعب أو تقوم بأنشطة تداول غير مقبولة، نحن نحتفظ بالحق في التحقيق في هذه الحسابات ومراجعتها وخصم الأرباح الناتجة عن المعاملات في الحسابات المشبوهة.  وعلى وجه التحديد، يجوز إلغاء أو التحقيق في أو تجميد معاملات المراجحة الناتجة عن التأخير في السعر، ويحق لشركة TigerWit إغلاق المراكز المفتوحة لهؤلاء العملاء أو إغلاق حساباتهم. وبالنسبة للحسابات المشتبه في تلاعبها بالأسعار، يحق لشركة TigerWit القيام بالتعديلات والتغييرات اللازمة."
@@ -8226,7 +8226,7 @@ module.exports = {
         "en": "Trade and third-party participation",
         "vi": "Giao dịch và tham gia của bên thứ ba",
         "zh-Hant": "交易與第三者參與",
-        "id": "Trade and third-party participation",
+        "id": "Trade dan partisipasi pihak ketiga",
         "es": "Trade y participación terceros",
         "pt-BR": "Comércio e participação de terceiros",
         "ar": "التداول ومشاركة الأطراف الثالثة"
@@ -8236,7 +8236,7 @@ module.exports = {
         "en": "Users have obligations to maintain their own passwords secrecy and confirm all the third parties are not able to login TigerWit or obtain rights of users in platform via users’ account names and passwords. In any cases, trading should be operated by users themselves only. If users authorize the usage of their account by any third party or trade according to others’ information, advice or instructions, no matter whether it is from users’ own decisions, the risks should be borne by users themselves. TigerWit is not responsible for any confirms or advice gave by third parties authorized by users. TigerWit does not offer any states or guarantees to any trading agents. TigerWit is not responsible for the loss of users caused by the practices of third parties.",
         "vi": "Người dùng có nghĩa vụ duy trì bí mật mật khẩu của riêng mình và xác nhận tất cả các bên thứ ba không thể đăng nhập TigerWit hoặc có được quyền của người dùng trên nền tảng thông qua tên và mật khẩu của người dùng. Trong mọi trường hợp, giao dịch chỉ được vận hành bởi người dùng. Nếu người dùng ủy quyền việc sử dụng tài khoản của họ cho bất kỳ bên thứ ba hoặc giao dịch nào theo thông tin, lời khuyên hoặc hướng dẫn của người khác, cho dù đó là do quyết định của người dùng, thì rủi ro sẽ do chính người dùng gánh chịu. TigerWit không chịu trách nhiệm về bất kỳ xác nhận hoặc lời khuyên nào được cung cấp bởi các bên thứ ba được người dùng ủy quyền. TigerWit không cung cấp bất kỳ tuyên bố hoặc bảo đảm nào cho bất kỳ đại lý giao dịch nào. TigerWit không chịu trách nhiệm về sự mất mát của người dùng do các hoạt động của các bên thứ ba.",
         "zh-Hant": "客戶有義務將密碼保密存放，確保第三方無法以用戶名稱及密碼進入平臺取得客戶在此平臺賬戶的權利，在任何時候，交易應當由客戶本人進行。無論是否出於自主權，客戶將交易權力或對其賬戶的控制授予第三者，或根據任何第三者（交易代理人）的信息、建議或指令行事，風險由客戶自行承擔。TigerWit 不承擔對客戶所選擇的交易代理人進行覆核或提供有關建議的任何責任。TigerWit 不就任何交易代理人作出任何聲明或保證。TigerWit 不對客戶因交易代理人的行為遭受的任何損失承擔責任。",
-        "id": "Users have obligations to maintain their own passwords secrecy and confirm all the third parties are not able to login TigerWit or obtain rights of users in platform via users’ account names and passwords. In any cases, trading should be operated by users themselves only. If users authorize the usage of their account by any third party or trade according to others’ information, advice or instructions, no matter whether it is from users’ own decisions, the risks should be borne by users themselves. TigerWit is not responsible for any confirms or advice gave by third parties authorized by users. TigerWit does not offer any states or guarantees to any trading agents. TigerWit is not responsible for the loss of users caused by the practices of third parties.",
+        "id": "Pengguna memiliki kewajiban untuk menjaga kerahasiaan kata sandi mereka sendiri dan mengonfirmasi bahwa semua pihak ketiga tidak dapat masuk ke TigerWit atau mendapatkan hak pengguna di platform melalui nama akun dan kata sandi pengguna. Dalam kasus apa pun, trading harus dioperasikan oleh pengguna itu sendiri saja. Jika pengguna mengizinkan penggunaan akun mereka oleh pihak ketiga atau trading sesuai dengan informasi, saran, atau instruksi orang lain, tidak peduli apakah itu dari keputusan pengguna sendiri, risiko harus ditanggung sendiri oleh pengguna. TigerWit tidak bertanggung jawab atas konfirmasi atau saran yang diberikan oleh pihak ketiga yang diizinkan oleh pengguna. TigerWit tidak menawarkan negara bagian atau jaminan apa pun kepada agen perdagangan mana pun. TigerWit tidak bertanggung jawab atas hilangnya pengguna yang disebabkan oleh praktik pihak ketiga.",
         "es": "Los usuarios tienen la obligación de mantener la privacidad de sus contraseñas y confirmar que ningún tercero es capaz de ingresar en TigerWit u obtener sus derechos de uso, vía nombre en las cuentas o contraseñas. En cualquier caso, el trading debe ser realizado directamente por los usuarios. Si los usuarios autorizan el uso de su cuenta por parte de un tercero o realizan un trade siguiendo la información, consejos o instrucciones de otros, sin importar si se trata de decisiones propias de los usuarios, los riesgos deben ser asumidos por los propios usuarios. TigerWit no es responsable de ninguna confirmación o consejo proporcionado por terceros autorizados por los usuarios. TigerWit no ofrece ningún estado ni garantía a ningún agente comercial. TigerWit no es responsable por la pérdida de usuarios causada por las prácticas de terceros.",
         "pt-BR": "Os usuários têm a obrigação de manter sigilo de suas próprias senhas e confirmam que todos os terceiros não podem fazer login na TigerWit ou obter direitos de usuários na plataforma através dos nomes de contas e senhas dos usuários. Em qualquer caso, a negociação deve ser operada apenas pelos usuários. Se os usuários autorizarem o uso de suas contas por terceiros ou negociarem de acordo com informações, conselhos ou instruções de outras pessoas, independentemente de serem de suas próprias decisões, os riscos devem ser assumidos pelos próprios usuários. A TigerWit não é responsável por quaisquer confirmações ou conselhos dados por terceiros autorizados pelos usuários. A TigerWit não oferece nenhum estado ou garantia a nenhum agente comercial. A TigerWit não é responsável pela perda de usuários causada pelas práticas de terceiros.",
         "ar": "يجب على المستخدمين المحافظة على سرية كلمات المرور الخاصة بهم والتأكد من أنه ليس بمقدور أي طرف ثالث تسجيل الدخول إلى منصة TigerWit أو الحصول على حقوق الاستخدام على المنصة عن طريق أسماء المستخدمين وكلمات المرور  الخاصة بحساباتهم.  وعلى أي حال، يجب أن يتم التداول بشكل مباشر بواسطة المستخدمين فقط. وإذا سمح المستخدمون لأي طرف ثالث باستخدام حساباتهم أو قاموا بالتداول باستخدام معلومات الآخرين أو مشورتهم أو تعليماتهم، سواء كان ذلك قرار المستخدمين أو لا، سيتحمل المستخدمون أنفسهم المخاطر.  ولن تتحمل TigerWit المسؤولية عن أي تأكيد أو مشورة مقدمة من أطراف ثالثة مصرح لها من جانب المستخدمين.  ولا تعرض TigerWit أي تعهدات أو ضمانات بشأن أي وكلاء تداول.  ولا تتحمل TigerWit المسؤولية عن أي خسارة بتكبدها المستخدمون بسبب ممارسات الأطراف الثالثة."
@@ -8246,7 +8246,7 @@ module.exports = {
         "en": "Platform Trading Hours",
         "vi": "Giờ giao dịch của nền tảng",
         "zh-Hant": "交易平臺時間",
-        "id": "Platform Trading Hours",
+        "id": "Jam Platform Trading",
         "es": "Horarios Plataforma Trading",
         "pt-BR": "Horário de negociação da plataforma",
         "ar": "مواعيد التداول على المنصة"
@@ -8272,11 +8272,11 @@ module.exports = {
         "ar": " "
     },
     "amtConditions33": {
-        "zh": "交易平台的报价来自银行及金融机构，所以开盘或收盘时间可能因银行及金融机构延长或提前结束报价而有所变动。开盘时的报价会依市场 价 格 而 有 所 调 整 或 报 价 可 能 受 到 干 扰 ，TigerWit 将在市场价格稳定后开盘。",
+        "zh": "交易平台的报价来自银行及金融机构，所以开盘或收盘时间可能因银行及金融机构延长或提前结束报价而有所变动。开盘时的报价会依市场价格而有所调整或报价可能受到干扰，TigerWit 将在市场价格稳定后开盘。",
         "en": "The quotations in TigerWit platform are offered by banks and financial institutions, thus, the hours of opening or closing quotations might start early or extend, because banks and financial institutions to do so. The opening quotations might be adjusted or affected due to the market quotations. TigerWit usually opens quotations under a stable market.",
         "vi": "Các chào giá trong nền tảng TigerWit được cung cấp bởi các ngân hàng và tổ chức tài chính, do đó, giờ mở cửa hoặc đóng cửa các chào giá có thể bắt đầu sớm hoặc kéo dài, bởi vì các ngân hàng và các tổ chức tài chính làm như vậy. Các chào giá mở có thể được điều chỉnh hoặc bị ảnh hưởng do các chào giá của thị trường. TigerWit thường mở các chào giá dưới một thị trường ổn định.",
-        "zh-Hant": "交易平臺的報價來自銀行及金融機構，所以開盤或收盤時間可能因銀行及金融機構延長或提前結束報價而有所變動。開盤時的報價會依市場 價 格 而 有 所 調 整 或 報 價 可 能 受 到 幹 擾 ，TigerWit 將在市場價格穩定後開盤。",
-        "id": "The quotations in TigerWit platform are offered by banks and financial institutions, thus, the hours of opening or closing quotations might start early or extend, because banks and financial institutions to do so. The opening quotations might be adjusted or affected due to the market quotations. TigerWit usually opens quotations under a stable market.",
+        "zh-Hant": "交易平臺的報價來自銀行及金融機構，所以開盤或收盤時間可能因銀行及金融機構延長或提前結束報價而有所變動。開盤時的報價會依市場價格而有所調整或報價可能受到干擾，TigerWit將在市場價格穩定後開盤。",
+        "id": "Kutipan dalam platform TigerWit ditawarkan oleh bank dan lembaga keuangan, dengan demikian, jam buka atau tutup kutipan dapat dimulai lebih awal atau diperpanjang, karena bank dan lembaga keuangan melakukannya. Kuotasi pembukaan mungkin disesuaikan atau terpengaruh karena kuotasi pasar. TigerWit biasanya membuka kutipan di bawah pasar yang stabil.",
         "es": "Las cotizaciones en la plataforma TigerWit son ofrecidas por bancos e instituciones financiera; por lo tanto, las horas de apertura o cierre de cotizaciones pueden comenzar antes o extenderse, debido a que los bancos y las instituciones financieras lo hacen. Las cotizaciones de apertura podrían ser ajustadas o afectadas debido a las cotizaciones del mercado. TigerWit generalmente abre las cotizaciones bajo un mercado estable.",
         "pt-BR": "As cotações na plataforma TigerWit são oferecidas por bancos e instituições financeiras, assim, as horas de abertura ou fechamento das cotações podem começar cedo ou estender, porque bancos e instituições financeiras o fazem. As cotações de abertura podem ser ajustadas ou afetadas devido às cotações de mercado. A TigerWit geralmente abre cotações em um mercado estável.",
         "ar": "يتم تقديم الأسعار في منصة TigerWit بواسطة البنوك والمؤسسات المالية، وبالتالي فإن وقت الافتتاح والإغلاق يكون عرضة للافتتاح المبكر أو الإغلاق المتأخر لأن البنوك والمؤسسات المالية التي تقدم الأسعار تفعل ذلك.  وقد يتم تعديل أسعار الافتتاح أو تتأثر نتيجة لأسعار السوق. وعادة ما يتم تقديم أسعار الافتتاح في TigerWit بعد استقرار السوق."
@@ -8286,7 +8286,7 @@ module.exports = {
         "en": "Circulation",
         "vi": "Lưu hành",
         "zh-Hant": "流通量",
-        "id": "Circulation",
+        "id": "Sirkulas",
         "es": "Circulación",
         "pt-BR": "Circulação",
         "ar": "التداول"
@@ -8296,7 +8296,7 @@ module.exports = {
         "en": "Traders please note: during a couple of hours around market opening, the amount of trading in circulation usually relatively small. At that time, the buyers and sellers are relatively few and spreads might be affected by the market.",
         "vi": "Nhà đầu tư xin lưu ý: trong một vài giờ trong thời gian mở cửa thị trường, số lượng giao dịch đang lưu thông thường tương đối nhỏ. Vào thời điểm đó, người mua và người bán là tương đối ít và phí spread có thể bị ảnh hưởng bởi thị trường.",
         "zh-Hant": "交易者請註意，在開市後前幾個小時的交易流通量通常較為清淡。市場清淡時買家及賣家較少，差價將會隨著市場而有所變動。",
-        "id": "Traders please note: during a couple of hours around market opening, the amount of trading in circulation usually relatively small. At that time, the buyers and sellers are relatively few and spreads might be affected by the market.",
+        "id": "Trader harap perhatikan: selama beberapa jam sekitar pembukaan pasar, jumlah trading yang beredar biasanya relatif kecil. Pada saat itu, pembeli dan penjual relatif sedikit dan spread mungkin akan terpengaruh oleh pasar.",
         "es": "Por favor, traders tened presente que, durante un par de horas en la apertura de mercado, el volumen de trading en circulación es normalmente relativamente reducido. En ese instante, los compradores y vendedores son relativamente pocos y los spreads se pudieran ver afectados por esta situación de mercado.",
         "pt-BR": "Traders, por favor note: durante algumas horas em torno da abertura do mercado, a quantidade de negociação em circulação geralmente é relativamente pequena. Naquela época, os compradores e vendedores são relativamente poucos e os spreads podem ser afetados pelo mercado.",
         "ar": "يرجى من المتداولين ملاحظة ما يلي:عادة ما يكون حجم التداول في الساعات القليلة الأولى بعد فتح السوق صغيرًا نسبيًا. ففي ذلك الوقت يكون البائعون والمشترون قليلون نسبيًا وقد تتأثر فروق الأسعار بهذا الوضع في السوق."
@@ -8316,7 +8316,7 @@ module.exports = {
         "en": "Margin decreases may widen as the result of spreads and lead to the reduction of free margin left in the account. If the margin is insufficient to maintain all open positions, the account may need to close the position due to insufficient margin. Although traders who held both long and short positions may feel the impact is limited from the market changes, in fact, a margin call on all open positions may occur at any time when spreads are widening and the free margin is insufficient.",
         "vi": "Các lần giảm số tiền kí quỹ có thể tăng lên do kết quả của spread và dẫn đến việc giảm số dư ký quỹ còn lại trong tài khoản. Nếu lợi nhuận không đủ để duy trì tất cả các vị thế mở, tài khoản có thể cần phải đóng vị thế do không đủ số dư. Mặc dù các nhà giao dịch nắm giữ cả vị thế mua và bán dài hạn có thể cảm thấy tác động từ các thay đổi từ thị trường bị giới hạn trên thực tế, một yêu cầu bảo chứng trên tất cả các vị thế mở có thể xảy ra bất kỳ lúc nào khi spread tăng lênh và mức margin có thể đặt lệnh không đủ.",
         "zh-Hant": "保證金減少的情勢可能會因買賣差價的變動而擴大，導致賬戶內可用保證金余額減少。假如保證金不足以維持任何開倉部位，賬戶可能會因為保證金不足而強制平倉。雖然持有長短倉令交易者覺得受市場變動的影響有限，實際上在任何時間買賣差價擴大而可用保證金不足，都可能出現全部倉位被強制平倉。",
-        "id": "Margin decreases may widen as the result of spreads and lead to the reduction of free margin left in the account. If the margin is insufficient to maintain all open positions, the account may need to close the position due to insufficient margin. Although traders who held both long and short positions may feel the impact is limited from the market changes, in fact, a margin call on all open positions may occur at any time when spreads are widening and the free margin is insufficient.",
+        "id": "Penurunan margin dapat melebar sebagai akibat dari spread dan menyebabkan pengurangan margin bebas yang tersisa di akun. Jika margin tidak cukup untuk mempertahankan semua posisi terbuka, akun mungkin perlu menutup posisi karena margin tidak mencukupi. Meskipun trader yang memegang posisi panjang dan pendek mungkin merasa dampaknya terbatas dari perubahan pasar, pada kenyataannya, margin call pada semua posisi terbuka dapat terjadi kapan saja ketika spread melebar dan margin bebas tidak mencukupi.",
         "es": "El descenso en el margen se pudiera ampliar como consecuencia de los spreads y conllevar una reducción del margen libre disponible en la cuenta. Si el margen es insuficiente para mantener todas las posiciones, la cuenta puede tener que cerrar la posición debido a un margen insuficiente. Aunque los traders que mantienen posiciones largas y cortas puedan sentir que el impacto es limitado en relación a los cambios de mercado, en realidad una llamada de margen puede suceder en todas las posiciones abiertas en una momento en el que los spreads se amplíen y el margen libre sea insuficiente.",
         "pt-BR": "As reduções de margem podem aumentar como resultado de spreads e levar à redução da margem livre deixada na conta. Se a margem é insuficiente para manter todas as posições abertas, a conta pode precisar fechar a posição devido a margem insuficiente. Embora os operadores que detêm posições longas e curtas possam sentir que o impacto é limitado pelas mudanças do mercado, de fato, uma chamada de margem em todas as posições abertas pode ocorrer a qualquer momento quando os spreads estão aumentando e a margem livre é insuficiente.",
         "ar": "تراجع الهامش قد يزداد نتيجة فروق الأسعار مما يتسبب بخفض الهامش المتاح المتبقي في الحساب.  وإذا كان الهامش غير كاف للمحافظة على جميع المراكز المفتوحة، قد يتعين على الحساب إغلاق المراكز بسبب عدم كفاية الهامش.  وعلى الرغم من أن المتداولين الذين لديهم صفقات شراء وبيع على السواء قد يشعرون أن التأثير محدود بالنسبة لتغيرات السوق، ولكن في الحقيقة فإن قد يتم إصدار مطالبة باضافة هامش على جميع المراكز المفتوحة في أي وقت عندما تزيد فروق الأسعار ويصبح الهامش الحر غير كاف. "
@@ -8326,7 +8326,7 @@ module.exports = {
         "en": "Risks over weekends",
         "vi": "Rủi ro cuối tuần",
         "zh-Hant": "周末風險",
-        "id": "Risks over weekends",
+        "id": "Risiko selama akhir pekan",
         "es": "Riesgos fines de semana",
         "pt-BR": "Riscos nos finais de semana",
         "ar": "مخاطر عطلات نهاية الأسبوع"
@@ -8336,7 +8336,7 @@ module.exports = {
         "en": "When the markets are closed over the weekends and holidays all kinds of situations, developments, changes or big events may occur, which may lead to large gaps between the opening quotations and the closing quotations of Friday afternoon of the previous week.",
         "vi": "Khi thị trường đóng cửa vào cuối tuần và ngày lễ, tất cả các tình huống, diễn biến, thay đổi hoặc sự kiện lớn có thể xảy ra, điều này có thể dẫn đến khoảng cách lớn giữa các báo giá mở và báo giá đóng cửa vào chiều thứ Sáu của tuần trước đó.",
         "zh-Hant": "在貨幣市場通常停止交易的周末（冬令時間：北京時間周六早上 5 點，至周壹早上 6 點 15分，夏令時間：北京時間周六早上 4 點，至周壹上午 5 點 15 分），可能會發生諸多情形、發展變化或事件。這可能會導致貨幣市場的開盤價與上個星期五下午收盤時的價格截然不同。",
-        "id": "When the markets are closed over the weekends and holidays all kinds of situations, developments, changes or big events may occur, which may lead to large gaps between the opening quotations and the closing quotations of Friday afternoon of the previous week.",
+        "id": "Ketika pasar tutup selama akhir pekan dan hari libur semua jenis situasi, perkembangan, perubahan atau peristiwa besar dapat terjadi, yang dapat menyebabkan kesenjangan besar antara kutipan pembukaan dan kutipan penutupan Jumat sore pada minggu sebelumnya.",
         "es": "Cuando los mercados se cierran durante el fin de semana y/o durante las vacaciones, distintas situaciones, acontecimientos, cambios o eventos relevantes pudieran ocurrir y provocar gaps o huecos entre las cotizaciones de apertura y las cotizaciones del cierre el Viernes anterior. ",
         "pt-BR": "Quando os mercados estão fechados durante os fins de semana e feriados, todos os tipos de situações, desenvolvimentos, mudanças ou grandes eventos podem ocorrer, o que pode levar a grandes lacunas entre as cotações de abertura e as cotações de fechamento da tarde de sexta-feira da semana anterior.",
         "ar": "عندما تكون الأسواق مغلقة خلال عطلات نهاية الأسبوع و/أو خلال العطلات، قد تحدث مواقف أو تطورات أو تغييرات أو أحداث مهمة والتي قد تؤدي إلى حدوث فجوات أو فجوات بين أسعار الافتتاح يوم الاثنين في بداية أسبوع التداول وأسعار الإغلاق يوم الجمعة في نهاية الأسبوع السابق."
@@ -8346,7 +8346,7 @@ module.exports = {
         "en": "Users in TigerWit cannot set up or change instructions through platform during weekends and closing time. If users hold the position during weekends, it is likely that the instructions would carry out at a worse price than the desired price in order to protect stop-loss instructions for holding positions.",
         "vi": "Người dùng của TigerWit không thể thiết lập hoặc thay đổi hướng dẫn đặt lệnh thông qua nền tảng vào cuối tuần và giờ đóng cửa. Nếu người dùng giữ vị thế trong các ngày cuối tuần, có khả năng các hướng dẫn sẽ thực hiện ở mức giá thấp hơn giá mong muốn để bảo vệ hướng dẫn lệnh dừng lỗ cho các vị thế đang được nắm giữ.",
         "zh-Hant": "本公司的客戶不能在周末以及市場關閉的其他時間內使用在線系統來設定或更改指令。客戶持有的倉位經過周末，為保護該持有的倉位所設置的止損指令，可能會在比停損指令指定的價格更糟的位置執行。",
-        "id": "Users in TigerWit cannot set up or change instructions through platform during weekends and closing time. If users hold the position during weekends, it is likely that the instructions would carry out at a worse price than the desired price in order to protect stop-loss instructions for holding positions.",
+        "id": "Pengguna di TigerWit tidak dapat mengatur atau mengubah instruksi melalui platform selama akhir pekan dan waktu penutupan. Jika pengguna menahan posisi selama akhir pekan, kemungkinan besar instruksi akan dilakukan pada harga yang lebih buruk daripada harga yang diinginkan untuk melindungi instruksi stop-loss untuk menahan posisi.",
         "es": "Los usuarios  no pueden fijar o modificar las instrucciones en TigerWit a través de la plataforma durante los fines de semana o en cierre de mercados. Si el usuario mantiene una posición durante el fin de semana, es posible que debido a las instrucciones para proteger las posiciones mantenidas, stop loss, obtenga un peor precio .",
         "pt-BR": "Os usuários na TigerWit não podem configurar ou alterar as instruções por meio da plataforma durante os finais de semana e horário de encerramento. Se os usuários ocuparem a posição durante os finais de semana, é provável que as instruções sejam realizadas a um preço pior do que o preço desejado, a fim de proteger as instruções de stop-loss para manter posições.",
         "ar": "لا يجوز للمستخدمين في TigerWit ضبط أو تعديل التعليمات عبر منصة التداول خلال عطلات نهاية الأسبوع أو عند إغلاق الأسواق.  وإذا احتفظ المستخدمون بمراكز مفتوحة خلال عطلة نهاية الأسبوع، فمن المرجح أن يتم تنفيذ التعليمات بسعر أسوأ من السعر المرغوب من أجل حماية تعليمات إيقاف الخسارة للمراكز المحتفظ بها."
@@ -8356,7 +8356,7 @@ module.exports = {
         "en": "Online trading",
         "vi": "Giao dịch trực tuyến",
         "zh-Hant": "網絡交易",
-        "id": "Online trading",
+        "id": "Trading online",
         "es": "Trading Online",
         "pt-BR": "Comércio on-line",
         "ar": "التداول عبر الإنترنت"
@@ -8366,7 +8366,7 @@ module.exports = {
         "en": "Trades placed in TigerWit platform on Over The Counter (OTC) contracts differ from that in other electronic trading platforms on traditional trading market",
         "vi": "Các giao dịch được đặt trong nền tảng TigerWit trên các hợp đồng Over The Counter (OTC) khác với các giao dịch điện tử khác trên thị trường giao dịch truyền thống",
         "zh-Hant": "通過網絡工具進行場外合約交易與在另壹個電子交易系統進行的交易不同，也與在傳統的市場中進行的交易不同。",
-        "id": "Trades placed in TigerWit platform on Over The Counter (OTC) contracts differ from that in other electronic trading platforms on traditional trading market",
+        "id": "Trade yang ditempatkan di platform TigerWit pada kontrak Over The Counter (OTC) berbeda dari yang di platform trading elektronik lainnya di pasar trading tradisional.",
         "es": "Los trades colocados en la plataforma TW con contratos Over The Counter (OTC) difieren de otras plataformas de trading en mercados de trading tradicionales. ",
         "pt-BR": "Os negócios realizados na plataforma TigerWit nos contratos Over The Counter (OTC) diferem dos de outras plataformas de negociação eletrônica no mercado de negociação tradicional",
         "ar": "يختلف التداول على منصة TigerWit في سوق التداول خارج مقصورة البورصة عن التداول على منصات التداول الإلكترونية الأخرى التي يتم فيها التداول في أسواق التداول التقليدية."
@@ -8376,7 +8376,7 @@ module.exports = {
         "en": "Users of online trading platform engaged in the risks that are related with system condition including bugs in hardware, software and system. The internet tools are comprised of single system bugs of users and communication facilities bugs of TigerWit that connect platform and users, such as the internet.",
         "vi": "Người dùng nền tảng giao dịch trực tuyến tham gia vào các rủi ro có liên quan đến tình trạng hệ thống bao gồm các lỗi trong phần cứng, phần mềm và hệ thống. Các công cụ internet bao gồm các lỗi hệ thống đơn lẻ của người dùng và các lỗi cơ sở truyền thông của TigerWit kết nối nền tảng và người dùng, chẳng hạn như internet.",
         "zh-Hant": "在網絡交易系統中進行交易的客戶，將暴露在與該系統有關的風險之中，包括硬件和軟件故障和系統故障，就網絡工具來說，包括單獨的客戶系統故障，以及連接平臺和客戶的通信基礎設施（例如互聯網）故障。",
-        "id": "Users of online trading platform engaged in the risks that are related with system condition including bugs in hardware, software and system. The internet tools are comprised of single system bugs of users and communication facilities bugs of TigerWit that connect platform and users, such as the internet.",
+        "id": "Pengguna platform trading online terlibat dalam risiko yang terkait dengan kondisi sistem termasuk bug di perangkat keras, perangkat lunak, dan sistem. Perangkat internet terdiri dari bug sistem tunggal pengguna dan bug fasilitas komunikasi TigerWit yang menghubungkan platform dan pengguna, seperti internet.",
         "es": "Los usuarios de plataformas online de trading incurren en los riesgos derivados del estado del sistema incluyendo bugs en el hardware, software y sistema. Las herramientas de internet y la infraestructura de  comunicación de TigerWit que conecta la plataforma y los usuarios engloban riesgos.",
         "pt-BR": "Usuários da plataforma de negociação on-line envolvidos nos riscos relacionados à condição do sistema, incluindo erros em hardware, software e sistema. As ferramentas de internet são compostas de bugs de usuários de sistema único e bugs de facilidades de comunicação da TigerWit que conectam plataforma e usuários, como a internet.",
         "ar": "يتحمل مستخدمو منصات التداول عبر الإنترنت المخاطر الناتجة عن حالة النظام بما في ذلك الأعطال التي قد تحدث في الأجهزة والبرامج والنظام.  تتكون أدوات الإنترنت من أخطاء المستخدمين لنظام واحد وأخطاء مرافق الاتصالات لشركة TigerWit التي تربط بين المنصة والمستخدمين مثل شبكة الإنترنت."
@@ -8386,7 +8386,7 @@ module.exports = {
         "en": "Commission charge",
         "vi": "Phí hoa hồng",
         "zh-Hant": "手續費",
-        "id": "Commission charge",
+        "id": "Biaya komisl",
         "es": "Cargo comisiones",
         "pt-BR": "Comissão responsável",
         "ar": "تكاليف العمولة"
@@ -8396,7 +8396,7 @@ module.exports = {
         "en": "Before making any transactions, customers should obtain detailed information of all commissions and other fees payable. Users should be aware that TigerWit may pass on other charges or regulatory fees not specified in the account application.",
         "vi": "Trước khi thực hiện bất kỳ giao dịch nào, khách hàng sẽ nhận được thông tin chi tiết về tất cả các khoản hoa hồng và các khoản phí khác phải trả. Người dùng cần lưu ý rằng TigerWit có thể chuyển các khoản phí khác hoặc các khoản phí pháp lý không được quy định trong đơn đăng ký tài khoản.",
         "zh-Hant": "在客戶開始交易之前，客戶應取得有關應繳的所有手續費與其他費用的詳細信息。若有任何費用未於開戶申請書中訂明，客戶亦應了解相關規定的費用。",
-        "id": "Before making any transactions, customers should obtain detailed information of all commissions and other fees payable. Users should be aware that TigerWit may pass on other charges or regulatory fees not specified in the account application.",
+        "id": "Sebelum melakukan transaksi apa pun, pelanggan harus memperoleh informasi terperinci tentang semua komisi dan biaya lain yang harus dibayarkan. Pengguna harus menyadari bahwa TigerWit dapat membebankan biaya lain atau biaya peraturan yang tidak ditentukan dalam aplikasi akun.",
         "es": "Antes de realizar ninguna transacción, los clientes deben obtener información detallada de todas la comisiones y otras tarifas abonables.\nLos usuarios deben tener presente que TigerWit pudiera repercutir otros cargos o tarifas regulatorias no especificadas en la solicitud de la cuenta.\n",
         "pt-BR": "Antes de fazer qualquer transação, os clientes devem obter informações detalhadas de todas as comissões e outras taxas a pagar. Os usuários devem estar cientes de que a TigerWit pode repassar outras cobranças ou taxas regulatórias não especificadas no aplicativo de conta.",
         "ar": "قبل إجراء أي معاملة، يجب على العملاء الحصول على معلومات تفصيلية عن جميع العمولات والرسوم الأخرى المعمول بها. ويجب أن يكون المستخدمون على علم بأنه يجوز أن تقوم TigerWit بتقاضي رسوم أو رسوم تنظيمية أخرى غير محددة في طلب الحساب."
@@ -8406,7 +8406,7 @@ module.exports = {
         "en": "Application for abnormal conditions",
         "vi": "Đơn đăng kí cho điều kiện bất thường",
         "zh-Hant": "斷線時緊急異常處理申請",
-        "id": "Application for abnormal conditions",
+        "id": "Aplikasi untuk kondisi abnormal",
         "es": "Solicitud condiciones anormales",
         "pt-BR": "Aplicação para condições anormais",
         "ar": "تطبيق الظروف غير الطبيعية"
@@ -8416,7 +8416,7 @@ module.exports = {
         "en": "When system occurs disconnection or abnormal conditions, we recommend that users should make the decision whether close the positions or not at the first place. Once users make up their mind, please operate the online application for abnormal conditions.",
         "vi": "Khi hệ thống xảy ra ngắt kết nối hoặc điều kiện bất thường, chúng tôi khuyên người dùng nên đưa ra quyết định xem có đóng vị thế hay không ở vị thế đầu tiên. Sau khi người dùng quyết định, hãy vận hành đơn đăng kí trực tuyến cho các điều kiện bất thường.",
         "zh-Hant": "當系統斷線或發生異常狀況時，建議客戶先自行判定您的在倉單是否要平倉或取消掛單，當您壹旦決定提出申請時，請至在線申請異常處理。",
-        "id": "When system occurs disconnection or abnormal conditions, we recommend that users should make the decision whether close the positions or not at the first place. Once users make up their mind, please operate the online application for abnormal conditions.",
+        "id": "Ketika sistem terjadi pemutusan atau kondisi tidak normal, kami menyarankan pengguna untuk membuat keputusan apakah menutup posisi atau tidak di tempat pertama. Setelah pengguna mengambil keputusan, silakan mengoperasikan aplikasi online untuk kondisi yang tidak normal.",
         "es": "Cuando en el sistema se produce una desconexión o condiciones no normales, recomendamos que los usuarios tomen la decisión de cerrar o no la posición en una primer momento. Una vez que el usuario tenga clara su decisión en condiciones anormales por favor opere vía la aplicación online.",
         "pt-BR": "Quando o sistema ocorre desconexão ou condições anormais, recomendamos que os usuários tomem a decisão de fechar as posições ou não em primeiro lugar. Uma vez que os usuários decidam, por favor, utilize o aplicativo on-line para condições anormais.",
         "ar": "عند انقطاع النظام أو حدوث ظروف غير طبيعية، نحن ننصح بأن يتخذ المستخدمون من البداية قرارًا بشأن ما إذا كانوا سيغلقون المراكز أم لا.  وبعد أن يتخذ المستخدمون قرارهم، يرجى العمل عبر التطبيق على الإنترنت للظروف غير الطبيعية."
@@ -8426,7 +8426,7 @@ module.exports = {
         "en": "The announcement: ",
         "vi": "Bản thông báo:",
         "zh-Hant": "註意事項說明：",
-        "id": "The announcement: ",
+        "id": "Pengumuman: ",
         "es": "El anuncio: ",
         "pt-BR": "O anúncio:",
         "ar": "الإعلان:"
@@ -8436,7 +8436,7 @@ module.exports = {
         "en": "1. While system disconnected, client needs to contact the support center. TigerWit only close the position or cancel the order on client's behalf, and will not open a new position or place the loss/take profit order for client.",
         "vi": "1. Trong khi hệ thống bị ngắt kết nối, khách hàng cần liên hệ với trung tâm hỗ trợ. TigerWit chỉ đóng vị thế hoặc hủy lệnh thay mặt khách hàng và sẽ không mở một vị thế mới hoặc đặt lệnh thua lỗ / chốt lời cho khách hàng.",
         "zh-Hant": "1. 交易系統斷線時，客戶請致電客服電話，TigerWit 僅代為平倉或取消掛單，無法代為建立新倉或掛止損/停利單。",
-        "id": "1. While system disconnected, client needs to contact the support center. TigerWit only close the position or cancel the order on client's behalf, and will not open a new position or place the loss/take profit order for client.",
+        "id": "1. Saat sistem terputus, klien perlu menghubungi pusat dukungan. TigerWit hanya menutup posisi atau membatalkan order atas nama klien, dan tidak akan membuka posisi baru atau menempatkan order loss / take profit untuk klien.",
         "es": "1. Cuando el sistema se desconecte, el cliente necesita contactar al centro de soporte. TigerWit sólo cerrará la posición o cancelará la orden en nombre del cliente y no abrirá una nueva posición o colocará el stop loss/take profit por el cliente.  ",
         "pt-BR": "1. Enquanto o sistema estiver desconectado, o cliente precisa entrar em contato com o centro de suporte. TigerWit apenas fecha a posição ou cancela o pedido em nome do cliente, e não abrirá uma nova posição ou colocará a perda / pedido de lucro para o cliente.",
         "ar": "1- عندما ينقطع النظام، يجب على العميل الاتصال بمركز الدعم.  ستقوم TigerWit فقط بإغلاق المركز أو إلغاء الأمر نيابة عن العميل، ولن تقوم بفتح مركز جديد أو تقديم أمر إيقاف خسارة/جني أرباح للعميل."
@@ -8446,7 +8446,7 @@ module.exports = {
         "en": "2. When TigerWit support center closes the position on client’s behalf, the quotations in the phone call may not exactly aligned with final trading quotations due to the delay of phone call or the internet. Clients should be aware and agree the settlement of TigerWit and take the responsibilities of the spreads mentioned above. TigerWit is only an authorized agent to execute for client, and does not quote to client as a trader. Therefore, if you apply for the abnormal condition settlement during the effective time, TigerWit will close the position by the accurate price according to the price while system disconnection or abnormality occurs. Attention: TigerWit does not accept any assigned price to close the position.",
         "vi": "2. Khi trung tâm hỗ trợ TigerWit đóng vị thế thay mặt khách hàng, các chào giá trong cuộc gọi điện thoại có thể không khớp chính xác với các chào giá giao dịch cuối cùng do sự chậm trễ của cuộc gọi điện thoại hoặc internet. Khách hàng cần phải nhận thức và đồng ý việc giải quyết của TigerWit và chịu trách nhiệm các khoản spread nêu trên. TigerWit chỉ là một đại lý được ủy quyền để thực hiện cho khách hàng và không báo giá cho khách hàng là một nhà giao dịch. Do đó, nếu bạn áp dụng cho việc giải quyết tình trạng bất thường trong thời gian hiệu lực, TigerWit sẽ đóng vị thế theo giá chính xác theo giá trong khi ngắt kết nối hệ thống hoặc bất thường xảy ra.",
         "zh-Hant": "2. TigerWit 客服代客戶平倉時，因電話延遲和網絡延遲，造成電話報價與最終成交價格並不完全壹致，客戶知曉並同意 TigerWit 的代為處理，此間價差由客戶承擔。TigerWit 只是作為代客執行交易的代理，並不是作為交易員給予客戶報價。所以，當您在依規定的時間內提出緊急處理申請後，TigerWit 依據斷線或報價異常期間之正確市場價格予以平倉處理。請註意:TigerWit 不接受指定價格平倉。",
-        "id": "2. When TigerWit support center closes the position on client’s behalf, the quotations in the phone call may not exactly aligned with final trading quotations due to the delay of phone call or the internet. Clients should be aware and agree the settlement of TigerWit and take the responsibilities of the spreads mentioned above. TigerWit is only an authorized agent to execute for client, and does not quote to client as a trader. Therefore, if you apply for the abnormal condition settlement during the effective time, TigerWit will close the position by the accurate price according to the price while system disconnection or abnormality occurs. Attention: TigerWit does not accept any assigned price to close the position.",
+        "id": "2. Ketika pusat dukungan TigerWit menutup posisi atas nama klien, kutipan dalam panggilan telepon mungkin tidak sama persis dengan kutipan trade akhir karena penundaan panggilan telepon atau internet. Klien harus mengetahui dan menyetujui penyelesaian TigerWit dan mengambil tanggung jawab atas spread yang disebutkan di atas. TigerWit hanya agen resmi untuk mengeksekusi untuk klien, dan tidak mengutip untuk klien sebagai trader. Oleh karena itu, jika Anda mengajukan penyelesaian kondisi abnormal selama waktu efektif, TigerWit akan menutup posisi dengan harga yang akurat sesuai harga saat pemutusan atau ketidaknormalan sistem terjadi. Perhatian: TigerWit tidak menerima harga yang ditetapkan untuk menutup posisi.",
         "es": "2.Cuando el centro de soporte de TigerWit cierre la posición en nombre del cliente, las cotizaciones en el teléfono pudieran no estar exactamente alineadas con las cotizaciones de trading finales debido a un posible retraso en internet. Los Clientes debe tenerlo presente y acceder a la liquidación con TigerWit y asumir las responsabilidades por los spreads antes mencionados. TigerWit es únicamente un agente autorizado para ejecutar las órdenes en nombre de los clientes y no cotiza al cliente como trader. Por tanto, si solicita la liquidación en condiciones no normales durante el período concreto, TigerWit cerrará la posición en el precio conforme al precio correspondiente cuando la desconexión o el suceso anómaloo se produjo. Atención: TigerWit no acepta ningún precio asignado para cerrar la posición.\n",
         "pt-BR": "2. Quando o centro de suporte da TigerWit fecha a posição em nome do cliente, as cotações na ligação podem não estar alinhadas com as cotações finais devido ao atraso da ligação ou da Internet. Os clientes devem estar cientes e concordar com a liquidação da TigerWit e assumir as responsabilidades dos spreads mencionados acima. TigerWit é apenas um agente autorizado a executar para o cliente e não cita para o cliente como um comerciante. Portanto, se você solicitar a liquidação de condição anormal durante o período de vigência, a TigerWit fechará a posição pelo preço exato de acordo com o preço, enquanto ocorrer a desconexão ou anormalidade do sistema. Atenção: TigerWit não aceita nenhum preço atribuído para fechar a posição.",
         "ar": "2- عندما يقوم مركز الدعم في TigerWit بإغلاق المركز نيابة عن العميل، قد تكون الأسعار الواردة على الهاتف غير مطابقة تمامًا لأسعار التداول النهائية بسبب تأخير الهاتف أو تأخير شبكة الإنترنت. ويجب أن يكون العملاء على علم بذلك ويوافقون على التسوية التي تقوم بها TigerWit ويتحملون فروق الأسعار المذكورة أعلاه.  وتعمل TigerWit بصفتها وكيل معتمد فقط لتنفيذ المعاملات نيابة عن العميل، ولا تقدم الأسعار إلى العميل بصفتها تاجرًا.  وبناء على ذلك، فإذا تقدمت بطلب للتسوية بسبب حدوث ظروف غير طبيعية خلال الفترة المحددة، ستقوم TigerWit بإغلاق المركز وفقًا لسعر السوق الصحيح الذي كان مطبقًا خلال الفترة التي حدث فيها انقطاع النظام أو الظروف غير الطبيعية.  تنبيه: لا تقبل TigerWit أي سعر محدد لإغلاق المركز."
@@ -8456,7 +8456,7 @@ module.exports = {
         "en": "3. After you apply for the abnormal condition settlement, please do not close any position that you applied for. If you still act in this way, TigerWit support center will still close the position by the accurate price according to the price while system disconnection or abnormality occurs.",
         "vi": "3. Sau khi bạn áp dụng cho việc giải quyết tình trạng bất thường, xin vui lòng không đóng bất kỳ vị thế mà bạn áp dụng cho. Nếu bạn vẫn hoạt động theo cách này, trung tâm hỗ trợ TigerWit sẽ vẫn đóng vị thế theo giá chính xác theo giá trong khi ngắt kết nối hệ thống hoặc bất thường xảy ra.",
         "zh-Hant": "3. 當您發出緊急處理申請之後切勿再對已申請的 單 子 做 任 何 平 倉 動 作 ， 若 有 此 情 形 ，TigerWit 仍將以依據斷線或報價異常期間之正確市場價格予以平倉處理。",
-        "id": "3. After you apply for the abnormal condition settlement, please do not close any position that you applied for. If you still act in this way, TigerWit support center will still close the position by the accurate price according to the price while system disconnection or abnormality occurs.",
+        "id": "3. Setelah Anda mengajukan permohonan penyelesaian kondisi abnormal, mohon tidak menutup posisi yang Anda ajukan. Jika Anda masih bertindak seperti ini, support center TigerWit akan tetap menutup posisi dengan harga yang akurat sesuai harga saat terjadi pemutusan atau ketidaknormalan sistem.",
         "es": "3.Después de solicitar la liquidación durante un período anormal, por favor, no cierre la posición que solicitó. Si actúa de ese modo, el centro de soporte de TigerWit le seguirá cerrando su posición en el precio alcanzado cuando sucedió la desconexión del sistema o la anormalidad en cuestión. ",
         "pt-BR": "3. Depois de se candidatar para a liquidação anormal da condição, por favor, não feche qualquer posição que você tenha solicitado. Se você ainda agir dessa maneira, o centro de suporte da TigerWit ainda fechará a posição pelo preço exato de acordo com o preço, enquanto ocorrer a desconexão ou anormalidade do sistema.",
         "ar": "3- بعد أن تتقدم بطلب للتسوية بسبب حدوث ظروف غير طبيعية، يرجى عدم إغلاق أي مركز تقدمت بطلب بشأنه.  إذا قمت بذلك، سيقوم مركز الدعم في TigerWit بإغلاق المركز وفقًا للسعر الصحيح  الذي كان مطبقًا خلال الفترة التي حدث فيها انقطاع النظام أو الظروف غير الطبيعية."
@@ -8466,7 +8466,7 @@ module.exports = {
         "en": "FAQs",
         "vi": "FAQs",
         "zh-Hant": "常見問題解答",
-        "id": "FAQs",
+        "id": "FAQ",
         "es": "PP.FF",
         "pt-BR": "FAQs",
         "ar": "أسئلة شائعة"
@@ -8476,7 +8476,7 @@ module.exports = {
         "en": "Questions regarding trading conditions should be addressed, in the first instance, to the Customer Support Department.",
         "vi": "Các câu hỏi liên quan đến điều kiện giao dịch cần được giải quyết, trong lần đầu tiên, được gửi đến Bộ phận hỗ trợ khách hàng.",
         "zh-Hant": "關於交易條件的問題首先傳達給客戶服務部。",
-        "id": "Questions regarding trading conditions should be addressed, in the first instance, to the Customer Support Department.",
+        "id": "Pertanyaan tentang kondisi trading harus ditujukan, pertama-tama, ke Departemen Dukungan Pelanggan.",
         "es": "Las cuestiones relativas a las condiciones de trading deben ser dirigidas en primera instancia al Departamento de Soporte al Cliente",
         "pt-BR": "Questões relacionadas às condições de negociação devem ser abordadas, em primeira instância, ao Departamento de Suporte ao Cliente.",
         "ar": "يجب أن يتم تقديم جميع الأسئلة المتعلقة بشروط التداول أولاً إلى إدارة دعم العملاء."
@@ -8486,7 +8486,7 @@ module.exports = {
         "en": "Customer Support Department",
         "vi": "Bộ Phận Hỗ Trợ Khách Hàng",
         "zh-Hant": "客戶服務部",
-        "id": "Customer Support Department",
+        "id": "Departemen Dukungan Pelanggan",
         "es": "Departamento de Soporte al Cliente",
         "pt-BR": "Departamento de Suporte ao Cliente",
         "ar": "إدارة دعم العملاء"
@@ -8506,7 +8506,7 @@ module.exports = {
         "en": "Additional Contacts",
         "vi": "Địa Chỉ Liên Hệ Bổ Sung",
         "zh-Hant": "其他聯系人",
-        "id": "Additional Contacts",
+        "id": "Kontak Tambahan",
         "es": "Contactos Adicionales",
         "pt-BR": "Contatos Adicionais",
         "ar": "بيانات اتصال إضافية"
@@ -8516,7 +8516,7 @@ module.exports = {
         "en": "TigerWit Compliance Department",
         "vi": "Bộ Phận Giám Sát của TigerWit",
         "zh-Hant": "TigerWit 合規部門",
-        "id": "TigerWit Compliance Department",
+        "id": "Departemen Compliance",
         "es": "Departamento Compliance de TigerWit",
         "pt-BR": "Departamento de Compliance da TigerWit",
         "ar": "إدارة الامتثال في TigerWit"
@@ -8822,21 +8822,21 @@ module.exports = {
         "ar": "أوافق وأسمح لشركة TigerWit بأن تخصم نسبة 20% من أرباحي في الوقت الفعلي من الأمر المكتمل في أي شهر ميلادي وأن تتحقق من المبلغ الإجمالي للأرباح للشهر الميلادي السابق قبل يوم الخامس عشر من الشهر التالي. بالإضافة إلى ذلك، فبعد حساب العمولات أو المكافآت، سيتم دفعها إلى \"أستاذ التداول\" كعمولات أو مكافآت عن أوامر المتابعة. أؤكد وأقر بأن التداول باستخدام متابعة الأوامر ينطوي على مخاطر وفهمت أن الأداء السابق \"لأستاذ التداول\" ليس ضمانًا للأداء في المستقبل وأنني أتحمل جميع الخسائر والخصوم المترتبة على متابعة الأوامر."
     },
     "amtCategorization1": {
-        "zh": "序言",
+        "zh": "1 引言",
         "en": "Introduction",
         "vi": "Giới thiệu",
         "zh-Hant": "序言",
-        "id": "Introduction",
+        "id": "Pengantar",
         "es": "Introducción",
         "pt-BR": "Introdução",
         "ar": "مقدمة"
     },
     "amtCategorization2": {
-        "zh": "1.TigerWit Limited（以下统称为“TigerWit”、“公司”或“本公司”）在 巴 哈 马 国 注 册 成 立 （ 注 册 证 书 编 号198255B）。我们的注册办事处位于 Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas。TigerWit 受巴哈马证券监察委员会授权和监管（注册编号 SIA-F185）。",
+        "zh": "1.1 TigerWit Limited（以下简称“TigerWit”、“公司”）成立于巴哈马联邦，注册证书编号为198255B。TigerWit已获巴哈马证券委员会授权并受其监管（许可证编号：SIA-F185）。",
         "en": "1.TigerWit Limited (hereinafter referred to as ‘TigerWit’, the ‘Firm’ or the 'Company') is incorporated (Certificate of Incorporation No. 198255B) in The Commonwealth of The Bahamas. Our registered office is Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. TigerWit is authorised and regulated by the Securities Commission of The Bahamas (licence No. SIA-F185).",
         "vi": "1.TigerWit Limited (sau đây gọi tắt là \"TigerWit\", \"Công ty\" hoặc \"Công ty\") được thành lập (Giấy chứng nhận thành lập số 198255B) trong Khối thịnh vượng chung Bahamas. Văn phòng đăng ký của chúng tôi là Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, Bahamas. TigerWit được ủy quyền và quản lý bởi Ủy ban Chứng khoán Bahamas (giấy phép số SIA-F185).",
         "zh-Hant": "1.TigerWit Limited（以下統稱為“TigerWit”、“公司”或“本公司”）在 巴 哈 馬 國 註 冊 成 立 （ 註 冊 證 書 編 號198255B）。我們的註冊辦事處位於 Sea Sky Lane, Sandyport, P. O. Box SP 64368.Nassau, TheBahamas。TigerWit 受巴哈馬證券監察委員會授權和監管（註冊編號 SIA-F185）。",
-        "id": "1.TigerWit Limited (hereinafter referred to as ‘TigerWit’, the ‘Firm’ or the 'Company') is incorporated (Certificate of Incorporation No. 198255B) in The Commonwealth of The Bahamas. Our registered office is Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. TigerWit is authorised and regulated by the Securities Commission of The Bahamas (licence No. SIA-F185).",
+        "id": "1. TigerWit Limited (selanjutnya disebut sebagai 'TigerWit', 'Firm' atau 'Company') didirikan (Certificate of Incorporation No. 198255B) di The Commonwealth of The Bahamas. Kantor terdaftar kami adalah Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. TigerWit disahkan dan diatur oleh Securities Commission of The Bahamas (lisensi No. SIA-F185).",
         "es": "1. TigerWit Limited (en lo sucesivo denominado \"TigerWit\", la \"Firma\" o la \"Compañía\") se incorpora (Certificado de Incorporación Nº. 198255B) en La Commonwealth de las Bahamas. Nuestro domicilio social es Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, Bahamas. TigerWit está autorizado y regulado por la Comisión de Valores de Las Bahamas (licencia Nº. SIA-F185).",
         "pt-BR": "1.TigerWit Limited (doravante referida como \"TigerWit\", a \"Firma\" ou a \"Empresa\") é incorporada (Certificado de Incorporação No. 198255B) na Comunidade das Bahamas. Nossa sede é Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, Bahamas. A TigerWit é autorizada e regulamentada pela Comissão de Valores Mobiliários das Bahamas (licença No. SIA-F185).",
         "ar": "1- إن شركة TigerWit Limited (المشار إليها فيما بعد بلفظ ‘TigerWit’ أو ‘المؤسسة’ أو 'الشركة') هي شركة مؤسسة في كومنولث جزر البهاما (شهادة التأسيس رقم 198255B). ويقع عنوان مكتبنا المسجل في Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. شركة TigerWit هي شركة مرخصة وخاضعة للرقابة من جانب هيئة الأوراق المالية بجزر البهاما (ترخيص رقم SIA-F185)."
@@ -9866,7 +9866,7 @@ module.exports = {
         "en": "As a regulated entity, TigerWit Limited meets the following regulatory requirements relating to client funds: ",
         "vi": "Là một thực thể có quy định, TigerWit Limited đáp ứng các yêu cầu pháp lý sau đây liên quan đến quỹ khách hàng:",
         "zh-Hant": "作為壹家受監管的實體，TigerWit Limited 符合下列有關客戶資金的監管要求：",
-        "id": "As a regulated entity, TigerWit Limited meets the following regulatory requirements relating to client funds: ",
+        "id": "Sebagai entitas yang diatur, TigerWit Limited memenuhi persyaratan peraturan berikut yang berkaitan dengan dana klien: ",
         "es": "Como entidad regulada, TigerWit Limited se rige por los siguientes criterios regulatorios en relación a los fondos de los clientes: ",
         "pt-BR": "Como uma entidade regulamentada, a TigerWit Limited atende aos seguintes requisitos regulamentares relacionados a fundos de clientes:",
         "ar": "بصفتها كيانًا مرخصًا وخاضعًا للرقابة، تستوفي TigerWit Limited المتطلبات الرقابية التالية فيما يتعلق بأموال العملاء:"
@@ -9876,7 +9876,7 @@ module.exports = {
         "en": "Segregation of Funds",
         "vi": "Phân chia các quỹ",
         "zh-Hant": "資金隔離",
-        "id": "Segregation of Funds",
+        "id": "Pemisahan Dana",
         "es": "Segregación de los Fondos",
         "pt-BR": "Segregação de Fundos",
         "ar": "فصل الأموال"
@@ -9886,7 +9886,7 @@ module.exports = {
         "en": "All client funds deposited with TigerWit are fully segregated from the company’s own funds and are kept in separate bank accounts. This ensures that funds belonging to clients cannot be used for any other purpose. Our interim and annual financial reports are externally audited, ensuring that our operations are conducted to the highest possible standards.",
         "vi": "Tất cả các quỹ của khách hàng được ký quỹ với TigerWit được tách biệt hoàn toàn khỏi các quỹ của chính công ty và được giữ trong các tài khoản ngân hàng riêng biệt. Điều này đảm bảo rằng các quỹ thuộc về khách hàng không thể được sử dụng cho bất kỳ mục đích nào khác. Báo cáo tài chính tạm thời và hàng năm của chúng tôi được kiểm toán bên ngoài, đảm bảo rằng các hoạt động của chúng tôi được thực hiện theo các tiêu chuẩn cao nhất có thể.",
         "zh-Hant": "所有存入 TigerWit 的客戶資金與本公司自有的資金完全隔離，並存放在獨立的銀行賬戶。這確保了屬於客戶的資金不能被用於任何其他目的。我們的中期和年度財務報表接受外部審計，確保我們的操作盡可能按照最高的標準進行。",
-        "id": "All client funds deposited with TigerWit are fully segregated from the company’s own funds and are kept in separate bank accounts. This ensures that funds belonging to clients cannot be used for any other purpose. Our interim and annual financial reports are externally audited, ensuring that our operations are conducted to the highest possible standards.",
+        "id": "Semua dana klien yang disimpan dengan TigerWit sepenuhnya dipisahkan dari dana perusahaan sendiri dan disimpan di rekening bank terpisah. Ini memastikan bahwa dana milik klien tidak dapat digunakan untuk tujuan lain. Laporan keuangan interim dan tahunan kami diaudit secara eksternal, memastikan bahwa operasi kami dilakukan dengan standar setinggi mungkin.",
         "es": "Todos los fondos de clientes depositados con TigerWit están completamente separados de los fondos propios de la compañía y se mantienen en cuentas bancarias segregadas. Esto garantiza que los fondos que pertenecen a los clientes no se pueden utilizar para ningún otro propósito. Nuestros informes financieros interinos y anuales son auditados externamente, asegurando que nuestras operaciones se realicen bajo los estándares más altos posibles.",
         "pt-BR": "Todos os fundos de clientes depositados na TigerWit são totalmente separados dos fundos próprios da empresa e são mantidos em contas bancárias separadas. Isso garante que os fundos pertencentes aos clientes não possam ser usados ",
         "ar": "يتم فضل جميع أموال العملاء المودعة لدى TigerWit فصلاً تامًا عن الأموال الخاصة بالشركة ويتم الاحتفاظ بها في حسابات مصرفية منفصلة.  ويضمن ذلك أن الأموال المملوكة للعملاء لا يمكن استخدامها في أي غرض آخر.  وتتم مراجعة تقاريرنا المالية المرحلية والسنوية بواسطة جهات خارجية، مما يضمن إجراء عملياتنا وفقًا لأعلى المعايير الممكنة."
@@ -9896,27 +9896,27 @@ module.exports = {
         "en": "Additional Measures We Take",
         "vi": "Các Biện Pháp Bổ Sung Mà Chúng Tôi Thực Hiện",
         "zh-Hant": "我們采取的其他措施",
-        "id": "Additional Measures We Take",
+        "id": "Tindakan Tambahan Yang Kami Ambil",
         "es": "Medidas Adicionales Adoptamos",
         "pt-BR": "Medidas Adicionais que Tomamos",
         "ar": "التدابير الإضافية التي نتخذها"
     },
     "amtFunds5": {
-        "zh": "TigerWit 与多家主要银行机构合作，客户资金被存放在银行，例如汇丰银行（HSBC）和澳洲联邦银行（CBA）等。内部限制确保了客户资金分散在不同的银行之间，同时会定期监控信用风险。客户资金仅存放在客户资金隔离受当地法律框架支持的司法管辖区。",
-        "en": "TigerWit is partnered with several major banking institutions, with client funds kept in banks such as HSBC and CBA. Internal limits ensure a diversification of client funds among banks, while credit risk is regularly monitored. Client funds are only kept in jurisdictions where segregation of client funds is supported by the local legal framework.",
-        "vi": "TigerWit hợp tác với một số tổ chức ngân hàng lớn, với các quỹ khách hàng được giữ tại các ngân hàng như HSBC và CBA. Các giới hạn nội bộ đảm bảo đa dạng hóa các quỹ khách hàng giữa các ngân hàng, trong khi rủi ro tín dụng thường xuyên được sao chép. Các quỹ của khách hàng chỉ được giữ ở các khu vực pháp lý, nơi sự phân chia các quỹ của khách hàng được hỗ trợ bởi khung pháp lý địa phương.",
-        "zh-Hant": "TigerWit 與多家主要銀行機構合作，客戶資金被存放在銀行，例如匯豐銀行（HSBC）和澳洲聯邦銀行（CBA）等。內部限制確保了客戶資金分散在不同的銀行之間，同時會定期監控信用風險。客戶資金僅存放在客戶資金隔離受當地法律框架支持的司法管轄區。",
-        "id": "TigerWit is partnered with several major banking institutions, with client funds kept in banks such as HSBC and CBA. Internal limits ensure a diversification of client funds among banks, while credit risk is regularly monitored. Client funds are only kept in jurisdictions where segregation of client funds is supported by the local legal framework.",
+        "zh": "TigerWit 与多家主要银行机构合作，客户的资金始终存放在受到适当监管的银行和信贷机构的独立账户中。内部限制确保客户资金在银行之间分散，同时定期监测信贷风险。",
+        "en": "TigerWit is partnered with several major banking institutions and client funds are always kept in segregated accounts at appropriately regulated banks and credit institutions. Internal limits ensure a diversification of client funds among banks, while credit risk is regularly monitored.",
+        "vi": "TigerWit hợp tác với một số tổ chức ngân hàng lớn, và các quỹ khách hàng luôn được giữ trong các tài khoản riêng biệt tại các ngân hàng được và các quỹ tín dụng được cấp phép đúng quy định. Các giới hạn nội bộ đảm bảo đa dạng hóa các quỹ khách hàng giữa các ngân hàng, trong khi rủi ro tín dụng thường xuyên được sao chép.",
+        "zh-Hant": "TigerWit 與多家主要銀行機構合作，客戶的資金始終存放在受到適當監管的銀行和信貸機構的獨立帳戶中。內部限制確保客戶資金在銀行之間分散，同時定期監測信貸風險。",
+        "id": "TigerWit bermitra dengan beberapa lembaga perbankan besar dan, dengan.Batasan internal memastikan diversifikasi dana klien antar bank, sementara risiko kredit dipantau secara teratur.",
         "es": "TigerWit está asociado con varias instituciones bancarias importantes, con fondos de clientes depositados en bancos como HSBC o CBA. Límites internos aseguran una diversificación de los fondos de los clientes entre los bancos, mientras que el riesgo de crédito se monitorea regularmente. Los fondos de los clientes sólo se mantienen en las jurisdicciones donde la segregación de los fondos de los clientes está respaldada por el marco legal local.",
         "pt-BR": "A TigerWit é parceira de várias instituições bancárias importantes, com fundos de clientes mantidos em bancos como HSBC e CBA. Os limites internos garantem uma diversificação dos fundos dos clientes entre os bancos, enquanto o risco de crédito é monitorado regularmente. Os fundos dos clientes são mantidos apenas em jurisdições onde a segregação dos fundos dos clientes é apoiada pela estrutura legal local.",
         "ar": "عقدت TigerWit شراكة مع العديد من المؤسسات المصرفية الكبرى، حيث يتم الاحتفاظ بأموال العملاء في بنوك عالمية كبرى مثل بنك HSBC وبنك CBA.  وتضمن الحدود الداخلية تنويع أموال العملاء بين البنوك، كما تتم مراقبة مخاطر الائتمان بشكل منتظم.  ولا يتم الاحتفاظ بأموال العملاء إلا في الولايات القضائية التي تدعم فصل أموال العملاء بموجب الإطار القانوني المحلي."
     },
     "amtFunds6": {
-        "zh": "只要没有受到操纵且真诚接受，TigerWit 向所有客户提供负结余保护保证，作为客户协议的组成部分。我们承诺执行严格的政策，确保客户的损失永远不会超过他们的总入金。",
-        "en": "TigerWit offers Negative Balance Protection guarantee to all clients as part of the Client Agreement, as long as it is not manipulated and is accepted in good faith. We are committed to a strict policy ensuring that clients may never lose more than their total deposits.",
-        "vi": "TigerWit cung cấp cho khách hàng chính sách bảo vệ tránh số dư âm cho tất cả khách hàng như là một phần của Hợp đồng khách hàng, miễn là điều này không được thao túng và được chấp nhận với thiện chí. Chúng tôi cam kết một chính sách nghiêm ngặt đảm bảo rằng khách hàng không bao giờ có thể mất nhiều hơn tổng số tiền gửi của họ.",
-        "zh-Hant": "只要沒有受到操縱且真誠接受，TigerWit 向所有客戶提供負結余保護保證，作為客戶協議的組成部分。我們承諾執行嚴格的政策，確保客戶的損失永遠不會超過他們的總入金。",
-        "id": "TigerWit offers Negative Balance Protection guarantee to all clients as part of the Client Agreement, as long as it is not manipulated and is accepted in good faith. We are committed to a strict policy ensuring that clients may never lose more than their total deposits.",
+        "zh": "只要没有受到操纵且真诚接受，TigerWit 向所有客户提供负结余保护保证，作为客户协议的组成部分,除非有明确的相反通知。我们承诺执行严格的政策，确保客户的损失永远不会超过他们的总入金。",
+        "en": "TigerWit offers Negative Balance Protection guarantee to all clients as part of the Client Agreement, unless notified expressly to the contrary and as long as it is not manipulated and is accepted in good faith. We are committed to a strict policy ensuring that clients may never lose more than their total deposits.",
+        "vi": "TigerWit cung cấp cho khách hàng chính sách bảo vệ tránh số dư âm cho tất cả khách hàng như là một phần của Hợp đồng khách hàng, nếu điều ngược lại không được thể hiện rõ ràng miễn là điều này không được thao túng và được chấp nhận với thiện chí. Chúng tôi cam kết một chính sách nghiêm ngặt đảm bảo rằng khách hàng không bao giờ có thể mất nhiều hơn tổng số tiền gửi của họ.",
+        "zh-Hant": "只要沒有受到操縱且真誠接受，TigerWit 向所有客戶提供負結余保護保證，作為客戶協議的組成部分，除非有明確的相反通知。我們承諾執行嚴格的政策，確保客戶的損失永遠不會超過他們的總入金。",
+        "id": "TigerWit menawarkan jaminan Perlindungan Saldo Negatif kepada semua klien sebagai bagian dari Perjanjian Klien, dan selama tidak dimanipulasi dan diterima dengan itikad baik. Kami berkomitmen pada kebijakan ketat yang memastikan bahwa klien tidak akan pernah kehilangan lebih dari total deposit mereka.",
         "es": "TigerWit ofrece una garantía de Protección contra Saldo en Negativo a todos los clientes como parte del Acuerdo de Cliente, siempre que no se manipule y se acepte de buena fe. Estamos comprometidos con una política estricta que garantiza que los clientes nunca pierdan más que sus depósitos totales.",
         "pt-BR": "A TigerWit oferece garantia de Proteção de Saldo Negativo para todos os clientes como parte do Contrato de Cliente, desde que não seja manipulado e seja aceito de boa fé. Estamos comprometidos com uma política rigorosa, garantindo que os clientes nunca percam mais do que o total de seus depósitos.",
         "ar": "وتوفر TigerWit الحماية من الرصيد السلبي لجميع العملاء كجزء من اتفاقية العميل، شريطة عدم التلاعب بهذه الميزة وقبولها بحسن نية.  ونحن ملتزمون بسياسة صارمة تضمن عدم تعرض العملاء على الإطلاق لخسارة تزيد عن إجمالي ودائعهم."
@@ -9936,27 +9936,27 @@ module.exports = {
         "en": "1.TigerWit Limited (hereinafter referred to as ‘TigerWit’, the ‘Firm’ or the 'Company') is incorporated (Certificate of Incorporation No. 198255B) in The Commonwealth of The Bahamas. Our registered office is Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. TigerWit is authorised and regulated by the Securities Commission of The Bahamas (licence No. SIA-F185).",
         "vi": "1.TigerWit Limited (sau đây gọi tắt là \"TigerWit\", \"Doanh nghiệp\" hoặc \"Công ty\") được thành lập (Giấy chứng nhận thành lập số 198255B) trong Khối thịnh vượng chung Bahamas. Văn phòng đăng ký của chúng tôi là Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, Bahamas. TigerWit được ủy quyền và quản lý bởi Ủy ban Chứng khoán Bahamas (giấy phép số SIA-F185).",
         "zh-Hant": "1.TigerWit Limited（以下統稱為“TigerWit”、“公司”或“本公司”）在 巴 哈 馬 國 註 冊 成 立 （ 註 冊 證 書 編 號198255B）。我們的註冊辦事處位於 Sea Sky Lane, Sandyport, P. O. Box SP 64368.Nassau, TheBahamas。TigerWit 受巴哈馬證券監察委員會授權和監管（註冊編號 SIA-F185）。",
-        "id": "1.TigerWit Limited (hereinafter referred to as ‘TigerWit’, the ‘Firm’ or the 'Company') is incorporated (Certificate of Incorporation No. 198255B) in The Commonwealth of The Bahamas. Our registered office is Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. TigerWit is authorised and regulated by the Securities Commission of The Bahamas (licence No. SIA-F185).",
+        "id": "1. TigerWit Limited (selanjutnya disebut sebagai 'TigerWit', 'Firm' atau 'Company') didirikan (Certificate of Incorporation No. 198255B) di The Commonwealth of The Bahamas. Kantor terdaftar kami adalah Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. TigerWit disahkan dan diatur oleh Securities Commission of The Bahamas (lisensi No. SIA-F185).",
         "es": "1. TigerWit Limited (en lo sucesivo denominado \"TigerWit\", la \"Firma\" o la \"Compañía\") se incorpora (Certificado de Incorporación Nº. 198255B) en el Commonwealth de las Bahamas. Nuestro domicilio social es Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, Bahamas. TigerWit está autorizado y regulado por la Comisión de Valores de Las Bahamas (licencia Nº. SIA-F185).",
         "pt-BR": "1.TigerWit Limited (doravante referida como \"TigerWit\", a \"Firma\" ou a \"Empresa\") é incorporada (Certificado de Incorporação No. 198255B) na Comunidade das Bahamas. Nossa sede é Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, Bahamas. A TigerWit é autorizada e regulamentada pela Comissão de Valores Mobiliários das Bahamas (licença No. SIA-F185).",
         "ar": "1- إن شركة TigerWit Limited (المشار إليها فيما بعد بلفظ ‘TigerWit’ أو ‘المؤسسة’ أو 'الشركة') هي شركة مؤسسة في كومنولث جزر البهاما (شهادة التأسيس رقم 198255B). ويقع عنوان مكتبنا المسجل في Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. شركة TigerWit هي شركة مرخصة وخاضعة للرقابة من جانب هيئة الأوراق المالية بجزر البهاما (ترخيص رقم SIA-F185)."
     },
     "amtExecution3": {
-        "zh": "2.本订单执行政策（以下称“本政策”）构成客户协议的一部分。所以，您与本公司签署客户协议，即同意本公司所提供的与金融工具有关的执行政策的条款，本文件所载合同规范可在网站 http://global.tigerwit.com（“金融工具”）在线获取。",
-        "en": "2.This Order Execution Policy (hereinafter the “Policy”) forms part of the Client Agreement. Therefore, by entering into the Client Agreement with the Firm, you are also agreeing to the terms of our Order Execution Policy relating to financial instruments provided by the Firm, the contract specifications of which are available online at http://global.tigerwit.com (the \"Financial Instruments\"), as set out in this document. ",
+        "zh": "2.本订单执行政策（以下称“本政策”）构成客户协议的一部分。所以，您与本公司签署客户协议，即同意本公司所提供的与金融工具有关的执行政策的条款，本文件所载合同规范可在网站 https://global.TigerWit.com（“金融工具”）在线获取。",
+        "en": "2.This Order Execution Policy (hereinafter the “Policy”) forms part of the Client Agreement. Therefore, by entering into the Client Agreement with the Firm, you are also agreeing to the terms of our Order Execution Policy relating to financial instruments provided by the Firm, the contract specifications of which are available online at https://global.TigerWit.com (the \"Financial Instruments\"), as set out in this document. ",
         "vi": "2.Chính sách Thực thi Lệnh này (sau đây gọi là “Chính sách”) là một phần của Hợp đồng Khách hàng. Do đó, bằng cách ký kết Hợp đồng Khách hàng với Công ty, bạn cũng đồng ý với các điều khoản của Chính sách Thực hiện Lệnh liên quan đến các công cụ tài chính do Công ty cung cấp, thông số hợp đồng có sẵn trên mạng tại http: //global.tigerwit. com (\"Công cụ tài chính\"), như được nêu trong tài liệu này.",
-        "zh-Hant": "2.本訂單執行政策（以下稱“本政策”）構成客戶協議的壹部分。所以，您與本公司簽署客戶協議，即同意本公司所提供的與金融工具有關的執行政策的條款，本文件所載合同規範可在網站 http://global.tigerwit.com（“金融工具”）在線獲取。",
-        "id": "2.This Order Execution Policy (hereinafter the “Policy”) forms part of the Client Agreement. Therefore, by entering into the Client Agreement with the Firm, you are also agreeing to the terms of our Order Execution Policy relating to financial instruments provided by the Firm, the contract specifications of which are available online at http://global.tigerwit.com (the \"Financial Instruments\"), as set out in this document. ",
-        "es": "2.Esta Política de  Ejecución de Órdenes (a partir de ahora la “Política”) forma parte del Acuerdo de Cliente. Por tanto, al entrar en el Acuerdo de Cliente con la Firma, está también indicando su conformidad con los términos de nuestra Política de Ejecución de Órdenes relativa a los instrumentos financieros proporcionados por la Firma; las especificaciones del contrato están disponibles online en http://global.tigerwit.com (los \" Instrumentos Financieros\"),como se establece en los documentos. ",
+        "zh-Hant": "2.本訂單執行政策（以下稱“本政策”）構成客戶協議的壹部分。所以，您與本公司簽署客戶協議，即同意本公司所提供的與金融工具有關的執行政策的條款，本文件所載合同規範可在網站 https://global.TigerWit.com（“金融工具”）在線獲取。",
+        "id": "2. Kebijakan Eksekusi Pesanan ini (selanjutnya disebut \"Kebijakan\") merupakan bagian dari Perjanjian Klien. Oleh karena itu, dengan menyepakati Perjanjian Klien dengan Firma, Anda juga menyetujui syarat-syarat Kebijakan Eksekusi Order kami terkait dengan instrumen keuangan yang disediakan oleh Perusahaan, spesifikasi kontraknya tersedia secara online di https: //global.TigerWit. com (\"Instrumen Keuangan\"), sebagaimana ditetapkan dalam dokumen ini.",
+        "es": "2.Esta Política de  Ejecución de Órdenes (a partir de ahora la “Política”) forma parte del Acuerdo de Cliente. Por tanto, al entrar en el Acuerdo de Cliente con la Firma, está también indicando su conformidad con los términos de nuestra Política de Ejecución de Órdenes relativa a los instrumentos financieros proporcionados por la Firma; las especificaciones del contrato están disponibles online en https://global.TigerWit.com (los \" Instrumentos Financieros\"),como se establece en los documentos. ",
         "pt-BR": "2.Esta Política de Execução de Ordens (doravante, a “Política”) faz parte do Contrato do Cliente. Portanto, ao firmar o Contrato de Cliente com a Empresa, você também está concordando com os termos de nossa Política de Execução de Ordens relacionada aos instrumentos financeiros fornecidos pela Empresa, cujas especificações do contrato estão disponíveis on-line em http: //global.tigerwit. com (os \"Instrumentos Financeiros\"), conforme estabelecido neste documento.",
-        "ar": "2- إن سياسة تنفيذ الأوامر هذه (المشار إليها فيما بعد بلفظ \"السياسة\") تشكل جزءًا من اتفاقية العميل.  وبناء على ذلك، وبموجب قيامك بإبرام اتفاقية العميل مع الشركة فأنت توافق أيضًا على شروط سياسة تنفيذ الأوامر المتعلقة بالأدوات المالية التي تقدمها الشركة والتي يمكن الإطلاع على مواصفات عقودها على موقعنا الإلكتروني http://global.tigerwit.com \n(\"الأدوات المالية\")  على النحو المحدد  في هذه الوثيقة."
+        "ar": "2- إن سياسة تنفيذ الأوامر هذه (المشار إليها فيما بعد بلفظ \"السياسة\") تشكل جزءًا من اتفاقية العميل.  وبناء على ذلك، وبموجب قيامك بإبرام اتفاقية العميل مع الشركة فأنت توافق أيضًا على شروط سياسة تنفيذ الأوامر المتعلقة بالأدوات المالية التي تقدمها الشركة والتي يمكن الإطلاع على مواصفات عقودها على موقعنا الإلكتروني https://global.TigerWit.com \n(\"الأدوات المالية\")  على النحو المحدد  في هذه الوثيقة."
     },
     "amtExecution4": {
         "zh": "除非另有规定，本政策中使用的术语应具有 SCB 条例赋予的相同含义。",
         "en": "Unless otherwise defined, any defined terms in this Policy will have the same meaning given by SCB regulations. ",
         "vi": "Trừ khi được định nghĩa khác, bất kỳ điều khoản nào được xác định trong Chính sách này sẽ có cùng ý nghĩa theo quy định của SCB.",
         "zh-Hant": "除非另有規定，本政策中使用的術語應具有 SCB 條例賦予的相同含義。",
-        "id": "Unless otherwise defined, any defined terms in this Policy will have the same meaning given by SCB regulations. ",
+        "id": "Kecuali ditentukan lain, setiap istilah yang didefinisikan dalam Kebijakan ini akan memiliki arti yang sama yang diberikan oleh peraturan SCB.",
         "es": "A no ser que se defina de otro modo, cualquier término definido de esta Política tiene el mismo significado que le atribuye la regulación de la SCB. ",
         "pt-BR": "A menos que definido de outra forma, quaisquer termos definidos nesta Política terão o mesmo significado dado pelos regulamentos da SCB.",
         "ar": "ما لم ينص على خلاف ذلك، يكون معنى أي مصطلحات معرفة في هذه السياسة هو نفس المعنى المحدد في لوائح هيئة الأوراق المالية في جزر البهاما (SCB)."
@@ -9966,17 +9966,17 @@ module.exports = {
         "en": "Scope and Services",
         "vi": "Phạm vi và dịch vụ",
         "zh-Hant": "範圍和服務",
-        "id": "Scope and Services",
+        "id": "Ruang Lingkup dan Layana",
         "es": "Alcance y Servicios",
         "pt-BR": "Âmbito e Serviços",
         "ar": "النطاق والخدمات"
     },
     "amtExecution6": {
-        "zh": "1.本政策从 2017 年 6 月起生效，适用于所有客户（零售和专业客户）。",
-        "en": "1.The Policy is effective from June 2017 and applies to all clients, retail and professional.",
-        "vi": "1.Chính sách có hiệu lực từ tháng 6 năm 2017 và áp dụng cho tất cả khách hàng, đơn lẻ và chuyên nghiệp.",
-        "zh-Hant": "1.本政策從 2017 年 6 月起生效，適用於所有客戶（零售和專業客戶）。",
-        "id": "1.The Policy is effective from June 2017 and applies to all clients, retail and professional.",
+        "zh": "1.本政策适用于所有客户，包含零售和专业客户。",
+        "en": "1.The Policy applies to all clients, retail and professional.",
+        "vi": "1.Chính sách áp dụng cho tất cả khách hàng, đơn lẻ và chuyên nghiệp.",
+        "zh-Hant": "1.本政策適用於所有客戶，包含零售和專業客戶。",
+        "id": "1. Kebijakan dan berlaku untuk semua klien, retail dan profesional.",
         "es": "1. La Política es efectiva a partir de junio de 2017 y se aplica a todos los clientes, minoristas y profesionales.",
         "pt-BR": "1.A Política entra em vigor a partir de junho de 2017 e se aplica a todos os clientes, varejistas e profissionais.",
         "ar": "1- تصبح هذه السياسة سارية المفعول اعتبارًا من يونيو 2017 وتسري على جميع العملاء، عملاء التجزئة والعملاء المحترفين على السواء."
@@ -9986,7 +9986,7 @@ module.exports = {
         "en": "2.This Policy applies when executing transactions in the Financial Instruments provided by the Firm. The Financial Instruments provided by the Firm are Contracts for Difference. It is up to the Firm’s discretion to decide which types of Financial Instruments to make available and to publish the prices at which these can be traded. The Firm, through its trading platform, provides the client with live streaming prices, “Quotes”, along with a breakdown of the available volumes (“market depth”) as received from its third-party liquidity providers. The Firm is always the counterparty (or principal) to every trade; therefore, if the Client decides to open a position in a Financial Instrument with the Firm, that position can only be closed with the Firm.",
         "vi": "2. Chính sách này áp dụng khi thực hiện giao dịch với các Công cụ tài chính do Công ty cung cấp là Hợp Đồng Chênh Lệch. Tùy theo quyết định của Công ty để quyết định loại Công cụ tài chính nào có sẵn và công bố giá mà tại đó chúng có thể được giao dịch. Công ty, thông qua nền tảng giao dịch, cung cấp cho khách hàng dòng giá trực tiếp, “Báo giá”, cùng với sự đột phá xuống của các khối lượng sẵn có (“độ sâu thị trường”) nhận được từ các nhà cung cấp thanh khoản của bên thứ ba. Công ty luôn là đối tác (hoặc người chịu trách nhiệm chính) cho mọi giao dịch; do đó, nếu Khách hàng quyết định mở một vị thế đối với Công cụ tài chính với Công ty, vị thế đó chỉ có thể được đóng lại với Công ty.",
         "zh-Hant": "2.本政策在執行本公司提供的金融工具交易時適用。本公司所提供的金融工具為差價合約。本公司可裁量決定可用於交易的金融工具類型以及發布可進行交易的價格。本公司通過其交易平臺向客戶提供實時滾動價格“報價”，以及從第三方流動性供應商收到的可用數量（“市場深度”）細分。本公司始終是所有交易的對手方（或做市商）；所以如果客戶決定在本公司開設金融工具頭寸，該頭寸只能通過本公司平倉。",
-        "id": "2.This Policy applies when executing transactions in the Financial Instruments provided by the Firm. The Financial Instruments provided by the Firm are Contracts for Difference. It is up to the Firm’s discretion to decide which types of Financial Instruments to make available and to publish the prices at which these can be traded. The Firm, through its trading platform, provides the client with live streaming prices, “Quotes”, along with a breakdown of the available volumes (“market depth”) as received from its third-party liquidity providers. The Firm is always the counterparty (or principal) to every trade; therefore, if the Client decides to open a position in a Financial Instrument with the Firm, that position can only be closed with the Firm.",
+        "id": "2. Kebijakan ini berlaku saat melakukan transaksi di Instrumen Keuangan yang disediakan oleh Perusahaan. Instrumen Keuangan yang disediakan oleh Perusahaan adalah Contracts for Difference. Terserah pada kebijaksanaan Perusahaan untuk memutuskan jenis Instrumen Keuangan yang akan disediakan dan untuk mempublikasikan harga di mana ini dapat diperdagangkan. Firma, melalui platform tradingnya, menyediakan klien dengan harga live streaming, \"Quotes\", bersama dengan rincian volume yang tersedia (\"kedalaman pasar\") yang diterima dari penyedia likuiditas pihak ketiga. Perusahaan selalu menjadi rekanan (atau prinsipal) untuk setiap trade; oleh karena itu, jika Klien memutuskan untuk membuka posisi dalam Instrumen Keuangan dengan Perusahaan, posisi itu hanya dapat ditutup dengan Perusahaan.",
         "es": "2. Esta Política se aplica cuando se ejecutan transacciones en los Instrumentos financieros provistos por la Firma. Los Instrumentos Financieros provistos por la Firma son Contratos por Diferencias. Depende de la discreción de la Firma decidir qué tipos de Instrumentos Financieros se pondrán a disposición y publicar los precios a los que se pueden negociar. La Firma, a través de su plataforma de trading, proporciona al cliente precios de trading en tiempo real, \"Cotizaciones\", junto con un desglose de los volúmenes disponibles (\"profundidad del mercado\") tal como se recibieron de sus proveedores de liquidez externos. La Firma es siempre la contraparte (o principal) de cada trade; por lo tanto, si el Cliente decide abrir una posición en una Instrumento Financiero con la Firma, esa posición sólo se puede cerrar con la Firma.",
         "pt-BR": "2.Esta Política se aplica ao executar transações nos Instrumentos Financeiros fornecidos pela Empresa. Os instrumentos financeiros fornecidos pela empresa são contratos por diferença. Cabe ao critério da empresa decidir quais tipos de instrumentos financeiros disponibilizar e publicar os preços pelos quais eles podem ser negociados. O Escritório, através de sua plataforma de negociação, fornece ao cliente preços de transmissão ao vivo, “Cotações”, juntamente com uma divisão dos volumes disponíveis (“profundidade de mercado”), conforme recebido de seus provedores de liquidez de terceiros. A Firma é sempre a contraparte (ou principal) de todo negócio; portanto, se o Cliente decidir abrir uma posição em um Instrumento Financeiro com a Empresa, essa posição só poderá ser fechada com a Empresa.",
         "ar": "2- تسري هذه السياسة عند تنفيذ المعاملات على الأدوات المالية التي تقدمها الشركة.  الأدوات المالية التي تقدمها الشركة هي عقود فروقات.  وتحدد الشركة حسب تقديرها وحدها دون غيرها أنواع الأدوات المالية التي سيتم تقديمها وتنشر الأسعار التي يمكن أن يتم تداول هذه الأدوات المالية بها.  وتوفر الشركة للعميل الأسعار الحية \"الأسعار\" من خلال منصة التداول الخاصة بها، بالإضافة إلى تحليل للأحجام المتوفرة (\"عمق السوق\") كما وردت من مزودي السيولة من الأطراف الثالثة.  وتكون الشركة دائمًا هي الطرف المقابل (أو الطرف الرئيسي) في كل صفقة؛ وبناء على ذلك فإذا قرر العميل فتح مركز على أداة مالية مع الشركة فإنه لا يمكن إغلاق هذا المركز إلا مع الشركة."
@@ -9996,7 +9996,7 @@ module.exports = {
         "en": "Order Type Definitions Please refer to Appendix I Execution Elements Prices",
         "vi": "Định nghĩa Các Loại Lệnh Vui lòng tham khảo Phụ lục I Các Yếu Tố Thực Hiện Giá.",
         "zh-Hant": "訂單類型的定義請參看附件 I 執行要素價格",
-        "id": "Order Type Definitions Please refer to Appendix I Execution Elements Prices",
+        "id": "Definisi Jenis Pesanan Silakan merujuk ke Lampiran I Harga Elemen Eksekusi.",
         "es": "Definiciones Tipos de Órdenes Consulte el Apéndice I, Precios Elementos Ejecución",
         "pt-BR": "Definições do Tipo de Pedido Por favor, consulte o Anexo I Preços dos Elementos de Execução",
         "ar": "تعريفات أنواع الأوامر، يرجى الرجوع إلى الملحق I أسعار عناصر التنفيذ"
@@ -10006,7 +10006,7 @@ module.exports = {
         "en": "TigerWit receives price feeds from some of the world’s leading liquidity providers. Having multiple liquidity providers is important especially during abnormal market conditions, such as times of extreme volatility. Under these conditions and even if a certain number of liquidity providers decide to widen the spreads or stop quoting prices at all, the Firm is still able to provide clients with competitive prices which for the trading platforms include TigerWit’s mark-up. The remaining liquidity providers shall continue competing to provide TigerWit the best ‘bid’ and ‘ask’ prices.",
         "vi": "TigerWit nhận được nguồn cập nhật dữ liệu giá từ một số nhà cung cấp thanh khoản hàng đầu thế giới. Có nhiều nhà cung cấp thanh khoản là đặc biệt quan trọng là trong điều kiện thị trường bất thường, chẳng hạn như thời điểm thị trường cực kì biến động. Dưới những điều kiện này và ngay cả khi một số nhà cung cấp thanh khoản nhất định quyết định tăng spread giá hoặc ngừng đưa ra chào giá, Công ty vẫn có thể cung cấp cho khách hàng mức giá cạnh tranh cho nền tảng giao dịch bao gồm lợi nhuận gộp của TigerWit. Các nhà cung cấp thanh khoản còn lại sẽ tiếp tục cạnh tranh để cung cấp cho TigerWit giá 'giá chào bán' và ' giá mua' tốt nhất.",
         "zh-Hant": "TigerWit 從部分世界領先的流動性供應商獲得價格。擁有多個流動性供應商非常重要，尤其是在非正常的市場條件下，例如發生極端的波動時。在這些情況下，即使是壹定數量的流動性供應商決定擴大點差或完全停止報價，本公司仍然能夠向客戶提供有競爭力的價格，對交易平臺包括 TigerWit 的加價。其余的流動性供應商會繼續競相向 TigerWit 提供最佳的“買價”和“賣價”。",
-        "id": "TigerWit receives price feeds from some of the world’s leading liquidity providers. Having multiple liquidity providers is important especially during abnormal market conditions, such as times of extreme volatility. Under these conditions and even if a certain number of liquidity providers decide to widen the spreads or stop quoting prices at all, the Firm is still able to provide clients with competitive prices which for the trading platforms include TigerWit’s mark-up. The remaining liquidity providers shall continue competing to provide TigerWit the best ‘bid’ and ‘ask’ prices.",
+        "id": "TigerWit menerima umpan harga dari beberapa penyedia likuiditas terkemuka dunia. Memiliki banyak penyedia likuiditas penting terutama selama kondisi pasar yang tidak normal, seperti saat volatilitas yang ekstrim. Dalam kondisi ini dan bahkan jika sejumlah penyedia likuiditas memutuskan untuk memperluas spread atau menghentikan harga kuotasi sama sekali, Perusahaan masih dapat menyediakan klien dengan harga yang kompetitif yang untuk platform trading termasuk mark-up TigerWit. Penyedia likuiditas yang tersisa akan terus bersaing untuk memberikan harga 'bid' dan 'ask' terbaik kepada TigerWit.",
         "es": "TigerWit recibe feeds de precios de algunos de los principales proveedores de liquidez del mundo. Tener múltiples proveedores de liquidez es importante, especialmente durante condiciones anormales de mercado, como en tiempos de extrema volatilidad. Bajo estas condiciones e incluso si un cierto número de proveedores de liquidez deciden ampliar los diferenciales o dejar de cotizar, la Firma aún puede ofrecer a los clientes precios competitivos, que en las plataformas de trading incluyen el mark-up de TigerWit. Los proveedores de liquidez compiten para proporcionar a TigerWit los mejores precios de \"bid\" y \"ask\".",
         "pt-BR": "A TigerWit recebe feeds de preço de alguns dos principais provedores de liquidez do mundo. Ter múltiplos provedores de liquidez é importante, especialmente durante condições anormais de mercado, como tempos de extrema volatilidade. Nestas condições e mesmo se um certo número de provedores de liquidez decidir ampliar os spreads ou parar de cotar preços, a Firma ainda é capaz de fornecer aos clientes preços competitivos que, para as plataformas de negociação, incluem o mark-up da TigerWit. Os restantes fornecedores de liquidez continuarão a competir para fornecer à TigerWit os melhores preços de 'oferta' e 'pedir'.",
         "ar": "تتلقى TigerWit تغذيات الأسعار من عدد من كبار مزودي السيولة في العالم. ومما لا شك فيه أن وجود مزودي سيولة متعددين مسألة مهمة ولاسيما في ظروف السوق غير الطبيعية مثل أوقات التقلبات الشديدة في الأسواق. وفي مثل هذه الظروف فحتى إذا قرر عدد معين من مزودي السيولة توسيع فروق الأسعار أو إيقاف التداول تمامًا، سيظل بمقدور الشركة أن تقدم لعملائها أسعارًا تنافسية والتي تشمل على منصات التداول هامش ربح TigerWit.  وسيواصل مزودي السيولة الآخرين التنافس على إمداد TigerWit بأفضل أسعار البيع والشراء."
@@ -10016,7 +10016,7 @@ module.exports = {
         "en": "Re-quoting ",
         "vi": "Chào giá lại",
         "zh-Hant": "重新報價",
-        "id": "Re-quoting ",
+        "id": "Mengutip ulang",
         "es": "Re-cotización ",
         "pt-BR": "Re-citando",
         "ar": "إعادة التسعير"
@@ -10026,7 +10026,7 @@ module.exports = {
         "en": "This is the practice of providing a secondary quote to the client after an ‘instant order’ has been submitted; the client must agree to this quote before the order is executed. TigerWit will re- quote ‘instant orders’ if the requested price originally specified by the client is not available. The secondary quote provided to the client is the next available price received by TigerWit from its thirdparty liquidity providers. TigerWit does not requote ‘pending orders’",
         "vi": "Đây là việc cung cấp một báo giá thứ cấp cho khách hàng sau khi một 'lệnh tức thì' đã được gửi; khách hàng phải đồng ý với báo giá này trước khi lệnh được thực thi. TigerWit sẽ báo lại 'các lệnh tức thì' nếu giá được yêu cầu ban đầu do khách hàng chỉ định không có sẵn. Báo giá thứ cấp được cung cấp cho khách hàng là giá sẵn có tiếp theo mà TigerWit nhận được từ các nhà cung cấp thanh khoản của bên thứ ba. TigerWit không yêu cầu 'lệnh chờ xử lý'",
         "zh-Hant": "這是在已提交“即時訂單”之後向客戶提供二次報價的做法；客戶必須在執行訂單前同意這壹報價。如果客戶原來指定的申請價格不能使用，TigerWit 將對“即時訂單”重新報價。提供給客戶的二次報價是 TigerWit 從第三方流動性供應商獲得的次優價格。TigerWit 對“掛單”不予重新報價。",
-        "id": "This is the practice of providing a secondary quote to the client after an ‘instant order’ has been submitted; the client must agree to this quote before the order is executed. TigerWit will re- quote ‘instant orders’ if the requested price originally specified by the client is not available. The secondary quote provided to the client is the next available price received by TigerWit from its thirdparty liquidity providers. TigerWit does not requote ‘pending orders’",
+        "id": "Ini adalah praktik memberikan penawaran harga sekunder kepada klien setelah 'pesanan instan' dikirimkan; klien harus menyetujui penawaran ini sebelum order dieksekusi. TigerWit  akan mengutip kembali 'pesanan instan' jika harga yang diminta semula yang ditentukan oleh klien tidak tersedia. Kutipan sekunder yang diberikan kepada klien adalah harga yang tersedia berikutnya yang diterima oleh TigerWit dari penyedia likuiditas pihak ketiganya. TigerWit tidak mengutip ulang 'pesanan tertunda'",
         "es": "Esta es la práctica de proporcionar una segunda cotización al cliente después de que se haya enviado una ‘instant order’; el cliente debe aceptar esta cotización antes de que se ejecute la orden. TigerWit volverá a cotizar ‘instant orders’ si el precio solicitado originalmente especificado por el cliente no está disponible. La segunda cotización proporcionada al cliente es el siguiente precio disponible recibido por TigerWit de sus proveedores de liquidez. TigerWit no cotiza \"órdenes pendientes\"",
         "pt-BR": "Esta é a prática de fornecer uma cotação secundária para o cliente depois que um \"pedido instantâneo\" foi enviado; o cliente deve concordar com essa cotação antes que o pedido seja executado. A TigerWit irá repassar \"pedidos instantâneos\" se o preço solicitado originalmente especificado pelo cliente não estiver disponível. A cotação secundária fornecida ao cliente é o próximo preço disponível recebido pela TigerWit de seus provedores de liquidez de terceiros. A TigerWit não exige \"pedidos pendentes\"",
         "ar": "يعني ذلك تقديم سعر ثاني للعميل بعد إرسال \"الأمر الفوري\"؛ ويجب أن يقبل العميل هذا السعر قبل أن يتم تنفيذ الأمر.  ستقوم TigerWit بإعادة تسعير \"الأوامر الفورية\" في حالة عدم توافر السعر المطلوب الذي حدده العميل في الأصل.  ويكون السعر الثاني المقدم إلى العميل هو السعر المتاح التالي الذي تتلقاه TigerWit من مزودي السيولة الخارجيين الذين تتعامل معهم TigerWit.  ولا تقدم TigerWit إعادة تسعير \"للأوامر المعلقة\"."
@@ -10046,7 +10046,7 @@ module.exports = {
         "en": "At the time that an order is presented for execution, the specific price requested by the client may not be available; therefore, the order will be executed close to or a number of pips away from the client’s requested price. If the execution price is better than the price requested by the client this is referred to as ‘positive slippage’. In contrast, if the execution price is worse than the price requested by the client this is referred to as ‘negative slippage’. Please be advised that ‘slippage’ is a normal market practise and a regular feature of the foreign exchange and stock markets under conditions* such as illiquidity and volatility due to news announcements, economic events and market openings. TigerWit’s automated execution software does not operate based on any individual parameters related to the execution of orders through any specific client accounts.",
         "vi": "Vào thời điểm một lệnh được được ra để khớp lệnh, giá cụ thể theo yêu cầu của khách hàng có thể không có sẵn; do đó, lệnh này sẽ được khớp với mức gần với một số pip ra so với yêu cầu của khách hàng. Nếu giá khớp tốt hơn giá được khách hàng yêu cầu, điều này được gọi là 'trượt dương'. Ngược lại, nếu giá thực hiện thấp hơn giá mà khách hàng yêu cầu, điều này được gọi là \"trượt âm\". Xin lưu ý rằng 'trượt' là hoạt động thị trường bình thường và tính năng thường xuyên của thị trường ngoại hối và thị trường chứng khoán trong điều kiện * như tính thanh khoản và biến động do thông báo tin tức, sự kiện kinh tế và thị trường mở. Phần mềm khớp lệnh tự động của TigerWit không hoạt động dựa trên bất kỳ thông số riêng lẻ nào liên quan đến việc thực hiện các lệnh thông qua bất kỳ tài khoản khách hàng cụ thể nào.",
         "zh-Hant": "在訂單被提交用於執行之時，客戶申請的指定價格可能無法使用，所以訂單的執行價將與客戶申請的價格接近，或者存在幾個點的差距。如果執行價格優於客戶申請的價格，這被稱為“正滑點”。相反，如果執行價格差於客戶申請的價格，這被稱為“負滑點”。請註意，“滑點”是正常的市場操作，也是外匯交易市場和股市在類似流動性和波動性因新聞發布、經濟事件和市場開盤而發生變化的情況下的常規特征*。TigerWit 的自動執行軟件不會根據與通過任何特定客戶賬戶執行訂單有關的個人參數操作。",
-        "id": "At the time that an order is presented for execution, the specific price requested by the client may not be available; therefore, the order will be executed close to or a number of pips away from the client’s requested price. If the execution price is better than the price requested by the client this is referred to as ‘positive slippage’. In contrast, if the execution price is worse than the price requested by the client this is referred to as ‘negative slippage’. Please be advised that ‘slippage’ is a normal market practise and a regular feature of the foreign exchange and stock markets under conditions* such as illiquidity and volatility due to news announcements, economic events and market openings. TigerWit’s automated execution software does not operate based on any individual parameters related to the execution of orders through any specific client accounts.",
+        "id": "Pada saat pesanan disajikan untuk dieksekusi, harga spesifik yang diminta oleh klien mungkin tidak tersedia; oleh karena itu, order akan dieksekusi mendekati atau beberapa pip dari harga yang diminta klien. Jika harga eksekusi lebih baik daripada harga yang diminta oleh klien, ini disebut sebagai 'selip positif'. Sebaliknya, jika harga eksekusi lebih buruk dari harga yang diminta oleh klien, ini disebut sebagai 'selip negatif'. Harap diperhatikan bahwa 'slippage' adalah praktik pasar normal dan fitur reguler dari valuta asing dan pasar saham dalam kondisi * seperti tidak likuiditas dan volatilitas karena pengumuman berita, peristiwa ekonomi, dan pembukaan pasar. Perangkat lunak eksekusi otomatis TigerWit tidak beroperasi berdasarkan parameter individual apa pun yang terkait dengan eksekusi pesanan melalui akun klien tertentu.",
         "es": "En el momento en que se presenta una orden para su ejecución, el precio específico solicitado por el cliente puede no estar disponible; por lo tanto, la orden se ejecutará cerca o a una cantidad de pips del precio solicitado por el cliente. Si el precio de ejecución es mejor que el precio solicitado por el cliente, esto se conoce como \"slippage positivo\". Por el contrario, si el precio de ejecución es peor que el precio solicitado por el cliente, esto se conoce como \"slippage negativo\". Tenga en cuenta que el \"slippage \" es una práctica normal en el mercado y una característica regular de los mercados de divisas y de valores en condiciones *como la falta de liquidez y/o la volatilidad, debido a la publicación de datos, eventos económicos y aperturas del mercado. El software de ejecución automatizada de TigerWit no funciona en base a ningún parámetro individual relacionado con la ejecución de órdenes a través de cuentas de clientes específicas.",
         "pt-BR": "No momento em que um pedido é apresentado para execução, o preço específico solicitado pelo cliente pode não estar disponível; portanto, o pedido será executado próximo a um número de pips do preço solicitado do cliente. Se o preço de execução for melhor que o preço solicitado pelo cliente, isso é chamado de \"deslizamento positivo\". Por outro lado, se o preço de execução for pior que o preço solicitado pelo cliente, isso é chamado de \"deslizamento negativo\". Esteja ciente de que a \"derrapagem\" é uma prática normal do mercado e uma característica regular dos mercados de câmbio e de ações sob condições * como falta de liquidez e volatilidade devido a notícias, eventos econômicos e aberturas de mercado. O software de execução automatizado da TigerWit não opera com base em nenhum parâmetro individual relacionado à execução de pedidos através de contas de clientes específicas.",
         "ar": "في الوقت الذي يقدم فيه العميل أمرًا للتنفيذ، قد لا يكون السعر المحدد الذي طلبه العميل متوفرًا؛ وبناء على ذلك، سيتم تنفيذ الأمر بسعر قريب من السعر الذي طلبه العميل أو بسعر يبعد عنه بعدد من النقاط.  وإذا كان سعر التنفيذ أفضل من السعر الذي طلبه العميل، يشار إلى ذلك بمصطلح \"الانزلاق الإيجابي\". وعلى العكس من ذلك, فإذا كان سعر التنفيذ أسوأ من السعر الذي طلبه العميل، يشار إلى ذلك بمصطلح \"الانزلاق السلبي\". ويرجى العلم بأن \"الانزلاق\" سمة معتادة في الأسواق وهي أمر يحدث باستمرار في أسواق العملات الأجنبية وأسواق الأسهم في ظروف* مثل نقص السيولة و/أو التقلبات التي تحدث بسبب البيانات والأحداث الاقتصادية وفتح الأسواق.  ولا يعمل برنامج TigerWit للتنفيذ الآلي للصفقات وفقًا لأي معلمات فردية متعلقة بتنفيذ الأوامر عن طريق حسابات عملاء محددة."
@@ -10056,7 +10056,7 @@ module.exports = {
         "en": "* Please note that this is not an exhaustive list.",
         "vi": "* Xin lưu ý rằng đây không phải là danh sách đầy đủ",
         "zh-Hant": "* 請註意，這不是詳盡清單。",
-        "id": "* Please note that this is not an exhaustive list.",
+        "id": "* Harap diperhatikan bahwa ini bukanlah daftar yang lengkap.",
         "es": "* Tenga en cuenta que esto no es una lista exhaustiva.",
         "pt-BR": "* Por favor note que essa não é uma lista exaustiva.",
         "ar": "* يرجى ملاحظة أن هذه القائمة ليست قائمة شاملة."
@@ -10064,9 +10064,9 @@ module.exports = {
     "amtExecution15": {
         "zh": "部分执行 如果当时市场上没有足够流动性的情况下，会部分地执行订单，以按照特定的价格执行整个订单。部分执行可能以不同的价格执行。",
         "en": "Partial fills This is the practice of executing an order in parts if there is not enough liquidity in the market at the time in order to fill-in the full order at a specific price. Partial fills may be executed at different prices.",
-        "vi": "Điền một phần Đây là thực hành khớp một lệnh trong các bộ phận nếu không có đủ thanh khoản trên thị trường vào thời điểm đó để lấp đầy đủ vào một mức giá cụ thể. Việc điền một phần có thể được thực hiện ở các mức giá khác nhau.",
+        "vi": "Khớp lệnh một phần, Đây là thực hành khớp một lệnh trong các bộ phận nếu không có đủ thanh khoản trên thị trường vào thời điểm đó để lấp đầy đủ vào một mức giá cụ thể. Việc điền một phần có thể được thực hiện ở các mức giá khác nhau.",
         "zh-Hant": "部分執行 如果當時市場上沒有足夠流動性的情況下，會部分地執行訂單，以按照特定的價格執行整個訂單。部分執行可能以不同的價格執行。",
-        "id": "Partial fills This is the practice of executing an order in parts if there is not enough liquidity in the market at the time in order to fill-in the full order at a specific price. Partial fills may be executed at different prices.",
+        "id": "Parsial mengisi Ini adalah praktik mengeksekusi pesanan sebagian jika tidak ada cukup likuiditas di pasar pada saat itu untuk mengisi pesanan penuh dengan harga tertentu. Pengisian parsial dapat dilakukan dengan harga berbeda.",
         "es": "Partial fills Es la práctica de ejecutar una orden en partes si no hay suficiente liquidez en el mercado en ese momento para cumplimentar la orden a un precio específico. Los partial fills pueden ser ejecutados a diferentes precios.",
         "pt-BR": "Preenchimentos Parciais Esta é a prática de executar uma ordem em partes se não houver liquidez suficiente no mercado no momento para preencher a ordem completa a um preço específico. Preenchimentos parciais podem ser executados a preços diferentes.",
         "ar": "عمليات التنفيذ الجزئية للأوامر هي تنفيذ الأمر على أجزاء إذا لم يكن هناك في ذلك الوقت سيولة كافية في السوق  لتنفيذ الأمر ككل بالسعر المحدد. ويمكن أن يتم التنفيذ الجزئي للأمر بأسعار مختلفة."
@@ -10082,19 +10082,19 @@ module.exports = {
         "ar": "العمولة"
     },
     "amtExecution17": {
-        "zh": "客户在通过本平台交易基于外汇和金属的 CFD时，可能被收取佣金。更多信息可在本网页在线获取：http://global.tigerwit.com。",
-        "en": "Clients may be charged commission when trading CFDs on forex and metals through the platform. Further information is available online at: http://global.tigerwit.com. ",
-        "vi": "Khách hàng có thể bị tính phí hoa hồng khi giao dịch CFD trên ngoại hối và kim loại thông qua nền tảng này. Thông tin thêm có sẵn trực tuyến tại: http://global.tigerwit.com.",
-        "zh-Hant": "客戶在通過本平臺交易基於外匯和金屬的 CFD時，可能被收取傭金。更多信息可在本網頁在線獲取：http://global.tigerwit.com。",
-        "id": "Clients may be charged commission when trading CFDs on forex and metals through the platform. Further information is available online at: http://global.tigerwit.com. ",
-        "es": "Los Clientes  pudieran ser cargados con una comisión al operar CFDs sobre forex y metales a través de la plataforma. Más información disponible online en: http://global.tigerwit.com. ",
-        "pt-BR": "Os clientes podem ser cobrado comissão ao negociar CFDs em forex e metais através da plataforma. Mais informações estão disponíveis online em: http://global.tigerwit.com.",
-        "ar": "يجوز أن يتم تحصيل عمولة من العملاء عند تداول عقود الفروقات على الفوركس والمعادن عبر المنصة. تتوفر المزيد من التفاصيل على شبكة الإنترنت على : http://global.tigerwit.com"
+        "zh": "客户在通过本平台交易基于外汇和金属的 CFD时，可能被收取佣金。更多信息可在本网页在线获取：https://global.TigerWit.com。",
+        "en": "Clients may be charged commission when trading CFDs on forex and metals through the platform. Further information is available online at: https://global.TigerWit.com. ",
+        "vi": "Khách hàng có thể bị tính phí hoa hồng khi giao dịch CFD trên ngoại hối và kim loại thông qua nền tảng này. Thông tin thêm có sẵn trực tuyến tại: https://global.TigerWit.com.",
+        "zh-Hant": "客戶在通過本平臺交易基於外匯和金屬的 CFD時，可能被收取傭金。更多信息可在本網頁在線獲取：https://global.TigerWit.com。",
+        "id": "Klien mungkin dikenai komisi saat trading CFD di forex dan logam melalui platform. Informasi lebih lanjut tersedia online di: https://global.TigerWit.com.",
+        "es": "Los Clientes  pudieran ser cargados con una comisión al operar CFDs sobre forex y metales a través de la plataforma. Más información disponible online en: https://global.TigerWit.com. ",
+        "pt-BR": "Os clientes podem ser cobrado comissão ao negociar CFDs em forex e metais através da plataforma. Mais informações estão disponíveis online em: https://global.TigerWit.com.",
+        "ar": "يجوز أن يتم تحصيل عمولة من العملاء عند تداول عقود الفروقات على الفوركس والمعادن عبر المنصة. تتوفر المزيد من التفاصيل على شبكة الإنترنت على : https://global.TigerWit.com"
     },
     "amtExecution18": {
         "zh": "加价",
         "en": "Mark-up",
-        "vi": "Lợi Nhuận Gộp",
+        "vi": "Mark-up",
         "zh-Hant": "加價",
         "id": "Mark-up",
         "es": "Mark-up",
@@ -10102,21 +10102,21 @@ module.exports = {
         "ar": "هامش الربح"
     },
     "amtExecution19": {
-        "zh": "客户在通过交易平台交易基于外汇、金属、石油、股票、指数和期货 CFD 时，会被收取加价。更 多 信 息 可 在 本 网 页 在 线 获 取 ：http://global.tigerwit.com。",
-        "en": "Clients shall be charged a mark-up on spread when trading CFDs on forex, metals, oil, equities, indices and futures through the trading platform. Further information is available online at: http://global.tigerwit.com. ",
-        "vi": "Khách hàng sẽ phải trả một khoản chênh lệch trên spread khi giao dịch CFD trên ngoại hối, kim loại, dầu, cổ phiếu, chỉ số và tương lai thông qua sàn giao dịch. Thông tin khác có tại: http://global.tigerwit.com.",
-        "zh-Hant": "客戶在通過交易平臺交易基於外匯、金屬、石油、股票、指數和期貨 CFD 時，會被收取加價。更 多 信 息 可 在 本 網 頁 在 線 獲 取 ：http://global.tigerwit.com。",
-        "id": "Clients shall be charged a mark-up on spread when trading CFDs on forex, metals, oil, equities, indices and futures through the trading platform. Further information is available online at: http://global.tigerwit.com. ",
-        "es": "A los Clientes se les cargará un mark-up en los spreads al operar CFDs sobre forex, metales, crudo, equities, indices y futuros a través de la plataforma. Más información disponible online en: http://global.tigerwit.com. ",
-        "pt-BR": "Aos clientes será cobrada uma margem de lucro sobre o spread na negociação de CFDs em moeda estrangeira, metais, petróleo, ações, índices e futuros através da plataforma de negociação. Mais informações estão disponíveis online em: http://global.tigerwit.com.",
-        "ar": "نحن نتقاضى عمولة من العملاء على فروق الأسعار عند تداول عقود الفروقات على الفوركس والمعادن والنفط والأسهم والمؤشرات والعقود الآجلة عبر  المنصة.  تتوفر المزيد من التفاصيل على شبكة الإنترنت على : http://global.tigerwit.com"
+        "zh": "客户在通过交易平台交易基于外汇、金属、石油、股票、指数和期货 CFD 时，会被收取加价。更 多 信 息 可 在 本 网 页 在 线 获 取 ：https://global.TigerWit.com。",
+        "en": "Clients shall be charged a mark-up on spread when trading CFDs on forex, metals, oil, equities, indices and futures through the trading platform. Further information is available online at: https://global.TigerWit.com. ",
+        "vi": "Khách hàng sẽ phải trả một khoản chênh lệch trên spread khi giao dịch CFD trên ngoại hối, kim loại, dầu, cổ phiếu, chỉ số và tương lai thông qua sàn giao dịch. Thông tin khác có tại: https://global.TigerWit.com.",
+        "zh-Hant": "客戶在通過交易平臺交易基於外匯、金屬、石油、股票、指數和期貨 CFD 時，會被收取加價。更 多 信 息 可 在 本 網 頁 在 線 獲 取 ：https://global.TigerWit.com。",
+        "id": "Klien akan dikenai mark-up pada spread saat trading CFD di forex, logam, minyak, ekuitas, indeks, dan kontrak berjangka melalui platform trading. Informasi lebih lanjut tersedia online di: https://global.TigerWit.com. ",
+        "es": "A los Clientes se les cargará un mark-up en los spreads al operar CFDs sobre forex, metales, crudo, equities, indices y futuros a través de la plataforma. Más información disponible online en: https://global.TigerWit.com. ",
+        "pt-BR": "Aos clientes será cobrada uma margem de lucro sobre o spread na negociação de CFDs em moeda estrangeira, metais, petróleo, ações, índices e futuros através da plataforma de negociação. Mais informações estão disponíveis online em: https://global.TigerWit.com.",
+        "ar": "نحن نتقاضى عمولة من العملاء على فروق الأسعار عند تداول عقود الفروقات على الفوركس والمعادن والنفط والأسهم والمؤشرات والعقود الآجلة عبر  المنصة.  تتوفر المزيد من التفاصيل على شبكة الإنترنت على : https://global.TigerWit.com"
     },
     "amtExecution20": {
         "zh": "订单类型",
         "en": "Order Type",
         "vi": "Loại Lệnh",
         "zh-Hant": "訂單類型",
-        "id": "Order Type",
+        "id": "Jenis Order",
         "es": "Tipo Orden",
         "pt-BR": "Tipo de ordem",
         "ar": "نوع الأمر"
@@ -10136,7 +10136,7 @@ module.exports = {
         "en": "Instant Order: this is an order to either buy or sell at the ‘ask’ or ‘bid’ price (respectively) as it appears in the quotes flow at the time the client presents the order for execution.",
         "vi": "Lệnh khớp tức thì: đây là một loại lệnh để mua hoặc bán với giá 'yêu cầu' hoặc 'giá thầu' (tương ứng) khi nó xuất hiện trong luồng báo giá tại thời điểm khách đặt lệnh này để khớp lệnh.",
         "zh-Hant": "即時訂單：這是在客戶提交訂單執行時以報價流所顯示的“賣價”或“買價”（分別）買入或賣出的訂單。",
-        "id": "Instant Order: this is an order to either buy or sell at the ‘ask’ or ‘bid’ price (respectively) as it appears in the quotes flow at the time the client presents the order for execution.",
+        "id": "Instant Order : ini adalah order untuk membeli atau menjual dengan harga 'ask' atau 'bid' (masing-masing) seperti yang muncul dalam aliran kutipan pada saat klien menyajikan pesanan untuk dieksekusi.",
         "es": "Orden instant: esta es una orden para comprar o vender al precio de \"ask\" o \"bid\" (respectivamente) tal como aparece en el flujo de cotizaciones en el momento en que el cliente presenta la orden de ejecución.",
         "pt-BR": "Encomenda Instantânea: é uma encomenda para comprar ou vender ao preço \"pedir\" ou \"licitar\" (respetivamente) tal como aparece no fluxo de cotações no momento em que o cliente apresenta a ordem de execução.",
         "ar": "أمر التنفيذ الفوري: هو أمر للشراء أو البيع بسعر \"الطلب\" أو بسعر \"العطاء\" (على الترتيب) حسبما يظهر في تدفق الأسعار في وقت تقديم العميل الأمر للتنفيذ."
@@ -10156,7 +10156,7 @@ module.exports = {
         "en": "This is an order to buy or sell once the market reaches the ‘stop price’. Once the market reaches the ‘stop price’ the ‘stop order’ is triggered and treated as a ‘market order’*. If the ‘stop order’ is not triggered it shall remain in the system until a later date subject to the conditions described in the ‘Good ‘til Cancelled’ section. For CFDs on FX, spot metals, equities, indices and futures, ‘stop orders’ should be placed a minimum number of pips away from the current market price in order for these to be valid. Stop Orders placed within the current bidask spread will be automatically removed.",
         "vi": "Đây là lệnh mua hoặc bán khi thị trường đạt đến 'giá dừng'. Khi thị trường đạt đến ‘giá dừng’, ‘lệnh dừng’ được kích hoạt và được coi là ‘lệnh thị trường’ *. Nếu 'lệnh dừng' không được kích hoạt, nó sẽ vẫn còn trong hệ thống cho đến một ngày sau đó tùy thuộc vào các điều kiện được mô tả trong phần ‘Good‘ til Canceled ’. Đối với CFD trên FX, kim loại giao ngay, chứng khoán, chỉ số và tương lai, 'lệnh dừng' phải được đặt số pip tối thiểu ra khỏi giá thị trường hiện tại để chúng có giá trị. Lệnh dừng được đặt trong phạm vi giá thầu hiện tại sẽ tự động bị xóa.",
         "zh-Hant": "這是在市場到達“止損價格”時，立即買入或賣出的訂單。壹旦到達“止損價格”，“止損單”將被觸發並被作為“市價單”對待。如果“止損單”沒有被觸發，將被系統保留到後面的日期，受“取消前有效”部分所規定的條件約束。對於基於外匯、現貨金屬、股票、指數和期貨的CFD，“止損單”應當設置離當前市價差距最小的點數，以使其有效。在當前買賣價差範圍內設置的止損單將被自動移除",
-        "id": "This is an order to buy or sell once the market reaches the ‘stop price’. Once the market reaches the ‘stop price’ the ‘stop order’ is triggered and treated as a ‘market order’*. If the ‘stop order’ is not triggered it shall remain in the system until a later date subject to the conditions described in the ‘Good ‘til Cancelled’ section. For CFDs on FX, spot metals, equities, indices and futures, ‘stop orders’ should be placed a minimum number of pips away from the current market price in order for these to be valid. Stop Orders placed within the current bidask spread will be automatically removed.",
+        "id": "Ini adalah perintah untuk membeli atau menjual setelah pasar mencapai 'stop price’. Setelah pasar mencapai 'stop price, 'stop order' dipicu dan diperlakukan sebagai 'market order' *. Jika 'stop order' tidak dipicu, itu akan tetap dalam sistem sampai nanti sesuai dengan kondisi yang dijelaskan di bagian 'Good' til Cancelled '. Untuk CFD di FX, logam spot, ekuitas, indeks, dan kontrak berjangka, 'stop order' harus ditempatkan dalam jumlah minimum pip jauhnya dari harga pasar saat ini agar valid. Stop Order yang ditempatkan dalam bidask spread saat ini akan secara otomatis dihapus.",
         "es": "Esta es una orden de compra o venta una vez que el mercado alcanza el \"precio stop\". Una vez que el mercado alcanza el \"precio stop\", la \"stop order\" se activa y se trata como un \"ordena mercado\"*. Si la \"stop order\" no se activa, permanecerá en el sistema hasta una fecha posterior sujeta a las condiciones descritas en la sección  ‘Good ‘til Cancelled’. Para los CFDs sobre FX, metales spot, acciones, índices y futuros, las \"stop orders\" deben colocarse a una cantidad mínima de pips del precio actual del mercado para que estos sean válidos. Las stop orders colocadas dentro de la rango bidask actual se eliminarán automáticamente.",
         "pt-BR": "Este é um pedido para comprar ou vender quando o mercado atingir o \"preço final\". Assim que o mercado atingir o \"preço final\", a \"ordem de parada\" é acionada e tratada como uma \"ordem de mercado\" *. Se a \"ordem de parada\" não for acionada, ela permanecerá no sistema até uma data posterior, sujeita às condições descritas na seção \"Bom\" até \"Cancelado\". Para CFDs sobre FX, metais spot, ações, índices e futuros, \"stop orders\" deve ser colocado a um número mínimo de pips de distância do preço atual de mercado para que estes sejam válidos. Os pedidos de parada colocados no spread atual do bidask serão removidos automaticamente.",
         "ar": "هذا هو أمر للشراء أو البيع بمجرد وصول السوق إلى \"سعر الإيقاف\".  بمجرد وصول السوق إلى \"سعر الإيقاف\"، يتم تفعيل \"أمر الإيقاف\" والتعامل معه باعتباره \"أمر سوق\"*.  إذا لم يتم تفعيل \"أمر الإيقاف\"، سيظل الأمر في النظام حتى تاريخ لاحق مع مراعاة الشروط المنصوص عليها في قسم \"صالح حتى الإلغاء\". بالنسبة إلى عقود الفروقات على الفوركس والمعادن الفورية والأسهم والمؤشرات والعقود الآجلة، يجب وضع \"أوامر الإيقاف\" على بعد حد أدنى من النقاط من سعر السوق الحالي حتى تكون هذه الأوامر صالحة.  سيتم بشكل آلي حذف أوامر الإيقاف التي يتم وضعها ضمن نطاق الفرق السعري بين سعري العطاء والطلب."
@@ -10176,7 +10176,7 @@ module.exports = {
         "en": "This is an order to minimise losses. Once the market reaches the ‘stop loss price’ the order is triggered and treated as a ‘market order’*. If the ‘stop loss’ is not triggered it shall remain in the system until a later date. For CFDs on FX, spot metals, equities, indices and futures, ‘stop loss’ orders should be placed a minimum number of pips away from the current market price in order for these to be valid. ‘Stop Loss’ orders placed within the current bid-ask spread will be automatically removed.",
         "vi": "Đây là một lệnh để giảm thiểu tổn thất. Khi thị trường đạt đến 'giá thua lỗ', lệnh được kích hoạt và được coi là 'lệnh thị trường' *. Nếu 'dừng lỗ' không được kích hoạt thì nó sẽ vẫn còn trong hệ thống cho đến ngày sau đó. Đối với CFD trên FX, kim loại giao ngay, chứng khoán, chỉ số và tương lai, lệnh 'dừng lỗ' phải được đặt số pip tối thiểu ra khỏi giá thị trường hiện tại để các giá trị này hợp lệ. Các lệnh ‘Stop Loss ( Dừng Lỗ) được đặt trong phạm vi trong đó spread giá thầu hiện tại sẽ tự động bị xóa.",
         "zh-Hant": "這個訂單是為了盡量減少虧損。壹旦市場到達“止損價格”，該訂單將被觸發並被作為“市價單”對待*。如果“止損價格”沒有被觸發，將被系統保留在後面的日期。對於基於外匯、現貨金屬、股票、指數和期貨的 CFD，“止損”單應當設置離當前市價差距最小的點數，以使其有效。在當前買賣價差範圍內設置的“止損”單將被自動移除。",
-        "id": "This is an order to minimise losses. Once the market reaches the ‘stop loss price’ the order is triggered and treated as a ‘market order’*. If the ‘stop loss’ is not triggered it shall remain in the system until a later date. For CFDs on FX, spot metals, equities, indices and futures, ‘stop loss’ orders should be placed a minimum number of pips away from the current market price in order for these to be valid. ‘Stop Loss’ orders placed within the current bid-ask spread will be automatically removed.",
+        "id": "Ini adalah perintah untuk meminimalkan kerugian. Setelah pasar mencapai 'harga stop loss’, pesanan dipicu dan diperlakukan sebagai 'market order' *. Jika 'stop loss' tidak dipicu, itu akan tetap dalam sistem sampai nanti. Untuk CFD di FX, logam spot, ekuitas, indeks, dan futures, order 'stop loss' harus ditempatkan dengan jarak minimum pip dari harga pasar saat ini agar valid. Order 'Stop Loss' yang ditempatkan dalam bid-ask spread akan secara otomatis dihapus.",
         "es": "Esta es una orden para minimizar las pérdidas. Una vez que el mercado alcanza el \"precio de stop loss\", la orden se inicia y se trata como una \"orden a mercado\" *. Si el 'stop loss' no se activa, permanecerá en el sistema hasta una fecha posterior. Para los CFDs en FX, metales al contado, acciones, índices y futuros, las órdenes  \"stop loss\" deben colocarse a una cantidad mínima de pips del precio actual del mercado para que estos sean válidos. Los \"Stop Loss\" colocados dentro del spread actual se eliminarán automáticamente.",
         "pt-BR": "Esta é uma ordem para minimizar as perdas. Quando o mercado atinge o \"preço de stop loss\", o pedido é acionado e tratado como um \"pedido de mercado\" *. Se o stop loss não for acionado, ele permanecerá no sistema até uma data posterior. Para CFDs sobre FX, metais spot, ações, índices e futuros, ordens de 'stop loss' devem ser colocadas a um número mínimo de pips de distância do preço de mercado atual para que elas sejam válidas. Os pedidos de \"Stop Loss\" colocados no spread bid-ask atual serão removidos automaticamente.",
         "ar": "هذا هو أمر لتقليل الخسائر.  بمجرد وصول السوق إلى سعر \"إيقاف الخسارة\"، يتم تفعيل الأمر والتعامل معه باعتباره \"أمر سوق\"*. إذا لم يتم تفعيل أمر \"إيقاف الخسارة\"، سيظل الأمر في النظام حتى تاريخ لاحق.  بالنسبة إلى عقود الفروقات على الفوركس والمعادن الفورية والأسهم والمؤشرات والعقود الآجلة، يجب وضع أوامر  \"إيقاف الخسارة\" على بعد حد أدنى من النقاط من سعر السوق الحالي حتى تكون هذه الأوامر صالحة. سيتم بشكل آلي حذف أوامر إيقاف الخسارة التي يتم وضعها بداخل نطاق الفرق السعري بين سعري العطاء والطلب."
@@ -10196,7 +10196,7 @@ module.exports = {
         "en": "This is an order to buy or sell once the market reaches the ‘limit price’. Once the market reaches the ‘limit price’ the ‘limit order’ is triggered and executed at the ‘limit price’ or better. If the ‘limit order’ is not triggered it shall remain in the system until a later date subject to the conditions described in the ‘Good ‘til Cancelled’ section. For CFDs on FX, spot metals, equities, indices and futures, ‘limit orders’ should be placed a minimum number of pips away from the current market price in order for these to be valid. Limit Orders placed within the current bid-ask spread will be automatically removed.",
         "vi": "Đây là lệnh mua hoặc bán khi thị trường đạt đến 'giá giới hạn'. Khi thị trường đạt đến 'giới hạn giá', ‘lệnh giới hạn’ được kích hoạt và được thực hiện ở 'mức giá giới hạn' hoặc cao hơn. Nếu ‘lệnh giới hạn’ không được kích hoạt, nó sẽ vẫn còn trong hệ thống cho đến một ngày sau đó tùy thuộc vào các điều kiện được mô tả trong phần ‘Good‘ til Canceled ’. Đối với CFD trên FX, kim loại giao ngay, chứng khoán, chỉ số và tương lai, 'lệnh giới hạn' phải được đặt số pip tối thiểu ra khỏi giá thị trường hiện tại để chúng có giá trị. Các lệnh giới hạn được đặt trong phạm vi chênh lệch giá thầu hiện tại sẽ tự động bị xóa.",
         "zh-Hant": "壹旦市場到達“限制價格”時，立即買入或賣出的訂單。壹旦市場達到“限制價格”，“限價單”將以“限制價格”或更佳的價格觸發和執行。如果“限制價格”沒有被觸發，將被系統保留到後面的日期，受“取消前有效”部分所規定的條件約束。對於基於外匯、現貨金屬、股票、指數和期貨的 CFD，“限價單”應當設置離當前市價差距最小的點數，以使其有效。在當前買賣價差範圍內設置的限價單將被自動移除。",
-        "id": "This is an order to buy or sell once the market reaches the ‘limit price’. Once the market reaches the ‘limit price’ the ‘limit order’ is triggered and executed at the ‘limit price’ or better. If the ‘limit order’ is not triggered it shall remain in the system until a later date subject to the conditions described in the ‘Good ‘til Cancelled’ section. For CFDs on FX, spot metals, equities, indices and futures, ‘limit orders’ should be placed a minimum number of pips away from the current market price in order for these to be valid. Limit Orders placed within the current bid-ask spread will be automatically removed.",
+        "id": "Ini adalah perintah untuk membeli atau menjual setelah pasar mencapai 'limit price'. Setelah pasar mencapai 'limit price', 'limit order’ dipicu dan dieksekusi pada 'limit price' atau lebih baik. Jika 'limit order' tidak dipicu, itu akan tetap dalam sistem sampai nanti sesuai dengan kondisi yang dijelaskan di bagian 'Good' til Cancelled '. Untuk CFD di FX, logam spot, ekuitas, indeks, dan kontrak berjangka, 'limit order' harus ditempatkan dalam jumlah minimum pip jauhnya dari harga pasar saat ini agar valid. Limit Order yang ditempatkan dalam bid-ask spread saat ini akan dihapus secara otomatis.",
         "es": "Esta es una orden de compra o venta una vez que el mercado alcanza el \"precio límite\". Una vez que el mercado alcanza el \"precio límite\", la \"orden limitada\" se activa y ejecuta al \"precio límite\" o mejor. Si la \"orden limitada\" no se activa, permanecerá en el sistema hasta una fecha posterior sujeta,  a las condiciones descritas en la sección Good ‘til Cancelled. Para los CFDs sobre FX, metales spot, acciones, índices y futuros, las \"órdenes limitadas\" deben colocarse a una cantidad mínima de pips del precio de mercado actual para que estos sean válidos. Las Órdenes Limitadas  colocadas dentro del spread se eliminarán automáticamente.",
         "pt-BR": "Este é um pedido para comprar ou vender quando o mercado atingir o \"preço limite\". Assim que o mercado atinge o \"preço limite\", a \"ordem de limite\" é acionada e executada ao \"preço limite\" ou melhor. Se a \"ordem de limite\" não for acionada, ela permanecerá no sistema até uma data posterior, sujeita às condições descritas na seção \"Bom\" até \"Cancelado\". Para CFDs sobre FX, metais spot, ações, índices e futuros, as 'ordens limitadas' devem ser colocadas a um número mínimo de pips de distância do preço de mercado atual para que elas sejam válidas. Limite Os pedidos colocados no spread bid-ask atual serão removidos automaticamente.",
         "ar": "هذا هو أمر للشراء أو البيع بمجرد وصول السوق إلى \"السعر المحدد\". بمجرد وصول السوق إلى \"السعر المحدد\"، يتم تفعيل \"الأمر المحدد\" وتنفيذه \"بالسعر المحدد\" أو بسعر أفضل منه.  إذا لم يتم تفعيل \"الأمر المحدد\"، سيظل الأمر في النظام حتى تاريخ لاحق مع مراعاة الشروط المنصوص عليها في قسم \"صالح حتى الإلغاء\". بالنسبة إلى عقود الفروقات على الفوركس والمعادن الفورية والأسهم والمؤشرات والعقود الآجلة، يجب وضع \"الأوامر المحددة\" على بعد حد أدنى من النقاط من سعر السوق الحالي حتى تكون هذه الأوامر صالحة. سيتم بشكل آلي حذف الأوامر المحددة التي يتم وضعها ضمن نطاق الفرق السعري بين سعري العطاء والطلب."
@@ -10216,7 +10216,7 @@ module.exports = {
         "en": "This is an order to secure profits. Once the market reaches the ‘take profit price’ the order is triggered and treated as a ‘limit order’. If the ‘take profit’ is not triggered it shall remain in the system until a later date. For CFDs on FX, spot metals, equities, indices and futures, ‘take profit’ orders should be placed a minimum number of pips away from the current market price in order for these to be valid. ‘Take Profit’ orders placed within the current bidask spread will be automatically removed.",
         "vi": "Đây là một lệnh để đảm bảo lợi nhuận. Khi thị trường đạt đến 'giá lợi nhuận', lệnh được kích hoạt và được coi là 'lệnh giới hạn'. Nếu ‘take profit’ (chốt lời ) không được kích hoạt thì nó sẽ vẫn còn trong hệ thống cho đến một ngày sau đó. Đối với CFD trên FX, kim loại giao ngay, chứng khoán, chỉ số và tương lai, lệnh ‘take profit’ (chốt lời) phải được đặt số pip tối thiểu ra khỏi giá thị trường hiện tại để các giá trị này hợp lệ. Các lệnh 'Chốt lời' được đặt trong phạm vi giá chào bán và chào mua hiện tại sẽ tự động bị xóa.",
         "zh-Hant": "此訂單是為了確保盈利。壹旦市場到達“止盈價格”，該訂單將被觸發並被作為“限價單”對待。如果“止盈”沒有被觸發，將被系統保留到後面的日期。對於基於外匯、現貨金屬、股票、指數和期貨的 CFD，“止盈”單應當設置離當前市價差距最小的點數，以使其有效。在當前買賣價差範圍內設置的“止盈”單將被自動移除。",
-        "id": "This is an order to secure profits. Once the market reaches the ‘take profit price’ the order is triggered and treated as a ‘limit order’. If the ‘take profit’ is not triggered it shall remain in the system until a later date. For CFDs on FX, spot metals, equities, indices and futures, ‘take profit’ orders should be placed a minimum number of pips away from the current market price in order for these to be valid. ‘Take Profit’ orders placed within the current bidask spread will be automatically removed.",
+        "id": "Ini adalah perintah untuk mengamankan keuntungan. Setelah pasar mencapai 'harga take profit', pesanan dipicu dan diperlakukan sebagai 'limit order’. Jika 'take profit' tidak dipicu, itu akan tetap dalam sistem sampai nanti. Untuk CFD di FX, logam spot, ekuitas, indeks, dan kontrak berjangka, pesanan 'take profit’ harus ditempatkan dalam jumlah minimum pips jauhnya dari harga pasar saat ini agar valid. Order 'Take Profit' yang ditempatkan dalam bidask spread saat ini akan otomatis dihapus.",
         "es": "Esta es una orden para asegurar ganancias. Una vez que el mercado alcanza el \"precio de toma de beneficios\", la orden se inicia y se trata como una \"orden límitada\". Si no se desencadena el \"take profit\", permanecerá en el sistema hasta una fecha posterior. Para los CFD sobre FX, metales al contado, acciones, índices y futuros, las órdenes de \"toma de ganancias\" deben colocarse a una cantidad mínima de pips del precio actual del mercado para que estos sean válidos. Las órdenes \"Take Profit\" colocados dentro del rango actual de bidask se eliminarán automáticamente.",
         "pt-BR": "Esta é uma ordem para garantir lucros. Assim que o mercado atingir o \"preço de lucro\", o pedido é acionado e tratado como \"pedido de limite\". Se o \"take profit\" não for acionado, ele permanecerá no sistema até uma data posterior. Para CFDs sobre FX, metais spot, ações, índices e futuros, pedidos de 'take profit' devem ser colocados a um número mínimo de pips de distância do preço de mercado atual para que estes sejam válidos. Os pedidos de \"Take Profit\" feitos no spread do bidask atual serão removidos automaticamente.",
         "ar": "هذا هو أمر لتأمين الأرباح. بمجرد وصول السوق إلى سعر \"جني الربح\"، يتم تفعيل الأمر والتعامل معه باعتباره \"أمر محدد\".. إذا لم يتم تفعيل أمر \"جني الربح\"، سيظل الأمر في النظام حتى تاريخ لاحق. بالنسبة إلى عقود الفروقات على الفوركس والمعادن الفورية والأسهم والمؤشرات والعقود الآجلة، يجب وضع أوامر  \"جني الربح\" على بعد حد أدنى من النقاط من سعر السوق الحالي حتى تكون هذه الأوامر صالحة. سيتم بشكل آلي حذف أوامر \"جني الربح\" التي يتم وضعها ضمن نطاق الفرق السعري بين سعري العطاء والطلب."
@@ -10236,7 +10236,7 @@ module.exports = {
         "en": "This is an order to buy or sell at the current market price that is available. The system automatically aggregates the volume received from third party liquidity providers and executes the ‘market order’ at VWAP (‘Volume-Weighted Average Price’) that is the average and best available price at the time of the execution. Once the ‘market order’ is triggered it shall be subject to the conditions described in the ‘Good ‘til Cancelled’ section.",
         "vi": "Đây là lệnh mua hoặc bán với giá thị trường hiện tại. Hệ thống sẽ tự động tổng hợp khối lượng nhận được từ nhà cung cấp thanh khoản của bên thứ ba và thực hiện ‘lệnh thị trường’ tại VWAP (‘Giá trung bình theo kích thước”) là mức giá trung bình và tốt nhất có sẵn tại thời điểm thực hiện. Khi 'lệnh thị trường' được kích hoạt, nó sẽ phải tuân theo các điều kiện được mô tả trong phần ‘Good’ ‘til Cancelled’ (Hết hạn).",
         "zh-Hant": "這是以當前可獲的市場價格買入或賣出的訂單。系統自動合並從第三方流動性供應商收到的成交量，並按成交量加權平均價（VWAP）執行“市價單”，VWAP 是在執行時可用的最佳價格的平均值。如果“市價單”沒有被觸發，將受“取消前有效”部分所規定的條件約束。",
-        "id": "This is an order to buy or sell at the current market price that is available. The system automatically aggregates the volume received from third party liquidity providers and executes the ‘market order’ at VWAP (‘Volume-Weighted Average Price’) that is the average and best available price at the time of the execution. Once the ‘market order’ is triggered it shall be subject to the conditions described in the ‘Good ‘til Cancelled’ section.",
+        "id": "Ini adalah perintah untuk membeli atau menjual pada harga pasar saat ini yang tersedia. Sistem secara otomatis menggabungkan volume yang diterima dari penyedia likuiditas pihak ketiga dan menjalankan 'market order' di VWAP (‘Volume-Weight Average Price) yang merupakan harga rata-rata dan terbaik yang tersedia pada saat eksekusi. Setelah 'market order' dipicu, itu harus tunduk pada kondisi yang dijelaskan di bagian 'Baik' sampai Dibatalkan '.",
         "es": "Esta es una orden de compra o venta al precio de mercado actual que está disponible. El sistema agrega automáticamente el volumen recibido de proveedores de liquidez y ejecuta la \"orden de mercado\" a VWAP (\"Precio medio ponderado por volumen\") que es el precio promedio y el mejor precio disponible en el momento de la ejecución. Una vez que se active la \"orden a mercado\", estará sujeto a las condiciones descritas en la sección Good ‘til Cancelled.",
         "pt-BR": "Este é um pedido para comprar ou vender pelo preço de mercado atual disponível. O sistema agrega automaticamente o volume recebido de provedores de liquidez de terceiros e executa a \"ordem de mercado\" no VWAP (\"Preço médio ponderado por volume\") que é a média e o melhor preço disponível no momento da execução. Assim que a \"ordem de mercado\" for acionada, ela estará sujeita às condições descritas na seção \"Bom\" até \"Cancelado\".",
         "ar": "هذا هو أمر للشراء أو البيع بالسعر  المتاح في السوق في الوقت الحالي.  يقوم النظام بشكل آلي بتجميع الحجم المستلم من مزودي السيولة وتنفيذ \"أمر السوق\" وفقًا إلى متوسط السعر المرجح بحجم التداول (VWAP) وهو متوسط السعر وأفضل سعر متاح في وقت التنفيذ. وبمجرد تفعيل \"أمر السوق\"، سيصبح الأمر خاضعًا للشروط المنصوص عليها في قسم \"صالح حتى الإلغاء\"."
@@ -10256,7 +10256,7 @@ module.exports = {
         "en": "This is an execution setting that the client may apply to ‘pending orders’. The order may remain ‘live’ and pending for execution until such time as the order is triggered and treated as a market order or cancelled by the client.",
         "vi": "Đây là cài đặt thực khớp lệnh mà khách hàng có thể áp dụng cho 'các lệnh đang chờ xử lý'. Lệnh có thể vẫn còn 'đang hoạt động' và đang chờ xử lý cho đến khi lệnh được kích hoạt và được coi là lệnh thị trường hoặc bị hủy bởi khách hàng.",
         "zh-Hant": "這是客戶可適用於“掛單”的執行設置。訂單會保持“有效”並等待執行，直到訂單被觸發並作為市價單對待，或被客戶取消時為止。",
-        "id": "This is an execution setting that the client may apply to ‘pending orders’. The order may remain ‘live’ and pending for execution until such time as the order is triggered and treated as a market order or cancelled by the client.",
+        "id": "Ini adalah pengaturan eksekusi yang mungkin diterapkan klien ke 'pending order'. Pesanan mungkin tetap 'aktif' dan menunggu eksekusi sampai pesanan dipicu dan diperlakukan sebagai market order atau dibatalkan oleh klien.",
         "es": "Esta es una configuración de ejecución que el cliente puede aplicar a las \"órdenes pendientes\". La orden puede permanecer \"activa\" y pendiente de ejecución hasta que la orden se active y se trate como una orden de mercado o sea cancelada por el cliente.",
         "pt-BR": "Essa é uma configuração de execução que o cliente pode aplicar a \"pedidos pendentes\". O pedido pode permanecer \"ativo\" e pendente de execução até o momento em que o pedido é acionado e tratado como uma ordem de mercado ou cancelado pelo cliente.",
         "ar": "هذه هي إعدادات تنفيذ والتي يمكن للعميل تطبيقها على \"الأوامر المعلقة\".  ويمكن أن يظل الأمر \"ساريًا\" وفي انتظار التنفيذ حتى يتم تنشيط الأمر والتعامل معه باعتباره أمر سوق أو إلغاؤه بواسطة العميل."
@@ -10266,7 +10266,7 @@ module.exports = {
         "en": "Pending Order Modification/Cancellation",
         "vi": "Điều chỉnh / Hủy lệnh đang chờ xử lý",
         "zh-Hant": "掛單修改/取消",
-        "id": "Pending Order Modification/Cancellation",
+        "id": "Modifikasi / Pembatalan Pending Order",
         "es": "Modificación Orden Pendiente/Cancelación",
         "pt-BR": "Modificação / cancelamento de pedido pendente",
         "ar": "تعديل/ إلغاء الأمر المعلق"
@@ -10276,7 +10276,7 @@ module.exports = {
         "en": "The client may modify/ cancel a ‘pending order’ if the market did not reach the level of the price specified by the client.",
         "vi": "Khách hàng có thể chỉnh sửa / hủy một 'lệnh chờ' nếu thị trường không đạt đến mức giá mà khách hàng chỉ định.",
         "zh-Hant": "如果市場沒有到達客戶所指定的價格水平，客戶可以修改或取消“掛單”。",
-        "id": "The client may modify/ cancel a ‘pending order’ if the market did not reach the level of the price specified by the client.",
+        "id": "Klien dapat mengubah / membatalkan 'pending order' jika pasar tidak mencapai tingkat harga yang ditentukan oleh klien.",
         "es": "El cliente puede modificar/cancelar una \"orden pendiente\" si el mercado no alcanzó el nivel del precio especificado por el cliente.",
         "pt-BR": "O cliente pode modificar / cancelar um \"pedido pendente\" se o mercado não atingir o nível do preço especificado pelo cliente.",
         "ar": "يجوز للعميل تعديل/ إلغاء \"أمر معلق\" إذا لم يصل السوق إلى مستوى السعر الذي حدده العميل."
@@ -10286,7 +10286,7 @@ module.exports = {
         "en": "NOTE: Most of the orders shall be automatically executed by TigerWit’s trading platform, as described above. But it should be noted that TigerWit reserves the right, at its absolute discretion, to manually execute in whole or in part an order of 100 lots or above, for major currency pairs. The same practice applies for orders of a significant size for minor currency pairs. In addition, orders may be manually executed at the discretion of the Firm in the event of a reasonable suspicion of arbitrage practices unrelated to market inefficiencies, including, but not limited to, latency arbitrage and swap arbitrage.",
         "vi": "LƯU Ý: Hầu hết các lệnh sẽ được tự động thực hiện bởi nền tảng giao dịch của TigerWit, như được mô tả ở trên. Nhưng cần lưu ý rằng TigerWit bảo lưu quyền, trong thẩm quyền của mình, để khớp lệnh thủ công toàn bộ hoặc một phần lệnh từ 100 lô trở lên đối với các cặp tiền tệ lớn. Các tiến hành tương tự cũng áp dụng cho các lệnh có kích thước đáng kể đối với các cặp tiền tệ nhỏ. Ngoài ra, lệnh có thể được thực hiện theo quyết định của Công ty trong trường hợp có sự nghi ngờ hợp lý về các hành vi kinh doanh chênh lệch giá không liên quan đến sự thiếu hiệu quả của thị trường, bao gồm, nhưng không giới hạn, chênh lệch do độ trễ và swap.",
         "zh-Hant": "註意：如上所述，大多數訂單應由 TigerWit 的交易平臺自動執行。但請註意，TigerWit 保留對於主要貨幣對的 100 手或以上的訂單擁有自由裁量權，可全部或部分手動執行的權利。這壹做法也適用於次要貨幣對的大規模訂單。此外，在合理懷疑存在與市場失效無關的套利行為的情況下，本公司可自行手動執行訂單，包括但不限於潛伏套利和掉期套利。",
-        "id": "NOTE: Most of the orders shall be automatically executed by TigerWit’s trading platform, as described above. But it should be noted that TigerWit reserves the right, at its absolute discretion, to manually execute in whole or in part an order of 100 lots or above, for major currency pairs. The same practice applies for orders of a significant size for minor currency pairs. In addition, orders may be manually executed at the discretion of the Firm in the event of a reasonable suspicion of arbitrage practices unrelated to market inefficiencies, including, but not limited to, latency arbitrage and swap arbitrage.",
+        "id": "CATATAN : Sebagian besar pesanan akan secara otomatis dieksekusi oleh platform trading TigerWit, seperti dijelaskan di atas. Namun perlu dicatat bahwa TigerWit berhak, atas kebijakan mutlaknya, untuk mengeksekusi secara manual seluruh atau sebagian pesanan 100 lot atau lebih, untuk pasangan mata uang utama. Praktik yang sama berlaku untuk pesanan dengan ukuran signifikan untuk pasangan mata uang minor. Selain itu, perintah dapat dieksekusi secara manual atas kebijakan Perusahaan jika terdapat kecurigaan yang wajar atas praktik arbitrase yang tidak terkait dengan inefisiensi pasar, termasuk, namun tidak terbatas pada, arbitrase latensi dan arbitrase swap.",
         "es": "NOTA: La mayoría de las órdenes se ejecutarán automáticamente por la plataforma de trading de TigerWit, como se describe anteriormente. Pero debe tenerse en cuenta que TigerWit se reserva el derecho, a su absoluta discreción, de ejecutar manualmente, total o parcialmente, una orden de 100 lotes o más, para los principales pares de divisas. La misma práctica se aplica para pedidos de un tamaño significativo para pares de divisas menores. Además, las órdenes pueden ejecutarse manualmente a discreción de la Firma en el caso de una sospecha razonable de prácticas de arbitraje no relacionadas con las ineficiencias del mercado, que incluyen, entre otras, el arbitraje de latencia y el arbitraje de swaps.",
         "pt-BR": "NOTA: A maioria dos pedidos será executada automaticamente pela plataforma de negociação da TigerWit, conforme descrito acima. Mas deve-se notar que a TigerWit se reserva o direito, a seu exclusivo critério, de executar manualmente no todo ou em parte uma ordem de 100 lotes ou mais, para os principais pares de moedas. A mesma prática se aplica a pedidos de tamanho significativo para pares de moedas menores. Além disso, os pedidos podem ser executados manualmente, a critério da Empresa, no caso de uma suspeita razoável de práticas de arbitragem não relacionadas a ineficiências do mercado, incluindo, mas não se limitando a, arbitragem de latência e arbitragem de swap.",
         "ar": "ملاحظة:  يتم تنفيذ معظم الأوامر آليًا عبر منصة تداول TigerWit، على النحو المنصوص عليه أعلاه. ولكن يجب أن يؤخذ في الاعتبار أن TigerWit تحتفظ لنفسها بالحق، وفقًا لتقديرها المطلق وحدها دون غيرها، في تنفيذ الأمر الذي يبلغ حجمه 100 عقد أو أعلى في أزواج العملات الرئيسية بشكل يدوي سواء تنفيذًا كليًا أو جزئيًا. ويسري نفس الأمر على الأوامر ذات الحجم الكبير لأزواج العملات الثانوية. وبالإضافة إلى ذلك، يجوز أن يتم تنفيذ الأوامر تنفيذًا يدويًا وفقًا لتقدير الشركة وحدها دون غيرها في حالة وجود شك معقول في ممارسة العميل للمراجحة التي ليس لها علاقة بكفاءة السوق، ويشمل ذلك على سبيل المثال وليس الحصر معاملات المراجحة التي يتم فيها تحقيق أرباح بسبب التأخر في عرض الأسعار."
@@ -10306,7 +10306,7 @@ module.exports = {
         "en": "This is an order to buy or sell at the current market price that is available. The system automatically aggregates the volume received from third party liquidity providers and executes the ‘market order’ at VWAP (‘Volume-Weighted Average Price’) that is the average and best available price at the time of the execution.",
         "vi": "Đây là lệnh mua hoặc bán với giá thị trường hiện tại. Hệ thống sẽ tự động tổng hợp khối lượng nhận được từ nhà cung cấp thanh khoản của bên thứ ba và thực hiện ‘lệnh thị trường’ tại VWAP (‘Giá trung bình theo kích thước”) là mức giá trung bình và tốt nhất có sẵn tại thời điểm thực hiện.",
         "zh-Hant": "這是以當前可獲的市場價格買入或賣出的訂單。系統自動合並從第三方流動性供應商收到的成交量並按成交量加權平均價（VWAP）執行“市價單”，VWAP 是在執行時可用的最佳價格的平均值。",
-        "id": "This is an order to buy or sell at the current market price that is available. The system automatically aggregates the volume received from third party liquidity providers and executes the ‘market order’ at VWAP (‘Volume-Weighted Average Price’) that is the average and best available price at the time of the execution.",
+        "id": "Ini adalah perintah untuk membeli atau menjual pada harga pasar saat ini yang tersedia. Sistem secara otomatis menggabungkan volume yang diterima dari penyedia likuiditas pihak ketiga dan menjalankan 'market order' di VWAP (' Volume-Weighted Average Price') yang merupakan harga rata-rata dan terbaik yang tersedia pada saat eksekusi.",
         "es": "Esta es una orden de compra o venta al precio de mercado actual que está disponible. El sistema agrega automáticamente el volumen recibido de proveedores de liquidez de terceros y ejecuta la \"orden de mercado\" a VWAP (\"Precio promedio ponderado por volumen\") que es el precio promedio y el mejor precio disponible en el momento de la ejecución.",
         "pt-BR": "Este é um pedido para comprar ou vender pelo preço de mercado atual disponível. O sistema agrega automaticamente o volume recebido de provedores de liquidez de terceiros e executa a \"ordem de mercado\" no VWAP (\"Preço médio ponderado por volume\") que é a média e o melhor preço disponível no momento da execução.",
         "ar": "هذا هو أمر للشراء أو البيع بالسعر  المتاح في السوق في الوقت الحالي. يقوم النظام بشكل آلي بتجميع الحجم المستلم من مزودي السيولة وتنفيذ \"أمر السوق\" وفقًا إلى متوسط السعر المرجح بحجم التداول (VWAP) وهو متوسط السعر وأفضل سعر متاح في وقت التنفيذ."
@@ -10326,7 +10326,7 @@ module.exports = {
         "en": "This is an order to buy or sell once the market reaches the ‘stop price’. Once the market reaches the ‘stop price’, the ‘stop order’ is triggered and treated as a ‘market order’*. If the ‘stop order’ is not triggered it shall remain in the system until a later date subject to the conditions described in the ‘Good ‘til Cancelled’ section. ‘Stop orders’ can be placed as close to the current market price as possible; there is no restriction.",
         "vi": "Đây là lệnh mua hoặc bán khi thị trường đạt đến 'giá dừng'. Khi thị trường đạt đến ‘giá dừng’, ‘lệnh dừng’ được kích hoạt và được coi là ‘lệnh thị trường’ *. Nếu 'lệnh dừng' không được kích hoạt, nó sẽ vẫn còn trong hệ thống cho đến một ngày sau đó tùy thuộc vào các điều kiện được mô tả trong phần ‘Good‘ til Canceled ’ (Hết hạn). 'Lệnh dừng' có thể được đặt gần giá thị trường hiện tại nhất có thể; không có giới hạn.",
         "zh-Hant": "這是在市場到達“止損價格”時，立即買入或賣出的訂單。壹旦到達“止損價格”，“止損單”將被觸發並被作為“市價單”對待*。如果“止損價格”沒有被觸發，將被系統保留到後面的日期，受“取消前有效”部分所規定的條件約束。“止損單”的設置可以盡可能與當前市場價相近；沒有限制。",
-        "id": "This is an order to buy or sell once the market reaches the ‘stop price’. Once the market reaches the ‘stop price’, the ‘stop order’ is triggered and treated as a ‘market order’*. If the ‘stop order’ is not triggered it shall remain in the system until a later date subject to the conditions described in the ‘Good ‘til Cancelled’ section. ‘Stop orders’ can be placed as close to the current market price as possible; there is no restriction.",
+        "id": "Ini adalah perintah untuk membeli atau menjual setelah pasar mencapai 'stop price’. Setelah pasar mencapai 'stop price’, 'stop order’ dipicu dan diperlakukan sebagai 'market order' *. Jika 'stop order' tidak dipicu, itu akan tetap dalam sistem sampai nanti sesuai dengan kondisi yang dijelaskan di bagian 'Good' til Cancelled '. 'Stop order' dapat ditempatkan sedekat mungkin dengan harga pasar saat ini; tidak ada batasan.",
         "es": "Esta es una orden de compra o venta una vez que el mercado alcanza el \"precio de cierre\". Una vez que el mercado alcanza el \"precio stop\", la \"stop order\" se activa y se trata como un \"orden a mercado\" *. Si la \"stop order\" no se activa, permanecerá en el sistema hasta una fecha posterior sujeta a las condiciones descritas en la sección ‘Good ‘til Cancelled’. Las \"órdenes stop\" se pueden colocar lo más cerca posible del precio de mercado actual; no hay restricción",
         "pt-BR": "Este é um pedido para comprar ou vender quando o mercado atingir o \"preço final\". Assim que o mercado atingir o \"preço final\", a \"ordem de parada\" é acionada e tratada como uma \"ordem de mercado\" *. Se a \"ordem de parada\" não for acionada, ela permanecerá no sistema até uma data posterior, sujeita às condições descritas na seção \"Bom\" até \"Cancelado\". \"Stop orders\" pode ser colocado o mais próximo possível do preço de mercado atual; não há restrição.",
         "ar": "هذا هو أمر للشراء أو البيع بمجرد وصول السوق إلى \"سعر الإيقاف\". بمجرد وصول السوق إلى \"سعر الإيقاف\"، يتم تفعيل \"أمر الإيقاف\" والتعامل معه باعتباره \"أمر سوق\"*. إذا لم يتم تفعيل \"أمر الإيقاف\"، سيظل الأمر في النظام حتى تاريخ لاحق مع مراعاة الشروط المنصوص عليها في قسم \"صالح حتى الإلغاء\". يمكن إدخال \"أمر الإيقاف\" عند أقرب سعر ممكن من سعر السوق الحالي، ليس هناك قيود على ذلك."
@@ -10346,7 +10346,7 @@ module.exports = {
         "en": "This is an order to minimise losses. Once the market reaches the ‘stop loss price’ the order is triggered and treated as a ‘market order’*. If the ‘stop loss’ is not triggered it shall remain in the system until a later date. ‘Stop loss’ can be placed as close to the current market price as possible; there is no restriction.",
         "vi": "Đây là một lệnh để giảm thiểu tổn thất. Khi thị trường đạt đến 'giá thua lỗ', lệnh được kích hoạt và được coi là 'lệnh thị trường' *. Nếu 'dừng lỗ' không được kích hoạt thì nó sẽ vẫn còn trong hệ thống cho đến ngày sau đó. 'Dừng lỗ' có thể được đặt càng gần với giá thị trường hiện tại càng tốt; không có giới hạn.",
         "zh-Hant": "這個訂單是為了盡量減少虧損。壹旦市場到達“止損價格”，該訂單將被觸發並被作為“市價單”對待*。如果“止損價格”沒有被觸發，將被系統保留在後面的日期。“止損單”可以設置盡可能與當前市場價相近；沒有限制。",
-        "id": "This is an order to minimise losses. Once the market reaches the ‘stop loss price’ the order is triggered and treated as a ‘market order’*. If the ‘stop loss’ is not triggered it shall remain in the system until a later date. ‘Stop loss’ can be placed as close to the current market price as possible; there is no restriction.",
+        "id": "Ini adalah perintah untuk meminimalkan kerugian. Setelah pasar mencapai 'harga stop loss’, pesanan dipicu dan diperlakukan sebagai 'market order’ *. Jika 'stop loss' tidak dipicu, itu akan tetap dalam sistem sampai nanti. 'Stop loss' dapat ditempatkan sedekat mungkin dengan harga pasar saat ini; tidak ada batasan.",
         "es": "Esta es una orden para minimizar las pérdidas. Una vez que el mercado alcanza el \"precio stop loss\", la orden se inicia y se trata como un \"orden a mercado\"*. Si el ‘stop loss’ no es ejecutado, permanecerá en el sistema hasta una fecha posterior. El ‘Stop loss’ puede ser colocado tan cerca del precio actual como sea posible; no hay restricciones.",
         "pt-BR": "Esta é uma ordem para minimizar as perdas. Quando o mercado atinge o \"preço de stop loss\", o pedido é acionado e tratado como um \"pedido de mercado\" *. Se o stop loss não for acionado, ele permanecerá no sistema até uma data posterior. \"Stop loss\" pode ser colocado o mais próximo possível do preço de mercado atual; não há restrição.",
         "ar": "هذا هو أمر لتقليل الخسائر. بمجرد وصول السوق إلى سعر \"إيقاف الخسارة\"، يتم تفعيل الأمر والتعامل معه باعتباره \"أمر سوق\"*. إذا لم يتم تفعيل أمر \"إيقاف الخسارة\"، سيظل الأمر في النظام حتى تاريخ لاحق. يمكن إدخال أمر \"إيقاف الخسارة\" عند أقرب سعر ممكن من سعر السوق الحالي، ليس هناك قيود على ذلك."
@@ -10366,7 +10366,7 @@ module.exports = {
         "en": "Shall mean an order that combines the features of stop order with those of a limit order. A stop-limit order will be executed at a specified price (or better) after a given stop price has been reached. Once the stop price is reached, the stop-limit order becomes a limit order to buy (or sell) at the limit price or better.",
         "vi": "Có nghĩa là một lệnh kết hợp các tính năng của lệnh dừng với lệnh của lệnh giới hạn. Lệnh dừng giới hạn sẽ được thực hiện ở một mức giá cụ thể (hoặc tốt hơn) sau khi đạt được giá dừng đã cho. Khi đạt đến giá dừng, lệnh giới hạn dừng sẽ trở thành lệnh giới hạn để mua (hoặc bán) ở mức giá giới hạn hoặc tốt hơn.",
         "zh-Hant": "指的是結合了止損單和限價單特性的訂單。止損限價單將在市場到達給定的止損價之後在指定（或更佳）的價格執行。壹旦到達止損價，止損限價單立即變成以限定或更佳的價格買入（或賣出）的限價單。",
-        "id": "Shall mean an order that combines the features of stop order with those of a limit order. A stop-limit order will be executed at a specified price (or better) after a given stop price has been reached. Once the stop price is reached, the stop-limit order becomes a limit order to buy (or sell) at the limit price or better.",
+        "id": "Berarti order yang menggabungkan fitur stop order dengan limit order. Perintah stop-limit akan dieksekusi pada harga tertentu (atau lebih baik) setelah harga stop tertentu tercapai. Setelah harga berhenti tercapai, order stop-limit menjadi order limit  untuk membeli (atau menjual) pada limit price atau lebih baik.",
         "es": "Una orden que combina las características de una orden stop con las de una orden limitada. Una stop-limit order se ejecutará a un precio específico (o mejor) después de que se haya alcanzado un precio stop determinado. Una vez que se alcanza el precio tope, la orden stop-limit order se convierte en una orden limitada para comprar (o vender) al precio límite o mejor.",
         "pt-BR": "Significa uma ordem que combina os recursos da ordem de parada com os de uma ordem de limite. Uma ordem de limite de parada será executada a um preço especificado (ou melhor) após um determinado preço de parada ter sido atingido. Quando o preço de parada é atingido, a ordem de limite de parada se torna uma ordem de limite para comprar (ou vender) pelo preço limite ou melhor.",
         "ar": "يعني أمر يجمع بين خصائص أمر الإيقاف وخصائص الأمر المحدد.  سيتم تنفيذ أمر الإيقاف المحدد وفقًا لسعر محدد (أو أفضل منه) بعد الوصول إلى سعر الإيقاف.  بمجرد الوصول إلى سعر الإيقاف، سيصبح أمر الإيقاف المحدد أمرًا محددًا للشراء (أو للبيع) وفقًا للسعر المحدد أو أفضل منه."
@@ -10376,7 +10376,7 @@ module.exports = {
         "en": "* Market Order (Applicable for ‘Stop Orders’ and Stop Loss’)",
         "vi": "* Lệnh thị trường (Áp dụng cho 'Lệnh dừng' và Dừng lỗ ')",
         "zh-Hant": "* 市價單（“ 止損單”和“止損”可適用）",
-        "id": "* Market Order (Applicable for ‘Stop Orders’ and Stop Loss’)",
+        "id": "* Market Order (Berlaku untuk 'Stop Order' dan Stop Loss')",
         "es": "* Market Order (Aplicable para ‘Stop Orders’ y Stop Loss’)",
         "pt-BR": "* Ordem de Mercado (Aplicável a 'Ordens de Parada' e Stop Loss ')",
         "ar": "* أمر السوق (معمول به في \"أوامر الإيقاف\" و أوامر \"إيقاف الخسارة\")"
@@ -10386,7 +10386,7 @@ module.exports = {
         "en": "This is an order to buy or sell at the current market price that is available. The system automatically aggregates the volume received from third party liquidity providers and executes the ‘market order’ at VWAP (‘Volume-Weighted Average Price’) that is the average and best available price at the time of the execution. Once the ‘market order’ is triggered it shall be subject to the conditions described in the ‘Good ‘til Date’ and ‘Good ‘til Cancelled’ sections.",
         "vi": "Đây là lệnh mua hoặc bán với giá thị trường hiện tại. Hệ thống sẽ tự động tổng hợp khối lượng nhận được từ nhà cung cấp thanh khoản của bên thứ ba và thực hiện ‘lệnh thị trường’ tại VWAP (‘Giá trung bình theo kích thước”) là mức giá trung bình và tốt nhất có sẵn tại thời điểm thực hiện. Khi ‘thứ tự thị trường’ được kích hoạt, nó sẽ phải tuân thủ các điều kiện được mô tả trong phần‘Good ‘til Date’ (Hiệu lực ' đến Ngày') và ‘Good ‘til Cancelled’ (Hiệu lực đến Hủy).",
         "zh-Hant": "這是以當前可獲的市場價格買入或賣出的訂單。系統自動合並從第三方流動性供應商收到的成交量，並按成交量加權平均價（VWAP）執行“市價單”，VWAP 是在執行時可用的最佳價格的平均值。壹旦“市價單”被觸發，將受“在指定日前有效”和“取消前有效”部分所規定的條件約束。",
-        "id": "This is an order to buy or sell at the current market price that is available. The system automatically aggregates the volume received from third party liquidity providers and executes the ‘market order’ at VWAP (‘Volume-Weighted Average Price’) that is the average and best available price at the time of the execution. Once the ‘market order’ is triggered it shall be subject to the conditions described in the ‘Good ‘til Date’ and ‘Good ‘til Cancelled’ sections.",
+        "id": "Ini adalah perintah untuk membeli atau menjual pada harga pasar saat ini yang tersedia. Sistem secara otomatis menggabungkan volume yang diterima dari penyedia likuiditas pihak ketiga dan menjalankan 'market order' di VWAP (‘Volume-Weighted Average Price') yang merupakan harga rata-rata dan terbaik yang tersedia pada saat eksekusi. Setelah 'market order' dipicu, itu harus tunduk pada kondisi yang dijelaskan dalam bagian 'Baik' sampai Tanggal 'dan' Baik 'sampai Dibatalkan'.",
         "es": "Esta es una orden de compra o venta al precio de mercado actual que está disponible. El sistema agrega automáticamente el volumen recibido de proveedores de liquidez de terceros y ejecuta la \"orden de mercado\" a VWAP (\"Precio promedio ponderado por volumen\") que es el precio promedio y el mejor precio disponible en el momento de la ejecución. Una vez que se active la \"orden de mercado\", estará sujeto a las condiciones descritas en las secciones  ‘Good ‘til Date’ y ‘Good ‘til Cancelled’.",
         "pt-BR": "Este é um pedido para comprar ou vender pelo preço de mercado atual disponível. O sistema agrega automaticamente o volume recebido de provedores de liquidez de terceiros e executa a \"ordem de mercado\" no VWAP (\"Preço médio ponderado por volume\") que é a média e o melhor preço disponível no momento da execução. Uma vez que a \"ordem de mercado\" seja acionada, ela estará sujeita às condições descritas nas seções \"Bom até a data\" e \"Bom até Cancelado\".",
         "ar": "هذا هو أمر للشراء أو البيع بالسعر  المتاح في السوق في الوقت الحالي. يقوم النظام بشكل آلي بتجميع الحجم المستلم من مزودي السيولة وتنفيذ \"أمر السوق\" وفقًا إلى متوسط السعر المرجح بحجم التداول (VWAP) وهو متوسط السعر وأفضل سعر متاح في وقت التنفيذ. وبمجرد تفعيل \"أمر السوق\"، سيصبح الأمر خاضعًا للشروط المنصوص عليها في قسمي \"صالح حتى تاريخ محدد\" و \"صالح حتى الإلغاء\"."
@@ -10406,7 +10406,7 @@ module.exports = {
         "en": "This is an execution setting that the client may apply to ‘pending orders’. The order may remain ‘live’ and pending for execution until such time as the order is triggered and treated as a market order or cancelled by the client.",
         "vi": "Đây là cài đặt thực khớp lệnh mà khách hàng có thể áp dụng cho 'các lệnh đang chờ xử lý'. Lệnh có thể vẫn còn 'đang hoạt động' và đang chờ xử lý cho đến khi lệnh được kích hoạt và được coi là lệnh thị trường hoặc bị hủy bởi khách hàng.",
         "zh-Hant": "這是客戶可適用於“掛單”的執行設置。訂單會保持“有效”並等待執行，直到訂單被觸發並作為市價單對待，或被客戶取消時為止。",
-        "id": "This is an execution setting that the client may apply to ‘pending orders’. The order may remain ‘live’ and pending for execution until such time as the order is triggered and treated as a market order or cancelled by the client.",
+        "id": "Ini adalah pengaturan eksekusi yang mungkin diterapkan klien ke 'pending order’. Pesanan mungkin tetap 'aktif' dan menunggu eksekusi sampai pesanan dipicu dan diperlakukan sebagai market order atau dibatalkan oleh klien.",
         "es": "Esta es una configuración de ejecución que el cliente puede aplicar a las \"órdenes pendientes\". La orden puede permanecer \"viva\" y pendiente de ejecución hasta que la orden se active y se trate como una orden a mercado o sea cancelada por el cliente.",
         "pt-BR": "Essa é uma configuração de execução que o cliente pode aplicar a \"pedidos pendentes\". O pedido pode permanecer \"ativo\" e pendente de execução até o momento em que o pedido é acionado e tratado como uma ordem de mercado ou cancelado pelo cliente.",
         "ar": "هذه هي إعدادات تنفيذ والتي يمكن للعميل تطبيقها على \"الأوامر المعلقة\". ويمكن أن يظل الأمر \"ساريًا\" وفي انتظار التنفيذ حتى يتم تنشيط الأمر والتعامل معه باعتباره أمر سوق أو إلغاؤه بواسطة العميل."
@@ -10426,7 +10426,7 @@ module.exports = {
         "en": "This is an execution setting that applies to ‘pending orders’ traded through the trading platform. The client may choose a specific date in the future until which the order shall remain ‘live’ and pending for execution. If the order is not triggered during this pre-determined timeframe it shall be deleted from the system.",
         "vi": "Đây là cài đặt thực thi lệnh áp dụng cho 'các lệnh đang chờ xử lý' được giao dịch thông qua sàn giao dịch. Khách hàng có thể chọn một ngày cụ thể trong tương lai cho đến khi lệnh này sẽ vẫn còn 'đang hiệu lực' và đang chờ xử lý. Nếu lệnh không được kích hoạt trong khung thời gian được xác định trước này, nó sẽ bị xóa khỏi hệ thống.",
         "zh-Hant": "這是壹種執行設置，適用於通過交易平臺交易的“掛單”。客戶可以選擇未來壹個特定的日期，訂單會保持“有效”和等待執行，直到這壹日期為止。如果在預設的時間範圍內訂單沒有觸發，訂單將會從系統刪除。",
-        "id": "This is an execution setting that applies to ‘pending orders’ traded through the trading platform. The client may choose a specific date in the future until which the order shall remain ‘live’ and pending for execution. If the order is not triggered during this pre-determined timeframe it shall be deleted from the system.",
+        "id": "Ini adalah pengaturan eksekusi yang berlaku untuk 'pending order' yang diperdagangkan melalui platform trading. Klien dapat memilih tanggal tertentu di masa depan hingga pesanan akan tetap 'aktif' dan menunggu untuk eksekusi. Jika pesanan tidak dipicu selama jangka waktu yang telah ditentukan sebelumnya, itu akan dihapus dari sistem.",
         "es": "Esta es una configuración de ejecución que se aplica a las \"órdenes pendientes\" negociadas a través de la plataforma de trading. El cliente puede elegir una fecha específica en el futuro hasta que la orden permanezca \" viva\" y pendiente de ejecución. Si la orden no se activa durante este período de tiempo predeterminado, se eliminará del sistema.",
         "pt-BR": "Esta é uma configuração de execução que se aplica a \"pedidos pendentes\" negociados por meio da plataforma de negociação. O cliente pode escolher uma data específica no futuro até a qual o pedido permanecerá \"vivo\" e pendente para execução. Se o pedido não for acionado durante esse período pré-determinado, ele deve ser excluído do sistema.",
         "ar": "هذه هي إعدادات تنفيذ والتي تسري على \"الأوامر المعلقة\" التي يتم تداولها عبر منصة التداول. يجوز للعميل اختيار تاريخ محدد في المستقبل حتى يظل الأمر \"ساريًا\" وفي انتظار التنفيذ.  سيتم إلغاء الأمر من النظام إذا لم يتم تفعيل الأمر خلال الفترة الزمنية المحددة مسبقًا."
@@ -10446,7 +10446,7 @@ module.exports = {
         "en": "This is an order to buy or sell once the market reaches the ‘limit price’. Once the market reaches the ‘limit price’ the order is triggered and executed at the ‘limit price’ or better. If the limit order is partially filled, a new Limit order will be automatically created for the outstanding volume and executed once the market price reaches the originally requested ‘limit price’. If the ‘limit order’ is not triggered it shall remain in the system until a later date subject to the conditions described in the ‘Good ‘til Cancelled’ section. For CFDs on FX, spot metals, equities, indices and futures, ‘limit orders’ should be placed a minimum number of pips away from the current market price in order for these to be valid. Limit Orders placed within the current bidask spread will be automatically removed.",
         "vi": "Đây là lệnh mua hoặc bán khi thị trường đạt đến 'giá giới hạn'. Khi thị trường đạt đến 'giới hạn giá', lệnh được kích hoạt và được thực hiện ở 'giá giới hạn' hoặc cao hơn. Nếu lệnh giới hạn được điền một phần, một Lệnh giới hạn mới sẽ được tự động tạo cho khối lượng chưa thanh toán và được thực hiện khi giá thị trường đạt đến 'giá giới hạn' ban đầu được yêu cầu. Nếu ‘thứ tự giới hạn’ không được kích hoạt, nó sẽ vẫn còn trong hệ thống cho đến một ngày sau đó tùy thuộc vào các điều kiện được mô tả trong phần ‘Good‘ til Canceled ’ (Hết Hạn). Đối với CFD trên FX, kim loại giao ngay, chứng khoán, chỉ số và tương lai, 'lệnh giới hạn' phải được đặt số pip tối thiểu ra khỏi giá thị trường hiện tại để chúng có giá trị. Các lệnh giới hạn được đặt trong phạm vi giá chào bán chào mua hiện tại sẽ tự động bị xóa.",
         "zh-Hant": "壹旦市場到達“限制價格”時，立即買入或賣出的訂單。壹旦市場達到“限制價格”，訂單將以“限制價格”或更佳的價格觸發和執行。如果限價單只是獲得部分執行，對未行使交易量將自動生成新的限價單，並在市場價格到達原來申請的“限制價格”時執行。如果“限制價格”沒有被觸發，將被系統保留到後面的日期，受“取消前有效”部分所規定的條件約束。對於基於外匯、現貨金屬、股票、指數和期貨的 CFD，“限價單”應當設置離當前市價差距最小的點數，以使其有效。在當前買賣價差範圍內設置的限價單將被自動移除。",
-        "id": "This is an order to buy or sell once the market reaches the ‘limit price’. Once the market reaches the ‘limit price’ the order is triggered and executed at the ‘limit price’ or better. If the limit order is partially filled, a new Limit order will be automatically created for the outstanding volume and executed once the market price reaches the originally requested ‘limit price’. If the ‘limit order’ is not triggered it shall remain in the system until a later date subject to the conditions described in the ‘Good ‘til Cancelled’ section. For CFDs on FX, spot metals, equities, indices and futures, ‘limit orders’ should be placed a minimum number of pips away from the current market price in order for these to be valid. Limit Orders placed within the current bidask spread will be automatically removed.",
+        "id": "Ini adalah perintah untuk membeli atau menjual setelah pasar mencapai 'price limit’. Setelah pasar mencapai 'price limit', pesanan dipicu dan dieksekusi pada 'price limit' atau lebih baik. Jika order limit terisi sebagian, order Limit baru akan secara otomatis dibuat untuk volume yang beredar dan dieksekusi setelah harga pasar mencapai 'price limit’ yang diminta semula. Jika 'limit order' tidak dipicu, itu akan tetap dalam sistem sampai nanti sesuai dengan kondisi yang dijelaskan di bagian 'Good' til Cancelled '. Untuk CFD di FX, logam spot, ekuitas, indeks, dan kontrak berjangka, 'limit order' harus ditempatkan dalam jumlah minimum pip jauhnya dari harga pasar saat ini agar valid. Limit Order yang ditempatkan dalam bidask spread saat ini akan otomatis dihapus.",
         "es": "Esta es una orden de compra o venta una vez que el mercado alcanza el \"precio límite\". Una vez que el mercado alcanza el \"precio límite\", la orden se inicia y se ejecuta al \"precio límite\" o mejor. Si la orden de límite se llena parcialmente, se creará automáticamente una nueva orden de límite para el volumen pendiente y se ejecutará una vez que el precio de mercado alcance el \"precio límite\" solicitado originalmente. Si la \"orden límite\" no se activa, permanecerá en el sistema hasta una fecha posterior sujeta a las condiciones descritas en la sección ‘Good ‘til Cancelled’. Para los CFDs sobre FX, metales spot, acciones, índices y futuros, las \"órdenes límite\" deben colocarse a una cantidad mínima de pips del precio de mercado actual para que estos sean válidos. Las órdenes limitadas colocadas dentro del spread actual se eliminarán automáticamente.",
         "pt-BR": "Este é um pedido para comprar ou vender quando o mercado atingir o \"preço limite\". Quando o mercado atinge o \"preço limite\", a ordem é acionada e executada ao \"preço limite\" ou melhor. Se a ordem limite estiver parcialmente preenchida, uma nova ordem limite será criada automaticamente para o volume pendente e executada quando o preço de mercado alcançar o \"preço limite\" originalmente solicitado. Se a \"ordem de limite\" não for acionada, ela permanecerá no sistema até uma data posterior, sujeita às condições descritas na seção \"Bom\" até \"Cancelado\". Para CFDs sobre FX, metais spot, ações, índices e futuros, as 'ordens limitadas' devem ser colocadas a um número mínimo de pips de distância do preço de mercado atual para que elas sejam válidas. Limite As encomendas colocadas no spread do bidask atual serão removidas automaticamente.",
         "ar": "هذا هو أمر للشراء أو البيع بمجرد وصول السوق إلى \"السعر المحدد\". بمجرد وصول السوق إلى \"السعر المحدد\"، يتم تفعيل \"الأمر المحدد\" وتنفيذه \"بالسعر المحدد\" أو بسعر أفضل منه. إذا تم تنفيذ الأمر المحدد تنفيذًا جزئيًا، سيتم بشكل آلي إنشاء أمر محدد جديد للحجم المتبقي وتنفيذه بمجرد وصول سعر السوق إلى سعر \"الأمر المحدد\" الذي كان مطلوبًا في الأساس.  إذا لم يتم تفعيل \"الأمر المحدد\"، سيظل الأمر في النظام حتى تاريخ لاحق مع مراعاة الشروط المنصوص عليها في قسم \"صالح حتى الإلغاء\". بالنسبة إلى عقود الفروقات على الفوركس والمعادن الفورية والأسهم والمؤشرات والعقود الآجلة، يجب وضع \"الأوامر المحددة\" على بعد حد أدنى من النقاط من سعر السوق الحالي حتى تكون هذه الأوامر صالحة. سيتم بشكل آلي حذف الأوامر المحددة التي يتم وضعها ضمن نطاق الفرق السعري بين سعري العطاء والطلب."
@@ -10466,7 +10466,7 @@ module.exports = {
         "en": "This is an order to secure profits. Once the market reaches the ‘take profit price’ the order is triggered and treated as a ‘limit order’. If the ‘take profit’ is not triggered it shall remain in the system until a later date. For CFDs on FX, spot metals, equities, indices and futures, ‘take profit’ orders should be placed a minimum number of pips away from the current market price in order for these to be valid. ‘Take Profit’ orders placed within the current bidask spread will be automatically removed.",
         "vi": "Đây là một lệnh để đảm bảo lợi nhuận. Khi thị trường đạt đến 'giá lợi nhuận', lệnh được kích hoạt và được coi là 'lệnh giới hạn'. Nếu ‘take profit’ (chốt lời ) không được kích hoạt thì nó sẽ vẫn còn trong hệ thống cho đến một ngày sau đó. Đối với CFD trên FX, kim loại giao ngay, chứng khoán, chỉ số và tương lai, lệnh ‘take profit’ (chốt lời) phải được đặt số pip tối thiểu ra khỏi giá thị trường hiện tại để các giá trị này hợp lệ. Các lệnh 'Chốt lời' được đặt trong phạm vi giá chào bán và chào mua hiện tại sẽ tự động bị xóa.",
         "zh-Hant": "此訂單是為了確保盈利。壹旦市場到達“止盈價格”，該訂單將被觸發並被作為“限價單”對待。如果“止盈”沒有被觸發，將被系統保留到後面的日期。對於基於外匯、現貨金屬、股票、指數和期貨的 CFD，“止盈”單應當設置離當前市價差距最小的點數，以使其有效。在當前買賣價差範圍內設置的“止盈”單將被自動移除。",
-        "id": "This is an order to secure profits. Once the market reaches the ‘take profit price’ the order is triggered and treated as a ‘limit order’. If the ‘take profit’ is not triggered it shall remain in the system until a later date. For CFDs on FX, spot metals, equities, indices and futures, ‘take profit’ orders should be placed a minimum number of pips away from the current market price in order for these to be valid. ‘Take Profit’ orders placed within the current bidask spread will be automatically removed.",
+        "id": "Ini adalah perintah untuk mengamankan keuntungan. Setelah pasar mencapai 'harga take profit', pesanan dipicu dan diperlakukan sebagai 'limit order'. Jika 'take profit' tidak dipicu, itu akan tetap dalam sistem sampai nanti. Untuk CFD di FX, logam spot, ekuitas, indeks, dan kontrak berjangka, pesanan 'take profit' harus ditempatkan dalam jumlah minimum pips jauhnya dari harga pasar saat ini agar valid. Order 'Take Profit' yang ditempatkan dalam bid ask spread saat ini akan otomatis dihapus.",
         "es": "Esta es una orden para asegurar ganancias. Una vez que el mercado alcanza el \"precio de toma de beneficios\", la orden se inicia y se trata como una \"orden limitada\". Si no se desencadena el \"take profit\", permanecerá en el sistema hasta una fecha posterior. Para los CFD sobre FX, metales al contado, acciones, índices y futuros, las órdenes de \"take profit\" deben colocarse a una cantidad mínima de pips del precio actual del mercado para que estos sean válidos. Las órdenes \"Take Profit\" colocadas dentro de la extensión actual del bidask se eliminarán automáticamente.",
         "pt-BR": "Esta é uma ordem para garantir lucros. Assim que o mercado atingir o \"preço de lucro\", o pedido é acionado e tratado como \"pedido de limite\". Se o \"take profit\" não for acionado, ele permanecerá no sistema até uma data posterior. Para CFDs sobre FX, metais spot, ações, índices e futuros, pedidos de 'take profit' devem ser colocados a um número mínimo de pips de distância do preço de mercado atual para que estes sejam válidos. Os pedidos de \"Take Profit\" feitos no spread do bidask atual serão removidos automaticamente.",
         "ar": "هذا هو أمر لتأمين الأرباح. بمجرد وصول السوق إلى سعر \"جني الربح\"، يتم تفعيل الأمر والتعامل معه باعتباره \"أمر محدد\".. إذا لم يتم تفعيل أمر \"جني الربح\"، سيظل الأمر في النظام حتى تاريخ لاحق. بالنسبة إلى عقود الفروقات على الفوركس والمعادن الفورية والأسهم والمؤشرات والعقود الآجلة، يجب وضع أوامر  \"جني الربح\" على بعد حد أدنى من النقاط من سعر السوق الحالي حتى تكون هذه الأوامر صالحة. سيتم بشكل آلي حذف أوامر \"جني الربح\" التي يتم وضعها ضمن نطاق الفرق السعري بين سعري العطاء والطلب."
@@ -10476,7 +10476,7 @@ module.exports = {
         "en": "Pending Order Modification/ Cancellation",
         "vi": "Điều chỉnh / Hủy lệnh đang chờ xử lý",
         "zh-Hant": "掛單修改/取消",
-        "id": "Pending Order Modification/ Cancellation",
+        "id": "Modifikasi / Pembatalan Pending Order",
         "es": "Modificación Orden Pendiente/Cancelación",
         "pt-BR": "Modificação / cancelamento de pedido pendente",
         "ar": "تعديل/ إلغاء الأمر المعلق"
@@ -10486,7 +10486,7 @@ module.exports = {
         "en": "An order can be modified by the client if the market did not reach the price level specified by the client and the order was not cancelled in the meantime.",
         "vi": "Lệnh có thể được khách hàng sửa đổi nếu thị trường không đạt đến mức giá do khách hàng chỉ định và lệnh không bị hủy trong thời gian chờ đợi.",
         "zh-Hant": "如果市場沒有到達客戶所指定的價格水平，而同時訂單沒有被取消， 客戶可以修改訂單。",
-        "id": "An order can be modified by the client if the market did not reach the price level specified by the client and the order was not cancelled in the meantime.",
+        "id": "Sebuah order dapat dimodifikasi oleh klien jika pasar tidak mencapai level harga yang ditentukan oleh klien dan order tidak dibatalkan untuk sementara waktu.",
         "es": "El cliente puede modificar una orden si el mercado no alcanzó el nivel de precio especificado por el cliente y la orden no se canceló mientras tanto.",
         "pt-BR": "Um pedido pode ser modificado pelo cliente se o mercado não atingir o nível de preço especificado pelo cliente e o pedido não foi cancelado nesse meio tempo.",
         "ar": "يجوز للعميل تعديل الأمر إذا لم يصل السوق إلى مستوى السعر الذي حدده العميل ولم يتم إلغاء الطلب في نفس الوقت."
@@ -10496,7 +10496,7 @@ module.exports = {
         "en": "An order will be cancelled in the event any of the following occurs: a. if a client manually cancels an order prior to the market reaching the price level specified by the client; or b. if a client places an expiration time frame and this is reached; For further details, please refer to Appendix II",
         "vi": "Một lệnh sẽ bị hủy trong trường hợp xảy ra bất kỳ điều sau đây: a. nếu một khách hàng tự hủy bỏ lệnh trước khi thị trường đạt đến mức giá do khách hàng chỉ định; hoặc b. nếu một khách hàng đặt một khung thời gian hết hạn và điều này đạt được; Để biết thêm chi tiết, vui lòng tham khảo Phụ lục II",
         "zh-Hant": "如果發生下列任壹情況，訂單將被取消：a. 客戶在市場到達客戶指定的價格前手動取消訂單；或b. 客戶設置了有效期而且已經到期；更多詳情，請參考附件 II",
-        "id": "An order will be cancelled in the event any of the following occurs: a. if a client manually cancels an order prior to the market reaching the price level specified by the client; or b. if a client places an expiration time frame and this is reached; For further details, please refer to Appendix II",
+        "id": "Pesanan akan dibatalkan jika salah satu dari hal berikut terjadi: a. jika klien secara manual membatalkan pesanan sebelum pasar mencapai tingkat harga yang ditentukan oleh klien; atau b. jika klien menempatkan kerangka waktu kedaluwarsa dan ini tercapai; Untuk detail lebih lanjut, silakan lihat Lampiran II",
         "es": "Se cancelará una orden en caso de que ocurra algo de lo siguiente: a. si un cliente cancela manualmente una orden antes de que el mercado alcance el nivel de precio especificado por el cliente; o b. si un cliente coloca un límite de tiempo de vencimiento y éste se alcanza; Para más detalles, consulte el Apéndice II.",
         "pt-BR": "Um pedido será cancelado no caso de ocorrer uma das seguintes situações: a. se um cliente cancela manualmente um pedido antes de o mercado atingir o nível de preço especificado pelo cliente; ou b. se um cliente colocar um prazo de expiração e isso for alcançado; Para mais detalhes, consulte o Apêndice II",
         "ar": "وسيتم إلغاء الأمر في حالة حدوث أي مما يلي: أ- إذا قام العميل بإلغاء الأمر يدويًا قبل وصول السوق إلى مستوى السعر الذي حدده العميل؛ أو ب- إذا أدخل العميل إطارًا زمنيًا محددًا لانتهاء الأمر وتم الوصول إلى ذلك؛ للحصول على المزيد من التفاصيل، يرجى الرجوع إلى الملحق II."
@@ -10506,7 +10506,7 @@ module.exports = {
         "en": "Instant Order(s)",
         "vi": "(Các )Lệnh Tức Thì",
         "zh-Hant": "即時訂單（即時）市",
-        "id": "Instant Order(s)",
+        "id": "Instant Order",
         "es": "Órdenes Instant ",
         "pt-BR": "Pedido (s) Instantâneo (s)",
         "ar": "الأمر الفوري"
@@ -10526,7 +10526,7 @@ module.exports = {
         "en": "This is an order to buy or sell at the current market price that is available. The system automatically aggregates the volume received from third party liquidity providers and executes the ‘market order’ at VWAP (‘Volume-Weighted Average Price’) that is the average and best available price at the time of the execution.",
         "vi": "Đây là lệnh mua hoặc bán với giá thị trường hiện tại. Hệ thống sẽ tự động tổng hợp khối lượng nhận được từ nhà cung cấp thanh khoản của bên thứ ba và thực hiện ‘lệnh thị trường’ tại VWAP (‘Giá trung bình theo Kích Thước”) là mức giá trung bình và tốt nhất có sẵn tại thời điểm thực hiện.",
         "zh-Hant": "這是以當前可獲的市場價格買入或賣出的訂單。系統自動合並從第三方流動性供應商收到的成交量，並按成交量加權平均價（VWAP）執行“市價單”，VWAP 是在執行時可用的最佳價格的平均值。",
-        "id": "This is an order to buy or sell at the current market price that is available. The system automatically aggregates the volume received from third party liquidity providers and executes the ‘market order’ at VWAP (‘Volume-Weighted Average Price’) that is the average and best available price at the time of the execution.",
+        "id": "Ini adalah perintah untuk membeli atau menjual pada harga pasar saat ini yang tersedia. Sistem secara otomatis menggabungkan volume yang diterima dari penyedia likuiditas pihak ketiga dan menjalankan 'market order' di VWAP ('Volume-Weighted Average Price) yang merupakan harga rata-rata dan terbaik yang tersedia pada saat eksekusi.",
         "es": "Esta es una orden de compra o venta al precio de mercado actual que está disponible. El sistema agrega automáticamente el volumen recibido de proveedores de liquidez de terceros y ejecuta la \"orden de mercado\" a VWAP (\"Precio promedio ponderado por volumen\") que es el precio promedio y el mejor precio disponible en el momento de la ejecución.",
         "pt-BR": "Este é um pedido para comprar ou vender pelo preço de mercado atual disponível. O sistema agrega automaticamente o volume recebido de provedores de liquidez de terceiros e executa a \"ordem de mercado\" no VWAP (\"Preço médio ponderado por volume\") que é a média e o melhor preço disponível no momento da execução.",
         "ar": "هذا هو أمر للشراء أو البيع بالسعر  المتاح في السوق في الوقت الحالي. يقوم النظام بشكل آلي بتجميع الحجم المستلم من مزودي السيولة وتنفيذ \"أمر السوق\" وفقًا إلى متوسط السعر المرجح بحجم التداول (VWAP) وهو متوسط السعر وأفضل سعر متاح في وقت التنفيذ."
@@ -10546,7 +10546,7 @@ module.exports = {
         "en": "This is an order to buy or sell once the market reaches the ‘stop price’. Once the market reaches the ‘stop price’, the ‘stop order’ is triggered and treated as a ‘market order’*. If the ‘stop order’ is not triggered it shall remain in the system until a later date subject to the conditions described in the ‘Good ‘til Cancelled’ section. ‘Stop orders’ can be placed as close to the current market price as possible; there is no restriction.",
         "vi": "Đây là lệnh mua hoặc bán khi thị trường đạt đến 'giá dừng'. Khi thị trường đạt đến ‘giá dừng’, ‘lệnh dừng’ được kích hoạt và được coi là ‘lệnh thị trường’ *. Nếu 'lệnh dừng' không được kích hoạt, nó sẽ vẫn còn trong hệ thống cho đến một ngày sau đó tùy thuộc vào các điều kiện được mô tả trong phần ‘Good‘ til Canceled ’ (Hết hạn). 'Lệnh dừng' có thể được đặt gần giá thị trường hiện tại nhất có thể; không có giới hạn.",
         "zh-Hant": "這是在市場到達“止損價格”時，立即買入或賣出的訂單。壹旦到達“止損價格”，“止損單”將被觸發並被作為“市價單”對待*。如果“止損價格”沒有被觸發，將被系統保留到後面的日期，受“取消前有效”部分所規定的條件約束。“止損單”可以設置盡可能與當前市場價相近；沒有限制。",
-        "id": "This is an order to buy or sell once the market reaches the ‘stop price’. Once the market reaches the ‘stop price’, the ‘stop order’ is triggered and treated as a ‘market order’*. If the ‘stop order’ is not triggered it shall remain in the system until a later date subject to the conditions described in the ‘Good ‘til Cancelled’ section. ‘Stop orders’ can be placed as close to the current market price as possible; there is no restriction.",
+        "id": "Ini adalah perintah untuk membeli atau menjual setelah pasar mencapai 'stop price'. Setelah pasar mencapai 'stop price', 'stop order' dipicu dan diperlakukan sebagai 'market order' *. Jika 'stop order' tidak dipicu, itu akan tetap dalam sistem sampai nanti sesuai dengan kondisi yang dijelaskan di bagian 'Good' til Cancelled '. 'Stop order' dapat ditempatkan sedekat mungkin dengan harga pasar saat ini; tidak ada batasan.",
         "es": "Esta es una orden de compra o venta una vez que el mercado alcanza el precio stop \". Una vez que el mercado alcanza el \"stop price\", la \"stop order\" se activa y se trata como un \"orden a mercado.\"* Si la \"stop order\" no se activa, permanecerá en el sistema hasta una fecha posterior sujeta a las condiciones descritas en la sección  ‘Good ‘til Cancelled’. Las \"órdenes stops\" se pueden colocar lo más cerca posible del precio de mercado actual; no hay restricción",
         "pt-BR": "Este é um pedido para comprar ou vender quando o mercado atingir o \"preço final\". Assim que o mercado atingir o \"preço final\", a \"ordem de parada\" é acionada e tratada como uma \"ordem de mercado\" *. Se a \"ordem de parada\" não for acionada, ela permanecerá no sistema até uma data posterior, sujeita às condições descritas na seção \"Bom\" até \"Cancelado\". \"Stop orders\" pode ser colocado o mais próximo possível do preço de mercado atual; não há restrição.",
         "ar": "هذا هو أمر للشراء أو البيع بمجرد وصول السوق إلى \"سعر الإيقاف\". بمجرد وصول السوق إلى \"سعر الإيقاف\"، يتم تفعيل \"أمر الإيقاف\" والتعامل معه باعتباره \"أمر سوق\"*. إذا لم يتم تفعيل \"أمر الإيقاف\"، سيظل الأمر في النظام حتى تاريخ لاحق مع مراعاة الشروط المنصوص عليها في قسم \"صالح حتى الإلغاء\". يمكن إدخال \"أمر الإيقاف\" عند أقرب سعر ممكن من سعر السوق الحالي، ليس هناك قيود على ذلك."
@@ -10566,7 +10566,7 @@ module.exports = {
         "en": "This is an order to minimise losses. Once the market reaches the ‘stop loss price’ the order is triggered and treated as a ‘market order’*. If the ‘stop loss’ is not triggered it shall remain in the system until a later date. ‘Stop loss’ orders can be placed as close to the current market price as possible; there is no restriction.",
         "vi": "Đây là một lệnh để giảm thiểu lỗ. Khi thị trường đạt đến 'giá thua lỗ', lệnh được kích hoạt và được coi là 'lệnh thị trường' *. Nếu 'dừng lỗ' không được kích hoạt thì nó sẽ vẫn còn trong hệ thống cho đến ngày sau đó. Các lệnh 'Stop loss' có thể được đặt càng sát với giá thị trường hiện tại càng tốt; không có giới hạn.",
         "zh-Hant": "這個訂單是為了盡量減少虧損。壹旦到達“止損價格”，該訂單將被觸發並被作為“市價單”對待*。如果“止損價格”沒有被觸發，將被系統保留在後面的日期。“止損”單可以設置盡可能與當前市場價相近；沒有限制。",
-        "id": "This is an order to minimise losses. Once the market reaches the ‘stop loss price’ the order is triggered and treated as a ‘market order’*. If the ‘stop loss’ is not triggered it shall remain in the system until a later date. ‘Stop loss’ orders can be placed as close to the current market price as possible; there is no restriction.",
+        "id": "Ini adalah perintah untuk meminimalkan kerugian. Setelah pasar mencapai 'harga stop loss', pesanan dipicu dan diperlakukan sebagai 'market order' *. Jika 'stop loss' tidak dipicu, itu akan tetap dalam sistem sampai nanti. Pesanan 'stop loss' dapat ditempatkan sedekat mungkin dengan harga pasar saat ini; tidak ada batasan.",
         "es": "Esta es una orden para minimizar las pérdidas. Una vez que el mercado alcanza el \"precio stop loss\", la orden se inicia y se trata como un \"orden a mercado\"*. Si el ‘stop loss’ no es ejecutado, permanecerá en el sistema hasta una fecha posterior. El ‘Stop loss’ puede ser colocado tan cerca del precio actual como sea posible; no hay restricciones.",
         "pt-BR": "Esta é uma ordem para minimizar as perdas. Quando o mercado atinge o \"preço de stop loss\", o pedido é acionado e tratado como um \"pedido de mercado\" *. Se o stop loss não for acionado, ele permanecerá no sistema até uma data posterior. As ordens de \"perda de parada\" podem ser colocadas o mais próximo possível do preço de mercado atual; não há restrição.",
         "ar": "هذا هو أمر لتقليل الخسائر. بمجرد وصول السوق إلى سعر \"إيقاف الخسارة\"، يتم تفعيل الأمر والتعامل معه باعتباره \"أمر سوق\"*. إذا لم يتم تفعيل أمر \"إيقاف الخسارة\"، سيظل الأمر في النظام حتى تاريخ لاحق. يمكن إدخال أوامر \"إيقاف الخسارة\" عند أقرب سعر ممكن من سعر السوق الحالي، ليس هناك قيود على ذلك."
@@ -10586,7 +10586,7 @@ module.exports = {
         "en": "This is an order to buy or sell once the market reaches the ‘limit price’. Once the market reaches the ‘limit price’ the order is triggered and executed at the ‘limit price’ or better. If the limit order is partially filled, a new Limit order will be automatically created for the outstanding volume and executed once the market price reaches the originally requested ‘limit price’. If the ‘limit order’ is not triggered it shall remain in the system until a later date subject to the conditions described in the ‘Good ‘til Cancelled’ section. ‘Limit orders’ can be placed as close to the current market price as possible; there is no restriction.",
         "vi": "Đây là lệnh mua hoặc bán khi thị trường đạt đến 'giá giới hạn'. Khi thị trường đạt đến 'giới hạn giá', lệnh được kích hoạt và được thực hiện ở 'giá giới hạn' hoặc cao hơn. Nếu lệnh giới hạn được điền một phần, một Lệnh giới hạn mới sẽ được tự động tạo cho khối lượng chưa thanh toán và được thực hiện khi giá thị trường đạt đến 'giá giới hạn' ban đầu được yêu cầu. Nếu ‘thứ tự giới hạn’ không được kích hoạt, nó sẽ vẫn còn trong hệ thống cho đến một ngày sau đó tùy thuộc vào các điều kiện được mô tả trong phần ‘Good‘ til Canceled ’ (Hết hạn). 'Lệnh giới hạn' có thể được đặt gần với giá thị trường hiện tại nhất có thể; không có giới hạn.",
         "zh-Hant": "壹旦市場到達“限制價格”時，立即買入或賣出的訂單。壹旦到達“限制價格”，此訂單將被觸發並在“限制價格”或更佳的價格執行。如果限價單只是獲得部分執行，對未行使交易量將自動生成新的限價單，並在市場價格到達原來申請的“限制價格”時執行。如果“限制價格”沒有被觸發，將被系統保留到後面的日期，受“取消前有效”部分所規定的條件約束。“限價單”可以設置盡可能與當前市場價相近；沒有限制。",
-        "id": "This is an order to buy or sell once the market reaches the ‘limit price’. Once the market reaches the ‘limit price’ the order is triggered and executed at the ‘limit price’ or better. If the limit order is partially filled, a new Limit order will be automatically created for the outstanding volume and executed once the market price reaches the originally requested ‘limit price’. If the ‘limit order’ is not triggered it shall remain in the system until a later date subject to the conditions described in the ‘Good ‘til Cancelled’ section. ‘Limit orders’ can be placed as close to the current market price as possible; there is no restriction.",
+        "id": "Ini adalah perintah untuk membeli atau menjual setelah pasar mencapai 'limit price'. Setelah pasar mencapai 'limit price', pesanan dipicu dan dieksekusi pada 'limit price' atau lebih baik. Jika order limit terisi sebagian, order Limit baru akan secara otomatis dibuat untuk volume yang beredar dan dieksekusi setelah harga pasar mencapai 'limit price' yang diminta semula. Jika 'limit order' tidak dipicu, itu akan tetap dalam sistem sampai nanti sesuai dengan kondisi yang dijelaskan di bagian 'Good' til Cancelled '. 'limit order' dapat ditempatkan sedekat mungkin dengan harga pasar saat ini; tidak ada batasan.",
         "es": "Esta es una orden de compra o venta una vez que el mercado alcanza el \"precio límite\". Una vez que el mercado alcanza el \"precio límite\", la \"orden limitada\" se activa y ejecuta al \"precio límite\" o mejor. Si la \"orden limitada\" no se activa, permanecerá en el sistema hasta una fecha posterior sujeta,  a las condiciones descritas en la sección Good ‘til Cancelled.  Las Órdenes Limitadas pueden ser colocadastan cerca del precio como sea posible; no hay restricciones",
         "pt-BR": "Este é um pedido para comprar ou vender quando o mercado atingir o \"preço limite\". Quando o mercado atinge o \"preço limite\", a ordem é acionada e executada ao \"preço limite\" ou melhor. Se a ordem limite estiver parcialmente preenchida, uma nova ordem limite será criada automaticamente para o volume pendente e executada quando o preço de mercado alcançar o \"preço limite\" originalmente solicitado. Se a \"ordem de limite\" não for acionada, ela permanecerá no sistema até uma data posterior, sujeita às condições descritas na seção \"Bom\" até \"Cancelado\". \"Limitar pedidos\" pode ser colocado o mais próximo possível do preço de mercado atual; não há restrição.",
         "ar": "هذا هو أمر للشراء أو البيع بمجرد وصول السوق إلى \"السعر المحدد\". بمجرد وصول السوق إلى \"السعر المحدد\"، يتم تفعيل \"الأمر المحدد\" وتنفيذه \"بالسعر المحدد\" أو بسعر أفضل منه. إذا تم تنفيذ الأمر المحدد تنفيذًا جزئيًا، سيتم بشكل آلي إنشاء أمر محدد جديد للحجم المتبقي وتنفيذه بمجرد وصول سعر السوق إلى سعر \"الأمر المحدد\" الذي كان مطلوبًا في الأساس. إذا لم يتم تفعيل \"الأمر المحدد\"، سيظل الأمر في النظام حتى تاريخ لاحق مع مراعاة الشروط المنصوص عليها في قسم \"صالح حتى الإلغاء\". يمكن إدخال \"الأوامر المحددة\" عند أقرب سعر ممكن من سعر السوق الحالي، ليس هناك قيود على ذلك."
@@ -10606,7 +10606,7 @@ module.exports = {
         "en": "This is an order to secure profits. Once the market reaches the ‘take profit price’ the order is triggered and treated as a ‘limit order’. If the ‘take profit’ is not triggered it shall remain in the system until a later date. ‘Take profit’ can be placed as close to the current market price as possible; there is no restriction.",
         "vi": "Đây là một lệnh để đảm bảo lợi nhuận. Khi thị trường đạt đến 'giá lợi nhuận', lệnh được kích hoạt và được coi là 'lệnh giới hạn'. Nếu ‘take profit’ (Lệnh chốt lời) không được kích hoạt thì nó sẽ vẫn còn trong hệ thống cho đến một ngày sau đó. ‘Lệnh Chốt Lời’ có thể được đặt càng gần với giá thị trường hiện tại càng tốt; không có giới hạn.",
         "zh-Hant": "此訂單是為了確保盈利。壹旦市場到達“止盈價格”，該訂單將被觸發並被作為“限價單”對待。如果“止盈”沒有被觸發，將被系統保留到後面的日期。“止盈”可以設置盡可能與當前市場價相近；沒有限制。",
-        "id": "This is an order to secure profits. Once the market reaches the ‘take profit price’ the order is triggered and treated as a ‘limit order’. If the ‘take profit’ is not triggered it shall remain in the system until a later date. ‘Take profit’ can be placed as close to the current market price as possible; there is no restriction.",
+        "id": "Ini adalah perintah untuk mengamankan keuntungan. Setelah pasar mencapai 'harga take profit', pesanan dipicu dan diperlakukan sebagai 'limit order’. Jika 'take profit’ tidak dipicu, itu akan tetap dalam sistem sampai nanti. 'Take profit' dapat ditempatkan sedekat mungkin dengan harga pasar saat ini; tidak ada batasan.",
         "es": "Esta es una orden para asegurar ganancias. Una vez que el mercado alcanza el \"precio de toma de beneficios\", la orden se inicia y se trata como una \"orden limitada\". Si no se desencadena el \"take profit\", permanecerá en el sistema hasta una fecha posterior. El ‘Take profit’ puede colocaqrse tan cerca del precio actual como sea posible; no hay restricciones.",
         "pt-BR": "Esta é uma ordem para garantir lucros. Assim que o mercado atingir o \"preço de lucro\", o pedido é acionado e tratado como \"pedido de limite\". Se o \"take profit\" não for acionado, ele permanecerá no sistema até uma data posterior. \"Take profit\" pode ser colocado o mais próximo possível do preço de mercado atual; não há restrição.",
         "ar": "هذا هو أمر لتأمين الأرباح. بمجرد وصول السوق إلى سعر \"جني الربح\"، يتم تفعيل الأمر والتعامل معه باعتباره \"أمر محدد\".. إذا لم يتم تفعيل أمر \"جني الربح\"، سيظل الأمر في النظام حتى تاريخ لاحق. يمكن إدخال أمر \"جني الربح\" عند أقرب سعر ممكن من سعر السوق الحالي، ليس هناك قيود على ذلك."
@@ -10626,7 +10626,7 @@ module.exports = {
         "en": "This is an order to buy or sell at the current market price that is available. The system automatically aggregates the volume received from third party liquidity providers and executes the ‘market order’ at VWAP (‘Volume-Weighted Average Price’) that is the average and best available price at the time of the execution. Once the ‘market order’ is triggered it shall be subject to the conditions described in the ‘Good ‘til Date’ and ‘Good ‘til Cancelled’ sections.",
         "vi": "Đây là lệnh mua hoặc bán với giá thị trường hiện tại. Hệ thống sẽ tự động tổng hợp khối lượng nhận được từ nhà cung cấp thanh khoản của bên thứ ba và thực hiện ‘lệnh thị trường’ tại VWAP (‘Giá trung bình theo kích thước”) là mức giá trung bình và tốt nhất có sẵn tại thời điểm thực hiện. Khi ‘thứ tự thị trường’ được kích hoạt, nó sẽ phải tuân thủ các điều kiện được mô tả trong phần‘Good ‘til Date’ (Hiệu lực ' đến Ngày') và ‘Good ‘til Cancelled’ (Hiệu lực đến Hủy).",
         "zh-Hant": "這是以當前可獲的市場價格買入或賣出的訂單。系統自動合並從第三方流動性供應商收到的成交量，並按成交量加權平均價（VWAP）執行“市價單”，VWAP 是在執行時可用的最佳價格的平均值。壹旦“市價單”被觸發，將受“在指定日前有效”和“取消前壹直有效”部分所規定的條件約束。",
-        "id": "This is an order to buy or sell at the current market price that is available. The system automatically aggregates the volume received from third party liquidity providers and executes the ‘market order’ at VWAP (‘Volume-Weighted Average Price’) that is the average and best available price at the time of the execution. Once the ‘market order’ is triggered it shall be subject to the conditions described in the ‘Good ‘til Date’ and ‘Good ‘til Cancelled’ sections.",
+        "id": "Ini adalah perintah untuk membeli atau menjual pada harga pasar saat ini yang tersedia. Sistem secara otomatis menggabungkan volume yang diterima dari penyedia likuiditas pihak ketiga dan menjalankan 'market order' di VWAP ('Volume-Weighted Average Price') yang merupakan harga rata-rata dan terbaik yang tersedia pada saat eksekusi. Setelah 'market order' dipicu, itu harus tunduk pada kondisi yang dijelaskan dalam bagian 'Baik' sampai Tanggal 'dan' Baik 'sampai Dibatalkan'.",
         "es": "Esta es una orden de compra o venta al precio de mercado actual que está disponible. El sistema agrega automáticamente el volumen recibido de proveedores de liquidez y ejecuta la \"orden a mercado\" al VWAP (\"Precio promedio ponderado por volumen\") que es el precio medio y el mejor precio disponible en el momento de la ejecución. Una vez que se active la \"orden a mercado\", estará sujeto a las condiciones descritas en las secciones ‘Good ‘til Date’ y ‘Good ‘til Cancelled’ \".",
         "pt-BR": "Este é um pedido para comprar ou vender pelo preço de mercado atual disponível. O sistema agrega automaticamente o volume recebido de provedores de liquidez de terceiros e executa a \"ordem de mercado\" no VWAP (\"Preço médio ponderado por volume\") que é a média e o melhor preço disponível no momento da execução. Uma vez que a \"ordem de mercado\" seja acionada, ela estará sujeita às condições descritas nas seções \"Bom até a data\" e \"Bom até Cancelado\".",
         "ar": "هذا هو أمر للشراء أو البيع بالسعر  المتاح في السوق في الوقت الحالي. يقوم النظام بشكل آلي بتجميع الحجم المستلم من مزودي السيولة وتنفيذ \"أمر السوق\" وفقًا إلى متوسط السعر المرجح بحجم التداول (VWAP) وهو متوسط السعر وأفضل سعر متاح في وقت التنفيذ. وبمجرد تفعيل \"أمر السوق\"، سيصبح الأمر خاضعًا للشروط المنصوص عليها في قسمي \"صالح حتى تاريخ محدد\" و \"صالح حتى الإلغاء\"."
@@ -10646,7 +10646,7 @@ module.exports = {
         "en": "This is an execution setting that the client may apply to ‘pending orders’. The order may remain ‘live’ and pending for execution until such time as the order is triggered and treated as a market order or cancelled by the client.",
         "vi": "Đây là cài đặt thực thi lệnh mà khách hàng có thể áp dụng cho 'các lệnh hàng đang chờ xử lý'. Lệnh có thể vẫn còn 'đang hoạt động' và đang chờ xử lý cho đến khi lệnh được kích hoạt và được coi là lệnh thị trường hoặc bị hủy bởi khách hàng.",
         "zh-Hant": "這是客戶可適用於“掛單”的執行設置。訂單會保持“有效”並等待執行，直到訂單被觸發並作為市價單對待，或被客戶取消時為止。",
-        "id": "This is an execution setting that the client may apply to ‘pending orders’. The order may remain ‘live’ and pending for execution until such time as the order is triggered and treated as a market order or cancelled by the client.",
+        "id": "Ini adalah pengaturan eksekusi yang mungkin diterapkan klien ke 'pending order'. Pesanan mungkin tetap 'aktif' dan menunggu eksekusi sampai pesanan dipicu dan diperlakukan sebagai pesanan pasar atau dibatalkan oleh klien.",
         "es": "Esta es una configuración de ejecución que el cliente puede aplicar a las \"órdenes pendientes\". La orden puede permanecer \"viva\" y pendiente de ejecución hasta que la orden se active y se trate como una orden de mercado o sea cancelada por el cliente.",
         "pt-BR": "Essa é uma configuração de execução que o cliente pode aplicar a \"pedidos pendentes\". O pedido pode permanecer \"ativo\" e pendente de execução até o momento em que o pedido é acionado e tratado como uma ordem de mercado ou cancelado pelo cliente.",
         "ar": "هذه هي إعدادات تنفيذ والتي يمكن للعميل تطبيقها على \"الأوامر المعلقة\". ويمكن أن يظل الأمر \"ساريًا\" وفي انتظار التنفيذ حتى يتم تنشيط الأمر والتعامل معه باعتباره أمر سوق أو إلغاؤه بواسطة العميل."
@@ -10666,7 +10666,7 @@ module.exports = {
         "en": "This is an execution setting that applies to ‘pending orders’ traded through the trading platform. The client may choose a specific date in the future until which the order shall remain ‘live’ and pending for execution. If the order is not triggered during this pre-determined timeframe it shall be deleted from the system.",
         "vi": "Đây là cài đặt thực thi lệnh áp dụng cho 'các lệnh đang chờ xử lý' được giao dịch thông qua sàn giao dịch. Khách hàng có thể chọn một ngày cụ thể trong tương lai cho đến khi lệnh vẫn còn 'đang hoạt động' và đang chờ xử lý. Nếu thứ tự không được kích hoạt trong khung thời gian được xác định trước này, nó sẽ bị xóa khỏi hệ thống.",
         "zh-Hant": "這是壹種執行設置，適用於通過交易平臺交易的“掛單”。客戶可以選擇未來壹個特定的日期，訂單會保持“有效”和等待執行，直到這壹日期為止。如果在預設的時間範圍內訂單沒有觸發，訂單將會從系統刪除。",
-        "id": "This is an execution setting that applies to ‘pending orders’ traded through the trading platform. The client may choose a specific date in the future until which the order shall remain ‘live’ and pending for execution. If the order is not triggered during this pre-determined timeframe it shall be deleted from the system.",
+        "id": "Ini adalah pengaturan eksekusi yang berlaku untuk 'pending order' yang diperdagangkan melalui platform trading. Klien dapat memilih tanggal tertentu di masa depan hingga pesanan akan tetap 'aktif' dan menunggu untuk eksekusi. Jika pesanan tidak dipicu selama jangka waktu yang telah ditentukan sebelumnya, itu akan dihapus dari sistem.",
         "es": "Esta es una configuración de ejecución que se aplica a las \"órdenes pendientes\" negociadas a través de la plataforma de trading. El cliente puede elegir una fecha específica en el futuro hasta que la orden permanezca \" viva\" y pendiente de ejecución. Si la orden no se activa durante este período de tiempo predeterminado, se eliminará del sistema.",
         "pt-BR": "Esta é uma configuração de execução que se aplica a \"pedidos pendentes\" negociados por meio da plataforma de negociação. O cliente pode escolher uma data específica no futuro até a qual o pedido permanecerá \"vivo\" e pendente para execução. Se o pedido não for acionado durante esse período pré-determinado, ele deve ser excluído do sistema.",
         "ar": "هذه هي إعدادات تنفيذ والتي تسري على \"الأوامر المعلقة\" التي يتم تداولها عبر منصة التداول. يجوز للعميل اختيار تاريخ محدد في المستقبل حتى يظل الأمر \"ساريًا\" وفي انتظار التنفيذ. سيتم إلغاء الأمر من النظام إذا لم يتم تفعيل الأمر خلال الفترة الزمنية المحددة مسبقًا."
@@ -10676,7 +10676,7 @@ module.exports = {
         "en": "Pending Order Modification/Cancellation",
         "vi": "Điều Chỉnh Lệnh Chờ/Hủy",
         "zh-Hant": "掛單修改/取消",
-        "id": "Pending Order Modification/Cancellation",
+        "id": "Modifikasi / Pembatalan Pending Order",
         "es": "Modificación /Cancelación Órdenes Pendientes",
         "pt-BR": "Modificação / cancelamento de pedido pendente",
         "ar": "تعديل/ إلغاء الأمر المعلق"
@@ -10686,7 +10686,7 @@ module.exports = {
         "en": "An order can be modified by the client if the market did not reach the price level specified by the client and the order was not cancelled in the meantime. An order will be cancelled in the event any of the following occurs: a. if the requested price is more than 50,000 pips from the market price; or b. if a client manually cancels an order prior to the market reaching the price level specified by the client; or c. if a client places an expiration time frame and this is reached; or d. after 200 unsuccessful attempts to execute the order. For further details, please refer to Appendix II",
         "vi": "Một lệnh có thể được khách hàng sửa đổi nếu thị trường không đạt đến mức giá do khách hàng chỉ định và lệnh này không bị hủy trong thời gian chờ đợi. Một lệnh sẽ bị hủy trong trường hợp xảy ra bất kỳ điều sau đây: a. nếu giá được yêu cầu cao hơn 50.000 pip so với giá thị trường; hoặc b. nếu một khách hàng tự hủy bỏ lệnh trước khi thị trường đạt đến mức giá do khách hàng chỉ định; hoặc c. nếu một khách hàng đặt một khung thời gian hết hạn và đã đến thời hạn này; hoặc d. sau 200 lần thực hiện lệnh không thành công. Để biết thêm chi tiết, vui lòng tham khảo Phụ lục II",
         "zh-Hant": "如果市場沒有到達客戶所指定的價格水平，而同時訂單沒有被取消， 客戶可以修改訂單。如果發生下列任壹情況，訂單將被取消：a. 申請的價格與市場價格相差超過 50,000點；或b. 客戶在市場到達客戶指定的價格前手動取消訂單；或c. 客戶設置了有效期而且已經到期；或d. 嘗試執行訂單不成功超過 200 次。更多詳情，請參考附件 II",
-        "id": "An order can be modified by the client if the market did not reach the price level specified by the client and the order was not cancelled in the meantime. An order will be cancelled in the event any of the following occurs: a. if the requested price is more than 50,000 pips from the market price; or b. if a client manually cancels an order prior to the market reaching the price level specified by the client; or c. if a client places an expiration time frame and this is reached; or d. after 200 unsuccessful attempts to execute the order. For further details, please refer to Appendix II",
+        "id": "Sebuah order dapat dimodifikasi oleh klien jika pasar tidak mencapai level harga yang ditentukan oleh klien dan order tidak dibatalkan untuk sementara waktu. Pesanan akan dibatalkan jika salah satu dari hal berikut terjadi: a. jika harga yang diminta lebih dari 50.000 pips dari harga pasar; atau b. jika klien secara manual membatalkan pesanan sebelum pasar mencapai tingkat harga yang ditentukan oleh klien; atau c. jika klien menempatkan kerangka waktu kedaluwarsa dan ini tercapai; atau d. setelah 200 kali gagal menjalankan perintah. Untuk detail lebih lanjut, silakan lihat Lampiran II",
         "es": "El cliente puede modificar una orden si el mercado no alcanzó el nivel de precio especificado por el cliente y la orden no fue cancelada mientras tanto. Se cancelará una orden en caso de que ocurra algo de lo siguiente: a. si el precio solicitado está a más de 50,000 pips del precio de mercado; o b. si un cliente cancela manualmente una orden antes de que el mercado alcance el nivel de precio especificado por el cliente; o c. si un cliente coloca un límite temporal y éste es alcanzado; o d. después de 200 intentos fallidos de ejecutar la orden. Para más detalles, consulte el Apéndice II.",
         "pt-BR": "Um pedido pode ser modificado pelo cliente se o mercado não atingir o nível de preço especificado pelo cliente e o pedido não foi cancelado nesse meio tempo. Um pedido será cancelado no caso de ocorrer uma das seguintes situações: a. se o preço solicitado for superior a 50.000 pips do preço de mercado; ou b. se um cliente cancela manualmente um pedido antes de o mercado atingir o nível de preço especificado pelo cliente; ou c. se um cliente colocar um prazo de expiração e isso for alcançado; ou d. depois de 200 tentativas frustradas de executar o pedido. Para mais detalhes, consulte o Apêndice II",
         "ar": "يجوز للعميل تعديل الأمر إذا لم يصل السوق إلى مستوى السعر الذي حدده العميل ولم يتم إلغاء الطلب في نفس الوقت. وسيتم إلغاء الأمر في حالة حدوث أي مما يلي: أ- إذا كان السعر المطلوب أبعد بمقدار 50.000 نقطة من سعر السوق؛ أو ب- إذا قام العميل بإلغاء الأمر يدويًا قبل وصول السوق إلى مستوى السعر الذي حدده العميل؛ أو  ج- إذا أدخل العميل إطارًا زمنيًا محددًا لانتهاء الأمر وتم الوصول إلى ذلك؛  أو د- بعد 200 محاولة غير ناجحة لتنفيذ الأمر.  للحصول على المزيد من التفاصيل، يرجى الرجوع إلى الملحق II."
@@ -10706,7 +10706,7 @@ module.exports = {
         "en": "TigerWit reserves the right to increase margin requirements prior to the release of a dividend.",
         "vi": "TigerWit có quyền tăng yêu cầu ký quỹ trước khi phát hành cổ tức.",
         "zh-Hant": "TigerWit 保留在派息前增加保證金要求的權利。",
-        "id": "TigerWit reserves the right to increase margin requirements prior to the release of a dividend.",
+        "id": "TigerWit berhak untuk meningkatkan persyaratan margin sebelum pembagian dividen.",
         "es": "TigerWit se reserva el derecho de aumentar los requisitos de margen antes de la publicación de un dividendo.",
         "pt-BR": "A TigerWit reserva-se o direito de aumentar os requisitos de margem antes da liberação de um dividendo.",
         "ar": "تحتفظ TigerWit لنفسها بالحق في زيادة متطلبات الهامش قبل صرف توزيعات الأرباح."
@@ -10726,7 +10726,7 @@ module.exports = {
         "en": "Clients holding long positions on the ex-div date will receive a dividend in the form of a cash adjustment (deposit).",
         "vi": "Khách hàng nắm giữ các vị thế mua vào ngày giao dịch trước sẽ nhận cổ tức dưới hình thức điều chỉnh tiền mặt (tiền gửi).",
         "zh-Hant": "持有長倉的客戶在除息日將以現金調整形式收到派息（入金）。",
-        "id": "Clients holding long positions on the ex-div date will receive a dividend in the form of a cash adjustment (deposit).",
+        "id": "Klien yang memegang posisi buy pada tanggal ex-div akan menerima dividen dalam bentuk penyesuaian tunai (deposit).",
         "es": "Los clientes que mantengan posiciones largas en la fecha ex div recibirán un dividendo en forma de ajuste en efectivo (depósito).",
         "pt-BR": "Os clientes que detêm posições longas na data ex-div receberão um dividendo na forma de um ajuste em dinheiro (depósito).",
         "ar": "العملاء الذين لديهم مراكز شراء بحلول تاريخ انتهاء الحق في الحصول على توزيعات الأرباح سيحصلون على توزيعات الأرباح في صورة تعديل نقدي (إيداع)."
@@ -10746,7 +10746,7 @@ module.exports = {
         "en": "Clients holding short positions on the ex-div date will be charged the dividend amount in the form of a cash adjustment (withdrawal).",
         "vi": "Khách hàng nắm giữ các vị thế ngắn vào ngày giao dịch cũ sẽ được tính số tiền cổ tức dưới hình thức điều chỉnh tiền mặt (rút tiền).",
         "zh-Hant": "持有短倉的客戶在除息日將以現金調整形式被收取派息（出金）。",
-        "id": "Clients holding short positions on the ex-div date will be charged the dividend amount in the form of a cash adjustment (withdrawal).",
+        "id": "Klien yang memegang posisi short pada tanggal ex-div akan dikenakan jumlah dividen dalam bentuk penyesuaian tunai (penarikan).",
         "es": "A los clientes que mantengan posiciones cortas en la fecha ex div se les cobrará el monto del dividendo en forma de un ajuste en efectivo (retiro).",
         "pt-BR": "Os clientes que detêm posições curtas na data da ex-div serão cobrados o valor do dividendo na forma de um ajuste em dinheiro (retirada).",
         "ar": "العملاء الذين لديهم مراكز بيع بحلول تاريخ انتهاء الحق في الحصول على توزيعات الأرباح سيتم تحصيل توزيعات الأرباح منهم في شكل تعديل نقدي (سحب)."
@@ -10756,7 +10756,7 @@ module.exports = {
         "en": "NOTE: Stocks may be offered as a dividend. The dividend amount should be calculated using the share price to determine the cash adjustment (see fractional share adjustments).",
         "vi": "LƯU Ý: Cổ phiếu có thể được chào bán như cổ tức. Số tiền cổ tức nên được tính bằng cách sử dụng giá cổ phiếu để xác định điều chỉnh tiền mặt (xem điều chỉnh tỷ lệ phân số).",
         "zh-Hant": "註意：股票可作為派息提供。派息金額應當用股價來計算以確定現金調整額（請參看碎股調整）。",
-        "id": "NOTE: Stocks may be offered as a dividend. The dividend amount should be calculated using the share price to determine the cash adjustment (see fractional share adjustments).",
+        "id": "CATATAN : Saham dapat ditawarkan sebagai dividen. Jumlah dividen harus dihitung menggunakan harga saham untuk menentukan penyesuaian tunai (lihat penyesuaian saham pecahan).",
         "es": "NOTA: Las acciones pueden ofrecerse como dividendo. El monto del dividendo se debe calcular utilizando el precio de la acción para determinar el ajuste en efectivo (consulte los ajustes fraccionarios de acciones).",
         "pt-BR": "NOTA: As ações podem ser oferecidas como dividendos. O valor do dividendo deve ser calculado usando o preço da ação para determinar o ajuste de caixa (ver ajustes de participação fracionária).",
         "ar": "ملاحظة:  قد يتم منح توزيعات أرباح على الأسهم.  ويتم حساب مقدار توزيع الأرباح باستخدام سعر السهم من أجل تحديد التعديل النقدي (انظر التعديلات الكسرية على الأسهم)."
@@ -10766,7 +10766,7 @@ module.exports = {
         "en": "Fractional Share Adjustments",
         "vi": "Điều chỉnh Cổ Phiếu Lẻ",
         "zh-Hant": "碎股調整",
-        "id": "Fractional Share Adjustments",
+        "id": "Penyesuaian Bagian Pecahan",
         "es": "Ajustes Fraccionales Acciones",
         "pt-BR": "Ajustes fracionários de ações",
         "ar": "التعديلات الكسرية على الأسهم"
@@ -10776,7 +10776,7 @@ module.exports = {
         "en": "In the event the corporate action results in a fractional position, the fractional component may be represented as a cash adjustment independent of the handling for the non-fractional position. The adjustment value will equal the fractional position times the adjusted closing price on the day prior to the ex-date.",
         "vi": "Trong trường hợp kết quả hành động của công ty ở một vị thế lẻ, thành phần lẻ có thể được biểu diễn dưới dạng điều chỉnh tiền mặt độc lập với việc xử lý cho vị thế không lẻ. Giá trị điều chỉnh sẽ bằng với vị thế lẻ nhân với giá đóng cửa được điều chỉnh vào ngày trước ngày hết hạn.",
         "zh-Hant": "在本公司行動產生碎股的情況下，零碎部分會表示為現金調整，獨立於非零碎頭寸來處理。調整價值將等於零碎頭寸乘以除息日前壹天經調整的收盤價。",
-        "id": "In the event the corporate action results in a fractional position, the fractional component may be represented as a cash adjustment independent of the handling for the non-fractional position. The adjustment value will equal the fractional position times the adjusted closing price on the day prior to the ex-date.",
+        "id": "Dalam hal aksi korporasi menghasilkan posisi pecahan, komponen pecahan dapat direpresentasikan sebagai penyesuaian kas yang independen dari penanganan untuk posisi non-pecahan. Nilai penyesuaian akan sama dengan posisi pecahan dikalikan harga penutupan yang disesuaikan pada hari sebelum tanggal sebelumnya.",
         "es": "En el caso de que la acción corporativa resulte en una posición fraccional, el componente fraccional puede representarse como un ajuste en efectivo, independiente del manejo de la posición no fraccional. El valor de ajuste será igual a la posición fraccional multiplicada por el precio de cierre ajustado el día anterior a la fecha de vencimiento.",
         "pt-BR": "Caso a ação corporativa resulte em uma posição fracionária, o componente fracionário pode ser representado como um ajuste de caixa independente do tratamento para a posição não fracionária. O valor de ajuste será igual à posição fracionária multiplicada pelo preço de fechamento ajustado no dia anterior à data ex.",
         "ar": "في حال ما إذا أدى إجراء الشركة إلى مركز كسري، يجوز أن يتم تمثيل المكون الكسري في صورة تعديل نقدي مستقل عن التعامل مع المراكز غير الكسرية.  وسوف تساوي قيمة التعديل المركز الكسري مضروبًا في سعر الإغلاق في أخر يوم تداول قبل حلول تاريخ انتهاء الحق في الحصول على توزيعات الأرباح."
@@ -10796,20 +10796,20 @@ module.exports = {
         "en": "Normal Stock Split",
         "vi": "Chia Tách Cổ Phiếu Thông Thường",
         "zh-Hant": "票拆分",
-        "id": "Normal Stock Split",
+        "id": "Stock Split Normal",
         "es": "Split Acciones Nornal",
         "pt-BR": "Divisão normal de ações",
         "ar": "تقسيم الأسهم العادي"
     },
     "amtExecution89": {
         "zh": "由于不影响公司的市值，实施这一行动将使用公布的拆分比率反映客户原有的股份。请参考我们的网站了解更多信息：http://global.tigerwit. com。",
-        "en": "As there is no impact on the company’s market capitalisation the action carried out is to reflect the clients existing share position using the split ratio announced. Please see our website for more information: http://global.tigerwit.com. ",
-        "vi": "Vì không có tác động đến vốn hóa thị trường của công ty nên hành động được thực hiện là phản ánh vị thế cổ phiếu hiện tại của khách hàng bằng cách sử dụng tỷ lệ phân chia được công bố. Vui lòng xem trang web của chúng tôi để biết thêm thông tin: http://global.tigerwit.com.",
+        "en": "As there is no impact on the company’s market capitalisation the action carried out is to reflect the clients existing share position using the split ratio announced. Please see our website for more information: https://global.TigerWit.com. ",
+        "vi": "Vì không có tác động đến vốn hóa thị trường của công ty nên hành động được thực hiện là phản ánh vị thế cổ phiếu hiện tại của khách hàng bằng cách sử dụng tỷ lệ phân chia được công bố. Vui lòng xem trang web của chúng tôi để biết thêm thông tin: https://global.TigerWit.com.",
         "zh-Hant": "由於不影響公司的市值，實施這壹行動將使用公布的拆分比率反映客戶原有的股份。請參考我們的網站了解更多信息：http://global.tigerwit. com。",
-        "id": "As there is no impact on the company’s market capitalisation the action carried out is to reflect the clients existing share position using the split ratio announced. Please see our website for more information: http://global.tigerwit.com. ",
-        "es": "Como no hay impacto en la capitalización de mercado de la compañía, la acción realizada es reflejar la posición actual de las acciones de los clientes utilizando split ratio anunciado. Consulte nuestro sitio web para obtener más información: http://global.tigerwit.com.. ",
-        "pt-BR": "Como não há impacto sobre a capitalização de mercado da empresa, a ação realizada é refletir a posição acionária existente dos clientes usando a taxa de divisão anunciada. Por favor, consulte o nosso site para mais informações: http://global.tigerwit.com.",
-        "ar": "نظرًا لأنه ليس هناك تأثير على قيمة الشركة السوقية، يكون الإجراء الذي يتم اتخاذه هو تغيير مركز الأسهم الحالي للعميل باستخدام نسبة تقسيم الأسهم المعلن عنها.  يرجى زيارة موقعنا الإلكتروني لمعرفة المزيد من المعلومات: http://global.tigerwit.com"
+        "id": "Karena tidak ada dampak pada kapitalisasi pasar perusahaan, tindakan yang dilakukan adalah mencerminkan posisi saham klien yang ada menggunakan rasio pemisahan yang diumumkan. Silakan lihat situs web kami untuk informasi lebih lanjut: https://global.TigerWit.com. ",
+        "es": "Como no hay impacto en la capitalización de mercado de la compañía, la acción realizada es reflejar la posición actual de las acciones de los clientes utilizando split ratio anunciado. Consulte nuestro sitio web para obtener más información: https://global.TigerWit.com.. ",
+        "pt-BR": "Como não há impacto sobre a capitalização de mercado da empresa, a ação realizada é refletir a posição acionária existente dos clientes usando a taxa de divisão anunciada. Por favor, consulte o nosso site para mais informações: https://global.TigerWit.com.",
+        "ar": "نظرًا لأنه ليس هناك تأثير على قيمة الشركة السوقية، يكون الإجراء الذي يتم اتخاذه هو تغيير مركز الأسهم الحالي للعميل باستخدام نسبة تقسيم الأسهم المعلن عنها.  يرجى زيارة موقعنا الإلكتروني لمعرفة المزيد من المعلومات: https://global.TigerWit.com"
     },
     "amtExecution90": {
         "zh": "反向股票拆分",
@@ -10822,21 +10822,21 @@ module.exports = {
         "ar": "تقسيم الأسهم العكسي"
     },
     "amtExecution91": {
-        "zh": "对公司市值不造成影响，客户的股份数需要调整以反映新的股价。请参考我们的网站了解更多信息：http://global.tigerwit.com。",
-        "en": "There is no impact on the company’s market cap and the clients’ positions need to be amended to reflect the new share price. Please see our website for more information: http://global.tigerwit.com. ",
-        "vi": "Không có tác động đến vốn thị trường của công ty và vị thế của khách hàng cần được sửa đổi để phản ánh giá cổ phiếu mới. Vui lòng xem trang web của chúng tôi để biết thêm thông tin: http://global.tigerwit.com.",
-        "zh-Hant": "對公司市值不造成影響，客戶的股份數需要調整以反映新的股價。請參考我們的網站了解更多信息：http://global.tigerwit.com。",
-        "id": "There is no impact on the company’s market cap and the clients’ positions need to be amended to reflect the new share price. Please see our website for more information: http://global.tigerwit.com. ",
-        "es": "No hay impacto en la capitalización de mercado de la empresa y las posiciones de los clientes deben modificarse para reflejar el nuevo precio de la acción. Consulte nuestro sitio web para obtener más información: http://global.tigerwit.com. ",
-        "pt-BR": "Não há impacto sobre o valor de mercado da empresa e as posições dos clientes precisam ser alteradas para refletir o novo preço das ações. Por favor, consulte o nosso site para mais informações: http://global.tigerwit.com.",
-        "ar": "ليس هناك تأثير على قيمة الشركة السوقية ويجب أن يتم تعديل مراكز العميل لتعكس السعر الجديد للسهم.  يرجى زيارة موقعنا الإلكتروني لمعرفة المزيد من المعلومات: http://global.tigerwit.com"
+        "zh": "对公司市值不造成影响，客户的股份数需要调整以反映新的股价。请参考我们的网站了解更多信息：https://global.TigerWit.com。",
+        "en": "There is no impact on the company’s market cap and the clients’ positions need to be amended to reflect the new share price. Please see our website for more information: https://global.TigerWit.com. ",
+        "vi": "Không có tác động đến vốn thị trường của công ty và vị thế của khách hàng cần được sửa đổi để phản ánh giá cổ phiếu mới. Vui lòng xem trang web của chúng tôi để biết thêm thông tin: https://global.TigerWit.com.",
+        "zh-Hant": "對公司市值不造成影響，客戶的股份數需要調整以反映新的股價。請參考我們的網站了解更多信息：https://global.TigerWit.com。",
+        "id": "Tidak ada dampak pada kapitalisasi pasar perusahaan dan posisi klien perlu diubah untuk mencerminkan harga saham baru. Silakan lihat situs web kami untuk informasi lebih lanjut: https://global.TigerWit.com. ",
+        "es": "No hay impacto en la capitalización de mercado de la empresa y las posiciones de los clientes deben modificarse para reflejar el nuevo precio de la acción. Consulte nuestro sitio web para obtener más información: https://global.TigerWit.com. ",
+        "pt-BR": "Não há impacto sobre o valor de mercado da empresa e as posições dos clientes precisam ser alteradas para refletir o novo preço das ações. Por favor, consulte o nosso site para mais informações: https://global.TigerWit.com.",
+        "ar": "ليس هناك تأثير على قيمة الشركة السوقية ويجب أن يتم تعديل مراكز العميل لتعكس السعر الجديد للسهم.  يرجى زيارة موقعنا الإلكتروني لمعرفة المزيد من المعلومات: https://global.TigerWit.com"
     },
     "amtExecution92": {
         "zh": "供股",
         "en": "Rights Issue",
         "vi": "Phát Hành Quyền Mua Cổ Phiếu",
         "zh-Hant": "供股",
-        "id": "Rights Issue",
+        "id": "Masalah Hak",
         "es": "Emisión de Derechos",
         "pt-BR": "Questão de direitos",
         "ar": "إصدار الحقوق"
@@ -10846,7 +10846,7 @@ module.exports = {
         "en": "Results in one of the following: Delivery of right security, issuance of CFD on the right or cash adjustment.",
         "vi": "Kết quả từ một trong những điều sau đây: Việc cung cấp quyền bảo mật, phát hành CFD về quyền hoặc điều chỉnh tiền mặt.",
         "zh-Hant": "導致下列結果之壹：供股交割、發行基於權利或現金調整的 CFD。",
-        "id": "Results in one of the following: Delivery of right security, issuance of CFD on the right or cash adjustment.",
+        "id": "Menghasilkan salah satu dari berikut ini: Pengiriman keamanan yang tepat, penerbitan CFD di kanan, atau penyesuaian tunai.",
         "es": "Resulta en uno de lo siguiente: Entrega security, emisión de CFD  sobre el derecho o efectivo.",
         "pt-BR": "Resulta em um dos seguintes itens: Entrega da segurança correta, emissão de CFD à direita ou ajuste de caixa.",
         "ar": "يؤدي ذلك إلى أحد الإجراءات التالية:  تسليم الورقة المالية للحق أو  إصدار عقد فروقات على الحق أو التعديل النقدي."
@@ -10856,7 +10856,7 @@ module.exports = {
         "en": "Although a rights issue will give the client an option of purchasing the share at a discounted price, the share price will be reduced also as the additional share will dilute the share value Action to prevent shorting of share after announcement",
         "vi": "Mặc dù vấn đề phát hành quyền cổ phiếu sẽ mang lại cho khách hàng một tùy chọn mua cổ phần với mức giá chiết khấu, giá cổ phiếu sẽ được giảm cũng vì phần bổ sung sẽ pha loãng giá trị cổ phiếu Hành động để ngăn chặn việc thiếu cổ phần sau khi thông báo",
         "zh-Hant": "雖然供股將為客戶提供以折扣價購股的選擇，但股價將由於股份增加稀釋價值而被降低公告後防範做空股票的行動",
-        "id": "Although a rights issue will give the client an option of purchasing the share at a discounted price, the share price will be reduced also as the additional share will dilute the share value Action to prevent shorting of share after announcement",
+        "id": "Meskipun rights issue akan memberi klien opsi untuk membeli saham dengan harga diskon, harga saham akan berkurang juga karena tambahan saham akan melemahkan nilai saham Tindakan untuk mencegah shorting saham setelah pengumuman.",
         "es": "Aunque una emisión de derechos le dará al cliente la opción de comprar la acción a un precio con descuento, el precio de la acción también se reducirá, ya que la acción adicional diluirá el valor de la Acción para evitar cortos sobre la acción después del anuncio",
         "pt-BR": "Embora uma emissão de direitos ofereça ao cliente uma opção de compra da ação a um preço com desconto, o preço da ação também será reduzido, uma vez que a ação adicional diluirá o valor da ação Ação para evitar o short-share após o anúncio",
         "ar": "وعلى الرغم من أن إصدار الحقوق يمنح العميل خيار شراء السهم بسعر مخفض، ولكن سيتم تخفيض سعر السهم أيضًا لأن السهم الإضافي سيقلل من قيمة السهم لمنع حدوث بيع للأسهم بعد الإعلان."
@@ -10866,7 +10866,7 @@ module.exports = {
         "en": "Best Execution",
         "vi": "Khớp Lệnh Tốt Nhất",
         "zh-Hant": "最佳執行",
-        "id": "Best Execution",
+        "id": "Eksekusi Terbaik",
         "es": "Mejor Ejecución",
         "pt-BR": "Melhor Execução",
         "ar": "التنفيذ الأمثل"
@@ -10876,7 +10876,7 @@ module.exports = {
         "en": "1.The Firm shall take all reasonable steps to obtain the best possible result for its clients taking into account the following factors when executing Clients orders against the Firm’s quoted prices. Prices, costs and currency conversion carry the highest importance when executing transactions for our clients.",
         "vi": "1.Công ty sẽ thực hiện tất cả các bước hợp lý để có được kết quả tốt nhất có thể cho khách hàng của mình khi tính đến các yếu tố sau khi thực hiện lệnh của Khách hàng so với giá niêm yết của Công ty. Giá cả, chi phí và chuyển đổi tiền tệ mang lại tầm quan trọng cao nhất khi thực hiện giao dịch cho khách hàng của chúng tôi.",
         "zh-Hant": "1.當針對本公司報價執行客戶訂單時，本公司應考慮以下因素，采取壹切合理措施為客戶獲得盡可能最佳的結果。 在為我們的客戶執行交易時，價格、成本和貨幣轉換最為重要。",
-        "id": "1.The Firm shall take all reasonable steps to obtain the best possible result for its clients taking into account the following factors when executing Clients orders against the Firm’s quoted prices. Prices, costs and currency conversion carry the highest importance when executing transactions for our clients.",
+        "id": "1. Perusahaan akan mengambil semua langkah yang wajar untuk mendapatkan hasil terbaik bagi kliennya dengan mempertimbangkan faktor-faktor berikut saat menjalankan perintah Klien terhadap harga yang dikutip Perusahaan. Harga, biaya, dan konversi mata uang menjadi hal terpenting saat melakukan transaksi untuk klien kami.",
         "es": "1. La Firma adoptará todas las medidas razonables para obtener el mejor resultado posible para sus clientes, teniendo en cuenta los siguientes factores al ejecutar las órdenes de los Clientes contra los precios cotizados de la Firma. Los precios, los costos y la conversión de divisa tienen la mayor importancia cuando se ejecutan transacciones para nuestros clientes.",
         "pt-BR": "1.A Empresa tomará todas as medidas razoáveis para obter o melhor resultado possível para seus clientes, levando em conta os seguintes fatores ao executar pedidos de Clientes em relação aos preços cotados da Empresa. Preços, custos e conversão de moeda têm a maior importância na execução de transações para nossos clientes.",
         "ar": "1- تتخذ الشركة جميع التدابير المعقولة للحصول على أفضل نتيجة ممكنة لعملائها مع مراعاة العوامل التالية عند تنفيذ أوامر العملاء مقابل الأسعار التي تعلنها للشركة. تحظى الأسعار والتكاليف وتحويل العملات بأهمية قصوى عند تنفيذ المعاملات لعملائنا."
@@ -10886,7 +10886,7 @@ module.exports = {
         "en": "2.Price",
         "vi": "2.Giá",
         "zh-Hant": "2.價格",
-        "id": "2.Price",
+        "id": "2.Harga",
         "es": "2.Precio",
         "pt-BR": "2. preço",
         "ar": "2- السعر"
@@ -10896,7 +10896,7 @@ module.exports = {
         "en": "a) Bid – Ask Spread: For any given Financial Instrument, the Firm will quote two prices: the higher price (ASK) at which the client can buy (go long) that Financial Instrument, and the lower price (BID) at which the client can sell (go short) that Financial Instrument; collectively referred to as the Firm’s prices. The difference between the lower and the higher price of a given Financial Instrument is the spread which for trading platform includes TigerWit’s mark-up.",
         "vi": "a) Spread giá chào mua-chào bán: Đối với bất kỳ Công cụ tài chính cụ thể nào, Công ty sẽ báo giá hai mức giá: giá cao hơn (ASK) mà khách hàng có thể mua (vị thế mua) Công cụ tài chính đó và giá thấp hơn (BID) mà khách hàng có thể bán (vị thế bán) Công cụ tài chính đó; gọi chung là giá của Công ty. Sự khác biệt giữa giá thấp hơn và cao hơn của một Công cụ tài chính cụ thể là mức spread cho sàn giao dịch bao gồm lợi nhuận gộp của TigerWit.",
         "zh-Hant": "a) 買賣點差：對於任意特定金融工具，本公司將報出兩個價格：客戶可以買入（做多）該金融工具的較高價格（賣價），以及客戶可以賣出（做空）該金融工具的較低價格（買價）；二者統稱為本公司的價格。某個特定金融工具的較低價格和較高價格之差，就是“點差”，對於交易平臺而言含有 TigerWit 的加價。",
-        "id": "a) Bid – Ask Spread: For any given Financial Instrument, the Firm will quote two prices: the higher price (ASK) at which the client can buy (go long) that Financial Instrument, and the lower price (BID) at which the client can sell (go short) that Financial Instrument; collectively referred to as the Firm’s prices. The difference between the lower and the higher price of a given Financial Instrument is the spread which for trading platform includes TigerWit’s mark-up.",
+        "id": "a) Bid - Ask Spread: Untuk Instrumen Keuangan tertentu, Perusahaan akan mengutip dua harga: harga yang lebih tinggi (ASK) di mana klien dapat membeli (membeli) Instrumen Keuangan tersebut, dan harga yang lebih rendah (BID) di mana klien dapat menjual (short) Instrumen Keuangan tersebut; secara kolektif disebut sebagai harga Perusahaan. Perbedaan antara harga yang lebih rendah dan lebih tinggi dari Instrumen Keuangan tertentu adalah spread yang untuk platform trading menyertakan mark-up TigerWit.",
         "es": "a) Bid – Ask Spread: para cualquier Instrumento financiero dado, la Firma cotizará dos precios: el precio más alto (ASK) al cual el cliente puede comprar (ponerse largo) ese Instrumento financiero, y el precio más bajo (BID) al que el cliente puede vender (ponerse corto) ese instrumento financiero; referidos colectivamente como los precios de la Firma. La diferencia entre el precio más bajo y el precio más alto de un instrumento financiero dado es el spread que para la plataforma de trading incluye el mark-up de TigerWit.",
         "pt-BR": "a) Bid - Ask Spread: Para qualquer Instrumento Financeiro, a Empresa irá citar dois preços: o preço mais alto (ASK) no qual o cliente pode comprar (go long) aquele Instrumento Financeiro, e o preço mais baixo (BID) no qual o o cliente pode vender (go short) que o Instrumento Financeiro; coletivamente referidos como os preços da empresa. A diferença entre o menor e o maior preço de um determinado Instrumento Financeiro é o spread que para plataforma de negociação inclui o mark-up da TigerWit.",
         "ar": "أ) الفرق السعري بين سعري العطاء والطلب:  بالنسبة إلى أي أداة مالية معينة، ستقدم الشركة سعرين: السعر الأعلى (سعر الطلب ASK) والذي يمكن للعميل الشراء به (الشراء) لتلك الأداة المالية، والسعر الأدنى (سعر العطاء BID) والذي يمكن للعميل البيع (البيع) لتلك الأداة المالية؛ ويشار إليهما مجتمعين باسم سعري الشركة. والفرق  بين السعر الأدنى والسعر الأعلى لأي أداة مالية هو الفرق السعري (أو الاسبريد) والذي يشمل في منصة التداول هامش الربح لشركة TigerWit."
@@ -10904,7 +10904,7 @@ module.exports = {
     "amtExecution99": {
         "zh": "b) 挂单：针对未平仓空头头寸的买入限价单、买入止损单和止损/止盈但这类订单按照卖价执行。针对未平仓多头头寸的卖出限价单、卖出止损单和止损/止盈但这类订单按照买价执行。",
         "en": "b) Pending Orders: Such orders as Buy Limit, Buy Stop and Stop Loss/Take profit for opened short position are executed at ASK price. Such orders as Sell Limit, Sell Stop and Stop Loss/Take profit for opened long position are executed at BID price.",
-        "vi": "b) Lệnh chờ: Các lệnh như Mua giới hạn, Dừng mua và Dừng lỗ / Chốt lời cho lệnh bán mở được thực hiện ở mức giá ASK (giá chào bán). Các lệnh như Bán giới hạn, Bán và Dừng lỗ / Chốt lời cho lệnh dài mở được thực hiện theo giá BID (giá chào mua)",
+        "vi": "b) Pending Order : Order seperti Buy Limit, Buy Stop dan Stop Loss / Take profit untuk membuka posisi short dieksekusi pada harga ASK. Order seperti Sell Limit, Sell Stop dan Stop Loss / Take profit untuk membuka posisi long dieksekusi pada harga BID.",
         "zh-Hant": "b) 掛單：針對未平倉空頭頭寸的買入限價單、買入止損單和止損/止盈但這類訂單按照賣價執行。針對未平倉多頭頭寸的賣出限價單、賣出止損單和止損/止盈但這類訂單按照買價執行。",
         "id": "b) Pending Orders: Such orders as Buy Limit, Buy Stop and Stop Loss/Take profit for opened short position are executed at ASK price. Such orders as Sell Limit, Sell Stop and Stop Loss/Take profit for opened long position are executed at BID price.",
         "es": "b) Órdenes Pendientes: Órdenes de compra tales como Buy Limit, Buy Stop y Stop Loss/Take profit para posiciones cortas abiertas se ejecutan al precio ASK. Órdenes de venta tales como Sell Limit, Sell Stop and Stop Loss/Take profit para posiciones largas abiertas se ejecutan al precio BID.",
@@ -10916,7 +10916,7 @@ module.exports = {
         "en": "c) The Firm’s price for a given Financial Instrument is calculated by reference to the price of the relevant underlying financial instrument, which the Firm obtains from third party liquidity providers. The Firm updates its prices as frequently as the limitations of technology and communications links allow. The Firm will not quote any price outside Firm’s operations time (see execution venue below) therefore no orders can be placed by the Client during that time.",
         "vi": "c) Giá của Công ty đối với một Công cụ tài chính cụ thể được tính bằng cách tham chiếu đến giá của công cụ tài chính cơ bản có liên quan mà Công ty thu được từ các nhà cung cấp thanh khoản của bên thứ ba. Công ty cập nhật giá của nó thường xuyên trong khả năng cho phép của các liên kết truyền thông và kĩ thuật. Công ty sẽ không báo giá bất kỳ giá nào ngoài thời gian hoạt động của Công ty (xem địa điểm thực hiện bên dưới) do đó không có lệnh nào có thể được Khách hàng đặt trong thời gian đó.",
         "zh-Hant": "c) 本公司特定金融工具的價格參考本公司從第三方流動性提供商獲得的相關標的金融工具的價格計算。本公司按照技術和通訊連接允許的最大頻率更新價格。本公司不會在公司營業時間（請參考下列執行場所） 外做任何報價，所以客戶在這段時間不能下達訂單。",
-        "id": "c) The Firm’s price for a given Financial Instrument is calculated by reference to the price of the relevant underlying financial instrument, which the Firm obtains from third party liquidity providers. The Firm updates its prices as frequently as the limitations of technology and communications links allow. The Firm will not quote any price outside Firm’s operations time (see execution venue below) therefore no orders can be placed by the Client during that time.",
+        "id": "c) Harga Perusahaan untuk Instrumen Keuangan tertentu dihitung dengan mengacu pada harga instrumen keuangan yang relevan, yang diperoleh Perusahaan dari penyedia likuiditas pihak ketiga. Perusahaan memperbarui harganya sesering yang dimungkinkan oleh keterbatasan tautan teknologi dan komunikasi. Perusahaan tidak akan mengutip harga apa pun di luar waktu operasi Perusahaan (lihat tempat pelaksanaan di bawah) sehingga tidak ada pesanan yang dapat ditempatkan oleh Klien selama waktu itu.",
         "es": "c) El precio de la Firma para un Instrumento Financiero dado se calcula por referencia al precio del instrumento financiero subyacente relevante, que la Firma obtiene de terceros proveedores de liquidez. La Firma actualiza sus precios con la frecuencia que permiten las limitaciones de la tecnología y los enlaces de comunicaciones. La Firma no cotizará ningún precio fuera del tiempo de trading de la Firma (consulte el execution venue a continuación), por lo que el Cliente no puede ejecutar órdenes durante ese tiempo.",
         "pt-BR": "c) O preço da Empresa para um determinado Instrumento Financeiro é calculado por referência ao preço do instrumento financeiro subjacente relevante, que a Empresa obtém de provedores de liquidez de terceiros. A Empresa atualiza seus preços com a mesma freqüência que as limitações de tecnologia e links de comunicação permitem. A Empresa não citará nenhum preço fora do horário de operações da Empresa (veja o local de execução abaixo), portanto, nenhum pedido pode ser feito pelo Cliente durante esse período.",
         "ar": "ج) يتم حساب سعر الشركة لأي أداة مالية معينة بالرجوع إلى سعر الأداة المالية المعنية ذات الصلة والذي تحصل عليه الشركة من مزودي السيولة الخارجيين.  وتقوم الشركة بتحديث أسعارها بقدر ما تسمح به حدود التكنولوجيا وروابط الاتصالات. ولن تقدم الشركة أي أسعار أي سعر خارج وقت العمل في الشركة (انظر مكان التنفيذ أدناه)، وبناء على ذلك فإنه لا يمكن للعميل إدخال أي أوامر خلال ذلك الوقت."
@@ -10926,7 +10926,7 @@ module.exports = {
         "en": "d) For ECN platforms, trades prices are obtained directly from the liquidity providers through an electronic execution system. This system automatically requests a quote from a selection of liquidity providers. In conjunction with the price, the Firm quotes the available liquidity, (or ‘market depth’), as obtained from its third-party liquidity providers. The Firm’s software will automatically aggregate all available liquidity at the best possible prices available and fill at the VolumeWeighted Average Price (VWAP).",
         "vi": "d) Đối với các nền tảng ECN, giá giao dịch được lấy trực tiếp từ các nhà cung cấp thanh khoản thông qua một hệ thống thực hiện điện tử. Hệ thống này tự động yêu cầu báo giá từ một lựa chọn các nhà cung cấp thanh khoản. Cùng với giá, Công ty báo giá tính thanh khoản có sẵn, (hoặc ‘độ sâu thị trường’), như được lấy từ các nhà cung cấp thanh khoản của bên thứ ba. Phần mềm của Công ty sẽ tự động tổng hợp tất cả các khoản thanh toán có sẵn với mức giá tốt nhất có thể có và điền vào Giá Khối lượng Trung bình (VWAP).",
         "zh-Hant": "d) 對電子通訊網絡（ECN）平臺而言，交易價格通過電子執行系統直接從流動性供應商獲得。本系統自動向選擇的流動性供應商詢價。對於價格，本公司按照從第三方流動性提供商獲得的可用流動性（或“市場深度”）報出。本公司軟件將自動以盡可能獲得的最佳價格合並可用的流動性，並按照成交量加權平均價（VWAP）執行。",
-        "id": "d) For ECN platforms, trades prices are obtained directly from the liquidity providers through an electronic execution system. This system automatically requests a quote from a selection of liquidity providers. In conjunction with the price, the Firm quotes the available liquidity, (or ‘market depth’), as obtained from its third-party liquidity providers. The Firm’s software will automatically aggregate all available liquidity at the best possible prices available and fill at the VolumeWeighted Average Price (VWAP).",
+        "id": "d) Untuk platform ECN, harga trade diperoleh langsung dari penyedia likuiditas melalui sistem eksekusi elektronik. Sistem ini secara otomatis meminta penawaran dari beberapa penyedia likuiditas. Sehubungan dengan harga, Perusahaan mengutip likuiditas yang tersedia, (atau 'kedalaman pasar'), yang diperoleh dari penyedia likuiditas pihak ketiganya. Perangkat lunak Perusahaan akan secara otomatis mengumpulkan semua likuiditas yang tersedia dengan harga terbaik yang tersedia dan mengisi Volume-Weighted Average Price (VWAP).",
         "es": "d) Para las plataformas ECN, los precios de las operaciones se obtienen directamente de los proveedores de liquidez a través de un sistema de ejecución electrónico. Este sistema solicita automáticamente una cotización de una selección de proveedores de liquidez. Junto con el precio, la Firma cotiza la liquidez disponible, (o \"profundidad de mercado\"), obtenida de sus proveedores de liquidez externos. El software de la Firma agregará automáticamente toda la liquidez disponible a los mejores precios posibles disponibles y se ejecutará al Precio medio Ponderado en Volumen (VWAP).",
         "pt-BR": "d) Para plataformas ECN, os preços de negociação são obtidos diretamente dos provedores de liquidez através de um sistema de execução eletrônico. Este sistema solicita automaticamente uma cotação de uma seleção de provedores de liquidez. Em conjunto com o preço, o Escritório cita a liquidez disponível (ou \"profundidade de mercado\"), obtida de seus provedores de liquidez de terceiros. O software da empresa agregará automaticamente toda a liquidez disponível com os melhores preços possíveis disponíveis e preencherá o preço médio ponderado por volume (VWAP).",
         "ar": "د) بالنسبة لمنصات ECN، يتم الحصول على أسعار الصفقات من مزودي السيولة مباشرة عبر نظام تنفيذ إلكتروني.  ويطلب هذا النظام بشكل آلي الأسعار من مجموعة من مزودي السيولة. و بالإضافة إلى السعر، تحسب الشركة السيولة المتاحة (أو \"عمق السوق\")، التي حصلت عليها من مزودي السيولة الخارجيين.  وسيقوم برنامج الشركة بشكل آلي بتجميع كل السيولة المتاحة بأفضل الأسعار الممكنة وتنفيذ الأوامر وفقًا إلى  متوسط السعر المرجح بحجم التداول (VWAP)."
@@ -10936,7 +10936,7 @@ module.exports = {
         "en": "Costs",
         "vi": "Các loại Chi phí",
         "zh-Hant": "成本",
-        "id": "Costs",
+        "id": "Biaya",
         "es": "Costes",
         "pt-BR": "Custos",
         "ar": "التكاليف"
@@ -10946,27 +10946,27 @@ module.exports = {
         "en": "3.For opening a position in some types of Financial Instruments the Client may be required to pay commission or other fees, if applicable; these amounts are disclosed in the contract specifications available in the Firm’s website.",
         "vi": "3.Để mở một vị thế trong một số loại Công cụ Tài chính, Khách hàng có thể được yêu cầu trả hoa hồng hoặc các khoản phí khác, nếu có; những số tiền này được tiết lộ trong các thông số hợp đồng có sẵn trên trang web của Công ty.",
         "zh-Hant": "3.客戶要開設某種類型金融工具的頭寸，會被要求支付傭金或其他費用（如果適用）；金額披露在合同規範中，可在本公司網站上查看。",
-        "id": "3.For opening a position in some types of Financial Instruments the Client may be required to pay commission or other fees, if applicable; these amounts are disclosed in the contract specifications available in the Firm’s website.",
+        "id": "3. Untuk membuka posisi di beberapa jenis Instrumen Keuangan, Klien mungkin diminta untuk membayar komisi atau biaya lain, jika berlaku; jumlah ini diungkapkan dalam spesifikasi kontrak yang tersedia di situs web Perusahaan.",
         "es": "3. Para abrir una posición en algunos tipos de instrumentos financieros, se le pudiera solicitar al Cliente comisiones u otros cargos, si correspondiera; estos importes se detallan en las especificaciones del contrato disponibles en el sitio web de la Firma.",
         "pt-BR": "3.Para abrir uma posição em alguns tipos de Instrumentos Financeiros, o Cliente pode ser obrigado a pagar comissões ou outras taxas, se aplicável; Esses valores são divulgados nas especificações do contrato disponíveis no site da empresa.",
         "ar": "3- من أجل فتح مركز في بعض أنواع الأدوات المالية، قد يتطلب الأمر من العميل دفع عمولات أو رسوم أخرى، إن وجدت؛ ويتم الإفصاح عن هذه المبالغ في مواصفات العقد المتاحة على موقع الشركة الإلكتروني."
     },
     "amtExecution104": {
-        "zh": "a) 佣金：佣金将按固定的金额收取，可访问本公司网站 http://global.tigerwit.com 查看。",
-        "en": "a) Commissions: Commissions will be charged as a fixed amount and can be found on the Firm’s website at http://global.tigerwit.com.",
-        "vi": "a) Hoa hồng: Các khoản hoa hồng sẽ được tính như một số tiền cố định và có thể được tìm thấy trên trang web của Công ty tại http://global.tigerwit.com.",
-        "zh-Hant": "a) 傭金：傭金將按固定的金額收取，可訪問本公司網站 http://global.tigerwit.com 查看。",
-        "id": "a) Commissions: Commissions will be charged as a fixed amount and can be found on the Firm’s website at http://global.tigerwit.com.",
-        "es": "a) Comisiones: las comisiones se cobrarán como una cantidad fija y se pueden encontrar en el sitio web de la Firma en http://global.tigerwit.com.",
-        "pt-BR": "a) Comissões: as comissões serão cobradas como um valor fixo e podem ser encontradas no site da empresa em http://global.tigerwit.com.",
-        "ar": "أ) العمولات:  سيتم احتساب العمولات في صورة مبلغ ثابت ويمكن الإطلاع عليها على موقع الشركة الإلكتروني http://global.tigerwit.com."
+        "zh": "a) 佣金：佣金将按固定的金额收取，可访问本公司网站 https://global.TigerWit.com 查看。",
+        "en": "a) Commissions: Commissions will be charged as a fixed amount and can be found on the Firm’s website at https://global.TigerWit.com.",
+        "vi": "a) Hoa hồng: Các khoản hoa hồng sẽ được tính như một số tiền cố định và có thể được tìm thấy trên trang web của Công ty tại https://global.TigerWit.com.",
+        "zh-Hant": "a) 傭金：傭金將按固定的金額收取，可訪問本公司網站 https://global.TigerWit.com 查看。",
+        "id": "a) Komisi: Komisi akan dibebankan sebagai jumlah tetap dan dapat ditemukan di situs web Perusahaan di https://global.TigerWit.com.",
+        "es": "a) Comisiones: las comisiones se cobrarán como una cantidad fija y se pueden encontrar en el sitio web de la Firma en https://global.TigerWit.com.",
+        "pt-BR": "a) Comissões: as comissões serão cobradas como um valor fixo e podem ser encontradas no site da empresa em https://global.TigerWit.com.",
+        "ar": "أ) العمولات:  سيتم احتساب العمولات في صورة مبلغ ثابت ويمكن الإطلاع عليها على موقع الشركة الإلكتروني https://global.TigerWit.com."
     },
     "amtExecution105": {
         "zh": "b) 融资费：如果有融资费产生，未平仓的某种类型金融工具的头寸将因合同期内每日融资费的“掉期”增加或减少。融资费按照主流市场利率执行，并会有变化。适用的每日融资费详情可在本公司网站上金融工具合约规范部分获取。",
         "en": "b) Financing Fee: In the case of financing fees, the value of opened positions in some types of Financial Instruments is increased or reduced by a daily financing fee “swap” throughout the life of the contract. Financing fees are based on prevailing market interest rates, which may vary. Details of daily financing fees applied are available on the Financial Instruments Contracts Specifications section in the Firm’s website.",
         "vi": "b) Phí tài chính: Trong trường hợp phí tài chính, giá trị của các vị thế mở trong một số loại Công cụ tài chính được tăng hoặc giảm bằng khoản phí tài chính hàng ngày “swap” trong suốt thời hạn của hợp đồng. Phí tài chính dựa trên lãi suất thị trường hiện hành, có thể thay đổi. Chi tiết về phí tài chính hàng ngày được áp dụng có sẵn trên phần Thông số Hợp đồng Công cụ Tài chính trong trang web của Công ty.",
         "zh-Hant": "b) 融資費：如果有融資費產生，未平倉的某種類型金融工具的頭寸將因合同期內每日融資費的“掉期”增加或減少。融資費按照主流市場利率執行，並會有變化。適用的每日融資費詳情可在本公司網站上金融工具合約規範部分獲取。",
-        "id": "b) Financing Fee: In the case of financing fees, the value of opened positions in some types of Financial Instruments is increased or reduced by a daily financing fee “swap” throughout the life of the contract. Financing fees are based on prevailing market interest rates, which may vary. Details of daily financing fees applied are available on the Financial Instruments Contracts Specifications section in the Firm’s website.",
+        "id": "b) Biaya Financing : Dalam hal biaya financing, nilai posisi terbuka dalam beberapa jenis Instrumen Keuangan ditambah atau dikurangi dengan \"swap\" biaya financing harian selama masa kontrak. Biaya financing didasarkan pada suku bunga pasar yang berlaku, yang mungkin berbeda-beda. Rincian biaya financing harian yang diterapkan tersedia di bagian Spesifikasi Kontrak Instrumen Keuangan di situs web Perusahaan.",
         "es": "b) Tasa de Financiación: en el caso de las tarifas de financiación, el valor de las posiciones abiertas en algunos tipos de instrumentos financieros se incrementa o reduce mediante un \"swap\" que refleja la interés de financiación a lo largo de la vida del contrato. Las tasas de financiación se basan en las tasas de interés  vigentes del mercado, las cuales pudieran variar. Los detalles de las tasas de financiación diarias aplicadas están disponibles en la sección de Especificaciones de Contratos de los Instrumentos Financieros en el sitio web de la Firma.",
         "pt-BR": "b) Taxa de financiamento: No caso de taxas de financiamento, o valor das posições abertas em alguns tipos de Instrumentos Financeiros é aumentado ou reduzido por uma taxa de financiamento diária “swap” ao longo da vigência do contrato. As taxas de financiamento baseiam-se nas taxas de juros vigentes no mercado, que podem variar. Os detalhes das taxas de financiamento diárias aplicadas estão disponíveis na seção Especificações de contratos de instrumentos financeiros no site da empresa.",
         "ar": "ب) رسوم التمويل:  في حالة رسوم التمويل، يتم زيادة أو تخفيض قيمة المراكز المفتوحة في بعض أنواع الأدوات المالية برسم تمويل يومي (فائدة التبييت) طوال مدة سريان العقد. تعتمد رسوم التمويل على أسعار الفائدة الحالية في السوق، والتي قد تكون مختلفة.  وتتوفر في قسم \"مواصفات العقود للأدوات المالية\" المتاح على موقع الشركة الإلكتروني تفاصيل رسوم التمويل اليومية المعمول بها."
@@ -10976,7 +10976,7 @@ module.exports = {
         "en": "For all types of Financial Instruments that the Firm offers, the commission and financing fees are not incorporated into the Firm’s quoted price and are instead charged explicitly to the Client account.",
         "vi": "Đối với tất cả các loại Công cụ tài chính mà Công ty cung cấp, phí hoa hồng và tài chính không được đưa vào giá niêm yết của Công ty và thay vào đó được tính phí rõ ràng trong phần Tài khoản Khách hàng.",
         "zh-Hant": "對於本公司提供的所有類型的金融工具，傭金和融資費不納入本公司的報價，而是明確向客戶賬戶收取。",
-        "id": "For all types of Financial Instruments that the Firm offers, the commission and financing fees are not incorporated into the Firm’s quoted price and are instead charged explicitly to the Client account.",
+        "id": "Untuk semua jenis Instrumen Keuangan yang ditawarkan Perusahaan, komisi dan biaya financing tidak dimasukkan ke dalam harga kuotasian Perusahaan dan sebaliknya dibebankan secara eksplisit ke akun Klien.",
         "es": "Para todos los tipos de Instrumentos Financieros que ofrece la Firma, las comisiones y los cargos de financiamiento no se incorporan al precio cotizado de la Firma y, en cambio, se cargan explícitamente a la cuenta del Cliente.",
         "pt-BR": "Para todos os tipos de instrumentos financeiros oferecidos pela Empresa, as comissões e taxas de financiamento não são incorporadas ao preço cotado da Empresa e, em vez disso, são cobradas explicitamente na conta do Cliente.",
         "ar": "بالنسبة إلى جميع أنواع الأدوات المالية التي تقدمها الشركة، لا تشمل الأسعار التي تعرضها الشركة العمولات ورسوم التمويل، وإنما يتم تحميل هذه التكاليف بشكل صريح على حساب العميل."
@@ -10986,7 +10986,7 @@ module.exports = {
         "en": "4.Currency Conversion",
         "vi": "4.Chuyển đổi ngoại tệ",
         "zh-Hant": "4.幣種轉換",
-        "id": "4.Currency Conversion",
+        "id": "4.Konversi Mata Uang",
         "es": "4. Conversión Divisas",
         "pt-BR": "4.Conversão de Moeda",
         "ar": "4- تحويل العملات"
@@ -10996,7 +10996,7 @@ module.exports = {
         "en": "The Firm may provide a currency conversion quote from the Client’s base currency to the currency of the relevant Financial Instrument. This will not reflect and actual conversion of currency in the Client’s account, and serves the purpose of calculating consideration in the base currency only.",
         "vi": "Công ty có thể cung cấp báo giá được chuyển đổi tiền tệ từ đơn vị tiền tệ gốc của Khách hàng sang đơn vị tiền tệ của Công cụ tài chính có liên quan. Điều này sẽ không phản ánh và chuyển đổi tiền tệ thực tế trong tài khoản của Khách hàng và chỉ nhằm mục đích các phép tính cân nhắc chỉ loại tiền cơ sở.",
         "zh-Hant": "本公司提供由客戶的基礎貨幣轉換成相關金融工具幣種的幣種轉換報價。這不會反映客戶賬戶中實際的貨幣轉換，而只是為了方便以基礎貨幣進行計算。",
-        "id": "The Firm may provide a currency conversion quote from the Client’s base currency to the currency of the relevant Financial Instrument. This will not reflect and actual conversion of currency in the Client’s account, and serves the purpose of calculating consideration in the base currency only.",
+        "id": "Perusahaan dapat memberikan kutipan konversi mata uang dari mata uang dasar Klien ke mata uang Instrumen Keuangan yang relevan. Ini tidak akan mencerminkan dan konversi mata uang yang sebenarnya di akun Klien, dan melayani tujuan penghitungan pertimbangan hanya dalam mata uang dasar.",
         "es": "La Firma puede proporcionar una cotización de conversión de divisas de la moneda base del Cliente a la moneda del Instrumento Financiero relevante. Esto no reflejará la conversión real de la moneda en la cuenta del Cliente y sirve sólo para cálculos en la moneda base.",
         "pt-BR": "A Empresa pode fornecer uma cotação de conversão de moeda a partir da moeda base do Cliente para a moeda do Instrumento Financeiro relevante. Isso não refletirá nem converterá a moeda real na conta do cliente, e servirá apenas para o cálculo da consideração na moeda base.",
         "ar": "يجوز للشركة تقديم سعر لتحويل العملة من عملة الأساس للعميل إلى عملة الأداة المالية المعنية. ولن يعكس ذلك التحويل الفعلي للعملة في حساب العميل، ولا يستخدم إلا بغرض التحويل من عملة الأساس فقط."
@@ -11006,7 +11006,7 @@ module.exports = {
         "en": "Speed of Execution",
         "vi": "Tốc Độ Khớp Lệnh",
         "zh-Hant": "執行速度",
-        "id": "Speed of Execution",
+        "id": "Kecepatan Eksekus",
         "es": "Velocidad de Ejecución",
         "pt-BR": "Velocidade de Execução",
         "ar": "سرعة التنفيذ"
@@ -11016,7 +11016,7 @@ module.exports = {
         "en": "5.The Firm places a significant importance when executing Client’s orders and strives to offer high speed of execution within the limitations of technology and communications links. The use of wireless connection or dial-up connection or any other form of unstable connection at the Client’s end, may result in poor or interrupted connectivity or lack of signal strength causing delays in the transmission of data between the Client and Firm’s when using the Firm’s electronic trading platform.",
         "vi": "5.Công ty đặt tầm quan trọng đáng kể khi thực hiện các lệnh của Khách hàng và cố gắng cung cấp tốc độ khớp lệnh cao trong khả năng cho phép của các kết nối kĩ thuật và truyền phát. Việc sử dụng kết nối không dây hoặc kết nối quay số hoặc bất kỳ hình thức kết nối không ổn định nào khác ở đầu của Khách hàng có thể dẫn đến kết nối kém hoặc bị gián đoạn hoặc thiếu tín hiệu gây ra sự chậm trễ trong việc truyền dữ liệu giữa Khách hàng và Công ty khi sử dụng nền tảng giao dịch điện tử của Công ty.",
         "zh-Hant": "5.本公司極其重視客戶訂單的執行，並致力於在技術和通信連接的極限範圍內提供高速的執行。無線連接或撥號連接，或客戶端任何其他形式的不穩定鏈接，可能導致連通性差或連通中斷，或缺乏信號強度，導致在使用本公司電子交易平臺時，客戶和本公司之間數據傳輸被延遲。",
-        "id": "5.The Firm places a significant importance when executing Client’s orders and strives to offer high speed of execution within the limitations of technology and communications links. The use of wireless connection or dial-up connection or any other form of unstable connection at the Client’s end, may result in poor or interrupted connectivity or lack of signal strength causing delays in the transmission of data between the Client and Firm’s when using the Firm’s electronic trading platform.",
+        "id": "5. Perusahaan menempatkan kepentingan yang signifikan ketika menjalankan perintah Klien dan berusaha untuk menawarkan kecepatan eksekusi yang tinggi dalam batasan teknologi dan tautan komunikasi. Penggunaan koneksi nirkabel atau koneksi dial-up atau bentuk koneksi tidak stabil lainnya di pihak Klien, dapat mengakibatkan konektivitas yang buruk atau terputus atau kurangnya kekuatan sinyal yang menyebabkan penundaan dalam transmisi data antara Klien dan Perusahaan saat menggunakan Perusahaan. platform trading elektronik.",
         "es": "5. La Firma otorga una importancia máxima a la ejecución de las órdenes del Cliente y se esfuerza por ofrecer una alta velocidad de ejecución dentro de las limitaciones de los enlaces de tecnología y comunicaciones. Un uso de la conexión inalámbrica o la conexión de acceso telefónico o cualquier otra forma de conexión inestable en el extremo del Cliente, pudiera resultar en una conectividad deficiente o interrumpida o en la falta de potencia de la señal, lo que causaría demoras en la transmisión de datos entre el Cliente y la Firma al utilizar la plataforma de trading electrónica.",
         "pt-BR": "5. A Empresa coloca uma importância significativa ao executar os pedidos do Cliente e se esforça para oferecer alta velocidade de execução dentro das limitações de tecnologia e links de comunicação. O uso de conexão sem fio ou conexão dial-up ou qualquer outra forma de conexão instável no final do Cliente pode resultar em conectividade fraca ou interrompida ou falta de intensidade de sinal causando atrasos na transmissão de dados entre o Cliente e a Empresa ao usar o Firm plataforma de negociação eletrônica.",
         "ar": "5- تولي الشركة أهمية كبيرة لتنفيذ أوامر العميل وتبذل قصارى جهدها لتقديم سرعة تنفيذ عاليه بقدر ما تسمح به حدود التكنولوجيا وروابط الاتصالات. وقد يؤدي استخدام الاتصال اللاسلكي أو الاتصال عبر الخط الهاتفي الحاسوبي أو أي شكل آخر من أشكال الاتصالات غير المستقرة من طرف العميل إلى ضعف الاتصال أو انقطاعه أو نقص قوة الإشارة، مما قد يتسبب في تأخير إرسال البيانات بين العميل والشركة عند استخدام منصة التداول الإلكترونية الخاصة بالشركة."
@@ -11026,7 +11026,7 @@ module.exports = {
         "en": "Likelihood of Execution",
         "vi": "Khả Năng Thực Hiện Lệnh",
         "zh-Hant": "執行的可能性",
-        "id": "Likelihood of Execution",
+        "id": "Kemungkinan Eksekusi",
         "es": "Probabilidad de ejecución",
         "pt-BR": "Probabilidade de Execução",
         "ar": "احتمالية التنفيذ"
@@ -11036,7 +11036,7 @@ module.exports = {
         "en": "6.The Firm relies on third party liquidity providers for prices and available volume, therefore execution of the Client’s orders will depend on the pricing and available liquidity of the providers. Although the Firm executes all orders placed by the Clients, it reserves the right to decline an order of any type.",
         "vi": "6.Công ty dựa vào các nhà cung cấp thanh khoản của bên thứ ba về giá và khối lượng có sẵn, do đó việc thực hiện các lệnh của Khách hàng sẽ phụ thuộc vào giá cả và tính thanh khoản có sẵn của các nhà cung cấp. Mặc dù Công ty thực hiện tất cả các lệnh do Khách hàng đặt, nhưng Công ty có quyền từ chối lệnh thuộc bất kỳ loại nào.",
         "zh-Hant": "6.本公司在價格和可用數量方面有賴於第三方流動性提供商，所以客戶訂單的執行將取決於提供商的價格和可用的流動性。雖然客戶下達的所有訂單都由本公司安排執行，本公司保留拒絕任何類型訂單的權利。",
-        "id": "6.The Firm relies on third party liquidity providers for prices and available volume, therefore execution of the Client’s orders will depend on the pricing and available liquidity of the providers. Although the Firm executes all orders placed by the Clients, it reserves the right to decline an order of any type.",
+        "id": "6. Perusahaan mengandalkan penyedia likuiditas pihak ketiga untuk harga dan volume yang tersedia, oleh karena itu pelaksanaan pesanan Klien akan bergantung pada harga dan likuiditas yang tersedia dari penyedia. Meskipun Perusahaan menjalankan semua pesanan yang ditempatkan oleh Klien, ia berhak untuk menolak pesanan dalam bentuk apa pun.",
         "es": "6. La Firma se basa en terceros proveedores de liquidez para los precios y el volumen disponible; por lo tanto, la ejecución de las órdenes del Cliente dependerá de los precios y la liquidez disponible de los proveedores. Aunque la Firma ejecuta todas las órdenes colocadas por los Clientes, se reserva el derecho a rechazar una orden de cualquier tipo.",
         "pt-BR": "6. A Empresa depende de provedores de liquidez de terceiros para preços e volume disponível, portanto, a execução dos pedidos do Cliente dependerá do preço e liquidez disponível dos provedores. Embora o Escritório execute todos os pedidos feitos pelos Clientes, ele se reserva o direito de recusar um pedido de qualquer tipo.",
         "ar": "6- تعتمد الشركة على مزودي سيولة خارجيين للحصول على الأسعار والحجم المتاح، وبناء على ذلك فإن تنفيذ أوامر العميل سيعتمد على الأسعار والسيولة المتاحة من مزودي السيولة. وعلى  الرغم من أن الشركة تنفذ جميع الأوامر التي يقدمها العملاء ولكنها تحتفظ لنفسها بالحق في رفض أي أمر من أي نوع."
@@ -11056,7 +11056,7 @@ module.exports = {
         "en": "Market Order, Buy Limit, Sell Limit, Sell Stop, Buy Stop, Stop Loss, Take Profit on Financial Instrument are executed in the manner explained in ‘Order Execution’ section above. It should be noted that the price at which a trade is executed at may vary significantly from original requested price during abnormal market conditions. This may occur, for example, at the following cases: ",
         "vi": "Lệnh thị trường, Giới hạn mua, Giới hạn bán, Dừng bán, Dừng mua, Dừng lỗ, Chốt lời trên Công cụ tài chính được thực hiện theo cách được giải thích trong phần ‘Thực Hiện lệnh’ ở trên. Cần lưu ý rằng giá mà tại đó một giao dịch được thực hiện tại có thể khác nhau đáng kể so với giá yêu cầu ban đầu trong điều kiện thị trường bất thường. Điều này có thể xảy ra, ví dụ, trong các trường hợp sau: ",
         "zh-Hant": "訂單的市價單、買入限價單、賣出限價單、賣出止損單、買入止損單、止損單、止盈單以上面“訂單執行”部分說明的方式執行。應當註意的是，在異常市場條件下，交易的執行價格可能與原來申請的價格顯著不同。例如，這種情況在下列情況下可能發生：",
-        "id": "Market Order, Buy Limit, Sell Limit, Sell Stop, Buy Stop, Stop Loss, Take Profit on Financial Instrument are executed in the manner explained in ‘Order Execution’ section above. It should be noted that the price at which a trade is executed at may vary significantly from original requested price during abnormal market conditions. This may occur, for example, at the following cases: ",
+        "id": "Market Order, Buy Limit, Sell Limit, Sell Stop, Buy Stop, Stop Loss, Take Profit pada Instrumen Keuangan dieksekusi dengan cara yang dijelaskan di bagian 'Eksekusi Order' di atas. Perlu dicatat bahwa harga di mana perdagangan dieksekusi dapat bervariasi secara signifikan dari harga asli yang diminta selama kondisi pasar yang tidak normal. Ini dapat terjadi, misalnya, pada kasus berikut :",
         "es": "Market Order, Buy Limit, Sell Limit, Sell Stop, Buy Stop, Stop Loss, Take Profit para los Instrumentos Financieros   son ejecutadas del modo descrito en la sección ‘Ejecución de Órdenes’ anterior. Cabe señalar que el precio al que se ejecuta una operación puede variar significativamente con respecto al precio original solicitado en condiciones de mercado anormales. Esto puede ocurrir, por ejemplo, en los siguientes casos: ",
         "pt-BR": "Ordem de Mercado, Limite de Compra, Limite de Venda, Parada de Venda, Parada de Compra, Parar Prejuízo, Pegar Lucro no Instrumento Financeiro são executados da maneira explicada na seção \"Execução de Ordem\" acima. Deve-se notar que o preço pelo qual uma negociação é executada pode variar significativamente do preço solicitado original durante condições anormais de mercado. Isso pode ocorrer, por exemplo, nos seguintes casos:",
         "ar": "يتم تنفيذ أمر السوق وأمر حد الشراء وأمر حد البيع وأمر إيقاف الشراء وأمر إيقاف البيع وأمر إيقاف الخسارة وأمر جني الربح على الأدوات المالية كما هو منصوص عليه في قسم \"تنفيذ الأوامر\" أعلاه. وينبغي ملاحظة أنه خلال ظروف السوق غير الطبيعية يمكن أن يتغير السعر الذي يتم به تنفيذ الصفقة تغيرًا كبيرًا عن السعر الأصلي المطلوب. ويجوز أن يحدث ذلك في الحالات التالية على سبيل المثال:"
@@ -11066,7 +11066,7 @@ module.exports = {
         "en": "a) During Market opening times, b) During news times, c) During volatile periods where prices may move significantly up or down and away from declared price, d) Where there is rapid price movement, if the price rises or falls in one trading session to such an extent that under the rules of the relevant exchange, trading is suspended or restricted, e) If there is insufficient liquidity for the execution of the specific volume at the declared price,",
         "vi": "a) Trong thời gian mở cửa thị trường, b) Trong thời gian tin tức, c) Trong thời gian biến động, giá có thể tăng hoặc giảm đáng kể và khác xa giá đã khai báo, d) Trường hợp biến động giá nhanh, giá tăng hoặc giảm trong một phiên giao dịch mức độ như vậy theo các quy tắc của trao đổi có liên quan, giao dịch bị đình chỉ hoặc hạn chế, e) Nếu không có đủ thanh khoản để thực hiện khối lượng cụ thể ở mức giá đã khai báo,",
         "zh-Hant": "a) 市場開市時，b) 新聞發布期間，c) 市場波動期間，價格可能劇烈上下波動，及遠離報價，d) 價格快速變化，當價格在壹個交易時段的漲跌導致根據相關交易所規則，交易被暫停或限制，e) 如果按照報價執行特定數量的流動性不足，",
-        "id": "a) During Market opening times, b) During news times, c) During volatile periods where prices may move significantly up or down and away from declared price, d) Where there is rapid price movement, if the price rises or falls in one trading session to such an extent that under the rules of the relevant exchange, trading is suspended or restricted, e) If there is insufficient liquidity for the execution of the specific volume at the declared price,",
+        "id": "a) Selama waktu pembukaan Pasar, b) Selama waktu berita, c) Selama periode volatil di mana harga dapat bergerak naik atau turun secara signifikan dan menjauh dari harga yang dinyatakan, d) Di mana ada pergerakan harga yang cepat, jika harga naik atau turun dalam satu sesi trading sedemikian rupa sehingga berdasarkan aturan bursa yang relevan, trading ditangguhkan atau dibatasi, e) Jika likuiditas tidak mencukupi untuk eksekusi volume tertentu pada harga yang dinyatakan,",
         "es": "a) Durante los horarios de apertura del mercado, b) Durante los periodos de noticias, c) Durante los períodos volátiles en los que los precios pudieran subir y bajar significativamente y alejarse del precio declarado, d) Cuando hay un movimiento rápido de precios, si el precio sube o baja en una sola operación sesión hasta tal punto que bajo las reglas de la bolsa correspondiente, se suspenda o restrinja la negociación, e) Si no hay suficiente liquidez para la ejecución del volumen específico al precio declarado,",
         "pt-BR": "a) Durante os períodos de abertura do mercado, b) Durante os tempos de notícias, c) Durante os períodos voláteis, onde os preços podem subir ou descer significativamente de preços declarados, d) Onde há movimento rápido de preços, se o preço sobe ou desce em uma negociação sessão a tal ponto que, de acordo com as regras da bolsa em questão, a negociação seja suspensa ou restrita, e) Se houver liquidez insuficiente para a execução do volume específico ao preço declarado,",
         "ar": "أ) خلال أوقات فتح السوق، ب) خلال أوقات الأخبار، ج) خلال الفترات المتقلبة التي قد ترتفع وتنخفض فيها الأسعار بشكل كبير وتبتعد عن السعر المعلن، د) عندما يكون هناك تحرك سريع في الأسعار، إذا ارتفع السعر أو انخفض في جلسة تداول واحدة إلى حد تعليق أو تقييد التداول على هذه الأداة المالية بموجب قواعد البورصة المعنية، هـ) إذا لم يكن هناك سيولة كافية لتنفيذ الحجم المحدد بالسعر المعلن."
@@ -11076,7 +11076,7 @@ module.exports = {
         "en": "7.The Firm strives to provide the best possible price to its clients, and makes every effort and necessary arrangements to do so.",
         "vi": "7.Công ty cố gắng cung cấp mức giá tốt nhất có thể cho khách hàng của mình và cố gắng hết sức và sắp xếp cần thiết để thực hiện điều đó.",
         "zh-Hant": "7.本公司將竭力向客戶盡可能提供最佳價格，並盡壹切努力和作出必要的安排。",
-        "id": "7.The Firm strives to provide the best possible price to its clients, and makes every effort and necessary arrangements to do so.",
+        "id": "7. Perusahaan berusaha untuk memberikan harga terbaik kepada kliennya, dan melakukan segala upaya dan pengaturan yang diperlukan untuk melakukannya.",
         "es": "7. La Firma se esfuerza por ofrecer el mejor precio posible a sus clientes y hace todos los esfuerzos e inversiones necesarios para conseguirlo.",
         "pt-BR": "7. A Empresa esforça-se por fornecer o melhor preço possível aos seus clientes e faz todos os esforços e providências necessárias para o fazer.",
         "ar": "7- تسعى الشركة إلى تقديم أفضل تنفيذ لعملائها، وتبذل كل الجهود والترتيبات اللازمة لتحقيق ذلك."
@@ -11086,7 +11086,7 @@ module.exports = {
         "en": "Likelihood of Settlement",
         "vi": "Khả Năng Thanh Toán",
         "zh-Hant": "結算的可能性",
-        "id": "Likelihood of Settlement",
+        "id": "Kemungkinan Penyelesaian",
         "es": "Probabilidad Liquidación",
         "pt-BR": "Probabilidade de Liquidação",
         "ar": "احتمالية التسوية"
@@ -11096,7 +11096,7 @@ module.exports = {
         "en": "8.The Firm shall proceed to a settlement of all transactions upon execution of such transactions.",
         "vi": "8.Công ty sẽ tiến hành thanh toán tất cả các giao dịch khi thực hiện các giao dịch đó.",
         "zh-Hant": "8.交易壹旦執行，本公司就應當進行所有交易的結算。",
-        "id": "8.The Firm shall proceed to a settlement of all transactions upon execution of such transactions.",
+        "id": "8. Perusahaan akan melanjutkan ke penyelesaian semua transaksi setelah eksekusi transaksi tersebut.",
         "es": "8. La Firma procederá a una liquidación de todas las transacciones en el momento de la ejecución de dichas transacciones.",
         "pt-BR": "8. A empresa deve proceder a uma liquidação de todas as transações no momento da execução de tais transações.",
         "ar": "8- ستقوم الشركة بتسوية جميع المعاملات في وقت تنفيذ هذه المعاملات."
@@ -11106,7 +11106,7 @@ module.exports = {
         "en": "Size of Order",
         "vi": "Kích Thước Lệnh",
         "zh-Hant": "訂單規模",
-        "id": "Size of Order",
+        "id": "Ukuran Pesanan",
         "es": "Tamaño del pedido",
         "pt-BR": "Tamanho da ordem",
         "ar": "حجم الأمر"
@@ -11116,7 +11116,7 @@ module.exports = {
         "en": "9.The minimum size of an order is 0.01 lots on the trading platforms. Although there is no maximum size of an order where the Client can place with the Firm, the Firm reserves the right to decline an order as explained in the agreement entered with the Client.",
         "vi": "9.Kích thước tối thiểu của một lệnh là 0.01 lot trên các sàn giao dịch. Mặc dù không có kích thước tối đa của một lệnh mà Khách hàng có thể đặt với Công ty, Công ty bảo lưu quyền từ chối một lệnh như được giải thích trong hợp đồng đã kí với Khách hàng.",
         "zh-Hant": "9.本交易平臺上最小訂單規模為 0.01 手。雖然對客戶可以下達給本公司的最大訂單規模沒有限制，本公司保留依照與客戶簽訂的協議中的說明拒絕訂單的權利。",
-        "id": "9.The minimum size of an order is 0.01 lots on the trading platforms. Although there is no maximum size of an order where the Client can place with the Firm, the Firm reserves the right to decline an order as explained in the agreement entered with the Client.",
+        "id": "9. Ukuran minimum pesanan adalah 0,01 lot di platform trading. Meskipun tidak ada ukuran maksimum pesanan di mana Klien dapat menempatkan dengan Perusahaan, Perusahaan berhak untuk menolak pesanan seperti yang dijelaskan dalam perjanjian yang dibuat dengan Klien.",
         "es": "9.El tamaño mínimo de un pedido es de 0.01 lotes en las plataformas comerciales. Aunque no hay un tamaño máximo de un pedido donde el Cliente puede realizar con la Firma, la Firma se reserva el derecho de rechazar un pedido como se explica en el acuerdo firmado con el Cliente.",
         "pt-BR": "9.O tamanho mínimo de um pedido é de 0,01 lotes nas plataformas de negociação. Embora não haja um tamanho máximo de um pedido em que o Cliente possa fazer a firma, o Escritório se reserva o direito de recusar um pedido, conforme explicado no contrato firmado com o Cliente.",
         "ar": "9- الحد الأدنى لحجم الأمر على منصات التداول هو 0.01 عقد.   وعلى الرغم من عدم وجود حد أقصى لحجم الأمر الذي يمكن للعميل تقديمه مع الشركة، ولكن الشركة تحتفظ لنفسها بالحق في رفض الأمر كما هو منصوص عليه في الاتفاقية المبرمة مع العميل."
@@ -11126,7 +11126,7 @@ module.exports = {
         "en": "The Firm makes every effort to fill the order of the client irrespective of the volume. However, if this is achieved, it may be at the best available price, as the market liquidity may allow at the time of execution (See ‘Likelihood of Execution’).",
         "vi": "Công ty thực hiện mọi nỗ lực để lấp đầy thứ tự của khách hàng bất kể khối lượng. Tuy nhiên, nếu điều này đạt được, nó có thể ở mức giá tốt nhất có sẵn, vì tính thanh khoản của thị trường có thể cho phép tại thời điểm thực hiện (Xem ‘Khả năng thực thi Lệnh’).",
         "zh-Hant": "不論成交量如何，本公司都盡全力執行客戶的訂單。但如果可以實現，將以可用的最佳價格，因為市場流動性可能在執行時滿足條件（請參看“執行的可能性”）。",
-        "id": "The Firm makes every effort to fill the order of the client irrespective of the volume. However, if this is achieved, it may be at the best available price, as the market liquidity may allow at the time of execution (See ‘Likelihood of Execution’).",
+        "id": "Perusahaan melakukan segala upaya untuk memenuhi pesanan klien terlepas dari volumenya. Namun, jika ini tercapai, ini mungkin pada harga terbaik yang tersedia, karena likuiditas pasar memungkinkan pada saat eksekusi (Lihat 'Kemungkinan Eksekusi').",
         "es": "La Firma hace todo lo posible para completar el pedido del cliente independientemente del volumen. Sin embargo, si se logra esto, puede ser al mejor precio disponible, ya que la liquidez del mercado puede permitirlo en el momento de la ejecución (consulte \"Probabilidad de ejecución\").",
         "pt-BR": "A Empresa faz todo o esforço para preencher a ordem do cliente, independentemente do volume. No entanto, se isso for alcançado, pode ser o melhor preço disponível, como a liquidez do mercado pode permitir no momento da execução (ver \"Probabilidade de Execução\").",
         "ar": "وتبذل الشركة أقصى ما في وسعها لتنفيذ أمر العميل بصرف النظر عن حجم الأمر.  ولكن إذا لم يتم تحقيق ذلك، يجوز أن يتم التنفيذ بأفضل سعر متاح بقدر ما تسمح به سيولة السوق في وقت التنفيذ (انظر \"احتمالية التنفيذ\")."
@@ -11136,7 +11136,7 @@ module.exports = {
         "en": "10.TigerWit reserves the right to place a cap on the number of contracts and/ or limit on the total net position value per profile for a specific instrument. In such an event, the Firm will undertake all possible efforts to notify clients prior to such an event.",
         "vi": "10.TigerWit có quyền đặt giới hạn về số lượng hợp đồng và / hoặc giới hạn trên tổng giá trị vị thế ròng trên mỗi cấu hình cho một sản phẩm cụ thể. Trong một sự kiện như vậy, Công ty sẽ thực hiện mọi nỗ lực có thể để thông báo cho khách hàng trước một sự kiện như vậy.",
         "zh-Hant": "10.TigerWit 保留對合約數量設置上限，和/或對特定工具每個組合總的凈持倉設限的權利。在這種情況下，本公司將盡壹切可能的努力在此類情況發生前通知客戶。",
-        "id": "10.TigerWit reserves the right to place a cap on the number of contracts and/ or limit on the total net position value per profile for a specific instrument. In such an event, the Firm will undertake all possible efforts to notify clients prior to such an event.",
+        "id": "10. TigerWit berhak untuk menempatkan batasan pada jumlah kontrak dan / atau batasan pada total nilai posisi bersih per profil untuk instrumen tertentu. Dalam kasus seperti itu, Perusahaan akan melakukan semua upaya yang mungkin untuk memberi tahu klien sebelum kasus tersebut.",
         "es": "10.TigerWit se reserva el derecho de poner un límite al número de contratos y / o al límite del valor neto total de la posición por perfil para un instrumento específico. En tal caso, la Firma realizará todos los esfuerzos posibles para notificar a los clientes antes de tal evento.",
         "pt-BR": "10.TigerWit reserva-se o direito de colocar um limite no número de contratos e / ou limitar o valor total da posição líquida por perfil para um instrumento específico. Nesse caso, a Empresa realizará todos os esforços possíveis para notificar os clientes antes de tal evento.",
         "ar": "10- تحتفظ TigerWit لنفسها بالحق في وضع حد أقصى لعدد العقود و/أو حد أقصى لإجمالي القيمة الصافية للمركز لكل ملف شخصي لأداة معينة.  وفي مثل هذه الحالات، ستبذل الشركة جميع الجهود الممكنة لإبلاغ العملاء قبل حدوث ذلك."
@@ -11146,7 +11146,7 @@ module.exports = {
         "en": "Market Impact",
         "vi": "Ảnh Hưởng Thị Trường",
         "zh-Hant": "市場影響",
-        "id": "Market Impact",
+        "id": "Dampak Pasar",
         "es": "Impacto Mercado",
         "pt-BR": "Impacto no mercado",
         "ar": "تأثير السوق"
@@ -11156,7 +11156,7 @@ module.exports = {
         "en": "11.Some factors may affect rapidly the price of the underlying financial instruments from which the quoted firm price for its Financial Instruments is derived. These factors may influence some of the factors listed above. The Firm will take all reasonable steps to obtain the best possible result for its Clients.",
         "vi": "11.Một số yếu tố có thể ảnh hưởng nhanh đến giá của các công cụ tài chính cơ bản mà từ đó giá công ty được chào giá cho Công cụ tài chính được chào giá. Những yếu tố này có thể ảnh hưởng đến một số yếu tố được liệt kê ở trên. Công ty sẽ thực hiện tất cả các bước hợp lý để có được kết quả tốt nhất có thể cho Khách hàng của mình.",
         "zh-Hant": "11.某些因素可能快速影響標的金融工具的價格，而對金融工具所報出的實價來源於此。這些因素可能影響以上所列的部分因素。本公司將采取壹切合理措施，以盡可能為客戶獲得最佳價格。",
-        "id": "11.Some factors may affect rapidly the price of the underlying financial instruments from which the quoted firm price for its Financial Instruments is derived. These factors may influence some of the factors listed above. The Firm will take all reasonable steps to obtain the best possible result for its Clients.",
+        "id": "11. Beberapa faktor dapat mempengaruhi dengan cepat harga instrumen keuangan yang mendasari dari mana harga perusahaan yang dikutip untuk Instrumen Keuangan tersebut berasal. Faktor-faktor ini dapat memengaruhi beberapa faktor yang tercantum di atas. Perusahaan akan mengambil semua langkah yang wajar untuk mendapatkan hasil terbaik bagi Kliennya.",
         "es": "11.Algunos factores pueden afectar rápidamente el precio de los instrumentos financieros subyacentes, de los cuales se deriva el precio cotizado para sus Instrumentos Financieros. Estos factores pueden influir en algunos de los factores enumerados anteriormente. La Firma adoptará todos los pasos razonables para obtener el mejor resultado posible para sus Clientes.",
         "pt-BR": "11.Alguns fatores podem afetar rapidamente o preço dos instrumentos financeiros subjacentes dos quais o preço firme cotado para seus Instrumentos Financeiros é derivado. Esses fatores podem influenciar alguns dos fatores listados acima. O Escritório tomará todas as medidas razoáveis ​​para obter o melhor resultado possível para seus Clientes.",
         "ar": "11- قد تؤثر بعض العوامل تأثيرًا سريعًا على سعر الأدوات المالية المعنية والتي يستمد منها السعر المعروض لتلك الأدوات المالية.  وقد تؤثر هذه العوامل على بعض العوامل المذكورة أعلاه. وسوف تتخذ الشركة جميع التدابير المعقولة من أجل تحقيق أفضل نتيجة ممكنة لعملائها."
@@ -11166,7 +11166,7 @@ module.exports = {
         "en": "The Firm does not consider the factors at paragraphs 3.2 to 3.9 exhaustive and the order in which the above factors are presented shall not be taken as priority factor.",
         "vi": "Công ty không xem xét các yếu tố ở các đoạn từ 3.2 đến 3.9 đầy đủ và thứ tự các yếu tố trên được trình bày sẽ không được coi là yếu tố ưu tiên.",
         "zh-Hant": "本公司並沒有窮盡考慮第 3.2 到 3.9 款所列的全部因素，而且出現以上因素的訂單將不被視作優先考慮因素。",
-        "id": "The Firm does not consider the factors at paragraphs 3.2 to 3.9 exhaustive and the order in which the above factors are presented shall not be taken as priority factor.",
+        "id": "Perusahaan tidak mempertimbangkan faktor-faktor pada paragraf 3.2 hingga 3.9 lengkap dan urutan di mana faktor-faktor di atas disajikan tidak boleh dijadikan sebagai faktor prioritas.",
         "es": "La Firma no considera exhaustivos los factores en los párrafos 3.2 a 3.9 y el orden en que se presentan los factores anteriores no debe tomarse como factor de prioridad.",
         "pt-BR": "A Firma não considera os fatores dos parágrafos 3.2 a 3.9 como exaustivos e a ordem em que os fatores acima são apresentados não deve ser tomada como fator prioritário.",
         "ar": "لا تعتبر الشركة أن العوامل المنصوص عليها في الفقرات من 3.2 إلى 3.9 هي العوامل الشاملة ولا ينبغي اعتبار أن الترتيب المذكور أعلاه يعبر عن أولوية بين العوامل."
@@ -11176,7 +11176,7 @@ module.exports = {
         "en": "Nevertheless, whenever there is a specific instruction from the client the Firm shall make sure that the Client’s order shall be executed following the specific instruction.",
         "vi": "Tuy nhiên, bất cứ khi nào có một hướng dẫn cụ thể từ khách hàng, Công ty sẽ đảm bảo rằng lệnh của Khách hàng sẽ được thực hiện theo hướng dẫn cụ thể.",
         "zh-Hant": "不過，只要客戶發出特定指示，本公司都應當確保客戶的訂單按照特定的指示獲得執行。",
-        "id": "Nevertheless, whenever there is a specific instruction from the client the Firm shall make sure that the Client’s order shall be executed following the specific instruction.",
+        "id": "Namun demikian, setiap kali ada instruksi khusus dari klien, Perusahaan harus memastikan bahwa pesanan Klien akan dieksekusi mengikuti instruksi spesifik.",
         "es": "Sin embargo, siempre que haya una instrucción específica del cliente, la Firma se asegurará de que la orden del Cliente se ejecute siguiendo la instrucción específica.",
         "pt-BR": "No entanto, sempre que houver uma instrução específica do cliente, a Empresa deve certificar-se de que o pedido do Cliente será executado seguindo a instrução específica.",
         "ar": "ومع ذلك، فعندما تكون هناك تعليمات محددة من العميل، ستحرص الشركة على تنفيذ أمر العميل بإتباع التعليمات المحددة."
@@ -11186,7 +11186,7 @@ module.exports = {
         "en": "The Firm will determine the relative importance of the above factors by using its commercial judgment and experience in the light of the information available on the market and taking into account the criteria described below: ",
         "vi": "Công ty sẽ xác định tầm quan trọng tương đối của các yếu tố trên bằng cách sử dụng đánh giá thương mại và kinh nghiệm của mình theo thông tin có sẵn trên thị trường và có tính đến các tiêu chí được mô tả dưới đây: ",
         "zh-Hant": "本公司將使用商業判斷和基於市場上可獲得信息的經驗，並考慮下列規定的標準，確定以上因素的相對重要性：",
-        "id": "The Firm will determine the relative importance of the above factors by using its commercial judgment and experience in the light of the information available on the market and taking into account the criteria described below: ",
+        "id": "Perusahaan akan menentukan kepentingan relatif dari faktor-faktor di atas dengan menggunakan pertimbangan dan pengalaman komersialnya berdasarkan informasi yang tersedia di pasar dan dengan mempertimbangkan kriteria yang dijelaskan di bawah ini:",
         "es": "La Firma determinará la importancia relativa de los factores anteriores utilizando su juicio comercial y experiencia a la luz de la información disponible en el mercado y teniendo en cuenta los criterios que se describen a continuación: ",
         "pt-BR": "A Empresa determinará a importância relativa dos fatores acima, utilizando seu julgamento comercial e experiência à luz das informações disponíveis no mercado e levando em conta os critérios descritos abaixo:",
         "ar": "ستحدد لشركة الأهمية النسبية للعوامل المذكورة أعلاه وفقًا لتقديراتها وخبراتها التجارية في ضوء المعلومات المتاحة في السوق مع مراعاة المعايير الموضحة أدناه:"
@@ -11196,7 +11196,7 @@ module.exports = {
         "en": "(a) the characteristics of the client including the categorisation of the client as retail or professional (b) the characteristics of the client’s order (c) the characteristics of the underlying financial instruments that are the subject of that order (d) the characteristics of the execution venues to which that order can be directed",
         "vi": "(a) các đặc điểm của khách hàng bao gồm phân loại khách hàng là lẻ hoặc chuyên nghiệp (b) các đặc điểm của lệnh của khách hàng (c) đặc điểm của các công cụ tài chính cơ bản là chủ đề của lệnh đó (d) đặc điểm của các địa điểm thực hiện mà lệnh đó có thể được chuyển hướng",
         "zh-Hant": "(a) 客戶的特點，包括客戶是零售投資者還是專業投資者的分類(b) 客戶訂單的特點(c) 作為訂單標的金融工具的特點(d) 訂單可能指示的執行場所的特點",
-        "id": "(a) the characteristics of the client including the categorisation of the client as retail or professional (b) the characteristics of the client’s order (c) the characteristics of the underlying financial instruments that are the subject of that order (d) the characteristics of the execution venues to which that order can be directed",
+        "id": "(a) karakteristik klien termasuk kategorisasi klien sebagai ritel atau profesional (b) karakteristik pesanan klien (c) karakteristik instrumen keuangan yang mendasari yang menjadi subjek pesanan tersebut (d) karakteristik tempat pelaksanaan dimana perintah itu dapat diarahkan",
         "es": "(a) las características del cliente, incluida la categorización del cliente como minorista o profesional (b) las características del pedido del cliente (c) las características de los instrumentos financieros subyacentes que son objeto de ese pedido (d) las características de Los lugares de ejecución a los que puede dirigirse esa orden.",
         "pt-BR": "(a) as características do cliente, incluindo a categorização do cliente como retalhista ou profissional; (b) as características da encomenda do cliente; (c) as características dos instrumentos financeiros subjacentes que são objeto dessa ordem; (d) as características dos clientes; os locais de execução para os quais essa ordem pode ser direcionada",
         "ar": "(أ) خصائص العميل بما في ذلك تصنيف العميل سواء كان عميل تجزئة أو عميل محترف (ب) خصائص أمر العميل (ج) خصائص الأدوات المالية المعنية التي هي موضوع الأمر (د) خصائص أماكن التنفيذ التي يمكن توجيه هذا الأمر إليها."
@@ -11206,7 +11206,7 @@ module.exports = {
         "en": "The best possible result for a client shall be determined in terms of the total consideration, representing the price of the financial instrument and the costs related to execution, which shall include all expenses incurred by the client which are directly related to the execution of the order.",
         "vi": "Kết quả tốt nhất có thể cho khách hàng sẽ được xác định theo tổng giá trị, thể hiện giá của công cụ tài chính và chi phí liên quan đến việc thực hiện, bao gồm tất cả các chi phí phát sinh của khách hàng liên quan trực tiếp đến việc thực hiện lệnh.",
         "zh-Hant": "客戶可能的最佳結果將按照代表金融工具價格和相關執行成本的總成本進行判定，其中包括客戶發生的與訂單執行直接相關的所有費用。",
-        "id": "The best possible result for a client shall be determined in terms of the total consideration, representing the price of the financial instrument and the costs related to execution, which shall include all expenses incurred by the client which are directly related to the execution of the order.",
+        "id": "Hasil terbaik untuk klien harus ditentukan dalam hal pertimbangan total, mewakili harga instrumen keuangan dan biaya yang terkait dengan eksekusi, yang akan mencakup semua biaya yang dikeluarkan oleh klien yang secara langsung terkait dengan pelaksanaan pesanan.",
         "es": "El mejor resultado posible para un cliente se determinará en términos de la contraprestación total, que representa el precio del instrumento financiero y los costos relacionados con la ejecución, que incluirán todos los gastos incurridos por el cliente que estén directamente relacionados con la ejecución de la orden.",
         "pt-BR": "O melhor resultado possível para um cliente será determinado em termos da contraprestação total, representando o preço do instrumento financeiro e os custos relacionados à execução, que incluirão todas as despesas incorridas pelo cliente que estejam diretamente relacionadas à execução do pedido. .",
         "ar": "سيتم تحديد أفضل نتيجة ممكنة من حيث المقابل الكلي والذي يمثل سعر الأداة المالية والتكاليف المرتبطة بالتنفيذ والتي ستشمل جميع التكاليف التي تكبدها العميل والتي ترتبط بشكل مباشر بتنفيذ الأمر."
@@ -11216,7 +11216,7 @@ module.exports = {
         "en": "Execution Venues",
         "vi": "Địa điểm Thực Thi Lệnh",
         "zh-Hant": "執行場所",
-        "id": "Execution Venues",
+        "id": "Tempat Eksekus",
         "es": "Venues Ejecución",
         "pt-BR": "Locais de Execução",
         "ar": "أماكن التنفيذ"
@@ -11226,7 +11226,7 @@ module.exports = {
         "en": "Execution Venues are the entities with which the orders are placed or to which the Firm transmits orders for execution. For the purposes of orders for the Financial Instrument provided by the Firm, the Firm acts as Principal and not as Agent on the Client’s behalf at all times; although the Firm may transmit your orders for execution to third party liquidity providers through its Electronic Communication Platform, contractually the Firm is the sole counterparty to your trades and any execution of orders is done in the Firm’s name, therefore the Firm is the sole Execution Venue for the execution of the Client’s orders.",
         "vi": "Địa điểm thực hiện là các thực thể mà các lệnh được đặt hoặc Công ty truyền các lệnh để thực thi lệnh. Đối với mục đích của các lệnh cho Công cụ tài chính do Công ty cung cấp, Công ty hoạt động với tư cách là Hiệu trưởng và không phải là Đại lý thay mặt Khách hàng vào mọi lúc; mặc dù Công ty có thể truyền phát các lệnh của bạn để thực hiện cho các nhà cung cấp thanh khoản của bên thứ ba thông qua Nền tảng Giao tiếp Điện tử, Công ty là đối tác duy nhất cho các giao dịch của bạn và việc thực hiện các lệnh được thực hiện bằng tên của Công ty, do đó Công ty là Địa điểm Thực hiện duy nhất để thực hiện các lệnh của Khách hàng.",
         "zh-Hant": "執行場所是訂單下達所在或本公司傳輸執行訂單的實體。就本公司提供的金融工具訂單而言，本公司始終充當做市商而不是客戶的代理人；盡管本公司會將您的執行訂單通過自己的電子通訊平臺傳輸給第三方流動性提供商，但根據合同約定，本公司是您交易的唯壹對手方，而且所有訂單的執行都是以本公司的名義完成，所以本公司是客戶訂單唯壹的執行地點。",
-        "id": "Execution Venues are the entities with which the orders are placed or to which the Firm transmits orders for execution. For the purposes of orders for the Financial Instrument provided by the Firm, the Firm acts as Principal and not as Agent on the Client’s behalf at all times; although the Firm may transmit your orders for execution to third party liquidity providers through its Electronic Communication Platform, contractually the Firm is the sole counterparty to your trades and any execution of orders is done in the Firm’s name, therefore the Firm is the sole Execution Venue for the execution of the Client’s orders.",
+        "id": "Tempat Eksekusi adalah entitas tempat pesanan ditempatkan atau di mana Perusahaan mengirimkan pesanan untuk dieksekusi. Untuk tujuan pesanan Instrumen Keuangan yang disediakan oleh Perusahaan, Perusahaan bertindak sebagai Prinsipal dan bukan sebagai Agen atas nama Klien setiap saat; meskipun Perusahaan dapat mengirimkan pesanan Anda untuk dieksekusi kepada penyedia likuiditas pihak ketiga melalui Platform Komunikasi Elektroniknya, secara kontrak Perusahaan adalah satu-satunya rekanan untuk trading Anda dan setiap eksekusi pesanan dilakukan atas nama Perusahaan, oleh karena itu Perusahaan adalah satu-satunya Tempat Eksekusi untuk eksekusi order Klien.",
         "es": "Las \"Execution Venues\" son las entidades con las que se colocan las órdenes o a las que la Firma transmite órdenes para su ejecución. En relación con las órdenes sobre los Instrumentos financieros proporcionados por la Firma, la Firma actúa como Principal y no como Agente en nombre del Cliente en todo momento; Aunque la Firma pudiera transmitir sus órdenes de ejecución a proveedores de liquidez terceros a través de su Plataforma de Comunicación Electrónica, la Firma es la única contraparte de sus operaciones y cualquier ejecución de órdenes se realiza a nombre de la Firma; por lo tanto, la Firma es el único lugar de Ejecución en relación a la ejecución de las órdenes del cliente.",
         "pt-BR": "Locais de Execução são as entidades com as quais as ordens são colocadas ou para as quais a Empresa transmite ordens para execução. Para fins de pedidos para o Instrumento Financeiro fornecido pela Empresa, a Empresa atua como Principal e não como Agente em nome do Cliente em todos os momentos; Embora a Firma possa transmitir suas ordens para execução a provedores de liquidez de terceiros por meio de sua Plataforma de Comunicação Eletrônica, contratualmente a Firma é a única contraparte de suas negociações e qualquer execução de ordens é feita em nome da Firma, portanto, a Firma é o único Local de Execução. para a execução das ordens do Cliente.",
         "ar": "أماكن التنفيذ هي الكيانات التي يتم تقديم الأوامر إليها أو التي ترسل إليها الشركة الأوامر لتنفيذها. ولأغراض الأوامر المقدمة على الأدوات المالية التي توفرها الشركة، تعمل الشركة بصفتها طرفًا رئيسيًا وليس وكيلاً للعميل في جميع الأوقات؛ على الرغم من أنه يجوز للشركة نقل أوامرك المراد تنفيذها إلى مزودي سيولة خارجيين عبر منصة الاتصالات الإلكترونية الخاصة بالشركة، ومن الناحية التعاقدية فإن الشركة هي الطرف المقابل الوحيد لصفقاتك ويتم تنفيذ أي أوامر باسم الشركة؛ وبناء على ذلك فالشركة هي مكان التنفيذ الوحيد لأوامر العميل."
@@ -11236,7 +11236,7 @@ module.exports = {
         "en": "1.The Firm operation time: round–the–clock from 22:00:01 GMT Sunday through to 22:00:00 GMT Friday. Non-working periods: from 22:00:01 GMT Friday through 22:00:00 GMT Sunday. Holidays will be announced through the internal mail of the trading terminal supplied by the Firm.",
         "vi": "1.Thời gian hoạt động của Công ty: tròn-đồng hồ từ 22:00:01 GMT Chủ Nhật đến 22:00:00 GMT Thứ Sáu. Thời gian không làm việc: từ 22:00:01 GMT Thứ Sáu đến 22:00:00 GMT Chủ Nhật. Ngày lễ sẽ được thông báo qua thư nội bộ của nhà giao dịch do Công ty cung cấp.",
         "zh-Hant": "1.本公司營業時間：從格林威治時間星期天 22:00:01 到格林威治時間星期五 22:00:00。非工作時間：從格林威治時間星期五 22:00:01到格林威治時間星期天 22:00:00。本公司應通過交易終端的內部電子郵件系統通知客戶任何假期。",
-        "id": "1.The Firm operation time: round–the–clock from 22:00:01 GMT Sunday through to 22:00:00 GMT Friday. Non-working periods: from 22:00:01 GMT Friday through 22:00:00 GMT Sunday. Holidays will be announced through the internal mail of the trading terminal supplied by the Firm.",
+        "id": "1. Waktu operasi Perusahaan: sepanjang waktu dari Minggu 22:00:01 GMT hingga Jumat 22:00:00 GMT. Periode non-kerja: dari 22:00:01 GMT Jumat sampai 22:00:00 GMT Minggu. Hari libur akan diumumkan melalui surat internal terminal trading yang disediakan oleh Perusahaan.",
         "es": "1.El tiempo de operación de la empresa: las 24 horas desde las 22:00:01 GMT del domingo hasta las 22:00:00 GMT del viernes. Períodos no laborables: desde las 22:00:01 GMT del viernes hasta las 22:00:00 GMT del domingo. Los días festivos se anunciarán a través del email interno de la terminal de trading suministrada por la Firma.",
         "pt-BR": "1.O tempo de operação da empresa: 24 horas de 22:00:01 GMT de domingo a 22:00:00 GMT de sexta-feira. Períodos não úteis: das 22:00 às 21:00 GMT de sexta a 22:00 GMT de domingo. Os feriados serão anunciados através do correio interno do terminal de negociação fornecido pela Empresa.",
         "ar": "1- وقت العمل في الشركة: على مدار الساعة من الساعة 22:00:01 بتوقيت جرينتش يوم الأحد إلى الساعة  22:00:00 بتوقيت جرينتش يوم الجمعة.  أوقات عدم العمل: من الساعة 22:00:01 بتوقيت جرينتش يوم الجمعة إلى الساعة 22:00:00 بتوقيت جرينتش يوم الأحد.  وسيتم الإعلان عن العطلات عبر البريد الإلكتروني الداخلي لمنصة التداول التي توفرها الشركة."
@@ -11246,7 +11246,7 @@ module.exports = {
         "en": "2.The Firm places significant reliance to the above Execution Venue based on the above- mentioned factors set out at paragraph 3 and their relative importance. It is the Firm’s policy to maintain such internal procedures and principles in order to determine the relative importance of these factors and to act for the best interest of its Clients and provide them the best possible result (or “best execution”) when dealing with them.",
         "vi": "2.Công ty có sự phụ thuộc đáng kể vào Địa điểm Thực Thi Lệnh ở trên dựa trên các yếu tố nêu trên được nêu tại khoản 3 và tầm quan trọng tương đối của chúng. Chính sách của Công ty là duy trì các quy trình và nguyên tắc nội bộ để xác định tầm quan trọng tương đối của các yếu tố này và hành động vì lợi ích tốt nhất của Khách hàng và cung cấp cho họ kết quả tốt nhất có thể (hoặc “thực hiện lệnh tốt nhất”) khi giao dịch với họ .",
         "zh-Hant": "2.根據上文第 3 款所述的因素，本公司嚴重依賴以上執行場所以及他們的相對重要性。本公司的政策規定需要保持此類內部流程和原則，從而確定這些因素的相對重要性，代表客戶的最佳利益行事，並在與他們交易時盡 可 能 為 他 們 提 供 最 佳 結 果 （ 或 “ 最 佳 執行”）。",
-        "id": "2.The Firm places significant reliance to the above Execution Venue based on the above- mentioned factors set out at paragraph 3 and their relative importance. It is the Firm’s policy to maintain such internal procedures and principles in order to determine the relative importance of these factors and to act for the best interest of its Clients and provide them the best possible result (or “best execution”) when dealing with them.",
+        "id": "2. Perusahaan menempatkan ketergantungan yang signifikan pada Tempat Pelaksanaan di atas berdasarkan faktor-faktor yang disebutkan di atas yang ditetapkan pada paragraf 3 dan kepentingan relatifnya. Merupakan kebijakan Perusahaan untuk mempertahankan prosedur dan prinsip internal tersebut untuk menentukan kepentingan relatif dari faktor-faktor ini dan untuk bertindak demi kepentingan terbaik Kliennya dan memberi mereka hasil terbaik (atau \"eksekusi terbaik\") ketika berurusan dengan mereka.",
         "es": "2.La Firma deposita una confianza significativa en el Lugar de Ejecución anterior en base a los factores mencionados anteriormente establecidos en el párrafo 3 y su importancia relativa. Es política de la Firma mantener dichos procedimientos y principios internos para determinar la importancia relativa de estos factores y actuar para el mejor interés de sus Clientes y proporcionarles el mejor resultado posible (o la \"mejor ejecución\") al operar con ellos.",
         "pt-BR": "2. A Empresa coloca uma confiança significativa no Local de Execução acima, com base nos fatores mencionados acima, estabelecidos no parágrafo 3 e sua importância relativa. É política da Empresa manter tais procedimentos e princípios internos, a fim de determinar a importância relativa desses fatores e agir no melhor interesse de seus Clientes, fornecendo-lhes o melhor resultado possível (ou “melhor execução”) ao lidar com eles. .",
         "ar": "2- تعتمد الشركة اعتمادًا كبيرًا على مكان التنفيذ السابق ذكره بناء على العوامل السابق ذكرها والمنصوص عليها في الفقرة 3 وأهميتها النسبية.  وتتمثل سياسة الشركة في إتباع هذه الإجراءات والمبادئ الداخلية من أجل تحديد الأهمية النسبية لهذه العوامل والعمل على نحو يخدم مصالح عملائها على أفضل وجه وتحقيق أفضل نتيجة ممكنة لهم أو (\"التنفيذ الأمثل\") عند العمل معهم."
@@ -11256,7 +11256,7 @@ module.exports = {
         "en": "3.The Client acknowledges that the transactions entered in Financial Instruments with the Firm are not undertaken on a recognised exchange, rather they are undertaken through the Firm’s Trading Platform and, accordingly, they may expose the Client to greater risks than regulated exchange transactions. Therefore, the Firm may not execute an order, or it may change the opening or closing price of an order in certain cases including but not limited to instances of a technical failure of the trading platform. The terms and conditions and trading rules are established solely by the counterparty which in this case is the Firm. The Client is obliged to close an open position of any given Financial Instruments during the opening hours of the Firm’s Trading Platform. The Client also has to close any position with the same counterparty with whom it was originally entered into, thus the Firm.",
         "vi": "3.Khách hàng thừa nhận rằng các giao dịch được nhập vào Công cụ tài chính với Công ty không được thực hiện trên sàn giao dịch được công nhận, thay vào đó chúng được thực hiện thông qua Nền tảng giao dịch của Công ty và theo đó, chúng có thể khiến Khách hàng gặp nhiều rủi ro hơn các giao dịch hối đoái được quy định. Do đó, Công ty có thể không thực hiện một lệnh, hoặc nó có thể thay đổi giá mở hoặc đóng của một lệnh trong một số trường hợp nhất định bao gồm nhưng không giới hạn trong các trường hợp sự cố kỹ thuật của sàn giao dịch. Các điều khoản và điều kiện và quy tắc giao dịch được thành lập chỉ bởi đối tác mà trong trường hợp này là Công ty. Khách hàng có nghĩa vụ đóng một vị thế mở của bất kỳ Công cụ tài chính cụ thể nào trong giờ mở cửa của Sàn giao dịch của Công ty. Khách hàng cũng phải đóng bất kỳ vị thế nào với cùng một đối tác mà họ đã được nhập vào ban đầu, do đó Công ty.",
         "zh-Hant": "3.客戶確認，與本公司進行的金融工具的交易不是在公認的交易所，而是通過本公司的交易平臺進行，因此，它們可能使客戶面臨比在受監管的交易所交易更大的風險。 所以，在某些情況下（包括但不限於交易平臺的技術錯誤），本公司可能不會執行訂單，或可能修改訂單的開倉或平倉價格。條款和條件以及交易規則完全由對手方（即本公司）創建。客戶有義務在本公司交易平臺的開放時間內，對任何給定金融工具的未平倉頭寸進行平倉。客戶還必須關閉所有與同壹對手方（即本公司）原先訂立的任何頭寸。",
-        "id": "3.The Client acknowledges that the transactions entered in Financial Instruments with the Firm are not undertaken on a recognised exchange, rather they are undertaken through the Firm’s Trading Platform and, accordingly, they may expose the Client to greater risks than regulated exchange transactions. Therefore, the Firm may not execute an order, or it may change the opening or closing price of an order in certain cases including but not limited to instances of a technical failure of the trading platform. The terms and conditions and trading rules are established solely by the counterparty which in this case is the Firm. The Client is obliged to close an open position of any given Financial Instruments during the opening hours of the Firm’s Trading Platform. The Client also has to close any position with the same counterparty with whom it was originally entered into, thus the Firm.",
+        "id": "3. Klien mengakui bahwa transaksi yang dimasukkan dalam Instrumen Keuangan dengan Perusahaan tidak dilakukan di bursa yang diakui, melainkan dilakukan melalui Platform trading Perusahaan dan, oleh karena itu, transaksi tersebut dapat membuat Klien berisiko lebih besar daripada transaksi pertukaran yang diatur. Oleh karena itu, Perusahaan tidak dapat mengeksekusi order, atau mungkin mengubah harga pembukaan atau penutupan order dalam kasus tertentu termasuk namun tidak terbatas pada contoh kegagalan teknis dari platform trading. Syarat dan ketentuan dan aturan trading ditetapkan sepenuhnya oleh rekanan yang dalam hal ini adalah Perusahaan. Klien berkewajiban untuk menutup posisi terbuka dari Instrumen Keuangan apa pun selama jam buka Platform trading Perusahaan. Klien juga harus menutup posisi apa pun dengan rekanan yang sama dengan siapa ia awalnya masuk.",
         "es": "3.El Cliente reconoce que las transacciones ingresadas en Instrumentos Financieros con la Firma no se realizan en una Mercado organizado, sino que se realizan a través de la Plataforma de Trading de la Firma y, en consecuencia, pueden exponer al Cliente a mayores riesgos que las transacciones de intercambios reguladas. Por lo tanto, la Firma pudiera no ejecutar una orden, o cambiar el precio de apertura o cierre de una orden en ciertos casos, incluidos, entre otros, casos de errores técnicos de la plataforma de trading. Los términos y condiciones y las reglas de trading se establecen únicamente por la contraparte, que en este caso es la Firma. El Cliente está obligado a cerrar una posición abierta de cualquier Instrumento Financiero dado durante las horas de apertura de la Plataforma de Trading de la Firma. El Cliente también tiene que cerrar cualquier posición con la misma contraparte con la que se contrató originalmente, por lo tanto, la Firma.",
         "pt-BR": "3.O Cliente reconhece que as transações inseridas em Instrumentos Financeiros com a Firma não são realizadas em uma bolsa reconhecida, ao contrário, são realizadas através da Plataforma de Negociação da Firma e, consequentemente, podem expor o Cliente a riscos maiores do que transações de câmbio regulamentadas. Portanto, a Empresa não pode executar um pedido ou pode alterar o preço de abertura ou fechamento de um pedido em certos casos, incluindo, mas não se limitando a, casos de falha técnica da plataforma de negociação. Os termos e condições e as regras de negociação são estabelecidos unicamente pela contraparte que, neste caso, é a Empresa. O Cliente é obrigado a fechar uma posição aberta de quaisquer Instrumentos Financeiros durante o horário de funcionamento da Plataforma de Negociação da Empresa. O Cliente também deve fechar qualquer posição com a mesma contraparte com a qual foi originalmente contratada, ou seja, a Empresa.",
         "ar": "3- يقر العميل أن المعاملات التي قام بإبرامها في الأدوات المالية مع الشركة لا تتم إجراؤها في بورصة منظمة وإنما يتم إجراؤها عبر منصة التداول الخاصة بالشركة، وبناء على ذلك فإن هذه المعاملات قد تعرض العميل لمخاطر أكبر من مخاطر معاملات البورصات المنظمة. وبناء عليه، قد لا تقوم الشركة بتنفيذ أمر، أو قد تقوم بتغيير سعر فتح أو إغلاق أمر في بعض الحالات والتي تشمل على سبيل المثال وليس الحصر حالات الخلل الفني في منصة التداول. ييتم وضع الشروط والأحكام وقواعد التداول بواسطة الطرف المقابل وحده دون غيره، والطرف المقابل في هذه الحالة هو  الشركة. ويلتزم العميل بإغلاق أي مركز مفتوح على أي أداة مالية تقدمها الشركة خلال أوقات عمل منصة التداول الخاصة بالشركة. ويتعين على العميل أيضًا إغلاق أي مركز مفتوح مع نفس الطرف المقابل الذي تعاقد معه في الأصل، وهذا الطرف المقابل هو الشركة."
@@ -11266,7 +11266,7 @@ module.exports = {
         "en": "Monitor and Review",
         "vi": "Giám Sát và Kiểm Tra",
         "zh-Hant": "監控和審查",
-        "id": "Monitor and Review",
+        "id": "Pemantauan dan Review",
         "es": "Monitorizar y Revisar",
         "pt-BR": "Monitorar e Rever",
         "ar": "الرقابة والمراجعة"
@@ -11276,7 +11276,7 @@ module.exports = {
         "en": "1.The Firm will monitor and assess on a regular basis the effectiveness of this Policy and the order of its order execution arrangements and, in particular, the execution quality of the procedures explained in the Policy in order to deliver the best possible result for the client, and, where appropriate, the Firm reserves the right to correct any deficiencies in this Policy and make improvements to its execution arrangements.",
         "vi": "1.Công ty sẽ sao chép và đánh giá thường xuyên tính hiệu quả của Chính sách này và thứ tự sắp xếp thực hiện các lệnh và đặc biệt là chất lượng thực hiện các thủ tục được giải thích trong Chính sách nhằm mang lại kết quả tốt nhất có thể cho khách hàng, và, nếu thích hợp, Công ty bảo lưu quyền sửa bất kỳ thiếu sót nào trong Chính sách này và thực hiện các cải thiện đối với các trình tự thực thi lệnh của nó.",
         "zh-Hant": "1.本公司將會定期監督和評估本政策和訂單執行安排秩序的效果，尤其是本政策所說明流程的執行質量，從而盡可能向客戶提供最佳結果。在適當情況下，本公司保留修改本政策任何缺陷和改善執行安排的的權利。",
-        "id": "1.The Firm will monitor and assess on a regular basis the effectiveness of this Policy and the order of its order execution arrangements and, in particular, the execution quality of the procedures explained in the Policy in order to deliver the best possible result for the client, and, where appropriate, the Firm reserves the right to correct any deficiencies in this Policy and make improvements to its execution arrangements.",
+        "id": "1. Perusahaan akan memantau dan menilai secara teratur keefektifan Kebijakan ini dan urutan pengaturan pelaksanaan pesanannya dan, khususnya, kualitas pelaksanaan prosedur yang dijelaskan dalam Kebijakan untuk memberikan hasil terbaik bagi klien, dan, jika sesuai, Perusahaan berhak untuk memperbaiki setiap kekurangan dalam Kebijakan ini dan melakukan perbaikan pada pengaturan pelaksanaannya.",
         "es": "1. La Firma supervisará y evaluará periódicamente la efectividad de esta Política y el orden de sus acuerdos de ejecución de órdenes y, en particular, la calidad de ejecución de los procedimientos explicados en la Política para brindar el mejor resultado posible para el cliente, y, cuando corresponda, la Firma se reserva el derecho de corregir cualquier deficiencia en esta Política y realizar mejoras en sus acuerdos de ejecución.",
         "pt-BR": "1.A Empresa monitorará e avaliará regularmente a eficácia desta Política e a ordem de seus arranjos de execução de ordens e, em particular, a qualidade da execução dos procedimentos explicados na Política, a fim de proporcionar o melhor resultado possível para a implementação da Política. cliente, e, quando apropriado, a Empresa reserva-se o direito de corrigir quaisquer deficiências nesta Política e fazer melhorias em seus arranjos de execução.",
         "ar": "1- ستقوم الشركة بشكل دوري بمراقبة وتقييم فعالية هذه السياسة وترتيباتها الخاصة بتنفيذ الأوامر، وعلى وجه التحديد جودة تنفيذ الإجراءات المنصوص عليها في السياسة من أجل تحقيق أفضل نتيجة ممكنة للعميل، وتحتفظ الشركة لنفسها بالحق في أن تقوم عند الاقتضاء بتصحيح أي قصور في هذه السياسة وإدخال تحسينات على ترتيباتها الخاصة بالتنفيذ."
@@ -11286,7 +11286,7 @@ module.exports = {
         "en": "2.In addition, Firm will review the Policy as well as its order execution arrangements at least annually. A review will also be carried out whenever a material change occurs that affects the ability of the Firm to continue to the best possible result for the execution of its client orders on a consistent basis using the venues included in this Policy.",
         "vi": "2.Ngoài ra, Công ty sẽ xem xét Chính sách cũng như sắp xếp thực hiện lệnh của mình ít nhất hàng năm. Việc xem xét cũng sẽ được thực hiện bất cứ khi nào có thay đổi về vật chất ảnh hưởng đến khả năng của Công ty để tiếp tục kết quả tốt nhất có thể cho việc thực hiện các lệnh của khách hàng một cách nhất quán bằng cách sử dụng các địa điểm trong Chính sách này.",
         "zh-Hant": "2.此外，本公司將至少每年檢查壹次本政策及訂單執行安排。當發生影響本公司繼續使用本政策內規定場所，以持續盡可能為客戶訂單實現最佳執行結果的重大變化時，也將開展檢查。",
-        "id": "2.In addition, Firm will review the Policy as well as its order execution arrangements at least annually. A review will also be carried out whenever a material change occurs that affects the ability of the Firm to continue to the best possible result for the execution of its client orders on a consistent basis using the venues included in this Policy.",
+        "id": "2. Selain itu, Perusahaan akan meninjau Kebijakan serta pengaturan pelaksanaan pesanannya setidaknya setiap tahun. Peninjauan juga akan dilakukan setiap kali terjadi perubahan material yang mempengaruhi kemampuan Perusahaan untuk melanjutkan ke hasil terbaik untuk pelaksanaan pesanan kliennya secara konsisten menggunakan tempat yang termasuk dalam Kebijakan ini.",
         "es": "2. Además, la Firma revisará la Política, así como sus acuerdos de ejecución de órdenes, al menos una vez al año. También se llevará a cabo una revisión cada vez que ocurra un cambio importante que afecte la capacidad de la Firma para continuar con el mejor resultado posible para la ejecución de las órdenes de sus clientes de manera consistente utilizando los lugares incluidos en esta Política.",
         "pt-BR": "2. Além disso, a Empresa revisará a Política, bem como seus dispositivos de execução de ordens pelo menos anualmente. Uma revisão também será realizada sempre que ocorrer uma alteração material que afete a capacidade da Empresa de continuar com o melhor resultado possível para a execução de seus pedidos de clientes de forma consistente, utilizando os locais incluídos nesta Política.",
         "ar": "2- بالإضافة إلى ذلك، ستقوم الشركة بمراجعة السياسة وكذلك ترتيباتها الخاصة بتنفيذ الأوامر مرة واحدة في السنة على الأقل. وسيتم أيضًا إجراء المراجعة متى حدث تغيير جوهري يحد من قدرة الشركة على مواصلة تحقيق  أفضل نتيجة ممكنة لتنفيذ أوامر عملائها على أساس ثابت باستخدام أماكن التنفيذ الوارد ذكرها في هذه السياسة."
@@ -11296,7 +11296,7 @@ module.exports = {
         "en": "The Firm will notify its affected clients on any material changes in its Policy or order execution arrangements.",
         "vi": "Công ty sẽ thông báo cho các khách hàng bị ảnh hưởng của mình về bất kỳ thay đổi vật chất nào trong Chính sách hoặc các thỏa thuận thực hiện lệnh của nó.",
         "zh-Hant": "本公司將對其政策或訂單執行安排的任何重大變動對客戶發出通知。",
-        "id": "The Firm will notify its affected clients on any material changes in its Policy or order execution arrangements.",
+        "id": "Perusahaan akan memberi tahu klien yang terkena dampak tentang setiap perubahan material dalam Kebijakan atau pengaturan pelaksanaan pesanannya.",
         "es": "La Firma notificará a sus clientes afectados sobre cualquier cambio importante en su Política o en los acuerdos de ejecución de órdenes.",
         "pt-BR": "A Empresa notificará seus clientes afetados sobre quaisquer mudanças relevantes em sua Política ou acordos de execução de ordens.",
         "ar": "وستبلغ الشركة عملائها المتأثرين بأي تغيير جوهري في سياستها أو ترتيبات تنفيذ الأوامر."
@@ -11306,7 +11306,7 @@ module.exports = {
         "en": "Client Consent",
         "vi": "Khách Hàng Đồng Ý",
         "zh-Hant": "客戶同意書",
-        "id": "Client Consent",
+        "id": "Persetujuan Klien",
         "es": "Consentimiento del Cliente",
         "pt-BR": "Consentimento do Cliente",
         "ar": "موافقة العميل"
@@ -11316,7 +11316,7 @@ module.exports = {
         "en": "1.When establishing a business relation with the Client, the Firm is required to obtain the Client’s prior consent to this Policy.",
         "vi": "1.Khi thiết lập quan hệ kinh doanh với Khách hàng, Công ty bắt buộc phải có được sự đồng ý trước của Khách hàng đối với Chính sách này.",
         "zh-Hant": "1.在與客戶建立業務關系時，本公司必須獲得客戶對本政策的事先同意。",
-        "id": "1.When establishing a business relation with the Client, the Firm is required to obtain the Client’s prior consent to this Policy.",
+        "id": "1. Saat membangun hubungan bisnis dengan Klien, Perusahaan diharuskan untuk mendapatkan persetujuan Klien sebelumnya untuk Kebijakan ini.",
         "es": "1. Al establecer una relación comercial con el Cliente, se requiere que la Firma obtenga el consentimiento previo del Cliente a esta Política.",
         "pt-BR": "1. Ao estabelecer uma relação comercial com o Cliente, a Empresa é obrigada a obter o consentimento prévio do Cliente para esta Política.",
         "ar": "1- عند إقامة علاقة تجارية مع العميل، تكون الشركة ملزمة بالحصول على موافقة العميل المسبقة على هذه السياسة."
@@ -11326,7 +11326,7 @@ module.exports = {
         "en": "2.By entering into the Client Agreement, the Client provides the consents referred to in paragraph 6.1 where the Client is informed that any orders placed with the Firm for the Financial Instruments offered by the Firm, the Firm acts as the principal and the Firm is the sole Execution Venue which is a non-regulated market.",
         "vi": "2.Bằng cách kí kết Hợp đồng Khách hàng, Khách hàng cung cấp các thỏa thuận được đề cập trong đoạn 6.1, trong đó Khách hàng được thông báo rằng bất kỳ lệnh nào được đặt với Công ty cho Công cụ Tài chính do Công ty cung cấp, Công ty đóng vai trò là người đứng đầu và Công ty là đơn vị duy nhất Địa điểm Khớp Lệnh là một thị trường không quy định.",
         "zh-Hant": "2.客戶與本公司簽署本協議，即表示客戶按照 6.1 款的規定給予同意書，即客戶獲知，對於所有就本公司提供金融工具而向本公司下達的所有訂單，本公司充當做市商，而且本公司是非監管市場的唯壹執行地點。",
-        "id": "2.By entering into the Client Agreement, the Client provides the consents referred to in paragraph 6.1 where the Client is informed that any orders placed with the Firm for the Financial Instruments offered by the Firm, the Firm acts as the principal and the Firm is the sole Execution Venue which is a non-regulated market.",
+        "id": "2. Dengan masuk ke dalam Perjanjian Klien, Klien memberikan persetujuan sebagaimana dimaksud dalam paragraf 6.1 di mana Klien diberi tahu bahwa setiap pesanan ditempatkan dengan Perusahaan untuk Instrumen Keuangan yang ditawarkan oleh Perusahaan, Perusahaan bertindak sebagai prinsipal dan Perusahaan tersebut satu-satunya Tempat Eksekusi yang merupakan pasar tanpa regulasi.",
         "es": "2. Al entrar en el Acuerdo del Cliente, el Cliente proporciona los consentimientos a los que se hace referencia en el párrafo 6.1, en el que se informa al Cliente de que cualquier pedido realizado a la Firma para los Instrumentos Financieros ofrecidos por la Firma, la Firma actúa como principal y la Firma es el único lugar de ejecución que es un mercado no regulado.",
         "pt-BR": "2.Entrando no Contrato de Cliente, o Cliente fornece os consentimentos referidos no parágrafo 6.1 onde o Cliente é informado de que quaisquer pedidos feitos à Empresa para os Instrumentos Financeiros oferecidos pela Empresa, a Empresa atua como principal e a Empresa é o único Local de Execução que é um mercado não regulamentado.",
         "ar": "2- بموجب إبرام اتفاقية العميل، يقدم العميل الموافقات المشار إليها في الفقرة 6.1 حيث تم إبلاغ العميل بأن أي أمر يتم تقديمه إلى الشركة على الأدوات المالية التي تقدمها الشركة، تعمل الشركة بصفتها طرفًا رئيسيًا وأن الشركة هي مكان التنفيذ الوحيد والذي هو سوق غير منظمة."
@@ -11336,7 +11336,7 @@ module.exports = {
         "en": "Important Information",
         "vi": "Thông tin quan trọng",
         "zh-Hant": "重要信息",
-        "id": "Important Information",
+        "id": "Informasi penting",
         "es": "Información Importante",
         "pt-BR": "Informação importante",
         "ar": "معلومات مهمة"
@@ -11346,7 +11346,7 @@ module.exports = {
         "en": "1.There may be specific leverage limits on the instruments available. For more information please visit our website.",
         "vi": "1.Có thể có giới hạn đòn bẩy cụ thể trên các công cụ có sẵn. Để biết thêm thông tin, vui lòng truy cập trang web của chúng tôi.",
         "zh-Hant": "1.對可用工具可能有特定的杠桿限制。了解更多信息，請訪問本網站。",
-        "id": "1.There may be specific leverage limits on the instruments available. For more information please visit our website.",
+        "id": "1. Mungkin ada batasan leverage khusus pada instrumen yang tersedia. Untuk informasi lebih lanjut silahkan kunjungi website kami.",
         "es": "1. Puede haber límites específicos sobre el apalancamiento en los instrumentos disponibles. Para obtener más información, por favor, visite nuestro sitio web.",
         "pt-BR": "1. Pode haver limites específicos de alavancagem nos instrumentos disponíveis. Para mais informações, visite nosso site.",
         "ar": "1- قد تكون هناك حدود قصوى للرافعة المالية على الأدوات المتاحة. للحصول على المزيد من المعلومات، يرجى زيارة موقعنا الإلكتروني."
@@ -11356,7 +11356,7 @@ module.exports = {
         "en": "2.On some trading platforms hedging may not be permitted. In the event a Client opens a second position on the same instrument, this will be netted-off against the existing open position.",
         "vi": "2.Trên một số nền tảng hedging (giao dịch bảo hiểm) có thể không được phép. Trong trường hợp Khách hàng mở một vị thế thứ hai trên cùng một công cụ, điều này sẽ được bù trừ theo vị thế mở hiện tại.",
         "zh-Hant": "2.某些交易可能不允許對沖。在這種情況下，客戶再次開設同壹工具的頭寸，將會抵消原有未平倉頭寸。",
-        "id": "2.On some trading platforms hedging may not be permitted. In the event a Client opens a second position on the same instrument, this will be netted-off against the existing open position.",
+        "id": "2. Di beberapa platform trading, lindung nilai mungkin tidak diizinkan. Jika Klien membuka posisi kedua pada instrumen yang sama, ini akan dijaringkan terhadap posisi terbuka yang ada.",
         "es": "2. En algunas plataformas de trading no se permite la cobertura(\"hedging\"). En el caso de que un Cliente abra una segunda posición en el mismo instrumento, se compensará con la posición abierta existente.",
         "pt-BR": "2. Em algumas plataformas de negociação, a cobertura poderá não ser permitida. No caso de um Cliente abrir uma segunda posição no mesmo instrumento, este será compensado com a posição aberta existente.",
         "ar": "2- قد لا يكون مسموحًا استخدام التحوط على بعض منصات التداول.  وفي حالة قيام العميل بفتح مركز ثان على نفس الأداة فإن المركز الثاني سيخضع للمقاصة ضد المركز المفتوح الحالي."
@@ -11366,7 +11366,7 @@ module.exports = {
         "en": "Example: If client has an open BUY position of 2 lots EURUSD and then enters a sell position of 1 lot EURUSD, these positions will net as they are the same currency pair, resulting in the client having a remaining position of BUY 1 lot EURUSD and a realized P/L from the 1 lot position closed due to the netting.",
         "vi": "Ví dụ: Nếu khách hàng có một vị trí MUA mở là 2 lot EURUSD và sau đó nhập vào vị thế bán 1 lot EURUSD, các vị trí này sẽ ròng vì chúng là cùng một cặp tiền tệ, dẫn đến khách hàng có vị trí MUA 1 lot EURUSD và một P / L đã nhận ra từ 1 lot vị thế đã đóng do bù trừ ròng.",
         "zh-Hant": "舉例：如果客戶開設 2 手歐元美元的多頭，然後開設 1 手歐元美元的的空頭，由於貨幣對相同，將會產生凈頭寸。這導致客戶留下 1 手歐元美元的多頭，並由於凈額計算，在平倉時得到由 1 手頭寸產生的盈虧。",
-        "id": "Example: If client has an open BUY position of 2 lots EURUSD and then enters a sell position of 1 lot EURUSD, these positions will net as they are the same currency pair, resulting in the client having a remaining position of BUY 1 lot EURUSD and a realized P/L from the 1 lot position closed due to the netting.",
+        "id": "Contoh: Jika klien memiliki posisi BUY terbuka 2 lot EURUSD dan kemudian memasuki posisi jual 1 lot EURUSD, posisi ini akan bersih karena merupakan pasangan mata uang yang sama, sehingga klien memiliki sisa posisi BUY 1 lot EURUSD dan P / L yang direalisasikan dari posisi 1 lot yang ditutup karena adanya netting.",
         "es": "Ejemplo: Si el cliente tiene una posición de COMPRA abierta de 2 lotes de EURUSD y luego ingresa en una posición de venta de 1 lote de EURUSD, estas posiciones se netearán, ya que son el mismo par de divisas, lo que hace que el cliente tenga una posición restante de COMPRAR 1 lote de EURUSD y un P/L realizado de la posición de 1 lote cerrado debido al neteado.",
         "pt-BR": "Exemplo: Se o cliente tiver uma posição de COMPRA aberta de 2 lotes EURUSD e depois entrar em uma posição de venda de 1 lote EURUSD, essas posições serão líquidas, pois são o mesmo par de moedas, resultando em uma posição remanescente de COMPRA 1 lote EURUSD e um P / L realizado a partir da posição de 1 lote fechada devido à compensação.",
         "ar": "مثال: إذا قام العميل بفتح مركز شراء بحجم 2 عقد على زوج اليورو/دولار أمريكي ثم قام بعد ذلك بفتح مركز بيع بحجم 1 عقد على زوج اليورو/دولار أمريكي، سيخضع هذان المركزان للمقاصة لأنهما نفس زوج العملة، ويؤدي ذلك إلى أن يتبقى لديه مركز شراء مقداره 1 عقد وربح محقق/خسائر محققة من مركز 1 عقد المغلق بسبب المقاصة."
@@ -11376,7 +11376,7 @@ module.exports = {
         "en": "3.CFDs are not eligible for sale in certain jurisdictions or countries. The Policy is not directed to any jurisdiction or country where its publication, availability or distribution would be contrary to local laws or regulations, including the United States of America. The Policy does not constitute an offer, invitation or solicitation to buy or sell CFDs. It may not be reproduced or disclosed (in whole or in part) to any other person without prior written permission. The Policy is not intended to constitute the sole basis for the evaluation of the client’s decision to trade in Contracts for Difference (CFDs).",
         "vi": "3.CFD không đủ điều kiện pháp lý để bán tại một số quốc gia hoặc quốc gia nhất định. Chính sách không hướng đến bất kỳ khu vực định chế pháp lý hoặc quốc gia nào nơi việc xuất bản, tính khả dụng hoặc phân phối của nó sẽ trái với luật pháp hoặc quy định của địa phương, bao gồm cả Hoa Kỳ. Chính sách này không cấu thành đề nghị, lời mời hoặc yêu cầu mua hoặc bán CFD. Nó không được sao chép hoặc tiết lộ (toàn bộ hoặc một phần) cho bất kỳ người nào khác mà không có sự cho phép trước bằng văn bản. Chính sách không nhằm tạo cơ sở duy nhất cho việc đánh giá quyết định giao dịch của khách hàng trong Hợp đồng chênh lệch (CFDs).",
         "zh-Hant": "3.CFD 在若幹司法管轄區或國家沒有銷售資格。本政策不針對其發布、提供或分發將違反當地法律或法規的司法管轄區或國家，包括美國發布、提供或分發。本政策不構成購買或出售 CFD 的要約、邀請或招攬。未經事先書面許可，不得向任何其他人士（全部或部分）復制或披露相關內容。本政策並不構成評估客戶交易差價合約（CFD）決策的唯壹依據。",
-        "id": "3.CFDs are not eligible for sale in certain jurisdictions or countries. The Policy is not directed to any jurisdiction or country where its publication, availability or distribution would be contrary to local laws or regulations, including the United States of America. The Policy does not constitute an offer, invitation or solicitation to buy or sell CFDs. It may not be reproduced or disclosed (in whole or in part) to any other person without prior written permission. The Policy is not intended to constitute the sole basis for the evaluation of the client’s decision to trade in Contracts for Difference (CFDs).",
+        "id": "3. CFD tidak memenuhi syarat untuk dijual di yurisdiksi atau negara tertentu. Kebijakan ini tidak ditujukan ke yurisdiksi atau negara mana pun di mana publikasi, ketersediaan, atau distribusinya akan bertentangan dengan hukum atau peraturan setempat, termasuk Amerika Serikat. Kebijakan bukan merupakan penawaran, undangan, atau ajakan untuk membeli atau menjual CFD. Ini tidak boleh direproduksi atau diungkapkan (seluruhnya atau sebagian) kepada orang lain tanpa izin tertulis sebelumnya. Kebijakan tidak dimaksudkan untuk menjadi satu-satunya dasar evaluasi keputusan klien untuk trading di Contracts for Difference (CFD).",
         "es": "3.CFD no son elegibles para la venta en ciertas jurisdicciones o países. La Política no está dirigida a ninguna jurisdicción o país donde su publicación, disponibilidad o distribución fuera contraria a las leyes o regulaciones locales; incluidos los Estados Unidos de América. La Política no constituye una oferta, invitación o solicitud para comprar o vender CFDs. No se puede reproducir ni divulgar (en su totalidad o en parte) a ninguna otra persona sin un permiso previo por escrito. La Política no pretende constituir la base única para la evaluación de la decisión del cliente de negociar Contratos por Diferencias (CFDs).",
         "pt-BR": "3.CFDs não são elegíveis para venda em certas jurisdições ou países. A Política não é dirigida a nenhuma jurisdição ou país onde sua publicação, disponibilidade ou distribuição seria contrária às leis ou regulamentos locais, incluindo os Estados Unidos da América. A Política não constitui uma oferta, convite ou solicitação para comprar ou vender CFDs. Não pode ser reproduzido ou divulgado (no todo ou em parte) a qualquer outra pessoa sem permissão prévia por escrito. A Política não se destina a constituir a única base para a avaliação da decisão do cliente de negociar Contratos por Diferença (CFDs).",
         "ar": "3- لا تكون عقود الفروقات مؤهلة للبيع في بعض الولايات القضائية أو البلدان.  هذه السياسة ليست موجهة إلى أي ولاية قضائية أو دولة يكون نشرها أو توفرها أو توزيعها فيها مخالفًا للقوانين أو اللوائح المحلية، ما في ذلك الولايات المتحدة الأمريكية.  لا تشكل السياسة عرضًا أو دعوة أو حثًا على شراء أو بيع عقود الفروقات.  ولا يجوز استنساخها أو الإفصاح عنها (بشكل كلي أو جزئي) لأي شخص آخر بدون إذن كتابي مسبق.  ولا تهدف السياسة إلى أن تشكل الأساس الوحيد لتقييم قرار العميل لتداول عقود الفروقات."
@@ -11386,7 +11386,7 @@ module.exports = {
         "en": "FAQs",
         "vi": "FAQs",
         "zh-Hant": "常見問題",
-        "id": "FAQs",
+        "id": "FAQ",
         "es": "PP.FF",
         "pt-BR": "FAQs",
         "ar": "أسئلة شائعة"
@@ -11396,7 +11396,7 @@ module.exports = {
         "en": "1.Questions regarding the Policy should be addressed, in the first instance, to the Customer Support Department.",
         "vi": "1.Các câu hỏi liên quan đến Chính sách nên được giải quyết, trong trường hợp đầu tiên, được đến Bộ Phận Hỗ Trợ Khách Hàng.",
         "zh-Hant": "1.關於政策問題首先傳達給客戶服務部。",
-        "id": "1.Questions regarding the Policy should be addressed, in the first instance, to the Customer Support Department.",
+        "id": "1.Pertanyaan tentang Kebijakan harus ditujukan, pertama-tama, ke Departemen Dukungan Pelanggan.",
         "es": "1. Las preguntas relacionadas con la Política deben dirigirse, en primera instancia, al Departamento de Atención al Cliente.",
         "pt-BR": "1. As perguntas sobre a Política devem ser tratadas, em primeira instância, para o Departamento de Suporte ao Cliente.",
         "ar": "1- يجب أن يتم تقديم جميع الأسئلة المتعلقة بالسياسة أولاً إلى إدارة دعم العملاء."
@@ -11406,7 +11406,7 @@ module.exports = {
         "en": "2.Customer Support Department",
         "vi": "2.Bộ Phận Hỗ Trợ Khách Hàng",
         "zh-Hant": "2.客戶服務部",
-        "id": "2.Customer Support Department",
+        "id": "2. Departemen Dukungan Pelanggan",
         "es": "2. Departamento de Atención al Cliente",
         "pt-BR": "2. Departamento de Suporte ao Cliente",
         "ar": "2- إدارة دعم العملاء:"
@@ -11426,7 +11426,7 @@ module.exports = {
         "en": "Additional Contacts",
         "vi": "Địa Chỉ Liên Hệ Bổ Sung",
         "zh-Hant": "其他聯系人",
-        "id": "Additional Contacts",
+        "id": "Kontak Tambahan",
         "es": "Contactos Adicionales",
         "pt-BR": "Contatos Adicionais",
         "ar": "بيانات اتصال إضافية"
@@ -11436,7 +11436,7 @@ module.exports = {
         "en": "1.TigerWit Compliance Department",
         "vi": "1.Bộ Phận Giám Sát TigerWIt",
         "zh-Hant": "1.TigerWit 合規部門",
-        "id": "1.TigerWit Compliance Department",
+        "id": "1. Departemen Compliance TigerWit",
         "es": "1. Departamento Compliance TigerWit",
         "pt-BR": "1. Departamento de Compliance da TigerWit",
         "ar": "2- إدارة الامتثال في TigerWit"
@@ -11986,7 +11986,7 @@ module.exports = {
         "en": "SUMMARY OF COMPLAINTS PROCEDURE",
         "vi": "TÓM TẮT QUY TRÌNH GIẢI QUYẾT PHÀN NÀN",
         "zh-Hant": "投訴程序概述",
-        "id": "SUMMARY OF COMPLAINTS PROCEDURE",
+        "id": "RINGKASAN PROSEDUR KELUHAN",
         "es": "SUMARIO PROCEDIMIENTO RECLAMACIONES",
         "pt-BR": "RESUMO DO PROCEDIMENTO DE RECLAMAÇÕES",
         "ar": "ملخص إجراءات الشكاوي"
@@ -11996,7 +11996,7 @@ module.exports = {
         "en": "1) We will acknowledge your complaint within 48 hours of receipt and let you know which senior person will be dealing with your complaint.",
         "vi": "1) Chúng tôi sẽ giải quyết khiếu nại, phàn nàn của bạn trong vòng 48 giờ tiếp nhận và cho bạn biết Chuyên viên nào đang giải quyết khiếu nại của bạn.",
         "zh-Hant": "1) 我們將在收到您的投訴 48 小時內確認收到，並告知由哪位專業人員處理您的投訴。",
-        "id": "1) We will acknowledge your complaint within 48 hours of receipt and let you know which senior person will be dealing with your complaint.",
+        "id": "1) Kami akan merespon keluhan Anda dalam waktu 48 jam setelah diterima dan memberi tahu Anda senior mana yang akan menangani keluhan Anda.",
         "es": "1) Reconoceremos su reclamación dentro de un plazo de 48 horas despues de su recepción y le asignaremos un empleado senior.",
         "pt-BR": "1) Confirmaremos sua reclamação dentro de 48 horas após o recebimento e informaremos a você qual pessoa sênior lidará com sua reclamação.",
         "ar": "1) سنقوم بالإقرار باستلام شكوتك في غضون 48 ساعة من استلامها وسنحيطك علمًا بمن من كبار المسؤولين بالشركة سيتولى التعامل مع شكوتك."
@@ -12006,7 +12006,7 @@ module.exports = {
         "en": "2) We will investigate your complaint and endeavor to send a final response to you within four (4) weeks of receipt of your complaint. If we are unable to provide you with a final response within this time we will send you an update.",
         "vi": "2) Chúng tôi sẽ kiểm tra khiếu nại của bạn và nỗ lực để gửi đến cho bạn phản hồi cuối cùng trong vòng bốn (4) tuần sau khi nhận được khiếu nại của bạn. Nếu chúng tôi có thể đưa ra phản hồi cuối cùng trong khoảng thời gian này, chúng tôi sẽ gửi đến bạn cập nhật mới nhất.",
         "zh-Hant": "2) 我們將調查您的投訴並努力在收到您投訴後的四（4）周內給您最終答復。如果我們在這段時間內不能給您最終答復，我們會向您發送最新情況。",
-        "id": "2) We will investigate your complaint and endeavor to send a final response to you within four (4) weeks of receipt of your complaint. If we are unable to provide you with a final response within this time we will send you an update.",
+        "id": "2) Kami akan menyelidiki keluhan Anda dan berusaha untuk mengirimkan tanggapan akhir kepada Anda dalam waktu empat (4) minggu setelah menerima keluhan Anda. Jika kami tidak dapat memberikan tanggapan akhir dalam waktu ini, kami akan mengirimkan pembaruan kepada Anda.",
         "es": "2) Investigaremos su reclamación y siguiendo nuestro proceso le enviaremos una contestación definitiva dentro de las cuatro (4) semanas posteriores a su recepción. En caso de no poder proporcionarle una respuesta definitiva dentro de ese período, nos pondremos en contacto para actualizarle su situación.",
         "pt-BR": "2) Investigaremos sua reclamação e nos empenharemos em enviar uma resposta final para você em até quatro (4) semanas após o recebimento da sua reclamação. Se não formos capazes de lhe fornecer uma resposta final dentro deste prazo, enviaremos uma atualização.",
         "ar": "2) سنقوم بالتحقيق في شكوتك وسنبذل قصارى جهدنا حتى نرسل إليك ردًا نهائيًا خلال 4 (أربعة) أسابيع من استلام شكواك.  إذا لم نستطع إرسال رد نهائي لك خلال تلك الفترة، سوف نرسل إليك تحديثًا بما وصل إليه التحقيق في الشكوى."
@@ -12016,7 +12016,7 @@ module.exports = {
         "en": "3) We will endeavor to send a final response to you within eight (8) weeks of receipt of your complaint. If we are unable to provide you with a final response within this time frame, we will write to you explaining why and advise you when you can expect a final response.",
         "vi": "3) Chúng tôi sẽ cố gắng gửi đến bạn phản hồi cuối cùng trong vòng tám (8) tuần kể từ khi nhận được khiếu nại của bạn. Nếu chúng tôi không thể đưa ra phản hồi trong khung thời gian này, chúng tôi sẽ viết thư để giải thích lý do và thông báo thời hạn bạn có thể nhận được phản hồi cuối cùng.",
         "zh-Hant": "3) 我們將努力在收到您的投訴八（8）周內給您最終答復。如果我們在這段時間內不能給您最終答復，我們會向您書面解釋原因並告知您何時會給您最終答復。",
-        "id": "3) We will endeavor to send a final response to you within eight (8) weeks of receipt of your complaint. If we are unable to provide you with a final response within this time frame, we will write to you explaining why and advise you when you can expect a final response.",
+        "id": "3) Kami akan berusaha untuk mengirimkan tanggapan akhir kepada Anda dalam waktu delapan (8) minggu setelah menerima keluhan Anda. Jika kami tidak dapat memberi Anda tanggapan akhir dalam jangka waktu ini, kami akan menulis kepada Anda menjelaskan alasannya dan memberi tahu Anda kapan Anda dapat mengharapkan tanggapan akhir.",
         "es": "3) Haremos lo posible por enviarle una respuesta definitiva dentro de las ocho (8) semanas posteriores a la recepción de su reclamación. Si no podemos brindarle una respuesta definitiva pasado ese plazo, le comunicaremos los motivos y le informaremos de la fecha de la respuesta final.",
         "pt-BR": "3) Faremos o possível para lhe enviar uma resposta final no prazo de oito (8) semanas após a recepção da sua reclamação. Se não formos capazes de lhe fornecer uma resposta final dentro deste prazo, escreveremos para você explicando por que e aconselhando quando você pode esperar uma resposta final.",
         "ar": "3) سوف نبذل قصارى جهدنا حتى نرسل إليك ردًا نهائيًا خلال 8 (ثمانية) أسابيع من استلام شكواك. إذا لم نستطع إرسال رد نهائي لك خلال تلك الفترة، سوف نرسل إليك رسالة تشرح الأسباب وسوف نقوم بإبلاغك بالموعد الذي من المتوقع أن نرسل إليك فيه ردنا النهائي."
@@ -12026,8 +12026,7 @@ module.exports = {
         "en": "4) If more than eight (8) weeks from the date of your complaint has past and you haven’t received a final response, or you are dissatisfied with the final response you have received from us, you are entitled to refer your complaint to the Securities Commission of The Bahamas (SCB), they can be contacted at the following: ",
         "vi": "4) Nếu hơn tám (8) tuần kể từ khi bạn gửi khiếu nại và bạn chưa nhận được phản hồi cuối cùng, hoặc bạn không hài lòng với phản hồi cuối cùng từ chúng tôi, bạn có quyền gửi khiếu nại của mình đến Ủy ban Chứng khoán Bahamas (SCB), bạn có thể liên hệ theo địa chỉ sau:",
         "zh-Hant": "4) 如果從您投訴之日起已經過去了超過八（8）周，並且未收到最終答復，或是您對已經收到的最終答復不滿意，您有權將投訴送交巴哈馬證券監察委員會（SCB），他們的聯系方式如下：",
-        "id": "4) If more than eight (8) weeks from the date of your complaint has past and you haven’t received a final response, or you are dissatisfied with the final response you have received from us, you are entitled to refer your complaint to the Securities Commission of The Bahamas (SCB), they can be contacted at the following: ",
-        "es": "4) Si han transcurrido más de ocho (8) semanas desde la fecha de su reclamación y no ha recibido una respuesta definitiva, o no está satisfecho(a) con ésta, puede ejercer su derecho de reclamación a La Securities Commission of The Bahamas (SCB); puede ponerse en contacto en la siguiente dirección: ",
+        "id": "4) Jika lebih dari delapan (8) minggu sejak tanggal pengaduan Anda berlalu dan Anda belum menerima tanggapan akhir, atau Anda tidak puas dengan tanggapan akhir yang Anda terima dari kami, Anda berhak untuk merujuk pengaduan Anda ke Komisi Sekuritas Bahamas (SCB), mereka dapat dihubungi di berikut ini:",
         "pt-BR": "4) Se mais de oito (8) semanas da data de sua reclamação tiver passado e você não tiver recebido uma resposta final, ou se estiver insatisfeito com a resposta final que recebeu de nós, você tem o direito de encaminhar sua reclamação para Comissão de Valores Mobiliários das Bahamas (SCB), eles podem ser contatados no seguinte:",
         "ar": "4) إذا مر أكثر من ثمانية (8) أسابيع من تاريخ الشكوى ولم تتسلم ردًا نهائيًا أو لم تكن راضيًا عن ردنا النهائي الذي تلقيته منا، يحق لك إحالة الشكوى إلى هيئة الأوراق المالية في جزر البهاما (SCB)، والتي يمكنك الاتصال بها على العنوان التالي:"
     },
@@ -12046,7 +12045,7 @@ module.exports = {
         "en": "Securities Commission of The Bahamas",
         "vi": "Ủy Ban Chứng khoán Bahamas",
         "zh-Hant": "Securities Commission of The Bahamas",
-        "id": "Securities Commission of The Bahamas",
+        "id": "Komisi Sekuritas Bahamas",
         "es": "Securities Commission of The Bahamas",
         "pt-BR": "Comissão de Valores Mobiliários das Bahamas",
         "ar": "Securities Commission of The Bahamas"
@@ -12064,9 +12063,9 @@ module.exports = {
     "amtComplaint9": {
         "zh": "2nd Floor Poinciana House",
         "en": "2nd Floor Poinciana House",
-        "vi": "Nhà Poinsana Tầng hai",
+        "vi": "Tầng 2, Floor Poinciana House",
         "zh-Hant": "2nd Floor Poinciana House",
-        "id": "2nd Floor Poinciana House",
+        "id": "Lantai 2 Rumah Poinciana",
         "es": "2nd Floor Poinciana House",
         "pt-BR": "2nd Floor Poinciana House",
         "ar": "2nd Floor Poinciana House"
@@ -12091,22 +12090,52 @@ module.exports = {
         "pt-BR": "Nassau, Bahamas",
         "ar": "Nassau, Bahamas"
     },
+    "amtComplaint11-1": {
+        "zh": "+1 (242) 397 4100",
+        "en": "+1 (242) 397 4100",
+        "vi": "+1 (242) 397 4100",
+        "zh-Hant": "+1 (242) 397 4100",
+        "id": " ",
+        "es": "+1 (242) 397 4100",
+        "pt-BR": "+1 (242) 397 4100",
+        "ar": "+1 (242) 397 4100"
+    },
+    "amtComplaint11-2": {
+        "zh": "info@scb.gov.bs",
+        "en": "info@scb.gov.bs",
+        "vi": "info@scb.gov.bs",
+        "zh-Hant": "info@scb.gov.bs",
+        "id": " ",
+        "es": "info@scb.gov.bs",
+        "pt-BR": "info@scb.gov.bs",
+        "ar": "info@scb.gov.bs"
+    },
+    "phone2": {
+      "zh": "电话:",
+      "en": "Phone:",
+      "vi": "Phone:",
+      "zh-Hant": "電話:",
+      "id": " ",
+      "es": "Teléfono:",
+      "pt-BR": "Phone:",
+      "ar": "تلفن:"
+    },
     "amtComplaint13": {
         "zh": "电邮：",
         "en": "Email: ",
         "vi": "Email: ",
         "zh-Hant": "電郵：",
-        "id": "Email: ",
+        "id": " ",
         "es": "Email: ",
         "pt-BR": "Email:",
         "ar": "البريد الإلكتروني:"
     },
     "amtComplaint14": {
         "zh": "您必须在收到最终答复之日起六（6）个月内向金融申诉服务机构提交投诉。",
-        "en": "You must refer your complaint to the Financial Ombudsman within six (6) months of the date on the final response",
-        "vi": "Bạn phải gửi khiếu nại đến Thanh Tra Tài Chính trong vòng sáu (6) tháng kể từ ngày nhận được phản hồi cuối cùng.",
+        "en": " ",
+        "vi": " ",
         "zh-Hant": "您必須在收到最終答復之日起六（6）個月內向金融申訴服務機構提交投訴。",
-        "id": "You must refer your complaint to the Financial Ombudsman within six (6) months of the date on the final response",
+        "id": " ",
         "es": "Debe realizar su reclamación al Financial Ombudsman en una plazo de 6 meses desde la fecha de la respuesta final",
         "pt-BR": "Você deve encaminhar sua queixa ao Financial Ombudsman dentro de seis (6) meses a contar da data da resposta final.",
         "ar": "يجب عليك تقديم شكواك إلى هيئة خدمات التحقيق في الشكاوي المالية (FOS) خلال ستة (6) شهور من تاريخ الرد النهائي."
@@ -12116,7 +12145,7 @@ module.exports = {
         "en": "INTRODUCTION",
         "vi": "GIỚI THIỆU",
         "zh-Hant": "序言",
-        "id": "INTRODUCTION",
+        "id": "PENGANTAR",
         "es": "INTRODUCCIÓN",
         "pt-BR": "Introdução",
         "ar": "مقدمة"
@@ -12126,7 +12155,7 @@ module.exports = {
         "en": "1.TigerWit Limited (hereinafter referred to as ‘TigerWit’, the ‘Firm’ or the 'Company') is incorporated (Certificate of Incorporation No. 198255B) in The Commonwealth of The Bahamas. Our registered office is Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. TigerWit is authorised and regulated by the Securities Commission of The Bahamas (licence No. SIA-F185).",
         "vi": "1.TigerWit Limited (sau đây gọi tắt là \"TigerWit\", \"Công ty\" hoặc \"Công ty\") được thành lập (Giấy chứng nhận thành lập số 198255B) trong Khối thịnh vượng chung Bahamas. Văn phòng đăng ký của chúng tôi là Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, Bahamas. TigerWit được ủy quyền và quản lý bởi Ủy ban Chứng khoán Bahamas (giấy phép số SIA-F185).",
         "zh-Hant": "1.TigerWit Limited（以下統稱為“TigerWit”、“公司”或“本公司”）在 巴 哈 馬 國 註 冊 成 立 （ 註 冊 證 書 編 號198255B）。我們的註冊辦事處位於 Sea Sky Lane, Sandyport, P. O. Box SP 64368.Nassau, TheBahamas。TigerWit 受巴哈馬證券監察委員會授權和監管（註冊編號 SIA-F185）。",
-        "id": "1.TigerWit Limited (hereinafter referred to as ‘TigerWit’, the ‘Firm’ or the 'Company') is incorporated (Certificate of Incorporation No. 198255B) in The Commonwealth of The Bahamas. Our registered office is Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. TigerWit is authorised and regulated by the Securities Commission of The Bahamas (licence No. SIA-F185).",
+        "id": "1.TigerWit Limited (selanjutnya disebut sebagai 'TigerWit', 'Firm' atau 'Company') didirikan (Certificate of Incorporation No. 198255B) di The Commonwealth of The Bahamas. Kantor terdaftar kami adalah Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. TigerWit disahkan dan diatur oleh Securities Commission of The Bahamas (lisensi No. SIA-F185).",
         "es": "1. TigerWit Limited (a partir de ahora ‘TigerWit’, o la ‘Firma’ o la 'Compañía') está incorporada en (Certificado de Incorporación No. 198255B) The Commonwealth of The Bahamas. Nuestra oficina registrada es Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. TigerWit está autorizado y regulado por la Securities Commission of The Bahamas (Licencia No. SIA-F185).",
         "pt-BR": "1.TigerWit Limited (doravante referida como \"TigerWit\", a \"Firma\" ou a \"Empresa\") é incorporada (Certificado de Incorporação No. 198255B) na Comunidade das Bahamas. Nossa sede é Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, Bahamas. A TigerWit é autorizada e regulamentada pela Comissão de Valores Mobiliários das Bahamas (licença No. SIA-F185).",
         "ar": "1- إن شركة TigerWit Limited (المشار إليها فيما بعد بلفظ ‘TigerWit’ أو ‘المؤسسة’ أو 'الشركة') هي شركة مؤسسة في كومنولث جزر البهاما (شهادة التأسيس رقم 198255B). ويقع عنوان مكتبنا المسجل في Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. شركة TigerWit هي شركة مرخصة وخاضعة للرقابة من جانب هيئة الأوراق المالية بجزر البهاما (ترخيص رقم SIA-F185)."
@@ -12136,7 +12165,7 @@ module.exports = {
         "en": "INTERPRETATION OF TERMS",
         "vi": "GIẢI THÍCH CÁC ĐIỀU KHOẢN",
         "zh-Hant": "條款解釋",
-        "id": "INTERPRETATION OF TERMS",
+        "id": "INTERPRETASI PERSYARATAN",
         "es": "INTERPRETACIÓN DE LOS TÉRMINOS",
         "pt-BR": "Interpretação dos Termos",
         "ar": "تفسير المصطلحات"
@@ -12146,27 +12175,27 @@ module.exports = {
         "en": "1.Unless indicated to the contrary, the terms included in this Report shall have a specific meaning and may be used in the singular or plural as appropriate.",
         "vi": "1.Trừ khi được chỉ định ngược lại, các điều khoản trong Báo cáo này sẽ có ý nghĩa cụ thể và có thể được sử dụng ở dạng số ít hoặc số nhiều nếu thích hợp.",
         "zh-Hant": "1.除非有相反的說明，本報告中包含的術語應具有特定含義，並可酌情以單數或復數使用（如恰當）。",
-        "id": "1.Unless indicated to the contrary, the terms included in this Report shall have a specific meaning and may be used in the singular or plural as appropriate.",
+        "id": "1. Kecuali disebutkan sebaliknya, istilah yang termasuk dalam Laporan ini akan memiliki arti khusus dan dapat digunakan dalam bentuk tunggal atau jamak yang sesuai.",
         "es": "1. A no ser que se indique lo contrario, los términos incluidos en este Report tienen un significado específico y se empleará el singular o plural según sea apropiado. ",
         "pt-BR": "1. Salvo indicação em contrário, os termos incluídos neste Relatório terão um significado específico e poderão ser usados no singular ou no plural, conforme apropriado.",
         "ar": "1-  ما لم يذكر خلاف ذلك، يكون للألفاظ الواردة في هذا \"التقرير\" معنى محدد ويتم استخدامها في صيغة المفرد أو الجمع حسب الاقتضاء."
     },
     "amtComplaint19": {
-        "zh": "2.客户: 指“客户协议”定义的“客户”，客户协议可在网页 http://global.tigerwit.com 查看。",
-        "en": "2.Client: Means the ‘client’ as defined in the ‘Client Agreement’ available online at http://global.tigerwit.com. ",
-        "vi": "2.Khách hàng: Có nghĩa là 'khách hàng' được xác định trong 'Thỏa thuận khách hàng' được trình bày tại http://global.tigerwit.com.",
-        "zh-Hant": "2.客戶: 指“客戶協議”定義的“客戶”，客戶協議可在網頁 http://global.tigerwit.com 查看。",
-        "id": "2.Client: Means the ‘client’ as defined in the ‘Client Agreement’ available online at http://global.tigerwit.com. ",
-        "es": "2.Cliente: Significa el ‘Cliente’ como se define en el ‘Acuerdo de Cliente’ disponible online en http://global.tigerwit.com. ",
-        "pt-BR": "2.Cliente: significa o \"cliente\" conforme definido no \"Contrato do cliente\" disponível on-line em http://global.tigerwit.com.",
-        "ar": "2.العميل: يعني \"العميل\" حسب المعنى المحدد في \"اتفاقية العميل\" المتوفرة على شبكة الإنترنت على http://global.tigerwit.com."
+        "zh": "2.客户: 指“客户协议”定义的“客户”，客户协议可在网页 https://global.TigerWit.com 查看。",
+        "en": "2.Client: Means the ‘client’ as defined in the ‘Client Agreement’ available online at https://global.TigerWit.com. ",
+        "vi": "2.Khách hàng: Có nghĩa là 'khách hàng' được xác định trong 'Thỏa thuận khách hàng' được trình bày tại https://global.TigerWit.com.",
+        "zh-Hant": "2.客戶: 指“客戶協議”定義的“客戶”，客戶協議可在網頁 https://global.TigerWit.com 查看。",
+        "id": "2. Klien: Berarti 'klien' sebagaimana didefinisikan dalam 'Perjanjian Klien' yang tersedia online di https://global.TigerWit.com. ",
+        "es": "2.Cliente: Significa el ‘Cliente’ como se define en el ‘Acuerdo de Cliente’ disponible online en https://global.TigerWit.com. ",
+        "pt-BR": "2.Cliente: significa o \"cliente\" conforme definido no \"Contrato do cliente\" disponível on-line em https://global.TigerWit.com.",
+        "ar": "2.العميل: يعني \"العميل\" حسب المعنى المحدد في \"اتفاقية العميل\" المتوفرة على شبكة الإنترنت على https://global.TigerWit.com."
     },
     "amtComplaint20": {
         "zh": "投诉处理程序的范围",
         "en": "SCOPE OF THE COMPLAINTS HANDLING PROCEDURE",
         "vi": "PHẠM VI THỦ TỤC XỬ LÝ KHIẾU NẠI",
         "zh-Hant": "投訴處理程序的範圍",
-        "id": "SCOPE OF THE COMPLAINTS HANDLING PROCEDURE",
+        "id": "RUANG LINGKUP PROSEDUR PENANGANAN KELUHAN",
         "es": "ALCANCE PROCEDIMIENTO RESOLUCIÓN RECLAMACIONES",
         "pt-BR": "ÂMBITO DO PROCEDIMENTO DE MANIPULAÇÃO DE RECLAMAÇÕES",
         "ar": "نطاق إجراءات التعامل مع الشكاوي"
@@ -12176,7 +12205,7 @@ module.exports = {
         "en": "1.The Complaints Handling Procedure (‘the Procedure’) sets out the processes employed when dealing with complaints received by clients.",
         "vi": "1.Thủ tục Xử lý Khiếu nại (‘Thủ tục’) quy định các quy trình được sử dụng khi giải quyết các khiếu nại từ khách hàng",
         "zh-Hant": "1.本投訴處理程序（簡稱“本程序”）列出了在處理收到客戶投訴時所使用的程序。",
-        "id": "1.The Complaints Handling Procedure (‘the Procedure’) sets out the processes employed when dealing with complaints received by clients.",
+        "id": "1. Prosedur Penanganan Keluhan ('Prosedur') menetapkan proses yang digunakan saat menangani keluhan yang diterima oleh klien.",
         "es": "1 El Procedimiento de Gestión de Reclamaciones (‘el Procedimiento’) fija el proceso empleado al gestionar las reclamaciones recibidas de los clientes.",
         "pt-BR": "1.O Procedimento de Tratamento de Reclamações (“o Procedimento”) define os processos utilizados para lidar com reclamações recebidas pelos clientes.",
         "ar": "1- تحدد إجراءات التعامل مع الشكاوي (\"الإجراءات\") ما تستخدمه الشركة من إجراءات عند التعامل مع الشكاوي المستلمة من العملاء."
@@ -12186,7 +12215,7 @@ module.exports = {
         "en": "DEFINITION OF A COMPLAINT",
         "vi": "ĐỊNH NGHĨA KHIẾU NẠI",
         "zh-Hant": "投訴的定義",
-        "id": "DEFINITION OF A COMPLAINT",
+        "id": "DEFINISI KELUHAN",
         "es": "DEFINICIÓN DE UNA QUEJA",
         "pt-BR": "DEFINIÇÃO DE UMA QUEIXA",
         "ar": "تعريف الشكوى"
@@ -12196,7 +12225,7 @@ module.exports = {
         "en": "1.A complaint is an expression of dissatisfaction by a client regarding the provision of investment and/ or ancillary services provided by TigerWit.",
         "vi": "1.Đơn khiếu nại là cách thức thể hiện sự không hài lòng của khách hàng về việc cung cấp các dịch vụ đầu tư và / hoặc dịch vụ phụ trợ do TigerWit cung cấp.",
         "zh-Hant": "1.投訴是指客戶對 TigerWit 提供的投資服務和/或輔助服務表示不滿意。",
-        "id": "1.A complaint is an expression of dissatisfaction by a client regarding the provision of investment and/ or ancillary services provided by TigerWit.",
+        "id": "1. Keluhan adalah ekspresi ketidakpuasan klien atas penyediaan investasi dan / atau layanan tambahan yang disediakan oleh TigerWit.",
         "es": "1. Una reclamación es una expresión de no satisfacción de un cliente en relación a los servicios financieros proporcionados por TigerWit.",
         "pt-BR": "1. Uma queixa é uma expressão de insatisfação de um cliente em relação à prestação de serviços de investimento e / ou auxiliares fornecidos pela TigerWit.",
         "ar": "1- الشكوى هي تعبير عن عدم الرضا من جانب العميل بشأن تقديم الخدمات الاستثمارية و/أو التكميلية من جانب TigerWit."
@@ -12206,7 +12235,7 @@ module.exports = {
         "en": "2.A complaint shall include: ",
         "vi": "2.Khiếu nại bao gồm:",
         "zh-Hant": "2.投訴應當包括：",
-        "id": "2.A complaint shall include: ",
+        "id": "2. Pengaduan harus mencakup: ",
         "es": "2.Una reclamación debe incluir: ",
         "pt-BR": "2. Uma reclamação deverá incluir:",
         "ar": "2- يجب أن تتضمن الشكوى ما يلي:"
@@ -12216,7 +12245,7 @@ module.exports = {
         "en": "the client’s name and surname; the client’s trading account number; the affected transaction numbers, if applicable; the date and time that the issue arose; and a description of the issue.",
         "vi": "tên và họ của khách hàng; số tài khoản giao dịch của khách hàng; số giao dịch bị ảnh hưởng, nếu có; ngày và giờ phát sinh vấn đề; và trình bày vấn đề.",
         "zh-Hant": "客戶姓名；客戶的交易賬號；受影響的訂單號；問題出現的日期和時間；問題詳情描述。",
-        "id": "the client’s name and surname; the client’s trading account number; the affected transaction numbers, if applicable; the date and time that the issue arose; and a description of the issue.",
+        "id": "nama klien dan nama belakang; nomor akun trading klien; nomor transaksi yang terpengaruh, jika berlaku; tanggal dan waktu masalah tersebut muncul; dan deskripsi masalah.",
         "es": "el nombre y apellido del cliente; el número de cuenta de trading del cliente; el número de la transacción afectada, si aplicable; la fecha y hora; y una descripción de la cuestión.",
         "pt-BR": "o nome e o sobrenome do cliente; o número da conta de negociação do cliente; os números de transação afetados, se aplicável; a data e hora em que a questão surgiu; e uma descrição do problema.",
         "ar": "اسم ولقب العميل؛ ورقم حساب تداول العميل؛ وأرقام المعاملات المتأثرة، إن وجدت؛ وتاريخ ووقت طرح المشكلة؛ ووصف المشكلة."
@@ -12226,7 +12255,7 @@ module.exports = {
         "en": "3.A complaint must not include offensive language directed either to TigerWit or an TigerWit employee.",
         "vi": "3.Đơn khiếu nại không chứa ngôn ngữ xúc phạm hướng đến TigerWit hoặc nhân viên TigerWit.",
         "zh-Hant": "3.投訴不得包含針對 TigerWit 或 TigerWit員工的冒犯性語言。",
-        "id": "3.A complaint must not include offensive language directed either to TigerWit or an TigerWit employee.",
+        "id": "3.Keluhan tidak boleh menyertakan bahasa yang menyinggung yang ditujukan baik kepada TigerWit atau karyawan TigerWit.",
         "es": "3. Las reclamaciones no deben incluir un lenguaje inapropiado con TigerWit o alguno de sus empleados.",
         "pt-BR": "3.Uma reclamação não deve incluir linguagem ofensiva dirigida à TigerWit ou a um funcionário da TigerWit.",
         "ar": "3- لا يجوز أن تتضمن الشكوى عبارات مسيئة موجهة إلى TigerWit أو إلى موظفي TigerWit ."
@@ -12236,7 +12265,7 @@ module.exports = {
         "en": "PROCEDURE",
         "vi": "QUY TRÌNH",
         "zh-Hant": "程序",
-        "id": "PROCEDURE",
+        "id": "PROSEDUR",
         "es": "PROCEDIMIENTO",
         "pt-BR": "PROCEDIMENTO",
         "ar": "الإجراءات"
@@ -12246,7 +12275,7 @@ module.exports = {
         "en": "1.All complaints must be in writing and shall be addressed, in the first instance, to the Customer Support Department. If the client receives a response from Customer Support but deems that the complaint needs to be raised further the client may either ask Customer Support to escalate it to the Compliance Department or directly contact Compliance, which will independently and impartially investigate it.",
         "vi": "1.Tất cả các khiếu nại phải bằng văn bản và sẽ được giải quyết, trong trường hợp đầu tiên, đến Bộ phận hỗ trợ khách hàng. Nếu khách hàng nhận được phản hồi từ bộ phận Hỗ trợ Khách hàng nhưng cho rằng khiếu nại cần được đưa lên cấp cao hơn, khách hàng có thể yêu cầu Bộ phận Hỗ trợ Khách hàng chuyển nó đến Phòng Kiểm Soát hoặc liên hệ trực tiếp với Bộ phận Kiểm Soát, sẽ là nơi điều tra công tâm và độc lập.",
         "zh-Hant": "1.所有投訴必須書面進行，且應當首先傳達給客戶服務部。如果客戶收到客戶服務部的答復，但認為應當進壹步投訴，客戶可要求客戶服務部將投訴提交合規部，或直接聯系合規部，該部門將獨立和公正地展開調查。",
-        "id": "1.All complaints must be in writing and shall be addressed, in the first instance, to the Customer Support Department. If the client receives a response from Customer Support but deems that the complaint needs to be raised further the client may either ask Customer Support to escalate it to the Compliance Department or directly contact Compliance, which will independently and impartially investigate it.",
+        "id": "1. Semua keluhan harus dibuat secara tertulis dan harus dialamatkan, pertama-tama, ke Departemen Dukungan Pelanggan. Jika klien menerima tanggapan dari Dukungan Pelanggan tetapi menganggap bahwa keluhan perlu diajukan lebih lanjut, klien dapat meminta Dukungan Pelanggan untuk meneruskannya ke Departemen Compliance atau langsung menghubungi Bagian Kepatuhan, yang akan menyelidikinya secara independen dan tidak memihak.",
         "es": "1.Todas las reclamaciones deben ser por escrito y dirigidas en una primer momento al Departamento de Soporte al Cliente. Si el cliente recibe una respuesta de Soporte al Cliente que no le satisface y considera que la reclamación debe ser elevada, el cliente puede solicitar a Soporte al Cliente que lo dirija al Departamento de Compliance o contactar directamente a Compliance (compliance@tigerwit.com), que realizará una investigación imparcial.",
         "pt-BR": "1. Todas as reclamações devem ser por escrito e devem ser endereçadas, em primeira instância, ao Departamento de Suporte ao Cliente. Se o cliente receber uma resposta do Suporte ao Cliente, mas considerar que a reclamação precisa ser aumentada, o cliente pode solicitar ao Suporte ao Cliente que o encaminhe para o Departamento de Conformidade ou entre em contato diretamente com a Compliance, que a investigará de forma independente e imparcial.",
         "ar": "1- يجب أن تكون جميع الشكاوي خطية وأن يتم تقديمها أولاً إلى إدارة دعم العملاء. إذا تلقى العميل ردًا من إدارة دعم العملاء ولكن الرد لم يكن مرضيًا للعميل ورأى أن الشكوى يجب أن يتم تصعيدها لمستوى أعلى، يمكن للعميل أن يطلب من إدارة دعم العملاء تصعيد الشكوى إلى إدارة الامتثال أو أن يتصل بإدارة ،الامتثال مباشرة، والتي ستقوم بالتحقيق في الشكوى بشكل مستقل وشامل."
@@ -12256,7 +12285,7 @@ module.exports = {
         "en": "2.Both the Customer Support Department and the Compliance Department shall thoroughly examine any complaints as required (taking into account any information contained within the books and records of the Firm, including but not limited to the client’s trading account journal) to reach a fair outcome.",
         "vi": "2.Cả Bộ phận Hỗ trợ Khách hàng và Phòng Giám sát sẽ kiểm tra kỹ mọi khiếu nại theo yêu cầu (xem xét bất kỳ thông tin nào có trong sách và hồ sơ của Công ty, bao gồm nhưng không giới hạn trong lịch sử tài khoản giao dịch của khách hàng) để đạt được kết quả công bằng.",
         "zh-Hant": "2.客戶服務部和合規部都應當按要求徹底調查所有投訴（對本公司文書和記錄所含的所有信息進行考察，包括但不限於客戶交易賬戶的日誌），以獲得公平的結論。",
-        "id": "2.Both the Customer Support Department and the Compliance Department shall thoroughly examine any complaints as required (taking into account any information contained within the books and records of the Firm, including but not limited to the client’s trading account journal) to reach a fair outcome.",
+        "id": "2. Baik Departemen Dukungan Pelanggan dan Departemen Compliance harus memeriksa secara menyeluruh setiap keluhan yang diperlukan (dengan mempertimbangkan informasi apa pun yang terkandung dalam pembukuan dan catatan Perusahaan, termasuk namun tidak terbatas pada jurnal akun trading klien) untuk mencapai hasil yang adil.",
         "es": "2. Ambos Departamentos, Soporte al Cliente y Compliance, procederán a  examinar cualquier reclamación en detalle (empleando información contenida en libros de la Firma, incluyendo el historial de trading de la cuenta del cliente) para alcanzar un acuerdo satisfactorio y justo.",
         "pt-BR": "2.O Departamento de Suporte ao Cliente e o Departamento de Compliance devem examinar minuciosamente todas as reclamações conforme necessário (levando em conta qualquer informação contida nos livros e registros da Empresa, incluindo, mas não limitado ao diário da conta de negociação do cliente) para alcançar um resultado justo. .",
         "ar": "ستقوم كل من إدارة دعم العملاء وإدارة الامتثال بفحص أي شكوى فحصًا شاملاً ودقيقًا كما ينبغي، مع الأخذ في الاعتبار أي معلومات موجودة في دفاتر وسجلات الشركة، بما في ذلك على سبيل المثال وليس الحصر سجل حساب التداول الخاص بالعميل، من أجل التوصل إلى حل عادل ومنصف."
@@ -12266,7 +12295,7 @@ module.exports = {
         "en": "3.Both the Customer Support Department and the Compliance Department shall: ",
         "vi": "3.Cả Bộ Phận Hỗ Trợ Khách Hàng và Giám Sát sẽ:",
         "zh-Hant": "3.客戶服務部和合規部都必須：",
-        "id": "3.Both the Customer Support Department and the Compliance Department shall: ",
+        "id": "3. Baik Departemen Dukungan Pelanggan maupun Departemen Compliance harus: ",
         "es": "3.Ambos Departamentos, Soporte al Cliente y Compliance deberán: ",
         "pt-BR": "3.O Departamento de Suporte ao Cliente e o Departamento de Compliance devem:",
         "ar": "3- يجب على كل من إدارة دعم العملاء وإدارة الامتثال القيام بما يلي:"
@@ -12276,7 +12305,7 @@ module.exports = {
         "en": "(i) send an initial response to the client within 48 hours,",
         "vi": "(i) gửi phản hồi ban đầu cho khách hàng trong vòng 48 giờ,",
         "zh-Hant": "(i) 在 48 小時內向客戶發送初步的答復，",
-        "id": "(i) send an initial response to the client within 48 hours,",
+        "id": "(i) mengirim tanggapan awal ke klien dalam waktu 48 jam,",
         "es": "(i) Enviar una respuesta inicial al cliente dentro de un plazo de 48 horas,",
         "pt-BR": "(i) enviar uma resposta inicial ao cliente dentro de 48 horas,",
         "ar": "(i) إرسال رد مبدئي إلى العميل في غضون 48 ساعة،"
@@ -12286,7 +12315,7 @@ module.exports = {
         "en": "(ii) resolve complaints as soon as reasonably practicable, and",
         "vi": "(ii) giải quyết khiếu nại ngay khi có thể thực hiện hợp lý và",
         "zh-Hant": "(ii) 按照合理可行的方式盡快解決投訴，並",
-        "id": "(ii) resolve complaints as soon as reasonably practicable, and",
+        "id": "(ii) menyelesaikan keluhan secepat mungkin, dan",
         "es": "(ii) resolver reclamaciones tan pronto como sea razonablemente posible, e",
         "pt-BR": "(ii) resolver reclamações assim que razoavelmente praticável, e",
         "ar": "(ii) حل الشكاوي حالما يكون ذلك ممكنًا عمليًا، و"
@@ -12296,7 +12325,7 @@ module.exports = {
         "en": "(iii) inform the client accordingly.",
         "vi": "(iii) thông báo cho khách hàng cho thích hợp.",
         "zh-Hant": "(iii) 通知相應客戶。",
-        "id": "(iii) inform the client accordingly.",
+        "id": "(iii) menginformasikan klien sebagaimana mestinya.",
         "es": "(iii) informar al cliente acordemente.",
         "pt-BR": "(iii) informar o cliente em conformidade.",
         "ar": "(iii) إبلاغ العميل وفقًا لذلك."
@@ -12306,7 +12335,7 @@ module.exports = {
         "en": "4.All complaints shall be treated confidentially.",
         "vi": "4.Tất cả các khiếu nại sẽ được xử lý một cách bảo mật.",
         "zh-Hant": "4.所有投訴都應保密。",
-        "id": "4.All complaints shall be treated confidentially.",
+        "id": "4. Semua keluhan harus diperlakukan secara rahasia.",
         "es": "4. Todas las reclamaciones serán tratadas confidencialmente.",
         "pt-BR": "4. Todas as reclamações serão tratadas confidencialmente.",
         "ar": "4- سيتم التعامل مع جميع الشكاوي بسرية."
@@ -12316,7 +12345,7 @@ module.exports = {
         "en": "FAQs",
         "vi": "FAQs",
         "zh-Hant": "常見問題",
-        "id": "FAQs",
+        "id": "FAQ",
         "es": "PP.FF",
         "pt-BR": "FAQs",
         "ar": "أسئلة شائعة"
@@ -12326,7 +12355,7 @@ module.exports = {
         "en": "1.Questions regarding this Procedure should be addressed, in the first instance, to the Customer Service Department.",
         "vi": "1.Các câu hỏi liên quan đến thủ tục này cần được giải quyết, trong trường hợp đầu tiên, đến Bộ Phận Dịch Vụ Khách Hàng.",
         "zh-Hant": "1.關於此程序的問題首先傳達給客戶服務部。",
-        "id": "1.Questions regarding this Procedure should be addressed, in the first instance, to the Customer Service Department.",
+        "id": "1.Pertanyaan mengenai Prosedur ini harus ditujukan, pertama-tama, ke Departemen Layanan Pelanggan.",
         "es": "1.Las preguntas sobre este Procedimiento deberán ser dirigidas en primer lugar al Departamento de Atención al Cliente.",
         "pt-BR": "1. Questões relativas a este Procedimento devem ser tratadas, em primeira instância, para o Departamento de Atendimento ao Cliente.",
         "ar": "1- يجب أن يتم تقديم جميع الأسئلة المتعلقة بالإجراءات أولاً إلى إدارة دعم العملاء."
@@ -12336,7 +12365,7 @@ module.exports = {
         "en": "CONTACTS",
         "vi": "LIÊN HỆ",
         "zh-Hant": "聯系方式",
-        "id": "CONTACTS",
+        "id": "KONTAK",
         "es": "CONTACTOS",
         "pt-BR": "Contatos",
         "ar": "جهات الاتصال"
@@ -12346,7 +12375,7 @@ module.exports = {
         "en": "1.Customer Support Department",
         "vi": "1.Bộ Phận Hỗ Trỡ Khách Hàng",
         "zh-Hant": "1.客戶服務部",
-        "id": "1.Customer Support Department",
+        "id": "1. Departemen Dukungan Pelanggan",
         "es": "1. Departmento Soporte al Cliente ",
         "pt-BR": "2. Departamento de Suporte ao Cliente",
         "ar": "1- إدارة دعم العملاء:"
@@ -12366,7 +12395,7 @@ module.exports = {
         "en": "2.Compliance Department",
         "vi": "2.Phòng Kiểm Soát",
         "zh-Hant": "2.合規部門",
-        "id": "2.Compliance Department",
+        "id": "2. Departemen Compliance",
         "es": "2. Teléfono Departamento Compliance",
         "pt-BR": "2. Departamento de Complacência",
         "ar": "2- إدارة الامتثال"

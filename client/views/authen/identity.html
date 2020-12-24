@@ -63,7 +63,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="row">
                 <div class="col-xs-12">
                     <div class="form-control-wrapper">
@@ -164,17 +163,17 @@
                 <!-- <button class="btn btn-sm tw-btn-capsule-gradient" ng-if="toState.name.indexOf('space.update') != -1 && clickable" ng-click="updatePaper()">
                     {{lang.text('tigerWitID.submit')}}
                 </button> -->
-                <button class="btn btn-sm tw-btn-capsule-gradient mg-lf-20" ng-if="clickable" ng-click="submitForm()">
+                <button class="btn btn-sm btn-primary-gradient mg-lf-20" ng-if="clickable" ng-click="submitForm()">
                     {{lang.text('tigerWitID.submit')}}
                 </button>
 
-                <a class="btn btn-sm tw-btn-capsule-gradient mg-lf-20" ng-if="!clickable">
+                <a class="btn btn-sm btn-primary-gradient mg-lf-20" ng-if="!clickable">
                     <i class="loading_spinner fa fa-spinner"></i>
                     {{lang.text('tigerWitID.submitting')}}
                 </a>
 
                 <a ng-if="dredgingType == 'live' && toState.name.indexOf('space.update') == -1"
-                    ui-sref="space.center.index" class="btn btn-sm tw-btn-capsule-gradient mg-lf-20">
+                    ui-sref="space.center.index" class="btn btn-sm btn-primary-gradient mg-lf-20">
                     {{lang.text('actLogin34')}}
                 </a>
             </div>
