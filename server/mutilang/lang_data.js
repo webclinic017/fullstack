@@ -14009,7 +14009,7 @@ module.exports = {
             "zh-Hant": "How do I login to my MT4 trading platform?",
             "id": "Bagaimana cara masuk ke platform trading MT4?",
             "es": "¿Cómo ingreso en mi plataforma de trading MT4?",
-            "pt-BR": "Como eu faço login na minha plataforma de negociações MT4",
+            "pt-BR": "Como eu faço login na minha plataforma de negociações MT4?",
             "ar": "كيف يمكنني تسجيل الدخول إلى منصة تداول MT4 الخاصة بي؟"
         },
         "protect2A_1": {

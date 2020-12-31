@@ -493,8 +493,8 @@ router.get('/web/aboutus/:subpage(stp|team|report|control|companyinformation|par
 });
 
 // faq 常见问题在web文件下
-router.get('/web/faq/:subpage(protect|simulate|real|wad|type|deal|platform|interest)', function (req, res) {
-    var subpage = req.params.subpage || 'protect';
+router.get('/web/faq/:subpage(mt4|simulate|real|wad|type|deal|platform|interest)', function (req, res) {
+    var subpage = req.params.subpage || 'mt4';
     var pageInfo = {
         id: subpage
     };
