@@ -2594,10 +2594,10 @@
                         "ar": "يجب ان يكون نوع الملف PNG و JPG و PDF ، وأن لا يتجاوز حجم الملف 10 ميجا بايت."
                       },
                     "tip24-2": {
-                        "zh": "我们需要您上传以下信息来完成申请。",
+                        "zh": "我们需要您提交以下信息来完成申请。",
                         "en": "To complete your application,we will require the following information and uploads.",
                         "vi": "Để hoàn thành đơn đăng kí của bạn, chúng tôi sẽ yêu cầu các thông tin và tải lên các tài liệu sau đây.",
-                        "zh-Hant": "我們需要您上傳以下信息來完成申請。",
+                        "zh-Hant": "我們需要您提交以下信息來完成申請。",
                         "id": "Untuk dapat menyelesaikan pendaftaran, anda harus mengisi informasi berikut dan mengunggah dokumen yang diperlukan.",
                         "es": "Para completar su solicitud, necesitaremos la siguiente información, y copias de su documento.",
                         "pt-BR": "Para completar sua inscrição, nós solicitaremos as seguintes informações e uploads.",
@@ -8878,13 +8878,13 @@
                         "ar": "حاشية الحوالة:"
                     },
                     "tip32": {
-                        "zh": "您的姓名拼音，通行证账号：",
-                        "en": "Your name spell, passport ID: ",
-                        "vi": "Tên đầy đủ, mã tài khoản: ",
-                        "zh-Hant": "您的姓名拼音，通行證賬號：",
-                        "id": "Nama lengkap anda,Passport ID: ",
-                        "es": "Su nombre deletreado, ID de pasaporte: ",
-                        "pt-BR": "Escreva seu nome, ID do passaporte:",
+                        "zh": "您的姓名拼音，通行证账号：12345678",
+                        "en": "Your name spell, passport ID: 12345678",
+                        "vi": "Tên đầy đủ, mã tài khoản: 12345678",
+                        "zh-Hant": "您的姓名拼音，通行證賬號：12345678",
+                        "id": "Nama lengkap anda,Passport ID: 12345678",
+                        "es": "Su nombre deletreado, ID de pasaporte: 12345678",
+                        "pt-BR": "Escreva seu nome, ID do passaporte: 12345678",
                         "ar": "اسمك الكامل، رقم حسابك ١٢٣٤٥٦٧٨"
                     },
                     "tip33": {
@@ -11856,12 +11856,12 @@
                         "ar": "تفاصيل عنوانك"
                     },
                     "openAccountNewTip5": {
-                        "zh": "请开始输入住址或邮编，我们的系统将自动获取您的地址",
+                        "zh": "请开始输入住址或邮编，我们的系统将自动获取您的地址。",
                         "en": "Please start typing the first line of your address or post code and our system will auto-complete.",
                         "vi": "Vui lòng điền thông tin địa chỉ của bạn hoặc mã bưu điện, hệ thống của chúng tôi sẽ tự động hoàn tất đăng kí.",
-                        "zh-Hant": "請開始輸入住址或郵編，我們的系統將自動獲取您的地址",
-                        "id": "Silahkan masukkan alamat anda beserta kode pos dan sistem kami akan melakukan verifikasi secara otomatis",
-                        "es": "Por favor, comienza a digitar la primera línea de tu dirección o código postal y nuestro sistema lo completará automáticamente",
+                        "zh-Hant": "請開始輸入住址或郵編，我們的系統將自動獲取您的地址。",
+                        "id": "Silahkan masukkan alamat anda beserta kode pos dan sistem kami akan melakukan verifikasi secara otomatis.",
+                        "es": "Por favor, comienza a digitar la primera línea de tu dirección o código postal y nuestro sistema lo completará automáticamente.",
                         "pt-BR": "Por favor, comece a digitar a primeira linha do seu endereço ou código postal e nosso sistema o completará automaticamente.",
                         "ar": "يرجى البدء في كتابة السطر الأول من عنوانك أو الرمز البريدي وسوف يكمل نظامنا المعلومات تلقائيًا"
                     },
@@ -11976,11 +11976,11 @@
                         "ar": "تفاصيل الاموال"
                     },
                     "openAccountNewTip17": {
-                        "zh": "我们需要询问一些关于您财务方面的问题",
+                        "zh": "我们需要询问一些关于您财务方面的问题。",
                         "en": "We need to ask some questions about your fund details of our products.",
-                        "vi": "Chúng tôi cần hỏi bạn một số câu hỏi về quỹ giao dịch của bạn đối với các sản phẩm của chúng tôi",
-                        "zh-Hant": "我們需要詢問一些關於您財務方面的問題",
-                        "id": "Pertanyaan mengenai data pendanaan anda untuk produk-produk kami",
+                        "vi": "Chúng tôi cần hỏi bạn một số câu hỏi về quỹ giao dịch của bạn đối với các sản phẩm của chúng tôi.",
+                        "zh-Hant": "我們需要詢問一些關於您財務方面的問題。",
+                        "id": "Pertanyaan mengenai data pendanaan anda untuk produk-produk kami.",
                         "es": "Precisamos hacerte algunas preguntas sobre detalles de los fondos aplicados en nuestros productos.",
                         "pt-BR": "Precisamos de fazer algumas perguntas sobre detalhes dos seus fundos aplicados em nossos produtos.",
                         "ar": "نحتاج إلى طرح بعض الأسئلة حول تفاصيل أموالك لمنتجاتنا."
