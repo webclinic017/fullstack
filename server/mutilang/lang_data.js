@@ -3565,7 +3565,7 @@ module.exports = {
         "zh": "利益冲突",
         "en": "Conflicts of Interest Policy",
         "vi": "Xung đột lợi ích chính sách",
-        "zh-Hant": "利益沖突",
+        "zh-Hant": "利益衝突",
         "id": "Kebijakan Konflik Kepentingan",
         "es": "Política de Conflictos de Interés ",
         "pt-BR": "Política de Conflitos de Interesses",
@@ -3942,10 +3942,10 @@ module.exports = {
         "ar": "مقدمة"
     },
     "amtClient2": {
-        "zh": "1.TigerWit Limited（以下统称为“TigerWit”、“公司”或”本公司”）在巴哈马国注册成立（注册证书编号 198255B）。我们 的 注 册 办 事 处 位 于 Sea Sky Lane, Sandyport, P. O. Box SP 64368.Nassau, TheBahamas。TigerWit 受巴哈马证券监察委员会授权和监管（注册编号 SIA-F185）。",
+        "zh": "1.TigerWit Limited（以下统称为“TigerWit”、“公司”或”本公司”）在巴哈马国注册成立（注册证书编号 198255B）。我们的注册办事处位于Sea Sky Lane, Sandyport, P. O. Box SP 64368.Nassau, TheBahamas。TigerWit 受巴哈马证券监察委员会授权和监管（注册编号 SIA-F185）。",
         "en": "1.TigerWit Limited (hereinafter referred to as ‘TigerWit’, the ‘Firm’ or the 'Company') is incorporated (Certificate of Incorporation No. 198255B) in The Commonwealth of The Bahamas. Our registered office is Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. TigerWit is authorised and regulated by the Securities Commission of The Bahamas (licence No. SIA-F185).",
         "vi": "1.1 TigerWit Limited (sau đây gọi tắt là TigerWit, Công ty hoặc 'Công ty') được thành lập (Giấy chứng nhận thành lập số 198255B) trong Khối thịnh vượng chung Bahamas. Văn phòng đăng ký của chúng tôi là Sea Sky Lane, Sandyport, P. O. Box SP64368. Nassau, Bahamas. TigerWit được ủy quyền và quản lý bởi Ủy ban Chứng khoán Bahamas (giấy phép số SIA-F185).",
-        "zh-Hant": "1.TigerWit Limited（以下統稱為“TigerWit”、“公司”或”本公司”）在巴哈馬國註冊成立（註冊證書編號 198255B）。我們 的 註 冊 辦 事 處 位 於 Sea Sky Lane, Sandyport, P. O. Box SP 64368.Nassau, TheBahamas。TigerWit 受巴哈馬證券監察委員會授權和監管（註冊編號 SIA-F185）。",
+        "zh-Hant": "1.TigerWit Limited（以下統稱為“TigerWit”、“公司”或”本公司”）在巴哈馬國註冊成立（註冊證書編號 198255B）。我們的註冊辦事處位於Sea Sky Lane, Sandyport, P. O. Box SP 64368.Nassau, TheBahamas。TigerWit 受巴哈馬證券監察委員會授權和監管（註冊編號 SIA-F185）。",
         "id": "1. TigerWit Limited (selanjutnya disebut sebagai 'TigerWit', 'Firm' atau 'Company') didirikan (Certificate of Incorporation No. 198255B) di The Commonwealth of The Bahamas. Kantor terdaftar kami adalah Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. TigerWit disahkan dan diatur oleh Securities Commission of The Bahamas (lisensi No. SIA-F185).",
         "es": "TigerWit Limited (a partir de ahora referido como ‘TigerWit’ o la ‘Firma’ o la ‘Empresa’) está incorporada (Certificado de Incorporación No. 198255B) en La Commonwealth of The Bahamas. Nuestra oficina registrada es Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. TigerWit está autorizada y regulada por la Securities Commission of The Bahamas (licencia No. SIA-F185).",
         "pt-BR": "1.TigerWit Limited (doravante referida como \"TigerWit\", a \"Firma\" ou a \"Empresa\") é incorporada (Certificado de Incorporação No. 198255B) na Comunidade das Bahamas. Nossa sede é Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, Bahamas. A TigerWit é autorizada e regulamentada pela Comissão de Valores Mobiliários das Bahamas (licença No. SIA-F185).",
@@ -3962,10 +3962,10 @@ module.exports = {
         "ar": "إقرار"
     },
     "amtClient4": {
-        "zh": "1.这是我们计划依赖的标准客户协议。客户承认，他/她已经阅读、理解并接受客户协议，包 括 附 件 A （ “ 风 险 披 露 声 明 ” ）。",
+        "zh": "1.这是我们计划依赖的标准客户协议。客户承认，他/她已经阅读、理解并接受客户协议，包括附件A（“风险披露声明”）。",
         "en": "1.This is our standard Client Agreement which we intend to rely on. The client acknowledges that he/she has read, understood and accepted the Client Agreement including the Annex A (‘Risk Disclosure Notice’).",
         "vi": "1.Đây là Hợp đồng (Thỏa thuận) khách hàng chuẩn mà chúng tôi áp dụng làm tiêu chuẩn căn cứ. Khách hàng thừa nhận rằng họ đã đọc, hiểu và chấp nhận Hợp đồng Khách Hàng bao gồm Phụ lục A (Thông báo Tiết lộ Rủi ro).",
-        "zh-Hant": "1.這是我們計劃依賴的標準客戶協議。客戶承認，他/她已經閱讀、理解並接受客戶協議，包 括 附 件 A （ “ 風 險 披 露 聲 明 ” ）。",
+        "zh-Hant": "1.這是我們計劃依賴的標準客戶協議。客戶承認，他/她已經閱讀、理解並接受客戶協議，包括附件A（ “風險披露聲明”）。",
         "id": "1. Ini adalah Perjanjian Klien standar kami yang ingin kami andalkan. Klien mengakui bahwa dia telah membaca, memahami dan menerima Perjanjian Klien termasuk Lampiran A ('Pemberitahuan Pengungkapan Risiko'). dan Annex B ('TigerWit Vault').",
         "es": "1.Este es el Acuerdo de Cliente estándar en el que se sustenta la relación. El cliente, él/ella, afirma que ha leído, comprendido y aceptado el Acuerdo de Cliente incluyendo el Anexo A (‘Notificación Divulgación del Riesgo’).",
         "pt-BR": "1. Este é o nosso Contrato de Cliente padrão no qual pretendemos confiar. O cliente reconhece que leu, compreendeu e aceitou o Contrato do Cliente, incluindo o Anexo A (\"Aviso de Divulgação de Risco\") e o Anexo B (\"TigerWit Vault\").",
@@ -4213,7 +4213,7 @@ module.exports = {
     },
     "amtClient29": {
         "zh": "法律- 指巴哈马或其他地区任何适用的法例、法律、监管、规则和操守。",
-        "en": "Law - shall mean any applicable statutes, laws, regulations, rules and codes of practice, whether in the United Kingdom or elsewhere.",
+        "en": "Law - shall mean any applicable statutes, laws, regulations, rules and codes of practice, whether in the Bahamas or elsewhere.",
         "vi": "Pháp luật - có nghĩa là bất kỳ điều luật, quy định, quy định, quy tắc và quy tắc có hiệu lực nào được áp dụng, cho dù ở Bahamas hay ở nơi khác.",
         "zh-Hant": "法律- 指巴哈馬或其他地區任何適用的法例、法律、監管、規則和操守。",
         "id": "Hukum - berarti undang-undang, undang-undang, regulasi, aturan, dan kode praktik yang berlaku, baik di Bahamas United Kingdom atau di tempat lain.",
@@ -4240,16 +4240,6 @@ module.exports = {
         "es": "Nivel de Margen -  representa el ratio Equity- Margen calculado como: Nivel de Margen = Equity / Margen",
         "pt-BR": "Nível de Margem - significa o quociente Patrimônio Líquido até Margem calculado como: Nível de Margem = Patrimônio Líquido / Margem",
         "ar": "مستوى الهامش - يعني نسبة الرصيد الإجمالي إلى الهامش، ويتم حسابه كما يلي:  مستوى الهامش = الرصيد الحقيقي / الهامش"
-    },
-    "amtClient32": {
-        "zh": "匹配的主要经纪商- 匹配的主要经纪商指获准以做市商身份进行投资交易的投资公司，相关投资是 IFPRU 的指定投资，其自身介入买家和卖家的交易，从而让双边交易同时执行，并确保其作为做市商交易时仅执行客户的订单。",
-        "en": " ",
-        "vi": " ",
-        "zh-Hant": "匹配的主要經紀商- 匹配的主要經紀商指獲準以做市商身份進行投資交易的投資公司，相關投資是 IFPRU 的指定投資，其自身介入買家和賣家的交易，從而讓雙邊交易同時執行，並確保其作為做市商交易時僅執行客戶的訂單。",
-        "id": " ",
-        "es": " ",
-        "pt-BR": "Corretora Principal Correspondente - Uma corretora principal combinada significa uma firma de investimento com permissão para negociar investimentos como principal com relação a investimentos que sejam investimentos designados por IFPRU, interpondo-se entre o comprador e o vendedor à transação de tal forma que ambos os lados sejam executados simultaneamente, e garante que lida como principal apenas para atender aos pedidos dos clientes.",
-        "ar": "وسيط طرف رئيسي مطابق - الوسيط الطرف الرئيسي المطابق يعني شركة استثمارية مسموح لها بالتداول في الاستثمارات بصفتها طرف رئيسي فيما يتعلق بالاستثمارات المحددة من IFPRU، من خلال إدخال نفسها بين المشتري والبائع في صفقات التداول على نحو يجعل تنفيذ أوامر كلا الطرفين يتم في نفس الوقت، وضمان أنها تتعامل باعتبارها طرفًا رئيسيًا فقط في تنفيذ أوامر العملاء."
     },
     "amtClient33": {
         "zh": "未平仓头寸- 指任何尚未关闭的头寸。例如，一个未被相反空头头寸对冲的未平仓多头头寸，反之亦然。",
@@ -4352,10 +4342,10 @@ module.exports = {
         "ar": "2- تقدم TigerWit، على أساس التنفيذ فقط، عددًا من الأدوات المالية والتي تتوفر تفاصيل عقودها على موقعنا الإلكتروني https://global.TigerWit.com."
     },
     "amtClient43": {
-        "zh": "3.本公司提供的金融工具的交易条件与执行 规 则 可 在 任 何 特 定 时 间 通 过 网 址https://global.TigerWit.com 在线查询。TigerWit 只限于执行委托运行，除非另有约定外，否则没有义务就客户交易决策的适当性进行监督或提出建议，因此即使在交易不适用于客户的情况下，本公司仍可按照客户接收的指令执行。",
+        "zh": "3.本公司提供的金融工具的交易条件与执行规则可在任何特定时间通过网址 https://global.TigerWit.com 在线查询。TigerWit 只限于执行委托运行，除非另有约定外，否则没有义务就客户交易决策的适当性进行监督或提出建议，因此即使在交易不适用于客户的情况下，本公司仍可按照客户接收的指令执行。",
         "en": "3.The trading conditions and execution rules of the financial instruments on offer by the Firm can be found online at https://global.TigerWit.com at any given time. TigerWit operates on an execution only mandate and unless agreed otherwise is under no obligation to monitor or advise the client on the suitability of their trading decision, therefore, the Firm may execute an instruction received by the client even if such transaction is not suitable for the client.",
         "vi": "3.Các điều kiện giao dịch và các quy tắc thực hiện của các công cụ tài chính được cung cấp bởi Công ty có thể được truy cập trực tuyến tại địa chỉ https://global.TigerWit.com tại bất kỳ thời điểm nào. TigerWit hoạt động trên một thực thi chỉ có nhiệm vụ và trừ khi có thoả thuận khác không có nghĩa vụ giám sát hoặc tư vấn cho khách hàng về sự phù hợp của quyết định giao dịch của họ, do đó, Công ty có thể thực hiện lệnh mà khách hàng nhận được ngay cả khi giao dịch đó không phù hợp với khách hàng. ",
-        "zh-Hant": "3.本公司提供的金融工具的交易條件與執行 規 則 可 在 任 何 特 定 時 間 通 過 網 址https://global.TigerWit.com 在線查詢。TigerWit 只限於執行委托運行，除非另有約定外，否則沒有義務就客戶交易決策的適當性進行監督或提出建議，因此即使在交易不適用於客戶的情況下，本公司仍可按照客戶接收的指令執行。",
+        "zh-Hant": "3.本公司提供的金融工具的交易條件與執行規則可在任何特定時間通過網址 https://global.TigerWit.com 在線查詢。TigerWit 只限於執行委托運行，除非另有約定外，否則沒有義務就客戶交易決策的適當性進行監督或提出建議，因此即使在交易不適用於客戶的情況下，本公司仍可按照客戶接收的指令執行。",
         "id": "3. Ketentuan trading dan aturan pelaksanaan dari instrumen keuangan yang ditawarkan oleh Perusahaan dapat ditemukan secara online di https://global.TigerWit.com pada waktu tertentu. TigerWit beroperasi pada mandat hanya eksekusi dan kecuali jika disetujui sebaliknya tidak berkewajiban untuk memantau atau memberi tahu klien tentang kesesuaian keputusan trading  mereka, oleh karena itu, Perusahaan dapat melaksanakan instruksi yang diterima oleh klien bahkan jika transaksi tersebut tidak sesuai untuk klien.",
         "es": "3.Las condiciones de trading y las reglas de ejecución de los instrumentos financieros ofrecidos por la Firma se pueden encontrar en línea en https://global.TigerWit.com en todo momento. TigerWit opera bajo un mandato de ejecución única y, a menos que se acuerde lo contrario, no tiene la obligación de monitorear o asesorar al cliente sobre la idoneidad de su decisión de trading; por lo tanto, la Firma puede ejecutar una instrucción recibida por el cliente incluso si dicha transacción no fuera adecuada para el cliente.\n",
         "pt-BR": "3.As condições comerciais e as regras de execução dos instrumentos financeiros oferecidos pela Firma podem ser encontradas online em https://global.TigerWit.com a qualquer momento. A TigerWit opera em um mandato de execução única e salvo acordo em contrário, não tem nenhuma obrigação de monitorar ou aconselhar o cliente sobre a adequação de sua decisão comercial, portanto, a Empresa pode executar uma instrução recebida pelo cliente mesmo se tal transação não for adequada para o cliente. cliente.",
@@ -4382,10 +4372,10 @@ module.exports = {
         "ar": "4- تحت أي ظرف من الظروف، تقوم TigerWit بتقديم المشورة أو التوصيات الاستثمارية إلى العميل أو إبداء الرأي حول إحدى الصفقات.  يفهم العميل أنه يجب عليه الاستعانة بمشورة مستقلة إذا لزم الأمر فيما يتعلق بأدوات التداول المالية، بما في ذلك على سبيل المثال وليس الحصر تداول أدوات مالية محددة واستراتيجيات التداول المنشودة والرسوم والتبعات الضريبية."
     },
     "amtClient46": {
-        "zh": "5.TigerWit 可以不时及按其认为适当的频率，通过其网站或其他媒体发布包含金融市场状况等信息的资料（以下简称“信息资料”）。请留意，该信息资料仅视作营销传播，并不包含且不得解释为包含投资意见或投资建议，或任何金融工具交易的邀约或邀请。TigerWit 对于所提供信息的准确性或完整性不作任何声明或承担任何责任，也不对基于 TigerWit 的任何雇员、第三方等提供的声明、预测或其他信息所作任何投资产生的任何损失承担责任。该信息资料并未按照提倡投资研究独立性的法律要求编制，且在投资研究传播前不受任何交易禁止。信息资料中包含的所有意见表述如有更改恕不另行通知。任何意见都可能出自作者个人观点，不一定反映TigerWit 的意见。",
+        "zh": "5.TigerWit 可以不时及按其认为适当的频率，通过其网站或其他媒体发布包含金融市场状况等信息的资料（以下简称“信息资料”）。请留意，该信息资料仅视作营销传播，并不包含且不得解释为包含投资意见或投资建议，或任何金融工具交易的邀约或邀请。TigerWit 对于所提供信息的准确性或完整性不作任何声明或承担任何责任，也不对基于 TigerWit 的任何雇员、第三方等提供的声明、预测或其他信息所作任何投资产生的任何损失承担责任。该信息资料并未按照提倡投资研究独立性的法律要求编制，且在投资研究传播前不受任何交易禁止。信息资料中包含的所有意见表述如有更改恕不另行通知。任何意见都可能出自作者个人观点，不一定反映 TigerWit 的意见。",
         "en": "5.TigerWit, from time to time and as often as it deems appropriate, may issue material (‘the Information Material’), which contains information including but not limited to the conditions of the financial market, published via its website and other media. It should be noted the Information Material is considered to be marketingcommunication only and does not contain, and should not be construed as containing investment advice or an investment recommendation or, an offer of or solicitation for any transactions in financial instruments. TigerWit makes no representation and assumes no liability as to the accuracy or completeness of the information provided, nor any loss arising from any investment based on a statement, forecast or other information supplied by any employee of TigerWit, a third party or otherwise. The Information Material is not prepared in accordance with legal requirements promoting the independence of investment research and it is not subject to any prohibition on dealing ahead of the dissemination of investment research. All expressions of opinion included in the Information Material are subject to change without notice. Any opinions made may be personal to the author and may not reflect the opinions of TigerWit.",
         "vi": "5. TigerWit, tùy từng thời điểm và thấy phù hợp, có thể phát hành tài liệu (Tài liệu Thông tin), chứa thông tin bao gồm nhưng không giới hạn ở các điều kiện của thị trường tài chính, được xuất bản qua trang web và các phương tiện khác. Cần lưu ý rằng Tài liệu Thông tin được coi là chỉ tiếp thị và không chứa và không được hiểu là có chứa lời khuyên đầu tư hoặc khuyến nghị đầu tư hoặc đề nghị hoặc chào mời bất kỳ giao dịch nào trong các công cụ tài chính. TigerWit không đại diện và không chịu trách nhiệm về tính chính xác hoặc đầy đủ của thông tin được cung cấp, cũng như bất kỳ tổn thất nào phát sinh từ bất kỳ khoản đầu tư nào dựa trên tuyên bố, dự báo hoặc thông tin khác được cung cấp bởi bất kỳ nhân viên nào của TigerWit hay bất kì một bên thứ ba hay bên nào khác. Thông Tin Tài Liệu không được chuẩn bị theo các điều kiện pháp luật cho biết sự độc lập của việc nghiên cứu và không thay đổi bất kì điều khoản nào của sự phổ biến nghiên cứu đầu tư. Tất cả các việc thể hiện ý kiến được bao gồm trong Tài Liệu Thông Tin có thể được thay đổi mà không cần có thông báo. Bất kì ý kiến nào được đưa có thể mang tính cá nhân từ tác giả và không thể hiện ý kiến của TigerWit.",
-        "zh-Hant": "5.TigerWit 可以不時及按其認為適當的頻率，通過其網站或其他媒體發布包含金融市場狀況等信息的資料（以下簡稱“信息資料”）。請留意，該信息資料僅視作營銷傳播，並不包含且不得解釋為包含投資意見或投資建議，或任何金融工具交易的邀約或邀請。TigerWit 對於所提供信息的準確性或完整性不作任何聲明或承擔任何責任，也不對基於 TigerWit 的任何雇員、第三方等提供的聲明、預測或其他信息所作任何投資產生的任何損失承擔責任。該信息資料並未按照提倡投資研究獨立性的法律要求編制，且在投資研究傳播前不受任何交易禁止。信息資料中包含的所有意見表述如有更改恕不另行通知。任何意見都可能出自作者個人觀點，不壹定反映TigerWit 的意見。",
+        "zh-Hant": "5.TigerWit 可以不時及按其認為適當的頻率，通過其網站或其他媒體發布包含金融市場狀況等信息的資料（以下簡稱“信息資料”）。請留意，該信息資料僅視作營銷傳播，並不包含且不得解釋為包含投資意見或投資建議，或任何金融工具交易的邀約或邀請。TigerWit 對於所提供信息的準確性或完整性不作任何聲明或承擔任何責任，也不對基於 TigerWit 的任何雇員、第三方等提供的聲明、預測或其他信息所作任何投資產生的任何損失承擔責任。該信息資料並未按照提倡投資研究獨立性的法律要求編制，且在投資研究傳播前不受任何交易禁止。信息資料中包含的所有意見表述如有更改恕不另行通知。任何意見都可能出自作者個人觀點，不壹定反映 TigerWit 的意見。",
         "id": "5. TigerWit, dari waktu ke waktu dan sesering yang dianggap perlu, dapat mengeluarkan materi ('Materi Informasi'), yang berisi informasi termasuk namun tidak terbatas pada kondisi pasar keuangan, yang dipublikasikan melalui situs webnya dan media lainnya. Perlu dicatat bahwa Materi Informasi dianggap hanya komunikasi pemasaran dan tidak mengandung, dan tidak boleh ditafsirkan sebagai berisi nasihat investasi atau rekomendasi investasi atau, tawaran atau ajakan untuk setiap transaksi dalam instrumen keuangan. TigerWit tidak membuat pernyataan dan tidak bertanggung jawab atas keakuratan atau kelengkapan informasi yang diberikan, atau kerugian apa pun yang timbul dari investasi apa pun berdasarkan pernyataan, perkiraan, atau informasi lain yang diberikan oleh karyawan TigerWit, pihak ketiga, atau lainnya. Materi Informasi tidak disiapkan sesuai dengan persyaratan hukum yang mendorong kemandirian penelitian investasi dan tidak tunduk pada larangan berurusan sebelum diseminasi penelitian investasi. Semua ekspresi pendapat yang termasuk dalam Materi Informasi dapat berubah tanpa pemberitahuan. Setiap pendapat yang dibuat mungkin bersifat pribadi bagi penulis dan mungkin tidak mencerminkan pendapat TigerWit.",
         "es": "5.TigerWit pudiera, de vez en cuando y con la frecuencia que considere apropiada, emitir contenido (‘Material de información’), con información sobre, entre otras, las condiciones de los mercados financieros, publicado a través de su sitio web y otros medios. Debe tenerse presente que el Material informativo se considera sólo una comunicación de marketing y no contiene, y no debe interpretarse como tal, consejos de inversión o una recomendaciones de inversión, o suponen una oferta o solicitud sobre cualquier transacción con instrumentos financieros. TigerWit no hace ninguna representación y no asume ninguna responsabilidad en cuanto a la exactitud o integridad de la información proporcionada, ni sobre cualquier pérdida que pudiera derivar de una inversión basada en una declaración, pronóstico u otra información suministrada por cualquier empleado de TigerWit, un tercero o de otra manera. El material de información no está preparado de acuerdo con los requisitos legales que promueven la independencia de la investigación de inversión y no está sujeto a ninguna prohibición de negociar antes de la difusión de la investigación de inversión. Todas las expresiones de opinión incluidas en el Material de Información están sujetas a cambios sin previo aviso. Cualquier opinión declarada es personal del autor y pudiera no reflejar las opiniones de TigerWit.",
         "pt-BR": "5. A TigerWit, de tempos em tempos e quantas vezes julgar apropriado, poderá emitir material (‘Material de Informação’), que contém informações incluindo mas não limitadas às condições do mercado financeiro, publicadas através de seu website e outras mídias. Deve-se notar que o Material de Informação é considerado como marketing apenas e não contém, e não deve ser interpretado como contendo conselho de investimento ou uma recomendação de investimento ou, uma oferta ou solicitação para quaisquer transações em instrumentos financeiros. A TigerWit não faz representação e não assume qualquer responsabilidade quanto à exatidão ou integridade das informações fornecidas, nem qualquer perda decorrente de qualquer investimento com base em uma declaração, previsão ou outras informações fornecidas por qualquer funcionário da TigerWit, terceiros ou de outra forma. O Material de Informação não é preparado de acordo com os requisitos legais que promovem a independência da pesquisa de investimento e não está sujeito a qualquer proibição de lidar antes da disseminação da pesquisa de investimento. Todas as expressões de opinião incluídas no Material Informativo estão sujeitas a alterações sem aviso prévio. Quaisquer opiniões feitas podem ser pessoais para o autor e podem não refletir as opiniões da TigerWit.",
@@ -4712,10 +4702,10 @@ module.exports = {
         "ar": "11- يقبل العميل أنه يجوز للمؤسسة إعادة الأموال لأي سبب من الأسباب.  وبناء على ذلك، ستقوم الشركة على الفور بإعادة المبلغ المعني من حساب التداول إلى المصدر الذي تم إرسال الأموال منه بعد خصم أي رسوم أو تكاليف أخرى تكبدتها الشركة.  ويقبل العميل أن هذا الإجراء قد يؤدي إلى أن يكون رصيد حساب التداول سلبيًا. وفي مثل هذه الظروف، يجوز للشركة دمج الأموال الموجودة في حسابات التداول المختلفة كما هو موضح في البند 10.4 أعلاه."
     },
     "amtClient79": {
-        "zh": "12.客户同意，有关交易账户管理的任何申请 应 通 过 TigerWit 的 应 用 程 序 或 网 站(https://global.TigerWit.com)提出。",
+        "zh": "12.客户同意，有关交易账户管理的任何申请应通过 TigerWit 的应用程序或网站（https://global.TigerWit.com）提出。",
         "en": "12.The client accepts that any requests in relation to the administration of the trading account shall be made through TigerWit’s app or website (https://global.TigerWit.com).",
         "vi": "12. Khách hàng chấp nhận rằng bất kỳ yêu cầu nào liên quan đến việc quản lý tài khoản giao dịch sẽ được thực hiện thông qua ứng dụng hoặc trang web của TigerWit (https://global.TigerWit.com).",
-        "zh-Hant": "12.客戶同意，有關交易賬戶管理的任何申請 應 通 過 TigerWit 的 應 用 程 序 或 網 站(https://global.TigerWit.com)提出。",
+        "zh-Hant": "12.客戶同意，有關交易賬戶管理的任何申請應通過 TigerWit 的應用程序或網站（https://global.TigerWit.com）提出。",
         "id": "12. Klien menerima bahwa setiap permintaan yang berhubungan dengan administrasi akun trading harus dilakukan melalui aplikasi atau situs web TigerWit (https://global.TigerWit.com).",
         "es": "12.El cliente acepta que cualquier solicitud relacionada con la administración de la cuenta de trading se realizará a través de la aplicación o sitio web de TigerWit (https://global.TigerWit.com).",
         "pt-BR": "12. O cliente aceita que quaisquer pedidos em relação à administração da conta de negociação devem ser feitos através do aplicativo ou site da TigerWit (https://global.TigerWit.com).",
@@ -4882,10 +4872,10 @@ module.exports = {
         "ar": "8- اعتمادًا على المركز الذي يحتفظ به العميل لليوم التالي وأسعار فائدة زوج العملة المستخدم في أي صفقة، يتم إما إضافة فائدة التمديد إلى حساب العميل أو خصمها منه؛ ويتم إجراء هذه العملية في الساعة 23:59 بتوقيت الخادم ويتم تحويل المبلغ الناتج بشكل تلقائي إلى عملة رصيد العميل."
     },
     "amtClient96": {
-        "zh": "9.星期五至星期一收取掉期费用一次，星期三至星期四掉期费用按三倍收取。应当注意的 是 ， TigerWit 按 自 己 的 利 率 收 取 费 用 ；TigerWit 的转仓利率是以彭博(Bloomberg)提供的隔夜利率计算。本公司会按照其认为必要的频率更新此类利率。",
+        "zh": "9.星期五至星期一收取掉期费用一次，星期三至星期四掉期费用按三倍收取。应当注意的是，TigerWit按自己的利率收取费用；TigerWit 的转仓利率是以彭博(Bloomberg)提供的隔夜利率计算。本公司会按照其认为必要的频率更新此类利率。",
         "en": "9.From Friday to Monday swap is charged once and from Wednesday to Thursday swap is charged in triple size. It should be noted that TigerWit charges its own interest; the rollover interest rates of TigerWit are based on the overnight rate provided by Bloomberg. The Firm updates such rate as often as it deems necessary.",
         "vi": "9.Tùy thuộc vào vị thế được giữ và lãi suất của cặp tiền tệ liên quan đến giao dịch mà khách hàng có thể được ghi có ghi nợ bằng tài chính; hoạt động được tiến hành vào lúc 23:59 thời gian máy chủ và số tiền kết quả được tự động chuyển đổi thành tiền tệ cân bằng của khách hàng.",
-        "zh-Hant": "9.星期五至星期壹收取掉期費用壹次，星期三至星期四掉期費用按三倍收取。應當註意的 是 ， TigerWit 按 自 己 的 利 率 收 取 費 用 ；TigerWit 的轉倉利率是以彭博(Bloomberg)提供的隔夜利率計算。本公司會按照其認為必要的頻率更新此類利率。",
+        "zh-Hant": "9.星期五至星期壹收取掉期費用壹次，星期三至星期四掉期費用按三倍收取。應當註意的是，TigerWit按自己的利率收取費用；TigerWit 的轉倉利率是以彭博(Bloomberg)提供的隔夜利率計算。本公司會按照其認為必要的頻率更新此類利率。",
         "id": "9. Dari Jumat hingga Senin swap dikenakan satu kali dan dari Rabu hingga Kamis swap dikenakan dalam ukuran tiga kali lipat. Perlu dicatat bahwa TigerWit membebankan kepentingannya sendiri; suku bunga rollover TigerWit didasarkan pada suku bunga overnight yang disediakan oleh Bloomberg. Perusahaan memperbarui tarif tersebut sesering yang dianggap perlu.",
         "es": "9. De viernes a lunes, el swap se cobra una vez y de miércoles a jueves el swap se cobra tres veces. Cabe señalar que TigerWit cobra su propio interés; Las tasas de interés de TigerWit se basan en la tasa a un día proporcionada por Bloomberg. La Firma actualiza dicha tarifa con la frecuencia que considere necesaria.",
         "pt-BR": "9.De sexta a segunda-feira, o swap é cobrado uma vez e de quarta a quinta, o swap é cobrado em tamanho triplo. Deve-se notar que a TigerWit cobra seu próprio interesse; as taxas de juros de rolagem da TigerWit baseiam-se na taxa overnight fornecida pela Bloomberg. A Firma atualiza essa taxa quantas vezes julgar necessário.",
@@ -4982,10 +4972,10 @@ module.exports = {
         "ar": "التعويضات"
     },
     "amtClient106": {
-        "zh": "1.如本公司在提供投资或辅助服务时因为(i)客 户 违 反 本 客 户 协 议 的 规 定 ， 或(ii) 客 户 向TigerWit 提供虚假或误导性信息等原因，给本公司招致任何费用，客户将向本公司作出赔偿或按要求作出赔偿。",
+        "zh": "1.如本公司在提供投资或辅助服务时因为(i)客户违反本客户协议的规定，或(ii)客户向 TigerWit 提供虚假或误导性信息等原因，给本公司招致任何费用，客户将向本公司作出赔偿或按要求作出赔偿。",
         "en": "1.The client shall indemnify, or indemnify on demand, the Firm for any costs incurred under the provision of investment or ancillary services by the latter, including but not limited to (i) the client’s breach of the Client Agreement or (ii) false or misleading information provided by the client to TigerWit. ",
         "vi": "1.Khách hàng sẽ bồi thường, hoặc bồi thường theo yêu cầu, Công ty về bất kỳ chi phí nào phát sinh từ việc cung cấp dịch vụ đầu tư hoặc phụ trợ, bao gồm nhưng không giới hạn (i) vi phạm Hợp đồng khách hàng hoặc (ii) sai hoặc thông tin gây hiểu lầm do khách hàng cung cấp cho TigerWit.",
-        "zh-Hant": "1.如本公司在提供投資或輔助服務時因為(i)客 戶 違 反 本 客 戶 協 議 的 規 定 ， 或(ii) 客 戶 向TigerWit 提供虛假或誤導性信息等原因，給本公司招致任何費用，客戶將向本公司作出賠償或按要求作出賠償。",
+        "zh-Hant": "1.如本公司在提供投資或輔助服務時因為(i)客戶違反本客戶協議的規定，或(ii)客戶向 TigerWit 提供虛假或誤導性信息等原因，給本公司招致任何費用，客戶將向本公司作出賠償或按要求作出賠償。",
         "id": "1. Klien harus mengganti rugi, atau mengganti kerugian atas permintaan, Perusahaan untuk setiap biaya yang timbul di bawah penyediaan investasi atau layanan tambahan oleh yang terakhir, termasuk tetapi tidak terbatas pada (i) pelanggaran klien terhadap Perjanjian Klien atau (ii) palsu atau informasi menyesatkan yang diberikan oleh klien kepada TigerWit.",
         "es": "1.1.El cliente deberá indemnizar, o indemnizar según se solicite, a la Firma por cualquier costo incurrido por la prestación de servicios de inversión o servicios auxiliares por parte de este último, incluidos, entre otros, (i) el incumplimiento por parte del cliente del Acuerdo del Cliente o (ii) falsedades o informaciones engañosas proporcionadas por el cliente a TigerWit. ",
         "pt-BR": "1. O cliente deverá indenizar, ou indenizar a pedido, a Empresa por quaisquer custos incorridos sob a prestação de serviços de investimento ou auxiliares por este, incluindo, mas não limitado a (i) a violação do Contrato de Cliente pelo Cliente ou (ii) falsa ou informações enganosas fornecidas pelo cliente para a TigerWit.",
@@ -5032,10 +5022,10 @@ module.exports = {
         "ar": "1- تخطر الشركة العميل في الوقت الملائم عن أي تغيير جوهري في المعلومات المقدمة في هذا القسم ذات الصلة بالخدمة التي تقدمها الشركة لذلك العميل."
     },
     "amtClient111": {
-        "zh": "2.TigerWit 保留随时修订客户协议中任何内容的权利，包括本公司认为根据有合法管辖权的监管机构发布的公告必须做出的修订。在此 情 况 下 ， 应 以 书 面 形 式 或 通 过 公 司 网 站(https://global.TigerWit.com)通知客户，客户保留接受或拒绝此类修订的权利。应当注意的是，客户的许可不适用于任何立即生效的修订。",
+        "zh": "2.TigerWit 保留随时修订客户协议中任何内容的权利，包括本公司认为根据有合法管辖权的监管机构发布的公告必须做出的修订。在此情况下，应以书面形式或通过公司网站(https://global.TigerWit.com)通知客户，客户保留接受或拒绝此类修订的权利。应当注意的是，客户的许可不适用于任何立即生效的修订。",
         "en": "2.TigerWit reserves the right to amend, from time to time, any part of the Client Agreement, including where the Firm deems that such amendments are necessary given an announcement by a regulatory authority of a competent jurisdiction. Under such circumstances, the client shall be notified either in writing or through the Firm’s site (https://global.TigerWit.com) accordingly and shall reserve the right to accept or deny the amendments; it should be noted that the client’s consent is not required for any amendment to be effective immediately.",
         "vi": "2.TigerWit có quyền sửa đổi, theo thời gian, bất kỳ phần nào của Hợp đồng khách hàng, bao gồm cả nơi Công ty cho rằng các sửa đổi đó là cần thiết do một cơ quan có thẩm quyền của một cơ quan có thẩm quyền công bố. Trong những trường hợp như vậy, khách hàng sẽ được thông báo bằng văn bản hoặc thông qua trang web của Công ty (https://global.TigerWit.com) cho phù hợp và sẽ bảo lưu quyền chấp nhận hoặc từ chối các sửa đổi; cần lưu ý rằng sự đồng ý của khách hàng là không cần thiết cho bất kỳ sửa đổi nào có hiệu lực ngay lập tức.",
-        "zh-Hant": "2.TigerWit 保留隨時修訂客戶協議中任何內容的權利，包括本公司認為根據有合法管轄權的監管機構發布的公告必須做出的修訂。在此 情 況 下 ， 應 以 書 面 形 式 或 通 過 公 司 網 站(https://global.TigerWit.com)通知客戶，客戶保留接受或拒絕此類修訂的權利。應當註意的是，客戶的許可不適用於任何立即生效的修訂。",
+        "zh-Hant": "2.TigerWit 保留隨時修訂客戶協議中任何內容的權利，包括本公司認為根據有合法管轄權的監管機構發布的公告必須做出的修訂。在此情況下，應以書面形式或通過公司網站(https://global.TigerWit.com)通知客戶，客戶保留接受或拒絕此類修訂的權利。應當註意的是，客戶的許可不適用於任何立即生效的修訂。",
         "id": "2. TigerWit berhak untuk mengubah, dari waktu ke waktu, setiap bagian dari Perjanjian Klien, termasuk di mana Perusahaan menganggap bahwa perubahan tersebut perlu diberikan pengumuman oleh otoritas pengatur dari yurisdiksi yang kompeten. Dalam keadaan seperti itu, klien akan diberitahu baik secara tertulis atau melalui situs Perusahaan (https://global.TigerWit.com) sebagaimana mestinya dan berhak untuk menerima atau menolak amandemen; perlu dicatat bahwa persetujuan klien tidak diperlukan agar amandemen apa pun dapat segera berlaku.",
         "es": "2.TigerWit se reserva el derecho de enmendar, de vez en cuando, cualquier parte del Acuerdo con el Cliente, incluso cuando la Firma considere que dichas modificaciones son necesarias, dado que la autoridad reguladora ha anunciado una jurisdicción competente. En tales circunstancias, se notificará al cliente por escrito o a través del sitio de la Firma (https://global.TigerWit.com) en consecuencia y se reservará el derecho de aceptar o rechazar las enmiendas; debe tenerse en cuenta que no se requiere el consentimiento del cliente para que cualquier enmienda sea efectiva de inmediato.",
         "pt-BR": "2.A TigerWit reserva-se o direito de alterar, de tempos em tempos, qualquer parte do Contrato de Cliente, inclusive quando a Empresa considerar que tais alterações são necessárias, mediante o anúncio por uma autoridade reguladora de uma jurisdição competente. Sob tais circunstâncias, o cliente deve ser notificado por escrito ou através do site da empresa (https://global.TigerWit.com) e reserva-se o direito de aceitar ou negar as alterações; Deve-se notar que o consentimento do cliente não é necessário para que qualquer alteração seja efetiva imediatamente.",
@@ -5062,10 +5052,10 @@ module.exports = {
         "ar": "1- يجوز للعميل إنهاء اتفاقية العميل خلال 15 (خمسة عشر) يوم عمل من الإعلان عن أي تعديل بموجب قسم \"الإخطارات والتعديلات على اتفاقية العميل\" أعلاه، من خلال إرسال إخطار بالبريد المسجل إلى المقر الرئيسي للشركة، شريطة عدم وجود مراكز تداول مفتوحة على حساب التداول المعني وألا يكون لدى العميل أي التزامات معلقة تجاه TigerWit."
     },
     "amtClient114": {
-        "zh": "2.客户出于任何原因，可以提前七个营业日通过挂号邮寄方式向本公司总部发送指定有终止日期的书面通知终止本客户协议，前提是相 关 交 易 账 户 不 存 在 未 平 仓 交 易 且 客 户对TigerWit 没有未结清付款。",
+        "zh": "2.客户出于任何原因，可以提前七个营业日通过挂号邮寄方式向本公司总部发送指定有终止日期的书面通知终止本客户协议，前提是相关交易账 户不存在未平仓交易且客户对 TigerWit 没有未结清付款。",
         "en": "2.The client may terminate the Client Agreement, for any reason, having provided a 7 (seven) business days written notice by sending a notification specifying the termination date through registered post to the Firm’s Head Office, provided only that there are no open positions traded through the relevant trading account and the client has no amounts due for payment to TigerWit.",
         "vi": "2.Khách hàng có thể chấm dứt Hợp đồng khách hàng, vì bất kỳ lý do nào, miễn là gửi thông báo ngày chấm dứt cụ thể trước 7 ngày làm việc đến Trụ sở chính của Công ty đã nêu, miễn là không có các vị thế mở được giao dịch thông qua các tài khoản giao dịch liên quan và khách hàng không có khoản thanh toán nào đến hạn phải trả cho TigerWit.",
-        "zh-Hant": "2.客戶出於任何原因，可以提前七個營業日通過掛號郵寄方式向本公司總部發送指定有終止日期的書面通知終止本客戶協議，前提是相 關 交 易 賬 戶 不 存 在 未 平 倉 交 易 且 客 戶對TigerWit 沒有未結清付款。",
+        "zh-Hant": "2.客戶出於任何原因，可以提前七個營業日通過掛號郵寄方式向本公司總部發送指定有終止日期的書面通知終止本客戶協議，前提是相關交易賬戶不存在未平倉交易且客戶對 TigerWit 沒有未結清付款。",
         "id": "2. Klien dapat mengakhiri Perjanjian Klien, dengan alasan apapun, setelah memberikan pemberitahuan tertulis 7 (tujuh) hari kerja dengan mengirimkan pemberitahuan yang menyebutkan tanggal pengakhiran melalui pos terdaftar ke Kantor Pusat Perusahaan, asalkan tidak ada posisi terbuka diperdagangkan melalui akun trading yang relevan dan klien tidak memiliki jumlah yang harus dibayarkan ke TigerWit.",
         "es": "2. El cliente puede rescindir el Acuerdo del cliente, por cualquier motivo, habiendo proporcionado una notificación por escrito de 7(siete) días hábiles mediante el envío de una notificación que especifique la fecha de finalización por correo certificado a la Oficina Central de la Firma, siempre que no haya puestos vacantes. se negocian a través de la cuenta comercial correspondiente y el cliente no tiene cantidades debidas para el pago a TigerWit.",
         "pt-BR": "2.O cliente poderá rescindir o Contrato de Cliente, por qualquer motivo, tendo enviado um aviso prévio de 7 (sete) dias úteis enviando uma notificação especificando a data de rescisão por meio de um cargo registrado na sede da empresa, contanto que não haja posições abertas transaccionado através da conta de negociação relevante e o cliente não tem montantes a pagar pela TigerWit.",
@@ -5133,7 +5123,7 @@ module.exports = {
     },
     "amtClient121": {
         "zh": "基于本公司的合理怀疑，客户利用本公司参与任何类型的欺诈。",
-        "en": "a client involving the Firm in any type of fraud based on the Firm's reasonable suspicion.",
+        "en": "a client involving the Firm in any type of fraud or other financial crime based on the Firm’s reasonable suspicion.",
         "vi": "một khách hàng liên quan đến Công ty trong bất kỳ hình thức gian lận hoặc các loại tội phạm tài chính khác nào dựa trên nghi ngờ hợp lý của Công ty.",
         "zh-Hant": "基於本公司的合理懷疑，客戶利用本公司參與任何類型的欺詐。",
         "id": "dan klien yang melibatkan Perusahaan dalam segala jenis penipuan atau kejahatan keuangan lainnya berdasarkan kecurigaan yang wajar dari Perusahaan.",
@@ -5233,7 +5223,7 @@ module.exports = {
     },
     "amtClient131": {
         "zh": "1.TigerWit Limited 在 巴哈马国注册总局注册；因此，任何客户的个人数据均由 TigerWit 依据巴哈马国的法律法规进行保存。",
-        "en": "1.TigerWit Limited is registered with the Registrar General's Department of The Bahamas; therefore, any clients’ personal data is kept by TigerWit according to the laws and regulations of The Bahamas.",
+        "en": "1.TigerWit Limited is registered with the Registrar General's Department of The Bahamas; therefore, any clients’ personal data is kept by TigerWit according to the laws and regulations of The Bahamas to include the Data Protection (Privacy of Personal Information) Act, 2003.",
         "vi": "1.Công ty TigerWit được đăng ký với Ủy ban Chứng khoán Bahamas; do đó, bất kỳ dữ liệu cá nhân của khách hàng được giữ bởi TigerWit tuân theo luật pháp và các quy định của Bahamas bao gồm luật Bảo Mật Thông Tin Dữ Liệu (Bảo Mật Thông Tin Cá Nhân), 2003.",
         "zh-Hant": "1.TigerWit Limited 在 巴哈馬國註冊總局註冊；因此，任何客戶的個人數據均由 TigerWit 依據巴哈馬國的法律法規進行保存。",
         "id": "1. TigerWit Limited terdaftar di Departemen Registrar General di Bahamas; oleh karena itu, setiap data pribadi klien disimpan oleh TigerWit sesuai dengan hukum dan peraturan Bahamas untuk menyertakan Undang-Undang Perlindungan Data (Privasi Informasi Pribadi), 2003.",
@@ -5372,10 +5362,10 @@ module.exports = {
         "ar": "ونحن نحتفظ بسجلات للمعاملات التجارية وتصنيف العملاء والعروض الترويجية المالية لفترة لا تقل عن خمس سنوات."
     },
     "amtClient145": {
-        "zh": "您可以申请一份我们持有的您的相关信息的副本。如果您索要全部或部分信息的副本，请写信 至 ： 收 件 人 ： 数 据 管 理 员 ， 地 址 为 201Church Street, Sandyport, PO Box SP 64368, Nassau, The Bahamas.我们可能会就此项服务收取少量费用。",
+        "zh": "您可以申请一份我们持有的您的相关信息的副本。如果您索要全部或部分信息的副本，请写信至：收件人：数据管理员，地址为 201Church Street, Sandyport, PO Box SP 64368, Nassau, The Bahamas.我们可能会就此项服务收取少量费用。",
         "en": "You may request a copy of the information that we hold about you. If you would like a copy of all or some of the information please write to: The Data Controller, Sea Sky Lane, Sandyport, PO Box SP 64368, Nassau, The Bahamas. We may make a small charge for this service.",
         "vi": "Bạn có thể yêu cầu một bản sao thông tin mà chúng tôi có về bạn. Nếu bạn muốn một bản sao của tất cả hoặc một số thông tin xin vui lòng viết thư cho: Bộ điều khiển dữ liệu, Sea Sky Lane, Sandyport, PO Box SP 64368, Nassau, Bahamas. Chúng tôi có thể tính một khoản phí nhỏ cho dịch vụ này.",
-        "zh-Hant": "您可以申請壹份我們持有的您的相關信息的副本。如果您索要全部或部分信息的副本，請寫信 至 ： 收 件 人 ： 數 據 管 理 員 ， 地 址 為 201Church Street, Sandyport, PO Box SP 64368, Nassau, The Bahamas.我們可能會就此項服務收取少量費用。",
+        "zh-Hant": "您可以申請壹份我們持有的您的相關信息的副本。如果您索要全部或部分信息的副本，請寫信至：收件人：數據管理員，地址為 201Church Street, Sandyport, PO Box SP 64368, Nassau, The Bahamas.我們可能會就此項服務收取少量費用。",
         "id": "Anda dapat meminta salinan informasi yang kami miliki tentang Anda. Jika Anda menginginkan salinan dari semua atau sebagian informasi, silakan kirim surat ke: Pengontrol Data, Sea Sky Lane, Sandyport, PO Box SP 64368, Nassau, The Bahamas. Kami mungkin akan mengenakan sedikit biaya untuk layanan ini.",
         "es": "Puede solicitar una copia de la información que tenemos sobre usted. Si desea una copia de toda o parte de la información, escriba a: El controlador de datos, Sea Sky Lane, Sandyport, PO Box SP 64368, Nassau, Las Bahamas. Podemos hacer un pequeño cargo por este servicio.",
         "pt-BR": "Você pode solicitar uma cópia das informações que temos sobre você. Se você quiser uma cópia de todas ou algumas das informações, por favor escreva para: The Data Controller, Sea Sky Lane, Sandyport, PO Box SP 64368, Nassau, Bahamas. Podemos cobrar uma pequena taxa por este serviço.",
@@ -5435,7 +5425,7 @@ module.exports = {
         "zh": "利益冲突",
         "en": "Conflicts of Interest",
         "vi": "Xung đột lợi ích",
-        "zh-Hant": "利益沖突",
+        "zh-Hant": "利益衝突",
         "id": "Konflik kepentingan",
         "es": "Conflictos de Interés",
         "pt-BR": "Conflitos de Interesse",
@@ -5902,10 +5892,10 @@ module.exports = {
         "ar": "2- إدارة دعم العملاء:"
     },
     "amtClient199": {
-        "zh": "电邮：",
+        "zh": "电子邮箱：",
         "en": "Email: ",
         "vi": "Email: ",
-        "zh-Hant": "電郵：",
+        "zh-Hant": "電子郵箱：",
         "id": "Email: ",
         "es": "Email: ",
         "pt-BR": "Email: ",
@@ -5932,10 +5922,10 @@ module.exports = {
         "ar": "1- إدارة التداول"
     },
     "amtClient203": {
-        "zh": "电邮：",
+        "zh": "电子邮箱：",
         "en": "Email: ",
         "vi": "Email: ",
-        "zh-Hant": "電郵：",
+        "zh-Hant": "電子郵箱：",
         "id": "Email: ",
         "es": "Email: ",
         "pt-BR": "Email: ",
@@ -5952,10 +5942,10 @@ module.exports = {
         "ar": "2- إدارة الامتثال"
     },
     "amtClient206": {
-        "zh": "电邮：",
+        "zh": "电子邮箱：",
         "en": "Email: ",
         "vi": "Email: ",
-        "zh-Hant": "電郵：",
+        "zh-Hant": "電子郵箱：",
         "id": "Email: ",
         "es": "Email: ",
         "pt-BR": "Email: ",
@@ -6372,10 +6362,10 @@ module.exports = {
         "ar": "1- للحصول على مزيد من المعلومات، أو إذا كنت لا تفهم بيان المخاطر هذا أو شروط وأحكام العمل أو اتفاقية العميل، أو إذا كنت لا تعرف كيف يمكن أن يؤثر تداول عقود الفروقات على استثماراتك، يجب عليك الاستعانة بمستشار مستقل."
     },
     "amtCookie1": {
-        "zh": "本隐私政策和 Cookie 披露声明介绍 TigerWit（ 以 下 简 称 “ 本 公 司 ” ） 如 何 通 过www.tigerwit.com、global.tigerwit.com 以及其他相关网站和应用程序收集和使用信息。本隐私政策和 Cookie 披露声明不适用于其他机构和其他第三方运作的网站。",
+        "zh": "本隐私政策和 Cookie 披露声明介绍 TigerWit（以下简称“本公司”）如何通过www.tigerwit.com、global.tigerwit.com 以及其他相关网站和应用程序收集和使用信息。本隐私政策和 Cookie 披露声明不适用于其他机构和其他第三方运作的网站。",
         "en": "This Privacy Policy and Cookie Disclosure describes how TigerWit (‘the Firm’) collects and uses information through its site www.tigerwit.com and global.tigerwit.com and any other related sites and applications. This Privacy Policy and Cookie Disclosure does not apply to websites operated by other organisations and other third parties.",
         "vi": "Chính sách Riêng Tư và Tiết lộ Cookie này mô tả cách TigerWit (‘Công ty’) thu thập và sử dụng thông tin thông qua trang web www.tigerwit.com và global.tigerwit.com và mọi trang web và ứng dụng liên quan khác. Chính sách Bảo mật và Tiết lộ Cookie này không áp dụng cho các trang web do các tổ chức khác và các bên thứ ba khác điều hành.",
-        "zh-Hant": "本隱私政策和 Cookie 披露聲明介紹 TigerWit（ 以 下 簡 稱 “ 本 公 司 ” ） 如 何 通 過www.tigerwit.com、global.tigerwit.com 以及其他相關網站和應用程序收集和使用信息。本隱私政策和 Cookie 披露聲明不適用於其他機構和其他第三方運作的網站。",
+        "zh-Hant": "本隱私政策和 Cookie 披露聲明介紹 TigerWit（以下簡稱“本公司”）如何通過www.tigerwit.com、global.tigerwit.com 以及其他相關網站和應用程序收集和使用信息。本隱私政策和 Cookie 披露聲明不適用於其他機構和其他第三方運作的網站。",
         "id": "Kebijakan Privasi dan Pengungkapan Cookie ini menjelaskan bagaimana TigerWit ('Perusahaan') mengumpulkan dan menggunakan informasi melalui situsnya www.TigerWit.com dan global.TigerWit.com serta situs dan aplikasi terkait lainnya. Kebijakan Privasi dan Pengungkapan Cookie ini tidak berlaku untuk situs web yang dioperasikan oleh organisasi lain dan pihak ketiga lainnya.",
         "es": "Esta Política de Privacidad y Divulgación de cookies describe cómo TigerWit (\"la Firma\") recopila y utiliza información a través de su sitio www.tigerwit.com y global.tigerwit.com y cualquier otro sitio y aplicación relacionados. Esta Política de Privacidad y Divulgación de cookies no se aplica a los sitios web operados por otras organizaciones y terceros.",
         "pt-BR": "Esta Política de Privacidade e Divulgação de Cookies descreve como a TigerWit (\"a Empresa\") coleta e usa informações através de seu site www.tigerwit.com e global.tigerwit.com e quaisquer outros sites e aplicativos relacionados. Esta Política de Privacidade e a Divulgação de Cookies não se aplicam a sites operados por outras organizações e outros terceiros.",
@@ -6572,10 +6562,10 @@ module.exports = {
         "ar": "ملف تعريف الارتباط (cookie) هو ملف نصي صغير يتم تخزينه على جهاز الكمبيوتر الخاص بالمستخدم من أجل أغراض حفظ السجلات.  تستخدم TigerWit ملفات تعريف الارتباط على مواقعها الإلكترونية."
     },
     "amtCookie21": {
-        "zh": "TigerWit 使用会话 ID cookie 和持久 cookie。关闭 浏 览 器 不 会 让 会 话 ID cookie 结 束 。 持 久cookie 会在您的硬盘中保存一段时间。您可以根据互联网浏览器中“帮助”文件的指示删除持久 cookie。",
+        "zh": "TigerWit 使用会话 ID cookie 和持久 cookie。关闭浏览器不会让会话 ID cookie 结束。持久 cookie 会在您的硬盘中保存一段时间。您可以根据互联网浏览器中“帮助”文件的指示删除持久 cookie。",
         "en": "TigerWit uses both session ID cookies and persistent cookies. A session ID cookie does not expire when you close your browser. A persistent cookie remains on your hard drive for an extended period of time. You can remove persistent cookies by following directions provided in your Internet browser's ‘Help’ file.",
         "vi": "TigerWit sử dụng cả cookie ID và cookie liên tục- persistent (không bị xóa khi đóng trình duyệt). Cookie ID không hết hạn khi bạn đóng trình duyệt của mình. Một cookie liên tục (persistent) vẫn còn trên ổ cứng của bạn trong một khoảng thời gian dài. Bạn có thể xóa cookie liên tục bằng cách làm theo các hướng dẫn được cung cấp trong file 'Trợ giúp' của trình duyệt Internet của bạn.",
-        "zh-Hant": "TigerWit 使用會話 ID cookie 和持久 cookie。關閉 瀏 覽 器 不 會 讓 會 話 ID cookie 結 束 。 持 久cookie 會在您的硬盤中保存壹段時間。您可以根據互聯網瀏覽器中“幫助”文件的指示刪除持久 cookie。",
+        "zh-Hant": "TigerWit 使用會話 ID cookie 和持久 cookie。關閉瀏覽器不會讓會話 ID cookie 結束。持久cookie 會在您的硬盤中保存壹段時間。您可以根據互聯網瀏覽器中“幫助”文件的指示刪除持久 cookie。",
         "id": "TigerWit menggunakan cookie ID sesi dan cookie persisten. Cookie ID sesi tidak kedaluwarsa saat Anda menutup browser Anda. Cookie tetap ada di hard drive Anda untuk jangka waktu yang lama. Anda dapat menghapus cookie yang ada dengan mengikuti petunjuk yang diberikan di file 'Bantuan' browser Internet Anda.",
         "es": "TigerWit utiliza cookies de identificación de sesión y cookies persistentes. Una cookie de ID de sesión no caduca cuando cierra su navegador. Una cookie persistente permanece en su disco duro durante un período prolongado de tiempo. Puede eliminar las cookies persistentes siguiendo las instrucciones proporcionadas en el archivo de \"Ayuda\" de su navegador de Internet.",
         "pt-BR": "A TigerWit usa cookies de ID de sessão e cookies persistentes. Um cookie de ID de sessão não expira quando você fecha o navegador. Um cookie persistente permanece no seu disco rígido por um longo período de tempo. Você pode remover cookies persistentes seguindo as instruções fornecidas no arquivo \"Ajuda\" do navegador da Internet.",
@@ -6633,7 +6623,7 @@ module.exports = {
     },
     "amtCookie27": {
         "zh": "通过互联网传输信息并不总是 100%安全；我们将尽一切努力保护您的个人数据，但不能保证传输您的数据的安全性；您要自行承担传输数据的风险。一旦我们收到您的信息，我们会采用相应程序以及安全功能，尽量阻止未获授权的访问。另外，我们向您收集的数据可能会被传送到以及储存在巴哈马以外的地方。本公司或本公司供应商在巴哈马以外地区从事活动的员工也可处理这类信息。这类员工可能执行您的订单、处理您的支付情况以及提供支持服务（包括其他）。您提交个人数据，即表示您同意此类数据传送、储存及处理。本公司将采取一切合理必要的措施确保在安全并遵守 2003 年数据保护（个人信息隐私）法和此隐私政策的情况下处理您的数据。",
-        "en": "Transmission of information via the internet is not always completely secure; we will exercise all endeavours to protect your personal data yet we cannot guarantee the security of your data transmitted; any transmission is at your own risk. Once we have received your information we will use procedures and security features to try to prevent unauthorised access. Furthermore, the data we collect from you may be transferred to, and stored at, a destination outside The Bahamas. It may also be processed by staff operating outside The Bahamas who work for us or for one of our suppliers. Such staff maybe engaged in, among other things, the fulfilment of your order, the processing of your payment details and the provision of support services. By submitting your personal data, you agree to this transfer, storing and processing. The Firm will take all steps reasonably necessary to ensure that your data is treated securely and in accordance with this Privacy Policy.",
+        "en": "Transmission of information via the internet is not always completely secure; we will exercise all endeavours to protect your personal data yet we cannot guarantee the security of your data transmitted; any transmission is at your own risk. Once we have received your information we will use procedures and security features to try to prevent unauthorised access. Furthermore, the data we collect from you may be transferred to, and stored at, a destination outside The Bahamas. It may also be processed by staff operating outside The Bahamas who work for us or for one of our suppliers. Such staff maybe engaged in, among other things, the fulfilment of your order, the processing of your payment details and the provision of support services. By submitting your personal data, you agree to this transfer, storing and processing. The Firm will take all steps reasonably necessary to ensure that your data is treated securely and in accordance with the Data Protection (Privacy of Personal Information) Act, 2003 and this Privacy Policy.",
         "vi": "Việc truyền tải thông tin qua internet không phải lúc nào cũng an toàn; chúng tôi sẽ thực hiện tất cả các nỗ lực để bảo vệ dữ liệu cá nhân của bạn nhưng chúng tôi không thể đảm bảo tính bảo mật của dữ liệu được truyền; bất kỳ sự truyền tải nào đều có nguy cơ đối với riêng bạn. Khi chúng tôi đã nhận được thông tin của bạn, chúng tôi sẽ sử dụng các thủ tục và tính năng bảo mật để cố gắng ngăn chặn truy cập trái phép. Hơn nữa, các dữ liệu chúng tôi thu thập từ bạn có thể được chuyển đến, và được lưu trữ tại, một điểm đến bên ngoài Bahamas. Thông tin cũng có thể được xử lý bởi nhân viên hoạt động bên ngoài The Bahamas, người làm việc cho chúng tôi hoặc cho một trong những nhà cung cấp của chúng tôi. Các nhân viên như vậy có thể tham gia, trong số những công việc khác, việc thực hiện các lệnh của bạn, xử lý các thông tin thanh toán của bạn và cung cấp các dịch vụ hỗ trợ. Bằng cách gửi dữ liệu cá nhân của bạn, bạn đồng ý với việc chuyển, lưu trữ và xử lý này. Công ty sẽ thực hiện tất cả các bước cần thiết một cách hợp lý để đảm bảo rằng dữ liệu của bạn được xử lý an toàn và tuân theo Chính Sách Bộ Luật Bảo Mật Dữ Liệu (Bảo Mật Dữ Liệu Khách Hàng) 2003 và với Chính sách bảo mật này.",
         "zh-Hant": "通過互聯網傳輸信息並不總是 100%安全；我們將盡壹切努力保護您的個人數據，但不能保證傳輸您的數據的安全性；您要自行承擔傳輸數據的風險。壹旦我們收到您的信息，我們會采用相應程序以及安全功能，盡量阻止未獲授權的訪問。另外，我們向您收集的數據可能會被傳送到以及儲存在巴哈馬以外的地方。本公司或本公司供應商在巴哈馬以外地區從事活動的員工也可處理這類信息。這類員工可能執行您的訂單、處理您的支付情況以及提供支持服務（包括其他）。您提交個人數據，即表示您同意此類數據傳送、儲存及處理。本公司將採取一切合理合理的必要措施確保在安全並遵守2003年數據保護（個人信息隱私）法和此隱私政策的情況下處理您的數據。",
         "id": "Transmisi informasi melalui internet tidak selalu sepenuhnya aman; kami akan melakukan semua upaya untuk melindungi data pribadi Anda namun kami tidak dapat menjamin keamanan data Anda yang dikirimkan; semua transmisi menjadi risiko Anda sendiri. Setelah kami menerima informasi Anda, kami akan menggunakan prosedur dan fitur keamanan untuk mencoba mencegah akses yang tidak sah. Lebih lanjut, data yang kami kumpulkan dari Anda dapat ditransfer ke, dan disimpan di, tujuan di luar Bahama. Ini juga dapat diproses oleh staf yang beroperasi di luar Bahama yang bekerja untuk kita atau untuk salah satu pemasok kita. Staf tersebut mungkin terlibat dalam, antara lain, pemenuhan pesanan Anda, pemrosesan detail pembayaran Anda, dan penyediaan layanan dukungan. Dengan mengirimkan data pribadi Anda, Anda menyetujui transfer, penyimpanan, dan pemrosesan ini. Perusahaan akan mengambil semua langkah yang diperlukan secara wajar untuk memastikan bahwa data Anda diperlakukan dengan aman dan sesuai dengan Undang-Undang Perlindungan Data (Privasi Informasi Pribadi), 2003 dan Kebijakan Privasi ini.",
@@ -6742,10 +6732,10 @@ module.exports = {
         "ar": "مقدمة"
     },
     "amtBusiness2": {
-        "zh": "1.TigerWit Limited（以下统称为“TigerWit”、“公司”或“本公司”）在 巴 哈 马 国 注 册 成 立 （ 注 册 证 书 编 号198255B）。我们的注册办事处位于 Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas。TigerWit 受巴哈马证券监察委员会授权和监管（注册编号 SIA-F185）。",
+        "zh": "1.TigerWit Limited（以下统称为“TigerWit”、“公司”或“本公司”）在巴哈马国注册成立（注册证书编号198255B）。我们的注册办事处位于 Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas。TigerWit 受巴哈马证券监察委员会授权和监管（注册编号 SIA-F185）。",
         "en": "1.TigerWit Limited (hereinafter referred to as ‘TigerWit’, the ‘Firm’ or the 'Company') is incorporated (Certificate of Incorporation No. 198255B) in The Commonwealth of The Bahamas. Our registered office is Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. TigerWit is authorised and regulated by the Securities Commission of The Bahamas (licence No. SIA-F185).",
         "vi": "1.TigerWit Limited (sau đây gọi tắt là \"TigerWit\", \"Doanh nghiệp\" hoặc \"Công ty\") được thành lập (Giấy chứng nhận thành lập số 198255B) trong Khối thịnh vượng chung Bahamas. Văn phòng đăng ký của chúng tôi là Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, Bahamas. TigerWit được ủy quyền và quản lý bởi Ủy ban Chứng khoán Bahamas (giấy phép số SIA-F185).",
-        "zh-Hant": "1.TigerWit Limited（以下統稱為“TigerWit”、“公司”或“本公司”）在 巴 哈 馬 國 註 冊 成 立 （ 註 冊 證 書 編 號198255B）。我們的註冊辦事處位於 Sea Sky Lane, Sandyport, P. O. Box SP 64368.Nassau, TheBahamas。TigerWit 受巴哈馬證券監察委員會授權和監管（註冊編號 SIA-F185）。",
+        "zh-Hant": "1.TigerWit Limited（以下統稱為“TigerWit”、“公司”或“本公司”）在巴哈馬國註冊成立（註冊證書編號198255B）。我們的註冊辦事處位於 Sea Sky Lane, Sandyport, P. O. Box SP 64368.Nassau, TheBahamas。TigerWit 受巴哈馬證券監察委員會授權和監管（註冊編號 SIA-F185）。",
         "id": "1.TigerWit Limited (hereinafter referred to as ‘TigerWit’, the ‘Firm’ or the 'Company') is incorporated (Certificate of Incorporation No. 198255B) in The Commonwealth of The Bahamas. Our registered office is Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. TigerWit is authorised and regulated by the Securities Commission of The Bahamas (licence No. SIA-F185).",
         "es": "1. TigerWit Limited (en lo sucesivo denominado \"TigerWit\", la \"Firma\" o la \"Compañía\") se incorpora (Certificado de Incorporación Nº. 198255B) en La Commonwealth de las Bahamas. Nuestro domicilio social es Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, Bahamas. TigerWit está autorizado y regulado por la Comisión de Valores de Las Bahamas (licencia Nº. SIA-F185).",
         "pt-BR": "1.TigerWit Limited (doravante referida como \"TigerWit\", a \"Firma\" ou a \"Empresa\") é incorporada (Certificado de Incorporação No. 198255B) na Comunidade das Bahamas. Nossa sede é Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, Bahamas. A TigerWit é autorizada e regulamentada pela Comissão de Valores Mobiliários das Bahamas (licença No. SIA-F185).",
@@ -8452,10 +8442,10 @@ module.exports = {
         "ar": "2- عندما يقوم مركز الدعم في TigerWit بإغلاق المركز نيابة عن العميل، قد تكون الأسعار الواردة على الهاتف غير مطابقة تمامًا لأسعار التداول النهائية بسبب تأخير الهاتف أو تأخير شبكة الإنترنت. ويجب أن يكون العملاء على علم بذلك ويوافقون على التسوية التي تقوم بها TigerWit ويتحملون فروق الأسعار المذكورة أعلاه.  وتعمل TigerWit بصفتها وكيل معتمد فقط لتنفيذ المعاملات نيابة عن العميل، ولا تقدم الأسعار إلى العميل بصفتها تاجرًا.  وبناء على ذلك، فإذا تقدمت بطلب للتسوية بسبب حدوث ظروف غير طبيعية خلال الفترة المحددة، ستقوم TigerWit بإغلاق المركز وفقًا لسعر السوق الصحيح الذي كان مطبقًا خلال الفترة التي حدث فيها انقطاع النظام أو الظروف غير الطبيعية.  تنبيه: لا تقبل TigerWit أي سعر محدد لإغلاق المركز."
     },
     "amtConditions51": {
-        "zh": "3. 当您发出紧急处理申请之后切勿再对已申请的 单 子 做 任 何 平 仓 动 作 ， 若 有 此 情 形 ，TigerWit 仍将以依据断线或报价异常期间之正确市场价格予以平仓处理。",
+        "zh": "3. 当您发出紧急处理申请之后切勿再对已申请的单子做任何平仓动作，若有此情形，TigerWit 仍将以依据断线或报价异常期间之正确市场价格予以平仓处理。",
         "en": "3. After you apply for the abnormal condition settlement, please do not close any position that you applied for. If you still act in this way, TigerWit support center will still close the position by the accurate price according to the price while system disconnection or abnormality occurs.",
         "vi": "3. Sau khi bạn áp dụng cho việc giải quyết tình trạng bất thường, xin vui lòng không đóng bất kỳ vị thế mà bạn áp dụng cho. Nếu bạn vẫn hoạt động theo cách này, trung tâm hỗ trợ TigerWit sẽ vẫn đóng vị thế theo giá chính xác theo giá trong khi ngắt kết nối hệ thống hoặc bất thường xảy ra.",
-        "zh-Hant": "3. 當您發出緊急處理申請之後切勿再對已申請的 單 子 做 任 何 平 倉 動 作 ， 若 有 此 情 形 ，TigerWit 仍將以依據斷線或報價異常期間之正確市場價格予以平倉處理。",
+        "zh-Hant": "3. 當您發出緊急處理申請之後切勿再對已申請的單子做任何平倉動作，若有此情形，TigerWit 仍將以依據斷線或報價異常期間之正確市場價格予以平倉處理。",
         "id": "3. Setelah Anda mengajukan permohonan penyelesaian kondisi abnormal, mohon tidak menutup posisi yang Anda ajukan. Jika Anda masih bertindak seperti ini, support center TigerWit akan tetap menutup posisi dengan harga yang akurat sesuai harga saat terjadi pemutusan atau ketidaknormalan sistem.",
         "es": "3.Después de solicitar la liquidación durante un período anormal, por favor, no cierre la posición que solicitó. Si actúa de ese modo, el centro de soporte de TigerWit le seguirá cerrando su posición en el precio alcanzado cuando sucedió la desconexión del sistema o la anormalidad en cuestión. ",
         "pt-BR": "3. Depois de se candidatar para a liquidação anormal da condição, por favor, não feche qualquer posição que você tenha solicitado. Se você ainda agir dessa maneira, o centro de suporte da TigerWit ainda fechará a posição pelo preço exato de acordo com o preço, enquanto ocorrer a desconexão ou anormalidade do sistema.",
@@ -8873,7 +8863,7 @@ module.exports = {
     },
     "amtCategorization6": {
         "zh": "1.4.1 专业客户",
-        "en": "1.4.1 Professional Clien",
+        "en": "1.4.1 Professional Client",
         "vi": "1.4.1 Khách hàng chuyên gia",
         "zh-Hant": "1.4.1 專業客戶",
         "id": "1.4.1 Klien Profesional",
@@ -8953,12 +8943,12 @@ module.exports = {
     },
     "amtCategorization7-7": {
         "zh": "1.6 默认情况下，除非满足以下标准，否则所有客户均将被分类为零售客户。",
-        "en": "1.6 1.3	By default, all clients will be classified as a retail client unless they meet the below criteria.",
+        "en": "1.6 By default, all clients will be classified as a retail client unless they meet the below criteria.",
         "vi": "1.6 Tất cả khách hàng sẽ được mặc định phân loại là khách hàng cá nhân trừ khi đạt các tiêu chí dưới đây.",
         "zh-Hant": "1.6 默認情況下，除非滿足以下標準，否則所有客戶均將被分類為零售客戶。",
         "id": "1.6 Secara default, semua klien akan diklasifikasikan sebagai klien ritel kecuali mereka memenuhi kriteria di bawah ini.",
         "es": "1.6 De forma predeterminada, todos los clientes se clasificarán como clientes minoristas a menos que cumplan con los siguientes criterios.",
-        "pt-BR": "1.6 1.3	By default, all clients will be classified as a retail client unless they meet the below criteria.",
+        "pt-BR": "1.6	By default, all clients will be classified as a retail client unless they meet the below criteria.",
         "ar": "1.6	ستقوم الشركة بشكل تلقائي بتصنيف جميع العملاء باعتبارهم عملاء تجزئة ما لم يستوفوا المعايير التالية."
     },
     "amtCategorization8": {
@@ -9032,13 +9022,13 @@ module.exports = {
         "ar": "2.1.5  برنامج استثمار جماعي أو شركة الإدارة لهذا البرنامج؛"
     },
     "amtCategorization15": {
-        "zh": "2.1.6 养老基金或养老基金的管理公司",
-        "en": "2.1.6 A pension fund or the management company of a pension fund ",
-        "vi": "2.1.6 Quỹ hưu trí hoặc công ty quản lý quỹ hưu trí",
-        "zh-Hant": "2.1.6 養老基金或養老基金的管理公司",
-        "id": "2.1.6 Dana pensiun atau perusahaan pengelola dana pensiun",
-        "es": "2.1.6 Un fondo de pensiones o la sociedad gestora de un fondo de pensiones",
-        "pt-BR": "2.1.6 A pension fund or the management company of a pension fund ",
+        "zh": "2.1.6 养老基金或养老基金的管理公司；",
+        "en": "2.1.6 A pension fund or the management company of a pension fund;",
+        "vi": "2.1.6 Quỹ hưu trí hoặc công ty quản lý quỹ hưu trí;",
+        "zh-Hant": "2.1.6 養老基金或養老基金的管理公司；",
+        "id": "2.1.6 Dana pensiun atau perusahaan pengelola dana pensiun;",
+        "es": "2.1.6 Un fondo de pensiones o la sociedad gestora de un fondo de pensiones;",
+        "pt-BR": "2.1.6 A pension fund or the management company of a pension fund;",
         "ar": " 2.1.6  صندوق ادخار أو شركة لادارة صندوق الادخار: "
     },
     "amtCategorization16": {
@@ -9063,12 +9053,12 @@ module.exports = {
     },
     "amtCategorization18": {
         "zh": "2.2 此外，公司将本身专业客户归类为满足以下两个规模要求条件的大型企业：",
-        "en": "2.2 Additionally, the Firm categorizes a per se professional client as a large undertaking meeting two of the following size requirement conditions : ",
+        "en": "2.2 Additionally, the Firm categorizes a per se professional client as a large undertaking meeting two of the following size requirement conditions: ",
         "vi": "2.2 Ngoài ra, Công ty phân loại khách hàng chuyên gia như một doanh nghiệp lớn đáp ứng hai trong số các điều kiện về yêu cầu kích thước như sau:",
         "zh-Hant": "2.2 此外，公司將本身專業客戶歸類為滿足以下兩個規模要求條件的大型企業：",
         "id": "2.2 Selain itu, Perusahaan mengkategorikan klien profesional per se sebagai usaha besar yang memenuhi dua kondisi persyaratan ukuran berikut:",
         "es": "2.2 Además, la Firma clasifica a un cliente profesional per se como una gran empresa que cumple dos de las siguientes condiciones de requisitos de tamaño:",
-        "pt-BR": "2.2 Additionally, the Firm categorizes a per se professional client as a large undertaking meeting two of the following size requirement conditions :",
+        "pt-BR": "2.2 Additionally, the Firm categorizes a per se professional client as a large undertaking meeting two of the following size requirement conditions:",
         "ar": "2.2 بالإضافة إلى ذلك ، تصنف الشركة العميل المحترف في حد ذاته على أنه تعهد كبير يلبي شرطين من شروط متطلبات التالية:"
     },
     "amtCategorization19": {
@@ -9225,40 +9215,40 @@ module.exports = {
         "zh": "2.5.2 (2) 在评估过程中，至少满足以下两个条件：",
         "en": "2.5.2 (2) in the course of that assessment, at least two of the following criteria are satisfied:",
         "vi": "2.5.2 (2) 在評估過程中，至少滿足以下兩個條件：",
-        "zh-Hant": "(i)客戶在過去四個季度內以每季度 10次的平均頻率在相關市場開展大規模交易；",
+        "zh-Hant": "2.5.2 (2) 在評估過程中，至少滿足以下兩個條件：",
         "id": " 2.5.2 (2) selama penilaian tersebut, setidaknya dua dari kriteria berikut dipenuhi:",
         "es": "2.5.2 (2) en el curso de esa evaluación, se cumplen al menos dos de los siguientes criterios:",
         "pt-BR": "2.5.2 (2) in the course of that assessment, at least two of the following criteria are satisfied:",
         "ar": "2.5.2  يجب أن يتم استيفاء معيارين على الأقل من المعايير التالية خلال ذلك التقييم:"
     },
     "amtCategorization35": {
-        "zh": "客户在过去四个季度中，平均每季度在相关市场上进行了10次大规模交易；",
-        "en": "The client has carried out transactions, in significant size, on the relevant market at an average frequency of 10 per quarter over the previous four quarters;",
-        "vi": "Khách hàng đã thực hiện các giao dịch ở quy mô đáng kể trên thị trường liên quan với tần suất trung bình là 10 giao dịch mỗi quý so với bốn quý trước;",
-        "zh-Hant": "客戶在過去四個季度中，平均每季度在相關市場上進行了10次大規模交易；",
-        "id": "Klien telah melakukan transaksi, dalam ukuran yang signifikan, di pasar yang relevan dengan frekuensi rata-rata 10 per kuartal selama empat kuartal sebelumnya;",
-        "es": "El cliente ha realizado transacciones, de tamaño significativo, en el mercado relevante con una frecuencia promedio de 10 por trimestre durante los cuatro trimestres anteriores;",
-        "pt-BR": "The client has carried out transactions, in significant size, on the relevant market at an average frequency of 10 per quarter over the previous four quarters;",
+        "zh": "• 客户在过去四个季度中，平均每季度在相关市场上进行了10次大规模交易；",
+        "en": "• The client has carried out transactions, in significant size, on the relevant market at an average frequency of 10 per quarter over the previous four quarters;",
+        "vi": "• Khách hàng đã thực hiện các giao dịch ở quy mô đáng kể trên thị trường liên quan với tần suất trung bình là 10 giao dịch mỗi quý so với bốn quý trước;",
+        "zh-Hant": "• 客戶在過去四個季度中，平均每季度在相關市場上進行了10次大規模交易；",
+        "id": "• Klien telah melakukan transaksi, dalam ukuran yang signifikan, di pasar yang relevan dengan frekuensi rata-rata 10 per kuartal selama empat kuartal sebelumnya;",
+        "es": "• El cliente ha realizado transacciones, de tamaño significativo, en el mercado relevante con una frecuencia promedio de 10 por trimestre durante los cuatro trimestres anteriores;",
+        "pt-BR": "• The client has carried out transactions, in significant size, on the relevant market at an average frequency of 10 per quarter over the previous four quarters;",
         "ar": "•	يكون العميل قد أجرى معاملات، ذات حجم كبير، في السوق ذات الصلة، بمعدل متوسط مقداره 10 معاملات في كل ربع عام على مدار الأرباع الأربعة السابقة؛"
     },
     "amtCategorization36": {
-        "zh": "客户的金融工具投资组合的规模（定义为包括现金存款和金融工具）超过500,000美元；",
-        "en": "The size of the client’s financial instrument portfolio, defined as including cash deposits and financial instruments, exceeds $500,000;",
-        "vi": "Quy mô danh mục công cụ tài chính của khách hàng được xác định bao gồm tiền nạp và công cụ tài chính, vượt quá 500.000 đô la;",
-        "zh-Hant": "客戶的金融工具投資組合的規模（定義為包括現金存款和金融工具）超過500,000美元；",
-        "id": "Ukuran portofolio instrumen keuangan klien, yang didefinisikan termasuk setoran tunai dan instrumen keuangan, melebihi $500.000;",
-        "es": "El tamaño de la cartera de instrumentos financieros del cliente, definido como que incluye depósitos en efectivo e instrumentos financieros, excede los $ 500.000;",
-        "pt-BR": "The size of the client’s financial instrument portfolio, defined as including cash deposits and financial instruments, exceeds $500,000;",
+        "zh": "• 客户的金融工具投资组合的规模（定义为包括现金存款和金融工具）超过500,000美元；",
+        "en": "• The size of the client’s financial instrument portfolio, defined as including cash deposits and financial instruments, exceeds $500,000;",
+        "vi": "• Quy mô danh mục công cụ tài chính của khách hàng được xác định bao gồm tiền nạp và công cụ tài chính, vượt quá 500.000 đô la;",
+        "zh-Hant": "• 客戶的金融工具投資組合的規模（定義為包括現金存款和金融工具）超過500,000美元；",
+        "id": "• Ukuran portofolio instrumen keuangan klien, yang didefinisikan termasuk setoran tunai dan instrumen keuangan, melebihi $500.000;",
+        "es": "• El tamaño de la cartera de instrumentos financieros del cliente, definido como que incluye depósitos en efectivo e instrumentos financieros, excede los $ 500.000;",
+        "pt-BR": "• The size of the client’s financial instrument portfolio, defined as including cash deposits and financial instruments, exceeds $500,000;",
         "ar": "•	يكون حجم محفظة الأدوات المالية للعميل، التي تحتوي على الودائع النقدية والأدوات المالية، أكبر من 500.000 دولار؛"
     },
     "amtCategorization37": {
-        "zh": "客户在金融领域工作或已经在需要所预期交易或服务知识的专业职位工作至少一年时间（“定量测试”）；以及",
-        "en": "The client works or has worked in the financial sector for at least one year in a professional position, which requires knowledge of the transactions or services envisaged; (the “quantitative test”); and",
-        "vi": "Khách hàng làm việc hoặc đã làm việc trong lĩnh vực tài chính ít nhất một năm ở vị trí chuyên môn, đòi hỏi kiến ​​thức về các giao dịch hoặc dịch vụ dự kiến; (\"kiểm tra kinh nghiệm giao dịch\"); và",
-        "zh-Hant": "客戶在金融領域工作或已經在需要所預期交易或服務知識的專業職位工作至少一年時間（“定量測試”）；以及",
-        "id": "Klien bekerja atau telah bekerja di sektor keuangan setidaknya selama satu tahun dalam posisi profesional, yang membutuhkan pengetahuan tentang transaksi atau layanan yang diharapkan; (\"tes kuantitatif\"); dan",
-        "es": " El cliente trabaja o ha trabajado en el sector financiero durante al menos un año en un puesto profesional, lo que requiere el conocimiento de las transacciones o servicios previstos; (la \"prueba cuantitativa\"); y",
-        "pt-BR": "The client works or has worked in the financial sector for at least one year in a professional position, which requires knowledge of the transactions or services envisaged; (the “quantitative test”); and",
+        "zh": "• 客户在金融领域工作或已经在需要所预期交易或服务知识的专业职位工作至少一年时间（“定量测试”）；以及",
+        "en": "• The client works or has worked in the financial sector for at least one year in a professional position, which requires knowledge of the transactions or services envisaged; (the “quantitative test”); and",
+        "vi": "• Khách hàng làm việc hoặc đã làm việc trong lĩnh vực tài chính ít nhất một năm ở vị trí chuyên môn, đòi hỏi kiến ​​thức về các giao dịch hoặc dịch vụ dự kiến; (\"kiểm tra kinh nghiệm giao dịch\"); và",
+        "zh-Hant": "• 客戶在金融領域工作或已經在需要所預期交易或服務知識的專業職位工作至少一年時間（“定量測試”）；以及",
+        "id": "• Klien bekerja atau telah bekerja di sektor keuangan setidaknya selama satu tahun dalam posisi profesional, yang membutuhkan pengetahuan tentang transaksi atau layanan yang diharapkan; (\"tes kuantitatif\"); dan",
+        "es": "• El cliente trabaja o ha trabajado en el sector financiero durante al menos un año en un puesto profesional, lo que requiere el conocimiento de las transacciones o servicios previstos; (la \"prueba cuantitativa\"); y",
+        "pt-BR": "• The client works or has worked in the financial sector for at least one year in a professional position, which requires knowledge of the transactions or services envisaged; (the “quantitative test”); and",
         "ar": '•	يكون العميل يعمل أو كان يعمل في القطاع المالي لمدة لا تقل عن عام في وظيفة مهنية تتطلب معرفة بالمعاملات أو الخدمات المقدمة؛ ("الاختبار الكمي")؛ '
     },
     "amtCategorization38": {
@@ -9272,33 +9262,33 @@ module.exports = {
         "ar": "2.5.3  يتم إتباع التدابير التالية:"
     },
     "amtCategorization39": {
-        "zh": "客户必须以书面形式向公司声明，其希望一般或就特定的服务或交易或者交易或产品的类型将其视为专业客户；",
-        "en": "The client must state in writing to the firm that it wishes to be treated as a professional client either generally or in respect of a particular service or transaction or type of transaction or product;",
-        "vi": "Khách hàng phải nêu rõ bằng văn bản với công ty rằng họ muốn được xem như là một khách hàng chuyên gia nói chung hoặc đối với một dịch vụ hoặc giao dịch cụ thể hoặc loại giao dịch hoặc sản phẩm;",
-        "zh-Hant": "客戶必須以書面形式向公司聲明，其希望一般或就特定的服務或交易或者交易或產品的類型將其視為專業客戶；",
-        "id": " Klien harus menyatakan secara tertulis kepada firma bahwa ia ingin diperlakukan sebagai klien profesional baik secara umum atau berkenaan dengan layanan atau transaksi tertentu atau jenis transaksi atau produk;",
-        "es": "El cliente debe declarar por escrito a la firma que desea ser tratado como un cliente profesional, ya sea en general o con respecto a un servicio o transacción en particular o un tipo de transacción o producto;",
-        "pt-BR": "The client must state in writing to the firm that it wishes to be treated as a professional client either generally or in respect of a particular service or transaction or type of transaction or product;",
+        "zh": "• 客户必须以书面形式向公司声明，其希望一般或就特定的服务或交易或者交易或产品的类型将其视为专业客户；",
+        "en": "• The client must state in writing to the firm that it wishes to be treated as a professional client either generally or in respect of a particular service or transaction or type of transaction or product;",
+        "vi": "• Khách hàng phải nêu rõ bằng văn bản với công ty rằng họ muốn được xem như là một khách hàng chuyên gia nói chung hoặc đối với một dịch vụ hoặc giao dịch cụ thể hoặc loại giao dịch hoặc sản phẩm;",
+        "zh-Hant": "• 客戶必須以書面形式向公司聲明，其希望一般或就特定的服務或交易或者交易或產品的類型將其視為專業客戶；",
+        "id": "• Klien harus menyatakan secara tertulis kepada firma bahwa ia ingin diperlakukan sebagai klien profesional baik secara umum atau berkenaan dengan layanan atau transaksi tertentu atau jenis transaksi atau produk;",
+        "es": "• El cliente debe declarar por escrito a la firma que desea ser tratado como un cliente profesional, ya sea en general o con respecto a un servicio o transacción en particular o un tipo de transacción o producto;",
+        "pt-BR": "• The client must state in writing to the firm that it wishes to be treated as a professional client either generally or in respect of a particular service or transaction or type of transaction or product;",
         "ar": "•	يجب على العميل إخطار الشركة خطيًا أنه يرغب في معاملته باعتباره عميلاً محترفًا، إما بشكل عام أو فيما يتعلق بخدمة أو معاملة معينة أو نوع من المعاملات أو المنتجات؛"
     },
     "amtCategorization40": {
-        "zh": "公司必须向客户提供明确的书面警告，说明客户可能失去的保护和投资者补偿权；以及",
-        "en": "•	The Firm must give the client a clear written warning of the protections and investor compensation rights the client may lose; and",
-        "vi": "Công ty phải cung cấp cho khách hàng một cảnh báo bằng văn bản rõ ràng về các phương thức bảo vệ và quyền bồi thường của nhà đầu tư mà khách hàng có thể mất; và",
-        "zh-Hant": "公司必須向客戶提供明確的書面警告，說明客戶可能失去的保護和投資者補償權；以及",
-        "id": "Perusahaan harus memberikan peringatan tertulis yang jelas kepada klien tentang perlindungan dan hak kompensasi investor yang mungkin hilang dari klien; dan",
-        "es": "La Firma debe dar al cliente una advertencia clara por escrito sobre las protecciones y los derechos de compensación del inversionista que el cliente puede perder; y",
+        "zh": "• 公司必须向客户提供明确的书面警告，说明客户可能失去的保护和投资者补偿权；以及",
+        "en": "• The Firm must give the client a clear written warning of the protections and investor compensation rights the client may lose; and",
+        "vi": "• Công ty phải cung cấp cho khách hàng một cảnh báo bằng văn bản rõ ràng về các phương thức bảo vệ và quyền bồi thường của nhà đầu tư mà khách hàng có thể mất; và",
+        "zh-Hant": "• 公司必須向客戶提供明確的書面警告，說明客戶可能失去的保護和投資者補償權；以及",
+        "id": "• Perusahaan harus memberikan peringatan tertulis yang jelas kepada klien tentang perlindungan dan hak kompensasi investor yang mungkin hilang dari klien; dan",
+        "es": "• La Firma debe dar al cliente una advertencia clara por escrito sobre las protecciones y los derechos de compensación del inversionista que el cliente puede perder; y",
         "pt-BR": "•	The Firm must give the client a clear written warning of the protections and investor compensation rights the client may lose; and",
         "ar": "•	يجب على الشركة إعطاء العميل تحذيرًا خطيًا واضحًا بشأن وسائل الحماية والحقوق التعويضية للمستثمر التي قد يخسرها العميل؛ و"
     },
     "amtCategorization41": {
-        "zh": "客户必须在合同以外的单独文件中以书面形式声明其知道失去保护的后果。",
-        "en": "The client must state in writing, in a separate document from the contract, that it is aware of the consequences of losing protections.",
-        "vi": "Khách hàng phải tuyên bố bằng văn bản trong một tài liệu khác với hợp đồng, rằng họ nhận thức được hậu quả của việc mất các phương thức bảo vệ.",
-        "zh-Hant": "客戶必須在合同以外的單獨文件中以書面形式聲明其知道失去保護的後果。",
-        "id": "Klien harus menyatakan secara tertulis, dalam dokumen terpisah dari kontrak, bahwa ia menyadari konsekuensi kehilangan perlindungan.",
-        "es": "El cliente debe manifestar por escrito, en un documento separado del contrato, que es consciente de las consecuencias de perder protecciones.",
-        "pt-BR": "The client must state in writing, in a separate document from the contract, that it is aware of the consequences of losing protections.",
+        "zh": "• 客户必须在合同以外的单独文件中以书面形式声明其知道失去保护的后果。",
+        "en": "• The client must state in writing, in a separate document from the contract, that it is aware of the consequences of losing protections.",
+        "vi": "• Khách hàng phải tuyên bố bằng văn bản trong một tài liệu khác với hợp đồng, rằng họ nhận thức được hậu quả của việc mất các phương thức bảo vệ.",
+        "zh-Hant": "• 客戶必須在合同以外的單獨文件中以書面形式聲明其知道失去保護的後果。",
+        "id": "• Klien harus menyatakan secara tertulis, dalam dokumen terpisah dari kontrak, bahwa ia menyadari konsekuensi kehilangan perlindungan.",
+        "es": "• El cliente debe manifestar por escrito, en un documento separado del contrato, que es consciente de las consecuencias de perder protecciones.",
+        "pt-BR": "• The client must state in writing, in a separate document from the contract, that it is aware of the consequences of losing protections.",
         "ar": "•	يجب على العميل أن يقر خطيًا، في وثيقة مستقلة عن العقد، أنه على علم بعواقب فقدان الحماية."
     },
     "amtCategorization42": {
@@ -9461,13 +9451,13 @@ module.exports = {
         "ar": " (8) حكومة وطنية أو مكتبها المراسل، بما في ذلك هيئة عامة تتولى إدارة الدين العام؛ "
     },
     "amtCategorization58": {
-        "zh": "(9) 中央银行",
+        "zh": "(9) 中央银行；",
         "en": "(9) A central bank",
         "vi": "(9) Một ngân hàng trung ương;",
         "zh-Hant": "(9) 中央銀行；",
         "id": " (9) Bank sentral;",
         "es": " (9) Un banco central;",
-        "pt-BR": "(9) A central bank",
+        "pt-BR": "(9) A central bank;",
         "ar": "(9) البنك المركزي؛ "
     },
     "amtCategorization59": {
@@ -9502,7 +9492,7 @@ module.exports = {
     },
     "amtCategorization62": {
         "zh": "(1) 客户是一家企业，并且是本身专业客户；或",
-        "en": "(1)	The client is an undertaking and Is a per se professional client; or",
+        "en": "(1) The client is an undertaking and Is a per se professional client; or",
         "vi": "(1) Khách hàng cam kết là một khách hàng chuyên gia tự thân, hoặc",
         "zh-Hant": "(1) 客戶是一家企業，並且是本身專業客戶；或",
         "id": " (1) Klien adalah usaha dan merupakan klien profesional; atau",
@@ -9512,7 +9502,7 @@ module.exports = {
     },
     "amtCategorization63": {
         "zh": "(2) 公司已从潜在交易对手获得明确确认，确认同意被视为合格交易对手。",
-        "en": "(2)The Firm has obtained express confirmation from the prospective counterparty that it agrees to be treated as an eligible counterparty.",
+        "en": "(2) The Firm has obtained express confirmation from the prospective counterparty that it agrees to be treated as an eligible counterparty.",
         "vi": "(2) Sau khi công ty nhận được xác nhận rõ ràng từ đối tác tiềm năng rằng họ đồng ý trở thành một đối tác đủ điều kiện lựa chọn.",
         "zh-Hant": "(2) 公司已從潛在交易對手獲得明確確認，確認同意被視為合格交易對手。",
         "id": " (2) Perusahaan telah memperoleh konfirmasi tegas dari calon rekanan bahwa ia setuju untuk diperlakukan sebagai rekanan yang memenuhi syarat.",
@@ -9522,12 +9512,12 @@ module.exports = {
     },
     "amtCategorization64": {
         "zh": "3.3.2 选择性合格交易对手类别包括满足上述条件和要求的同等企业。",
-        "en": "2.3.2	The categories of elective eligible counterparties include an equivalent undertaking provided the above conditions and requirements are satisfied.",
+        "en": "3.3.2	The categories of elective eligible counterparties include an equivalent undertaking provided the above conditions and requirements are satisfied.",
         "vi": "3.3.2 Phân loại đối tác đủ điều kiện lựa chọn bao gồm một cam kết tương đương với điều kiện và yêu cầu thỏa mãn nêu trên.",
         "zh-Hant": "3.3.2 選擇性合格交易對手類別包括滿足上述條件和要求的同等企業。",
         "id": "3.3.2 Kategori rekanan yang memenuhi syarat elektif mencakup usaha yang setara asalkan kondisi dan persyaratan di atas dipenuhi.",
         "es": "3.3.2 Las categorías de contrapartes elegibles electivas incluyen un compromiso equivalente siempre que se cumplan las condiciones y requisitos anteriores.",
-        "pt-BR": "2.3.2	The categories of elective eligible counterparties include an equivalent undertaking provided the above conditions and requirements are satisfied.",
+        "pt-BR": "3.3.2	The categories of elective eligible counterparties include an equivalent undertaking provided the above conditions and requirements are satisfied.",
         "ar": "3.3.2 فئات الأطراف المقابلة المؤهلة الاختيارية المناظرة تضم الشركات المكافئة شريطة استيفاء الشروط والمتطلبات سالفة الذكر."
     },
     "amtCategorization65": {
@@ -9641,7 +9631,7 @@ module.exports = {
         "ar": "5.6 (1) إذا طلب عميل محترف في حد ذاته أو طرف مقابل مؤهل في حد ذاته أن تتم معاملته باعتباره عميل تجزئة، سيتم تصنيف العميل باعتباره عميل تجزئة إذا أبرم اتفاقية خطية مع الشركة تفيد بأنه لا يتجنب معاملته كعميل محترف أو كطرف مقابل مؤهل من أجل إدارة النظام التجاري المعمول به. (2) يجب أن تحدد هذه الاتفاقية نطاق إعادة التصنيف، مثل ما إذا كان ذلك سوف يسري على خدمة أو معاملة واحدة أو على عدد أكبر من الخدمات أو المعاملات المحددة، أو على نوع أو أكثر من أنواع المنتجات أو المعاملات، أو على قاعدة واحدة أو أكثر من القواعد."
     },
     "amtCategorization76": {
-        "zh": "5.7 (1) 按照“与客户沟通”的原则，如果公司根据本节主动对客户重新分类，则公司将根据本节通知该客户其新的类别。(2) 如果公司已经与客户达成协议，则公司还将考虑有关修改该协议的任何合同要求",
+        "zh": "5.7 (1) 按照“与客户沟通”的原则，如果公司根据本节主动对客户重新分类，则公司将根据本节通知该客户其新的类别。(2) 如果公司已经与客户达成协议，则公司还将考虑有关修改该协议的任何合同要求。",
         "en": "5.7 (1) In accordance with the principle ‘communications with clients’, if the Firm at its own initiative re- categorizes a client in accordance with this section, it will notify that client of its new category under this section. (2) If the Firm already has an agreement with the client, it will also consider any contractual requirements concerning the amendment of that agreement.",
         "vi": "5.7 (1)	Theo nguyên tắc 'giao tiếp với khách hàng', nếu Công ty chủ động phân loại lại khách hàng theo phần này, thì Công ty sẽ thông báo cho khách hàng đó về danh mục mới của mình trong phần này. (2) Nếu Công ty đã có thỏa thuận với khách hàng, Công ty cũng sẽ xem xét bất kỳ yêu cầu hợp đồng nào liên quan đến việc sửa đổi thỏa thuận đó.",
         "zh-Hant": "5.7 (1) 按照“與客戶溝通”的原則，如果公司根據本節主動對客戶重新分類，則公司將根據本節通知該客戶其新的類別。 (2) 如果公司已經與客戶達成協議，則公司還將考慮有關修改該協議的任何合同要求。",
@@ -9702,12 +9692,12 @@ module.exports = {
     },
     "amtCategorization82": {
         "zh": "电子邮箱：",
-        "en": "Email:",
-        "vi": "Email:",
+        "en": "Email: ",
+        "vi": "Email: ",
         "zh-Hant": "電子郵箱：",
-        "id": "Email:",
-        "es": "Email:",
-        "pt-BR": "Email:",
+        "id": "Email: ",
+        "es": "Email: ",
+        "pt-BR": "Email: ",
         "ar": "البريد:"
     },
     "amtCategorization83": {
@@ -9732,12 +9722,12 @@ module.exports = {
     },
     "amtCategorization85": {
         "zh": "电子邮箱：",
-        "en": "Email:",
-        "vi": "Email:",
+        "en": "Email: ",
+        "vi": "Email: ",
         "zh-Hant": "電子郵箱：",
-        "id": "Email:",
-        "es": "Email:",
-        "pt-BR": "Email:",
+        "id": "Email: ",
+        "es": "Email: ",
+        "pt-BR": "Email: ",
         "ar": "البريد:"
     },
     "amtCategorization98": {
@@ -9782,19 +9772,19 @@ module.exports = {
     },
     "amtCategorization102": {
         "zh": "电话：+86 400 809 8509",
-        "en": "Phone: +84 028 710 99 168",
-        "vi": "Phone: +84 028 710 99 168",
+        "en": "Phone: +86 400 809 8509",
+        "vi": "Phone: +86 400 809 8509",
         "zh-Hant": "電話：+86 400 809 8509",
-        "id": "Telepon: + 86400809 8509",
+        "id": "Telepon: + 86 400809 8509",
         "es": "Teléfono: +86 400 809 8509",
-        "pt-BR": "Phone: +84 028 710 99 168",
+        "pt-BR": "Phone: +86 400 809 8509",
         "ar": "الهاتف: +961 81 851650"
     },
     "amtCategorization103": {
-        "zh": "电邮：",
+        "zh": "电子邮箱：",
         "en": "Email: ",
         "vi": "Email: ",
-        "zh-Hant": "電郵：",
+        "zh-Hant": "電子郵箱：",
         "id": "Email: ",
         "es": "Email: ",
         "pt-BR": "Email:",
@@ -9821,10 +9811,10 @@ module.exports = {
         "ar": "الهاتف: +1 (242) 676 7306"
     },
     "amtCategorization106": {
-        "zh": "电邮：compliance@tigerwit.com",
+        "zh": "电子邮箱：compliance@tigerwit.com",
         "en": "Email:compliance@tigerwit.com ",
         "vi": "Email: compliance@tigerwit.com",
-        "zh-Hant": "電郵：compliance@tigerwit.com",
+        "zh-Hant": "電子郵箱：compliance@tigerwit.com",
         "id": "Email: compliance@tigerwit.com",
         "es": "Email: compliance@tigerwit.com",
         "pt-BR": "Email:",
@@ -9881,7 +9871,7 @@ module.exports = {
         "ar": "عقدت TigerWit شراكة مع العديد من المؤسسات المصرفية الكبرى، حيث يتم الاحتفاظ بأموال العملاء في بنوك عالمية كبرى مثل بنك HSBC وبنك CBA.  وتضمن الحدود الداخلية تنويع أموال العملاء بين البنوك، كما تتم مراقبة مخاطر الائتمان بشكل منتظم.  ولا يتم الاحتفاظ بأموال العملاء إلا في الولايات القضائية التي تدعم فصل أموال العملاء بموجب الإطار القانوني المحلي."
     },
     "amtFunds6": {
-        "zh": "只要没有受到操纵且真诚接受，TigerWit 向所有客户提供负结余保护保证，作为客户协议的组成部分,除非有明确的相反通知。我们承诺执行严格的政策，确保客户的损失永远不会超过他们的总入金。",
+        "zh": "只要没有受到操纵且真诚接受，TigerWit 向所有客户提供负结余保护保证，作为客户协议的组成部分，除非有明确的相反通知。我们承诺执行严格的政策，确保客户的损失永远不会超过他们的总入金。",
         "en": "TigerWit offers Negative Balance Protection guarantee to all clients as part of the Client Agreement, unless notified expressly to the contrary and as long as it is not manipulated and is accepted in good faith. We are committed to a strict policy ensuring that clients may never lose more than their total deposits.",
         "vi": "TigerWit cung cấp cho khách hàng chính sách bảo vệ tránh số dư âm cho tất cả khách hàng như là một phần của Hợp đồng khách hàng, nếu điều ngược lại không được thể hiện rõ ràng miễn là điều này không được thao túng và được chấp nhận với thiện chí. Chúng tôi cam kết một chính sách nghiêm ngặt đảm bảo rằng khách hàng không bao giờ có thể mất nhiều hơn tổng số tiền gửi của họ.",
         "zh-Hant": "只要沒有受到操縱且真誠接受，TigerWit 向所有客戶提供負結余保護保證，作為客戶協議的組成部分，除非有明確的相反通知。我們承諾執行嚴格的政策，確保客戶的損失永遠不會超過他們的總入金。",
@@ -9901,10 +9891,10 @@ module.exports = {
         "ar": "مقدمة"
     },
     "amtExecution2": {
-        "zh": "1.TigerWit Limited（以下统称为“TigerWit”、“公司”或“本公司”）在 巴 哈 马 国 注 册 成 立 （ 注 册 证 书 编 号198255B）。我们的注册办事处位于 Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas。TigerWit 受巴哈马证券监察委员会授权和监管（注册编号 SIA-F185）。",
+        "zh": "1.TigerWit Limited（以下统称为“TigerWit”、“公司”或“本公司”）在巴哈马国注册成立（注册证书编号198255B）。我们的注册办事处位于 Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas。TigerWit 受巴哈马证券监察委员会授权和监管（注册编号 SIA-F185）。",
         "en": "1.TigerWit Limited (hereinafter referred to as ‘TigerWit’, the ‘Firm’ or the 'Company') is incorporated (Certificate of Incorporation No. 198255B) in The Commonwealth of The Bahamas. Our registered office is Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. TigerWit is authorised and regulated by the Securities Commission of The Bahamas (licence No. SIA-F185).",
         "vi": "1.TigerWit Limited (sau đây gọi tắt là \"TigerWit\", \"Doanh nghiệp\" hoặc \"Công ty\") được thành lập (Giấy chứng nhận thành lập số 198255B) trong Khối thịnh vượng chung Bahamas. Văn phòng đăng ký của chúng tôi là Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, Bahamas. TigerWit được ủy quyền và quản lý bởi Ủy ban Chứng khoán Bahamas (giấy phép số SIA-F185).",
-        "zh-Hant": "1.TigerWit Limited（以下統稱為“TigerWit”、“公司”或“本公司”）在 巴 哈 馬 國 註 冊 成 立 （ 註 冊 證 書 編 號198255B）。我們的註冊辦事處位於 Sea Sky Lane, Sandyport, P. O. Box SP 64368.Nassau, TheBahamas。TigerWit 受巴哈馬證券監察委員會授權和監管（註冊編號 SIA-F185）。",
+        "zh-Hant": "1.TigerWit Limited（以下統稱為“TigerWit”、“公司”或“本公司”）在巴哈馬國註冊成立（註冊證書編號198255B）。我們的註冊辦事處位於 Sea Sky Lane, Sandyport, P. O. Box SP 64368.Nassau, TheBahamas。TigerWit 受巴哈馬證券監察委員會授權和監管（註冊編號 SIA-F185）。",
         "id": "1. TigerWit Limited (selanjutnya disebut sebagai 'TigerWit', 'Firm' atau 'Company') didirikan (Certificate of Incorporation No. 198255B) di The Commonwealth of The Bahamas. Kantor terdaftar kami adalah Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. TigerWit disahkan dan diatur oleh Securities Commission of The Bahamas (lisensi No. SIA-F185).",
         "es": "1. TigerWit Limited (en lo sucesivo denominado \"TigerWit\", la \"Firma\" o la \"Compañía\") se incorpora (Certificado de Incorporación Nº. 198255B) en el Commonwealth de las Bahamas. Nuestro domicilio social es Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, Bahamas. TigerWit está autorizado y regulado por la Comisión de Valores de Las Bahamas (licencia Nº. SIA-F185).",
         "pt-BR": "1.TigerWit Limited (doravante referida como \"TigerWit\", a \"Firma\" ou a \"Empresa\") é incorporada (Certificado de Incorporação No. 198255B) na Comunidade das Bahamas. Nossa sede é Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, Bahamas. A TigerWit é autorizada e regulamentada pela Comissão de Valores Mobiliários das Bahamas (licença No. SIA-F185).",
@@ -10071,10 +10061,10 @@ module.exports = {
         "ar": "هامش الربح"
     },
     "amtExecution19": {
-        "zh": "客户在通过交易平台交易基于外汇、金属、石油、股票、指数和期货 CFD 时，会被收取加价。更 多 信 息 可 在 本 网 页 在 线 获 取 ：https://global.TigerWit.com。",
+        "zh": "客户在通过交易平台交易基于外汇、金属、石油、股票、指数和期货 CFD 时，会被收取加价。更多信息可在本网页在线获取：https://global.TigerWit.com。",
         "en": "Clients shall be charged a mark-up on spread when trading CFDs on forex, metals, oil, equities, indices and futures through the trading platform. Further information is available online at: https://global.TigerWit.com. ",
         "vi": "Khách hàng sẽ phải trả một khoản chênh lệch trên spread khi giao dịch CFD trên ngoại hối, kim loại, dầu, cổ phiếu, chỉ số và tương lai thông qua sàn giao dịch. Thông tin khác có tại: https://global.TigerWit.com.",
-        "zh-Hant": "客戶在通過交易平臺交易基於外匯、金屬、石油、股票、指數和期貨 CFD 時，會被收取加價。更 多 信 息 可 在 本 網 頁 在 線 獲 取 ：https://global.TigerWit.com。",
+        "zh-Hant": "客戶在通過交易平臺交易基於外匯、金屬、石油、股票、指數和期貨 CFD 時，會被收取加價。更多信息可在本網頁在線獲取：https://global.TigerWit.com。",
         "id": "Klien akan dikenai mark-up pada spread saat trading CFD di forex, logam, minyak, ekuitas, indeks, dan kontrak berjangka melalui platform trading. Informasi lebih lanjut tersedia online di: https://global.TigerWit.com. ",
         "es": "A los Clientes se les cargará un mark-up en los spreads al operar CFDs sobre forex, metales, crudo, equities, indices y futuros a través de la plataforma. Más información disponible online en: https://global.TigerWit.com. ",
         "pt-BR": "Aos clientes será cobrada uma margem de lucro sobre o spread na negociação de CFDs em moeda estrangeira, metais, petróleo, ações, índices e futuros através da plataforma de negociação. Mais informações estão disponíveis online em: https://global.TigerWit.com.",
@@ -11211,10 +11201,10 @@ module.exports = {
         "ar": "1- وقت العمل في الشركة: على مدار الساعة من الساعة 22:00:01 بتوقيت جرينتش يوم الأحد إلى الساعة  22:00:00 بتوقيت جرينتش يوم الجمعة.  أوقات عدم العمل: من الساعة 22:00:01 بتوقيت جرينتش يوم الجمعة إلى الساعة 22:00:00 بتوقيت جرينتش يوم الأحد.  وسيتم الإعلان عن العطلات عبر البريد الإلكتروني الداخلي لمنصة التداول التي توفرها الشركة."
     },
     "amtExecution133": {
-        "zh": "2.根据上文第 3 款所述的因素，本公司严重依赖以上执行场所以及他们的相对重要性。本公司的政策规定需要保持此类内部流程和原则，从而确定这些因素的相对重要性，代表客户的最佳利益行事，并在与他们交易时尽 可 能 为 他 们 提 供 最 佳 结 果 （ 或 “ 最 佳 执行”）。",
+        "zh": "2.根据上文第 3 款所述的因素，本公司严重依赖以上执行场所以及他们的相对重要性。本公司的政策规定需要保持此类内部流程和原则，从而确定这些因素的相对重要性，代表客户的最佳利益行事，并在与他们交易时尽可能为他们提供最佳结果（或“最佳执行”）。",
         "en": "2.The Firm places significant reliance to the above Execution Venue based on the above- mentioned factors set out at paragraph 3 and their relative importance. It is the Firm’s policy to maintain such internal procedures and principles in order to determine the relative importance of these factors and to act for the best interest of its Clients and provide them the best possible result (or “best execution”) when dealing with them.",
         "vi": "2.Công ty có sự phụ thuộc đáng kể vào Địa điểm Thực Thi Lệnh ở trên dựa trên các yếu tố nêu trên được nêu tại khoản 3 và tầm quan trọng tương đối của chúng. Chính sách của Công ty là duy trì các quy trình và nguyên tắc nội bộ để xác định tầm quan trọng tương đối của các yếu tố này và hành động vì lợi ích tốt nhất của Khách hàng và cung cấp cho họ kết quả tốt nhất có thể (hoặc “thực hiện lệnh tốt nhất”) khi giao dịch với họ .",
-        "zh-Hant": "2.根據上文第 3 款所述的因素，本公司嚴重依賴以上執行場所以及他們的相對重要性。本公司的政策規定需要保持此類內部流程和原則，從而確定這些因素的相對重要性，代表客戶的最佳利益行事，並在與他們交易時盡 可 能 為 他 們 提 供 最 佳 結 果 （ 或 “ 最 佳 執行”）。",
+        "zh-Hant": "2.根據上文第 3 款所述的因素，本公司嚴重依賴以上執行場所以及他們的相對重要性。本公司的政策規定需要保持此類內部流程和原則，從而確定這些因素的相對重要性，代表客戶的最佳利益行事，並在與他們交易時盡可能為他們提供最佳結果（或“最佳執行”）。",
         "id": "2. Perusahaan menempatkan ketergantungan yang signifikan pada Tempat Pelaksanaan di atas berdasarkan faktor-faktor yang disebutkan di atas yang ditetapkan pada paragraf 3 dan kepentingan relatifnya. Merupakan kebijakan Perusahaan untuk mempertahankan prosedur dan prinsip internal tersebut untuk menentukan kepentingan relatif dari faktor-faktor ini dan untuk bertindak demi kepentingan terbaik Kliennya dan memberi mereka hasil terbaik (atau \"eksekusi terbaik\") ketika berurusan dengan mereka.",
         "es": "2.La Firma deposita una confianza significativa en el Lugar de Ejecución anterior en base a los factores mencionados anteriormente establecidos en el párrafo 3 y su importancia relativa. Es política de la Firma mantener dichos procedimientos y principios internos para determinar la importancia relativa de estos factores y actuar para el mejor interés de sus Clientes y proporcionarles el mejor resultado posible (o la \"mejor ejecución\") al operar con ellos.",
         "pt-BR": "2. A Empresa coloca uma confiança significativa no Local de Execução acima, com base nos fatores mencionados acima, estabelecidos no parágrafo 3 e sua importância relativa. É política da Empresa manter tais procedimentos e princípios internos, a fim de determinar a importância relativa desses fatores e agir no melhor interesse de seus Clientes, fornecendo-lhes o melhor resultado possível (ou “melhor execução”) ao lidar com eles. .",
@@ -11513,7 +11503,7 @@ module.exports = {
     "amtConflicts10": {
         "zh": "2. 政策范围",
         "en": "2. Scope of the Policy",
-        "vi": "2. Phạm Vi Của Chính Sách",
+        "vi": "2. Phạm vi Chính sách",
         "zh-Hant": "2. 政策範圍",
         "id": "2. Scope of the Policy",
         "es": "2. Alcance de la Política",
@@ -11533,7 +11523,7 @@ module.exports = {
     "amtConflicts12": {
         "zh": "2.2 公司在此详细介绍了识别和管理在其业务活动过程中可能发生的利益冲突的方法。本政策适用于其所有董事、雇员、与公司直接或间接有联系的任何人员（以下简称“相关人员”），是指与其所有客户的所有互动。",
         "en": " 2.2 The Company  herein details its  approach to identifying and managing conflicts of interest which may arise during the course of its business activities. The Policy applies to all its directors, employees, any persons directly or indirectly linked to the Company (hereinafter called “related persons”) and refers to all interactions with all of its clients.",
-        "vi": "2.2 Trong tài liệu này, Công ty trình bày chi tiết cách tiếp cận của mình để xác định và quản lý các xung đột lợi ích có thể phát sinh trong quá trình hoạt động kinh doanh của mình. Chính sách áp dụng cho tất cả các giám đốc, nhân viên của Công ty, bất kỳ người nào có liên kết trực tiếp hoặc gián tiếp với Công ty (sau đây gọi là “những người có liên quan”) và đề cập đến tất cả các tương tác với tất cả các khách hàng của Công ty",
+        "vi": "2.2 Trong tài liệu này, Công ty trình bày chi tiết cách tiếp cận của mình để xác định và quản lý các xung đột lợi ích có thể phát sinh trong quá trình hoạt động kinh doanh của mình. Chính sách áp dụng cho tất cả các giám đốc, nhân viên của Công ty, bất kỳ người nào có liên kết trực tiếp hoặc gián tiếp với Công ty (sau đây gọi là “những người có liên quan”) và đề cập đến tất cả các tương tác với tất cả các khách hàng của Công ty.",
         "zh-Hant": "2.2 公司在此詳細介紹了識別和管理在其業務活動過程中可能發生的利益衝突的方法。本政策適用於其所有董事、僱員、與公司直接或間接有聯繫的任何人員（以下簡稱“相關人員”），是指與其所有客戶的所有互動。",
         "id": "2.2 Perusahaan di sini merinci pendekatannya untuk mengidentifikasi dan mengelola konflik kepentingan yang mungkin timbul selama kegiatan bisnisnya. Kebijakan ini berlaku untuk semua direktur, karyawan, setiap orang yang secara langsung atau tidak langsung terkait dengan Perusahaan (selanjutnya disebut \"orang terkait\") dan mengacu pada semua interaksi dengan semua kliennya.",
         "es": " 2.2 La Compañía en este documento detalla su enfoque para identificar y gestionar los conflictos de intereses que puedan surgir durante el curso de sus actividades comerciales. La Política se aplica a todos sus directores, empleados, cualquier persona directa o indirectamente vinculada a la Compañía (en adelante, \"personas relacionadas\") y se refiere a todas las interacciones con todos sus clientes.",
@@ -11553,7 +11543,7 @@ module.exports = {
     "amtConflicts14": {
         "zh": "3. 识别利益冲突",
         "en": "3. Identification of Conflicts of Interest",
-        "vi": "3. Xác định xung đột lợi ích",
+        "vi": "3. Xác Định Mâu Thuẫn Lợi Ích",
         "zh-Hant": "3. 識別利益沖突",
         "id": "3. Identification of Conflicts of Interest",
         "es": "3. Identificación de Conflictos de Interés",
@@ -11652,7 +11642,7 @@ module.exports = {
     },
     "amtConflicts24": {
         "zh": "4.3 采取的控制措施旨在确保从事涉及利益冲突的不同业务活动的相关人员，以与公司和集团的规模和活动以及损害客户利益的风险重要性相适应的独立性水平进行这些活动。",
-        "en": "4.3 The control measures adopted are designed to ensure that relevant persons engaged in different business activities involving a conflict of interest carry on those activities at a level of independence appropriate to the size and activities of the Firm and the Group, and to the materiality of the risk of damage to the interests of the client. In general, the internal controls that the Company follows regarding conflicts of interest include the following measures to ensure the requisite degree of independence:",
+        "en": "4.3 The control measures adopted are designed to ensure that relevant persons engaged in different business activities involving a conflict of interest carry on those activities at a level of independence appropriate to the size and activities of the Firm and the Group, and to the materiality of the risk of damage to the interests of the client. ",
         "vi": "4.3 Các biện pháp kiểm soát được áp dụng được thiết kế để đảm bảo rằng những người có liên quan tham gia vào các hoạt động kinh doanh khác nhau liên quan đến xung đột lợi ích thực hiện các hoạt động đó ở mức độ độc lập phù hợp với quy mô và hoạt động của Công ty và Tập đoàn cũng như tính trọng yếu của rủi ro thiệt hại đến lợi ích của khách hàng. ",
         "zh-Hant": "4.3 採取的控制措施旨在確保從事涉及利益衝突的不同業務活動的相關人員，以與公司和集團的規模和活動以及損害客戶利益的風險重要性相適應的獨立性水平進行這些活動。",
         "id": "4.3 Langkah-langkah pengendalian yang diadopsi dirancang untuk memastikan bahwa orang-orang relevan yang terlibat dalam aktivitas bisnis berbeda yang melibatkan konflik kepentingan menjalankan aktivitas tersebut pada tingkat kemandirian yang sesuai dengan ukuran dan aktivitas Perusahaan dan Grup, dan dengan materialitas Perusahaan. resiko kerusakan kepentingan klien. ",
@@ -12200,10 +12190,10 @@ module.exports = {
       "ar": "تلفن:"
     },
     "amtComplaint13": {
-        "zh": "电邮：",
+        "zh": "电子邮箱：",
         "en": "Email: ",
         "vi": "Email: ",
-        "zh-Hant": "電郵：",
+        "zh-Hant": "電子郵箱：",
         "id": " ",
         "es": "Email: ",
         "pt-BR": "Email:",
