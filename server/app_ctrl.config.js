@@ -160,7 +160,7 @@
                         description: "Process optimization of deposit and withdrawal",
                         updated_description: "Go to Google play for updates and enjoy a new trading experience",
                         url: "",
-                        force_update: true
+                        force_update: false
                     }
                 }
             },
@@ -179,7 +179,7 @@
                         description: "Process optimization of deposit and withdrawal",
                         updated_description: "Go to Google play for updates and enjoy a new trading experience",
                         url: "",
-                        force_update: true
+                        force_update: false
                     }
                 }
             }
