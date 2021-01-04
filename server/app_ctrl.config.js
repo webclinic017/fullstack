@@ -156,8 +156,8 @@
                 },
                 android: {
                     app_info: {
-                        version_name: "V2.5.2",
-                        description: "1.Updated onboarding process\n2.Optimize the user experience",
+                        version_name: "V2.5.4",
+                        description: "Process optimization of deposit and withdrawal",
                         updated_description: "Go to Google play for updates and enjoy a new trading experience",
                         url: "",
                         force_update: true
@@ -175,8 +175,8 @@
                 },
                 android: {
                     app_info: {
-                        version_name: "V2.5.2",
-                        description: "1.Updated onboarding process\n2.Optimize the user experience",
+                        version_name: "V2.5.4",
+                        description: "Process optimization of deposit and withdrawal",
                         updated_description: "Go to Google play for updates and enjoy a new trading experience",
                         url: "",
                         force_update: true
