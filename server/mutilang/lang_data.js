@@ -7838,7 +7838,7 @@ module.exports = {
         "zh-Hant": "電子郵箱：",
         "id": "Email: ",
         "es": "Email: ",
-        "pt-BR": "Email:",
+        "pt-BR": "Email: ",
         "ar": "البريد الإلكتروني:"
     },
     "amtBusiness114": {
@@ -8488,7 +8488,7 @@ module.exports = {
         "zh-Hant": "電子郵箱：",
         "id": "Email: ",
         "es": "Email: ",
-        "pt-BR": "Email:",
+        "pt-BR": "Email: ",
         "ar": "البريد الإلكتروني:"
     },
     "amtConditions57": {
@@ -8518,7 +8518,7 @@ module.exports = {
         "zh-Hant": "電子郵箱：",
         "id": "Email: ",
         "es": "Email: ",
-        "pt-BR": "Email:",
+        "pt-BR": "Email: ",
         "ar": "البريد الإلكتروني:"
     },
     "amtStatement1": {
@@ -9415,7 +9415,7 @@ module.exports = {
         "zh": "(5) 养老基金或其管理公司；",
         "en": "(5) A pension fund or its management company; ",
         "vi": "(5) Một quỹ hưu trí hoặc công ty quản lý của quỹ đó;",
-        "zh-Hant": "養老基金或其管理公司；",
+        "zh-Hant": "(5) 養老基金或其管理公司；",
         "id": "(5) Dana pensiun atau perusahaan pengelola;",
         "es": "(5) Un fondo de pensiones o su sociedad gestora;",
         "pt-BR": "(5) A pension fund or its management company; ",
@@ -9435,7 +9435,7 @@ module.exports = {
         "zh": "(7) 免受监管的企业；",
         "en": "(7)	An undertaking exempted from regulations; ",
         "vi": "(7) Một cam kết được miễn trừ theo quy định;",
-        "zh-Hant": "（7）免受監管的企業；",
+        "zh-Hant": "(7) 免受監管的企業；",
         "id": "(7) Usaha yang dikecualikan dari peraturan; ",
         "es": "(7) Una empresa exenta de regulaciones; ",
         "pt-BR": "(7)	An undertaking exempted from regulations; ",
@@ -9788,7 +9788,7 @@ module.exports = {
         "zh-Hant": "電子郵箱：",
         "id": "Email: ",
         "es": "Email: ",
-        "pt-BR": "Email:",
+        "pt-BR": "Email: ",
         "ar": "البريد الإلكتروني:"
     },
     "amtCategorization104": {
@@ -9813,7 +9813,7 @@ module.exports = {
     },
     "amtCategorization106": {
         "zh": "电子邮箱：compliance@tigerwit.com",
-        "en": "Email:compliance@tigerwit.com ",
+        "en": "Email: compliance@tigerwit.com ",
         "vi": "Email: compliance@tigerwit.com",
         "zh-Hant": "電子郵箱：compliance@tigerwit.com",
         "id": "Email: compliance@tigerwit.com",
@@ -11388,7 +11388,7 @@ module.exports = {
         "zh-Hant": "電子郵箱：",
         "id": "Email: ",
         "es": "Email: ",
-        "pt-BR": "Email:",
+        "pt-BR": "Email: ",
         "ar": "البريد الإلكتروني:"
     },
     "amtExecution152": {
@@ -11418,7 +11418,7 @@ module.exports = {
         "zh-Hant": "電子郵箱：",
         "id": "Email: ",
         "es": "Email: ",
-        "pt-BR": "Email:",
+        "pt-BR": "Email: ",
         "ar": "البريد الإلكتروني:"
     },
     "amtConflicts1": {
@@ -11624,7 +11624,7 @@ module.exports = {
     "amtConflicts21": {
         "zh": "4. 管理利益冲突",
         "en": "4. Managing Conflicts of Interest",
-        "vi": "4. Giải quyết xung đột lợi ích",
+        "vi": "4. Xử Lý Mâu Thuẫn Lợi Ích",
         "zh-Hant": "4. 管理利益沖突",
         "id": "4. Mengelola Benturan Kepentingan",
         "es": "4. Manejo de conflictos de intereses",
@@ -11928,7 +11928,7 @@ module.exports = {
         "zh-Hant": "電子郵箱：",
         "id": "Email: ",
         "es": "Email: ",
-        "pt-BR": "Email:",
+        "pt-BR": "Email: ",
         "ar": "البريد الإلكتروني:"
     },
     "amtConflicts52": {
@@ -12215,9 +12215,9 @@ module.exports = {
         "en": "Email: ",
         "vi": "Email: ",
         "zh-Hant": "電子郵箱：",
-        "id": "Email:",
+        "id": "Email: ",
         "es": "Email: ",
-        "pt-BR": "Email:",
+        "pt-BR": "Email: ",
         "ar": "البريد الإلكتروني:"
     },
     "amtComplaint15": {
@@ -12231,10 +12231,10 @@ module.exports = {
         "ar": "مقدمة"
     },
     "amtComplaint16": {
-        "zh": "1.TigerWit Limited（以下统称为“TigerWit”、“公司”或“本公司”）在 巴 哈 马 国 注 册 成 立 （ 注 册 证 书 编 号198255B）。我们的注册办事处位于 Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas。TigerWit 受巴哈马证券监察委员会授权和监管（注册编号 SIA-F185）。",
+        "zh": "1.TigerWit Limited（以下统称为“TigerWit”、“公司”或“本公司”）在巴哈马国注册成立（注册证书编号198255B）。我们的注册办事处位于 Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas。TigerWit 受巴哈马证券监察委员会授权和监管（注册编号 SIA-F185）。",
         "en": "1.TigerWit Limited (hereinafter referred to as ‘TigerWit’, the ‘Firm’ or the 'Company') is incorporated (Certificate of Incorporation No. 198255B) in The Commonwealth of The Bahamas. Our registered office is Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. TigerWit is authorised and regulated by the Securities Commission of The Bahamas (licence No. SIA-F185).",
         "vi": "1.TigerWit Limited (sau đây gọi tắt là \"TigerWit\", \"Công ty\" hoặc \"Công ty\") được thành lập (Giấy chứng nhận thành lập số 198255B) trong Khối thịnh vượng chung Bahamas. Văn phòng đăng ký của chúng tôi là Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, Bahamas. TigerWit được ủy quyền và quản lý bởi Ủy ban Chứng khoán Bahamas (giấy phép số SIA-F185).",
-        "zh-Hant": "1.TigerWit Limited（以下統稱為“TigerWit”、“公司”或“本公司”）在 巴 哈 馬 國 註 冊 成 立 （ 註 冊 證 書 編 號198255B）。我們的註冊辦事處位於 Sea Sky Lane, Sandyport, P. O. Box SP 64368.Nassau, TheBahamas。TigerWit 受巴哈馬證券監察委員會授權和監管（註冊編號 SIA-F185）。",
+        "zh-Hant": "1.TigerWit Limited（以下統稱為“TigerWit”、“公司”或“本公司”）在巴哈馬國註冊成立（註冊證書編號198255B）。我們的註冊辦事處位於 Sea Sky Lane, Sandyport, P. O. Box SP 64368.Nassau, TheBahamas。TigerWit 受巴哈馬證券監察委員會授權和監管（註冊編號 SIA-F185）。",
         "id": "1.TigerWit Limited (selanjutnya disebut sebagai 'TigerWit', 'Firm' atau 'Company') didirikan (Certificate of Incorporation No. 198255B) di The Commonwealth of The Bahamas. Kantor terdaftar kami adalah Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. TigerWit disahkan dan diatur oleh Securities Commission of The Bahamas (lisensi No. SIA-F185).",
         "es": "1. TigerWit Limited (a partir de ahora ‘TigerWit’, o la ‘Firma’ o la 'Compañía') está incorporada en (Certificado de Incorporación No. 198255B) The Commonwealth of The Bahamas. Nuestra oficina registrada es Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. TigerWit está autorizado y regulado por la Securities Commission of The Bahamas (Licencia No. SIA-F185).",
         "pt-BR": "1.TigerWit Limited (doravante referida como \"TigerWit\", a \"Firma\" ou a \"Empresa\") é incorporada (Certificado de Incorporação No. 198255B) na Comunidade das Bahamas. Nossa sede é Sea Sky Lane, Sandyport, P. O. Box SP 64368. Nassau, Bahamas. A TigerWit é autorizada e regulamentada pela Comissão de Valores Mobiliários das Bahamas (licença No. SIA-F185).",
