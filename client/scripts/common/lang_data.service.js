@@ -2042,14 +2042,34 @@
                         "ar": "كشف حساب مصرفي"
                     },
                     "noCan": {
-                        "zh": "该文件不应超过3个月。 我们不接受手机账单，信用卡账单，发票或收据。",
-                        "en": "The document should not be no more than 3 months old. We cannot accept mobile phone bills, credit card bills, invoices or receipts.",
-                        "vi": "Tài liệu không quá 3 tháng. Chúng tôi không chấp nhận hóa đơn điện thoại, hoá đơn thẻ tín dụng, hóa đơn hoặc biên nhận.",
-                        "zh-Hant": "該文件不應超過3個月。我們不接受手機賬單，信用卡賬單，發票或收據。",
-                        "id": "Dokumen tidak boleh lebih dari 3 bulan. Kami tidak menerima tagihan telepon seluler, tagihan kartu kredit, faktur atau tanda terima.",
-                        "es": "Este documento no debe superar los 3 meses desde que fue emitido. No aceptamos facturas móviles, facturas de tarjetas de crédito, facturas o recibos que no pueden comprobar el nombre del usuario, la dirección o que no tengan fecha de emisión.",
-                        "pt-BR": "O documento não deve ter mais de 3 meses da data atual. Não podemos aceitar contas de telefone celular, faturas de cartão de crédito, faturas ou recibos.",
-                        "ar": "يجب ألا يكون قد مر على تاريخ صدور الوثيقة أكثر من 3 أشهر. نحن لا نقبل فواتير الهاتف المحمول أو فواتير أو إيصالات البطاقة الائتمانية"
+                        "zh": "我们只接受以下必须少于 3 个月的文件。",
+                        "en": "We can only accept the following document which must be less than 3 months old.",
+                        "vi": "Chúng tôi chỉ có thể chấp nhận tài liệu sau (phải có hiệu lực trong 3 tháng gần nhất).",
+                        "zh-Hant": "我們只接受以下必須少於 3 個月的文件。",
+                        "id": "Kami hanya menerima dokumen yang berlaku dalam kurun waktu 3 bulan terakhir.",
+                        "es": "Para ser aceptado, el documento debe tener menos de 3 meses de emisión.",
+                        "pt-BR": "Só podemos aceitar o seguinte documento que deve ter menos de 3 meses de emissão.",
+                        "ar": "اننا نقبل فقط المستند التالي الذي يجب ألا يتجاوز 3 أشهر من تاريخ الإصدار.",
+                        },
+                    "noCan2": {
+                      "zh": "该文件不应超过 3 个月，我们不接收无法证明上传人姓名，地址和签发日期的手机账单，信用卡账单，发票或者收据。",
+                      "en": "This document should not exceed 3 months. We do not accept mobile bills, credit card bills, invoices or receipts that cannot prove the uploader’s name, address and date of issue.",
+                      "vi": "Tài liệu này không nên quá 3 tháng. Chúng tôi không chấp nhận hóa đơn điện thoại, hóa đơn thẻ tín dụng, các hóa đơn hoặc biên nhận khoog có tên, địa chỉ của người tải lên và ngày cấp của tài liệu.",
+                      "zh-Hant": "該文件不應超過3個月，我們不接受無法證明上傳人姓名，地址和簽發日期的的手機賬單，信用卡賬單，發票或者收據。",
+                      "id": "Dokumen ini tidak boleh melebihi 3 bulan. Kami tidak dapat menerima tagihan kartu telepon, kartu kredit, invoice, atau bukti pembayaran yang tidak memiliki nama, alamat dan tanggal penerbitan.",
+                      "es": "Este documento no debe superar los 3 meses desde que fue emitido. No aceptamos facturas móviles, facturas de tarjetas de crédito, facturas o recibos que no pueden comprobar el nombre del usuario, la dirección o que no tengan fecha de emisión.",
+                      "pt-BR": "Este documento não deve exceder 3 meses. Não aceitamos faturas móveis, faturas de cartão de crédito, faturas ou recibos que não podem provar o nome, o endereço e a data de emissão do remetente.",
+                      "ar": "يجب ألا يتجاوز هذا المستند 3 أشهر. نحن لا نقبل فواتير الهاتف المحمول أو فواتير بطاقات الائتمان أو الفواتير أو الإيصالات التي لا يمكنها إثبات اسم العميل، عنوانه وتاريخ الإصدار."
+                    },
+                    "noCan3" : {
+                      "zh": "支持 PNG、JPG、PDF 格式文件，文件大小不可超过 10MB。",
+                      "en": "Support PNG, JPG, PDF format file, the file size should not exceed 10MB.",
+                      "vi": "Hỗ trợ tệp định dạng PNG, JPG, PDF, dung lượng tệp không quá 10MB.",
+                      "zh-Hant": "支持PNG、JPG、PDF格式的文件，文件大小不要超過10MB。",
+                      "id": "Mendukung format PNG, JPG, PDF, ukuran tidak boleh lebih dari 10MB.",
+                      "es": "Soporta archivos de formato PNG, JPG, PDF, el tamaño del archivo no debe exceder los 10MB.",
+                      "pt-BR": "Suporta arquivos em PNG, JPG, PDF. O tamanho do arquivo não pode exceder 10 MB.",
+                      "ar": "يجب ان يكون نوع الملف PNG و JPG و PDF ، وأن لا يتجاوز حجم الملف 10 ميجا بايت."
                     },
                     "uploadAddress": {
                         "zh": "上传地址证明",
@@ -2558,19 +2578,29 @@
                         "en": "We require colour copies of a government-issued drive license, passport and ID card. For ID cards and drive license, we require copies of the card’s front and back.",
                         "vi": "Chúng tôi yêu cầu bản sao màu giấy phép lái xe cấp bởi chính phủ, hộ chiếu và thẻ ID. Với thẻ ID và bằng lái xe, chúng tôi yêu cầu bản sao mặt trước và mặt sau.",
                         "zh-Hant": "請確保證件邊框完整、大小適中、字迹清晰、亮度均衡、證件資訊與填寫資訊一致、證件未過期、已滿18周歲。",
-                        "id": " Mohon masukkan informasi yang relevan. Pastikan bahwa ini adalah anda karena informasi ini tidak dapat diubah lagi apabila sudah masuk ke status peninjauan. ",
+                        "id": " Mohon masukkan informasi yang relevan. Pastikan bahwa ini adalah anda karena informasi ini tidak dapat diubah lagi apabila sudah masuk ke status peninjauan.",
                         "es": "Requerimos copias a color emitidas por el gobierno de una licencia de conducir, pasaporte y/o tarjeta ID. Para las tarjetas ID y la licencia de conducir, requerimos copias de la parte delantera y trasera de la tarjeta.",
                         "pt-BR": "Nós exigimos cópias coloridas de uma carteira de motorista emitida pelo governo, passaporte e carteira de identidade. Para cartões de identificação e licença de unidade, exigimos cópias da frente e verso do cartão.",
-                        "ar": "نحن نحتاج إلى صور ملونة لرخصة قيادة أو جواز سفر أو بطاقة هوية صادرة من جهة حكومية. بالنسبة لبطاقة الهوية ورخصة القيادة، نحن نحتاج إلى صور للوجهين الأمامي والخلفي للبطاقة."
-                    },
+                      "ar": "نحن نحتاج إلى صور ملونة لرخصة قيادة أو جواز سفر أو بطاقة هوية صادرة من جهة حكومية. بالنسبة لبطاقة الهوية ورخصة القيادة، نحن نحتاج إلى صور للوجهين الأمامي والخلفي للبطاقة."
+                      },
+                      "tip24-1" : {
+                        "zh": "支持 PNG、JPG、PDF 格式文件，文件大小不可超过 10MB。",
+                        "en": "Support PNG, JPG, PDF format file, the file size should not exceed 10MB.",
+                        "vi": "Hỗ trợ tệp định dạng PNG, JPG, PDF, dung lượng tệp không quá 10MB.",
+                        "zh-Hant": "支持PNG、JPG、PDF格式的文件，文件大小不要超過10MB。",
+                        "id": "Mendukung format PNG, JPG, PDF, ukuran tidak boleh lebih dari 10MB.",
+                        "es": "Soporta archivos de formato PNG, JPG, PDF, el tamaño del archivo no debe exceder los 10MB.",
+                        "pt-BR": "Suporta arquivos em PNG, JPG, PDF. O tamanho do arquivo não pode exceder 10 MB.",
+                        "ar": "يجب ان يكون نوع الملف PNG و JPG و PDF ، وأن لا يتجاوز حجم الملف 10 ميجا بايت."
+                      },
                     "tip24-2": {
-                        "zh": "我们需要您上传以下信息来完成申请",
+                        "zh": "我们需要您提交以下信息来完成申请。",
                         "en": "To complete your application,we will require the following information and uploads.",
-                        "vi": "Để hoàn thành đơn đăng kí của bạn, chúng tôi sẽ yêu cầu các thông tin và tải lên các tài liệu sau đây",
-                        "zh-Hant": "我們需要您上傳以下信息來完成申請",
-                        "id": "Untuk dapat menyelesaikan pendaftaran, anda harus mengisi informasi berikut dan mengunggah dokumen yang diperlukan",
-                        "es": "Para completar su solicitud, necesitaremos la siguiente información, y copias de su documento",
-                        "pt-BR": "Para completar sua inscrição, nós solicitaremos as seguintes informações e uploads",
+                        "vi": "Để hoàn thành đơn đăng kí của bạn, chúng tôi sẽ yêu cầu các thông tin và tải lên các tài liệu sau đây.",
+                        "zh-Hant": "我們需要您提交以下信息來完成申請。",
+                        "id": "Untuk dapat menyelesaikan pendaftaran, anda harus mengisi informasi berikut dan mengunggah dokumen yang diperlukan.",
+                        "es": "Para completar su solicitud, necesitaremos la siguiente información, y copias de su documento.",
+                        "pt-BR": "Para completar sua inscrição, nós solicitaremos as seguintes informações e uploads.",
                         "ar": "لإكمال طلبك، سنطلب تحميل البيانات التالية"
                     },
                     "realName": {
@@ -5868,7 +5898,7 @@
                         "en": "Master’s return over previous trading day.",
                         "vi": "Lợi nhuận của bậc thầy trong những ngày trước đó.",
                         "zh-Hant": "指該高手最後壹次有交易行為的數據統計。",
-                        "id": "Keuntungan master sebelumnya",
+                        "id": "Keuntungan master sebelumnya.",
                         "es": "Retorno Master previo día de trading.",
                         "pt-BR": "Retorno do mestre ao longo do dia de negociação anterior.",
                         "ar": "عائد الأستاذ خلال اليوم السابق من التداول"
@@ -8848,14 +8878,14 @@
                         "ar": "حاشية الحوالة:"
                     },
                     "tip32": {
-                        "zh": "您的姓名拼音，交易账号：",
-                        "en": "Your name spell, trading account number: ",
-                        "vi": "Đánh vần tên của bạn, số tài khoản giao dich: ",
-                        "zh-Hant": "您的姓名拼音，交易帳號：",
-                        "id": "Nama sesuai identitas dan mudah dibaca, disertai dengan nomor akun anda: ",
-                        "es": "Su nombre completo, número de cuenta trading: ",
-                        "pt-BR": "Seu nome, número de conta comercial:",
-                        "ar": "اسمك، الاسم لفظيًا، رقم حساب التداول الخاص بك:"
+                        "zh": "您的姓名拼音，通行证账号：12345678",
+                        "en": "Your name spell, passport ID: 12345678",
+                        "vi": "Tên đầy đủ, mã tài khoản: 12345678",
+                        "zh-Hant": "您的姓名拼音，通行證賬號：12345678",
+                        "id": "Nama lengkap anda,Passport ID: 12345678",
+                        "es": "Su nombre deletreado, ID de pasaporte: 12345678",
+                        "pt-BR": "Escreva seu nome, ID do passaporte: 12345678",
+                        "ar": "اسمك الكامل، رقم حسابك ١٢٣٤٥٦٧٨"
                     },
                     "tip33": {
                         "zh": "充值已提交，到账约为10分钟，请耐心等待",
@@ -11806,11 +11836,11 @@
                         "ar": "بياناتك الشخصية"
                     },
                     "openAccountNewTip3": {
-                        "zh": "请在下面填写您的个人信息以注册TigerWit真实账户。 开户将花费不到五分钟，并且您需要提供一些您的身份证明和地址证明的文档。",
+                        "zh": "请在下面填写您的个人信息以开通 TigerWit 真实账户。 开户将仅需几分钟，您需要提供一些您的身份证明和地址证明的文档。",
                         "en": "Please enter your personal information below to register for a TigerWit Live account. Registration will take only a few minutes, and you will need some supporting documentation in order to provide your identity and address.",
-                        "vi": "Vui lòng điền thông tin cá nhân của bạn để đăng kí mở tài khoản thực với TigerWit. Việc đăng kí sẽ mất khoảng vài phút, bạn cần cung cấp tài liệu để nhận diện và xác minh địa chỉ",
-                        "zh-Hant": "請在下面填寫您的個人信息以註冊TigerWit真實賬戶。開戶將花費不到五分鐘，並且您需要提供一些您的身份證明和地址證明的文檔。",
-                        "id": "Silahkan masukkan data diri anda untuk melakukan pendaftaran di TigerWit. Pendaftarakan akan memakan waktu kurang dari 5 menit dan mohon siapkan data identitas anda beserta bukti alamatnya",
+                        "vi": "Vui lòng điền thông tin cá nhân của bạn để đăng kí mở tài khoản thực với TigerWit. Việc đăng kí sẽ mất khoảng vài phút, bạn cần cung cấp tài liệu để nhận diện và xác minh địa chỉ.",
+                        "zh-Hant": "請在下面填寫您的個人信息以開通 TigerWit 真實賬戶。開戶將僅需幾分鐘，您需要提供一些您的身份證明和地址證明的文檔。",
+                        "id": "Silahkan masukkan data diri anda untuk melakukan pendaftaran di TigerWit. Pendaftarakan akan memakan waktu kurang dari 5 menit dan mohon siapkan data identitas anda beserta bukti alamatnya.",
                         "es": "Por favor, ingresa tu información personal a continuación para registrarse para cuenta real en TigerWit. Registrarte tomará menos de cinco minutos y necesitarás documentación de respaldo al proporcionarnos tu identidad y tu dirección.",
                         "pt-BR": "Por favor, digite suas informações pessoais abaixo para se registrar para uma conta real na TigerWit. O registro levará menos de cinco minutos e você precisará de documentação de apoio que nos comprove sua identidade e seu endereço.",
                         "ar": "يرجى إرسال معلوماتك الشخصية أدناه للتسجيل في حساب حقيقي مع TigerWit. سيستغرق التسجيل أقل من خمس دقائق وستقوم بتوثيق بعض المستندات الداعمة لإثبات هويتك وعنوانك"
@@ -11826,12 +11856,12 @@
                         "ar": "تفاصيل عنوانك"
                     },
                     "openAccountNewTip5": {
-                        "zh": "请开始输入住址或邮编，我们的系统将自动获取您的地址",
+                        "zh": "请开始输入住址或邮编，我们的系统将自动获取您的地址。",
                         "en": "Please start typing the first line of your address or post code and our system will auto-complete.",
                         "vi": "Vui lòng điền thông tin địa chỉ của bạn hoặc mã bưu điện, hệ thống của chúng tôi sẽ tự động hoàn tất đăng kí.",
-                        "zh-Hant": "請開始輸入住址或郵編，我們的系統將自動獲取您的地址",
-                        "id": "Silahkan masukkan alamat anda beserta kode pos dan sistem kami akan melakukan verifikasi secara otomatis",
-                        "es": "Por favor, comienza a digitar la primera línea de tu dirección o código postal y nuestro sistema lo completará automáticamente",
+                        "zh-Hant": "請開始輸入住址或郵編，我們的系統將自動獲取您的地址。",
+                        "id": "Silahkan masukkan alamat anda beserta kode pos dan sistem kami akan melakukan verifikasi secara otomatis.",
+                        "es": "Por favor, comienza a digitar la primera línea de tu dirección o código postal y nuestro sistema lo completará automáticamente.",
                         "pt-BR": "Por favor, comece a digitar a primeira linha do seu endereço ou código postal e nosso sistema o completará automaticamente.",
                         "ar": "يرجى البدء في كتابة السطر الأول من عنوانك أو الرمز البريدي وسوف يكمل نظامنا المعلومات تلقائيًا"
                     },
@@ -11946,11 +11976,11 @@
                         "ar": "تفاصيل الاموال"
                     },
                     "openAccountNewTip17": {
-                        "zh": "我们需要询问一些关于您财务方面的问题",
+                        "zh": "我们需要询问一些关于您财务方面的问题。",
                         "en": "We need to ask some questions about your fund details of our products.",
-                        "vi": "Chúng tôi cần hỏi bạn một số câu hỏi về quỹ giao dịch của bạn đối với các sản phẩm của chúng tôi",
-                        "zh-Hant": "我們需要詢問一些關於您財務方面的問題",
-                        "id": "Pertanyaan mengenai data pendanaan anda untuk produk-produk kami",
+                        "vi": "Chúng tôi cần hỏi bạn một số câu hỏi về quỹ giao dịch của bạn đối với các sản phẩm của chúng tôi.",
+                        "zh-Hant": "我們需要詢問一些關於您財務方面的問題。",
+                        "id": "Pertanyaan mengenai data pendanaan anda untuk produk-produk kami.",
                         "es": "Precisamos hacerte algunas preguntas sobre detalles de los fondos aplicados en nuestros productos.",
                         "pt-BR": "Precisamos de fazer algumas perguntas sobre detalhes dos seus fundos aplicados em nossos produtos.",
                         "ar": "نحتاج إلى طرح بعض الأسئلة حول تفاصيل أموالك لمنتجاتنا."

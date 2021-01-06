@@ -64,11 +64,13 @@
                 </div>
             </div>
         </div>
+        <p class="authen_content__tip mg-tp-15 font-dark">{{lang.text('tigerWitID.authen.noCan2')}}</p>
+        <p class="authen_content__tip mg-tp-15 font-dark">{{lang.text('tigerWitID.authen.noCan3')}}</p>
         <!-- <p class="mg-tp-15 font-dark">
             {{lang.text('tigerWitID.myAccount.tip26')}}
         </p> -->
 
-        <div class="authen_card_eg">
+        <!-- <div class="authen_card_eg">
             <p class="tit">{{lang.text('tigerWitID.myAccount.cardEgTitle')}}</p>
             <ul class="item-center">
                 <li class="item text-center">
@@ -88,7 +90,7 @@
                     <p>{{lang.text('tigerWitID.myAccount.cardEgTip4')}}</p>
                 </li>
             </ul>
-        </div>
+        </div> -->
         <div class="text-center mg-tp-50">
             <div ng-show="backErr.show">
                 <p class="alert-system">
@@ -96,11 +98,11 @@
                 </p>
             </div>
             <div class="btn_wrapper text-center">
-                <button class="btn btn-sm tw-btn-capsule-gradient" ng-if="clickable" ng-click="uploadAddress()">
+                <button class="btn btn-sm btn-primary-gradient" ng-if="clickable" ng-click="uploadAddress()">
                     {{lang.text('actLogin29')}}
                 </button>
 
-                <a class="btn btn-sm tw-btn-capsule-gradient" ng-if="!clickable">
+                <a class="btn btn-sm btn-primary-gradient" ng-if="!clickable">
                     <i class="loading_spinner fa fa-spinner"></i>
                     {{lang.text('tigerWitID.submitting')}}
                 </a>
