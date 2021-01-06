@@ -231,8 +231,10 @@
             if (data.is_succ) {
                 // console.log(data.data);
                 // 因为使用此接口之前已经定义好了各出金方式的key，所以这里沿用以前的key，做一下替换
+
                 angular.forEach(data.data, function (value, index) {
-                    if (value.key === 'bank_account') value.key = 'bank';
+                    // if (value.key === 'bank_account') value.key = 'bank';
+                    if (value.key === 'bank_card') value.key = 'bank';
                     // if (value.key === 'third_account') {
                     //     angular.forEach(value.child, function (value2, index2) {
                     //         if (value2.key === 'cse_wallet') value2.key = 'cse';
@@ -242,7 +244,7 @@
                     $scope.withdrawTypeLst[value.key] = value;
                     // }
                 });
-
+                console.log(899, $scope.withdrawTypeLst, $scope.withdraw.accountType)
                 // 设置初始币种
                 $scope.withdraw.currency = $scope.withdrawTypeLst[$scope.withdraw.accountType].currency.length ? $scope.withdrawTypeLst[$scope.withdraw.accountType].currency[0] : null;
             }
