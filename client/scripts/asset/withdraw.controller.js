@@ -119,7 +119,10 @@
                 getTransfer();
             }else if($scope.withdraw.accountType == 'bank'){
                 // 获取默认银行卡
-                getCard();
+                getCard(0);
+            }else if($scope.withdraw.accountType == 'bank_account'){
+                // 获取默认银行账户
+                getCard(3);
             }else if($scope.withdraw.accountType == 'third_account'){
                 // 获取默认第三方
                 getThird();
@@ -251,10 +254,15 @@
         });
 
         // 获取银行卡信息
-        function getCard() {
+        function getCard(type) {
             // 为区分第三方银行卡信息切换提现方式后清空重新请求
             $scope.withdraw.card = {};
-            var params = ($scope.withdraw.accountType === 'third_account') ? {platform: $scope.withdraw.third.third_type} : {};
+            // var params = ($scope.withdraw.accountType === 'third_account') ? {platform: $scope.withdraw.third.third_type} : {};
+            var params = {
+              type: type
+            }
+            console.log(params)
+            // return
             asset.getCard(params).then(function (data) {
                 if (!data) return;
                 // console.log(data);
@@ -969,6 +977,8 @@
 
         function changeWithdrawAccountType(accountType) {
             $scope.withdraw.accountType = accountType;
+            console.log(accountType)
+            // return
             getAssetCardList();
             $scope.withdraw.currency = $scope.withdrawTypeLst[$scope.withdraw.accountType].currency.length ? $scope.withdrawTypeLst[$scope.withdraw.accountType].currency[0] : null;
         }
@@ -1009,6 +1019,8 @@
                     }
 
                     function changeType() {
+                      console.log(111, $scope.withdraw.accountType)
+                      // return
                         closeModal();
                         changeWithdrawAccountType($scope.withdraw.accountType);
                     }

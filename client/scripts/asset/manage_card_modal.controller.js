@@ -12,6 +12,8 @@
       $scope.openCardMdl = openCardMdl;
       // 管理银行账号
       function openManageCardMdl(params) {
+        console.log(13221, params)
+        // return
         /**
          * params
          *    type: switch, manage, delete
@@ -30,6 +32,9 @@
                 $timeout(function () {
                     $scope.$broadcast('hideLoadingImg');
                 }, 0)
+                if (params.isAccount) {
+                  $scope.isAccount = params.isAccount;
+                }
                 $scope.closeModal = closeModal;
                 $scope.manageType = params.type;
                 $scope.lang = lang;
@@ -37,7 +42,7 @@
                 $scope.parentScope = params.parentScope
                 $scope.page = params.page
                 $scope.type = params.parentScope.deposit ? params.parentScope.deposit.type : undefined;
-                //刷新列表 
+                //刷新列表
                 getCardList();
 
                 $scope.chooseCard = function (card) {
@@ -109,7 +114,7 @@
         return payment_platform;
     }
       // 添加银行卡
-      function openCardMdl(page, parentScope) {
+      function openCardMdl(page, parentScope, isAccount) {
         if (parentScope && parentScope.manageCardModalInstance) {
             parentScope.manageCardModalInstance.dismiss()
         }
@@ -128,8 +133,9 @@
                     controller: 'AssetCardController',
                     resolve: {
                         passedScope: function () {
-                            // console.log(page, parentScope)
+                            console.log(23, page, parentScope, isAccount)
                             return {
+                                isAccount: isAccount,
                                 personal: $scope.lang.isThird() ? $scope.main : $scope.personal,
                                 card: parentScope && parentScope[page].card,
                                 payment_platform: getPlatform(page, parentScope),
