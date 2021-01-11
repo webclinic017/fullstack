@@ -4759,6 +4759,16 @@
                         "pt-BR": "Inverter",
                         "ar": "رسوم الإدارة"
                     },
+                    "adminstration": {
+                        "zh": "账户管理费",
+                        "en": "Administration fee",
+                        "vi": "Phí quản lí",
+                        "zh-Hant": "賬戶管理費",
+                        "id": "Biaya admin",
+                        "es": "Cuota de administracion",
+                        "pt-BR": "Taxa de administração",
+                        "ar": "رسوم إدارية"
+                    },
                     "commission": {
                         "zh": "手续费",
                         "en": "Commission",

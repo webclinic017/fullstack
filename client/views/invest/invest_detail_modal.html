@@ -42,7 +42,8 @@
                     <th>{{lang.text('tigerWitID.details.lots')}}</th>
                     <th>{{ modal.asset }}</th>
                     <th>{{lang.text('tigerWitID.details.P_L')}}</th>
-                    <th>{{lang.text('tigerWitID.details.swap')}}</th>
+                    <th ng-if="islamic_status == 1">{{lang.text('tigerWitID.details.swap')}}</th>
+                    <th ng-if="islamic_status == 2">{{lang.text('tigerWitID.details.adminstration')}}</th>
                     <th>{{lang.text('tigerWitID.details.commission')}}</th>
                     <th>{{lang.text('tigerWitID.details.profitRate')}}</th>
                     <th ng-if="follow_master">{{lang.text('tigerWitID.tradingAccount.followedMaster')}}</th>

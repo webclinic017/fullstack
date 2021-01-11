@@ -187,7 +187,7 @@
             });
         }
 
-        function openInvestOwnDetailMdl(type, event) {
+        function openInvestOwnDetailMdl(type, event, personal) {
             event.stopPropagation();
             event.stopImmediatePropagation();
             var mt4_id = $scope.investSelect.id;
@@ -198,7 +198,7 @@
                 backdrop: true,
                 controller: function ($scope, invest, $modalInstance, lang) {
                     $scope.lang = lang;
-
+                    $scope.islamic_status = personal.islamic_status;
                     $scope.details = [];        // 交易详情 弹窗数据
                     $scope.isDivident = false;
                     $scope.modal = {
