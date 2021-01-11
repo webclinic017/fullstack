@@ -104,7 +104,7 @@
                         <!-- 语音验证 -->
                         <div ng-show="isSendVoice" data-register-set-password="registerSetPassword" voice-verification-tab data-code-list="account" data-register-step="registerStep1" data-fn="register('registerForm1', 1)" data-cold-type="1" data-is-slider="isSkipVerify" data-is-send-voice="is_send_voice"></div>
                         <div class="account_login__btn_wrapper pd-tp-15">
-                            <button class="tw-btn-md tw-btn-capsule-gradient" ng-click="[register('registerForm1'), toTrackEvent('Login and register', 'click_register'), toGtagEvent('click_register_phone_web')]">{{lang.text("tigerWitID.login.register")}}</button>
+                            <button class="tw-btn-md tw-btn-capsule-gradient" ng-click="[register('registerForm1')]">{{lang.text("tigerWitID.login.register")}}</button>
                         </div>
                     </div>
                 </div>
