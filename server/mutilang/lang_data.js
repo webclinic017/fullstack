@@ -3332,14 +3332,14 @@ module.exports = {
         "ar": "صالح من:"
     },
     "amtIndex3": {
-        "zh": "2017年10月30日",
-        "en": "Oct. 30th, 2017",
-        "vi": "Ngày 30 tháng 10 năm 2017",
-        "zh-Hant": "2017年10月30日",
-        "id": "30 Oktober 2017",
-        "es": "Oct. 30, 2017",
-        "pt-BR": "30 de outubro de 2017",
-        "ar": "30 أكتوبر 2017"
+        "zh": "2021年01月01日",
+        "en": "January 01, 2021",
+        "vi": "Ngày 01 tháng 01 năm 2021",
+        "zh-Hant": "2021年01月01日",
+        "id": "01 Januari 2021",
+        "es": "01 de enero de 2021",
+        "pt-BR": "01 de janeiro de 2021",
+        "ar": "01 يناير 2021"
     },
     "amtIndex4": {
         "zh": "法律声明",
