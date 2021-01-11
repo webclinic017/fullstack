@@ -180,6 +180,11 @@
         };
         // 注册
         $scope.register = function (formName, is_agree) {
+            // 埋点
+            toMgqEvent();
+            $scope.toTrackEvent('Login and register', 'click_register');
+            $scope.toGtagEvent('click_register_phone_web');
+            
             if (!$scope.registerBtnStatus) return;
             if (!($scope.account.country.value)) {
                 layer.msg(lang.text("tigerWitID.login.selectCountry"));
