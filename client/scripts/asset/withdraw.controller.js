@@ -105,6 +105,7 @@
         $scope.openTransferMdl = openTransferMdl;
         $scope.openManageThirdMdl = openManageThirdMdl;
         $scope.openManageTransferMdl = openManageTransferMdl;
+        $scope.openAddCardMdl = openAddCardMdl;
         // $scope.changeWithdrawType = changeWithdrawType;
         $scope.openChangeWithTypeMdl = openChangeWithTypeMdl;
         $scope.openCurrency = openCurrency;
@@ -445,7 +446,49 @@
                 }
             })
         }
-
+        function getPlatform(page, parentScope){
+            var payment_platform;
+            if(page == 'withdraw' && parentScope.withdraw.accountType === 'third_account'){
+                payment_platform = parentScope.withdraw.third.third_type; // 是否为第三方账户的银行卡
+            }else if(page == 'deposit' && parentScope.depositTypeLst[parentScope.deposit.type].need_card === 1 && parentScope.depositTypeLst[parentScope.deposit.type].channel_type === 1){
+                payment_platform = parentScope.depositTypeLst[parentScope.deposit.type].payment_platform // 入金通道支持选择银行卡
+            }
+            return payment_platform;
+        }
+        // 添加银行卡
+        function openAddCardMdl(page, parentScope) {
+          console.log(56789098, page, parentScope)
+          // return
+          if (parentScope && parentScope.manageCardModalInstance) {
+              parentScope.manageCardModalInstance.dismiss()
+          }
+          // 检测认证状态
+          $scope.$emit('global.checkAuthenFlow', {
+              ctrlName: 'AssetWithdrawController',
+              callback: function () {
+                  // var personal = {
+                  //     verified: $scope.personal.verified,
+                  //     realname: $scope.personal.realname,
+                  //     profile_check: $scope.personal.profile_check,
+                  // };
+                  $modal.open({
+                      templateUrl: '/views/asset/card_modal.html',
+                      size: 'md',
+                      controller: 'AssetCardController',
+                      resolve: {
+                          passedScope: function () {
+                              return {
+                                  personal: $scope.lang.isThird() ? $scope.main : $scope.personal,
+                                  card: parentScope && parentScope[page].card,
+                                  payment_platform: getPlatform(page, parentScope),
+                                  type: page === 'deposit' ? parentScope.deposit.type : undefined
+                              };
+                          }
+                      }
+                  });
+              }
+          })
+        }
         // 管理第三方账号
         function openManageThirdMdl(type, third) {
             $modal.open({
@@ -1014,12 +1057,13 @@
                             return true
                         }
                     }
-                    function selectType(accountType) {
+                    function selectType(accountType, value) {
+                      console.log(value)
                         $scope.withdraw.accountType = accountType;
                     }
 
                     function changeType() {
-                      console.log(111, $scope.withdraw.accountType)
+                      console.log(111, $scope.withdraw.accountType, $scope.changeType)
                       // return
                         closeModal();
                         changeWithdrawAccountType($scope.withdraw.accountType);

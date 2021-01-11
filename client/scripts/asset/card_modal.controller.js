@@ -174,7 +174,7 @@
                 // });
             });
         }
-        function submitForm() {
+        function submitForm(isAccount) {
             // console.log($scope.card);
             showErr('realname');
             showErr('world');
@@ -208,6 +208,9 @@
                 country: $scope.card.world.value,
                 bank_addr: $scope.card.address,
             };
+            if (isAccount) {
+              oParams.iban = $scope.card.iban
+            }
             if ($scope.type !== 'Noire') oParams.bank_addr = $scope.card.address;
             if($scope.payment_platform){
                 oParams.platform = $scope.payment_platform;
@@ -229,7 +232,7 @@
             if ($scope.type === 'Noire') oParams.expiry_date = $scope.card.date;   //信用卡有效期
 
             $scope.clickable = false;
-
+            console.log(888, oParams)
             // 如果是第一次绑卡()
             // if (typeof $scope.card.id === 'undefined') {
             asset.bindCard(oParams).then(function (data) {

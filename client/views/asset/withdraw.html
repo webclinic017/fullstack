@@ -42,6 +42,12 @@
         </div>
     </div>
     <p> ---  {{withdraw.third.withdraw_type}} ==== {{withdraw.accountType}}</p>
+    <!-- <div class="display-flex mg-bt-30 text-center"> -->
+      <!-- <span ng-if="withdraw.accountType == 66" class="tw-btn tw-btn-md tw-btn-capsule-bordered card_manage" ng-click="openManageCardMdl({type: 'manage', page: 'deposit', parentScope: parentScope, getCard: getCard})" ng-style="{width: lang.isEnglishArea() ? '170px' : ''}">添加信用卡</span> -->
+      <div class="mg-tp-10" ng-if="withdraw.accountType == 66">
+          <span class="tw-btn tw-btn-md tw-btn-capsule-bordered card_manage" ng-click="openAddCardMdl('deposit', parentScope)">{{lang.text('tigerWitID.wallet.addCreditCard')}}</span>
+      </div>
+    <!-- </div> -->
     <!-- 银行账户 -->
     <div class="display-flex mg-bt-30" ng-show="withdraw.accountType === 'bank_account'"
         ng-controller="ManageCardController">
