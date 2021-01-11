@@ -5,9 +5,9 @@
     angular.module('fullstackApp')
         .controller('AssetWithdrawController', AssetWithdrawController);
 
-    AssetWithdrawController.$inject = ['$rootScope', '$scope', '$modal', '$state', 'asset', 'validator', '$cookies', 'invest', 'trader', '$document'];
+    AssetWithdrawController.$inject = ['$rootScope', '$scope', '$modal', '$state', 'asset', 'validator', '$cookies', 'invest', 'trader', '$document', 'account'];
 
-    function AssetWithdrawController($rootScope, $scope, $modal, $state, asset, validator, $cookies, invest, trader, $document) {
+    function AssetWithdrawController($rootScope, $scope, $modal, $state, asset, validator, $cookies, invest, trader, $document, account) {
 
         if ($cookies["d&w_czc"] && (!localStorage["withdraw_czc"] || localStorage["withdraw_czc"] !== $cookies["d&w_czc"])) {
             $scope.toTrackEvent('Deposit/withdrawal', 'withdrawal');
@@ -16,6 +16,16 @@
         // 缓存当前父scope 给弹窗控制器使用
         $scope.parentScope = $scope;
         var parentScope = $scope;
+        // $scope.isAccount = passedScope.isAccount;
+        // $scope.personal = passedScope.personal;
+        // $scope.payment_platform = passedScope.payment_platform;
+        // $scope.type = passedScope.type;
+        $scope.datepicker = {
+            options: {
+                format: 'YYYY-MM',
+                toolbarPlacement: 'top'
+            }
+        };
         parentScope.hasChooseedCard = false
         parentScope.ThirdList = undefined;   // 第三方列表
         parentScope.TransferList = undefined;   // 电汇列表
@@ -59,6 +69,11 @@
                 // swift_code	swift code
                 // card_no	账号
             },
+            // realname: $scope.personal.realname,
+            world: {
+              key: $scope.personal.region.world_name,
+              value: $scope.personal.region.world_code,
+            },
             type: '',   // invest, wallet
             mt4_id: '',
             accountType: 'bank',    // bank, cse
@@ -67,6 +82,11 @@
             minAmount: 20,
             maxAmount: 0
         };
+        $scope.frontErr = {
+          bank: {
+              show: false
+          }
+        }
         $scope.withdrawTypeLst = {}; // 出金方式列表
         $scope.currencyStatus = false; // 选择币种列表
         $scope.frontErr = {
@@ -111,9 +131,35 @@
         $scope.openCurrency = openCurrency;
         $scope.selcetCurrency = selcetCurrency;
         $scope.getCard = getCard;
+        $scope.getWorlds = getWorlds;
 
         // 获取账户列表(统一处理)
+        getWorlds()
         getAssetCardList()
+        function getWorlds() {
+            account.getWorlds().then(function (data) {
+                if (data.is_succ) {
+                    $scope.worlds = data.data;
+                    console.log("国家列表", $scope.worlds )
+                }
+            });
+        }
+        // 如果是修改银行卡，要初始化表单元素数据
+        // if (typeof passedScope.card !== 'undefined') {
+        //     $scope.withdraw.realname = passedScope.card.realname
+        //     $scope.withdraw.number = undefined;
+
+        //     var isBreak = false;
+        //     angular.forEach($scope.banks, function (bank) {
+        //         if (isBreak) {
+        //             return;
+        //         }
+        //         if (bank.code === passedScope.card.bank) {
+        //             $scope.withdraw.bank = bank;
+        //             isBreak = true;
+        //         }
+        //     });
+        // }
         function getAssetCardList(){
             if($scope.withdraw.accountType == 'transfer' && !($scope.withdraw.transfer.id)){
                 // 获取默认电汇
@@ -455,13 +501,13 @@
             }
             return payment_platform;
         }
-        // 添加银行卡
+        // 添加银行卡-引用
         function openAddCardMdl(page, parentScope) {
           console.log(56789098, page, parentScope)
           // return
-          if (parentScope && parentScope.manageCardModalInstance) {
-              parentScope.manageCardModalInstance.dismiss()
-          }
+          // if (parentScope && parentScope.manageCardModalInstance) {
+          //     parentScope.manageCardModalInstance.dismiss()
+          // }
           // 检测认证状态
           $scope.$emit('global.checkAuthenFlow', {
               ctrlName: 'AssetWithdrawController',
@@ -478,10 +524,10 @@
                       resolve: {
                           passedScope: function () {
                               return {
-                                  personal: $scope.lang.isThird() ? $scope.main : $scope.personal,
-                                  card: parentScope && parentScope[page].card,
-                                  payment_platform: getPlatform(page, parentScope),
-                                  type: page === 'deposit' ? parentScope.deposit.type : undefined
+                                  // personal: $scope.lang.isThird() ? $scope.main : $scope.personal,
+                                  // card: parentScope && parentScope[page].card,
+                                  // payment_platform: getPlatform(page, parentScope),
+                                  // type: page === 'deposit' ? parentScope.deposit.type : undefined
                               };
                           }
                       }
