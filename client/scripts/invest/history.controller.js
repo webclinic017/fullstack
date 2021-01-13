@@ -139,7 +139,7 @@
             return total;
         }
 
-        function openInvestOwnDetailMdl (event) {
+        function openInvestOwnDetailMdl (event, personal) {
             event.stopPropagation();
             event.stopImmediatePropagation();
 
@@ -153,6 +153,7 @@
                 controller: function ($scope, invest, $modalInstance, mt4_id, lang) {
 
                     $scope.lang = lang;
+                    $scope.islamic_status = personal.islamic_status;
                     $scope.details = [];        // 交易详情 弹窗数据
                     $scope.isDivident = false;
                     $scope.modal = {
