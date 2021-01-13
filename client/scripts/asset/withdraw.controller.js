@@ -191,6 +191,9 @@
             }else if($scope.withdraw.accountType == 'third_account'){
                 // 获取默认第三方
                 getThird();
+            }else if($scope.withdraw.accountType == '66'){
+                // 获取默认银行账户
+                getCard(1, $scope.withdraw.accountType, $scope.personal.region.world_code);
             }
         }
 
@@ -319,12 +322,18 @@
         });
 
         // 获取银行卡信息
-        function getCard(type) {
+        function getCard(type, platform, worldCode) {
             // 为区分第三方银行卡信息切换提现方式后清空重新请求
             $scope.withdraw.card = {};
             // var params = ($scope.withdraw.accountType === 'third_account') ? {platform: $scope.withdraw.third.third_type} : {};
             var params = {
               type: type
+            }
+            if (platform) {
+              params.platform = platform
+            }
+            if (worldCode) {
+              params.world_code = worldCode
             }
             console.log(params)
             // return
@@ -522,10 +531,11 @@
         // 添加银行卡-引用
         function openAddCardMdl(page, parentScope) {
           console.log(56789098, page, parentScope)
+          // "Noire"
           // return
-          // if (parentScope && parentScope.manageCardModalInstance) {
-          //     parentScope.manageCardModalInstance.dismiss()
-          // }
+          if (parentScope && parentScope.manageCardModalInstance) {
+              parentScope.manageCardModalInstance.dismiss()
+          }
           // 检测认证状态
           $scope.$emit('global.checkAuthenFlow', {
               ctrlName: 'AssetWithdrawController',
@@ -544,8 +554,9 @@
                               return {
                                   personal: $scope.lang.isThird() ? $scope.main : $scope.personal,
                                   card: $scope.withdraw.transfer,
-                                  payment_platform: getPlatform(page, parentScope),
-                                  type: page === 'deposit' ? parentScope.deposit.type : undefined
+                                  // payment_platform: getPlatform(page, parentScope),
+                                  // type: page === 'deposit' ? parentScope.deposit.type : undefined
+                                  type: page === 'deposit' ? 'Noire' : undefined
                               };
                           }
                       },
