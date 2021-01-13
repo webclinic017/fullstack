@@ -8,7 +8,7 @@
     AssetDepositController.$inject = ['$rootScope', '$scope', '$window', '$document', '$cookies', '$modal', '$state', '$timeout', 'asset', 'validator', 'account', '$layer', 'previewImage', 'fun'];
 
     function AssetDepositController($rootScope, $scope, $window, $document, $cookies, $modal, $state, $timeout, asset, validator, account, $layer, previewImage, fun) {
-        /**  2020.04.15 
+        /**  2020.04.15
          * 注意 这四个接口参数中的 platform 都已修改成取交易列表中的 payment_platform 字段
          *  api/v3/user/bank_card       //获取默认银行卡
             api/v3/user/bank_card/lists //银行卡列表
@@ -19,7 +19,7 @@
             $scope.toTrackEvent('Deposit/withdrawal', 'deposit');
             localStorage["deposit_czc"] = $cookies["d&w_czc"];
         }
-        
+
         $scope.toGtagEvent('open_deposit_web');
         // 缓存当前父scope 给弹窗控制器使用
         $scope.parentScope = $scope;
@@ -79,15 +79,60 @@
         $scope.selcetCurrency = selcetCurrency;
         // 获取默认银行卡
         $scope.getCard = getCard;
+        $scope.openAddCardModal = openCardMdl;
         // getCard();
 
         //绑定银行卡后获取银行卡信息
         $rootScope.$on('bindCardSuccess', function () {
-            // 通知所有子控器 
+            // 通知所有子控器
             if (!parentScope.hasChooseedCard) {
                 getCard()
             }
         });
+        //   根据条件返回platform
+        function getPlatform(page, parentScope){
+            var payment_platform;
+            if(page == 'withdraw' && parentScope.withdraw.accountType === 'third_account'){
+                payment_platform = parentScope.withdraw.third.third_type; // 是否为第三方账户的银行卡
+            }else if(page == 'deposit' && parentScope.depositTypeLst[parentScope.deposit.type].need_card === 1 && parentScope.depositTypeLst[parentScope.deposit.type].channel_type === 1){
+                payment_platform = parentScope.depositTypeLst[parentScope.deposit.type].payment_platform // 入金通道支持选择银行卡
+            }
+            return payment_platform;
+        }
+          // 添加银行卡
+          function openCardMdl(page, parentScope, isAccount) {
+            if (parentScope && parentScope.manageCardModalInstance) {
+                parentScope.manageCardModalInstance.dismiss()
+            }
+            // 检测认证状态
+            $scope.$emit('global.checkAuthenFlow', {
+                ctrlName: 'AssetWithdrawController',
+                callback: function () {
+                    // var personal = {
+                    //     verified: $scope.personal.verified,
+                    //     realname: $scope.personal.realname,
+                    //     profile_check: $scope.personal.profile_check,
+                    // };
+                    $modal.open({
+                        templateUrl: '/views/asset/card_modal.html',
+                        size: 'md',
+                        controller: 'AssetCardController',
+                        resolve: {
+                            passedScope: function () {
+                                console.log(23, page, parentScope, isAccount)
+                                return {
+                                    isAccount: isAccount,
+                                    personal: $scope.lang.isThird() ? $scope.main : $scope.personal,
+                                    card: parentScope && parentScope[page].card,
+                                    payment_platform: getPlatform(page, parentScope),
+                                    type: page === 'deposit' ? parentScope.deposit.type : undefined
+                                };
+                            }
+                        }
+                    });
+                }
+            })
+          }
         // 获取支付方式列表
         asset.getDepositPlatform().then(function (data) {
             if (data.is_succ) {
@@ -128,7 +173,7 @@
             // 支付方式不同银行卡列表不同，所以提前清空
             $scope.deposit.card = {};
             if(!($scope.deposit.type && $scope.depositTypeLst[$scope.deposit.type].need_card === 1)){
-                return 
+                return
             }
             var params = ($scope.depositTypeLst[$scope.deposit.type].channel_type === 1) ? {platform: $scope.depositTypeLst[$scope.deposit.type].payment_platform} : {};
             asset.getCard(params).then(function (data) {
@@ -312,7 +357,7 @@
             }else{
                 changeDepositType(type)
             }
-            
+
         }
          // 切换充值方式
          function changeDepositType(type) {
@@ -327,7 +372,7 @@
             checkInvestLimit();
             checkInputAmount();
             checkInvestBank();
-            getCard();
+            // getCard();
         }
 
 
@@ -670,7 +715,7 @@
                     $scope.toUrl = function () {
                         var flag = window.open($scope.msgInfo.msgUrl);
                         if(flag == null) {
-                            alert("Enable popup filtering in your browser!\n\n Please turn off this function temporarily!") ;  
+                            alert("Enable popup filtering in your browser!\n\n Please turn off this function temporarily!") ;
                         }
                     };
                     function closeModal() {

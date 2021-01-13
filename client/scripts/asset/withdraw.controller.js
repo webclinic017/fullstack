@@ -132,6 +132,7 @@
         $scope.selcetCurrency = selcetCurrency;
         $scope.getCard = getCard;
         $scope.getWorlds = getWorlds;
+        // $scope.banks = [];
 
         // 获取账户列表(统一处理)
         getWorlds()
@@ -144,6 +145,23 @@
                 }
             });
         }
+        // getBanks();
+        // function getBanks(){
+        //     var params = {
+        //         type: 1,
+        //         world_code: $scope.personal.region.world_code
+        //     }
+        //     if($scope.payment_platform){
+        //         params.platform = $scope.payment_platform;
+        //     }
+        //     asset.getBanks(params).then(function (data) {
+        //         console.log(4567890, data);
+        //         return
+        //         if (data.is_succ) {
+        //             $scope.banks = data.data;
+        //         }
+        //     });
+        // }
         // 如果是修改银行卡，要初始化表单元素数据
         // if (typeof passedScope.card !== 'undefined') {
         //     $scope.withdraw.realname = passedScope.card.realname
@@ -524,13 +542,23 @@
                       resolve: {
                           passedScope: function () {
                               return {
-                                  // personal: $scope.lang.isThird() ? $scope.main : $scope.personal,
-                                  // card: parentScope && parentScope[page].card,
-                                  // payment_platform: getPlatform(page, parentScope),
-                                  // type: page === 'deposit' ? parentScope.deposit.type : undefined
+                                  personal: $scope.lang.isThird() ? $scope.main : $scope.personal,
+                                  card: $scope.withdraw.transfer,
+                                  payment_platform: getPlatform(page, parentScope),
+                                  type: page === 'deposit' ? parentScope.deposit.type : undefined
                               };
                           }
-                      }
+                      },
+                      // resolve: {
+                      //     passedScope: function () {
+                      //         return {
+                      //             personal: $scope.lang.isThird() ? $scope.main : $scope.personal,
+                      //             card: parentScope && parentScope[page].card,
+                      //             payment_platform: getPlatform(page, parentScope),
+                      //             type: page === 'deposit' ? parentScope.deposit.type : undefined
+                      //         };
+                      //     }
+                      // }
                   });
               }
           })

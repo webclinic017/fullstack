@@ -47,204 +47,39 @@
       <!-- <div class="mg-tp-10" ng-if="withdraw.accountType == 66">
           <span class="tw-btn tw-btn-md tw-btn-capsule-bordered card_manage" ng-click="openAddCardMdl('deposit', parentScope)">{{lang.text('tigerWitID.wallet.addCreditCard')}}</span>
       </div> -->
-      <div class="sys_modal_v2 slim_case card_modal" ng-if="withdraw.accountType == 66">
-                <!-- <button class="close" ng-click="closeModal()">&times;</button> -->
 
-                <div>
-                    <div class="sys_modal_v2__title">
-                        {{lang.text('tigerWitID.wallet.addCards')}}
-                        <br>
-                        <span class="desp">
-                            {{lang.text('tigerWitID.depositWithdrawal.bindUserBankCard2')}}
-                        </span>
-                    </div>
-                    <div class="sys_modal_v2__content" ng-show="!card.binding">
-                        <form name="cardForm" novalidate autocomplete="off">
-                            <div class="item-center">
-                                <div class="col-xs-3">
-                                    <label class="form-control-wrapper">{{lang.text('tigerWitID.wallet.nameM')}}</label>
-                                </div>
-
-                                <div class="col-xs-9">
-                                    <!-- <label>{{personal.realname}}</label> -->
-                                    <div class="form-control-wrapper">
-                                        <input class="form-control"
-                                               name="realname"
-                                               type="text"
-                                               required
-                                               placeholder="{{lang.text('tigerWitID.wallet.cardholderName')}}"
-                                               ng-class="{'form-control-error': frontErr.realname.show && cardForm.realname.$invalid}"
-                                               ng-model="card.realname"
-                                               ng-disabled="card.realname != ''"
-                                               ng-focus="hideErr('realname')"
-                                               ng-init="card.realname = personal.realname"
-                                               ng-blur="showErr('realname')">
-                                        <div ng-show="frontErr.realname.show">
-                                            <p class="alert alert-arrow_tp_lf" ng-show="cardForm.realname.$error.required">
-                                                {{lang.text('tigerWitID.wallet.cardholderName')}}
-                                            </p>
-                                            <!-- <p class="alert alert-arrow_tp_lf" ng-show="cardForm.realname.$error.pattern">
-                                                {{frontErr.realname.tip}}
-                                            </p> -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="item-center">
-                                <div class="col-xs-3">
-                                    <label class="form-control-wrapper">{{lang.text('tigerWitID.wallet.bankCountryM')}}</label>
-                                </div>
-                                <div class="col-xs-9">
-                                    <div class="form-control-wrapper">
-                                        <!-- <span class="form-control-wrapper" ng-show="!card.world.value">{{lang.text("tigerWitID.login.countryRegion")}}</span> -->
-                                        <input class="form-control" readonly name="country" type="text" placeholder="{{lang.text('tigerWitID.login.countryRegion')}}" required ng-model="withdraw.world.key">
-
-                                        <i class="select__icon fa fa-angle-down"></i>
-
-                                        <ul class="select__dropdown" twform-select data-bind-model="withdraw.world">
-
-                                            <li class="first_li"><input type="text" placeholder="{{lang.text('tigerWitID.login.countryCode')}}" ng-model="placeholderCountry"><i class="fa fa-search"></i></li>
-                                            <li ng-repeat="world in worlds | filter : placeholderCountry" ng-class="{'selected': world.code == withdraw.world.value}">
-                                                <span data-value="{{world.code}}" data-disabled='{"disabled": {{world.disabled}}, "msg": "{{lang.text("tigerWitID.myAccount.unableCountry")}}"}' ng-click="world.disabled || selectWorld(world)" ng-class="{'font-light': world.disabled}">{{world.name}}</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="item-center">
-                                <div class="col-xs-3">
-                                    <label class="form-control-wrapper">{{lang.text('tigerWitID.depositWithdrawal.cardNumberNoire')}}</label>
-                                </div>
-
-                                <div class="col-xs-9">
-                                    <div class="form-control-wrapper">
-                                        <input class="form-control"
-                                               name="number"
-                                               type="text"
-                                               required
-                                               ng-class="{'form-control-error': frontErr.number.show && cardForm.number.$invalid}"
-                                               ng-model="card.number"
-                                               placeholder="{{lang.text('tigerWitID.depositWithdrawal.enterCardNumberNoire')}}"
-                                               ng-focus="hideErr('number')"
-                                               ng-blur="showErr('number')">
-
-                                        <div ng-show="frontErr.number.show">
-                                            <p class="alert alert-arrow_tp_lf" ng-show="cardForm.number.$error.required">
-                                                {{lang.text('tigerWitID.depositWithdrawal.enterCardNumberNoire')}}
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 判断不是第三方platform    TODO（后台有判断）所以银行name也可根据后台返回的列表长度判断，有值选择，没有值填写 -->
-                            <div class="item-center">
-                                <div class="col-xs-3">
-                                    <label class="form-control-wrapper">{{lang.text('tigerWitID.wallet.selectBankM2')}}</label>
-                                </div>
-
-                                <div class="col-xs-9">
-                                    <div class="form-control-wrapper">
-                                        <select class="form-control"
-                                                name="bank"
-                                                required
-                                                ng-class="{'form-control-error': frontErr.bank.show && cardForm.bank.$invalid}"
-                                                ng-model="withdraw.bank"
-                                                ng-options="bank.name for bank in banks"
-                                                ng-change="setSwiftCode()"
-                                                ng-focus="hideErr('bank')"
-                                                ng-blur="showErr('bank')">
-                                            <option value="">{{lang.text('tigerWitID.pleaseSelect')}}</option>
-                                        </select>
-
-                                        <div ng-show="frontErr.bank.show">
-                                            <p class="alert alert-arrow_tp_lf" ng-show="cardForm.bank.$error.required">
-                                                {{lang.text(lang.text(withdraw.accountType == 66 ? 'tigerWitID.wallet.selectCardType' : 'tigerWitID.wallet.pSelectBank'))}}
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item-center" ng-if="banks.length <= 0">
-                                <div class="col-xs-3">
-                                    <label class="form-control-wrapper">{{lang.text('tigerWitID.wallet.fillBankM')}}</label>
-                                </div>
-
-                                <div class="col-xs-9">
-                                    <div class="form-control-wrapper">
-                                        <input class="form-control"
-                                                name="bankOther"
-                                                type="text"
-                                                required
-                                                ng-class="{'form-control-error': frontErr.bankOther.show && cardForm.bankOther.$invalid}"
-                                                ng-model="card.bankOther"
-                                                placeholder="{{lang.text('tigerWitID.wallet.bankName')}}"
-                                                ng-focus="hideErr('bankOther')"
-                                                ng-blur="showErr('bankOther')">
-
-                                        <div ng-show="frontErr.bankOther.show">
-                                            <p class="alert alert-arrow_tp_lf" ng-show="cardForm.bankOther.$error.required">
-                                                {{lang.text('tigerWitID.wallet.bankName')}}
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item-center" ng-if="withdraw.accountType == 66">
-                                <div class="col-xs-3">
-                                    <label class="form-control-wrapper">{{lang.text('tigerWitID.wallet.expirationDate')}}</label>
-                                </div>
-
-                                <div class="col-xs-9">
-                                    <div class="form-control-wrapper">
-                                        <input class="form-control"
-                                               style="padding-left: 30px;"
-                                               name="date"
-                                               type="text"
-                                               required
-                                               ng-model="card.date"
-                                               tw-datetimepicker
-                                               ng-focus="hideErr('date')"
-                                               datetimepicker-options="{{datepicker.options}}">
-                                        <i class="fa fa-calendar"></i>
-                                        <div ng-show="frontErr.date.show">
-                                            <p class="alert alert-arrow_tp_lf" ng-show="!card.date">
-                                                {{lang.text('tigerWitID.wallet.fillExpirationDate')}}
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                        <!-- <p>
-                            <span class="font-danger">*</span>
-                            开户行全称请精确到支行，如：中国工商银行 北京分行 清华园支行
-                        </p> -->
-                        <p class="btn_wrapper mg-bt-15">
-                            <button class="btn btn-primary-gradient" ng-if="clickable" ng-click="submitForm(isAccount)">
-                                {{lang.text('tigerWitID.confirm')}}
-                            </button>
-                            <button class="btn btn-primary-gradient" ng-if="!clickable">
-                                <i class="loading_spinner fa fa-spinner"></i>
-                                {{lang.text('tigerWitID.wallet.adding')}}
-                            </button>
-                        </p>
-                    </div>
-
-                    <div class="sys_modal_v2__content" ng-if="card.binding">
-                        <p class="system_modal__info">
-                            {{lang.text('tigerWitID.wallet.tip4_1')}}{{ card.number }}{{lang.text('tigerWitID.wallet.tip4_2')}}
-                        </p>
-                        <p class="btn_wrapper mg-bt-15">
-                            <button class="btn btn-primary-gradient" ng-click="closeModal()">
-                                {{lang.text('tigerWitID.confirm')}}
-                            </button>
-                        </p>
-                    </div>
-                </div>
-            </div>
     <!-- </div> -->
+    <!-- 信用卡 -->
+    <div class="display-flex mg-bt-30" ng-show="withdraw.accountType === '66'"
+        ng-controller="ManageCardController">
+        <div class="col-xs-2 justify-flex-end deposit__title-money">
+            <!-- {{lang.text('tigerWitID.depositWithdrawal.bankCard')}} -->
+            收款信息
+        </div>
+
+        <!-- <div class="col-xs-10 pd-tp-10" ng-show="!withdraw.card.id">
+            <span class="deposit__pointer font-info"
+                ng-click="openCardMdl('withdraw', parentScope, isAccount)">添加银行卡 ></span>
+        </div> -->
+
+        <div class="col-xs-9 withdraw__card_handler" ng-show="withdraw.card.id">
+            <div class="widthdraw__card_bg">
+                <img ng-show="withdraw.card.bank_img" ng-src="{{ withdraw.card.bank_img }}">
+                <span>{{ withdraw.card.bank_name ||  withdraw.card.bank_code }}</span>
+            </div>
+            <span class="card_number">
+                <span>
+                    {{withdraw.card.number}}
+                </span>
+                <!-- <span class="deposit__pointer font-info btn-text card_switch"
+                    ng-click="openManageCardMdl({type: 'switch', page: 'withdraw', parentScope: parentScope, getCard: getCard, isAccount: true})">切换银行账户
+                    ></span> -->
+            </span>
+            <span class="tw-btn tw-btn-md tw-btn-capsule-bordered card_manage"
+                ng-click="openAddCardMdl('deposit', parentScope)"
+                ng-style="{width: lang.isEnglishArea() ? '170px' : ''}">添加信用卡</span>
+        </div>
+    </div>
     <!-- 银行账户 -->
     <div class="display-flex mg-bt-30" ng-show="withdraw.accountType === 'bank_account'"
         ng-controller="ManageCardController">

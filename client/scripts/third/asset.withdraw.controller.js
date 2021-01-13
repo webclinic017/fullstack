@@ -78,7 +78,6 @@
         $scope.openWithdrawMdl = openWithdrawMdl;
         $scope.openCardMdl = openCardMdl;
         $scope.openAddCardMdl = openAddCardMdl;
-        $scope.openCardMdl = openCardMdl;
         // $scope.changeWithdrawType = changeWithdrawType;
         $scope.openChangeWithTypeMdl = openChangeWithTypeMdl;
         $scope.openCurrency = openCurrency;
