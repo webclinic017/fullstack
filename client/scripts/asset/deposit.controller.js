@@ -119,7 +119,6 @@
                         controller: 'AssetCardController',
                         resolve: {
                             passedScope: function () {
-                                console.log(23, page, parentScope, isAccount)
                                 return {
                                     isAccount: isAccount,
                                     personal: $scope.lang.isThird() ? $scope.main : $scope.personal,
@@ -265,7 +264,7 @@
         };
         // 选择倍数金额
         $scope.selectMoney = function (money) {
-            console.log(money)
+            // console.log(money)
             $scope.deposit.amount = Number(money);
             checkInputAmount();
         }
@@ -577,7 +576,6 @@
                                 layer.msg($scope.lang.text("tigerWitID.depositWithdrawal.uploadTeleTranVoucher"));
                             } else {
                                 asset.teleDeposit(amount, $scope.deposit.teleFile, mt4_id).then(function (data) {
-                                    console.log(data);
                                     $scope.isLoading = false;
                                     if (data.is_succ) {
                                         // $scope.toGtagEvent('完成入金');
@@ -679,7 +677,7 @@
                     }
                     // 兼容第三方
                     function gotoEvidence() {
-                        console.log($scope.main)
+                        // console.log($scope.main)
                         $rootScope.main.switchPage('evidence');
                         closeModal();
                     }

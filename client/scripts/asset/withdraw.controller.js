@@ -141,27 +141,9 @@
             account.getWorlds().then(function (data) {
                 if (data.is_succ) {
                     $scope.worlds = data.data;
-                    console.log("国家列表", $scope.worlds )
                 }
             });
         }
-        // getBanks();
-        // function getBanks(){
-        //     var params = {
-        //         type: 1,
-        //         world_code: $scope.personal.region.world_code
-        //     }
-        //     if($scope.payment_platform){
-        //         params.platform = $scope.payment_platform;
-        //     }
-        //     asset.getBanks(params).then(function (data) {
-        //         console.log(4567890, data);
-        //         return
-        //         if (data.is_succ) {
-        //             $scope.banks = data.data;
-        //         }
-        //     });
-        // }
         // 如果是修改银行卡，要初始化表单元素数据
         // if (typeof passedScope.card !== 'undefined') {
         //     $scope.withdraw.realname = passedScope.card.realname
@@ -192,8 +174,8 @@
                 // 获取默认第三方
                 getThird();
             }else if($scope.withdraw.accountType == '66'){
-                // 获取默认银行账户
-                getCard(1, $scope.withdraw.accountType, $scope.personal.region.world_code);
+                // 获取默认信用卡账户
+                getCard(4, $scope.withdraw.accountType, $scope.personal.region.world_code, true);
             }
         }
 
@@ -201,7 +183,12 @@
         $rootScope.$on('bindCardSuccess', function () {
             // 通知所有子控器
             if (!parentScope.hasChooseedCard) {
+              if ($scope.withdraw.accountType == 66) {
+                getCard(4, $scope.withdraw.accountType, $scope.personal.region.world_code);
+              } else {
                 getCard()
+              }
+
             }
         });
         //绑定第三方账户后获取账号信息
@@ -315,17 +302,17 @@
                     $scope.withdrawTypeLst[value.key] = value;
                     // }
                 });
-                console.log(899, $scope.withdrawTypeLst, $scope.withdraw.accountType)
                 // 设置初始币种
                 $scope.withdraw.currency = $scope.withdrawTypeLst[$scope.withdraw.accountType].currency.length ? $scope.withdrawTypeLst[$scope.withdraw.accountType].currency[0] : null;
             }
         });
 
         // 获取银行卡信息
-        function getCard(type, platform, worldCode) {
+        function getCard(type, platform, worldCode, isTrue) {
             // 为区分第三方银行卡信息切换提现方式后清空重新请求
             $scope.withdraw.card = {};
             // var params = ($scope.withdraw.accountType === 'third_account') ? {platform: $scope.withdraw.third.third_type} : {};
+            if (isTrue) return;
             var params = {
               type: type
             }
@@ -335,7 +322,6 @@
             if (worldCode) {
               params.world_code = worldCode
             }
-            console.log(params)
             // return
             asset.getCard(params).then(function (data) {
                 if (!data) return;
@@ -530,9 +516,6 @@
         }
         // 添加银行卡-引用
         function openAddCardMdl(page, parentScope) {
-          console.log(56789098, page, parentScope)
-          // "Noire"
-          // return
           if (parentScope && parentScope.manageCardModalInstance) {
               parentScope.manageCardModalInstance.dismiss()
           }
@@ -555,6 +538,7 @@
                                   personal: $scope.lang.isThird() ? $scope.main : $scope.personal,
                                   card: $scope.withdraw.transfer,
                                   // payment_platform: getPlatform(page, parentScope),
+                                  payment_platform: 66,
                                   // type: page === 'deposit' ? parentScope.deposit.type : undefined
                                   type: page === 'deposit' ? 'Noire' : undefined
                               };
@@ -819,6 +803,13 @@
                     } else if($scope.withdraw.accountType === 'transfer'){
                         paramsAsset.third_type = $scope.withdrawTypeLst[$scope.withdraw.accountType].platform;
                         paramsAsset.bank_card_id = $scope.withdraw.transfer.id;
+                    } else if ($scope.withdraw.accountType == 66){
+                        // paramsAsset.third_type = $scope.withdrawTypeLst[$scope.withdraw.accountType].platform;
+                        // paramsAsset.third_account = $scope.withdraw.thirdAccount;
+                        paramsAsset.bank_card_id = $scope.withdraw.card.id;
+                        // if($scope.withdraw.third.withdraw_type === 1){
+                        //     paramsAsset.bank_card_id = $scope.withdraw.card.id;
+                        // }
                     } else {
                         paramsAsset.third_type = $scope.withdrawTypeLst[$scope.withdraw.accountType].platform;
                         paramsAsset.third_account = $scope.withdraw.thirdAccount;
@@ -1105,8 +1096,6 @@
 
         function changeWithdrawAccountType(accountType) {
             $scope.withdraw.accountType = accountType;
-            console.log(accountType)
-            // return
             getAssetCardList();
             $scope.withdraw.currency = $scope.withdrawTypeLst[$scope.withdraw.accountType].currency.length ? $scope.withdrawTypeLst[$scope.withdraw.accountType].currency[0] : null;
         }
@@ -1143,13 +1132,10 @@
                         }
                     }
                     function selectType(accountType, value) {
-                      console.log(value)
                         $scope.withdraw.accountType = accountType;
                     }
 
                     function changeType() {
-                      console.log(111, $scope.withdraw.accountType, $scope.changeType)
-                      // return
                         closeModal();
                         changeWithdrawAccountType($scope.withdraw.accountType);
                     }

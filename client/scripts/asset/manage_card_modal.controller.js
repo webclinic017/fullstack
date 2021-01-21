@@ -12,8 +12,6 @@
       $scope.openCardMdl = openCardMdl;
       // 管理银行账号
       function openManageCardMdl(params) {
-        console.log(13221, params)
-        // return
         /**
          * params
          *    type: switch, manage, delete
@@ -133,7 +131,6 @@
                     controller: 'AssetCardController',
                     resolve: {
                         passedScope: function () {
-                            console.log(23, page, parentScope, isAccount)
                             return {
                                 isAccount: isAccount,
                                 personal: $scope.lang.isThird() ? $scope.main : $scope.personal,

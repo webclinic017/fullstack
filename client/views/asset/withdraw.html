@@ -5,7 +5,7 @@
             {{lang.text('tigerWitID.depositWithdrawal.withdrawalTo')}}
         </div>
 
-        <div class="col-xs-6">
+        <div class="col-xs-6 justify-flex-end deposit__title-money">
             <div class="deposit__way" ng-click="openChangeWithTypeMdl()">
                 <label>{{ withdrawTypeLst[withdraw.accountType].name }}</label>
             </div>
@@ -41,26 +41,17 @@
                 ng-click="openManageThirdMdl('manage')">{{lang.text('tigerWitID.wallet.manageThird')}}</span>
         </div>
     </div>
-    <p> ---  {{withdraw.third.withdraw_type}} ==== {{withdraw.accountType}}</p>
-    <!-- <div class="display-flex mg-bt-30 text-center"> -->
-      <!-- <span ng-if="withdraw.accountType == 66" class="tw-btn tw-btn-md tw-btn-capsule-bordered card_manage" ng-click="openManageCardMdl({type: 'manage', page: 'deposit', parentScope: parentScope, getCard: getCard})" ng-style="{width: lang.isEnglishArea() ? '170px' : ''}">添加信用卡</span> -->
-      <!-- <div class="mg-tp-10" ng-if="withdraw.accountType == 66">
-          <span class="tw-btn tw-btn-md tw-btn-capsule-bordered card_manage" ng-click="openAddCardMdl('deposit', parentScope)">{{lang.text('tigerWitID.wallet.addCreditCard')}}</span>
-      </div> -->
-
-    <!-- </div> -->
     <!-- 信用卡 -->
     <div class="display-flex mg-bt-30" ng-show="withdraw.accountType === '66'"
         ng-controller="ManageCardController">
         <div class="col-xs-2 justify-flex-end deposit__title-money">
-            <!-- {{lang.text('tigerWitID.depositWithdrawal.bankCard')}} -->
-            收款信息
+            {{lang.text('tigerWitID.wallet.collectionInformation')}}
         </div>
 
-        <!-- <div class="col-xs-10 pd-tp-10" ng-show="!withdraw.card.id">
+        <div class="col-xs-9 withdraw__card_handler" ng-show="!withdraw.card.id">
             <span class="deposit__pointer font-info"
-                ng-click="openCardMdl('withdraw', parentScope, isAccount)">添加银行卡 ></span>
-        </div> -->
+                ng-click="openAddCardMdl('deposit', parentScope)">{{lang.text('tigerWitID.wallet.addCreditCard')}} ></span>
+        </div>
 
         <div class="col-xs-9 withdraw__card_handler" ng-show="withdraw.card.id">
             <div class="widthdraw__card_bg">
@@ -72,12 +63,12 @@
                     {{withdraw.card.number}}
                 </span>
                 <!-- <span class="deposit__pointer font-info btn-text card_switch"
-                    ng-click="openManageCardMdl({type: 'switch', page: 'withdraw', parentScope: parentScope, getCard: getCard, isAccount: true})">切换银行账户
+                    ng-click="openManageCardMdl({type: 'switch', page: 'withdraw', parentScope: parentScope, getCard: getCard, isAccount: true})">切换信用卡
                     ></span> -->
             </span>
             <span class="tw-btn tw-btn-md tw-btn-capsule-bordered card_manage"
                 ng-click="openAddCardMdl('deposit', parentScope)"
-                ng-style="{width: lang.isEnglishArea() ? '170px' : ''}">添加信用卡</span>
+                ng-style="{width: lang.isEnglishArea() ? '170px' : ''}">{{lang.text('tigerWitID.wallet.addCreditCard')}}</span>
         </div>
     </div>
     <!-- 银行账户 -->
@@ -85,7 +76,7 @@
         ng-controller="ManageCardController">
         <div class="col-xs-2 justify-flex-end deposit__title-money">
             <!-- {{lang.text('tigerWitID.depositWithdrawal.bankCard')}} -->
-            收款信息
+            {{lang.text('tigerWitID.wallet.collectionInformation')}}
         </div>
 
         <!-- <div class="col-xs-10 pd-tp-10" ng-show="!withdraw.card.id">
@@ -103,12 +94,12 @@
                     {{withdraw.card.number}}
                 </span>
                 <span class="deposit__pointer font-info btn-text card_switch"
-                    ng-click="openManageCardMdl({type: 'switch', page: 'withdraw', parentScope: parentScope, getCard: getCard, isAccount: true})">切换银行账户
+                    ng-click="openManageCardMdl({type: 'switch', page: 'withdraw', parentScope: parentScope, getCard: getCard, isAccount: true})">{{lang.text('tigerWitID.wallet.switchBank')}}
                     ></span>
             </span>
             <span class="tw-btn tw-btn-md tw-btn-capsule-bordered card_manage"
                 ng-click="openManageCardMdl({type: 'manage', page: 'withdraw', parentScope: parentScope, getCard: getCard, isAccount: true})"
-                ng-style="{width: lang.isEnglishArea() ? '170px' : ''}">管理银行账户</span>
+                ng-style="{width: lang.isEnglishArea() ? '170px' : ''}">{{lang.text('tigerWitID.wallet.manageBankAccounts')}}</span>
         </div>
     </div>
     <!-- 银行卡 -->
@@ -116,7 +107,7 @@
         ng-controller="ManageCardController">
         <div class="col-xs-2 justify-flex-end deposit__title-money">
             <!-- {{lang.text('tigerWitID.depositWithdrawal.bankCard')}} -->
-            收款信息
+            {{lang.text('tigerWitID.wallet.collectionInformation')}}
         </div>
 
         <div class="col-xs-10 pd-tp-10" ng-show="!withdraw.card.id">
@@ -168,7 +159,7 @@
         </div>
     </div>
     <div class="display-flex"
-        ng-show="withdraw.accountType !== 'bank_account' && withdraw.accountType !== 'bank' && withdraw.accountType !== 'wallet' && withdraw.accountType !== 'third_account' && withdraw.accountType !== 'transfer'">
+        ng-show="withdraw.accountType !== '66' && withdraw.accountType !== 'bank_account' && withdraw.accountType !== 'bank' && withdraw.accountType !== 'wallet' && withdraw.accountType !== 'third_account' && withdraw.accountType !== 'transfer'">
         <div class="col-xs-2 justify-flex-end deposit__title-money">
             {{lang.text('tigerWitID.depositWithdrawal.name')}}
         </div>
@@ -183,7 +174,7 @@
         </div>
     </div>
     <div class="display-flex"
-        ng-show="withdraw.accountType !== 'bank_account' && withdraw.accountType !== 'bank' && withdraw.accountType !== 'wallet' && withdraw.accountType !== 'third_account' && withdraw.accountType !== 'transfer'">
+        ng-show="withdraw.accountType !== '66' && withdraw.accountType !== 'bank_account' && withdraw.accountType !== 'bank' && withdraw.accountType !== 'wallet' && withdraw.accountType !== 'third_account' && withdraw.accountType !== 'transfer'">
         <div class="col-xs-2 justify-flex-end deposit__title-money">
             {{lang.text('tigerWitID.myAccount.accountNumber')}}
         </div>

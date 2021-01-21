@@ -84,20 +84,22 @@
         $scope.submitForm = submitForm;
         $scope.getCity = getCity;
         $scope.setSwiftCode = setSwiftCode;
-
+        $scope.selectWorld = selectWorld;
+        function selectWorld (world) {
+          getBanks(world.code);
+        }
         getWorlds();
         getProvince();
         getBanks();
-        function getBanks(){
+        function getBanks(code){
             var params = {
                 type: 1,
-                world_code: $scope.card.world.world_code
+                world_code: code?code:$scope.personal.region.world_code
             }
             if($scope.payment_platform){
                 params.platform = $scope.payment_platform;
             }
             asset.getBanks(params).then(function (data) {
-                // console.log(data);
                 if (data.is_succ) {
                     $scope.banks = data.data;
                 }
@@ -127,7 +129,7 @@
             account.getWorlds().then(function (data) {
                 if (data.is_succ) {
                     $scope.worlds = data.data;
-                    console.log("国家列表", $scope.worlds )
+                    // console.log("国家列表", $scope.worlds )
                 }
             });
         }
@@ -187,13 +189,13 @@
             }else{
                 showErr('bankOther');
             }
-            if ($scope.card.world && $scope.card.world.world_code === 'CN') {
+            if ($scope.card.world && $scope.card.world.value === 'CN') {
                 showErr('province');
                 showErr('city');
                 showErr('phone');
             }
-            if ($scope.card.world && $scope.card.world.world_code !== 'CN' && $scope.type !== 'Noire') {
-                if ($scope.card.world.world_code !== 'VN') {
+            if ($scope.card.world && $scope.card.world.value !== 'CN' && $scope.type !== 'Noire') {
+                if ($scope.card.world.value !== 'VN') {
                     showErr('swift_code');
                 }
             }
@@ -220,19 +222,20 @@
             }else{
                 oParams.bank_name = $scope.card.bankOther;
             }
-            if ($scope.card.world && $scope.card.world.world_code === 'CN') {
+            if ($scope.card.world && $scope.card.world.value === 'CN') {
                 oParams.province = $scope.card.province.code;
                 oParams.city = $scope.card.city.code;
                 oParams.phone = $scope.card.phone;
             } else if ($scope.type !== 'Noire') {
-                if ($scope.card.world.world_code !== 'VN') {
+                if ($scope.card.world.value !== 'VN') {
                     oParams.swift_code = typeof $scope.card.swift_code === 'object' ? $scope.card.swift_code.swift_code : $scope.card.swift_code;
                 }
             }
-            if ($scope.type === 'Noire') oParams.expiry_date = $scope.card.date;   //信用卡有效期
-
+            if ($scope.type === 'Noire') {
+              oParams.expiry_date = $scope.card.date;   //信用卡有效期
+              oParams.type = 4;
+            }
             $scope.clickable = false;
-            console.log(888, oParams)
             // 如果是第一次绑卡()
             // if (typeof $scope.card.id === 'undefined') {
             asset.bindCard(oParams).then(function (data) {
