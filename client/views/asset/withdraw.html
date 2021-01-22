@@ -79,10 +79,10 @@
             {{lang.text('tigerWitID.wallet.collectionInformation')}}
         </div>
 
-        <!-- <div class="col-xs-10 pd-tp-10" ng-show="!withdraw.card.id">
+        <div class="col-xs-9 withdraw__card_handler" ng-show="!withdraw.card.id">
             <span class="deposit__pointer font-info"
-                ng-click="openCardMdl('withdraw', parentScope, isAccount)">添加银行卡 ></span>
-        </div> -->
+                ng-click="openCardMdl('withdraw', parentScope, true)">{{lang.text('tigerWitID.wallet.addBankCards')}} ></span>
+        </div>
 
         <div class="col-xs-9 withdraw__card_handler" ng-show="withdraw.card.id">
             <div class="widthdraw__card_bg">
@@ -110,7 +110,7 @@
             {{lang.text('tigerWitID.wallet.collectionInformation')}}
         </div>
 
-        <div class="col-xs-10 pd-tp-10" ng-show="!withdraw.card.id">
+        <div class="col-xs-9 withdraw__card_handler" ng-show="!withdraw.card.id">
             <span class="deposit__pointer font-info"
                 ng-click="openCardMdl('withdraw', parentScope)">{{lang.text('tigerWitID.wallet.bindBankCard')}} ></span>
         </div>

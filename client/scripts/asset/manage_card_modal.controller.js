@@ -85,6 +85,9 @@
                 function getCardList() {
                   $scope.$emit('showLoadingImg');
                   var param = {platform: getPlatform(params.page, params.parentScope)}
+                  if (params.isAccount) {
+                    param.type = 3;
+                  }
                   return asset.getCardList(param).then(function (data) {
                       $scope.$broadcast('hideLoadingImg');
                       if (!data) {

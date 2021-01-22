@@ -212,6 +212,7 @@
             };
             if (isAccount) {
               oParams.iban = $scope.card.iban
+              oParams.type = 3;
             }
             if ($scope.type !== 'Noire') oParams.bank_addr = $scope.card.address;
             if($scope.payment_platform){
