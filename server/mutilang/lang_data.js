@@ -21351,14 +21351,14 @@ module.exports = {
             "ar": "  TigerWit ستتم إزالته من هذا العرض وسيفقد أهليته للمطالبة باسترداد النقود وستتم إزالة مبالغ المكافأة المدفوعة من حساباتهم",
         },
         "termsConditions7": {
-            "zh": "6. 不允许剥头皮交易。",
-            "en": "6. No Scalping is allowed.",
-            "vi": "6. Giao dịch Scalping được cho phép.",
-            "zh-Hant": "6. 不允許剝頭皮交易。",
-            "id": "6. Scalping tidak diperbolehkan.",
-            "es": "6. No se permite operativa Scalping",
-            "pt-BR": "6. Operativa Scalping não é permitida.",
-            "ar": "6. غير مسموح بالتداول السريع (سكالبينغ).",
+            "zh": "6. 不允许剥头皮和对冲交易。",
+            "en": "6. No Scalping or hedging is allowed.",
+            "vi": "6. Giao dịch scalping hoặc đối xứng không được cho phép.",
+            "zh-Hant": "6. 不允許剝頭皮和對沖交易。",
+            "id": "6. Scalping dan hedging tidak diperbolehkan",
+            "es": "6. Estrategias de Scalping o Hedging no están permitidas.",
+            "pt-BR": "6. Scalping ou hedge não é permitido.",
+            "ar": "6. غير مسموح بالتداول السريع ( سكالبينغ) والتحوط. "
         }
     },
     "advertLfc": {
