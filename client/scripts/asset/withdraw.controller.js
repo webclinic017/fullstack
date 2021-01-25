@@ -1094,10 +1094,12 @@
             $scope.withdraw.currency = item;
         }
 
-        function changeWithdrawAccountType(accountType) {
+        function changeWithdrawAccountType(accountType, withdrawTypeLst) {
             $scope.withdraw.accountType = accountType;
+            $scope.withdrawTypeLst = withdrawTypeLst;
             getAssetCardList();
             $scope.withdraw.currency = $scope.withdrawTypeLst[$scope.withdraw.accountType].currency.length ? $scope.withdrawTypeLst[$scope.withdraw.accountType].currency[0] : null;
+            $scope.withdraw.third.withdraw_type = $scope.withdrawTypeLst[$scope.withdraw.accountType].withdraw_type;
         }
         //  切换提现方式
         function openChangeWithTypeMdl() {
@@ -1115,7 +1117,6 @@
                     }
                 },
                 controller: function ($scope, $modalInstance, passedScope, lang) {
-                    // console.log(passedScope);
                     $scope.withdraw = {
                         accountType: passedScope.withdrawType,
                         withdrawTypeLst: passedScope.withdrawTypeLst
@@ -1137,7 +1138,7 @@
 
                     function changeType() {
                         closeModal();
-                        changeWithdrawAccountType($scope.withdraw.accountType);
+                        changeWithdrawAccountType($scope.withdraw.accountType, $scope.withdraw.withdrawTypeLst);
                     }
 
                     function closeModal() {
