@@ -153,11 +153,11 @@
                     {{withdraw.card.number}}
                 </span>
                 <span class="deposit__pointer font-info btn-text card_switch"
-                    ng-click="openManageCardMdl({type: 'switch', page: 'withdraw', parentScope: parentScope, getCard: getCard})">{{lang.text('tigerWitID.wallet.switchBankCard')}}
+                    ng-click="openManageCardMdl({type: 'switch', page: 'withdraw', parentScope: parentScope, getCard: getCard, is_third: withdraw.is_third, platform: withdraw.accountType})">{{lang.text('tigerWitID.wallet.switchBankCard')}}
                     ></span>
             </span>
             <span class="tw-btn tw-btn-md tw-btn-capsule-bordered card_manage"
-                ng-click="openManageCardMdl({type: 'manage', page: 'withdraw', parentScope: parentScope, getCard: getCard})"
+                ng-click="openManageCardMdl({type: 'manage', page: 'withdraw', parentScope: parentScope, getCard: getCard, is_third: withdraw.is_third, platform: withdraw.accountType})"
                 ng-style="{width: lang.isEnglishArea() ? '170px' : ''}">{{lang.text('tigerWitID.wallet.manageBankCards')}}</span>
         </div>
     </div>

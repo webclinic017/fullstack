@@ -351,7 +351,7 @@
                 开户行全称请精确到支行，如：中国工商银行 北京分行 清华园支行
             </p> -->
             <p class="btn_wrapper mg-bt-15">
-                <button class="btn btn-primary-gradient" ng-if="clickable" ng-click="submitForm(isAccount)">
+                <button class="btn btn-primary-gradient" ng-if="clickable" ng-click="submitForm(isAccount, payment_platform)">
                     {{lang.text('tigerWitID.confirm')}}
                 </button>
                 <button class="btn btn-primary-gradient" ng-if="!clickable">

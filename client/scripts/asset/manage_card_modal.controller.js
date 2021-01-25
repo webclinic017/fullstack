@@ -30,6 +30,9 @@
                 $timeout(function () {
                     $scope.$broadcast('hideLoadingImg');
                 }, 0)
+                if (params.is_third == 1) {
+                  $scope.platform = params.platform;
+                }
                 if (params.isAccount) {
                   $scope.isAccount = params.isAccount;
                 }
@@ -41,7 +44,7 @@
                 $scope.page = params.page
                 $scope.type = params.parentScope.deposit ? params.parentScope.deposit.type : undefined;
                 //刷新列表
-                getCardList();
+                getCardList(params);
 
                 $scope.chooseCard = function (card) {
                     // console.log(card)
@@ -82,11 +85,14 @@
                     })
                 }
 
-                function getCardList() {
+                function getCardList(params) {
                   $scope.$emit('showLoadingImg');
                   var param = {platform: getPlatform(params.page, params.parentScope)}
                   if (params.isAccount) {
                     param.type = 3;
+                  }
+                  if (params.is_third == 1) {
+                    param.platform = params.platform;
                   }
                   return asset.getCardList(param).then(function (data) {
                       $scope.$broadcast('hideLoadingImg');
@@ -107,8 +113,9 @@
     //   根据条件返回platform
     function getPlatform(page, parentScope){
         var payment_platform;
-        if(page == 'withdraw' && parentScope.withdraw.accountType === 'third_account'){
-            payment_platform = parentScope.withdraw.third.third_type; // 是否为第三方账户的银行卡
+        if(page == 'withdraw' && parentScope.withdraw.is_third === 1){
+            // payment_platform = parentScope.withdraw.third.third_type; // 是否为第三方账户的银行卡
+            payment_platform = parentScope.withdraw.accountType; // 是否为第三方账户的银行卡
         }else if(page == 'deposit' && parentScope.depositTypeLst[parentScope.deposit.type].need_card === 1 && parentScope.depositTypeLst[parentScope.deposit.type].channel_type === 1){
             payment_platform = parentScope.depositTypeLst[parentScope.deposit.type].payment_platform // 入金通道支持选择银行卡
         }

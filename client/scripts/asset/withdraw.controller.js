@@ -160,7 +160,7 @@
         //         }
         //     });
         // }
-        function getAssetCardList(){
+        function getAssetCardList(is_third){
             if($scope.withdraw.accountType == 'transfer' && !($scope.withdraw.transfer.id)){
                 // 获取默认电汇
                 getTransfer();
@@ -176,6 +176,8 @@
             }else if($scope.withdraw.accountType == '66'){
                 // 获取默认信用卡账户
                 getCard(4, $scope.withdraw.accountType, $scope.personal.region.world_code, true);
+            } else if (is_third == 1) {
+              getCard(0, $scope.withdraw.accountType, $scope.personal.region.world_code);
             }
         }
 
@@ -813,6 +815,7 @@
                     } else {
                         paramsAsset.third_type = $scope.withdrawTypeLst[$scope.withdraw.accountType].platform;
                         paramsAsset.third_account = $scope.withdraw.thirdAccount;
+                        paramsAsset.bank_card_id = $scope.withdraw.card.id;
                     }
 
                     withdrawInvest(paramsAsset);
@@ -1097,7 +1100,8 @@
         function changeWithdrawAccountType(accountType, withdrawTypeLst) {
             $scope.withdraw.accountType = accountType;
             $scope.withdrawTypeLst = withdrawTypeLst;
-            getAssetCardList();
+            $scope.withdraw.is_third = $scope.withdrawTypeLst[$scope.withdraw.accountType].is_third;
+            getAssetCardList($scope.withdraw.is_third);
             $scope.withdraw.currency = $scope.withdrawTypeLst[$scope.withdraw.accountType].currency.length ? $scope.withdrawTypeLst[$scope.withdraw.accountType].currency[0] : null;
             $scope.withdraw.third.withdraw_type = $scope.withdrawTypeLst[$scope.withdraw.accountType].withdraw_type;
         }

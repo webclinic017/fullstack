@@ -176,8 +176,7 @@
                 // });
             });
         }
-        function submitForm(isAccount) {
-            // console.log($scope.card);
+        function submitForm(isAccount, payment_platform) {
             showErr('realname');
             showErr('world');
             showErr('number');
