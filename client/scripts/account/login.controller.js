@@ -13,6 +13,7 @@
         $scope.loginType = 'pass';  // 登录方式 code ->验证码登录，pass ->密码登录
         $scope.loginStep2 = 1;      // 密码登录进行到哪一步
         $scope.loginStep3 = 2;      // 1邮箱登录2手机登录
+        $scope.isAccount = false;
         // $scope.step1PasswordStatus = true;  // 验证码登录密码显示or隐藏
         // $scope.step2PasswordStatus = true;  // 密码登录密码显示or隐藏
         // $scope.forgetPasswordStatus = true; // 忘记密码设置密码显示or隐藏
@@ -262,17 +263,27 @@
             } else {
                 para.login_type = 1;
                 if ($scope.loginStep3 == 1) {
-                    if (!showEmaliVel()) { return };
+
+                    if (!showEmaliId()) {
+                      $scope.isAccount = true;
+                    // return
+                    } else {
+                      $scope.isAccount = false;
+                    }
                     if (!($scope.account.step1Password)) {
                         layer.msg(lang.text('register11'));     //请填写密码
                         return;
                     }
                     para = angular.extend({
-                        account_type: 2,
+                        account_type: $scope.isAccount ? 3 : 2,
                         account: $scope.account.emailEmali,
                         password: account.encrypt($scope.account.step1Password),
                     }, para);
-                    msg = lang.text('tigerWitID.login.tip7_21');
+                    if ($scope.isAccount) {
+                      msg = '通行证账号'
+                    } else {
+                      msg = lang.text('tigerWitID.login.tip7_21');
+                    }
                 } else {
                     // 手机
                     if (!showPhoneVel()) { return };
@@ -572,6 +583,17 @@
             }
             if (!validator.regType.email.reg.test($scope.account.emailEmali)) {
                 layer.msg(validator.regType.email.tip);     //请填写正确的邮箱
+                return false;
+            }
+            return true;
+        }
+        // 邮箱／通行证
+        function showEmaliId() {
+            if (!($scope.account.emailEmali)) {
+                layer.msg('请输入邮箱/通行证账号');     //请输入邮箱
+                return false;
+            }
+            if (!validator.regType.email.reg.test($scope.account.emailEmali)) {
                 return false;
             }
             return true;
