@@ -211,9 +211,9 @@
     }
 
     //为BI推广参数做筛选
-    var dealUserSourceOne = 1; // 进入页面后只执行一次，，刷新后再执行
-    function checkUserSource(search_arr) {
-      var sourceReg = /^DW_|^D_|^R_/i;
+    // var dealUserSourceOne = 1; // 进入页面后只执行一次，，刷新后再执行
+    function checkUserSource(search_arr, reg) {
+      var sourceReg = reg;
       var bol = false;
       search_source = {};
       // $.each(search_arr, function (index, value) {
@@ -228,10 +228,11 @@
           search_source[key] = search_arr[key];
         }
       }
-      if (bol && dealUserSourceOne == 1) {
+      // && dealUserSourceOne == 1
+      if (bol) {
         setBrowserID(true);
       }
-      dealUserSourceOne++;
+      // dealUserSourceOne++;
       search_source = Object.keys(search_source).length
         ? search_source
         : undefined;
@@ -264,7 +265,20 @@
           };
           isSet = true;
         } else {
-          var search_source = checkUserSource(search_arr);
+          // 旧BI推广
+          var search_source = checkUserSource(search_arr, /^DW_|^D_|^R_/i);
+          if (!search_source) {
+            // 新BI推广
+            // region = XX;
+            // channel = XX;
+            // campaign = XX;
+            // ads = XX;
+            // other = XX;
+            search_source = checkUserSource(
+              search_arr,
+              /^region|^channel|^campaign|^ads|^other/i
+            );
+          }
           if (search_source) {
             // console.log(search_source)
             source = {

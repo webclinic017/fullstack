@@ -151,7 +151,8 @@
             password: $("#verify_code").val(),
             login_type: 2, // 登录验证方式，1-密码登录，2-验证码登录 3-密码登录有验证码
             is_agree: is_agree == 'is_agree' ? 1 : 0,
-            lp: getLp(getSearch().lp)
+            lp: getLp(getSearch().lp),
+            referer: location.href
         }
         var all_sources = $.cookie('all_sources');
         if (all_sources) {
