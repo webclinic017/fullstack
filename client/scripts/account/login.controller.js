@@ -13,7 +13,6 @@
         $scope.loginType = 'pass';  // 登录方式 code ->验证码登录，pass ->密码登录
         $scope.loginStep2 = 1;      // 密码登录进行到哪一步
         $scope.loginStep3 = 2;      // 1邮箱登录2手机登录
-        $scope.isAccount = false;
         // $scope.step1PasswordStatus = true;  // 验证码登录密码显示or隐藏
         // $scope.step2PasswordStatus = true;  // 密码登录密码显示or隐藏
         // $scope.forgetPasswordStatus = true; // 忘记密码设置密码显示or隐藏
@@ -263,27 +262,17 @@
             } else {
                 para.login_type = 1;
                 if ($scope.loginStep3 == 1) {
-
-                    if (!showEmaliVel()) {
-                      $scope.isAccount = true;
-                    // return
-                    } else {
-                      $scope.isAccount = false;
-                    }
+                    if (!showEmaliVel()) { return };
                     if (!($scope.account.step1Password)) {
                         layer.msg(lang.text('register11'));     //请填写密码
                         return;
                     }
                     para = angular.extend({
-                        account_type: $scope.isAccount ? 3 : 2,
+                        account_type: 2,
                         account: $scope.account.emailEmali,
                         password: account.encrypt($scope.account.step1Password),
                     }, para);
-                    if ($scope.isAccount) {
-                      msg = '通行证账号'
-                    } else {
-                      msg = lang.text('tigerWitID.login.tip7_21');
-                    }
+                    msg = lang.text('tigerWitID.login.tip7_21');
                 } else {
                     // 手机
                     if (!showPhoneVel()) { return };
