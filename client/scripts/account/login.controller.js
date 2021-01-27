@@ -590,7 +590,7 @@
         // 邮箱／通行证
         function showEmaliId() {
             if (!($scope.account.emailEmali)) {
-                layer.msg('请输入邮箱/通行证账号');     //请输入邮箱
+                layer.msg(lang.text("tigerWitID.login.tigerWitIDLogin2"));     //请输入邮箱
                 return false;
             }
             if (!validator.regType.email.reg.test($scope.account.emailEmali)) {
