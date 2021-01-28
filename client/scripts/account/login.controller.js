@@ -353,7 +353,15 @@
                         $layer(obj)
                     }
                     $timeout(function () {
-                        $scope.toGtagEvent('login_success_web');
+                        if(para.account_type == 1) {
+                          $scope.toGtagEvent('login_phone_success_web', { belong: 'tigerwit' });
+                        }
+                        if(para.account_type == 2) {
+                          $scope.toGtagEvent('login_email_success_web', { belong: 'tigerwit' })
+                        }
+                        if(para.account_type == 3) {
+                          $scope.toGtagEvent('login_passport_success_web', { belong: 'tigerwit' })
+                        }
                         $scope.toTrackEvent('Login and register', 'login_success');
                         account.hasChecked = false;
                         // lang.globalOrCn(data.data.area_id);
