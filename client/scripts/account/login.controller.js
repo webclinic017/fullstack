@@ -280,7 +280,7 @@
                         password: account.encrypt($scope.account.step1Password),
                     }, para);
                     if ($scope.isAccount) {
-                      msg = '通行证账号'
+                      msg = lang.text('tigerWitID.myAccount.accountNumber');
                     } else {
                       msg = lang.text('tigerWitID.login.tip7_21');
                     }
