@@ -2546,13 +2546,13 @@
                     },
                     "accountNumber": {
                         "zh": "账号",
-                        "en": "Account number",
-                        "vi": "Số tài khoản",
+                        "en": "Account number ",
+                        "vi": "Số tài khoản ",
                         "zh-Hant": "帳號",
-                        "id": "Nomor Akun",
-                        "es": "Número cuenta",
-                        "pt-BR": "Número da conta",
-                        "ar": "رقم الحساب"
+                        "id": "Nomor Akun ",
+                        "es": "Número cuenta ",
+                        "pt-BR": "Número da conta ",
+                        "ar": " رقم الحساب "
                     },
                     "tip20": {
                         "zh": "恭喜您已开通TigerWit真实交易账户",
