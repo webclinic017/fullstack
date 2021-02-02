@@ -1439,6 +1439,37 @@
                         "pt-BR": "O número de telefone já está cadastrado",
                         "ar": "رقم الهاتف موجود بالفعل"
                     },
+                    // 通行证登录相关翻译
+                    "tigerWitIDLogin1": {
+                      "zh": "切换到邮箱/通行证登录",
+                      "en": "Login with email / TigerWit ID",
+                      "vi": "Truy cập bằng email / TigerWit ID",
+                      "zh-Hant": "切換到郵箱/通行證登錄",
+                      "id": "Masuk melalui email / IDTigerWit",
+                      "es": "Ingreso con email / TigerWit ID",
+                      "pt-BR": "Entre com o email / TigerWit ID",
+                      "ar": "تسجيل الدخول من خلال البريد الإلكتروني / رقم حساب TigerWit"
+                    },
+                    "tigerWitIDLogin2": {
+                      "zh": "请输入邮箱/通行证账号",
+                      "en": "Please enter email / TigerWit ID",
+                      "vi": "Vui lòng nhập email/IDTigerWit",
+                      "zh-Hant": "請輸入郵箱/通行證賬號",
+                      "id": "Silahkan masukkan email / ID TigerWit",
+                      "es": "Por favor, introduzca email / TigerWit ID",
+                      "pt-BR": "Por favor, digite seu email / TigerWitID",
+                      "ar": "الرجاء إدخال البريد الإلكتروني / رقم حساب TigerWit"
+                    },
+                    "tigerWitIDLogin3": {
+                      "zh": "邮箱/通行证账号",
+                      "en": "Email / TigerWit ID",
+                      "vi": "Email / IDTigerWit",
+                      "zh-Hant": "郵箱/通行證賬號",
+                      "id": "Email / ID TigerWit",
+                      "es": " Email / TigerWit ID",
+                      "pt-BR": "Email / TigerWitID",
+                      "ar": "البريد الإلكتروني / رقم حساب TigerWit"
+                    },
                     "tip2": {
                         "zh": "该手机号已存在，请更换手机号进行注册或前往登录。",
                         "en": "This phone number already exists. Please use another valid phone number for registration.",
@@ -2515,13 +2546,13 @@
                     },
                     "accountNumber": {
                         "zh": "账号",
-                        "en": "Account number",
-                        "vi": "Số tài khoản",
+                        "en": "Account number ",
+                        "vi": "Số tài khoản ",
                         "zh-Hant": "帳號",
-                        "id": "Nomor Akun",
-                        "es": "Número cuenta",
-                        "pt-BR": "Número da conta",
-                        "ar": "رقم الحساب"
+                        "id": "Nomor Akun ",
+                        "es": "Número cuenta ",
+                        "pt-BR": "Número da conta ",
+                        "ar": " رقم الحساب "
                     },
                     "tip20": {
                         "zh": "恭喜您已开通TigerWit真实交易账户",
