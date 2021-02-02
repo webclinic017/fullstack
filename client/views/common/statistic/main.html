@@ -211,11 +211,11 @@
     }
 
     //为BI推广参数做筛选
-    var dealUserSourceOne = 1; // 进入页面后只执行一次，，刷新后再执行
-    function checkUserSource(search_arr) {
-      var sourceReg = /^DW_|^D_|^R_/i;
+    // var dealUserSourceOne = 1; // 进入页面后只执行一次，，刷新后再执行
+    function checkUserSource(search_arr, reg) {
+      var sourceReg = reg;
       var bol = false;
-      search_source = {};
+      var search_source = {};
       // $.each(search_arr, function (index, value) {
       //     if (sourceReg.test(index)) {
       //         bol = true;
@@ -228,10 +228,11 @@
           search_source[key] = search_arr[key];
         }
       }
-      if (bol && dealUserSourceOne == 1) {
+      // && dealUserSourceOne == 1
+      if (bol) {
         setBrowserID(true);
       }
-      dealUserSourceOne++;
+      // dealUserSourceOne++;
       search_source = Object.keys(search_source).length
         ? search_source
         : undefined;
@@ -264,7 +265,20 @@
           };
           isSet = true;
         } else {
-          var search_source = checkUserSource(search_arr);
+          // 旧BI推广
+          var search_source = checkUserSource(search_arr, /^DW_|^D_|^R_/i);
+          if (!search_source) {
+            // 新BI推广
+            // region = XX;
+            // channel = XX;
+            // campaign = XX;
+            // ads = XX;
+            // other = XX;
+            search_source = checkUserSource(
+              search_arr,
+              /^region|^channel|^campaign|^ads|^other/i
+            );
+          }
           if (search_source) {
             // console.log(search_source)
             source = {
@@ -502,17 +516,17 @@
     if (!init) {
       setBrowserID(true);
     }
-    gtag("config", "UA-142852435-1", {
-      user_id: userId,
-    });
+    if (userId) {
+      gtag("config", "UA-142852435-1", {
+        user_id: userId,
+      });
+    } else {
+      // 谷歌埋点
+      gtag("config", "UA-142852435-1");
+    }
   }
   var user_id = getCookie("user_code");
-  if (user_id) {
-    setGtagUserId(user_id, true);
-  } else {
-    // 谷歌埋点
-    gtag("config", "UA-142852435-1");
-  }
+  setGtagUserId(user_id, true);
   // google Ads再营销代码
   gtag("config", "AW-750596788");
   // 传递事件

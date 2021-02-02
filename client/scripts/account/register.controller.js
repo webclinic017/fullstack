@@ -199,12 +199,8 @@
                 login_type: 2,
                 world_code: $scope.account.country.value,
                 appsflyer_id: $cookies['APPSFLYER_ID'] || null,
-                lp: getLp($state.params.lp)
-                // TODO 暂时
-                // referrer: document.referrer,
-                // href: location.href,
-                // cookie: document.cookie
-                // step1Password
+                lp: getLp($state.params.lp),
+                referer: location.href
             };
             var all_sources = $cookies['all_sources'];
             if (all_sources) {

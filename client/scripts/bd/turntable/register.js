@@ -242,6 +242,7 @@
                     login_type: 3, // 登录验证方式，1-密码登录，2-验证码登录 3-验证码密码都有
                     is_agree: is_agree == 'is_agree' ? 1 : 0,
                     lp: getLp(urlSearch.lp),
+                    referer: location.href
                 };
                 var all_sources = $.cookie('all_sources');
                 if (all_sources) {

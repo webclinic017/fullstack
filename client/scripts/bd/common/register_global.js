@@ -98,10 +98,7 @@ $(document).ready(function () {
       login_type: 3,
       lp: getLp(oReg.search_arr.lp),
       is_agree: is_agree == 'is_agree' ? 1 : 0,
-      // TODO 暂时
-      // referrer: document.referrer,
-      // href: location.href,
-      // cookie: document.cookie
+      referer: location.href
     }
     var all_sources = $.cookie('all_sources');
     if (all_sources) {
