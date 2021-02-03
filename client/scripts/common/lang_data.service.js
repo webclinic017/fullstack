@@ -6189,13 +6189,13 @@
                     },
                     "collectionInformation": {
                       "zh": "收款信息",
-                      "en": "收款信息",
-                      "vi": "收款信息",
-                      "zh-Hant": "收款信息",
-                      "id": "收款信息",
-                      "es": "收款信息",
-                      "pt-BR": "收款信息",
-                      "ar": "收款信息"
+                      "en": "Collection information",
+                      "vi": "Thông tin bộ sưu tập",
+                      "zh-Hant": "收款資訊",
+                      "id": "Informasi koleksi",
+                      "es": "Información de la colección",
+                      "pt-BR": "Informações de recolha",
+                      "ar": "جمع المعلومات"
                     },
                     "expirationDate": {
                         "zh": "信用卡有效期",
@@ -8076,6 +8076,26 @@
                         "es": "Vincula tu banco de crédito",
                         "pt-BR": "Vincule o cartão de crédito do titular do cartão",
                         "ar": "يرجى ربط بطاقة الخصم الخاصة بحامل البطاقة."
+                    },
+                    "bindUserBankCard5": {
+                        "zh": "信用卡",
+                        "en": "Credit card",
+                        "vi": "Thẻ tín dụng",
+                        "zh-Hant": "信用卡",
+                        "id": "kartu kredit",
+                        "es": "Tarjeta de Crédito",
+                        "pt-BR": "Cartão de crédito",
+                        "ar": "بطاقة ائتمانية"
+                    },
+                    "bindUserBankCard6": {
+                        "zh": "请填写信用卡",
+                        "en": "Please fill in Credit card",
+                        "vi": "Vui lòng điền vào Thẻ tín dụng",
+                        "zh-Hant": "請填寫信用卡",
+                        "id": "silahkan masukkan kartu kredit",
+                        "es": "Por favor rellene  Tarjeta de Crédito ",
+                        "pt-BR": "Preencha por gentileza Cartão de crédito ",
+                        "ar": "يرجى ملء بطاقة الائتمان"
                     },
                     "enterCardNumber": {
                         "zh": "请填写银行账户",
