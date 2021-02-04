@@ -83,7 +83,9 @@
                                 {{ lang.text('tigerWitID.login.keepMeLogin') }}
                             </span>
                             <p class="account_login__remenber-switch">
-                                <span ng-click="toggleLoginMethod(1)" ng-if="loginStep3 == 2">{{lang.text('tigerWitID.login.loginWithEmail')}}</span>
+                                <span ng-click="toggleLoginMethod(1)" ng-if="loginStep3 == 2">
+                                {{lang.text('tigerWitID.login.tigerWitIDLogin1')}}
+                                </span>
                             </p>
                         </div>
                     </form>
@@ -98,12 +100,14 @@
                             <input class="account-form-control-new"
                                     name="emailPwEmail"
                                     type="text"
-                                    placeholder="{{lang.text('tigerWitID.login.enterEmail')}}"
+                                    placeholder="{{lang.text('tigerWitID.login.tigerWitIDLogin2')}}"
                                     required
                                     ng-click="toTrackEvent('Login and register', 'inp_account')"
                                     on-enter="login('loginFormEmailPw')"
                                     ng-model="account.emailEmali">
-                            <span class="account-form-control-tip-new" ng-show="account.emailEmali">{{lang.text('tigerWitID.login.email')}}</span>
+                            <span class="account-form-control-tip-new" ng-show="account.emailEmali">
+                            {{lang.text('tigerWitID.login.tigerWitIDLogin3')}}
+                            </span>
                             <span class="account_login__close" ng-show="account.emailEmali" ng-click="clearPhone('emailEmali')">
                                 <i class="fa fa-times" aria-hidden="true"></i>
                             </span>

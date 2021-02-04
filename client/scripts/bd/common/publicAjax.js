@@ -120,7 +120,8 @@
         getThirdEvidenceLst: origin + '/payment/evidence_list', //get
         uploadThirdEvidence: origin + '/payment/evidence', //post
         cancelThirdEvidence: origin + '/payment/evidence_cancel', //post
-        getThirdWithdrawPlatform: origin + '/payment/withdraw_list', //get
+        // getThirdWithdrawPlatform: origin + '/payment/withdraw_list', //get
+        getThirdWithdrawPlatform: origin + '/payment/withdraw/platform', //get
         getThirdBankLst: origin + '/user/bank_card/lists', //get
         delThirdBank: origin + '/user/bank_card/destroy', //post
         getThirdBankNames: origin + '/bank_names', //get

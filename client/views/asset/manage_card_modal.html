@@ -3,8 +3,10 @@
 
     <!-- 选择银行卡/管理银行卡 -->
     <div class="sys_modal_v2__content" ng-if="manageType == 'switch' || manageType == 'manage'">
-        <div class="sys_modal_v2__title" ng-if="manageType == 'switch'">{{lang.text('tigerWitID.wallet.switchBankCard')}}</div>
-        <div class="sys_modal_v2__title" ng-if="manageType == 'manage'">{{lang.text('tigerWitID.wallet.manageBankCards')}}</div>
+        <div class="sys_modal_v2__title" ng-if="manageType == 'switch' && !isAccount">{{lang.text('tigerWitID.wallet.switchBankCard')}}</div>
+        <div class="sys_modal_v2__title" ng-if="manageType == 'manage' && !isAccount">{{lang.text('tigerWitID.wallet.manageBankCards')}}</div>
+        <div class="sys_modal_v2__title" ng-if="manageType == 'switch' && isAccount">切换银行账户</div>
+        <div class="sys_modal_v2__title" ng-if="manageType == 'manage' && isAccount">管理银行账户</div>
         <div tw-loading-img></div>
         <table class="manage_card_list">
             <colgroup>
@@ -41,7 +43,7 @@
             </tbody>
         </table>
         <div class="mg-tp-10" ng-if="manageType == 'manage'">
-            <a class="btn-text" ng-click="openAddCardModal(page, parentScope)">{{lang.text(type === 'Noire' ? 'tigerWitID.wallet.addCreditCard' : 'tigerWitID.wallet.addBankCards')}}</a>
+            <a class="btn-text" ng-click="openAddCardModal(page, parentScope, isAccount)">{{lang.text(type === 'Noire' ? 'tigerWitID.wallet.addCreditCard' : isAccount ? 'tigerWitID.wallet.addBankCards' : 'tigerWitID.wallet.addCards')}}</a>
         </div>
     </div>
 

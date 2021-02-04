@@ -30,6 +30,12 @@
                 $timeout(function () {
                     $scope.$broadcast('hideLoadingImg');
                 }, 0)
+                if (params.is_third == 1) {
+                  $scope.platform = params.platform;
+                }
+                if (params.isAccount) {
+                  $scope.isAccount = params.isAccount;
+                }
                 $scope.closeModal = closeModal;
                 $scope.manageType = params.type;
                 $scope.lang = lang;
@@ -37,8 +43,8 @@
                 $scope.parentScope = params.parentScope
                 $scope.page = params.page
                 $scope.type = params.parentScope.deposit ? params.parentScope.deposit.type : undefined;
-                //刷新列表 
-                getCardList();
+                //刷新列表
+                getCardList(params);
 
                 $scope.chooseCard = function (card) {
                     // console.log(card)
@@ -79,9 +85,15 @@
                     })
                 }
 
-                function getCardList() {
+                function getCardList(params) {
                   $scope.$emit('showLoadingImg');
                   var param = {platform: getPlatform(params.page, params.parentScope)}
+                  if (params.isAccount) {
+                    param.type = 3;
+                  }
+                  if (params.is_third == 1) {
+                    param.platform = params.platform;
+                  }
                   return asset.getCardList(param).then(function (data) {
                       $scope.$broadcast('hideLoadingImg');
                       if (!data) {
@@ -101,15 +113,16 @@
     //   根据条件返回platform
     function getPlatform(page, parentScope){
         var payment_platform;
-        if(page == 'withdraw' && parentScope.withdraw.accountType === 'third_account'){
-            payment_platform = parentScope.withdraw.third.third_type; // 是否为第三方账户的银行卡
+        if(page == 'withdraw' && parentScope.withdraw.is_third === 1){
+            // payment_platform = parentScope.withdraw.third.third_type; // 是否为第三方账户的银行卡
+            payment_platform = parentScope.withdraw.accountType; // 是否为第三方账户的银行卡
         }else if(page == 'deposit' && parentScope.depositTypeLst[parentScope.deposit.type].need_card === 1 && parentScope.depositTypeLst[parentScope.deposit.type].channel_type === 1){
             payment_platform = parentScope.depositTypeLst[parentScope.deposit.type].payment_platform // 入金通道支持选择银行卡
         }
         return payment_platform;
     }
       // 添加银行卡
-      function openCardMdl(page, parentScope) {
+      function openCardMdl(page, parentScope, isAccount) {
         if (parentScope && parentScope.manageCardModalInstance) {
             parentScope.manageCardModalInstance.dismiss()
         }
@@ -128,8 +141,8 @@
                     controller: 'AssetCardController',
                     resolve: {
                         passedScope: function () {
-                            // console.log(page, parentScope)
                             return {
+                                isAccount: isAccount,
                                 personal: $scope.lang.isThird() ? $scope.main : $scope.personal,
                                 card: parentScope && parentScope[page].card,
                                 payment_platform: getPlatform(page, parentScope),
