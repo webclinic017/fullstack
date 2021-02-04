@@ -6028,25 +6028,45 @@
                         "pt-BR": "Gerenciar Cartões de banco",
                         "ar": "إدارة البطاقات المصرفية"
                     },
+                    "manageBankAccounts": {
+                        "zh": "管理银行账户",
+                        "en": "Manage bank account",
+                        "vi": "Quản lý tài khoản ngân hàng",
+                        "zh-Hant": "管理銀行帳戶",
+                        "id": "Atur Rekening Bank",
+                        "es": "Gestione cuenta bancaria ",
+                        "pt-BR": "Gerenciar conta bancária",
+                        "ar": "إدارة الحساب المصرفي"
+                    },
                     "addBankCards": {
-                        "zh": "添加银行卡",
-                        "en": "Add Bank Cards",
-                        "vi": "Thêm Tài khoản \"Ngân hàng\"",
-                        "zh-Hant": "添加銀行卡",
-                        "id": "Tambah rekening bank",
-                        "es": "Solicitud de retiro a Cuenta Bancaria ",
-                        "pt-BR": "Adicionar cartões de banco",
-                        "ar": "أضف بطاقات مصرفية"
+                        "zh": "添加银行账户",
+                        "en": "Add bank account",
+                        "vi": "Thêm tài khoản ngân hàng",
+                        "zh-Hant": "添加銀行帳戶",
+                        "id": "Tambahkan rekening bank",
+                        "es": "Agregar cuenta bancaria",
+                        "pt-BR": "Adicionar conta bancária",
+                        "ar": "إضافة حساب مصرفي"
+                    },
+                    "addNoire": {
+                        "zh": "添加信用卡",
+                        "en": "Add credit card",
+                        "vi": "Thêm thẻ tín dụng",
+                        "zh-Hant": "添加信用卡",
+                        "id": "Tambahkan kartu kredit",
+                        "es": "Agregar tarjeta de crédito",
+                        "pt-BR": "Adicionar cartão de crédito",
+                        "ar": "إضافة بطاقة ائتمان"
                     },
                     "addCards": {
                         "zh": "添加银行卡",
-                        "en": "Add Card",
-                        "vi": "Thêm Tài khoản \"Ngân hàng\"",
+                        "en": "Add bank card",
+                        "vi": "Thêm thẻ ngân hàng",
                         "zh-Hant": "添加銀行卡",
-                        "id": "Tambah rekening bank",
-                        "es": "Solicitud de retiro a Cuenta Bancaria ",
-                        "pt-BR": "Adicionar cartões de banco",
-                        "ar": "أضف بطاقات مصرفية"
+                        "id": "Tambahkan kartu bank",
+                        "es": "Adhiera tarjeta bancaria",
+                        "pt-BR": "Aderir cartão bancario ",
+                        "ar": "إضافة بطاقة مصرفية"
                     },
                     "name": {
                         "zh": "持卡人",
@@ -6238,6 +6258,16 @@
                         "pt-BR": "Adicionar cartão de crédito",
                         "ar": "أضف بطاقة ائتمان"
                     },
+                    "collectionInformation": {
+                      "zh": "收款信息",
+                      "en": "Collection information",
+                      "vi": "Thông tin bộ sưu tập",
+                      "zh-Hant": "收款資訊",
+                      "id": "Informasi koleksi",
+                      "es": "Información de la colección",
+                      "pt-BR": "Informações de recolha",
+                      "ar": "جمع المعلومات"
+                    },
                     "expirationDate": {
                         "zh": "信用卡有效期",
                         "en": "Expiration date",
@@ -6337,6 +6367,16 @@
                         "es": "Nombre del Banco: ",
                         "pt-BR": "Preencher o banco de abertura de conta:",
                         "ar": "ادخل بنك فتح الحساب:"
+                    },
+                    "fillIBAN": {
+                        "zh": "请填写IBAN",
+                        "en": "Please fill in IBAN",
+                        "vi": "Vui lòng điền IBAN",
+                        "zh-Hant": "請填寫IBAN",
+                        "id": "Silahkan isi IBAN",
+                        "es": "Por favor ingrese IBAN",
+                        "pt-BR": "Por favor, preencha IBAN",
+                        "ar": "يرجى ملء رقم الحساب المصرفي الدولي"
                     },
                     "bankIdentificationCode": {
                         "zh": "银行机构鉴定代码",
@@ -6527,6 +6567,16 @@
                         "es": "Cambiar tarjeta bancaria",
                         "pt-BR": "Trocar cartão bancário",
                         "ar": "تحويل بطاقة مصرفية"
+                    },
+                    "switchBank": {
+                        "zh": "切换银行账户",
+                        "en": "Switching bank account",
+                        "vi": "Đổi tài khoản ngân hàng",
+                        "zh-Hant": "切換銀行帳戶",
+                        "id": "Pindah Rekening Bank",
+                        "es": "Cambiar cuenta bancaria",
+                        "pt-BR": "Mudar de conta bancária",
+                        "ar": "تبديل الحساب البنكي"
                     },
                     "deleteBankCard": {
                         "zh": "删除银行卡",
@@ -7809,20 +7859,20 @@
                         "ar": "رقم البطاقة"
                     },
                     "cardNumberM": {
-                        "zh": "银行账号：",
-                        "en": "Bank account number: ",
-                        "vi": "Số tài khoản ngân hàng: ",
-                        "zh-Hant": "銀行賬號：",
-                        "id": "Nomor rekening bank: ",
-                        "es": "Número de Cuenta bancaria: ",
-                        "pt-BR": "Número da conta bancária: ",
-                        "ar": "رقم البطاقة:"
+                        "zh": "银行账户：",
+                        "en": "Bank account: ",
+                        "vi": "TK ngân hàng: ",
+                        "zh-Hant": "銀行賬戶：",
+                        "id": "Rekening Bank: ",
+                        "es": "Cuenta Bancaria: ",
+                        "pt-BR": "Conta bancária: ",
+                        "ar": "حساب البنك:"
                     },
                     "cardNumberNoire": {
-                        "zh": "银行账号：",
+                        "zh": "银行卡号：",
                         "en": "Card number: ",
                         "vi": "Số tài khoản ngân hàng: ",
-                        "zh-Hant": "銀行賬號：",
+                        "zh-Hant": "銀行卡號：",
                         "id": "Nomor rekening bank: ",
                         "es": "Número de Cuenta bancaria: ",
                         "pt-BR": "Número da conta bancária: ",
@@ -8059,30 +8109,70 @@
                         "ar": "البطاقة المصرفية"
                     },
                     "bindUserBankCard": {
-                        "zh": "请绑定认证用户本人的银行卡",
-                        "en": "Please bind the user’s own bank card",
-                        "vi": "Vui lòng liên kết thẻ ngân hàng của riêng người dùng",
-                        "zh-Hant": "請邦定認證用戶本人的銀行卡",
-                        "id": "Mohon daftarkan nomor rekening anda",
-                        "es": "Por favor, complete sus datos de cuenta bancaria.",
-                        "pt-BR": "Por favor, associe o bancário do usuário",
-                        "ar": "يرجى ربط البطاقة المصرفية المملوكة للمستخدم"
+                        "zh": "请绑定认证用户本人的银行卡，当前不支持信用卡提现。",
+                        "en": "Please bind the debit card of the cardholder . Credit card withdrawal is not supported.",
+                        "vi": "Xin vui lòng liên kết thẻ ghi nợ (debit card) của chủ thẻ. Rút tiền qua thẻ tín dụng (credit card) không được hỗ trợ.",
+                        "zh-Hant": "請綁定認證用戶本人的銀行卡，當前不支持信用卡提現。",
+                        "id": "Silahkan hubungkan pemegang kartu debit. Penarikan melalui kartu kredit tidak tersedia.",
+                        "es": "Enlace la tarjeta de débito del propietario de la tarjeta. No se admite el retiro con tarjeta de crédito.",
+                        "pt-BR": "Enlace la tarjeta de débito del propietario de la tarjeta.Não se admite a retirada com tarjeta de crédito.",
+                        "ar": "يرجى ربط البطاقة المصرفية الخاصة بحامل البطاقة   ان سحب بطاقة الائتمان غير مدعوم."
                     },
                     "bindUserBankCard2": {
-                        "zh": "请绑定认证用户本人的银行卡",
-                        "en": "Please add your card details. The card must be held by the TigerWit account holder.",
-                        "vi": "Vui lòng liên kết thẻ ngân hàng của riêng người dùng",
-                        "zh-Hant": "請邦定認證用戶本人的銀行卡",
-                        "id": "Mohon daftarkan nomor rekening anda",
-                        "es": "Por favor, complete sus datos de cuenta bancaria.",
-                        "pt-BR": "Por favor, associe o bancário do usuário",
-                        "ar": "يرجى ربط البطاقة المصرفية المملوكة للمستخدم"
+                        "zh": "请绑定认证用户本人的银行账户",
+                        "en": "Please bind your bank account",
+                        "vi": "Vui lòng liên kết tài khoản ngân hàng của bạn",
+                        "zh-Hant": "請綁定認證用戶本人的銀行帳戶",
+                        "id": "Silakan hubungkan rekening bank Anda ",
+                        "es": "Por favor enlace su cuenta de banco",
+                        "pt-BR": "Por gentileza vincule sua conta bancária",
+                        "ar": "الرجاء ربط حسابك المصرفي"
+                    },
+                    "bindUserBankCard3": {
+                        "zh": "不支持信用卡",
+                        "en": "Credit card not supported",
+                        "vi": "Không hỗ trợ thẻ tín dụng",
+                        "zh-Hant": "不支持信用卡",
+                        "id": "Kartu kredit tidak tersedia",
+                        "es": "Tarjeta de crédito no admitida",
+                        "pt-BR": "Tarjeta de crédito no admitida",
+                        "ar": "ان بطاقة الائتمان غير مدعومة "
+                    },
+                    "bindUserBankCard4": {
+                        "zh": "请绑定持卡人本人的信用卡",
+                        "en": "Please bind the debit card of the cardholder.",
+                        "vi": "Vui lòng ràng buộc thẻ tín dụng của chủ thẻ",
+                        "zh-Hant": "請綁定持卡人本人的信用卡",
+                        "id": "silahkan hubungkan rekening kredit Anda",
+                        "es": "Vincula tu banco de crédito",
+                        "pt-BR": "Vincule o cartão de crédito do titular do cartão",
+                        "ar": "يرجى ربط بطاقة الخصم الخاصة بحامل البطاقة."
+                    },
+                    "bindUserBankCard5": {
+                        "zh": "信用卡",
+                        "en": "Credit card",
+                        "vi": "Thẻ tín dụng",
+                        "zh-Hant": "信用卡",
+                        "id": "kartu kredit",
+                        "es": "Tarjeta de Crédito",
+                        "pt-BR": "Cartão de crédito",
+                        "ar": "بطاقة ائتمانية"
+                    },
+                    "bindUserBankCard6": {
+                        "zh": "请填写信用卡",
+                        "en": "Please fill in Credit card",
+                        "vi": "Vui lòng điền vào Thẻ tín dụng",
+                        "zh-Hant": "請填寫信用卡",
+                        "id": "silahkan masukkan kartu kredit",
+                        "es": "Por favor rellene  Tarjeta de Crédito ",
+                        "pt-BR": "Preencha por gentileza Cartão de crédito ",
+                        "ar": "يرجى ملء بطاقة الائتمان"
                     },
                     "enterCardNumber": {
-                        "zh": "请填写银行卡号",
+                        "zh": "请填写银行账户",
                         "en": "Bank account number",
                         "vi": "Số tài khoản ngân hàng",
-                        "zh-Hant": "請填寫銀行卡號",
+                        "zh-Hant": "請填寫銀行帳戶",
                         "id": "Nomor rekening",
                         "es": "Ingrese su número de Cuenta Bancaria",
                         "pt-BR": "Número do cartão",
@@ -8097,6 +8187,16 @@
                         "es": "Ingrese su número de Cuenta Bancaria",
                         "pt-BR": "Número do cartão",
                         "ar": "رقم البطاقة"
+                    },
+                    "enterCardName": {
+                        "zh": "请填写银行名称",
+                        "en": "Please fill in the name of the bank",
+                        "vi": "Vui lòng điền tên ngân hàng",
+                        "zh-Hant": "請填寫銀行名稱",
+                        "id": "Silahkan isi nama Bank",
+                        "es": "Por favor ingrese el nombre del banco",
+                        "pt-BR": "Por favor, preencha o nome do banco",
+                        "ar": "يرجى ذكر اسم البنك"
                     },
                     "bankName": {
                         "zh": "银行名称",

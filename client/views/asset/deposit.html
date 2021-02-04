@@ -79,11 +79,14 @@
             <div class="col-xs-2 justify-flex-end deposit__title-money">
                 {{lang.text('tigerWitID.depositWithdrawal.bankCard')}}
             </div>
-    
-            <div class="col-xs-10 pd-tp-10" ng-show="!deposit.card.id">
-                <span class="deposit__pointer font-info" ng-click="openCardMdl('deposit', parentScope)">{{lang.text('tigerWitID.wallet.bindBankCard')}} ></span>
+
+            <div class="col-xs-9 withdraw__card_handler" ng-show="!deposit.card.id">
+                <span class="deposit__pointer font-info" ng-click="openCardMdl('deposit', parentScope)">
+                <!-- {{lang.text('tigerWitID.wallet.bindBankCard')}} > -->
+                {{lang.text('tigerWitID.wallet.addCreditCard')}}
+                </span>
             </div>
-    
+            <!-- 管理银行卡 -->
             <div class="col-xs-9 withdraw__card_handler" ng-show="deposit.card.id">
                 <div class="widthdraw__card_bg">
                     <img ng-show="deposit.card.bank_img" ng-src="{{ deposit.card.bank_img }}">
@@ -91,12 +94,23 @@
                 </div>
                 <span class="card_number">
                     <span>
-                        {{deposit.card.number}} 
+                        {{deposit.card.number}}
                     </span>
-                    <span class="deposit__pointer font-info btn-text card_switch" ng-click="openManageCardMdl({type: 'switch', page: 'deposit', parentScope: parentScope, getCard: getCard})">{{lang.text('tigerWitID.wallet.switchBankCard')}} ></span>
-                </span>
-                <span class="tw-btn tw-btn-md tw-btn-capsule-bordered card_manage" ng-click="openManageCardMdl({type: 'manage', page: 'deposit', parentScope: parentScope, getCard: getCard})" ng-style="{width: lang.isEnglishArea() ? '170px' : ''}">{{lang.text('tigerWitID.wallet.manageBankCards')}}</span>
+                    <!-- <span class="deposit__pointer font-info btn-text card_switch" ng-click="openManageCardMdl({type: 'switch', page: 'deposit', parentScope: parentScope, getCard: getCard})">{{lang.text('tigerWitID.wallet.switchBankCard')}} ></span>
+                </span> -->
+                <!-- <span class="tw-btn tw-btn-md tw-btn-capsule-bordered card_manage" ng-click="openManageCardMdl({type: 'manage', page: 'deposit', parentScope: parentScope, getCard: getCard})" ng-style="{width: lang.isEnglishArea() ? '170px' : ''}">
+                {{lang.text('tigerWitID.wallet.manageBankCards')}}
+                </span> -->
+                <!-- <span class="tw-btn tw-btn-md tw-btn-capsule-bordered card_manage" ng-click="openAddCardModal('deposit', parentScope, isAccount)" ng-style="{width: lang.isEnglishArea() ? '170px' : ''}">
+                添加信用卡 {{deposit.type}}
+                </span> -->
             </div>
+            <!-- <div class="col-xs-9 withdraw__card_handler" ng-if="deposit.type === 'Noire'">
+              <span class="tw-btn tw-btn-md tw-btn-capsule-bordered card_manage" ng-click="openAddCardModal('deposit', parentScope, isAccount)" ng-style="{width: lang.isEnglishArea() ? '170px' : ''}">
+              添加信用卡 {{deposit.type}}
+              </span>
+
+            </div> -->
         </div>
         <div class="display-flex" ng-if="deposit.type && depositTypeLst[deposit.type].need_card === 1">
             <div class="col-xs-2"></div>
@@ -167,7 +181,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="deposit_separator"></div>
 
         <div class="deposit__tele mg-tp-10" ng-if="deposit.type === 'tele'">
@@ -235,7 +249,7 @@
             </div>
         </div>
     </div>
-    
+
     <div class="deposit__wallet_succ mg-tp-50 mg-bt-50" ng-show="walletDepositSucc">
         {{lang.text('tigerWitID.depositWithdrawal.tip33')}}
     </div>
@@ -246,6 +260,6 @@
         <div class="tip">
             {{lang.text('tigerWitID.depositWithdrawal.tip35')}}<br>{{lang.text('tigerWitID.depositWithdrawal.tip34')}}
         </div>
-        
+
     </div>
 </div>

@@ -58,7 +58,7 @@
             if(n.id && n.type) {
                 getIsWithdraw()
             }
-            
+
         }, true)
 
         $scope.withdrawTypeLst = {}; // 出金方式列表
@@ -77,7 +77,7 @@
         $scope.toWithdraw = toWithdraw;
         $scope.openWithdrawMdl = openWithdrawMdl;
         $scope.openCardMdl = openCardMdl;
-        $scope.openManageCardMdl = openManageCardMdl;
+        $scope.openAddCardMdl = openAddCardMdl;
         // $scope.changeWithdrawType = changeWithdrawType;
         $scope.openChangeWithTypeMdl = openChangeWithTypeMdl;
         $scope.openCurrency = openCurrency;
@@ -88,13 +88,13 @@
 
         //绑定银行卡后获取银行卡信息
         $rootScope.$on('bindCardSuccess', function () {
-            // 通知所有子控器 
+            // 通知所有子控器
             if (!parentScope.hasChooseedCard) {
                 getCard()
             }
         });
 
-        
+
         function noIsWalletId(){
             var mt4_id;
             if($scope.withdraw.type !== 'wallet'){
@@ -191,7 +191,7 @@
                         $scope.withdrawTypeLst[value.key] = value;
                     }
                 });
-                
+
                 // 设置初始币种
                 $scope.withdraw.currency = $scope.withdrawTypeLst[$scope.withdraw.accountType].currency.length ? $scope.withdrawTypeLst[$scope.withdraw.accountType].currency[0] : null;
             }
@@ -334,7 +334,7 @@
                     $scope.closeModal = closeModal;
                     $scope.manageType = type
                     $scope.openAddCardModal = openCardMdl
-                    //刷新列表 
+                    //刷新列表
                     getCardList($scope).then(function () {
                         $scope.cardList = parentScope.cardList
                     })
@@ -436,7 +436,7 @@
         //         if($scope.withdraw.accountType === 'wallet'){
         //             changeWithdrawAccountType('bank');
         //         }
-        //     } 
+        //     }
         //     getIsWithdraw();
         //     $scope.withdraw.maxAmount = type === 'invest' ? $scope.maxAmountInvest : $scope.maxAmountWallet;
         // }
@@ -592,7 +592,7 @@
         //         });
         //     }
         // }
-        
+
         //选择币种
         $document.on('click', function () {
             $scope.$apply(function () {

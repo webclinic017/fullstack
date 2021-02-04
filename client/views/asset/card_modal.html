@@ -3,10 +3,10 @@
 
     <div>
         <div class="sys_modal_v2__title">
-            {{lang.text(type === 'Noire'?'tigerWitID.wallet.addCards':'tigerWitID.wallet.addBankCards')}}
+            {{lang.text(type === 'Noire' ? 'tigerWitID.wallet.addNoire' : isAccount ? 'tigerWitID.wallet.addBankCards' : 'tigerWitID.wallet.addCards')}}
             <br>
             <span class="desp">
-                {{lang.text(type === 'Noire'?'tigerWitID.depositWithdrawal.bindUserBankCard2':'tigerWitID.depositWithdrawal.bindUserBankCard')}}
+                {{lang.text(type === 'Noire' ? 'tigerWitID.depositWithdrawal.bindUserBankCard4' : isAccount ? 'tigerWitID.depositWithdrawal.bindUserBankCard2' : 'tigerWitID.depositWithdrawal.bindUserBankCard')}}
             </span>
         </div>
         <div class="sys_modal_v2__content" ng-show="!card.binding">
@@ -46,40 +46,26 @@
                     <div class="col-xs-3">
                         <label class="form-control-wrapper">{{lang.text('tigerWitID.wallet.bankCountryM')}}</label>
                     </div>
-
                     <div class="col-xs-9">
-                        <!-- <div class="form-control-wrapper">
-                            <select class="form-control"
-                                    name="world"
-                                    required
-                                    ng-class="{'form-control-error': frontErr.world.show && cardForm.world.$invalid}"
-                                    ng-model="card.world"
-                                    ng-options="world.name for world in worlds"
-                                    ng-focus="hideErr('world')"
-                                    ng-blur="showErr('world')">
-                                <option value="">{{lang.text('tigerWitID.pleaseSelect')}}</option>
-                            </select>
-
-                            <div ng-show="frontErr.world.show">
-                                <p class="alert alert-arrow_tp_lf" ng-show="cardForm.world.$error.required">
-                                    请选择开户国家
-                                </p>
-                            </div>
-                        </div> -->
                         <div class="form-control-wrapper">
-                            <input class="form-control"
-                                name="world"
-                                type="text"
-                                required
-                                ng-model="card.world.world_name"
-                                ng-disabled="card.world.world_name != ''">
+                            <input class="form-control" readonly name="country" type="text" placeholder="{{lang.text('tigerWitID.login.countryRegion')}}" required ng-model="card.world.key">
+
+                            <i class="select__icon fa fa-angle-down"></i>
+
+                            <ul class="select__dropdown" twform-select data-bind-model="card.world">
+
+                                <li class="first_li"><input type="text" placeholder="{{lang.text('tigerWitID.login.countryCode')}}" ng-model="placeholderCountry"><i class="fa fa-search"></i></li>
+                                <li ng-repeat="world in worlds | filter : placeholderCountry" ng-class="{'selected': world.code == card.world.value}">
+                                    <span data-value="{{world.code}}" data-disabled='{"disabled": {{world.disabled}}, "msg": "{{lang.text("tigerWitID.myAccount.unableCountry")}}"}' ng-click="selectWorld(world)" ng-class="{'font-light': world.disabled}">{{world.name}}</span>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
 
                 <div class="item-center">
                     <div class="col-xs-3">
-                        <label class="form-control-wrapper">{{lang.text(type === 'Noire'?'tigerWitID.depositWithdrawal.cardNumberNoire':'tigerWitID.depositWithdrawal.cardNumberM')}}</label>
+                        <label class="form-control-wrapper">{{lang.text(type === 'Noire' ? 'tigerWitID.depositWithdrawal.bindUserBankCard5' : !isAccount ? 'tigerWitID.depositWithdrawal.cardNumberNoire' : 'tigerWitID.depositWithdrawal.cardNumberM')}}</label>
                     </div>
 
                     <div class="col-xs-9">
@@ -90,25 +76,45 @@
                                    required
                                    ng-class="{'form-control-error': frontErr.number.show && cardForm.number.$invalid}"
                                    ng-model="card.number"
-                                   placeholder="{{lang.text(type === 'Noire'?'tigerWitID.depositWithdrawal.enterCardNumberNoire':'tigerWitID.depositWithdrawal.enterCardNumber')}}"
+                                   placeholder="{{lang.text(type === 'Noire' ? 'tigerWitID.depositWithdrawal.bindUserBankCard6' : !isAccount ? 'tigerWitID.depositWithdrawal.enterCardNumberNoire' : 'tigerWitID.depositWithdrawal.enterCardNumber')}}"
                                    ng-focus="hideErr('number')"
                                    ng-blur="showErr('number')">
 
                             <div ng-show="frontErr.number.show">
                                 <p class="alert alert-arrow_tp_lf" ng-show="cardForm.number.$error.required">
-                                    {{lang.text(type === 'Noire'?'tigerWitID.depositWithdrawal.enterCardNumberNoire':'tigerWitID.depositWithdrawal.enterCardNumber')}}
+                                  {{lang.text(type === 'Noire' ? 'tigerWitID.depositWithdrawal.bindUserBankCard6' : !isAccount ? 'tigerWitID.depositWithdrawal.enterCardNumberNoire' : 'tigerWitID.depositWithdrawal.enterCardNumber')}}
                                 </p>
                             </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="item-center mg-bt-20" ng-if="type !== 'Noire' && !isAccount">
+                  <p class="col-xs-9 font-danger">{{lang.text('tigerWitID.depositWithdrawal.bindUserBankCard3')}}</p>
+                </div>
+                <div class="item-center" ng-if="isAccount">
+                    <div class="col-xs-3">
+                        <label class="form-control-wrapper">IBAN</label>
+                    </div>
+
+                    <div class="col-xs-9">
+                        <div class="form-control-wrapper">
+                            <input class="form-control"
+                                   name="iban"
+                                   type="text"
+                                   required
+                                   ng-model="card.iban"
+                                   placeholder="{{lang.text('tigerWitID.wallet.fillBank')}}">
                         </div>
                     </div>
                 </div>
                 <!-- 判断不是第三方platform    TODO（后台有判断）所以银行name也可根据后台返回的列表长度判断，有值选择，没有值填写 -->
                 <div class="item-center" ng-if="banks.length > 0">
                     <div class="col-xs-3">
-                        <label class="form-control-wrapper">{{lang.text(type === 'Noire' ? 'tigerWitID.wallet.selectBankM2' : 'tigerWitID.wallet.selectBankM')}}</label>
+                        <label class="form-control-wrapper">{{lang.text(type === 'Noire' ? 'tigerWitID.wallet.selectBankM2' :isAccount === true?'tigerWitID.wallet.fillBankM' : 'tigerWitID.wallet.selectBankM')}}</label>
                     </div>
 
-                    <div class="col-xs-9">
+                    <div class="col-xs-9" ng-if="!isAccount">
                         <div class="form-control-wrapper">
                             <select class="form-control"
                                     name="bank"
@@ -125,6 +131,25 @@
                             <div ng-show="frontErr.bank.show">
                                 <p class="alert alert-arrow_tp_lf" ng-show="cardForm.bank.$error.required">
                                     {{lang.text(lang.text(type === 'Noire' ? 'tigerWitID.wallet.selectCardType' : 'tigerWitID.wallet.pSelectBank'))}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-9" ng-if="isAccount">
+                        <div class="form-control-wrapper">
+                            <input class="form-control"
+                                   name="bank"
+                                   type="text"
+                                   required
+                                   ng-class="{'form-control-error': frontErr.bank.show && cardForm.bank.$invalid}"
+                                   ng-model="card.bank.name"
+                                   placeholder="{{lang.tex('tigerWitID.depositWithdrawal.enterCardNumbeenterCardName')}}"
+                                   ng-focus="hideErr('bank')"
+                                   ng-blur="showErr('bank')">
+
+                            <div ng-show="frontErr.bank.show">
+                                <p class="alert alert-arrow_tp_lf" ng-show="cardForm.bank.$error.required">
+                                    {{lang.tex('tigerWitID.depositWithdrawal.enterCardNumbeenterCardName')}}
                                 </p>
                             </div>
                         </div>
@@ -155,8 +180,8 @@
                         </div>
                     </div>
                 </div>
-                
-                <div class="item-center" ng-if="card.world && (card.world.world_code !== 'CN' && card.world.world_code !== 'VN') && type !== 'Noire'">
+
+                <div class="item-center" ng-if="card.world && (card.world.value !== 'CN' && card.world.value !== 'VN') && type !== 'Noire'">
                     <div class="col-xs-3">
                         <label class="form-control-wrapper">{{lang.text('tigerWitID.wallet.bankIdentificationCodeM')}}</label>
                     </div>
@@ -183,7 +208,7 @@
                 </div>
 
 
-                <div class="item-center" ng-if="card.world && card.world.world_code === 'CN'">
+                <div class="item-center" ng-if="card.world && card.world.value === 'CN'">
                     <div class="col-xs-3">
                         <label class="form-control-wrapper">{{lang.text('tigerWitID.depositWithdrawal.provinceM')}}</label>
                     </div>
@@ -211,7 +236,7 @@
                     </div>
                 </div>
 
-                <div class="item-center" ng-if="card.world && card.world.world_code === 'CN'">
+                <div class="item-center" ng-if="card.world && card.world.value === 'CN'">
                     <div class="col-xs-3">
                         <label class="form-control-wrapper">{{lang.text('tigerWitID.depositWithdrawal.cityM')}}</label>
                     </div>
@@ -240,8 +265,8 @@
 
                 <div class="item-center" ng-if="card.world && type !== 'Noire'">
                     <div class="col-xs-3">
-                        <label class="form-control-wrapper" ng-if="card.world && card.world.world_code === 'CN'">{{lang.text('tigerWitID.depositWithdrawal.branchM')}}</label>
-                        <label class="form-control-wrapper" ng-if="card.world && card.world.world_code !== 'CN'">{{lang.text('tigerWitID.wallet.bankAddressM')}}</label>
+                        <label class="form-control-wrapper" ng-if="card.world && card.world.value === 'CN'">{{lang.text('tigerWitID.depositWithdrawal.branchM')}}</label>
+                        <label class="form-control-wrapper" ng-if="card.world && card.world.value !== 'CN'">{{lang.text('tigerWitID.wallet.bankAddressM')}}</label>
                     </div>
 
                     <div class="col-xs-9">
@@ -252,20 +277,20 @@
                                    required
                                    ng-class="{'form-control-error': frontErr.address.show && cardForm.address.$invalid}"
                                    ng-model="card.address"
-                                   placeholder="{{card.world && card.world.world_code === 'CN' ? lang.text('tigerWitID.wallet.enterBranchBankName') : lang.text('tigerWitID.wallet.enterOpeningAccountAddress')}}"
+                                   placeholder="{{card.world && card.world.value === 'CN' ? lang.text('tigerWitID.wallet.enterBranchBankName') : lang.text('tigerWitID.wallet.enterOpeningAccountAddress')}}"
                                    ng-focus="hideErr('address')"
                                    ng-blur="showErr('address')">
 
                             <div ng-show="frontErr.address.show">
                                 <p class="alert alert-arrow_tp_lf" ng-show="cardForm.address.$error.required">
-                                    {{card.world && card.world.world_code === 'CN' ? lang.text('tigerWitID.wallet.enterBranchBankName') : lang.text('tigerWitID.wallet.enterOpeningAccountAddress')}}
+                                    {{card.world && card.world.value === 'CN' ? lang.text('tigerWitID.wallet.enterBranchBankName') : lang.text('tigerWitID.wallet.enterOpeningAccountAddress')}}
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="item-center" ng-if="card.world && card.world.world_code === 'CN'">
+                <div class="item-center" ng-if="card.world && card.world.value === 'CN'">
                     <div class="col-xs-3">
                         <label class="form-control-wrapper">{{lang.text('tigerWitID.wallet.reservedPhoneNumberM')}}</label>
                     </div>
@@ -326,7 +351,7 @@
                 开户行全称请精确到支行，如：中国工商银行 北京分行 清华园支行
             </p> -->
             <p class="btn_wrapper mg-bt-15">
-                <button class="btn btn-primary-gradient" ng-if="clickable" ng-click="submitForm()">
+                <button class="btn btn-primary-gradient" ng-if="clickable" ng-click="submitForm(isAccount, payment_platform)">
                     {{lang.text('tigerWitID.confirm')}}
                 </button>
                 <button class="btn btn-primary-gradient" ng-if="!clickable">
