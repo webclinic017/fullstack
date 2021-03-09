@@ -3,7 +3,7 @@
   <div class="sys_modal_v2__content" ng-if="!lang.isEnglishArea()">
     <div class="dredge_box mg-bt-40">
       <div class="sys_modal_v2__title text-center">{{lang.text('tigerWitID.settings.openAccountNewTip1')}}</div>
-      
+
       <ul class="dredge_box_list clearfix">
         <li ng-class="{deleteDemo: deleteDemo}">
           <h4 class="text-center">{{lang.text('tigerWitID.settings.openLiveAccount')}}</h4>
@@ -28,7 +28,7 @@
       <ul class="dredge_box_btn_list clearfix">
         <li ng-class="{deleteDemo: deleteDemo}">
           <div class="btn_wrapper">
-            <a class="btn btn-primary-gradient btn-sm" ng-click="[confirmLive()]">
+            <a class="btn btn-primary-gradient btn-sm" ng-click="[confirmLive(dredgingType)]">
               {{lang.text('tigerWitID.settings.freeOpening')}}
             </a>
           </div>
@@ -47,7 +47,7 @@
   <div class="sys_modal_v2__content" ng-if="lang.isEnglishArea()">
     <div class="dredge_box mg-bt-40">
       <div class="sys_modal_v2__title text-center">{{lang.text('tigerWitID.settings.openAccountNewTip1')}}</div>
-      
+
       <ul class="dredge_box_list clearfix">
         <li ng-class="{deleteDemo: deleteDemo}">
           <h4 class="text-center">{{lang.text('tigerWitID.settings.openAcount1')}}</h4>
