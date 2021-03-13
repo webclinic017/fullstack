@@ -489,7 +489,7 @@ module.exports = function (grunt) {
         // set CDN URL
         // 通行证暂时不使用CDN 2018.05.29 
         // CDN 开启后出现一个问题是 /fonts/ 目录访问跨域，因为这个目录是在静态文件里引入的，所以静态文件设置了CDN，此目录只能也走CDN
-        // CDN_URL = url === 'www' ? 'https://static.tigerwitfx.com' : 'https://staticdemo.tigerwitfx.com';
+        // CDN_URL = url === 'www' ? 'https://static.lkjhgfdsuytr.com' : 'https://staticdemo.tigerwitfx.com';
         var url_path, login_public_key;
 
         url_path = companyInfo[company][url]["url_path"];

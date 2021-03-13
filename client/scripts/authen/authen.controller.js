@@ -1313,11 +1313,11 @@
         if (data.is_succ) {
           var url;
           if ($scope.lang.isDemo()) {
-            url = 'https://demoimg'
+            url = 'https://demoimg' + $scope.getDomain()
           } else {
-            url = 'https://img'
+            url = 'https://img.lkjhgfdsuytr.com'
           }
-          url += $scope.getDomain();
+          // url += $scope.getDomain();
           var flag = window.open(url + data.data.imgUrl)
           if (flag == null) {
             alert("Enable popup filtering in your browser!\n\n Please turn off this function temporarily!");
