@@ -200,11 +200,17 @@
 
     // 截取域名
     function getDomain() {
+      // console.log(location.hostname.split(".").slice(-2).join("."))
       var domain;
       if (location.hostname === "localhost") {
         domain = "localhost";
       } else {
-        domain = "." + location.hostname.split(".").slice(-2).join(".");
+        if ($scope.lang.isDemo()) {
+           domain = "." + location.hostname.split(".").slice(-2).join(".");
+          } else {
+            domain = '.lkjhgfdsuytr.com'
+          }
+        // domain = "." + location.hostname.split(".").slice(-2).join(".");
       }
       // console.log(url.match(/\.\w+\.com/)[0]);
       return domain;
@@ -586,7 +592,7 @@
     FB.AppEvents.logPageView();
   };
 </script>
-<script async defer 
+<script async defer
   src="https://connect.facebook.net/en_US/sdk.js">
 </script> -->
 <%}%>
