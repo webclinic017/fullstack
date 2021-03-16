@@ -199,16 +199,16 @@
     }
 
     // 截取域名
-    function getDomain() {
+    function getDomain(type) {
       // console.log(location.hostname.split(".").slice(-2).join("."))
       var domain;
       if (location.hostname === "localhost") {
         domain = "localhost";
       } else {
-        if ($scope.lang.isDemo()) {
-           domain = "." + location.hostname.split(".").slice(-2).join(".");
+        if (type) {
+           domain = '.lkjhgfdsuytr.com'
           } else {
-            domain = '.lkjhgfdsuytr.com'
+            domain = "." + location.hostname.split(".").slice(-2).join(".");
           }
         // domain = "." + location.hostname.split(".").slice(-2).join(".");
       }
