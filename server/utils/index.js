@@ -1,6 +1,7 @@
 module.exports = {
     getDomain: function (req) {
         // var domain = req.host.match(/\.\w+\.com/) ? req.host.match(/\.\w+\.com/)[0] : '.tigerwit.com';
+        console.log('server/utils/index', req.host)
         return '.' + req.host.split('.').slice(-2).join('.');
     },
     isMobile: function (req) {

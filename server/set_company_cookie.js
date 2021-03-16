@@ -25,6 +25,7 @@
             req.lang = lang;
             res.cookie('lang', lang, { path: '/', domain: domain })
         }
+        console.log(lang, res.cookie)
         // console.log('------domain------',domain)
         // console.log('------req.host------',req.host)
     };

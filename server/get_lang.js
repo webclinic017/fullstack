@@ -11,7 +11,7 @@ module.exports = function (req) {
     }
     // 获取链接中语言参数
     function paramsLang() {
-        // console.log('-----------lang------', req.params.lang)
+        console.log('-----------lang------', req.params.lang)
         var lang = ''
         var paramsLang = req.params.lang;
         if (paramsLang && langArr.indexOf(paramsLang) !== -1) {
@@ -59,7 +59,7 @@ module.exports = function (req) {
         // } else {
         //     cookieLang = cookieList['lang'];
         // }
-        // console.log('---cookieLang---', cookieList)
+        console.log('---cookieLang---', cookieLang)
         if (cookieLang && langArr.indexOf(cookieLang) !== -1) {
             lang = cookieLang;
         }
