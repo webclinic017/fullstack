@@ -410,7 +410,7 @@ module.exports = function (app) {
     // :params为语言或者空
     app.use('/:lang(' + langArrFilter + ')?', function (req, res, next) {
         // console.log('-----------host------', req.originalUrl)
-        // console.log('-----------lang------', req.params.lang)
+        console.log('-----------lang------', req.params.lang)
         // console.log('----referer-----', req.headers.referer)
 
         // console.log('-----1---', req.url)
