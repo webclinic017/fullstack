@@ -22,7 +22,7 @@
                         <li ng-repeat="item in blogList" ng-click="goDetails(item.key)">
                             <div class="infobox">
                                 <div class="pic-wrapper">
-                                    <img ng-src="https://{{(lang.isDemo() ? 'demoimg' : 'img') + getDomain() + item.photo_url}}" alt="">
+                                    <img ng-src="https://{{(lang.isDemo() ? 'demoimg' + getDomain() : 'img.lkjhgfdsuytr.com') + item.photo_url}}" alt="">
                                 </div>
                                 <div class="cont-wrapper">
                                     <div class="label-wrapper space-between-center">
