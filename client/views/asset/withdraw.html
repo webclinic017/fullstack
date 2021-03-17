@@ -278,6 +278,9 @@
                     <span>{{lang.text('tigerWitID.depositWithdrawal.rate1d')}}</span>
                     <span>{{withdraw.currency.rate_out}}</span> {{withdraw.currency.currency_name}}
                 </p>
+                <p class="mg-tp-10" ng-if="withdraw.fee_unit !== 0">
+                  手续费：${{ withdraw.fee_unit == 1 ? withdraw.fee : (withdraw.amount * withdraw.fee || 0).toFixed(2) }}
+                </p>
             </div>
         </div>
         <br>

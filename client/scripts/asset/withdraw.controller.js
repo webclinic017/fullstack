@@ -76,7 +76,7 @@
             },
             type: '',   // invest, wallet
             mt4_id: '',
-            accountType: 'bank',    // bank, cse
+            accountType: '73',    // bank, cse 原来默认bank 后改成中国区没有银行卡 默认73
             thirdAccount: undefined,
             success: false,
             minAmount: 20,
@@ -305,7 +305,11 @@
                     // }
                 });
                 // 设置初始币种
+                console.log($scope.withdraw.accountType, $scope.withdrawTypeLst[$scope.withdraw.accountType])
                 $scope.withdraw.currency = $scope.withdrawTypeLst[$scope.withdraw.accountType].currency.length ? $scope.withdrawTypeLst[$scope.withdraw.accountType].currency[0] : null;
+                // 初始手续费相关
+                $scope.withdraw.fee = $scope.withdrawTypeLst[$scope.withdraw.accountType].fee;
+                $scope.withdraw.fee_unit = $scope.withdrawTypeLst[$scope.withdraw.accountType].fee_unit;
             }
         });
 
@@ -1098,9 +1102,12 @@
         }
 
         function changeWithdrawAccountType(accountType, withdrawTypeLst) {
+          console.log(123, $scope.withdrawTypeLst[$scope.withdraw.accountType])
             $scope.withdraw.accountType = accountType;
             $scope.withdrawTypeLst = withdrawTypeLst;
             $scope.withdraw.is_third = $scope.withdrawTypeLst[$scope.withdraw.accountType].is_third;
+            $scope.withdraw.fee = $scope.withdrawTypeLst[$scope.withdraw.accountType].fee;
+            $scope.withdraw.fee_unit = $scope.withdrawTypeLst[$scope.withdraw.accountType].fee_unit;
             getAssetCardList($scope.withdraw.is_third);
             $scope.withdraw.currency = $scope.withdrawTypeLst[$scope.withdraw.accountType].currency.length ? $scope.withdrawTypeLst[$scope.withdraw.accountType].currency[0] : null;
             $scope.withdraw.third.withdraw_type = $scope.withdrawTypeLst[$scope.withdraw.accountType].withdraw_type;
