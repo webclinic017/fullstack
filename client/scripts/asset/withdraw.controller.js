@@ -305,7 +305,6 @@
                     // }
                 });
                 // 设置初始币种
-                console.log($scope.withdraw.accountType, $scope.withdrawTypeLst[$scope.withdraw.accountType])
                 $scope.withdraw.currency = $scope.withdrawTypeLst[$scope.withdraw.accountType].currency.length ? $scope.withdrawTypeLst[$scope.withdraw.accountType].currency[0] : null;
                 // 初始手续费相关
                 $scope.withdraw.fee = $scope.withdrawTypeLst[$scope.withdraw.accountType].fee;
@@ -821,7 +820,6 @@
                         paramsAsset.third_account = $scope.withdraw.thirdAccount;
                         paramsAsset.bank_card_id = $scope.withdraw.card.id;
                     }
-
                     withdrawInvest(paramsAsset);
                 }
             })
@@ -854,10 +852,16 @@
                             return
                           }
                             var amount = Number($scope.withdraw.amount).toFixed(2);
-                            var amountRMB = Number(amount * $scope.withdraw.currency.rate_out).toFixed(2);
+                            // 实际到账
+                            var actualArrival = Number($scope.withdraw.amount - $scope.withdraw.amount * $scope.withdraw.fee).toFixed(2);
+                            var amountRMB = actualArrival ? Number(actualArrival * $scope.withdraw.currency.rate_out).toFixed(2) : Number(amount * $scope.withdraw.currency.rate_out).toFixed(2);
+                            // var feeNumber = ($scope.withdraw.fee * 100).toFixed(2)
+                            // $scope.withdraw.fee = $scope.withdrawTypeLst[$scope.withdraw.accountType].fee;
+                            // $scope.withdraw.fee_unit = $scope.withdrawTypeLst[$scope.withdraw.accountType].fee_unit;
                             openWithdrawMdl({
                                 type: 'withdrawReady',
                                 message: data.data.status_message,
+                                actualArrival: actualArrival,
                                 amountDollar: amount,
                                 amountRMB: amountRMB,
                                 desc: $scope.withdrawNotice,
@@ -1102,7 +1106,6 @@
         }
 
         function changeWithdrawAccountType(accountType, withdrawTypeLst) {
-          console.log(123, $scope.withdrawTypeLst[$scope.withdraw.accountType])
             $scope.withdraw.accountType = accountType;
             $scope.withdrawTypeLst = withdrawTypeLst;
             $scope.withdraw.is_third = $scope.withdrawTypeLst[$scope.withdraw.accountType].is_third;
