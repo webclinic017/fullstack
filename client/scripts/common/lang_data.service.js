@@ -4810,6 +4810,16 @@
                         "pt-BR": "Comissão do último mês",
                         "ar": "العمولة"
                     },
+                    "commission2": {
+                        "zh": "手续费",
+                        "en": "Fee",
+                        "vi": "Phí",
+                        "zh-Hant": "手續費",
+                        "id": "Biaya",
+                        "es": "Cargo",
+                        "pt-BR": "Taxa",
+                        "ar": "الرسوم"
+                    },
                     "profitRate": {
                         "zh": "收益率",
                         "en": "Return",
@@ -7586,7 +7596,7 @@
                       "id": "Jumlah yang diterima",
                       "es": "Monto Recibido",
                       "pt-BR": "Montante recebido",
-                      "ar": " "
+                      "ar": "تم استلام المبلغ"
                     },
                     "switchAccount": {
                         "zh": "点击切换子账号",
