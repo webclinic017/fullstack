@@ -4810,6 +4810,16 @@
                         "pt-BR": "Comissão do último mês",
                         "ar": "العمولة"
                     },
+                    "commission2": {
+                        "zh": "手续费",
+                        "en": "Fee",
+                        "vi": "Phí",
+                        "zh-Hant": "手續費",
+                        "id": "Biaya",
+                        "es": "Cargo",
+                        "pt-BR": "Taxa",
+                        "ar": "الرسوم"
+                    },
                     "profitRate": {
                         "zh": "收益率",
                         "en": "Return",
@@ -7567,6 +7577,26 @@
                       "es": "Nota: esta cantidad es una cantidad estimada. Afectada por el tipo de cambio, la cantidad real recibida será diferente.",
                       "pt-BR": "Nota: Esta é uma estimativa.Afectado pela taxa de câmbio, o montante real recebido será diferente.",
                       "ar": "ملاحظة: هذا المبلغ هو مبلغ تقديري ويتأثر بسعر الصرف، المبلغ الفعلي المستلم ربما يكون مختلفًا."
+                    },
+                    "depositTips2": {
+                      "zh": "提示:提现将收取手续费，折合金额为预估金额，受汇率影响，实际到账金额将会有差异。",
+                      "en": "Note: Withdrawal fee will be charged. The amount converted is the estimated amount. Due to the influence of exchange rate, the actual amount received will be different.",
+                      "vi": "Ghi chú: Phí rút tiền sẽ được tính. Số tiền đã chuyển đổi là con số ước lượng. Do sự ảnh hưởng của tỷ giá, số tiền nhận được thực tế sẽ thay đổi.",
+                      "zh-Hant": "提示：提現將收取手續費，折合金額為預估金額，受匯率影響，實際到賬金額將會有差异。",
+                      "id": "Catatan : Biaya penarikan akan dibebankan. Jumlahnya akan dikonversikan sejumlah berikut. Bergantung pada fluktuasi nilai tukar, jumlah yang anda terima akan berbeda sedikit.",
+                      "es": "Nota: Se cobrará una tarifa de retiro. La cantidad convertida es la cantidad estimada. Debido a la influencia del tipo de cambio, la cantidad real recibida será diferente.",
+                      "pt-BR": "Nota: Será cobrada uma taxa de retirada. O valor convertido é o valor estimado. Devido à influência da taxa de câmbio, o valor real recebido será diferente.",
+                      "ar": " "
+                    },
+                    "depositTips3": {
+                      "zh": "到账金额",
+                      "en": "Amount received",
+                      "vi": "Số tiền đã nhận",
+                      "zh-Hant": "到賬金額",
+                      "id": "Jumlah yang diterima",
+                      "es": "Monto Recibido",
+                      "pt-BR": "Montante recebido",
+                      "ar": "تم استلام المبلغ"
                     },
                     "switchAccount": {
                         "zh": "点击切换子账号",
