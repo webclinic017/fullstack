@@ -104,6 +104,10 @@
                     <span class="">{{lang.text('tigerWitID.depositWithdrawal.withdrawalAmountM')}}</span>
                     <span class="" style="font-family: initial;">$ {{params.amountDollar}}</span>
                 </li>
+                <li class="space-between">
+                    <span class="">{{ lang.text('tigerWitID.depositWithdrawal.depositTips3') }}:</span>
+                    <span class="" style="font-family: initial;">$ {{params.actualArrival}}</span>
+                </li>
                 <li class="space-between" ng-if="params.currency.currency !== 'USD'">
                     <span class="">{{lang.text('tigerWitID.depositWithdrawal.tip59_1')}}{{params.currency.currency_name}}{{lang.text('tigerWitID.depositWithdrawal.tip59_2')}}</span>
                     <span class="" style="font-family: initial;">{{params.currency.currency_symbol}} {{params.amountRMB}}</span>
