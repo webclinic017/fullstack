@@ -13722,14 +13722,14 @@ module.exports = {
             "ar": "ما هي شروط السحب؟"
         },
         "wad5A": {
-            "zh": "Only the approved live accounts can withdraw funds; The clients can only withdrawal after depositing; Trading behavior is required after depositing; The minimum withdrawal amount is USD30.",
-            "en": "Only the approved live accounts can withdraw funds; The clients can only withdrawal after depositing; Trading behavior is required after depositing; The minimum withdrawal amount is USD30.",
-            "vi": "Chỉ những tài khoản thực đã được phê duyệt mới có thể rút tiền; Khách hàng chỉ có thể rút tiền sau khi nạp tiền; Khách hàng cần phải giao dịch ít nhất một lệnh sau khi nạp tiền; Số tiền rút tối thiểu là 30 USD.",
-            "zh-Hant": "Only the approved live accounts can withdraw funds; The clients can only withdrawal after depositing; Trading behavior is required after depositing; The minimum withdrawal amount is USD30.",
-            "id": "Hanya akun live yang telah diterima yang dapat melakukan penarikan dana; Klien hanya dapat dapat menarik dana setelah melakukan deposit; Klien juga wajib melakukan transaksi setelah deposit; Penarikan minimum adalah $30.",
-            "es": "Solo cuentas aprobadas pueden realizar el retiro; Los clientes solo pueden retirar después de depositar; Se requiere operar luego de depositar; El monto mínimo de retiro son $30 dólares.",
-            "pt-BR": "Somente as contas aprovadas podem fazer um saque; Os clientes só podem se retirar após o depósito; É necessário transação após o depósito; O valor mínimo de retirada é de $30.",
-            "ar": "يمكن فقط للحسابات الحقيقية المعتمدة سحب الأموال ؛ يمكن للعملاء السحب فقط بعد الإيداع ؛ يمكنك القيام بعملية السحب بعد قيام بصفقة على الأقل ؛ الحد الأدنى لمبلغ السحب هو 30 دولارًا أمريكيًا."
+            "zh": "TigerWit supports multiple methods of withdrawal. The withdrawal fees charged by the payment channel are borne by the client. TigerWit does not charge any withdrawal fees. When you withdraw funds, the system will prompt for specific fees.",
+            "en": "TigerWit supports multiple methods of withdrawal. The withdrawal fees charged by the payment channel are borne by the client. TigerWit does not charge any withdrawal fees. When you withdraw funds, the system will prompt for specific fees.",
+            "vi": "TigerWit hỗ trợ các phương thức rút tiền khác nhau. Phí rút tiền được thu bởi kênh thanh toán do khách hàng chi trả. TigerWit không tính phí rút tiền. Khi bạn rút tiền, hệ thống sẽ thông báo các khoản phí cụ thể.",
+            "zh-Hant": "TigerWit supports multiple methods of withdrawal. The withdrawal fees charged by the payment channel are borne by the client. TigerWit does not charge any withdrawal fees. When you withdraw funds, the system will prompt for specific fees.",
+            "id": "TigerWit mendukung berbagai jenis metode penarikan. Untuk penarikan melalui kanal pihak ketiga maka akan dikenakan biaya penarikan dan ditanggung oleh penarik dana. TigerWit tidak membebankan biaya penarikan apapun. Ketika anda menarik dana, sistem akan menghitung biaya secara otomatis.",
+            "es": "TigerWit admite múltiples métodos de retiro. Las tarifas de retiro cobradas por el canal de pago corren a cargo del cliente. TigerWit no cobra ninguna tarifa de retiro. Cuando retire fondos, el sistema le solicitará tarifas específicas.",
+            "pt-BR": "TigerWit oferece vários métodos de retirada. As taxas de saque cobradas pelo método de pagamento são pagas pelo cliente. TigerWit não cobra nenhuma taxa de retirada. Quando você retirar fundos, o sistema solicitará taxas específicas.",
+            "ar":"لا تقوم TigerWit بفرض أي رسوم إضافية على عملية السحب، أي رسوم إضافية قد تكون موجودة على عملية السحب تكون من البنك الخاص بك أو من مزود خدمة البطاقة المستخدمة."
         },
         "wad6Q": {
             "zh": "Are there any withdrawal fees?",
