@@ -45,6 +45,7 @@
         $scope.withdraw = {
             // amount: ,
             // succAmount: ,
+            set_amount: 0,
             card: {
                 //id: ,             // 银行卡 id
                 //number: ,         // 卡号
@@ -308,7 +309,6 @@
                 $scope.withdraw.currency = $scope.withdrawTypeLst[$scope.withdraw.accountType].currency.length ? $scope.withdrawTypeLst[$scope.withdraw.accountType].currency[0] : null;
                 // 初始手续费相关
                 $scope.withdraw.fee_set = $scope.withdrawTypeLst[$scope.withdraw.accountType].fee_set;
-                console.log(9000, $scope.withdraw.fee_set)
 
 
                 // $scope.withdraw.fee = $scope.withdrawTypeLst[$scope.withdraw.accountType].fee;
@@ -316,24 +316,28 @@
             }
         });
         $scope.$watch('withdraw.amount',function(newValue,oldValue){
-          console.log(899, newValue, oldValue)
-          if($scope.withdraw.fee_set && $scope.withdraw.fee_set.length > 0) {
-            $scope.withdraw.fee_set.forEach(function (value) {
-              if ($scope.withdraw.amount <= value.amount) {
-                console.log('value.unit', value.unit)
-                if (value.unit == 'USD') {
-                  $scope.withdraw.set_amoun = value.commission
-                }
-                if (value.unit == '%') {
-                  $scope.withdraw.set_amoun = value.commission
-                }{
-                  $scope.withdraw.set_amount = value.amount / value.commission / 100;
-                }
+          if($scope.withdraw.fee_set && $scope.withdraw.fee_set.length > 0 && $scope.withdraw.amount) {
+            var amountNumber = parseFloat($scope.withdraw.amount);
+            var amountList = $scope.withdraw.fee_set[$scope.withdraw.fee_set.length - 1];
+            for(var i = 0; i < $scope.withdraw.fee_set.length; i++) {
+            // $scope.withdraw.fee_set.forEach(function (value, index) {
 
-                return
+              if (amountNumber <= $scope.withdraw.fee_set[i].amount) {
+                // 判断超出收费范围
+                if (i - 1 < 0) {
+                  amountList = {name: 0, unit: "USD", amount: 0, commission: 0};
+                } else {
+                  amountList = $scope.withdraw.fee_set[i - 1];
+                }
+                break
+
               }
-              console.log(123, value, $scope.withdraw.set_amount)
-            })
+            }
+            if (amountList.unit == 'USD') {
+              $scope.withdraw.set_amount = amountList.commission
+            } else {
+              $scope.withdraw.set_amount = Number($scope.withdraw.amount / (amountList.commission * 100)).toFixed(2);
+            }
           }
         })
 
@@ -878,7 +882,7 @@
                           }
                             var amount = Number($scope.withdraw.amount).toFixed(2);
                             // 实际到账
-                            var actualArrival = Number($scope.withdraw.amount - $scope.withdraw.amount * $scope.withdraw.fee).toFixed(2);
+                            var actualArrival = Number($scope.withdraw.amount - $scope.withdraw.set_amount).toFixed(2);
                             var amountRMB = actualArrival ? Number(actualArrival * $scope.withdraw.currency.rate_out).toFixed(2) : Number(amount * $scope.withdraw.currency.rate_out).toFixed(2);
                             // var feeNumber = ($scope.withdraw.fee * 100).toFixed(2)
                             // $scope.withdraw.fee = $scope.withdrawTypeLst[$scope.withdraw.accountType].fee;
