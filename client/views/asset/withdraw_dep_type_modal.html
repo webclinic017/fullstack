@@ -14,9 +14,8 @@
                <div class="col-xs-9 deposit_modal__type-cont">
                    <p class="tit">{{value.name}}</p>
                    <p class="mg-bt-5" ng-if="value.fee_set && value.fee_set.length > 0" ng-repeat="item in value.fee_set">
-                   {{lang.text("tigerWitID.exceed")}}{{item.amount}}USD, {{item.commission }}{{item.unit}}/{{lang.text("tigerWitID.lot2")}}
+                   ≥${{item.amount}}, {{item.commission }}{{item.unit == 'USD' ? '$' : item.unit}}/{{lang.text("tigerWitID.lot2")}}
                    </p>
-                   <!-- <p ng-if="value.fee_unit !== 0">{{ value.fee_unit == 1 ? value.fee : (value.fee * 100).toFixed(2)}} {{ value.fee_unit == 1 ? 'USD' : '%'}}/{{lang.text("tigerWitID.lot2")}}</p> -->
                    <!-- <p class="tip" ng-show="key === 'bank'">&nbsp;</p> -->
                    <p class="tip" ng-show="key === 'cse'">{{lang.text('tigerWitID.depositWithdrawal.tip43')}}</p>
                    <p class="tip" ng-show="key === 'paypal'">{{lang.text('tigerWitID.depositWithdrawal.tip44')}}</p>
