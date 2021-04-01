@@ -820,11 +820,11 @@ module.exports = {
         id: "__id__"
     },
     faqAsset10: {
-        zh: "A：正常交易的客户每月有4次免费取款，超过4次，每次收取1美元取款费用。",
-        en: "A: The first 4 withdrawals are free. After that a fee of £5 will be charged for each withdrawal.",
-        vi: "^^-^^",
-        "zh-Hant": "A：正常交易的客戶每月有4次免費取款，超過4次，每次收取1美元取款費用。",
-        id: "__id__"
+        zh: "A：TigerWit 支持多种方式出金，支付通道收取的出金手续费由客户自行承担，TigerWit 不收取任何出金手续费用。当您出金时系统将提示具体的手续费。",
+        en: "A: TigerWit supports multiple methods of withdrawal. The withdrawal fees charged by the payment channel are borne by the client. TigerWit does not charge any withdrawal fees. When you withdraw funds, the system will prompt for specific fees.",
+        vi: "TigerWit hỗ trợ các phương thức rút tiền khác nhau. Phí rút tiền được thu bởi kênh thanh toán do khách hàng chi trả. TigerWit không tính phí rút tiền. Khi bạn rút tiền, hệ thống sẽ thông báo các khoản phí cụ thể.",
+        "zh-Hant": "A：TigerWit 支持多種方式出金，支付通道收取的出金手續費由客戶自行承擔，TigerWit 不收取任何出金手續費用。當您出金時系統將提示具體的手續費。",
+        id: "TigerWit mendukung berbagai jenis metode penarikan. Untuk penarikan melalui kanal pihak ketiga maka akan dikenakan biaya penarikan dan ditanggung oleh penarik dana. TigerWit tidak membebankan biaya penarikan apapun. Ketika anda menarik dana, sistem akan menghitung biaya secara otomatis."
     },
     faqAsset11: {
         zh: "Q：交易账户中的资金已显示移除，为什么我的银行卡还没有收到出金金额？",
