@@ -322,21 +322,25 @@
             for(var i = 0; i < $scope.withdraw.fee_set.length; i++) {
             // $scope.withdraw.fee_set.forEach(function (value, index) {
 
-              if (amountNumber <= $scope.withdraw.fee_set[i].amount) {
+              if (amountNumber < $scope.withdraw.fee_set[i].amount && amountNumber ) {
                 // 判断超出收费范围
                 if (i - 1 < 0) {
                   amountList = {name: 0, unit: "USD", amount: 0, commission: 0};
-                } else {
+                }else {
                   amountList = $scope.withdraw.fee_set[i - 1];
                 }
                 break
-
               }
+
+              if (amountNumber == $scope.withdraw.fee_set[i].amount) {
+                 amountList = $scope.withdraw.fee_set[i];
+                 break
+               }
             }
             if (amountList.unit == 'USD') {
               $scope.withdraw.set_amount = amountList.commission
             } else {
-              $scope.withdraw.set_amount = Number($scope.withdraw.amount / (amountList.commission * 100)).toFixed(2);
+              $scope.withdraw.set_amount = Number($scope.withdraw.amount * amountList.commission / 100).toFixed(2);
             }
           }
         })
