@@ -11,7 +11,7 @@
 
 
     if (system === 'download_mt4') {
-        window.location.href = "https://download.mql5.com/cdn/web/metaquotes.software.corp/mt4/metatrader4.apk?utm_campaign=www.metatrader4.com";
+        window.location.href = "//twdl.oss-cn-beijing.aliyuncs.com/metatrader4.apk";
     } else {
         setTimeout(function () {
             if (platform) {
