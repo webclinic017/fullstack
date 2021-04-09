@@ -86,7 +86,13 @@
         $rootScope.$on('bindCardSuccess', function () {
             // 通知所有子控器
             if (!parentScope.hasChooseedCard) {
+              // getCard(4, $scope.deposit.type, 'VN')
+              if ($scope.deposit.type == 'Noire') {
+                getCard(4, 66);
+              } else {
                 getCard()
+              }
+            
             }
         });
         //   根据条件返回platform
@@ -168,16 +174,23 @@
             }
         });
         // 获取银行卡信息
-        function getCard() {
-            // 支付方式不同银行卡列表不同，所以提前清空
+        function getCard(type, platform, worldCode, isTrue) {
+            // 为区分第三方银行卡信息切换提现方式后清空重新请求
             $scope.deposit.card = {};
-            if(!($scope.deposit.type && $scope.depositTypeLst[$scope.deposit.type].need_card === 1)){
-                return
+            // var params = ($scope.withdraw.accountType === 'third_account') ? {platform: $scope.withdraw.third.third_type} : {};
+            if (isTrue) return;
+            var params = {
+              type: type
             }
-            var params = ($scope.depositTypeLst[$scope.deposit.type].channel_type === 1) ? {platform: $scope.depositTypeLst[$scope.deposit.type].payment_platform} : {};
+            if (platform) {
+              params.platform = platform
+            }
+            if (worldCode) {
+              params.world_code = worldCode
+            }
+            // return
             asset.getCard(params).then(function (data) {
                 if (!data) return;
-                // console.log(data);
                 if (data.is_succ && data.data) {
                     $scope.deposit.card.id = data.data.id;
                     $scope.deposit.card.number = data.data.card_no;
@@ -191,12 +204,39 @@
                     $scope.deposit.card.country = data.data.country_code;
                     // 判断是否为英文简称
                     $scope.deposit.card.is_short = /^[A-Za-z]/.test(data.data.bank_name);
-
                     checkInputAmount();
-
                 }
             });
         }
+        // function getCard() {
+        //     // 支付方式不同银行卡列表不同，所以提前清空
+        //     $scope.deposit.card = {};
+        //     if(!($scope.deposit.type && $scope.depositTypeLst[$scope.deposit.type].need_card === 1)){
+        //         return
+        //     }
+        //     var params = ($scope.depositTypeLst[$scope.deposit.type].channel_type === 1) ? {platform: $scope.depositTypeLst[$scope.deposit.type].payment_platform} : {};
+        //     asset.getCard(params).then(function (data) {
+        //         if (!data) return;
+        //         // console.log(data);
+        //         if (data.is_succ && data.data) {
+        //             $scope.deposit.card.id = data.data.id;
+        //             $scope.deposit.card.number = data.data.card_no;
+        //             $scope.deposit.card.bank_name = data.data.bank_name;
+        //             $scope.deposit.card.address = data.data.bank_addr;
+        //             $scope.deposit.card.province = data.data.province;
+        //             $scope.deposit.card.city = data.data.city;
+        //             $scope.deposit.card.bank_img = data.data.bank_img;
+        //             $scope.deposit.card.bank_code = data.data.bank_code;
+        //             $scope.deposit.card.phone = data.data.phone;
+        //             $scope.deposit.card.country = data.data.country_code;
+        //             // 判断是否为英文简称
+        //             $scope.deposit.card.is_short = /^[A-Za-z]/.test(data.data.bank_name);
+
+        //             checkInputAmount();
+
+        //         }
+        //     });
+        // }
         $scope.checkSafetyCode = function (value) {
             if (value != null) $scope.deposit.safetyCode = value.toString().slice(0,6);
         }
