@@ -11,7 +11,7 @@
 
 
     if (system === 'download_mt4') {
-        window.location.href = "//twdl.oss-cn-beijing.aliyuncs.com/metatrader4.apk";
+        window.location.href = "https://dlmt4.uytregfds.com/cdn/mobile/mt4/android?server=TigerWit-Live,TigerWit-Trial";
     } else {
         setTimeout(function () {
             if (platform) {
