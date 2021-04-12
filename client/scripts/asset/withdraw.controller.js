@@ -45,6 +45,7 @@
         $scope.withdraw = {
             // amount: ,
             // succAmount: ,
+            set_amount: 0,
             card: {
                 //id: ,             // 银行卡 id
                 //number: ,         // 卡号
@@ -307,10 +308,42 @@
                 // 设置初始币种
                 $scope.withdraw.currency = $scope.withdrawTypeLst[$scope.withdraw.accountType].currency.length ? $scope.withdrawTypeLst[$scope.withdraw.accountType].currency[0] : null;
                 // 初始手续费相关
-                $scope.withdraw.fee = $scope.withdrawTypeLst[$scope.withdraw.accountType].fee;
-                $scope.withdraw.fee_unit = $scope.withdrawTypeLst[$scope.withdraw.accountType].fee_unit;
+                $scope.withdraw.fee_set = $scope.withdrawTypeLst[$scope.withdraw.accountType].fee_set;
+
+
+                // $scope.withdraw.fee = $scope.withdrawTypeLst[$scope.withdraw.accountType].fee;
+                // $scope.withdraw.fee_unit = $scope.withdrawTypeLst[$scope.withdraw.accountType].fee_unit;
             }
         });
+        $scope.$watch('withdraw.amount',function(newValue,oldValue){
+          if($scope.withdraw.fee_set && $scope.withdraw.fee_set.length > 0 && $scope.withdraw.amount) {
+            var amountNumber = parseFloat($scope.withdraw.amount);
+            var amountList = $scope.withdraw.fee_set[$scope.withdraw.fee_set.length - 1];
+            for(var i = 0; i < $scope.withdraw.fee_set.length; i++) {
+            // $scope.withdraw.fee_set.forEach(function (value, index) {
+
+              if (amountNumber < $scope.withdraw.fee_set[i].amount && amountNumber ) {
+                // 判断超出收费范围
+                if (i - 1 < 0) {
+                  amountList = {name: 0, unit: "USD", amount: 0, commission: 0};
+                } else {
+                  amountList = $scope.withdraw.fee_set[i - 1];
+                }
+                break
+              }
+
+              // if (amountNumber == $scope.withdraw.fee_set[i].amount) {
+              //    amountList = $scope.withdraw.fee_set[i];
+              //    break
+              //  }
+            }
+            if (amountList.unit == 'USD') {
+              $scope.withdraw.set_amount = amountList.commission
+            } else {
+              $scope.withdraw.set_amount = Number($scope.withdraw.amount * amountList.commission / 100).toFixed(2);
+            }
+          }
+        })
 
         // 获取银行卡信息
         function getCard(type, platform, worldCode, isTrue) {
@@ -853,7 +886,7 @@
                           }
                             var amount = Number($scope.withdraw.amount).toFixed(2);
                             // 实际到账
-                            var actualArrival = Number($scope.withdraw.amount - $scope.withdraw.amount * $scope.withdraw.fee).toFixed(2);
+                            var actualArrival = Number($scope.withdraw.amount - $scope.withdraw.set_amount).toFixed(2);
                             var amountRMB = actualArrival ? Number(actualArrival * $scope.withdraw.currency.rate_out).toFixed(2) : Number(amount * $scope.withdraw.currency.rate_out).toFixed(2);
                             // var feeNumber = ($scope.withdraw.fee * 100).toFixed(2)
                             // $scope.withdraw.fee = $scope.withdrawTypeLst[$scope.withdraw.accountType].fee;
@@ -1109,8 +1142,9 @@
             $scope.withdraw.accountType = accountType;
             $scope.withdrawTypeLst = withdrawTypeLst;
             $scope.withdraw.is_third = $scope.withdrawTypeLst[$scope.withdraw.accountType].is_third;
-            $scope.withdraw.fee = $scope.withdrawTypeLst[$scope.withdraw.accountType].fee;
-            $scope.withdraw.fee_unit = $scope.withdrawTypeLst[$scope.withdraw.accountType].fee_unit;
+            $scope.withdraw.fee_set = $scope.withdrawTypeLst[$scope.withdraw.accountType].fee_set;
+            // $scope.withdraw.fee = $scope.withdrawTypeLst[$scope.withdraw.accountType].fee;
+            // $scope.withdraw.fee_unit = $scope.withdrawTypeLst[$scope.withdraw.accountType].fee_unit;
             getAssetCardList($scope.withdraw.is_third);
             $scope.withdraw.currency = $scope.withdrawTypeLst[$scope.withdraw.accountType].currency.length ? $scope.withdrawTypeLst[$scope.withdraw.accountType].currency[0] : null;
             $scope.withdraw.third.withdraw_type = $scope.withdrawTypeLst[$scope.withdraw.accountType].withdraw_type;
