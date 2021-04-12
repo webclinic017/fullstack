@@ -278,11 +278,12 @@
                     <span>{{lang.text('tigerWitID.depositWithdrawal.rate1d')}}</span>
                     <span>{{withdraw.currency.rate_out}}</span> {{withdraw.currency.currency_name}}
                 </p>
-                <p class="sys_tip1" ng-if="withdraw.fee_unit !== 0">
+                <p class="sys_tip1" ng-if="withdraw.fee_set">
                   <span class="font-danger">*</span>
-                  {{lang.text('tigerWitID.details.commission2')}}：${{ withdraw.fee_unit == 1 ? withdraw.fee : (withdraw.amount * withdraw.fee || 0).toFixed(2) }}
+                  {{lang.text('tigerWitID.details.commission2')}}: ${{withdraw.set_amount}}
+                   <!-- == 1 ? withdraw.fee : (withdraw.amount * withdraw.fee || 0).toFixed(2) -->
                 </p>
-                <p class="sys_tip1" ng-if="withdraw.fee_unit !== 0">
+                <p class="sys_tip1" ng-if="withdraw.fee_set">
                   <span class="font-danger">*</span>
                   <span>{{ lang.text('tigerWitID.depositWithdrawal.depositTips2') }}</span>
                 </p>
