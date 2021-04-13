@@ -14239,25 +14239,26 @@
                 "ar": "www.tigerwit.com"
             },
             "imgPath": {
+                // 将重构
                 "liverpoolSmOver": {
-                    "en": indexBasePath + "/bd/liverpool/liverpool-sm-over-en.png",
-                    "id": indexBasePath + "/bd/liverpool/liverpool-sm-over-id.png",
-                    "zh": indexBasePath + "/bd/liverpool/liverpool-sm-over-zh.png",
-                    "vi": indexBasePath + "/bd/liverpool/liverpool-sm-over-vi.png",
-                    "zh-Hant": indexBasePath + "/bd/liverpool/liverpool-sm-over-zh-Hant.png",
-                    "es": indexBasePath + "/bd/liverpool/liverpool-sm-over-es.png",
-                    "pt-BR": indexBasePath + "/bd/liverpool/liverpool-sm-over-pt-BR.png",
-                    "ar": indexBasePath + "/bd/liverpool/liverpool-sm-over-ar.png"
+                    "en": indexBasePath + "/bd/liverpool/active-sm-over-en.png",
+                    "id": indexBasePath + "/bd/liverpool/active-sm-over-en.png",
+                    "zh": indexBasePath + "/bd/liverpool/active-sm-over-en.png",
+                    "vi": indexBasePath + "/bd/liverpool/active-sm-over-en.png",
+                    "zh-Hant": indexBasePath + "/bd/liverpool/active-sm-over-en.png",
+                    "es": indexBasePath + "/bd/liverpool/active-sm-over-en.png",
+                    "pt-BR": indexBasePath + "/bd/liverpool/active-sm-over-en.png",
+                    "ar": indexBasePath + "/bd/liverpool/active-sm-over-ar.png"
                 },
                 "liverpoolSm": {
-                    "en": indexBasePath + "/bd/liverpool/liverpool-sm.png",
-                    "id": indexBasePath + "/bd/liverpool/liverpool-sm.png",
-                    "zh": indexBasePath + "/bd/liverpool/liverpool-sm.png",
-                    "vi": indexBasePath + "/bd/liverpool/liverpool-sm.png",
-                    "zh-Hant": indexBasePath + "/bd/liverpool/liverpool-sm.png",
-                    "es": indexBasePath + "/bd/liverpool/liverpool-sm.png",
-                    "pt-BR": indexBasePath + "/bd/liverpool/liverpool-sm.png",
-                    "ar": indexBasePath + "/bd/liverpool/liverpool-sm-ar.png"
+                    "en": indexBasePath + "/bd/liverpool/active-sm.png",
+                    "id": indexBasePath + "/bd/liverpool/active-sm.png",
+                    "zh": indexBasePath + "/bd/liverpool/active-sm.png",
+                    "vi": indexBasePath + "/bd/liverpool/active-sm.png",
+                    "zh-Hant": indexBasePath + "/bd/liverpool/active-sm.png",
+                    "es": indexBasePath + "/bd/liverpool/active-sm.png",
+                    "pt-BR": indexBasePath + "/bd/liverpool/active-sm.png",
+                    "ar": indexBasePath + "/bd/liverpool/active-sm.png"
                 }
             }
         }, lang_data);

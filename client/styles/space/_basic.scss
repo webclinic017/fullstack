@@ -69,13 +69,13 @@ $font-space-gray-color: $gray-dark;
         background-image: url("/images/space/space-total.png");
       }
       &.liverpool {
-        color: #000;
+        // color: #000;
         padding-top: 18px;
         .con {
           font-size: 12px;
           line-height: 14px;
           padding: 3px 0;
-          color: rgba(50, 50, 50, 1);
+          // color: rgba(50, 50, 50, 1);
           &.con_width{
             width: 135px;
           }
@@ -290,10 +290,10 @@ $font-space-gray-color: $gray-dark;
 }
 
 @include b(space_center_liverpool) {
-  background-image: url("/white_label/bd/liverpool/liverpool-lg.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  // background-image: url("/white_label/bd/liverpool/liverpool-lg.png");
+  // background-repeat: no-repeat;
+  // background-position: center;
+  // background-size: cover;
   padding-left: 40px;
   padding-right: 40px;
   > h3 {
@@ -309,6 +309,6 @@ $font-space-gray-color: $gray-dark;
 
 .ar-lang{
   .space_center_liverpool{
-    background-image: url("/white_label/bd/liverpool/liverpool-lg-ar.png");
+    // background-image: url("/white_label/bd/liverpool/liverpool-lg-ar.png");
   }
 }

@@ -925,10 +925,17 @@ module.exports = {
         id: "__id__"
     },
     faqMeta2: {
-        zh: "A：MT4 下载地址",
-        en: "A: MT4 for",
+        zh: "A：",
+        en: "A: ",
         vi: "^^-^^",
-        "zh-Hant": "A：MT4 下載地址",
+        "zh-Hant": "A：",
+        id: "__id__"
+    },
+    faqMeta2_1: {
+        zh: "MT4 下载地址",
+        en: "MT4 for",
+        vi: "^^-^^",
+        "zh-Hant": "MT4 下載地址",
         id: "__id__"
     },
     faqMeta3: {

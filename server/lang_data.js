@@ -66,14 +66,14 @@ module.exports = function () {
             'ar': 'www.tigerwit.com'
         },
         webMt4Download:{
-            zh:"https://download.mql5.com/cdn/web/tiger.wit.group/mt4/tigerwit4setup.exe",
-            en:"https://download.mql5.com/cdn/web/tiger.wit.group/mt4/tigerwit4setup.exe",
-            vi:"https://download.mql5.com/cdn/web/tiger.wit.group/mt4/tigerwit4setup.exe",
-            "zh-Hant":"https://download.mql5.com/cdn/web/tiger.wit.group/mt4/tigerwit4setup.exe",
-            id:"https://download.mql5.com/cdn/web/tiger.wit.group/mt4/tigerwit4setup.exe",
-            es:"https://download.mql5.com/cdn/web/tiger.wit.group/mt4/tigerwit4setup.exe",
-            'pt-BR': 'https://download.mql5.com/cdn/web/tiger.wit.group/mt4/tigerwit4setup.exe',
-            'ar': 'https://download.mql5.com/cdn/web/tiger.wit.group/mt4/tigerwit4setup.exe'
+            zh:"https://dlmt4.uytregfds.com/cdn/web/tiger.wit.group/mt4/tigerwit4setup.exe",
+            en:"https://dlmt4.uytregfds.com/cdn/web/tiger.wit.group/mt4/tigerwit4setup.exe",
+            vi:"https://dlmt4.uytregfds.com/cdn/web/tiger.wit.group/mt4/tigerwit4setup.exe",
+            "zh-Hant":"https://dlmt4.uytregfds.com/cdn/web/tiger.wit.group/mt4/tigerwit4setup.exe",
+            id:"https://dlmt4.uytregfds.com/cdn/web/tiger.wit.group/mt4/tigerwit4setup.exe",
+            es:"https://dlmt4.uytregfds.com/cdn/web/tiger.wit.group/mt4/tigerwit4setup.exe",
+            'pt-BR': 'https://dlmt4.uytregfds.com/cdn/web/tiger.wit.group/mt4/tigerwit4setup.exe',
+            'ar': 'https://dlmt4.uytregfds.com/cdn/web/tiger.wit.group/mt4/tigerwit4setup.exe'
         },
         // androidApp: {
         //     zh: versionAndroidApp,
