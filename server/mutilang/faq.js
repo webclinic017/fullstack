@@ -505,17 +505,17 @@ module.exports = {
         id: "__id__"
     },
     faqTrade8: {
-        zh: "A：对于外汇和贵金属，TigerWit向客户同时提供3种杠杆，100倍、200倍和400倍。",
+        zh: "A：对于外汇和贵金属，TigerWit向客户同时提供三种杠杆，100倍、200倍和400倍。",
         en: "A: Fx, Precious metals: TigerWit offers 3 kinds of leverage, 100 leverage, 200 leverage, 400 leverage. ",
         vi: "^^-^^",
-        "zh-Hant": "A：對於外匯和貴金屬，TigerWit向客戶同時提供3種杠桿， 100倍、200倍和400倍。",
+        "zh-Hant": "A：對於外匯和貴金屬，TigerWit向客戶同時提供三種杠桿，100倍、200倍和400倍。",
         id: "__id__"
     },
     faqTrade9: {
-        zh: "对于原油、天然气和CFD股指差价合约，我们只提供一种杠杆1:100。",
+        zh: "对于原油和天然气，我们提供两种杠杆，50倍和200倍。对于CFD股指差价合约，我们提供两种杠杆，100倍和200倍。",
         en: "Crude oil, Natural gas, CFD: TigerWit only offers 100 leverage.",
         vi: "^^-^^",
-        "zh-Hant": "對於原油、天然氣和CFD股指差價合約，我們只提供壹種杠桿1:100。",
+        "zh-Hant": "對於原油和天然氣，我們提供兩種杠桿，50倍和200倍。對於CFD股指差價合約，我們提供兩種杠桿，100倍和200倍。",
         id: "__id__"
     },
     faqTrade10: {
