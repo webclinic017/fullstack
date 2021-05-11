@@ -171,21 +171,22 @@
                 errFunc(error);
             });
         }
-        if ($method.toUpperCase() === 'POST') {
-            return $.post($url, $params).then(function (data) {
-                return checkTokenCode(data);
-            }, function (error) {
-                errFunc(error);
-            });
-        }
-        if ($method.toUpperCase() === 'PUT') {
+        // if ($method.toUpperCase() === 'POST') {
+            // return $.post($url, $params).then(function (data) {
+            //     return checkTokenCode(data);
+            // }, function (error) {
+            //     errFunc(error);
+            // });
+        // }
+        if ($method.toUpperCase() === 'PUT' || $method.toUpperCase() === 'POST') {
             return $.ajax({
                 url: $url,
-                type: 'PUT',
+                type: $method.toUpperCase(),
                 xhrFields: {
                     withCredentials: true
                 },
                 data: $params,
+                async: false , //改为同步
                 success: function (data) {
                     // console.log(data);
                     return checkTokenCode(data);
