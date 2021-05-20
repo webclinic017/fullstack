@@ -138,7 +138,7 @@
         //品种报价状态
         getSymbolQuoteStatus(requestSymbols.join(','));
         var socketPara = {
-            websocketTigerUrl: $scope.lang.isDemo() ? ('wss://demo'+ $scope.getDomain() +':4567') : 'wss://quotephp'+ $scope.getDomain() +':4567',
+            websocketTigerUrl: 'wss://quotephp'+ $scope.getDomain() +':4567',
             request_symbols: requestSymbols,
             request_symbols_zh: isCloned ? forCloneSymbolZh : forNormalSymbolZh,
             user_name: "tiger",
